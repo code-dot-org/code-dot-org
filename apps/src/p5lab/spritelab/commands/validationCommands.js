@@ -187,7 +187,7 @@ export const commands = {
         if (this.currentFrame() > this.validationFrames.pass) {
           return {
             state: 'succeeded',
-            feedback: commands.reportSuccess(this.criteria)
+            feedback: commands.reportSuccess(this.criteria, this.successMessage)
           };
         }
         break;
@@ -284,7 +284,7 @@ export const commands = {
   },
 
   // Used at the end of a level. If there are no failed criteria, return the generic success feedback.
-  reportSuccess(criteria) {
+  reportSuccess(criteria, message) {
     let firstFailed = -1;
     for (const criterion in criteria) {
       if (!criteria[criterion].complete && firstFailed === -1) {
@@ -292,7 +292,7 @@ export const commands = {
       }
     }
     if (firstFailed === -1) {
-      return 'genericSuccess';
+      return message;
     }
   }
 };
