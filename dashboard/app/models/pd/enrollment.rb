@@ -140,10 +140,6 @@ class Pd::Enrollment < ApplicationRecord
     user_id
   end
 
-  def completed_survey?
-    completed_survey_id.present?
-  end
-
   def survey_class
     if workshop.local_summer?
       Pd::LocalSummerWorkshopSurvey
