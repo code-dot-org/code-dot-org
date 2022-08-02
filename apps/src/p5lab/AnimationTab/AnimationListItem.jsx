@@ -1,7 +1,7 @@
 /** A single list item representing an animation. */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';

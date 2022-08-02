@@ -3,7 +3,7 @@ import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import SpeedSlider from '@cdo/apps/templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
 import DeleteAnimationDialog from './DeleteAnimationDialog';

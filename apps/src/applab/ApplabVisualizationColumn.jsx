@@ -4,7 +4,7 @@ import * as color from '../util/color';
 import {getAppWidth, APP_HEIGHT} from './constants';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import Visualization from './Visualization';
 import CompletionButton from '../templates/CompletionButton';
 import PlaySpaceHeader from './PlaySpaceHeader';

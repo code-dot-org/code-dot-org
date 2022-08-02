@@ -1,7 +1,7 @@
 /** @file Root of the animation editor interface mode for GameLab */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import AnimationPicker, {PICKER_TYPE} from '../AnimationPicker/AnimationPicker';
