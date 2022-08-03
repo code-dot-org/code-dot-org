@@ -1,4 +1,4 @@
-require_relative 'test_helper'
+require_relative '../test_helper'
 require 'animation_library_api'
 
 class AnimationLibraryTest < Minitest::Test
