@@ -4,7 +4,7 @@ import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from '../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,

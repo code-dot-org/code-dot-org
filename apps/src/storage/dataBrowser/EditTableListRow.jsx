@@ -3,7 +3,7 @@ import {DataView} from '../constants';
 import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import * as dataStyles from './dataStyles';
 
