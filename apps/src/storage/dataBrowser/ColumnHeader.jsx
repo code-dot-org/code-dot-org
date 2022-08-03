@@ -5,7 +5,7 @@ import ColumnMenu from './ColumnMenu';
 import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import color from '../../util/color';
 import * as dataStyles from './dataStyles';

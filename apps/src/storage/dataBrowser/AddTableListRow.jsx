@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
