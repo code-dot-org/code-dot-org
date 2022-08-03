@@ -711,6 +711,7 @@ en:
         csa-pl-vpl-m1-unit-3: Software Engineering in Unit 3
         csa-pl-intro-to-equality: Introduction to Equality
         csa-pl-intro-to-equals-method: Introduction to the .equals() method
+        csa-pl-equals-book: Writing the equals() method for the Book class
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

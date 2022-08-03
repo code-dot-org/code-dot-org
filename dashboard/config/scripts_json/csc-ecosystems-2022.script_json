@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2022-07-20 23:13:22 UTC",
+    "serialized_at": "2022-07-29 20:50:03 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -994,6 +994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ecosystems_helloworld_say_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1016,15 +1019,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_location_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_location_2022"
+          "helloworld_bunny_location_ecosystems"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1032,7 +1032,7 @@
         "activity_section.key": "1b74326a-11a6-4e8f-8890-9cfab6b0ec09"
       },
       "level_keys": [
-        "helloworld_food_location_2022"
+        "helloworld_bunny_location_ecosystems"
       ]
     },
     {
@@ -1041,15 +1041,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_click_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_click_2022"
+          "helloworld_bunny_click_ecosystems"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1057,7 +1054,7 @@
         "activity_section.key": "1b74326a-11a6-4e8f-8890-9cfab6b0ec09"
       },
       "level_keys": [
-        "helloworld_food_click_2022"
+        "helloworld_bunny_click_ecosystems"
       ]
     },
     {
@@ -1091,15 +1088,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "coursee_helloworld_events_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_events_2022"
+          "helloworld_bunny_adaptation_ecosystems"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1107,7 +1101,7 @@
         "activity_section.key": "a422d364-77e1-43e3-a546-657716f00d47"
       },
       "level_keys": [
-        "coursee_helloworld_events_2022"
+        "helloworld_bunny_adaptation_ecosystems"
       ]
     },
     {
@@ -1116,15 +1110,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_backgrounds_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_backgrounds_2022"
+          "csc_ecosystems_giraffe_evo_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1132,7 +1123,7 @@
         "activity_section.key": "a422d364-77e1-43e3-a546-657716f00d47"
       },
       "level_keys": [
-        "helloworld_food_backgrounds_2022"
+        "csc_ecosystems_giraffe_evo_2022"
       ]
     },
     {
@@ -1141,15 +1132,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_costumes_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_costumes_2022"
+          "csc_ecosystems_whale_movement_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1157,7 +1145,7 @@
         "activity_section.key": "a422d364-77e1-43e3-a546-657716f00d47"
       },
       "level_keys": [
-        "helloworld_food_costumes_2022"
+        "csc_ecosystems_whale_movement_2022"
       ]
     },
     {
@@ -1166,15 +1154,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_sizes_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_sizes_2022"
+          "csc_ecosystems_whale_explain_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1182,7 +1167,7 @@
         "activity_section.key": "a422d364-77e1-43e3-a546-657716f00d47"
       },
       "level_keys": [
-        "helloworld_food_sizes_2022"
+        "csc_ecosystems_whale_explain_2022"
       ]
     },
     {
@@ -1191,15 +1176,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_behaviors_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_behaviors_2022"
+          "helloworld_bugs_behaviors_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1207,7 +1189,7 @@
         "activity_section.key": "a422d364-77e1-43e3-a546-657716f00d47"
       },
       "level_keys": [
-        "helloworld_food_behaviors_2022"
+        "helloworld_bugs_behaviors_2022"
       ]
     },
     {
@@ -1216,9 +1198,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gray_csc_helloworld_choice_group_ecosystems_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1238,31 +1217,6 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "helloworld_food_sounds_2022"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "helloworld_food_sounds_2022"
-        ],
-        "lesson.key": "Hello World CSC",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "a422d364-77e1-43e3-a546-657716f00d47"
-      },
-      "level_keys": [
-        "helloworld_food_sounds_2022"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1286,8 +1240,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1311,7 +1265,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1336,7 +1290,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1361,7 +1315,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1386,7 +1340,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1411,7 +1365,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1436,7 +1390,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1461,7 +1415,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -1486,7 +1440,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1511,7 +1465,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1536,7 +1490,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1561,34 +1515,9 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_ecosystems_giraffe_evo_2022"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_ecosystems_giraffe_evo_2022"
-        ],
-        "lesson.key": "Model Animal Adaptations",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
-      },
-      "level_keys": [
-        "csc_ecosystems_giraffe_evo_2022"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1611,9 +1540,9 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1636,59 +1565,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_ecosystems_whale_movement_2022"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_ecosystems_whale_movement_2022"
-        ],
-        "lesson.key": "Model Animal Adaptations",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
-      },
-      "level_keys": [
-        "csc_ecosystems_whale_movement_2022"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_ecosystems_whale_explain_2022"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_ecosystems_whale_explain_2022"
-        ],
-        "lesson.key": "Model Animal Adaptations",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
-      },
-      "level_keys": [
-        "csc_ecosystems_whale_explain_2022"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1711,9 +1590,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1736,9 +1615,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1761,8 +1640,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 9,
+      "chapter": 29,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1786,8 +1665,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 10,
+      "chapter": 30,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1838,9 +1717,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_location_2022",
+        "level.key": "helloworld_bunny_location_ecosystems",
         "script_level.level_keys": [
-          "helloworld_food_location_2022"
+          "helloworld_bunny_location_ecosystems"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1850,9 +1729,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_click_2022",
+        "level.key": "helloworld_bunny_click_ecosystems",
         "script_level.level_keys": [
-          "helloworld_food_click_2022"
+          "helloworld_bunny_click_ecosystems"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1874,9 +1753,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_events_2022",
+        "level.key": "helloworld_bunny_adaptation_ecosystems",
         "script_level.level_keys": [
-          "coursee_helloworld_events_2022"
+          "helloworld_bunny_adaptation_ecosystems"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1886,9 +1765,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_backgrounds_2022",
+        "level.key": "csc_ecosystems_giraffe_evo_2022",
         "script_level.level_keys": [
-          "helloworld_food_backgrounds_2022"
+          "csc_ecosystems_giraffe_evo_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1898,9 +1777,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_costumes_2022",
+        "level.key": "csc_ecosystems_whale_movement_2022",
         "script_level.level_keys": [
-          "helloworld_food_costumes_2022"
+          "csc_ecosystems_whale_movement_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1910,9 +1789,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_sizes_2022",
+        "level.key": "csc_ecosystems_whale_explain_2022",
         "script_level.level_keys": [
-          "helloworld_food_sizes_2022"
+          "csc_ecosystems_whale_explain_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1922,9 +1801,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_behaviors_2022",
+        "level.key": "helloworld_bugs_behaviors_2022",
         "script_level.level_keys": [
-          "helloworld_food_behaviors_2022"
+          "helloworld_bugs_behaviors_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1937,18 +1816,6 @@
         "level.key": "gray_csc_helloworld_choice_group_ecosystems_2022",
         "script_level.level_keys": [
           "gray_csc_helloworld_choice_group_ecosystems_2022"
-        ],
-        "lesson.key": "Hello World CSC",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "a422d364-77e1-43e3-a546-657716f00d47"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "helloworld_food_sounds_2022",
-        "script_level.level_keys": [
-          "helloworld_food_sounds_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -2102,18 +1969,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_ecosystems_giraffe_evo_2022",
-        "script_level.level_keys": [
-          "csc_ecosystems_giraffe_evo_2022"
-        ],
-        "lesson.key": "Model Animal Adaptations",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc_ecosystems_bunny_adapt_2022",
         "script_level.level_keys": [
           "csc_ecosystems_bunny_adapt_2022"
@@ -2129,30 +1984,6 @@
         "level.key": "csc_ecosystems_bunny_explain_2022",
         "script_level.level_keys": [
           "csc_ecosystems_bunny_explain_2022"
-        ],
-        "lesson.key": "Model Animal Adaptations",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_ecosystems_whale_movement_2022",
-        "script_level.level_keys": [
-          "csc_ecosystems_whale_movement_2022"
-        ],
-        "lesson.key": "Model Animal Adaptations",
-        "lesson_group.key": "",
-        "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_ecosystems_whale_explain_2022",
-        "script_level.level_keys": [
-          "csc_ecosystems_whale_explain_2022"
         ],
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
