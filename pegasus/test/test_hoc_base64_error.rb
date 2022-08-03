@@ -5,7 +5,7 @@ require_relative 'fixtures/mock_pegasus'
 CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze
 CAUSES_CIPHERERROR = "IMALITTLETEAPOTSHORTANDSTOUT".freeze
 
-class Base64ErrorTest < Minitest::Test
+class HocBase64ErrorTest < Minitest::Test
   include SetupTest
 
   def setup
