@@ -1,4 +1,4 @@
-require_relative 'test_helper'
+require_relative '../test_helper'
 require 'sound_library_api'
 require_relative 'files_api_test_base'
 require 'timecop'
