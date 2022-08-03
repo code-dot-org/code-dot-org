@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ChatBubble from './ChatBubble';
 import {convertXmlToBlockly} from './utils';
 import SafeMarkdown from '../SafeMarkdown';

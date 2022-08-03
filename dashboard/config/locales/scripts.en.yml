@@ -6285,7 +6285,7 @@ en:
         hello-world-draft:
           lesson_groups: {}
           name: hello-world-draft
-          title: '"Hello, World!"'
+          title: Hello, World!
           description_audience: ''
           description_short: ''
           description: ''
@@ -8273,12 +8273,13 @@ en:
           name: dlp-csd-mod1-2022
         dlp-csd-mod2-2022:
           title: 2022 CS Discoveries Deeper Learning Module A
-          description: "##This module will be published by August 1, 2022."
+          description: "## Completed module due by November 1, 2022"
           student_description: ''
           description_short: ''
           description_audience: ''
           lesson_groups: {}
           name: dlp-csd-mod2-2022
+          lessons: {}
         dlp-csd-mod3-2022:
           title: 2022 CS Discoveries Deeper Learning Module B
           description: "##This module will be published by October 3, 2022."
@@ -8305,12 +8306,13 @@ en:
           name: dlp-csp-mod1-2022
         dlp-csp-mod2-2022:
           title: 2022 CS Principles Deeper Learning Module A
-          description: "##This module will be published by August 1, 2022."
+          description: "##Completed submissions due by November 1, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
           lesson_groups: {}
           name: dlp-csp-mod2-2022
+          lessons: {}
         dlp-csp-mod3-2022:
           title: 2022 CS Principles Deeper Learning Module B
           description: "##This module will be published by October 3, 2022."

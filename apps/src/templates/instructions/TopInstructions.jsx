@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';

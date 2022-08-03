@@ -1,8 +1,7 @@
 /** Pagination controls */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
-import Radium, {Style} from 'radium';
+import Radium, {Style} from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '../util/color';
 import {Pagination} from '@react-bootstrap/pagination';
 
