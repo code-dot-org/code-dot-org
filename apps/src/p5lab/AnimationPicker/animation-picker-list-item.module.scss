@@ -1,0 +1,106 @@
+@import 'color.scss';
+
+$thumbnailSize: 105px;
+$thumbnailBorderWidth: 1px;
+$hoverPlusSize: 24px;
+
+.root {
+    float: left;
+    width: $thumbnailSize;
+    text-align: center;
+    margin: 1px 1px 10px 1px;
+    position: relative;
+    border: 0px;
+    padding-right: 10px;
+    outline: none;
+}
+
+.thumbnail {
+    height: $thumbnailSize;
+    width: 100%;
+    border-style: solid;
+    border-color: $light_gray;
+    border-width: $thumbnailBorderWidth;
+    border-radius: 12px;
+    padding: 2px;
+    cursor: pointer;
+    background: none;
+    box-shadow: none;
+    margin: 0px 0px 0px 0px;
+    outline: none;
+}
+
+.thumbnailIcon {
+    color: $white;
+    background-color: $purple;
+    border-color: $purple;
+    font-size: $thumbnailSize / 2;
+    line-height: $thumbnailSize + px;
+    &:hover {
+      background-color: $hoverPlusSize$light_purple;
+      border-color: $hoverPlusSize$light_purple;
+    }
+    &:focus {
+      background-color: $hoverPlusSize$light_purple;
+      border-color: $hoverPlusSize$light_purple;
+    }
+}
+.label {
+    margin-top: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.noLabel {
+    padding-bottom: 10px;
+}
+.labelIcon {
+    font-style: italic;
+}
+.categoryImage {
+    border-radius: 10px
+}
+.multiSelectIcon {
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    font-size: $hoverPlusSize;
+    height: $hoverPlusSize;
+    width: $hoverPlusSize;
+    border-radius: 5px;
+    top: $thumbnailSize / 2 - $hoverPlusSize / 2;
+    left: $thumbnailSize / 2 - $hoverPlusSize / 2;
+    &:hover {
+        color: $purple;
+        background-color: $white;
+        border-color: $purple;
+    }
+    &:active {
+        color: $white;
+        background-color: $level_perfect;
+        border-color: $level_perfect;
+    }
+}
+.thumbnailWithHover {
+    &:hover {
+        border-style: solid;
+        border-radius: 12px;
+        cursor: pointer;
+        border-width: 3px;
+        padding: 0px;
+        border-color: $purple;
+    }
+    &:active {
+        border-width: 3px;
+        padding: 0px;
+        border-color: $level_perfect;
+    }
+}
+
+.block {
+    display: block
+}
+
+.none {
+    display: none
+}
