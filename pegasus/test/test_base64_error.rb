@@ -13,20 +13,16 @@ class Base64ErrorTest < Minitest::Test
   end
 
   def test_base64_error
-    # test all the cases with a channel ID that will raise ArgumentError internally when trying to base64 decode
-    run_test_cases CAUSES_ARGUMENTERROR
-    # test all the cases with a channel ID that will raise OpenSSL::Cipher::CipherError internally when trying to base64 decode
-    run_test_cases CAUSES_CIPHERERROR
+    # test case with a filename that will raise ArgumentError internally when trying to base64 decode
+    @pegasus.get "/v2/hoc/certificate/#{CAUSES_ARGUMENTERROR}"
+    assert_equal 400, @pegasus.last_response.status
+
+    # test case with a filename that will raise OpenSSL::Cipher::CipherError internally when trying to base64 decode
+    @pegasus.get "/v2/hoc/certificate/#{CAUSES_CIPHERERROR}"
+    assert_equal 400, @pegasus.last_response.status
 
     # For this route, just test with one case - route doesn't support input being long enough to hit the other case
     @pegasus.get "/api/hour/certificate64/anycourse/#{CAUSES_ARGUMENTERROR}"
-    assert_equal 400, @pegasus.last_response.status
-  end
-
-  private
-
-  def run_test_cases(channel_id)
-    @pegasus.get "/v2/hoc/certificate/#{channel_id}"
     assert_equal 400, @pegasus.last_response.status
   end
 end
