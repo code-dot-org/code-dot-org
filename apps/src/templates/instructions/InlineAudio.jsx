@@ -1,6 +1,6 @@
 import MD5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';

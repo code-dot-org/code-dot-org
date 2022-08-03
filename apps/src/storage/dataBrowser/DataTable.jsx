@@ -8,7 +8,7 @@ import DataEntryError from './DataEntryError';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {showWarning} from '../redux/data';
 import * as dataStyles from './dataStyles';
