@@ -82,5 +82,5 @@ Dashboard::Application.configure do
 
   # The activities_old table should not be part of the schema
   # DELETE_ME when the activities old table gets removed
-  ActiveRecord::SchemaDumper.ignore_tables = %w[activities_old google_sheets_shared_.*]
+  ActiveRecord::SchemaDumper.ignore_tables = ['activities_old']
 end

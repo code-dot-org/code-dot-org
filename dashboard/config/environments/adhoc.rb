@@ -39,5 +39,4 @@ Dashboard::Application.configure do
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
   config.action_mailer.show_previews = true
-  ActiveRecord::SchemaDumper.ignore_tables = ['google_sheets_shared_.*']
 end
