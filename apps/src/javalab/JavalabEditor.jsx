@@ -14,7 +14,6 @@ import {
   setActiveTabKey,
   setOrderedTabKeys,
   setFileMetadata,
-  getTabKey,
   setAllEditorMetadata,
   openEditorDialog,
   closeEditorDialog,
@@ -38,12 +37,12 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
+import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import JavalabEditorDialogManager, {
   JavalabEditorDialog
 } from './JavalabEditorDialogManager';
 import JavalabEditorHeader from './JavalabEditorHeader';
-import {getDefaultFileContents} from './JavalabFileHelper';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
