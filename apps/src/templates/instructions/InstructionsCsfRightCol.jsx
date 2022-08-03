@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
@@ -111,10 +110,10 @@ class InstructionsCsfRightCol extends React.Component {
             ref={c => {
               this.collapser = c;
             }}
-            style={[
-              styles.collapserButton,
-              this.props.isMinecraft && styles.craftStyles.collapserButton
-            ]}
+            style={{
+              ...styles.collapserButton,
+              ...(this.props.isMinecraft && styles.craftStyles.collapserButton)
+            }}
             collapsed={this.props.collapsed}
             onClick={this.props.handleClickCollapser}
             isMinecraft={this.props.isMinecraft}
@@ -123,14 +122,14 @@ class InstructionsCsfRightCol extends React.Component {
         )}
         {this.props.displayScrollButtons && (
           <ScrollButtons
-            style={[
-              styles.scrollButtons,
-              this.props.isMinecraft &&
+            style={{
+              ...styles.scrollButtons,
+              ...(this.props.isMinecraft &&
                 (this.props.isRtl
                   ? styles.craftStyles.scrollButtonsRtl
-                  : styles.craftStyles.scrollButtons),
-              displayCollapserButton && scrollButtonsBelowCollapserStyle
-            ]}
+                  : styles.craftStyles.scrollButtons)),
+              ...(displayCollapserButton && scrollButtonsBelowCollapserStyle)
+            }}
             ref={c => {
               this.scrollButtons = c;
             }}
@@ -181,9 +180,7 @@ const styles = {
   }
 };
 
-export const UnconnectedInstructionsCsfRightCol = Radium(
-  InstructionsCsfRightCol
-);
+export const UnconnectedInstructionsCsfRightCol = InstructionsCsfRightCol;
 
 export default connect(
   function propsFromStore(state) {
@@ -199,4 +196,4 @@ export default connect(
   null,
   null,
   {withRef: true}
-)(Radium(InstructionsCsfRightCol));
+)(InstructionsCsfRightCol);
