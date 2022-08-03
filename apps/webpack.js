@@ -41,17 +41,34 @@ var toTranspileWithinNodeModules = [
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 
-// Our base config, on which other configs are derived
-var baseConfig = {
+const nodePolyfillConfig = {
+  plugins: [
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+      stream: 'stream-browserify',
+      path: 'path-browserify',
+      process: 'process/browser',
+      timers: 'timers-browserify'
+    })
+  ],
   resolve: {
-    extensions: ['.js', '.jsx'],
     fallback: {
-      buffer: require.resolve('buffer'),
+      buffer: require.resolve('buffer/'),
       stream: require.resolve('stream-browserify'),
       path: require.resolve('path-browserify'),
+      process: require.resolve('process/browser'),
       timers: require.resolve('timers-browserify'),
       crypto: false
-    },
+    }
+  }
+};
+
+// Our base config, on which other configs are derived
+var baseConfig = {
+  plugins: [...nodePolyfillConfig.plugins],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
       '@cdo/locale': path.resolve(
         __dirname,
@@ -440,6 +457,7 @@ function create(options) {
     optimization: {chunkIds: 'total-size', moduleIds: 'size', ...optimization},
     mode: mode,
     plugins: [
+      ...baseConfig.plugins,
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),
@@ -449,8 +467,9 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
         DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
-    ].concat(plugins),
+      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
+      ...plugins
+    ],
     watch: watch,
     keepalive: watch,
     failOnError: !watch
