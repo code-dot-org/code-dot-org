@@ -4,7 +4,7 @@ import $ from 'jquery';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 const STANDARD_PADDING = 20;
 

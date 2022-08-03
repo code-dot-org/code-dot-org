@@ -64,11 +64,8 @@ class Pd::Workshop < ApplicationRecord
     'third_party_provider',
 
     # If true, our system will not send enrollees reminders related to this workshop.
-    # Note that this is one of (at least) three mechanisms we use to suppress
-    # email in various cases -- see Workshop.suppress_reminders? for
-    # subject-specific suppression of reminder emails. This is functionally
-    # extremely similar (identical?) to the logic currently implemented
-    # by this serialized attribute.
+    # If the subject is not in the MUST_SUPPRESS_EMAIL_SUBJECTS constant, this attribute
+    # can be set to be true or false from the UI
     'suppress_email'
   ]
 
@@ -80,7 +77,6 @@ class Pd::Workshop < ApplicationRecord
   validate :subject_must_be_valid_for_course
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
-  validate :suppress_email_subjects_must_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
@@ -109,14 +105,8 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def subject_must_be_valid_for_course
-    unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
+    unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course.')
-    end
-  end
-
-  def suppress_email_subjects_must_suppress_email
-    if MUST_SUPPRESS_EMAIL_SUBJECTS.include?(subject) && !suppress_email?
-      errors.add :properties, 'All academic year workshops and the Admin/Counselor - Welcome workshop must suppress email.'
     end
   end
 
@@ -443,20 +433,10 @@ class Pd::Workshop < ApplicationRecord
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
-  # Note that this is one of (at least) three mechanisms we use to suppress
-  # email in various cases -- see the serialized attribute 'suppress_email'
-  # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
-  # [MEG] It appears that these courses can move into the MUST_SUPPRESS_EMAIL_SUBJECTS constant
+  # The suppress_email? attribute gets set in the UI
   def suppress_reminders?
-    [
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSP_FIT,
-      SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT,
-      SUBJECT_CSF_FIT,
-      SUBJECT_ADMIN_COUNSELOR_WELCOME
-    ].include? subject
+    (MUST_SUPPRESS_EMAIL_SUBJECTS.include? subject) || suppress_email?
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
@@ -485,7 +465,7 @@ class Pd::Workshop < ApplicationRecord
         errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
 
-      # send pre-workshop email for CSD and CSP facilitators 10 days before the workshop only
+      # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
       next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
@@ -727,6 +707,10 @@ class Pd::Workshop < ApplicationRecord
     attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
   end
 
+  def ayw?
+    ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
+  end
+
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
   end
@@ -758,6 +742,10 @@ class Pd::Workshop < ApplicationRecord
 
   def csf_intro?
     course == Pd::Workshop::COURSE_CSF && subject == Pd::Workshop::SUBJECT_CSF_101
+  end
+
+  def csf_district?
+    course == COURSE_CSF && subject == SUBJECT_CSF_DISTRICT
   end
 
   def csf_201?
@@ -818,23 +806,22 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def pre_survey?
-    # CSP for returning teachers does not have a pre-survey. Academic year workshops have multiple pre-survey options,
-    # so we do not show any to teachers ourselves.
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
+    # CSP for returning teachers does not have a pre-survey.
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
     PRE_SURVEY_BY_COURSE.key? course
   end
 
-  def pre_survey_course_name
-    PRE_SURVEY_BY_COURSE[course].try(:[], :course_name)
+  def pre_survey_course_offering_name
+    PRE_SURVEY_BY_COURSE[course].try(:[], :course_offering_name)
   end
 
   def pre_survey_course
     return nil unless pre_survey?
-    UnitGroup.find_by_name! pre_survey_course_name
+    UnitGroup.latest_stable_version(pre_survey_course_offering_name)
   rescue ActiveRecord::RecordNotFound
     # Raise a RuntimeError if the course name is not found, so we'll be notified in Honeybadger
     # Otherwise the RecordNotFound error will result in a 404, and we won't know.
-    raise "No course found for name #{pre_survey_course_name}"
+    raise "No course found for course offering key #{pre_survey_course_offering_name}"
   end
 
   # @return an array of tuples, each in the format:

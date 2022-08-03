@@ -1620,7 +1620,7 @@ FactoryGirl.define do
     association :script
   end
 
-  factory :project_version do
+  factory :project_commit do
     sequence(:project_id)
     sequence(:object_version_id)
     comment 'a commit comment'

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {
   setSource,
   sourceTextUpdated,
@@ -22,7 +22,6 @@ import {
   setNewFileError,
   clearNewFileError,
   setRenameFileError
-  setAllEditorMetadata
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -40,14 +39,11 @@ import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import {getDefaultFileContents} from './JavalabFileHelper';
 import JavalabEditorDialogManager, {
   JavalabEditorDialog
 } from './JavalabEditorDialogManager';
 import JavalabEditorHeader from './JavalabEditorHeader';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
-import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
+import {getDefaultFileContents} from './JavalabFileHelper';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -114,7 +110,7 @@ class JavalabEditor extends React.Component {
     setFileMetadata: PropTypes.func.isRequired,
     orderedTabKeys: PropTypes.array.isRequired,
     setOrderedTabKeys: PropTypes.func.isRequired,
-    activeTabKey: PropTypes.string.isRequired,
+    activeTabKey: PropTypes.string,
     setActiveTabKey: PropTypes.func.isRequired,
     lastTabKeyIndex: PropTypes.number.isRequired,
     editTabKey: PropTypes.string,
@@ -478,11 +474,15 @@ class JavalabEditor extends React.Component {
     // add new file to sources
     setSource(filename, fileContents);
     projectChanged();
-    setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
     // add new tab and set it as the active tab
     closeEditorDialog();
     clearNewFileError();
+    setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
+    this.setState({
+      openDialog: null,
+      newFileError: null
+    });
   }
 
   onDeleteFile() {

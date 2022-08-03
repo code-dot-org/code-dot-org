@@ -1,7 +1,7 @@
 import React from 'react';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 /**
  * A restore theme defaults button
