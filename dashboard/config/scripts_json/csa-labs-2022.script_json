@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-23 03:29:01 UTC",
+    "serialized_at": "2022-08-02 22:59:23 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -217,6 +217,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "In this activity, students will be completing the implementation required to make the GUI function.",
+        "purpose": "Students are able to write program code to declare instance variables and write headers for constructors with or without parameters, but sometimes fail to assign a value to the instance variables in the constructor. They might unknowingly create local variables in the constructor with the same name as the instance variables instead.",
         "student_overview": "In this activity, you will be completing the implementation required to make the GUI function."
       },
       "seeding_key": {
@@ -1812,7 +1813,7 @@
       "key": "17c46f7f-3ea4-4e38-8965-175420c138a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute the [r csa_celebrity_class_lesson_7_activity_guide/csa-labs/unversioned]. Direct students to also take out the activity guide from the previous lesson. They will need that activity guide to look at their `play` method and the `Game` class in order to answer question 4 in today's activity guide.\n\n Students should work on Part 1 of the activity guide. Once students have completed question 4, review the UML diagrams and the code provided in `Celebrity.java` class.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute the [r csa_celebrity_class_lesson_7_activity_guide/csa-labs/unversioned]. Direct students to also take out the activity guide from the previous lesson. They will need that activity guide to look at their `play` method and the `Game` class in order to answer question 4 in today's activity guide.\n\n Students should work on Part 1 of the activity guide. Once students have completed question 4, complete a UML diagram with the class and the code provided in `Celebrity.java` class.\n\n\n",
         "name": "Simple Celebrity Class Activity Guide",
         "tips": [
           {
@@ -1830,7 +1831,7 @@
       "key": "4a4c96a0-f0f9-4c44-9182-043391836d81",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to go to Lesson 7, Level 1 to complete the `Celebrity` class based on their answers to part 1 of the activity guide. Students should also be directed to write code to test their `Celebrity` class. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Based on Part 1 and the creation of the UML diagram, direct students to move on to Part 2 of the activity guide where they will complete the `Celebrity` class as well as code to test the `Celebrity` class. You may decide to have students complete this part in Java or in pseudocode. \n\n**Do This:** When students have completed Part 2 of their activity guide, direct students to go to Lesson 8, Level 1 to complete the `Celebrity` class based on their answers to part 1 of the activity guide. Students should also be directed to write code to test their `Celebrity` class. \n",
         "name": "Complete and Test the Celebrity Class",
         "progression_name": "Celebrity Class",
         "tips": [
@@ -2755,6 +2756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Celebrity-L2-L1_2022"
+        ],
         "progression": "Celebrity Class"
       },
       "bonus": false,
@@ -3184,7 +3188,7 @@
   ],
   "resources": [
     {
-      "name": "[KEY] CSA Celebrity Class Lesson 7 Activity Guide",
+      "name": "[KEY] CSA Celebrity Class: A Simple Version Activity Guide",
       "url": "https://docs.google.com/document/d/1W0sjEW9tueswsYu4YqbAQ7D3103qlvpQo46-hSjQ59U/edit?usp=sharing",
       "key": "_key_csa_celebrity_class_lesson_7_activity_guide",
       "properties": {
@@ -3193,6 +3197,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_csa_celebrity_class_lesson_7_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] CSA Celebrity Lab - Putting It All Together Activity Guide",
+      "url": "https://docs.google.com/document/d/1J6L-0ZMGqObTq8KcaeeGzBNxK5HEsme_e72QfFyE7pk/edit?usp=sharing",
+      "key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide"
       }
     },
     {
@@ -3220,7 +3236,7 @@
       }
     },
     {
-      "name": "CSA Celebrity Class Lesson 7 Activity Guide",
+      "name": "CSA Celebrity Class: A Simple Version Activity Guide",
       "url": "https://docs.google.com/document/d/1l2TYIy-bRiz1hgK5LIE5VxD9-o__V18O5U0K2kzxdGM/edit?usp=sharing",
       "key": "csa_celebrity_class_lesson_7_activity_guide",
       "properties": {
@@ -3229,6 +3245,18 @@
       },
       "seeding_key": {
         "resource.key": "csa_celebrity_class_lesson_7_activity_guide"
+      }
+    },
+    {
+      "name": "CSA Celebrity Lab - Putting It All Together Activity Guide",
+      "url": "https://docs.google.com/document/d/1pzr3z1gu3CKSnyaNb7nIQhaM1qISbGDrSuXDE-xH1ME/edit?usp=sharing",
+      "key": "csa_celebrity_lab_-_putting_it_all_together_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "csa_celebrity_lab_-_putting_it_all_together_activity_guide"
       }
     },
     {
@@ -3277,6 +3305,174 @@
       },
       "seeding_key": {
         "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "name": "Student Starter Code - Celebrity.java",
+      "url": "https://docs.google.com/document/d/1Er1WGzrfgxvtjtj23FrDb2r_xOKV1UStZNrgkyH8crw/edit?usp=sharing",
+      "key": "student_starter_code_-_celebrity_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebrity_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityFrame.java",
+      "url": "https://docs.google.com/document/d/1DVyqvo234fKVh_3m5B_4TMvIdmTKrnUlMUX6z8FZ0Vo/edit?usp=sharing",
+      "key": "student_starter_code_-_celebrityframe_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityGame.java",
+      "url": "https://docs.google.com/document/d/1j8ybN1voKB-uHFQDyyC-6fzRaMSWqzS2s3239Ak3M-c/edit?usp=sharing",
+      "key": "student_starter_code_-_celebritygame_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebritygame_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityPanel.java",
+      "url": "https://docs.google.com/document/d/1-d4RaUndX-aAhkEJjF4gXdFFPQ9SpkCQXS23f1I0750/edit?usp=sharing",
+      "key": "student_starter_code_-_celebritypanel_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityRunner.java",
+      "url": "https://docs.google.com/document/d/1-0ZY6AYH6wqb0Lo69JziJJPuqlqNa7tcCgHcQh_9Gyo/edit?usp=sharing",
+      "key": "student_starter_code_-_celebrityrunner_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - SimpleGUIRunner.java",
+      "url": "https://docs.google.com/document/d/1zJXQ8Z_6KxQYOyWPD0Ea-FFUfhb8AyWAlDilDfEJQNI/edit?usp=sharing",
+      "key": "student_starter_code_-_simpleguirunner_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - StartPanel.java",
+      "url": "https://docs.google.com/document/d/1QaQ5xG2beaHJaq8hKkAjBelyood6HDU_MVAsJc-Qtfk/edit?usp=sharing",
+      "key": "student_starter_code_-_startpanel_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_startpanel_java"
+      }
+    },
+    {
+      "name": "Teacher Code - Celebrity.java",
+      "url": "https://docs.google.com/document/d/1s3zKnfAIy3dymlgNrODV4jSmhQyZgHa0MwfTFFzw1n0/edit?usp=sharing",
+      "key": "teacher_code_-_celebrity_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebrity_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityFrame.java",
+      "url": "https://docs.google.com/document/d/17_Qig-BB6A8lrIEBdj2MEyUNFi_Y9acDKbqTqXLc9nc/edit?usp=sharing",
+      "key": "teacher_code_-_celebrityframe_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityGame.java",
+      "url": "https://docs.google.com/document/d/1Eo9bQTKiE_Fxtg_2XCG9ftqVAuhQWqwhTmlBlXplr7M/edit?usp=sharing",
+      "key": "teacher_code_-_celebritygame_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebritygame_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityPanel.java",
+      "url": "https://docs.google.com/document/d/1xodEbMI0ERV8auNUR4iq6Sjihegnx-Ebr-AyxLdJDxs/edit?usp=sharing",
+      "key": "teacher_code_-_celebritypanel_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityRunner.java",
+      "url": "https://docs.google.com/document/d/1yjDV69jhu3C4-Zvi6ICL_n5GMRftdWtVXm9DGXmsDUQ/edit?usp=sharing",
+      "key": "teacher_code_-_celebrityrunner_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "name": "Teacher Code - SimpleGUIRunner.java",
+      "url": "https://docs.google.com/document/d/1C3pyl1pfkG7TSVOjJAfpYXbf8U_YZNe9I0a-thMIc3M/edit?usp=sharing",
+      "key": "teacher_code_-_simpleguirunner_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "name": "Teacher Code - StartPanel.java",
+      "url": "https://docs.google.com/document/d/1PDLgVB8g-zbG_EnSz0FtmE6n56HlPS53hrxJkhCaVxI/edit?usp=sharing",
+      "key": "teacher_code_-_startpanel_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_startpanel_java"
       }
     },
     {
@@ -3376,6 +3572,102 @@
         "lesson.key": "lesson-7",
         "resource.key": "csa_celebrity_class_lesson_7_activity_guide"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebrity_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebritygame_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_startpanel_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebrity_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebritygame_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_startpanel_java"
+      }
     }
   ],
   "scripts_resources": [
@@ -3462,6 +3754,16 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "54bae34c-d029-4d24-8abb-306c8fa95ede"
+      }
+    },
+    {
+      "key": "5b23cd46-0f18-4b28-ac50-4f0c69595e81",
+      "properties": {
+        "description": "Write program code to declare instance variables and write headers for constructors with or without parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "5b23cd46-0f18-4b28-ac50-4f0c69595e81"
       }
     },
     {

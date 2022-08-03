@@ -7,7 +7,7 @@ import {DataView} from '../constants';
 import EditKeyRow from './EditKeyRow';
 import DataEntryError from './DataEntryError';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
