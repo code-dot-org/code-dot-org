@@ -60,4 +60,7 @@ export {editorSetup};
 export const lightTheme = EditorView.theme({}, {dark: false});
 
 // Extension to enable the light theme (both the editor theme and the highlight style).
-export const lightMode = [lightTheme, defaultHighlightStyle];
+export const lightMode = [
+  lightTheme,
+  syntaxHighlighting(defaultHighlightStyle)
+];
