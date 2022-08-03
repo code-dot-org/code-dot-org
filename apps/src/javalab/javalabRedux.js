@@ -1,5 +1,6 @@
 import UserPreferences from '../lib/util/UserPreferences';
 import {DisplayTheme} from './DisplayTheme';
+import {fileMetadataForEditor} from './JavalabFileHelper';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
@@ -8,7 +9,8 @@ const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
 const SOURCE_TEXT_UPDATED = 'javalab/SOURCE_TEXT_UPDATED';
-const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
+const SET_ALL_SOURCES_AND_FILE_METADATA =
+  'javalab/SET_ALL_SOURCES_AND_FILE_METADATA';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
@@ -33,17 +35,21 @@ const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
 const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
 const SET_VALIDATION_PASSED = 'javalab/SET_VALIDATION_PASSED';
 const SET_HAS_RUN_OR_TESTED = 'javalab/SET_HAS_RUN_OR_TESTED';
+const SET_EDIT_TAB_KEY = 'javalab/SET_EDIT_TAB_KEY';
+const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
+const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
+const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
+const SET_ALL_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
+
+const initialSources = {
+  'MyClass.java': {text: '', isVisible: true, isValidation: false}
+};
 
 // Exported for test
 export const initialState = {
+  ...fileMetadataForEditor(initialSources),
   consoleLogs: [],
-  sources: {
-    'MyClass.java': {
-      text: '',
-      isVisible: true,
-      isValidation: false
-    }
-  },
+  sources: initialSources,
   displayTheme: DisplayTheme.LIGHT,
   validation: {},
   renderedEditorHeight: 400,
@@ -100,9 +106,13 @@ export const setAllValidation = validation => ({
   validation
 });
 
-export const setAllSources = sources => ({
-  type: SET_ALL_SOURCES,
-  sources
+export const setAllSourcesAndFileMetadata = (
+  sources,
+  isEditingStartSources
+) => ({
+  type: SET_ALL_SOURCES_AND_FILE_METADATA,
+  sources,
+  isEditingStartSources
 });
 
 export const renameFile = (oldFilename, newFilename) => ({
@@ -284,6 +294,49 @@ export const setCommitSaveStatus = (
   hasCommitSaveError
 });
 
+export const setEditTabKey = editTabKey => {
+  return {
+    type: SET_EDIT_TAB_KEY,
+    editTabKey
+  };
+};
+
+export const setActiveTabKey = activeTabKey => {
+  return {
+    type: SET_ACTIVE_TAB_KEY,
+    activeTabKey
+  };
+};
+
+export const setFileMetadata = fileMetadata => {
+  return {
+    type: SET_FILE_METADATA,
+    fileMetadata
+  };
+};
+
+export const setOrderedTabKeys = orderedTabKeys => {
+  return {
+    type: SET_ORDERED_TAB_KEYS,
+    orderedTabKeys
+  };
+};
+
+export const setAllEditorMetadata = (
+  fileMetadata,
+  orderedTabKeys,
+  activeTabKey,
+  lastTabKeyIndex
+) => {
+  return {
+    type: SET_ALL_EDITOR_METADATA,
+    fileMetadata,
+    orderedTabKeys,
+    activeTabKey,
+    lastTabKeyIndex
+  };
+};
+
 export const setValidationPassed = validationPassed => ({
   type: SET_VALIDATION_PASSED,
   validationPassed
@@ -367,9 +420,10 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
-  if (action.type === SET_ALL_SOURCES) {
+  if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
     return {
       ...state,
+      ...fileMetadataForEditor(action.sources, action.isEditingStartSources),
       sources: action.sources
     };
   }
@@ -500,6 +554,39 @@ export default function reducer(state = initialState, action) {
       ...state,
       isCommitSaveInProgress: action.isCommitSaveInProgress,
       hasCommitSaveError: action.hasCommitSaveError
+    };
+  }
+  if (action.type === SET_EDIT_TAB_KEY) {
+    return {
+      ...state,
+      editTabKey: action.editTabKey
+    };
+  }
+  if (action.type === SET_ACTIVE_TAB_KEY) {
+    return {
+      ...state,
+      activeTabKey: action.activeTabKey
+    };
+  }
+  if (action.type === SET_ORDERED_TAB_KEYS) {
+    return {
+      ...state,
+      orderedTabKeys: action.orderedTabKeys
+    };
+  }
+  if (action.type === SET_FILE_METADATA) {
+    return {
+      ...state,
+      fileMetadata: action.fileMetadata
+    };
+  }
+  if (action.type === SET_ALL_EDITOR_METADATA) {
+    return {
+      ...state,
+      fileMetadata: action.fileMetadata,
+      orderedTabKeys: action.orderedTabKeys,
+      activeTabKey: action.activeTabKey,
+      lastTabKeyIndex: action.lastTabKeyIndex || state.lastTabKeyIndex
     };
   }
   if (action.type === SET_VALIDATION_PASSED) {
