@@ -1,0 +1,26 @@
+{
+  "category": "CSC",
+  "config": {
+    "func": "spriteSay",
+    "blockText": "{SPRITE} say {SPEECH}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "We migrate north to cooler waters in the summer.",
+            "\"We migrate north to cooler waters in the summer.\""
+          ],
+          [
+            "We migrate south to warmer waters in the winter.",
+            "\"We migrate south to warmer waters in the winter.\""
+          ]
+        ]
+      }
+    ]
+  }
+}
