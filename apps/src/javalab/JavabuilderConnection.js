@@ -68,7 +68,7 @@ export default class JavabuilderConnection {
       '/javabuilder/access_token',
       requestData,
       /* checkProjectEdited */ true
-    ).then(this.onConnectDone);
+    );
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -86,7 +86,7 @@ export default class JavabuilderConnection {
       requestData,
       /* checkProjectEdited */ false,
       /* usePostRequest */ true
-    ).then(this.onConnectDone);
+    );
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -103,15 +103,16 @@ export default class JavabuilderConnection {
       requestData,
       /* checkProjectEdited */ true,
       /* usePostRequest */ true
-    ).then(this.onConnectDone);
+    );
   }
 
-  async connectJavabuilderHelper(
-    url,
-    data,
-    checkProjectEdited,
-    usePostRequest
-  ) {
+  connectJavabuilderHelper(url, data, checkProjectEdited, usePostRequest) {
+    this.initiateConnection(url, data, checkProjectEdited, usePostRequest).then(
+      this.onConnectDone
+    );
+  }
+
+  async initiateConnection(url, data, checkProjectEdited, usePostRequest) {
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
