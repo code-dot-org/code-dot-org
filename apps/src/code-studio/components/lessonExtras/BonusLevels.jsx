@@ -1,6 +1,6 @@
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import color from '../../../util/color';
 import i18n from '@cdo/locale';
