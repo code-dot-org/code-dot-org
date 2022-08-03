@@ -1,7 +1,7 @@
 require_relative './test_helper'
 require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
-require 'channels_api'
+require 'helpers/core'
 
 CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze
 CAUSES_CIPHERERROR = "IMALITTLETEAPOTSHORTANDSTOUT".freeze
@@ -11,7 +11,6 @@ class Base64ErrorTest < Minitest::Test
 
   def setup
     @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
   end
 
   def test_base64_error
@@ -28,22 +27,7 @@ class Base64ErrorTest < Minitest::Test
   private
 
   def run_test_cases(channel_id)
-    @channels.get "/v3/channels/#{channel_id}"
-    assert_equal 400, @channels.last_response.status
-
-    @channels.post "/v3/channels/#{channel_id}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert_equal 400, @channels.last_response.status
-
-    @channels.delete "/v3/channels/#{channel_id}"
-    assert_equal 400, @channels.last_response.status
-
     @pegasus.get "/v2/hoc/certificate/#{channel_id}"
     assert_equal 400, @pegasus.last_response.status
-
-    @channels.get "/v3/channels/#{channel_id}/abuse"
-    assert_equal 400, @channels.last_response.status
-
-    @channels.post "/v3/channels/#{channel_id}/abuse", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert_equal 400, @channels.last_response.status
   end
 end
