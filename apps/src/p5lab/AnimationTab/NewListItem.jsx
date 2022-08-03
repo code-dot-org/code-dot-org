@@ -2,7 +2,7 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 /**
  * List item control (usable in animation or frame lists) for adding
