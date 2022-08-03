@@ -1,7 +1,6 @@
 require_relative './test_helper'
 require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
-require 'helpers/core'
 
 CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze
 CAUSES_CIPHERERROR = "IMALITTLETEAPOTSHORTANDSTOUT".freeze
