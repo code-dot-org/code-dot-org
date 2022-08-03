@@ -77,5 +77,4 @@ Dashboard::Application.configure do
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = false
-  ActiveRecord::SchemaDumper.ignore_tables = ['google_sheets_shared_.*']
 end

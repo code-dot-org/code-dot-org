@@ -15,6 +15,7 @@ class CsvToSqlTable
   def up_to_date?
     seed = @db[:seed_info].where(table: @table.to_s).first
     return false unless seed
+
     mtime = File.mtime(@path)
     mtime.to_s == seed[:mtime].to_s
   end
@@ -29,6 +30,7 @@ class CsvToSqlTable
 
     # Starting with 1 means the first item's ID is 2 which matches the id to the line number of the item.
     at = 1
+
     CSV.open(@path, 'rb', encoding: 'utf-8') do |csv|
       table, columns = create_table(csv.shift)
       while values = csv.shift
@@ -68,6 +70,7 @@ class CsvToSqlTable
 
   def create_table(columns)
     schema = columns.map {|column| column_name_to_schema(column)}
+
     @db.create_table!(@table, charset: 'utf8') do
       primary_key :id
 
