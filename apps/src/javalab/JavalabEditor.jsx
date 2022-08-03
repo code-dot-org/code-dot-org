@@ -43,7 +43,11 @@ import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
+import {
+  getDefaultFileContents,
+  getTabKey,
+  isJavaFile
+} from './JavalabFileHelper';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import {java} from '@codemirror/lang-java';
 
@@ -231,9 +235,7 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const fileName = this.state.fileMetadata[key];
-    const isJava = fileName.endsWith('.java');
-    const {displayTheme, isReadOnlyWorkspace} = this.props;
+    const {displayTheme, isReadOnlyWorkspace, fileMetadata} = this.props;
     const extensions = [...editorSetup];
 
     extensions.push(
@@ -258,13 +260,12 @@ class JavalabEditor extends React.Component {
         EditorState.readOnly.of(isReadOnlyWorkspace)
       )
     );
-    console.log(`fileName is ${fileName}`);
-    console.log(`isJava is ${isJava}`);
-    if (isJava) {
-      this.languageCompartment.of(java());
-    }
 
-    extensions.push(this.languageCompartment);
+    if (isJavaFile(fileMetadata[key])) {
+      extensions.push(this.languageCompartment.of(java()));
+    } else {
+      extensions.push(this.languageCompartment.of([]));
+    }
 
     this.editors[key] = new EditorView({
       state: EditorState.create({
@@ -450,6 +451,18 @@ class JavalabEditor extends React.Component {
     // update sources with new filename
     renameFile(oldFilename, newFilename);
     setFileMetadata(newFileMetadata);
+
+    // change syntax highlighting if there was a change from non-java to java or vice-versa
+    if (isJavaFile(newFilename) && !isJavaFile(oldFilename)) {
+      this.editors[editTabKey].dispatch({
+        effects: this.languageCompartment.reconfigure(java())
+      });
+    } else if (!isJavaFile(newFilename) && isJavaFile(oldFilename)) {
+      this.editors[editTabKey].dispatch({
+        effects: this.languageCompartment.reconfigure([])
+      });
+    }
+
     projectChanged();
     this.setState({
       openDialog: null,
