@@ -1,7 +1,6 @@
 /** A single list item representing an animation. */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';
@@ -180,7 +179,7 @@ class AnimationListItem extends React.Component {
         <div style={styles.nameInputWrapper}>
           <input
             type="text"
-            style={[styles.nameInput, invalidNameStyle]}
+            style={{...styles.nameInput, ...invalidNameStyle}}
             value={name}
             onChange={this.onNameChange}
           />
@@ -190,13 +189,10 @@ class AnimationListItem extends React.Component {
       animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
-    const tileStyle = [
-      styles.tile,
-      this.props.isSelected && styles.selectedTile,
-      this.props.style
-    ];
+    const selectedStyle = this.props.isSelected ? styles.selectedTile : {};
+    const tileStyle = {...styles.tile, ...selectedStyle, ...this.props.style};
 
-    const arrowStyle = [this.props.isSelected && styles.rightArrow];
+    const arrowStyle = this.props.isSelected ? styles.rightArrow : {};
 
     return (
       <button style={tileStyle} onClick={this.onSelect} type="button">
@@ -318,4 +314,4 @@ export default connect(
       }
     };
   }
-)(Radium(AnimationListItem));
+)(AnimationListItem);
