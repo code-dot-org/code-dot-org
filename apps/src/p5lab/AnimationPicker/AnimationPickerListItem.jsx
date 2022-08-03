@@ -1,7 +1,7 @@
 /** @file A clickable item in the scroll area of the animation picker */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
