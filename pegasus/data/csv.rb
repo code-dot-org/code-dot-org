@@ -8,8 +8,8 @@ class CsvToSqlTable
   def initialize(path, params={})
     @db = params[:db] || PEGASUS_DB
     @path = path
-    @table_prefix = params[:table_prefix] || ''
-    @table = (@table_prefix + File.basename(@path, File.extname(@path)).tr('-', '_')).to_sym
+    table_prefix = params[:table_prefix] || ''
+    @table = (table_prefix + File.basename(@path, File.extname(@path)).tr('-', '_')).to_sym
   end
 
   def up_to_date?
