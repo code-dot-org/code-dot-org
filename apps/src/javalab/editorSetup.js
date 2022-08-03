@@ -49,7 +49,6 @@ const editorSetup = [
     ...foldKeymap,
     indentWithTab
   ]),
-  //java(),
   EditorState.tabSize.of(2)
 ];
 
