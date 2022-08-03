@@ -31,6 +31,7 @@
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introduzione all'artista",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video per gli alunni"
         },
         "csf-turns-angles-doc/artist/unversioned": {
@@ -39,6 +40,7 @@
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Curve e angoli",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video per gli alunni"
         },
         "dance-party-playlist/dance/unversioned": {
@@ -519,7 +521,8 @@
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "exploring_apps/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "type": "Risorse"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Introduzione al Laboratorio dei Personaggi",
@@ -535,7 +538,8 @@
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Documentazione Sviluppo App",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Risorse"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Personaggi in azione",
@@ -552,11 +556,13 @@
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Il potere delle parole: le parole possono ferire",
-          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
+          "type": "Dispensa"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
           "name": "Il potere delle parole: Lesson Quiz",
-          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
+          "type": "Risorse"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
           "name": "Il potere delle parole: Lesson Quiz",
@@ -567,9 +573,11 @@
           "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Storia delle caselle vuote",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "Storia delle caselle vuote",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "text_and_prompts/coursef/2021": {
@@ -586,7 +594,8 @@
         },
         "teacher_sandbox_level/coursef/2021": {
           "name": "Livello sandbox per insegnanti",
-          "url": "https://studio.code.org/levels/27300"
+          "url": "https://studio.code.org/levels/27300",
+          "type": "Risorse"
         },
         "mini_project_user_input_programs_1/coursef/2021": {
           "name": "Mini progetto: programmi di input utente",
@@ -611,7 +620,8 @@
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
           "name": "Divertiti usando i cicli con contatore",
-          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit",
+          "type": "Esercitazione"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Divertiti usando i cicli con contatore",
@@ -624,11 +634,13 @@
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Attività manipolative"
         },
         "running-simulations/coursef/2021": {
           "name": "Simulazioni in corso",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "type": "Esercitazione"
         },
         "ai-ml/coursef/2021": {
           "name": "IA: Apprendimento Automatico (Machine Learning)",
@@ -648,7 +660,8 @@
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
           "name": "Schede indirizzo IP e tipo di trasmissione",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
+          "type": "Attività manipolative"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
@@ -661,7 +674,8 @@
         },
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
-          "url": "http://get-site-ip.com/"
+          "url": "http://get-site-ip.com/",
+          "type": "Risorse"
         },
         "design-process/coursef/2021": {
           "name": "Il processo di progettazione",
@@ -669,7 +683,8 @@
         },
         "final-project-design-worksheet/coursef/2021": {
           "name": "Progetto finale - Foglio di lavoro",
-          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/"
+          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/",
+          "type": "Esercitazione"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Progetto finale - Fondamenti d'informatica",
@@ -677,51 +692,63 @@
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/coursef-2021/standards"
+          "url": "https://studio.code.org/s/coursef-2021/standards",
+          "type": "Risorse"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
           "name": "Guida Common Core e NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
+          "type": "Risorse"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
           "name": "Attività di estensione interdisciplinare",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Risorse"
         },
         "course_vocabulary/coursef/2021": {
           "name": "Glossario del corso\t",
-          "url": "https://studio.code.org/s/coursef-2021/vocab"
+          "url": "https://studio.code.org/s/coursef-2021/vocab",
+          "type": "Risorse"
         },
         "implementation_guide/coursef/2021": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Risorse"
         },
         "lesson_type_guide/coursef/2021": {
           "name": "Guida al tipo di lezione",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Risorse"
         },
         "debugging_guide/coursef/2021": {
           "name": "Guida alla correzione di errori",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Risorse"
         },
         "curriculum_guide_1/coursef/2021": {
           "name": "Guida Curriculum",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Risorse"
         },
         "2021_change_log/coursef/2021": {
           "name": "Registro modifiche 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Risorse"
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Documentazione Sviluppo App",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Risorse"
         },
         "virtual_lesson_modifications/coursef/2021": {
           "name": "Modifiche alla lezione virtuale",
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
+          "type": "Risorse"
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Percorsi digitali: diapositive delle lezioni",
@@ -747,7 +774,8 @@
         },
         "mimi-debugging/courseb/2021": {
           "name": "Muovilo, muovilo",
-          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
+          "type": "Esercitazione"
         },
         "mimi-teacher-puzzle/courseb/2021": {
           "name": "Muovilo, muovilo",
@@ -760,7 +788,8 @@
         },
         "feeling_faces_emotion_image/courseb/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "feeling-faces-image/courseb/2021": {
           "name": "Faccine delle emozioni",
@@ -777,7 +806,8 @@
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi A e B)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Attività manipolative"
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Programmazione in coppia",
@@ -791,23 +821,28 @@
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Regola 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Risorse"
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "Parti del gioco Mappe felici",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Attività manipolative"
         },
         "compass-rose/courseb/2021": {
           "name": "La Rosa dei venti",
-          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
+          "type": "Dispensa"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stefi e il grande progetto",
-          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
+          "type": "Risorse"
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Quei fastidiosi insetti nascosti",
@@ -820,7 +855,8 @@
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
           "name": "Diventare ripetitivi",
-          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
+          "type": "Esercitazione"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Diventare ripetitivi",
@@ -864,7 +900,8 @@
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "Guida alla pianificazione del progetto Play Lab",
-          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
+          "type": "Dispensa"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
           "name": "Guida alla pianificazione del progetto Play Lab",
@@ -872,47 +909,58 @@
         },
         "csta_standards_mapping/courseb/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/courseb-2021/standards"
+          "url": "https://studio.code.org/s/courseb-2021/standards",
+          "type": "Risorse"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
           "name": "Guida Common Core e NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
+          "type": "Risorse"
         },
         "cross-curricular_extension_activities/courseb/2021": {
           "name": "Attività di estensione interdisciplinare",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Risorse"
         },
         "course_vocabulary/courseb/2021": {
-          "name": "Vocabolario",
-          "url": "https://studio.code.org/s/courseb-2021/vocab"
+          "name": "Glossario del corso",
+          "url": "https://studio.code.org/s/courseb-2021/vocab",
+          "type": "Risorse"
         },
         "implementation_guide/courseb/2021": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Risorse"
         },
         "lesson_type_guide/courseb/2021": {
           "name": "Guida al tipo di lezione",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Risorse"
         },
         "debugging_guide/courseb/2021": {
           "name": "Guida alla correzione di errori",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Risorse"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "Guida Curriculum",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Risorse"
         },
         "2021_change_log/courseb/2021": {
           "name": "Registro modifiche 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Risorse"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "virtual_lesson_modifications/courseb/2021": {
           "name": "Modifiche alla lezione virtuale",
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
+          "type": "Risorse"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "Sicurezza nel mio quartiere online: diapositive delle lezioni",
@@ -938,7 +986,8 @@
         },
         "20_20_20_rule/coursea/2021": {
           "name": "Regola 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Risorse"
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles-Go Noodle",
@@ -956,7 +1005,8 @@
         },
         "happy-map-cards/coursea/2021": {
           "name": "Schede Mappe felici",
-          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
+          "type": "Esercitazione"
         },
         "activity-answer-happy-maps/coursea/2021": {
           "name": "Schede Mappe felici",
@@ -964,19 +1014,23 @@
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "Parti del gioco Mappe felici",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Attività manipolative"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
+          "type": "Risorse"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi A e B)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Attività manipolative"
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "Regola 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Risorse"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
@@ -990,23 +1044,28 @@
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "happy-map-cards-xl/coursea/2021": {
           "name": "Schede Mappe felici XL",
-          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
+          "type": "Esercitazione"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
           "name": "Pacchetto bonus parti del gioco Mappe felici",
-          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
+          "type": "Attività manipolative"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Faccine delle emozioni",
@@ -1020,11 +1079,13 @@
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "csf_lesson_recommendations/coursea/2021": {
           "name": "Consigli per le lezioni CSF",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Risorse"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Fermati e pensa online",
@@ -1033,11 +1094,13 @@
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
           "name": "Consigli per le lezioni CSF",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Risorse"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Il grande evento",
@@ -1058,7 +1121,8 @@
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "Suggerimenti per le principali attività dei corsi di Fondamenti di informatica",
@@ -1066,15 +1130,18 @@
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Risorse"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
           "name": "Consigli per le lezioni CSF",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Risorse"
         },
         "artist_project_planning_guide/coursea/2021": {
           "name": "Guida alla pianificazione dei progetti per",
-          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+          "type": "Dispensa"
         },
         "artist_project_planning_guide_1/coursea/2021": {
           "name": "Guida alla pianificazione dei progetti per",
@@ -1082,47 +1149,58 @@
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/coursea-2021/standards"
+          "url": "https://studio.code.org/s/coursea-2021/standards",
+          "type": "Risorse"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
           "name": "Guida Common Core e NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
+          "type": "Risorse"
         },
         "cross-curricular_extension_activities/coursea/2021": {
           "name": "Attività di estensione interdisciplinare",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Risorse"
         },
         "course_vocabulary/coursea/2021": {
-          "name": "Vocabolario",
-          "url": "https://studio.code.org/s/coursea-2021/vocab"
+          "name": "Glossario del corso",
+          "url": "https://studio.code.org/s/coursea-2021/vocab",
+          "type": "Risorse"
         },
         "implementation_guide/coursea/2021": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Risorse"
         },
         "lesson_type_guide/coursea/2021": {
           "name": "Guida al tipo di lezione",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Risorse"
         },
         "debugging_guide/coursea/2021": {
           "name": "Guida alla correzione di errori",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Risorse"
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "Guida Curriculum",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Risorse"
         },
         "2021_change_log/coursea/2021": {
           "name": "Registro modifiche 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Risorse"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "virtual_lesson_modifications/coursea/2021": {
           "name": "Modifiche alla lezione virtuale",
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
+          "type": "Risorse"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "Fermare la cattiveria online: diapositive della lezione",
@@ -1158,8 +1236,9 @@
           "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
         },
         "unplugged-maze-blocks/coursec/2021": {
-          "name": "Blocchi tradizionali del labirinto",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "name": "Lezione Tradizionale - Blocchi del labirinto",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Attività manipolative"
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programmazione in coppia",
@@ -1172,18 +1251,22 @@
         },
         "debugging_guide/coursec/2021": {
           "name": "Guida alla correzione di errori",
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
+          "type": "Risorse"
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Attività manipolative"
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "Introduzione all'artista",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video per gli alunni"
         },
         "csf-turns-angles-video/coursec/2021": {
           "name": "Curve e angoli",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video per gli alunni"
         },
         "csf-turns-angles-doc/coursec/2021": {
@@ -1193,7 +1276,8 @@
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Emoticon - Rappresentazione grafica delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
+          "type": "Risorse"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Il grande evento",
@@ -1227,7 +1311,8 @@
         },
         "right-app-scenarios/coursec/2021": {
           "name": "Rappresentazione grafica dei dati da Play Lab",
-          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
+          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
+          "type": "Esercitazione"
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "Bit vs Byte",
@@ -1244,7 +1329,8 @@
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "Braccialetti binari",
-          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
+          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
+          "type": "Esercitazione"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Braccialetti binari",
@@ -1261,51 +1347,63 @@
         },
         "play-lab-project-guide/coursec/2021": {
           "name": "Guida alla pianificazione del progetto Play Lab",
-          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
+          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit",
+          "type": "Esercitazione"
         },
         "csta_standards_mapping/coursec/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/coursec-2021/standards"
+          "url": "https://studio.code.org/s/coursec-2021/standards",
+          "type": "Risorse"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
           "name": "Guida Common Core e NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
+          "type": "Risorse"
         },
         "cross-curricular_extension_activities/coursec/2021": {
           "name": "Attività di estensione interdisciplinare",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Risorse"
         },
         "course_vocabulary/coursec/2021": {
-          "name": "Vocabolario",
-          "url": "https://studio.code.org/s/coursec-2021/vocab"
+          "name": "Glossario del corso",
+          "url": "https://studio.code.org/s/coursec-2021/vocab",
+          "type": "Risorse"
         },
         "implementation_guide/coursec/2021": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Risorse"
         },
         "lesson_type_guide/coursec/2021": {
           "name": "Guida al tipo di lezione",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Risorse"
         },
         "debugging_guide_1/coursec/2021": {
           "name": "Guida alla correzione di errori",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Risorse"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "Guida Curriculum",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Risorse"
         },
         "2021_change_log/coursec/2021": {
           "name": "Registro modifiche 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Risorse"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "virtual_lesson_modifications/coursec/2021": {
           "name": "Modifiche alla lezione virtuale",
-          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
+          "type": "Risorse"
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "Potenziamento password: diapositive della lezione",
@@ -1313,7 +1411,8 @@
         },
         "password_power-up_power-up_your_password/coursed/2021": {
           "name": "Accensione della password: potenzia la tua password",
-          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit"
+          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit",
+          "type": "Dispensa"
         },
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
           "name": "Accensione della password: potenzia la tua password",
@@ -1321,7 +1420,8 @@
         },
         "password_power-up_lesson_quiz/coursed/2021": {
           "name": "Potenziamento della password: quiz sulla lezione",
-          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
+          "type": "Risorse"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
           "name": "Potenziamento della password: quiz sulla lezione",
@@ -1329,7 +1429,8 @@
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
           "name": "Accensione password: se... allora... scenari",
-          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
+          "type": "Dispensa"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
           "name": "Accensione password: se... allora... scenari",
@@ -1371,7 +1472,8 @@
         },
         "relay-assessment/coursed/2021": {
           "name": "Programmazione a staffetta",
-          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
+          "type": "Esercitazione"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Programmazione a staffetta",
@@ -1392,7 +1494,8 @@
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Attività manipolative"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
@@ -1412,14 +1515,16 @@
         },
         "dance-party-project-guide/coursed/2021": {
           "name": "Guida al progetto Dance Party",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Esercitazione"
         },
         "dance-party-playlist/coursed/2021": {
           "name": "Playlist Spotify (tutte le età)"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "Festa di ballo",
-          "url": "https://curriculum.code.org/hoc/unplugged/4/"
+          "url": "https://curriculum.code.org/hoc/unplugged/4/",
+          "type": "Risorse"
         },
         "open-ended_programming_levels_2/coursed/2021": {
           "name": "Livelli di programmazione aperti",
@@ -1466,51 +1571,63 @@
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/coursed-2021/standards"
+          "url": "https://studio.code.org/s/coursed-2021/standards",
+          "type": "Risorse"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
           "name": "Guida Common Core e NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
+          "type": "Risorse"
         },
         "cross-curricular_extension_activities/coursed/2021": {
           "name": "Attività di estensione interdisciplinare",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Risorse"
         },
         "course_vocabulary/coursed/2021": {
-          "name": "Vocabolario",
-          "url": "https://studio.code.org/s/coursed-2021/vocab"
+          "name": "Glossario del corso",
+          "url": "https://studio.code.org/s/coursed-2021/vocab",
+          "type": "Risorse"
         },
         "implementation_guide/coursed/2021": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Risorse"
         },
         "lesson_type_guide/coursed/2021": {
           "name": "Guida al tipo di lezione",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Risorse"
         },
         "debugging_guide/coursed/2021": {
           "name": "Guida alla correzione di errori",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Risorse"
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "Guida Curriculum",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Risorse"
         },
         "2021_change_log/coursed/2021": {
           "name": "Registro modifiche 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Risorse"
         },
         "teacher_forum_1/coursed/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "virtual_lesson_modifications/coursed/2021": {
           "name": "Modifiche alla lezione virtuale",
-          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit",
+          "type": "Risorse"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "Blocchi tradizionali del labirinto",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "name": "Lezione Tradizionale - Blocchi del labirinto",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Risorse"
         },
         "pair_programming/express/2021": {
           "name": "Programmazione in coppia",
@@ -1523,23 +1640,27 @@
         },
         "artist_introduction/express/2021": {
           "name": "Introduzione all'artista",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video"
         },
         "turns_angles/express/2021": {
           "name": "Curve e angoli",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
           "name": "Curve e angoli",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Dispensa"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "Sandbox per insegnanti di pesce di nuoto",
+          "name": "Ambiente di prova: istruttori di nuoto per pesci",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Documentazione Sviluppo App",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Risorse"
         },
         "making_sprites/express/2021": {
           "name": "Creazione di personaggi",
@@ -1547,7 +1668,8 @@
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Documentazione Sviluppo App",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Risorse"
         },
         "sprites_in_action/express/2021": {
           "name": "Personaggi in azione",
@@ -1560,7 +1682,8 @@
         },
         "dance-party-project-guide/express/2021": {
           "name": "Guida al progetto Dance Party",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Esercitazione"
         },
         "dance-party-playlist/express/2021": {
           "name": "Playlist Spotify (tutte le età)"
@@ -1613,15 +1736,18 @@
         },
         "csta_standards_mapping/express/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/express-2021/standards"
+          "url": "https://studio.code.org/s/express-2021/standards",
+          "type": "Risorse"
         },
         "course_vocabulary_1/express/2021": {
           "name": "Glossario del corso\t",
-          "url": "https://studio.code.org/s/express-2021/vocab"
+          "url": "https://studio.code.org/s/express-2021/vocab",
+          "type": "Risorse"
         },
         "teacher_forum_1/express/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "debugging_guide/express/2021": {
           "name": "Guida alla correzione di errori",
@@ -1659,15 +1785,18 @@
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/pre-express-2021/standards"
+          "url": "https://studio.code.org/s/pre-express-2021/standards",
+          "type": "Risorse"
         },
         "course_vocabulary/pre-express/2021": {
           "name": "Glossario del corso\t",
-          "url": "https://studio.code.org/s/pre-express-2021/vocab"
+          "url": "https://studio.code.org/s/pre-express-2021/vocab",
+          "type": "Risorse"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "debugging_guide/pre-express/2021": {
           "name": "Guida alla correzione di errori",
@@ -1677,12 +1806,13 @@
           "name": "Segui l'algoritmo"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "Sandbox per insegnanti di pesce di nuoto",
+          "name": "Ambiente di prova: istruttori di nuoto per pesci",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Documentazione Sviluppo App",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Risorse"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
           "type": "Video per gli alunni"
@@ -1694,8 +1824,12 @@
           "name": "Fermati e pensa online",
           "type": "Video"
         },
+        "about_me_planning_guide/coursee/2021": {
+          "type": "Dispensa"
+        },
         "digital-sharing-lesson/coursee/2021": {
-          "name": "Piano di lavoro della lezione - Condivisione digitale"
+          "name": "Piano di lavoro della lezione - Condivisione digitale",
+          "type": "Risorse"
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Etica della condivisione digitale (video)",
@@ -1708,6 +1842,7 @@
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Curve e angoli",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video per gli alunni"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
@@ -1717,7 +1852,8 @@
           "name": "Funzioni - Composizione di canzoni"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funzioni - Composizione di canzoni"
+          "name": "Funzioni - Composizione di canzoni",
+          "type": "Esercitazione"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Funzioni - Composizione di canzoni",
@@ -1728,10 +1864,17 @@
         },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Attività manipolative"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Progettare per l'accessibilità"
+        },
+        "types_of_disabilities/coursee/2021": {
+          "type": "Risorse"
+        },
+        "end-of-course-project-guide/coursee/2021": {
+          "type": "Esercitazione"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Progetto finale - Fondamenti d'informatica",
@@ -1742,47 +1885,58 @@
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 Creative Ways for Your Students to Show What They Know"
+          "name": "72 Creative Ways for Your Students to Show What They Know",
+          "type": "Risorse"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "Mappatura standard CSTA",
-          "url": "https://studio.code.org/s/coursee-2021/standards"
+          "url": "https://studio.code.org/s/coursee-2021/standards",
+          "type": "Risorse"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
           "name": "Guida Common Core e NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
+          "type": "Risorse"
         },
         "cross-curricular_extension_activities/coursee/2021": {
           "name": "Attività di estensione interdisciplinare",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Risorse"
         },
         "course_vocabulary/coursee/2021": {
           "name": "Glossario del corso\t",
-          "url": "https://studio.code.org/s/coursee-2021/vocab"
+          "url": "https://studio.code.org/s/coursee-2021/vocab",
+          "type": "Risorse"
         },
         "implementation_guide/coursee/2021": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Risorse"
         },
         "lesson_type_guide/coursee/2021": {
           "name": "Guida al tipo di lezione",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Risorse"
         },
         "debugging_guide/coursee/2021": {
           "name": "Guida alla correzione di errori",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Risorse"
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "Guida Curriculum",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Risorse"
         },
         "2021_change_log/coursee/2021": {
           "name": "Registro modifiche 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Risorse"
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Forum dell'insegnante",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Risorse"
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Documentazione Sviluppo App",
@@ -1790,7 +1944,8 @@
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Modifiche alla lezione virtuale",
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit",
+          "type": "Risorse"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Video"
@@ -1802,6 +1957,12 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Video"
         },
+        "shoe_survey/csd/2021": {
+          "type": "Risorse"
+        },
+        "fruit_veggie_cards/csd/2021": {
+          "type": "Risorse"
+        },
         "introduction_to_ai_lab/csd/2021": {
           "name": "Lezione 6"
         },
@@ -1812,6 +1973,18 @@
         "training_and_testing_in_ai_lab/csd/2021": {
           "type": "Video"
         },
+        "accuracy_in_ai_lab/csd/2021": {
+          "type": "Risorse"
+        },
+        "selecting_features/csd/2021": {
+          "type": "Risorse"
+        },
+        "using_data_with_categorical_features/csd/2021": {
+          "type": "Risorse"
+        },
+        "importing_a_model_in_app_lab/csd/2021": {
+          "type": "Risorse"
+        },
         "ai_training_data_bias/csd/2021": {
           "name": "IA: Dati di apprendimento e distorsioni",
           "type": "Video"
@@ -1819,11 +1992,17 @@
         "model_cards_in_ai_lab/csd/2021": {
           "type": "Video"
         },
+        "selecting_a_label/csd/2021": {
+          "type": "Risorse"
+        },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2021": {
+          "type": "Risorse"
         },
         "ai_ethics_research_reflection/csd/2021": {
           "type": "Dispensa per gli alunni"
@@ -1834,29 +2013,79 @@
         "survey_planning/csd/2021": {
           "name": "Progettare la Raccolta dei Dati"
         },
+        "creating_a_survey/csd/2021": {
+          "type": "Risorse"
+        },
         "cleaning_survey_data/csd/2021": {
           "type": "Video"
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "Video"
         },
+        "_template_5_why_s/csd/2021": {
+          "type": "Risorse"
+        },
+        "model_card_-_digital_template/csd/2021": {
+          "type": "Risorse"
+        },
+        "model_card_-_printable_template/csd/2021": {
+          "type": "Risorse"
+        },
+        "csd_curriculum_guide/csd/2021": {
+          "type": "Risorse"
+        },
+        "csd_implementation_guide/csd/2021": {
+          "type": "Risorse"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
+        },
+        "user-interface-screens/csd/2021": {
+          "type": "Risorse"
+        },
+        "paper-prototype-sample-feedback/csd/2021": {
+          "type": "Risorse"
+        },
+        "user-interviews/csd/2021": {
+          "type": "Risorse"
         },
         "computer-science-practices/csd/2021": {
           "type": "Riflessione"
         },
         "design_mode/csd/2021": {
-          "name": "Design Mode"
+          "name": "Design Mode",
+          "type": "Risorse"
+        },
+        "design_mode_elements/csd/2021": {
+          "type": "Risorse"
         },
         "whats-for-lunch-testing/csd/2021": {
           "type": "Video"
+        },
+        "model-screen-design/csd/2021": {
+          "type": "Risorse"
         },
         "intro_to_design_mode/csd/2021": {
           "type": "Video"
         },
         "design_mode_1/csd/2021": {
-          "name": "Design Mode"
+          "name": "Design Mode",
+          "type": "Risorse"
+        },
+        "design_mode_elements_1/csd/2021": {
+          "type": "Risorse"
+        },
+        "changing_screens/csd/2021": {
+          "type": "Risorse"
+        },
+        "importing_screens/csd/2021": {
+          "type": "Risorse"
+        },
+        "multi-screen_apps/csd/2021": {
+          "type": "Risorse"
+        },
+        "responding_to_user_input/csd/2021": {
+          "type": "Risorse"
         },
         "teacher_forum/csd/2021": {
           "name": "Forum dell'insegnante"
@@ -1868,45 +2097,123 @@
           "name": "L'informatica sta cambiando ogni cosa",
           "type": "Video"
         },
+        "designing_screens_with_code/csd/2021": {
+          "type": "Risorse"
+        },
         "random_numbers_1/csd/2021": {
-          "name": "Numeri Casuali"
+          "name": "Numeri Casuali",
+          "type": "Risorse"
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "type": "Risorse"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Come Funzionano i Computer: Hardware e Software",
           "type": "Video"
         },
+        "circuit_playground/csd/2021": {
+          "type": "Risorse"
+        },
+        "board_events/csd/2021": {
+          "type": "Risorse"
+        },
+        "physical_input/csd/2021": {
+          "type": "Risorse"
+        },
+        "physical_output/csd/2021": {
+          "type": "Risorse"
+        },
+        "taking_input_with_getproperty/csd/2021": {
+          "type": "Risorse"
+        },
         "analog-digital-video/csd/2021": {
           "type": "Video"
         },
+        "analog_sensors/csd/2021": {
+          "type": "Risorse"
+        },
+        "changing_sensor_scale/csd/2021": {
+          "type": "Risorse"
+        },
+        "date_and_change_events/csd/2021": {
+          "type": "Risorse"
+        },
+        "booleans_and_comparison_operators_1/csd/2021": {
+          "type": "Risorse"
+        },
         "functions_2/csd/2021": {
-          "name": "Funzioni"
+          "name": "Funzioni",
+          "type": "Risorse"
+        },
+        "if_statements_1/csd/2021": {
+          "type": "Risorse"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "Introduzione agli array",
           "type": "Video"
         },
         "arrays/csd/2021": {
-          "name": "Insiemi"
+          "name": "Insiemi",
+          "type": "Risorse"
+        },
+        "circuits_and_leds/csd/2021": {
+          "type": "Risorse"
+        },
+        "color_lights/csd/2021": {
+          "type": "Risorse"
         },
         "playing_notes/csd/2021": {
-          "name": "Riprodurre Note"
+          "name": "Riprodurre Note",
+          "type": "Risorse"
+        },
+        "producing_output/csd/2021": {
+          "type": "Risorse"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "Cicli con contatore",
           "type": "Video"
         },
         "for_loops/csd/2021": {
-          "name": "Cicli con contatore"
+          "name": "Cicli con contatore",
+          "type": "Risorse"
+        },
+        "modifying_arrays/csd/2021": {
+          "type": "Risorse"
         },
         "accelerometer_events/csd/2021": {
-          "name": "Eventi Accelerometro"
+          "name": "Eventi Accelerometro",
+          "type": "Risorse"
+        },
+        "the_accelerometer/csd/2021": {
+          "type": "Risorse"
         },
         "circuits-logic-video/csd/2021": {
           "name": "Come Funzionano i Computer: Circuiti e Logica",
           "type": "Video"
         },
+        "circuits_and_buttons/csd/2021": {
+          "type": "Risorse"
+        },
+        "circuit_playground_1/csd/2021": {
+          "type": "Risorse"
+        },
+        "meals-data-resource-2019/csd/2021": {
+          "type": "Risorse"
+        },
+        "ascii-text/csd/2021": {
+          "type": "Risorse"
+        },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Video"
+        },
+        "interpreting-data-1/csd/2021": {
+          "type": "Risorse"
+        },
+        "problem-solving-process-with-data/csd/2021": {
+          "type": "Risorse"
+        },
+        "data-decisions-resource/csd/2021": {
+          "type": "Risorse"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "Video"
@@ -1940,25 +2247,31 @@
           "type": "Video"
         },
         "drawing_shapes/csd/2021": {
-          "name": "Disegnare Forme"
+          "name": "Disegnare Forme",
+          "type": "Risorse"
         },
         "shapes_and_parameters_-_map_level/csd/2021": {
-          "name": "Forme e Parametri"
+          "name": "Forme e Parametri",
+          "type": "Risorse"
         },
         "shapes_and_parameters/csd/2021": {
-          "name": "Forme e Parametri"
+          "name": "Forme e Parametri",
+          "type": "Risorse"
         },
         "introduction-to-variables/csd/2021": {
           "type": "Video"
         },
         "naming_variables/csd/2021": {
-          "name": "Nominare le Variabili"
+          "name": "Nominare le Variabili",
+          "type": "Risorse"
         },
         "variables_1/csd/2021": {
-          "name": "Variabili"
+          "name": "Variabili",
+          "type": "Risorse"
         },
         "random_numbers/csd/2021": {
-          "name": "Numeri Casuali"
+          "name": "Numeri Casuali",
+          "type": "Risorse"
         },
         "introduction_to_sprites/csd/2021": {
           "type": "Video"
@@ -1967,11 +2280,16 @@
           "name": "The Animation Tab",
           "type": "Video"
         },
+        "animation_tab/csd/2021": {
+          "type": "Risorse"
+        },
         "sprites_1/csd/2021": {
-          "name": "Personaggi"
+          "name": "Personaggi",
+          "type": "Risorse"
         },
         "sprite_properties/csd/2021": {
-          "name": "Proprietà del personaggio"
+          "name": "Proprietà del personaggio",
+          "type": "Risorse"
         },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
@@ -1979,8 +2297,14 @@
         "introduction_to_the_draw_loop/csd/2021": {
           "type": "Video"
         },
+        "the_draw_loop/csd/2021": {
+          "type": "Risorse"
+        },
         "animating-sprites/csd/2021": {
           "type": "Video"
+        },
+        "the_counter_pattern/csd/2021": {
+          "type": "Risorse"
         },
         "boolean_expressions/csd/2021": {
           "name": "Espressioni Booleane",
@@ -1990,6 +2314,15 @@
           "name": "Istruzioni Condizionali",
           "type": "Video"
         },
+        "booleans_and_comparison_operators/csd/2021": {
+          "type": "Risorse"
+        },
+        "if_statements/csd/2021": {
+          "type": "Risorse"
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "type": "Risorse"
+        },
         "if_else_statements/csd/2021": {
           "name": "Dichiarazioni Se/altrimenti",
           "type": "Video"
@@ -1997,24 +2330,32 @@
         "interactive-card-1-2-3-4/csd/2021": {
           "type": "Valutazioni dei parigrado"
         },
+        "extra_code_in_challenge_levels_1/csd/2021": {
+          "type": "Risorse"
+        },
         "velocity_1/csd/2021": {
           "name": "Velocità",
           "type": "Video"
         },
         "velocity_2/csd/2021": {
-          "name": "Velocità"
+          "name": "Velocità",
+          "type": "Risorse"
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "Rilevamento delle Collisioni"
         },
         "collision_detection/csd/2021": {
-          "name": "Rilevamento delle Collisioni"
+          "name": "Rilevamento delle Collisioni",
+          "type": "Risorse"
         },
         "side-scroller-1/csd/2021": {
           "name": "Scorrimento Laterale"
         },
         "side-scroller/csd/2021": {
           "name": "Scorrimento Laterale"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "type": "Risorse"
         },
         "flyer-game-1/csd/2021": {
           "name": "Gioco del Volantino"
@@ -2027,7 +2368,8 @@
           "type": "Video"
         },
         "functions_1/csd/2021": {
-          "name": "Funzioni"
+          "name": "Funzioni",
+          "type": "Risorse"
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Valutazioni dei parigrado"
@@ -2053,8 +2395,15 @@
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "type": "Valutazioni dei parigrado"
         },
+        "apps_and_problem_solving_-_student_checklist/csd/2021": {
+          "type": "Risorse"
+        },
+        "solving-problems-tangrams-2020/csd/2021": {
+          "type": "Risorse"
+        },
         "html_tags/csd/2021": {
-          "name": "Tag HTML"
+          "name": "Tag HTML",
+          "type": "Risorse"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "Video"
@@ -2063,11 +2412,12 @@
           "type": "Video"
         },
         "video_pair_programming/csd/2021": {
-          "name": "Video: Programmazione in coppia",
+          "name": "Video: Programmazione in coppie",
           "type": "Video"
         },
         "headings_and_paragraphs/csd/2021": {
-          "name": "Intestazioni e Paragrafi"
+          "name": "Intestazioni e Paragrafi",
+          "type": "Risorse"
         },
         "video_debugging/csd/2021": {
           "type": "Video"
@@ -2075,8 +2425,12 @@
         "html-web-page/csd/2021": {
           "type": "Valutazioni dei parigrado"
         },
+        "formatting_html/csd/2021": {
+          "type": "Risorse"
+        },
         "lists/csd/2021": {
-          "name": "Liste"
+          "name": "Liste",
+          "type": "Risorse"
         },
         "digital-footprint/csd/2021": {
           "name": "Orme digitali"
@@ -2089,11 +2443,23 @@
           "name": "Introduzione a CSS - Parte 2",
           "type": "Video"
         },
+        "style_sheets/csd/2021": {
+          "type": "Risorse"
+        },
+        "text_properties/csd/2021": {
+          "type": "Risorse"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "Valutazioni dei parigrado"
         },
         "creative-commons-video/csd/2021": {
           "type": "Video"
+        },
+        "creative_commons_search/csd/2021": {
+          "type": "Risorse"
+        },
+        "images_in_html/csd/2021": {
+          "type": "Risorse"
         },
         "personal-web-page-1/csd/2021": {
           "type": "Valutazioni dei parigrado"
@@ -2101,6 +2467,12 @@
         "publishing_your_website/csd/2021": {
           "name": "Pubblicare il tuo sito web",
           "type": "Video"
+        },
+        "personal_web_page_-_student_checklist/csd/2021": {
+          "type": "Risorse"
+        },
+        "extra_code_in_challenge_levels/csd/2021": {
+          "type": "Risorse"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
           "type": "Video"
@@ -2110,6 +2482,12 @@
         },
         "how-search-works-video/csd/2021": {
           "type": "Video"
+        },
+        "classes/csd/2021": {
+          "type": "Risorse"
+        },
+        "hyperlinks/csd/2021": {
+          "type": "Risorse"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Valutazioni dei parigrado"

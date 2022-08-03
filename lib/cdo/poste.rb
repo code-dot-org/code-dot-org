@@ -66,7 +66,7 @@ module Poste
       unless messages.where(name: name).first
         id = messages.insert(name: name)
         raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
-        logger.info "Registered new message template '#{name}' as #{id}" if logger
+        logger&.info "Registered new message template '#{name}' as #{id}"
       end
 
       return path
@@ -113,7 +113,7 @@ module Poste
     def initialize(path)
       @path = path
       @template_type = File.extname(path)[1..-1]
-      @header, @html, @text = parse_template(IO.read(path))
+      @header, @html, @text = parse_template(File.read(path))
     end
 
     def render(params={})
@@ -196,7 +196,7 @@ class Deliverer
   end
 
   def reset_connection
-    @smtp.finish if @smtp
+    @smtp&.finish
     @smtp = smtp_connect unless rack_env?(:development)
   end
 

@@ -381,7 +381,7 @@
     "/supporting-special-needs-students.md": "W/\"583012c6e149c6a0f6bcfe8b0ff662fb\"",
     "/international-partners.md": "\"320363a030aab33e01c8be1dcc87f536\"",
     "/whole-school.md": "\"87cdf9ed0e20bdf71d0054bba4a5a808\"",
-    "/activity-guidelines.md": "\"238504740c3bfb8b4b1e67fdbe067b3d\""
+    "/activity-guidelines.md": "W/\"c11e2e3102ad72036353bd29518dc09f\""
   },
   "zh-CN": {
     "/en.yml": "W/\"293e3a4e869bba4b0642cb1d952b57e9\"",
@@ -673,8 +673,8 @@
   },
   "dz": {
     "/en.yml": "\"e147465d3a6c65c130e715a1f5b3d699\"",
-    "/how-to/volunteers.md": "W/\"7bc81e7adb213c591a425b8d2387686e\"",
-    "/how-to/parents.md": "W/\"7bc81e7adb213c591a425b8d2387686e\"",
+    "/how-to/volunteers.md": "W/\"eaa1945cd8a14b2d1785ab7718038e3d\"",
+    "/how-to/parents.md": "W/\"eaa1945cd8a14b2d1785ab7718038e3d\"",
     "/how-to/events.md": "\"2e12924ec9eaa2873bd1979dd744d816\"",
     "/how-to/public-officials.md": "\"b72ce7fae30d3303c9fa7037b56c946a\"",
     "/how-to/districts.md": "\"1bcb597bdbd1dd13d959219b2c8b7d5a\"",
@@ -682,7 +682,7 @@
     "/how-to/companies.md": "\"a102bd291229dce60f13df2777e98d96\"",
     "/how-to/afterschool.md": "\"0597960b1b5d00f305abe1132c8ce5f0\"",
     "/how-to/2019.md": "\"f7d3ca6db86f5380aad708ff7071315f\"",
-    "/how-to/parents-new.md": "W/\"7bc81e7adb213c591a425b8d2387686e\"",
+    "/how-to/parents-new.md": "W/\"eaa1945cd8a14b2d1785ab7718038e3d\"",
     "/how-to/companies-old.md": "\"187fc528c5f885019d383e56b28da37b\"",
     "/how-to/virtual.md": "\"0ee7984d8de02a7abb85635ef15cfd25\"",
     "/how-to/volunteers-old.md": "\"8e3d552ab236d5503d4c5f91e5a0d784\"",
@@ -694,10 +694,10 @@
     "/promote/resources.md": "\"34edd99855ef1f7b7383fa6f83e288e2\"",
     "/promote/stats.md": "\"8b7a82651511fd9ff95b1176496e1c18\"",
     "/promote/previous-posters.md": "\"b6d4baf2db50672c2870d09e96ee092c\"",
-    "/thanks.md": "W/\"7bc81e7adb213c591a425b8d2387686e\"",
+    "/thanks.md": "W/\"f38b071cc90d60fe65835391b72c0daa\"",
     "/partners.md": "\"d5350c4077ca8ebf347db86692af3c22\"",
     "/assistive-technology.md": "\"dfc6abb86472116e6eb1d360941474f8\"",
-    "/advisory-committee.md": "W/\"7bc81e7adb213c591a425b8d2387686e\"",
+    "/advisory-committee.md": "W/\"eaa1945cd8a14b2d1785ab7718038e3d\"",
     "/supporting-special-needs-students.md": "W/\"583012c6e149c6a0f6bcfe8b0ff662fb\"",
     "/international-partners.md": "\"320363a030aab33e01c8be1dcc87f536\"",
     "/whole-school.md": "\"87cdf9ed0e20bdf71d0054bba4a5a808\"",
@@ -2720,7 +2720,7 @@
     "/activity-guidelines.md": "\"9973ddb3f70c5b1032e7a38bf0a25510\""
   },
   "tr": {
-    "/en.yml": "W/\"ec97e758b6da37aa0590eeba2b3ea900\"",
+    "/en.yml": "W/\"8bc8d9b8de3a9b6c1a6ff681f08bef82\"",
     "/how-to/volunteers.md": "W/\"86b1d91e2f174d6d35ddf49bc4a15e62\"",
     "/how-to/parents.md": "W/\"3436c53a096b8601742992f371d89df9\"",
     "/how-to/events.md": "W/\"40438dd269bfdf695212280be93413e3\"",

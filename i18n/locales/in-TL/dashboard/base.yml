@@ -430,7 +430,6 @@ in:
     popup:
       progress_for_user: "crwdns38277:0%{name}crwdne38277:0"
       progress: 'crwdns2599:0crwdne2599:0'
-      lines: 'crwdns2966:0%{lines}crwdne2966:0'
       close: 'crwdns2600:0crwdne2600:0'
       mastery: 'crwdns2967:0crwdne2967:0'
       puzzle_map: 'crwdns2968:0crwdne2968:0'

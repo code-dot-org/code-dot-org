@@ -1125,7 +1125,7 @@
         },
         "CourseF_outbreak2": {
           "minitoolbox": "Kattints ide a blokk kibontásához",
-          "pointerlocation": "Húzza ide a tárgyblokkot."
+          "pointerlocation": "Húzd ide a tárgyblokkot."
         },
         "courseF_sprites_positioning": {
           "locations_category": "Kattints ide, hogy megnyisd a pozíció kategóriát."

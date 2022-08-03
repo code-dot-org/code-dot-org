@@ -1198,6 +1198,7 @@ el:
             '180': αριστερά
             '270': επάνω
       gamelab_makeSpritesWithSize:
+        text: φτιάξε {NUM} καινούριο {SIZE} {COSTUME} χαρακτήρες
         options:
           SIZE:
             '30': small
@@ -1357,7 +1358,12 @@ el:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
+      gamelab_spriteThink:
+        text: "{SPRITE} σκέφτεται {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}σκέφτεται{TEXT1}για{NUM}δευτερόλεπτα"
       gamelab_spriteThink_fables1:
+        text: "{SPRITE} σκέφτεται {THOUGHT}"
         options:
           THOUGHT:
             '"Hmm..."': Χμμ...
@@ -1367,6 +1373,7 @@ el:
             '"I''m a green troll."': Είμαι ένα πράσινο τρολ.
             '"No one will cross my bridge."': Κανένας δε θα διασχίσει τη γέφυρά μου.
       gamelab_spriteThink_fables2:
+        text: "{SPRITE} σκέφτεται {THOUGHT}"
         options:
           THOUGHT:
             '"Hmm..."': Χμμ...
@@ -1376,6 +1383,7 @@ el:
             '"This costume keeps me warm."': Αυτή η στολή με κρατάει ζεστό.
             '"I am actually a wolf."': Ουσιαστικά, είμαι ένας λύκος.
       gamelab_spriteThink_fables3:
+        text: "{SPRITE} σκέφτεται {THOUGHT}"
         options:
           THOUGHT:
             '"Hmm..."': Χμμ...
@@ -1385,6 +1393,7 @@ el:
             '"My feet are bigger than Turtle''s feet."': Το πόδια μου είναι μεγαλύτερα
               από τα πόδια της Χελώνας.
       gamelab_spriteThink_fables4:
+        text: "{SPRITE} σκέφτεται {THOUGHT}"
         options:
           THOUGHT:
             '"Hmm..."': Χμμ...

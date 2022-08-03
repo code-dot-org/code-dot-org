@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
 import {levelWithProgressType} from './progressTypes';

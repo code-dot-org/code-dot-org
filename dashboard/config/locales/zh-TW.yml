@@ -29,6 +29,7 @@ zh-TW:
         personal_email_markdown: 個人電子信箱 [（如果你沒有個人信箱請點擊這裡）](%{url})
         username: 用戶名稱
         password: 密碼
+        verified_teacher: 認證老師
         password_confirmation: 密碼確認
         current_password: 目前的密碼
         locale: 語言
@@ -424,7 +425,6 @@ zh-TW:
     popup:
       progress_for_user: "%{name} 的進度"
       progress: 你的學習進度
-      lines: 程式碼總計行數：%{lines}
       close: 關閉
       mastery: 觀念
       puzzle_map: 所有階段
@@ -620,6 +620,7 @@ zh-TW:
     try_hour_of_code: 試試「一小時玩程式」！
     store: 商店
     cookie_notice: Cookie通知
+    view_code: 檢視程式碼
   reference_area:
     title: 需要幫忙？
     subtitle: 看看這些影片和提示
@@ -1071,6 +1072,7 @@ zh-TW:
         israel: Israel
         malaysia: Malaysia
         mexico: Mexico
+        paraguay: 巴拉圭
         thailand: Thailand
         uzbekistan: 烏茲別克斯坦
       ages:

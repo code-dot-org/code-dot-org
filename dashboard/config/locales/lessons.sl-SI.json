@@ -545,6 +545,15 @@
         "jigsaw/Jigsaw": {
           "name": "Sestavljanka"
         },
+        "allthethings/Jigsaw": {
+          "name": "Sestavljanka"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Umetnik"
+        },
         "allthethings/Flappy": {
           "name": "Flappy"
         },

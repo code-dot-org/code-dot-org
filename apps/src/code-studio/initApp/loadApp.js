@@ -366,6 +366,7 @@ async function loadAppAsync(appOptions) {
     const data = await userAppOptionsRequest;
 
     appOptions.disableSocialShare = data.disableSocialShare;
+    appOptions.isInstructor = data.isInstructor;
 
     if (data.isStarted) {
       appOptions.level.isStarted = data.isStarted;

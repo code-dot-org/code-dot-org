@@ -300,7 +300,7 @@
         "Course 4 Artist 12": {
           "Course_4_Artist_12_a": "Cada forma repetida es la combinación de \\*\\* la mitad de un hexágono \\*\\*, seguida de \\*\\* 2/3 de un triángulo \\*\\*. ",
           "Course_4_Artist_12_b": "La forma de la unidad es casi la misma que en el último acertijo, excepto que el medio hexágono es un poco más grande. ",
-          "Course_4_Artist_12_c": "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados ",
+          "Course_4_Artist_12_c": "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados ",
           "Course_4_Artist_12_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">60</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant\">\n                        <title name=\"DIR\">turnRight</title>\n                        <title name=\"VALUE\">60</title>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveForward</title>\n                        <title name=\"VALUE\">80</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">120</title>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "Course 4 Artist 6": {
@@ -1212,7 +1212,7 @@
         "course1_artist_loops_challenge4": {
           "courseB_artist_loops_challenge1_a": "¡Bloques como este: <xml>  <block type=\"simple_move_up_right\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
           "courseB_artist_loops_challenge1_b": "Cuando termines uno de los dados, ¡\"salta\" al próximo!",
-          "courseB_artist_loops_challenge1_c": "Tendrá que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
+          "courseB_artist_loops_challenge1_c": "Tendrás que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
         },
         "course1_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_a": "Intenta cambiar los números en cada loop si algo va mal.",
@@ -1423,19 +1423,19 @@
         },
         "courseA_artist_loops3": {
           "courseA_artist_loops3_a": "Delinea lentamente el programa con tu dedo para ver dónde esta el error.",
-          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este desafío.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este rompecabezas.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops3_2018": {
           "courseA_artist_loops3_a": "Delinea lentamente el programa con tu dedo para ver dónde esta el error.",
-          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este desafío.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este rompecabezas.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops3_2019": {
           "courseA_artist_loops3_a": "Delinea lentamente el programa con tu dedo para ver dónde esta el error.",
-          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este desafío.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este rompecabezas.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Delinea lentamente el programa con tu dedo para ver dónde esta el error.",
-          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este desafío.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este rompecabezas.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Si deseas que el bucle (loop) se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
@@ -1511,22 +1511,22 @@
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Intenta ejecutar el código para ver lo que se ha escrito para ti.",
-          "courseA_artist_loops8_b": "¿Cómo enlazarías el código que se te ha dado?",
+          "courseA_artist_loops8_b": "¿Cómo usarías un bucle (loop) en el código que se te ha dado?",
           "courseA_artist_loops8_c": "¿Qué hace el código?\\\n¿Qué se supone que haga?\\\n¿Qué te dice eso?"
         },
         "courseA_artist_loops8_2018": {
           "courseA_artist_loops8_a": "Intenta ejecutar el código para ver lo que se ha escrito para ti.",
-          "courseA_artist_loops8_b": "¿Cómo enlazarías el código que se te ha dado?",
+          "courseA_artist_loops8_b": "¿Cómo usarías un bucle (loop) en el código que se te ha dado?",
           "courseA_artist_loops8_c": "¿Qué hace el código?\\\n¿Qué se supone que haga?\\\n¿Qué te dice eso?"
         },
         "courseA_artist_loops8_2019": {
           "courseA_artist_loops8_a": "Intenta ejecutar el código para ver lo que se ha escrito para ti.",
-          "courseA_artist_loops8_b": "¿Cómo enlazarías el código que se te ha dado?",
+          "courseA_artist_loops8_b": "¿Cómo usarías un bucle (loop) en el código que se te ha dado?",
           "courseA_artist_loops8_c": "¿Qué hace el código?\\\n¿Qué se supone que haga?\\\n¿Qué te dice eso?"
         },
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "Intenta ejecutar el código para ver lo que se ha escrito para ti.",
-          "courseA_artist_loops8_b": "¿Cómo enlazarías el código que se te ha dado?",
+          "courseA_artist_loops8_b": "¿Cómo usarías un bucle (loop) en el código que se te ha dado?",
           "courseA_artist_loops8_c": "¿Qué hace el código?\\\n¿Qué se supone que haga?\\\n¿Qué te dice eso?"
         },
         "courseA_artist_loops9": {
@@ -1904,7 +1904,7 @@
         },
         "courseA_harvester_seq1": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz cuando la cosechadora lo encuentre!\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq10": {
           "courseA_harvester_seq10_a": "¿Estás atascado/a? Trata de anotar primero los pasos en una hoja de papel.",
@@ -1932,22 +1932,22 @@
         },
         "courseA_harvester_seq1_2019": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz cuando la cosechadora lo encuentre!\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2020": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz cuando la cosechadora lo encuentre!\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq3": {
@@ -1975,17 +1975,17 @@
           "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Recoger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5": {
-          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la dirección incorrecta?",
+          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora en la dirección incorrecta?",
           "courseA_harvester_seq5_b": "Necesitas eliminar un bloque.",
           "courseA_harvester_seq5_c": "¡Tira este bloque a la basura!\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2019": {
-          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la dirección incorrecta?",
+          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora en la dirección incorrecta?",
           "courseA_harvester_seq5_b": "Necesitas eliminar un bloque.",
           "courseA_harvester_seq5_c": "¡Tira este bloque a la basura!\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2020": {
-          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la dirección incorrecta?",
+          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora en la dirección incorrecta?",
           "courseA_harvester_seq5_b": "Necesitas eliminar un bloque.",
           "courseA_harvester_seq5_c": "¡Tira este bloque a la basura!\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
@@ -2011,28 +2011,28 @@
           "courseA_harvester_seq7_b": "¿Tienes problemas? Éste es el camino que debe seguir la cosechadora."
         },
         "courseA_harvester_seq8": {
-          "courseA_harvester_seq8_a": "Tu código final debe tener \\*\\* 4 \\*\\* bloques de movimiento y \\*\\* 2 \\*\\* bloques de selección."
+          "courseA_harvester_seq8_a": "Tu código final debería tener **4** bloques de movimiento y **2** bloques de recogida."
         },
         "courseA_harvester_seq8_2019": {
-          "courseA_harvester_seq8_a": "Tu código final debe tener \\*\\* 4 \\*\\* bloques de movimiento y \\*\\* 2 \\*\\* bloques de selección."
+          "courseA_harvester_seq8_a": "Tu código final debería tener **4** bloques de movimiento y **2** bloques de recogida."
         },
         "courseA_harvester_seq8_2020": {
-          "courseA_harvester_seq8_a": "Tu código final debe tener \\*\\* 4 \\*\\* bloques de movimiento y \\*\\* 2 \\*\\* bloques de selección."
+          "courseA_harvester_seq8_a": "Tu código final debería tener **4** bloques de movimiento y **2** bloques de recogida."
         },
         "courseA_harvester_seq9": {
           "courseA_harvester_seq9_a": "Ejecute el código varias veces para ver qué sucede. ¿Dónde se detiene la cosechadora?",
           "courseA_harvester_seq9_b": "¡No te olvides de recoger todo el maíz! Necesitarás **_3_** bloques de maíz recogido.",
-          "courseA_harvester_seq9_c": "Sigue esta ruta para recoger todo el maíz."
+          "courseA_harvester_seq9_c": "Deberías tomar este camino para recoger todo el maíz."
         },
         "courseA_harvester_seq9_2019": {
           "courseA_harvester_seq9_a": "Ejecute el código varias veces para ver qué sucede. ¿Dónde se detiene la cosechadora?",
           "courseA_harvester_seq9_b": "¡No te olvides de recoger todo el maíz! Necesitarás **_3_** bloques de maíz recogido.",
-          "courseA_harvester_seq9_c": "Sigue esta ruta para recoger todo el maíz."
+          "courseA_harvester_seq9_c": "Deberías tomar este camino para recoger todo el maíz."
         },
         "courseA_harvester_seq9_2020": {
           "courseA_harvester_seq9_a": "Ejecute el código varias veces para ver qué sucede. ¿Dónde se detiene la cosechadora?",
           "courseA_harvester_seq9_b": "¡No te olvides de recoger todo el maíz! Necesitarás **_3_** bloques de maíz recogido.",
-          "courseA_harvester_seq9_c": "Sigue esta ruta para recoger todo el maíz."
+          "courseA_harvester_seq9_c": "Deberías tomar este camino para recoger todo el maíz."
         },
         "courseA_maze_ramp2_2018": {
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2089,39 +2089,39 @@
         },
         "courseA_maze_seq10_2018": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_2019": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_2020": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_copy": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
           "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones para resolver este rompecabezas."
         },
         "courseA_maze_seq13": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
           "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> te ayudarán a moverte más cerca del cerdo."
         },
         "courseA_maze_seq13_2018": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
           "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> te ayudarán a moverte más cerca del cerdo."
         },
         "courseA_maze_seq13_2019": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverse más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
+          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverte más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseA_maze_seq13_2020": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverse más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
+          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverte más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto debajo de <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -2468,19 +2468,19 @@
         },
         "courseB_artist_loops3": {
           "courseB_artist_loops3_a": "¡Recuerda usar un loop \"repetir\" para un mejor código!",
-          "courseB_artist_loops3_b": "El artista querrá moverse hacia el sur para dibujar esta línea."
+          "courseB_artist_loops3_b": "El artista querrá moverse hacia el Sur para dibujar esta línea."
         },
         "courseB_artist_loops3_2018": {
           "courseB_artist_loops3_a": "¡Recuerda utilizar un bucle (loop) de \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> para un mejor código!",
-          "courseB_artist_loops3_b": "El artista querrá moverse hacia el sur para dibujar esta línea."
+          "courseB_artist_loops3_b": "El artista querrá moverse hacia el Sur para dibujar esta línea."
         },
         "courseB_artist_loops3_2019": {
           "courseB_artist_loops3_a": "¡Recuerda utilizar un bucle (loop) de \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> para un mejor código!",
-          "courseB_artist_loops3_b": "El artista querrá moverse hacia el sur para dibujar esta línea."
+          "courseB_artist_loops3_b": "El artista querrá moverse hacia el Sur para dibujar esta línea."
         },
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_a": "¡Recuerda utilizar un bucle (loop) de \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> para un mejor código!",
-          "courseB_artist_loops3_b": "El artista querrá moverse hacia el sur para dibujar esta línea."
+          "courseB_artist_loops3_b": "El artista querrá moverse hacia el Sur para dibujar esta línea."
         },
         "courseB_artist_loops4": {
           "courseB_artist_loops4_a": "El bloque saltar te permite avanzar sin dibujar una línea.",
@@ -2506,13 +2506,13 @@
           "courseB_artist_loops5_a": "Arrastre un loop de \"repetición\", luego coloque los otros bloques dentro de él. ¿Cuántas veces necesita repetir?"
         },
         "courseB_artist_loops5_2018": {
-          "courseB_artist_loops5_a": "Arrastre un bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesita repetir?"
+          "courseB_artist_loops5_a": "Arrastre un <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesitas repetir?"
         },
         "courseB_artist_loops5_2019": {
-          "courseB_artist_loops5_a": "Arrastre un bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesita repetir?"
+          "courseB_artist_loops5_a": "Arrastre un <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesitas repetir?"
         },
         "courseB_artist_loops5_2020": {
-          "courseB_artist_loops5_a": "Arrastre un bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesita repetir?"
+          "courseB_artist_loops5_a": "Arrastre un <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesitas repetir?"
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "Intenta escribir los movimientos en un papel y busca un patrón."
@@ -2564,59 +2564,59 @@
         },
         "courseB_artist_loops9": {
           "courseB_artist_loops9_a": "Recuerde que los bloques de salto se pueden usar para moverse sin dibujar una línea.",
-          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este desafío.",
+          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este rompecabezas.",
           "courseB_artist_loops9_c": "¿No puede averiguar dónde colocar el bucle (loop)? Trate de escribir el código paso a paso, y buscar para un patrón."
         },
         "courseB_artist_loops9_2018": {
           "courseB_artist_loops9_a": "Recuerde que los bloques de salto se pueden usar para moverse sin dibujar una línea.",
-          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este desafío.",
+          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este rompecabezas.",
           "courseB_artist_loops9_c": "¿No puede averiguar dónde colocar el bucle (loop)? Trate de escribir el código paso a paso, y buscar para un patrón."
         },
         "courseB_artist_loops9_2019": {
           "courseB_artist_loops9_a": "Recuerde que los bloques de salto se pueden usar para moverse sin dibujar una línea.",
-          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este desafío.",
+          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este rompecabezas.",
           "courseB_artist_loops9_c": "¿No puede averiguar dónde colocar el bucle (loop)? Trate de escribir el código paso a paso, y buscar para un patrón."
         },
         "courseB_artist_loops9_2020": {
           "courseB_artist_loops9_a": "Recuerde que los bloques de salto se pueden usar para moverse sin dibujar una línea.",
-          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este desafío.",
+          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este rompecabezas.",
           "courseB_artist_loops9_c": "¿No puede averiguar dónde colocar el bucle (loop)? Trate de escribir el código paso a paso, y buscar para un patrón."
         },
         "courseB_artist_loops_challenge1": {
           "courseB_artist_loops_challenge1_a": "¡Bloques como este: <xml>  <block type=\"simple_move_up_right\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
           "courseB_artist_loops_challenge1_b": "Cuando termines uno de los dados, ¡\"salta\" al próximo!",
-          "courseB_artist_loops_challenge1_c": "Tendrá que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
+          "courseB_artist_loops_challenge1_c": "Tendrás que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
         },
         "courseB_artist_loops_challenge1_2018": {
           "courseB_artist_loops_challenge1_a": "¡Bloques como este: <xml>  <block type=\"simple_move_up_right\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
           "courseB_artist_loops_challenge1_b": "Cuando termines uno de los dados, ¡\"salta\" al próximo!",
-          "courseB_artist_loops_challenge1_c": "Tendrá que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
+          "courseB_artist_loops_challenge1_c": "Tendrás que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
         },
         "courseB_artist_loops_challenge1_2019": {
           "courseB_artist_loops_challenge1_a": "¡Bloques como este: <xml>  <block type=\"simple_move_up_right\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
           "courseB_artist_loops_challenge1_b": "Cuando termines uno de los dados, ¡\"salta\" al próximo!",
-          "courseB_artist_loops_challenge1_c": "Tendrá que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
+          "courseB_artist_loops_challenge1_c": "Tendrás que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
         },
         "courseB_artist_loops_challenge1_2020": {
           "courseB_artist_loops_challenge1_a": "¡Bloques como este: <xml>  <block type=\"simple_move_up_right\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
           "courseB_artist_loops_challenge1_b": "Cuando termines uno de los dados, ¡\"salta\" al próximo!",
-          "courseB_artist_loops_challenge1_c": "Tendrá que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
+          "courseB_artist_loops_challenge1_c": "Tendrás que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
         },
         "courseB_artist_loops_challenge2": {
           "courseB_artist_loops_challenge2_a": "El código para dibujar una X ya se te ha dado. Todo lo que necesitas hacer es repetir la X y \"saltar\" al siguiente punto.",
-          "courseB_artist_loops_challenge2_b": "Puede usar los bloques \"saltar\" para moverse a otros espacios sin dibujar."
+          "courseB_artist_loops_challenge2_b": "Puedes usar los bloques `saltar` para moverte a otros espacios sin dibujar."
         },
         "courseB_artist_loops_challenge2_2018": {
           "courseB_artist_loops_challenge2_a": "El código para dibujar una X ya se te ha dado. Todo lo que necesitas hacer es repetir la X y \"saltar\" al siguiente punto.",
-          "courseB_artist_loops_challenge2_b": "Puede usar los bloques \"saltar\" para moverse a otros espacios sin dibujar."
+          "courseB_artist_loops_challenge2_b": "Puedes usar los bloques `saltar` para moverte a otros espacios sin dibujar."
         },
         "courseB_artist_loops_challenge2_2019": {
           "courseB_artist_loops_challenge2_a": "El código para dibujar una X ya se te ha dado. Todo lo que necesitas hacer es repetir la X y \"saltar\" al siguiente punto.",
-          "courseB_artist_loops_challenge2_b": "Puede usar los bloques \"saltar\" para moverse a otros espacios sin dibujar."
+          "courseB_artist_loops_challenge2_b": "Puedes usar los bloques `saltar` para moverte a otros espacios sin dibujar."
         },
         "courseB_artist_loops_challenge2_2020": {
           "courseB_artist_loops_challenge2_a": "El código para dibujar una X ya se te ha dado. Todo lo que necesitas hacer es repetir la X y \"saltar\" al siguiente punto.",
-          "courseB_artist_loops_challenge2_b": "Puede usar los bloques \"saltar\" para moverse a otros espacios sin dibujar."
+          "courseB_artist_loops_challenge2_b": "Puedes usar los bloques `saltar` para moverte a otros espacios sin dibujar."
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_a": "El bloque <xml><block type=\"collector_collect_simplified\"/></xml> puede ser usado para tomar el tesoro cuando estés parado arriba."
@@ -2829,30 +2829,30 @@
           "courseB_collector_loops_challenge2a_c": "Para recoger todo el tesoro, tendrás que añadir dos bloques <xml> <block type=\"collector_collect\"/></xml> dentro de tu bucle (loop), o poner el bloque en el interior de su propio bloque de 'repetir'."
         },
         "courseB_iceage_loops1": {
-          "courseB_iceage_loops1_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops1_a": "Cuidado con el hielo roto! ¡Scrat caerá a través de él!",
           "courseB_iceage_loops1_b": "Tendrás que usar este bloque:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops10": {
-          "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops10_a": "Cuidado con el hielo roto! ¡Scrat caerá al agua!",
           "courseB_iceage_loops10_b": "Intente decir los pasos en voz alta o escríbalos en un pedazo de papel. ¿Ves algún patrón?",
           "courseB_iceage_loops10_c": "¡Este es un rompecabezas muy largo! Sigue este camino."
         },
         "courseB_iceage_loops10_2019": {
-          "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops10_a": "Cuidado con el hielo roto! ¡Scrat caerá al agua!",
           "courseB_iceage_loops10_b": "Intente decir los pasos en voz alta o escríbalos en un pedazo de papel. ¿Ves algún patrón?",
           "courseB_iceage_loops10_c": "¡Este es un rompecabezas muy largo! Sigue este camino."
         },
         "courseB_iceage_loops10_2020": {
-          "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops10_a": "Cuidado con el hielo roto! ¡Scrat caerá al agua!",
           "courseB_iceage_loops10_b": "Intente decir los pasos en voz alta o escríbalos en un pedazo de papel. ¿Ves algún patrón?",
           "courseB_iceage_loops10_c": "¡Este es un rompecabezas muy largo! Sigue este camino."
         },
         "courseB_iceage_loops1_2019": {
-          "courseB_iceage_loops1_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops1_a": "Cuidado con el hielo roto! ¡Scrat caerá a través de él!",
           "courseB_iceage_loops1_b": "Tendrás que usar este bloque:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops1_2020": {
-          "courseB_iceage_loops1_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops1_a": "Cuidado con el hielo roto! ¡Scrat caerá a través de él!",
           "courseB_iceage_loops1_b": "Tendrás que usar este bloque:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops2": {
@@ -2898,17 +2898,17 @@
           "courseB_iceage_loops4_c": "Este es el camino que Scrat deberia tomar."
         },
         "courseB_iceage_loops6": {
-          "courseB_iceage_loops6_a": "Su código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
+          "courseB_iceage_loops6_a": "Tu código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
           "courseB_iceage_loops6_b": "¡Solo necesita agregar un bucle (loop) más!",
           "courseB_iceage_loops6_c": "La ruta final debe verse así."
         },
         "courseB_iceage_loops6_2019": {
-          "courseB_iceage_loops6_a": "Su código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
+          "courseB_iceage_loops6_a": "Tu código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
           "courseB_iceage_loops6_b": "¡Solo necesita agregar un bucle (loop) más!",
           "courseB_iceage_loops6_c": "La ruta final debe verse así."
         },
         "courseB_iceage_loops6_2020": {
-          "courseB_iceage_loops6_a": "Su código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
+          "courseB_iceage_loops6_a": "Tu código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
           "courseB_iceage_loops6_b": "¡Solo necesita agregar un bucle (loop) más!",
           "courseB_iceage_loops6_c": "La ruta final debe verse así."
         },
@@ -2940,17 +2940,17 @@
           "courseB_iceage_loops8_c": "Utiliza bucles (loops) para ayudar a Scrat a que siga este camino."
         },
         "courseB_iceage_loops9": {
-          "courseB_iceage_loops9_a": "¿Tiene problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
+          "courseB_iceage_loops9_a": "¿Tienes problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
           "courseB_iceage_loops9_b": "Su código final debería tener **4** bucles (loops).",
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseB_iceage_loops9_2019": {
-          "courseB_iceage_loops9_a": "¿Tiene problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
+          "courseB_iceage_loops9_a": "¿Tienes problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
           "courseB_iceage_loops9_b": "Su código final debería tener **4** bucles (loops).",
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseB_iceage_loops9_2020": {
-          "courseB_iceage_loops9_a": "¿Tiene problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
+          "courseB_iceage_loops9_a": "¿Tienes problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
           "courseB_iceage_loops9_b": "Su código final debería tener **4** bucles (loops).",
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
@@ -3205,22 +3205,22 @@
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "Necesitarás estos bloques de eventos:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Use las flechas desplegables en verde `cuando la flecha ___ presionó` bloques de eventos para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Usa las flechas desplegables de los bloques de eventos `cuando se presiona tecla ___` verde' para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "¡Llega a todas las banderas para pasar!"
         },
         "courseB_playlab_events6_2018": {
           "courseB_playlab_events6_a": "Necesitarás estos bloques de eventos:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Use las flechas desplegables en verde `cuando la flecha ___ presionó` bloques de eventos para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Usa las flechas desplegables de los bloques de eventos `cuando se presiona tecla ___` verde' para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "¡Llega a todas las banderas para pasar!"
         },
         "courseB_playlab_events6_2019": {
           "courseB_playlab_events6_a": "Necesitarás estos bloques de eventos:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Use las flechas desplegables en verde `cuando la flecha ___ presionó` bloques de eventos para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Usa las flechas desplegables de los bloques de eventos `cuando se presiona tecla ___` verde' para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "¡Llega a todas las banderas para pasar!"
         },
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_a": "Necesitarás estos bloques de eventos:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Use las flechas desplegables en verde `cuando la flecha ___ presionó` bloques de eventos para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Usa las flechas desplegables de los bloques de eventos `cuando se presiona tecla ___` verde' para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "¡Llega a todas las banderas para pasar!"
         },
         "courseB_playlab_events7": {
@@ -3244,64 +3244,64 @@
           "courseB_playlab_events7_c": "Este es el bloque que necesitas para que el caballero desaparezca:\n<xml>\n<block type=\"studio_vanish\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1": {
-          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo all pulsar `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">abajo</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo cuando presiones `▼`.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
           "courseB_playlab_events_challenge1_b": "Cambia la velocidad de los animales usando este bloque:\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
-          "courseB_playlab_events_challenge1_c": "¿Qué dirá todo el mundo al acabar la carrera? Hazles hablar con este evento:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">¡Yujuuuu!</title>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_playlab_events_challenge1_c": "¿Qué dirán todos cuando termine la carrera? Hazlos hablar con este evento:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2018": {
-          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo all pulsar `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">abajo</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo cuando presiones `▼`.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
           "courseB_playlab_events_challenge1_b": "Cambia la velocidad de los animales usando este bloque:\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
-          "courseB_playlab_events_challenge1_c": "¿Qué dirá todo el mundo al acabar la carrera? Hazles hablar con este evento:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">¡Yujuuuu!</title>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_playlab_events_challenge1_c": "¿Qué dirán todos cuando termine la carrera? Hazlos hablar con este evento:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2019": {
-          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo all pulsar `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">abajo</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo cuando presiones `▼`.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
           "courseB_playlab_events_challenge1_b": "Cambia la velocidad de los animales usando este bloque:\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
-          "courseB_playlab_events_challenge1_c": "¿Qué dirá todo el mundo al acabar la carrera? Hazles hablar con este evento:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">¡Yujuuuu!</title>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_playlab_events_challenge1_c": "¿Qué dirán todos cuando termine la carrera? Hazlos hablar con este evento:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2020": {
-          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo all pulsar `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">abajo</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo cuando presiones `▼`.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
           "courseB_playlab_events_challenge1_b": "Cambia la velocidad de los animales usando este bloque:\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
-          "courseB_playlab_events_challenge1_c": "¿Qué dirá todo el mundo al acabar la carrera? Hazles hablar con este evento:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">¡Yujuuuu!</title>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_playlab_events_challenge1_c": "¿Qué dirán todos cuando termine la carrera? Hazlos hablar con este evento:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2": {
           "courseB_playlab_events_challenge2_a": "Cada animal en el juego debería desaparecer al hacer clic. ¡También debería volver después de uno o dos segundos!",
-          "courseB_playlab_events_challenge2_b": "Usa otros bloques de eventos para hacer desaparecer a los otros animales.\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
-          "courseB_playlab_events_challenge2_c": "¡Usa comandos adicionales para reproducir sonidos o ganar puntos cuando haces clic en los animales!\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "¡Usa otros bloques de eventos para hacer desaparecer a los otros animales!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "¡Usa otros comandos para reproducir sonidos o anotar puntos cuando haces clic en los animales!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "¡Mezclar!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_playlab_events_challenge2_2018": {
           "courseB_playlab_events_challenge2_a": "Cada animal en el juego debería desaparecer al hacer clic. ¡También debería volver después de uno o dos segundos!",
-          "courseB_playlab_events_challenge2_b": "Usa otros bloques de eventos para hacer desaparecer a los otros animales.\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
-          "courseB_playlab_events_challenge2_c": "¡Usa comandos adicionales para reproducir sonidos o ganar puntos cuando haces clic en los animales!\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "¡Usa otros bloques de eventos para hacer desaparecer a los otros animales!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "¡Usa otros comandos para reproducir sonidos o anotar puntos cuando haces clic en los animales!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "¡Mezclar!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_playlab_events_challenge2_2019": {
           "courseB_playlab_events_challenge2_a": "Cada animal en el juego debería desaparecer al hacer clic. ¡También debería volver después de uno o dos segundos!",
-          "courseB_playlab_events_challenge2_b": "Usa otros bloques de eventos para hacer desaparecer a los otros animales.\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
-          "courseB_playlab_events_challenge2_c": "¡Usa comandos adicionales para reproducir sonidos o ganar puntos cuando haces clic en los animales!\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "¡Usa otros bloques de eventos para hacer desaparecer a los otros animales!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "¡Usa otros comandos para reproducir sonidos o anotar puntos cuando haces clic en los animales!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "¡Mezclar!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_playlab_events_challenge2_2020": {
           "courseB_playlab_events_challenge2_a": "Cada animal en el juego debería desaparecer al hacer clic. ¡También debería volver después de uno o dos segundos!",
-          "courseB_playlab_events_challenge2_b": "Usa otros bloques de eventos para hacer desaparecer a los otros animales.\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
-          "courseB_playlab_events_challenge2_c": "¡Usa comandos adicionales para reproducir sonidos o ganar puntos cuando haces clic en los animales!\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "¡Usa otros bloques de eventos para hacer desaparecer a los otros animales!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "¡Usa otros comandos para reproducir sonidos o anotar puntos cuando haces clic en los animales!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "¡Mezclar!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2018": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "Divide este problema en dos partes. Consigue una sola pila de chatarra y luego descubre cómo llegar a la otra."
@@ -3390,22 +3390,22 @@
         "courseB_starWars_prog7": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog7_2018": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog7_2019": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog7_2020": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog8": {
           "courseB_starWars_prog8_a": "Está bien volver sobre un conjunto de espacios por los que ya has viajado.",
@@ -3431,17 +3431,17 @@
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
           "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
-          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' ayudar aquí?"
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
           "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
-          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' ayudar aquí?"
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
           "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
-          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' ayudar aquí?"
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
@@ -6451,30 +6451,30 @@
           "courseD_harvester_nested_loops_challenge1_c": "¡Deberás agregar un bucle (loop) pequeño dentro de tu bucle (loop) principal para resolver este desafío!"
         },
         "courseD_iceage_loops1": {
-          "courseD_iceage_loops1_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseD_iceage_loops1_a": "Cuidado con el hielo roto! ¡Scrat caerá a través de él!",
           "courseD_iceage_loops1_b": "Tendrás que usar este bloque:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops10": {
-          "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops10_a": "Cuidado con el hielo roto! ¡Scrat caerá al agua!",
           "courseB_iceage_loops10_b": "Intente decir los pasos en voz alta o escríbalos en un pedazo de papel. ¿Ves algún patrón?",
           "courseB_iceage_loops10_c": "¡Este es un rompecabezas muy largo! Sigue este camino."
         },
         "courseD_iceage_loops10_2019": {
-          "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops10_a": "Cuidado con el hielo roto! ¡Scrat caerá al agua!",
           "courseB_iceage_loops10_b": "Intente decir los pasos en voz alta o escríbalos en un pedazo de papel. ¿Ves algún patrón?",
           "courseB_iceage_loops10_c": "¡Este es un rompecabezas muy largo! Sigue este camino."
         },
         "courseD_iceage_loops10_2020": {
-          "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops10_a": "Cuidado con el hielo roto! ¡Scrat caerá al agua!",
           "courseB_iceage_loops10_b": "Intente decir los pasos en voz alta o escríbalos en un pedazo de papel. ¿Ves algún patrón?",
           "courseB_iceage_loops10_c": "¡Este es un rompecabezas muy largo! Sigue este camino."
         },
         "courseD_iceage_loops1_2019": {
-          "courseD_iceage_loops1_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseD_iceage_loops1_a": "Cuidado con el hielo roto! ¡Scrat caerá a través de él!",
           "courseD_iceage_loops1_b": "Tendrás que usar este bloque:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops1_2020": {
-          "courseD_iceage_loops1_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseD_iceage_loops1_a": "Cuidado con el hielo roto! ¡Scrat caerá a través de él!",
           "courseD_iceage_loops1_b": "Tendrás que usar este bloque:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops2": {
@@ -6562,17 +6562,17 @@
           "courseD_iceage_loops8_c": "Utiliza bucles (loops) para ayudar a Scrat a que siga este camino."
         },
         "courseD_iceage_loops9": {
-          "courseD_iceage_loops9_a": "¿Tiene problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
+          "courseD_iceage_loops9_a": "¿Tienes problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
           "courseD_iceage_loops9_b": "Su código final debería tener **4** bucles (loops).",
           "courseD_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseD_iceage_loops9_2019": {
-          "courseD_iceage_loops9_a": "¿Tiene problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
+          "courseD_iceage_loops9_a": "¿Tienes problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
           "courseD_iceage_loops9_b": "Su código final debería tener **4** bucles (loops).",
           "courseD_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseD_iceage_loops9_2020": {
-          "courseD_iceage_loops9_a": "¿Tiene problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
+          "courseD_iceage_loops9_a": "¿Tienes problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
           "courseD_iceage_loops9_b": "Su código final debería tener **4** bucles (loops).",
           "courseD_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
@@ -8133,22 +8133,22 @@
           "courseF_artist_variables6a_d": "¡Este es el patrón que seguirás!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables7": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables7_2018": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables7_2019": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables7_2020": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
@@ -8285,25 +8285,25 @@
         "courseF_bee_for10": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for10_2018": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for10_2019": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for10_2020": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for11": {
@@ -8974,40 +8974,40 @@
         },
         "courseA_artist_loops3_2021": {
           "courseA_artist_loops3_a": "Delinea lentamente el programa con tu dedo para ver dónde esta el error.",
-          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este desafío.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_b": "Querrás utilizar un bloque como este para resolver este rompecabezas.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_a": "Si deseas que el loop se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
-          "courseA_artist_loops4_b": "Dado que solo puedes utilizar un bloque <xml><block type=\"simple_move_right\"/></xml>\nintenta ponerlo dentro del loop <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block>."
+          "courseA_artist_loops4_a": "Si deseas que el bucle (loop) se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
+          "courseA_artist_loops4_b": "Dado que solo puedes utilizar un bloque <xml><block type=\"simple_move_right\"/></xml>\nintenta ponerlo dentro del bucle (loop) <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block>."
         },
         "courseA_artist_loops5_2021": {
-          "courseA_artist_loops5_a": "¡Intenta usar lo que has aprendido sobre los bloques <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> repetir para completar este desafío!",
-          "courseA_artist_loops5_b": "Si deseas que el loop se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
-          "courseA_artist_loops5_c": "Dado que sólo puedes utilizar un bloque <xml><block type=\"simple_move_right\"/></xml> intenta ponerlo dentro del loop\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
+          "courseA_artist_loops5_a": "Intenta usar lo que has aprendido sobre bloques <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> para completar este rompecabezas!",
+          "courseA_artist_loops5_b": "Si deseas que el bucle (loop) se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
+          "courseA_artist_loops5_c": "Dado que sólo puedes utilizar un bloque <xml><block type=\"simple_move_right\"/></xml> intenta ponerlo dentro del bucle (loop)\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_artist_loops6_2021": {
           "courseA_artist_loops6_a": "¿No puedes descifrar cómo hacer la colina? Intenta jugar con los bloques para ver qué dibuja cada uno.",
-          "courseA_artist_loops6_b": "Necesitarás 2 bloques en 2 direcciones para resolver este desafío."
+          "courseA_artist_loops6_b": "Necesitarás 2 bloques en 2 direcciones para resolver este rompecabezas."
         },
         "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_a": "¿No puedes descifrar donde colocar el loop? Intenta escribir el código paso a paso y busca un patrón.",
+          "courseA_artist_loops7_a": "¿No puede averiguar dónde colocar el bucle (loop)? Trate de escribir el código paso a paso, y buscar para un patrón.",
           "courseA_artist_loops7_b": "Primero escribe el código para una ola y luego repítelo para dibujar las otras dos.",
-          "courseA_artist_loops7_c": "Recuerda que puedes poner más de un bloque en un loop <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+          "courseA_artist_loops7_c": "Recuerda que puedes poner más de un bloque en un bucle (loop) <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_a": "Intenta ejecutar el código para ver lo que se ha escrito para ti.",
-          "courseA_artist_loops8_b": "¿Cómo enlazarías el código que se te ha dado?",
+          "courseA_artist_loops8_b": "¿Cómo usarías un bucle (loop) en el código que se te ha dado?",
           "courseA_artist_loops8_c": "¿Qué hace el código?\\\n¿Qué se supone que haga?\\\n¿Qué te dice eso?"
         },
         "courseA_artist_loops9_2021": {
           "courseA_artist_loops9_a": "Agrega otro bloque al código que te dan para dibujar el resto de las escaleras.",
-          "courseA_artist_loops9_b": "El bloque que agregues debería ir dentro del loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>.",
-          "courseA_artist_loops9_c": "Si no puedes descifrar dónde colocar el loop, intenta escribir tu código paso a paso y buscar patrones."
+          "courseA_artist_loops9_b": "El bloque que agregues debería ir dentro del bucle (loop) <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>.",
+          "courseA_artist_loops9_c": "Si no puedes descifrar dónde colocar el bucle (loop), intenta escribir tu código paso a paso y buscar patrones."
         },
         "courseA_artist_loops_challenge2a_2021": {
           "courseA_artist_loops_challenge2_a": "¡Bloques como este <xml>  <block type=\"simple_move_up_left\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
-          "courseA_artist_loops_challenge2_b": "Cuando termines una tienda, ¡'salta' dos veces para pasar a la siguiente!",
-          "courseA_artist_loops_challenge2_c": "Todos tus bloques necesitarán estar dentro de un loop para terminar este desafío."
+          "courseA_artist_loops_challenge2_b": "Cuando termines una carpa, ¡'salta' dos veces para pasar a la siguiente!",
+          "courseA_artist_loops_challenge2_c": "Todos tus bloques necesitarán estar dentro de un bucle (loop) para terminar este rompecabezas."
         },
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_a": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>",
@@ -9101,47 +9101,47 @@
         },
         "courseA_harvester_seq10_2021": {
           "courseA_harvester_seq10_a": "¿Estás atascado/a? Trata de anotar primero los pasos en una hoja de papel.",
-          "courseA_harvester_seq10_b": "Necesitas `Mover al este`, luego`Mover al norte`. Haz esto dos veces. ¡No te olvides de obtener todo el maíz también!",
+          "courseA_harvester_seq10_b": "Necesitas `Mover al Este`, y después `Mover al Norte`. Haz esto dos veces. ¡No te olvides de recoger también todo el maíz!",
           "courseA_harvester_seq10_c": "¡Utiliza esta ruta para recoger todo el maíz."
         },
         "courseA_harvester_seq13_2021": {
-          "courseA_bee_seq1_a": "Usa este bloque para recoger maíz una vez que el cosechador llegue a él.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+          "courseA_bee_seq1_a": "Usa este bloque para recoger maíz una vez que la cosechadora llegue a él.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2021": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz en cuanto el cosechador lo encuentre!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "El cosechador necesita moverse tres veces hacia el Este para recoger el maíz. Usa este bloque:\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq3_2021": {
-          "courseA_harvester_seq3_a": "¿Te has acordado de usar este bloque?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "¿Recordaste usar este bloque?\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta."
         },
         "courseA_harvester_seq4_2021": {
-          "courseA_harvester_seq4_a": "¿Cuántos espacios hay entre el Harvester y el maíz? ¿Cuántos bloques hay en tu espacio de trabajo?",
-          "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Coger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "¿Cuántos espacios hay entre la cosechadora y el maíz? ¿Cuántos bloques hay en tu espacio de trabajo?",
+          "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Recoger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
-          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la manera incorrecta?",
-          "courseA_harvester_seq5_b": "Es necesario eliminar un bloque.",
-          "courseA_harvester_seq5_c": "¡Descarta este bloque!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora en la dirección incorrecta?",
+          "courseA_harvester_seq5_b": "Necesitas eliminar un bloque.",
+          "courseA_harvester_seq5_c": "¡Tira este bloque a la basura!\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq6_2021": {
-          "courseA_harvester_seq6_a": "Si estás atascado, trata de decir los pasos en voz alta. Podría ayudarte a descubrir el camino correcto."
+          "courseA_harvester_seq6_a": "Si estás atascado/a, trata de decir los pasos en voz alta. Podría ayudarte a descubrir el camino correcto."
         },
         "courseA_harvester_seq7_2021": {
           "courseA_harvester_seq7_a": "Intenta resolver el rompecabezas en 2 partes, una parte antes de la esquina y una parte después de la esquina.",
-          "courseA_harvester_seq7_b": "¿Tienes problemas? Este es el camino que debe tomar la cosechadora."
+          "courseA_harvester_seq7_b": "¿Tienes problemas? Éste es el camino que debe seguir la cosechadora."
         },
         "courseA_harvester_seq8_2021": {
-          "courseA_harvester_seq8_a": "Tu código final debe tener \\*\\* 4 \\*\\* bloques de movimiento y \\*\\* 2 \\*\\* bloques de selección."
+          "courseA_harvester_seq8_a": "Tu código final debería tener **4** bloques de movimiento y **2** bloques de recogida."
         },
         "courseA_harvester_seq9_2021": {
           "courseA_harvester_seq9_a": "Ejecute el código varias veces para ver qué sucede. ¿Dónde se detiene la cosechadora?",
-          "courseA_harvester_seq9_b": "¡No te olvides de recoger todo el maíz! Necesitarás bloques de maíz \\*\\* \\*\\* \\*\\*.",
-          "courseA_harvester_seq9_c": "Sigue esta ruta para recoger todo el maíz."
+          "courseA_harvester_seq9_b": "¡No te olvides de recoger todo el maíz! Necesitarás **_3_** bloques de maíz recogido.",
+          "courseA_harvester_seq9_c": "Deberías tomar este camino para recoger todo el maíz."
         },
         "courseA_maze_ramp2_2021": {
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -9160,20 +9160,20 @@
         },
         "courseA_maze_seq10_2021": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_dani": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
           "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones para resolver este rompecabezas."
         },
         "courseA_maze_seq13_2021": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> te acercarán al cerdo."
+          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverte más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto en <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "El ave tendrá que moverse hacia el oeste 3 veces para llegar al cerdo. Utilice este bloque:\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto debajo de <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "El pájaro tendrá que moverse hacia el Oeste 3 veces para llegar al cerdo. Usa este bloque:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "¡Intenta escribir los pasos en papel para encontrar una solución!",
@@ -9188,7 +9188,7 @@
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "Tu código final debe tener 3 bloques de movimiento.",
-          "courseA_maze_seq6_b": "Si te quedas atascado, intenta resolver el rompecabezas en 2 partes, una parte antes de la esquina y una parte después de la esquina."
+          "courseA_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en 2 partes, una parte antes de la esquina y una parte después de la esquina."
         },
         "courseA_maze_seq6_dani": {
           "courseA_maze_seq6_a": "Tu código final debe tener 3 bloques de movimiento.",
@@ -9199,7 +9199,7 @@
           "courseA_maze_seq7_b": "Si no puede descubrir qué hacer, intente dibujar el rompecabezas en papel y use su dedo para descubrir en qué dirección moverse."
         },
         "courseA_maze_seq8_2021": {
-          "courseA_maze_seq8_a": "Si estás atascado, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
+          "courseA_maze_seq8_a": "Si estás atascado/a, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
         },
         "courseA_maze_seq8_dani": {
           "courseA_maze_seq8_a": "Si estás atascado/a, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
@@ -9211,8 +9211,8 @@
           "courseA_maze_seq_challenge2_a": "Intenta contar los espacios con tu dedo. ¡Recuerda no contar el espacio donde comienzas!"
         },
         "courseA_playLab_events2_2021": {
-          "courseA_playLab_events2_a": "Mira el bloque que hace decir algo al perro.",
-          "courseA_playLab_events2_b": "Este es el código que necesitas para completar este desafío:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+          "courseA_playLab_events2_a": "Busca el bloque que hace decir algo al perro.",
+          "courseA_playLab_events2_b": "Este es el código que necesitas para completar este rompecabezas:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events3_2021": {
           "courseA_playLab_events3_a": "Arrastra este bloque <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> y ubícalo en la parte inferior de <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>",
@@ -9220,10 +9220,10 @@
         },
         "courseA_playLab_events4_2021": {
           "courseA_playLab_events4_a": "Este es el bloque de evento que necesitarás para que Jorge se mueva a la derecha:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
-          "courseA_playLab_events4_b": "Este es el código que necesitarás para completar este desafío:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">derecha</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+          "courseA_playLab_events4_b": "Este es el código que necesitas para completar este rompecabezas:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
         },
         "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_a": "Aquí están los bloques evento que deberás usar para mover a Jorge arriba y abajo:\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\ny\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_a": "Aquí están los bloques evento que deberás usar para mover a Jorge arriba y abajo:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nand \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
           "courseA_playLab_events5_b": "¿Sabías que puedes hacer clic en la imagen del bloque y elegir una nueva tecla para la flecha asignada al evento?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events6_2021": {
@@ -9235,20 +9235,20 @@
           "courseA_playLab_events7_a": "Usa este bloque para controlar lo que ocurre cuando chocan los actores.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2021": {
-          "courseA_playlab_events_challenge1_a": "¡Haz que Waddles el Pingüino se muestre al hacer clic en Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "¡Haz que Boo el Fantasme se muestre cuando haces clic en Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "¡Haz que Jayden el Monstruo Fuzzy aparezca cuando haces clic en Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "¡Haz que Spiff the Robot se muestre cuando haces clic en el monstruo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_a": "¡Haz que Waddles el Pingüino se muestre al hacer clic en Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "¡Haz que Boo el Fantasme se muestre cuando haces clic en Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "¡Haz que Jayden el Monstruo Fuzzy aparezca cuando haces clic en Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "¡Haz que Spiff the Robot aparezca cuando haces clic en el monstruo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_e": "Finalmente, ¡haz que Wendel el Mago se muestre cuando haces clic en Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2021": {
-          "courseA_playlab_events_challenge2_a": "Puedes hacer cantar a un pájaro.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Puedes hacer que el robot haga bip.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
+          "courseA_playlab_events_challenge2_a": "Puedes hacer cantar al pájaro.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Puedes hacer que el robot haga bip.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Puedes hacer gruñir a un monstruo enojado.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2021": {
           "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "courseB_Scrat_ramp2_2021": {
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -9266,49 +9266,49 @@
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_artist_loops2_2021": {
-          "courseB_artist_loops2_a": "Si deseas que el loop se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
+          "courseB_artist_loops2_a": "Si deseas que el bucle (loop) se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
           "courseB_artist_loops2_b": "Intenta ejecutar el código primero para ver dónde termina el artista."
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_a": "¡Recuerda utilizar un loop \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> para un mejor código!",
-          "courseB_artist_loops3_b": "El artista querrá moverse hacia el sur para dibujar esta línea."
+          "courseB_artist_loops3_a": "¡Recuerda utilizar un bucle (loop) de \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> para un mejor código!",
+          "courseB_artist_loops3_b": "El artista querrá moverse hacia el Sur para dibujar esta línea."
         },
         "courseB_artist_loops4_2021": {
           "courseB_artist_loops4_a": "El bloque saltar te permite avanzar sin dibujar una línea.",
-          "courseB_artist_loops4_b": "Deberás agregar un bloque dentro del loop repetir para resolver este desafío.",
-          "courseB_artist_loops4_c": "No olvides cambiar la cantidad de veces que el loop se repite."
+          "courseB_artist_loops4_b": "Deberá agregar un bloque dentro del bucle (loop) de 'repetir' para resolver este rompecabezas.",
+          "courseB_artist_loops4_c": "No olvides cambiar el número de veces que el bucle (loop) se repite."
         },
         "courseB_artist_loops5_2021": {
-          "courseB_artist_loops5_a": "Arrastre un loop de \"repetición\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesita repetir?"
+          "courseB_artist_loops5_a": "Arrastre un <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesitas repetir?"
         },
         "courseB_artist_loops6_2021": {
           "courseB_artist_loops6_b": "Intenta escribir los movimientos en un papel y busca un patrón."
         },
         "courseB_artist_loops7_2021": {
-          "courseB_artist_loops7_a": "Este desafío usa **4** loops, ¡uno tras de otro!",
-          "courseB_artist_loops7_b": "Observa que cada bucle crea un patrón de escalera que va en una dirección diferente. \n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Los bucles deberían hacer esto:\n\n-   Bucle 1\n    -   Derecha\n    -   Abajo\n\n-   Bucle 2\n    -   Derecha\n    -   Arriba\n\n-   Bucle 3\n    -   Izquierda\n    -   Arriba\n\n-   Bucle 4\n    -   Izquierda\n    -   Abajo"
+          "courseB_artist_loops7_a": "Este desafío usa **4** bucles (loops), ¡uno tras de otro!",
+          "courseB_artist_loops7_b": "Observa que cada bucle (loop) crea un patrón de escalera que va en una dirección diferente. \n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "Los bucles (loops) deberían hacer esto:\n\n-   Bucle 1\n    -   Derecha\n    -   Abajo\n\n-   Bucle 2\n    -   Derecha\n    -   Arriba\n\n-   Bucle 3\n    -   Izquierda\n    -   Arriba\n\n-   Bucle 4\n    -   Izquierda\n    -   Abajo"
         },
         "courseB_artist_loops8_2021": {
           "courseB_artist_loops8_a": "¿Cuántas veces debes repetir el patrón para hacer la escalera?",
           "courseB_artist_loops8_b": "Intenta ejecutar el código que se te ha dado para ver lo que hace."
         },
         "courseB_artist_loops9_2021": {
-          "courseB_artist_loops9_a": "Recuerda que los bloques saltar pueden usarse para moverse sin dibujar una línea.",
-          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este desafío.",
-          "courseB_artist_loops9_c": "¿No puedes descifrar donde colocar el loop? Intenta escribir el código paso a paso y busca un patrón."
+          "courseB_artist_loops9_a": "Recuerde que los bloques de salto se pueden usar para moverse sin dibujar una línea.",
+          "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este rompecabezas.",
+          "courseB_artist_loops9_c": "¿No puede averiguar dónde colocar el bucle (loop)? Trate de escribir el código paso a paso, y buscar para un patrón."
         },
         "courseB_artist_loops_challenge1_2021": {
           "courseB_artist_loops_challenge1_a": "¡Bloques como este: <xml>  <block type=\"simple_move_up_right\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
           "courseB_artist_loops_challenge1_b": "Cuando termines uno de los dados, ¡\"salta\" al próximo!",
-          "courseB_artist_loops_challenge1_c": "Tendrá que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
+          "courseB_artist_loops_challenge1_c": "Tendrás que `mover` o`saltar` sobre algunas de las mismas líneas dos veces. "
         },
         "courseB_artist_loops_challenge2_2021": {
           "courseB_artist_loops_challenge2_a": "El código para dibujar una X ya se te ha dado. Todo lo que necesitas hacer es repetir la X y \"saltar\" al siguiente punto.",
-          "courseB_artist_loops_challenge2_b": "Puede usar los bloques \"saltar\" para moverse a otros espacios sin dibujar."
+          "courseB_artist_loops_challenge2_b": "Puedes usar los bloques `saltar` para moverte a otros espacios sin dibujar."
         },
         "courseB_collector_loops10_2021": {
-          "courseB_collector_loops10_a": "Si no puedes descifrar dónde poner los loops \"repetir\", escribe paso a paso el código y busca un patrón.",
+          "courseB_collector_loops10_a": "Si no puedes descifrar dónde poner los bucles (loops) de \"repetir\", escribe paso a paso el código y busca un patrón.",
           "courseB_collector_loops10_b": "Intenta escribir los movimientos en un papel tratando de encontrar un patrón."
         },
         "courseB_collector_loops1_2021": {
@@ -9320,61 +9320,61 @@
         },
         "courseB_collector_loops3_2021": {
           "courseB_collector_prog3_a": "Intenta usar un bloque <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> para recoger tu tesoro.",
-          "courseB_collector_prog3_b": "Recuerda que puedes poner más de un bloque dentro de un loop repetir."
+          "courseB_collector_prog3_b": "Recuerde que puede poner más de un bloque dentro de un bucle (loop) de 'repetir'."
         },
         "courseB_collector_loops4_2021": {
-          "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
+          "courseB_collector_loops4_a": "Pruebe usar el botón de paso para descubrir dónde van las cosas mal.",
+          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el bucle (loop).",
+          "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro después de que termine el <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> bucle (loop) de 'repetir'!"
         },
         "courseB_collector_loops5_2021": {
-          "courseB_collector_loops5_a": "Use más de un loop para finalizar el trabajo.",
+          "courseB_collector_loops5_a": "Use más de un bucle (loop) para finalizar el trabajo.",
           "courseB_collector_loops5_b": "Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseB_collector_loops6_2021": {
-          "courseB_collector_loops6_a": "¿No puedes descifrar dónde las cosas empiezan a fallar? Usa el botón \"Paso\" para ejecutar tu programa un bloque a la vez.",
-          "courseB_collector_loops6_b": "Puedes cambiar el número de veces que el loop se repite y ejecutar haciendo clic en el \"3\" y eligiendo un número distinto.",
-          "courseB_collector_loops6_c": "Querrás utilizar 3 loops de repetición para resolver este desafío <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>.",
-          "courseB_collector_loops6_d": "Si estás confundido/a, intenta dividir este desafío en 3 partes."
+          "courseB_collector_loops6_a": "¿No puedes averiguar dónde las cosas empiezan a fallar? Usa el botón \"Paso\" para ejecutar tu programa un bloque a la vez.",
+          "courseB_collector_loops6_b": "Puedes cambiar el número de veces que el bucle (loop) se repite y ejecutar haciendo clic en el \"3\" y eligiendo un número distinto.",
+          "courseB_collector_loops6_c": "Querrá utilizar 3 bucles (loops) de 'repetir' para resolver este rompecabezas <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>.",
+          "courseB_collector_loops6_d": "Si estás confundido/a, intenta dividir este rompecabezas en 3 partes."
         },
         "courseB_collector_loops7_2021": {
-          "courseB_collector_loops7_a": "Si tienes dificultades con este desafío, intenta dibujarlo en un papel para ayudarte a resolverlo.",
-          "courseB_collector_loops7_b": "Necesitarás 3 loops 'repetir' para resolver este desafío, ¡y no olvides el tesoro extra al final!"
+          "courseB_collector_loops7_a": "Si tienes dificultades con este rompecabezas, intenta dibujarlo en un papel para ayudarte a resolverlo.",
+          "courseB_collector_loops7_b": "Necesitarás 3 bucles (loops) de 'repetir' para resolver este rompecabezas, ¡y no olvides el tesoro extra al final!"
         },
         "courseB_collector_loops8_2021": {
-          "courseB_collector_loops8_challenge_a": "Si no puedes averiguar donde poner los loops 'repetir', escribe tu código paso a paso y busca un patrón."
+          "courseB_collector_loops8_challenge_a": "Si no puedes averiguar donde poner los bucles (loops) de 'repetir', escribe tu código paso a paso y busca un patrón."
         },
         "courseB_collector_loops9_2021": {
           "courseB_collector_loops9_a": "¿Parece muy difícil? Divídelo en 3 pequeños problemas para que sea más fácil.",
-          "courseB_collector_loops9_b": "Se necesitan 3 loops repetir, uno después de otro, para esta solución."
+          "courseB_collector_loops9_b": "Se necesitan 3 bucles (loops) de 'repetir', uno después de otro, para esta solución."
         },
         "courseB_collector_loops_challenge1_2021": {
-          "courseB_collector_loops_challenge1_b": "Empieza haciendo bucles con los siguientes comandos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_b": "Para empezar, crea un bucle (loop) con los siguientes comandos:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
           "courseB_collector_loops_challenge1_c": "Muévete al Este dos veces entre cada camino.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nPuedes hacerlo con solamente 14 bloques. Haz click y pide una pista más para ver la solución.",
-          "courseB_collector_loops_challenge1_d": "¡Prueba con esto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "¡Prueba esto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge2a_2021": {
           "courseB_collector_loops_challenge2a_a": "Si algo sale mal, intenta depurarlo. ¡No te rindas!",
           "courseB_collector_loops_challenge2a_b": "Mira esta opción para atravesar el laberinto. ¿Ves un patrón que puedas repetir?",
-          "courseB_collector_loops_challenge2a_c": "Para recoger todo el tesoro, tendrás que añadir dos bloques <xml> <block type=\"collector_collect\"/></xml> dentro de tu loop, o poner el bloque en el interior de su propio bloque de 'repetir'."
+          "courseB_collector_loops_challenge2a_c": "Para recoger todo el tesoro, tendrás que añadir dos bloques <xml> <block type=\"collector_collect\"/></xml> dentro de tu bucle (loop), o poner el bloque en el interior de su propio bloque de 'repetir'."
         },
         "courseB_iceage_loops10_2021": {
-          "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
+          "courseB_iceage_loops10_a": "Cuidado con el hielo roto! ¡Scrat caerá al agua!",
           "courseB_iceage_loops10_b": "Intente decir los pasos en voz alta o escríbalos en un pedazo de papel. ¿Ves algún patrón?",
-          "courseB_iceage_loops10_c": "¡Este es un acertijo muy largo! Sigue este camino."
+          "courseB_iceage_loops10_c": "¡Este es un rompecabezas muy largo! Sigue este camino."
         },
         "courseB_iceage_loops1_2021": {
-          "courseB_iceage_loops1_a": "Cuidado con de hielo roto! ¡Scrat caerá a la perfección!",
+          "courseB_iceage_loops1_a": "Cuidado con el hielo roto! ¡Scrat caerá a través de él!",
           "courseB_iceage_loops1_b": "Tendrás que usar este bloque:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops2_2021": {
-          "courseB_iceage_loops2_a": "Rompe este puzzle en dos partes, una antes de la esquina y otra después de la esquina.",
-          "courseB_iceage_loops2_b": "Si te quedas atascado, trata de decir los pasos en voz alta.",
+          "courseB_iceage_loops2_a": "Separa este rompecabezas en dos piezas, una antes de la esquina, y otra después de la esquina.",
+          "courseB_iceage_loops2_b": "Si te quedas atascado/a, trata de decir los pasos en voz alta.",
           "courseB_iceage_loops2_c": "Sigue este camino para que Scrat llegue a la bellota."
         },
         "courseB_iceage_loops3_2021": {
           "courseB_iceage_loops3_a": "¡Usa este nuevo bloque!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Para repetir el código, arrastra un loop ´repetir´ <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, luego ubica el bloque que quieres dentro de él."
+          "courseB_iceage_loops3_b": "Para repetir el código, arrastra un bucle (loop) de ´repetir´ <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, luego ubica el bloque que quieres dentro de él."
         },
         "courseB_iceage_loops4_2021": {
           "courseB_iceage_loops4_a": "Intente anotar los pasos que Scrat tomaría para llegar a la bellota. ¿Ves un patrón?",
@@ -9382,22 +9382,22 @@
           "courseB_iceage_loops4_c": "Este es el camino que Scrat deberia tomar."
         },
         "courseB_iceage_loops6_2021": {
-          "courseB_iceage_loops6_a": "Su código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
-          "courseB_iceage_loops6_b": "¡Solo necesita agregar un ciclo más!",
+          "courseB_iceage_loops6_a": "Tu código final tendrá \\*\\* tres \\*\\* bloques de movimiento.",
+          "courseB_iceage_loops6_b": "¡Solo necesita agregar un bucle (loop) más!",
           "courseB_iceage_loops6_c": "La ruta final debe verse así."
         },
         "courseB_iceage_loops7_2021": {
-          "courseB_iceage_loops7_a": "Si te quedas atascado, prueba a escribir pasos en una hoja de papel. ¿Ves un patrón?",
+          "courseB_iceage_loops7_a": "Si te quedas atascado/a, prueba a escribir pasos en una hoja de papel. ¿Ves un patrón?",
           "courseB_iceage_loops7_b": "Este es el camino que Scrat debe tomar para llegar a la bellota."
         },
         "courseB_iceage_loops8_2021": {
           "courseB_iceage_loops8_a": "¿Los bloques de movimiento son correctos? ¿Qué más puedes cambiar?",
-          "courseB_iceage_loops8_b": "El primer ciclo deberia repetirse **3** veces, el segundo **5** veces, el cuarto **4** veces, y el último **4** veces.",
-          "courseB_iceage_loops8_c": "Utiliza ciclos para ayudar a Scrat a que siga este camino."
+          "courseB_iceage_loops8_b": "El primer bucle (loop) deberia repetirse **3** veces, el segundo **5** veces, el tercer **4** veces, y el último bucle (loop) **4** veces.",
+          "courseB_iceage_loops8_c": "Utiliza bucles (loops) para ayudar a Scrat a que siga este camino."
         },
         "courseB_iceage_loops9_2021": {
-          "courseB_iceage_loops9_a": "¿Tiene problemas? Intente dividir este puzzle en partes más pequeñas. No tema ejecutar su puzzle mientras codifica!",
-          "courseB_iceage_loops9_b": "Su código final debería tner **4** loops.",
+          "courseB_iceage_loops9_a": "¿Tienes problemas? Intente dividir este rompecabezas en partes más pequeñas. No tema ejecutar tu rompecabezas mientras codifica!",
+          "courseB_iceage_loops9_b": "Su código final debería tener **4** bucles (loops).",
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseB_maze_seq1_2021": {
@@ -9459,35 +9459,35 @@
           "courseB_playlab_events5_b": "Éste es el bloque que hace que el caballero huya.\n\n<xml>\n<block type=\"studio_move\">\n  <title name=\"SPRITE\">1</title>\n  <title name=\"DIR\">2</title>\n </block>\n</xml>"
         },
         "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Necesitarás estos bloques de evento:\n\n<xml>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">arriba</title>\n</block>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">abajo</title>\n</block>\n</xml>",
-          "courseB_playlab_events6_b": "Usa las flechas desplegables de los bloques de eventos `cuando se presiona tecla ___` verdes para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_a": "Necesitarás estos bloques de eventos:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "Usa las flechas desplegables de los bloques de eventos `cuando se presiona tecla ___` verde' para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "¡Llega a todas las banderas para pasar!"
         },
         "courseB_playlab_events7_2021": {
           "courseB_playlab_events7_a": "Éste es el bloque de evento que necesitarás:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n</block>\n</xml>",
           "courseB_playlab_events7_b": "Éste es el bloque que necesitas para reproducir un sonido.\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">palmada</title>\n</block>\n</xml>",
-          "courseB_playlab_events7_c": "Éste es el bloque que necesitas para hacer que el caballero se desvanezca:\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
+          "courseB_playlab_events7_c": "Este es el bloque que necesitas para que el caballero desaparezca:\n<xml>\n<block type=\"studio_vanish\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2021": {
-          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo all pulsar `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">abajo</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo cuando presiones `▼`.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
           "courseB_playlab_events_challenge1_b": "Cambia la velocidad de los animales usando este bloque:\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
-          "courseB_playlab_events_challenge1_c": "¿Qué dirá todo el mundo al acabar la carrera? Hazles hablar con este evento:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">¡Yujuuuu!</title>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_playlab_events_challenge1_c": "¿Qué dirán todos cuando termine la carrera? Hazlos hablar con este evento:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2_2021": {
           "courseB_playlab_events_challenge2_a": "Cada animal en el juego debería desaparecer al hacer clic. ¡También debería volver después de uno o dos segundos!",
-          "courseB_playlab_events_challenge2_b": "¡Usa otros bloques de eventos para hacer desaparecer a los demás animales!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "¡Usa otros comandos para reproducir sonidos o anotar puntos si haces clic en los animales!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "¡A mezclarlo!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
+          "courseB_playlab_events_challenge2_b": "¡Usa otros bloques de eventos para hacer desaparecer a los otros animales!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "¡Usa otros comandos para reproducir sonidos o anotar puntos cuando haces clic en los animales!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "¡Mezclar!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este desafío. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
           "courseB_starWars_prog2_a": "Divide este problema en dos partes. Consigue una sola pila de chatarra y luego descubre cómo llegar a la otra."
         },
         "courseB_starWars_prog3_2021": {
-          "courseB_starWars_prog3_a": "Necesitarás moverte de 3 maneras para resolver este desafío.",
+          "courseB_starWars_prog3_a": "Tendrás que moverte en 3 direcciones para resolver este rompecabezas.",
           "courseB_starWars_prog3_b": "Construye una pieza de código a la vez. Ejecútalo para descubrir a dónde ir desde allí."
         },
         "courseB_starWars_prog4_2021": {
@@ -9495,28 +9495,28 @@
           "courseB_starWars_prog4_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "¿Este patrón no se parece un poco al último desafío?",
+          "courseB_starWars_prog5_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog5_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
           "courseB_starWars_prog5_c": "Traza este patrón con tu dedo. Cuenta las piezas de metal mientras te mueves.",
-          "courseB_starWars_prog5_da": "Mira lo que sucede si usas la misma solución del desafío de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_da": "Mira lo que ocurre si utilizas la misma solución que el rompecabezas de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6_2021": {
           "courseB_starWars_prog6_a": "¡Este patrón es solo un paso escalón con dos movimientos por dirección!",
           "courseB_starWars_prog6_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último desafío?",
+          "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "Está bien volver sobre un conjunto de espacios por los que ya has viajado.",
           "courseB_starWars_prog8_b": "Intenta usar el bloque `repetir` para ver lo que ocurre en el código que pusiste dentro.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle.",
-          "courseB_starWars_prog9_b": "Hay muchas formas de resolver este desafío.",
-          "courseB_starWars_prog9_c": "¿Podría un loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block></xml> ayudar aquí?"
+          "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
+          "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
@@ -10518,14 +10518,14 @@
           "courseF_artist_for1_a": "Puedes dibujar algo como esto:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
         },
         "courseF_artist_for6_2021": {
-          "courseF_artist_for6_a": "Tu bucle 'desde' contará de 15 a 300 por 15.",
-          "courseF_artist_for6_b": "Pon un bloque 'avanzar' y uno 'girar' dentro de este loop 'para'.",
+          "courseF_artist_for6_a": "Tu bucle (loop) 'para' contará de 15 a 300 por 15.",
+          "courseF_artist_for6_b": "Pon un bloque 'avanzar' y uno 'girar' dentro de este bucle (loop) 'para'.",
           "courseF_artist_for6_c": "Todo lo que tienes que cambiar es el número de grados en el bloque de 'girar'."
         },
         "courseF_artist_for7_2021": {
-          "courseF_artist_for7_a": "El lápiz es más fino en este puzle. Tendrás que configurarlo en '1' antes de empezar.",
+          "courseF_artist_for7_a": "La pluma es más fina en este rompecabezas. Tendrás que configurarla a '1' antes de empezar.",
           "courseF_artist_for7_b": "¡Fíjate en que esta espiral gira a la derecha en vez de a la izquierda!",
-          "courseF_artist_for7_c": "El bucle 'desde' en este desafío va de 15 a 300 de 2 en 2.",
+          "courseF_artist_for7_c": "El bucle (loop) 'para' en este rompecabezas va de 15 a 300 por 2.",
           "courseF_artist_for7_d": "Esta imagen se hace girando a 89 grados."
         },
         "courseF_artist_for8_2021": {
@@ -10533,7 +10533,7 @@
           "courseF_artist_for8_b": "¡Si lo deseas puedes elegir un color diferente para tu espiral!"
         },
         "courseF_artist_for9_2021": {
-          "courseF_artist_for9_a": "Si pones el bloque 'establecer alfa' dentro de tu bucle 'desde' y usas la variable 'contador' para cambiarlo, puedes crear un diseño como este.",
+          "courseF_artist_for9_a": "Si pones el bloque 'establecer alfa' dentro de tu bucle (loop) 'para' y usas la variable 'contador' para cambiarlo, puedes crear un diseño como este.",
           "courseF_artist_for9_b": "El bloque de 'establecer alfa' cambia la opacidad de un color. Cuanto menor sea el valor, más transparente es el color."
         },
         "courseF_artist_for_challenge1_2021": {
@@ -10543,9 +10543,9 @@
           "courseF_artist_for_challenge1_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for_challenge2_2021": {
-          "courseF_artist_for_challenge2_c": "El \"bucle para\" va desde 5 a 250 por 2. ",
+          "courseF_artist_for_challenge2_c": "El bucle \"loop para\" va desde 5 a 250 por 2. ",
           "courseF_artist_for_challenge2_a": "El cambio de color se presenta con el bloque 'definir color con rojo, verde, azul'. Rojo es la constante definida como 255, verde es siempre el valor de `contador`, y azul es siempre `255-contador`.",
-          "courseF_artist_for_challenge2_b": "El código para esto es mucho más simple de lo que podrías pensar. Solo define el color dentro del 'bucle para', avanza, y luego gira.",
+          "courseF_artist_for_challenge2_b": "El código para esto es mucho más simple de lo que podrías pensar. Solo define el color dentro del bucle 'loop para', avanza, y luego gira.",
           "courseF_artist_for_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
         "courseF_artist_variables10_2021": {
@@ -10553,18 +10553,18 @@
           "courseF_artist_variables10_b": "Puedes intentar varias cosas y ejecutar el código varias veces."
         },
         "courseF_artist_variables7_2021": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
-          "courseF_artist_variables7_b": "Puedes utilizar un bucle 'repetir' para simplificar el código para el triángulo.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables8_2021": {
           "courseF_artist_variables8_b": "Recuerda iniciar tu código para el triángulo con el bloque 'establecer longitud', y empezar a 150 píxeles.",
-          "courseF_artist_variables8_c": "Asegúrate de utilizar el bucle 'repetir' para dibujar el triángulo.",
-          "courseF_artist_variables8_a": "Intenta poner el\n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro del bucle al final."
+          "courseF_artist_variables8_c": "Asegúrate de utilizar el bucle (loop) de 'repetir' para dibujar el triángulo.",
+          "courseF_artist_variables8_a": "Intenta poner el\n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro del bucle (loop) al final."
         },
         "courseF_artist_variables9_2021": {
-          "courseF_artist_variables9_a": "Para este puzle, todo lo que necesitas es cambiar cuántas veces se repite el bucle.",
-          "courseF_artist_variables9_b": "Asegúrate de que el bloque que cambia la `longitud` está dentro del bucle para que las líneas sigan siendo más largas."
+          "courseF_artist_variables9_a": "Para este puzle, todo lo que necesitas es cambiar cuántas veces se repite el bucle (loop).",
+          "courseF_artist_variables9_b": "Asegúrate de que el bloque que cambia la `longitud` está dentro del bucle (loop) para que las líneas sigan siendo más largas."
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "¿Quieres probar otros polígonos? \n\nUtiliza el número de lados en tu `repetición` y el ángulo en tu bloque de `giro`.\nPrueba con estos:\n\n| Forma, lados, ángulo...\n\\| :------: \\| :---: \\| :---: \\|\n| triángulo | 3 | 120° |\n| cuadrado | 4 | 90° |\n| pentágono | 5 | 72° |\n| hexágono | 6 | 60° |\n| octógono | 8 | 45° |\n| nonágono | 9 | 40° |\n| decágono | 10 | 36° |"
@@ -10572,53 +10572,53 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for11_2021": {
           "courseF_bee_for11_a": "¿Cuánto menos es 12 que 15?\\\n¿Cuánto menos es 9 que 12?\n\n¿Ves un patrón'?"
         },
         "courseF_bee_for1_2021": {
-          "courseF_bee_for1_b": "Necesitas dos bloques en tu bucle 'repetir' para recoger todo el néctar."
+          "courseF_bee_for1_b": "Necesitas dos bloques en tu bucle (loop) de 'repetir' para recoger todo el néctar."
         },
         "courseF_bee_for2_2021": {
-          "courseF_bee_for2_a": "Si estas confunso, trabaja con una flor cada vez y prueba continuamente.",
-          "courseF_bee_for2_b": "Recuerda avanzar entre cada bucle, y así podrás llegar a cada flor."
+          "courseF_bee_for2_a": "Si estas confundido/a, trabaja con una flor a la vez y prueba continuamente.",
+          "courseF_bee_for2_b": "Recuerda avanzar entre cada bucle (loop) para llegar a cada flor."
         },
         "courseF_bee_for4_2021": {
-          "courseF_bee_for4_a": "Utiliza un bucle ´desde' que vaya de 1 a 7 con un incremento de 1 para resolver este puzle.",
-          "courseF_bee_for4_b": "Dentro de tu bucle 'desde', tendrás que tener un comando 'avanzar' y un bucle para recolectar néctar.",
-          "courseF_bee_for4_c": "¡Asegúrate de usar la variable `contador` dentro de tu bucle `repetir` anidado para obtener suficiente néctar!"
+          "courseF_bee_for4_a": "Utiliza un bucle (loop)´para' que vaya de 1 a 7 con un incremento de 1 para resolver este puzle.",
+          "courseF_bee_for4_b": "Dentro de tu bucle (loop) 'para', tendrás que tener un comando 'avanzar' y un bucle (loop) para recolectar néctar.",
+          "courseF_bee_for4_c": "¡Asegúrate de usar la variable `contador` dentro de tu bucle (loop) de `repetir` anidado para obtener suficiente néctar!"
         },
         "courseF_bee_for5_2021": {
-          "courseF_bee_for5_a": "Esta vez, tu bloque 'avanzar' y tu bloque 'obtener néctar' tendrán que estar en bucles'repetir' diferentes, ambos dentro del mismo bucle 'desde'.",
-          "courseF_bee_for5_b": "Usa la variable 'contador' en cada bucle para que la abeja se mueva a distintas distancias entre cada flor.",
-          "courseF_bee_for5_c": "¡No tengas miedo de cometer un error! Prueba a agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el puzle."
+          "courseF_bee_for5_a": "Esta vez, tu bloque 'avanzar' y tu bloque 'obtener néctar' tendrán que estar en bucles (loops) de 'repetir' separados, ambos dentro del mismo bucle (loop) 'para'.",
+          "courseF_bee_for5_b": "Usa la variable 'contador' en cada bucle (loop) para que la abeja se mueva distintas distancias entre cada flor.",
+          "courseF_bee_for5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el rompecabezas."
         },
         "courseF_bee_for6_2021": {
-          "courseF_bee_for6_a": "No te olvides de utilizar una variable 'contador' dentro de tu bucle ´repetir´,",
-          "courseF_bee_for6_b": "Dentro de tu bucle 'desde', tendrás que tener un comando 'avanzar' y un bucle para recolectar néctar.",
-          "courseF_bee_for6_c": "Tu bucle debe contar \\*\\* de 5 a 1 \\*\\*."
+          "courseF_bee_for6_a": "No te olvides de utilizar una variable 'contador' dentro de tu bucle (loop) de ´repetir´,",
+          "courseF_bee_for6_b": "Dentro de tu bucle (loop) 'para', tendrás que tener un comando 'avanzar' y un bucle (loop) para recolectar néctar.",
+          "courseF_bee_for6_c": "Tu bucle (loop) debe contar \\*\\* de 5 a 1 \\*\\*."
         },
         "courseF_bee_for7_2021": {
-          "courseF_bee_for7_a": "Tu loop 'desde' deberá contar de 1 a 7 en incrementos de 2.",
-          "courseF_bee_for7_b": "Dentro de tu bucle 'desde', tendrás que tener un comando 'avanzar' y un bucle para recolectar néctar.",
-          "courseF_bee_for7_c": "No te olvides de utilizar una variable 'contador' dentro de tu bucle 'repetir'."
+          "courseF_bee_for7_a": "Tu bucle (loop) 'para' deberá contar de 1 a 7 en incrementos de 2.",
+          "courseF_bee_for7_b": "Dentro de tu bucle (loop) 'para', tendrás que tener un comando 'avanzar' y un bucle (loop) para recolectar néctar.",
+          "courseF_bee_for7_c": "No te olvides de utilizar una variable 'contador' dentro de tu bucle (loop) de 'repetir'."
         },
         "courseF_bee_for8_2021": {
-          "courseF_bee_for8_a": "Si tu bucle está contando hacia arriba, el incremento se agrega a tu variable de contador cada vez.\n\n¿Qué necesitas añadir a cada número para obtener la próxima cantidad de néctar?",
+          "courseF_bee_for8_a": "Si tu bucle (loop) está contando hacia arriba, el incremento se agrega a tu variable de contador cada vez.\n\n¿Qué necesitas añadir a cada número para obtener la próxima cantidad de néctar?",
           "courseF_bee_for8_b": "En este puzle, tendrás que moverte en un patrón de escaleras para llegar a las flores.",
-          "courseF_bee_for8_c": "Tu bucle contará _de 3 a 15_ con algún incremento. ¿Cuál es?"
+          "courseF_bee_for8_c": "Tu bucle (loop) contará _de 3 a 15_ con algún incremento. ¿Qué es?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Intenta hacer algunos cálculos con la variable contador.\n\n¿Qué tienes que hacerle al contador en cada flor para alcanzar la cantidad de néctar que necesitas recolectar?",
-          "courseF_bee_for9_c": "Parece que tendrás que girar a la abeja al inicio de cada repetición del bucle si quieres resolver el puzle.",
-          "courseF_bee_for9_b": "**Recuerda.** Si tu bucle está contando hacia arriba, el incremento se añade a tu variable 'contador' cada vez."
+          "courseF_bee_for9_c": "Parece que tendrás que girar a la abeja al inicio de cada repetición del bucle (loop) si quieres resolver el puzle.",
+          "courseF_bee_for9_b": "**Recuerda.** Si tu bucle (loop) está contando hacia arriba, el incremento se añade a tu variable 'contador' cada vez."
         },
         "courseF_bee_for_challenge2_2021": {
           "courseF_bee_for_challenge2_a": "Echa un vistazo a esta opción de movimiento:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
-          "courseF_bee_for_challenge2_b": "Trata de usar dos loops \"para\": Uno para escalar y agarrar el néctar, y otro para descender y hacer miel.",
-          "courseF_bee_for_challenge2_c": "Observe que un bucle `para` necesita varios bucles regulares dentro en que se repita 'contador' veces para hacer el patrón creciente de escalera.\n\nEl otro bucle `para` solo necesita un bucle regular para hacer una cantidad 'contador' de miel.",
+          "courseF_bee_for_challenge2_b": "Trata de usar dos bucles (loops) \"para\": Uno para escalar y agarrar el néctar, y otro para descender y hacer miel.",
+          "courseF_bee_for_challenge2_c": "Observa que un bucle (loop) \"para\" necesita varios bucles (loops) regulares dentro del 'contador' de repetición; las veces para hacer aumentar el patrón de escalera.\n\nEl otro bucle (loop) \"para\" solo necesita un bucle (loop) regular para hacer un 'contador' cantidad de miel.",
           "courseF_bee_for_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_bee_variables_3a_2021": {

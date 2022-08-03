@@ -7,8 +7,8 @@
       "announcements": [
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1",
           "type": "feedback",
           "visibility": "Teacher-only"
         }
@@ -20,11 +20,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-16 14:28:22 UTC",
+    "serialized_at": "2022-08-01 15:46:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8661,6 +8662,7 @@
       "key": "asphalt_art_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8673,6 +8675,7 @@
       "key": "backgroundpainter",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8721,6 +8724,7 @@
       "key": "code_reviews_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -8781,6 +8785,7 @@
       "key": "cs_bingo_cards",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8805,6 +8810,7 @@
       "key": "decomposition",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8817,6 +8823,7 @@
       "key": "exploring_open_source_code",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8865,6 +8872,7 @@
       "key": "patternpainter",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8901,6 +8909,7 @@
       "key": "software_engineering_characteristics",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8937,6 +8946,7 @@
       "key": "spiralpainter_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8985,6 +8995,7 @@
       "key": "u1l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8997,6 +9008,7 @@
       "key": "u1l11_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9009,6 +9021,7 @@
       "key": "u1l12_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9021,6 +9034,7 @@
       "key": "u1l13_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9033,6 +9047,7 @@
       "key": "u1l14_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9045,6 +9060,7 @@
       "key": "u1l15_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9057,6 +9073,7 @@
       "key": "u1l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9069,6 +9086,7 @@
       "key": "u1l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9081,6 +9099,7 @@
       "key": "u1l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9093,6 +9112,7 @@
       "key": "u1l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9105,6 +9125,7 @@
       "key": "u1l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9117,6 +9138,7 @@
       "key": "u1l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9129,6 +9151,7 @@
       "key": "u1l8_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9141,6 +9164,7 @@
       "key": "u1l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9153,6 +9177,7 @@
       "key": "unit_1_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9189,6 +9214,7 @@
       "key": "unit_1_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -9225,6 +9251,7 @@
       "key": "using_two-way_selection_and_not",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9273,6 +9300,7 @@
       "key": "writing_algorithms",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9309,12 +9337,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "software_engineering_skills_and_characteristics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "unit_1_guide"
       }
     },
     {
@@ -10393,7 +10415,7 @@
     {
       "key": "software_engineer",
       "word": "software engineer",
-      "definition": "a person who designs, developers, and tests software for home, school, and business use",
+      "definition": "a person who designs, develops, and tests software for home, school, and business use",
       "properties": {
       },
       "seeding_key": {

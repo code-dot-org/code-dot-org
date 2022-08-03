@@ -13,13 +13,13 @@
         = f.text_field :login, value: email, autofocus: email == ''
 
       / Password
-      .field
+      .field#password_field
         = f.label :password
         = f.password_field :password, autofocus: email != ''
 
-      / Forgot password?
+        / Forgot password?
       - if devise_mapping.recoverable?
-        %div.field-aligned
+        %div.field-aligned.password_help_link
           = link_to t('auth.forgot_password'), new_password_path(resource_name), id: 'forgot-password'
 
       / Sign in button
@@ -27,8 +27,6 @@
 
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
-      %div.field-aligned
-        %strong= t('auth.notyet_signedup')
       = link_to new_user_registration_path, class: 'field-aligned' do
         %button.blue-button= t('nav.user.signup')
 
@@ -39,7 +37,7 @@
 
   = render "devise/shared/oauth_links"
 
-%h3= t('signin.try_heading')
+%h2#code_without_signing_in= t('signin.try_heading')
 
 .row
   - if @is_english
