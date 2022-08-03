@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {
   setSource,
   sourceTextUpdated,
