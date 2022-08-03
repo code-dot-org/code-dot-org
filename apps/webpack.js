@@ -41,6 +41,9 @@ var toTranspileWithinNodeModules = [
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 
+// As of Webpack 5, Node APIs are no longer automatically polyfilled.
+// resolve.fallback resolves the API to its NPM package, and the plugin
+// makes the API available as a global.
 const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
