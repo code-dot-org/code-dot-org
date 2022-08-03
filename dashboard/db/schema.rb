@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_02_162830) do
+ActiveRecord::Schema.define(version: 2022_07_13_165055) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -633,36 +633,6 @@ ActiveRecord::Schema.define(version: 2022_08_02_162830) do
     t.string "app"
     t.integer "intro_video_id"
     t.index ["intro_video_id"], name: "index_games_on_intro_video_id"
-  end
-
-  create_table "google_sheets_shared_cdo_donors", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name_s"
-    t.string "url_s"
-    t.string "show_s"
-    t.string "twitter_s"
-    t.string "level_s"
-    t.float "weight_f"
-    t.float "twitter_weight_f"
-  end
-
-  create_table "google_sheets_shared_cdo_languages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "code_s"
-    t.string "unique_language_s"
-    t.string "language_s"
-    t.string "locale_s"
-    t.string "native_name_s"
-    t.string "english_name_s"
-    t.boolean "supported_codeorg_b"
-    t.boolean "supported_hoc_b"
-    t.string "crowdin_code_s"
-    t.string "crowdin_name_s"
-    t.boolean "csf_b"
-    t.boolean "frozen_b"
-    t.boolean "starwars_b"
-    t.boolean "minecraft_adventurer_b"
-    t.boolean "minecraft_designer_b"
-    t.index ["code_s"], name: "code_s", unique: true
-    t.index ["supported_codeorg_b"], name: "google_sheets_shared_cdo_languages_supported_codeorg_b_index"
   end
 
   create_table "hint_view_requests", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
