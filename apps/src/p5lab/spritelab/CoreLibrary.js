@@ -26,6 +26,7 @@ export default class CoreLibrary {
     this.soundLog = [];
     this.criteria = [];
     this.previous = {};
+    this.successMessage = 'genericSuccess';
     this.validationFrames = {
       delay: 90,
       fail: 150,
