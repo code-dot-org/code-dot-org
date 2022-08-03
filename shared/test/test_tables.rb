@@ -1,7 +1,7 @@
 require 'mocha/mini_test'
 require_relative 'test_helper'
-require 'channels_api'
-require 'tables_api'
+require_relative '../middleware/channels_api'
+require_relative '../middleware/tables_api'
 
 class TablesTest < Minitest::Test
   include Rack::Test::Methods

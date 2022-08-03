@@ -4,14 +4,14 @@ require 'rails/all'
 
 require 'cdo/geocoder'
 require 'cdo/properties'
-require 'varnish_environment'
-require 'files_api'
-require 'channels_api'
-require 'tables_api'
-require 'shared_resources'
-require 'net_sim_api'
-require 'sound_library_api'
-require 'animation_library_api'
+require_relative '../../shared/middleware/varnish_environment'
+require_relative '../../shared/middleware/files_api'
+require_relative '../../shared/middleware/channels_api'
+require_relative '../../shared/middleware/tables_api'
+require_relative '../../shared/middleware/shared_resources'
+require_relative '../../shared/middleware/net_sim_api'
+require_relative '../../shared/middleware/sound_library_api'
+require_relative '../../shared/middleware/animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -76,7 +76,7 @@ module Dashboard
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
     if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
-      require 'pegasus_sites'
+      require_relative '../../shared/middleware/pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
 

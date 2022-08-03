@@ -29,7 +29,7 @@ use Rack::SslEnforcer,
   # Only HTTPS-redirect in development when `https_development` is true.
   ignore: lambda {|request| !request.ssl? && !CDO.https_development}
 
-require 'varnish_environment'
+require_relative '../shared/middleware/varnish_environment'
 use VarnishEnvironment
 
 unless CDO.chef_managed
@@ -56,7 +56,7 @@ end
 # Add Honeybadger::Rack::ErrorNotifier to Rack middleware directly.
 use Honeybadger::Rack::ErrorNotifier
 
-require 'shared_resources'
+require_relative '../shared/middleware/shared_resources'
 use SharedResources
 
 run Documents

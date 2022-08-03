@@ -1,5 +1,5 @@
 require_relative '../test_helper'
-require 'channels_api'
+require_relative '../../middleware/channels_api'
 require 'timecop'
 require 'active_support/time'
 

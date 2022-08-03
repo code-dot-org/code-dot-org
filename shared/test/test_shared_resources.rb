@@ -1,5 +1,5 @@
 require_relative 'test_helper'
-require 'shared_resources'
+require_relative '../middleware/shared_resources'
 
 class SharedResourcesTest < Minitest::Test
   include Rack::Test::Methods

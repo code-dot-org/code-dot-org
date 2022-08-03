@@ -1,7 +1,7 @@
 require 'rack/test'
 require 'minitest/autorun'
 require_relative '../router'
-require 'helpers/auth_helpers'
+require_relative '../../shared/middleware/helpers/auth_helpers'
 
 class HamlTest < Minitest::Test
   include Rack::Test::Methods

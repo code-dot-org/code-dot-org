@@ -8,7 +8,7 @@
 require_relative '../test_helper'
 require 'fakeredis' unless use_real_redis?
 require 'redis-slave-read'
-require 'net_sim_api'
+require_relative '../../middleware/net_sim_api'
 require_relative '../spy_pub_sub_api'
 
 class NetSimApiTest < Minitest::Test

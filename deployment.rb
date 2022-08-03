@@ -1,5 +1,4 @@
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift File.expand_path('../shared/middleware', __FILE__)
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
