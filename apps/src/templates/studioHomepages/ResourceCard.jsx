@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import color from '../../util/color';
-import {merge} from 'lodash';
 import {connect} from 'react-redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -48,17 +47,17 @@ class ResourceCard extends Component {
     };
 
     if (['sm', 'xs'].includes(responsiveSize)) {
-      merge(cardStyles, styles.cardSmall);
-      merge(titleStyles, styles.titleSmall);
-      merge(descriptionStyles, styles.descriptionSmall);
+      Object.assign(cardStyles, styles.cardSmall);
+      Object.assign(titleStyles, styles.titleSmall);
+      Object.assign(descriptionStyles, styles.descriptionSmall);
     }
 
     if (allowWrap) {
-      merge(buttonStyles, styles.buttonAllowWrap);
-      merge(cardStyles, styles.cardAllowWrap);
-      merge(titleStyles, styles.titleAllowWrap);
+      Object.assign(buttonStyles, styles.buttonAllowWrap);
+      Object.assign(cardStyles, styles.cardAllowWrap);
+      Object.assign(titleStyles, styles.titleAllowWrap);
     } else {
-      merge(titleStyles, styles.titleNoWrap);
+      Object.assign(titleStyles, styles.titleNoWrap);
     }
 
     let descriptionContent = description;
