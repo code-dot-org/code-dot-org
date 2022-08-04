@@ -435,6 +435,20 @@ def distribute_translations(upload_manifests)
       FileUtils.mv(loc_file, destination)
     end
 
+    ### Docs
+    Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      basename = File.basename(loc_file, '.json')
+      destination = "dashboard/config/locales/#{basename}.#{locale}.json"
+
+      # JSON files in this directory need the root key to be set to the locale
+      loc_data = JSON.parse(File.read(loc_file))
+      loc_data = wrap_with_locale(loc_data, locale, basename)
+      sanitize_data_and_write(loc_data, destination)
+    end
+
     ### Pegasus
     loc_file = "#{locale_dir}/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
