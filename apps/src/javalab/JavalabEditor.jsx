@@ -261,6 +261,8 @@ class JavalabEditor extends React.Component {
       )
     );
 
+    // Set the language, which determines syntax highlighting.
+    // We only support Java or no language (no highlighting, good for text files)
     if (isJavaFile(fileMetadata[key])) {
       extensions.push(this.languageCompartment.of(java()));
     } else {
