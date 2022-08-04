@@ -27,3 +27,12 @@
 .fileTypeIcon {
   margin: 5px;
 }
+
+.openCodeReviewWarningBanner {
+   z-index: 99;
+   background-color: $light_yellow;
+   height: 20px;
+   padding: 5px;
+   width: 100%;
+   color: $black;
+}
