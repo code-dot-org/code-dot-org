@@ -403,7 +403,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     new webpack.ProvidePlugin({
       React: 'react',
       Buffer: ['buffer', 'Buffer'],
-      process: require.resolve('process/browser')
+      process: 'process/browser'
     }),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
