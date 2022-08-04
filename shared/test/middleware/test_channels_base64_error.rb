@@ -1,16 +1,14 @@
-require_relative './test_helper'
+require_relative '../test_helper'
 require 'mocha/mini_test'
-require_relative 'fixtures/mock_pegasus'
 require 'channels_api'
 
 CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze
 CAUSES_CIPHERERROR = "IMALITTLETEAPOTSHORTANDSTOUT".freeze
 
-class Base64ErrorTest < Minitest::Test
+class ChannelsBase64ErrorTest < Minitest::Test
   include SetupTest
 
   def setup
-    @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
   end
 
@@ -19,10 +17,6 @@ class Base64ErrorTest < Minitest::Test
     run_test_cases CAUSES_ARGUMENTERROR
     # test all the cases with a channel ID that will raise OpenSSL::Cipher::CipherError internally when trying to base64 decode
     run_test_cases CAUSES_CIPHERERROR
-
-    # For this route, just test with one case - route doesn't support input being long enough to hit the other case
-    @pegasus.get "/api/hour/certificate64/anycourse/#{CAUSES_ARGUMENTERROR}"
-    assert_equal 400, @pegasus.last_response.status
   end
 
   private
@@ -36,9 +30,6 @@ class Base64ErrorTest < Minitest::Test
 
     @channels.delete "/v3/channels/#{channel_id}"
     assert_equal 400, @channels.last_response.status
-
-    @pegasus.get "/v2/hoc/certificate/#{channel_id}"
-    assert_equal 400, @pegasus.last_response.status
 
     @channels.get "/v3/channels/#{channel_id}/abuse"
     assert_equal 400, @channels.last_response.status
