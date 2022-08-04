@@ -117,6 +117,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     }),
     progress: {
       scriptName: 'script-name',
+      scriptId: 17,
       unitProgressHasLoaded: true
     },
     currentUser: {

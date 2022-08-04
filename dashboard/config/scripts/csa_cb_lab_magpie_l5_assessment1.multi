@@ -9,23 +9,25 @@ right 'I only'
 markdown <<MARKDOWN
 *Consider the following code segment:*
 
->if (**a < b**) {  </br>
-&nbsp &nbsp  if (**b < c**) {  </br>
-&nbsp &nbsp &nbsp &nbsp if (**c < 10**) {  </br>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp System.out.println(**"one"**)  </br>
-&nbsp &nbsp &nbsp &nbsp } else if (**c < a**) {  </br>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp System.out.println(**"two"**)  </br>
-&nbsp &nbsp &nbsp &nbsp }  </br>
-&nbsp &nbsp }  </br>
-} else {  </br>
-&nbsp &nbsp if (**c < a**) {  </br>
-&nbsp &nbsp &nbsp &nbsp System.out.println(**"three**")  </br>
-&nbsp &nbsp } else {  </br>
-&nbsp &nbsp &nbsp System.out.println(**"four"**)  </br>
-&nbsp &nbsp }  </br>
-}
-&nbsp 
+```
 
+if (**a < b**) {
+	if (**b < c**) {  
+		if (**c < 10**) {
+			System.out.println(**"one"**) 
+		} else if (**c < a**) {
+			System.out.println(**"two"**)  
+		} 
+	}  
+} else { 
+	if (**c < a**) {
+		System.out.println(**"three**") 
+	} else {
+		System.out.println(**"four"**)
+	}
+}
+
+```
 **For which values of a, b, and c will the code print “one”?**
 
 **I.** a = 5, b = 6, c = 7

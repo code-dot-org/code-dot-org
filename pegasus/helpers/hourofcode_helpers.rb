@@ -3,7 +3,7 @@ def hoc_dir(*dirs)
 end
 
 def hoc_load_countries
-  JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
+  JSON.parse(File.read(hoc_dir('i18n/countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 

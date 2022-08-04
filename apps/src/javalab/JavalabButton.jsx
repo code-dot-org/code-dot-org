@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 
 // TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).
