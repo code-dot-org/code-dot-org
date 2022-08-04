@@ -1,6 +1,6 @@
 require_relative 'middleware_test_helper'
 require 'mocha/mini_test'
-require_relative '../../middleware/channels_api'
+require_relative '../../../lib/middleware/channels_api'
 
 CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze
 CAUSES_CIPHERERROR = "IMALITTLETEAPOTSHORTANDSTOUT".freeze

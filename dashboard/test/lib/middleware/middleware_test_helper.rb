@@ -1,6 +1,6 @@
 # Test settings for middleware directory
 
-require_relative '../common_test_helper'
+require_relative '../../../../shared/test/common_test_helper'
 
 require 'webmock'
 

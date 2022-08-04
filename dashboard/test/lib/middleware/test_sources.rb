@@ -5,7 +5,7 @@ require 'timecop'
 require 'cdo/firehose'
 
 MAIN_JSON = 'main.json'
-COMMENT_BLOCK_SOURCES = File.join(__dir__, '..', 'fixtures', 'comment-block-sources.json')
+COMMENT_BLOCK_SOURCES = File.join(__dir__, '..', '..', 'fixtures', 'comment-block-sources.json')
 
 class SourcesTest < FilesApiTestBase
   def setup
@@ -185,7 +185,7 @@ class SourcesTest < FilesApiTestBase
   def test_get_source_blocks_profanity_violations
     # Given a Play Lab program with a privacy violation
     filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
+    file_data = File.read(File.expand_path('../../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -212,7 +212,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_get_source_blocks_privacy_violations
     filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
+    file_data = File.read(File.expand_path('../../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -258,7 +258,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_policy_channel_api
     filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
+    file_data = File.read(File.expand_path('../../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?

@@ -1,5 +1,5 @@
 require_relative '../middleware_test_helper'
-require_relative '../../../middleware/helpers/firebase_helper'
+require_relative '../../../../lib/middleware/helpers/firebase_helper'
 
 class FirebaseHelperTest < Minitest::Test
   def setup

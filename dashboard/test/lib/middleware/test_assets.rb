@@ -2,7 +2,7 @@
 
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
-require_relative '../../middleware/helpers/asset_bucket'
+require_relative '../../../lib/middleware/helpers/asset_bucket'
 
 class AssetsTest < FilesApiTestBase
   def setup
@@ -468,7 +468,7 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.stubs(:max_app_size).returns(2000)
 
     # gradient.png's file size is 1559. Upload should only be successful if it is downsampled.
-    _, filetodelete1 = post_asset_file(@api, "existingFile.jpg", File.open("./test/gradient.png").read, 'image/png')
+    _, filetodelete1 = post_asset_file(@api, "existingFile.jpg", File.open("./test/lib/middleware/gradient.png").read, 'image/png')
     assert successful?, "Downsampled file upload is successful."
     @api.delete_object(filetodelete1)
 

@@ -1,5 +1,5 @@
 require_relative '../middleware_test_helper'
-require_relative '../../../middleware/helpers/bucket_helper'
+require_relative '../../../../lib/middleware/helpers/bucket_helper'
 
 class BucketHelperTest < Minitest::Test
   def test_replace_unsafe_chars

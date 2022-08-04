@@ -4,7 +4,7 @@
 
 require_relative '../middleware_test_helper'
 require 'fakeredis'
-require_relative '../../../middleware/helpers/sharded_redis_factory'
+require_relative '../../../../lib/middleware/helpers/sharded_redis_factory'
 
 # Monkeypatch Redis client so we can store the URL we used when creating it;
 # FakeRedis always lists a localhost URL when connecting to an in-memory store,
