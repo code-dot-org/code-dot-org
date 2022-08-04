@@ -857,6 +857,7 @@
   "errorParsingLibrary": "There is an error in your imported library ({libraryName}). Try deleting and re-importing this library. {errorMessage}",
   "errorQuestionMarksInNumberField": "Try replacing \"???\" with a value.",
   "errorRequiredParamsMissing": "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition.",
+  "errorSavingLockStatus": "An error has occurred. Changes may not have saved.",
   "errorUnusedFunction": "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program.",
   "errorUnusedParam": "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",
   "errorDeleting": "Error deleting file.",
