@@ -237,20 +237,11 @@ const styles = {
     // Allows looping button to display relative to whole card
     position: 'relative',
 
-    ':hover': {
-      cursor: 'pointer',
-      backgroundColor: color.lighter_purple
-    },
     border: 0,
     margin: '5px 0 0 0'
   },
   selectedTile: {
-    backgroundColor: color.purple,
-
-    ':hover': {
-      cursor: 'auto',
-      backgroundColor: color.purple
-    }
+    backgroundColor: color.purple
   },
   nameLabel: {
     marginLeft: 4,
