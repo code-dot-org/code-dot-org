@@ -473,15 +473,11 @@ class JavalabEditor extends React.Component {
     // add new file to sources
     setSource(filename, fileContents);
     projectChanged();
+    setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
     // add new tab and set it as the active tab
     closeEditorDialog();
     clearNewFileError();
-    setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
-    this.setState({
-      openDialog: null,
-      newFileError: null
-    });
   }
 
   onDeleteFile() {
