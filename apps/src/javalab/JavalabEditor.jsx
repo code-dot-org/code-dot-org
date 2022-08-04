@@ -22,7 +22,7 @@ import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import classNames from 'classnames';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
-import stylez from './javalab-editor.module.scss';
+import cssModuleStyles from './javalab-editor.module.scss';
 import NameFileDialog from './NameFileDialog';
 import JavalabDialog from './JavalabDialog';
 import CommitDialog from './CommitDialog';
@@ -712,7 +712,7 @@ class JavalabEditor extends React.Component {
           className={displayTheme === DisplayTheme.DARK ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" className={stylez.tabs}>
+            <Nav bsStyle="tabs" className={cssModuleStyles.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -723,7 +723,7 @@ class JavalabEditor extends React.Component {
                   <NavItem eventKey={tabKey} key={`${tabKey}-tab`}>
                     {isEditingStartSources && (
                       <FontAwesome
-                        className={stylez.fileTypeIcon}
+                        className={cssModuleStyles.fileTypeIcon}
                         icon={
                           sources[fileMetadata[tabKey]].isVisible
                             ? 'eye'
@@ -735,7 +735,7 @@ class JavalabEditor extends React.Component {
                     )}
                     {!isEditingStartSources && (
                       <FontAwesome
-                        className={stylez.fileTypeIcon}
+                        className={cssModuleStyles.fileTypeIcon}
                         icon={'file-text'}
                       />
                     )}
@@ -746,9 +746,9 @@ class JavalabEditor extends React.Component {
                         type="button"
                         className={classNames(
                           'no-focus-outline',
-                          stylez.fileMenuToggleButton,
+                          cssModuleStyles.fileMenuToggleButton,
                           displayTheme === DisplayTheme.DARK &&
-                            stylez.darkFileMenuToggleButton
+                            cssModuleStyles.darkFileMenuToggleButton
                         )}
                         onClick={e => this.toggleTabMenu(tabKey, e)}
                       >
@@ -786,7 +786,7 @@ class JavalabEditor extends React.Component {
               {showOpenCodeReviewWarning && (
                 <div
                   id="openCodeReviewWarningBanner"
-                  style={styles.openCodeReviewWarningBanner}
+                  className={cssModuleStyles.openCodeReviewWarningBanner}
                 >
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
@@ -887,14 +887,6 @@ const styles = {
     display: 'inline-block',
     float: 'left',
     overflow: 'visible'
-  },
-  openCodeReviewWarningBanner: {
-    zIndex: 99,
-    backgroundColor: color.light_yellow,
-    height: 20,
-    padding: 5,
-    width: '100%',
-    color: color.black
   }
 };
 
