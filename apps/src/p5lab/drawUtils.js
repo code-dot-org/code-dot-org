@@ -175,18 +175,7 @@ export function validationBar(
   state,
   {barHeight = 10, x = 0, y = APP_HEIGHT - barHeight} = {}
 ) {
-  let color;
-  switch (state) {
-    case 'fail':
-      color = colors.purple;
-      break;
-    case 'pass':
-      color = colors.teal;
-      break;
-    case 'bonus':
-      color = colors.highlight_green;
-      break;
-  }
+  const color = colors[`spritelab_${state}`];
   p5.push();
   p5.noStroke();
   p5.fill(color);
