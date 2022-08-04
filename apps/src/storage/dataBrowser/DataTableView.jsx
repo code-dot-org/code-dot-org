@@ -7,7 +7,7 @@ import DataTable from './DataTable';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {changeView, showWarning, tableType} from '../redux/data';
 import * as dataStyles from './dataStyles';
