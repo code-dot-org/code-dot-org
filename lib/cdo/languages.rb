@@ -5,7 +5,7 @@ class Languages
   using CacheMethod
 
   def self.table
-    @@table ||= PEGASUS_DB[:cdo_languages]
+    raise "Use parent classes to define a table"
   end
 
   cached def self.get_crowdin_languages
