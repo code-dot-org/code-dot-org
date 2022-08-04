@@ -29,7 +29,8 @@ export default class JavabuilderConnection {
     onMarkdownLog,
     csrfToken,
     onValidationPassed,
-    onValidationFailed
+    onValidationFailed,
+    onConnectDone
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -47,6 +48,7 @@ export default class JavabuilderConnection {
     this.csrfToken = csrfToken;
     this.onValidationPassed = onValidationPassed;
     this.onValidationFailed = onValidationFailed;
+    this.onConnectDone = onConnectDone;
 
     this.seenUnsupportedNeighborhoodMessage = false;
     this.seenUnsupportedTheaterMessage = false;
@@ -105,6 +107,12 @@ export default class JavabuilderConnection {
   }
 
   connectJavabuilderHelper(url, data, checkProjectEdited, usePostRequest) {
+    this.initiateConnection(url, data, checkProjectEdited, usePostRequest).then(
+      this.onConnectDone
+    );
+  }
+
+  async initiateConnection(url, data, checkProjectEdited, usePostRequest) {
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
@@ -135,17 +143,18 @@ export default class JavabuilderConnection {
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();
 
-    $.ajax(ajaxPayload)
-      .done(result => this.establishWebsocketConnection(result.token))
-      .fail(error => {
-        if (error.status === 403) {
-          this.displayUnauthorizedMessage(error);
-        } else {
-          this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
-          this.onNewlineMessage();
-          console.error(error.responseText);
-        }
-      });
+    try {
+      const result = await $.ajax(ajaxPayload);
+      this.establishWebsocketConnection(result.token);
+    } catch (error) {
+      if (error.status === 403) {
+        this.displayUnauthorizedMessage(error);
+      } else {
+        this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
+        this.onNewlineMessage();
+        console.error(error.responseText);
+      }
+    }
   }
 
   getDefaultRequestData() {
