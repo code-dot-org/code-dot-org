@@ -1,0 +1,29 @@
+@import 'color.scss';
+
+.fileMenuToggleButton {
+  padding: 0;
+  height: 20px;
+  width: 13px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+  }
+}
+
+.darkFileMenuToggleButton {
+  color: $white;
+}
+
+.tabs {
+  background-color: $background_gray;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.fileTypeIcon {
+  margin: 5px;
+}
