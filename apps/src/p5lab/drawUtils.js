@@ -177,8 +177,9 @@ export function validationBar(
 ) {
   const color = colors[`spritelab_${state}`];
   p5.push();
-  p5.noStroke();
   p5.fill(color);
+  p5.stroke(colors.white);
+  p5.strokeWeight(1);
   p5.rect(x, y, width, barHeight);
   p5.pop();
 }
