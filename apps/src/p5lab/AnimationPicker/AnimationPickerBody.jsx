@@ -1,7 +1,6 @@
 /** Body of the animation picker dialog */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -16,6 +15,7 @@ import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
+import style from './animation-picker-body.module.scss';
 
 const MAX_SEARCH_RESULTS = 40;
 
@@ -199,7 +199,12 @@ export default class AnimationPickerBody extends React.Component {
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
-    const {searchQuery, categoryQuery, results} = this.state;
+    console.log(this.state);
+    let {searchQuery, categoryQuery, results} = this.state;
+    //TODO: Fix this... (Mike 8/4)
+    //Where/why is categoryQuery looking at class names?
+    categoryQuery = categoryQuery.split(' ')[0];
+    console.log('render with category: ' + categoryQuery);
     const {
       hideUploadOption,
       is13Plus,
@@ -211,7 +216,6 @@ export default class AnimationPickerBody extends React.Component {
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
-
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -232,18 +236,20 @@ export default class AnimationPickerBody extends React.Component {
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={styles.navigation}>
+          <div className={style.navigation}>
             {categoryQuery !== '' && (
-              <div style={styles.breadCrumbs}>
+              <div className={style.breadCrumbs}>
                 {this.props.navigable && (
                   <span
                     onClick={this.onClearCategories}
-                    style={styles.allAnimations}
+                    className={style.allAnimations}
                   >
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
                 )}
-                <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
+                <span>
+                  {msg[`animationCategory_${categoryQuery.split(' ')[0]}`]()}
+                </span>
               </div>
             )}
           </div>
@@ -257,7 +263,7 @@ export default class AnimationPickerBody extends React.Component {
             {' '}
             {(searchQuery !== '' || categoryQuery !== '') &&
               results.length === 0 && (
-                <div style={styles.emptyResults}>
+                <div className={style.emptyResults}>
                   {msg.animationPicker_noResultsFound()}
                 </div>
               )}
@@ -286,7 +292,7 @@ export default class AnimationPickerBody extends React.Component {
           </ScrollableList>
         </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={styles.footer}>
+          <div className={style.footer}>
             <Button
               className="ui-test-selector-done-button"
               text={msg.done()}
@@ -300,40 +306,11 @@ export default class AnimationPickerBody extends React.Component {
   }
 }
 
-export const UnconnectedAnimationPickerBody = Radium(AnimationPickerBody);
+export const UnconnectedAnimationPickerBody = AnimationPickerBody;
 
 export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
 );
 WarningLabel.propTypes = {
   children: PropTypes.node
-};
-
-const styles = {
-  allAnimations: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif",
-    cursor: 'pointer'
-  },
-  breadCrumbs: {
-    margin: '8px 0',
-    fontSize: 14,
-    display: 'inline-block'
-  },
-  pagination: {
-    float: 'right',
-    display: 'inline',
-    marginTop: 10
-  },
-  emptyResults: {
-    paddingBottom: 10
-  },
-  navigation: {
-    minHeight: 30
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    marginTop: 5
-  }
 };
