@@ -432,7 +432,6 @@ tr:
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: 'İlerlemeniz'
-      lines: 'Toplam kod satırı: %{lines}'
       close: 'kapat'
       mastery: 'Kavramlar'
       puzzle_map: 'aşamalar'

@@ -12,8 +12,8 @@ require 'aws-sdk-cloudwatch'
 STATUS_CACHE = pegasus_dir('cache', 'mysql-status-cache.json')
 
 status = PEGASUS_DB.fetch('show global status').all.map {|x| [x[:Variable_name], x[:Value]]}.to_h
-old_status = File.file?(STATUS_CACHE) ? JSON.parse(IO.read(STATUS_CACHE)) : {}
-IO.write STATUS_CACHE, JSON.pretty_generate(status)
+old_status = File.file?(STATUS_CACHE) ? JSON.parse(File.read(STATUS_CACHE)) : {}
+File.write STATUS_CACHE, JSON.pretty_generate(status)
 
 const_keys = %w(
   Audit_log_current_size

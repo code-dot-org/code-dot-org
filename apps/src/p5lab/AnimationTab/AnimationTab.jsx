@@ -1,7 +1,6 @@
 /** @file Root of the animation editor interface mode for GameLab */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import AnimationPicker, {PICKER_TYPE} from '../AnimationPicker/AnimationPicker';
@@ -53,7 +52,7 @@ class AnimationTab extends React.Component {
           </div>
           <div style={styles.editorColumn}>
             <PiskelEditor style={styles.piskelEl} />
-            <div style={[hidePiskelStyle, styles.emptyPiskelEl]}>
+            <div style={{...hidePiskelStyle, ...styles.emptyPiskelEl}}>
               <div style={styles.helpText}>
                 Add a new animation on the left to begin
               </div>
@@ -129,4 +128,4 @@ export default connect(
       dispatch(setColumnSizes(widths));
     }
   })
-)(Radium(AnimationTab));
+)(AnimationTab);
