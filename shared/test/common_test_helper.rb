@@ -1,4 +1,5 @@
-# Common settings shared across unit tests for shared, pegasus, lib
+# Common settings shared across unit tests for shared, pegasus, lib, and
+# dashboard/lib/middleware
 ENV['RACK_ENV'] = 'test'
 ENV['UNIT_TEST'] = '1'
 
