@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Radium from 'radium';
 import {
   setSource,
   sourceTextUpdated,
@@ -21,7 +20,9 @@ import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
+import classNames from 'classnames';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
+import stylez from './javalab-editor.module.scss';
 import NameFileDialog from './NameFileDialog';
 import JavalabDialog from './JavalabDialog';
 import CommitDialog from './CommitDialog';
@@ -86,7 +87,6 @@ export const editorLightModeThemeOverride = EditorView.theme(
 
 class JavalabEditor extends React.Component {
   static propTypes = {
-    style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
@@ -658,7 +658,7 @@ class JavalabEditor extends React.Component {
       zIndex: 1000
     };
     return (
-      <div style={this.props.style}>
+      <div>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -712,7 +712,7 @@ class JavalabEditor extends React.Component {
           className={displayTheme === DisplayTheme.DARK ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" style={styles.tabs}>
+            <Nav bsStyle="tabs" className={stylez.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -723,7 +723,7 @@ class JavalabEditor extends React.Component {
                   <NavItem eventKey={tabKey} key={`${tabKey}-tab`}>
                     {isEditingStartSources && (
                       <FontAwesome
-                        style={styles.fileTypeIcon}
+                        className={stylez.fileTypeIcon}
                         icon={
                           sources[fileMetadata[tabKey]].isVisible
                             ? 'eye'
@@ -735,34 +735,30 @@ class JavalabEditor extends React.Component {
                     )}
                     {!isEditingStartSources && (
                       <FontAwesome
-                        style={styles.fileTypeIcon}
+                        className={stylez.fileTypeIcon}
                         icon={'file-text'}
                       />
                     )}
                     <span>{fileMetadata[tabKey]}</span>
-
-                    <button
-                      ref={`${tabKey}-file-toggle`}
-                      type="button"
-                      style={{
-                        ...styles.fileMenuToggleButton,
-                        ...(displayTheme === DisplayTheme.DARK &&
-                          styles.darkFileMenuToggleButton),
-                        ...((isReadOnlyWorkspace ||
-                          activeTabKey !== tabKey) && {
-                          visibility: 'hidden'
-                        })
-                      }}
-                      onClick={e => this.toggleTabMenu(tabKey, e)}
-                      className="no-focus-outline"
-                      disabled={isReadOnlyWorkspace || activeTabKey !== tabKey}
-                    >
-                      <FontAwesome
-                        icon={
-                          contextTarget === tabKey ? 'caret-up' : 'caret-down'
-                        }
-                      />
-                    </button>
+                    {activeTabKey === tabKey && !isReadOnlyWorkspace && (
+                      <button
+                        ref={`${tabKey}-file-toggle`}
+                        type="button"
+                        className={classNames(
+                          'no-focus-outline',
+                          stylez.fileMenuToggleButton,
+                          displayTheme === DisplayTheme.DARK &&
+                            stylez.darkFileMenuToggleButton
+                        )}
+                        onClick={e => this.toggleTabMenu(tabKey, e)}
+                      >
+                        <FontAwesome
+                          icon={
+                            contextTarget === tabKey ? 'caret-up' : 'caret-down'
+                          }
+                        />
+                      </button>
+                    )}
                   </NavItem>
                 );
               })}
@@ -886,30 +882,6 @@ const styles = {
   darkBackground: {
     backgroundColor: color.darkest_slate_gray
   },
-  fileMenuToggleButton: {
-    margin: '0, 0, 0, 4px',
-    padding: 0,
-    height: 20,
-    width: 13,
-    backgroundColor: 'transparent',
-    border: 'none',
-    ':hover': {
-      cursor: 'pointer',
-      boxShadow: 'none'
-    }
-  },
-  darkFileMenuToggleButton: {
-    color: color.white
-  },
-  fileTypeIcon: {
-    margin: 5
-  },
-  tabs: {
-    backgroundColor: color.background_gray,
-    marginBottom: 0,
-    display: 'flex',
-    alignItems: 'center'
-  },
   backpackSection: {
     textAlign: 'left',
     display: 'inline-block',
@@ -953,4 +925,4 @@ export default connect(
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename))
   })
-)(Radium(JavalabEditor));
+)(JavalabEditor);
