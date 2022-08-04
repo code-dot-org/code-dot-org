@@ -1,6 +1,6 @@
 # Test settings for shared directory
 
-require_relative './common_test_helper'
+require_relative '../common_test_helper'
 
 require 'webmock'
 

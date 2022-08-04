@@ -3,7 +3,7 @@
 # real instance on localhost by setting the USE_REAL_REDIS environment variable;
 # e.g. "USE_REAL_REDIS=true ruby test_redis_property_bag.rb".
 
-require_relative '../test_helper'
+require_relative 'middleware_test_helper'
 require 'fakeredis' unless use_real_redis?
 require 'timecop'
 require_relative '../fake_timecop'
