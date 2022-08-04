@@ -44,14 +44,12 @@
     "preload_asset_list": null,
     "default_poem": null
   },
-  "game_id": 69,
-  "published": true,
-  "created_at": "2021-10-07T14:58:14.000Z",
   "level_num": "custom",
+  "game_id": 69,
+  "created_at": "2022-08-03T16:51:51.000Z",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-07T14:58:14.832+00:00\",\"changed\":[\"cloned from \\\"poetry_module_variables_freeplay\\\"\"],\"cloned_from\":\"poetry_module_variables_freeplay\"},{\"changed_at\":\"2021-10-07 14:58:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 14:59:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:26:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:33:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:49:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 22:21:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-13 22:21:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-13 22:23:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 12:31:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 12:34:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-18 20:52:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-19 15:57:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 15:07:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 15:11:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"callout_json\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 15:49:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-05 20:13:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16435,\"changed_by_email\":\"katleiah+test@code.org\"},{\"changed_at\":\"2021-11-11 02:58:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-15 18:18:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-15 18:59:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-15 19:44:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-19 19:36:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2022-08-03 16:28:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-03T16:51:51.877+00:00\",\"changed\":[\"cloned from \\\"poetry_module_animate_freeplay\\\"\"],\"cloned_from\":\"poetry_module_animate_freeplay\"},{\"changed_at\":\"2022-08-03 16:52:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -63,116 +61,117 @@
     <toolbox_blocks>
       <xml>
         <category name="Events">
-          <block type="Poetry_whenLineShows">
-            <title name="N">0</title>
+          <block type="Poetry_whenLineShows" id="he,[({%J.|N`e_EX6sPs">
+            <field name="N">0</field>
           </block>
         </category>
         <category name="Text">
-          <block type="Poetry_setTitle">
+          <block type="Poetry_setTitle" id="}Deq,dqA%4q*w]?S3y#*">
             <value name="TITLE">
-              <shadow type="Poetry_stringValue">
-                <title name="TEXT"/>
+              <shadow type="Poetry_stringValue" id="wJ@MbM#D((gEFV7O3NkB">
+                <field name="TEXT"/>
               </shadow>
             </value>
           </block>
-          <block type="Poetry_setAuthor">
+          <block type="Poetry_setAuthor" id="mECwLvQWRxzWnON)^c:r">
             <value name="AUTHOR">
-              <shadow type="Poetry_stringValue">
-                <title name="TEXT"/>
+              <shadow type="Poetry_stringValue" id="s}Eif70]SWB5O:%)O;(%">
+                <field name="TEXT"/>
               </shadow>
             </value>
           </block>
-          <block type="Poetry_addLine">
+          <block type="Poetry_addLine" id="ohoguTJJP)w]3*,`uvci">
             <value name="LINE">
-              <shadow type="Poetry_stringValue">
-                <title name="TEXT"/>
+              <shadow type="Poetry_stringValue" id="tBl4DEgd6MA{i6}@Q4kD">
+                <field name="TEXT"/>
               </shadow>
             </value>
           </block>
-          <block type="Poetry_animateText"/>
+          <block type="Poetry_animateText" id="OS3^PNH@ZX`CRMfIYang"/>
         </category>
         <category name="Effects">
-          <block type="Poetry_setFont">
-            <title name="FONT">"Courier"</title>
+          <block type="Poetry_setFont" id="BgNUDCYW}AhgUNa[,_-}">
+            <field name="FONT">"Courier"</field>
           </block>
-          <block type="Poetry_setFontColor">
+          <block type="Poetry_setFontColor" id="@Ai=@~^QiqUaI73G6HW0">
             <value name="FILL">
-              <shadow type="colour_picker">
-                <title name="COLOUR">#99ff99</title>
+              <shadow type="colour_picker" id="b9:tf1I=)q$`6myyfM#.">
+                <field name="COLOUR">#99ff99</field>
               </shadow>
             </value>
           </block>
-          <block type="Poetry_setTextEffect">
-            <title name="EFFECT">"fade"</title>
+          <block type="Poetry_setTextEffect" id="ybhp$`)f~k;uT.J(?:-_">
+            <field name="EFFECT">"fade"</field>
           </block>
-          <block type="Poetry_addTextHighlight">
+          <block type="Poetry_addTextHighlight" id="~8/$y0C~2?^TSvG8hfm/">
             <value name="COLOR">
-              <shadow type="colour_picker" can_disconnect_from_parent="false">
-                <title name="COLOUR">#99ff99</title>
+              <shadow type="colour_picker" id="bcQ$2|5Oy,K5QO:!{^jU">
+                <field name="COLOUR">#99ff99</field>
               </shadow>
             </value>
           </block>
-          <block type="Poetry_playSound">
-            <title name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</title>
+          <block type="Poetry_playSound" id="zH,NFfgLH8l*hHyFO5@:">
+            <field name="SOUND">"sound://category_bell/long_bell_notification.mp3"</field>
           </block>
-          <block type="Poetry_playMusic">
-            <title name="SOUND">"placeholder"</title>
+          <block type="Poetry_playMusic" id="-kw{|`mQG0x[0L$N{?Fx">
+            <field name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</field>
           </block>
-          <block type="Poetry_setForegroundEffect">
-            <title name="EFFECT">"rain"</title>
+          <block type="Poetry_setForegroundEffect" id="]x])9,1Lw=k5mT;tS00Y">
+            <field name="EFFECT">"rain"</field>
           </block>
-          <block type="Poetry_addFrame">
-            <title name="BRUSH">"placeholder"</title>
+          <block type="Poetry_addFrame" id="_hYY3G^CRlR00Sj+q:z4">
+            <field name="BRUSH">"bamboo"</field>
           </block>
-          <block type="Poetry_setBackground">
+          <block type="Poetry_setBackground" id="^}xWJrJV5??G/q_|=zi8">
             <value name="COLOR">
-              <shadow type="colour_picker">
-                <title name="COLOUR">#cc0000</title>
+              <shadow type="colour_picker" id="e2@_w@sh0[[-YYX2IE5Q">
+                <field name="COLOUR">#cc0000</field>
               </shadow>
             </value>
           </block>
-          <block type="Poetry_setBackgroundImageAs">
-            <title name="IMG">"cave"</title>
+          <block type="Poetry_setBackgroundImageAs" id="vEF*t$nV^wb{J?W{IN?J">
+            <field name="IMG">"cave"</field>
           </block>
-          <block type="Poetry_setBackgroundEffect">
-            <title name="EFFECT">"colors"</title>
-            <title name="PALETTE">"grayscale"</title>
+          <block type="Poetry_setBackgroundEffect" id="`$dD},y=gS]GqxU3~Gjs">
+            <field name="EFFECT">"colors"</field>
+            <field name="PALETTE">"grayscale"</field>
           </block>
         </category>
         <category name="Sprites">
-          <block type="Poetry_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="LOCATION">{"x":75,"y":200}</title>
+          <block type="Poetry_makeNewSpriteAnon" id="6R9=?z,*@-sXn-:?-:/l">
+            <field name="ANIMATION_NAME">"cloud_single"</field>
+            <field name="LOCATION">{"x":75,"y":200}</field>
           </block>
-          <block type="Poetry_setSize">
-            <title name="SPRITE">"bear"</title>
-            <title name="VAL">50</title>
+          <block type="Poetry_setSize" id="~AGBH$Y*e!%{qT+Q~?Ah">
+            <field name="SPRITE">"cloud_single"</field>
+            <field name="VAL">50</field>
           </block>
-          <block type="Poetry_startBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="BEHAVIOR">fluttering</title>
+          <block type="Poetry_startBehavior" id="*$FBrfM1{VA!q~^,}{Kb">
+            <field name="ANIMATION_NAME">"cloud_single"</field>
+            <field name="BEHAVIOR">"fluttering"</field>
           </block>
-          <block type="Poetry_stopBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="BEHAVIOR">fluttering</title>
+          <block type="Poetry_stopBehavior" id="/L|0`x:Z0~0x1PNB,mHN">
+            <field name="ANIMATION_NAME">"cloud_single"</field>
+            <field name="BEHAVIOR">"fluttering"</field>
           </block>
-          <block type="Poetry_destroy">
-            <title name="ANIMATION_NAME">"bear"</title>
+          <block type="Poetry_destroy" id="n6y|%~Vo/n^yw@*+g%h:">
+            <field name="ANIMATION_NAME">"cloud_single"</field>
           </block>
-          <block type="Poetry_makeBurst">
-            <title name="EFFECT">"burst"</title>
-            <title name="NUM">10</title>
-            <title name="ANIMATION_NAME">"bear"</title>
+          <block type="Poetry_makeBurst" id="@7Vet9{{=0[+MvoeA^7E">
+            <field name="EFFECT">"burst"</field>
+            <field name="NUM">10</field>
+            <field name="ANIMATION_NAME">"cloud_single"</field>
           </block>
-          <block type="Poetry_makeNumSprites">
-            <title name="NUM">3</title>
-            <title name="ANIMATION_NAME">"bear"</title>
+          <block type="Poetry_makeNumSprites" id="Z9Aq1ZQivWT@{:mT|FB*">
+            <field name="NUM">3</field>
+            <field name="ANIMATION_NAME">"cloud_single"</field>
           </block>
           <block type="Poetry_glideTo" id="26">
-            <title name="SPRITE">"night_cloud"</title>
-            <title name="LOCATION">{"x": 200, "y": 200}</title>
+            <field name="SPRITE">"cloud_single"</field>
+            <field name="LOCATION">{"x": 200, "y": 200}</field>
           </block>
         </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
   </blocks>
