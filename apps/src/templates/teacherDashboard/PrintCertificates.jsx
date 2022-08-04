@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import style from './print-certificates.module.scss;';
+import style from './print-certificates.module.scss';
 
 class PrintCertificates extends Component {
   static propTypes = {
