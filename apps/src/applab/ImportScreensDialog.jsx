@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import * as applabConstants from './constants';
 import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';

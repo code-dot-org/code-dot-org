@@ -5,10 +5,10 @@ require 'cdo/google/drive'
 class CsvToSqlTable
   attr_reader :db, :table
 
-  def initialize(path, params={})
-    @db = params[:db] || PEGASUS_DB
+  def initialize(path, db, table_prefix = '')
+    @db = db
     @path = path
-    @table = File.basename(@path, File.extname(@path)).tr('-', '_').to_sym
+    @table = (table_prefix + File.basename(@path, File.extname(@path)).tr('-', '_')).to_sym
   end
 
   def up_to_date?
