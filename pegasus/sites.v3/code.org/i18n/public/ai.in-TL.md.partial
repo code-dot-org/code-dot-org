@@ -21,7 +21,7 @@ crwdns2588068:0{{ ai_header_stylesheets_links }}crwdne2588068:0
 # crwdns2588070:0crwdne2588070:0
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">crwdns2690117:0crwdne2690117:0</h2><p>crwdns2690119:0crwdne2690119:0</p>crwdns2690123:0crwdne2690123:0</div>
+<h2 style="color:#ffffff; margin-top:25px">crwdns2690117:0crwdne2690117:0</h2><p>crwdns2690119:0crwdne2690119:0</p>crwdns2929930:0crwdne2929930:0</div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="crwdns2690125:0crwdne2690125:0" style="max-width: 100%" alt="crwdns2690127:0crwdne2690127:0"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ crwdns2588086:0{{ ai_20px_margin }}crwdne2588086:0
 
 crwdns2588088:0{{ ai_microsoft_block }}crwdne2588088:0
 
-crwdns2588090:0{{ ai_videos_link }}crwdne2588090:0
-
 <a id="about-aimodule"></a>
 
 ## crwdns2690129:0crwdne2690129:0
 <div>
-<div class="col-50">
-<p>crwdns2690131:0crwdne2690131:0 crwdns2690133:0crwdne2690133:0</p><p>crwdns2690135:0crwdne2690135:0 crwdns2690137:0crwdne2690137:0 crwdns2690139:0crwdne2690139:0 crwdns2690141:0crwdne2690141:0 crwdns2690143:0crwdne2690143:0 crwdns2690145:0crwdne2690145:0  </p>
-<p>crwdns2690147:0crwdne2690147:0 crwdns2690149:0crwdne2690149:0</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="crwdns2690151:0crwdne2690151:0" style="max-width: 100%"/></p>crwdns2866850:0crwdne2866850:0</div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>crwdns2929932:0crwdne2929932:0 crwdns2690133:0crwdne2690133:0</p><p>crwdns2690135:0crwdne2690135:0 crwdns2690137:0crwdne2690137:0 crwdns2690139:0crwdne2690139:0 crwdns2690141:0crwdne2690141:0 crwdns2690143:0crwdne2690143:0 crwdns2690145:0crwdne2690145:0  </p>
+    <p>crwdns2690147:0crwdne2690147:0 crwdns2690149:0crwdne2690149:0</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="crwdns2690151:0crwdne2690151:0" style="max-width: 100%"/></p>crwdns2929934:0crwdne2929934:0</div>
+  <div class="clear"></div>
 </div>
 
+crwdns2588090:0{{ ai_videos_link }}crwdne2588090:0
 ## crwdns2690155:0crwdne2690155:0
 
 crwdns2588094:0crwdne2588094:0 crwdns2588096:0crwdne2588096:0

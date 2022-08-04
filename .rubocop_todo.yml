@@ -203,11 +203,6 @@ Naming/RescuedExceptionsVariableName:
 Naming/VariableNumber:
   Enabled: false
 
-# Offense count: 20
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/Casecmp:
-  Enabled: false
-
 # Offense count: 42
 # Configuration parameters: MinSize.
 Performance/CollectionLiteralInLoop:
@@ -392,11 +387,6 @@ Rails/WhereEquals:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: exists, where
 Rails/WhereExists:
-  Enabled: false
-
-# Offense count: 56
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Security/IoMethods:
   Enabled: false
 
 # Offense count: 2

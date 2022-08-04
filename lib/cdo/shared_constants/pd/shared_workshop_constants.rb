@@ -27,7 +27,7 @@ module Pd
 
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
 
-    # Academic Year Workshop subjects shared between CSP and CSD.
+    # Academic Year Workshop subjects shared between CSA, CSD, and CSP
     SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze
     SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze
     SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze
