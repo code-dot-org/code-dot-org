@@ -809,6 +809,7 @@ class JavalabEditor extends React.Component {
                           styles.darkBackground),
                         ...{height: height - HEADER_OFFSET}
                       }}
+                      className="codemirror-container"
                     />
                   </Tab.Pane>
                 );
