@@ -3,27 +3,20 @@ import {
   drawSelection,
   highlightActiveLine,
   keymap,
-  EditorView,
-  lineNumbers,
-  rectangularSelection
+  EditorView
 } from '@codemirror/view';
-import {EditorState} from '@codemirror/state';
-import {
-  indentOnInput,
-  foldGutter,
-  foldKeymap,
-  defaultHighlightStyle,
-  bracketMatching,
-  syntaxHighlighting
-} from '@codemirror/language';
-import {
-  defaultKeymap,
-  indentWithTab,
-  history,
-  historyKeymap
-} from '@codemirror/commands';
-import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
+import {EditorState, Prec} from '@codemirror/state';
+import {history, historyKeymap} from '@codemirror/history';
+import {foldGutter, foldKeymap} from '@codemirror/fold';
+import {indentOnInput} from '@codemirror/language';
+import {lineNumbers} from '@codemirror/gutter';
+import {defaultKeymap, indentWithTab} from '@codemirror/commands';
+import {bracketMatching} from '@codemirror/matchbrackets';
+import {closeBrackets, closeBracketsKeymap} from '@codemirror/closebrackets';
 import {highlightSelectionMatches, searchKeymap} from '@codemirror/search';
+import {commentKeymap} from '@codemirror/comment';
+import {rectangularSelection} from '@codemirror/rectangular-selection';
+import {defaultHighlightStyle} from '@codemirror/highlight';
 import {java} from '@codemirror/lang-java';
 
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
@@ -36,7 +29,7 @@ const editorSetup = [
   drawSelection(),
   EditorState.allowMultipleSelections.of(true),
   indentOnInput(),
-  syntaxHighlighting(defaultHighlightStyle, {fallback: true}),
+  Prec.fallback(defaultHighlightStyle),
   bracketMatching(),
   closeBrackets(),
   rectangularSelection(),
@@ -48,6 +41,7 @@ const editorSetup = [
     ...searchKeymap,
     ...historyKeymap,
     ...foldKeymap,
+    ...commentKeymap,
     indentWithTab
   ]),
   java(),
@@ -60,7 +54,4 @@ export {editorSetup};
 export const lightTheme = EditorView.theme({}, {dark: false});
 
 // Extension to enable the light theme (both the editor theme and the highlight style).
-export const lightMode = [
-  lightTheme,
-  syntaxHighlighting(defaultHighlightStyle)
-];
+export const lightMode = [lightTheme, defaultHighlightStyle];
