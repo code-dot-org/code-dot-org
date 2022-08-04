@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-22 12:30:01 UTC",
+    "serialized_at": "2022-08-03 13:57:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5981,6 +5981,7 @@
       "key": "abstract_data_art_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6038,6 +6039,7 @@
       "key": "bingocaller_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6050,6 +6052,7 @@
       "key": "bingocaller_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6074,6 +6077,7 @@
       "key": "cs_bingo_cards_3",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6098,6 +6102,7 @@
       "key": "dataset_summaries",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6110,6 +6115,7 @@
       "key": "de_morgan_s_laws",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6122,6 +6128,7 @@
       "key": "finding_patterns",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6134,6 +6141,7 @@
       "key": "investigating_casting",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6146,6 +6154,7 @@
       "key": "investigating_the_theater",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6206,6 +6215,7 @@
       "key": "the_math_class",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6218,6 +6228,7 @@
       "key": "truth_tables",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6230,6 +6241,7 @@
       "key": "u4l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6242,6 +6254,7 @@
       "key": "u4l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6254,6 +6267,7 @@
       "key": "u4l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6266,6 +6280,7 @@
       "key": "u4l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6278,6 +6293,7 @@
       "key": "u4l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6290,6 +6306,7 @@
       "key": "u4l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6302,6 +6319,7 @@
       "key": "u4l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6314,6 +6332,7 @@
       "key": "u4l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6326,6 +6345,7 @@
       "key": "u4l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6338,6 +6358,7 @@
       "key": "u4l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6350,6 +6371,7 @@
       "key": "unit_4_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6386,6 +6408,7 @@
       "key": "unit_4_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
