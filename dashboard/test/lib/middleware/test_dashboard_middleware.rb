@@ -4,6 +4,6 @@ require_relative '../../../../shared/test/common_test_helper'
 # into dashboard will cause any problems in our test pipeline.
 class DashboardMiddlewareTest < Minitest::Test
   def test_dashboard_middleware
-    assert true
+    assert false
   end
 end
