@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';

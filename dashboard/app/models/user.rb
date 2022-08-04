@@ -1291,6 +1291,11 @@ class User < ApplicationRecord
       first
   end
 
+  #sections owned by the user AND not deleted
+  def owned_section_ids
+    sections.select(:id).all
+  end
+
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
