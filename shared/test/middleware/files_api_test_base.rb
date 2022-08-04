@@ -1,4 +1,4 @@
-require_relative '../test_helper' # Must be required first to establish load paths
+require_relative 'middleware_test_helper' # Must be required first to establish load paths
 require 'mocha/mini_test'
 require 'files_api'
 require 'channels_api'

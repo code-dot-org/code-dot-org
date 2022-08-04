@@ -5,7 +5,7 @@
 # Caution: This test is destructive to the Redis instance it runs against,
 # use caution when running against real redis.
 
-require_relative '../test_helper'
+require_relative 'middleware_test_helper'
 require 'fakeredis' unless use_real_redis?
 require 'timecop'
 require_relative '../fake_timecop'
