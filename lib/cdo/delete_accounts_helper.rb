@@ -1,4 +1,5 @@
 require_relative '../../shared/middleware/helpers/storage_id'
+require_relative '../../dashboard/lib/middleware/helpers/projects'
 require 'cdo/aws/s3'
 require 'cdo/db'
 

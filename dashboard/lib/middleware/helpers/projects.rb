@@ -1,6 +1,6 @@
 require 'sinatra'
-require_relative './storage_id'
-require_relative './profanity_privacy_helper'
+require_relative '../../../../shared/middleware/helpers/storage_id'
+require_relative 'profanity_privacy_helper'
 
 #
 # Projects

@@ -5,9 +5,9 @@ require 'cdo/db'
 require 'cdo/rack/request'
 require 'cgi'
 require 'csv'
-require_relative '../middleware/helpers/redis_table'
-require_relative '../middleware/helpers/sharded_redis_factory'
-require_relative '../middleware/channels_api'
+require_relative 'helpers/redis_table'
+require_relative 'helpers/sharded_redis_factory'
+require_relative 'channels_api'
 
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
@@ -42,11 +42,18 @@ class NetSimApi < Sinatra::Base
       core.rb
       auth_helpers.rb
       storage_id.rb
+    }.each do |file|
+      load(CDO.dir('shared', 'middleware', 'helpers', file))
+    end
+  end
+
+  helpers do
+    %w{
       table.rb
       null_pub_sub_api.rb
       pusher_api.rb
     }.each do |file|
-      load(CDO.dir('shared', 'middleware', 'helpers', file))
+      load(CDO.dir('dashboard', 'lib', 'middleware', 'helpers', file))
     end
   end
 

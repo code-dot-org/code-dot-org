@@ -22,7 +22,7 @@ For developer set-up instructions see [CONTRIBUTING.md](./CONTRIBUTING.md).
 The Internet Simulator simulates a computer network for a group of users.
 It does not actually establish peer-to-peer connections between clients;
 instead, each client communicates with the [Internet Simulator
-API](../../../shared/middleware/net_sim_api.rb) on Code.org's servers, so all
+API](../../../dashboard/lib/middleware/net_sim_api.rb) on Code.org's servers, so all
 clients interact with a common network state hosted with us. Beyond that
 network state, there is little intelligence on the server - clients are
 trusted, and distribute work for running the simulation among themselves
