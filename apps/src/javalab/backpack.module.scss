@@ -1,0 +1,19 @@
+@import 'color.scss';
+
+.fileListItem {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  width: 100%;
+
+  &:hover {
+    background-color: $background_gray;
+  }
+}
+
+.fileListItemDark {
+  &:hover {
+    background-color: $dark_charcoal;
+  }
+}

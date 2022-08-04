@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
+import classNames from 'classnames';
 import JavalabButton from './JavalabButton';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
+import cssModuleStyles from './backpack.module.scss';
 import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
@@ -283,11 +284,11 @@ class Backpack extends Component {
                   <div style={styles.listContainer}>
                     {backpackFilenames.map((filename, index) => (
                       <div
-                        style={{
-                          ...styles.fileListItem,
-                          ...(displayTheme === DisplayTheme.DARK &&
-                            styles.fileListItemDark)
-                        }}
+                        className={classNames(
+                          cssModuleStyles.fileListItem,
+                          displayTheme === DisplayTheme.DARK &&
+                            cssModuleStyles.fileListItemDark
+                        )}
                         key={`backpack-file-${index}`}
                       >
                         <input
@@ -391,21 +392,6 @@ const styles = {
   dropdownOpenButton: {
     backgroundColor: color.cyan
   },
-  fileListItem: {
-    display: 'flex',
-    flexDirection: 'row',
-    boxSizing: 'border-box',
-    padding: '5px 15px',
-    width: '100%',
-    ':hover': {
-      backgroundColor: color.background_gray
-    }
-  },
-  fileListItemDark: {
-    ':hover': {
-      backgroundColor: color.dark_charcoal
-    }
-  },
   fileListLabel: {
     marginLeft: 5,
     width: 'inherit'
@@ -416,10 +402,7 @@ const styles = {
     fontSize: 13,
     padding: '5px 16px',
     width: 'fit-content',
-    borderColor: color.orange,
-    ':disabled': {
-      borderColor: color.light_gray
-    }
+    borderColor: color.orange
   },
   backpackIcon: {
     height: 15,
@@ -452,4 +435,4 @@ export default connect(state => ({
   sources: state.javalab.sources,
   validation: state.javalab.validation,
   backpackEnabled: state.javalab.backpackEnabled
-}))(onClickOutside(Radium(UnconnectedBackpack)));
+}))(onClickOutside(UnconnectedBackpack));
