@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-20 16:08:20 UTC",
+    "serialized_at": "2022-08-03 16:47:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -48,6 +48,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Consumer Review Lab"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022"
       }
     }
@@ -135,6 +147,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "The Magpie lab is designed to be used early in the class, but it can be useful later in the class as well. This fairly short activity provides a rewrite of the getRandomResponse method to\nuse an array. It can be used to introduce arrays or early in the discussion of arrays. Students add literal strings to an array of random responses; this illustrates use of the length attribute of arrays. It should take no more than 30 minutes to complete.",
+        "purpose": "In previous lessons, when Magpie did not match a particular word or phrase, it would call the method `getRandomResponse()`. This method used a random number and a series of multi-way selections using conditional statements to pick the response to return. In this lesson, we will look at an alternative way to accomplish this task using a random number generator object and an array. This can lead to more readable, compact, and efficient code.",
         "student_overview": "When you last worked with the Magpie, default responses were handled with a nested if statement. This certainly worked, and you could add more responses, but it was a bit awkward. An easier way to keep track of default responses is with an array. In this activity, you will see how an array makes handling default responses much easier."
       },
       "seeding_key": {
@@ -151,6 +164,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "These are completely optional resources that you may choose to use in your classroom in order to extend the lab time, to give students more opportunities to customize their Magpie chatbot, and to practice some sample multiple choice style questions, similar to what might occur on the AP CS A exam."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -202,6 +216,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "In this activity, students will be completing the implementation required to make the GUI function.",
+        "purpose": "Students are able to write program code to declare instance variables and write headers for constructors with or without parameters, but sometimes fail to assign a value to the instance variables in the constructor. They might unknowingly create local variables in the constructor with the same name as the instance variables instead.",
+        "student_overview": "In this activity, you will be completing the implementation required to make the GUI function."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -217,6 +234,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "This activity gives students the chance to design their own subclass of `Celebrity`. They should spend time thinking about the different attributes and behaviors that they might want to include in this new class. Emphasize that time spent on the design before beginning implementation can cut down on the time needed to implement a\nclass. ",
+        "student_overview": "In this activity you will get the chance to design your own subclass of `Celebrity`. You should spend time thinking about the different attributes and behaviors that you might want to include in this new class. Time spent on the design before beginning implementation can cut down on the time needed to implement a class."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -236,6 +255,91 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Introduction (Reviews & Sentiment Value)",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "The persuasive power of words can be seen in a variety of places such as entertainment,\nnews, social media, and even reviews and comments. This activity focuses on the\nsentiment value of individual words, and you will start by reading a few online reviews of\nyour choice.",
+        "student_overview": "The persuasive power of words can be seen in a variety of places such as entertainment,\nnews, social media, and even reviews and comments. This activity focuses on the\nsentiment value of individual words, and you will start by reading a few online reviews of\nyour choice."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Sentiment Value & Star Ratings ",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "Now that you have read several reviews and started exploring the `sentimentVal`\nmethod, you will use this method to determine the overall sentiment of an entire review.",
+        "student_overview": "Now that you have read several reviews and started exploring the `sentimentVal`\nmethod, you will use this method to determine the overall sentiment of an entire review."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Autogenerated Review",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "overview": "In this activity you will write and test a method that will autogenerate a review based\non the review used in Activity 2. The method will autogenerate a review by replacing\nadjectives in the given review with randomly selected adjectives from a list.",
+        "student_overview": "In this activity you will write and test a method that will autogenerate a review based\non the review used in Activity 2. The method will autogenerate a review by replacing\nadjectives in the given review with randomly selected adjectives from a list."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Create a Positive or Negative Review",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "overview": "Fake reviews can be slanted positive or negative. To create a positive review the\nprogram only need substitute positive adjectives for neutral or negative adjectives.\nTo create a negative review the program would substitute only negative adjectives for\nneutral or positive adjectives. In this activity you’ll modify the `fakeReview` method\nwritten in Activity 3. The method will be redesigned so that it will make reviews\nstronger; that is, either more negative or more positive.",
+        "student_overview": "Fake reviews can be slanted positive or negative. To create a positive review the\nprogram only need substitute positive adjectives for neutral or negative adjectives.\nTo create a negative review the program would substitute only negative adjectives for\nneutral or positive adjectives. In this activity you’ll modify the `fakeReview` method\nwritten in Activity 3. The method will be redesigned so that it will make reviews\nstronger; that is, either more negative or more positive."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Open-Ended Activity",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+        "overview": "This open-ended activity requires you to develop a program on a topic that interests you.\nAs a class, spend a few minutes reviewing the requirements of the open-ended activity.",
+        "student_overview": "This open-ended activity requires you to develop a program on a topic that interests you.\nAs a class, spend a few minutes reviewing the requirements of the open-ended activity."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022"
       }
     }
@@ -413,7 +517,7 @@
       "key": "b67821e9-baf6-455b-b130-b35e999b79e4",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -427,7 +531,7 @@
       "key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 25,
         "name": "Activity "
       },
       "seeding_key": {
@@ -571,6 +675,150 @@
         "lesson_activity.key": "66ccb90b-d441-4a46-9fa6-e5f7b91823cd",
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "6ebd808d-6afd-4a11-afbf-5db4eecfb991",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ebd808d-6afd-4a11-afbf-5db4eecfb991",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "0800e92a-151c-43a9-8b23-b9c2fe149292",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0800e92a-151c-43a9-8b23-b9c2fe149292",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "31310913-8f03-4280-96e4-94df436a229d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31310913-8f03-4280-96e4-94df436a229d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "96b3a243-6384-456f-82d2-ee05471fae12",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96b3a243-6384-456f-82d2-ee05471fae12",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "3ee23329-9b47-4087-9fd9-6ce21cf43338",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ee23329-9b47-4087-9fd9-6ce21cf43338",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "584122ca-e2a9-4439-a7f5-699121cd7577",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "584122ca-e2a9-4439-a7f5-699121cd7577",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "dbe11eca-2c53-4275-b068-1228b45b3bbb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "ed645d5d-f646-4a5f-b807-dda0d0e88e2c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ed645d5d-f646-4a5f-b807-dda0d0e88e2c",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "86cdde5a-a751-4ca3-addf-4933b76cc4d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86cdde5a-a751-4ca3-addf-4933b76cc4d9",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022"
       }
     }
@@ -926,8 +1174,19 @@
       }
     },
     {
-      "key": "bff02fbf-a5f2-4499-b818-cde569a78464",
+      "key": "20eb553e-d046-4790-bc51-d05c7750cb5d",
       "position": 1,
+      "properties": {
+        "description": "\n\n![](https://images.code.org/8dfe5d5131520000d7781f421785b95a-magpieLogo_final.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "20eb553e-d046-4790-bc51-d05c7750cb5d",
+        "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96"
+      }
+    },
+    {
+      "key": "bff02fbf-a5f2-4499-b818-cde569a78464",
+      "position": 2,
       "properties": {
         "description": "Since our last interaction with the Magpie chatbot, some additional interactivity has been added to the source code. With a partner, run the code and interact with Magpie using the newly added types of statements: **I want to** [*statement*] & **you** [*statement*] **me**\n",
         "name": "Conversing with the Bot",
@@ -940,7 +1199,7 @@
     },
     {
       "key": "ca60a16f-6ad5-49d6-93fe-5b85f8f2e059",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "**Group:** Students should work with a partner for this investigation.\n\n**Do this:** Using the updated Magpie source code, have students experiment with inputting sample statements using the following format:\n\n* \"**I want to**...\" statements <br>  *e.g. \"I want to ask Magpie to dance.\"*\n* \"**you** ... **me**\" statements <br>  *e.g. \"You energize me!\"*"
       },
@@ -951,7 +1210,7 @@
     },
     {
       "key": "3c5c7714-adde-4f65-b49e-d16ae3443f4c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Discuss**: What types of statements produce valid responses? What types of statements break the bot and expose its shortcomings?"
       },
@@ -962,7 +1221,7 @@
     },
     {
       "key": "8c648361-f036-473f-9033-7253bfce720c",
-      "position": 4,
+      "position": 5,
       "properties": {
         "tips": [
           {
@@ -978,7 +1237,7 @@
     },
     {
       "key": "b697654e-6ccb-49ac-b36f-99c8adf88295",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Conversing with the Bot"
       },
@@ -1008,7 +1267,7 @@
       "position": 2,
       "properties": {
         "description": "In this first portion of the activity, we will be examining how the provided code searches for a multi-word phrase and calls a method accordingly. \n\n**Group:** Students should continue to work with the same partner with whom they completed the *Warm Up*.\n\n**Do This:** Review the `findKeyword()` method that was modified in the prior activity.\n\n**Discuss:** `findKeyword()` is an example of an *overloaded* method. What is the difference between the two versions of this method in the new Magpie code?\n",
-        "name": "Scanning for a Phrase"
+        "name": "Reviewing findKeyword()"
       },
       "seeding_key": {
         "activity_section.key": "62297cb0-ea1a-4482-83d2-cb3010fac1f0",
@@ -1032,10 +1291,22 @@
       }
     },
     {
-      "key": "4467b700-2151-4f3f-9463-3fa8a6bae1fa",
+      "key": "c350cf15-8eb8-4182-8ba4-2770bdd219df",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Have students examine the conditional statements within the `getResponse()` method. Instruct them to find the specific condition that is executed when the user input contains the string \"*I want to*\".\n\n**Do This:** Have students analyze the method `transformIWantToStatement()` that is called when this conditional evaluates as *true*. They should prepare a simple decomposition of the steps that are performed in this method. Use abstraction to describe, in the simplest terms possible, what these steps accomplish.\n\n**Discuss:** What are the steps that are accomplished in the `transformIWantToStatement()` method?\n"
+        "description": "**Do This:** Match the parameters from the `findKeyword()` method with their definition in the matching activity (*Level 3*)."
+      },
+      "seeding_key": {
+        "activity_section.key": "c350cf15-8eb8-4182-8ba4-2770bdd219df",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "4467b700-2151-4f3f-9463-3fa8a6bae1fa",
+      "position": 5,
+      "properties": {
+        "description": "\n\n**Do This:** Create a conditional statement that will utilize the `findKeyword()` method in order to determine if a user's input contains `I want`(#ffe3e3). This conditional, if *true*, should call a method named `transformIWantStatement()`. Students should pass the user's *statement* into the method as a String. The method should return a string that will be saved into the *response* variable\n\n**Do This:** Create a basic `transformIWantStatement()` method. When this method is run, it should simply return the String \"*I want!*\"  Use this basic response in order to test that the student's conditional statement and method are set up correctly.\n\n**Do This:** With a partner, students should analyze the existing method `transformIWantToStatement()`. This code will serve as a model that students will use to write their `transformIWantStatement()` method.\n",
+        "name": "Scanning for a Phrase"
       },
       "seeding_key": {
         "activity_section.key": "4467b700-2151-4f3f-9463-3fa8a6bae1fa",
@@ -1043,26 +1314,10 @@
       }
     },
     {
-      "key": "dc6e68bf-a433-47c2-9a69-fb35e274969f",
-      "position": 5,
-      "properties": {
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Sample Response:\n1. *Remove spaces* from beginning / end of statement\n2. *Remove period*, if one exists\n3. *Find an index value* where \"I want to\" ends in the statement\n4. *Create a substring* from that index value until the end of the statement\n5. *Return a response* with the substring attached"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "dc6e68bf-a433-47c2-9a69-fb35e274969f",
-        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
-      }
-    },
-    {
       "key": "4c6e675c-2b78-45b9-baa7-3a36b906527e",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Direct students to create a new empty method called `transformIWantStatement()` that takes in the user statement as an argument. Model this method header after the one that we examined previously.\n\n**Do This:** Have students add a conditional statement that tests for the presence of an \"*I want*\" statement in the user input. Take care in placing this conditional in the proper location to avoid overriding the \"*I want to*\" conditional.\n\n**User Testing:** Direct students to use a sample `System.out.println(\"I want!\")` within the `transformIWantStatement()` method to make sure that your program is calling it correctly based on the conditional that you created.\n\n**Display:** The list of decomposed steps that you outlined in the previous discussion should be provided as a reference.\n\n**Do This:** Direct students to use the list of decomposed steps in order to code our new `transformIWantStatement()` method using a similar algorithmic flow. Encourage students to create this method from memory as much as possible. If they get stuck on how to recreate a step, have them refer back to the `transformIWantToStatement()` method for guidance.\n\n**Do This:**  Instruct students to have Magpie respond to “I want [*something*]” statements with “Would you really be happy if you had\n[*something*]?” \n\n* **Sample Statement:** I want *fried pickles*.\n* **Sample Response:** Would you really be happy if you had *fried pickles*?\n\n**User Testing:** Use a variety of \"*I want*\" and \"*I want to*\" statements, located at various locations within a statement (*beginning, middle*, or *end*) in order to test the output.\n\n**Discuss:** Is the output consistent with what you and your partner envisioned?"
+        "description": "\n\n**Do This:** Direct students to use the list of decomposed steps in order to code our new `transformIWantStatement()` method using a similar algorithmic flow. Encourage students to create this method from memory as much as possible. If they get stuck on how to recreate a step, have them refer back to the `transformIWantToStatement()` method for guidance.\n\n**Do This:** Instruct students to complete the `transformIWantStatement()` to have Magpie respond to “I want [*something*]” statements with “Would you really be happy if you had [*something*]?” \n\n* **Sample Statement:** I want *fried pickles*.\n* **Sample Response:** Would you really be happy if you had *fried pickles*?\n\n**User Testing:** Use a variety of \"*I want*\" and \"*I want to*\" statements, located at various locations within a statement (*beginning, middle*, or *end*) in order to test the output.\n\n**Discuss:** Is the output consistent with what you and your partner envisioned?"
       },
       "seeding_key": {
         "activity_section.key": "4c6e675c-2b78-45b9-baa7-3a36b906527e",
@@ -1109,8 +1364,35 @@
       }
     },
     {
-      "key": "294e7df3-1d8e-4fff-aa53-ecaaa658a5be",
+      "key": "3c2863a6-6dd5-419f-a534-d78a283d041d",
       "position": 10,
+      "properties": {
+        "description": "**Do This:** Retrieve-Pair-Share. Using the computational thinking skill of decomposition, have students determine the steps that are presented in the `transformIYouStatement()` method. The students should be able to use abstraction to simplify the algorithm and to generally describe what is occurring.\n\n**Do This:** After examining the steps in the `transformIYouStatement()` method, have students complete the activity to place the steps in the algorithm in order (*Level 7*).\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c2863a6-6dd5-419f-a534-d78a283d041d",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "dc6e68bf-a433-47c2-9a69-fb35e274969f",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Sample Algorithm:\n1. *Remove spaces* from beginning / end of statement\n2. *Remove period*, if one exists\n3. *Find an index values* of both \"you\" and \"me\"\n4. *Create a substring* between \"you\" and \"me\"\n5. *Return a response* with the substring attached"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc6e68bf-a433-47c2-9a69-fb35e274969f",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "294e7df3-1d8e-4fff-aa53-ecaaa658a5be",
+      "position": 12,
       "properties": {
         "description": "**Do This:** Instruct students to create a new empty method called `transformIYouStatement()` that takes in the user statement as an argument. Model this method header after the one that we examined previously.\n\n**Do This:** Students should add a conditional statement that tests for the presence of both *I* and *you* within the user input. The conditional should check that *I* occurs before *you* in the statement.\n\n**Do This:** Direct students to code the `transformIYouStatement()` method using the same algorithmic flow as the `transformYouMeStatement()` method. Again, students should try to create this method from memory as much as possible. If they get stuck on how to recreate a step, refer back to the reference method for guidance.\n\n**Do This:** Students should have Magpie respond to statements of the form “I [*something*] you” with the restructuring “Why do you\n[*something*] me?”\n\n*  **Sample Statement:** I *like* you.\n* **Sample Response:** Why do you *like* me?\n\n**Discuss:** Is the output consistent with what you and your partner envisioned?"
       },
@@ -1121,7 +1403,7 @@
     },
     {
       "key": "274d4e77-0afe-4711-8f97-8ed340b413d2",
-      "position": 11,
+      "position": 13,
       "properties": {
         "progression_name": "Two Word Combinations"
       },
@@ -1193,9 +1475,22 @@
       }
     },
     {
-      "key": "e6f8732e-26c2-4cbf-97c1-9919245fbb33",
+      "key": "9d2cef48-2359-450f-8ecd-22438d19bf87",
       "position": 1,
       "properties": {
+        "description": "\n\n![](https://images.code.org/3b66910f83e514fb5524553f0d84a340-magpieLogo_final.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d2cef48-2359-450f-8ecd-22438d19bf87",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
+      }
+    },
+    {
+      "key": "e6f8732e-26c2-4cbf-97c1-9919245fbb33",
+      "position": 2,
+      "properties": {
+        "description": "Students will begin this optional lesson by running the program and putting in a response that will cause Magpie to return a default random response.\n\n",
+        "name": "Exploration"
       },
       "seeding_key": {
         "activity_section.key": "e6f8732e-26c2-4cbf-97c1-9919245fbb33",
@@ -1203,8 +1498,31 @@
       }
     },
     {
+      "key": "dd27360d-98e8-4785-bd1d-dbf1efaebed0",
+      "position": 3,
+      "properties": {
+        "description": "To begin, run the code that you see here. Put in a response that will cause Magpie to call the `getRandomResponse()` method. Are there any differences between what you observe here and what you had observed previously?\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd27360d-98e8-4785-bd1d-dbf1efaebed0",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
+      }
+    },
+    {
+      "key": "b2df9cff-e072-4815-a4e1-06e445c2889c",
+      "position": 4,
+      "properties": {
+        "description": "**Discuss**: What differences, if any, exist between this version of the code and the previous version with regards to returning random responses?\n\nStudents will then compare the two methods that return random responses. The code can be found in Level One. \n\nThe method that they are familiar with from previous lessons has been named `previousRandomResponse()` while the new method that they will be working with is now named `getRandomResponse()`"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2df9cff-e072-4815-a4e1-06e445c2889c",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
+      }
+    },
+    {
       "key": "974fff87-6fdc-4924-be28-ba3c4285ccdd",
-      "position": 2,
+      "position": 5,
       "properties": {
         "progression_name": "Refactoring the Randomness"
       },
@@ -1214,9 +1532,66 @@
       }
     },
     {
+      "key": "1f5725dd-b4af-4fa9-acaf-10db4dab67f7",
+      "position": 6,
+      "properties": {
+        "description": "You and a partner should compare the `previousRandomResponse()` and `getRandomResponse()`. Even though the program functioned the same as it had previously, the method for returning a random response has been **refactored**-- or rewritten-- so that it is more compact and easier to manage.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1f5725dd-b4af-4fa9-acaf-10db4dab67f7",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
+      }
+    },
+    {
+      "key": "97450120-e101-4ea9-bdf8-7b148ef83d8a",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Even if you are approaching this optional lesson before tackling arrays with your students, the objective of the lesson is achievable. However, students should reference the 1D Array documentation that is provided under the *Help & Tips* section in the left panel."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "97450120-e101-4ea9-bdf8-7b148ef83d8a",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
+      }
+    },
+    {
+      "key": "1bb2ac90-dc0f-4a53-9e86-3006d78217c2",
+      "position": 8,
+      "properties": {
+        "description": "**Discuss:** Students should look at both methods side-by-side and discuss the differences in approach between them. This can evolve into a whole-class discussion about the basic differences between the approaches."
+      },
+      "seeding_key": {
+        "activity_section.key": "1bb2ac90-dc0f-4a53-9e86-3006d78217c2",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
+      }
+    },
+    {
+      "key": "8fb6b106-8f7f-4b8c-91cd-638cf665eca6",
+      "position": 9,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "It might be easy for students to become confused about the way that Random() is used, as it is using a random number generator *object* instead of assigning a random number to a *primitive variable*. \n\nFocus the discussion on the way that the String array is declared / initialized, the manner in which elements are added into the array, and the way that the `nextInt() ` method is used on the random number generator."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8fb6b106-8f7f-4b8c-91cd-638cf665eca6",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
+      }
+    },
+    {
       "key": "2f27b619-c555-4460-b966-d99853241a16",
       "position": 1,
       "properties": {
+        "description": "In this series of levels, the students will be modifying the starter code that is present here in order to add more depth to the amount and quality of random responses that Magpie returns.\n\n**Do This:** Direct students to *Level Two* and have them match the commands from the refactored `getRandomResponse()` method with the definition of their functionality within the program. \n\nThis matching activity will seek to clarify some of the important commands / properties that were present in the refactored method.",
+        "name": "Matching"
       },
       "seeding_key": {
         "activity_section.key": "2f27b619-c555-4460-b966-d99853241a16",
@@ -1224,10 +1599,62 @@
       }
     },
     {
-      "key": "6bda751b-29e0-4288-9409-c74f2e813448",
+      "key": "76440f5e-c299-4758-8410-fdd1b3cc30dc",
       "position": 2,
       "properties": {
-        "progression_name": "Random Elements in Arrays"
+        "description": "Next, students will have the option to **choose** one of two differentiated activities in which they will be asked to add random elements into the array in order to add more personality to Magpie. \n",
+        "name": "Random Elements from Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "76440f5e-c299-4758-8410-fdd1b3cc30dc",
+        "lesson_activity.key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda"
+      }
+    },
+    {
+      "key": "1ef1c24c-84ba-45ca-a318-89ced95c30f9",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Alter the array to add four additional random responses.\n\n**Discuss:** Did it have the expected functionality? Is there a limit to how many random responses you might add?\n\n**Extension:** Ask the students to declare the array on one line, and then initialize its elements on the next line.. This changes the syntax and students can refer to the reference in order to see how this might look in practice.\n\n**Extension:** Have the students attempt to code their own version of the refactored `getRandomResponse()` method. They can use either the random *objects* or *primitives*, but they should attempt to declare / initialize an array rather than rely on multi-way conditional statements. ",
+        "name": "Adding Elements - Intro"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ef1c24c-84ba-45ca-a318-89ced95c30f9",
+        "lesson_activity.key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda"
+      }
+    },
+    {
+      "key": "7780437d-cf9a-4998-afc9-8e9c4604779c",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Alter the array to add four additional random responses. \n\n**Do This:** Declare and initialize a new array called `myEmotions[]`. Fill it with 8 words that denote an emotional response, *e.g. happy, sad, frustrated, etc.*\n\n**Do This:** Randomly select one of the emotion words from `myEmotions[]` and concatenate (*combine*) with one of the responses from the `randomResponses[]` array.\n\nExample:\n\n* myEmotions[3] = \"excited\"\n* randomResponses[4] = \"That makes me extremely \"\n* Return = randomResponses[4] + myEmotions[3] =  \"That makes me extremely excited\"\n\n**Do This:** Compile and run your code. You should run it until you see all of your new responses.\n\n**Discuss:** Did it have the expected functionality? Is there a limit to how many random responses you might add?",
+        "name": "Adding Elements - Advanced"
+      },
+      "seeding_key": {
+        "activity_section.key": "7780437d-cf9a-4998-afc9-8e9c4604779c",
+        "lesson_activity.key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda"
+      }
+    },
+    {
+      "key": "a4d5d51e-29e3-4871-be86-1991f2756e7d",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Adding Elements - Advanced activity requires substantially more knowledge of arrays than the Intro activity. Encourage students to tackle the Advanced activity if they finish the Intro quickly. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a4d5d51e-29e3-4871-be86-1991f2756e7d",
+        "lesson_activity.key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda"
+      }
+    },
+    {
+      "key": "6bda751b-29e0-4288-9409-c74f2e813448",
+      "position": 6,
+      "properties": {
+        "progression_name": "Random Elements from Arrays"
       },
       "seeding_key": {
         "activity_section.key": "6bda751b-29e0-4288-9409-c74f2e813448",
@@ -1238,6 +1665,8 @@
       "key": "aea23a5b-b7ac-4133-81d7-56de7965b316",
       "position": 1,
       "properties": {
+        "description": "**Discuss:** With your partner, brainstorm additional ways that you could incorporate arrays and random response generation into the Magpie chatbot in order to add more life-like responses:\n\n**Do This:** Share one of your ideas in the reflection text box on Level Four.",
+        "name": "Reflection on Arrays"
       },
       "seeding_key": {
         "activity_section.key": "aea23a5b-b7ac-4133-81d7-56de7965b316",
@@ -1248,7 +1677,7 @@
       "key": "370c53ee-f4f5-4b37-9c59-5b714f357114",
       "position": 2,
       "properties": {
-        "progression_name": "Optional Lab Assessments"
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "370c53ee-f4f5-4b37-9c59-5b714f357114",
@@ -1423,7 +1852,7 @@
       "key": "55319368-f673-431b-b1b7-8ee6c1b2e41a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part 3 of the activity guide. \n\nThe goal of Part 2 is to provide students with multiple opportunities to model real-world objects which will help them understand the type of data associated with the objects, and also what data is essential to store in instance variables. \n\n**Note:** Students are given no constraints on the objects that they can discuss, however variety is helpful for discussions. In order to ensure variety, one option would be to divide the class into 4 or 5 groups and give each group a distinct category of items. *If you do this, it would be helpful to have students partner up with someone from a different group.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part 3 of the activity guide. \n\nThe goal of Part 3 is to provide students with multiple opportunities to model real-world objects which will help them understand the type of data associated with the objects, and also what data is essential to store in instance variables. \n\n**Note:** Students are given no constraints on the objects that they can discuss, however variety is helpful for discussions. In order to ensure variety, one option would be to divide the class into 4 or 5 groups and give each group a distinct category of items. *If you do this, it would be helpful to have students partner up with someone from a different group.*",
         "name": "Check for Understanding",
         "tips": [
           {
@@ -1458,6 +1887,14 @@
       "key": "17c46f7f-3ea4-4e38-8965-175420c138a2",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute the [r csa_celebrity_class_lesson_7_activity_guide/csa-labs/unversioned]. Direct students to also take out the activity guide from the previous lesson. They will need that activity guide to look at their `play` method and the `Game` class in order to answer question 4 in today's activity guide.\n\n Students should work on Part 1 of the activity guide. Once students have completed question 4, complete a UML diagram with the class and the code provided in `Celebrity.java` class.\n\n\n",
+        "name": "Simple Celebrity Class Activity Guide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Decisions about how to handle a clue in the `Celebrity` class were made to work with the GUI, and might be different from what students come up with. Specifically, the provided exemplar solution of the `Celebrity` class has an instance variable named `clue` that is a `String`, which corresponds to the field in the GUI where the clue is entered. \n\n**Note:** a single String could contain multiple clues separated by a comma. The `LiteratureCelebrity` subclass supports multiple clues in an `ArrayList`."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "17c46f7f-3ea4-4e38-8965-175420c138a2",
@@ -1465,13 +1902,203 @@
       }
     },
     {
+      "key": "4a4c96a0-f0f9-4c44-9182-043391836d81",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Based on Part 1 and the creation of the UML diagram, direct students to move on to Part 2 of the activity guide where they will complete the `Celebrity` class as well as code to test the `Celebrity` class. You may decide to have students complete this part in Java or in pseudocode. \n\n**Do This:** When students have completed Part 2 of their activity guide, direct students to go to Lesson 8, Level 1 to complete the `Celebrity` class based on their answers to part 1 of the activity guide. Students should also be directed to write code to test their `Celebrity` class. \n",
+        "name": "Complete and Test the Celebrity Class",
+        "progression_name": "Celebrity Class",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Spend time reviewing how students should go about testing their `Celebrity` class. Students should create multiple `Celebrity` objects, calling methods on these objects outside the context of the GUI application. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4a4c96a0-f0f9-4c44-9182-043391836d81",
+        "lesson_activity.key": "4067b7ee-1dcf-4bf0-9223-72fa19b7fb55"
+      }
+    },
+    {
       "key": "97848207-c834-4cb2-a59d-31526323af84",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 3 of today's activity guide individually before discussing constructors as a class. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Constructors are an excellent example of overloading, and it is helpful for students\nto recognize that they can have multiple constructors with different numbers of\nparameters. If students use parameter names that are the same as their instance\nvariables, they will need to use the `this` keyword. If you would prefer to not discuss\nthe use of the `this` keyword, require students to use different names for the\nconstructor parameters.\n\nIf a student did not include a no-argument constructor, they could add\none. It should still initialize all instance variables with values, however the\nvariables can be initialized to whatever the student wants."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "97848207-c834-4cb2-a59d-31526323af84",
         "lesson_activity.key": "66ccb90b-d441-4a46-9fa6-e5f7b91823cd"
+      }
+    },
+    {
+      "key": "e903365c-fc8e-4aed-9968-bd27ed482750",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of the activity guide where they will investigate Java GUI swing components. \n",
+        "name": "Investigate Java GUI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although GUIs are not part of the framework for this course, they can be an excellent way to engage students. If there is time and interest, discuss the basic GUI structural components of a Frame (JFrame), Panel (JPanel), and the UI components of buttons, and fields. If this lab is being completed after covering inheritance, incorporate the role of inheritance in the existing GUI libraries. "
+          },
+          {
+            "type": "discussionGoal",
+            "markdown": "The first question in this activity asks students to explore the official Java tutorial on using swing components to investigate a class that they are interested in. Depending on the depth with which you would like students to learn about GUIs, this question could be skipped or done as a guided practice with the entire class.\n\nThe logic of a program is often referred to as the “back-end,” while the GUI is often referred to as the “front-end” because it’s what a user interacts with. Students do not need to know this terminology, but they may have heard it and it might be useful to define it here."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e903365c-fc8e-4aed-9968-bd27ed482750",
+        "lesson_activity.key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba"
+      }
+    },
+    {
+      "key": "181d6be1-49f1-4db0-b6d2-f2c37067829c",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "181d6be1-49f1-4db0-b6d2-f2c37067829c",
+        "lesson_activity.key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba"
+      }
+    },
+    {
+      "key": "df44679c-e195-4e8a-86d6-ea378ec7e232",
+      "position": 1,
+      "properties": {
+        "description": "---\n##IMPORTANT DISCLAIMER\n\n*This activity requires the use of a GUI. Unfortunately, you will not be able to use our platform for this activity as the GUI is not supported by our platform.*\n\n*To run the Celebrity program, you will need to direct your students to use another IDE such as Replit. Here is a video of a replit Java Swing GUI example for your reference: \n[r replit_java_swing_gui_example/csa-labs/unversioned].*\n\n---\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Parts 2-5 of the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\nIn this activity, students will be completing the implementation required to make the GUI function. Each question in the activity guide provides short, explicit direction for students.\n\nEnsure students have access to the Student Starter Code files for each of the classes needed. \n\n*If you’re interested in learning more about how this GUI works, or having your students learn more about this GUI, please see the [r gui_appendix/csa-labs/unversioned] for more detailed information.*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although students designed their own Celebrity class in the previous lesson, it is possible to provide them with the `Celebrity.java` class from the teacher code exemplar resources to ensure that the GUI works as intended. The student code resources contains all of the files necessary to run the GUI, with functionality being implemented throughout this activity."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Option for Differentiation:** When students are completing the implementation of the `CelebrityGame` class, they can add necessary instance variables and method functionality to support the idea of a “score” within the game. This may involve changes to more than just the `CelebrityGame` class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df44679c-e195-4e8a-86d6-ea378ec7e232",
+        "lesson_activity.key": "6ebd808d-6afd-4a11-afbf-5db4eecfb991"
+      }
+    },
+    {
+      "key": "28db7f98-f094-4fbb-977d-3a74233f5504",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 6 of their activity guide. \n\nIn addition, now that students have created, interacted with, and modified a few different classes responsible for the Celebrity game, you may choose to have them discuss some of what they have observed. Either in groups or as a class, you can choose to spend a few minutes discussing the relationship between classes, specifically the separation of roles within the program.",
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "28db7f98-f094-4fbb-977d-3a74233f5504",
+        "lesson_activity.key": "0800e92a-151c-43a9-8b23-b9c2fe149292"
+      }
+    },
+    {
+      "key": "2a0f1272-b05b-4869-b056-fdd39f0dd392",
+      "position": 1,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What if you wanted to create a more specific type of Celebrity? One that had additional attributes and behaviors apart from what all Celebrity objects have? How could we do this?*",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "By using inheritance to extend the `Celebrity` class, you can do just that."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2a0f1272-b05b-4869-b056-fdd39f0dd392",
+        "lesson_activity.key": "31310913-8f03-4280-96e4-94df436a229d"
+      }
+    },
+    {
+      "key": "4433fb86-fab0-4473-8c78-113c15fab9b4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *With a partner, think about a subset or certain classification of celebrities that would have additional attributes or behaviors.*\n\n* *If you were to incorporate a different type of celebrity into the Celebrity game, what kind of celebrity would you want to make?*\n "
+      },
+      "seeding_key": {
+        "activity_section.key": "4433fb86-fab0-4473-8c78-113c15fab9b4",
+        "lesson_activity.key": "31310913-8f03-4280-96e4-94df436a229d"
+      }
+    },
+    {
+      "key": "697017e6-25c6-43ca-afe7-ac9721930327",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [activity guide]. At this point you also need to ensure students can access the `LiteratureCelebrity` class starter code. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "697017e6-25c6-43ca-afe7-ac9721930327",
+        "lesson_activity.key": "96b3a243-6384-456f-82d2-ee05471fae12"
+      }
+    },
+    {
+      "key": "1aa77e09-a74c-46c9-b3e3-489b91f88418",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1aa77e09-a74c-46c9-b3e3-489b91f88418",
+        "lesson_activity.key": "3ee23329-9b47-4087-9fd9-6ce21cf43338"
+      }
+    },
+    {
+      "key": "4f472c09-11ab-4cb0-a25b-5f70799372e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4f472c09-11ab-4cb0-a25b-5f70799372e4",
+        "lesson_activity.key": "584122ca-e2a9-4439-a7f5-699121cd7577"
+      }
+    },
+    {
+      "key": "1868dbf1-4e1b-4a2b-b2bb-f5f6ce1a211e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1868dbf1-4e1b-4a2b-b2bb-f5f6ce1a211e",
+        "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb"
+      }
+    },
+    {
+      "key": "14d5c8c9-44da-403d-90f0-1dc610406850",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "14d5c8c9-44da-403d-90f0-1dc610406850",
+        "lesson_activity.key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533"
+      }
+    },
+    {
+      "key": "470bf05c-8912-4cf6-8917-a84c6befecbb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "470bf05c-8912-4cf6-8917-a84c6befecbb",
+        "lesson_activity.key": "ed645d5d-f646-4a5f-b807-dda0d0e88e2c"
+      }
+    },
+    {
+      "key": "9b72da7f-7d7e-401f-aa3c-9012b3bfaf72",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9b72da7f-7d7e-401f-aa3c-9012b3bfaf72",
+        "lesson_activity.key": "86cdde5a-a751-4ca3-addf-4933b76cc4d9"
       }
     }
   ],
@@ -2035,7 +2662,7 @@
         "level_keys": [
           "CSA CB_Lab Magpie-L5-Match_2022"
         ],
-        "progression": "Random Elements in Arrays"
+        "progression": "Random Elements from Arrays"
       },
       "bonus": false,
       "seeding_key": {
@@ -2060,7 +2687,7 @@
         "level_keys": [
           "Editing CSA CB_Lab Magpie-L5-L3-Bubble_2022"
         ],
-        "progression": "Random Elements in Arrays"
+        "progression": "Random Elements from Arrays"
       },
       "bonus": false,
       "seeding_key": {
@@ -2079,13 +2706,13 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
+      "activity_section_position": 1,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA CB_Lab Magpie-L5-FR_2022"
         ],
-        "progression": "Random Elements in Arrays"
+        "progression": "Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -2095,7 +2722,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "6bda751b-29e0-4288-9409-c74f2e813448"
+        "activity_section.key": "370c53ee-f4f5-4b37-9c59-5b714f357114"
       },
       "level_keys": [
         "CSA CB_Lab Magpie-L5-FR_2022"
@@ -2107,6 +2734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment1"
+        ],
         "progression": "Multiple Choice"
       },
       "bonus": false,
@@ -2129,6 +2759,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment2"
+        ],
         "progression": "Multiple Choice"
       },
       "bonus": false,
@@ -2151,6 +2784,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment3"
+        ],
         "progression": "Free Response Question"
       },
       "bonus": false,
@@ -2173,6 +2809,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment4"
+        ],
         "progression": "Free Response Question"
       },
       "bonus": false,
@@ -2195,6 +2834,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment5"
+        ],
         "progression": "Free Response Question"
       },
       "bonus": false,
@@ -2217,6 +2859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment6"
+        ],
         "progression": "Extensions"
       },
       "bonus": false,
@@ -2239,6 +2884,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment7"
+        ],
         "progression": "Extensions"
       },
       "bonus": false,
@@ -2261,6 +2909,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment8"
+        ],
         "progression": "Extensions"
       },
       "bonus": false,
@@ -2275,6 +2926,31 @@
       },
       "level_keys": [
         "CSA CB_Lab Magpie-L5-Assessment8"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA CB_Lab Celebrity-L2-L1_2022"
+        ],
+        "progression": "Celebrity Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Celebrity-L2-L1_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "4a4c96a0-f0f9-4c44-9182-043391836d81"
+      },
+      "level_keys": [
+        "CSA CB_Lab Celebrity-L2-L1_2022"
       ]
     }
   ],
@@ -2576,7 +3252,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "6bda751b-29e0-4288-9409-c74f2e813448"
+        "activity_section.key": "370c53ee-f4f5-4b37-9c59-5b714f357114"
       }
     },
     {
@@ -2674,9 +3350,45 @@
         "script.name": "csa-labs-2022",
         "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Celebrity-L2-L1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Celebrity-L2-L1_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "4a4c96a0-f0f9-4c44-9182-043391836d81"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[KEY] CSA Celebrity Class: A Simple Version Activity Guide",
+      "url": "https://docs.google.com/document/d/1W0sjEW9tueswsYu4YqbAQ7D3103qlvpQo46-hSjQ59U/edit?usp=sharing",
+      "key": "_key_csa_celebrity_class_lesson_7_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_csa_celebrity_class_lesson_7_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] CSA Celebrity Lab - Putting It All Together Activity Guide",
+      "url": "https://docs.google.com/document/d/1J6L-0ZMGqObTq8KcaeeGzBNxK5HEsme_e72QfFyE7pk/edit?usp=sharing",
+      "key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
     {
       "name": "[KEY] Introduction to Celebrity Lab",
       "url": "https://docs.google.com/document/d/16K7PbWWEezWLjMQlETYqm5OVjlFph7lQSCnRGN9EJ98/edit?usp=sharing",
@@ -2690,6 +3402,66 @@
       }
     },
     {
+      "name": "Activity 1 - Introduction (Reviews and Sentiment Value) ",
+      "url": "https://docs.google.com/document/d/11WLoIkY1pBYnaKs6b1_yuoow_NY6XuogpEePqyvZI84/edit?usp=sharing",
+      "key": "activity_1_-_introduction_reviews_and_sentiment_value_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "activity_1_-_introduction_reviews_and_sentiment_value_"
+      }
+    },
+    {
+      "name": "Activity 4- Create a Positive or Negative Review",
+      "url": "https://docs.google.com/document/d/1WjuPKYc5c5rNXct181-7EvlAxLj4Dsh_jwouqulDbOw/edit?usp=sharing",
+      "key": "activity_4-_create_a_positive_or_negative_review",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_4-_create_a_positive_or_negative_review"
+      }
+    },
+    {
+      "name": "Activity 5- Open-Ended Activity",
+      "url": "https://docs.google.com/document/d/1MOxX4pcqQOoMZGp8L2Buf0I1Zl9tW1jTG1IOqtCaGGU/edit?usp=sharing",
+      "key": "activity_5-_open-ended_activity",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_5-_open-ended_activity"
+      }
+    },
+    {
+      "name": "Activity Three- Autogenerated Review",
+      "url": "https://docs.google.com/document/d/1rX08gFPk2EQ6jQkp1vxle0swWnR1KhS_q8NnNuSPnBc/edit?usp=sharing",
+      "key": "activity_three-_autogenerated_review",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_three-_autogenerated_review"
+      }
+    },
+    {
+      "name": "Activity Two- Sentiment Value and Star Ratings",
+      "url": "https://docs.google.com/document/d/1HKxv06FXGde0ROTLnDNWhLnUOu7UbLmhbjV4uJm_5C4/edit?usp=sharing",
+      "key": "activity_two-_sentiment_value_and_star_ratings",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_two-_sentiment_value_and_star_ratings"
+      }
+    },
+    {
       "name": "Chatbot 2",
       "url": "To be determined",
       "key": "chatbot_2",
@@ -2699,6 +3471,42 @@
       },
       "seeding_key": {
         "resource.key": "chatbot_2"
+      }
+    },
+    {
+      "name": "CSA Celebrity Class: A Simple Version Activity Guide",
+      "url": "https://docs.google.com/document/d/1l2TYIy-bRiz1hgK5LIE5VxD9-o__V18O5U0K2kzxdGM/edit?usp=sharing",
+      "key": "csa_celebrity_class_lesson_7_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "csa_celebrity_class_lesson_7_activity_guide"
+      }
+    },
+    {
+      "name": "CSA Celebrity Lab - Putting It All Together Activity Guide",
+      "url": "https://docs.google.com/document/d/1pzr3z1gu3CKSnyaNb7nIQhaM1qISbGDrSuXDE-xH1ME/edit?usp=sharing",
+      "key": "csa_celebrity_lab_-_putting_it_all_together_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "name": "CSA Celebrity Lab: Extending the Celebrity Class",
+      "url": "https://docs.google.com/document/d/1TvtAtwYWzCYvqj2ttlDJTRVmjC3jgguHSlWHAHyC1GI/edit?usp=sharing",
+      "key": "csa_celebrity_lab_extending_the_celebrity_class",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class"
       }
     },
     {
@@ -2726,6 +3534,18 @@
       }
     },
     {
+      "name": "GUI Appendix",
+      "url": "https://drive.google.com/file/d/1juKnCHDP8Tmsfv4B7myyW76MpgDSxWdc/view?usp=sharing",
+      "key": "gui_appendix",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "gui_appendix"
+      }
+    },
+    {
       "name": "Introduction to Celebrity Lab",
       "url": "https://docs.google.com/document/d/1tg1ccbIT4s10aXUMjipDeqtmhBHaFqVPuc8UjOhGnCA/edit?usp=sharing",
       "key": "introduction_to_celebrity_lab",
@@ -2747,6 +3567,186 @@
       },
       "seeding_key": {
         "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "name": "replit Java Swing GUI Example",
+      "url": "https://www.youtube.com/watch?v=mGi2i9MKzgg",
+      "key": "replit_java_swing_gui_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "replit_java_swing_gui_example"
+      }
+    },
+    {
+      "name": "Student Starter Code - Celebrity.java",
+      "url": "https://docs.google.com/document/d/1Er1WGzrfgxvtjtj23FrDb2r_xOKV1UStZNrgkyH8crw/edit?usp=sharing",
+      "key": "student_starter_code_-_celebrity_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebrity_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityFrame.java",
+      "url": "https://docs.google.com/document/d/1DVyqvo234fKVh_3m5B_4TMvIdmTKrnUlMUX6z8FZ0Vo/edit?usp=sharing",
+      "key": "student_starter_code_-_celebrityframe_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityGame.java",
+      "url": "https://docs.google.com/document/d/1j8ybN1voKB-uHFQDyyC-6fzRaMSWqzS2s3239Ak3M-c/edit?usp=sharing",
+      "key": "student_starter_code_-_celebritygame_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebritygame_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityPanel.java",
+      "url": "https://docs.google.com/document/d/1-d4RaUndX-aAhkEJjF4gXdFFPQ9SpkCQXS23f1I0750/edit?usp=sharing",
+      "key": "student_starter_code_-_celebritypanel_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - CelebrityRunner.java",
+      "url": "https://docs.google.com/document/d/1-0ZY6AYH6wqb0Lo69JziJJPuqlqNa7tcCgHcQh_9Gyo/edit?usp=sharing",
+      "key": "student_starter_code_-_celebrityrunner_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - SimpleGUIRunner.java",
+      "url": "https://docs.google.com/document/d/1zJXQ8Z_6KxQYOyWPD0Ea-FFUfhb8AyWAlDilDfEJQNI/edit?usp=sharing",
+      "key": "student_starter_code_-_simpleguirunner_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "name": "Student Starter Code - StartPanel.java",
+      "url": "https://docs.google.com/document/d/1QaQ5xG2beaHJaq8hKkAjBelyood6HDU_MVAsJc-Qtfk/edit?usp=sharing",
+      "key": "student_starter_code_-_startpanel_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_starter_code_-_startpanel_java"
+      }
+    },
+    {
+      "name": "Teacher Code - Celebrity.java",
+      "url": "https://docs.google.com/document/d/1s3zKnfAIy3dymlgNrODV4jSmhQyZgHa0MwfTFFzw1n0/edit?usp=sharing",
+      "key": "teacher_code_-_celebrity_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebrity_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityFrame.java",
+      "url": "https://docs.google.com/document/d/17_Qig-BB6A8lrIEBdj2MEyUNFi_Y9acDKbqTqXLc9nc/edit?usp=sharing",
+      "key": "teacher_code_-_celebrityframe_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityGame.java",
+      "url": "https://docs.google.com/document/d/1Eo9bQTKiE_Fxtg_2XCG9ftqVAuhQWqwhTmlBlXplr7M/edit?usp=sharing",
+      "key": "teacher_code_-_celebritygame_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebritygame_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityPanel.java",
+      "url": "https://docs.google.com/document/d/1xodEbMI0ERV8auNUR4iq6Sjihegnx-Ebr-AyxLdJDxs/edit?usp=sharing",
+      "key": "teacher_code_-_celebritypanel_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "name": "Teacher Code - CelebrityRunner.java",
+      "url": "https://docs.google.com/document/d/1yjDV69jhu3C4-Zvi6ICL_n5GMRftdWtVXm9DGXmsDUQ/edit?usp=sharing",
+      "key": "teacher_code_-_celebrityrunner_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "name": "Teacher Code - SimpleGUIRunner.java",
+      "url": "https://docs.google.com/document/d/1C3pyl1pfkG7TSVOjJAfpYXbf8U_YZNe9I0a-thMIc3M/edit?usp=sharing",
+      "key": "teacher_code_-_simpleguirunner_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "name": "Teacher Code - StartPanel.java",
+      "url": "https://docs.google.com/document/d/1PDLgVB8g-zbG_EnSz0FtmE6n56HlPS53hrxJkhCaVxI/edit?usp=sharing",
+      "key": "teacher_code_-_startpanel_java",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_code_-_startpanel_java"
       }
     },
     {
@@ -2807,6 +3807,36 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "activity_1_-_introduction_reviews_and_sentiment_value_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "activity_two-_sentiment_value_and_star_ratings"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "activity_three-_autogenerated_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "activity_4-_create_a_positive_or_negative_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "activity_5-_open-ended_activity"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_key_introduction_to_celebrity_lab"
       }
@@ -2833,6 +3863,132 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_csa_celebrity_class_lesson_7_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "csa_celebrity_class_lesson_7_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "gui_appendix"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "replit_java_swing_gui_example"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebrity_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebritygame_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "student_starter_code_-_startpanel_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebrity_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebrityframe_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebritygame_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebritypanel_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_celebrityrunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_simpleguirunner_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "teacher_code_-_startpanel_java"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class"
       }
     }
   ],
@@ -2893,6 +4049,16 @@
       }
     },
     {
+      "key": "23d98694-e4cd-45f4-b053-ce07d21d90ef",
+      "properties": {
+        "description": "Write program code to override methods in the superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "23d98694-e4cd-45f4-b053-ce07d21d90ef"
+      }
+    },
+    {
       "key": "2e8b36c3-9613-4d57-8e54-7e0953206400",
       "properties": {
         "description": "Predict a simple algorithm used in chatbot output"
@@ -2923,6 +4089,16 @@
       }
     },
     {
+      "key": "5b23cd46-0f18-4b28-ac50-4f0c69595e81",
+      "properties": {
+        "description": "Write program code to declare instance variables and write headers for constructors with or without parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "5b23cd46-0f18-4b28-ac50-4f0c69595e81"
+      }
+    },
+    {
       "key": "6a7f22a3-f0d5-486f-85f3-bb2eec939519",
       "properties": {
         "description": "Define behaviors of an object through non-void methods without parameters written in a class"
@@ -2940,6 +4116,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "6e6c4988-b98f-4424-8129-d8d1a03afe2d"
+      }
+    },
+    {
+      "key": "777b7695-3ba0-4ad8-a722-751770a7ad78",
+      "properties": {
+        "description": "Use an index variable to reference string elements within an array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "777b7695-3ba0-4ad8-a722-751770a7ad78"
       }
     },
     {
@@ -2963,6 +4149,16 @@
       }
     },
     {
+      "key": "b6e961d3-e5dd-44de-b3f0-9e6ff4b951d5",
+      "properties": {
+        "description": "Add string elements to an existing array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "b6e961d3-e5dd-44de-b3f0-9e6ff4b951d5"
+      }
+    },
+    {
       "key": "b7768245-1466-4003-a855-a9d0335defbb",
       "properties": {
         "description": "Explore the connection between Natural Language Processing and chatbots"
@@ -2970,6 +4166,36 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "b7768245-1466-4003-a855-a9d0335defbb"
+      }
+    },
+    {
+      "key": "c35b4e67-ad59-43be-bad4-79eb836bb991",
+      "properties": {
+        "description": "Write program code that calls methods that are in the same class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "c35b4e67-ad59-43be-bad4-79eb836bb991"
+      }
+    },
+    {
+      "key": "d9d3b5fb-fd31-4a0b-8718-9e53d99a2b72",
+      "properties": {
+        "description": "Write the correct syntax for a class header with inheritance"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "d9d3b5fb-fd31-4a0b-8718-9e53d99a2b72"
+      }
+    },
+    {
+      "key": "ead66323-7961-41b9-aaeb-a111b3c6bad6",
+      "properties": {
+        "description": "Write program code to call methods in a superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "ead66323-7961-41b9-aaeb-a111b3c6bad6"
       }
     },
     {
@@ -2984,6 +4210,76 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.3"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -3035,6 +4331,41 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.6"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.B.3"
@@ -3045,6 +4376,62 @@
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.1"
       }
     }
   ],

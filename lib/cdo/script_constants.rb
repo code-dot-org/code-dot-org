@@ -148,6 +148,15 @@ module ScriptConstants
       CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
       CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
     ],
+    csd_2022: [
+      CSD1_2022_NAME = 'csd1-2022'.freeze,
+      CSD2_2022_NAME = 'csd2-2022'.freeze,
+      CSD3_2022_NAME = 'csd3-2022'.freeze,
+      CSD4_2022_NAME = 'csd4-2022'.freeze,
+      CSD5_2022_NAME = 'csd5-2022'.freeze,
+      CSD6_2022_NAME = 'csd6-2022'.freeze,
+      CSD7_2022_NAME = 'csd7-2022'.freeze,
+    ],
     csd_2021: [
       CSD1_2021_NAME = 'csd1-2021'.freeze,
       CSD2_2021_NAME = 'csd2-2021'.freeze,
@@ -412,6 +421,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd_2018, script) ||
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
       ScriptConstants.unit_in_category?(:csd_2021, script) ||
+      ScriptConstants.unit_in_category?(:csd_2022, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||

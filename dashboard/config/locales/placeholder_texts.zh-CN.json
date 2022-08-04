@@ -593,6 +593,42 @@
         "CourseF_outbreak8": {
           "fac94901e68fc1dea6e749c012e3efc0": "点击精灵图给他们口罩。",
           "968c8b54671ab303d48320f86937c40b": "口罩有助于减缓病毒的传播！"
+        },
+        "OPD-K5-projects-6": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "OPD-K5-projects-7": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "course3_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "courseC19_playLab_EOC5": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "courseC19_playLab_EOC6": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "courseE_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
+        },
+        "courseE_playLab_scaffold5": {
+          "5cec903c4d41c49412a70a94d54999ee": "你可以写点东西。",
+          "3e11a2dc6edb909c47778bed75a81769": "在这里输入文本"
         }
       }
     }

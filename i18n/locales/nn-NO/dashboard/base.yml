@@ -407,7 +407,6 @@ nn:
     popup:
       progress_for_user: "Framgangen til %{name}"
       progress: 'Framgangen din'
-      lines: 'Totalt tal på kodeliner: %{lines}'
       close: 'LUKK'
       mastery: 'Konsept'
       puzzle_map: 'Nivå'
