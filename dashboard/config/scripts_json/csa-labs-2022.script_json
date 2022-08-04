@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-08-02 22:59:23 UTC",
+    "serialized_at": "2022-08-03 16:47:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -234,6 +234,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "This activity gives students the chance to design their own subclass of `Celebrity`. They should spend time thinking about the different attributes and behaviors that they might want to include in this new class. Emphasize that time spent on the design before beginning implementation can cut down on the time needed to implement a\nclass. ",
+        "student_overview": "In this activity you will get the chance to design your own subclass of `Celebrity`. You should spend time thinking about the different attributes and behaviors that you might want to include in this new class. Time spent on the design before beginning implementation can cut down on the time needed to implement a class."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -680,10 +682,82 @@
       "key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba",
         "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "6ebd808d-6afd-4a11-afbf-5db4eecfb991",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ebd808d-6afd-4a11-afbf-5db4eecfb991",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "0800e92a-151c-43a9-8b23-b9c2fe149292",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0800e92a-151c-43a9-8b23-b9c2fe149292",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "31310913-8f03-4280-96e4-94df436a229d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31310913-8f03-4280-96e4-94df436a229d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "96b3a243-6384-456f-82d2-ee05471fae12",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96b3a243-6384-456f-82d2-ee05471fae12",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "3ee23329-9b47-4087-9fd9-6ce21cf43338",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ee23329-9b47-4087-9fd9-6ce21cf43338",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-labs-2022"
       }
@@ -1867,10 +1941,114 @@
       "key": "e903365c-fc8e-4aed-9968-bd27ed482750",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of the activity guide where they will investigate Java GUI swing components. \n",
+        "name": "Investigate Java GUI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although GUIs are not part of the framework for this course, they can be an excellent way to engage students. If there is time and interest, discuss the basic GUI structural components of a Frame (JFrame), Panel (JPanel), and the UI components of buttons, and fields. If this lab is being completed after covering inheritance, incorporate the role of inheritance in the existing GUI libraries. "
+          },
+          {
+            "type": "discussionGoal",
+            "markdown": "The first question in this activity asks students to explore the official Java tutorial on using swing components to investigate a class that they are interested in. Depending on the depth with which you would like students to learn about GUIs, this question could be skipped or done as a guided practice with the entire class.\n\nThe logic of a program is often referred to as the “back-end,” while the GUI is often referred to as the “front-end” because it’s what a user interacts with. Students do not need to know this terminology, but they may have heard it and it might be useful to define it here."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e903365c-fc8e-4aed-9968-bd27ed482750",
         "lesson_activity.key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba"
+      }
+    },
+    {
+      "key": "181d6be1-49f1-4db0-b6d2-f2c37067829c",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "181d6be1-49f1-4db0-b6d2-f2c37067829c",
+        "lesson_activity.key": "587bfbe0-0c8c-4499-a14a-ef6b92990eba"
+      }
+    },
+    {
+      "key": "df44679c-e195-4e8a-86d6-ea378ec7e232",
+      "position": 1,
+      "properties": {
+        "description": "---\n##IMPORTANT DISCLAIMER\n\n*This activity requires the use of a GUI. Unfortunately, you will not be able to use our platform for this activity as the GUI is not supported by our platform.*\n\n*To run the Celebrity program, you will need to direct your students to use another IDE such as Replit. Here is a video of a replit Java Swing GUI example for your reference: \n[r replit_java_swing_gui_example/csa-labs/unversioned].*\n\n---\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Parts 2-5 of the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\nIn this activity, students will be completing the implementation required to make the GUI function. Each question in the activity guide provides short, explicit direction for students.\n\nEnsure students have access to the Student Starter Code files for each of the classes needed. \n\n*If you’re interested in learning more about how this GUI works, or having your students learn more about this GUI, please see the [r gui_appendix/csa-labs/unversioned] for more detailed information.*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although students designed their own Celebrity class in the previous lesson, it is possible to provide them with the `Celebrity.java` class from the teacher code exemplar resources to ensure that the GUI works as intended. The student code resources contains all of the files necessary to run the GUI, with functionality being implemented throughout this activity."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Option for Differentiation:** When students are completing the implementation of the `CelebrityGame` class, they can add necessary instance variables and method functionality to support the idea of a “score” within the game. This may involve changes to more than just the `CelebrityGame` class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df44679c-e195-4e8a-86d6-ea378ec7e232",
+        "lesson_activity.key": "6ebd808d-6afd-4a11-afbf-5db4eecfb991"
+      }
+    },
+    {
+      "key": "28db7f98-f094-4fbb-977d-3a74233f5504",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 6 of their activity guide. \n\nIn addition, now that students have created, interacted with, and modified a few different classes responsible for the Celebrity game, you may choose to have them discuss some of what they have observed. Either in groups or as a class, you can choose to spend a few minutes discussing the relationship between classes, specifically the separation of roles within the program.",
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "28db7f98-f094-4fbb-977d-3a74233f5504",
+        "lesson_activity.key": "0800e92a-151c-43a9-8b23-b9c2fe149292"
+      }
+    },
+    {
+      "key": "2a0f1272-b05b-4869-b056-fdd39f0dd392",
+      "position": 1,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What if you wanted to create a more specific type of Celebrity? One that had additional attributes and behaviors apart from what all Celebrity objects have? How could we do this?*",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "By using inheritance to extend the `Celebrity` class, you can do just that."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2a0f1272-b05b-4869-b056-fdd39f0dd392",
+        "lesson_activity.key": "31310913-8f03-4280-96e4-94df436a229d"
+      }
+    },
+    {
+      "key": "4433fb86-fab0-4473-8c78-113c15fab9b4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *With a partner, think about a subset or certain classification of celebrities that would have additional attributes or behaviors.*\n\n* *If you were to incorporate a different type of celebrity into the Celebrity game, what kind of celebrity would you want to make?*\n "
+      },
+      "seeding_key": {
+        "activity_section.key": "4433fb86-fab0-4473-8c78-113c15fab9b4",
+        "lesson_activity.key": "31310913-8f03-4280-96e4-94df436a229d"
+      }
+    },
+    {
+      "key": "697017e6-25c6-43ca-afe7-ac9721930327",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [activity guide]. At this point you also need to ensure students can access the `LiteratureCelebrity` class starter code. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "697017e6-25c6-43ca-afe7-ac9721930327",
+        "lesson_activity.key": "96b3a243-6384-456f-82d2-ee05471fae12"
+      }
+    },
+    {
+      "key": "1aa77e09-a74c-46c9-b3e3-489b91f88418",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1aa77e09-a74c-46c9-b3e3-489b91f88418",
+        "lesson_activity.key": "3ee23329-9b47-4087-9fd9-6ce21cf43338"
       }
     },
     {
@@ -3224,6 +3402,66 @@
       }
     },
     {
+      "name": "Activity 1 - Introduction (Reviews and Sentiment Value) ",
+      "url": "https://docs.google.com/document/d/11WLoIkY1pBYnaKs6b1_yuoow_NY6XuogpEePqyvZI84/edit?usp=sharing",
+      "key": "activity_1_-_introduction_reviews_and_sentiment_value_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "activity_1_-_introduction_reviews_and_sentiment_value_"
+      }
+    },
+    {
+      "name": "Activity 4- Create a Positive or Negative Review",
+      "url": "https://docs.google.com/document/d/1WjuPKYc5c5rNXct181-7EvlAxLj4Dsh_jwouqulDbOw/edit?usp=sharing",
+      "key": "activity_4-_create_a_positive_or_negative_review",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_4-_create_a_positive_or_negative_review"
+      }
+    },
+    {
+      "name": "Activity 5- Open-Ended Activity",
+      "url": "https://docs.google.com/document/d/1MOxX4pcqQOoMZGp8L2Buf0I1Zl9tW1jTG1IOqtCaGGU/edit?usp=sharing",
+      "key": "activity_5-_open-ended_activity",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_5-_open-ended_activity"
+      }
+    },
+    {
+      "name": "Activity Three- Autogenerated Review",
+      "url": "https://docs.google.com/document/d/1rX08gFPk2EQ6jQkp1vxle0swWnR1KhS_q8NnNuSPnBc/edit?usp=sharing",
+      "key": "activity_three-_autogenerated_review",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_three-_autogenerated_review"
+      }
+    },
+    {
+      "name": "Activity Two- Sentiment Value and Star Ratings",
+      "url": "https://docs.google.com/document/d/1HKxv06FXGde0ROTLnDNWhLnUOu7UbLmhbjV4uJm_5C4/edit?usp=sharing",
+      "key": "activity_two-_sentiment_value_and_star_ratings",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_two-_sentiment_value_and_star_ratings"
+      }
+    },
+    {
       "name": "Chatbot 2",
       "url": "To be determined",
       "key": "chatbot_2",
@@ -3260,6 +3498,18 @@
       }
     },
     {
+      "name": "CSA Celebrity Lab: Extending the Celebrity Class",
+      "url": "https://docs.google.com/document/d/1TvtAtwYWzCYvqj2ttlDJTRVmjC3jgguHSlWHAHyC1GI/edit?usp=sharing",
+      "key": "csa_celebrity_lab_extending_the_celebrity_class",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class"
+      }
+    },
+    {
       "name": "Chatbot 1",
       "url": "To be determined",
       "key": "elbot_the_chatbot",
@@ -3284,6 +3534,18 @@
       }
     },
     {
+      "name": "GUI Appendix",
+      "url": "https://drive.google.com/file/d/1juKnCHDP8Tmsfv4B7myyW76MpgDSxWdc/view?usp=sharing",
+      "key": "gui_appendix",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "gui_appendix"
+      }
+    },
+    {
       "name": "Introduction to Celebrity Lab",
       "url": "https://docs.google.com/document/d/1tg1ccbIT4s10aXUMjipDeqtmhBHaFqVPuc8UjOhGnCA/edit?usp=sharing",
       "key": "introduction_to_celebrity_lab",
@@ -3305,6 +3567,18 @@
       },
       "seeding_key": {
         "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "name": "replit Java Swing GUI Example",
+      "url": "https://www.youtube.com/watch?v=mGi2i9MKzgg",
+      "key": "replit_java_swing_gui_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "replit_java_swing_gui_example"
       }
     },
     {
@@ -3533,6 +3807,36 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "activity_1_-_introduction_reviews_and_sentiment_value_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "activity_two-_sentiment_value_and_star_ratings"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "activity_three-_autogenerated_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "activity_4-_create_a_positive_or_negative_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "activity_5-_open-ended_activity"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_key_introduction_to_celebrity_lab"
       }
@@ -3583,6 +3887,18 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "gui_appendix"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "replit_java_swing_gui_example"
       }
     },
     {
@@ -3668,6 +3984,12 @@
         "lesson.key": "lesson-8",
         "resource.key": "teacher_code_-_startpanel_java"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class"
+      }
     }
   ],
   "scripts_resources": [
@@ -3724,6 +4046,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "1267461c-0300-46a6-8673-c349a9591d7f"
+      }
+    },
+    {
+      "key": "23d98694-e4cd-45f4-b053-ce07d21d90ef",
+      "properties": {
+        "description": "Write program code to override methods in the superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "23d98694-e4cd-45f4-b053-ce07d21d90ef"
       }
     },
     {
@@ -3834,6 +4166,36 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "b7768245-1466-4003-a855-a9d0335defbb"
+      }
+    },
+    {
+      "key": "c35b4e67-ad59-43be-bad4-79eb836bb991",
+      "properties": {
+        "description": "Write program code that calls methods that are in the same class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "c35b4e67-ad59-43be-bad4-79eb836bb991"
+      }
+    },
+    {
+      "key": "d9d3b5fb-fd31-4a0b-8718-9e53d99a2b72",
+      "properties": {
+        "description": "Write the correct syntax for a class header with inheritance"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "d9d3b5fb-fd31-4a0b-8718-9e53d99a2b72"
+      }
+    },
+    {
+      "key": "ead66323-7961-41b9-aaeb-a111b3c6bad6",
+      "properties": {
+        "description": "Write program code to call methods in a superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "ead66323-7961-41b9-aaeb-a111b3c6bad6"
       }
     },
     {
@@ -4049,6 +4411,27 @@
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.1"
       }
     }
   ],
