@@ -1,0 +1,165 @@
+{
+  "es-MX": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "name": "Laboratorio de Juegos",
+          "categories": {
+            "game_lab": {
+              "name": "Laboratorio de juegos"
+            },
+            "sprites": {
+              "name": "Sprites"
+            },
+            "groups": {
+              "name": "Grupos"
+            },
+            "drawing": {
+              "name": "Dibujos"
+            },
+            "control": {
+              "name": "Control"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funciones"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratorio de Aplicaciones",
+          "categories": {
+            "ui_controls": {
+              "name": "Controles de IU"
+            },
+            "canvas": {
+              "name": "Lienzo"
+            },
+            "data": {
+              "name": "Datos"
+            },
+            "turtle": {
+              "name": "Tortuga"
+            },
+            "control": {
+              "name": "Control"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funciones"
+            },
+            "advanced": {
+              "name": "Avanzado"
+            },
+            "maker": {
+              "name": "Creador"
+            },
+            "circuit": {
+              "name": "Circuito"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Laboratorio Java",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Atajos del Laboratorio Java"
+            },
+            "general": {
+              "name": "Bases de Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Estructuras de Control"
+            },
+            "data_structures": {
+              "name": "Estructuras de datos"
+            }
+          }
+        },
+        "weblab": {
+          "name": "Laboratorio Web",
+          "categories": {
+            "html_tags": {
+              "name": "Etiquetas HTML"
+            },
+            "css_properties": {
+              "name": "Propiedad CSS"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laboratorio de Sprites",
+          "categories": {
+            "sprites": {
+              "name": "Sprites"
+            },
+            "world": {
+              "name": "Mundo"
+            },
+            "location": {
+              "name": "Ubicaciones"
+            },
+            "actions": {
+              "name": "Acciones"
+            },
+            "events": {
+              "name": "Eventos"
+            },
+            "behaviors": {
+              "name": "Comportamientos"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "logic": {
+              "name": "Lógica"
+            },
+            "functions": {
+              "name": "Funciones"
+            },
+            "text": {
+              "name": "Texto"
+            },
+            "comments": {
+              "name": "Comentarios"
+            }
+          }
+        }
+      }
+    }
+  }
+}
