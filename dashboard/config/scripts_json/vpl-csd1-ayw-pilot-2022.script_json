@@ -2,13 +2,17 @@
   "script": {
     "name": "vpl-csd1-ayw-pilot-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-16 08:22:47 UTC",
+    "serialized_at": "2022-08-04 22:27:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -18,10 +22,107 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Part 1: Synchronous"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Part 2: Asynchronous"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Workshop Opener",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Content Workshop",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Debugging on the Code.org Platform",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Identity and Debugging",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Closing",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
 
@@ -36,13 +137,43 @@
 
   ],
   "resources": [
-
+    {
+      "name": "CSD 2022 M1 Pilot Slides",
+      "url": "https://docs.google.com/presentation/d/1QwcoiPKLy4iu8E72WLUz6nxwQR8TAi4FSNnTPrY-m1U/edit?usp=sharing",
+      "key": "csd_2022_m1_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_2022_m1_pilot_slides"
+      }
+    },
+    {
+      "name": "CSD 22 M1 Pilot Agenda",
+      "url": "https://docs.google.com/document/d/1hZo0u3QCn8QKJOSq3bWM491FsYwPq0ZHPiWDqYKr2vY/edit?usp=sharing",
+      "key": "csd_22_m1_pilot_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_22_m1_pilot_agenda"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_2022_m1_pilot_slides",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_22_m1_pilot_agenda",
+        "script.name": "vpl-csd1-ayw-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
