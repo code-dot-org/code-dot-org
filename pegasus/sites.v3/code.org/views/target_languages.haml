@@ -1,5 +1,5 @@
 #language{:style=>'background-color: #f3f3f3; padding: 10px; display: flex; justify-content: center; flex-wrap: wrap'}
-  - PegasusLanguages.get_crowdin_languages.each do |properties|
+  - Languages.get_crowdin_languages.each do |properties|
     - next if properties[:crowdin_code_s] == 'in-TL'
     - project_url = "http://crowdin.com/project/codeorg/#{properties[:crowdin_code_s]}"
     - image_url = "/images/flags/#{properties[:crowdin_code_s]}.png"

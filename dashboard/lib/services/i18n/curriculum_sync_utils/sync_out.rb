@@ -18,7 +18,7 @@ module Services
         # sync in. Ultimately, we want one file per content type; one for all
         # lessons, one for all activities, one for all resources, etc.
         def self.reorganize
-          PegasusLanguages.get_locale.each do |prop|
+          Languages.get_locale.each do |prop|
             locale = prop[:locale_s]
             next if locale == 'en-US'
             locale_dir = File.join('i18n/locales', locale, 'curriculum_content')
