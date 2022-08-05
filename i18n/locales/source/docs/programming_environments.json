@@ -1,0 +1,159 @@
+{
+  "gamelab": {
+    "name": "Game Lab",
+    "categories": {
+      "game_lab": {
+        "name": "Game Lab"
+      },
+      "sprites": {
+        "name": "Sprites"
+      },
+      "groups": {
+        "name": "Groups"
+      },
+      "drawing": {
+        "name": "Drawing"
+      },
+      "control": {
+        "name": "Control"
+      },
+      "math": {
+        "name": "Math"
+      },
+      "variables": {
+        "name": "Variables"
+      },
+      "functions": {
+        "name": "Functions"
+      }
+    }
+  },
+  "applab": {
+    "name": "App Lab",
+    "categories": {
+      "ui_controls": {
+        "name": "UI controls"
+      },
+      "canvas": {
+        "name": "Canvas"
+      },
+      "data": {
+        "name": "Data"
+      },
+      "turtle": {
+        "name": "Turtle"
+      },
+      "control": {
+        "name": "Control"
+      },
+      "math": {
+        "name": "Math"
+      },
+      "variables": {
+        "name": "Variables"
+      },
+      "functions": {
+        "name": "Functions"
+      },
+      "advanced": {
+        "name": "Advanced"
+      },
+      "maker": {
+        "name": "Maker"
+      },
+      "circuit": {
+        "name": "Circuit"
+      }
+    }
+  },
+  "javalab": {
+    "name": "Java Lab",
+    "categories": {
+      "java_lab_shortcuts": {
+        "name": "Java Lab Shortcuts"
+      },
+      "general": {
+        "name": "Java Basics"
+      },
+      "org_code_theater": {
+        "name": "org.code.theater"
+      },
+      "org_code_media": {
+        "name": "org.code.media"
+      },
+      "org_code_neighborhood": {
+        "name": "org.code.neighborhood"
+      },
+      "java_io": {
+        "name": "java.io"
+      },
+      "java_util": {
+        "name": "java.util"
+      },
+      "java_lang": {
+        "name": "java.lang"
+      },
+      "control_structures": {
+        "name": "Control Structures"
+      },
+      "data_structures": {
+        "name": "Data Structures"
+      }
+    }
+  },
+  "weblab": {
+    "name": "Web Lab",
+    "categories": {
+      "html_tags": {
+        "name": "HTML Tags"
+      },
+      "css_properties": {
+        "name": "CSS Properties"
+      }
+    }
+  },
+  "spritelab": {
+    "name": "Sprite Lab",
+    "categories": {
+      "sprites": {
+        "name": "Sprites"
+      },
+      "world": {
+        "name": "World"
+      },
+      "location": {
+        "name": "Locations"
+      },
+      "actions": {
+        "name": "Actions"
+      },
+      "events": {
+        "name": "Events"
+      },
+      "behaviors": {
+        "name": "Behaviors"
+      },
+      "loops": {
+        "name": "Loops"
+      },
+      "variables": {
+        "name": "Variables"
+      },
+      "math": {
+        "name": "Math"
+      },
+      "logic": {
+        "name": "Logic"
+      },
+      "functions": {
+        "name": "Functions"
+      },
+      "text": {
+        "name": "Text"
+      },
+      "comments": {
+        "name": "Comments"
+      }
+    }
+  }
+}
