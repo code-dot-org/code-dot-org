@@ -21,6 +21,7 @@ class CsvToSqlTable
 
   def import
     import! unless up_to_date?
+
     @table
   end
 
