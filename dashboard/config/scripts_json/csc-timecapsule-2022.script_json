@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-07-11 18:38:42 UTC",
+    "serialized_at": "2022-08-04 15:28:22 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,9 +60,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students will plan out their time capsule app before coding it. Students will reflect on their favorite things to do and their own personal experiences in order to write a short story about the current time period. ",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Review the time capsule example app\n- Print one ***Worksheet** for each student.\n",
-        "purpose": "In the previous Poem Art lesson, students were introduced to coding by representing a poem visually. In this lesson, they will create their own narrative based on lived experience. Students will then find moments in their story that can be visualized or enhanced by visual effects, sounds, or images."
+        "overview": "In this lesson, students will plan and write their own time capsule story. Students will reflect on their life and personal experiences to select an important idea for a short story about the current time period. Students should imagine what someone 50 years in the future would want to know about today.",
+        "preparation": "- Review the lesson slides.\n- Print one ***Write Your Own Time Capsule Handout** for each student.\n",
+        "purpose": "Today you will write your own time capsule. As you plan, think about what someone in the future would want to learn about your life. Imagine your future grandchildren asking you what it was like when you were young. They want to see life through your eyes. Next class you will code this time capsule to create an app. Start thinking about what backgrounds, text effects, sounds, sprites and events you may use."
       },
       "seeding_key": {
         "lesson.key": "The Time We Live In",
@@ -501,11 +501,33 @@
       }
     },
     {
-      "key": "9b078c3e-8a6f-47b1-8033-7c0bfeeb0395",
+      "key": "206f721c-17f4-46a0-aa62-1853152e54a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n- **Time Capsule** - A place to hold memories and everyday items which represent a day in the life of someone living during a specific time period. \n- **Curator** - A person who selects content for presentation, such as in a museum \n- **Enhance** -  To increase or improve the quality of something",
-        "name": "Introduction"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unique Time Capsules” slide\n\n**Do This**: Read the caption for each time capsule. Allow students to share observations about each time capsule. This could be a quick turn and talk or brief class discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What are the pros and cons of each of these unique time capsules?_ \n\n**Anticipated student responses:**\n \n**Message in a bottle**\n\nPros - This message in a bottle was free to make. \n\nCons - You don’t know if it will be lost out at sea; the ocean currents could drag the bottle to the middle of the ocean and it would add to ocean pollution. You don’t know when someone will find it; it is hard to predict when the bottle would wash up on shore again. \n\n**Paris Apartment**\n\nPros - This time capsule was able to show a lot of what life was like; it is a house full of preserved items. The items were all kept safe from damage because they were kept indoors.\n\nCons - It costs a lot of money to rent an apartment for 70 years. No one might know to go look inside the apartment. \n\n**Plymouth Belvedere Sport Coupe**\n\nPros - A lot of people love vintage cars; this is an interesting item to preserve. It would be interesting to compare old cars to cars today.\n\nCons - This time capsule was completely ruined by water. It hasn’t been possible to restore it and museums don’t even want to show it because of too much water damage.\n\n**Space Time Capsule**\n\nPros - They used images to communicate with someone in any language. They used strong materials so that it could withstand traveling through space.\n\nCons - It is unknown whether anyone will ever receive this time capsule.\n",
+        "name": "Unique Time Capsules"
+      },
+      "seeding_key": {
+        "activity_section.key": "206f721c-17f4-46a0-aa62-1853152e54a2",
+        "lesson_activity.key": "7ebbe822-76b3-47ab-b9c0-3e54e8bede19"
+      }
+    },
+    {
+      "key": "ba87dfdd-4f2f-4f2d-8f55-f9836dd1c56e",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss**: _What are the pros and cons of using computer science to create a time capsule?_ \n\n**Discussion Goal**: The purpose of this warm up question is to shift student thinking to computer science and this specific project. Students should activate background knowledge from Lesson 1 – computer science is a powerful tool for a time capsule because you can add complexity and details to really bring it to life. Reading a short story becomes an immersive experience when you use computer science."
+      },
+      "seeding_key": {
+        "activity_section.key": "ba87dfdd-4f2f-4f2d-8f55-f9836dd1c56e",
+        "lesson_activity.key": "7ebbe822-76b3-47ab-b9c0-3e54e8bede19"
+      }
+    },
+    {
+      "key": "9b078c3e-8a6f-47b1-8033-7c0bfeeb0395",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n\n- **Time Capsule** - A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. "
       },
       "seeding_key": {
         "activity_section.key": "9b078c3e-8a6f-47b1-8033-7c0bfeeb0395",
@@ -513,25 +535,13 @@
       }
     },
     {
-      "key": "8157bf6e-c1a1-442d-8d89-11ebda7c6e08",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Example” slide \n\n**Do This**: Show students the [time capsule example app](https://studio.code.org/projects/poetry_hoc/GQIx_bn2YCfP7z892faOmnGVbrXb9CUG41_vp66vWFo) provided in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**:\n- _What words stood out to you?_\n- _How were the words enhanced by the sounds and images in the project?_\n- _What decisions did the author make to curate their app?_\n- _What can you tell about the person who made this project?_\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to an example time capsule app. Students should understand how sounds and images can be used to visually represent and enhance a story. Students should also begin noticing how each author of a story has their own way of curating and personalizing the content they wish to use.\n",
-        "name": "Time Capsule Example"
-      },
-      "seeding_key": {
-        "activity_section.key": "8157bf6e-c1a1-442d-8d89-11ebda7c6e08",
-        "lesson_activity.key": "7ebbe822-76b3-47ab-b9c0-3e54e8bede19"
-      }
-    },
-    {
       "key": "6a648cd0-a426-40e3-b0ac-2d1ca95b4215",
-      "position": 3,
+      "position": 4,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The discussion questions serve as a great opportunity to do a Think, Pair, Share activity. Students will first watch the time capsule app as a class. Then they will pair up and discuss the questions with a partner. After providing time for students to discuss in pairs, bring students together for a full class discussion."
+            "markdown": "Give students 10 seconds of **think time** before allowing responses. This will allow more students to participate and responses may be more thoughtful. \n\nHave students **turn & talk** to share initial ideas. This will allow all students to be involved in the discussion rather than just a few. "
           }
         ]
       },
@@ -544,9 +554,9 @@
       "key": "b2409699-c5e4-4910-b7aa-4254be931b67",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Your Task” slide\n\n**Say**: _Today you will plan out your time capsule app before coding it next class. As you plan, think about what someone in the future would want to learn about your life._\n\n_Imagine your future grandchildren ask you what it was like when you were young. They want to see life through your eyes._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Plan Your Time Capsule” slide\n\n**Discuss**: \n- _What do you do when you go home?_\n- _What are your favorite subjects?_\n- _Who are your best friends?_\n- _What does your family do on weekends?_\n- _What are your favorite foods?_\n- _What are your favorite shows, videos or books_ \n- _Who is your favorite streamer or YouTuber?_\n- _What else would you want to share about your life?_\n\n**Do This**: Hand out the Plan Your Time Capsule Questions sheet to students. Have them pair up with a partner and answer the questions about their own lives.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Plan Your Time Capsule” slide\n\n**Do this**: Have students pair up with a partner and read through the brainstorming questions. Explain to students that today they will pick 3 questions to answer. They should decide which 3 questions they have the most to say about and would be excited to answer for someone in the future. Students should tell their partner which questions they are going to pick and how they are going to answer those questions.",
         "duration": "10",
-        "name": "Plan Your Time Capsule"
+        "name": "Brainstorming"
       },
       "seeding_key": {
         "activity_section.key": "b2409699-c5e4-4910-b7aa-4254be931b67",
@@ -554,8 +564,19 @@
       }
     },
     {
-      "key": "83121f96-6464-4778-af3c-0f0922e7cd6c",
+      "key": "43ba1f1e-090d-4354-a300-c1c2f6a70568",
       "position": 2,
+      "properties": {
+        "description": "**1. What is something important or interesting that has happened recently?** \n\n   - _Think of something that someone in the future has to know or would enjoy knowing._ \n\n   - _Think about things you have seen in the news recently._\n\n**2. What is something that has changed recently?** \n\n   - _Think of something that is different now than in the past._\n\n   - _Think about things your parents have told you from when they were kids._\n\n**3. What is something popular recently?**\n\n   - _Think of something that is exciting for you and many others right now._\n\n**4. What is something new?** \n    \n   - _Think of something that was invented recently._\n\n**5. What is something you are worried about?**\n\n   - _Think of something that you hope has a solution in the future._\n\n**6. What is something you do every single day?** \n   \n   - _Think of someone in the future hearing about a regular day in your life._\n\n**7. What else would you want to share about your life?** \n    \n   - _This is more of an open question for students to get creative._\n\n**Do this**: Once students have had a chance to discuss with a partner, pass out the brainstorming handout. Students should write in their answers for at least 3 of the questions."
+      },
+      "seeding_key": {
+        "activity_section.key": "43ba1f1e-090d-4354-a300-c1c2f6a70568",
+        "lesson_activity.key": "e9b8f568-f523-4605-9d7f-c47e32e92379"
+      }
+    },
+    {
+      "key": "83121f96-6464-4778-af3c-0f0922e7cd6c",
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -571,9 +592,9 @@
     },
     {
       "key": "a9e12d73-0945-4824-888b-5b3d445aec96",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story: Example” slide\n\n**Say**: _Before you begin writing your time capsule story, we are going to look at an example. This is the same story we saw at the beginning of class. Just like this student, before you begin coding, you are going to write out each line of your story._\n\n_Title: A New World_\n\n_By: Nate M._ \n\n_1. When our school closed its doors_\n\n_2. And we went home to learn_ \n\n_3. I felt very alone_\n\n_4. But then I got really into Minecraft_ \n\n_5. And played Roblox with my friends!_\n\n_6. And now I'm back in school_\n\n_7. Where other people like games, too_\n\n_8. And I have so many more friends now!_\n\n**Do This**: Read the example time capsule story aloud to students. Make sure students recognize that it is the same story from the example app at the beginning of class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story” slide\n\n**Say**: _Now you will take what you said to your partner and use it to guide your writing as you craft an original time capsule story. Your story should have 5-8 lines, at least three different pieces of information about you, and clear details that describe life through your eyes_\n\n**Do This**: Hand out the Write Your Own Story worksheet and have students complete it independently for the next 15 minutes. Make sure students can see the connection between their responses to the seven questions and their time capsule story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Visualize Your Story” slide\n\n**Say**: _Now that we’ve finished writing our stories, it is time to plan out what our apps will look like. You are going to circle words or phrases from your story that you can enhance using visual effects, sounds, or images._ \n\n_What words or phrases did this student circle? How did he represent those words or phrases in his time capsule app?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule” slide\n\n**Discuss**: _What are some potential ideas for your time capsule short stories?_\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule short story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule?_\n\n- _What **text effects** might go with your time capsule?_\n\n- _What **sounds** might go with your time capsule?_\n\n- _What **sprites** might go with your time capsule?_\n\n**Do This**: Have students flip their handout to the other side. They will select one idea from the brainstorming session to use for their time capsule short story. Students should come up with a title and about 8 lines of story. Afterwards, students will begin thinking about how they will code their time capsule to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short story.",
         "duration": "20",
         "name": "Write Your Time Capsule"
       },
@@ -583,35 +604,13 @@
       }
     },
     {
-      "key": "3d2ace9e-aac7-4e02-a8b3-82cbe1fef976",
-      "position": 4,
-      "properties": {
-        "description": "\n\n\n![](https://images.code.org/595afd9736ea14fe4f54aa3a6db8ef13-Screen Shot 2022-04-27 at 12.52.25 PM.png)"
-      },
-      "seeding_key": {
-        "activity_section.key": "3d2ace9e-aac7-4e02-a8b3-82cbe1fef976",
-        "lesson_activity.key": "e9b8f568-f523-4605-9d7f-c47e32e92379"
-      }
-    },
-    {
-      "key": "96caf993-5cea-4bc8-926f-99759361a79a",
-      "position": 5,
-      "properties": {
-        "description": "\n**Do This**: Call students’ attention to the “Visualize Your Story” slide. See if students can remember how the student chose to visually represent the words circled. Now direct students back to their handouts to circle specific words or phrases in their own stories that can be enhanced by visual effects, sounds, or images."
-      },
-      "seeding_key": {
-        "activity_section.key": "96caf993-5cea-4bc8-926f-99759361a79a",
-        "lesson_activity.key": "e9b8f568-f523-4605-9d7f-c47e32e92379"
-      }
-    },
-    {
       "key": "a3315060-1eea-41f9-b43a-fb3f72ae37d5",
-      "position": 6,
+      "position": 5,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students read over their story a few times to help them visualize how it would look with visual effects and images. If students are having trouble thinking of words or phrases to animate, have them reflect on the poem apps they saw in the Poem Art lesson."
+            "markdown": "Have students read over their story a few times to help them imagine how it would look with visual effects and images. If students are having trouble thinking of words or phrases to animate, have them reflect on the examples they saw in the Poem Art lesson."
           }
         ]
       },
@@ -624,7 +623,7 @@
       "key": "f4eb408f-86cf-4da0-9ed6-4dd6c5113b85",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Look at the words you circled._ \n\n_How might someone else interpret those words?_ \n\n_What feelings or thoughts do you hope the viewer gets from reading your story?_\n\n**Discussion Goal**: Students should be able to name specific emotions or thoughts that the viewer will be left with after reading their time capsule story. Students should also understand the power of curation and how every person can interpret the same content differently.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your short story to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short story to use in their time capsule app. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -1330,8 +1329,8 @@
       }
     },
     {
-      "name": "Plan Your Time Capsule",
-      "url": "https://docs.google.com/document/d/1E6Ev3uJ-J31471jMnPjQnFoXCL_xUbyi8aTiP_o_dUI/template/preview",
+      "name": "Write Your Own Time Capsule",
+      "url": "https://docs.google.com/document/d/1Bs4DV4Da2etiOJIjd6GxmVfAbJeS4YRfmg69BxKIZ60/template/preview",
       "key": "plan_your_time_capsule",
       "properties": {
         "audience": "Student",
@@ -1391,39 +1390,15 @@
     },
     {
       "name": "Time Capsule",
-      "url": "https://docs.google.com/presentation/d/1wVDXMaozOJXt-gqN0Kgp_rCy0U_CYKdkQOywN0S6tWI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1bxTI55bz0KT6j4ru3_mtu2Eskiba2W1W-TW7ewRX8oo/template/preview",
       "key": "time_capsule",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1wVDXMaozOJXt-gqN0Kgp_rCy0U_CYKdkQOywN0S6tWI/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1bxTI55bz0KT6j4ru3_mtu2Eskiba2W1W-TW7ewRX8oo/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "time_capsule"
-      }
-    },
-    {
-      "name": "Time Capsule App",
-      "url": "https://studio.code.org/projects/poetry_hoc/GQIx_bn2YCfP7z892faOmnGVbrXb9CUG41_vp66vWFo",
-      "key": "time_capsule_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "time_capsule_app"
-      }
-    },
-    {
-      "name": "Write Your Own Story",
-      "url": "https://docs.google.com/document/d/1Pqc7lV1s3sUx5YfdEsWCbjq9g49GbyKrRx_ujjQQjh4/template/preview",
-      "key": "write_your_own_story",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "write_your_own_story"
       }
     }
   ],
@@ -1492,18 +1467,6 @@
       "seeding_key": {
         "lesson.key": "The Time We Live In",
         "resource.key": "time_capsule"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "resource.key": "time_capsule_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "resource.key": "write_your_own_story"
       }
     }
   ],
@@ -1587,7 +1550,7 @@
     {
       "key": "time_capsule",
       "word": "Time Capsule",
-      "definition": "A place to hold memories and everyday items which represent a day in the life of someone living during a specific time period. ",
+      "definition": "A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. ",
       "properties": {
       },
       "seeding_key": {
@@ -1648,18 +1611,6 @@
       "seeding_key": {
         "lesson.key": "Poem Art",
         "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "vocabulary.key": "curator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "vocabulary.key": "enhance"
       }
     },
     {
@@ -1766,7 +1717,7 @@
     {
       "key": "ae6e35c2-c792-4c9e-8dd1-9bac7d3aa196",
       "properties": {
-        "description": "Embody the role of a curator by planning their own time capsule narratives"
+        "description": "Plan and write their own time capsule narratives"
       },
       "seeding_key": {
         "lesson.key": "The Time We Live In",
@@ -1776,7 +1727,7 @@
     {
       "key": "ae7a4f34-f6e7-4561-9879-305e0d4043a2",
       "properties": {
-        "description": "Reflect on their life in the current time they're living in and choose memories and items that reflect their identity"
+        "description": "Define a time capsule"
       },
       "seeding_key": {
         "lesson.key": "The Time We Live In",
