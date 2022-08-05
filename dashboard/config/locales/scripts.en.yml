@@ -8372,7 +8372,38 @@ en:
           lesson_groups: {}
           name: csc-timecapsule-2022
         vpl-csd1-ayw-pilot-2022:
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous'
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Debugging on the Code.org Platform
+            lesson-4:
+              name: Identity and Debugging
+            lesson-5:
+              name: Closing
+          name: vpl-csd1-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 1
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **Participants will:**
+
+            * Reconnect with their community to celebrate successes, vent frustrations, and troubleshoot roadblocks.
+            * Build confidence and skill in core computer science concepts.
+            * Revisit debugging content and learn about platform and curriculum tools to support students.
+          student_description: |-
+            **You will:**
+
+            * Reconnect with your community to celebrate successes, vent frustrations, and troubleshoot roadblocks.
+            * Build confidence and skill in core computer science concepts.
+            * Revisit debugging content and learn about platform and curriculum tools to support students.
         alltheblocklythings:
           lesson_groups:
             lessonGroup-2:
