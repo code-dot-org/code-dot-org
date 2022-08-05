@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-07-12 17:50:56 UTC",
+    "serialized_at": "2022-08-04 20:46:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -80,8 +80,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students will choose their favorite stories to adapt, by picking a moral and two characters from two different stories. Students will begin drafting the characters and drafting the scene they plan to animate. ",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Review the [Fables Guide](https://docs.google.com/document/d/1Xl78e2Ii7eW2fp-xaehWCjFKos0cz6mnFRTvfd8Hpqg/template/preview) document\n- Have students read and discuss stories prior to this module. ",
+        "overview": "In this lesson, students will ​​recount short stories they have previously learned about, including fables, folktales, and myths from diverse cultures and determine the morals the stories taught. Students will then plan a simple computer program that uses key details to retell a short story of their choice with code. Students will write a detailed plan in order to begin coding their program in the next lesson. ",
+        "preparation": "- Review the lesson slides.\n- Review the [Fables Guide](https://docs.google.com/document/d/1Xl78e2Ii7eW2fp-xaehWCjFKos0cz6mnFRTvfd8Hpqg/template/preview) document\n- Choose a common lesson/moral for your students to write about. (ex: hard work pays off)\n- Have students read and discuss stories prior to this module. ",
         "purpose": "Students will use their knowledge of similar themes and topics and patterns of events in traditional literature from different cultures. Students will use this knowledge in order to begin crafting their own story. Students are able to use knowledge of the patterns of events in traditional literature from different cultures to begin crafting their own story. "
       },
       "seeding_key": {
@@ -639,7 +639,7 @@
       "key": "f091ffa4-e132-4ba7-996e-162ff80a49b5",
       "position": 2,
       "properties": {
-        "description": "Today, we are going to make a plan to retell a short story using computer programming! We will choose a short story that we want to retell, then we are going to plan how we are going to retell the story using coding and programming. Before we get started today, let’s think about short stories. What are some examples of short stories we have read?  ",
+        "description": "Today, we are going to make a plan to retell a short story using computer programming! We will choose an existing short story that we want to retell, then we are going to plan how we are going to retell the story using coding and programming. Before we get started today, let’s think about short stories. What are some examples of short stories we have read?  ",
         "remarks": true
       },
       "seeding_key": {
@@ -687,7 +687,7 @@
       "key": "40e3df32-0c5e-4fd0-ad1a-3ccc8434bb3d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _Think back to our previous class, what were the stories we read?_ \n- _What were their morals?_\n\n**Discussion Goal**:  Students should recall the morals from the previous lessons and key details of those stories. They can also brainstorm other scenes in stories they are familiar with.\n\n**Do This:** As students reach the end of their brainstorm, remind them of the moral of a previous story they have read and help them see how the character’s traits directly relate to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _Think back to our previous class._ \n- _What were the stories we read, and what were their morals?_\n\n**Discussion Goal**:  Students should recall the morals from the previous lessons and key details of those stories. They can also brainstorm other scenes in stories they are familiar with.\n\n**Do This:** As students reach the end of their brainstorm, remind them of the moral of a previous story they have read and help them see how the sequence of events and key details lead to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "40e3df32-0c5e-4fd0-ad1a-3ccc8434bb3d",
@@ -726,7 +726,7 @@
       "key": "f594f1c4-c3bc-4836-b57b-c6d6ab9b835d",
       "position": 1,
       "properties": {
-        "description": "**Do This**: Hand out a Story Planning Sheet and a Fables Guide to each student.",
+        "description": "**Do This**: Hand out a Planning Sheet and a rubric to each student.",
         "duration": "30",
         "name": "Plan Your Story"
       },
@@ -766,7 +766,7 @@
       "key": "73d1a0a0-be49-4d18-8a4b-4bce13d31ba1",
       "position": 4,
       "properties": {
-        "description": "You are going to be retelling a short story that teaches us about [insert the theme of your choice: greed, kindness, hard work pays off, etc]. The retelling of the story is going to include key details in the story where the lesson/moral is shown. Let’s take a look at the rubric to see what your project will include. \n\nToday we’ll decide on the programs we are going to make, and tomorrow we’ll create it with code! When you are writing, think about the stories we read, and the scenes where the lesson is shown. \n\nIn Part 1, you are going to choose your fable. In Part 2, you are choosing your characters and describing them. In Part 3, you are going to choose three key details to create your scene. Make sure to include the moral at the end. Part 4 is a checklist for you to reflect on your project plan. In the checklist you should have: \n\n- My images match the story\n- I include dialogue for three or more characters\n- I use at least three events to have my characters interact\n- Each character says something that matches their description\n- The moral is clearly stated\n- There is a clear beginning, middle, and end\n- I have completed my project plan\n\n",
+        "description": "You are going to be retelling a short story that teaches an important lesson. The retelling of the story is going to include key details through which the lesson or moral is shown. Let’s take a look at the rubric to see what your project will include. \n\nStart your planning by choosing a story that you’re going to retell. You have creative license to change the story or make up your own. Be sure to write a clear theme or message that the story will teach the audience and include details about where the story takes place. \n\nNext, you will plan your characters and their role in the story. Give a detailed description of what they look like, and their character traits. Then explain what they do in the story. \n\nThird, you will plan your story’s sequence. Describe how the story starts, what happens next and then how the story ends. This is a very important part of your plan! The sequence (or order) of your story includes key events that help the audience learn the moral.\n\nWhen you are finished with your detailed plan, complete the checklist and reflection questions. This will help you feel prepared to begin coding your story in our next class!  \n",
         "remarks": true
       },
       "seeding_key": {
@@ -778,7 +778,7 @@
       "key": "1aed5545-64f1-46df-89a5-d7cdb9b8aec8",
       "position": 5,
       "properties": {
-        "description": "**Do This**: Give students about 30 minutes to plan their story. Circulate the room to support students in their brainstorming and planning. Remind students that the purpose of the short stories we’ve read is to teach readers a moral, and they should think about what their characters will say. \n\nPrompt students to ask themselves “Does my character say or think something that teaches readers a lesson or moral?” Make sure their dialogue includes key details that reveal to the reader what the character is like, or how their actions lead to big events in the story. "
+        "description": "**Do This**: Give students about 30 minutes to plan their story. Circulate the room to support students in their brainstorming and planning. Remind students that the purpose of the short stories we’ve read is to teach readers a moral, and they should think about what their characters will say. \n\nPrompt students to ask themselves “Does my character say or think something that teaches readers a lesson or moral?” Make sure their dialogue includes key details that reveal to the reader what the character is like, or how their actions lead to big events in the story. As students work through the planning sheet, you can display the other slides. "
       },
       "seeding_key": {
         "activity_section.key": "1aed5545-64f1-46df-89a5-d7cdb9b8aec8",
@@ -792,7 +792,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may have some difficulties getting started. Here are some guiding questions to help: \n- Who are the characters in your story? Where are they?\n- What lessons does your main character learn? \n- What does your character think or say to help the story teach the reader a lesson/moral? \n\nEncourage students to focus on the key details that reveal a lesson. Identifying the key details will help readers recognize a moral or lesson. "
+            "markdown": "Students may have some difficulties getting started. Here are some guiding questions to help: \n- Who are the characters in your story? Where are they?\n- What lessons does your main character learn? \n- What does your character think or say to help the story teach the reader a lesson/moral? \n- What happens first in your story? What happens next? How does it end?\n\nEncourage students to focus on the key details that reveal a lesson. Identifying the key details will help readers recognize a moral or lesson. "
           }
         ]
       },
@@ -2158,7 +2158,7 @@
     },
     {
       "name": "Story Planning Sheet",
-      "url": "https://docs.google.com/document/d/1_xyVZjqibwHjiJKHOmPkQeE9YaUeDRTxNf335YlMhQI/template/preview",
+      "url": "https://docs.google.com/document/d/1UC11FSPa4U3JxCZfhqgEAj1x_sEqSiaUWSAaMKMlQSo/template/preview",
       "key": "fable_planning_sheet",
       "properties": {
         "audience": "Student",
@@ -2170,7 +2170,7 @@
     },
     {
       "name": "Story Planning Sheet [Key]",
-      "url": "https://docs.google.com/document/d/1IGlbF-fBcVwZBtv7C1ZZMugDgI8FKPtpN5qH7nKGBT0/template/preview",
+      "url": "https://docs.google.com/document/d/1x9j_amer9ndTujHcqsIRW2dd1jkW3CNpErjSyYUhy1I/template/preview",
       "key": "fable_planning_sheet_key_",
       "properties": {
         "audience": "Teacher",
@@ -2214,6 +2214,16 @@
       },
       "seeding_key": {
         "resource.key": "project_reflection"
+      }
+    },
+    {
+      "name": "Short Story Project Rubric ",
+      "url": "https://docs.google.com/document/d/1Erws_iMHW4ta6febRb_Ye-8G6PK9P1qV9ZECAE1eJC8/template/preview",
+      "key": "short_story_project_rubric",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "short_story_project_rubric"
       }
     },
     {
@@ -2282,6 +2292,12 @@
       "seeding_key": {
         "lesson.key": "Plan Your Fable",
         "resource.key": "fables_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plan Your Fable",
+        "resource.key": "short_story_project_rubric"
       }
     },
     {
