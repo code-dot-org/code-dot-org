@@ -23,10 +23,9 @@ import PaneHeader, {
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
-import {editorSetup, lightMode} from './editorSetup';
+import {editorSetup} from './editorSetup';
 import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
-import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
 import NameFileDialog from './NameFileDialog';
@@ -45,6 +44,7 @@ import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
+import {darkMode, lightMode} from './editorThemes';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -184,7 +184,7 @@ class JavalabEditor extends React.Component {
           ? editorDarkModeThemeOverride
           : editorLightModeThemeOverride;
       const newStyle =
-        this.props.displayTheme === DisplayTheme.DARK ? oneDark : lightMode;
+        this.props.displayTheme === DisplayTheme.DARK ? darkMode : lightMode;
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
@@ -235,7 +235,7 @@ class JavalabEditor extends React.Component {
       displayTheme === DisplayTheme.DARK
         ? [
             this.editorThemeOverrideCompartment.of(editorDarkModeThemeOverride),
-            this.editorModeConfigCompartment.of(oneDark)
+            this.editorModeConfigCompartment.of(darkMode)
           ]
         : [
             this.editorThemeOverrideCompartment.of(
