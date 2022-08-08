@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2022-07-29 20:50:03 UTC",
+    "serialized_at": "2022-08-05 20:56:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -43,9 +43,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. ",
-        "preparation": "\n* Play through the puzzles to find any potential problem areas for your class.\n- Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.",
-        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. With this skill, students could then create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects.",
+        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events.\n\nStudents will create an event-based cause-and-effect model in Sprite Lab to illustrate how species adapt to their environments over time in order to survive. Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. \n\nStudents will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. The lesson concludes with a creative project where students create a hypothesis for a potential future aquatic animal adaptation to survive overfishing.\n",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n",
+        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. Students will learn how to use computer science to code models of animal adaptations. They will make a project that demonstrates how several animals have changed over time. For example, they could show how giraffes got their long necks, how bunnies have changed their fur color to hide in their environment, or how whales migrate to warmer or cooler water when the season changes. \n",
         "student_overview": "In this lesson, you will learn to create and animate sprites and make them interactive using events."
       },
       "seeding_key": {
@@ -80,9 +80,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students will create an event-based cause-and-effect model in Sprite Lab to illustrate how species adapt to their environments over time in order to survive. They will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. The lesson concludes with a creative project where students create a hypothesis for a potential future aquatic animal adaptation due to overfishing.",
-        "preparation": "- Review and complete the online tutorial yourself\n- Check your technology and decide if you need to troubleshoot anything in advance\n- Review slides and decide on pacing between student work time and whole group instruction",
-        "purpose": "Students will learn how to use computer science to code models of animal adaptations. Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. Students will make a project that demonstrates how several animals have changed over time. For example, they could show how giraffes got their long necks, how bunnies have changed their fur color to hide in their environment and how whales migrate to warmer or cooler water when the season changes. \n"
+        "overview": "In this **skill building** lesson, students will read about and then program three different solutions to the problem of overfishing. \n\nThis lesson starts where the previous lesson left off, with the model of an unbalanced aquatic ecosystem Students will learn how to use a variable to keep track of the number of fish the boat has removed. Then, they will modify the behavior of the boat so it only moves within a specific area. Third, students will program a new event to specify a “fishing season” and a “no fishing season”. In the last level teachers have the opportunity to upload their own images for sprites and backgrounds that represent a local ecosystem. \n",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Upload images of local ecosystems for backgrounds and sprites that will be used in the final free play level. ",
+        "purpose": "Students will continue to learn about balanced and unbalanced ecosystems. Using a scientific article about overfishing as a foundation, students will develop a rich understanding of the connections between organisms in an ecosystem. Ultimately, students will have the opportunity to apply what they have learned by modeling a local ecosystem. "
       },
       "seeding_key": {
         "lesson.key": "Model Animal Adaptations",
@@ -180,7 +180,7 @@
       "key": "83cdf4f6-f5d8-43f2-82ab-638573a02d8d",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -224,8 +224,9 @@
       "key": "7fab6c93-bb37-47ac-b836-1914fb54c3a5",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Notice, Wonder, Want to Know” slide\n\n**Say**: \n* _What do you notice about this picture and code?_\n* _What do you wonder?_\n* _What do you want to know?_\n",
-        "name": "Setting the Stage "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide\n\n**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n- _Where do they live?_ \n- _How much time do they spend in water?_\n- _What do their feet look like?_\n- _What is the best kind of foot for swimming? Why?_\n\n**Discussion Goal**:  Use the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. Students should discuss similarities and differences between the animals listed. Let them start with very broad points such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n",
+        "duration": "5",
+        "name": "Think About It"
       },
       "seeding_key": {
         "activity_section.key": "7fab6c93-bb37-47ac-b836-1914fb54c3a5",
@@ -233,48 +234,52 @@
       }
     },
     {
-      "key": "47691fc8-92ff-4d98-bf85-576195ced86f",
+      "key": "840802ed-9647-439c-8f5c-51ad1d883de3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide",
-        "name": "A Series of Events"
-      },
-      "seeding_key": {
-        "activity_section.key": "47691fc8-92ff-4d98-bf85-576195ced86f",
-        "lesson_activity.key": "8933c85c-5b87-4f2a-861f-16c473b5e0c2"
-      }
-    },
-    {
-      "key": "f74e59b1-b2cb-40d1-a294-c5de3f407559",
-      "position": 3,
-      "properties": {
-        "description": "**Say**: *We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*"
-      },
-      "seeding_key": {
-        "activity_section.key": "f74e59b1-b2cb-40d1-a294-c5de3f407559",
-        "lesson_activity.key": "8933c85c-5b87-4f2a-861f-16c473b5e0c2"
-      }
-    },
-    {
-      "key": "376778f5-b96c-4d3c-8a5e-100f59106f4d",
-      "position": 4,
-      "properties": {
-        "description": "Today, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other."
-      },
-      "seeding_key": {
-        "activity_section.key": "376778f5-b96c-4d3c-8a5e-100f59106f4d",
-        "lesson_activity.key": "8933c85c-5b87-4f2a-861f-16c473b5e0c2"
-      }
-    },
-    {
-      "key": "407d050e-4e6d-4647-ae99-9ebc39af7549",
-      "position": 5,
-      "properties": {
-        "description": "In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.",
+        "description": "All of these animals live and/or hunt in an environment with a lot of water. Each of these animals has developed webbed feet to help them swim better. \n\nAnimals have found many ways to change and adjust in order to survive in their environments. In today’s coding lesson you will discover and model several animal adaptations!\n\n",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "407d050e-4e6d-4647-ae99-9ebc39af7549",
+        "activity_section.key": "840802ed-9647-439c-8f5c-51ad1d883de3",
+        "lesson_activity.key": "8933c85c-5b87-4f2a-861f-16c473b5e0c2"
+      }
+    },
+    {
+      "key": "a3b28f5a-ed57-4d76-b9fb-54ecc44a4ef6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet is an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that adaptations also happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet."
+      },
+      "seeding_key": {
+        "activity_section.key": "a3b28f5a-ed57-4d76-b9fb-54ecc44a4ef6",
+        "lesson_activity.key": "8933c85c-5b87-4f2a-861f-16c473b5e0c2"
+      }
+    },
+    {
+      "key": "e39cc421-2a9f-40f2-80cd-b8136a8d2add",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To boost engagement and ensure all voices are heard, give students a moment to think or even write down a few ideas before sharing with the full group. Consider using a think, pair, share strategy. Allow students with the same native language to discuss in their native language. Add gestures to the discussion where possible. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e39cc421-2a9f-40f2-80cd-b8136a8d2add",
+        "lesson_activity.key": "8933c85c-5b87-4f2a-861f-16c473b5e0c2"
+      }
+    },
+    {
+      "key": "853555c6-026d-40f3-a1db-15595da68a6c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n**Display**:\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "853555c6-026d-40f3-a1db-15595da68a6c",
         "lesson_activity.key": "8933c85c-5b87-4f2a-861f-16c473b5e0c2"
       }
     },
@@ -686,9 +691,15 @@
       "key": "9f2276f6-9067-4b58-832a-79373b1152eb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide\n\n**Discuss**: What do these animals have in common? Frog, duck, otter, penguin, alligator. \n\n**Discussion Goal**: Help students understand that animals have developed body parts that help them in their specific environment using the example of webbed feet. This will be a great lead to other animal adaptations. Have students discuss similarities and differences between the animals listed. Let them start with very broad points such as *“They’re all alive. They live on Earth. They all have a body. They all have a head. They all have legs. They live near or in water.”* Then when they start on the right track, help them get more specific. *“They all have feet. Their feet help them swim.”* Reveal one hint at a time on the slides to help students reach the answer: They all have webbed feet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n",
-        "duration": "5",
-        "name": "Think About It"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read & Discuss” slide\n\n**Do This**: Provide students with the Understanding Overfishing article digitally or printed. Read the article together out loud, taking time to address new vocabulary as needed for your class. \n\n**Discuss**: _How does the article connect to the overfishing simulation we made in Lesson 2? How could we change the code to balance the ecosystem?_\n\n**Discussion Goal**: Students should see the connection to the unbalanced ecosystem, specifically if there are fewer fish, the algae overgrows and the coral becomes sick. Have students refer to the paragraph of the article titled **“Harm to ecosystems”** Students can also find several solutions to the problem in the section titled “How to prevent overfishing”. Students should brainstorm how they could apply these solutions to their coded simulation. ",
+        "duration": "10",
+        "name": "Read and Discuss",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To boost engagement and ensure all voices are heard, give students a moment to think or even write down a few ideas before sharing with the full group. Reinforce the idea that in the brainstorming phase there are no wrong answers or bad ideas. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9f2276f6-9067-4b58-832a-79373b1152eb",
@@ -699,7 +710,7 @@
       "key": "4044a2a5-076e-4cb3-94b3-d022b8f279c9",
       "position": 2,
       "properties": {
-        "description": "All of these animals live and/or hunt in an environment with a lot of water. Each of these animals have developed webbed feet to help them swim better. \n\nAnimals have found many ways to change and adjust in order to survive in their environments. In today’s coding lesson you will discover and model several animal adaptations!",
+        "description": "This article gives us several, well-researched solutions to the problem of overfishing. How could we change our simulation to demonstrate one of these solutions? How could we keep the coral healthy? How could we keep track of the amount of fish caught by the boat?  Do we need to limit any of the sprites? Which of the solutions in the article would be easy to code and which would be very difficult? ",
         "remarks": true
       },
       "seeding_key": {
@@ -708,50 +719,23 @@
       }
     },
     {
-      "key": "54d3bdb0-f9db-4428-820e-b61c16d31bf4",
-      "position": 3,
+      "key": "3672b603-4551-4cb2-b06c-cdcd062e9e49",
+      "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide\n",
+        "duration": "35",
+        "name": "Balancing the Aquatic Ecosystem Simulation - Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "54d3bdb0-f9db-4428-820e-b61c16d31bf4",
-        "lesson_activity.key": "83cdf4f6-f5d8-43f2-82ab-638573a02d8d"
-      }
-    },
-    {
-      "key": "008b4bb5-5da9-4fe6-ad69-a10453a79fa8",
-      "position": 4,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "To boost engagement and ensure all voices are heard, give students a moment to think or even write down a few ideas before sharing with the full group. Consider using a think, pair, share strategy. Allow students with the same native language to discuss in their native language. Add gestures to the discussion where possible."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "008b4bb5-5da9-4fe6-ad69-a10453a79fa8",
-        "lesson_activity.key": "83cdf4f6-f5d8-43f2-82ab-638573a02d8d"
-      }
-    },
-    {
-      "key": "366b8362-cf36-4a91-9e2f-5c4729d45cca",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n**Display**: \n\n_**Adaptations:** Animals change over many generations so that they have a better chance of survival._\n\n_**Build a Model:** Today you will use computer science and code to build models that show animal adaptations._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Learning Targets” slide\n\n* _I can develop a model using code to show biological evolution._\n* _I can create simulations of animal adaptations._\n* _I can explain how animals evolve and change as a result of changes in their environment_\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "366b8362-cf36-4a91-9e2f-5c4729d45cca",
-        "lesson_activity.key": "83cdf4f6-f5d8-43f2-82ab-638573a02d8d"
+        "activity_section.key": "3672b603-4551-4cb2-b06c-cdcd062e9e49",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
       }
     },
     {
       "key": "5e362270-3a17-44e3-b557-33623e9aaf03",
-      "position": 1,
+      "position": 2,
       "properties": {
-        "description": "In today’s coding lesson you will create models of more animal adaptations. Computer science can help us model how a change occurs. You can code your models to be interactive, like clicking an animal to watch it change. You will learn new coding skills, then you will code your own project based on a hypothesis you make. ",
-        "duration": "20",
-        "name": "Animal Adaptations",
+        "description": "In today’s coding lesson you will modify a model of an unbalanced aquatic ecosystem. The ecosystem starts unbalanced due to humans removing too many fish from the water. When one species of an ecosystem is removed there is an effect on the rest of the organisms in the system. \n\nYou will code three different solutions to the problem of overfishing. First you’ll add code to count the number of fish caught by the boat and stop the boat from catching more fish once it reaches its limit. Then, you will limit the area in which the boat is allowed to fish. Third, you’ll create a fishing season and a no fishing season to allow the fish time to recover. Watch the simulation carefully when you run the code for each solution to find the solution you believe is the most effective.\n\nFinally, create a simulation of a local ecosystem!\n",
         "remarks": true
       },
       "seeding_key": {
@@ -761,9 +745,9 @@
     },
     {
       "key": "efc689a1-7c3c-445a-bd88-df899622f9c9",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section. Circulate the room as students work at their own pace."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1” slide\n\n**Say**: _What is causing the coral to die in this aquatic simulation?_\n\n**Do This**: Have students start together on the first level. They will type an answer into the text box using evidence from the text in the article they read during the warm-up. You can use their responses as a check for understanding and address any common misconceptions. \n"
       },
       "seeding_key": {
         "activity_section.key": "efc689a1-7c3c-445a-bd88-df899622f9c9",
@@ -771,157 +755,174 @@
       }
     },
     {
-      "key": "73b7996e-911e-4c0c-bb5a-3ce36f0ae25f",
-      "position": 3,
+      "key": "8d362481-04d8-464a-a8c2-d78ba21cd768",
+      "position": 4,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "There are 5 slides with scientific information and photos that relate to the skill building levels 1-8. Decide if you’d like to show your class all 5 of the animal adaptation slides before they begin to work at their own pace, scattered throughout the work time at a pace that matches the majority of the group’s level progression or after they finish level 8 as a review. Students will likely be primarily focused on the coding challenges and will benefit from the additional support, photos and information in the slides. "
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "73b7996e-911e-4c0c-bb5a-3ce36f0ae25f",
+        "activity_section.key": "8d362481-04d8-464a-a8c2-d78ba21cd768",
         "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
       }
     },
     {
-      "key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992",
-      "position": 4,
+      "key": "a3f4a1e4-cbe2-4eb4-bf4a-823024d4f9e2",
+      "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-3 - Limit the Number of Fish Caught ” slide\n\n**Do This**: Have students complete the code using the instructions on levels 2-3 at their own pace. Consider pulling the group together to make a connection to the text (displayed on the slide). ",
+        "name": "Overfishing Solution #1  - Limit the Number of Fish Caught"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3f4a1e4-cbe2-4eb4-bf4a-823024d4f9e2",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "1cc5aa09-8946-44df-87fe-203db8542f6e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - Debugging” slide\n\n**Do This**: Pause the class to address the concept of debugging in computer science. There are two optional videos linked in the notes of this slide that you can show your class depending on their familiarity with the concept. Guide students to look closely at the code and choose the answer that best describes the bug and its fix. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1cc5aa09-8946-44df-87fe-203db8542f6e",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "a58a8e9c-7d84-4086-9319-35658b81cb07",
+      "position": 7,
+      "properties": {
+        "description": "Level 4 is a debugging challenge! Computer scientists typically spend a lot of time finding and fixing problems in their code. Read the code out loud, one line at a time. Listen to each step to figure out where the problem is. Which line of code doesn’t make sense?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a58a8e9c-7d84-4086-9319-35658b81cb07",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "0f4ab7a3-4146-4dde-9829-2e1507906b13",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may not realize at first that they need to read the code first and then choose the best answer. If they answered incorrectly, it is also helpful to remind them to take a moment to figure out how they made a mistake in their response and what makes the actual answer correct. Use the check for understanding as a chance to clear up misconceptions.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0f4ab7a3-4146-4dde-9829-2e1507906b13",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "d70a8039-dbef-4d81-9c65-efe467ef7e68",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 5 - Establish Marine Protected Areas” slide\n\n**Do This**: Have students follow the instructions to complete level 5. Remind students to try running their code several times and using the built-in hints to figure out the solution before asking their peers for assistance. Consider making a connection to the text displayed on the slide. ",
+        "name": "Overfishing Solution #2 - Establish Marine Protected Areas"
+      },
+      "seeding_key": {
+        "activity_section.key": "d70a8039-dbef-4d81-9c65-efe467ef7e68",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "827a4c88-1f72-4681-9795-46eee3eef61d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Check for Understanding” slide\n\n**Do This**: You may want to check students’ answers to the CFU multiple choice question to confirm that they are learning strategies to avoid overfishing. After a quick check, have students advance through the rest of the lesson at their own pace. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "827a4c88-1f72-4681-9795-46eee3eef61d",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "69e1ec66-9937-497e-b77b-d1e318d7d743",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 7-8 - Create a Fishing Season” slide\n\n**Do This**: Have students complete the code in these levels at their own pace. Consider pulling the group together to make a connection to the text (displayed on the slide). \n",
+        "name": "Overfishing Solution #3  - Create a “Fishing Season”"
+      },
+      "seeding_key": {
+        "activity_section.key": "69e1ec66-9937-497e-b77b-d1e318d7d743",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "f965b982-c7d3-434a-83ed-a6700f00ec7d",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Check for Understanding” slide\n\n**Do This**: Level 9 is a final check for understanding. There is an empty text box where students can write in an answer describing the third overfishing solution. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f965b982-c7d3-434a-83ed-a6700f00ec7d",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "ecc0e74f-00a3-49f8-8b10-a9e8ba49b3df",
+      "position": 13,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It may be helpful for students who are working at the same pace to gather in pairs or in small groups to discuss the Level 9 - Check For Understanding question before typing their own answers in. Guide students to explain each line of code and its purpose in the simulation. After discussing in small groups, students should be better prepared to write up a high quality answer. \n\nIt may also be helpful to provide students with a few sentence starters for their discussions. You can write these on a piece of paper or on the classroom board as needed. \n\n- The coral stays healthy in this simulation because… \n- The coral does not get sick in this simulation because…\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ecc0e74f-00a3-49f8-8b10-a9e8ba49b3df",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "5bc6a2ca-9a96-4b21-ae48-56105ffdb953",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. This is a video that explains how to upload your own images for your students to use as sprites. . \n",
+        "duration": "10",
+        "name": "Create a Local Ecosystem"
+      },
+      "seeding_key": {
+        "activity_section.key": "5bc6a2ca-9a96-4b21-ae48-56105ffdb953",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "c49bf1b2-c71f-4d8c-a52a-bca715779c23",
+      "position": 15,
+      "properties": {
+        "description": "Try adding a background and sprites that represent an ecosystem in our area! There are new sprite and background options available to you in this level. \n\n- How do the organisms in this ecosystem move? Try adding behaviors!\n- How do the organisms in this ecosystem interact? Try adding events!\n- How does the energy flow (food web) in this ecosystem?  \n- Is your simulation a balanced ecosystem or is one organism causing an imbalance?  \n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Level 10 would be a great place for students to pair program. You can show students [this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) demonstrating how to pair program. Have students pair up and use one computer to experiment with creating a new ecosystem model. Working with a partner promotes conversation and encourages students to explain their observations and thinking."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c49bf1b2-c71f-4d8c-a52a-bca715779c23",
+        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
+      }
+    },
+    {
+      "key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f",
+      "position": 16,
+      "properties": {
+        "name": "[Delete]",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "24a98d06-02bd-47bd-8cfc-f7d56e97175b",
-      "position": 5,
-      "properties": {
-        "description": "**Level 1**: Giraffe **Evolution** - In this level, students will program two new events that enable the use to click on the giraffe sprite to change it three times. It models the evolution of a giraffe’s neck to reach high trees. \n\n**Level 2-3**: Bunny **Adaptations** - These two levels teach students to switch the background and the sprite costume to simulate how bunnies have adapted the color of the fur to blend into their environment. There is also a writing component as the students write a sentence that explains the adaptation for each character to say.\n\n**Level 4-5**: Whale **Migration** - This level models a whale’s migration north and south when the seasons change. Students learn how to make a whale sprite move up and down and review how to switch the background and make the sprite say an explanation. \n\n**Level 6-8**: Bug **Natural Selection** - The final skill building levels create a model with a declining bug population.\n",
-        "progression_name": "Choice Level"
-      },
-      "seeding_key": {
-        "activity_section.key": "24a98d06-02bd-47bd-8cfc-f7d56e97175b",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "bb89594c-8909-4667-b057-182f007943a0",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Survival in Groups” slide\n",
-        "duration": "5",
-        "name": "Animal Groups"
-      },
-      "seeding_key": {
-        "activity_section.key": "bb89594c-8909-4667-b057-182f007943a0",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "6a525ae7-1965-40ac-8f49-29cd283c5b82",
-      "position": 7,
-      "properties": {
-        "description": "You get to choose one of the aquatic ecosystem lessons to practice the skills you have learned in this lesson. If you have time, you can complete more than one! ",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "6a525ae7-1965-40ac-8f49-29cd283c5b82",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "dce630e4-3d01-4f5a-8865-2bad32f7cc72",
-      "position": 8,
-      "properties": {
-        "description": "**Do This**: Show students each of the options for the practice levels, emphasizing how each group of animals (fish, dolphins, and sharks) behave differently in their groups."
-      },
-      "seeding_key": {
-        "activity_section.key": "dce630e4-3d01-4f5a-8865-2bad32f7cc72",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "b3be1eec-968d-4b8a-8d99-4211f8f707b9",
-      "position": 9,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The choices range from most simple, to most complex. Consider guiding some students towards the appropriate level for them. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b3be1eec-968d-4b8a-8d99-4211f8f707b9",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "f2e98b01-df88-47eb-a2b8-7755459dda0f",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Make a Hypothesis” slide",
-        "duration": "10",
-        "name": "Make a Hypothesis"
-      },
-      "seeding_key": {
-        "activity_section.key": "f2e98b01-df88-47eb-a2b8-7755459dda0f",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "85fa0042-f619-4e21-ace2-9ef93c2c79a3",
-      "position": 11,
-      "properties": {
-        "description": "**Discuss**: _In our previous lesson we created an aquatic ecosystem simulation that was impacted by overfishing. We saw the damage of the water quality and coral reef caused by lower numbers of fish and higher levels of algae. How could one species in the aquatic ecosystem adapt to overfishing?_ \n\n**Discussion Goal**: Brainstorm a few ideas of potential adaptations we may see in aquatic life we might see 500 years in the future as a result of their ecosystems changing due to overfishing.   "
-      },
-      "seeding_key": {
-        "activity_section.key": "85fa0042-f619-4e21-ace2-9ef93c2c79a3",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "28f87002-47e8-4d01-bf03-0dd2651da71e",
-      "position": 12,
-      "properties": {
-        "description": "Use one of the ideas you’ve thought of or heard and model your hypothesis of how a species may adapt to overfishing. ",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "28f87002-47e8-4d01-bf03-0dd2651da71e",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "d3496a73-c9e4-422a-b9be-e835917549f6",
-      "position": 13,
-      "properties": {
-        "description": "**(Optional) Do This**: It is possible for teachers to make a remix of the Free Play level and then upload their own images to use for sprites. You could use this technique to put a local lens on the last level. This is a [video](https://www.youtube.com/watch?v=8KCAvNt4jRg) that explains how to upload your own images for your students to use as sprites. ",
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "d3496a73-c9e4-422a-b9be-e835917549f6",
-        "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
-      }
-    },
-    {
-      "key": "1a879fa0-849a-4ebe-bc1b-976b3a5839c8",
-      "position": 14,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The most difficult part of free play levels is getting started from a blank screen. Narrate out loud what you see as students get started to help spark other ideas in the class. Reminding students to use one of the previous levels as inspiration may help them take the first step. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "1a879fa0-849a-4ebe-bc1b-976b3a5839c8",
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f",
         "lesson_activity.key": "f4198257-6de9-453c-b70a-a99fcf0207a1"
       }
     },
@@ -929,9 +930,9 @@
       "key": "a2d884f0-bc48-4f16-be8d-1435a88c5177",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: \n- _What animals live near us?_\n- _Explain their environment._ \n- _How have they adapted to survive in this environment?_\n\n**Discussion Goal**: Make connections to animal adaptations in your local ecosystem.   \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What you Know” slide\n\n**Say:** \n- _Name THREE blocks of code used in Lesson 3: Balancing the Ecosystem._ \n- _Describe TWO solutions to the overfishing problem._\n- _Explain your ONE favorite part of the lesson._\n\n**Do This**: Have students record their answers on sticky notes, a journal, Google form or other content management system used in your class. _Optional: Extended reading and discussion._\n",
         "duration": "10",
-        "name": "Local Ecosystem Connection"
+        "name": "Show What You Know"
       },
       "seeding_key": {
         "activity_section.key": "a2d884f0-bc48-4f16-be8d-1435a88c5177",
@@ -942,22 +943,11 @@
       "key": "53389390-e974-4757-aab5-a20efd7e7574",
       "position": 2,
       "properties": {
-        "description": "Think of one animal that lives in the wild near our school/town/in our state. Write a sentence that explains how its body has adapted to help it survive in our specific environment. Use the vocabulary we modeled in our computer science lesson today. ",
+        "description": "We have learned a lot about computer programming by exploring the effects of overfishing on an ecosystem that has fish, algae, and coral. We programmed three different solutions to help keep the coral healthy for longer. Which do you believe is the best solution? Explain your answer. Using evidence from the simulation \n\nIn conclusion take time to consider your role in your local ecosystem. Think about how humans may be impacting aquatic ecosystems and how we can work towards keeping our ecosystems in balance so that all organisms can thrive. \n",
         "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "53389390-e974-4757-aab5-a20efd7e7574",
-        "lesson_activity.key": "ce74c6ae-e259-4c4a-8409-36640916e6ae"
-      }
-    },
-    {
-      "key": "246ae143-b964-4a86-a4d6-19918a17fb06",
-      "position": 3,
-      "properties": {
-        "description": "**Do This**: Have students record their answers on sticky notes, a journal, Google form or other content management system used in your class. "
-      },
-      "seeding_key": {
-        "activity_section.key": "246ae143-b964-4a86-a4d6-19918a17fb06",
         "lesson_activity.key": "ce74c6ae-e259-4c4a-8409-36640916e6ae"
       }
     }
@@ -1019,6 +1009,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_location_ecosystems"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1041,6 +1034,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_click_ecosystems"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1088,6 +1084,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_adaptation_ecosystems"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1110,6 +1109,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_giraffe_evo_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1132,6 +1134,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_movement_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1154,6 +1159,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_explain_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1176,6 +1184,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bugs_behaviors_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1198,6 +1209,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gray_csc_helloworld_choice_group_ecosystems_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1520,9 +1534,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_bunny_adapt_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1533,7 +1544,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       },
       "level_keys": [
         "csc_ecosystems_bunny_adapt_2022"
@@ -1545,9 +1556,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_bunny_explain_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1558,7 +1566,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       },
       "level_keys": [
         "csc_ecosystems_bunny_explain_2022"
@@ -1570,9 +1578,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_bugs_selection_counters_one_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1583,7 +1588,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       },
       "level_keys": [
         "csc_ecosystems_bugs_selection_counters_one_2022"
@@ -1595,9 +1600,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_bugs_selection_counters_two_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1608,7 +1610,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       },
       "level_keys": [
         "csc_ecosystems_bugs_selection_counters_two_2022"
@@ -1620,9 +1622,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_bugs_selection_explain_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1633,7 +1632,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       },
       "level_keys": [
         "csc_ecosystems_bugs_selection_explain_2022"
@@ -1642,13 +1641,10 @@
     {
       "chapter": 29,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gray_csc_ecosystems_survival_choice_2022"
-        ],
-        "progression": "Choice Level"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1658,7 +1654,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "24a98d06-02bd-47bd-8cfc-f7d56e97175b"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       },
       "level_keys": [
         "gray_csc_ecosystems_survival_choice_2022"
@@ -1667,13 +1663,10 @@
     {
       "chapter": 30,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_freeplay_2022"
-        ],
-        "progression": "Free Play"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1683,7 +1676,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "d3496a73-c9e4-422a-b9be-e835917549f6"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       },
       "level_keys": [
         "csc_ecosystems_freeplay_2022"
@@ -1976,7 +1969,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       }
     },
     {
@@ -1988,7 +1981,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       }
     },
     {
@@ -2000,7 +1993,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       }
     },
     {
@@ -2012,7 +2005,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       }
     },
     {
@@ -2024,7 +2017,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "4239fbe3-4d0a-47b9-833d-7be3b57d7992"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       }
     },
     {
@@ -2036,7 +2029,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "24a98d06-02bd-47bd-8cfc-f7d56e97175b"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       }
     },
     {
@@ -2048,7 +2041,7 @@
         "lesson.key": "Model Animal Adaptations",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "d3496a73-c9e4-422a-b9be-e835917549f6"
+        "activity_section.key": "744e6b20-e886-4d74-8f24-e9f5a84cad1f"
       }
     }
   ],
@@ -2065,6 +2058,18 @@
       "seeding_key": {
         "resource.key": "ecosystems"
       }
+    },
+    {
+      "name": "Understanding Overfishing Article",
+      "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
+      "key": "understanding_overfishing_article",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "understanding_overfishing_article"
+      }
     }
   ],
   "lessons_resources": [
@@ -2078,6 +2083,12 @@
       "seeding_key": {
         "lesson.key": "Model Animal Adaptations",
         "resource.key": "ecosystems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Animal Adaptations",
+        "resource.key": "understanding_overfishing_article"
       }
     },
     {
@@ -2135,6 +2146,16 @@
       }
     },
     {
+      "key": "debug",
+      "word": "Debug",
+      "definition": "Finding and fixing errors or problems in code.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debug"
+      }
+    },
+    {
       "key": "ecosystem",
       "word": "Ecosystem",
       "definition": "A biological community of interacting organisms and their environment",
@@ -2165,36 +2186,6 @@
       }
     },
     {
-      "key": "hypothesis",
-      "word": "Hypothesis",
-      "definition": "A guess or idea based on known facts",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "hypothesis"
-      }
-    },
-    {
-      "key": "migration",
-      "word": "Migration",
-      "definition": "A long distance move an animal makes seeking a better environment",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "migration"
-      }
-    },
-    {
-      "key": "natural_selection",
-      "word": "Natural Selection",
-      "definition": "The process where animals with the best traits for survival keep reproducing while other similar animals with less favorable traits die off. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "natural_selection"
-      }
-    },
-    {
       "key": "overfishing",
       "word": "Overfishing",
       "definition": "Removal of fish faster than they can reproduce",
@@ -2213,49 +2204,65 @@
       "seeding_key": {
         "vocabulary.key": "simulation"
       }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A container that can store a value. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Model Animal Adaptations",
+        "lesson.key": "Hello World CSC",
         "vocabulary.key": "adaptation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Model Animal Adaptations",
+        "lesson.key": "Hello World CSC",
         "vocabulary.key": "code"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Model Animal Adaptations",
+        "lesson.key": "Hello World CSC",
         "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Model Animal Adaptations",
+        "lesson.key": "Hello World CSC",
         "vocabulary.key": "evolution"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Model Animal Adaptations",
-        "vocabulary.key": "hypothesis"
+        "vocabulary.key": "debug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Model Animal Adaptations",
-        "vocabulary.key": "migration"
+        "vocabulary.key": "ecosystem"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Model Animal Adaptations",
-        "vocabulary.key": "natural_selection"
+        "vocabulary.key": "overfishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Animal Adaptations",
+        "vocabulary.key": "variable"
       }
     },
     {
@@ -2316,23 +2323,13 @@
       }
     },
     {
-      "key": "14971f72-877b-4c01-98ce-5f7f27cd21fc",
+      "key": "4d83f242-46d5-42e4-a738-09e2cd30ad94",
       "properties": {
-        "description": "Create new sprites and assign them costumes and locations."
+        "description": "Use a scientific article to guide their solutions to the overfishing simulation. "
       },
       "seeding_key": {
-        "lesson.key": "Hello World CSC",
-        "objective.key": "14971f72-877b-4c01-98ce-5f7f27cd21fc"
-      }
-    },
-    {
-      "key": "519d20e3-27dc-47c0-8451-55834f86d5c5",
-      "properties": {
-        "description": "Create an interactive animation using sprites and events."
-      },
-      "seeding_key": {
-        "lesson.key": "Hello World CSC",
-        "objective.key": "519d20e3-27dc-47c0-8451-55834f86d5c5"
+        "lesson.key": "Model Animal Adaptations",
+        "objective.key": "4d83f242-46d5-42e4-a738-09e2cd30ad94"
       }
     },
     {
@@ -2346,33 +2343,53 @@
       }
     },
     {
-      "key": "5c7b4ec6-8ba5-46ad-ae2e-f18e9b87ddcf",
+      "key": "5db0622d-164d-4546-9068-ca715c9dff3f",
       "properties": {
-        "description": "Develop a model using code to show biological evolution"
+        "description": " Create an interactive animation using sprites and events. "
       },
       "seeding_key": {
-        "lesson.key": "Model Animal Adaptations",
-        "objective.key": "5c7b4ec6-8ba5-46ad-ae2e-f18e9b87ddcf"
+        "lesson.key": "Hello World CSC",
+        "objective.key": "5db0622d-164d-4546-9068-ca715c9dff3f"
       }
     },
     {
-      "key": "66a45802-8a42-47c1-88fa-541797a29e10",
+      "key": "8eccc3d3-f0f1-4eb6-9269-f05381715f5c",
       "properties": {
-        "description": "Explain how animals evolve and change as a result of changes in their environment"
+        "description": "Code a model that shows biological evolution. "
       },
       "seeding_key": {
-        "lesson.key": "Model Animal Adaptations",
-        "objective.key": "66a45802-8a42-47c1-88fa-541797a29e10"
+        "lesson.key": "Hello World CSC",
+        "objective.key": "8eccc3d3-f0f1-4eb6-9269-f05381715f5c"
       }
     },
     {
-      "key": "f5b8cc5d-f878-4f4e-88c4-d74f727ee671",
+      "key": "a79aff80-8480-4e99-8224-b689263cd471",
       "properties": {
-        "description": "Create simulations of animal adaptations"
+        "description": "Debug (find and fix problems) in their code. "
       },
       "seeding_key": {
         "lesson.key": "Model Animal Adaptations",
-        "objective.key": "f5b8cc5d-f878-4f4e-88c4-d74f727ee671"
+        "objective.key": "a79aff80-8480-4e99-8224-b689263cd471"
+      }
+    },
+    {
+      "key": "e673be1d-d10f-409b-b800-600514f72870",
+      "properties": {
+        "description": "Create and use a variable to keep track of a changing value in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Model Animal Adaptations",
+        "objective.key": "e673be1d-d10f-409b-b800-600514f72870"
+      }
+    },
+    {
+      "key": "f6e54abd-f1c4-4468-b91a-653337ef820b",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and locations. "
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "objective.key": "f6e54abd-f1c4-4468-b91a-653337ef820b"
       }
     }
   ],
