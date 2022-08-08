@@ -1,5 +1,5 @@
 require 'cdo/honeybadger'
-require 'cdo/languages'
+require 'lib/cdo/dashboard_languages'
 require 'net/http'
 require 'dynamic_config/gatekeeper'
 require 'cdo/throttle'
@@ -86,7 +86,7 @@ module AzureTextToSpeech
 
       voice_dictionary = {}
       voices.each do |voice|
-        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+        native_locale_name = DashboardLanguages.get_native_name_by_locale(voice["Locale"])
         next if native_locale_name.empty?
         native_name_s = native_locale_name[0][:native_name_s]
         voice_dictionary[native_name_s] ||= {}
