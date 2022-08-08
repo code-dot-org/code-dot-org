@@ -22,7 +22,6 @@ class EditTableListRow extends React.Component {
   };
 
   render() {
-    console.log('edit table list row');
     return (
       <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
