@@ -176,7 +176,6 @@ class DataTable extends React.Component {
   }
 
   render() {
-    console.log('rendering DataTable');
     let columnNames = [...this.props.tableColumns];
     let editingColumn = this.state.editingColumn;
 
