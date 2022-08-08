@@ -4,6 +4,7 @@ require 'action_view/helpers/date_helper'
 require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
 require '../lib/cdo/hash_utils'
+require '../lib/cdo/data/csv_to_sql_table'
 
 # Enables timed_task to be used in place of task when defining rake tasks, which prints
 # how long the task took to stdout.
