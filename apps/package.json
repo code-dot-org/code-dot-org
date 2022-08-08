@@ -233,6 +233,7 @@
     "@codemirror/state": "^6.1.0",
     "@codemirror/view": "^6.1.2",
     "@dsco_/link": "^1.1.2",
+    "@lezer/highlight": "^1.0.0",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
     "ace-builds": "^1.4.12",
     "blockly": "8.0.3",
