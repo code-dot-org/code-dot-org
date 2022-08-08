@@ -21,7 +21,6 @@ class TableControls extends React.Component {
   };
 
   render() {
-    console.log('table controls');
     return (
       <div className={style.container}>
         <div className={style.tableNameWrapper}>
