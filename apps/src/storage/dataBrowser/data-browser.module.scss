@@ -12,8 +12,8 @@ $bgColor: $lightest_gray;
     box-sizing: border-box;
     height: $tabHeight;
     padding: 0 10px;
+    // TODO: Get the elements in DataBrowser to use the next three subclasses.
     &.activeTab{
-        color: $green;
         background-color: $bgColor;
         border-top-width: 1px;
         border-right-width: 1px;
@@ -22,7 +22,6 @@ $bgColor: $lightest_gray;
         float: left;
     }
     &.inactiveTab{
-        color: $red;
         border-top-width: 1px;
         border-right-width: 1px;
         border-bottom-width: 1px;
@@ -31,7 +30,6 @@ $bgColor: $lightest_gray;
     }
     // This tab should fill the remaining horizontal space.
     &.emptyTab{
-        color:$red;
         border-top-width: 0px;
         border-right-width: 0px;
         border-bottom-width: 1px;
@@ -40,12 +38,8 @@ $bgColor: $lightest_gray;
     }
   };
 
+//TODO: Remove the next 3 classes:
 .activeTab{
-    border-color: $borderColor;
-    border-style: solid;
-    box-sizing: border-box;
-    height: $tabHeight;
-    padding: 0px 10px;
     background-color: $bgColor;
     border-top-width: 1px;
     border-right-width: 1px;
@@ -54,31 +48,21 @@ $bgColor: $lightest_gray;
     float: left;
 }
 .inactiveTab{
-    border-color: $borderColor;
-    border-style: solid;
-    box-sizing: border-box;
-    height: $tabHeight;
-    padding: 0px 10px;
     border-top-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
     border-left-width: 0px;
     float: left;
 }
-
+// This tab should fill the remaining horizontal space.
 .emptyTab{
-    border-color: $borderColor;
-    border-style: solid;
-    box-sizing: border-box;
-    height: $tabHeight;
-    padding: 0px 10px;
-    color:$red;
     border-top-width: 0px;
     border-right-width: 0px;
     border-bottom-width: 1px;
     border-left-width: 0px;
     width: 100%;
 }
+
 .workspaceDescription {
     height: 28;
     overflow: hidden

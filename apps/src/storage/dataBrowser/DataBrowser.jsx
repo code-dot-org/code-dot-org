@@ -45,6 +45,7 @@ class DataBrowser extends React.Component {
           <div
             id="dataTablesTab"
             className={classNames(
+              style.baseTabStyle,
               this.state.selectedTab === TabType.DATA_TABLES && style.activeTab,
               this.state.selectedTab !== TabType.DATA_TABLES &&
                 style.inactiveTab
@@ -56,6 +57,7 @@ class DataBrowser extends React.Component {
           <div
             id="keyValuePairsTab"
             className={classNames(
+              style.baseTabStyle,
               this.state.selectedTab === TabType.KEY_VALUE_PAIRS &&
                 style.activeTab,
               this.state.selectedTab !== TabType.KEY_VALUE_PAIRS &&
@@ -65,7 +67,10 @@ class DataBrowser extends React.Component {
           >
             <span className={style.tabLabel}>{msg.keyValuePairsHeader()}</span>
           </div>
-          <div id="emptyTab" className={style.emptyTab} />
+          <div
+            id="emptyTab"
+            className={classNames(style.baseTabStyle, style.emptyTab)}
+          />
         </div>
         <div id="dataBrowserBody" className={style.workspaceBody}>
           <div
