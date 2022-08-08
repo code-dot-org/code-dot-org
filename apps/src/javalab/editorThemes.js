@@ -4,6 +4,7 @@ import {
   tags,
   defaultHighlightStyle
 } from '@codemirror/highlight';
+import color from '@cdo/apps/util/color';
 
 // modified from @codemirror/theme-one-dark
 const chalky = '#e5c07b',
@@ -18,7 +19,6 @@ const chalky = '#e5c07b',
   violet = '#c678dd',
   darkBackground = '#21252b',
   highlightBackground = '#2c313a',
-  background = '#282c34',
   selection = '#3E4451',
   cursor = '#528bff';
 
@@ -29,7 +29,7 @@ export const darkTheme = EditorView.theme(
   {
     '&': {
       color: ivory,
-      backgroundColor: background
+      backgroundColor: color.darkest_slate_gray
     },
     '.cm-content': {
       caretColor: cursor
@@ -48,14 +48,14 @@ export const darkTheme = EditorView.theme(
     '.cm-searchMatch.cm-searchMatch-selected': {
       backgroundColor: '#6199ff2f'
     },
-    '.cm-activeLine': {backgroundColor: highlightBackground},
+    '.cm-activeLine': {backgroundColor: color.dark_gray},
     '.cm-selectionMatch': {backgroundColor: '#aafe661a'},
     '.cm-matchingBracket, .cm-nonmatchingBracket': {
       backgroundColor: '#bad0f847',
       outline: '1px solid #515a6b'
     },
     '.cm-gutters': {
-      backgroundColor: background,
+      backgroundColor: color.darkest_slate_gray,
       color: stone,
       border: 'none'
     },
@@ -155,7 +155,19 @@ the highlight style).
 export const darkMode = [darkTheme, darkHighlightStyle];
 
 // The default light theme styles for codemirror
-export const lightTheme = EditorView.theme({}, {dark: false});
+export const lightTheme = EditorView.theme(
+  {
+    // Sets the background color for the main editor area
+    '&': {
+      backgroundColor: color.white
+    },
+    // Sets the background color for the left-hand side gutters
+    '.cm-gutters': {
+      backgroundColor: color.white
+    }
+  },
+  {dark: false}
+);
 
 // Extension to enable the light theme (both the editor theme and the highlight style).
 export const lightMode = [lightTheme, defaultHighlightStyle];

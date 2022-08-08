@@ -2,10 +2,7 @@ import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {mount} from 'enzyme';
-import JavalabEditor, {
-  editorDarkModeThemeOverride,
-  editorLightModeThemeOverride
-} from '@cdo/apps/javalab/JavalabEditor';
+import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -15,8 +12,6 @@ import {
 } from '@cdo/apps/redux';
 import {EditorView} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
-import {oneDark} from '@codemirror/theme-one-dark';
-import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {
   setDisplayTheme,
   sourceVisibilityUpdated,
@@ -41,6 +36,7 @@ import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import javalabMsg from '@cdo/javalab/locale';
 import {JavalabEditorDialog} from '@cdo/apps/javalab/JavalabEditorDialogManager';
+import {darkMode, lightMode} from '../../../src/javalab/editorThemes';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
@@ -368,21 +364,15 @@ describe('Java Lab Editor Test', () => {
         const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
         store.dispatch(setDisplayTheme(DisplayTheme.DARK));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: [
-            javalabEditor.editorThemeOverrideCompartment.reconfigure(
-              editorDarkModeThemeOverride
-            ),
-            javalabEditor.editorModeConfigCompartment.reconfigure(oneDark)
-          ]
+          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
+            darkMode
+          )
         });
         store.dispatch(setDisplayTheme(DisplayTheme.LIGHT));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: [
-            javalabEditor.editorThemeOverrideCompartment.reconfigure(
-              editorLightModeThemeOverride
-            ),
-            javalabEditor.editorModeConfigCompartment.reconfigure(lightMode)
-          ]
+          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
+            lightMode
+          )
         });
         dispatchSpy.restore();
       });
