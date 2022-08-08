@@ -25,10 +25,9 @@ import {
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
 import {EditorView} from '@codemirror/view';
-import {editorSetup, lightMode} from './editorSetup';
+import {editorSetup} from './editorSetup';
 import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
-import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
@@ -38,6 +37,7 @@ import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
+import {darkMode, lightMode} from './editorThemes';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import JavalabEditorDialogManager, {
   JavalabEditorDialog
@@ -48,38 +48,6 @@ const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
 const EDITOR_LOAD_PAUSE_MS = 100;
-
-// Custom theme overrides (exported for tests)
-export const editorDarkModeThemeOverride = EditorView.theme(
-  {
-    // Sets the background color for the main editor area
-    '&': {
-      backgroundColor: color.darkest_slate_gray
-    },
-    // Sets the background color for the currently selected line
-    '.cm-activeLine': {
-      backgroundColor: color.dark_gray
-    },
-    // Sets the background color for the left-hand side gutters
-    '.cm-gutters': {
-      backgroundColor: color.darkest_slate_gray
-    }
-  },
-  {dark: true}
-);
-export const editorLightModeThemeOverride = EditorView.theme(
-  {
-    // Sets the background color for the main editor area
-    '&': {
-      backgroundColor: color.white
-    },
-    // Sets the background color for the left-hand side gutters
-    '.cm-gutters': {
-      backgroundColor: color.white
-    }
-  },
-  {dark: false}
-);
 
 class JavalabEditor extends React.Component {
   static propTypes = {
@@ -168,19 +136,12 @@ class JavalabEditor extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.displayTheme !== this.props.displayTheme) {
-      const styleOverride =
-        this.props.displayTheme === DisplayTheme.DARK
-          ? editorDarkModeThemeOverride
-          : editorLightModeThemeOverride;
       const newStyle =
-        this.props.displayTheme === DisplayTheme.DARK ? oneDark : lightMode;
+        this.props.displayTheme === DisplayTheme.DARK ? darkMode : lightMode;
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
-          effects: [
-            this.editorThemeOverrideCompartment.reconfigure(styleOverride),
-            this.editorModeConfigCompartment.reconfigure(newStyle)
-          ]
+          effects: this.editorModeConfigCompartment.reconfigure(newStyle)
         });
       });
     }
@@ -222,16 +183,8 @@ class JavalabEditor extends React.Component {
 
     extensions.push(
       displayTheme === DisplayTheme.DARK
-        ? [
-            this.editorThemeOverrideCompartment.of(editorDarkModeThemeOverride),
-            this.editorModeConfigCompartment.of(oneDark)
-          ]
-        : [
-            this.editorThemeOverrideCompartment.of(
-              editorLightModeThemeOverride
-            ),
-            this.editorModeConfigCompartment.of(lightMode)
-          ]
+        ? this.editorModeConfigCompartment.of(darkMode)
+        : this.editorModeConfigCompartment.of(lightMode)
     );
 
     extensions.push(
