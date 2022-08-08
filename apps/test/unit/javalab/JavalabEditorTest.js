@@ -36,7 +36,7 @@ import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import javalabMsg from '@cdo/javalab/locale';
 import {JavalabEditorDialog} from '@cdo/apps/javalab/JavalabEditorDialogManager';
-import {darkMode, lightMode} from '../../../src/javalab/editorThemes';
+import {darkMode, lightMode} from '@cdo/apps/javalab/editorThemes';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
