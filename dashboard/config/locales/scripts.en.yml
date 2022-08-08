@@ -8395,15 +8395,15 @@ en:
           description: |-
             **Participants will:**
 
-            * Reconnect with their community to celebrate successes, vent frustrations, and troubleshoot roadblocks.
             * Build confidence and skill in core computer science concepts.
             * Revisit debugging content and learn about platform and curriculum tools to support students.
+            * Reflect on personal moments of failure and debugging to consider their role in building classroom culture.
           student_description: |-
             **You will:**
 
             * Reconnect with your community to celebrate successes, vent frustrations, and troubleshoot roadblocks.
             * Build confidence and skill in core computer science concepts.
-            * Revisit debugging content and learn about platform and curriculum tools to support students.
+            * Reflect on personal moments of failure and debugging to consider your role in building classroom culture.
         alltheblocklythings:
           lesson_groups:
             lessonGroup-2:
@@ -8475,3 +8475,36 @@ en:
         csa-draft-pl:
           lessons: {}
           lesson_groups: {}
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Debugging Projects
+            lesson-4:
+              name: Inclusion Scenarios
+            lesson-5:
+              name: Closing
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous'
+          name: vpl-csd2-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 2
+          description_audience: ''
+          description_short: ''
+          description: |
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Extend their knowledge of debugging by looking at longer, more complex sections of code.
+            * Examine common classroom scenarios to reflect on threats to inclusion and belonging, and how to avoid them.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Extend your knowledge of debugging by looking at longer, more complex sections of code.
+            * Examine common classroom scenarios to reflect on threats to inclusion and belonging, and how to avoid them.
