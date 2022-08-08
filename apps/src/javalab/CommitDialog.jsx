@@ -9,6 +9,7 @@ import {connect} from 'react-redux';
 import _ from 'lodash';
 import CommitDialogBody from './CommitDialogBody';
 import {setCommitSaveStatus} from '@cdo/apps/javalab/javalabRedux';
+import {CompileStatus} from './constants';
 
 const PADDING = 8;
 
@@ -19,7 +20,8 @@ export class UnconnectedCommitDialog extends React.Component {
     commitNotes: '',
     backpackSaveInProgress: false,
     hasBackpackLoadError: false,
-    hasBackpackSaveError: false
+    hasBackpackSaveError: false,
+    compileStatus: CompileStatus.NONE
   };
 
   componentDidMount() {
@@ -28,11 +30,27 @@ export class UnconnectedCommitDialog extends React.Component {
     }
   }
 
-  // Get updated backpack file list every time we open the modal
   componentDidUpdate(prevProps) {
-    if (this.props.backpackEnabled && this.props.isOpen && !prevProps.isOpen) {
-      this.updateBackpackFileList();
+    if (this.props.isOpen && !prevProps.isOpen) {
+      // Re-compile code every time this dialog is opened
+      this.compileCode();
+
+      // Get updated backpack file list every time we open the modal if backpack is enabled
+      if (this.props.backpackEnabled) {
+        this.updateBackpackFileList();
+      }
     }
+  }
+
+  compileCode() {
+    // When the dialog opens, we will compile the user's files and notify them of success/errors.
+    // For now, this is mocked out to successfully compile after a set amount of time.
+    this.setState({
+      compileStatus: CompileStatus.LOADING
+    });
+    setTimeout(() => {
+      this.setState({compileStatus: CompileStatus.SUCCESS});
+    }, 500);
   }
 
   updateBackpackFileList() {
