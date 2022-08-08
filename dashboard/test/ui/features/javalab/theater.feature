@@ -1,5 +1,5 @@
 @eyes
-
+@skip
 # TODO: Re-enable when all the things level has been updated to the new Theater API
 Feature: Theater
 
