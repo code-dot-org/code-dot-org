@@ -2,7 +2,6 @@ import Dialog from '../../templates/Dialog';
 import PendingButton from '../../templates/PendingButton';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
@@ -56,7 +55,9 @@ class ConfirmImportButton extends React.Component {
 
   render() {
     return (
-      <span style={[{display: 'inline-block'}, this.props.containerStyle]}>
+      <span
+        style={{...{display: 'inline-block'}, ...this.props.containerStyle}}
+      >
         <input
           ref={input => (this.importFileInput = input)}
           type="file"
@@ -86,4 +87,4 @@ class ConfirmImportButton extends React.Component {
     );
   }
 }
-export default Radium(ConfirmImportButton);
+export default ConfirmImportButton;
