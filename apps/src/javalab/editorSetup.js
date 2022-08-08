@@ -3,7 +3,6 @@ import {
   drawSelection,
   highlightActiveLine,
   keymap,
-  EditorView,
   lineNumbers,
   rectangularSelection
 } from '@codemirror/view';
@@ -56,11 +55,11 @@ const editorSetup = [
 
 export {editorSetup};
 
-// The default light theme styles for codemirror
-export const lightTheme = EditorView.theme({}, {dark: false});
+// // The default light theme styles for codemirror
+// export const lightTheme = EditorView.theme({}, {dark: false});
 
-// Extension to enable the light theme (both the editor theme and the highlight style).
-export const lightMode = [
-  lightTheme,
-  syntaxHighlighting(defaultHighlightStyle)
-];
+// // Extension to enable the light theme (both the editor theme and the highlight style).
+// export const lightMode = [
+//   lightTheme,
+//   syntaxHighlighting(defaultHighlightStyle)
+// ];
