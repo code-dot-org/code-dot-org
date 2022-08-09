@@ -40,6 +40,7 @@ export const darkTheme = EditorView.theme(
       backgroundColor: selection
     },
     '.cm-panels': {backgroundColor: darkBackground, color: ivory},
+    '.cm-panels button': {color: color.lighter_gray},
     '.cm-panels.cm-panels-top': {borderBottom: '2px solid black'},
     '.cm-panels.cm-panels-bottom': {borderTop: '2px solid black'},
     '.cm-searchMatch': {
@@ -77,7 +78,8 @@ export const darkTheme = EditorView.theme(
         backgroundColor: highlightBackground,
         color: ivory
       }
-    }
+    },
+    '.cm-textfield': {color: color.lighter_gray}
   },
   {dark: true}
 );
