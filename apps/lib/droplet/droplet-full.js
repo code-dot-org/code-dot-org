@@ -15656,11 +15656,13 @@ exports.View = View = (function() {
   };
 
   View.prototype.clearMarks = function() {
-    var key, ref, val;
+    var key, ref, ref1, val;
     ref = this.marks;
     for (key in ref) {
       val = ref[key];
-      this.map[key].unmark();
+      if ((ref1 = this.map[key]) != null) {
+        ref1.unmark();
+      }
     }
     return this.marks = {};
   };
