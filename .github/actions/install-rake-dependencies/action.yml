@@ -1,6 +1,6 @@
 name: Rake dependencies installer
 jobs:
-description: 'Install Rake dependencies like npm'
+description: 'Runs rake install and rake build'
 runs:
   using: "composite"
   steps:
