@@ -53,4 +53,14 @@ class ProgrammingMethodTest < ActiveSupport::TestCase
     programming_method.seed_in_progress = true
     assert programming_method.valid?
   end
+
+  test "summarize for show summarizes overloads" do
+    programming_class = create :programming_class
+    programming_method = create :programming_method, programming_class: programming_class
+    create :programming_method, programming_class: programming_class, overload_of: programming_method.key
+    create :programming_method, programming_class: programming_class, overload_of: programming_method.key
+
+    summary = programming_method.summarize_for_show
+    assert_equal 2, summary[:overloads].length
+  end
 end

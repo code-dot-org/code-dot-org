@@ -91,6 +91,23 @@ def get_i18n_strings(level)
       end
     end
 
+    # rubric
+    if level.mini_rubric&.to_bool
+      rubric_properties = Hash.new
+      %w(
+        rubric_key_concept
+        rubric_performance_level_1
+        rubric_performance_level_2
+        rubric_performance_level_3
+        rubric_performance_level_4
+      ).each do |prop|
+        prop_value = level.try(prop)
+        rubric_properties[prop] = prop_value unless prop_value.nil?
+      end
+      i18n_strings['mini_rubric'] = Hash.new unless rubric_properties.empty?
+      i18n_strings['mini_rubric'].merge! rubric_properties
+    end
+
     # parse markdown properties for potential placeholder texts
     documents = []
     %w(
@@ -134,10 +151,15 @@ def get_i18n_strings(level)
 
       # Spritelab behaviors
       behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
-      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      unless behaviors.empty?
+        i18n_strings['behavior_names'] = Hash.new
+        i18n_strings['behavior_descriptions'] = Hash.new
+      end
       behaviors.each do |behavior|
         name = behavior.at_xpath('./title[@name="NAME"]')
+        description = behavior.at_xpath('./mutation/description')
         i18n_strings['behavior_names'][name.content] = name.content if name
+        i18n_strings['behavior_descriptions'][description.content] = description.content if description
       end
 
       ## Variable Names
@@ -172,6 +194,13 @@ def get_i18n_strings(level)
       %w[block_categories variable_names parameter_names].each do |type|
         i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
       end
+    end
+  end
+
+  if level.is_a? LevelGroup
+    i18n_strings["sublevels"] = {}
+    level.child_levels.map do |sublevel|
+      i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
     end
   end
 
@@ -286,7 +315,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if ScriptConstants.unit_in_category?(:hoc, script.name)
+        if Script.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")
@@ -418,7 +447,7 @@ end
 
 def redact_level_file(source_path)
   return unless File.exist? source_path
-  source_data = JSON.load(File.open(source_path))
+  source_data = JSON.parse(File.read(source_path))
   return if source_data.blank?
 
   redactable_data = source_data.map do |level_url, i18n_strings|
@@ -492,6 +521,7 @@ def localize_markdown_content
     curriculum/unplugged.md.partial
     educate/csc.md.partial
     educate/curriculum/csf-transition-guide.md
+    educate/it.md
     helloworld.md.partial
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial

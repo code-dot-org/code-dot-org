@@ -44,9 +44,10 @@ ________________
 <a id="landing"></a>
 ## Facilitator Landing Pages
 
-- <a href="https://curriculum.code.org/plcsf-21/", target=_"blank">CS Fundamentals Facilitator Landing Page</a> 
-- <a href="https://curriculum.code.org/plcsd-21/w", target=_"blank">CS Discoveries Facilitator Landing Page</a> 
-- <a href="https://curriculum.code.org/plcsp-21/", target=_"blank">CS Principles Facilitator Landing Page</a> 
+- <a href="https://code.org/educate/facilitator-landing/CSF", target=_"blank">CS Fundamentals Facilitator Landing Page</a> 
+- <a href="https://code.org/educate/facilitator-landing/CSD", target=_"blank">CS Discoveries Facilitator Landing Page</a> 
+- <a href="https://code.org/educate/facilitator-landing/CSP", target=_"blank">CS Principles Facilitator Landing Page</a>
+- <a href="https://code.org/educate/facilitator-landing/CSA", target=_"blank">CSA Facilitator Landing Page</a> 
 
 
 

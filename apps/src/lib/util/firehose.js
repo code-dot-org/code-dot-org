@@ -240,7 +240,9 @@ class FirehoseClient {
     const handleError = this.handleError.bind(this, data);
     if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed('Skipped sending record to ' + deliveryStreamName);
-      console.log(data);
+      if (!IN_UNIT_TEST) {
+        console.log(data);
+      }
       console.groupEnd();
       if (options.callback) {
         options.callback(null, data);
@@ -294,7 +296,9 @@ class FirehoseClient {
         'Skipped sending record batch to ' + deliveryStreamName
       );
       data.map(function(record) {
-        console.log(record);
+        if (!IN_UNIT_TEST) {
+          console.log(record);
+        }
       });
       console.groupEnd();
       return;
@@ -322,11 +326,19 @@ class FirehoseClient {
 /* eslint-disable */
 function createNewFirehose(AWS, Firehose) {
   var _0xr0t13 = function(message) {
-    return message.replace(/[a-z]/gi, letter => String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13)));
-  }
+    return message.replace(/[a-z]/gi, letter =>
+      String.fromCharCode(
+        letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13)
+      )
+    );
+  };
   const _0x12ed = [
-    _0xr0t13('\x4e\x58\x56\x4e\x4a\x35\x43\x35\x52\x52\x52\x59\x56\x49\x57\x55\x53\x44\x44\x49'),
-    _0xr0t13('\x71\x42\x2f\x7a\x37\x77\x32\x4f\x64\x4e\x36\x53\x45\x4b\x73\x47\x4f\x4d\x71\x52\x64\x48\x6a\x45\x47\x2f\x50\x2b\x33\x39\x35\x76\x72\x42\x62\x6f\x43\x69\x4b\x35'),
+    _0xr0t13(
+      '\x4e\x58\x56\x4e\x4a\x35\x43\x35\x52\x52\x52\x59\x56\x49\x57\x55\x53\x44\x44\x49'
+    ),
+    _0xr0t13(
+      '\x71\x42\x2f\x7a\x37\x77\x32\x4f\x64\x4e\x36\x53\x45\x4b\x73\x47\x4f\x4d\x71\x52\x64\x48\x6a\x45\x47\x2f\x50\x2b\x33\x39\x35\x76\x72\x42\x62\x6f\x43\x69\x4b\x35'
+    ),
     '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
     '\x63\x6f\x6e\x66\x69\x67'
   ];

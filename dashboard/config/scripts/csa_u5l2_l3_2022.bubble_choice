@@ -1,5 +1,5 @@
 name 'CSA U5L2-L3_2022'
-display_name 'Traversing2D Arrays'
+display_name 'Traversing 2D Arrays'
 description 'Implement standard 1D array algorithms for 2D arrays using the console or The Theater.'
 
 sublevels

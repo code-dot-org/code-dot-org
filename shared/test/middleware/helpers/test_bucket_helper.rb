@@ -1,4 +1,4 @@
-require_relative '../../test_helper'
+require_relative '../middleware_test_helper'
 require_relative '../../../middleware/helpers/bucket_helper'
 
 class BucketHelperTest < Minitest::Test
@@ -31,7 +31,7 @@ class BucketHelperTest < Minitest::Test
     mock_select.expects(:where).returns(mock_where).once
     mock_table = mock
     mock_table.expects(:select).returns(mock_select).once
-    DASHBOARD_DB.expects(:[]).with(:project_versions).returns(mock_table).once
+    DASHBOARD_DB.expects(:[]).with(:project_commits).returns(mock_table).once
     bucket_helper.expects(:storage_decrypt_channel_id).returns([1, 2])
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)
@@ -64,7 +64,7 @@ class BucketHelperTest < Minitest::Test
     mock_select.expects(:where).returns(mock_where).once
     mock_table = mock
     mock_table.expects(:select).returns(mock_select).once
-    DASHBOARD_DB.expects(:[]).with(:project_versions).returns(mock_table).once
+    DASHBOARD_DB.expects(:[]).with(:project_commits).returns(mock_table).once
     bucket_helper.expects(:storage_decrypt_channel_id).returns([1, 2])
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)

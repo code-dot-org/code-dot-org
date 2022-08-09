@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -154,7 +154,7 @@ export class LibraryManagerDialog extends React.Component {
     }
   };
 
-  fetchLatestLibrary = (channelId, callback) => {
+  fetchLatestLibrary = (channelId, callback, event) => {
     const {cachedClassLibraries} = this.state;
     const cachedLibrary = cachedClassLibraries.find(
       library => library.channelId === channelId
@@ -186,7 +186,8 @@ export class LibraryManagerDialog extends React.Component {
           },
           errorCallback
         ),
-      errorCallback
+      errorCallback,
+      event
     );
   };
 
@@ -207,8 +208,10 @@ export class LibraryManagerDialog extends React.Component {
     }
 
     const onUpdate = channelId => {
-      this.fetchLatestLibrary(channelId, lib =>
-        this.viewCode(lib, DisplayLibraryMode.UPDATE)
+      this.fetchLatestLibrary(
+        channelId,
+        lib => this.viewCode(lib, DisplayLibraryMode.UPDATE),
+        'update' /* event */
       );
     };
 
@@ -248,10 +251,18 @@ export class LibraryManagerDialog extends React.Component {
           key={library.channel}
           library={library}
           onAdd={() =>
-            this.fetchLatestLibrary(library.channel, this.addLibraryToProject)
+            this.fetchLatestLibrary(
+              library.channel,
+              this.addLibraryToProject,
+              'add' /* event */
+            )
           }
           onViewCode={() =>
-            this.fetchLatestLibrary(library.channel, this.viewCode)
+            this.fetchLatestLibrary(
+              library.channel,
+              this.viewCode,
+              'view' /* event */
+            )
           }
         />
       );
@@ -353,7 +364,7 @@ export class LibraryManagerDialog extends React.Component {
         >
           <h1 style={styles.header}>{i18n.libraryManage()}</h1>
           <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-          <h1 style={styles.header}>{i18n.libraryClassImport()}</h1>
+          <h2 style={styles.subHeader}>{i18n.libraryClassImport()}</h2>
           <div style={{textAlign: 'left'}}>
             <label style={{...styles.message, display: 'inline'}}>
               {i18n.showingLibrariesFromSection()}
@@ -372,7 +383,7 @@ export class LibraryManagerDialog extends React.Component {
             </select>
           </div>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-          <h1 style={styles.header}>{i18n.libraryIdImport()}</h1>
+          <h2 style={styles.subHeader}>{i18n.libraryIdImport()}</h2>
           <div style={styles.inputParent} id="ui-test-import-library">
             <input
               style={styles.linkBox}
@@ -384,7 +395,11 @@ export class LibraryManagerDialog extends React.Component {
               style={styles.add}
               onClick={() => {
                 this.setState({isLoading: true});
-                this.fetchLatestLibrary(importLibraryId, this.addLibraryById);
+                this.fetchLatestLibrary(
+                  importLibraryId,
+                  this.addLibraryById,
+                  'import' /* event */
+                );
               }}
               type="button"
               disabled={!importLibraryId}
@@ -408,7 +423,7 @@ const styles = {
   },
   linkBox: {
     cursor: 'auto',
-    height: '32px',
+    height: '22px',
     marginBottom: 0,
     flex: 1,
     maxWidth: 400
@@ -418,8 +433,13 @@ const styles = {
     fontSize: 24,
     marginTop: 20
   },
+  subHeader: {
+    textAlign: 'left',
+    fontSize: 18,
+    margin: DEFAULT_MARGIN
+  },
   libraryList: {
-    maxHeight: '140px',
+    maxHeight: '200px',
     overflowY: 'auto',
     borderBottom: `2px solid ${color.purple}`
   },
@@ -437,6 +457,8 @@ const styles = {
   },
   add: {
     margin: DEFAULT_MARGIN,
+    fontSize: 16,
+    padding: DEFAULT_MARGIN,
     color: color.dark_charcoal,
     borderColor: color.dark_charcoal,
     ':disabled': {
@@ -452,7 +474,7 @@ const styles = {
     color: color.red,
     textAlign: 'left',
     margin: DEFAULT_MARGIN,
-    minHeight: 30,
+    minHeight: 18,
     whiteSpace: 'pre-wrap',
     lineHeight: 1
   },

@@ -135,8 +135,6 @@ class LessonsController < ApplicationController
       # available to lessons in migrated scripts, which only need to be
       # serialized using the new json format.
       @lesson.script.write_script_json
-
-      Script.merge_and_write_i18n(@lesson.i18n_hash, @lesson.script.name)
     end
 
     render json: @lesson.summarize_for_lesson_edit

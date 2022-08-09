@@ -1,12 +1,12 @@
 name 'CSA U6L3-L5v2_2022'
 title 'Check for Understanding'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`population.length();`'
+wrong '`population.total();`'
+right '`population.size();`'
+wrong '`size(population);`'
+wrong '`length(population);`'
 
 markdown <<MARKDOWN
-question
+Which of the following correctly returns the total number of elements in the `ArrayList` `population`?
 MARKDOWN

@@ -6,8 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -16,6 +15,7 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import FontAwesome from '../../../templates/FontAwesome';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -31,8 +31,7 @@ class UnitOverviewTopRow extends React.Component {
   static propTypes = {
     assignedSectionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -111,7 +110,6 @@ class UnitOverviewTopRow extends React.Component {
       viewAs,
       isRtl,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       showAssignButton,
       assignedSectionId,
@@ -124,8 +122,6 @@ class UnitOverviewTopRow extends React.Component {
       courseOfferingId,
       courseVersionId
     } = this.props;
-
-    const useMigratedTeacherResources = isMigrated && !teacherResources.length;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
@@ -155,9 +151,8 @@ class UnitOverviewTopRow extends React.Component {
             />
             {studentResources.length > 0 && (
               <ResourcesDropdown
-                migratedResources={studentResources}
+                resources={studentResources}
                 unitId={scriptId}
-                useMigratedResources={true}
                 studentFacing
               />
             )}
@@ -176,20 +171,23 @@ class UnitOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Instructor &&
-            ((!useMigratedTeacherResources && teacherResources.length > 0) ||
-              (useMigratedTeacherResources &&
-                migratedTeacherResources.length > 0)) && (
+            (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
                 resources={teacherResources}
-                migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources={useMigratedTeacherResources}
               />
             )}
           {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
-                text={i18n.printingOptions()}
+                customText={
+                  <div>
+                    <FontAwesome icon="print" style={styles.icon} />
+                    <span style={styles.customText}>
+                      {i18n.printingOptions()}
+                    </span>
+                  </div>
+                }
                 color={Button.ButtonColor.blue}
               >
                 {pdfDropdownOptions.map(option => (
@@ -249,6 +247,17 @@ const styles = {
   buttonsInRow: {
     display: 'flex',
     alignItems: 'center'
+  },
+  customText: {
+    margin: '0px 2px'
+  },
+  icon: {
+    margin: '0px 2px',
+    fontSize: 16,
+    // we want our icon text to be a different size than our button text, which
+    // requires we manually offset to get it centered properly
+    position: 'relative',
+    top: 1
   },
   right: {
     position: 'absolute',

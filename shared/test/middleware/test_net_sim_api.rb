@@ -5,11 +5,11 @@
 # Caution: This test is destructive, clears the whole Redis instance between
 # tests, so be careful when using real redis.
 
-require_relative '../test_helper'
+require_relative 'middleware_test_helper'
 require 'fakeredis' unless use_real_redis?
 require 'redis-slave-read'
 require 'net_sim_api'
-require_relative '../spy_pub_sub_api'
+require_relative 'spy_pub_sub_api'
 
 class NetSimApiTest < Minitest::Test
   include SetupTest
@@ -653,7 +653,6 @@ class NetSimApiTest < Minitest::Test
         }
       }
     )
-
   ensure
     delete_node(node_a['id'])
     delete_node(node_b['id'])
@@ -716,7 +715,6 @@ class NetSimApiTest < Minitest::Test
     refute record_exists(TABLE_NAMES[:node], node_a['id'])
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
     refute record_exists(TABLE_NAMES[:node], node_c['id'])
-
   ensure
     delete_node(node_a['id'])
     delete_node(node_b['id'])

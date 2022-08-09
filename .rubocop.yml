@@ -1,25 +1,29 @@
 inherit_from:
   - .rubocop_hound.yml
+  - .rubocop_new.yml
   - .rubocop_todo.yml
 
+require:
+  - rubocop-performance
+  - rubocop-rails
+
 AllCops:
+  SuggestExtensions: false
   Exclude:
     - 'apps/**/*'
     - 'dashboard/db/schema.rb'
     - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
 
 Rails:
   Enabled: true
+  Include:
+    - dashboard/**/* # only run Rails cops on Rails-specific code
 
 # BEGIN CODE.ORG OVERRIDES
 
-Rails/Delegate:
-  Include:
-    - dashboard/**/*
-
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
 Layout/DotPosition:
@@ -70,7 +74,7 @@ Metrics/AbcSize:
 Metrics/BlockNesting:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Metrics/ModuleLength:
@@ -80,9 +84,6 @@ Style/AsciiComments:
   Enabled: false
 
 Style/BarePercentLiterals:
-  Enabled: false
-
-Style/BracesAroundHashParameters:
   Enabled: false
 
 Layout/ClosingParenthesisIndentation:

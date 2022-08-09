@@ -1,17 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {
   NavigationBar,
   NavigationCategory,
   NavigationItem
 } from '@cdo/apps/templates/NavigationBar';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
-
-const baseUrl = window.location.href
-  .split('/')
-  .slice(0, -1)
-  .join('/');
+import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
 
 const referenceGuideShape = PropTypes.shape({
   display_name: PropTypes.string,
@@ -20,7 +15,11 @@ const referenceGuideShape = PropTypes.shape({
   parent_reference_guide_key: PropTypes.string
 });
 
-export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
+export default function ReferenceGuideView({
+  referenceGuide,
+  referenceGuides,
+  baseUrl
+}) {
   let rootCategory = referenceGuide;
   while (rootCategory.parent_reference_guide_key !== null) {
     rootCategory = referenceGuides.find(
@@ -63,7 +62,7 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
             </NavigationCategory>
           ))}
         </NavigationBar>
-        <EnhancedSafeMarkdown markdown={referenceGuide.content} />
+        <ReferenceGuide referenceGuide={referenceGuide} />
       </div>
     </>
   );
@@ -71,5 +70,6 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
 
 ReferenceGuideView.propTypes = {
   referenceGuide: referenceGuideShape.isRequired,
-  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired
+  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
+  baseUrl: PropTypes.string.isRequired
 };

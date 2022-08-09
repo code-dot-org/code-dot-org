@@ -59,6 +59,10 @@ function UnassignSectionButton({
 
   const closeUnassignDialog = () => {
     setShowUnassignDialog(false);
+  };
+
+  const cancelUnassign = () => {
+    closeUnassignDialog();
     firehoseSendRecord(FIREHOSE_CANCEL_EVENT);
   };
 
@@ -106,6 +110,7 @@ function UnassignSectionButton({
         courseName={courseName}
         sectionName={sectionName}
         onClose={closeUnassignDialog}
+        cancelUnassign={cancelUnassign}
         unassignSection={confirmUnassign}
       />
     </div>

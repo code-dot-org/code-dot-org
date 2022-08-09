@@ -6,7 +6,7 @@
     "self-paced-pl-csp3-2021",
     "self-paced-pl-csp4-2021"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "universal_instructor",

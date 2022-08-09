@@ -27,7 +27,6 @@ describe('the level builder page init script', () => {
         participantAudience: 'student'
       },
       i18n: {
-        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:

@@ -1,13 +1,12 @@
-class Api::V1::SectionLibrariesController < Api::V1::JsonApiController
+class Api::V1::SectionLibrariesController < Api::V1::JSONApiController
   before_action :authenticate_user!
-  check_authorization unless: :no_sections?
+  check_authorization unless: :no_active_sections?
 
-  # gets the libraries from all members of all sections I am a part of
+  # gets the libraries from all members of all active sections I am a part of
   # GET api/v1/section_libraries
   def index
-    sections = current_user.sections + current_user.sections_as_student
     libraries = []
-    sections.each do |section|
+    active_sections.each do |section|
       authorize! :list_projects, section
       libraries += ProjectsList.fetch_section_libraries(section)
     end
@@ -16,7 +15,12 @@ class Api::V1::SectionLibrariesController < Api::V1::JsonApiController
 
   private
 
-  def no_sections?
-    current_user.sections.empty? && current_user.sections_as_student.empty?
+  def no_active_sections?
+    active_sections.empty?
+  end
+
+  def active_sections
+    sections = current_user.sections + current_user.sections_as_student
+    sections.select {|section| !section.hidden}
   end
 end

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-timecapsule",
-    "serialized_at": "2022-04-22 20:48:10 UTC",
+    "serialized_at": "2022-04-27 17:06:22 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -337,11 +337,23 @@
       }
     },
     {
-      "key": "6ccfe050-d23a-4a71-8c38-71318c504156",
+      "key": "9b2a9bb9-b6b1-4fc3-8d0d-85c59a5748d0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Meaning with Images and Sounds\" video\n\n####General Support\nBy the end of this activity, students will have an animated poem that represents their visual interpretation of the poem they chose. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the poem. Staying on a level and tinkering with their code is highly encouraged. \n- **Find a poem you like:** The poem that displays for a student at a new level is just a suggestion. There is a poem dropdown menu with pre-loaded poems at the top of the playspace. Ask students to read through a few and find one that speaks to them. They can then start animating the poem they chose with code. \n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n",
-        "name": "Poem Art"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Meaning with Images and Sounds\" video\n",
+        "name": "Poem Art",
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b2a9bb9-b6b1-4fc3-8d0d-85c59a5748d0",
+        "lesson_activity.key": "f7eb5cd6-1191-4183-b7d9-2a6e041c8949"
+      }
+    },
+    {
+      "key": "6ccfe050-d23a-4a71-8c38-71318c504156",
+      "position": 2,
+      "properties": {
+        "description": "####General Support\nBy the end of this activity, students will have an animated poem that represents their visual interpretation of the poem they chose. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the poem. Staying on a level and tinkering with their code is highly encouraged. \n- **Find a poem you like:** The poem that displays for a student at a new level is just a suggestion. There is a poem dropdown menu with pre-loaded poems at the top of the playspace. Ask students to read through a few and find one that speaks to them. They can then start animating the poem they chose with code. \n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n"
       },
       "seeding_key": {
         "activity_section.key": "6ccfe050-d23a-4a71-8c38-71318c504156",
@@ -350,7 +362,7 @@
     },
     {
       "key": "45e15f48-7c01-40ba-95fe-8bb6c9c8a160",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "####Level-by-Level Support (40 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “All Levels\" slide\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
         "progression_name": "Skill Building"
@@ -362,7 +374,7 @@
     },
     {
       "key": "66257728-c587-4445-83be-bbd8f3d74c85",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. ",
         "progression_name": "Example"
@@ -374,7 +386,7 @@
     },
     {
       "key": "c1dc904c-df0b-4a9e-930b-a3509280a5fd",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Level 3:** This level introduces sound. Students can use headphones if they have them. ",
         "progression_name": "Skill Building"
@@ -386,7 +398,7 @@
     },
     {
       "key": "512ba8f0-75a7-420b-ba8a-f7b78a1f435d",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Level 4:** Ask students to read the poem and find the line where the poem’s mood shifts or if there is a new image that the poet introduces. Use the event block to add corresponding effects to the identified lines of the poem.",
         "progression_name": "Skill Building"
@@ -398,7 +410,7 @@
     },
     {
       "key": "e118bf6c-40d9-4816-a6de-bab8bae163e5",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Level 5:** In this exemplar, students should read the poem on their own first, then press Run. Ask the student whether the images matched the words of the poem. Ask them to elaborate on their answer. ",
         "progression_name": "Example"
@@ -410,7 +422,7 @@
     },
     {
       "key": "c1d9bb08-0bbe-48c0-a51e-8632dfd21b78",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Levels 6, 7, 8:** See “Celebrate bugs” under the General Support section. Encourage students to build programs with more than one transition with their event blocks. ",
         "progression_name": "Skill Building"
@@ -422,7 +434,7 @@
     },
     {
       "key": "bec31486-4723-4c0f-843b-65ed0765a857",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Level 9:** Encourage students to read through all the poems in the dropdown menu to find one they like. Tell students that they can share what they make in this final level with their friends and family. Now is the time to put all the coding and ELA skills together! ",
         "progression_name": "Free Play"
@@ -434,7 +446,7 @@
     },
     {
       "key": "4f2ab4a8-68ea-4533-a667-58eedf2edcba",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Great work! What’s next?\" slide\n"
       },
@@ -562,7 +574,7 @@
       "key": "bdf5951b-6c1f-48b9-80b6-6f33accb8a6d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story: Example” slide\n\n**Say**: _Before you begin writing your time capsule story, we are going to look at an example. This is the same story we saw at the beginning of class. Just like this student, before you begin coding, you are going to write out each line of your story._\n\n_Title: A New World_\n\n_By: Nate M._ \n\n_1. When our school closed its doors_\n\n_2. And we went home to learn_ \n\n_3. I felt very alone_\n\n_4. But then I got really into Minecraft_ \n\n_5. And played Roblox with my friends!_\n\n_6. And now I'm back in school_\n\n_7. Where other people like games, too_\n\n_8. And I have so many more friends now!_\n\n**Do This**: Read the example time capsule story aloud to students. Make sure students recognize that it is the same story from the example app at the beginning of class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story” slide\n\n**Say**: _Now you will take what you said to your partner and use it to write your time capsule story. Your story should have 5-8 lines, at least three different pieces of information about you, and clear details that describe life through your eyes._\n\n**Do This**: Hand out the Write Your Own Story worksheet and have students complete it independently for the next 15 minutes. Make sure students can see the connection between their responses to the seven questions and their time capsule story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Visualize Your Story” slide\n\n**Say**: _Now that we’ve finished writing our stories, it is time to plan out what our apps will look like. You are going to circle words or phrases from your story that you can enhance using visual effects, sounds, or images._ \n\n_What words or phrases did this student circle? How did he represent those words or phrases in his time capsule app?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story: Example” slide\n\n**Say**: _Before you begin writing your time capsule story, we are going to look at an example. This is the same story we saw at the beginning of class. Just like this student, before you begin coding, you are going to write out each line of your story._\n\n_Title: A New World_\n\n_By: Nate M._ \n\n_1. When our school closed its doors_\n\n_2. And we went home to learn_ \n\n_3. I felt very alone_\n\n_4. But then I got really into Minecraft_ \n\n_5. And played Roblox with my friends!_\n\n_6. And now I'm back in school_\n\n_7. Where other people like games, too_\n\n_8. And I have so many more friends now!_\n\n**Do This**: Read the example time capsule story aloud to students. Make sure students recognize that it is the same story from the example app at the beginning of class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story” slide\n\n**Say**: _Now you will take what you said to your partner and use it to guide your writing as you craft an original time capsule story. Your story should have 5-8 lines, at least three different pieces of information about you, and clear details that describe life through your eyes_\n\n**Do This**: Hand out the Write Your Own Story worksheet and have students complete it independently for the next 15 minutes. Make sure students can see the connection between their responses to the seven questions and their time capsule story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Visualize Your Story” slide\n\n**Say**: _Now that we’ve finished writing our stories, it is time to plan out what our apps will look like. You are going to circle words or phrases from your story that you can enhance using visual effects, sounds, or images._ \n\n_What words or phrases did this student circle? How did he represent those words or phrases in his time capsule app?_\n",
         "duration": "20",
         "name": "Write Your Time Capsule"
       },
@@ -575,7 +587,7 @@
       "key": "cf09367c-cbe3-4fe6-9e30-473ee06fb7cc",
       "position": 4,
       "properties": {
-        "description": "\n\n![](https://images.code.org/6ad5e7ded8c8122f7a79a35e58097621-Screen Shot 2022-04-21 at 1.29.45 PM.png)"
+        "description": "\n\n\n![](https://images.code.org/595afd9736ea14fe4f54aa3a6db8ef13-Screen Shot 2022-04-27 at 12.52.25 PM.png)"
       },
       "seeding_key": {
         "activity_section.key": "cf09367c-cbe3-4fe6-9e30-473ee06fb7cc",
@@ -729,6 +741,7 @@
       "key": "fc14eb35-1a91-4c5b-9a9e-e3f14ad52532",
       "position": 5,
       "properties": {
+        "progression_name": "My Time Capsule"
       },
       "seeding_key": {
         "activity_section.key": "fc14eb35-1a91-4c5b-9a9e-e3f14ad52532",
@@ -781,7 +794,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**For remote teaching**: This activity requires students to be able to see each other’s work. If students are not able to physically walk around to different computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button and post the link on a shared space, like the “Student URL Sharing Document”. Students can keep adding more to their projects even after they have shared their project link."
+            "markdown": "**For remote teaching**: This activity requires students to be able to see each other’s work. If students are not able to physically walk around to different computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button and post the provided link on a shared space, like the “Student URL Sharing Document”. (NOTE: Make sure students click the \"Share\" button on their project and not the link in their browser's address bar.) Students can keep adding more to their projects even after they have shared their project link."
           }
         ]
       },
@@ -802,8 +815,24 @@
       }
     },
     {
-      "key": "c95f2acd-ebe7-4eb8-9a2f-eca98b4cd23e",
+      "key": "593b1067-128a-4f3a-bf46-2c9b17cdea72",
       "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There is an optional [Sticky Notes Handout](https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview) with sentence stems that you can print out and cut into slips for students to use during the Gallery Walk. This way students do not have to spend time writing out the sentence stems each time, and can devote more of their energy on experiencing the different projects."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "593b1067-128a-4f3a-bf46-2c9b17cdea72",
+        "lesson_activity.key": "2f967266-5997-4329-95b6-a4eee6420850"
+      }
+    },
+    {
+      "key": "c95f2acd-ebe7-4eb8-9a2f-eca98b4cd23e",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What images and sounds did you see on your classmates’ apps?* \\\n*2. How were their stories different from yours?* \\\n*3. How were their stories similar to yours?* \\\n*4. How did their images make you feel?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**:  The goal is for students to understand how their stories and visual effects are similar to or different from their classmates stories. They should also note how different images and sounds made them feel.",
         "duration": "10",
@@ -835,9 +864,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-poem-art-intro-video-level"
-        ]
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -847,7 +874,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "4e626245-ad07-4497-83c5-18757bd19640"
+        "activity_section.key": "9b2a9bb9-b6b1-4fc3-8d0d-85c59a5748d0"
       },
       "level_keys": [
         "csc-poem-art-intro-video-level"
@@ -1110,7 +1137,8 @@
       "properties": {
         "level_keys": [
           "timecapsule_freeplay"
-        ]
+        ],
+        "progression": "My Time Capsule"
       },
       "bonus": false,
       "seeding_key": {
@@ -1137,7 +1165,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "4e626245-ad07-4497-83c5-18757bd19640"
+        "activity_section.key": "9b2a9bb9-b6b1-4fc3-8d0d-85c59a5748d0"
       }
     },
     {
@@ -1274,6 +1302,18 @@
     }
   ],
   "resources": [
+    {
+      "name": "[Optional] Gallery Walk Sticky Notes",
+      "url": "https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview",
+      "key": "_optional_gallery_walk_sticky_notes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_gallery_walk_sticky_notes"
+      }
+    },
     {
       "name": "[Optional] Student URL Sharing Document",
       "url": "https://docs.google.com/document/d/1HlFPpKoyqO6KM0CsZsxtKDQSzqLgIgnaP9bpFQOi72o/template/preview",
@@ -1443,6 +1483,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "time_capsule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_optional_gallery_walk_sticky_notes"
       }
     },
     {

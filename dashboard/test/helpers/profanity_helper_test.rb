@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class ProfanityHelperTest < ActionView::TestCase
+  setup do
+    # A list of keys used by our shared cache that should be cleared between every test.
+    CDO.shared_cache.delete_matched(ProfanityHelper::PROFANITY_PREFIX)
+  end
+
   test 'throttled_find_profanities: yields profanities if cached' do
     CDO.shared_cache.expects(:exist?).returns(true)
     expected_profanities = ['bad']

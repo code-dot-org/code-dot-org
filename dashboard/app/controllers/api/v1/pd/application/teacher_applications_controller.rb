@@ -20,12 +20,16 @@ module Api::V1::Pd::Application
       end
 
       status = params[:status]
+      previous_status = @application.status
       if status
         @application.status = status
       end
 
       if @application.save
         render json: @application, status: :ok
+
+        # send confirmation email only if user is submitting their application for the first time
+        on_successful_create if previous_status == 'incomplete' && status == 'unreviewed'
       else
         return render json: {errors: @application.errors.full_messages}, status: :bad_request
       end

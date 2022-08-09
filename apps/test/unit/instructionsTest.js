@@ -281,6 +281,8 @@ describe('instructions', () => {
             levelVideos: undefined,
             mapReference: undefined,
             referenceLinks: undefined,
+            muteBackgroundMusic: undefined,
+            unmuteBackgroundMusic: undefined,
             programmingEnvironment: undefined
           });
         });
@@ -314,6 +316,8 @@ describe('instructions', () => {
             levelVideos: undefined,
             mapReference: undefined,
             referenceLinks: undefined,
+            muteBackgroundMusic: undefined,
+            unmuteBackgroundMusic: undefined,
             programmingEnvironment: undefined
           });
         }
@@ -405,6 +409,8 @@ describe('instructions', () => {
           levelVideos: ['notEmpty'],
           mapReference: undefined,
           referenceLinks: undefined,
+          muteBackgroundMusic: undefined,
+          unmuteBackgroundMusic: undefined,
           programmingEnvironment: undefined
         });
       });
@@ -433,6 +439,8 @@ describe('instructions', () => {
           levelVideos: undefined,
           mapReference: '/test/abc.html',
           referenceLinks: undefined,
+          muteBackgroundMusic: undefined,
+          unmuteBackgroundMusic: undefined,
           programmingEnvironment: undefined
         });
       });
@@ -461,6 +469,8 @@ describe('instructions', () => {
           levelVideos: undefined,
           mapReference: undefined,
           referenceLinks: ['/test/alpha.html', '/test/beta.html'],
+          muteBackgroundMusic: undefined,
+          unmuteBackgroundMusic: undefined,
           programmingEnvironment: undefined
         });
       });

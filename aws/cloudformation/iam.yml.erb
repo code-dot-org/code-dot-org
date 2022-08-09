@@ -242,6 +242,9 @@ Resources:
               - 'arn:aws:s3:::cdo-data-sharing-internal'
               - 'arn:aws:s3:::cdo-census/*'
               - 'arn:aws:s3:::cdo-census'
+              - 'arn:aws:s3:::cdo-nces/*'
+              - 'arn:aws:s3:::cdo-nces'
+
   DataAnalystDmsReadOnlyPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -276,6 +279,7 @@ Resources:
               - dms:DescribeReplicationTaskAssessmentRuns
               - dms:DescribeTableStatistics
             Resource: "*"
+
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:

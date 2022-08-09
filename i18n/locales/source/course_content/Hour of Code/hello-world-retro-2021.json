@@ -68,6 +68,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/hello-world-retro-2021/lessons/1/levels/6": {
@@ -100,6 +116,25 @@
       "moving east and looping": "moving east and looping",
       "moving north and looping": "moving north and looping",
       "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
     }
   },
   "https://studio.code.org/s/hello-world-retro-2021/lessons/1/levels/7": {
@@ -127,6 +162,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/hello-world-retro-2021/lessons/1/levels/8": {
@@ -173,6 +222,25 @@
       "moving east and looping": "moving east and looping",
       "moving north and looping": "moving north and looping",
       "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
     }
   },
   "https://studio.code.org/s/hello-world-retro-2021/lessons/1/levels/10": {
@@ -204,6 +272,25 @@
       "moving east and looping": "moving east and looping",
       "moving north and looping": "moving north and looping",
       "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
     }
   },
   "https://studio.code.org/s/hello-world-retro-2021/lessons/1/levels/11": {

@@ -18,6 +18,7 @@ When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, d
   drag_block_relative(get_block_id(block_id), dx, dy)
 end
 
+# Note: this is an offset relative to the current position of the block
 When /^I begin to drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |from, dx, dy|
   id_selector = get_id_selector
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(from)}']\").simulate( 'drag', {skipDrop: true, handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")

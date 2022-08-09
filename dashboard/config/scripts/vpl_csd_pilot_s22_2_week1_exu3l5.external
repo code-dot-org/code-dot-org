@@ -5,15 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 1 - 5 
 
-##### Review the lesson overviews from the first five lessons. Summarize the key learning from the first five lessons and connect this to the learning throughout the unit. Highlight how the start of the unit sets students up for success later in the unit. 
-
-## Key terms used throughout the Animations and Games unit
-
-* ##### **Parameter** - Additional information provided as input to a block to customize it's functionality.
-* ##### **Variable** - A label for a piece of information used in a program.
-* ##### **Sprite** - A character on the screen with properties that describe its location, movement, and look.
-* ##### **Counter Pattern** - Incrementally or decrementally changing a sprite's properties.
-
+##### The first few lessons of the unit help students build foundational knowledge that they will continue to draw upon as they move through the unit. 
 
 ## Overview of Lessons 1 - 5
 
@@ -22,9 +14,7 @@ markdown <<MARKDOWN
 <details>
 <summary><strong>Lesson 1: Programming for Entertainment </strong></summary>
 
-<img src="https://images.code.org/08cd739e507de5efd22534cb26e422cd-image-1648853799260.JPG" alt="Image of Canvas Stamp App" width="200px" style="float:left; margin: 0 0 10px 10px;  padding-right: 10px;">
-
-<img src="https://images.code.org/c3cecc70d194d4998072d372685efd5d-image-1648858391813.JPG" alt="Image of Alien Game in Game Lag" width="200px" style="float:left; margin: 0 0 10px 10px;  padding-right: 30px;">
+<img src="https://images.code.org/c3cecc70d194d4998072d372685efd5d-image-1648858391813.JPG" alt="Image of Alien Game in Game Lag" width="225px" style="float:left; margin: 0 0 10px 10px;  padding-right: 30px;">
 
 **Question of the Day:** How is computer science used in entertainment?
 
@@ -49,7 +39,7 @@ Students are asked to consider the "problems" of boredom and self expression, an
 
 **Lesson Overview:**
 
-Students explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own image to communicate before a debrief discussion.
+Students explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. 
 
 **Students will be able to:** 
 * Communicate how to draw an image in Game Lab, accounting for shape position, color, and order

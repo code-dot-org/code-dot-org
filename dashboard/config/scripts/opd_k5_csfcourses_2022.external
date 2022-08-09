@@ -37,12 +37,12 @@ Computer Science Fundamentals is designed for elementary school educators and st
     </th>
   </tr>
   <tr>
-    <td style="background-color:#f9cb9c; text-align:center;color:black; border-style:none; vertical-align: text-top;"">13 lessons<br></br>~13 hours to complete</td>
-    <td style="background-color:#ffe599; text-align:center; color:black; border-style:none; vertical-align: text-top;"">13 lessons<br></br>~13 hours to complete</td>
-    <td style="background-color:#d2da0e; text-align:center; color:black; border-style:none; vertical-align: text-top;"">16 lessons<br></br>~16 hours to complete</td>
-    <td style="background-color:#68ebf5; text-align:center; color:black; border-style:none; vertical-align: text-top;"">17 lessons<br></br>~17 hours to complete</td>
-    <td style="background-color:#9ed7ed; text-align:center; color:black; border-style:none; vertical-align: text-top;"">18 lessons<br></br>~18-20 hours to complete</td>
-    <td style="background-color:#c9c1e9; text-align:center; color:black; border-style:none; vertical-align: text-top;"">20 lessons<br></br>~20-22 hours to complete</td>
+    <td style="background-color:#f9cb9c; text-align:center;color:black; border-style:none; vertical-align: text-top;"">13 lessons<br></br></td>
+    <td style="background-color:#ffe599; text-align:center; color:black; border-style:none; vertical-align: text-top;"">13 lessons<br></br></td>
+    <td style="background-color:#d2da0e; text-align:center; color:black; border-style:none; vertical-align: text-top;"">16 lessons<br></br></td>
+    <td style="background-color:#68ebf5; text-align:center; color:black; border-style:none; vertical-align: text-top;"">17 lessons<br></br></td>
+    <td style="background-color:#9ed7ed; text-align:center; color:black; border-style:none; vertical-align: text-top;"">17 lessons<br></br></td>
+    <td style="background-color:#c9c1e9; text-align:center; color:black; border-style:none; vertical-align: text-top;"">16 lessons<br></br></td>
   </tr>
   <tr>
     <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">Concepts</td>
@@ -82,15 +82,15 @@ Computer Science Fundamentals is designed for elementary school educators and st
         <li>Digital Citizenship</li>
         <li>Sequencing</li>
         <li>Events</li>
-        <li>Nest Loops</li>
+        <li>Loops</li>
         <li>Conditionals</li>
         <li>End of Course Project</li>
       </ul>
     </td>
     <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li>Sprites</li>
         <li>Digital Citizenship</li>
+        <li>Sprites</li>
         <li>Nested Loops</li>
         <li>Functions</li>
         <li>Conditionals</li>
@@ -100,10 +100,9 @@ Computer Science Fundamentals is designed for elementary school educators and st
     </td>
     <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-         <li>Sprites</li>
-        <li>Digital Citizenship</li>
+         <li>Digital Citizenship</li>
+        <li>Sprites</li>
         <li>Variables</li>
-        <li>For Loops</li>
          <li>Data & Simulations</li>
         <li>End of Course Project</li>
         </ul>
@@ -111,7 +110,7 @@ Computer Science Fundamentals is designed for elementary school educators and st
 </table>
 <br/>
 
-**Note:**  For more information about each course, check out the <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="blank" rel="noopener noreferrer">Computer Science Fundamentals Curriculum Guide</a>.
+**Note:**  For more information about each course, check out the <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="blank" rel="noopener noreferrer">Computer Science Fundamentals Curriculum Guide</a>.
 
 
 

@@ -79,6 +79,8 @@ Scenario: Javalab with free response contained level
   And I see no difference for "answer entered" using stitch mode "none"
   Then I press "runButton"
   And I see no difference for "level run" using stitch mode "none"
+  # Wait until we see at least one message on the console, this means the program saved.
+  And I wait until element ".javalab-console" contains text "[JAVALAB]"
 
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission

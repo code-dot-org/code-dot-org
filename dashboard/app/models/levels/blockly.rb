@@ -383,7 +383,7 @@ class Blockly < Level
 
       if is_a?(Maze) && step_mode
         step_mode_value = JSONValue.value(step_mode)
-        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['step'] = [1, 2].include?(step_mode_value)
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
@@ -801,9 +801,16 @@ class Blockly < Level
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
 
-      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name|
-        localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
-        name.content = localized_name if localized_name
+      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name_element|
+        localized_name = I18n.t(name_element.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        name_element.content = localized_name if localized_name
+
+        mutation.xpath('.//description').each do |description|
+          # Using name_element['id'] so we still access the correct translation key even if the
+          # content has been translated in a previous step
+          localized_description = I18n.t(name_element['id'], scope: [:data, :behavior_descriptions, name], default: nil, smart: true)
+          description.content = localized_description if localized_description
+        end
       end
     end
 

@@ -104,7 +104,8 @@ const styles = {
   },
   controlIcon: {
     margin: '0 5px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontSize: 20
   },
   previewContainer: {
     color: color.default_text

@@ -45,7 +45,7 @@ export default function ExampleEditor({example, updateExample}) {
         />
       </label>
       <ImageInput
-        imageUrl={example.image}
+        initialImageUrl={example.image}
         updateImageUrl={img => updateExample('image', img)}
       />
       <label>

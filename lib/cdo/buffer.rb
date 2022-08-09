@@ -118,7 +118,7 @@ module Cdo
     BufferObject = Struct.new(:object, :added_at)
 
     def now
-      Concurrent.monotonic_time
+      Process.clock_gettime(Process::CLOCK_MONOTONIC)
     end
 
     # Schedule a flush in the future when the next batch is ready.

@@ -15,7 +15,8 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  assignedUnitLessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable,
+  assignedUnitRequiresVerifiedInstructor
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -27,6 +28,8 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
+import GetVerifiedBanner from './GetVerifiedBanner';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -53,6 +56,8 @@ class EditSectionForm extends Component {
     assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
+    assignedUnitRequiresVerifiedInstructor: PropTypes.bool,
+    isVerifiedInstructor: PropTypes.bool,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
 
@@ -140,11 +145,17 @@ class EditSectionForm extends Component {
       handleClose,
       assignedUnitLessonExtrasAvailable,
       assignedUnitTextToSpeechEnabled,
+      assignedUnitRequiresVerifiedInstructor,
       assignedUnitName,
       localeCode,
       isNewSection,
-      showLockSectionField // DCDO Flag - show/hide Lock Section field
+      showLockSectionField,
+      isVerifiedInstructor // DCDO Flag - show/hide Lock Section field
     } = this.props;
+
+    const courseDisplayName = section.courseOfferingId
+      ? courseOfferings[section.courseOfferingId].display_name
+      : '';
 
     /**
     OAuth and personal email login types can not be changed.
@@ -192,11 +203,13 @@ class EditSectionForm extends Component {
             onChange={name => editSectionProperties({name})}
             disabled={isSaveInProgress}
           />
-          <GradeField
-            value={section.grade || ''}
-            onChange={grade => editSectionProperties({grade})}
-            disabled={isSaveInProgress}
-          />
+          {section.participantType === ParticipantAudience.student && (
+            <GradeField
+              value={section.grade || ''}
+              onChange={grade => editSectionProperties({grade})}
+              disabled={isSaveInProgress}
+            />
+          )}
           {showLoginTypeField && (
             <LoginTypeField
               value={section.loginType}
@@ -212,6 +225,11 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
             isNewSection={isNewSection}
           />
+          {!isVerifiedInstructor &&
+            assignedUnitRequiresVerifiedInstructor &&
+            courseDisplayName && (
+              <GetVerifiedBanner courseName={courseDisplayName} />
+            )}
           {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
               value={section.lessonExtras}
@@ -373,7 +391,16 @@ const AssignmentField = ({
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
-    <FieldDescription>{i18n.whichCourse()}</FieldDescription>
+    <FieldDescription>
+      {i18n.whichCourse()}
+      <a
+        href="https://support.code.org/hc/en-us/articles/204874337-What-happens-when-I-assign-a-course-to-a-section-Can-I-assign-2-at-once-"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {i18n.explainCourseAssignmentsLearnMore()}
+      </a>
+    </FieldDescription>
     <AssignmentSelector
       section={section}
       onChange={ids => onChange(ids)}
@@ -539,6 +566,10 @@ let defaultPropsFromState = state => ({
   assignedUnitName: assignedUnitName(state),
   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
+  assignedUnitRequiresVerifiedInstructor: assignedUnitRequiresVerifiedInstructor(
+    state
+  ),
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
 
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: state.teacherSections.showLockSectionField

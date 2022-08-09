@@ -4,6 +4,7 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var WebpackNotifierPlugin = require('webpack-notifier');
+var sass = require('sass');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
@@ -34,7 +35,9 @@ var toTranspileWithinNodeModules = [
     __dirname,
     'node_modules',
     'microsoft-cognitiveservices-speech-sdk'
-  )
+  ),
+  path.resolve(__dirname, 'node_modules', 'slate'),
+  path.resolve(__dirname, 'node_modules', 'react-loading-skeleton')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -130,14 +133,44 @@ var baseConfig = {
         loader: 'ejs-webpack-loader'
       },
       {test: /\.css$/, loader: 'style-loader!css-loader'},
+
+      // Rules for global SCSS (*.scss) and modules (*.module.scss)
+      // are currently duplicated for Webpack 4. This can be simplified via
+      // css-loader's options.modules.auto option when we upgrade to Webpack 5:
+      // https://v4.webpack.js.org/loaders/css-loader/#auto
       {
         test: /\.scss$/,
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
-          {loader: 'sass-loader', options: {includePaths: [scssIncludePath]}}
-        ]
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [scssIncludePath],
+              implementation: sass,
+              quietDeps: true
+            }
+          }
+        ],
+        exclude: /\.module\.scss$/
       },
+      {
+        test: /\.scss$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader', options: {modules: {auto: true}}},
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [scssIncludePath],
+              implementation: sass,
+              quietDeps: true
+            }
+          }
+        ],
+        include: /\.module\.scss$/
+      },
+
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
       {test: /\.exported_js$/, loader: 'raw-loader'},
       {

@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import Radium from 'radium';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
@@ -9,19 +7,18 @@ import JavalabButton from './JavalabButton';
 import JavalabDropdown from './components/JavalabDropdown';
 
 /**
- * A button that drops down to a set of clickable links, and closes itself if
+ * A button that drops down to a set of clickable options, and closes itself if
  * you click on the button, or outside of the dropdown.
  */
 export class JavalabSettings extends Component {
   static propTypes = {
-    style: PropTypes.object,
     children: props => {
       React.Children.map(props.children, child => {
-        if (child.type !== 'a') {
-          throw new Error('only accepts children of type <a/>');
+        if (child.type !== 'button') {
+          throw new Error('only accepts children of type <button/>');
         }
         if (!child.props.onClick) {
-          throw new Error('each child must have an href or onclick');
+          throw new Error('each child must have an onclick');
         }
       });
     }
@@ -59,12 +56,10 @@ export class JavalabSettings extends Component {
   };
 
   render() {
-    const {style} = this.props;
     const {dropdownOpen} = this.state;
     const btnStyle = {
       ...styles.button,
-      ...(dropdownOpen && styles.button.selected),
-      ...style
+      ...(dropdownOpen && styles.button.selected)
     };
 
     return (
@@ -72,10 +67,11 @@ export class JavalabSettings extends Component {
         {dropdownOpen && (
           <JavalabDropdown style={styles.dropdown}>
             {React.Children.map(this.props.children, (child, index) => (
-              <a
+              <button
                 {...child.props}
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
+                type="button"
                 style={child.props.style}
               />
             ))}
@@ -93,7 +89,7 @@ export class JavalabSettings extends Component {
   }
 }
 
-export default onClickOutside(Radium(JavalabSettings));
+export default onClickOutside(JavalabSettings);
 
 const styles = {
   main: {

@@ -1,6 +1,6 @@
 name 'CSA U5L9-L2_2022'
 display_name 'Finding Duplicates in a 2D Array'
-description 'Implement your algorithm to find duplicates in 2D arrays using the console or The Theater.'
+description 'Implement your algorithm to find duplicates in 2D arrays.'
 
 sublevels
 level 'CSA U5L9-L2a_2022'

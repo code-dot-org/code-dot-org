@@ -1,5 +1,5 @@
-require_relative '../../files_api_test_base' # Must be required first to establish load paths
-require_relative '../../files_api_test_helper'
+require_relative '../files_api_test_base' # Must be required first to establish load paths
+require_relative '../files_api_test_helper'
 require 'cdo/aws/s3'
 
 class PublicThumbnailsTest < FilesApiTestBase
@@ -195,7 +195,6 @@ class PublicThumbnailsTest < FilesApiTestBase
 
     # Test
     yield channel_id
-
   ensure
     delete_thumbnail(channel_id)
 
