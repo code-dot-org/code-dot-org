@@ -55,7 +55,7 @@ class UnconnectedDisplayProjectName extends React.Component {
   }
 }
 const DisplayProjectName = connect(state => ({
-  projectName: state.header.projectName
+  projectName: state.project.projectName
 }))(UnconnectedDisplayProjectName);
 
 class UnconnectedEditProjectName extends React.Component {
