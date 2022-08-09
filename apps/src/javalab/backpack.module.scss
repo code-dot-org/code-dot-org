@@ -1,5 +1,39 @@
 @import 'color.scss';
 
+.dropdown {
+  overflow: auto;
+  padding: 10px 0;
+  min-width: inherit;
+}
+
+.dropdownContainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 30px;
+  background-color: $white;
+  z-index: 20;
+  border-width: 1px;
+  border-color: $light_gray;
+  border-style: solid;
+  border-radius: 4px;
+  max-width: 35%;
+  max-height: 80%;
+  min-width: 150px;
+  color: $dark_charcoal;
+  margin-left: 3px;
+
+  &Dark {
+    background-color: $darkest_slate_gray;
+    color: $background_gray;
+  }
+}
+
+.listContainer {
+  width: fit-content;
+  min-width: inherit;
+}
+
 .fileListItem {
   display: flex;
   flex-direction: row;
@@ -18,6 +52,10 @@
   }
 }
 
+.dropdownOpenButton {
+  background-color: $cyan;
+}
+
 input[type="checkbox"] {
   margin: 0;
 }
@@ -25,4 +63,33 @@ input[type="checkbox"] {
 .fileListLabel {
   margin: 0 0 0 5px;
   width: inherit;
+}
+
+.backpackIcon {
+  height: 15px;
+  opacity: 1;
+}
+
+.spinner {
+  font-size: 22px;
+}
+
+.spinnerContainer {
+  text-align: center;
+}
+
+.message {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px;
+}
+
+.importMessageList {
+  marginBottom: 0;
+}
+
+importWarningConfirm {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
