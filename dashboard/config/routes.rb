@@ -20,6 +20,7 @@ Dashboard::Application.routes.draw do
     resource :pairing, only: [:show, :update]
 
     resources :user_levels, only: [:update, :destroy]
+    post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
