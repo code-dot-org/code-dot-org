@@ -2,7 +2,8 @@
     display: inline-block;
     margin-bottom: 10px;
     margin-top: 10px;
-};
+}
+
 .container {
     // subtract the height of the clearfix element
     margin-bottom: -28px;
@@ -15,14 +16,17 @@
     // make the buttons align right usually, but align left if they
     // are forced to wrap onto the next line by a very long table name.
     text-align: justify
-};
+}
+
 .exportButton {
     margin-left: 10px;
     width: 120px;
-};
+}
+
 .tableName {
     font-size: 18px;
-};
+}
+
 .tableNameWrapper {
     align-items: flex-end;
     display: inline-flex;

@@ -5,7 +5,8 @@ $maxCellWidth: 350px;
     max-width: $maxCellWidth;
     overflow: hidden;
     white-space: nowrap;
-};
+}
+
 .container {
     justify-content: space-between;
     padding: 6px 0px;
@@ -13,11 +14,13 @@ $maxCellWidth: 350px;
     &IsEditing {
         display: none;
     }
-};
+}
+
 iconWrapper {
     align-self: flex-end;
     padding-left: 5px;
-};
+}
+
 .icon {
     color: white;
     cursor: pointer
