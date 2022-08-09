@@ -6,7 +6,7 @@ import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
 import VisualizerModal from './dataVisualizer/VisualizerModal';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';

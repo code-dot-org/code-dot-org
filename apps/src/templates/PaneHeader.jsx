@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import commonStyles from '../commonStyles';
 import styleConstants from '../styleConstants';
 import color from '../util/color';
