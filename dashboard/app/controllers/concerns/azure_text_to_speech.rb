@@ -1,8 +1,8 @@
 require 'cdo/honeybadger'
-require 'lib/cdo/dashboard_languages'
 require 'net/http'
 require 'dynamic_config/gatekeeper'
 require 'cdo/throttle'
+require 'dashboard_languages'
 
 module AzureTextToSpeech
   # Azure authentication token is valid for 10 minutes, so cache it for 9.
