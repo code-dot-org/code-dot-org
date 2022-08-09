@@ -5,9 +5,6 @@ jobs:
 runs:
   using: "composite"
   steps:
-    - name: Environment variables
-      run: echo "Environment variables were set up for MySQL"
-      shell: bash
     - name: Start MySQL
       run: sudo /etc/init.d/mysql start
       shell: bash
