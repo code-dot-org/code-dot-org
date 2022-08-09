@@ -295,4 +295,4 @@ export default connect(
       dispatch(showWarning(warningMsg, warningTitle));
     }
   })
-)(DataTable); //)(Radium(DataTable));
+)(DataTable);
