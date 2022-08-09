@@ -8,9 +8,9 @@
 require_relative 'middleware_test_helper'
 require 'fakeredis' unless use_real_redis?
 require 'timecop'
-require_relative '../fake_timecop'
-require_relative '../../middleware/helpers/null_pub_sub_api'
-require_relative '../../middleware/helpers/redis_table'
+require_relative '../../../shared/test/fake_timecop'
+require_relative '../../lib/legacy/middleware/helpers/null_pub_sub_api'
+require_relative '../../lib/legacy/middleware/helpers/redis_table'
 require_relative 'spy_pub_sub_api'
 
 class RedisTableTest < Minitest::Test

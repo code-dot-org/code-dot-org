@@ -6,8 +6,8 @@
 require_relative 'middleware_test_helper'
 require 'fakeredis' unless use_real_redis?
 require 'timecop'
-require_relative '../fake_timecop'
-require_relative '../../middleware/helpers/redis_property_bag'
+require_relative '../../../shared/test/fake_timecop'
+require_relative '../../lib/legacy/middleware/helpers/redis_property_bag'
 
 class RedisPropertyBagTest < Minitest::Test
   def setup

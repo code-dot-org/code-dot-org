@@ -5,7 +5,7 @@
 
 require_relative 'middleware_test_helper'
 require 'redis-slave-read'
-require_relative '../../middleware/helpers/sharded_redis_factory'
+require_relative '../../lib/legacy/middleware/helpers/sharded_redis_factory'
 
 class RedisSlaveReadGemTest < Minitest::Test
   include SetupTest

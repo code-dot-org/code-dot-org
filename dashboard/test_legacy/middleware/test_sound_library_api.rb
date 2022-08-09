@@ -1,5 +1,5 @@
 require_relative 'middleware_test_helper'
-require_relative '../../middleware/sound_library_api'
+require_relative '../../lib/legacy/middleware/sound_library_api'
 require_relative 'files_api_test_base'
 require 'timecop'
 

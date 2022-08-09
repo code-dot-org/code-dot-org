@@ -1,5 +1,5 @@
 require_relative 'middleware_test_helper'
-require_relative '../../middleware/animation_library_api'
+require_relative '../../lib/legacy/middleware/animation_library_api'
 
 class AnimationLibraryTest < Minitest::Test
   include Rack::Test::Methods
