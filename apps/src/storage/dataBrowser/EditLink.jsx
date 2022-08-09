@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import * as dataStyles from './dataStyles';
 
@@ -18,4 +17,4 @@ class EditLink extends React.Component {
   }
 }
 
-export default Radium(EditLink);
+export default EditLink;
