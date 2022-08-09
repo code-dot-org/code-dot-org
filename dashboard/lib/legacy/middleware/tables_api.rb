@@ -6,13 +6,14 @@ require 'csv'
 class TablesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
 
+  load(CDO.dir('shared', 'middleware', 'helpers', 'core.rb'))
+
   helpers do
     [
-      'core.rb',
       'table.rb',
       'firebase_helper.rb',
     ].each do |file|
-      load(CDO.dir('shared', 'middleware', 'helpers', file))
+      load(CDO.dir('dashboard', 'lib', 'legacy', 'middleware', 'helpers', file))
     end
   end
 
