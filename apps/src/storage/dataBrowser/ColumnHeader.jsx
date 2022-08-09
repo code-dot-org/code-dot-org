@@ -129,7 +129,7 @@ class ColumnHeader extends React.Component {
         <div
           className={classNames(
             style.container,
-            this.props.isEditing ? style.containerIsEditing : ''
+            this.props.isEditing && style.containerIsEditing
           )}
         >
           <div className={classNames(style.columnName, 'test-tableNameDiv')}>
