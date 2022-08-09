@@ -2,7 +2,7 @@
 # This uses a fake in-memory Redis service that does not actually support
 # replication.
 
-require_relative '../../test_helper'
+require_relative '../middleware_test_helper'
 require 'fakeredis'
 require 'helpers/sharded_redis_factory'
 
