@@ -196,6 +196,15 @@ namespace :test do
     end
   end
 
+  task :dashboard_legacy_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_legacy_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
   task :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
@@ -236,6 +245,7 @@ namespace :test do
     :shared_ci,
     :pegasus_ci,
     :dashboard_ci,
+    :dashboard_legacy_ci,
     :lib_ci,
     :bin_i18n_ci,
     :ui_live
@@ -244,6 +254,11 @@ namespace :test do
   desc 'Runs dashboard tests.'
   task :dashboard do
     TestRunUtils.run_dashboard_tests
+  end
+
+  desc 'Runs dashboard legacy tests.'
+  task :dashboard_legacy do
+    TestRunUtils.run_dashboard_legacy_tests
   end
 
   desc 'Runs pegasus tests.'
@@ -297,12 +312,32 @@ namespace :test do
           'Gemfile.lock',
           'deployment.rb',
           'dashboard/**/*',
+          'dashboard_legacy/**/*',
           'lib/**/*',
           'shared/**/*'
         ],
         ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
         TestRunUtils.run_dashboard_tests
+      end
+    end
+
+    desc 'Runs dashboard legacy tests if dashboard legacy might have changed from staging.'
+    task :dashboard_legacy do
+      run_tests_if_changed(
+        'dashboard',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard/**/*',
+          'dashboard_legacy/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_legacy_tests
       end
     end
 
