@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-08-04 20:46:17 UTC",
+    "serialized_at": "2022-08-08 20:09:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -817,7 +817,7 @@
       "key": "eee612da-143d-4011-a845-f69b9dc0d57c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \n- My images match the story\n- I include dialogue for three or more characters\n- I use at least three events to have my characters interact\n- Each character says something that matches their description\n- The moral is clearly stated\n- There is a clear beginning, middle, and end\n- I have completed my project plan\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \nReflect on your project plan. Does your plan include the following items? \n\n- Three characters (sprites) with detailed descriptions \n- A setting (background)\n- Dialogue for three or more characters (think or say blocks)\n- A beginning, middle, and end to the story (events)\n- A moral or theme that is clearly stated\n\n"
       },
       "seeding_key": {
         "activity_section.key": "eee612da-143d-4011-a845-f69b9dc0d57c",
@@ -863,7 +863,7 @@
       "key": "dd181ec2-4915-46e6-b164-51bb4f593fbf",
       "position": 2,
       "properties": {
-        "description": "**Match**: \n- Check out the example program in Lesson 4\n- In the [Fables Warm Up Activity](https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview) handout, draw a line to match each block to what it does\n\n**Do This**: Give students time to match the blocks with the corresponding action. Students will review what the blocks do and think about when it is best to use each one.  \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Match - Check out an example program\" slide\n\n**Match**: \n- Check out the example program in Lesson 4\n- In the [Fables Warm Up Activity](https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview) handout, draw a line to match each block to what it does\n\n**Do This**: Give students time to match the blocks with the corresponding action. Students will review what the blocks do and think about when it is best to use each one.  \n",
         "duration": "5",
         "name": "Activity"
       },
