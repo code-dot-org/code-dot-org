@@ -7,8 +7,9 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
-import headerReducer from '@cdo/apps/code-studio/headerRedux';
-import {refreshProjectName} from '@cdo/apps/code-studio/projectRedux';
+import projectReducer, {
+  refreshProjectName
+} from '@cdo/apps/code-studio/projectRedux';
 import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
 
 describe('EditableProjectName', () => {
@@ -34,7 +35,7 @@ describe('EditableProjectName', () => {
   });
 
   it('provides a "rename project" interface', async () => {
-    const store = createStore(combineReducers({header: headerReducer}));
+    const store = createStore(combineReducers({project: projectReducer}));
     store.dispatch(refreshProjectName());
     const wrapper = mount(
       <Provider store={store}>
