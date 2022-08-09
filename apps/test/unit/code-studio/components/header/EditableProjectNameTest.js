@@ -7,9 +7,8 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
-import headerReducer, {
-  refreshProjectName
-} from '@cdo/apps/code-studio/headerRedux';
+import headerReducer from '@cdo/apps/code-studio/headerRedux';
+import {refreshProjectName} from '@cdo/apps/code-studio/projectRedux';
 import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
 
 describe('EditableProjectName', () => {
