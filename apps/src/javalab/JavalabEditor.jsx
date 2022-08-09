@@ -27,10 +27,9 @@ import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
-import color from '@cdo/apps/util/color';
 import classNames from 'classnames';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
-import moduleStyles from './javalab-editor.module.scss';
+import style from './javalab-editor.module.scss';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -45,7 +44,6 @@ import JavalabEditorDialogManager, {
 } from './JavalabEditorDialogManager';
 import JavalabEditorHeader from './JavalabEditorHeader';
 
-const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
 const EDITOR_LOAD_PAUSE_MS = 100;
@@ -587,7 +585,7 @@ class JavalabEditor extends React.Component {
           className={displayTheme === DisplayTheme.DARK ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" className={moduleStyles.tabs}>
+            <Nav bsStyle="tabs" className={style.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -598,7 +596,7 @@ class JavalabEditor extends React.Component {
                   <NavItem eventKey={tabKey} key={`${tabKey}-tab`}>
                     {isEditingStartSources && (
                       <FontAwesome
-                        className={moduleStyles.fileTypeIcon}
+                        className={style.fileTypeIcon}
                         icon={
                           sources[fileMetadata[tabKey]].isVisible
                             ? 'eye'
@@ -610,7 +608,7 @@ class JavalabEditor extends React.Component {
                     )}
                     {!isEditingStartSources && (
                       <FontAwesome
-                        className={moduleStyles.fileTypeIcon}
+                        className={style.fileTypeIcon}
                         icon={'file-text'}
                       />
                     )}
@@ -621,9 +619,9 @@ class JavalabEditor extends React.Component {
                         type="button"
                         className={classNames(
                           'no-focus-outline',
-                          moduleStyles.fileMenuToggleButton,
+                          style.fileMenuToggleButton,
                           displayTheme === DisplayTheme.DARK &&
-                            moduleStyles.darkFileMenuToggleButton
+                            style.darkFileMenuToggleButton
                         )}
                         onClick={e => this.toggleTabMenu(tabKey, e)}
                       >
@@ -661,7 +659,7 @@ class JavalabEditor extends React.Component {
               {showOpenCodeReviewWarning && (
                 <div
                   id="openCodeReviewWarningBanner"
-                  className={moduleStyles.openCodeReviewWarningBanner}
+                  className={style.openCodeReviewWarningBanner}
                 >
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
@@ -675,12 +673,12 @@ class JavalabEditor extends React.Component {
                   <Tab.Pane eventKey={tabKey} key={`${tabKey}-content`}>
                     <div
                       ref={el => (this._codeMirrors[tabKey] = el)}
-                      style={{
-                        ...styles.editor,
-                        ...(displayTheme === DisplayTheme.DARK &&
-                          styles.darkBackground),
-                        ...{height: height - HEADER_OFFSET}
-                      }}
+                      className={classNames(
+                        style.editor,
+                        displayTheme === DisplayTheme.DARK &&
+                          style.darkBackground
+                      )}
+                      style={{height: height - HEADER_OFFSET}}
                     />
                   </Tab.Pane>
                 );
@@ -703,17 +701,6 @@ class JavalabEditor extends React.Component {
     );
   }
 }
-
-const styles = {
-  editor: {
-    width: '100%',
-    minHeight: MIN_HEIGHT,
-    backgroundColor: color.white
-  },
-  darkBackground: {
-    backgroundColor: color.darkest_slate_gray
-  }
-};
 
 export default connect(
   state => ({
