@@ -5,13 +5,13 @@ require 'rails/all'
 require 'cdo/geocoder'
 require 'cdo/properties'
 require 'varnish_environment'
-require_relative '../../shared/middleware/files_api'
-require_relative '../../shared/middleware/channels_api'
-require_relative '../../shared/middleware/tables_api'
+require_relative '../lib/legacy/middleware/files_api'
+require_relative '../lib/legacy/middleware/channels_api'
+require_relative '../lib/legacy/middleware/tables_api'
 require 'shared_resources'
-require_relative '../../shared/middleware/net_sim_api'
-require_relative '../../shared/middleware/sound_library_api'
-require_relative '../../shared/middleware/animation_library_api'
+require_relative '../lib/legacy/middleware/net_sim_api'
+require_relative '../lib/legacy/middleware/sound_library_api'
+require_relative '../lib/legacy/middleware/animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -128,8 +128,8 @@ module Dashboard
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
-    config.assets.paths << Rails.root.join('../shared/css')
-    config.assets.paths << Rails.root.join('../shared/js')
+    config.assets.paths << Rails.root.join('lib/legacy/middleware/css')
+    config.assets.paths << Rails.root.join('lib/legacy/middleware/js')
 
     # Whether to fallback to assets pipeline if a precompiled asset is missed.
     config.assets.compile = !CDO.optimize_rails_assets

@@ -3,7 +3,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/aws/s3'
-require_relative '../../lib/cdo/png_utils'
+require_relative '../../../../lib/cdo/png_utils'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
