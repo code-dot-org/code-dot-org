@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-08 02:35:30 UTC",
+    "serialized_at": "2022-08-08 16:20:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -255,27 +255,13 @@
 
   ],
   "resources": [
-    {
-      "name": "CSD 2022 M2 Pilot Slides",
-      "url": "https://docs.google.com/presentation/d/1NX5H6_psQX5qJKrNete0xtJkXTixbo25heZ7WxhDnPk/edit?usp=sharing",
-      "key": "csd_2022_m2_pilot_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_2022_m2_pilot_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "csd_2022_m2_pilot_slides",
-        "script.name": "vpl-csd2-ayw-pilot-2022"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
