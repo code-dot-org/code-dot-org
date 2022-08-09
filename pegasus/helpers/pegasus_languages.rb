@@ -1,8 +1,7 @@
 require 'cdo/db'
-require 'cdo/cache_method'
+require 'cdo/languages'
 
 class PegasusLanguages < Languages
-  using CacheMethod
   def self.table
     @@table ||= PEGASUS_DB[:cdo_languages]
   end
