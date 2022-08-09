@@ -6,14 +6,13 @@ $tabHeight: 35px;
 $borderColor: $lighter_gray;
 $bgColor: $lightest_gray;
 
-.baseTabStyle {
+.tab {
     border-color: $borderColor;
     border-style: solid;
     box-sizing: border-box;
     height: $tabHeight;
     padding: 0 10px;
-    // TODO: Get the elements in DataBrowser to use the next three subclasses.
-    &.activeTab{
+    &Active{
         background-color: $bgColor;
         border-top-width: 1px;
         border-right-width: 1px;
@@ -21,7 +20,7 @@ $bgColor: $lightest_gray;
         border-left-width: 0px;
         float: left;
     }
-    &.inactiveTab{
+    &Inactive{
         border-top-width: 1px;
         border-right-width: 1px;
         border-bottom-width: 1px;
@@ -29,7 +28,7 @@ $bgColor: $lightest_gray;
         float: left;
     }
     // This tab should fill the remaining horizontal space.
-    &.emptyTab{
+    &Empty{
         border-top-width: 0px;
         border-right-width: 0px;
         border-bottom-width: 1px;
@@ -37,31 +36,6 @@ $bgColor: $lightest_gray;
         width: 100%;
     }
   };
-
-//TODO: Remove the next 3 classes:
-.activeTab{
-    background-color: $bgColor;
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    float: left;
-}
-.inactiveTab{
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 0px;
-    float: left;
-}
-// This tab should fill the remaining horizontal space.
-.emptyTab{
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 1px;
-    border-left-width: 0px;
-    width: 100%;
-}
 
 .workspaceDescription {
     height: 28;
