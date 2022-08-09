@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative './storage_id'
+require 'helpers/storage_id'
 require_relative './profanity_privacy_helper'
 
 #
