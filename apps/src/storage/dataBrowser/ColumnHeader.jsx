@@ -5,11 +5,12 @@ import ColumnMenu from './ColumnMenu';
 import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import color from '../../util/color';
 import * as dataStyles from './dataStyles';
 import {valueOr} from '../../utils';
+import classNames from 'classnames';
+import style from './column-header.module.scss';
 
 const INITIAL_STATE = {
   newName: undefined,
@@ -115,33 +116,31 @@ class ColumnHeader extends React.Component {
   }
 
   render() {
-    const containerStyle = [
-      styles.container,
-      {
-        display: this.props.isEditing ? 'none' : null
-      }
-    ];
-    const inputStyle = [
-      dataStyles.input,
-      {
+    const inputStyle = {
+      ...dataStyles.input,
+      ...{
         display: this.props.isEditing ? null : 'none',
         backgroundColor: this.isInputValid() ? null : color.lightest_red,
         minWidth: 80
       }
-    ];
+    };
     return (
       <th style={dataStyles.headerCell} className="uitest-data-table-column">
-        <div style={containerStyle} className="flex">
-          <div style={styles.columnName} className="test-tableNameDiv">
+        <div
+          className={classNames(
+            style.container,
+            this.props.isEditing ? style.containerIsEditing : ''
+          )}
+        >
+          <div className={classNames(style.columnName, 'test-tableNameDiv')}>
             {this.props.columnName}
           </div>
           {!this.props.readOnly && (
-            <div style={styles.iconWrapper}>
+            <div className={style.iconWrapper}>
               {this.props.isPending ? (
                 <FontAwesome
                   icon="spinner"
-                  className="fa-spin"
-                  style={styles.icon}
+                  className={classNames('fa-spin', style.icon)}
                 />
               ) : (
                 <ColumnMenu
@@ -178,25 +177,4 @@ class ColumnHeader extends React.Component {
   }
 }
 
-const styles = {
-  columnName: {
-    display: 'inline-block',
-    maxWidth: dataStyles.maxCellWidth,
-    overflow: 'hidden',
-    whiteSpace: 'nowrap'
-  },
-  container: {
-    justifyContent: 'space-between',
-    padding: '6px 0'
-  },
-  iconWrapper: {
-    alignSelf: 'flex-end',
-    paddingLeft: 5
-  },
-  icon: {
-    color: 'white',
-    cursor: 'pointer'
-  }
-};
-
-export default Radium(ColumnHeader);
+export default ColumnHeader;
