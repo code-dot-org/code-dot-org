@@ -3,7 +3,7 @@ require 'mocha/mini_test'
 require_relative '../../middleware/files_api'
 require_relative '../../middleware/channels_api'
 require 'cdo/aws/s3'
-require_relative '../spy_newrelic_agent'
+require_relative '../../../shared/test/spy_newrelic_agent'
 
 #
 # Base class for tests against the FilesApi (which include SourcesTest,
