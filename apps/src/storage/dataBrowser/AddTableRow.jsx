@@ -1,7 +1,6 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {castValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
@@ -92,4 +91,4 @@ class AddTableRow extends React.Component {
   }
 }
 
-export default Radium(AddTableRow);
+export default AddTableRow;

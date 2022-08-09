@@ -1,7 +1,6 @@
 /** @overview Component for editing a key/value pair row. */
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
 import {castValue, displayableValue, editableValue} from './dataUtils';
@@ -134,4 +133,4 @@ class EditKeyRow extends React.Component {
   }
 }
 
-export default Radium(EditKeyRow);
+export default EditKeyRow;
