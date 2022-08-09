@@ -299,7 +299,7 @@ class Backpack extends Component {
                         />
                         <label
                           htmlFor={`backpack-file-${index}`}
-                          style={styles.fileListLabel}
+                          className={cssModuleStyles.fileListLabel}
                         >
                           {filename}
                         </label>
@@ -391,10 +391,6 @@ const styles = {
   },
   dropdownOpenButton: {
     backgroundColor: color.cyan
-  },
-  fileListLabel: {
-    marginLeft: 5,
-    width: 'inherit'
   },
   importButton: {
     backgroundColor: color.orange,
