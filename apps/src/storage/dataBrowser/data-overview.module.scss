@@ -6,7 +6,8 @@ $tableWidth: 400px;
     width: $tableWidth;
     margin-top: 10px;
     margin-bottom: 10px;
-};
+}
+
 .container {
     position: absolute;
     width: 100%;
@@ -17,7 +18,8 @@ $tableWidth: 400px;
     &Display {
         display: block;
     }
-};
+}
+
 .dataBrowser {
     position: absolute;
     top: 0px;

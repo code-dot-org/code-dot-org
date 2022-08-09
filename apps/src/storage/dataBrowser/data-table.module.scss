@@ -3,11 +3,13 @@
 $minTableWidth: 600px;
 
 .addColumnHeader {
-    width: 19
-};
+    width: 19px;
+}
+
 .table {
     min-width: $minTableWidth;
-};
+}
+
 .plusIcon {
     align-items: center;
     border-radius: 2px;
@@ -18,4 +20,4 @@ $minTableWidth: 600px;
     height: 18px;
     justify-content: center;
     width: 18px;
-};
+}
