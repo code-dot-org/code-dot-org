@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 bs:
   errors:
     messages:
@@ -255,7 +261,6 @@ bs:
     popup:
       progress_for_user: "Napredak za %{name}"
       progress: 'Tvoj napredak'
-      lines: 'Ukupno linija kôda: %{lines}'
       close: 'ZATVORI'
       mastery: 'Pojmovi'
       puzzle_map: 'Faze'
@@ -629,10 +634,13 @@ bs:
         cs: 'Računarstvo'
         math: 'Matematika'
         science: 'Nauka'
+        other: "Ostalo"
       resources:
         kodable: 'Kodable'
+        other: "Ostalo"
       robotics:
         kodable: 'Kodable'
+        other: "Ostalo"
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'

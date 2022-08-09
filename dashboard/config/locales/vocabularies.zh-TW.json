@@ -178,8 +178,29 @@
           "word": "迴圈",
           "definition": "不斷重複做某件事情的動作。"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "凱撒密碼（Caesar Cipher）",
+          "definition": "一種加密技術，使用若干數目的字元來轉換字母"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "密碼（Cipher）",
+          "definition": "執行加密技術（或演算法）的通用詞彙"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "破解加密內容（Cracking encryption）",
+          "definition": "若你嘗試把秘密訊息解碼，而不知道密碼的詳情，這就表示你正在嘗試「破解」加密內容。"
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "解密（Decryption）",
+          "definition": "這種流程用於反轉加密程序，把秘密訊息重現成原始的純文字"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "加密"
+          "word": "加密",
+          "definition": "把訊息編碼的流程，讓訊息內容保密，只有得到「授權」的人士才可讀取。"
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "隨機替換式密碼（Random Substitution Cipher）",
+          "definition": "一種加密技術，把字母表的每個字母，配對至字母表中隨機選擇的其他字母。"
         },
         "code/starwars/unversioned": {
           "word": "代碼",
@@ -230,11 +251,16 @@
           "definition": "編碼為可以由電腦運行的演算法。"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "無損壓縮"
+          "word": "無損壓縮",
+          "definition": "一種資料壓縮演算法，可讓壓縮資料完美重建成原始資料。最常用於文字壓縮（例如 .zip 壓縮）"
         },
         "event/outbreak/unversioned": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "模型和模擬",
+          "definition": "複製或模仿現實世界事件的關鍵特徵以研究其行為的程式，無需在現實生活中進行實驗的成本、時間或危險。"
         },
         "event/sports/unversioned": {
           "word": "事件（Event）",
@@ -359,6 +385,10 @@
         "for_loop/coursef/2021": {
           "word": "計數/計次迴圈（For Loop）",
           "definition": "有預先確定的開始、結束與增加幅度（階值）的迴圈。"
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "模型和模擬",
+          "definition": "複製或模仿現實世界事件的關鍵特徵以研究其行為的程式，無需在現實生活中進行實驗的成本、時間或危險。"
         },
         "machine_learning/coursef/2021": {
           "word": "機器學習",
@@ -807,6 +837,9 @@
         "machine_learning/csd/2021": {
           "word": "機器學習",
           "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
+        },
+        "ethics/csd/2021": {
+          "word": "倫理"
         },
         "user_interface/csd/2021": {
           "word": "使用者介面"

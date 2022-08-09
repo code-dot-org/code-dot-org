@@ -8,6 +8,7 @@
         "coursed": "Khóa học D",
         "coursee": "Khóa học E",
         "coursef": "Khóa học F",
+        "express": "Khóa học cấp tốc",
         "pre-express": "Đọc trước",
         "csd": "Những khám phá Khoa học Máy tính",
         "csp": "Nguyên tắc Khoa học Máy tính",
@@ -26,7 +27,7 @@
         "course4": "Khóa học 4",
         "dance-extras-2019": "Nhảy tiếp đi (2019)",
         "dance-extras": "Nhảy tiếp đi (2018)",
-        "frozen": "Mã hóa cùng  Anna và Elsa",
+        "frozen": "Lập trình với Anna và Elsa",
         "gumball": "Gumball Play Lab",
         "hourofcode": "Mê cung cổ điển",
         "iceage": "Kho dữ liệu trò chơi Kỷ băng hà",
@@ -48,7 +49,16 @@
         "hello-world-animals": "Xin chào Thế giới: Động vật",
         "hello-world-food": "Xin chào Thế giới: Đồ ăn",
         "edit-code": "Hiệu chỉnh mã",
-        "tesstest921": "tesstest921"
+        "tesstest921": "tesstest921",
+        "poetry-hoc3": "poetry-hoc3",
+        "csa-u8-dev": "csa-u8-dev",
+        "outbreakmodule": "môđundịchbệnhbùngphát",
+        "netsim": "netsim",
+        "outbreak-module": "mô-đun-dịch-bệnh-bùng-phát",
+        "allthethingscourse": "allthethingscourse",
+        "step": "bước/ từng bước",
+        "coursee-ramp": "coursee-ramp",
+        "csa5-exemplars": "csa5-exemplars"
       }
     }
   }

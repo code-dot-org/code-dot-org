@@ -4354,6 +4354,28 @@
               "nectars": "花のミツ"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "正方形 を かく"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "図形をかく",
+            "parameters": {
+              "sides": "辺",
+              "length": "長さ"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "関数1"
+          },
+          "function 2": {
+            "name": "関数2"
+          }
         }
       }
     }

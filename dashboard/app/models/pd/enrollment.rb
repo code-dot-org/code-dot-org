@@ -41,9 +41,9 @@ class Pd::Enrollment < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-  belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
-  belongs_to :school_info
-  belongs_to :user
+  belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id, optional: true
+  belongs_to :school_info, optional: true
+  belongs_to :user, optional: true
   has_one :pre_workshop_survey, class_name: 'Pd::PreWorkshopSurvey', foreign_key: :pd_enrollment_id
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
   auto_strip_attributes :first_name, :last_name
@@ -60,7 +60,7 @@ class Pd::Enrollment < ApplicationRecord
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
-  validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop'}, unless: :deleted?
+  validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop', case_sensitive: false}, unless: :deleted?
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
   validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
@@ -168,11 +168,11 @@ class Pd::Enrollment < ApplicationRecord
         enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
     # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
-    # CSF Deep Dive after 9/1 also uses Foorm
+    # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
     foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
       (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
-        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?)
+        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
     end
 
     # Admin and Counselor still use Pegasus form
@@ -205,8 +205,7 @@ class Pd::Enrollment < ApplicationRecord
 
   # Pre-workshop survey URL (if any)
   def pre_workshop_survey_url
-    # 5-day summer workshop
-    if workshop.local_summer?
+    if workshop.local_summer? || workshop.ayw?
       url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
     elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "pd/workshop_survey/csf/pre201", CDO.default_scheme
@@ -214,7 +213,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def exit_survey_url
-    if workshop.course == Pd::Workshop::COURSE_CSF && workshop.subject == Pd::Workshop::SUBJECT_CSF_101
+    if workshop.course == Pd::Workshop::COURSE_CSF && (workshop.subject == Pd::Workshop::SUBJECT_CSF_101 || workshop.subject == Pd::Workshop::SUBJECT_CSF_DISTRICT)
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
     elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
@@ -340,6 +339,11 @@ class Pd::Enrollment < ApplicationRecord
       break if application_id
     end
     self.application_id = application_id
+  end
+
+  def application
+    return nil unless application_id
+    Pd::Application::ApplicationBase.find_by(id: application_id)
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.

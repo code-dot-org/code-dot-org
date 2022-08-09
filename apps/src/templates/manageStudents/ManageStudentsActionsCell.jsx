@@ -208,11 +208,6 @@ class ManageStudentsActionsCell extends Component {
 
   render() {
     const {rowType, isEditing, loginType} = this.props;
-    const canDelete = [
-      SectionLoginType.word,
-      SectionLoginType.picture,
-      SectionLoginType.email
-    ].includes(loginType);
 
     const showWordPictureOptions = [
       SectionLoginType.word,
@@ -238,13 +233,11 @@ class ManageStudentsActionsCell extends Component {
                 {i18n.viewParentLetter()}
               </PopUpMenu.Item>
             )}
-            {this.props.canEdit && canDelete && <MenuBreak />}
-            {canDelete && (
-              <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
-                <FontAwesome icon="times-circle" style={styles.xIcon} />
-                {i18n.removeStudent()}
-              </PopUpMenu.Item>
-            )}
+            {this.props.canEdit && <MenuBreak />}
+            <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
+              <FontAwesome icon="times-circle" style={styles.xIcon} />
+              {i18n.removeStudent()}
+            </PopUpMenu.Item>
           </QuickActionsCell>
         )}
         {isEditing && rowType !== RowType.ADD && (

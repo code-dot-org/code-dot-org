@@ -122,6 +122,11 @@ ja:
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
   hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -186,7 +191,7 @@ ja:
   hourofcode_homepage_hoc2018_header_line1: 世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。経験は必要ありません。
   hourofcode_homepage_hoc2018_header_line2: 4歳から104歳まで。
   codeorg_homepage_hoc_is_coming: Hour of Code がやってきます。
-  codeorg_homepage_celebrate_cse: 世界中でコンピューターサイエンスの発展を願う！
+  codeorg_homepage_celebrate_cse: 世界中でコンピューターサイエンスの発展を祝いましょう！
   codeorg_homepage_csc: コンピュータサイエンスが言語技術、数学などに出会います。
   codeorg_homepage_csc_long: コンピュータサイエンスが私たちのカリキュラムで言語技術、数学などとどう出会うのかご覧ください！
   codeorg_homepage_csc_title: CSコネクション
@@ -535,122 +540,119 @@ ja:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: よくある質問
   hoc_faq_what_is_hoc_q: Hour of Codeとは何ですか？
-  hoc_faq_what_is_hoc_a: Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを明らかにして、コンピューターサイエンス分野への参加者を拡大するため、1時間のコンピューターサイエンス入門として始まりました。1時間のコーディング（プログラミング）が、いまや様々なコミュニティの取り組みへと拡大し、コンピューターサイエンスの発展のための世界的な取り組みとなっています。<a
-    href='%{tutorials}'>チュートリアルとアクティビティ</a>をご覧ください。この草の根キャンペーンは、世界中の<a href='%{partners}'>400以上のパートナー</a>と200,000以上の教育者によってサポートされています。
-  hoc_faq_what_is_hoc_a_markdown: Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを明らかにして、コンピューターサイエンス分野への参加者を拡大するため、1時間のコンピューターサイエンス入門として始まりました。1時間のコーディング（プログラミング）が、いまや様々なコミュニティの取り組みへと拡大し、コンピューターサイエンスの発展のための世界的な取り組みとなっています。［チュートリアルとアクティビティ］(%{tutorials})をご覧ください。この草の根キャンペーンは、世界中の［400以上のパートナー］(%{partners})
+  hoc_faq_what_is_hoc_a: Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを知らせ、コンピューターサイエンス分野への参加者の裾野を広げるため、1時間のコンピューターサイエンス入門として始まりました。1時間のコーディング（プログラミング）が、いまや様々なコミュニティの取り組みへと拡大し、コンピューターサイエンスの発展のための世界的な取り組みとなっています。<a
+    href='%{tutorials}'>チュートリアルとアクティビティ</a>をご覧ください。この草の根キャンペーンは、世界中の<a href='%{partners}'>400以上のパートナー</a>と200,000人以上の教育者によってサポートされています。
+  hoc_faq_what_is_hoc_a_markdown: Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを知らせ、コンピューターサイエンス分野への参加者の裾野を広げるため、1時間のコンピューターサイエンス入門として始まりました。それ以来、コンピューターサイエンスを祝う世界的な取り組みとなり、1時間のコーディング活動から始まり、あらゆる種類のコミュニティの取り組みに広がっています。[チュートリアルとアクティビティ](%{tutorials})をご覧ください。この草の根キャンペーンは、世界中の[400以上のパートナー](%{partners})
     と200,000人以上の教育者によってサポートされています。
   hoc_faq_last_year: チュートリアルを試す
-  hoc_faq_when_is_hoc_q: Hour of Code はいつ行われますか？
-  hoc_faq_when_is_hoc_a: Hour of Codeは、毎年<a href='%{csedweek_url}'>コンピューターサイエンス教育週間</a>に実施されます。%{campaign_date_year}年のコンピューターサイエンス教育週間は%{campaign_date_full}ですが、あなたは年間を通じてHour
-    of Codeを開催できます。コンピューターサイエンス教育週間は、コンピューターの先駆者<a href='%{grace_hopper}'>アドミラル・グレース・マーレー・ホッパー</a>の誕生日
-    (1906年12月9日) を記念して毎年開催されています。
-  hoc_faq_when_is_hoc_a_markdown: "  Hour of Codeは毎年、[コンピュータサイエンス教育週間](%{csedweek_url})の間に開催されます。キャンペーン期間中、%{campaign_date_year}コンピュータサイエンス教育週間は%{campaign_date_full}となりますが、1年を通してHour
-    of Codeを開催することができます。コンピュータサイエンス教育週間は、コンピュータのパイオニア[Admiral Grace Murray Hopper](%{grace_hopper}提督)の誕生日(1906年12月9日)を記念して毎年開催されます。
-    \ "
+  hoc_faq_when_is_hoc_q: Hour of Code はいつ開催されますか？
+  hoc_faq_when_is_hoc_a: Hour of Codeは、毎年<a href='%{csedweek_url}'>コンピューターサイエンス教育週間</a>中に開催されます。%{campaign_date_year}年のコンピューターサイエンス教育週間は%{campaign_date_full}ですが、あなたは年間を通じてHour
+    of Codeを開催できます。コンピューターサイエンス教育週間は、コンピューターの先駆者<a href='%{grace_hopper}'>Admiral
+    Grace Murray Hopper提督</a>の誕生日 (1906年12月9日) を記念して毎年開催されています。
+  hoc_faq_when_is_hoc_a_markdown: 'Hour of Codeは毎年、[コンピュータサイエンス教育週間](%{csedweek_url})中に開催されます。キャンペーン期間中、%{campaign_date_year}年のコンピュータサイエンス教育週間は%{campaign_date_full}となりますが、年間を通してHour
+    of Codeを開催できます。コンピュータサイエンス教育週間は、コンピュータのパイオニア[Admiral Grace Murray Hopper提督](%{grace_hopper})の誕生日(1906年12月9日)を記念して毎年開催されます。  '
   hoc_faq_why_cs_q: なぜコンピュータサイエンスなのですか？
-  hoc_faq_why_cs_a: "<i>すべての</i>生徒はコンピューターサイエンスを学ぶ機会を与えられるべきです。それは、問題解決能力、論理的思考、創造性を育む手助けになります。早期に始めることにより、21世紀のいずれのキャリアパスにおいても成功する基盤を身に付けることができます。詳しい統計データは<a
-    href='%{stats_url}'>ここ</a>を参照してください。"
-  hoc_faq_why_cs_a_markdown: "  _すべての_学生はコンピュータサイエンスを学ぶ機会を持つべきです。問題解決能力、論理性、創造性を養います。早くに始めることで、学生は21世紀のあらゆるキャリアパスで成功するための基盤を持つことになります。統計
-    [こちら](%{stats_url})をもっと見る。  "
+  hoc_faq_why_cs_a: "<i>すべての</i>生徒はコンピューターサイエンスを学ぶ機会を持つべきです。それは、問題解決能力、論理的思考、創造性を育む手助けになります。早期に始めることにより、21世紀のいずれのキャリアパスにおける成功基盤を身に付けることができます。詳しい統計データは<a
+    href='%{stats_url}'>こちら</a>をご覧ください。"
+  hoc_faq_why_cs_a_markdown: "  _すべての_学生はコンピュータサイエンスを学ぶ機会を持つべきです。問題解決能力、論理性、創造性を養います。早期に始めることで、学生は21世紀のあらゆるキャリアパスにおける成功基盤を持つことになります。統計は[こちら](%{stats_url})でご覧ください。"
   hoc_faq_how_participate_q: どうすればHour of Codeの運動に参加できますか?
   hoc_faq_how_participate_a: "<a href='/how-to'>イベント開催ガイド</a>を見て、プランを立て始めましょう。Hour
     of Codeのイベントは、学校や地域コミュニティー、学校での課外活動等様々な場所で簡単に開催することができます。もしくは、%{campaign_date}
     の期間内にご自分で試していただいても問題ありません！"
-  hoc_faq_how_participate_a_markdown: "  ハウツーガイドを参考にして、[計画を始めましょう](%{howto})をご覧ください。課外クラブ、非営利団体、職場など、学校や地域でアワー・オブ・コードのイベントを企画することができます。または、%{campaign_date}届いたら自分で試してみてください。
-    \ "
-  hoc_faq_behind_hoc_q: Hour of Codeは誰が運営しているのですか?
-  hoc_faq_behind_hoc_a: Hour of Codeは、Hour of Codeとコンピューターサイエンス教育週間の<a href='%{partner_url}'>諮問委員会と審査委員会</a>、およびマイクロソフト、アップル、アマゾン、ボーイズ・アンド・ガールズ・クラブ・オブ・アメリカ、大学の理事会を含む、Hour
-    of Codeを一体となって支援しているパートナーたちの、前例のない連携により運営されています。
-  hoc_faq_behind_hoc_a_markdown: "  Hour of Codeは、Hour of Codeとコンピュータサイエンス教育週間[諮問委員会および審査委員会](%{partner_url})のほか、マイクロソフト、アップル、アマゾン、Boys
-    and Girls Clubs of America、College Boardなど、Hour of Codeをサポートするために集まったパートナーの史上初めての連合によって推進されています。
-    \ "
+  hoc_faq_how_participate_a_markdown: 'ハウツーガイドを参考にして、[計画を始めましょう](%{howto})をご覧ください。課外クラブ、非営利団体、職場など、学校や地域でHour
+    of Codeのイベントを企画できます。または、%{campaign_date}が来たら自分で試してみてください。  '
+  hoc_faq_behind_hoc_q: Hour of Codeは誰が運営しているのですか？
+  hoc_faq_behind_hoc_a: Hour of Codeは、Hour of Codeとコンピューターサイエンス教育週間の<a href='%{partner_url}'>諮問委員会と審査委員会</a>、およびマイクロソフト、アップル、アマゾン、Boys
+    and Girls Clubs of America、College Boardを含む、Hour of Codeを一体となって支援しているパートナーたちの、前例のない連携により運営されています。
+  hoc_faq_behind_hoc_a_markdown: 'Hour of Codeは、Hour of Codeとコンピュータサイエンス教育週間[諮問委員会および審査委員会](%{partner_url})のほか、マイクロソフト、アップル、アマゾン、Boys
+    and Girls Clubs of America、College Boardを含む、Hour of Codeを一体となって支援しているパートナーたちの、前例のない連携により運営されています。 '
   hoc_faq_host_q: プログラミングについて知らなくても、イベントを開催できますか？
   hoc_faq_host_a: もちろんです。Hour of Codeのチュートリアルは、生徒が自分のペースで一人で進められるようになっています。イベントを開催するにあたってあなたがやるべきことは<a
     href='%{codeorg_url}/learn'> 現在のチュートリアルを試してみる</a>ことだけです。後は私たちのチュートリアルに任せてください。それではいますぐ、<a
     href='/resources/how-to'> How to ガイド</a> を読んでイベントを計画しましょう！
-  hoc_faq_host_a_markdown: "  もちろん。Hour of Code のアクティビティは自習スタイルです。あなたは [現在のチュートリアルを試す](%{codeorg_url}/learn)
-    とチュートリアルを選択し、1時間、時間を作るだけです。また、幼稚園児から上級者まで、年齢や経験レベルに応じたオプションもご用意しています。[ハウツーガイド]（%{howto}）を読んで、イベントの計画を始めましょう。
+  hoc_faq_host_a_markdown: "  もちろん。Hour of Code のアクティビティは自習スタイルです。あなたは [現在のチュートリアルを試して](%{codeorg_url}/learn)
+    チュートリアルを選択し、1時間、時間を作るだけです。休憩も行いましょう。また、幼稚園児から上級者まで、年齢や経験レベルに応じたオプションもご用意しています。[ハウツーガイド](%{howto})を読んで、イベントの計画を始めましょう。
     \ "
   hoc_faq_devices_q: 生徒はどのようなデバイスを使用する必要がありますか？
-  hoc_faq_devices_a: Code.orgのチュートリアルは、どのようなデバイスでも、どのようなブラウザでも動作します。<a href='%{codeorg_url}/educate/it'>こちら</a>から、より詳細な情報を入手できますのでご覧ください。Code.org以外のチュートリアルに関しては、<a
+  hoc_faq_devices_a: Code.org のチュートリアルはすべてのデバイスとブラウザで動作します。<a href='%{codeorg_url}/educate/it'>こちら</a>から、より詳細な情報を入手できますのでご覧ください。Code.org以外のチュートリアルに関しては、<a
     href='%{codeorg_url}/learn'>%{partner_url}/learn</a>のチュートリアルの説明をご覧ください。あなたの学校にチュートリアルに必要な機材が無くても、私たちは<a
     href='%{unplugged_url}'>コンピュータを必要としないアクティビティ</a>を用意していますので、忘れないでくださいね！
-  hoc_faq_devices_a_markdown: "  Code.org のチュートリアルはすべてのデバイスとブラウザで動作します。Code.org のチュートリアルの技術的なニーズについての詳細な情報は
-    [こちら](%{codeorg_url}/educate/it) で見ることができます。Code.org以外のチュートリアルの技術的なニーズはチュートリアルの説明の中の[%{partner_url}/learn](%{codeorg_url}/learn)で見つけることができます。もしあなたの学校がチュートリアルに対応できない場合は、[非接続型アクティビティ](%{unplugged_url})も提供していることをお忘れなく!
-    \ "
+  hoc_faq_devices_a_markdown: 'Code.org のチュートリアルはすべてのデバイスとブラウザで動作します。Code.org のチュートリアルの技術的なニーズについての詳細な情報は
+    [こちら](%{codeorg_url}/educate/it) で見ることができます。Code.org以外のチュートリアルの技術的なニーズはチュートリアルの説明の中の[%{partner_url}/learn](%{codeorg_url}/learn)で見つかります。もしあなたの学校がチュートリアルに対応できない場合は、[コンピュータを必要としないアクティビティ](%{unplugged_url})も提供していることをお忘れなく!  '
   hoc_faq_need_computers_q: 参加者の人数分のコンピュータが必要ですか？
-  hoc_faq_need_computers_a: いいえ。Hour of Codeのチュートリアルはパソコン、スマートフォン、タブレットで動きますし、いくつかはコンピュータがまったく不要です。どの場所からでも、持っているものがどんなものでも参加できます。<p><i>いくつかのやり方があります:</i>
-    <br> <ul> <li><b>2人のペアで作業する。</b><a href='%{pair_programming_research}'>調査によると</a>、コンピュータを共有して一緒に作業する<a
-    href='%{pair_programming_video}'>ペアプログラミング</a>によって、生徒は最もよく学ぶことができるそうです。生徒にペアを組むように呼びかけましょう。<li><b>プロジェクター・スクリーンを使う。</b>もしウェブに接続されたコンピュータ用にプロジェクターとスクリーンが用意できるなら、グループ全員が一緒にHour
+  hoc_faq_need_computers_a: いいえ。Hour of Codeのチュートリアルはパソコン、スマートフォン、タブレットで利用可能です。また中にはコンピュータがまったく不要なものもあります！どこからでも、どんな端末を持っていても参加できます。<p><i>いくつかのやり方があります:</i>
+    <br> <ul> <li><b>ペアで作業する。</b><a href='%{pair_programming_research}'>調査によると</a>、生徒が最もよく学べるのはコンピュータを共有して一緒に作業する<a
+    href='%{pair_programming_video}'>ペアプログラミング</a>です。生徒にペアを組むように呼びかけましょう。<li><b>プロジェクター・スクリーンを使う。</b>もしウェブに接続されたコンピュータ用にプロジェクターとスクリーンが用意できるなら、グループ全員が一緒にHour
     of Codeを行えます。一緒にビデオを見たり、順番にパズルを解いたり、質問に答えたりしましょう。<li><b>コンピュータは不要。</b><a href='%{unplugged_url}'>コンピュータがまったく不要のチュートリアル</a>も提供しています。</ul>
-  hoc_faq_need_computers_a_markdown: "  PC、スマートフォン、タブレット、そしてパソコンを全く必要としないチュートリアルもあります。どこにいても、どこにいても、何を持っていても参加できます。
-    \     _ここにオプションがあります_ - **ペアで作業。**[研究によると](%{pair_programming_research}) 学生は、[ペアプログラミング](%{pair_programming_video})、コンピュータを共有して一緒に作業することで最もよく学習します。学生には、共同作業を奨励してください。
-    \  -  **投影された画面を使用してください。 **Web接続されたコンピュータ用のプロジェクターとスクリーンがあれば、グループ全員で一緒にHour of
-    Codeを行うことができます。ビデオの一部を一緒に見て、交代でパズルを解いたり、質問に答えたりします。   - **非接続環境でもできます**[パソコンが不要なチュートリアル］(%{unplugged_url})を提供しています。
+  hoc_faq_need_computers_a_markdown: "いいえ。PC、スマートフォン、タブレット、そしてパソコンを全く必要としないチュートリアルもあります！どこにいても、どんな端末を持っていても参加できます。\n\n_ここにオプションがあります_\n\n-
+    **ペアで作業。** [研究によると](%{pair_programming_research}) 学生が最もよく学習するのは、[ペアプログラミング](%{pair_programming_video})、コンピュータを共有した共同作業時です。学生には、共同作業を奨励してください。
+    \n-  **プロジェクター・スクリーンを使う。 ** Web接続されたコンピュータ用のプロジェクターとスクリーンがあれば、グループ全員で一緒にHour of
+    Codeを行うことができます。ビデオを一緒に見て、交代でパズルを解いたり、質問に答えたりします。\n\n- **コンピュータ不要** [パソコンが不要なチュートリアル］(%{unplugged_url})を提供しています。
     \ "
   hoc_faq_international_q: 日本でHour of Codeに参加もしくはイベントを開催するにはどうしたら良いでしょう？
   hoc_faq_international_a: 誰でも、どこでもHour of Codeのイベントを開催することができます。昨年も、世界中の生徒がHour of
     Codeの取り組みに参加しました。2015年は、あなたの番です。<a href='/promote'>もっと知る</a>。
-  hoc_faq_international_a_markdown: 誰でも、どこでもHour of Codeのイベントを開催することができます。昨年も、世界中の生徒がHour
-    of Codeの取り組みに参加しました。詳しくは、 [こちら](%{promote})をご覧ください。
+  hoc_faq_international_a_markdown: 誰でも、どこでもHour of Codeのイベントを開催できます。昨年も、世界中の生徒がHour
+    of Codeに参加しました。詳しくは、 [こちら](%{promote})をご覧ください。
   hoc_faq_tutorial_q: Hour of Codeのチュートリアルを作成するにはどうしたら良いですか？
   hoc_faq_tutorial_a: もしあなた自身がチュートリアルを提供する「チュートリアルパートナー」になる事に興味がありましたら、<a href='/tutorial-guidelines'>
     当社のガイドラインと手順を参照してください</a> 。現在提供しているチュートリアルより多くの、より魅力的でバラエティに富んだチュートリアルを提供したいと思っています。
-  hoc_faq_tutorial_a_markdown: "  チュートリアルパートナーに興味がある場合は、[ガイドラインと指示を参照してください](%{tutorial_guidelines})。私たちは様々な魅力的なオプションを用意したいと考えていますが、第一の目標は、コンピュータサイエンスを初めて学ぶ学生や先生方に最適な体験を提供することです。
+  hoc_faq_tutorial_a_markdown: "  チュートリアルパートナーに興味がある場合は、[ガイドラインと指示をご覧ください](%{tutorial_guidelines})。私たちは様々な魅力的なオプションを用意したいと考えていますが、第一の目標は、コンピュータサイエンスを初めて学ぶ学生や先生方に最適な体験を提供することです。
     \ "
   hoc_faq_account_q: 生徒たちが、アカウントを取得してログインする必要はありますか？
-  hoc_faq_account_a: いいえ。生徒がHour of Codeを試すのに、サインアップやログインは全く必要ありません。<a href='%{codeorg_url}/learn/beyond'>続きのコース</a>の多くは、生徒の進捗を保存するためにアカウントの作成が必要です。また、Hour
-    of Codeへサインアップしても、自動的にCode Studioアカウントを作成することはありません。生徒の為のアカウントを作成したい場合は、<a href='https://youtu.be/_smelV_KISE'>手順</a>に従ってください。
-  hoc_faq_account_a_markdown: "  Hour of Codeを試すためのサインアップやログインは一切必要ありません。ほとんどの[後続コース](%{codeorg_url}/learn/beyond)では、学生の進捗状況を保存するためにアカウントを作成する必要があります。また、Hour
+  hoc_faq_account_a: いいえ。Hour of Codeを試すためのサインアップやログインは一切必要ありません。ほとんどの<a href='%{codeorg_url}/learn/beyond'>後続コース</a>では、学生の進捗状況を保存するためアカウントを作成する必要があります。また、Hour
+    of Codeに登録したからといって、自動的にCode Studioのアカウントが作成されるわけではありません。あなたの生徒用のアカウントを作成したい場合は、次の
+    <a href='https://youtu.be/_smelV_KISE'>手順</a>に従ってください。
+  hoc_faq_account_a_markdown: 'いいえ。Hour of Codeを試すためのサインアップやログインは一切必要ありません。ほとんどの[後続コース](%{codeorg_url}/learn/beyond)では、学生の進捗状況を保存するためアカウントを作成する必要があります。また、Hour
     of Codeに登録したからといって、自動的にCode Studioのアカウントが作成されるわけではありません。学生用のアカウントを作成したい場合は、以下の
-    [手順](https://youtu.be/_smelV_KISE) に従ってください。  "
+    [手順](%{section_instructions_url})に従ってください。  '
   hoc_faq_high_school_q: 高校生は、どのチュートリアルから始めるべきですか？
-  hoc_faq_high_school_a: スターウォーズやマインクラフトのチュートリアル、特にJavaScript版のスターウォーズは高校生にぴったりで、両方のチュートリアルは操作のレベルに左右されません。他には、<a
-    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>の初心者用チュートリアルである、アングリーバードやアナと雪の女王から始めるのもお勧めです。高校生ならば、1つのチュートリアルを30分程で完了することができるはずです。次には、カーンアカデミーやCodeHSなどより高度なJavaScriptチュートリアルを試すことも出来ます。
-  hoc_faq_high_school_a_markdown: "  スターウォーズとマインクラフトのチュートリアルは高校生に最適で、特にスターウォーズのJavaScript版と両方のチュートリアルのフリープレイレベルは最適です。代わりに、[%{partner_url}/learn](%{codeorg_url}/learn)の初心者チュートリアルを試してみることをお勧めします。高校生であれば、30分で1つ終わらせることができ、その後、Khan
+  hoc_faq_high_school_a: 'スターウォーズやマインクラフトのチュートリアル、特に両方のチュートリアルのスターウォーズのJavaScript版とフリープレイレベルは高校生に最適です。Angry
+    BirdsやAnna and Elsaなどを交互に、<a href=''%{codeorg_url}/learn''>%{partner_url}/learn</a>の初心者用チュートリアルから始めるのもお勧めです。高校生であれば、30分で1つ終わらせることができ、その後、Khan
+    AcademyやCodeHSなどのJavaScriptのより高度なチュートリアルに挑戦することができます。  '
+  hoc_faq_high_school_a_markdown: "  スターウォーズとマインクラフトのチュートリアル、特に両方のチュートリアルのスターウォーズのJavaScript版とフリープレイレベルは高校生に最適です。Angry
+    BirdsやAnna and Elsaなどを交互に、[%{partner_url}/learn](%{codeorg_url}/learn)の初心者用チュートリアルから始めるのもお勧めです。高校生であれば、30分で1つ終わらせることができ、その後、Khan
     AcademyやCodeHSなどのJavaScriptのより高度なチュートリアルに挑戦することができます。  "
   hoc_faq_scratch_q: Hour of CodeでScratchをやりたいと思っています。もし生徒がノートパソコンでなくiPadを持っていたらどうしたら良いでしょう？
-  hoc_faq_scratch_a: タブレットではScratchは実行できません。もし生徒が小さいのならScratchJr iPadアプリ (初心者向け) を試してみることをお勧めします。
-    その他に <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> には、Code.org、Tynker、Lightbot
-    や CodeSpark から提供されている iPad 用のチュートリアルもあります。
-  hoc_faq_scratch_a_markdown: タブレットではスクラッチは使えません。年少の生徒の場合は、スクラッチJR iPadアプリ(読み始めた子供用)が使えます。[%{partner_url}/learn](%{codeorg_url}/learn)にあるチュートリアルをご覧になると、Code.org、Tynker、Lightbot、CodeSparkから
-    iPadで動作するチュートリアルを探してみてください。
+  hoc_faq_scratch_a: タブレットではScratchは実行できません。年少の生徒の場合は、ScratchJr iPadアプリ(初心者向け)が使えます。<a
+    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>にあるチュートリアルをご覧になると、Code.org、Tynker、Lightbot、CodeSparkなどiPadで動作するその他のチュートリアルが見つかります。
+  hoc_faq_scratch_a_markdown: タブレットではScratchは実行できません。年少の生徒の場合は、ScratchJr iPadアプリ(初心者向け)が使えます。[%{partner_url}/learn](%{codeorg_url}/learn)にあるチュートリアルをご覧になると、Code.org、Tynker、Lightbot、CodeSparkから
+    iPadで動作するその他のチュートリアルが見つかります。
   hoc_faq_count_hoc_q: Hour of Codeの参加者の数はどうやって測っていますか？
   hoc_faq_map_q: なんで私のイベントに関するドットが地図上に表示されないのですか？
-  hoc_faq_map_a: 大変申し訳ありませんが、数多くのイベント主催者の方に登録頂いたため、いくつかのイベントをまとめて表示している場合があります。地図の上部に表示されている数字をクリックすることで、全てのイベントのリストが表示されますので、ご確認ください。また、イベントの追加後48時間ほど、地図上に反映されるまで時間がかかりますので、ご了承ください。
-  hoc_faq_map_a_markdown: "  Hour of Codeマップにあなたのイベントが表示されていないのは残念です。何万人もの主催者が登録しているため、マップはデータを集約し、複数のイベントの1地点を表示しています。マップの下の[イベントページ](%{events_url})リンクをクリックすると、州別のすべてのイベントのリストが表示され、そこにあなたのイベントを見つけることができます。さらに、何千人もの人々が
-    Hour of Code に登録しているため、マップとイベントリストの更新には通常 48 時間かかります。数日後にまたチェックしてみてください!  "
-  hoc_faq_count_hoc_a: Hour of Codeの記録システムの利用者数測定は正確ではありません。Hour of Codeの参加者を追跡する際に、生徒がログインや登録をしなくて済むようにするため、個々の生徒のIDを完全にはカウントしていません。結果として参加者のカウントは多めだったり少なめだったりします。詳しくは<a
-    href='%{codeorg_url}/loc'>こちら</a>を参照してください。
+  hoc_faq_map_a: 大変申し訳ありませんが、数多くのイベント主催者の方に登録頂いたため、複数のイベントをまとめて表示している場合があります。マップ下部の<a
+    href='%{events_url}'>イベントページ</a> をクリックすると、州別のすべてのイベントの一覧が表示され、そこにイベントが一覧で表示されます。また、イベント追加後マップ上に反映されるまで48時間ほどかかりますのでご了承ください。
+  hoc_faq_map_a_markdown: 'Hour of Codeマップにあなたのイベントが表示されておらず大変申し訳ありません。何万人もの主催者が登録しているため、マップはデータを集約し、複数のイベントをまとめて表示しています。マップの下の[イベントページ](%{events_url})リンクをクリックすると、州別のすべてのイベントのリストが表示され、そこであなたのイベントを見つけられるでしょう。さらに、何千人もの人々が
+    Hour of Code に登録しているため、マップとイベントリストの更新には通常 48 時間かかります。数日後にまたチェックしてみてください!  '
+  hoc_faq_count_hoc_a: Hour of Codeの記録システムの利用者数カウントは正確ではありません。Hour of Codeの参加者を追跡する際、生徒のログインや登録は不要なため、個々の生徒のIDを完全にはカウントしていないのです。結果として参加者人数は実際より多いことも少ないこともあります。詳しくは<a
+    href='%{codeorg_url}/loc'>こちら</a>をお読みください。
   hoc_faq_count_hoc_a_markdown: "  Hour of Codeトラッカーは利用状況を正確に把握するものではありません。Hour of
-    Codeへの参加を追跡する際に、学生のログインや登録を義務付けていないため、独自の学生IDを完全に集計しているわけではありません。その結果、参加者のオーバーカウントとアンダーカウントを同時に行っています。すべての詳細を読む
-    [こちら](%{codeorg_url}/loc)。  "
+    Codeへの参加を追跡する際に、学生のログインや登録を義務付けていないため、一意の学生IDを完全に集計しているわけではありません。そのため参加者人数は実際より多いことも少ないこともあります。すべての詳細は[こちら](%{codeorg_url}/loc)をお読みください。
+    \ "
   hoc_faq_one_hour_q: どれくらいのことを、１時間で学ぶことができますか？
   hoc_faq_one_hour_a: |-
     Hour of Codeのゴールは、1時間で誰もをコンピュータサイエンスの専門家にすることではありません。むしろ、Hour of Codeを通じてコンピュータサイエンスが楽しく創造的で、誰でも取り組めることに気づいてほしいと思っています。ですので、Hour of Codeの成功は、どれくらい詳しく生徒が学んだかではなく、どれだけ幅広く多くの人がこの運動に参加し、最終的にコンピュータサイエンスをもっと勉強したいと思ったかで測られます。その結果、既に数百万人の先生や生徒がもっと勉強したいと思い、一部の生徒はコンピュータサイエンスを大学での専攻にしたいと考えています。これは素晴らしいことです。<br/>
     <br/>
     また、先生方が1時間のアクティビティを通して、コンピュータサイエンスの学位を持っていなくてもコンピュータサイエンスの授業ができる、という自信を持ってもらうことも目的の一つです。既に、数千人の先生が、コンピュータサイエンスをより深く学ぶために、オンラインコースや大学の授業に参加しています。更に言えば、教育委員会の人々が生徒がをコンピュータサイエンスを学びたいと思っていることを実感し、また先生がそれを教える十分なスキルを持っていることも証明することも、Hour of Codeの目的です。
-  hoc_faq_one_hour_a_markdown: "  Hour of Codeの目的は、1時間でコンピュータ科学のエキスパートになることではありません。コンピュータサイエンスは楽しく創造的なものであること、すべての年齢層、すべての学生にとって、バックグラウンドに関係なく利用可能であることを学ぶためには、1時間だけで十分です。このキャンペーンの成功の尺度は、CSの学生がどれだけ学習したかではありません。成功は、性別や民族、社会経済グループを超えた幅広い参加、そして結果として、すべての学年レベルでCSコースへの登録と参加が増加したことに反映されています。何百万人もの参加している先生方や学生が、1時間を超えて、1日または1週間、またはそれ以上の時間を学習することを決め、その結果、多くの学生が全コース（または大学の専攻科）に入学することを決めています。
-    \     学生の他に、もう一人の「学習者」は、コンピュータ科学者としての大学の学位を持っていなくても、1時間後にはコンピュータサイエンスを教えることができるという自信を得る教育者です。何万人もの教師が、さらにコンピュータサイエンスを追求することを決め、PDを受講するか、フォローオンのオンラインコースを提供するか、あるいはその両方を選択しています。これは学校の管理者にも当てはまります。コンピュータサイエンスは学生が求めているものであり、教師にもできることだと認識しているのです。
-    \     何よりも、参加者全員が1時間で学べることは、「こんなことができるんだ」ということです。  "
+  hoc_faq_one_hour_a_markdown: "  Hour of Codeの目的は、1時間でコンピュータサイエンスのエキスパートになることではありません。コンピュータサイエンスは楽しく創造的なものであること、すべての年齢層、すべての学生にとって、バックグラウンドに関係なく利用可能であることを学ぶための1時間です。このキャンペーンの成功の評価基準は、CSの学生がどれだけ学習したかではありません。成功は、性別や民族、社会経済的グループを超えた幅広い参加、また結果として、すべての学年レベルでCSコースへの登録と参加者の増加が反映されます。参加している何百万人もの先生方や学生が、1時間を超えて、1日または1週間、またはそれ以上の時間を学習に費やすことを決め、その結果多くの学生が全コース（または大学の専攻科）にへの入学することを決めています。\n\n学生以外の「学習者」は、コンピュータサイエンティストとしての大学の学位を持っていなくても、1時間後にはコンピュータサイエンスを教えることができるという自信を得る教育者です。何万人もの教師が、さらにコンピュータサイエンスを追求することを決め、PDを受講するか、フォローオンのオンラインコースを提供するか、あるいはその両方を選択しています。これは学校の管理者にも当てはまります。コンピュータサイエンスは学生が求めているものであり、教師にもできることだと認識しているのです。\n\n何よりも、参加者全員が1時間で学べることは、「こんなことができるんだ」ということです。
+    \ "
   hoc_faq_more_questions_q: この他に質問がありますか？
   hoc_faq_more_questions_a: "<a href='http://support.code.org'>サポート フォーラム</a> で回答を探してみてください。"
-  hoc_faq_more_questions_a_markdown: 答えを見つけるには、[サポートフォーラム](http://support.code.org)をご覧ください。
+  hoc_faq_more_questions_a_markdown: "[サポートフォーラム](http://support.code.org)で回答を探してみてください。"
   hoc_faq_keep_learning_q: Hour of Codeに参加したあと、どのように学び続けることができますか？
-  hoc_faq_keep_learning_a: 誰もが、Hour of Codeのイベントを、いつでもどこでも開催できます。Hour of Codeのチュートリアルやカリキュラムは、永続的にオンラインで提供されますので、ご安心ください。Hour
-    of Codeのイベントを成功させる秘訣は、<a href='/promote'>こちら</a>を御覧ください。
-  hoc_faq_keep_learning_a_markdown: "  誰でもいつでもHour of Codeに参加することができます。チュートリアルは年間を通して開催されます。すべてのチュートリアルやカリキュラムは、当サイトで永久公開されます。Hour
+  hoc_faq_keep_learning_a: 誰もがHour of Codeのイベントをいつでもどこでも開催できます。Hour of Codeのチュートリアルやカリキュラムは、永久にオンラインで提供されますのでご安心ください。Hour
+    of Codeのイベントを成功させるためのガイドやその他リソースは、<a href='/promote'>こちら</a>を御覧ください。
+  hoc_faq_keep_learning_a_markdown: " 誰でもいつでもHour of Codeに参加することができます。チュートリアルは年間を通して開催されます。すべてのチュートリアルやカリキュラムは当サイトでの永久公開です。Hour
     of Codeイベントを成功させるためのイベントハウツーガイドやその他のリソースについては、[リソース](%{promote})にアクセスしてください。  "
   hoc_faq_certificates_q: 生徒の認定証はどこから印刷できますか？
   hoc_faq_certificates_a: "<a href='%{codeorg_url}/certificates'>こちら</a>を御覧ください。全ての生徒さんの分を、授業前に前もって印刷することもできます。Minecraftのチュートリアルの証明書は、<a
     href='%{codeorg_url}/certificates?course=mc'>こちら</a>から印刷できます。"
   hoc_faq_certificates_a_markdown: "  [証明書ページ](%{codeorg_url}/certificates)にアクセスして、クラス全体の証明書を事前に印刷することができます。また、マインクラフトのチュートリアルを行っている学生のための[特別証明書](%{codeorg_url}/certificates?course=mc)を印刷することもできます。
     \ "
-  hoc_faq_logo_q: Hour of Code のロゴや名前の使い方に、何か制限はありますか？
-  hoc_faq_logo_a: Hour of Code は登録商標です。我々はその使用を妨げませんが、いくつかの制限を確実に守るようにして下さい。<a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
-    使用法のガイドライン</a> を参照してください。
-  hoc_faq_logo_a_markdown: "  Hour of Codeは商標登録されています。私たちはその使用を阻止したいわけではありませんが、その使用がいくつかの制限の範囲内に収まるようにしたいと考えています。ご利用にあたっては、[本ガイドライン](%{logo_url})をご覧ください。
-    \ "
+  hoc_faq_logo_q: Hour of Code のロゴや名称の使い方に制限はありますか？
+  hoc_faq_logo_a: Hour of Codeは登録された商標です。私たちはその使用を妨げたいわけではありませんが、それに関する制限を確実に守るようにして下さい。<a
+    href='%{logo_url}'>利用ガイドライン</a> をご覧ください。
+  hoc_faq_logo_a_markdown: 'Hour of Codeは登録された商標です。私たちはその使用を阻止したいわけではありませんが、その使用が制限の範囲内に収まるようにしたいと考えています。ご利用にあたっては、[利用ガイドライン](%{logo_url})をご覧ください。  '
   stats_hoc_2013_image_alt: Hour of Codeの 2013 の統計情報
   stats_growth: 1500 万ユーザーに到達する最速記録でした。
   stats_i18n: 45以上の言語で生徒たちが学んでいます
@@ -9930,86 +9932,167 @@ ja:
   all: All
   dont_know: I don't know
   language_label: Language
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: 日本語
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: 日本語
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: 日本語
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

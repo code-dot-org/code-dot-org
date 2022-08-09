@@ -26,9 +26,9 @@ require 'cdo/activity_constants'
 class Activity < ApplicationRecord
   include ActivityConstants
 
-  belongs_to :level
-  belongs_to :user
-  belongs_to :level_source
+  belongs_to :level, optional: true
+  belongs_to :user, optional: true
+  belongs_to :level_source, optional: true
 
   def perfect?
     ActivityConstants.perfect? test_result

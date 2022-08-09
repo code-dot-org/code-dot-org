@@ -362,26 +362,29 @@ export function setInitialAnimationList(
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
-    let index = 0;
+    let key = serializedAnimationList.orderedKeys[0];
     // If we're in spritelab, we need to make sure we don't set the selected animation to a background
     if (isSpriteLab) {
-      while (
-        index < serializedAnimationList.orderedKeys.length &&
-        (
-          serializedAnimationList.propsByKey[
-            serializedAnimationList.orderedKeys[index]
-          ].categories || []
-        ).includes('backgrounds')
-      ) {
-        index = index + 1;
-      }
+      const filteredOrderedKeys = getOrderedKeysWithoutBackgrounds(
+        serializedAnimationList
+      );
+      key = filteredOrderedKeys[0];
     }
-    dispatch(selectAnimation(serializedAnimationList.orderedKeys[index] || ''));
+    dispatch(selectAnimation(key || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
   };
 }
+
+const getOrderedKeysWithoutBackgrounds = serializedAnimationList => {
+  return serializedAnimationList.orderedKeys.filter(animKey => {
+    const animProps = serializedAnimationList.propsByKey[animKey];
+    return (
+      !animProps.categories || !animProps.categories.includes('backgrounds')
+    );
+  });
+};
 
 export function addBlankAnimation() {
   // To avoid special cases and saving tons of blank animations to our server,
@@ -608,9 +611,14 @@ export function editAnimation(key, props) {
  * @param {!AnimationKey} key
  * @returns {function}
  */
-export function deleteAnimation(key) {
+export function deleteAnimation(key, isSpriteLab = false) {
   return (dispatch, getState) => {
-    const orderedKeys = getState().animationList.orderedKeys;
+    const animationList = getState().animationList;
+    let orderedKeys = animationList.orderedKeys;
+    // If we're in spritelab, we need to make sure we don't set the selected animation to a background
+    if (isSpriteLab) {
+      orderedKeys = getOrderedKeysWithoutBackgrounds(animationList);
+    }
     const currentSelectionIndex = orderedKeys.indexOf(key);
     let keyToSelect =
       currentSelectionIndex === 0 ? 1 : currentSelectionIndex - 1;

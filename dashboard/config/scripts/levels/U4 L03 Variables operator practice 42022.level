@@ -56,8 +56,9 @@
     "display_name": "Ticket Prices",
     "ai_enabled": "false",
     "thumbnail_url": "https://images.code.org/cbdc2c888eb5863809a904570d894bce-image-1647378108940.png",
+    "bubble_choice_description": "Add code to make all the buttons update the total cost and number of tickets on this ticket price app.",
     "preload_asset_list": null,
-    "bubble_choice_description": "Add code to make all the buttons update the total cost and number of tickets on this ticket price app."
+    "watchers_prepopulated": "[\"dollars\", \"tickets\"]"
   },
   "game_id": 41,
   "published": true,
@@ -65,7 +66,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:04:32.842+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Variables operator practice 4_2021\\\"\"],\"cloned_from\":\"U4 L03 Variables operator practice 4_2021\"},{\"changed_at\":\"2022-03-15 06:45:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-03-15 21:02:18 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:01:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-22 19:55:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:04:32.842+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Variables operator practice 4_2021\\\"\"],\"cloned_from\":\"U4 L03 Variables operator practice 4_2021\"},{\"changed_at\":\"2022-03-15 06:45:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-03-15 21:02:18 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:01:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-22 19:55:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-06 21:38:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

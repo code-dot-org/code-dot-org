@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 nl:
   errors:
     messages:
@@ -409,7 +415,6 @@ nl:
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: 'Jouw voortgang'
-      lines: 'Totaal aantal regels code: %{lines}'
       close: 'SLUITEN'
       mastery: 'Begrippen'
       puzzle_map: 'Niveaus'
@@ -570,6 +575,7 @@ nl:
     how_it_works: 'Hoe het werkt'
     try_hour_of_code: 'Probeer een Hour of Code!'
     store: 'Winkel'
+    cookie_notice: 'Cookiebeleid'
   reference_area:
     title: 'Hulp nodig?'
     subtitle: 'Bekijk deze video''s en hints'
@@ -633,6 +639,10 @@ nl:
       title: 'Dansfeest'
     dance-2019:
       title: 'Dansfeest'
+    hello-world:
+      title: 'Hallo Wereld'
+    poem-art:
+      title: 'Poëzie'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -778,13 +788,6 @@ nl:
     accept: "Accepteren"
     print: "Afdrukken"
     review_terms: "Herzie de aangepaste gebruiksvoorwaarden"
-  donor_interstitial:
-    title: "Je gratis informaticacursussen worden mogelijk gemaakt door..."
-    local_supporters: "Lokale ondersteuners"
-    global_supporters: "Globale ondersteuners"
-    support_codeorg_1: "Elke euro die Code.org ontvangt, geeft meer leerlingen kansen."
-    support_codeorg_2: "[Doneer nu](%{donate_url}) om Code.org te ondersteunen."
-    get_started: "Ga aan de slag op Code.org"
   school_info_interstitial:
     save: "Opslaan"
   race_interstitial:
@@ -919,14 +922,14 @@ nl:
         lightbot: 'LightBot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Anders:"
+        other: "Anders"
       robotics:
         kodable: 'Kodable'
         microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "Anders:"
+        other: "Anders"
       workshop_course:
         csp: 'CW Principes'
       email_opt_in:

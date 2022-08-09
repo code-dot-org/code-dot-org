@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 is:
   errors:
     messages:
@@ -407,7 +413,6 @@ is:
     popup:
       progress_for_user: "Framvinda %{name}"
       progress: 'Framvinda þín'
-      lines: 'Samtals línur af kóða: %{lines}'
       close: 'LOKA'
       mastery: 'Hugtök'
       puzzle_map: 'Áfangar'
@@ -797,14 +802,6 @@ is:
     reminder_desc: 'Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a> okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.'
     reminder_desc_markdown: Við höfum uppfært [þjónustuskilmála](%{tos_url}) og [persónuverndarstefnu](%{privacy_url}) okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.
     review_terms: "Skoða uppfærða skilmála"
-  donor_interstitial:
-    title: "Þessi ókeypis námskeið í tölvunarfræði eru studd af..."
-    subtitle: "Við viljum þakka þeim örlátu stuðningsaðilum sem með stuðningi sínum hafa gert góðan árangur Code.org mögulegan. Við erum ákveðin í að Code.org verði áfram ókeypis fyrir skóla og nemendur um allan heim, þökk sé áframhaldandi örlæti [stuðningsaðila okkar](%{donors_url})!"
-    local_supporters: "Staðbundir stuðningsaðilar"
-    global_supporters: "Stuðningsaðilar á heimsvísu"
-    support_codeorg_1: "Hver dollar sem gefinn er Code.org veitir fleiri nemendum tækifæri."
-    support_codeorg_2: "[Gefðu núna](%{donate_url}) til að styðja Code.org."
-    get_started: "Byrjaðu á Code.org"
   school_info_interstitial:
     title: "Við viljum koma tölvunarfræði á framfæri við hvern nemanda - hjálpaðu okkur að fylgjast með árangri okkar!"
     message: "Vinsamlegast skráðu upplýsingar um skóla hér fyrir neðan."
@@ -1031,6 +1028,7 @@ is:
         music: 'Tónlist'
         art: 'Listir'
         other: "Annað:"
+        na: 'Á ekki við'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1040,7 +1038,8 @@ is:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Annað:"
+        other: "Annað"
+        na: 'Á ekki við'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1050,7 +1049,8 @@ is:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Annað:"
+        other: "Annað"
+        na: 'Á ekki við'
       workshop_course:
         csf_af: 'Grunnatriði TF (Námskeið A-F)'
         csf_express: 'Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)'

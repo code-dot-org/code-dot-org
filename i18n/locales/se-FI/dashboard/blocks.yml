@@ -925,7 +925,7 @@ se:
         text: maid sáhttá gaikut
       gamelab_edgesDisplace:
         text: ravddat lássejit {SPRITE} sirdimis
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: gearddut juohke {N} {UNIT}
         options:
           UNIT:
@@ -1042,8 +1042,6 @@ se:
         text: sadji {SPRITE}:s
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_makeNewScaledSprite:
-        text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       gamelab_makeNumSprites:

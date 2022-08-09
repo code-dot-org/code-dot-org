@@ -37,12 +37,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             @script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                @lesson.name => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
@@ -60,7 +55,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit = create :script, :with_lessons, lessons_count: 1, name: 'in-development-unit', published_state: SharedCourseConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
+    @in_development_unit = create :script, :with_lessons, lessons_count: 1, name: 'in-development-unit', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
     @in_development_unit.reload
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
@@ -79,10 +74,10 @@ class LessonsControllerTest < ActionController::TestCase
     @login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-script', is_migrated: true, include_student_lesson_plans: true, login_required: true
     @login_req_script.reload
 
-    @pl_login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', is_migrated: true, include_student_lesson_plans: true, login_required: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', is_migrated: true, include_student_lesson_plans: true, login_required: true, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @pl_login_req_script.reload
 
-    @pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-unit-1', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-unit-1', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @pl_script.reload
   end
 
@@ -288,12 +283,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                solo_lesson_in_script.key => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
@@ -688,11 +678,6 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
     @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
-
-    # Just make sure the new lesson name appears somewhere in the new file contents.
-    File.stubs(:write).with do |filename, data|
-      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
-    end.once
 
     # Just make sure the new lesson name appears somewhere in the new file contents.
     File.stubs(:write).with do |filename, data|

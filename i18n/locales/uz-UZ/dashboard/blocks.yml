@@ -4,6 +4,22 @@ uz:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': o‘rta
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': o‘rta
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: " {MOVE1} va {MOVE2} orasida {GROUP} harakatlar guruhi har {N} o'lchovda almashadi"
         options:
@@ -1033,7 +1049,7 @@ uz:
         text: sudranuvchan
       gamelab_edgesDisplace:
         text: chegaralar {SPRITE} harakatini bloklagan
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: har {N} {UNIT} takrorlash
         options:
           UNIT:
@@ -1184,8 +1200,6 @@ uz:
         options:
           EFFECT:
             '"rain"': yomg‘ir
-      gamelab_makeNewScaledSprite:
-        text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNumSprites:
@@ -1197,6 +1211,12 @@ uz:
             '90': pastga
             '180': chap
             '270': yuqoriga
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': o‘rta
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ga yuzlangan"
         options:

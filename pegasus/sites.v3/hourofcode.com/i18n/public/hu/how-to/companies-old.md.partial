@@ -7,7 +7,7 @@ nav: how_to_nav
 {{ signup_button }}
 
 # Hogyan hozd el a "Hour of Code" rendezvényt, az intézményedhez?
-### Ismerje meg, hogyan inspirálhatja Ön és alkalmazottai a diákokat arra, hogy kipróbálják az informatikát!
+### Ismerje meg, hogyan inspirálhatja Ön és alkalmazottai a diákokat arra, hogy kipróbálják a számítástechnikát!
 
 ***
 
@@ -33,7 +33,7 @@ Alkalmazottaid bátorításához és osztálytermekhez való csatlakozásukról 
 - Népszerűsítsd [Kódolás Órája]({{ urls/promote }}) rendezvényed és bátoríts másokat is előadni.
 - Ösztönözz szoftvermérnököket a vállalatodnál, hogy látogasson be egy helyi osztályba segíteni a "Kódolás Órája" eseményt és hogy inspirálja a tanulókat, hogy számítástechnikát tanuljanak. [Iratkozz fel]({{ urls/volunteer_engineer }}), hogy legyen egy osztályteremhez kapcsolatod.
 
-## 2. Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Válassz tevékenységet
 Minden korosztály számára kínálunk a partnereink által elkészített <a href={{ urls/learn }}">1 óra hosszú, mókás gyakorlatok</a>. Próbáld ki őket!

@@ -17,14 +17,7 @@ module ActionViewSinatra
   # require us to set an instance variable on the resulting object. So we
   # simply call the Rails 6 factory, then manually set our instance variable.
   def self.create_view(sinatra)
-    # Rails 6 added the `with_empty_template_cache` method and some new
-    # initialization logic that requires us to use it rather than instantiating
-    # directly. To provide support for both Rails 5 and 6, we conditionally
-    # invoke that pathway.
-    # Once we have fully upgraded to Rails 6, this can be simplified.
-    view = ActionViewSinatra::Base.respond_to?(:with_empty_template_cache) ?
-      ActionViewSinatra::Base.with_empty_template_cache.empty :
-      ActionViewSinatra::Base.new
+    view = ActionViewSinatra::Base.with_empty_template_cache.empty
     view.set_sinatra(sinatra)
     view
   end

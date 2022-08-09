@@ -738,6 +738,9 @@ ja:
       2:
         text: この例では、花の場合はすべてのミツを手に入れる指示し、さらに別の「条件」ブロックを使ってハチの巣の場合はハチミツを作ると指示します。できましたね！
     C4_conditionals:
+      1:
+        text: if/elseブロックと呼ばれる新しいブロックがあります。これは以前にパズルで使用したifブロックと同じ条件ステートメントです。しかし今、下のに「else」という新しい部分があります。if/elseブロックを使用すると、ミツバチは2つのアクションセット間で決定を行えます。蜂が花にいれば、蜂は最初の部分で行う
+          (do) の部分に書かれた一連の動作を行います。花のところにいなければ、蜂はそうでなければ (else) の部分に書かれた一連の動作を行います。
       2:
         text: コンピューターは条件文によって決定を下します。人間は、コンピューターに対して、特定の状況になった場合はこれを行い、そうならなければ (else)、これを行うという条件をコンピューターに設定します。「もし/でなければ」ブロックの一番上には「花のところにいる場合」と書かれています。けれども、ブロックの上部で他のことを言うこともできます。たとえば、もしミツが2に等しい場合や、もし前に道がある場合などです。その場合も、ブロックは同じように動作します。一番上の文が真
           (true) の場合、最初の行動セットが実行されます。けれども、一番上の文が偽 (false) の場合、2番目の行動セットが実行されます。
@@ -1807,6 +1810,9 @@ ja:
         text: 'ネッティ: やったね、おめでとう！'
       4:
         text: 'トモホーク: おめでとうございます！'
+      5:
+        text: 素晴らしい一日でした！すべての宝探しは、Minecraftコンジットの構築やNautilusシェルを知り、宝箱の発見につながりました。
+          私はプリズマリンの色が好きです。 また、ループと条件でコード化する方法も学びました。
       6:
         text: プログラミングについて言うと、このクエストにはもう1つのレベルがあります。冒険家の君はそれにチャレンジする準備はできていますか？
       7:
@@ -1817,58 +1823,80 @@ ja:
         text: これまで自身が大胆なプログラマーであることを証明してきました。何を構築するのか、見るのが楽しみです。そしてプログラミングの冒険がここで終わることがありませんように。良い旅を！
     teaching_csf_how_it_works:
       1:
+        image: notes/teaching_cs_fundamentals_1.png
         text: このコースは何段階かに分かれています。
       2:
+        image: notes/teaching_cs_fundamentals_2.png
         text: 最初のいくつかの段階では、コンピューター サイエンスとは何か、また主要な語彙を説明します。
       3:
+        image: notes/teaching_cs_fundamentals_3.png
         text: 次に、生徒と同じようにプログラミングする方法を学びます。コースの最終段階は、教室でコンピューター サイエンスを教える計画を立てるのに役立つでしょう。コース全体を通して、プラグイン
           (またはオンライン) レッスンと、コンピューターを使わずに行うオフラインのレッスンのどちらの例もご覧いただけます。
       4:
+        image: notes/teaching_cs_fundamentals_4.png
         text: 学習プラットフォームは進捗状況をトラッキングするので、いつでも中断したところから始めることができます。
     what_is_cs:
       1:
+        image: notes/what_is_cs.png
         text: プログラミングは、コンピューターに与える一連の指示です。コンピューター サイエンスは、人々がコンピューターの力を使って大きな問題を解決する分野です。コンピューター
           サイエンスにはプログラミングが含まれますが、インターネットのしくみや社会への影響、ビッグデータの扱い方、大きな問題の分解方法といった他の事柄も扱います。コンピューター
           サイエンスは、問題解決、批判的思考、そして粘り強さがポイントになります。
     writing_first_program:
       1:
+        image: notes/writing_first_program_1.png
         text: Code.orgでは、Blocklyと呼ばれる視覚的なドラッグ・アンド・ドロップ プログラミング言語を用いています。 Blocklyは、ブロックと呼ばれるカラフルな指示を使用してプログラムを構築し、パズルを解いていきます。
       2:
+        image: notes/writing_first_program_2.png
         text: 各パズルには4つの部分があります。
       3:
+        image: notes/writing_first_program_3.png
         text: 左側にはプレイエリアがあり、プログラムが実行されます。
       4:
+        image: notes/writing_first_program_4.png
         text: 中央には、必要なすべてのブロックがあるツールボックスエリアがあります。
       5:
+        image: notes/writing_first_program_5.png
         text: 右側はワークスペースで、ブロックをドラッグしてプログラムを構築します。
       6:
+        image: notes/writing_first_program_6.png
         text: ワークスペースの上には、各パズルの説明があります。
       7:
+        image: notes/writing_first_program_7.png
         text: ツールボックスからドラッグするブロックが多すぎる場合は、余分なブロックをツールボックスにドラッグして戻します。プログラムを試すには [実行]
           をクリックし、もう一度やり直すには [リセット] をクリックしてください。
     repeat_block:
       1:
+        image: notes/repeat_block.png
         text: "「繰り返し」ブロックを使用すると、その中にあるコードを指示に従い何度でもループできます。"
     what_is_an_event:
       1:
+        image: notes/what_is_an_event.png
         text: イベントは、発生する何かを待つようにプログラムに指示します。そのことが起こると、プログラムはアクションを実行します。コンピューターは、マウスのクリック、矢印ボタンの押下げ、または画面のタップを待ちます。
     lesson_planning:
       1:
+        image: notes/lesson_planning_1.png
         text: CS基礎レッスンは、レッスンの内容を説明する概要から始まります。
       2:
+        image: notes/lesson_planning_2.png
         text: レッスンには、ウォームアップ、アクティビティ、まとめがあります。独自のレッスンプランを作成する場合は、これらのヒントを覚えておくとよいでしょう。
       3:
+        image: notes/lesson_planning_3.png
         text: 1.らせん状のカリキュラム設計を用いるようにしてください。概念を一度紹介してから、その後復習しまうｓ。
       4:
+        image: notes/lesson_planning_4.png
         text: 2.オンラインレッスンとオフラインレッスンを組み合わせて、混合学習体験を創出します。
       5:
+        image: notes/lesson_planning_5.png
         text: 3.カリキュラムを小さなセクションに分割します。
       6:
+        image: notes/lesson_planning_6.png
         text: 4.現地の基準に合わせ、大学進学とキャリアに備えたスキルに沿うようにしてください。
     opd_closing:
       1:
+        image: notes/opd_closing_1.png
         text: おめでとうございます！教職員用のコンピューター サイエンス入門オンラインコースを修了しました。これで、生徒の進学・キャリアアップを後押しする先生コミュニティの一員になれました。
       2:
+        image: notes/opd_closing_2.png
         text: さらにサポートが必要な場合は、以下のリソースをご覧ください。1. forum.code.org、2. Twitterの@teachcode、3.
           studio.code.org
     hoc_dance_warmup_2019:
@@ -1881,20 +1909,28 @@ ja:
       4:
         text: 次の1時間では、独自のダンスパーティーをプログラミングするところからコンピューター サイエンスを始めます。ヒットした楽曲と素晴らしいダンサーのチームを集めたので、一緒に楽しく踊りましょう。
       5:
+        image: notes/hoc_dance_warmup_2019_5.png
         text: プログラムのブロックを使用して、さまざまなダンサーを選択し、ダンスの動きを変更し、音楽に反応させ、インタラクティブにします。
       6:
+        image: notes/hoc_dance_warmup_2019_6.png
         text: 画面が3つの主要部分に分割されていますね。左側はプレイスペース。ここにダンサーが現れます。
       7:
+        image: notes/hoc_dance_warmup_2019_7.png
         text: 中央のエリアがツールボックスです。レッスンを進めるにつれ、このスペースで新しいコードブロックが利用できるようになります。
       8:
+        image: notes/hoc_dance_warmup_2019_8.png
         text: 右側のスペースはワークスペースです。ブロックをツールボックスからワークスペースにドラッグして、プログラムを構築できます。
       9:
+        image: notes/hoc_dance_warmup_2019_9.png
         text: 各レベルの説明は、画面の上部に表示されています。ヒントが必要な場合は、電球マークをクリックしてください。
       10:
+        image: notes/hoc_dance_warmup_2019_10.png
         text: まず、この赤いブロックで新しいダンサーを作ってみましょう。まず、ツールボックスの外にドラッグし、このオレンジ色の「セットアップ」ブロックの下にくっつけます。このダンサーは猫です。
       11:
+        image: notes/hoc_dance_warmup_2019_11.png
         text: これで、ダンサーがプレイスペースのどこに表示されるかを変更することもできます。
       12:
+        image: notes/hoc_dance_warmup_2019_12.png
         text: プレイスペースの上には、音楽を選ぶためのメニューがあります。選べる曲がたくさんあるので、お気に入りを見つけて楽しんでください。プレイスペースの下には
           [実行] ボタンがあります。[実行] を押すと、プログラムのダンサーがプレイスペースに表示され、音楽が再生されます。
       13:
@@ -1903,35 +1939,50 @@ ja:
       1:
         text: 'Hour of Code | ダンスパーティー: イベント'
       2:
+        image: notes/hoc_dance_events_2019_2.png
         text: 私はエリンです。Code.orgのソフトウェアエンジニアで、ダンスパーティーの構築を手伝いました。
       3:
+        image: notes/hoc_dance_events_2019_3.png
         text: さまざまなダンスの動きを音楽に合わせて発生させるには、「イベント」と呼ばれるものを使うことができます。イベントは、何かが起こるのを待って、すぐに反応するようにプログラムに指示します。
       4:
+        image: notes/hoc_dance_events_2019_4.png
         text: イベントの例としては、マウスをクリックしたり、矢印ボタンやスクリーンを軽くタッチしたりするのをリッスンすることが挙げられます
       5:
+        image: notes/hoc_dance_events_2019_5.png
         text: ここでは、画面の矢印ボタンまたはキーボードのキーを押すと、ダンサーが動きを実行するようにプログラムします。
       6:
+        image: notes/hoc_dance_events_2019_6.png
         text: "「上矢印を押したとき」(when up arrow) イベントブロックを使って、「一度行う」(do once) ブロックをそれにくっつけることができます。誰かが上矢印キーを押すと、「上矢印キー」ブロックにくっついたプログラムが実行されます。どのダンスの動きにしましょうか？"
       7:
+        image: notes/hoc_dance_events_2019_7.png
         text: 選択するダンサーのタイプが、「設定」ブロック内で作成したダンサーの1つと一致していることを確認してください。一致していないと、何も起こりません。
       8:
+        image: notes/hoc_dance_events_2019_8.png
         text: 最終的には、このようなイベントをさらに作成して、ダンサーに各キーで異なる動きをさせることができます。試してみてください。数行のプログラムで、独自のインタラクティブなダンスを作成できます。
     hoc_dance_measures_2019:
       1:
+        image: notes/hoc_dance_measures_2019_1.png
         text: 'Hour of Code | ダンスパーティー: 小節'
       2:
+        image: notes/hoc_dance_measures_2019_2.png
         text: アロエ・ブラックです。私はシンガー・ソングライター、エンターテイナーです。コンピューター サイエンスは未来があるので、本当に学ぶ価値があると思います。また、文字通り自分の生活をコントロールしているテクノロジーを操ることができるようになることが重要だと思います。
       3:
+        image: notes/hoc_dance_measures_2019_3.png
         text: これから使用するイベントは、曲の変更を待ちます。その変更により、ダンサーは新しいダンスをするようになります。
       4:
+        image: notes/hoc_dance_measures_2019_4.png
         text: プロのダンサーは、曲のビートを数えて振り付けを練習します。音楽では、小節は特定の数のビートを指します。最も人気のある曲では、小節は4ビート長です。
       5:
+        image: notes/hoc_dance_measures_2019_5.png
         text: ダンサーを自由にするには、緑色のイベントブロックが必要です。このイベントブロックは、「4小節後」と言います。
       6:
+        image: notes/hoc_dance_measures_2019_6.png
         text: 紫色の「永久に実行」ブロックをドラッグすると、ダンサーが行うダンスを選択できます。それは「4小節後」イベントブロックの下にあるため、ダンサーは曲の4小節分待ってからダンスを開始します。
       7:
+        image: notes/hoc_dance_measures_2019_7.png
         text: 表示エリアの上部にある小節カウンターに注意してください。
       8:
+        image: notes/hoc_dance_measures_2019_8.png
         text: ダンスコードをトリガーするイベントを見て聞いてください。そして合図があり次第すぐに、ダンサーが動き始めます。
     hoc_dance_properties_2019:
       1:
@@ -1947,12 +1998,16 @@ ja:
       6:
         text: ダンサーの動きを変更できるだけでなく、ダンサーのプロパティも変更できます。プロパティは、画面上のダンサーの位置、ダンサーのサイズ、ダンサーの色などを説明します。
       7:
+        image: notes/hoc_dance_properties_2019_7.png
         text: ダンサーのプロパティを変更するには、「設定」ブロックを使用します。「設定」ブロックを使用して、ダンサーを小さく見せましょう。まず、「設定」ブロックをプログラムにドラッグします。
       8:
+        image: notes/hoc_dance_properties_2019_8.png
         text: 次に、変更するダンサーを選択して、画面に表示するサイズを入力します。フルサイズは100です。これより小さい数値を選択すると、ダンサーが小さくなります。ダンサーが小さいほど、遠くに見えます。
       9:
+        image: notes/hoc_dance_properties_2019_9.png
         text: "「設定」ブロックを使用して、ダンサーの寸法、回転、位置、色を変更することもできます。これらのプロパティをいじってみると、あらゆる種類の変更を加えて、曲のさまざまな部分にリンクすることができます。"
       10:
+        image: notes/hoc_dance_properties_2019_10.png
         text: 既に存在するダンサーのプロパティのみを設定できることを覚えておいてください。「セット」ブロックが「新しいダンサーを作成」（Make a
           new dancer）ブロックの後に来ることを確認してください。自由に創造力を発揮して、楽しんでください。
     hoc_dance_congrats_2019:
@@ -1969,29 +2024,176 @@ ja:
       6:
         text: それとも、全く違う遊び方をしてみても？
       7:
+        image: notes/hoc_dance_congrats_7.png
         text: チュートリアルの最後に、あなたの作品へのリンクを友だちと共有することができます。想像力をふくらませて、楽しんでください！
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: 私はカイアです。詩人でありコンピュータサイエンスの学生です。私はコーディングから多くを学び、私はよりよい詩人になりました。私の詩によりよりよいコーディングができるようになりました。選ぶ単語やその単語が組み合わさったときに何を作ろうとしているのかについて本当に考えなければならないからです。
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: 次の1時間で、アニメ化された詩を作って、コンピュータサイエンスと詩について学びます。詩は本質的に単語で芸術を作っているのです。私は自分自身を表現する詩を作ります。私が自身の独特なスタイルとリズムを使って書くときは、読む人の想像力と感情をかき立てるようにします。
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: 芸術と同様、詩もさまざまな方法で解釈できます。同じ詩であっても受け取り方は十人十色です。それぞれの詩にそれ独特の雰囲気があるかもしれません。雰囲気はあなたが詩から得る感情です。人々は特定の色やイメージをさまざまな雰囲気に関連付けることがあります。
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: 例えば、黄色は私を陽気にさせてくれます。恐れのような気分が浮かぶと、私はときどき頭の中で暗くて嵐のような夜を心に描きます。このアクティビティでは、あなたが詩をどう感じるかに基づいて詩の雰囲気を説明し、アニメ化します。
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: コードを使ってそうする方法を見てみましょう。画面が主に3つに分割されていることがわかります。左側にはプレイスペースがあります。ここにアニメ化した詩が表示されます。それぞれの詩にはタイトルと著者があります。
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: この中央のエリアがツールボックスです。レッスンを進めるにつれ、このスペースで新しいコードブロックが利用できるようになります。
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: 右側のスペースはワークスペースです。ブロックをツールボックスからワークスペースにドラッグして、プログラムを構築できます。
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
+        text: 各レベルの説明は、画面の上部に表示されています。ヒントが必要な場合は、電球マークをクリックしてください。
       9:
         image: notes/hoc_poem_art_2021_introduction_09.jpg
+        text: まず、好きな詩を選びます。あらゆる種類の詩、あらゆるレベルで新しい詩を選べます。
       10:
         image: 'notes/hoc_poem_art_2021_introduction_10.jpg
 
 '
+        text: 次に、ツールボックスからワークスペースにブロックをドラッグして、詩をアニメ化します。あなたの詩の雰囲気に合った背景色や効果を選び、次に
+          [実行] をクリックするとあなたの詩の動作を見ることができます。
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+        text: 他の詩を読んであなたの感情をスパークさせる詩を1つ見つけましょう。 イメージやコードを使って、あなた自身がどう感じているか、またどうすればその感情を伝えられるかについて考えてみましょう。
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+        text: 詩の途中で気分が変わることがあります。幸せに聞こえる詩として始まったものが悲しくなるかもしれませんし、暗闇が光に変わるかもしれません。
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+        text: このアクティビティでは、イベントで作業します。このイベントブロックを使って、詩のある行が表示されたときにプログラムの方向を変更できます。イベントブロックはメインプログラムには、はめ込みません。
+          その代わりに、独自の小さなプログラムを作成します。
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+        text: 'あなたの詩を読んで雰囲気が変わる瞬間を見つけましょう。どの行で雰囲気が変化するか数えてみてください: 1行、2行、3行。イベントブロックにその行の番号を入力します。'
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+        text: 次に画面にその行が表示されたときに、雰囲気の変化を反映するようにプログラムします。 [実行] を押すと、コーディングした内容が表示されます。
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+        text: 詩の作者はイメージを使って読者の心に絵を描きます。「ワニ」という言葉を見ると、私たちは自動的に心に緑色のワニを想像します。 このようなイメージをアニメに取り込むためにSpritesを使うのです。
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+        text: これにより、Spriteを作成してそのコスチュームを選択できる新しいSpriteブロックが作成されます。 あなたが詩に取り組もうと考えるSpriteのためのコスチュームを選んでください。
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+        text: Spriteの位置を変更するには、位置ブロック内のピンアイコンをクリックしてプレイスペース内で移動先の位置をクリックします。
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+        text: 次のいくつかのレベルでは、新しいブロックがいくつか表示されます。 このブロックを使用すると、Spriteのサイズを変更できます。 このブロックにより、動きでSpriteをアニメ化できるのです。
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+        text: 詩が漂う雲と言っているなら、まず雲のSpriteを作成してから、この動きブロックを選択してドラッグし、「漂う」を選択します。
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+        text: Spriteのコスチュームが一致していることを確認します。[実行] を押すと、雲が漂っている様子が表示されます。
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+        text: これで文字のイメージを追加して、詩の中の言葉を表現できるようになりました。 楽しんでくださいね！
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+        text: おめでとう！コンピュータサイエンスの基礎と詩の雰囲気を見つける方法を学びましたね。これで、友達と共有できるアニメを作れます。
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+        text: 詩全体の単純な場面を慎重に選びますか？
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+        text: それともたくさんのイベントを使って詩のすべての行に新しいシーンを作りますか？
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+        text: チュートリアルの最後で作成したものをリンクとして友達と共有できます。
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+        text: 想像力を広げて楽しみましょう！
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+        text: こんにちは。 私はエリンです。Code.orgのソフトウェアエンジニアです。このチュートリアルに参加をとても楽しみにしています。あなたがしよううとしているチュートリアルに取りかかりました！私たちはこれを「Hello
+          world (こんにちは、世界)」と呼んでいます。
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+        text: "「Hello World (こんにちは、世界)」は、コンピュータサイエンスでは有名なフレーズです。このフレーズを表示することが、コンピュータサイエンスの学習における共通の第一歩となります。
+          次の1時間は、Sprite Labでプログラミングを行ってコンピュータサイエンスの学習を始めることになります。"
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+        text: Sprite Labは、想像力に富んだ楽しいプロジェクトの作成に使えるツールです。画面が主に3つに分割されていることがわかります。左側にはプレイスペースがあります。ここにSpriteが表示されます。
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+        text: Spriteとは、ストーリーやゲームの文字やアイテムなど操作できる画面上のオブジェクトを指します。
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: この中央のエリアがツールボックスです。レッスンを進めるにつれ、このスペースで新しいコードブロックが利用できるようになります。
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+        text: 右側はワークスペースです。 ブロックをツールボックスからワークスペースにドラッグして、プログラムを構築できます。
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+        text: 各レベルの説明は、画面の上部に表示されています。ヒントが必要な場合は、電球マークをクリックしてください。
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+        text: まずはSpriteを作成しましょう！このブロックを使うと、Spriteにコスチュームと位置を指定できます。 「コスチューム」とは、Spriteの外観を表すために使われる言葉です。
+          Spriteの位置を変更するには、位置ブロック内のピンアイコンをクリックして移動先の位置をクリックします。
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+        text: 次に、SpriteにSpriteを導入しましょう！Spriteに何かを言わせるには、この「Say」ブロックを使って、あなたのプログラムに追加します。「Say」ブロックで選択したコスチュームがあなたのSpriteのコスチュームと一致することを確認します。
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+        text: "「実行」ボタンを押すとSpriteが指定したテキストを話します。Sprite Labを始めて、あなたの想像力が導いてくれる場所を見てみましょう。"
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+        text: さてSprite Labの使い方を学習しました。誰かがこれを再生するとプログラムを反応させられるようになります。そのためにはイベントを使用します。イベントは、起こることをリッスンして、ただちに反応します。
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+        text: リッスンするイベント例としては、マウスのクリック、矢印ボタン、または画面上のタップなどがあります。「when clicked (クリックしたとき)」などのブロックは、イベントブロックと呼ばれます。イベントブロックに繋げられたコードは適切なアクションが検出されると実行されます。
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+        text: 例えばこの「Say (言う)」ブロックを「When Clicked (クリックしたとき)」イベントに割り当てると、ユーザーがクリックまたはタップしたときにSpriteが何かを言います。イベントブロックはメインプログラムには、はめ込みません。
+          その代わりに、独自の小さなプログラムを作成します。
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+        text: Spriteが複数ある場合は、追加のイベントを使ってインタラクティブなストーリーを伝えられます。
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+        text: Sprite Labでは、Spriteのサイズや外観の変更、さまざまな背景の設定、サウンドの再生など、さらに多くのことを行う方法をすぐに習得できます。誰かがあなたのSpriteと対話するときにあなたは何をしたいですか？それはあなた次第です！
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+        text: おめでとう！コンピュータサイエンスの基礎を学びました。 Sprite Labを使って、必要なものを作成できるようになりました。
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+        text: "[コスチューム] ボタンがあります。これをクリックすると新しいSpriteのコスチュームをライブラリから選択できます。"
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+        text: 自分で描画することもできます！あなたが好むコスチュームを持てたらあなたのコードに戻りましょう。
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+        text: 次に、Spriteのコスチュームを選択します。
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+        text: ツールボックスを見ると、これまではなかった新しいブロックをいくつか見つけるでしょう。例えばたくさんの動きブロックがあります。これを使うと、Spriteを楽しくおもしろい方法で動かせます。
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+        text: "「さわったとき」イベントブロックを使うと、2つのSpriteが互いにぶつかったときの動作を制御できます。"
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+        text: "「create effect (エフェクトの作成)」ブロックを探します。この強力なブロックを使うと、コマンドでバースト、ポップ、または雨のSpriteをすべて作成できます。"
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+        text: 周りを見て、これらの新しいブロックと機能を試してみてください。チュートリアルの最後にある「共有」ボタンをクリックして、作成したものをリンクで友達と共有しましょう。
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+        text: Sprite Labはあなたが必要とするアプリ、ゲーム、その他新しいプログラム開発の開始に必要な強力なスキルをすべて備えています。新しいパワーをよいことに活用しましょう。紙に何かを書いたり、友人と話したりするときと同じように、親切に敬意を払ってください。
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg
+        text: では、何を作りますか？あなた自身のストーリーを語ることも、独自の特殊文字でストーリーの構築もできます。新しいコンピュータサイエンススキルを次のスクールプロジェクトに使うこともできるでしょう！想像力を広げて楽しみましょう！

@@ -1,34 +1,35 @@
 {
   "pages": {
-    "homepage": ["thebadguys"]
+    "homepage": ["csa-launch-2022"]
   },
 
   "banners": {
-    "thebadguys": {
-      "dcdo": "thebadguys-promotion",
-      "class": "vertical-stack",
-      "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
-      "leftImage": "/images/marketing/homepage-thebadguys-left.png",
-      "rightImage": "/images/marketing/homepage-thebadguys-right.png",
+    "csa-launch-2022": {
+      "dcdo": "csa-homepage-banner-2022",
+      "languages": ["en"],
+      "class": "csa",
+      "desktopImage": "/images/marketing/homepage-csa-background.svg",
       "actions": [
         {
-          "type": "image",
-          "url": "/images/marketing/homepage-thebadguys-logo.png"
-        },
-        {
-          "type": "video_thumbnail",
-          "image_url": "/images/marketing/homepage-thebadguys-video-thumbnail.png",
-          "text": "homepage_action_text_codevideo",
-          "youtube_id": "6gauCnbXxnQ"
+          "type": "text",
+          "text": "homepage_csa_subhead"
         },
         {
           "type": "text",
-          "text": "homepage_thebadguys_body"
+          "text": "homepage_csa_title"
         },
         {
-          "type": "cta_button_solid_black",
-          "text": "homepage_action_text_try_it",
-          "url": "/thebadguys"
+          "type": "text",
+          "text": "homepage_csa_body"
+        },
+        {
+          "type": "image",
+          "url": "/images/marketing/homepage-csa-right.svg"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "homepage_banner_text_link",
+          "url": "/educate/csa"
         }
       ]
     }

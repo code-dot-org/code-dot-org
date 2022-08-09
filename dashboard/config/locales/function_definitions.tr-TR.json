@@ -61,7 +61,11 @@
             "name": "sağ bacak çiz"
           },
           "draw body and arms": {
-            "name": "gövde ve kollar çiz"
+            "name": "gövde ve kollar çiz",
+            "parameters": {
+              "armlength": "Kol uzunluğu",
+              "bodylength": "vücut uzunluğu"
+            }
           },
           "draw a head": {
             "name": "kafa çiz"
@@ -410,34 +414,53 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "3 nektar al"
+            "name": "3 nektar al",
+            "parameters": {
+              "direction": "yön"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "3 nektar al"
+            "name": "3 nektar al",
+            "parameters": {
+              "direction": "yön"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "5 nektar al"
+            "name": "5 nektar al",
+            "parameters": {
+              "direction": "yön"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "5 nektar al"
+            "name": "5 nektar al",
+            "parameters": {
+              "direction": "yön",
+              "nectar units": "nektar birimleri"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "çok nektar al"
+            "name": "çok nektar al",
+            "parameters": {
+              "direction": "yön",
+              "nectars": "nektarlar"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "nektar al, bal yap",
             "parameters": {
-              "honey": "bal"
+              "honey": "bal",
+              "direction": "yön",
+              "nectars": "nektarlar"
             }
           }
         },
@@ -528,13 +551,19 @@
           "get nectar": {
             "name": "nektarı al",
             "parameters": {
-              "counter": "sayaç"
+              "counter": "sayaç",
+              "dir": "dir"
             }
           }
         },
         "Course 4 SCF 2": {
           "draw an octagon": {
             "name": "bir sekizgen çiz"
+          },
+          "draw octagons": {
+            "parameters": {
+              "numOctagons": "numOctagons"
+            }
           }
         },
         "Course 4 SCF 3": {
@@ -828,7 +857,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -981,7 +1011,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -1074,11 +1105,17 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "course3_bee_functions_challenge1": {
@@ -1121,6 +1158,9 @@
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -2238,41 +2278,65 @@
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_predict1": {
@@ -2963,7 +3027,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3411,7 +3476,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -4047,6 +4113,85 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "bir kare çiz"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "bir şekil çiz",
+            "parameters": {
+              "sides": "kenarlar",
+              "length": "uzunluk"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
           }
         }
       }

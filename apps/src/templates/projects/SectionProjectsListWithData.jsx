@@ -9,6 +9,7 @@ class SectionProjectsListWithData extends Component {
     studioUrlPrefix: PropTypes.string,
 
     // Props provided by redux.
+    localeCode: PropTypes.string,
     sectionId: PropTypes.number
   };
 
@@ -42,6 +43,7 @@ class SectionProjectsListWithData extends Component {
         {this.state.isLoading && <Spinner />}
         {!this.state.isLoading && (
           <SectionProjectsList
+            localeCode={this.props.localeCode}
             projectsData={projectsData}
             studioUrlPrefix={studioUrlPrefix}
             showProjectThumbnails={true}
@@ -55,5 +57,6 @@ class SectionProjectsListWithData extends Component {
 export const UnconnectedSectionProjectsListWithData = SectionProjectsListWithData;
 
 export default connect(state => ({
+  localeCode: state.locales.localeCode,
   sectionId: state.teacherSections.selectedSectionId
 }))(SectionProjectsListWithData);

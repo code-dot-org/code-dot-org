@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '~> 2.5'
+ruby '>= 2.5', '< 2.7'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -21,10 +21,7 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
 
-# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
-# breaks some firebase URIs. See
-# https://github.com/code-dot-org/code-dot-org/pull/31614
-gem 'sinatra', '2.0.2', require: 'sinatra/base'
+gem 'sinatra', '2.1.0', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
@@ -32,7 +29,6 @@ gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
 gem 'jumphash'
-gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.3'
@@ -75,26 +71,24 @@ group :development, :test do
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.7.0'
   gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
-  gem 'webmock', require: false
+  gem 'webmock', '~> 3.8', require: false
 
-  gem 'codecov', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'simplecov', '~> 0.9', require: false
   gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
   gem 'cucumber'
   gem 'eyes_selenium', '3.18.4'
-  gem 'minitest', '~> 5.5'
+  gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
@@ -108,11 +102,6 @@ group :development, :test do
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
   gem 'pdf-reader', require: false
-end
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
@@ -179,7 +168,7 @@ gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger' # error monitoring
+gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
   # Ref:
@@ -193,7 +182,7 @@ gem 'redcarpet', '~> 3.3.4'
 gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
-gem 'rmagick'
+gem 'rmagick', '~> 4.2.5'
 
 gem 'acts_as_list'
 
@@ -221,16 +210,16 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.5'
+gem 'font-awesome-rails', '~> 4.7.0.8'
 
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.5.0'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.10'
+gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -252,7 +241,9 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '~> 0.52', require: false
+  gem 'rubocop', '1.28', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
   gem 'scss_lint', require: false
 end
 
@@ -299,7 +290,7 @@ gem 'octokit'
 
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
-gem 'rambling-trie'
+gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
@@ -320,8 +311,6 @@ gem 'auto_strip_attributes', '~> 2.1'
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
-gem 'StreetAddress', require: "street_address"
-
 gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', ' ~> 2.2.1'
@@ -336,8 +325,8 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'active_record_union'
 gem 'activerecord-import'
+gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 
@@ -355,3 +344,8 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+# Google's Compact Language Detector
+gem 'cld'
+
+gem 'crowdin-api', '~> 1.2.1'

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ga:
   errors:
     messages:
@@ -405,7 +411,6 @@ ga:
     popup:
       progress_for_user: "Dul chun cinn %{name}"
       progress: 'Do dhul chun cinn'
-      lines: 'Línte cóid ó thús aimsire: %{lines}'
       close: 'DÚN'
       mastery: 'Coincheapa'
       puzzle_map: 'Céimeanna'
@@ -1019,7 +1024,7 @@ ga:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Eile:"
+        other: "Eile"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1029,7 +1034,7 @@ ga:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Eile:"
+        other: "Eile"
       workshop_course:
         csf_af: 'Buntús na Ríomheolaíochta (Cúrsaí A-F)'
         csf_express: 'Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)'

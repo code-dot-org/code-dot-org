@@ -1,11 +1,17 @@
 name 'CSA U4 Assessment 2022 q12'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`boolean b = false || ((5 / 4) % 3 == 1);`'
+right '`boolean b = false && ((5 / 4) % 3 == 1);`'
+wrong '`boolean b = true || ((5 / 4) % 3 == 1);`'
+wrong '`boolean b = true && ((5 / 4) % 3 == 1);`'
+wrong '`boolean b = !true || !false;`'
 
 markdown <<MARKDOWN
-question
+Consider the following statement, which assigns a value to `a`.
+
+```
+boolean a = true && ((5 / 4) % 3 == 2);
+```
+
+Which of the following assigns the same value to `b` as the value stored in `a`?
 MARKDOWN

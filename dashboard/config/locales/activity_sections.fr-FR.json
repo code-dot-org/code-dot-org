@@ -817,6 +817,9 @@
             null
           ]
         },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "Coder ton propre jeu de sports"
+        },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
           "tips": [
             null
@@ -1048,6 +1051,9 @@
             null
           ]
         },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "Entraîner l'IA pour rendre l'océan propre"
+        },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "IA : Données de formation et erreurs courantes - Vidéo"
         },
@@ -1207,6 +1213,9 @@
         "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
           "name": "Cours E Projet du Labo des Lutins",
           "progression_name": "Cours E Projet du Labo des Lutins"
+        },
+        "6f0c4f43-6167-42df-b2f8-717a5ecc23d1": {
+          "progression_name": "Aperçu de la leçon"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Aperçu de la leçon"
@@ -1435,7 +1444,7 @@
           "progression_name": "Aperçu de la leçon"
         },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
           "progression_name": "Jeu Collector"
@@ -1624,7 +1633,7 @@
           "progression_name": "Événements"
         },
         "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "cc69ba2c-1958-4589-90a8-13886b9c00ef": {
           "progression_name": "Terminer les touches"
@@ -2300,6 +2309,9 @@
         "8eeabef8-20df-4bea-ba8d-10376953fb46": {
           "progression_name": "Activité libre"
         },
+        "69bff80f-8f24-42fa-9400-acda568b9042": {
+          "progression_name": "Mini-projet : Bataille Royale"
+        },
         "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
           "progression_name": "Activité libre"
         },
@@ -2895,8 +2907,8 @@
           "progression_name": "S'entraîner"
         },
         "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
-          "name": "Les Extras de la Leçon",
-          "progression_name": "Les Extras de la Leçon"
+          "name": "Activités bonus",
+          "progression_name": "Activités bonus"
         },
         "7f146ca9-a234-446d-808a-f0acc1c991e8": {
           "progression_name": "Intro Artiste avec JR Hildebrand"
@@ -2997,6 +3009,16 @@
         "a7acf14f-0f67-4412-aa8b-f0167bc5a4e9": {
           "name": "Projet",
           "progression_name": "Projet"
+        },
+        "5b798399-282e-49fa-b6ff-49a267c2a88e": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "122c7721-3946-460b-905c-aaf2a8315a7a": {
+          "name": "Dessiner des formes",
+          "progression_name": "Dessiner des formes"
         },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "Aperçu de la leçon"
@@ -3227,7 +3249,7 @@
           "progression_name": "Vidéo: Les Fonctions"
         },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
           "progression_name": "Jeu Collector"
@@ -3296,6 +3318,25 @@
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Réflexion",
           "progression_name": "Réflexion"
+        },
+        "f3b83c25-457b-49e0-97bb-b6cf01729b96": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "e8d8ba0c-067a-4b05-afac-49467b70d19a": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "22d81b4c-d781-4955-816b-5db96efe24ce": {
+          "progression_name": "Dessiner des écrans en codant"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Évènements et Propriétés"
+        },
+        "8aaad068-43af-4e02-ab64-efac8c2f7b7f": {
+          "progression_name": "Exemple de machine d’émotion"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Fabriquer une application",
+          "progression_name": "Fabriquer une application"
         },
         "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
           "progression_name": "Aperçu de la leçon"
@@ -3389,7 +3430,7 @@
           "progression_name": "Événements"
         },
         "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "396e73f3-7348-4d06-8aa3-a4eb24bc7018": {
           "progression_name": "Terminer les touches"
@@ -3498,6 +3539,14 @@
         "12296f1e-4a27-45e0-b951-597d94b413ab": {
           "name": "Réflexion",
           "progression_name": "Réflexion"
+        },
+        "718cfc6c-7248-4776-8567-743b410346fe": {
+          "name": "Aperçu de la leçon",
+          "progression_name": "Aperçu de la leçon"
+        },
+        "32c6086e-831b-4619-bdee-ba1148a43543": {
+          "name": "Aperçu de la leçon",
+          "progression_name": "Aperçu de la leçon"
         },
         "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
           "name": "Aperçu de la leçon",
@@ -3608,6 +3657,14 @@
           "name": "Réflexion",
           "progression_name": "Réflexion"
         },
+        "bffba681-eb9e-4dc3-8f57-893671e6c2c1": {
+          "name": "Aperçu de la leçon",
+          "progression_name": "Aperçu de la leçon"
+        },
+        "6f338ea8-0c2f-46bb-ad95-dc6541ff1cf9": {
+          "name": "Aperçu de la leçon",
+          "progression_name": "Aperçu de la leçon"
+        },
         "a17f73b3-11f1-499b-873e-0543c661ec9b": {
           "name": "Aperçu de la leçon",
           "progression_name": "Aperçu de la leçon"
@@ -3693,6 +3750,13 @@
           "name": "Aperçu de la leçon",
           "progression_name": "Aperçu de la leçon"
         },
+        "4baf3e55-b479-405e-acfb-99bc0b8c9912": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Processus de Résolution De Problème",
+          "progression_name": "Processus de Résolution De Problème"
+        },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "Aperçu de la leçon",
           "progression_name": "Aperçu de la leçon"
@@ -3722,6 +3786,12 @@
         "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
           "name": "Réflexion",
           "progression_name": "Réflexion"
+        },
+        "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "7d345d9c-3308-4a84-b288-512e51e57815": {
+          "progression_name": "Aperçu de la leçon"
         },
         "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
           "progression_name": "Aperçu de la leçon"
@@ -3945,6 +4015,16 @@
         "5ccce1a2-deb4-444d-ae0b-2aab8d25f5d9": {
           "name": "Préparez-vous pour votre présentation",
           "progression_name": "Préparez-vous pour votre présentation"
+        },
+        "ceaeda39-02d6-4007-83fb-f037c707389c": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
+          "progression_name": "Aperçu de la leçon"
+        },
+        "a4e22b77-a871-48dd-b56a-c73055f6ba15": {
+          "name": "Dessiner des formes",
+          "progression_name": "Dessiner des formes"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Aperçu de la leçon"
@@ -4233,7 +4313,7 @@
           "progression_name": "Aperçu de la leçon"
         },
         "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
           "progression_name": "Jeu Collector"
@@ -4310,6 +4390,9 @@
         "4a3c9ed6-af53-4747-9298-b104980a8961": {
           "name": "Réflexion",
           "progression_name": "Réflexion"
+        },
+        "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
+          "progression_name": "Aperçu de la leçon"
         },
         "9788e225-92b9-4d11-8bc7-987573ba1b45": {
           "progression_name": "Aperçu de la leçon"
@@ -4424,7 +4507,7 @@
           "progression_name": "Événements"
         },
         "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "1bf5d680-889c-4c29-bc4a-478802aaf9b6": {
           "progression_name": "Terminer les touches"
@@ -4529,6 +4612,9 @@
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "Réflexion",
           "progression_name": "Réflexion"
+        },
+        "51ac2647-90fe-443e-a77b-48132f4b7680": {
+          "progression_name": "Aperçu de la leçon"
         },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "Aperçu de la leçon"
@@ -4784,6 +4870,10 @@
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "Réflexion",
           "progression_name": "Réflexion"
+        },
+        "f2b5d0ac-98f0-4ad6-8cba-c70d2053fac6": {
+          "name": "Aperçu de la leçon",
+          "progression_name": "Aperçu de la leçon"
         },
         "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
           "name": "Aperçu de la leçon",
@@ -5419,7 +5509,7 @@
           "progression_name": "S'entraîner"
         },
         "7a256684-5f37-4780-b2d7-a75a079dfc95": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "05cdc09c-2fde-45f0-ba51-06b6dc94b8a3": {
           "name": "Réflexion",
@@ -5443,7 +5533,7 @@
           "progression_name": "Activité libre"
         },
         "6ea6e198-fa99-46cb-a234-0f2b60eaff4d": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "936c3852-feab-48df-824d-8b67ae8e9f90": {
           "tips": [
@@ -5843,7 +5933,7 @@
           "progression_name": "S'entraîner"
         },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "6a3d0163-b925-4e7a-933a-93f7d6432233": {
           "tips": [
@@ -5868,7 +5958,7 @@
           "description": "#### Débogage, persévérance et frustration\n\n**Discutez :** Préparez les élèves aux exercices en ligne d'aujourd'hui en leur demandant ce qu'ils feraient s'ils pensaient qu'il y avait un bogue dans leur code. Plus précisément, que se demanderaient-ils ?\n\n-   Est-ce que tout était correct dans la première étape ?\n-   Et la seconde ? Troisième?\n-   Où mon programme s'est-il mal passé ?\n-   Qu'est-ce que ça veut dire ?\n\n**Invite** : **Le débogage** peut être frustrant ! Mais la persévérance peut nous aider à nous en sortir. Que pouvons-nous faire pour persévérer malgré la frustration ?\n\nExemples de réponses :\n\n-   Compter jusqu'à 10\n-   Respirer profondément\n-   Reporter les bugs que nous avons trouvés\n-   Parler à un camarade des bugs\n-   Demander de l'aide\n\n**Transition :** Dites à vos élèves que la frustration fait partie du codage. Tout le monde a des bugs ! Ce n'est pas grave s'ils pensent qu'ils ont un bogue mais qu'ils ne peuvent pas le trouver ou le corriger tout de suite. L'utilisation de stratégies comme celles énumérées ci-dessus peut les aider à persévérer malgré la frustration et à résoudre n'importe quel problème !"
         },
         "478f0185-2792-46bb-8d0d-e88788ebb722": {
-          "name": "La Programmation avec l'Agricultrice",
+          "name": "Programmer avec l'Agricultrice",
           "description": "À ce stade, les élèves devraient déjà être familiarisés avec l'environnement de programmation. Certaines nouvelles choses à surveiller dans cette leçon sont la confusion au sujet du processus de débogage ou le fait de ne pas se souvenir d'utiliser le bloc « pick corn » lorsque l'Agricultrice atteint le maïs."
         },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
@@ -6016,7 +6106,7 @@
           "progression_name": "S'entraîner"
         },
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "65456981-db3c-42cb-b698-e162463df4d1": {
           "description": "Au fur et à mesure que les élèves résolvent les énigmes, voyez s'ils peuvent déterminer combien de blocs ils utilisent avec une **boucle** ou sans **boucle**. "
@@ -6063,7 +6153,7 @@
           "progression_name": "Activité libre"
         },
         "6c661991-bf9d-4271-a318-5878b3ef438c": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
           "name": "Réflexion",
@@ -6152,11 +6242,14 @@
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "Activité libre"
         },
+        "31c0685f-1407-4c10-9077-b081c1843c07": {
+          "progression_name": "Mini-projet : Bataille Royale"
+        },
         "afc1b191-5ed3-4f1e-9457-8499c5445f54": {
           "progression_name": "Activité libre"
         },
         "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "f7fafab8-5c1c-473a-901b-893eb23c491b": {
           "name": "Réflexion",
@@ -6368,7 +6461,7 @@
           "progression_name": "S'entraîner"
         },
         "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "3719811c-4fc2-4da5-94c7-989c91ef7d1e": {
           "tips": [
@@ -6534,7 +6627,7 @@
           "progression_name": "S'entraîner"
         },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "46ce0bcb-9f62-42c7-91dd-a6a98b68b10b": {
           "description": "Au fur et à mesure que les élèves résolvent les énigmes, voyez s'ils peuvent déterminer combien de blocs ils utilisent avec une boucle par rapport à sans boucle. "
@@ -6548,7 +6641,7 @@
           "description": "-   Revoir rapidement la définition d'une boucle, l'action de faire quelque chose encore et encore.\n-   Discutez de différents modèles comme les zigzags et les marches d'escalier.\n    -   _Comment expliqueriez-vous à quelqu'un comment dessiner ce modèle ?_\n    -   _Comment peux-on dessiner ça en boucle ?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nDans les niveaux d'artiste, les élèves utiliseront des angles de 45 degrés décrits comme nord-ouest, nord-est, sud-ouest, sud-est. Nous vous recommandons de discuter brièvement de ces instructions avec la classe et de dessiner une image à laquelle les élèves pourront se référer. "
         },
         "13752711-384a-4249-bf95-632d8a8ad185": {
-          "name": "Scène de l'Océan avec des Boucles",
+          "name": "Scène de l'Océan avec Boucles",
           "description": "#### Démonstration du professeur"
         },
         "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
@@ -6579,7 +6672,7 @@
           "progression_name": "Activité libre"
         },
         "cfcb405b-99fc-4686-bd02-4e37b3f5c337": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "75843546-1fa3-4171-b034-3c14d8d9d5a4": {
           "name": "Réflexion",
@@ -6656,7 +6749,7 @@
           "progression_name": "Mini-projet : Jorge le chien"
         },
         "40ddc694-3a85-4874-b3ad-71810e6a0474": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
           "name": "Réflexion",
@@ -6802,7 +6895,7 @@
           "progression_name": "S'entraîner"
         },
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "b36f792a-6557-4c68-9065-3a87966f2cf6": {
           "description": "**Circulez.** Les enseignants jouent un rôle essentiel dans l'enseignement de l'informatique, en contribuant à une ambiance de classe basée sur la collaboration et le dynamisme. Lors des activités en ligne, le rôle de l'enseignant est avant tout celui d'encourager et de soutenir. Les cours en ligne sont censés être centrés sur l'élève, les enseignants doivent donc éviter d'intervenir lorsque les élèves sont bloqués. Voici quelques idées sur la façon de procéder :\n\n-   Utilisez la programmation en binôme si possible.\n-   Encouragez les élèves ayant des questions ou problèmes à commencer par demander à leur camarade.\n-   Les questions sans réponse peuvent être transmises à un groupe proche, qui connaît peut-être déjà la solution.\n-   Rappelez aux élèves d'utiliser le processus de débogage avant d'approcher.\n-   Demandez-leur de décrire le problème qu'ils voient. Qu'est-ce que c'est censé faire ? Qu'est ce que ça fait ? Qu'est-ce que ça veut dire ?\n-   Rappelez aux élèves qui s'énervent parce qu'ils n'y arrivent pas que c'est une étape sur la voie de l'apprentissage et que la persévérance sera payante.\n-   Si un élève est toujours bloqué après tout cela, posez des questions suggestives pour l'amener à repérer une erreur par lui-même. \n\n**Discussion :** après avoir envoyé aux élèves des avertissements de fin de cours, attirez l'attention de tous et faites-les réfléchir sur les expériences qu'ils viennent de vivre.\n\n-   Est-ce que quelqu'un s'est senti frustré pendant l'une des énigmes ?\n-   Quelqu'un a-t-il remarqué la nécessité d'être persévérant ?\n\n**Transition :** Demandez aux élèves de prendre leurs journaux de réflexion et de prendre un moment pour réfléchir à l'expérience par eux-mêmes. "
@@ -6841,7 +6934,7 @@
           "progression_name": "S'entraîner"
         },
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "14243604-a841-47b9-a7b3-edeccb23ae65": {
           "description": "Comme mentionné dans le but de cette leçon, assurez-vous que les élèves soient bien conscients qu'ils seront confrontés à des énigmes frustrantes. Dites-leur qu'il est normal d'être énervé, voire frustré, mais qu'il est important de résoudre le problème et de demander de l'aide. Pendant que les élèves résolvent les énigmes, faites le tour pour vous assurer qu'aucun ne se sente tellement coincé qu'il n'arrive plus à continuer. "
@@ -6884,7 +6977,7 @@
           "progression_name": "S'entraîner"
         },
         "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "02bdc7bd-ae6d-426d-8e13-7f804e2292d4": {
           "name": "Réflexion",
@@ -6917,7 +7010,7 @@
           "progression_name": "Prédiction"
         },
         "8d556f84-689c-4046-bd40-a955e56ef116": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "e7143536-5b4e-4594-b2ff-707b87e128c3": {
           "name": "Réflexion",
@@ -7003,7 +7096,7 @@
           "progression_name": "S'entraîner"
         },
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "351f97fd-0d87-49c1-90ee-f4243884adf9": {
           "description": "Au fur et à mesure que les élèves résolvent les énigmes, voyez s'ils peuvent déterminer combien de blocs ils utilisent avec une boucle plutôt que de ne pas en utiliser. La**\\*Programmation par groupe de deux - Vidéo élève** fonctionne très bien avec cet ensemble de puzzles car il existe plusieurs façons de remplir les boucles. Encouragez une discussion conviviale dans les groupes de deux en cas de désaccord sur la façon de résoudre l'énigme. Demandez aux élèves de se poser des questions telles que :\n\n-   _Comment avez-vous trouvé cette solution ?_\n-   _Quels sont les avantages à résoudre le puzzle de cette façon ?_\n\nNous recommandons également d'avoir du papier à portée de main pour que les élèves écrivent leur code et trouvent des répétitions à utiliser dans les boucles. "
@@ -7037,7 +7130,7 @@
           "progression_name": "Prédiction"
         },
         "f5cc9272-be27-471b-9cdd-f56920c56a34": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
           "name": "Réflexion",
@@ -7178,7 +7271,7 @@
           "progression_name": "Activité libre"
         },
         "9f2441ae-b524-455b-b43b-8c01d9458d0d": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "27d0103f-b003-4668-bab3-46e2517d375f": {
           "name": "Réflexion",
@@ -7598,7 +7691,7 @@
           "progression_name": "Activité libre"
         },
         "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
           "name": "Réflexion",
@@ -7713,7 +7806,7 @@
           "progression_name": "Prédiction"
         },
         "725a7d9a-35a3-483e-a83b-f88bf0033095": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "b014e946-ff8d-4740-9c42-51c8aa635252": {
           "name": "Réflexion",
@@ -7814,7 +7907,7 @@
           "progression_name": "S'entraîner"
         },
         "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "fd68c153-b4d6-4729-a742-09f9ee9c25b1": {
           "name": "Réflexion",
@@ -7995,7 +8088,7 @@
           "progression_name": "S'entraîner"
         },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "0406b536-ef27-4e66-aebd-6163d05bcc36": {
           "name": "Réflexion",
@@ -8035,7 +8128,7 @@
           "progression_name": "S'entraîner"
         },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "c1db98cf-ca82-4092-a167-fc450bf6fd0f": {
           "name": "Réflexion",
@@ -8068,7 +8161,7 @@
           "progression_name": "Prédiction"
         },
         "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "6e2ecb9e-09e6-4af0-b1b4-7b704334ba6c": {
           "name": "Réflexion",
@@ -8262,7 +8355,7 @@
           "progression_name": "Activité libre"
         },
         "436d2aa5-5369-462c-acdd-5ae81d6b0423": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "name": "Réflexion",
@@ -8305,7 +8398,7 @@
           "progression_name": "S'entraîner"
         },
         "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "a26945ef-9b81-4b37-96f8-c18304af3332": {
           "description": "Au fur et à mesure que les élèves résolvent les énigmes, voyez s'ils peuvent déterminer combien de blocs ils utilisent avec une boucle plutôt que de ne pas utiliser de boucle. **\\*Student Video** fonctionne très bien avec cet ensemble de puzzles car il existe plusieurs façons de remplir les boucles. Encouragez une discussion amicale entre les paires en cas de désaccord sur la façon de résoudre le casse-tête. Demandez aux élèves de se poser des questions telles que :\n\n-   _Comment avez-vous trouvé cette solution ?_\n-   _Quels sont les avantages de résoudre le puzzle de cette façon ?_\n\nNous recommandons également d'avoir du papier à portée de main pour que les élèves écrivent leur code et trouvent des répétitions à utiliser dans les boucles."
@@ -8375,7 +8468,7 @@
           "progression_name": "Prédiction"
         },
         "20282149-72fa-4e24-aa15-5182f21bcf95": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "fc83d25f-9089-4795-9933-52f7372e3ae7": {
           "name": "Réflexion",
@@ -8452,7 +8545,7 @@
           "progression_name": "S'entraîner"
         },
         "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "50020a45-10c5-4b0c-ba08-b54004bdcaa8": {
           "name": "Réflexion",
@@ -8491,7 +8584,7 @@
           "progression_name": "Prédiction"
         },
         "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "4860c6c5-d580-4865-a582-3c33cdb8e4da": {
           "name": "Réflexion",
@@ -8584,7 +8677,7 @@
           "progression_name": "Prédiction"
         },
         "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "294fb9eb-4bd1-497a-8326-562ddd2671bf": {
           "name": "Réflexion"
@@ -8649,7 +8742,7 @@
           "progression_name": "Activité libre"
         },
         "8a16a242-40d2-407c-b2c2-92012cc69e3d": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "48eb2965-3a46-402c-9bcd-c38037adf810": {
           "name": "Réflexion"
@@ -8781,7 +8874,7 @@
           "progression_name": "S'entraîner"
         },
         "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "3dde779a-f373-47b8-b892-013f3898d438": {
           "name": "Réflexion",
@@ -8792,6 +8885,7 @@
           "description": "Sur un tableau affiché à toute la classe, dessinez (ou affichez via un projecteur) l'une des conceptions finales des puzzles Code Studio associés à cette leçon. Nous recommandons l'un des éléments suivants :\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nDemandez à la classe comment un ordinateur pourrait dessiner le dessin que vous avez affiché.\n\nAprès quelques prédictions, répondez _avec des boucles Pour bien sûr !_\n\nDites aux élèves qu'ils apprendront bientôt à créer ces beaux dessins en utilisant des boucles Pour et des variables. "
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "name": "Les Boucles « Pour » avec l'Artiste",
           "tips": [
             "Ces puzzles sont super amusants, mais ça peut être bien pour les élèves d'avoir des rapporteurs, des crayons et du papier brouillon pour voir leurs dessins représentés physiquement. Sinon, faites-les les tracer sur l'écran de l'ordinateur avec leurs doigts."
           ],
@@ -8807,7 +8901,7 @@
           "progression_name": "Activité libre"
         },
         "ad447053-20d4-49cb-a771-7fd893973f54": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "4622563b-bc99-49ea-b1fb-b7a9916cf957": {
           "name": "Réflexion",
@@ -8911,7 +9005,7 @@
           "progression_name": "S'entraîner"
         },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
@@ -8947,7 +9041,7 @@
           "name": "Introduction"
         },
         "0684b025-9c16-437c-936c-d9743cad2d94": {
-          "name": "La Programmation avec l'Agricultrice",
+          "name": "Programmer avec l'Agricultrice",
           "description": "À ce stade, les élèves devraient déjà être familiarisés avec l'environnement de programmation. Certaines nouvelles choses à surveiller dans cette leçon sont la confusion au sujet du processus de débogage ou le fait de ne pas se souvenir d'utiliser le bloc « pick corn » lorsque l'Agricultrice atteint le maïs."
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
@@ -9042,7 +9136,7 @@
           "progression_name": "S'entraîner"
         },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "6397718f-1733-47e6-8ace-820b3f9d1701": {
           "name": "Réflexion"
@@ -9052,7 +9146,7 @@
           "description": "-   Revoir rapidement la définition d'une boucle, l'action de faire quelque chose encore et encore.\n-   Discutez de différents modèles comme les zigzags et les marches d'escalier.\n    -   _Comment expliqueriez-vous à quelqu'un comment dessiner ce modèle ?_\n    -   _Comment peux-on dessiner ça en boucle ?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nDans les niveaux d'artiste, les élèves utiliseront des angles de 45 degrés décrits comme nord-ouest, nord-est, sud-ouest, sud-est. Nous vous recommandons de discuter brièvement de ces instructions avec la classe et de dessiner une image à laquelle les élèves pourront se référer. "
         },
         "8cb479d1-0b50-4d24-998d-9fff971dcf0c": {
-          "name": "Scène de l'Océan avec des Boucles",
+          "name": "Scène de l'Océan avec Boucles",
           "description": "#### Démonstration du professeur"
         },
         "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
@@ -9082,7 +9176,7 @@
           "progression_name": "Activité libre"
         },
         "71d66635-8ac0-46fa-94d5-1f574f1c7996": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "7043a915-b252-47d3-bb01-5975d613129c": {
           "name": "Réflexion"
@@ -9109,7 +9203,7 @@
           "progression_name": "Activité libre"
         },
         "b1227c60-2106-47a0-a2a0-d7fb4a460d44": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "e382cc47-35ef-4c10-80a1-4b9090d86856": {
           "name": "Réflexion"
@@ -9139,7 +9233,7 @@
           "progression_name": "Mini-projet : Jorge le chien"
         },
         "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
           "name": "Réflexion"
@@ -9153,11 +9247,14 @@
         "fbc5ec8c-04e4-4690-8361-be9c49c1daca": {
           "name": "Une Bataille Royale avec des Événements"
         },
+        "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
+          "progression_name": "Mini-projet : Bataille Royale"
+        },
         "ddebabd0-cce0-446d-81ad-f4734e71d06c": {
           "progression_name": "Activité libre"
         },
         "85076d8d-1ddf-45cc-b510-0eeddffaff85": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
           "name": "Réflexion",
@@ -9314,7 +9411,7 @@
           "progression_name": "Défi"
         },
         "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "7f7b2c5d-fcd3-409a-9191-5e8ee587d2ea": {
           "name": "Réflexion",
@@ -9350,7 +9447,7 @@
           "progression_name": "Activité libre"
         },
         "0c0b60c9-9aee-43f0-9018-6f1d770ae014": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "9ad07175-6454-4905-9366-61b189a9ab7e": {
           "name": "Réflexion"
@@ -9450,7 +9547,7 @@
           "progression_name": "S'entraîner"
         },
         "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
-          "progression_name": "Les Extras de la Leçon"
+          "progression_name": "Activités bonus"
         },
         "c8e5eb74-9ded-4c7c-bfbf-3fb3a144fe3a": {
           "name": "Réflexion"
@@ -10067,6 +10164,26 @@
           ],
           "progression_name": "Instructions pour l'enquête après le cours"
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -10612,6 +10729,24 @@
           ],
           "progression_name": "Instructions pour l'enquête après le cours"
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Trouve de l’Inspiration"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ]
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -10772,7 +10907,7 @@
           "progression_name": "Événements"
         },
         "b919f5c1-5152-4baa-bddb-112275d049ac": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "ec8d5281-885f-4d9d-af4e-2d28ecfb94c6": {
           "progression_name": "Terminer les touches"
@@ -10978,6 +11113,39 @@
             null
           ],
           "progression_name": "Instructions pour l'enquête après le cours"
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Réflexion"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
         },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
@@ -11398,6 +11566,21 @@
             null
           ],
           "progression_name": "Instructions pour l'enquête après le cours"
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -12286,6 +12469,39 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Le Processus de Résolution de Problèmes",
+          "tips": [
+            null
+          ],
+          "progression_name": "Processus de Résolution De Problème"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -12665,6 +12881,22 @@
             null
           ]
         },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "name": "Explorer des Sites Web",
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
+          "tips": [
+            null
+          ]
+        },
         "248256b0-de8c-4fcf-8f60-58492ef07802": {
           "tips": [
             null
@@ -12790,6 +13022,9 @@
           "tips": [
             null
           ]
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Commentaire par les pairs"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -13325,6 +13560,9 @@
         "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
           "progression_name": "Activité libre"
         },
+        "c7ba3184-330c-4e7a-b462-7bf2c39e1858": {
+          "progression_name": "Mini-projet : Bataille Royale"
+        },
         "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
           "progression_name": "Activité libre"
         },
@@ -13580,8 +13818,8 @@
           "progression_name": "S'entraîner"
         },
         "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
-          "name": "Les Extras de la Leçon",
-          "progression_name": "Les Extras de la Leçon"
+          "name": "Activités bonus",
+          "progression_name": "Activités bonus"
         },
         "11eeb059-ed55-4472-bcc2-95e163a7766d": {
           "progression_name": "Intro Artiste avec JR Hildebrand"

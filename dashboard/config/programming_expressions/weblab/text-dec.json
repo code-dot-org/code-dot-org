@@ -3,7 +3,7 @@
   "name": "Text Decoration",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Text Decoration\n\nThe `text-decoration` property specifies the appearance of decorative lines on text. The most common text-decoration are:\n\n* `text-decoration-line` -  Sets the kind of text decoration to use such as, underline, overline, line-through. \n* `text-decoration-color` -  Sets the color of the text decoration.\n* `text-decoration-style` -  Sets the style of the text decoration such as `solid`, `wavy`, `dotted`, `dashed`, or `double`.\n",
+  "content": "# Text Decoration\n\nThe [`text-decoration: value;`(#d3e965)](/docs/weblab/Text-Dec/) property specifies the appearance of decorative lines on text. The most common text-decoration are:\n\n* `text-decoration-line` -  Sets the kind of text decoration to use such as, underline, overline, line-through. \n* `text-decoration-color` -  Sets the color of the text decoration.\n* `text-decoration-style` -  Sets the style of the text decoration such as `solid`, `wavy`, `dotted`, `dashed`, or `double`.\n",
   "examples": [
     {
       "name": "Multiple Text Decorations",

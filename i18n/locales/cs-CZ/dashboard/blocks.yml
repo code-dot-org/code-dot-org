@@ -4,6 +4,22 @@ cs:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': velmi malý
+            '0.75': malý
+            '1.00': středně
+            '2.00': velký
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': velmi malý
+            '0.75': malý
+            '1.00': středně
+            '2.00': velký
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} střídat každých {N} taktů \nmezi {MOVE1} a {MOVE2}"
         options:
@@ -1023,6 +1039,15 @@ cs:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): otáčení doprava
+            new Behavior(spinning_left, []): otáčení doleva
+            new Behavior(fluttering, []): třepotání
+            new Behavior(jittering, []): komíhání
+            new Behavior(wobbling, []): kymácení
+            new Behavior(wandering, []): potulování se
+            new Behavior(patrolling, []): patrolování
+            new Behavior(moving_west_and_looping, []): posuv na západ a zacyklení
+            new Behavior(moving_east_and_looping, []): posuv na východ a zacyklení
             new Behavior(moving_north_and_looping, []): posuv na sever a zacyklení
             new Behavior(moving_south_and_looping, []): posuv na jih a zacyklení
       gamelab_comment:
@@ -1041,7 +1066,7 @@ cs:
         text: nakreslit čáru {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: hrany bloku {SPRITE} z přesunutí
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'opakovat každé {N} {UNIT} '
         options:
           UNIT:
@@ -1200,8 +1225,6 @@ cs:
             '"pop"': kuk
             '"rain"': déšť
             '"spiral"': spirála
-      gamelab_makeNewScaledSprite:
-        text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
@@ -1214,6 +1237,13 @@ cs:
             '90': dolů
             '180': vlevo
             '270': nahoru
+      gamelab_makeSpritesWithSize:
+        text: vytvoř {NUM} nových postav v kostýmu {COSTUME} o velikosti {SIZE}
+        options:
+          SIZE:
+            '30': malý
+            '50': středně
+            '100': velký
       gamelab_mirrorSprite:
         text: "{SPRITE} tvář {DIRECTION}"
         options:
@@ -1290,6 +1320,7 @@ cs:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): pohyb pomocí kláves se šipkami
+            new Behavior(driving_with_arrow_keys, []): ovládání šipkovými klávesami
             draggable(): přetažení
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
@@ -1425,6 +1456,46 @@ cs:
         text: "{SPRITE} říká {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}říká{TEXT1}{NUM}sekund"
+      gamelab_spriteThink:
+        text: "{SPRITE} si myslí {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE} si myslí {TEXT1} po dobu {NUM} sekund"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': Taky mám hlad.
+            '"I only want the biggest goat."': Chci jen tu největší kozu.
+            '"I''m a green troll."': Jsem zelený trol.
+            '"No one will cross my bridge."': Přes můj most nikdo nepřejde.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Je čas spřátelit se s ovcemi.
+            '"She''ll never recognize me now."': Už mě nikdy nepozná.
+            '"This costume keeps me warm."': Tenhle kostým mě hřeje.
+            '"I am actually a wolf."': Ve skutečnosti jsem vlk.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Chce se mi spát.
+            '"No one could ever beat me."': Nikdo mě nemůže porazit.
+            '"I''ve done this race before."': Tenhle závod pro mě není nový.
+            '"My feet are bigger than Turtle''s feet."': Mám větší nohy než želva.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Mám takový hlad.
+            '"I''m a visitor in this town."': Jsem v tomhle městě na návštěvě.
+            '"If we share, we''ll all have something to eat. "': Když se podělíme, budeme mít všichni co jíst.
+            '"I''ll trick everyone into giving me their food."': Všechny obelstím, aby mi dali svoje jídlo.
       gamelab_startAvoiding:
         text: "{SPRITE} se začne vyhýbat cíli {TARGET}"
       gamelab_startFollowing:
@@ -2022,12 +2093,28 @@ cs:
         text: 'sprajt {ANIMATION_NAME} začne {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': třepotání
+            '"growing"': růst
+            '"jittering"': komíhání
+            '"shrinking"': smršťování
+            '"spinning_left"': otáčení doleva
+            '"spinning_right"': otáčení doprava
             '"swimming_left_and_right"': plavání
+            '"wandering"': potulování se
+            '"wobbling"': kymácení
       Poetry_stopBehavior:
         text: 'sprajt {ANIMATION_NAME} zastaví {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': třepotání
+            '"growing"': růst
+            '"jittering"': komíhání
+            '"shrinking"': smršťování
+            '"spinning_left"': otáčení doleva
+            '"spinning_right"': otáčení doprava
             '"swimming_left_and_right"': plavání
+            '"wandering"': potulování se
+            '"wobbling"': kymácení
             '"all"': "--všechna chování--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

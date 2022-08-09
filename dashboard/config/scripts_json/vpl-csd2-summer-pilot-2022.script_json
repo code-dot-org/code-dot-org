@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 21:38:06 UTC",
+    "serialized_at": "2022-05-11 01:58:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -99,7 +100,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use heading tags to change the appearance of text on a web page.**\r\n\r\n\tSee the multiple choice question on Level 8 and the rubric on Level 9.\r\n\r\n2. **Structure content into headings, subheadings, and paragraphs.**\r\n\r\n\tSee the rubric on Level 9.\r\n    \r\n3. **Use a structured practice to collaboratively create a digital artifact.**\r\n\r\n\tAs students move through the lesson, ensure that that are following the guidelines for pair programming as described in the video.  In the wrap up journal prompt, check that student responses describe effective collaboration.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 3: Headings. This lesson will provide participants with an introduction to HTML heading tags. This model lesson will also highlight the structure of programming lesions throughout the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes",
+        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 3: Headings. This lesson will provide participants with an introduction to HTML heading tags. This model lesson will also highlight the structure of programming lessons throughout the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes",
         "preparation": "* Have student journals ready to give back.\r\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.",
         "purpose": "This lesson introduces the core practices of pair programming and debugging.  These will be used throughout the unit and align with authentic practices used by industry professionals. It also covers the heading tags that students will use in their pages for the rest of the unit and reinforces the general structure of HTML (opening tag / content / closing tag).\r\n\r\n",
         "student_overview": "**You will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum."
@@ -118,7 +119,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Overview:**\nThis session is intended to introduce participants to teaching and learning strategies specific to CS and integral to the CS Discoveries curriculum. Participants will be introduced to pair programming, using resources, and debugging along with the Code Studio tools that can be used to support the use of these strategies. Discussions will center around the role of the teacher in supporting students who are learning CS for the first time.\n\n**Participants will:**\n\n* Get an introduction to three CS teaching and learning strategies: pair programming, using resources, and debugging.\n* Learn how to use the pair programming tool in Code studio. \n* Practice debugging in Game Lab.\n* Consider your role as the teacher in supporting students learning CS for the first time.\n\n**Suggested time:** 60 minutes",
+        "overview": "**Overview:**\nThis session is intended to introduce participants to teaching and learning strategies specific to CS and integral to the CS Discoveries curriculum. Participants will be introduced to pair programming, using resources, and debugging along with the Code Studio tools that can be used to support the use of these strategies. Discussions will center around the role of the teacher in supporting students who are learning CS for the first time.\n\n**Participants will:**\n\n* Get an introduction to three CS teaching and learning strategies: pair programming, using resources, and debugging.\n* Learn how to use the pair programming tool in Code studio. \n* Practice debugging in Game Lab.\n* Consider their role as the teacher in supporting students learning CS for the first time.\n\n**Suggested time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to three CS teaching and learning strategies: pair programming, using resources, and debugging.\n* Learn how to use the pair programming tool in Code studio. \n* Practice debugging in Game Lab.\n* Consider your role as the teacher in supporting students learning CS for the first time."
       },
       "seeding_key": {
@@ -192,7 +193,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use and reason about drawing commands with multiple parameters**\n\n\tSee level 7 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 3 Lesson 4: Shapes and Parameters. This lesson will provide participants with the opportunity to practice manipulating the width and height of shapes drawn in Game Lab. This TLO lesson will also highlight the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson. rt. \n\n**Participants will:**\n\n* Engage in Unit 3 Lesson 4 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson.\n\n**Suggested time:** 60 minutes",
+        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 3 Lesson 4: Shapes and Parameters. This lesson will provide participants with the opportunity to practice manipulating the width and height of shapes drawn in Game Lab. This TLO lesson will also highlight the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson. \n\n**Participants will:**\n\n* Engage in Unit 3 Lesson 4 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson.\n\n**Suggested time:** 60 minutes",
         "preparation": "* Review the level sequence in Code Studio",
         "purpose": "This lesson gives students a chance to slightly expand their drawing skills while continuing to develop general purpose programming skills. They will need to reason about the x-y coordinate plane, consider the order of their code, and slightly increase their programs' complexity.  This lesson should be focused primarily on skill-building.",
         "student_overview": "**You will:**\n\n* Engage in Unit 3 Lesson 4 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson."
@@ -228,7 +229,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Overview:**\nThese asynchronous activities introduce participants to the tools and resources available to them in the CS Discoveries curriculum to track student progress, provide students with feedback, and assess student learning. Later in the workshop, participants will make a plan for how they will incorporate ongoing assessment of learning and feedback into. \n\n**Participants will:**\n\n* Get an overview of how to track student progress and provide feedback to students in Code Studio.\n* Explore resources included in the CS Discoveries curriculum related to assessing student learning and providing feedback.\n\n**Suggested time:** 30 minutes",
+        "overview": "**Overview:**\nThese asynchronous activities introduce participants to the tools and resources available to them in the CS Discoveries curriculum to track student progress, provide students with feedback, and assess student learning. \n\n**Participants will:**\n\n* Get an overview of how to track student progress and provide feedback to students in Code Studio.\n* Explore resources included in the CS Discoveries curriculum related to assessing student learning and providing feedback.\n\n**Suggested time:** 30 minutes",
         "student_overview": "**You will:**\n\n* Get an overview of how to track student progress and provide feedback to students in Code Studio.\n* Explore resources included in the CS Discoveries curriculum related to assessing student learning and providing feedback.\n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
@@ -1747,6 +1748,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CSD HTML project Review_2021"
         ],
@@ -1797,6 +1799,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-TLOMakeAPlan"
+        ],
         "progression": "TLO Lesson Planning"
       },
       "bonus": false,
@@ -1819,6 +1824,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-AssignRoles"
+        ],
         "progression": "TLO Lesson Planning"
       },
       "bonus": false,
@@ -1841,6 +1849,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-PrepareForReflection"
+        ],
         "progression": "TLO Lesson Planning"
       },
       "bonus": false,
@@ -1863,6 +1874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-Day2Lesson4-WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

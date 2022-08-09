@@ -2110,6 +2110,9 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Поменяйте число здесь"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Нажмите здесь, чтобы добавить в ваш проект костюмы."
         }
       }
     }

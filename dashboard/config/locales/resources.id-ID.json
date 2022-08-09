@@ -2,6 +2,9 @@
   "id-ID": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Daftar Putar Spotify (semua usia)"
+        },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
@@ -19,19 +22,60 @@
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Video"
         },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Pengenalan Artis"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Putaran dan Sudut",
+          "type": "Handout Murid"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Putaran dan Sudut"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Daftar Putar Spotify (semua usia)"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Enkripsi dan Kunci Publik",
           "type": "Video"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Widget Enkripsi pada Code Studio"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Panduan Aktivitas - Kompresi Teks"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Rangkuman Aktivitas - Decode Pesan ini",
+          "type": "Rangkuman Aktivitas"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Decode pesan ini"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Widget Kompresi Teks pada Code Studio",
+          "type": "Widget"
         },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: Kompresi Teks dengan Aloe Blacc",
           "type": "Video"
         },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Daftar Putar Spotify (semua usia)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Daftar Putar Spotify (semua usia)"
+        },
         "ai-ml/oceans/unversioned": {
+          "name": "Kecerdasan Buatan: Pembelajaran Mesin",
           "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
+          "name": "AI: Dampak terhadap Masyarakat",
           "type": "Video"
         },
         "ai-training/oceans/unversioned": {
+          "name": "AI: Data Pelatihan & Bias",
           "type": "Video"
         },
         "lesson_plans/courseb/2018": {
@@ -579,12 +623,15 @@
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
+          "name": "Kecerdasan Buatan: Pembelajaran Mesin",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
+          "name": "AI: Data Pelatihan & Bias",
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
+          "name": "AI: Dampak terhadap Masyarakat",
           "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -618,7 +665,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Tugas Akhir CS Fundamentals",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Pemetaan Standar CSTA",
@@ -678,11 +726,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Jejak Digital: Persegi Jejak Digital",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Handout Murid"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Jejak Digital: Trek Binatang",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Handout Murid"
         },
         "mimi-activity/courseb/2021": {
           "name": "Gerakkan itu, Gerakkan itu",
@@ -868,7 +918,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Keamanan di Lingkungan Tetangga Online Saya: Momen Jeda dan Berpikir",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Handout Murid"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Pair Programming",
@@ -1067,7 +1118,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Penerapan STOP terhadap Sikap Kasar Online: STOP Sikap Kasar Online",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Handout Murid"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Teman-teman robot saya",
@@ -1114,8 +1166,16 @@
           "name": " Blok Unplugged (Kursus C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Pengenalan Artis"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Putaran dan Sudut"
+        },
         "csf-turns-angles-doc/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Putaran dan Sudut",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Handout Murid"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Perasaan Wajah Emosi Gambar",
@@ -1337,6 +1397,9 @@
           "name": "Panduan Proyek Pesta Dansa",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Daftar Putar Spotify (semua usia)"
+        },
         "dance_party_unplugged/coursed/2021": {
           "url": "https://curriculum.code.org/hoc/unplugged/4/"
         },
@@ -1441,12 +1504,15 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
+          "name": "Pengenalan Artis",
           "type": "Video"
         },
         "turns_angles/express/2021": {
+          "name": "Putaran dan Sudut",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
+          "name": "Putaran dan Sudut",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
@@ -1477,6 +1543,9 @@
         "dance-party-project-guide/express/2021": {
           "name": "Panduan Proyek Pesta Dansa",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Daftar Putar Spotify (semua usia)"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Level Pemrograman Terbuka",
@@ -1521,7 +1590,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Tugas Akhir CS Fundamentals",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Pemetaan Standar CSTA",
@@ -1611,7 +1681,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "Informasi Privat dan Pribadi: Tiket Keluar",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Handout Murid"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Informasi Privat dan Pribadi: Kuis Pelajaran",
@@ -1640,7 +1711,12 @@
           "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Putaran dan Sudut",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Handout Murid"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Putaran dan Sudut"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Menulis Lagu dengan Fungsi",
@@ -1681,7 +1757,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Tugas Akhir CS Fundamentals",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "design-process/coursee/2021": {
           "name": "Proses Desain",
@@ -1760,6 +1837,7 @@
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
+          "name": "AI: Data Pelatihan & Bias",
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2021": {
@@ -1772,8 +1850,14 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Handout Murid"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubrik"
         },
         "survey_planning/csd/2021": {
           "name": "Merancang Pengumpulan Data"
@@ -1784,6 +1868,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "Video"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubrik"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
         },
@@ -1791,7 +1878,8 @@
           "type": "Bayangan"
         },
         "paper-prototypes/csd/2021": {
-          "name": "Prototipe Kertas"
+          "name": "Prototipe Kertas",
+          "type": "Rubrik"
         },
         "market-research/csd/2021": {
           "name": "Meneliti pasar"
@@ -1815,13 +1903,24 @@
           "name": "Aplikasi Multilayar"
         },
         "app-presentation/csd/2021": {
-          "name": "Penyajian aplikasi"
+          "name": "Penyajian aplikasi",
+          "type": "Rubrik"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Penyajian aplikasi"
         },
         "teacher_forum/csd/2021": {
           "name": "Forum guru"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "Inovasi Komputasi"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Ilmu Komputer Mengubah Segalanya",
+          "type": "Video"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "Perancangan Layar dengan Kode"
@@ -1844,6 +1943,9 @@
         },
         "functions_2/csd/2021": {
           "name": "fungsi"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubrik"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "Pengenalan Array",
@@ -1872,8 +1974,17 @@
         "physical-prototyping-project/csd/2021": {
           "type": "Panduan Proyek"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubrik"
+        },
         "planning-your-innovation/csd/2021": {
           "type": "Panduan Proyek"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Representasi Itu Penting"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Representasi Itu Penting"
         },
         "representing-information-1/csd/2021": {
           "name": "Menunjukkan informasi"
@@ -1885,8 +1996,8 @@
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Merepresentasikan Angka"
         },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "Menjaga Kerahasiaan Data"
+        "create_a_representation/csd/2021": {
+          "type": "Rubrik"
         },
         "structuring_data/csd/2021": {
           "name": "Penataan Data"
@@ -1928,6 +2039,7 @@
           "name": "Data di Dunia Nyata"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Video: Dampak terhadap Masyarakat",
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
@@ -1935,10 +2047,14 @@
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Data Pelatihan dan Bias",
           "type": "Video"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "Penelaahan Sejawat"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubrik"
         },
         "solve-a-data-problem/csd/2021": {
           "type": "Panduan Proyek"
@@ -1965,6 +2081,12 @@
         "sprites_1/csd/2021": {
           "name": "Sprites"
         },
+        "sprite_properties/csd/2021": {
+          "name": "Properti Sprite"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubrik"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
         },
@@ -1977,6 +2099,9 @@
         "animating-sprites/csd/2021": {
           "name": "Gerakan Sprite",
           "type": "Video"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubrik"
         },
         "boolean_expressions/csd/2021": {
           "name": "Ekspresi Boolean",
@@ -1996,6 +2121,9 @@
         "interactive-card-1-2-3-4/csd/2021": {
           "type": "Penelaahan Sejawat"
         },
+        "interactive_card/csd/2021": {
+          "type": "Rubrik"
+        },
         "velocity_1/csd/2021": {
           "name": "Percepatan",
           "type": "Video"
@@ -2010,7 +2138,8 @@
           "name": "Deteksi tumbukan"
         },
         "side-scroller-1/csd/2021": {
-          "name": "Side Scroller"
+          "name": "Side Scroller",
+          "type": "Rubrik"
         },
         "side-scroller/csd/2021": {
           "name": "Side Scroller",
@@ -2020,7 +2149,8 @@
           "name": "Percepatan dan Pola Tandingan"
         },
         "flyer-game-1/csd/2021": {
-          "name": "Flyer Game"
+          "name": "Flyer Game",
+          "type": "Rubrik"
         },
         "flyer-game/csd/2021": {
           "name": "Flyer Game",
@@ -2039,8 +2169,24 @@
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Penelaahan Sejawat"
         },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubrik"
+        },
         "teacher_forum_1/csd/2021": {
           "name": "Forum guru"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Proses Pemecahan Masalah"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Proses Pemecahan Masalah",
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Proses Pemecahan Masalah"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Proses Pemecahan Masalah"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Apa itu Komputer?"
@@ -2065,7 +2211,14 @@
           "type": "Penelaahan Sejawat"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "Aplikasi dan Pemecahan Masalah"
+          "name": "Aplikasi dan Pemecahan Masalah",
+          "type": "Rubrik"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Mengeksplorasi Halaman Web"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Mengeksplorasi Halaman Web"
         },
         "html_tags/csd/2021": {
           "name": "Tag HTML"
@@ -2084,7 +2237,11 @@
           "name": "Heading dan Paragrap"
         },
         "video_debugging/csd/2021": {
+          "name": "Video: Debugging",
           "type": "Video"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubrik"
         },
         "html-web-page/csd/2021": {
           "type": "Penelaahan Sejawat"
@@ -2115,6 +2272,9 @@
           "name": "Pengantar CSS - Bagian 2",
           "type": "Video"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubrik"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "Penelaahan Sejawat"
         },
@@ -2142,6 +2302,9 @@
         "person-web-page-reflect/csd/2021": {
           "type": "Panduan Proyek"
         },
+        "personal-web-page/csd/2021": {
+          "type": "Rubrik"
+        },
         "publishing_your_website/csd/2021": {
           "name": "Sedang diterbitkan situs web",
           "type": "Video"
@@ -2153,16 +2316,22 @@
           "name": "Situs Web untuk suatu Tujuan"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Mengelola Ketidakcocokan",
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Kerja Tim",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: Cara Kerja Pencarian",
           "type": "Video"
         },
         "classes/csd/2021": {
           "name": "Kelas"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubrik"
         },
         "plan-a-multi-page-website/csd/2021": {
           "type": "Panduan Proyek"

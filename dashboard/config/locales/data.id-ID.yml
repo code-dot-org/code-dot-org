@@ -896,6 +896,28 @@ id:
         csd_ml_ethics_ai: Etika dan AI
         PL_overview_CSP: Apa prinsip-prinsip Ilmu Komputer?
         PL_CSP_EIPMOverview: Panduan Belajar EIPM
+        CSA-PL-debugging-temp: Pengantar Debugging dalam Java Lab - temp
+        csd_u6_circuit_playground: Komputasi Fisik
+        csd_u6_input_output: Input dan Output
+        CSA-PL-for-loops: Untuk loop di Java
+        CSA-PL-variables: Membuat Variabel di Java
+        PL_CS_Journeys_Overview: CS Journeys
+        CSA-PL-intro-to-java-lab: Dasar-Dasar Java Lab
+        CSA-PL-first-program: Menulis Program di Java
+        CSD_u6_variables_part1: 'CSD: Variabel'
+        csd_u6_if_statements: 'CSD: Pernyataan If'
+        csc-poem-art-intro: Video Pembuka
+        csc-poem-art-outro: Video Penutup
+        csd_u6_call_define_functions: 'CSD: Memanggil dan Menetapkan Fungsi'
+        csp_applab_parameters: Fungsi dengan parameter
+        starquilts_intro_artist: Pengantar Star Quilts
+        CSA-PL-intro-to-arrays: Array 1 Dimensi/ One-Dimensional (1D)
+        CSA-PL-1d-arrays-new-values: Memasukkan nilai dalam array ID
+        CSA-PL-conditionals: Pernyataan Kondisional di Java
+        CSA-PL-two-way-selection: Pemilihan dua arah
+        CSA-PL-Printing-in-Java: Mencetak di Java
+        CSA-PL-multi-selection-statements: Pernyataan Multi-seleksi
+        CS_Changing_Everything: Ilmu Komputer Mengubah Segalanya
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

@@ -29,3 +29,15 @@ div[role=dialog] {
     }
   }
 }
+
+.load-buttons-top-row {
+  display: flex;
+}
+
+.load-buttons-new {
+  margin-top: 0;
+}
+
+.load-buttons-search {
+  width: 60%;
+}

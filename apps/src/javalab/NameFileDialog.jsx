@@ -24,6 +24,20 @@ export default class NameFileDialog extends Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    if (!prevProps.isOpen && this.props.isOpen) {
+      this.textInput.setSelectionRange(0, 0);
+    }
+  }
+
+  onKeyDown = event => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      this.props.handleSave(this.textInput.value);
+    }
+  };
+
   render() {
     const {
       isOpen,
@@ -70,6 +84,8 @@ export default class NameFileDialog extends Component {
               ...styles.dialogInput,
               ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
             }}
+            onKeyDown={this.onKeyDown}
+            autoFocus
           />
           <div>
             <button

@@ -2,7 +2,7 @@
 title: Leitfaden für Eltern
 ---
 
-# Gewusst wie: Machen Sie eine Hour of Code gemeinsam mit Ihrem Kind
+# So veranstalten Sie eine Hour of Code mit Ihrem Kind
 Ein Stunde Hour of Code auszuprobieren ist eine einfache und unterhaltsame Möglichkeit, Ihr Kind an die Informatik heranzuführen, vielleicht sogar zum ersten Mal. Die Informatik ist nicht nur grundlegend für alle Studienrichtungen, sondern <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">neue Studien zeigen</a> auch: Kinder, die Informatikunterricht haben, schneiden in anderen Fächern besser ab, sind beim Lösen von Aufgaben überdurchschnittlich erfolgreich und <font color="00adbc"><b> die Wahrscheinlichkeit, dass sie an einer Hochschule studieren werden, ist um 17 % höher</b></font>.
 
 Sie können zusammen mit vielen Millionen SchülerInnen weltweit an dieser globalen Veranstaltung teilnehmen. Gemeinsam können wir Kinder und Jugendliche zum Lernen inspirieren, Klischees aufbrechen und ihnen helfen, sich für etwas ganz Neues zu interessieren. Und das Beste ist, dass Sie bereits alles haben, um die Hour of Code nach Hause zu holen!
@@ -10,7 +10,7 @@ Sie können zusammen mit vielen Millionen SchülerInnen weltweit an dieser globa
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
 <h3>Was brauchen wir, um mitzumachen?</h3>
-Die Hour of Code ist extrem unkompliziert - auch für Anfänger. Sie brauchen keine Erfahrung mit Informatik oder pädagogische Qualifikationen, um Ihren Kindern eine unterhaltsame Aktivität zu bieten, mit der sie sowohl lernen als auch etwas zum Lachen haben.
+Die Hour of Code ist auch für Anfänger sehr unkompliziert. Sie brauchen keine Erfahrung mit Informatik oder pädagogische Qualifikationen, um Ihren Kindern eine unterhaltsame Aktivität zu bieten, mit der sie sowohl lernen als auch etwas zum Lachen haben.
 
 Sie können die Hour of Code auf einem Computer, einem Tablet, einem Smartphone oder ganz ohne Internet ausprobieren! Hier erfahren Sie, wie Sie mitmachen können.
 
@@ -20,30 +20,30 @@ Sie können die Hour of Code auf einem Computer, einem Tablet, einem Smartphone 
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-Es gibt unzählige <a href="https://hourofcode.com/us/learn">Hour of Code Aktivitäten</a>, die Ihnen zur Verfügung stehen, wenn Sie an einem Computer mit Internetzugang arbeiten. Es ist hilfreich, wenn Sie sich einige der Optionen vorher ansehen, damit Sie Ihr Kind zu denjenigen Übungen führen können, die ihm besonders viel Spaß machen werden.
+Es gibt unzählige <a href="https://hourofcode.com/us/learn">Hour of Code Aktivitäten</a>, die Sie an einem Computer mit Internetzugang nutzen können. Es ist hilfreich, wenn Sie sich einige der Optionen vorher ansehen, damit Sie Ihr Kind zu den Übungen führen können, die ihm besonders viel Spaß machen werden.
 
-Alle unsere Aktivitäten verbinden das Lösen von Aufgaben und kritisches Denken mit Spaß und Kreativität, aber hier sehen Sie einige, die bei den SchülerInnen besonders beliebt sind:
+Alle unsere Aktivitäten verbinden das Lösen von Aufgaben und kritisches Denken mit Spaß und Kreativität, Hier finden Sie Aufgaben, die bei den SchülerInnen besonders beliebt sind:
 
 - Für Kinder, die gerne spielen: <a href="https://code.org/minecraft">Minecraft</a> oder <a href="https://code.org/dance">Tanzparty</a>
 - Für Kinder, die Disney lieben: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Die Eiskönigin</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Für Kind, die Spaß am Lernen haben: <a href="https://code.org/oceans">KI für Ozeane</a> oder <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Musizieren mit Scratch</a>
 
-<h3>Low-Tech oder No-Tech?</h3>
+<h3>Wenig oder keine Technik?</h3>
 Wenn Sie nur wenig oder keine Technologie verwenden, können Sie die <a href="https://hourofcode.com/us/learn">Hour of Code Aktivitäten</a> filtern, indem Sie im Abschnitt <em>Technologie in der Klasse</em> "Keine Computer oder Geräte" auswählen.
 
 [<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
 
-Schauen Sie sich auch diese <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">kurzen Videos</a> an, die Ihnen weitere Ideen geben, wie man Aktivitäten auch ohne Technologie zu Hause durchführen kann!
+Schauen Sie sich auch diese <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">kurzen Videos</a> mit weitere Ideen, wie man Aktivitäten auch ohne Technologie zu Hause durchführen kann, an!
 
 ## 2) Bereiten Sie sich vor
-Sie haben sich nun einige Tutorials ausgesucht. Dabei kann es sinnvoll sein, diese Aktivitäten auf Ihrem Gerät zu testen, bevor Sie sie Ihrem Kind vorstellen.
+Sie haben sich jetzt einige Tutorials ausgesucht. Testen Sie die Aktivitäten auf Ihrem Gerät, bevor Sie sie Ihrem Kind vorstellen.
 
 [<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
 
 <h3>Mehrere Kinder im Haus?</h3>
-Vielleicht ist es sinnvoll, jedem Kind einen Kopfhörer zu geben, wenn sie an separaten Geräten arbeiten wollen. So können sie die Aktivitäten mit Ton spielen, ohne die anderen zu stören.
+Vielleicht ist es sinnvoll, den Kindern einen Kopfhörer zu geben, wenn jedes Kind an seinem Gerät lernen möchte. So können sie die Aktivitäten mit Ton spielen, ohne die anderen zu stören.
 
-Wenn Sie nur ein Gerät verwenden oder Ihre "Hour of Code" einfach interaktiver gestalten wollen, versuchen Sie es mit der <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">Programmierung zu zweit</a>. Die Programmierung zu zweit ermutigt die Kinder zur Zusammenarbeit. Wenn sie gemeinsam arbeiten, helfen sie sich bei der Lösung von Aufgaben gegenseitig. Sie werden dann auch feststellen, dass Informatik sozial und kooperativ ist.
+Wenn Sie nur ein Gerät verwenden oder Ihre "Hour of Code" einfach interaktiver gestalten wollen, versuchen Sie es mit der <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">Programmierung zu zweit</a>. Die Programmierung zu zweit ermutigt die Kinder zur Zusammenarbeit. Wenn sie gemeinsam arbeiten, helfen sie sich bei der Lösung von Aufgaben gegenseitig. Sie merken schnell, dass Informatik sozial und kooperativ ist.
 
 <h3>Begeistern Sie Ihre Kinder! </h3>
 Dies ist eine großartige Gelegenheit, dem Tagesablauf Ihres Kindes eine ganz neue Aktivität hinzuzufügen. Mit diesen Vorschlägen können Sie den Spaß über ein Tutorial hinaus fortführen:
@@ -70,14 +70,14 @@ Es ist kein Problem, wenn Sie und Ihr Kind bisher überhaupt nichts mit Informat
 Wenn Ihr Kind Schwierigkeiten bei einer Aufgabe hat, ist es in Ordnung, so darauf zu reagieren:
 - "Ich weiß nicht. Wir sollten die Lösung gemeinsam suchen."
 - "Die Technik funktioniert nicht immer so, wie wir es wollen."
-- "Programmieren lernen ist wie das Lernen einer Fremdsprache - wir beherrschen das niemals gleich fließend.""
+- "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
 
-In der Informatik geht es darum zu lernen, wie man Fehler in Situationen beseitigt, die sich nicht so entwickelt sind, wie wir dachten. Sie und Ihr Kind können sich gemeinsam kreative Methoden zur Lösung der Aufgabe ausdenken!
+In der Informatik geht es darum zu lernen, wie man Fehler in Situationen beseitigt, die sich nicht so entwickelt, wie wir dachten. Sie und Ihr Kind können sich gemeinsam kreative Methoden zur Lösung der Aufgabe ausdenken!
 
 
 ## 4) Vergessen Sie das Feiern nicht!
 
-Die Hour of Code ist Ereignis, das auf der ganzen Welt stattfindet, und Ihre Familie sollte mitfeiern. Hier sind einige Möglichkeiten, wie Sie Ihre Hour of Code ganz besonders gestalten können:
+Die Hour of Code ist ein Ereignis, das auf der ganzen Welt stattfindet, und Ihre Familie sollte mitfeiern. Hier sind einige Möglichkeiten, wie Sie Ihre Hour of Code ganz besonders gestalten können:
 
 - Drucken Sie <a href="https://staging.code.org/certificates">Hour of Code Zertifikate</a> aus, die Sie Ihrem Kind übergeben, wenn es seine Aktivität abgeschlossen hat
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Drucken Sie Sticker </a> zu Hause aus oder <a href="https://store.code.org/"> bestellen Sie sie online </a> als zusätzliche Überraschung.

@@ -3541,12 +3541,12 @@ es-MX:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       ForLoopFun-Unplugged_2020:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       GoingPlacesSafely-unplugged:
         markdown: |
           # Ir a lugares con seguridad
@@ -7047,7 +7047,7 @@ es-MX:
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
-            "avance".
+            "avanzar".
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -7412,11 +7412,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -7436,11 +7436,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -7460,11 +7460,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -7484,11 +7484,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -7506,116 +7506,117 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
@@ -7630,10 +7631,11 @@ es-MX:
         - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
@@ -7648,12 +7650,13 @@ es-MX:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
-            néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
+            nectar de cada flor y miel de cada panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
         - text: No lo sé.
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
@@ -7666,12 +7669,13 @@ es-MX:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
-            néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
+            nectar de cada flor y miel de cada panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
         - text: No lo sé.
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
@@ -7681,7 +7685,7 @@ es-MX:
             detrás de cada nube.
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7698,7 +7702,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7715,7 +7719,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7732,7 +7736,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7863,7 +7867,7 @@ es-MX:
             veces y recogerá la mayor cantidad de maíz o lechuga que encuentre. No
             recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -7884,7 +7888,7 @@ es-MX:
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -7905,7 +7909,7 @@ es-MX:
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -7926,7 +7930,7 @@ es-MX:
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -7958,74 +7962,74 @@ es-MX:
       courseD_multi_farmer_while10_predict2:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8040,10 +8044,10 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8058,10 +8062,10 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8076,10 +8080,10 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8111,61 +8115,64 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8184,7 +8191,7 @@ es-MX:
             hagas clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8203,7 +8210,7 @@ es-MX:
             hagas clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8222,7 +8229,7 @@ es-MX:
             hagas clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8364,7 +8371,7 @@ es-MX:
         - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
       courseE_prediction_artistFunction1:
         answers:
-        - text: Nada. No se llama a la función en el programa.
+        - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
@@ -8381,7 +8388,7 @@ es-MX:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - text: Nada. No se llama a la función en el programa.
+        - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
@@ -8398,7 +8405,7 @@ es-MX:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - text: Nada. No se llama a la función en el programa.
+        - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
@@ -8415,7 +8422,7 @@ es-MX:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - text: Nada. No se llama a la función en el programa.
+        - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
@@ -8432,7 +8439,7 @@ es-MX:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_copy:
         answers:
-        - text: Nada. No se llama a la función en el programa.
+        - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
@@ -8854,13 +8861,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8871,13 +8878,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8888,13 +8895,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8905,13 +8912,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8919,15 +8926,15 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
@@ -8943,11 +8950,12 @@ es-MX:
         - text: La abeja recogerá el néctar de cada flor; de lo contrario, hará miel.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja obtener
             el néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
             hay un panal).
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque `si en la flor` permite a la
             abeja obtener el néctar de cada flor y la miel de cada panal.
         - text: No lo sé.
@@ -8963,76 +8971,76 @@ es-MX:
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y tratará de recoger más néctar del que hay en
             las flores. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: La abeja no recogerá néctar o miel.
@@ -9119,9 +9127,9 @@ es-MX:
 
       coursee_prediction_artistfunction2:
         answers:
-        - text: El artista resolverá el desafío correctamente.
-          feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
-            línea de polígonos".
+        - text: El artista resolverá el rompecabezas correctamente.
+          feedback: Incorrecto. El bucle (loop) usa "dibujar polígono" en lugar de
+            "dibujar línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
@@ -9129,15 +9137,15 @@ es-MX:
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
-          feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
+          feedback: Incorrecto. El bucle (loop) gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
         - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - text: El artista resolverá el desafío correctamente.
-          feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
-            línea de polígonos".
+        - text: El artista resolverá el rompecabezas correctamente.
+          feedback: Incorrecto. El bucle (loop) usa "dibujar polígono" en lugar de
+            "dibujar línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
@@ -9145,15 +9153,15 @@ es-MX:
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
-          feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
+          feedback: Incorrecto. El bucle (loop) gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
         - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - text: El artista resolverá el desafío correctamente.
-          feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
-            línea de polígonos".
+        - text: El artista resolverá el rompecabezas correctamente.
+          feedback: Incorrecto. El bucle (loop) usa "dibujar polígono" en lugar de
+            "dibujar línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
@@ -9161,15 +9169,15 @@ es-MX:
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
-          feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
+          feedback: Incorrecto. El bucle (loop) gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
         - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - text: El artista resolverá el desafío correctamente.
-          feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
-            línea de polígonos".
+        - text: El artista resolverá el rompecabezas correctamente.
+          feedback: Incorrecto. El bucle (loop) usa "dibujar polígono" en lugar de
+            "dibujar línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
@@ -9177,7 +9185,7 @@ es-MX:
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
-          feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
+          feedback: Incorrecto. El bucle (loop) gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
         - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
@@ -10582,14 +10590,14 @@ es-MX:
           En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |
-          # Historias de Espacios en Blanco
+          # Historias del espacio en blanco
 
-          En esta lección, aprenderás a usar y escribir historias de espacios en blanco. Mira este vídeo para aprender cómo se conecta con la informática.
+          En esta lección, aprenderás a usar y escribir historias de espacio en blanco. Mira este video para aprender cómo esto se conecta con las ciencias de la computación.
       ForLoopFun-Unplugged_2021:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       GettingLoopy-Unplugged_2021:
         markdown: |-
           # Cómo hacerse Loopy
@@ -11690,12 +11698,12 @@ es-MX:
         - text: Scrat llegará a la bellota. No hay errores en el código.
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
-        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+        - text: Scrat no llegará a la bellota porque gira en la dirección equivocada.
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
-            "avance".
+            "avanzar".
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -11708,18 +11716,18 @@ es-MX:
             problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - text: El pájaro se quedará a un paso del cerdo.
+        - text: El pájaro se quedará a un paso atras del cerdo.
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
-        - text: El pájaro se estrellará contra la pared.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
+        - text: El pájaro chocará con la pared.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
             en "Ejecutar"?
@@ -11738,21 +11746,21 @@ es-MX:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - text: BB-8 llegará demasiado lejos en el primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
-            recoger toda la chatarra.
+        - text: BB-8 llegará demasiado lejos en el primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle (loop) para
+            poder recoger toda la chatarra.
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 girará en la dirección equivocada después del primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 girará en la dirección equivocada después del primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
         questions:
-        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseD_EOC_2021:
         description: "¡Has llegado a la última lección del Curso D! Elige un proyecto
@@ -11768,14 +11776,14 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: Ninguna de las anteriores
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -11803,47 +11811,47 @@ es-MX:
           feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
             recoger néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
             panal.
-          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
-            néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja intentará obtener miel y néctar tanto de las flores como
+          feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
+            nectar de cada flor y miel de cada panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
+        - text: La abeja intentará recoger miel y néctar tanto de las flores como
             del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
@@ -11851,59 +11859,59 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - text: La abeja avanzará y recogerá el néctar solo una vez.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja girará en la dirección equivocada.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         questions:
-        - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
-            ocurrirá si haces clic en "Ejecutar"?
+        - text: Mira los bucles (loops) anidados de abajo. ¿Qué sucederá si haces
+            clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '8'
           correct: true
           feedback: "¡Correcto!"
         - text: '10'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '12'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         questions:
-        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
-            clic en "Ejecutar"?
+        - text: Mira el código de abajo. ¿Cuánta miel hará la abeja si haces clic
+            en "Ejecutar"?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - text: La granjera recogerá todos los cultivos.
+        - text: La cosechadora recogerá todos los cultivos.
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
-        - text: La granjera no recogerá ninguna de las cosechas con el camino que
-            está tomando.
+        - text: La cosechadora no recogerá cultivos en el camino que está tomando.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         - text: La cosechadora recogerá todos los cultivos, excepto la calabaza.
           correct: true
           feedback: "¡Correcto!"
-        - text: La Granjera sólo recogerá la calabaza.
+        - text: La cosechadora sólo recogerá la calabaza.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
-        markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+        markdown: |+
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
+
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
             en "Ejecutar"?
@@ -11915,13 +11923,13 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Este código dejará los hoyos completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para eliminar la tierra de la pila.
-        - text: Este código dejará el último agujero sin tocar.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
+        - text: Este código dejará el último hoyo sin tocar.
           feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este puzle?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while4_predict1_2021:
         answers:
         - text: No sucederá nada.
@@ -11953,7 +11961,7 @@ es-MX:
             círculos sin parar.
           feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
             yendo hacia adelante y hacia atrás para siempre.
-        - text: El zombi se quedará atascado al final del camino de frente.
+        - text: El zombie se quedará atascado al final del camino de frente.
           feedback: En este código, el zombie se pasará del camino correcto y terminará
             yendo hacia adelante y hacia atrás para siempre.
         questions:
@@ -11961,7 +11969,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2021:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -11992,37 +12000,37 @@ es-MX:
         - text: El alien empezará a patrullar de derecha a izquierda.
           feedback: Incorrecto. El alien comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
-        - text: El alien empezará a moverse hacia arriba y hacia abajo en la pantalla.
+        - text: El alien comenzará a moverse hacia arriba y hacia abajo en la pantalla.
           correct: true
           feedback: "¡Correcto!"
         - text: El alien desaparecerá de la parte superior de la pantalla.
           feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         questions:
-        - text: Fíjate bien en el código de abajo. ¿Qué ocurrirá después de hacer
-            clic en el alienígena?
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en el alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - text: La granjera recogerá dos calabazas.
-          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+        - text: La cosechadora recogerá dos calabazas.
+          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La granjera recogerá todas las calabazas.
-          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+        - text: La cosechadora recogerá todas las calabazas.
+          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La granjera recogerá la lechuga.
+        - text: La cosechadora recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
-        - text: La granjera recogerá el maíz.
-          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+        - text: La cosechadora recogerá el maíz.
+          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - text: Nada. El programa no activa la función.
-          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. El programa activa dos veces la función.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
@@ -12034,7 +12042,7 @@ es-MX:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_dani:
         answers:
-        - text: Nada. No se llama a la función en el programa.
+        - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
@@ -12052,14 +12060,14 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
-          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         - text: La planta rodadora comenzará a caer
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.
-          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
@@ -12075,20 +12083,21 @@ es-MX:
         display_name: Proyecto de fin de curso
       courseF_artist_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles y el Artista!"
-        display_name: Práctica con Artista
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) y el Artista!"
+        display_name: Práctica con el Artista
       courseF_beeFor_practice:
         description: ¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles "for" y la abeja!
-        display_name: Práctica con Abeja
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) "para" y
+          la abeja!
+        display_name: Práctica con la abeja
       courseF_beeVar_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con las variables y la abeja!"
-        display_name: Práctica con Abeja
+        display_name: Práctica con la abeja
       courseF_bee_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles y la abeja!"
-        display_name: Práctica con Abeja
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) y la abeja!"
+        display_name: Práctica con la abeja
       courseF_events_freeplay:
         description: Ahora puedes utilizar lo que has aprendido para mejorar tu proyecto.
           ¡Sigue añadiendo a tu programa o empieza algo nuevo!
@@ -12101,9 +12110,9 @@ es-MX:
           # Resumen del Nivel de Elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
-          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+          Puedes utilizar las descripciones siguientes para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecer|Inflar un pez|Un pingüino en movimiento|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecerse|Inflar un pez|Un pingüino en movimiento|
           |-|-|-|-|-|-|-|
           | ***Tipo*** |**Revisar**|**Debug**|**Corregir**|**Debug**|**Contenido Opcional**|**Contenido Opcional**
           | ***Concepto***|*events, behaviors*|*eventos, comportamientos*|*events, behaviors*|*eventos, comportamientos*|*when/while events*|*eventos when/while*|
@@ -12138,18 +12147,17 @@ es-MX:
           Estas opciones llevan a los alumnos a aplicaciones que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de la lección] (.././).
       courseF_labels_predict_multi:
         answers:
-        - text: '"¡Una pizza marchando!"'
+        - text: '"¡Una pizza viene enseguida!"'
           feedback: No es correcto. Las etiquetas de las variables no coinciden.
-        - text: '"¡Una comida marchando!"'
+        - text: '"¡Una comida viene enseguida!"'
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
-        - text: '"¡Una comida marchando!"'
+        - text: '"¡Una comida viene enseguida!"'
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
         - text: '"¡Una que viene enseguida!"'
           correct: true
           feedback: "¡Correcto! Las etiquetas de las variables no coinciden."
         - text: No se imprimirá nada.
-          feedback: No se imprimirá nada, pero es incorrecto. El evento y el bloque
-            de impresión seguirán funcionando.
+          feedback: No es correcto. El evento y el bloque de impresión seguirán funcionando.
         questions:
         - text: Este código puede parecerte familiar, pero léelo con atención. ¿Qué
             se imprimirá si el usuario escribe "pizza"?
@@ -12160,11 +12168,11 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 píxeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
-        - text: El ordenador pedirá al usuario un número.
+        - text: La computadora solicitará un número al usuario.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
@@ -12173,19 +12181,19 @@ es-MX:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
-            de una.
+            una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y recogerá un néctar de las flores número 1 y 4. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
       courseF_sprites_freeplay:
@@ -12227,42 +12235,42 @@ es-MX:
         - text: Lee el código y haz una predicción.
       courseF_text_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. Sigue practicando con el texto y las indicaciones."
-        display_name: Práctica de Texto y Avisos
+          todas las que puedas. ¡Sigue practicando con el texto y las solicitudes!"
+        display_name: Práctica de Texto y Solicitudes
         teacher_markdown: |+
           # Visión General de los Niveles de Elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
           Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Avisos|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de las Solicitudes|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
           |-|-|-|-|-|-|-|-|
-          | ***Tipo*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
-          | ***Concepto***|*print block, events*|*avisos, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
+          | ***Teclear*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
+          | ***Concepto***|*print block, events*|*solicitudes, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
 
 
       courseF_variables_predict_multi:
         answers:
         - text: El programa imprimirá "¡Hola nombre!"
           feedback: No es correcto. El bloque del nombre será reemplazado por lo que
-            usted escriba.
-        - text: El programa le dará la bienvenida con el nombre que introduzca.
+            escribas.
+        - text: El programa te dará la bienvenida con el nombre que escribas.
           correct: true
           feedback: "¡Correcto! Lo que escribas se utilizará en lugar del bloque de
             nombres."
         - text: El sprite cambiará de tamaño.
           feedback: Es incorrecto. El texto se imprime en la pantalla.
-        - text: El ordenador hará otra pregunta.
+        - text: La computadora hará otra pregunta.
           feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
             programa.
         questions:
-        - text: 'Este programa le permite responder a una pregunta escribiendo con
-            el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
-            una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
+        - text: 'Este programa te permite escribir con el teclado para responder una
+            pregunta. El bloque `imprimir` muestra el texto en la pantalla. Haz una
+            predicción: ¿qué ocurrirá después de responder la pregunta?'
       courseF_variables_projects:
-        description: Crearás una tarjeta de felicitación, un chatbot o una historia
-          de espacio en blanco. Si ya has terminado la "Parte 1" de tu proyecto, pasa
-          a la "Parte 2".
+        description: Crearás una tarjeta de felicitaciones, un chatbot o una historia
+          de espacio en blanco. Si ya has terminado la \"Parte 1"\ de tu proyecto,
+          pasa a la \"Parte 2\".
         display_name: Elige un Proyecto
         teacher_markdown: |
           # Visión General del Nivel de Elección
@@ -12272,8 +12280,8 @@ es-MX:
       courseF_variables_samples:
         description: Crearás una tarjeta de felicitación, un chatbot o una historia
           en blanco. Antes de empezar, explora los proyectos de ejemplo que aparecen
-          a continuación para ver qué te interesa crear. Pulsa "Terminar" cuando estés
-          listo para empezar a planificar tu propio programa.
+          a continuación para ver qué te interesa crear. Pulsa \"Terminar"\ cuando
+          estés listo/a para empezar a planificar tu propio programa.
         display_name: Exploración - Ejemplos de Programas
         teacher_markdown: |
           # Visión General de los Niveles de Elección
@@ -12282,21 +12290,21 @@ es-MX:
           Los alumnos deben mirar estos proyectos cuidadosamente antes de decidir lo que quieren crear. Pueden estudiarlos juntos en clase o hacer que los alumnos los exploren por su cuenta.
       courseF_variables_stop:
         content1: descripción aquí
-        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo para seguir adelante?
-          \n\n\nEn el siguiente nivel, comenzarás a escribir el código de tu proyecto.
-          Esto funciona mejor si ya tienes un plan.\n\nTu plan completo debe incluir:\n\n<img
-          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo/a para seguir
+          adelante? \n\n\nEn el siguiente nivel, comenzarás a escribir el código de
+          tu proyecto. Esto funciona mejor si ya tienes un plan.\n\nTu plan completo
+          debe incluir:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
           style=\"float:left; height:70px; padding:10px\"/>\n\n* El tipo de proyecto
-          que estás construyendo. Por ejemplo, una tarjeta de felicitación, un chatbot
+          que estás construyendo. Por ejemplo, una tarjeta de felicitaciones, un chatbot
           o una historia en blanco.\n* Una lista de preguntas que le harás al usuario.\n*
           El otro texto que mostrarás en la pantalla.\n* Una descripción o dibujo
           de los sprites que necesitarás (y sus comportamientos).\n\nSi no estás seguro
           de estar preparado para seguir adelante, ¡consulta con tu profesor!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
-        - text: El artista resolverá el puzle correctamente.
-          feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
-            línea de polígonos".
+        - text: El artista resolverá el rompecabezas correctamente.
+          feedback: Incorrecto. El bucle (loop) usa "dibujar polígono" en lugar de
+            "dibujar línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
@@ -12304,8 +12312,8 @@ es-MX:
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
-          feedback: Incorrecto. El bucle gira 90 grados entre las activaciones de
-            la función "dibujar polígono".
+          feedback: Incorrecto. El bucle (loop) gira 90 grados entre llamadas a "dibujar
+            polígono".
         questions:
         - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
       csf_be_a_super_digital_citizen_2021:
@@ -12360,10 +12368,10 @@ es-MX:
         display_name: Ejemplos de Proyecto
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - text: Laurel recogerá 4 piezas del tesoro con este programa.
+        - text: Laurel recogerá 4 piezas del tesoro con este código.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
-        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso provoca un
             error.
           correct: true
           feedback: "¡Correcto!"
@@ -12601,7 +12609,7 @@ es-MX:
             AM.png">
         title: dibujarSprites
       CSD U3 drawing practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: "¡Practica mucho!"
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descripción aquí
@@ -12623,6 +12631,26 @@ es-MX:
           Una vez que hayas acordado un tipo de juego con tu compañero, rellena la Guía del Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego.  Pasarás los siguientes niveles creando tu juego.
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: descripción aquí
+        markdown: |
+          # Construir un Salto de Plataforma
+
+          A medida que construyas tu salto de plataforma, utilizarás el proceso de resolución de problemas.
+
+          ## Definir
+
+          El problema está claramente definido para este juego, porque ya has visto una versión de ejemplo.  Sin embargo, es posible que quieras hacer algunos cambios.   Asegúrate de que las nuevas características de tu juego están claramente definidas.
+
+          ## Preparar
+
+          Antes de empezar a codificar, tienes que rellenar una guía de proyecto.  Te preparará y hará que la codificación sea mucho más fácil.
+
+          ## Probar
+
+          Probarás tu plan cuando empieces a codificar.  No te olvides de todos tus recursos, como la documentación y la pestaña de ayuda y consejos, cuando empieces a codificar.
+
+          ## Reflexionar
+
+          Después de terminar tu proyecto, querrás reflexionar sobre si tu juego ha resultado como habías planeado, y sobre las formas en que podrías mejorar tu proceso para la próxima vez.
       CSD U5 test_2021:
         title: Datos y Sociedad Prueba Fin de Proyecto
       CSD U6 LED create intro_2021:
@@ -12720,7 +12748,7 @@ es-MX:
         description: |2-
 
           Haz el Tuyo Propio
-          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué características o retos adicionales quieres crear?
+          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué funciones o desafíos adicionales quieres crear?
       CSD games functions practice choice_2021:
         display_name: Funciones Practicar
         description: Practica el uso de las funciones y aprende más sobre lo que las
@@ -12732,33 +12760,33 @@ es-MX:
         display_name: Condicionales Practicar
         description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web movement practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web text practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Pon a prueba tus conocimientos de texto en estas actividades.
       CSDU6 Innovation_2021:
         teacher_markdown: |+
-          A continuación, se muestran algunos sitios recomendados para que los estudiantes comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, el contenido dentro de ellos cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebes cada sitio para ver si hay contenido inapropiado antes de compartirlo con los estudiantes**.
+          A continuación, hay algunos sitios web que los estudiantes pueden utilizar para comenzar su investigación. No hemos proporcionado estos sitios web directamente a los estudiantes debido a que algunas veces estos sitios son bloqueados por programas de filtrado distritales, ó bien, la innovación mas reciente digna de una noticia puede no ser apropiada para estudiantes de secundaria. **Sugerimos encarecidamente que compruebes cada sitio para asegurarte que no incluya contenido inapropiado y que cargue en las computadoras del salon de clases antes de compartirlo con los estudiantes**.
 
-          ### Tecnología Portable
+          ### Tecnología Portable/Vestible
 
-          * [Warable.com](https://www.wareable.com/)
+          * [Wareable.com](https://www.wareable.com/)
 
-          ### Salud y Seguridad
+          ### Salud y Cuidado
 
-          * [Sanidad Moderna](http://www.modernhealthcare.com/section/medical-devices)
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
           * [Medstartr](http://www.medstartr.com/)
 
           ### Agricultura
 
           * [Instituto Nacional de Alimentación y Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
-          * [Noticias del Sector Agrícola](http://www.farmindustrynews.com/technology)
+          * [Noticias de la Industria Agrícola](http://www.farmindustrynews.com/technology)
 
-          ### Fabricación
+          ### Manufactura
 
           * [Semana de la Industria](https://www.industryweek.com/technology-and-iiot)
           * [Impresión 3D](https://3dprinting.com/)
@@ -12766,7 +12794,7 @@ es-MX:
           ### Arte y Diseño
 
           * [ArtFab](http://artfab.art.cmu.edu/)
-          * [Tutoriales](http://www.instructables.com/tag/type-id/category-technology/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
 
           ### Casa Inteligente
 
@@ -12777,38 +12805,37 @@ es-MX:
         markdown: |+
           # Investigación sobre la Innovación
 
-          Elige uno de los siguientes temas para investigar. Querrás encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con tu categoría.
+          Elige uno de los siguientes temas para investigar. Querrás encontrar información acerca de algunos de los dispositivos de computo innovadores más recientes relacionados con tu categoría.
 
-          ## Tecnología Portable
-          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos dispositivos para llevar puestos, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez vestible _y_ pretende ayudar a mejorar la salud personal.
+          ## Tecnología Portable/Vestible
+          La tecnología portable/vestible incluye cualquier forma de computo diseñada para ser portada/vestida por el usuario, ya sea integrada en la ropa o como un accesorio. Muchos dispositivos portables/vestibles, como los podómetros inteligentes, se superponen en cierto modo con la salud y los cuidados, ya que el dispositivo es a la vez portable/vestible _y_ tiene como proposito ayudar a mejorar la salud personal.
 
-          ## Salud y Seguridad
-          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que puedes usar para mejorar tu salud o seguridad) como la tecnología profesional (equipos que puede usar un médico u otro profesional).
+          ## Salud y Cuidado
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que puedes usar para mejorar tu salud o cuidado) como la tecnología profesional (equipos que pueden ser utilizados por un médico u otro profesional).
 
           ## Agricultura
-          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que concebimos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que concebimos la agricultura. Esto incluye la incorporación de computadoras a los equipos agrícolas existentes, el uso de sensores y robótica para monitorear los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
 
-          ## Fabricación
-          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de la fábrica, hay muchas áreas interesantes para investigar aquí.
+          ## Manufactura
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la manufactura asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de computadoras en el trabajo de la fábrica, hay muchas áreas interesantes para investigar aquí.
 
           ## Arte y Diseño
-          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+          La intersección entre la expresión artística y la computación puede producir resultados impresionantes e inesperados. Aunque es menos probable que encuentres productos comerciales disponibles relacionados con el arte y el diseño, encontraras una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos de computo de maneras creativas y expresivas.
 
           ## Casa Inteligente
-          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
-
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para monitorear y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
 
           # Consideraciones sobre la Investigación
 
-          Cuando busques dispositivos sobre tu especialidad, ten en cuenta las siguientes consideraciones:
+          Cuando busques dispositivos sobre tu tema, ten en mente las siguientes consideraciones:
 
-          * Céntrate en las soluciones basadas en hardware sobre los programas de software
-          * Céntrate en las innovaciones recientes por encima de las antiguas
+          * Enfocate en las soluciones basadas en hardware por encima de los programas de software
+          * Enfocate en las innovaciones recientes por encima de las antiguas
           * Sigue lo que te interesa
 
           # Comenzando tu Investigación
 
-          Consulta con tu profesor los sitios web recomendados para comenzar tu investigación. También puedes utilizar algunas de las palabras clave anteriores para empezar a buscar ideas específicas en Internet. Por ejemplo, considera la posibilidad de buscar en los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+          Consulta con tu profesor los sitios web recomendados para comenzar tu investigación. También puedes utilizar algunas de las palabras clave anteriores para empezar a buscar ideas específicas en Internet. Por ejemplo, considera la posibilidad de buscar en los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) productos que aún no han salido al mercado.
 
 
 
@@ -13016,6 +13043,7 @@ es-MX:
       ml-models in applab-choice parent:
         description: Prueba lo que has aprendido en una o varias de las siguientes
           actividades.
+        display_name: 'Práctica de Tarjeta Modelo '
       CSD CSS project RGB_2021:
         description: Comprueba cómo puedes conseguir aún más colores utilizando los
           códigos RGB.
@@ -13175,3 +13203,206 @@ es-MX:
         description: Practica la entrada de teclado y el uso del bloque if/else con
           estas actividades.
         display_name: Entrada de Ratón y Práctica de If/else
+      aiml-ch1-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      aiml-intro-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: "¡Encuesta Rápida de Informática!"
+      ml-customize apps-practice choice-2021:
+        display_name: Practica Personalizando tus Aplicaciones
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para crear una copia de los datos de Isaac
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para crear una copia de los datos de Kim
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder a la encuesta de Kim
+      ml-model card-medical-1-2021:
+        markdown: |
+          # Recomendador Sala de Urgencias V1
+
+          Pulsa en la tarjeta modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # Prioridad en la Sala de Urgencias de Auroras Boreales
+
+          Pulsa en la tarjeta modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # Recomendador Médico con Inteligencia Artificial
+
+          Pulsa en la ficha del modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Pulsa aquí](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para realizar la Encuesta de Recomendación de Calzado
+      ml-plan survey-copy form:
+        markdown: |
+          # Copia un Formulario de Google
+
+          ## [Pulsa Aquí](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para crear la copia de una plantilla de encuesta que utilizaremos hoy
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Tarjeta Modelo del Recomendador de Mascotas
+
+          **Con un compañero:** ¿Cómo puedes diferenciar las características categóricas de las numéricas en la tarjeta modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: Practica con Modelos en el Laboratorio de Aplicaciones
+      Choose 2 Test:
+        answers:
+        - text: Línea 2
+          correct: true
+        - text: Línea 3
+          correct: true
+        - text: Línea 4
+        - text: Línea 5
+        questions:
+        - text: Qué líneas de código hay que eliminar para que el programa funcione
+            como se pretende? Selecciona <u>dos</u> respuestas
+        markdown: "Esta pregunta utiliza un robot en una trama de cuadrados. El robot
+          se representa como un triángulo, que inicialmente está orientado hacia el
+          lado derecho de la cuadrícula. El robot se mueve según las siguientes instrucciones:\n\n|
+          Instrucción       | Explicación |\n|--------------------|--------|\n|`Avanzar`
+          | El robot se mueve una casilla hacia adelante en la dirección en la que
+          está orientado |\n|`Girar a la derecha` | El robot gira en su sitio 90 grados
+          en el sentido de las agujas del reloj (es decir, hace un giro a la derecha
+          en su sitio). |\n|`Girar a la izquierda` | El robot gira en su lugar 90
+          grados en sentido contrario a las agujas del reloj (es decir, hace un giro
+          a la izquierda en su lugar). |\n|`REPETIR n VECES` | El bloque de instrucciones
+          contenido entre las llaves {} se repite n veces. |\n \n&nbsp;\n\nObserva
+          el siguiente programa incorrecto, que pretende mover el robot alrededor
+          del perímetro de la cuadrícula de abajo, como indican las flechas.\n\n![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png)\n\n![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n"
+      Eval Contracts F:
+        answers:
+        - texto|Imagen|Cadena|Número|Cadena
+        content1: Escribe un contrato para la función de texto
+        content2: Contratos de Evaluación E.bloques_solución, 300
+        title: Texto del Contrato
+      Multi Horizontal Scroll Test:
+        answers:
+        - text: 3 bits
+        - text: 4 bits
+        - text: 5 bits
+        - text: 6 bits
+        - text: 7 bits
+          correct: true
+        - text: 12 bits
+        questions:
+        - text: |-
+            El teclado QWERTY estándar tiene 47 teclas que pueden colocar caracteres en la pantalla. Cada una de estas teclas también puede mostrar un segundo carácter manteniendo pulsada la tecla "Shift" al mismo tiempo (Supongamos que en esta pregunta se ignoran todas las demás teclas).
+
+            ¿Cuántos bits necesitarías para codificar todo lo que se puede escribir en este teclado?
+        title: 'Evaluación: Codificación del Texto'
+      Submittable Multi:
+        answers:
+        - text: azul
+        - text: verde
+        - text: turquesa
+        - text: amarillo
+        - text: naranja auténtica, por supuesto
+          correct: true
+        - text: rojo
+        questions:
+        - text: "¿Cuál es tu color favorito?"
+        title: Múltiples Opciones para Enviar
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: descripción aquí
+      allthethings_external_not_displayed_as_unplugged:
+        content1: descripción aquí
+      contained_Choose_2_Test:
+        answers:
+        - text: Línea 2
+          correct: true
+        - text: Línea 3
+          correct: true
+        - text: Línea 4
+        - text: Línea 5
+        questions:
+        - text: Qué líneas de código hay que eliminar para que el programa funcione
+            como se pretende? Selecciona <u>dos</u> respuestas
+      contained_Choose_2_Test_2:
+        answers:
+        - text: Línea 2
+          correct: true
+        - text: Línea 3
+          correct: true
+        - text: Línea 4
+        - text: Línea 5
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: "¿Qué flecha lleva al Flurb hacia el tesoro?"
+        title: Opción múltiple
+      test questionless single multi:
+        answers:
+        - text: "Llamar a los parámetros de una función  \n ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)"
+        - text: "Definir los parámetros de una función  \n ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)"
+          correct: true
+        - text: "Mover la tortuga por la pantalla  \n ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)"
+        - text: "Orientar la dirección de la tortuga   \n ![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)"
+        - text: "Configurar las propiedades del lápiz \n ![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)"
+        - text: Ninguna de las anteriores
+        markdown: "Ten en cuenta los siguientes usos de `randomNumber`.  Cada respuesta
+          describe el uso y muestra un ejemplo de código. ¿Cuál de las siguientes
+          opciones NO es un uso válido de `randomNumber`?\n\n"
+        teacher_markdown: "La respuesta llega a la diferencia entre definir los parámetros
+          de una función y llamar a esa función.  Dado que `randomNumber` devuelve
+          un valor (un número), puede utilizarse en lugares en los que, de otro modo,
+          se proporcionaría un valor numérico.\n\nPor ejemplo, no se define una función
+          con un parámetro numérico.  Esto no tiene sentido:\n\n`función dibujarFigura(50){
+          ... }` <-- no hagas esto.\n\nEn lugar de eso, *define* la función con un
+          parámetro con nombre, así:\n\n`función dibujarFigura(tamaño){ ... }`  \n\ny
+          luego la *llamas*, proporcionando un valor para ese parámetro así:\n\n`dibujarFigura(50);`
+          \n\nEn el caso de esta pregunta estamos usando randomNumber en lugar de
+          ese valor para la *llamada* a la función.\n\ndibujarFigura( número aleatorio(25,75)
+          );`\n\n"

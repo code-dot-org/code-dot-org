@@ -2,6 +2,22 @@
 hr:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': srednje
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': srednje
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -282,7 +298,7 @@ hr:
             new Behavior(moving_east_and_looping, []): krećući se prema istoku i petljajući
             new Behavior(moving_north_and_looping, []): krećući se prema sjeveru i petljajući
             new Behavior(moving_south_and_looping, []): krećući se prema jugu i petljajući
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': sekunde
@@ -331,6 +347,12 @@ hr:
             '90': dolje
             '180': lijevo
             '270': gore
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': srednje
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

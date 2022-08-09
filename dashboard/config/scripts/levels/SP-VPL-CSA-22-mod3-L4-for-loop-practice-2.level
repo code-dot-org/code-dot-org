@@ -13,15 +13,13 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "encrypted_exemplar_sources": "ykM7UO8YvE5K4v00mWc1NtyW6o+6yBlZ9gEc7WAHsF/NO6aqN3/KcWEE1JpS\nIZVNM23KDOpCibpihiSjEs8NV0LRVLOgZafFbOB4DEM+Qso3Tir7hykazp4o\n/58cYWBO2C0WNl5ngZPGS4fJXltOvDUyOKBBWMAhONSPmIyN1MHgOAF3bF6N\nBmafzdffYYxbj1g8GbtSSIXUANi49gCyvjdEmYFjdZ447arEN2AelZn7QRFg\ng+MgVuwxybbfnTgADBRPR6JWUeD4e2skPWFIIvx+ZonHNhWpKGrNTTCBIluq\nRKKh7Rrjj1KjC4ccL0qyx9B7HXY30R0an+j4eY3dqvLBPrV4YKMHk0TB4IiL\nfB2DIxTHid7N4SRvcF6CZhj6ajeHsxY/4LDWHaZUazwbzUIZm47QQsLh5p4U\nxPlWU9MHx1NJ8w3TO6iehNGFagw5kJ1bDoW3w7zMqJ16aclzQpyMXZgAw0iM\nUWv6FF0+wBmhkwliYNCjqCePH+lY9QEZIcq9aG6ff24soipHpg2EJANfaLNp\nzTM/FP+/25Eh4P8=\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-21T00:55:53.000Z",
   "level_num": "custom",
   "user_id": 977,
-  "audit_log": "[{\"changed_at\":\"2022-03-21T00:55:53.518+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 01:27:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:43 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:17:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:24:10 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-21T00:55:53.518+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 01:27:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:43 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:17:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:24:10 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-26 16:20:12 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ar:
   errors:
     messages:
@@ -427,7 +433,6 @@ ar:
     popup:
       progress_for_user: "تقدم %{name}"
       progress: 'إنجازاتك'
-      lines: 'عدد أسطر الكود البرمجي : %{lines}'
       close: 'إغلاق'
       mastery: 'مفاهيم'
       puzzle_map: 'مراحل'
@@ -665,6 +670,10 @@ ar:
       title: 'حفلة الرقص'
     dance-2019:
       title: 'حفلة الرقص'
+    hello-world:
+      title: 'مرحبًا أيها العالم'
+    poem-art:
+      title: 'فن القصيدة'
     hoc:
       title: 'المتاهة الكلاسيكية'
       body: 'جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.'
@@ -823,14 +832,6 @@ ar:
     reminder_desc: 'أجرينا تحديثًا على <a href="%{tos_url}" target="_blank">شروط الخدمة</a> بموقعنا و<a href="%{privacy_url}" target="_blank">سياسة الخصوصية</a>. لذا؛ يُرجى قراءتها جيدًا قبل الموافقة عليها. ويُرجى العلم أن ربما لا تتوفر أدواتنا لتدريس لغة جافا سكريبت لطلابك قبل إبداء الموافقة الصريحة على الشروط التي تم تحديثها.'
     reminder_desc_markdown: أجرينا تحديثًا على [شروط الخدمة](%{tos_url}) بموقعنا و%{privacy_url}[سياسة الخصوصية]. لذا؛ يُرجى قراءتها جيدًا قبل الموافقة عليها. ويُرجى العلم أن ربما لا تتوفر أدواتنا لتدريس لغة جافا سكريبت لطلابك قبل الموافقة على الشروط التي تم تحديثها.
     review_terms: "راجع الشروط المُحدَّثَة"
-  donor_interstitial:
-    title: "أصبحت دورات علوم الكمبيوتر المجانية الخاصة بك ممكنة عن طريق ..."
-    subtitle: "نود أن نشكر الجهات المانحة السخية التي جعل دعمها نجاح Code.org ممكنًا. نحن ملتزمون بالحفاظ على Code.org مجانًا للمدارس والطلاب ، على مستوى العالم ، بفضل كرمنا المستمر[donors](%{donors_url})!"
-    local_supporters: "الداعمون المحليون"
-    global_supporters: "الداعمون العالميون"
-    support_codeorg_1: "كل دولار يتم منحه لـ Code.org يجلب الفرصة لمزيد من الطلاب."
-    support_codeorg_2: "[تبرع الآن] (%{donate_url}) لدعم Code.org."
-    get_started: "ابدأ على Code.org"
   school_info_interstitial:
     title: "نريد أن نوصل علم الحاسوب إلى جميع الطلاب - ساعدنا على مواصلة تقدمنا في ذلك!"
     message: "يُرجى إدخال بيانات مدرستك أدناه."
@@ -1060,6 +1061,7 @@ ar:
         music: 'الموسيقى'
         art: 'الفن'
         other: "غير ذلك:"
+        na: 'لا ينطبق'
       resources:
         bootstrap: 'التمهيد'
         codecademy: 'CodeCademy'
@@ -1068,7 +1070,8 @@ ar:
         kodable: 'كودابل'
         scratch: 'لغة سكراتش (برمجة)'
         tynker: "Tynker\n"
-        other: "غير ذلك:"
+        other: "الأخرى"
+        na: 'لا ينطبق'
       robotics:
         grok: 'Grok Learning'
         kodable: 'كودابل'
@@ -1078,7 +1081,8 @@ ar:
         sphero: "Sphero\n"
         raspberry: "Raspberry Pi\n"
         wonder: 'Wonder Workshop'
-        other: "غير ذلك:"
+        other: "الأخرى"
+        na: 'لا ينطبق'
       workshop_course:
         csf_af: 'أساسيات علوم الكمبيوتر (دورات أ-و)'
         csf_express: 'أساسيات علوم الكمبيوتر (ما قبل السريعة أو السريعة)'

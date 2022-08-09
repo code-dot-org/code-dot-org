@@ -6,6 +6,7 @@ mr:
         Unplug2: कॉम्प्युटेशनल विचार  
         Unplug6: कंडीशनल्स 
         Custom: आर्टीस्ट
+        Spritelab: स्प्राइट लॅब
     level:
       instructions:
         maze_2_2: 'तुम्ही मला हे खोडकर डुक्कर पकडायला मदत करू शकता का? दोन-तीन "move forward" ब्लॉक्स एकत्र जोडा आणि मला तिथे जायला मदत करण्यासाठी "Run" दाबा.'
@@ -58,16 +59,29 @@ mr:
         artist_intro: आर्टीस्ट प्रस्तावना 
         Unplug2: कॉम्प्युटेशनल विचार  
         Unplug6: कंडीशनल्स 
+        Unplug7: गीतलेखन
+        Unplug10: इंटरनेट
+        C1_happy_maps_unplugged: हॅपी मैप्स
+        C1_bigevent_unplugged: मोठा इव्हेंट 
+        C1_getting_loopy: लूप्स वापरणे
         C1_artist_intro: आर्टीस्ट प्रस्तावना 
+        C1_building_foundation: पाया तयार करणे
+        C1_going_places_safely: सुरक्षितपणे ठिकाणी जाणे
         C2_artist_intro: आर्टीस्ट प्रस्तावना 
         C2_artist_loops: आर्टीस्ट लूप्स
         C2_artist_debugging: आर्टीस्ट डीबगिंग
         C2_conditionals_with_cards: कंडीशनल्स 
+        C2_binary_bracelets: बायनरी ब्रेसलेट्स
+        C2_digital_footprint: तुमचे  डिजिटल फूटप्रिंट
+        C2_digital_footprint_v2: तुमचे  डिजिटल फूटप्रिंट
         C3_artist_intro: आर्टीस्ट प्रस्तावना 
         C3_artist_functions: आर्टीस्ट फंक्शन्स
         C3_artist_nested_loops: नेस्टेड लूप्स
         C3_bee_nested_loops: नेस्टेड लूप्स
         C3_computational_thinking: कॉम्प्युटेशनल विचार  
+        C3_internet: इंटरनेट
+        C3_crowdsourcing: क्राउडसोर्सिंग
+        C3_functional_suncatchers: फंक्शनल सनकॅचर्स 
         C4_loops_zombie: लूप्स
         C4_variables_artist: व्हेरीएबल्स - आर्टीस्ट
         C4_math_artist: गणित वापरून आर्टीस्टचे प्रोग्रॅमिंग करणे
@@ -76,6 +90,7 @@ mr:
         CSF_artist_angles: आर्टीस्टमध्ये कोन
         CSF_debugging_k1_blocks: डीबगिंग
         CSF_debugging_text_blocks: डीबगिंग
+        CSF_my_robotic_friends: माझे रोबोटिक मित्र
         frozen_intro: अवर ऑफ कोड प्रस्तावना
         frozen_loops: लूप्सची ओळख
         frozen_functions: फंक्शन्सची ओळख
@@ -112,12 +127,15 @@ mr:
         hoc_dance_events: नृत्य पार्टी - कार्यक्रम
         hoc_dance_properties: नृत्य पार्टी - मालमत्ता
         hoc_dance_congrats: डांस पार्टी - पार्टी करत राहा!
+        c_and_c_great_to_create: फेअर तयार करणे आणि प्ले करणे खूप छान आहे
+        c_and_c_digital_sharing: डिजिटल शेअरिंग
         csd_debugging: डीबगिंग
         oceans_machine_learning: मशीन लर्निंग
         hoc_dance_congrats_2019: डांस पार्टी - पार्टी करत राहा!
         hoc_dance_warmup_2019: डांस पार्टी - वार्म अप
         hoc_dance_events_2019: नृत्य पार्टी - कार्यक्रम
         hoc_dance_properties_2019: नृत्य पार्टी - मालमत्ता
+        csf_private_and_personal_information: खाजगी आणि वैयक्तिक माहिती
         outbreak_mike: CodeBytes एपिसोड 3 माईकसह - आऊटब्रेक सिम्युलेटर   
         PL_CSD_TeacherTips_Advise: शिक्षकांच्या सूचना - नवीन शिक्षकांना सल्ला
         PL_CSD_TeacherTips_IntroToCSD: शिक्षकांच्या सूचना-सीएस डिस्कव्हरीजची ओळख
@@ -132,6 +150,25 @@ mr:
         hello_world_events: हॅलो वर्ल्ड - इव्हेंटसह प्रोग्रामिंग
         hello_world_congrats: हॅलो वर्ल्ड -  आपणास पाहिजे ते करा
         poemart_intro: कविता ह्या कलेची ओळख
+        CSA-PL-debugging-temp: जावा लॅबमध्ये डीबगिंगची ओळख - टेम्प (temp)
+        CSA-PL-for-loops: जावा मधील फॉर लूप्स 
+        CSA-PL-variables: जावामध्ये व्हेरिएबल्स तयार करणे
+        PL_CS_Journeys_Overview: संगणक शास्त्राचा प्रवास
+        CSA-PL-intro-to-java-lab: जावा लॅब बेसिक्स 
+        CSA-PL-first-program: जावामध्ये प्रोग्राम लिहित आहे
+        CSD_u6_variables_part1: 'CSD: व्हेरिएबल्स'
+        csd_u6_if_statements: 'CSD: if स्टेटमेंट्स'
+        csc-poem-art-intro: परिचय व्हिडिओ
+        csc-poem-art-outro: आऊट्रो व्हिडिओ
+        csd_u6_call_define_functions: 'CSD: कॉल करणे आणि कार्ये परिभाषित करणे'
+        starquilts_intro_artist: स्टार क्विल्ट्सचा परिचय
+        CSA-PL-intro-to-arrays: एक-आयामी (1D) अॅरेज
+        CSA-PL-1d-arrays-new-values: 1D अ‍ॅरेमध्ये मूल्ये एंटर करत आहे
+        CSA-PL-conditionals: जावा मधील कंडीशनल स्टेटमेंट्स
+        CSA-PL-two-way-selection: दुहेरी निवड
+        CSA-PL-Printing-in-Java: जावा मध्ये प्रिंटिंग
+        CSA-PL-multi-selection-statements: मल्टी सिलेक्शन स्टेटमेंट्स
+        CS_Changing_Everything: संगणक शास्त्रामुळे सगळे काही बदलत आहे
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा

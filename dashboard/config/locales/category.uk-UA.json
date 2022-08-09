@@ -1,0 +1,14 @@
+{
+  "uk-UA": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Обчислювальне мислення"
+        },
+        "ccela/L": {
+          "description": "Мова"
+        }
+      }
+    }
+  }
+}

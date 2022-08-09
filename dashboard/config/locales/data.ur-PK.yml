@@ -182,6 +182,9 @@ ur:
         poetry_module_multichoiceprompts: کثیر الانتخاب اشارے - شاعری کے ساتھ کوڈنگ
         poetry_module_conditionals: شرائط - شاعری کے ساتھ کوڈنگ
         poemart_intro: نظم کا فن تعارف
+        CSA-PL-debugging-temp: جاوا لیب میں ڈیبگنگ کا تعارف - ٹمپلیٹ
+        PL_CS_Journeys_Overview: CS کے سفر
+        CSA-PL-intro-to-arrays: ایک جہتی (1D) صفیں
     callout:
       text:
         frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔

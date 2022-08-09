@@ -9,6 +9,8 @@ mr:
       length: लांबी
       min: किमान
       points: गुण
+      radius: त्रिज्या
+      sides: बाजू
       size: आकार
       speed: वेग 
       width: रुंदी

@@ -1571,7 +1571,7 @@ it:
         text: "I computer hanno la potenzialità di fare cose fantastiche.\nMa l'unica cosa che rende i computer intelligenti o utili, sei tu.\nQuando impari a programmare, devi definire il problema da risolvere e scrivere il software che trasforma queste idee in realtà."
     hoc_dance_warmup:
       1:
-        text: "Ora del Codice | Ballando col codice: Riscaldamento"
+        text: "Ora del Codice | Ballando col codice: Introduzione"
       2:
         text: "Ciao! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di software e la creatrice di iLuminate."
       3:
@@ -1800,7 +1800,7 @@ it:
         text: "Dai un'occhiata alle risorse se ti serve più supporto: 1. forum.code.org 2. @teachcode su Twitter 3. studio.code.org "
     hoc_dance_warmup_2019:
       1:
-        text: "Ora del Codice | Ballando col codice: Riscaldamento"
+        text: "Ora del Codice | Ballando col codice: Introduzione"
       2:
         text: "Ciao! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di software e la creatrice di iLuminate."
       3:

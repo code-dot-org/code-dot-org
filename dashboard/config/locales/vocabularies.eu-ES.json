@@ -74,6 +74,9 @@
         "variable/coursef/2021": {
           "word": "Aldagaia"
         },
+        "input/coursef/2021": {
+          "word": "Sarrera"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
         },
@@ -151,6 +154,9 @@
         },
         "function/csd/2021": {
           "word": "Funtzioa"
+        },
+        "input/csd/2021": {
+          "word": "Sarrera"
         },
         "copyright/csd/2021": {
           "word": "Egile-eskubideak"

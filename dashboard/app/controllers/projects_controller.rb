@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -226,7 +226,7 @@ class ProjectsController < ApplicationController
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
-    if current_user && current_user.project_validator?
+    if current_user&.project_validator?
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
@@ -265,6 +265,10 @@ class ProjectsController < ApplicationController
       channel_id: channel,
       enableMaker: params['enableMaker'] ? true : nil
     )
+  end
+
+  def weblab_footer
+    render partial: 'projects/weblab_footer'
   end
 
   private def initial_data
@@ -405,7 +409,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_starter_assets?(project_type)
-    %w(javalab).include? project_type
+    %w(javalab applab).include? project_type
   end
 
   def export_create_channel

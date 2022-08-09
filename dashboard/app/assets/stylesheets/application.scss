@@ -348,6 +348,19 @@ img.video_thumbnail {
   }
 }
 
+.levelbuilder-header {
+  .header {
+    background-color: $purple;
+  }
+}
+
+.local-header {
+  .header {
+    background-color: $orange;
+  }
+}
+
+
 #language_dir.rtl #pageheader-wrapper {
   .create_options {
     direction: rtl;
@@ -460,10 +473,9 @@ img.video_thumbnail {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 216px;
+$footer_min_height: 236px;
 $footer_padding-top: 20px;
-$footer_padding-bottom: 20px;
-$footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
+$footer_fullheight: $footer_min_height + $footer_padding-top;
 html, body {
   height: 100%;
 }
@@ -482,9 +494,8 @@ html, body {
 }
 
 .footer {
-  height: $footer_height;                 /* A height is required to push this footer to the bottom of the page. */
+  min-height: $footer_min_height;
   padding-top: $footer_padding-top;
-  padding-bottom: $footer_padding-bottom;
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
@@ -865,7 +876,7 @@ $default-modal-width: 640px;
     top: 50px; // top of the dialog
 
     width: $default-modal-width;
-    margin-left: -($default-modal-width / 2);
+    margin-left: -($default-modal-width * 0.5);
 
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
@@ -881,7 +892,7 @@ $default-modal-width: 640px;
 
 .dash_modal {
   width: $default-modal-width;
-  margin-left: -($default-modal-width / 2);
+  margin-left: -($default-modal-width * 0.5);
 }
 
 .dash_modal_body {
@@ -1257,8 +1268,8 @@ body.iframe_embed_app_and_code {
 #codeApp.pin_bottom {
   position: absolute;
   top: 60px;
-  left: $codeApp-left-margin;
-  right: 25px;
+  left: 10px;
+  right: 10px;
   bottom: 10px;
 
   &.centered_embed {
@@ -1687,7 +1698,15 @@ a.download-video {
   }
 
   #forgot-password {
-    font-family: $gotham-extra-bold-italics;
+    font-family: $gotham-extra-bold;
+  }
+
+  #password_field, #new_user {
+    margin-bottom: 0;
+  }
+
+  .password_help_link {
+    margin-bottom: 21px;
   }
 
   button {
@@ -1695,7 +1714,7 @@ a.download-video {
     background-color: $orange;
     border: 1px solid $orange;
     color: $white;
-    font-family: $gotham-extra-bold;
+    font-family: $gotham-bold;
     margin: 5px 0;
     width: $button-width;
   }
@@ -1704,6 +1723,10 @@ a.download-video {
     background-color: $blue;
     border: 1px solid $blue;
   }
+}
+
+#code_without_signing_in {
+  margin-top: 80px;
 }
 
 #signup, #school-info-modal {
@@ -2105,7 +2128,7 @@ a.download-video {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
-      font-family: $gotham-extra-bold;
+      font-family: $gotham-bold;
       padding: 10px 20px;
       margin-right: 0;
     }
@@ -2113,7 +2136,7 @@ a.download-video {
 
   .oauth-sign-in {
     color: $white;
-    font-family: $gotham-extra-bold;
+    font-family: $gotham-bold;
     width: 100%;
     margin: 5px 0;
 
@@ -3504,8 +3527,12 @@ h2.danger {
   background-color: $orange !important;
 }
 
+.foorm-button-left {
+  float: left !important;
+}
+
 .foorm-button-right {
-  float: right;
+  float: right !important;
 }
 
 .foorm-survey-rating-question-sample {

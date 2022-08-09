@@ -4,7 +4,9 @@ tr:
       Actions: İşlemler
       Advanced: İleri seviye
       Behaviors: Davranışlar
+      Boolean: Boolean
       Brushes: Fırçalar
+      Category: Kategori
       Color: Renk
       Comment: Yorum
       Comments: Yorumlar
@@ -17,16 +19,21 @@ tr:
       Game/Score: Oyun/Skor
       Games/Score: Oyunlar/skor
       Groups: Gruplar
-      Input: Girdi
+      Input: Giriş
       Location: Konum
       Locations: Konumlar
       Logic: Mantık
       Loops: Döngüler
       Math: Matematik
+      Number: Sayı
       Numbers: Sayılar
+      Picker: Seçici
+      Prebuilt: önceden oluşturulmuş
       Properties: Özellikleri
       Sprites: Hareketli Nesneler
+      String: String
       Text: yazı
       Variables: Değişkenler
       'Variables ': 'Değişkenler'
+      'Variables  ': 'Değişkenler  '
       World: Dünya

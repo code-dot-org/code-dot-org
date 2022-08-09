@@ -186,10 +186,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'can not update participant type' do
-    section = create :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    section = create :section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     error = assert_raises do
-      section.participant_type = SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.participant_type = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       section.grade = 'pl'
       section.save!
     end
@@ -276,7 +276,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'add_student raises for admin students' do
     assert_raises do
       assert_does_not_create(Follower) do
-        @section.add_student (create :admin)
+        @section.add_student(create(:admin))
       end
     end
   end

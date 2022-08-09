@@ -2553,6 +2553,55 @@
         },
         "CSD U3 Random add_2021": {
           "CSD_U3_butterfly": "Observa atentamente este código."
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Añade el bloque reproduceSonido aquí"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Añade tu sentencia `if` aquí"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Esta es la función de la temperatura"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Esta es la función de la Hora del Día"
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Esta es la función del Número de Coches"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Esta es la función del tiempo"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto.",
+          "make_sprite": "¡Utiliza los bloques aquí para hacer un sprite!"
+        },
+        "Calc Circles of Eval .2": {
+          "calc_question_marks": "Selecciona el número correcto en este desplegable"
+        },
+        "Calc Vars 1": {
+          "Calc Vars 1_edit_option": "Pulsa en editar para cambiar el valor de esta variable"
+        },
+        "Eval Strings Images .2": {
+          "": "Los bloques de color turquesa, como éste, devuelven valores de cadena"
         }
       }
     }

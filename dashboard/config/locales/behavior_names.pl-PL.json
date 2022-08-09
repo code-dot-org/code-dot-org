@@ -3345,6 +3345,32 @@
           "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
           "moving north and looping": "poruszanie się na północ i w pętli",
           "moving south and looping": "poruszanie się na południe i w pętli"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "pływanie w lewo i prawo",
+          "shrinking": "zwężenie",
+          "patrolling": "patrolowanie",
+          "wandering": "wędrowanie",
+          "growing": "rośnięcie",
+          "jittering": "trzęsienie się",
+          "moving east": "przechodzenie na wschód",
+          "moving north": "przechodzenie na północ",
+          "moving south": "przechodzenie na południe",
+          "moving west": "przechodzenie na zachód",
+          "spinning right": "obracanie się w prawo"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "pływanie w lewo i prawo",
+          "shrinking": "zwężenie",
+          "patrolling": "patrolowanie",
+          "wandering": "wędrowanie",
+          "growing": "rośnięcie",
+          "jittering": "trzęsienie się",
+          "moving east": "przechodzenie na wschód",
+          "moving north": "przechodzenie na północ",
+          "moving south": "przechodzenie na południe",
+          "moving west": "przechodzenie na zachód",
+          "spinning right": "obracanie się w prawo"
         }
       }
     }

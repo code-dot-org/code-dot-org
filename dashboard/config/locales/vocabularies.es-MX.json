@@ -68,6 +68,7 @@
           "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
         },
         "code/flappy/unversioned": {
+          "word": "programar",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -866,23 +867,93 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "features/csd/2021": {
+          "word": "Características",
+          "definition": "Entradas que un modelo utiliza para tomar decisiones"
+        },
+        "label/csd/2021": {
+          "word": "Etiqueta",
+          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
+        },
+        "model/csd/2021": {
+          "word": "Modelo",
+          "definition": "Programa computacional diseñado para tomar decisiones"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Aprendizaje Supervisado",
+          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
+        },
+        "training/csd/2021": {
+          "word": "Entrenamiento",
+          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "Aprendizaje No Supervisado",
+          "definition": "Detección de patrones en datos que no tienen etiquetas"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Datos categóricos",
+          "definition": "Datos que pueden separarse en grupos"
+        },
+        "classification/csd/2021": {
+          "word": "Clasificación",
+          "definition": "Predicción de una categoría basada en otras características"
+        },
+        "bias/csd/2021": {
+          "word": "Sesgo",
+          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
+        },
+        "numerical_data/csd/2021": {
+          "word": "Datos Numéricos",
+          "definition": "Datos que se pueden contar o medir"
+        },
         "ethics/csd/2021": {
-          "word": "Ética"
+          "word": "Ética",
+          "definition": "Normas para un buen comportamiento."
+        },
+        "empathy/csd/2021": {
+          "word": "Empatía",
+          "definition": "En el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto."
+        },
+        "user/csd/2021": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2021": {
+          "word": "Usabilidad",
+          "definition": "Facilidad, eficacia y satisfacción en el uso de un objeto o dispositivo hecho por el hombre (incluido el software)."
+        },
+        "prototype/csd/2021": {
+          "word": "Prototipo",
+          "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
         },
         "user_interface/csd/2021": {
-          "word": "Pantalla de Usuario"
+          "word": "Pantalla de Usuario",
+          "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
         },
         "bug/csd/2021": {
           "word": "Bug",
           "definition": "Una parte de un programa que no funciona correctamente."
         },
+        "feature/csd/2021": {
+          "word": "Característica",
+          "definition": "Parte de un programa que añade funcionalidad para el usuario"
+        },
+        "innovation/csd/2021": {
+          "word": "Innovación",
+          "definition": "Una nueva o mejorada idea de aparato, producto, etc, o el desarrollo de este"
+        },
         "analog/csd/2021": {
-          "word": "Analógico",
-          "definition": "Cualquier señal que cambia continuamente y que no está restringida a un conjunto finito de valores. Por ejemplo, las formas de onda de las palabras cuando hablamos son una señal analógica."
+          "word": "Análogo",
+          "definition": "Una señal que cambia continuamente y que no está restringida a un conjunto de valores limitados. Por ejemplo, la forma ondulada de las palabras habladas son una señal análoga."
         },
         "digital/csd/2021": {
           "word": "Digital",
-          "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
+          "definition": "Datos o señales representadas por un número limitado de valores. Señales análogas (que pueden tener valores limitados) deben convertirse a digital para ser computadas."
+        },
+        "array/csd/2021": {
+          "word": "Arreglo",
+          "definition": "Una estructura de datos en JavaScript que se utiliza para representar una lista."
         },
         "for_loop/csd/2021": {
           "word": "Bucle desde",
@@ -891,6 +962,42 @@
         "parameter/csd/2021": {
           "word": "Parámetro",
           "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
+        },
+        "circuit/csd/2021": {
+          "word": "Circuito",
+          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
+        },
+        "decode/csd/2021": {
+          "word": "Decodificar",
+          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla"
+        },
+        "encode/csd/2021": {
+          "word": "Codificar",
+          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla"
+        },
+        "binary_system/csd/2021": {
+          "word": "Sistema Binario",
+          "definition": "una forma de representar información utilizando solamente dos opciones"
+        },
+        "ascii/csd/2021": {
+          "word": "ASCII",
+          "definition": "un sistema popular para representar un texto en binario"
+        },
+        "bit/csd/2021": {
+          "word": "Bit",
+          "definition": "una sola pieza de información binaria"
+        },
+        "pixel/csd/2021": {
+          "word": "Pixel",
+          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
+        },
+        "decrypt/csd/2021": {
+          "word": "Desencriptar",
+          "definition": "cambiar la información con el objetivo de revelar su significado"
+        },
+        "encrypt/csd/2021": {
+          "word": "Encriptar",
+          "definition": "cambiar la información con el objetivo de ocultar su significado"
         },
         "debugging/csd/2021": {
           "word": "Depurar",
@@ -906,7 +1013,7 @@
         },
         "property/csd/2021": {
           "word": "Propiedades",
-          "definition": "Una etiqueta para una característica de una sprite, como su ubicación y su apariencia"
+          "definition": "Una etiqueta para una característica de un sprite, como su ubicación y su apariencia"
         },
         "sprite/csd/2021": {
           "word": "Sprite",
@@ -914,7 +1021,7 @@
         },
         "dot_notation/csd/2021": {
           "word": "Notación de puntos",
-          "definition": "La forma en la que las propiedades de las sprites se utilizan en el Game Lab. Conectando a la sprite y a sus propiedades mediante un punto."
+          "definition": "La forma en la que las propiedades de los sprites se utilizan en el Game Lab. Conectando el sprite y sus propiedades mediante un punto."
         },
         "condition/csd/2021": {
           "word": "Condición",
@@ -925,8 +1032,8 @@
           "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
         },
         "boolean_expression/csd/2021": {
-          "word": "Expresión booleana",
-          "definition": "En programación, una expresión evalúa verdadero o falso."
+          "word": "Expresión Booleana",
+          "definition": "En programación, una expresión evalúa Verdadero o Falso. "
         },
         "abstraction/csd/2021": {
           "word": "Abstracción",
@@ -950,7 +1057,7 @@
         },
         "processing/csd/2021": {
           "word": "Procesamiento",
-          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida"
+          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida."
         },
         "storage/csd/2021": {
           "word": "almacenamiento",
@@ -966,7 +1073,7 @@
         },
         "html_tag/csd/2021": {
           "word": "Etiqueta HTML",
-          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y que tipo de elemento es"
+          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y qué tipo de elemento es"
         },
         "website_content/csd/2021": {
           "word": "Contenido de sitio web",
@@ -1002,11 +1109,11 @@
         },
         "trustworthy/csd/2021": {
           "word": "Confiable",
-          "definition": "fiable, honesto, verdadero "
+          "definition": "fiable, honesto, y verdadero "
         },
         "search_engine/csd/2021": {
           "word": "Motor de búsqueda",
-          "definition": "Un programa que busca elementos en la red informática mundial (World wide web)."
+          "definition": "Un programa que busca elementos en la Red Informática Mundial (World wide web)."
         },
         "css_class/csd/2021": {
           "word": "Clase CSS",

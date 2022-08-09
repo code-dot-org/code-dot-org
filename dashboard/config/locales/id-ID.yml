@@ -424,6 +424,7 @@ id:
       educate_beyond: Di Luar Code.org
       educate_inspire: Menginspirasi seorang Siswa
       educate_community: Komunitas Online
+      educate_requirements: Persyaratan Teknis
       educate_tools: Alat dan Video
       about_us: Tentang Kami
       about_leadership: Kepemimpinan
@@ -491,13 +492,13 @@ id:
       starwars: Star Wars
       starwarsblocks: Star wars(blok)
       starwarsblocks_hour: Star wars(blok)
+      thebadguys: The Bad Guys
       loading: Memuat...
       weblab: Web lab
       view_all: Lihat semua proyek...
     popup:
       progress_for_user: kemajuan %{name}
       progress: Kemajuan Anda
-      lines: 'Jumlah baris kode: %{lines}'
       close: TUTUP
       mastery: Konsep
       puzzle_map: Tahap
@@ -825,6 +826,13 @@ id:
       title: Pesta Tari
     dance-2019:
       title: Pesta Tari
+    hello-world:
+      title: Halo Dunia
+      body: Pilih dari empat tema seru untuk membuat coding karakter yang interaktif
+        di dunia yang kamu ciptakan.
+    poem-art:
+      title: Seni Puisi
+      body: Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.
     hoc:
       title: Labirin Klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
@@ -1043,18 +1051,6 @@ id:
       tidak tersedia bagi murid Anda sebelum secara tegas menerima persyaratan yang
       diperbarui.
     review_terms: Tinjau ketentuan yang diperbarui
-  donor_interstitial:
-    title: Kursus gratis CS anda dibuat mungkin oleh...
-    subtitle: Kami ingin mengucapkan terimakasih kepada para donatur yang murah hati
-      yang dengan dukungannya membuat Code.org sukses. Kami berkomitmen agar Code.org
-      tetap gratis untuk sekolah dan para siswa,secara global, terimakasih kepada
-      kemurahan hati yang berkelanjutan dari [donors](%{donors_url}) kami!
-    local_supporters: Pendukung lokal
-    global_supporters: Pendukung global
-    support_codeorg_1: Setiap dolar yang diberikan kepada Code.org membawa kesempatan  untuk
-      lebih banyak siswa.
-    support_codeorg_2: "[Berdonasi sekarang](%{donate_url}) untuk mendukung Code.org."
-    get_started: Memulai di Code.org
   school_info_interstitial:
     title: Kami ingin menghadirkan Ilmu Komputer kepada setiap murid - bantu kami
       memantau kemajuan kami!
@@ -1264,6 +1260,16 @@ id:
   no_script_access_teacher: Anda tidak punya akses ke unit ini. Jika Anda yakin seharusnya
     memiliki akses ke unit ini, silakan menulis ke support@code.org agar kami dapat
     mengatasi masalahnya.
+  no_level_access_student: Anda tidak memiliki akses ke level ini. Silakan bertanya
+    pada guru Anda terkait level yang harus Anda ikuti.
+  no_level_access_teacher: Anda tidak memiliki akses ke level ini. Jika Anda merasa
+    yakin berhak mengakses level ini, kirimkan email ke support@code.org agar kami
+    dapat memperbaikinya.
+  no_exemplar: Tidak ada contoh untuk level ini.
+  no_exemplar_access_student: Siswa tidak dapat mengakses kode contoh. Silakan bertanya
+    pada guru Anda terkait level yang harus Anda ikuti.
+  no_exemplar_access_teacher: Hanya guru terverifikasi yang dapat mengakses kode contoh.
+    Jika Anda ingin menjadi guru terverifikasi, silakan kirim email ke support@code.org.
   return_unit_overview: Buka ikhtisar unit
   return_course_overview: Buka ikhtisar kursus
   view_all_units: Tampilkan semua unit
@@ -1345,6 +1351,7 @@ id:
         music: Musik
         art: Seni
         other: 'Lainnya:'
+        na: Tidak dapat diterapkan
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1354,7 +1361,8 @@ id:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Lainnya:'
+        other: Lain
+        na: Tidak dapat diterapkan
       robotics:
         grok: Pembelajaran Grok
         kodable: Kodable
@@ -1364,7 +1372,8 @@ id:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Lainnya:'
+        other: Lain
+        na: Tidak dapat diterapkan
       workshop_course:
         csf_af: CS Fundamentals (Kursus A-F)
         csf_express: CS Fundamentals (Praekspres atau Ekspres)

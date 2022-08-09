@@ -17,7 +17,7 @@
         "2-3 Bee Loops 2A": "Egin al dezakezu ataza bera modu errazagoan begizta bat erabiliz?",
         "2-3 Bee Loops 3A": "Begizta bat erabiltzerik al duzu nektar guztia biltzeko?",
         "2-3 Maze 10": "Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)",
-        "2-3 Maze 2": "Txerri honek sutan jartzen nau. Lagundu bera aurkitzen!",
+        "2-3 Maze 2": "Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)",
         "2-3 Maze 4": "Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)",
         "2-3 Maze 6": "Lasai egon eta lagundu txerri gaiztoa topatzen. bestela haserretu naiteke!",
         "2-3 Maze 7": "Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)",
@@ -370,7 +370,11 @@
         "courseA_EOC_playlab_people": "Zure azken proiektua egiteko unea iritsi da. Nahi duzuna egin dezakezu!",
         "courseD_maze_nestedLoops4_2021": "Eraman nazazu ekiloreraino!",
         "courseD_maze_nestedLoops6_2021": "Eraman nazazu ekiloreraino!",
-        "CSD U5 black white images pixelation 5_2021": "Marraztu nahi duzuna"
+        "CSD U5 black white images pixelation 5_2021": "Marraztu nahi duzuna",
+        "2-3 Maze 1": "Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)",
+        "2-3 Maze 3": "Lasai egon eta lagundu txerri gaiztoa topatzen. bestela haserretu naiteke!",
+        "Overworld Chop Tree - allthethings": "Egurra baliabide garrantzitsua da. Gauza asko egiten dira egurrarekin. Joan zuhaitzera eta erabili \"txikitu blokea\" agindua zuhaitza botatzeko.",
+        "allthethings-anigif-instructions": "Mugi nazazu ekialdera zerriarekin elkartzeko!"
       }
     }
   }

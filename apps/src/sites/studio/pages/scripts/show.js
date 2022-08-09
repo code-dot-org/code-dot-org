@@ -84,19 +84,18 @@ function initPage() {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  progress.initViewAs(store, scriptData.user_type);
-  initializeStoreWithSections(store, scriptData.sections, scriptData.section);
+  progress.initViewAs(
+    store,
+    scriptData.user_id !== null,
+    scriptData.is_instructor
+  );
+  if (scriptData.is_instructor) {
+    initializeStoreWithSections(store, scriptData.sections, scriptData.section);
+  }
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
   progress.initCourseProgress(scriptData);
-
-  const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({
-      type,
-      link
-    })
-  );
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -116,8 +115,7 @@ function initPage() {
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
         excludeCsfColumnInLegend={!scriptData.csf}
-        teacherResources={teacherResources}
-        migratedTeacherResources={scriptData.migrated_teacher_resources}
+        teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning

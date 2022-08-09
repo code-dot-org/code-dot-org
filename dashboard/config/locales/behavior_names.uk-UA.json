@@ -1627,6 +1627,18 @@
           "wobbling": "хитання",
           "moving west and looping": "рух на захід і циклічно",
           "moving east and looping": "рух на схід і циклічно"
+        },
+        "AllTheThings sprite lab with video": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "allthethings_fish_tank": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
         }
       }
     }

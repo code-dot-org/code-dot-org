@@ -75,6 +75,10 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
@@ -433,6 +437,14 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
+  if (config.muteBackgroundMusic) {
+    this.muteBackgroundMusic = config.muteBackgroundMusic;
+  }
+
+  if (config.unmuteBackgroundMusic) {
+    this.unmuteBackgroundMusic = config.unmuteBackgroundMusic;
+  }
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -556,7 +568,7 @@ StudioApp.prototype.init = function(config) {
     ReactDOM.render(
       <ChallengeDialog
         isOpen={true}
-        avatar={this.icon}
+        avatar={this.icon || this.skin.staticAvatar}
         handleCancel={() => {
           this.skipLevel();
         }}
@@ -1038,7 +1050,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   if (showRun) {
     if (this.editDuringRunAlert !== undefined) {
-      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.closeAlert(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
     }
     getStore().dispatch(setIsEditWhileRun(false));
@@ -1387,17 +1399,17 @@ function resizePinnedBelowVisualizationArea() {
 }
 
 /**
- * Debounced onResize operations that update the layout to support sizing
+ * Throttled onResize operations that update the layout to support sizing
  * to viewport height and using the small footer.
  * @type {Function}
  */
-var onResizeSmallFooter = _.debounce(function() {
+var onResizeSmallFooter = _.throttle(function() {
   resizePinnedBelowVisualizationArea();
-}, 10);
+}, 1000 / 60);
 
 /**
  * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
- * to be static so it can be statically debounced as onResizeSmallFooter
+ * to be static so it can be statically throttled as onResizeSmallFooter.
  */
 StudioApp.prototype.resizePinnedBelowVisualizationArea = function() {
   resizePinnedBelowVisualizationArea();
@@ -1511,7 +1523,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -3109,7 +3121,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
       type: type,
       onClose: () => {
         onClose();
-        ReactDOM.unmountComponentAtNode(container[0]);
+        this.closeAlert(container[0]);
       },
       isBlockly: this.usingBlockly_,
       displayBottom: bottom
@@ -3143,9 +3155,7 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
   var renderElement = container[0];
 
   let alertProps = {
-    onClose: () => {
-      ReactDOM.unmountComponentAtNode(renderElement);
-    },
+    onClose: () => this.closeAlert(renderElement),
     type: type
   };
 
@@ -3158,6 +3168,14 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+};
+
+/**
+ * Remove an alert from the DOM. This is just an alias for ReactDOM.unmountComponentAtNode.
+ * @param {Node} alert
+ */
+StudioApp.prototype.closeAlert = function(alert) {
+  ReactDOM.unmountComponentAtNode(alert);
 };
 
 /**
@@ -3298,6 +3316,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
     {
       exampleSolutions: config.exampleSolutions,
       isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
+      hasBackgroundMusic: level.levelTracks && level.levelTracks.length !== 0,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
@@ -3334,17 +3353,25 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      isProjectTemplateLevel:
+        !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:
         !!config.level.projectTemplateLevelName &&
         !config.level.isK1 &&
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
-      serverLevelId: config.serverLevelId
+      serverLevelId: config.serverLevelId,
+      serverProjectLevelId: config.serverProjectLevelId,
+      codeOwnersName: config.codeOwnersName
     },
     appSpecificConstants
   );
 
   getStore().dispatch(setPageConstants(combined));
+
+  if (config.isInstructor) {
+    getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));

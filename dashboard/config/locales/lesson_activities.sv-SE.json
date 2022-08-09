@@ -2,8 +2,74 @@
   "sv-SE": {
     "data": {
       "lesson_activities": {
+        "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
+          "name": "Komma igång (5 minuter)"
+        },
+        "b5a5dd70-3968-40ab-bcb5-5d0e7df30880": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "13553f81-6547-4b09-b32e-7aab19725967": {
+          "name": "Bli viral"
+        },
+        "7e5f5376-de4c-478e-a70d-d4ddb97b0564": {
+          "name": "Utvärdering (2 minuter)"
+        },
+        "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "2ccc0a90-872b-424b-ae39-d7f92ceb8c06": {
+          "name": "Utvärdering (2 minuter)"
+        },
+        "e85d6071-2762-4dbb-843e-2f65408a30f8": {
+          "name": "Komma igång (5 minuter)"
+        },
+        "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "2caf682d-0389-4b9f-830a-60d398a8260d": {
+          "name": "Utvärdering (2 minuter)"
+        },
+        "3ff80342-0510-45ed-bf69-4cf19ebaf5c1": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "5cb4e862-56b7-445e-a99a-22cc738504a1": {
+          "name": "Komma igång (5 minuter)"
+        },
+        "84586f7e-4b74-4a9f-936e-d358a0e7670b": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "838f000b-c756-4d71-abfc-877a61b59a91": {
+          "name": "Utvärdering (2 minuter)"
+        },
+        "b3fd8108-41b8-46f8-9382-f19c73c597cb": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "d31e813b-9457-415f-8632-009132bb5e48": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
         "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Nivåer"
+        },
+        "14d674a9-18e0-43f3-ae74-d593dfc0fbda": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "2d33d18f-944d-4408-992a-31d1311733fc": {
+          "name": "Utvärdering (2 minuter)"
+        },
+        "74e90ab8-051a-45fd-bfd7-ec1e72686dc4": {
+          "name": "Bli viral"
+        },
+        "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "09d516b6-38b7-42e0-900c-5d427b051b65": {
+          "name": "Sammanfatta (5 minuter)"
+        },
+        "3b10ea82-0421-4583-a1cf-561c09edc727": {
+          "name": "Utvärdering (2 minuter)"
         },
         "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
           "name": "Aktivitet"
@@ -11,8 +77,41 @@
         "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
           "name": "Gör klart"
         },
+        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
+          "name": "Komma igång (5 minuter)"
+        },
+        "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
+          "name": "Utvärdering (2 minuter)"
+        },
+        "301e5420-a6e3-46c3-a76f-c2e042652974": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "3664c675-1dd2-468f-b854-a7daa9b0dc38": {
+          "name": "Utvärdering (2 minuter)"
+        },
+        "efd4f483-32c2-4810-96fd-186649c2efe2": {
+          "name": "Sammanfatta (5 minuter)"
+        },
+        "974b1dfa-682c-4556-89d8-af3f0d0a9d69": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
         "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
           "name": "Aktivitet"
+        },
+        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
+          "name": "Komma igång (5 minuter)"
+        },
+        "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "d77010f1-4c38-4b28-8b5f-ef931622b016": {
+          "name": "Sammanfatta (5 minuter)"
+        },
+        "894da896-c653-4f74-a0f9-b02dca7ebcad": {
+          "name": "Utvärdering (2 minuter)"
         },
         "8b8d6959-c861-4474-950b-b097aaa9fae3": {
           "name": "Aktivitet"
@@ -20,11 +119,26 @@
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Gör klart"
         },
+        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
+          "name": "Komma igång (5 minuter)"
+        },
+        "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
+          "name": "Aktivitet (30-45 minuter)"
+        },
+        "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
+          "name": "Sammanfatta (5 minuter)"
+        },
+        "2cf39290-cd45-4bb4-8ef6-f1dc74e50890": {
+          "name": "Utvärdering (2 minuter)"
+        },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
           "name": "Aktivitet"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Nivåer"
+        },
+        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
+          "name": "Utvärdering (2 minuter)"
         },
         "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
           "name": "Nivåer"
@@ -34,6 +148,9 @@
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Nivåer"
+        },
+        "4cf19609-58ef-497b-b48d-2b9a0281a490": {
+          "name": "Bli viral"
         },
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Aktivitet"
@@ -749,7 +866,7 @@
         "c83b9067-f5cf-4d5c-a246-effde510c121": {
           "name": "Nivåer"
         },
-        "a701bcb3-040d-450f-8427-d0ff90f42549": {
+        "996ce33a-6eec-46a8-8b02-9282b006dd20": {
           "name": "Nivåer"
         },
         "3678b5ba-0e26-4abb-9612-d5a525799e9f": {
@@ -1454,10 +1571,10 @@
         "8946e76d-d595-423c-8408-0eca539f9f5f": {
           "name": "Nivåer"
         },
-        "0d26b1ca-c97f-445a-ab3a-83e45d4ae4a9": {
+        "191d4843-f7ab-4d54-b9ce-d6ceb7d5f680": {
           "name": "Nivåer"
         },
-        "175a5a5f-9f19-40fc-b8d3-f6e429270c14": {
+        "19aa92d5-e95f-42dd-98dc-9f0c86e37dc2": {
           "name": "Nivåer"
         },
         "a7514510-0928-419c-bb19-a184dd082bbe": {
@@ -1520,10 +1637,10 @@
         "c81a77e3-a658-44f5-9f98-ba67b99803e4": {
           "name": "Nivåer"
         },
-        "9da22490-6037-4b05-b56c-878535e11f89": {
+        "9392c057-99c8-4778-bf37-e2fa872aaa71": {
           "name": "Nivåer"
         },
-        "a1fb9f1c-ccb6-4398-adcf-41955f04b6cb": {
+        "c5cdda6b-df76-47a7-bc8a-3225e427086d": {
           "name": "Nivåer"
         },
         "381a9096-cef4-47ec-a3e2-33d47118a8b5": {
@@ -1568,10 +1685,10 @@
         "419d2c6b-4626-4471-915f-a4f0ad231e1a": {
           "name": "Nivåer"
         },
-        "3b1e4fc8-7dba-4cfd-afa4-664c1e020c8e": {
+        "d8216aa3-1f88-4194-a809-83c0a8bfd136": {
           "name": "Nivåer"
         },
-        "2ab18f57-fbb7-4c1c-89d8-d3fae21d412f": {
+        "48f3c49b-4a66-4e20-aa29-042e49ddda48": {
           "name": "Nivåer"
         },
         "63e800fd-6f35-412f-bec1-97179ec2b1e4": {
@@ -1616,10 +1733,10 @@
         "5b041434-0018-4533-bbc3-52be39bde755": {
           "name": "Nivåer"
         },
-        "b9dff44c-ae84-46cd-a39c-e607dcdc72b4": {
+        "9e49263a-8c10-4bf2-93d0-6ce8f78935a8": {
           "name": "Nivåer"
         },
-        "0b3fca52-a420-4487-8859-85980c6a7923": {
+        "fcd16875-49dc-4b20-994d-0c6fc99ba57d": {
           "name": "Nivåer"
         },
         "d1b95303-ac24-4c45-a772-b7ce97e45660": {
@@ -1664,7 +1781,7 @@
         "1f2d2416-1810-4934-ba29-7657b37b5413": {
           "name": "Nivåer"
         },
-        "3aea3cc5-5d95-4617-be21-4912a2cfd7ff": {
+        "5b3ade8b-ca99-40c0-b0bb-3e97bbbd3ab5": {
           "name": "Nivåer"
         },
         "c9898bd6-88cf-471c-946a-115ee0730aac": {
@@ -1685,10 +1802,10 @@
         "040d1bd7-ae82-4e60-b015-17baad1279d1": {
           "name": "Nivåer"
         },
-        "5c672516-04f3-484d-a5bc-8808b4bba3b3": {
+        "a88c8f88-88f9-4590-9123-46bf5608ee34": {
           "name": "Nivåer"
         },
-        "06c4a690-d2a7-4e5b-ac4b-d064673db8cd": {
+        "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5": {
           "name": "Nivåer"
         },
         "ed41ea87-b959-4053-96de-0dc5e5e50e5c": {
@@ -2210,10 +2327,10 @@
         "34bf035e-c547-4be5-b486-53afb9a48f7f": {
           "name": "Nivåer"
         },
-        "3b998e7c-a5ca-4ecf-806e-0a66dccc7485": {
+        "6d9a6010-5625-41f6-9cba-4c508e3f5304": {
           "name": "Nivåer"
         },
-        "dacf5b73-defa-4bce-8c41-ff0c1e60a6c9": {
+        "11422ae0-1498-4ab6-8542-76d01f48318a": {
           "name": "Nivåer"
         },
         "b5927137-3ab3-49f2-a657-1f0b039bc671": {
@@ -2276,7 +2393,7 @@
         "4f1eef78-4a22-4c44-b694-b76057add793": {
           "name": "Nivåer"
         },
-        "f6fcadb1-5887-41c2-bd41-c716efccfb91": {
+        "d3efaf4a-d127-47f9-86fe-e79c7fb49ba8": {
           "name": "Nivåer"
         },
         "e2aa5dc7-5442-4a69-b36a-dbedfa325bb8": {
@@ -2324,7 +2441,7 @@
         "675154ec-8181-4691-92cb-dbf2ed090fa6": {
           "name": "Nivåer"
         },
-        "086b9e87-7672-4d56-b1a8-dbca21eedf59": {
+        "6d602a27-eb6d-48bb-b6f6-6abf34ddb38e": {
           "name": "Nivåer"
         },
         "1141dd35-49c4-4803-bab8-2b4dcf5e150b": {
@@ -2393,7 +2510,7 @@
         "db825aec-ea4c-406c-9b76-d7e82f77c720": {
           "name": "Nivåer"
         },
-        "36da18f0-ea4c-42d2-b26c-52c5b2df0677": {
+        "1c77cf41-b082-436b-9c70-bfab4c0bc086": {
           "name": "Nivåer"
         },
         "cda71fb9-9e3e-4de6-a2cc-9342ad84ee0e": {
@@ -2438,7 +2555,7 @@
         "888f5102-6f2c-43dc-b4d7-f5b1597f404e": {
           "name": "Nivåer"
         },
-        "cc5c8226-aaca-482f-b271-e2e681a1696d": {
+        "3ec86279-3061-4f41-bc0b-a3272a4a19bf": {
           "name": "Nivåer"
         },
         "9efa84e0-99a8-4ef5-a789-e2d1c418b365": {
@@ -2810,6 +2927,138 @@
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
           "name": "Nivåer"
         },
+        "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
+          "name": "Nivåer"
+        },
+        "83fafdc5-ad91-43a1-a3f6-b7312346a3ab": {
+          "name": "Nivåer"
+        },
+        "6aec6572-d76b-45c3-b69e-c140c8e5077e": {
+          "name": "Nivåer"
+        },
+        "1c529a06-0eb8-49b1-ab18-608c6c63de01": {
+          "name": "Nivåer"
+        },
+        "4f5887f4-1526-473b-bd29-1a6b60c9849a": {
+          "name": "Nivåer"
+        },
+        "4914687d-6ea0-486d-b5d2-833db8f1260e": {
+          "name": "Nivåer"
+        },
+        "6a90aeea-2071-4871-9dd3-9b8738c69423": {
+          "name": "Nivåer"
+        },
+        "d79baf7b-176a-4cc0-8bb6-93d974793855": {
+          "name": "Nivåer"
+        },
+        "e1194726-0b93-4ebe-a524-a36051b19654": {
+          "name": "Nivåer"
+        },
+        "94a5ed09-24e4-4733-afd4-24ff516ec2db": {
+          "name": "Nivåer"
+        },
+        "236d8f94-151e-4c5e-98d9-255293ad71fa": {
+          "name": "Nivåer"
+        },
+        "05418fbe-29fd-46d9-b2a3-3f9c552a09d9": {
+          "name": "Nivåer"
+        },
+        "99aa9251-89ad-4f11-ad8b-54cc32286b72": {
+          "name": "Nivåer"
+        },
+        "348ae6bb-4dfd-4be5-b00f-f3cf2ea5d0bd": {
+          "name": "Nivåer"
+        },
+        "3c7a5185-6a3b-41cd-a9d2-ba274e436816": {
+          "name": "Nivåer"
+        },
+        "fb982e59-8b24-4b0a-9bda-5ff9658d7c11": {
+          "name": "Nivåer"
+        },
+        "8f2a0453-ef6a-45f7-a702-53af16c82074": {
+          "name": "Nivåer"
+        },
+        "c4f2cf1c-f8f2-4e01-b627-750d01ac7fae": {
+          "name": "Nivåer"
+        },
+        "17074694-5220-4c93-8128-70e3af715344": {
+          "name": "Nivåer"
+        },
+        "e056b1c0-3ffe-4fca-89aa-094da2060f3f": {
+          "name": "Nivåer"
+        },
+        "8a8b1b99-3128-4adc-8ced-333285da77b3": {
+          "name": "Nivåer"
+        },
+        "2e329f95-3c8d-482a-83ca-d21564c9f4c6": {
+          "name": "Nivåer"
+        },
+        "f8c96c1a-f122-4c14-b110-20157785406c": {
+          "name": "Nivåer"
+        },
+        "f34d7f79-ff9c-49c8-93c9-bf0ecb5faffb": {
+          "name": "Nivåer"
+        },
+        "9da9391a-f33f-4c48-a573-a0ee6858b111": {
+          "name": "Nivåer"
+        },
+        "c91cb0fd-6857-46b3-9b26-daab7f2be908": {
+          "name": "Nivåer"
+        },
+        "44ef4c93-b89f-4a4d-bf38-4d376fcfee12": {
+          "name": "Nivåer"
+        },
+        "72d1f168-1a5e-4015-9f4e-767aadf1d12a": {
+          "name": "Nivåer"
+        },
+        "245481d9-3ff6-4f2c-9147-8af79d8c98d5": {
+          "name": "Nivåer"
+        },
+        "a0bfcf67-8e9c-4792-96ac-3f13d1ee67cb": {
+          "name": "Nivåer"
+        },
+        "37a8e94b-7199-462b-aec7-10c55e8feba6": {
+          "name": "Nivåer"
+        },
+        "ac3d127a-ec6f-4d0f-9fc6-e8750ed9ee10": {
+          "name": "Nivåer"
+        },
+        "f1a32532-fa4e-4094-b179-db7504e3fbf1": {
+          "name": "Nivåer"
+        },
+        "26b60f43-a34f-4e95-bb23-21495b5757c3": {
+          "name": "Nivåer"
+        },
+        "5511f790-bf8a-4094-aed2-b0cf6058b87b": {
+          "name": "Nivåer"
+        },
+        "c8fb0fe2-b420-42b8-b4d3-540d9c3b0d79": {
+          "name": "Nivåer"
+        },
+        "8bb15d3d-31b7-422a-b8c7-fa150f172044": {
+          "name": "Nivåer"
+        },
+        "b17d58c5-9439-455e-ae90-b73257ae8260": {
+          "name": "Nivåer"
+        },
+        "7bdacd27-cfa5-415b-aa1e-63d93c0032ac": {
+          "name": "Nivåer"
+        },
+        "e974a735-db1b-4b89-85a1-a50a4942e445": {
+          "name": "Nivåer"
+        },
+        "5347fb67-2f83-4286-9613-89dea87db66b": {
+          "name": "Nivåer"
+        },
+        "b9c84d52-3377-4e35-985e-96dd083f81fa": {
+          "name": "Nivåer"
+        },
+        "6d8b34e5-23aa-4678-a6b3-e60b1eae6ec9": {
+          "name": "Nivåer"
+        },
+        "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Nivåer"
+        },
         "eba207ca-a259-40be-93b5-0a9c0c906b80": {
           "name": "Aktivitet"
         },
@@ -2839,6 +3088,9 @@
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
           "name": "Aktivitet"
+        },
+        "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
+          "name": "Aktivitet (30-45 minuter)"
         },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Nivåer"
@@ -2921,8 +3173,8 @@
         "a6536809-2fee-43de-ae35-96467d01d080": {
           "name": "Dag 5"
         },
-        "d9ce0330-5c0e-41e2-837c-d4eba9da6310": {
-          "name": "Nivåer"
+        "9057adaa-50f5-48cb-b7b7-1371ef765e1c": {
+          "name": "Aktivitet"
         },
         "084345cc-db08-4c77-bc28-be51fb79dd0d": {
           "name": "Aktivitet"
@@ -2984,8 +3236,11 @@
         "9bbaadd9-354f-4ff6-b019-700d851293fa": {
           "name": "Aktivitet"
         },
-        "e618f9e4-3aaa-4aa6-a43b-498fef6c72b0": {
-          "name": "Nivåer"
+        "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f": {
+          "name": "Aktivitet"
+        },
+        "4fada4f6-95c0-462f-af3f-7d3d655a466f": {
+          "name": "Tillägg"
         },
         "2fff60de-5366-470f-ad77-577397a87071": {
           "name": "Aktivitet"
@@ -3044,8 +3299,8 @@
         "fe9db805-4d94-4c5e-a497-5fba5af44ff1": {
           "name": "Tillägg"
         },
-        "87851095-c111-49f0-b9eb-bbe31736cef0": {
-          "name": "Nivåer"
+        "cf690c94-3a16-4106-8bb0-260d9a235edc": {
+          "name": "Aktivitet"
         },
         "0ccf48b9-639c-43b3-b737-74a1bcec7f5b": {
           "name": "Aktivitet"
@@ -3095,8 +3350,8 @@
         "de11024e-5469-41b6-bc28-627c9515eff1": {
           "name": "Aktivitet"
         },
-        "0f4a9cea-1a4a-4312-be99-79edfadbb6db": {
-          "name": "Nivåer"
+        "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309": {
+          "name": "Aktivitet"
         },
         "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
           "name": "Aktivitet"
@@ -3179,8 +3434,8 @@
         "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
           "name": "Aktivitet"
         },
-        "a03605f6-2db6-446e-ba25-a91492277402": {
-          "name": "Nivåer"
+        "675f7979-4687-4193-bd1e-10332a1ac050": {
+          "name": "Aktivitet"
         },
         "c8d05b47-5ef6-429d-8162-74d7c1198428": {
           "name": "Aktivitet"
@@ -3215,8 +3470,8 @@
         "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c": {
           "name": "Aktivitet"
         },
-        "5618c307-5639-4715-8735-c545ded5de85": {
-          "name": "Nivåer"
+        "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3": {
+          "name": "Aktivitet"
         },
         "53d85fa1-fecf-43b6-83f0-bef5454c41ed": {
           "name": "Aktivitet"

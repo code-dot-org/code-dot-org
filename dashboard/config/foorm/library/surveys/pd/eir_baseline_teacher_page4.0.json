@@ -248,7 +248,7 @@
               "columns": [
                 {
                   "value": "0",
-                  "text": "None"
+                  "text": "Not at all"
                 },
                 {
                   "value": "1",
@@ -513,7 +513,7 @@
             {
               "type": "matrix",
               "name": "teacher_resourcefulness_coping",
-              "title": "How much do you agree or disagree with the following statements? (Check one in each row).",
+              "title": "Question 1 of 4: How much do you agree or disagree with the following statements? (Check one in each row.)",
               "columns": [
                 {
                   "value": "0",
@@ -570,7 +570,7 @@
             {
               "type": "matrix",
               "name": "teaching_ability_beliefs",
-              "title": "How much do you agree or disagree with the following statements? (Check one in each row).",
+              "title": "Question 2 of 4: How much do you agree or disagree with the following statements? (Check one in each row.)",
               "columns": [
                 {
                   "value": "0",
@@ -618,8 +618,8 @@
             },
             {
               "type": "matrix",
-              "name": "question1",
-              "title": "How much do you agree or disagree with the following statements? (Check one in each row).",
+              "name": "teacher_innovativeness",
+              "title": "Question 3 of 4: How much do you agree or disagree with the following statements? (Check one in each row.)",
               "columns": [
                 {
                   "value": "0",
@@ -668,7 +668,7 @@
             {
               "type": "matrix",
               "name": "cs_teaching_ability_beliefs",
-              "title": "How much do you agree or disagree with the following statements? (Check one in each row).",
+              "title": "Question 4 of 4: How much do you agree or disagree with the following statements? (Check one in each row.)",
               "columns": [
                 {
                   "value": "0",

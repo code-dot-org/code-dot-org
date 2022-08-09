@@ -1,5 +1,7 @@
 import UserPreferences from '../lib/util/UserPreferences';
 import {DisplayTheme} from './DisplayTheme';
+import {JavalabEditorDialog} from './JavalabEditorDialogManager';
+import {fileMetadataForEditor} from './JavalabFileHelper';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
@@ -8,7 +10,8 @@ const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
 const SOURCE_TEXT_UPDATED = 'javalab/SOURCE_TEXT_UPDATED';
-const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
+const SET_ALL_SOURCES_AND_FILE_METADATA =
+  'javalab/SET_ALL_SOURCES_AND_FILE_METADATA';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
@@ -25,15 +28,36 @@ const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
-const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
+const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
+const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
+const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
+const SET_VALIDATION_PASSED = 'javalab/SET_VALIDATION_PASSED';
+const SET_HAS_RUN_OR_TESTED = 'javalab/SET_HAS_RUN_OR_TESTED';
+const SET_IS_JAVABUILDER_CONNECTING = 'javalab/SET_IS_JAVABUILDER_CONNECTING';
+const SET_EDIT_TAB_KEY = 'javalab/SET_EDIT_TAB_KEY';
+const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
+const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
+const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
+const SET_ALL_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
+const OPEN_EDITOR_DIALOG = 'javalab/OPEN_EDITOR_DIALOG';
+const CLOSE_EDITOR_DIALOG = 'javalab/CLOSE_EDITOR_DIALOG';
+const SET_NEW_FILE_ERROR = 'javalab/SET_NEW_FILE_ERROR';
+const CLEAR_NEW_FILE_ERROR = 'javalab/CLEAR_NEW_FILE_ERROR';
+const SET_RENAME_FILE_ERROR = 'javalab/SET_RENAME_FILE_ERROR';
+const CLEAR_RENAME_FILE_ERROR = 'javalab/CLEAR_RENAME_FILE_ERROR';
+
+const initialSources = {
+  'MyClass.java': {text: '', isVisible: true, isValidation: false}
+};
 
 // Exported for test
 export const initialState = {
+  ...fileMetadataForEditor(initialSources),
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
+  sources: initialSources,
   displayTheme: DisplayTheme.LIGHT,
   validation: {},
   renderedEditorHeight: 400,
@@ -49,10 +73,19 @@ export const initialState = {
   backpackEnabled: false,
   isStartMode: false,
   levelName: undefined,
-  disableFinishButton: false,
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
-  photoPrompterPromptText: ''
+  photoPrompterPromptText: '',
+  isReadOnlyWorkspace: false,
+  hasOpenCodeReview: false,
+  isCommitSaveInProgress: false,
+  hasCommitSaveError: false,
+  validationPassed: false,
+  hasRunOrTestedCode: false,
+  editorOpenDialogName: null,
+  newFileError: null,
+  renameFileError: null,
+  isJavabuilderConnecting: false
 };
 
 // Action Creators
@@ -85,9 +118,13 @@ export const setAllValidation = validation => ({
   validation
 });
 
-export const setAllSources = sources => ({
-  type: SET_ALL_SOURCES,
-  sources
+export const setAllSourcesAndFileMetadata = (
+  sources,
+  isEditingStartSources
+) => ({
+  type: SET_ALL_SOURCES_AND_FILE_METADATA,
+  sources,
+  isEditingStartSources
 });
 
 export const renameFile = (oldFilename, newFilename) => ({
@@ -182,13 +219,6 @@ export const setLevelName = levelName => ({
   levelName
 });
 
-export const setDisableFinishButton = disableFinishButton => {
-  return {
-    type: SET_DISABLE_FINISH_BUTTON,
-    disableFinishButton
-  };
-};
-
 export const openPhotoPrompter = promptText => ({
   type: OPEN_PHOTO_PROMPTER,
   promptText
@@ -196,6 +226,20 @@ export const openPhotoPrompter = promptText => ({
 
 export const closePhotoPrompter = () => ({
   type: CLOSE_PHOTO_PROMPTER
+});
+
+export const openEditorDialog = dialogName => ({
+  type: OPEN_EDITOR_DIALOG,
+  dialogName
+});
+
+export const closeEditorDialog = () => ({
+  type: CLOSE_EDITOR_DIALOG
+});
+
+export const setIsJavabuilderConnecting = isJavabuilderConnecting => ({
+  type: SET_IS_JAVABUILDER_CONNECTING,
+  isJavabuilderConnecting
 });
 
 // Selectors
@@ -255,6 +299,96 @@ export const setConsoleHeight = height => ({
 export const setEditorColumnHeight = editorColumnHeight => ({
   type: EDITOR_COLUMN_HEIGHT,
   editorColumnHeight
+});
+
+export const setIsReadOnlyWorkspace = isReadOnlyWorkspace => ({
+  type: SET_IS_READONLY_WORKSPACE,
+  isReadOnlyWorkspace
+});
+
+export const setHasOpenCodeReview = hasOpenCodeReview => ({
+  type: SET_HAS_OPEN_CODE_REVIEW,
+  hasOpenCodeReview
+});
+
+export const setCommitSaveStatus = (
+  isCommitSaveInProgress,
+  hasCommitSaveError
+) => ({
+  type: SET_COMMIT_SAVE_STATUS,
+  isCommitSaveInProgress,
+  hasCommitSaveError
+});
+
+export const setEditTabKey = editTabKey => {
+  return {
+    type: SET_EDIT_TAB_KEY,
+    editTabKey
+  };
+};
+
+export const setActiveTabKey = activeTabKey => {
+  return {
+    type: SET_ACTIVE_TAB_KEY,
+    activeTabKey
+  };
+};
+
+export const setFileMetadata = fileMetadata => {
+  return {
+    type: SET_FILE_METADATA,
+    fileMetadata
+  };
+};
+
+export const setOrderedTabKeys = orderedTabKeys => {
+  return {
+    type: SET_ORDERED_TAB_KEYS,
+    orderedTabKeys
+  };
+};
+
+export const setAllEditorMetadata = (
+  fileMetadata,
+  orderedTabKeys,
+  activeTabKey,
+  lastTabKeyIndex
+) => {
+  return {
+    type: SET_ALL_EDITOR_METADATA,
+    fileMetadata,
+    orderedTabKeys,
+    activeTabKey,
+    lastTabKeyIndex
+  };
+};
+
+export const setNewFileError = error => ({
+  type: SET_NEW_FILE_ERROR,
+  error: error
+});
+
+export const clearNewFileError = () => ({
+  type: CLEAR_NEW_FILE_ERROR
+});
+
+export const setRenameFileError = error => ({
+  type: SET_RENAME_FILE_ERROR,
+  error: error
+});
+
+export const clearRenameFileError = () => ({
+  type: CLEAR_RENAME_FILE_ERROR
+});
+
+export const setValidationPassed = validationPassed => ({
+  type: SET_VALIDATION_PASSED,
+  validationPassed
+});
+
+export const setHasRunOrTestedCode = hasRunOrTestedCode => ({
+  type: SET_HAS_RUN_OR_TESTED,
+  hasRunOrTestedCode
 });
 
 // Reducer
@@ -330,9 +464,10 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
-  if (action.type === SET_ALL_SOURCES) {
+  if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
     return {
       ...state,
+      ...fileMetadataForEditor(action.sources, action.isEditingStartSources),
       sources: action.sources
     };
   }
@@ -426,12 +561,6 @@ export default function reducer(state = initialState, action) {
       levelName: action.levelName
     };
   }
-  if (action.type === SET_DISABLE_FINISH_BUTTON) {
-    return {
-      ...state,
-      disableFinishButton: action.disableFinishButton
-    };
-  }
   if (action.type === TOGGLE_VISUALIZATION_COLLAPSED) {
     return {
       ...state,
@@ -450,6 +579,118 @@ export default function reducer(state = initialState, action) {
       ...state,
       isPhotoPrompterOpen: false,
       photoPrompterPromptText: ''
+    };
+  }
+  if (action.type === SET_IS_READONLY_WORKSPACE) {
+    return {
+      ...state,
+      isReadOnlyWorkspace: action.isReadOnlyWorkspace
+    };
+  }
+  if (action.type === SET_HAS_OPEN_CODE_REVIEW) {
+    return {
+      ...state,
+      hasOpenCodeReview: action.hasOpenCodeReview
+    };
+  }
+  if (action.type === SET_COMMIT_SAVE_STATUS) {
+    return {
+      ...state,
+      isCommitSaveInProgress: action.isCommitSaveInProgress,
+      hasCommitSaveError: action.hasCommitSaveError
+    };
+  }
+  if (action.type === SET_EDIT_TAB_KEY) {
+    return {
+      ...state,
+      editTabKey: action.editTabKey
+    };
+  }
+  if (action.type === SET_ACTIVE_TAB_KEY) {
+    return {
+      ...state,
+      activeTabKey: action.activeTabKey
+    };
+  }
+  if (action.type === SET_ORDERED_TAB_KEYS) {
+    return {
+      ...state,
+      orderedTabKeys: action.orderedTabKeys
+    };
+  }
+  if (action.type === SET_FILE_METADATA) {
+    return {
+      ...state,
+      fileMetadata: action.fileMetadata
+    };
+  }
+  if (action.type === SET_ALL_EDITOR_METADATA) {
+    return {
+      ...state,
+      fileMetadata: action.fileMetadata,
+      orderedTabKeys: action.orderedTabKeys,
+      activeTabKey: action.activeTabKey,
+      lastTabKeyIndex: action.lastTabKeyIndex || state.lastTabKeyIndex
+    };
+  }
+  if (action.type === OPEN_EDITOR_DIALOG) {
+    if (JavalabEditorDialog[action.dialogName] !== undefined) {
+      return {
+        ...state,
+        editorOpenDialogName: action.dialogName
+      };
+    }
+  }
+  if (action.type === CLOSE_EDITOR_DIALOG) {
+    return {
+      ...state,
+      editorOpenDialogName: null
+    };
+  }
+
+  if (action.type === SET_NEW_FILE_ERROR) {
+    return {
+      ...state,
+      newFileError: action.error
+    };
+  }
+
+  if (action.type === CLEAR_NEW_FILE_ERROR) {
+    return {
+      ...state,
+      newFileError: null
+    };
+  }
+
+  if (action.type === SET_RENAME_FILE_ERROR) {
+    return {
+      ...state,
+      renameFileError: action.error
+    };
+  }
+
+  if (action.type === CLEAR_RENAME_FILE_ERROR) {
+    return {
+      ...state,
+      renameFileError: null
+    };
+  }
+  if (action.type === SET_VALIDATION_PASSED) {
+    return {
+      ...state,
+      validationPassed: action.validationPassed
+    };
+  }
+  if (action.type === SET_HAS_RUN_OR_TESTED) {
+    return {
+      ...state,
+      hasRunOrTestedCode: action.hasRunOrTestedCode
+    };
+  }
+  if (action.type === SET_IS_JAVABUILDER_CONNECTING) {
+    return {
+      ...state,
+      isJavabuilderConnecting: action.isJavabuilderConnecting
     };
   }
   return state;

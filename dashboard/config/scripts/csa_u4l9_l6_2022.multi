@@ -1,12 +1,12 @@
 name 'CSA U4L9-L6_2022'
 title 'Check for Understanding'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`Math.random() < 0.25`'
+right '`Math.random() > 0.25`'
+wrong '`Math.random() < 25`'
+wrong '`Math.random() > 25`'
+wrong '`Math.random(.75)`'
 
 markdown <<MARKDOWN
-question
+Which of these statements is true 75% of the time?
 MARKDOWN

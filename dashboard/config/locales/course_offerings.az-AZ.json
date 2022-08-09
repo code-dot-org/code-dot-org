@@ -43,7 +43,6 @@
         "hello-world-emoji": "Salam Dünya",
         "hello-world-food": "Salam Dünya",
         "hello-world-retro": "Salam Dünya",
-        "contagion-pilot": "Yoluxma simulyatoru",
         "k5-onlinepd": "k5-onlaynpd",
         "csf-pilot": "csf-pilot",
         "peru": "peru",
@@ -51,7 +50,11 @@
         "vpl-csp": "vpl-csp",
         "tesstesting": "sınaqdan keçirmə",
         "drafting": "qaralama",
-        "edit-code": "Koda düzəliş et"
+        "edit-code": "Koda düzəliş et",
+        "valentine": "sevgili",
+        "allthethingscourse": "bütübhərşeyinkursu",
+        "halloween": "hallovin",
+        "step": "addım"
       }
     }
   }

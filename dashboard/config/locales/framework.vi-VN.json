@@ -1,0 +1,20 @@
+{
+  "vi-VN": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Tiêu chuẩn ngữ văn Anh ngữ căn bản phổ thông"
+        },
+        "ccmath": {
+          "name": "Tiêu chuẩn toán học căn bản phổ thông"
+        },
+        "csta2011": {
+          "name": "Tiêu chuẩn khoa học máy tính CSTA K-12 (2011)"
+        },
+        "iste": {
+          "name": "Tiêu chuẩn ISTE cho học sinh"
+        }
+      }
+    }
+  }
+}

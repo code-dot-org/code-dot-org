@@ -828,6 +828,28 @@ hi:
         poetry_module_multichoiceprompts: मल्टीपल चॉइस संकेत - कोडिंग विद पोएट्री
         poetry_module_conditionals: कंडीशनल - कोडिंग विद पोएट्री
         poemart_intro: कविता कला परिचय
+        CSA-PL-debugging-temp: जावा लैब में डिबगिंग का परिचय - अस्थायी
+        csd_u6_circuit_playground: भौतिक कंप्यूटिंग
+        csd_u6_input_output: इनपुट और आउटपुट
+        CSA-PL-for-loops: Java में लूप्स के लिए
+        CSA-PL-variables: Java में वेरिएबल्स तैयार करना
+        PL_CS_Journeys_Overview: CS के सफर
+        CSA-PL-intro-to-java-lab: Java लैब के मूल सिद्धांत
+        CSA-PL-first-program: Java में एक प्रोग्राम लिखना
+        CSD_u6_variables_part1: 'CSD: वेरिएबल्स'
+        csd_u6_if_statements: 'CSD: If स्टेटमेंट्स'
+        csc-poem-art-intro: इंट्रो वीडियो
+        csc-poem-art-outro: ओउट्रो वीडियो
+        csd_u6_call_define_functions: 'CSD: कालिंग और डिफाइनिंग फंक्शन'
+        csp_applab_parameters: मापदंडों के साथ फंक्शन
+        starquilts_intro_artist: इंट्रो से स्टार कुइल्टस
+        CSA-PL-intro-to-arrays: एक-आयामी (1D) ऐरे
+        CSA-PL-1d-arrays-new-values: 1D ऐरेस में मान दर्ज करना
+        CSA-PL-conditionals: Java में कंडीशनल स्टेटमेंट्स
+        CSA-PL-two-way-selection: दोतरफा चयन
+        CSA-PL-Printing-in-Java: Java में प्रिंटिंग
+        CSA-PL-multi-selection-statements: बहु-चयन स्टेटमेंट्स
+        CS_Changing_Everything: कंप्यूटर साइंस सब कुछ बदल रहा है
     callout:
       text:
         drag_blocks: '"मूव करें" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें'

@@ -144,10 +144,14 @@ class LevelsController < ApplicationController
     if @level.properties['encrypted']&.is_a?(String)
       @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
     end
-    @in_script = @level.script_levels.any?
+    bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
+    any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
+    @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
-    fb = FirebaseHelper.new('shared')
-    @dataset_library_manifest = fb.get_library_manifest
+    if @level.is_a? Applab
+      fb = FirebaseHelper.new('shared')
+      @dataset_library_manifest = fb.get_library_manifest
+    end
   end
 
   use_reader_connection_for_route(:get_rubric)
@@ -157,11 +161,11 @@ class LevelsController < ApplicationController
   def get_rubric
     return head :no_content unless @level.mini_rubric&.to_bool
     render json: {
-      keyConcept: @level.rubric_key_concept,
-      performanceLevel1: @level.rubric_performance_level_1,
-      performanceLevel2: @level.rubric_performance_level_2,
-      performanceLevel3: @level.rubric_performance_level_3,
-      performanceLevel4: @level.rubric_performance_level_4
+      keyConcept: @level.localized_rubric_property('rubric_key_concept'),
+      performanceLevel1: @level.localized_rubric_property('rubric_performance_level_1'),
+      performanceLevel2: @level.localized_rubric_property('rubric_performance_level_2'),
+      performanceLevel3: @level.localized_rubric_property('rubric_performance_level_3'),
+      performanceLevel4: @level.localized_rubric_property('rubric_performance_level_4')
     }
   end
 
@@ -191,9 +195,9 @@ class LevelsController < ApplicationController
     # Levels which support (and have )solution blocks use those blocks
     # as the toolbox for required and recommended block editors, plus
     # the special "pick one" block
-    can_use_solution_blocks = @level.respond_to?("get_solution_blocks") &&
+    can_use_solution_blocks = @level.respond_to?(:get_solution_blocks) &&
         @level.properties['solution_blocks']
-    should_use_solution_blocks = type == 'required_blocks' || type == 'recommended_blocks'
+    should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
       toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
@@ -272,7 +276,7 @@ class LevelsController < ApplicationController
   def update
     if level_params[:name] &&
         @level.name != level_params[:name] &&
-        @level.name.downcase == level_params[:name].downcase
+        @level.name.casecmp?(level_params[:name])
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       log_save_error(@level)
@@ -290,6 +294,8 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
+  rescue ArgumentError, ActiveRecord::RecordInvalid => e
+    render status: :not_acceptable, plain: e.message
   end
 
   # POST /levels/:id/update_start_code

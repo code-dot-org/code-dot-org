@@ -1,7 +1,8 @@
 # Helper steps for creating and managing sections
 
-And (/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type}))
+And(/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
+  grade = participant_type == 'student' ? 'Other' : 'pl'
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type, grade: grade}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   navigate_to replace_hostname('http://studio.code.org') if home
@@ -36,7 +37,7 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" versi
   }
 end
 
-Given (/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
+Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
   browser_request(
     url: '/api/test/create_student_section_assigned_to_script',
     method: 'POST',
@@ -234,6 +235,13 @@ Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for th
   expect(@section_id).to be > 0
   steps %{
     Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
+  }
+end
+
+Then /^I navigate to the script "([^"]*)" lesson (\d+) level (\d+) for the section I saved$/ do |script_name, lesson_num, level_num|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/levels/#{level_num}?section_id=#{@section_id}&noautoplay=true"
   }
 end
 

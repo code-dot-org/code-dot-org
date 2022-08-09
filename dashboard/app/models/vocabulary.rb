@@ -20,7 +20,7 @@ class Vocabulary < ApplicationRecord
   include SerializedProperties
 
   has_and_belongs_to_many :lessons, join_table: :lessons_vocabularies
-  belongs_to :course_version
+  belongs_to :course_version, optional: true
 
   KEY_CHAR_RE = /[a-z_]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -95,7 +95,7 @@ class Vocabulary < ApplicationRecord
   def self.sanitize_key(key)
     key.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.squeeze('_')
   end
 
   # Return a version of the given key which does not conflict

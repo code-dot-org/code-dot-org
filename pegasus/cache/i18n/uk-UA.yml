@@ -1255,6 +1255,7 @@ uk-UA:
   coursee-2020_name: Курс Е (2020)
   coursef-2020_name: Курс F (2020)
   coursed-2021_name: Курс D (2021)
+  coursed-2022_name: Курс D (2021)
   express-2018_name: Експрес курс (2018)
   express-2019_name: Експрес курс (2019)
   express-2020_name: Експрес курс (2020)
@@ -1370,6 +1371,12 @@ uk-UA:
   coursed-2021_gradelevel: 8+ класи
   coursee-2021_gradelevel: Вік 8-12
   coursef-2021_gradelevel: Вік 9-13
+  coursea-2022_gradelevel: Вік 4-7
+  courseb-2022_gradelevel: Вік 5-8
+  coursec-2022_gradelevel: Вік 6-10
+  coursed-2022_gradelevel: 8+ класи
+  coursee-2022_gradelevel: Вік 8-12
+  coursef-2022_gradelevel: Вік 9-13
   accelerated_gradelevel: Вік 10-18
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
@@ -1498,6 +1505,24 @@ uk-UA:
     з програмування, з якими ознайомились у попередньому курсі, і шукатимуть гнучкіших
     рішень складніших завдань. До кінця цього курсу учні навчаться створювати інтерактивні
     історії та ігри, якими зможуть поділитись. Рекомендовано для 4-8 класів.
+  coursea-2020_shortdescription_congrats: Вивчення основ інформатики та безпеки в
+    інтернеті. At the end of the course, create your very own game or story you can
+    share.
+  courseb-2020_shortdescription_congrats: Вивчення основ інформатики та безпеки в
+    інтернеті. At the end of the course, create your very own game or story you can
+    share.
+  coursea-2021_shortdescription_congrats: Вивчення основ інформатики та безпеки в
+    інтернеті. At the end of the course, create your very own game or story you can
+    share.
+  courseb-2021_shortdescription_congrats: Вивчення основ інформатики та безпеки в
+    інтернеті. At the end of the course, create your very own game or story you can
+    share.
+  coursea-2022_shortdescription_congrats: Вивчення основ інформатики та безпеки в
+    інтернеті. At the end of the course, create your very own game or story you can
+    share.
+  courseb-2022_shortdescription_congrats: Вивчення основ інформатики та безпеки в
+    інтернеті. At the end of the course, create your very own game or story you can
+    share.
   codeorg_longdescription: Вивчайте основи програмування шляхом перетягування блоків.
     Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла
     Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові
@@ -1984,6 +2009,7 @@ uk-UA:
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
   header_sections: Секції
+  header_professional_learning: Підвищення кваліфікації
   header_educate_overview: Огляд для педагога
   header_educate_elementary: Початкова школа
   header_educate_middle: Середня школа
@@ -2008,7 +2034,7 @@ uk-UA:
   header_teach: Вчити
   header_stats: Статистика
   header_help_us: Допомога нам
-  header_about: Про
+  header_about: Про нас
   header_teacher_community: Спільнота вчителів
   header_help_support: 'Допомога та підтримка '
   header_report_bug: Сповістити про проблему
@@ -2227,7 +2253,7 @@ uk-UA:
   codebytes_skinny_banner_english_only: Лише англійська
   codebytes_skinny_banner_learn: 'Дізнатися більше на [code.org/codebytes](%{code_bytes_url}). '
   footer_privacy_policy: Політика конфіденційності
-  footer_about: Про
+  footer_about: Про нас
   footer_partners: Партнери
   footer_donate: Підтримати
   footer_support: Довідка та спільнота

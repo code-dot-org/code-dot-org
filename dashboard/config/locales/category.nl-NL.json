@@ -1,0 +1,14 @@
+{
+  "nl-NL": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Rekenend Denken"
+        },
+        "ccela/L": {
+          "description": "Taal"
+        }
+      }
+    }
+  }
+}

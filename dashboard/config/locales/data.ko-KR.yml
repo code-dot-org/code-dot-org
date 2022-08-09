@@ -676,10 +676,15 @@ ko:
         csf21pilot_prompts: '스프라이트 랩: 텍스트 및 프롬프트'
         outbreak_mike: 마이크와 함께 하는 CodeBytes 에피소드 3 - 발생 시뮬레이터
         poembot-pilot-text: 삼행시 봇 - 텍스트 저장 [PILOT]
+        csd_ml_intro_to_ai_lab: AI 연구실 소개
+        csf_lots_of_sprites: '영혼 연구실: 많은 영혼들'
         playlab_2021: 플레이 랩 소개
         playlab_2021_reader: 플레이 랩 소개
+        csp_tutorial_datatab: 앱 연구실의 데이터 창
+        PL-Video-21: Code.org의 전문 학습에 오신 것을 환영합니다!
         csp_tutorial_datavis1: 앱 랩 내 데이터 비주얼라이저 - 파트 1
         csp_tutorial_datavis2: 앱 랩 내 데이터 비주얼라이저 - 파트 2
+        csd_ml_intro_ai_lab_july2021: AI 연구실 소개
         csd_ml_training_testing_ai_lan: AI 랩 교육 및 테스팅
         csd_ml_model_cards_july2021: AI 랩 모델 카드
         Gettting_Started_Progress: 진도 및 피드백, 평가
@@ -719,6 +724,29 @@ ko:
         outbreak_events: '발생: 이벤트'
         outbreak_scientist: '발생 시뮬레이터: 과학자처럼 생각하기'
         outbreak_outro: '발생 시뮬레이터: 프리플레이'
+        CSA-PL-debugging-temp: 자바 연구소에서의 디버깅 소개 - 임시
+        csd_app_lab_events: CSD 앱 연구소 이벤트
+        csd_u6_circuit_playground: 물리적 컴퓨팅
+        csd_u6_input_output: 인풋 및 아웃풋
+        CSA-PL-for-loops: 자바 내 루프를 위하여
+        CSA-PL-variables: 자바로 변수 만들기
+        PL_CS_Journeys_Overview: CS 저니
+        CSA-PL-intro-to-java-lab: 자바 연구소 기초
+        CSA-PL-first-program: 자바로 프로그램 쓰기
+        CSD_u6_variables_part1: 'CSD: 변수'
+        csd_u6_if_statements: 'CSD: If문'
+        csc-poem-art-intro: 소개 영상
+        csc-poem-art-outro: 아우트로 동영상
+        csd_u6_call_define_functions: 'CSD: 함수 호출 및 정의'
+        csp_applab_parameters: 함수(값 전달)
+        starquilts_intro_artist: 스타 퀼트 소개
+        CSA-PL-intro-to-arrays: 1차원 (1D) 어레이
+        CSA-PL-1d-arrays-new-values: 1D 어레이로 값 입력
+        CSA-PL-conditionals: 자바 조건문
+        CSA-PL-two-way-selection: 양방향 선택
+        CSA-PL-Printing-in-Java: 자바로 인쇄
+        CSA-PL-multi-selection-statements: 복수 선택 문
+        CS_Changing_Everything: 컴퓨터 과학은 모든 것을 바꾸고 있습니다.
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

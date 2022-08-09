@@ -10,6 +10,8 @@ ta:
       length: நீளம்
       min: குறைந்தபட்சம்
       points: புள்ளிகள்
+      radius: ஆரம் 
+      sides: பக்கங்களிலும் 
       size: அளவு
       speed: வேகம்
       width: அகலம்

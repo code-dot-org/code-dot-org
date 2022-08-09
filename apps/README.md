@@ -226,7 +226,6 @@ A static version of the styleguide is hosted at https://code-dot-org.github.io/c
 
 Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
-
 ### Localization
 
 It's especially important to test your changes with localization when modifying layouts. We support

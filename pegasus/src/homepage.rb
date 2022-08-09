@@ -7,7 +7,7 @@ class Homepage
   @@json_path = pegasus_dir 'sites.v3/code.org/homepage.json'
 
   # gets special announcement data for a page, or nil if not found
-  def self.get_announcement_for_page(page)
+  def self.get_announcement_for_page(page, request)
     load_announcements
     return nil if @@load_error || !@@announcements_data
     pages = @@announcements_data[:pages]
@@ -24,6 +24,9 @@ class Homepage
 
       # If the banner has a required DCDO flag, then it must be set.
       next if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+
+      # If the banner has an array of languages, then the current language must be one of them.
+      next if banner["languages"] && !banner["languages"].include?(request.language)
 
       # We have a banner.  Add the ID to the hash that we return.
       return banner.merge({"id": banner_id_for_page})
@@ -44,7 +47,7 @@ class Homepage
     end
     begin
       @@announcements_data = JSON.parse(
-        IO.read(@@json_path),
+        File.read(@@json_path),
         symbolize_names: true,
         object_class: HashWithIndifferentAccess
       )
@@ -60,7 +63,7 @@ class Homepage
   def self.validate_announcements_data(announcements_data)
     return false unless announcements_data && announcements_data[:pages] &&
       announcements_data[:banners] &&
-      announcements_data[:banners].respond_to?("each_value")
+      announcements_data[:banners].respond_to?(:each_value)
 
     announcements_data[:banners].each_value do |banner|
       return false unless validate_banner(banner)
@@ -176,8 +179,8 @@ class Homepage
     ]
   end
 
-  def self.get_action_buttons_css_class
-    custom_banner = get_announcement_for_page("homepage")
+  def self.get_action_buttons_css_class(request)
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner && custom_banner["class"]
       custom_banner["class"]
     else
@@ -185,8 +188,8 @@ class Homepage
     end
   end
 
-  def self.get_num_columns
-    custom_banner = get_announcement_for_page("homepage")
+  def self.get_num_columns(request)
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
       return 3
     end
@@ -194,8 +197,8 @@ class Homepage
     1
   end
 
-  def self.get_outer_column_images
-    custom_banner = get_announcement_for_page("homepage")
+  def self.get_outer_column_images(request)
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
       return {left_image: custom_banner["leftImage"], right_image: custom_banner["rightImage"]}
     end
@@ -221,7 +224,7 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    custom_banner = get_announcement_for_page("homepage")
+    custom_banner = get_announcement_for_page("homepage", request)
 
     if custom_banner
       custom_banner["actions"].map do |action|
@@ -466,7 +469,7 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    custom_banner = get_announcement_for_page("homepage")
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner
       "custom"
     else
@@ -481,7 +484,7 @@ class Homepage
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    custom_banner = get_announcement_for_page("homepage")
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner
       heroes_arranged =
         [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]

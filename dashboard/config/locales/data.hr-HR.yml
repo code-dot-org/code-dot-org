@@ -618,6 +618,7 @@ hr:
         playlab_2021: Uvod u Laboratorij igara
         playlab_2021_reader: Uvod u Laboratorij igara
         csd_ml_intro_ai_lab_july2021: Uvod u AI laboratorij
+        csp_applab_parameters: Funkcije s parametrima
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka

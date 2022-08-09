@@ -171,6 +171,11 @@ es:
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
+  hoc_danceparty_alt_text: Personajes animados bailando al ritmo de la música bajo
+    el texto "Codifica tu propia fiesta de baile".
+  hoc_ai_alt_text: Un personaje flotante de inteligencia artificial, de color blanco,
+    con una antena, un escáner en la parte inferior y una cara LED
+  hoc_banner_alt_text: Cartel de la Hora del Código
   ai_video_title_what_is_ai: "¿Qué es la Inteligencia Artificial?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"
@@ -3967,13 +3972,13 @@ es:
     algoritmos para dibujar la naturaleza. Los algoritmos son recursivos, es decir,
     describen un paso y luego te dicen simplemente que dibujes el siguiente paso de
     la misma manera, siguiendo el algoritmo desde el principio.
-  tutorial_tlcpunch_longdescription: Demuestra cómo las primeras computadoras pudieron
-    encontrar datos almacenados en tarjetas perforadas y muestra que es el mismo algoritmo
-    que se usa en el truco de magia de la actividad "El sueño del mago australiano".
-    Su objetivo es mostrar de forma visual cómo funciona un algoritmo de búsqueda.
-    Al hacerlo, demuestras un uso práctico de los números binarios, un algoritmo de
-    división y conquista para buscar y explorar el truco de pensamiento computacional
-    para traducir soluciones entre áreas problemáticas.
+  tutorial_tlcpunch_longdescription: Demuestra cómo los primeros ordenadores eran
+    capaces de encontrar datos almacenados en tarjetas perforadas y demuestra que
+    es el mismo algoritmo que el truco de magia de la actividad "El Sueño del Mago
+    Australiano". Pretende mostrar de forma visual cómo funciona un algoritmo de búsqueda.
+    Para ello, demuestra un uso práctico de los números binarios, un algoritmo de
+    "divide y vencerás" para la búsqueda y explora el truco de pensamiento informático
+    de trasladar las soluciones entre áreas de problemas.
   tutorial_finchfract_longdescription: Esta actividad usa recursividad para dibujar
     fractales de Koch con el robot Finch. Asume que a los estudiantes se les ha presentado
     la idea de recursividad, pero completar esta actividad los ayudará a desarrollar
@@ -11195,86 +11200,167 @@ es:
   all: Todos
   dont_know: No sé
   language_label: Idioma
-  ar: Árabe
-  az: Azerí
-  bg: Búlgaro
-  bn: Bengalí
-  br: Bretón
-  bs: Bosnio
-  ca: Catalán
-  cs: Checo
-  cs-cz: Checo (Chequia)
-  da: Danés
-  da-dk: Danés (Dinamarca)
-  de: Alemán
-  de-de: Alemán (Alemania)
-  el: Griego
-  el-gr: Griego (Grecia)
-  en: Español (España)
-  en-gb: Inglés (Reino Unido)
-  es: Español
-  es-es: Español (España)
-  es-mx: Español (México)
-  et: Estonio
-  eu: Vasco
-  fa: Persa
-  fa-ir: Persa (Irán)
-  fi: Finlandés
-  fi-fi: Finlandés (Finlandia)
-  fil-ph: Filipino (Filipinas)
-  fr: Francés
-  gl: Gallego
-  he: Hebreo
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croata
-  hu: Húngaro
-  ia: Interlingua (Asociación Internacional de Lenguas Auxiliares)
-  id: Bahasa Indonesio
-  is: Islandés
-  it: Italiano
-  it-it: Italiano (Italia)
-  ja: Japonés
-  ja-jp: Japonés (Japón)
-  ka: Georgiano
-  kk: Kazajo
-  ko: Coreano
-  lt: Lituano
-  lv: Letón
-  mk: Macedonio
-  mr: Maratí
-  ms: Malayo
-  my: Birmano
-  nl: Holandés
-  nl-nl: Holandés (Holanda)
-  nn: Noruego (Nynorsk)
-  false: Noruego
-  pl: Polaco
-  pl-pl: Polaco (Polonia)
-  pt: Portugués
-  pt-br: Portugués (Brasil)
-  pt-pt: Portugués (Portugal)
-  ro: Rumano
-  ru: Ruso
-  sk: Eslovaco
-  sl: Esloveno
-  sq: Albanés
-  sr: Serbio
-  sv: Sueco
-  sv-se: Sueco (Suecia)
-  sw: Swahili
-  ta: Tamil
-  te: Télugu
-  th: Tailandés
-  tl: Tagalo
-  tr: Turco
-  uk: Ucraniano
-  ur: Urdú
-  ur-in: Urdú (India)
-  ur-pk: Urdú (República Islámica de Pakistán)
-  vi: Vietnamita
-  zh: Chino (Simplificado)
-  zh-cn: Chino (Simplificado, República Popular de China)
-  zh-hans: Chino (Simplificado) (zh-Hans)
-  zh-hant: Chino (Tradicional) (zh-Hant)
-  zh-tw: Chino (Tradicional, Taiwán)
+  language_code:
+    ar: Árabe
+    az: Azerí
+    bg: Búlgaro
+    bn: Bengalí
+    br: Bretón
+    bs: Bosnio
+    ca: Catalán
+    co: Corso
+    cs: Checo
+    da: Danés
+    de: Alemán
+    dv: Dhivehi
+    el: Griego
+    en: Español (España)
+    es: Español
+    et: Estonio
+    eu: Vasco
+    fa: Persa
+    fi: Finlandés
+    fil: Tagalo
+    fr: Francés
+    ga: Irlandés
+    gl: Gallego
+    haw: Hawaiano
+    he: Hebreo
+    hi: Hindi
+    hr: Croata
+    hu: Húngaro
+    hy: Armenio
+    ia: Interlingua (Asociación Internacional de Lenguas Auxiliares)
+    id: indonesio
+    is: Islandés
+    it: Italiano
+    ja: Japonés
+    ka: Georgiano
+    kk: Kazajo
+    km: Jemer
+    kn: Canarés
+    ko: Coreano
+    ku: Kurdo
+    ky: Kirguís
+    lt: Lituano
+    lv: Letón
+    mi: Maori
+    mk: Macedonio
+    mn: Mongol
+    mr: Maratí
+    ms: Malayo
+    mt: Maltés
+    my: Birmano
+    ne: Nepalí
+    nl: Holandés
+    nn: Noruego (Nynorsk)
+    false: Noruego (Bokmål)
+    pl: Polaco
+    ps: Pastún
+    pt: Portugués
+    ro: Rumano
+    ru: Ruso
+    se: Sami del Norte
+    si: Cingalés
+    sk: Eslovaco
+    sl: Esloveno
+    sq: Albanés
+    sr: Serbio
+    sv: Sueco
+    sw: Swahili
+    ta: Tamil
+    te: Télugu
+    tg: Tayiko
+    th: Tailandés
+    tl: Tagalo
+    tr: Turco
+    uk: Ucraniano
+    ur: Urdu
+    uz: Uzbeko
+    vi: Vietnamita
+    zh: Chino (Simplificado)
+    zu: Zulú
+  locale_code:
+    ar-sa: Árabe
+    az-az: Azerí
+    bg-bg: Búlgaro
+    bn-bd: Bengalí
+    bs-ba: Bosnio
+    ca-es: Catalán
+    co-co: Corso
+    cs-cz: Checo
+    da-dk: Danés
+    de-de: Alemán
+    dv-mv: Dhivehi
+    el-gr: Griego
+    en-gb: Inglés (Reino Unido)
+    en-us: Español (España)
+    es-es: Español (España)
+    es-mx: Español (México)
+    et-ee: Estonio
+    eu-es: Vasco
+    fa-af: Darí
+    fa-ir: Persa
+    fi-fi: Finlandés
+    fil-ph: Tagalo
+    fr-fr: Francés
+    ga-ie: Irlandés
+    gl-es: Gallego
+    haw-hi: Hawaiano
+    he-il: Hebreo
+    hi-in: Hindi
+    hr-hr: Croata
+    hu-hu: Húngaro
+    hy-am: Armenio
+    id-id: indonesio
+    is-is: Islandés
+    it-it: Italiano
+    ja-jp: Japonés
+    ka-ge: Georgiano
+    kk-kz: Kazajo
+    km-kh: Jemer
+    kn-in: Canarés
+    ko-kr: Coreano
+    ku-iq: Kurdo
+    ky-kg: Kirguís
+    lt-lt: Lituano
+    lv-lv: Letón
+    mi-nz: Maori
+    mk-mk: Macedonio
+    mn-mn: Mongol
+    mr-in: Maratí
+    ms-my: Malayo
+    mt-mt: Maltés
+    my-mm: Birmano
+    ne-np: Nepalí
+    nl-nl: Holandés
+    nn-no: Noruego (Nynorsk)
+    no-no: Noruego (Bokmål)
+    pl-pl: Polaco
+    ps-af: Pastún
+    pt-br: Portugués (Brasil)
+    pt-pt: Portugués (Portugal)
+    ro-ro: Rumano
+    ru-ru: Ruso
+    se-fi: Sami del Norte
+    si-lk: Cingalés
+    sk-sk: Eslovaco
+    sl-si: Esloveno
+    sq-al: Albanés
+    sr-sp: Serbio
+    sv-se: Sueco
+    ta-in: Tamil
+    te-in: Télugu
+    tg-tj: Tayiko
+    th-th: Tailandés
+    tr-tr: Turco
+    uk-ua: Ucraniano
+    ur-in: Urdú (India)
+    ur-pk: Urdú (Pakistán)
+    uz-uz: Uzbeko
+    vi-vn: Vietnamita
+    zh-cn: Chino (Simplificado)
+    zh-hans: Chino (Simplificado)
+    zh-hant: Chino (Tradicional)
+    zh-tw: Chino (Tradicional)
+    zu-za: Zulú

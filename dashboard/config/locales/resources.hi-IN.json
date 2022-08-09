@@ -1911,6 +1911,16 @@
         "teacher_forum/csd/2021": {
           "name": "अध्यापक फोरम"
         },
+        "computing-innovations/csd/2021": {
+          "name": "कंप्यूटिंग अन्वेषण"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "वीडीयो"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "कंप्यूटर साइंस सब कुछ बदल रहा है",
+          "type": "वीडीयो"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "कोड के साथ स्क्रीन डिजाइन करना"
         },
@@ -1969,6 +1979,12 @@
         "planning-your-innovation/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
         },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "प्रस्तुतिकरण विषय"
+        },
+        "representation-matters/csd/2021": {
+          "name": "प्रस्तुतिकरण विषय"
+        },
         "representing-information-1/csd/2021": {
           "name": "जानकारी प्रस्तुत करना"
         },
@@ -1977,9 +1993,6 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "संख्याएं प्रस्तुत करना"
-        },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "डेटा को गोपनीय रखना"
         },
         "create_a_representation/csd/2021": {
           "type": "शीर्षक"
@@ -2024,6 +2037,7 @@
           "name": "वास्तविक दुनिया में डेटा"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "वीडियो: समाज पर प्रभाव",
           "type": "वीडीयो"
         },
         "video_machine_learning/csd/2021": {
@@ -2032,7 +2046,11 @@
           "type": "वीडीयो"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "वीडियो: प्रशिक्षण डेटा और पूर्वाग्रह",
           "type": "वीडीयो"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "सहकर्मी की समीक्षा"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "शीर्षक"
@@ -2061,6 +2079,9 @@
         },
         "sprites_1/csd/2021": {
           "name": "स्प्राइट्स"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "स्प्राइट्स की विशेषताएं"
         },
         "captioned-scenes/csd/2021": {
           "type": "शीर्षक"
@@ -2095,6 +2116,9 @@
         },
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "सहकर्मी की समीक्षा"
         },
         "interactive_card/csd/2021": {
           "type": "शीर्षक"
@@ -2141,11 +2165,27 @@
         "make-your-own-game/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "सहकर्मी की समीक्षा"
+        },
         "make_your_own_game/csd/2021": {
           "type": "शीर्षक"
         },
         "teacher_forum_1/csd/2021": {
           "name": "अध्यापक फोरम"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया",
+          "type": "वीडीयो"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "कंप्यूटर क्या है?"
@@ -2166,11 +2206,18 @@
           "name": "ऐप्स और सवाल हल करना"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "ऐप्स और सवाल हल करना"
+          "name": "ऐप्स और सवाल हल करना",
+          "type": "सहकर्मी की समीक्षा"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "ऐप्स और सवाल हल करना",
           "type": "शीर्षक"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "वेब पृष्ठों की पड़ताल करना"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "वेब पृष्ठों की पड़ताल करना"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "वीडीयो"
@@ -2183,10 +2230,14 @@
           "type": "वीडीयो"
         },
         "video_debugging/csd/2021": {
+          "name": "वीडियो: डीबगिंग",
           "type": "वीडीयो"
         },
         "html-web-page-1/csd/2021": {
           "type": "शीर्षक"
+        },
+        "html-web-page/csd/2021": {
+          "type": "सहकर्मी की समीक्षा"
         },
         "html-page/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
@@ -2214,6 +2265,9 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "शीर्षक"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "सहकर्मी की समीक्षा"
+        },
         "your-personal-style/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
         },
@@ -2226,6 +2280,9 @@
         "person-web-page-prepare/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
         },
+        "personal-web-page-1/csd/2021": {
+          "type": "सहकर्मी की समीक्षा"
+        },
         "person-web-page-reflect/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
         },
@@ -2237,12 +2294,15 @@
           "type": "वीडीयो"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "वीडियो: असहमति का प्रबंधन",
           "type": "वीडीयो"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "वीडियो: टीमवर्क",
           "type": "वीडीयो"
         },
         "how-search-works-video/csd/2021": {
+          "name": "वीडियो: खोज कैसे काम करती है",
           "type": "वीडीयो"
         },
         "classes/csd/2021": {
@@ -2253,6 +2313,9 @@
         },
         "plan-a-multi-page-website/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "सहकर्मी की समीक्षा"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "प्रोजेक्ट गाइड"

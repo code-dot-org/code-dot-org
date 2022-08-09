@@ -1698,7 +1698,7 @@
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
           "spinning left": "rotazione anti-oraria",
-          "blocking movement": "movimento di blocco"
+          "blocking movement": "blocco del movimento"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1727,7 +1727,7 @@
           "jittering2": "pulsazione 2",
           "moving west2": "spostamento verso ovest 2",
           "patrolling2": "pattugliamento 2",
-          "blocking movement": "movimento di blocco",
+          "blocking movement": "blocco del movimento",
           "moving with arrow keys2": "movimento con tasti freccia2",
           "driving with arrow keys2": "guida con tasti freccia2"
         },
@@ -1816,7 +1816,7 @@
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
           "spinning left": "rotazione anti-oraria",
-          "blocking movement": "movimento di blocco"
+          "blocking movement": "blocco del movimento"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1833,7 +1833,7 @@
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
           "spinning left": "rotazione anti-oraria",
-          "blocking movement": "movimento di blocco"
+          "blocking movement": "blocco del movimento"
         },
         "courseF_editable_madlib": {
           "wandering": "movimento casuale",
@@ -3333,6 +3333,32 @@
           "wobbling": "barcollamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
           "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria"
         }
       }
     }

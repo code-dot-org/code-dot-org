@@ -169,8 +169,22 @@ class FilesApi < Sinatra::Base
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, filename, true)
+  end
+
+  #
+  # GET /projects/<project-type>/<channel-id>/<filename>?version=<version-id>
+  #
+  # Read a file. Optionally get a specific version instead of the most recent.
+  # Only from codeprojects.org domain
+  #
+  get %r{/projects/([a-z]+)/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_channel_id, filename|
+    not_found unless project_type == 'weblab'
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     get_file('files', encrypted_channel_id, filename, true)
@@ -181,8 +195,22 @@ class FilesApi < Sinatra::Base
   #
   # Redirect to /<channel-id>/
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    redirect "#{request.path_info}/"
+  end
+
+  #
+  # GET /projects/<project-type>/<channel-id>
+  #
+  # Redirect to /projects/<project-type>/<channel-id>/
+  # Only from codeprojects.org domain
+  #
+  get %r{/projects/([a-z]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_channel_id|
+    not_found unless project_type == 'weblab'
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     redirect "#{request.path_info}/"
@@ -193,8 +221,23 @@ class FilesApi < Sinatra::Base
   #
   # Serve index.html for this project.
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, 'index.html', true)
+  end
+
+  #
+  # GET /projects/<project-type>/<channel-id>/
+  #
+  # Serve index.html for this project.
+  # Only from codeprojects.org domain
+  # Currently only supported for weblab
+  #
+  get %r{/projects/([a-z]+)/([^/]+)/$}, {code_projects_domain: true} do |project_type, encrypted_channel_id|
+    not_found unless project_type == 'weblab'
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     get_file('files', encrypted_channel_id, 'index.html', true)
@@ -242,7 +285,7 @@ class FilesApi < Sinatra::Base
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
-      return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
+      return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/weblab/footer.js'></script>\n<link rel='stylesheet' href='/weblab/footer.css'></head>\n" << result[:body].string
     end
 
     response.headers['S3-Version-Id'] = result[:version_id]
@@ -312,7 +355,7 @@ class FilesApi < Sinatra::Base
   TEXT_HTML = 'text/html'.freeze
 
   def html?(headers)
-    headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
+    headers[CONTENT_TYPE]&.include?(TEXT_HTML)
   end
 
   def html_file?(filename)
@@ -458,7 +501,7 @@ class FilesApi < Sinatra::Base
       source.each_key do |key|
         # Multi-file source structure:
         # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
-        return false unless source[key]["text"] && source[key]["text"].force_encoding("UTF-8").valid_encoding?
+        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
       end
       return true
     end
@@ -690,7 +733,7 @@ class FilesApi < Sinatra::Base
     #     }
     #   ]
     # }
-    {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
+    {"filesVersionId": result[:version_id], "files": JSON.parse(result[:body].read)}.to_json
   end
 
   #
@@ -835,7 +878,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse(manifest_result[:body].read)
 
     # delete the manifest and all of the files it referenced
     bucket.delete_multiple(encrypted_channel_id, [FileBucket::MANIFEST_FILENAME].concat(manifest.map {|e| e['filename'].downcase})) unless manifest.empty?
@@ -859,7 +902,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse(manifest_result[:body].read)
 
     # remove the file from the manifest
     manifest_delete_comparison_filename = CGI.unescape(filename).downcase
@@ -904,7 +947,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, nil, params['version'])
     bad_request if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse(manifest_result[:body].read)
 
     # restore the files based on the versions stored in the manifest
     manifest.each do |entry|

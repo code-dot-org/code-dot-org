@@ -169,6 +169,14 @@ MusicController.prototype.preload = function() {
   }, this);
 };
 
+MusicController.prototype.setMuteMusic = function(
+  isBackgroundMusicMuted,
+  track
+) {
+  this.muteMusic_ = isBackgroundMusicMuted;
+  isBackgroundMusicMuted ? this.stop() : this.play(track);
+};
+
 /**
  * Begins playing a particular piece of music immediately.
  * @param {string} trackName

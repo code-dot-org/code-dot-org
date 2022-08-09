@@ -14,6 +14,9 @@
         "13553f81-6547-4b09-b32e-7aab19725967": {
           "name": "Rozpowszechniaj"
         },
+        "7e5f5376-de4c-478e-a70d-d4ddb97b0564": {
+          "name": "Ewaluacja (2 minuty)"
+        },
         "ab15beb1-d005-41c6-a156-e4c110c423b8": {
           "name": "Wersja rozszerzona"
         },
@@ -26,6 +29,9 @@
         "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
           "name": "Zakończenie"
         },
+        "2ccc0a90-872b-424b-ae39-d7f92ceb8c06": {
+          "name": "Ewaluacja (2 minuty)"
+        },
         "e4041676-353d-409e-a7aa-bcfcc62bab09": {
           "name": "Wersja rozszerzona"
         },
@@ -37,6 +43,9 @@
         },
         "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
           "name": "Zakończenie"
+        },
+        "2caf682d-0389-4b9f-830a-60d398a8260d": {
+          "name": "Ewaluacja (2 minuty)"
         },
         "ce329650-3549-4f96-8da9-8bc77c162411": {
           "name": "Wersja rozszerzona"
@@ -80,6 +89,9 @@
         "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
           "name": "Wersja rozszerzona"
         },
+        "7f4844a0-3455-4cf0-932b-ba3eba761758": {
+          "name": "Sugestie różnicowania"
+        },
         "5cb4e862-56b7-445e-a99a-22cc738504a1": {
           "name": "Pierwsze kroki (5 minut)"
         },
@@ -88,6 +100,9 @@
         },
         "633ec4e2-ea0b-496f-8878-d4178882a69e": {
           "name": "Zakończenie"
+        },
+        "838f000b-c756-4d71-abfc-877a61b59a91": {
+          "name": "Ewaluacja (2 minuty)"
         },
         "f49ce667-e4b7-4a66-88a4-16848365e63a": {
           "name": "Wersja rozszerzona"
@@ -155,6 +170,9 @@
         "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
           "name": "Zakończenie"
         },
+        "2d33d18f-944d-4408-992a-31d1311733fc": {
+          "name": "Ewaluacja (2 minuty)"
+        },
         "74e90ab8-051a-45fd-bfd7-ec1e72686dc4": {
           "name": "Rozpowszechniaj"
         },
@@ -175,6 +193,9 @@
         },
         "09d516b6-38b7-42e0-900c-5d427b051b65": {
           "name": "Zakończenie (5 minut)"
+        },
+        "3b10ea82-0421-4583-a1cf-561c09edc727": {
+          "name": "Ewaluacja (2 minuty)"
         },
         "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
           "name": "Wersja rozszerzona"
@@ -212,11 +233,17 @@
         "262ad475-1b09-4834-8401-0cf39d3955c5": {
           "name": "Wersja rozszerzona"
         },
+        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
+          "name": "Ewaluacja (2 minuty)"
+        },
         "37f266a7-4b80-449e-805a-4a06aad37292": {
           "name": "Pierwsze kroki"
         },
         "301e5420-a6e3-46c3-a76f-c2e042652974": {
           "name": "Zajęcia (30-45 minut)"
+        },
+        "3664c675-1dd2-468f-b854-a7daa9b0dc38": {
+          "name": "Ewaluacja (2 minuty)"
         },
         "efd4f483-32c2-4810-96fd-186649c2efe2": {
           "name": "Zakończenie (5 minut)"
@@ -269,6 +296,9 @@
         "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
           "name": "Wersja rozszerzona"
         },
+        "894da896-c653-4f74-a0f9-b02dca7ebcad": {
+          "name": "Ewaluacja (2 minuty)"
+        },
         "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
           "name": "Pierwsze kroki"
         },
@@ -311,6 +341,9 @@
         "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
           "name": "Zakończenie (5 minut)"
         },
+        "2cf39290-cd45-4bb4-8ef6-f1dc74e50890": {
+          "name": "Ewaluacja (2 minuty)"
+        },
         "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
           "name": "Wersja rozszerzona"
         },
@@ -337,6 +370,9 @@
         },
         "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
           "name": "Zakończenie"
+        },
+        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
+          "name": "Ewaluacja (2 minuty)"
         },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Wersja rozszerzona"
@@ -370,6 +406,9 @@
         },
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Wersja rozszerzona"
+        },
+        "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
+          "name": "Zagłębianie się w widok informacji"
         },
         "899fd6a9-1214-43ec-a159-77c421de2c8a": {
           "name": "Poziomy"
@@ -1091,7 +1130,7 @@
         "c83b9067-f5cf-4d5c-a246-effde510c121": {
           "name": "Poziomy"
         },
-        "a701bcb3-040d-450f-8427-d0ff90f42549": {
+        "996ce33a-6eec-46a8-8b02-9282b006dd20": {
           "name": "Poziomy"
         },
         "3678b5ba-0e26-4abb-9612-d5a525799e9f": {
@@ -1796,10 +1835,10 @@
         "8946e76d-d595-423c-8408-0eca539f9f5f": {
           "name": "Poziomy"
         },
-        "0d26b1ca-c97f-445a-ab3a-83e45d4ae4a9": {
+        "191d4843-f7ab-4d54-b9ce-d6ceb7d5f680": {
           "name": "Poziomy"
         },
-        "175a5a5f-9f19-40fc-b8d3-f6e429270c14": {
+        "19aa92d5-e95f-42dd-98dc-9f0c86e37dc2": {
           "name": "Poziomy"
         },
         "a7514510-0928-419c-bb19-a184dd082bbe": {
@@ -1862,10 +1901,10 @@
         "c81a77e3-a658-44f5-9f98-ba67b99803e4": {
           "name": "Poziomy"
         },
-        "9da22490-6037-4b05-b56c-878535e11f89": {
+        "9392c057-99c8-4778-bf37-e2fa872aaa71": {
           "name": "Poziomy"
         },
-        "a1fb9f1c-ccb6-4398-adcf-41955f04b6cb": {
+        "c5cdda6b-df76-47a7-bc8a-3225e427086d": {
           "name": "Poziomy"
         },
         "381a9096-cef4-47ec-a3e2-33d47118a8b5": {
@@ -1910,10 +1949,10 @@
         "419d2c6b-4626-4471-915f-a4f0ad231e1a": {
           "name": "Poziomy"
         },
-        "3b1e4fc8-7dba-4cfd-afa4-664c1e020c8e": {
+        "d8216aa3-1f88-4194-a809-83c0a8bfd136": {
           "name": "Poziomy"
         },
-        "2ab18f57-fbb7-4c1c-89d8-d3fae21d412f": {
+        "48f3c49b-4a66-4e20-aa29-042e49ddda48": {
           "name": "Poziomy"
         },
         "63e800fd-6f35-412f-bec1-97179ec2b1e4": {
@@ -1958,10 +1997,10 @@
         "5b041434-0018-4533-bbc3-52be39bde755": {
           "name": "Poziomy"
         },
-        "b9dff44c-ae84-46cd-a39c-e607dcdc72b4": {
+        "9e49263a-8c10-4bf2-93d0-6ce8f78935a8": {
           "name": "Poziomy"
         },
-        "0b3fca52-a420-4487-8859-85980c6a7923": {
+        "fcd16875-49dc-4b20-994d-0c6fc99ba57d": {
           "name": "Poziomy"
         },
         "d1b95303-ac24-4c45-a772-b7ce97e45660": {
@@ -2006,7 +2045,7 @@
         "1f2d2416-1810-4934-ba29-7657b37b5413": {
           "name": "Poziomy"
         },
-        "3aea3cc5-5d95-4617-be21-4912a2cfd7ff": {
+        "5b3ade8b-ca99-40c0-b0bb-3e97bbbd3ab5": {
           "name": "Poziomy"
         },
         "c9898bd6-88cf-471c-946a-115ee0730aac": {
@@ -2027,10 +2066,10 @@
         "040d1bd7-ae82-4e60-b015-17baad1279d1": {
           "name": "Poziomy"
         },
-        "5c672516-04f3-484d-a5bc-8808b4bba3b3": {
+        "a88c8f88-88f9-4590-9123-46bf5608ee34": {
           "name": "Poziomy"
         },
-        "06c4a690-d2a7-4e5b-ac4b-d064673db8cd": {
+        "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5": {
           "name": "Poziomy"
         },
         "ed41ea87-b959-4053-96de-0dc5e5e50e5c": {
@@ -2552,10 +2591,10 @@
         "34bf035e-c547-4be5-b486-53afb9a48f7f": {
           "name": "Poziomy"
         },
-        "3b998e7c-a5ca-4ecf-806e-0a66dccc7485": {
+        "6d9a6010-5625-41f6-9cba-4c508e3f5304": {
           "name": "Poziomy"
         },
-        "dacf5b73-defa-4bce-8c41-ff0c1e60a6c9": {
+        "11422ae0-1498-4ab6-8542-76d01f48318a": {
           "name": "Poziomy"
         },
         "b5927137-3ab3-49f2-a657-1f0b039bc671": {
@@ -2618,7 +2657,7 @@
         "4f1eef78-4a22-4c44-b694-b76057add793": {
           "name": "Poziomy"
         },
-        "f6fcadb1-5887-41c2-bd41-c716efccfb91": {
+        "d3efaf4a-d127-47f9-86fe-e79c7fb49ba8": {
           "name": "Poziomy"
         },
         "e2aa5dc7-5442-4a69-b36a-dbedfa325bb8": {
@@ -2666,7 +2705,7 @@
         "675154ec-8181-4691-92cb-dbf2ed090fa6": {
           "name": "Poziomy"
         },
-        "086b9e87-7672-4d56-b1a8-dbca21eedf59": {
+        "6d602a27-eb6d-48bb-b6f6-6abf34ddb38e": {
           "name": "Poziomy"
         },
         "1141dd35-49c4-4803-bab8-2b4dcf5e150b": {
@@ -2735,7 +2774,7 @@
         "db825aec-ea4c-406c-9b76-d7e82f77c720": {
           "name": "Poziomy"
         },
-        "36da18f0-ea4c-42d2-b26c-52c5b2df0677": {
+        "1c77cf41-b082-436b-9c70-bfab4c0bc086": {
           "name": "Poziomy"
         },
         "cda71fb9-9e3e-4de6-a2cc-9342ad84ee0e": {
@@ -2780,7 +2819,7 @@
         "888f5102-6f2c-43dc-b4d7-f5b1597f404e": {
           "name": "Poziomy"
         },
-        "cc5c8226-aaca-482f-b271-e2e681a1696d": {
+        "3ec86279-3061-4f41-bc0b-a3272a4a19bf": {
           "name": "Poziomy"
         },
         "9efa84e0-99a8-4ef5-a789-e2d1c418b365": {
@@ -3174,6 +3213,138 @@
           "name": "Wersja rozszerzona"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
+          "name": "Poziomy"
+        },
+        "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
+          "name": "Poziomy"
+        },
+        "83fafdc5-ad91-43a1-a3f6-b7312346a3ab": {
+          "name": "Poziomy"
+        },
+        "6aec6572-d76b-45c3-b69e-c140c8e5077e": {
+          "name": "Poziomy"
+        },
+        "1c529a06-0eb8-49b1-ab18-608c6c63de01": {
+          "name": "Poziomy"
+        },
+        "4f5887f4-1526-473b-bd29-1a6b60c9849a": {
+          "name": "Poziomy"
+        },
+        "4914687d-6ea0-486d-b5d2-833db8f1260e": {
+          "name": "Poziomy"
+        },
+        "6a90aeea-2071-4871-9dd3-9b8738c69423": {
+          "name": "Poziomy"
+        },
+        "d79baf7b-176a-4cc0-8bb6-93d974793855": {
+          "name": "Poziomy"
+        },
+        "e1194726-0b93-4ebe-a524-a36051b19654": {
+          "name": "Poziomy"
+        },
+        "94a5ed09-24e4-4733-afd4-24ff516ec2db": {
+          "name": "Poziomy"
+        },
+        "236d8f94-151e-4c5e-98d9-255293ad71fa": {
+          "name": "Poziomy"
+        },
+        "05418fbe-29fd-46d9-b2a3-3f9c552a09d9": {
+          "name": "Poziomy"
+        },
+        "99aa9251-89ad-4f11-ad8b-54cc32286b72": {
+          "name": "Poziomy"
+        },
+        "348ae6bb-4dfd-4be5-b00f-f3cf2ea5d0bd": {
+          "name": "Poziomy"
+        },
+        "3c7a5185-6a3b-41cd-a9d2-ba274e436816": {
+          "name": "Poziomy"
+        },
+        "fb982e59-8b24-4b0a-9bda-5ff9658d7c11": {
+          "name": "Poziomy"
+        },
+        "8f2a0453-ef6a-45f7-a702-53af16c82074": {
+          "name": "Poziomy"
+        },
+        "c4f2cf1c-f8f2-4e01-b627-750d01ac7fae": {
+          "name": "Poziomy"
+        },
+        "17074694-5220-4c93-8128-70e3af715344": {
+          "name": "Poziomy"
+        },
+        "e056b1c0-3ffe-4fca-89aa-094da2060f3f": {
+          "name": "Poziomy"
+        },
+        "8a8b1b99-3128-4adc-8ced-333285da77b3": {
+          "name": "Poziomy"
+        },
+        "2e329f95-3c8d-482a-83ca-d21564c9f4c6": {
+          "name": "Poziomy"
+        },
+        "f8c96c1a-f122-4c14-b110-20157785406c": {
+          "name": "Poziomy"
+        },
+        "f34d7f79-ff9c-49c8-93c9-bf0ecb5faffb": {
+          "name": "Poziomy"
+        },
+        "9da9391a-f33f-4c48-a573-a0ee6858b111": {
+          "name": "Poziomy"
+        },
+        "c91cb0fd-6857-46b3-9b26-daab7f2be908": {
+          "name": "Poziomy"
+        },
+        "44ef4c93-b89f-4a4d-bf38-4d376fcfee12": {
+          "name": "Poziomy"
+        },
+        "72d1f168-1a5e-4015-9f4e-767aadf1d12a": {
+          "name": "Poziomy"
+        },
+        "245481d9-3ff6-4f2c-9147-8af79d8c98d5": {
+          "name": "Poziomy"
+        },
+        "a0bfcf67-8e9c-4792-96ac-3f13d1ee67cb": {
+          "name": "Poziomy"
+        },
+        "37a8e94b-7199-462b-aec7-10c55e8feba6": {
+          "name": "Poziomy"
+        },
+        "ac3d127a-ec6f-4d0f-9fc6-e8750ed9ee10": {
+          "name": "Poziomy"
+        },
+        "f1a32532-fa4e-4094-b179-db7504e3fbf1": {
+          "name": "Poziomy"
+        },
+        "26b60f43-a34f-4e95-bb23-21495b5757c3": {
+          "name": "Poziomy"
+        },
+        "5511f790-bf8a-4094-aed2-b0cf6058b87b": {
+          "name": "Poziomy"
+        },
+        "c8fb0fe2-b420-42b8-b4d3-540d9c3b0d79": {
+          "name": "Poziomy"
+        },
+        "8bb15d3d-31b7-422a-b8c7-fa150f172044": {
+          "name": "Poziomy"
+        },
+        "b17d58c5-9439-455e-ae90-b73257ae8260": {
+          "name": "Poziomy"
+        },
+        "7bdacd27-cfa5-415b-aa1e-63d93c0032ac": {
+          "name": "Poziomy"
+        },
+        "e974a735-db1b-4b89-85a1-a50a4942e445": {
+          "name": "Poziomy"
+        },
+        "5347fb67-2f83-4286-9613-89dea87db66b": {
+          "name": "Poziomy"
+        },
+        "b9c84d52-3377-4e35-985e-96dd083f81fa": {
+          "name": "Poziomy"
+        },
+        "6d8b34e5-23aa-4678-a6b3-e60b1eae6ec9": {
+          "name": "Poziomy"
+        },
+        "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
           "name": "Poziomy"
         },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
@@ -4967,8 +5138,14 @@
         "dafc86e5-32a2-4e29-a95f-6566059dbf22": {
           "name": "Dzień 4"
         },
-        "d9ce0330-5c0e-41e2-837c-d4eba9da6310": {
-          "name": "Poziomy"
+        "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca": {
+          "name": "Rozgrzewka"
+        },
+        "9057adaa-50f5-48cb-b7b7-1371ef765e1c": {
+          "name": "Aktywność"
+        },
+        "c6c58364-dc46-4970-81f4-6470013dd502": {
+          "name": "Zakończenie"
         },
         "b6431e82-34e6-4e30-a587-42d2b8b4bd45": {
           "name": "Rozgrzewka"
@@ -5150,8 +5327,14 @@
         "f2cb20fc-4b5e-419f-9e06-45952d3e883a": {
           "name": "Zakończenie"
         },
-        "e618f9e4-3aaa-4aa6-a43b-498fef6c72b0": {
-          "name": "Poziomy"
+        "83194b44-89d2-4b23-8601-b26ce5caa6af": {
+          "name": "Rozgrzewka"
+        },
+        "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f": {
+          "name": "Aktywność"
+        },
+        "098e6ecf-1fe4-459a-acc3-25907450f581": {
+          "name": "Zakończenie"
         },
         "7b0be7ad-5d23-4932-b902-3a8ecac6de48": {
           "name": "Rozgrzewka"
@@ -5279,8 +5462,14 @@
         "d411cf59-7c5f-4e4e-8aba-845836bc9658": {
           "name": "Zakończenie"
         },
-        "87851095-c111-49f0-b9eb-bbe31736cef0": {
-          "name": "Poziomy"
+        "95526ba9-ab16-49b6-a013-d52be08b2753": {
+          "name": "Rozgrzewka"
+        },
+        "cf690c94-3a16-4106-8bb0-260d9a235edc": {
+          "name": "Aktywność"
+        },
+        "abdae5ff-0f80-4901-bb76-a6a3dc1f4313": {
+          "name": "Zakończenie"
         },
         "4128a59a-9016-49c1-b024-dfdf80c1c433": {
           "name": "Rozgrzewka"
@@ -5344,6 +5533,9 @@
         },
         "89d015e9-9fce-4748-a2dc-0a59c7fa8e10": {
           "name": "Zakończenie"
+        },
+        "8a636c2f-2fd5-4984-b9f1-92bd90ac5420": {
+          "name": "Rozgrzewka"
         },
         "a7af54f2-f0da-4b17-bddd-88a8ba1390b2": {
           "name": "Aktywność"
@@ -5414,8 +5606,14 @@
         "558ee427-4fa3-4820-a16b-fe7dbfea3e4a": {
           "name": "Zakończenie"
         },
-        "0f4a9cea-1a4a-4312-be99-79edfadbb6db": {
-          "name": "Poziomy"
+        "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
+          "name": "Rozgrzewka"
+        },
+        "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309": {
+          "name": "Aktywność"
+        },
+        "9df9685e-8a25-4529-a130-ccacacc23186": {
+          "name": "Zakończenie"
         },
         "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
           "name": "Rozgrzewka"
@@ -5663,8 +5861,17 @@
         "694fdbc9-0938-41a0-8646-8f04d7fb37fd": {
           "name": "Zakończenie"
         },
-        "a03605f6-2db6-446e-ba25-a91492277402": {
-          "name": "Poziomy"
+        "135ce2c3-2a89-400c-a42e-4e8b71e2a309": {
+          "name": "Rozgrzewka"
+        },
+        "675f7979-4687-4193-bd1e-10332a1ac050": {
+          "name": "Aktywność"
+        },
+        "a427afac-1d4e-477c-8efb-2f2813326ece": {
+          "name": "Zakończenie"
+        },
+        "75941c07-de18-45db-b260-4cd48e0f1bf0": {
+          "name": "Wersja rozszerzona"
         },
         "a80e7362-2c08-40a7-9c59-b0d89cf1df88": {
           "name": "Rozgrzewka"
@@ -5771,8 +5978,14 @@
         "a4b0740b-a9d1-41f7-9d20-00f1d77f878d": {
           "name": "Zakończenie"
         },
-        "5618c307-5639-4715-8735-c545ded5de85": {
-          "name": "Poziomy"
+        "a0381dd6-760a-46a9-9217-7e7744252d97": {
+          "name": "Rozgrzewka"
+        },
+        "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3": {
+          "name": "Aktywność"
+        },
+        "d5f9994e-0aec-4d0f-a93a-adb8a3b91d33": {
+          "name": "Zakończenie"
         },
         "a0692a63-008e-4013-9089-9f9c9b22d67c": {
           "name": "Rozgrzewka"

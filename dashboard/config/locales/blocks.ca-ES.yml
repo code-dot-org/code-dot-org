@@ -731,7 +731,7 @@ ca:
           CONDITION:
             '"when"': quan
             '"while"': mentres
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'cada {N} {UNIT} '
         options:
           UNIT:

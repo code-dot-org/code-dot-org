@@ -35,7 +35,7 @@ class PdProgramRegistration < Form
 
       result[:dietary_needs_ss] = required_multi_enum data, :dietary_needs_ss
       if result[:dietary_needs_ss].class != FieldError
-        result[:dietary_needs_other_s] = stripped data [:dietary_needs_other_s] if result[:dietary_needs_ss].include? OTHER
+        result[:dietary_needs_other_s] = stripped data[:dietary_needs_other_s] if result[:dietary_needs_ss].include? OTHER
         result[:allergy_list_s] = stripped data[:allergy_list_s] if result[:dietary_needs_ss].include? FOOD_ALLERGY
       end
 
@@ -186,7 +186,7 @@ class PdProgramRegistration < Form
   def self.process_(form)
     # Save this form id in the relevant dashboard pd_teacher_application row, if applicable
     id = form[:id]
-    data = JSON.load(form[:data])
+    data = JSON.parse(form[:data])
     application_id = data['pd_teacher_application_id_i']
     if application_id
       DASHBOARD_DB[:pd_teacher_applications].where(id: application_id).update(program_registration_id: id)

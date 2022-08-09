@@ -165,7 +165,7 @@
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "loops/aquatic/unversioned": {
-          "word": "boucles",
+          "word": "Boucles",
           "definition": "L'action de faire quelque chose encore et encore."
         },
         "encryption/hoc-encryption/unversioned": {
@@ -539,7 +539,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "sequencing/coursec/2021": {
-          "word": "Séquençage",
+          "word": "Séquencement",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "programming/coursec/2021": {
@@ -638,7 +638,7 @@
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "sequencing/express/2021": {
-          "word": "Séquençage",
+          "word": "Séquencement",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "program/express/2021": {
@@ -829,6 +829,10 @@
         "machine_learning/csd/2021": {
           "word": "Apprentissage Automatique",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
+        },
+        "user/csd/2021": {
+          "word": "Utilisateur",
+          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
         },
         "bug/csd/2021": {
           "word": "Bug",

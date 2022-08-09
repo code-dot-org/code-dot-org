@@ -402,7 +402,6 @@ se:
     popup:
       progress_for_user: "%{name} ovdáneapmi"
       progress: Du ovdáneapmi
-      lines: 'Oktiibuot linjját kodas: %{lines}'
       close: GIDDE
       mastery: Konseaptat
       puzzle_map: Dásit
@@ -886,18 +885,6 @@ se:
       daid. Fuomáš ahte oahpahusreaiddut nugo JavaScript eai soaitte leat olatmuttos
       ohppiide ovdal go don eksplisihtta dohkkehat ođastuvvon eavttuid.
     review_terms: Loga ođastuvvon eavttuid
-  donor_interstitial:
-    title: Du nuvttá CS kurssaid lea dahkan vejolažžan...
-    subtitle: Mii háliidit giitit daid árvvas skeŋkejeddjiid geaid doarjagat leat
-      dahkan Code.org lihkostuvvama vejolažžan. Mii leat geatnegahtton doalahit Code.org
-      nuvttá skuvllaide ja ohppiide, globálalaččat, giitu joatkás árvvasvuhtii min
-      [skeŋkejeaddjit](%{donors_url})!
-    local_supporters: Báikkálaš Doarjjaolbmot
-    global_supporters: Globála Doarjjaolbmot
-    support_codeorg_1: Juohke ruhta mii skeŋkejuvvo Code.org:i addá vejolašvuođaid
-      eanet ohppiide.
-    support_codeorg_2: "[Skeŋke dál](%{donate_url}) doarjun dihte Code.org."
-    get_started: Boađe johtui Code.org:s
   school_info_interstitial:
     title: Mii hálidit buktit DihtorDiehtaga juohke oahppái  - veahket min oaidnit
       min ovdáneami!
@@ -1167,6 +1154,7 @@ se:
         music: Musihkka
         art: Dáidda
         other: 'Eará:'
+        na: Ii leat guoskevaš
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1174,7 +1162,8 @@ se:
         khan: Khan Academy
         scratch: Scratch
         tynker: Tynker
-        other: 'Eará:'
+        other: Eará
+        na: Ii leat guoskevaš
       robotics:
         grok: Grok Learning
         lego: LEGO Education
@@ -1183,7 +1172,8 @@ se:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Eará:'
+        other: Eará
+        na: Ii leat guoskevaš
       workshop_course:
         csf_af: CS Vuođut (Kurssat A-F)
         csf_express: CS Vuođut (Pre-Ekspreassa or Ekspreassa)

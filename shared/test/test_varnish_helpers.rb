@@ -60,15 +60,15 @@ class VarnishHelperTest < Minitest::Test
       "#{x} == true"
     end
     output = if_else(items, condition) {|x| x}
-    assert_equal <<STR.strip, output
-if (a == true) {
-  a
-} else if (c == true) {
-  c
-} else {
-  d
-}
-STR
+    assert_equal <<~STR.strip, output
+      if (a == true) {
+        a
+      } else if (c == true) {
+        c
+      } else {
+        d
+      }
+    STR
   end
   HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   BEHAVIOR = {
@@ -97,37 +97,37 @@ STR
 
   def test_setup_behavior
     output = setup_behavior(BEHAVIOR, 'req', &method(:process_request))
-    assert_equal <<STR.strip, output
-if (req.http.host ~ "(dashboard|studio)") {
-  # Allow all request cookies.
-} else {
-  if (req.url ~ "^/api/.*#{END_URL_REGEX}") {
-    # Allow all request cookies.
-  } else if (req.url ~ "^/#{END_URL_REGEX}") {
-    if(cookie.isset("1")) {
-      set req.http.X-COOKIE-1 = cookie.get("1");
-    }
-    cookie.filter_except("1");
-  } else {
-    cookie.filter_except("NO_CACHE");
-    set req.url = regsub(req.url, \"\\?.*$\", \"\");
-  }
-}
-STR
+    assert_equal <<~STR.strip, output
+      if (req.http.host ~ "(dashboard|studio)") {
+        # Allow all request cookies.
+      } else {
+        if (req.url ~ "^/api/.*#{END_URL_REGEX}") {
+          # Allow all request cookies.
+        } else if (req.url ~ "^/#{END_URL_REGEX}") {
+          if(cookie.isset("1")) {
+            set req.http.X-COOKIE-1 = cookie.get("1");
+          }
+          cookie.filter_except("1");
+        } else {
+          cookie.filter_except("NO_CACHE");
+          set req.url = regsub(req.url, \"\\?.*$\", \"\");
+        }
+      }
+    STR
     output = setup_behavior(BEHAVIOR, 'bereq', &method(:process_response))
-    assert_equal <<STR.strip, output
-if (bereq.http.host ~ "(dashboard|studio)") {
-  # Allow set-cookie responses.
-} else {
-  if (bereq.url ~ "^/api/.*#{END_URL_REGEX}") {
-    # Allow set-cookie responses.
-  } else if (bereq.url ~ "^/#{END_URL_REGEX}") {
-    # Allow set-cookie responses.
-  } else {
-    unset beresp.http.set-cookie;
-  }
-}
-STR
+    assert_equal <<~STR.strip, output
+      if (bereq.http.host ~ "(dashboard|studio)") {
+        # Allow set-cookie responses.
+      } else {
+        if (bereq.url ~ "^/api/.*#{END_URL_REGEX}") {
+          # Allow set-cookie responses.
+        } else if (bereq.url ~ "^/#{END_URL_REGEX}") {
+          # Allow set-cookie responses.
+        } else {
+          unset beresp.http.set-cookie;
+        }
+      }
+    STR
   end
 
   def ruby_behavior(config, path)

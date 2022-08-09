@@ -25,6 +25,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   alias_attribute :categories, :programming_environment_categories
   has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
+  has_many :programming_classes, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
   after_destroy :remove_serialization
@@ -86,11 +87,7 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def studio_documentation_path
-    if DCDO.get('use-studio-code-docs', false) && ['applab', 'gamelab', 'spritelab', 'weblab'].include?(name)
-      "/docs/#{name}"
-    else
-      programming_environment_path(name)
-    end
+    programming_environment_path(name)
   end
 
   def summarize_for_lesson_edit
@@ -132,10 +129,26 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def categories_for_navigation
-    categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_navigation", force: !Script.should_cache?) do
+      categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
+    end
   end
 
   def categories_for_get
-    categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_get", force: !Script.should_cache?) do
+      categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+    end
+  end
+
+  def self.get_published_environments_from_cache
+    Rails.cache.fetch("published_programming_environments", force: !Script.should_cache?) do
+      @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
+    end
+  end
+
+  def self.get_from_cache(name)
+    Rails.cache.fetch("programming_environment/#{name}", force: !Script.should_cache?) do
+      ProgrammingEnvironment.find_by_name(name)
+    end
   end
 end

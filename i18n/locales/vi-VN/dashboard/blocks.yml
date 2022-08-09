@@ -4,6 +4,22 @@ vi:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': cực nhỏ
+            '0.75': nhỏ
+            '1.00': trung bình
+            '2.00': lớn
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': cực nhỏ
+            '0.75': nhỏ
+            '1.00': trung bình
+            '2.00': lớn
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} luân phiên giữa \n{MOVE1} và {MOVE2} sau mỗi {N} nhịp"
         options:
@@ -909,6 +925,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -954,6 +971,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1051,7 +1069,7 @@ vi:
         text: vẽ đường {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: cạnh chặn {SPRITE} di chuyển
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'mỗi {N} {UNIT} '
         options:
           UNIT:
@@ -1141,6 +1159,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} đang chạm vào các cạnh"
@@ -1184,6 +1203,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'
@@ -1207,8 +1227,6 @@ vi:
           EFFECT:
             '"pop"': nổ
             '"rain"': mưa
-      gamelab_makeNewScaledSprite:
-        text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNumSprites:
@@ -1221,6 +1239,13 @@ vi:
             '90': xuống
             '180': trái
             '270': trên
+      gamelab_makeSpritesWithSize:
+        text: tạo {NUM} nhân vật {SIZE} {COSTUME} mới
+        options:
+          SIZE:
+            '30': nhỏ
+            '50': trung bình
+            '100': lớn
       gamelab_mirrorSprite:
         text: "{SPRITE} mặt {DIRECTION}"
         options:
@@ -1422,6 +1447,46 @@ vi:
         text: "{SPRITE} nói {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE} nói {TEXT1} trong {NUM} giây"
+      gamelab_spriteThink:
+        text: "{SPRITE} nghĩ {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE} nghĩ {TEXT1} trong {NUM} giây"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I am hungry, too."': Ta cũng đang đói.
+            '"I only want the biggest goat."': Ta chỉ cần con dê mập nhất.
+            '"I''m a green troll."': Ta là người khổng lồ xanh lá.
+            '"No one will cross my bridge."': Không ai có thể băng qua cây cầu của ta.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"Time to make friends with the sheep."': Tới lúc làm bạn với con cừu rồi.
+            '"She''ll never recognize me now."': Giờ nó sẽ không thể nào nhận ra ta.
+            '"This costume keeps me warm."': Bộ trang phục này giúp ta giữ ấm.
+            '"I am actually a wolf."': Thực ra ta là sói.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I''m feeling sleepy."': Buồn ngủ ghê.
+            '"No one could ever beat me."': Không kẻ nào có thể đánh bại ta.
+            '"I''ve done this race before."': Đường đua này ta đã từng chinh phục.
+            '"My feet are bigger than Turtle''s feet."': Chân ta bự hơn chân Rùa.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I''m so hungry."': Đói quá.
+            '"I''m a visitor in this town."': Ta là du khách của thị trấn này.
+            '"If we share, we''ll all have something to eat. "': Nếu chia nhau thì cả hai chúng ta đều có đồ ăn.
+            '"I''ll trick everyone into giving me their food."': Ta sẽ lừa tất cả mọi người đưa đồ ăn cho ta.
       gamelab_startAvoiding:
         text: "{SPRITE} bắt đầu né {TARGET}"
       gamelab_startFollowing:

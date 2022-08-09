@@ -364,6 +364,7 @@
   homepage_slot_text_link_buy: "S'investir"
   homepage_slot_text_link_donate: "Faire un don"
   homepage_slot_text_link_shop: "T-shirts, casquettes & plus"
+  homepage_slot_text_link_thebadguys: "Codez avec Les Bad Guys."
   homepage_slot_text_link_administrators: "Créer une classe d'informatique dans votre école"
   homepage_gallery_header: "Des %{project_count} millions de projets créés sur Code.org"
   homepage_header_donors: "Code.org remercie tout ceux qui l'ont soutenu"
@@ -962,6 +963,7 @@
   coursee-2020_name: Cours E (2020)
   coursef-2020_name: Cours F (2020)
   coursed-2021_name: Cours D (2021)
+  coursed-2022_name: Cours D (2021)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
   express-2019_name: Cour rapide (2019)
@@ -1082,10 +1084,16 @@
   coursed-2021_gradelevel: 4ème ou plus
   coursee-2021_gradelevel: De 8 à 12 ans
   coursef-2021_gradelevel: Seconde ou plus
+  coursea-2022_gradelevel: CM2 ou plus
+  courseb-2022_gradelevel: 6ème ou plus
+  coursec-2022_gradelevel: 5ème ou plus
+  coursed-2022_gradelevel: 4ème ou plus
+  coursee-2022_gradelevel: De 8 à 12 ans
+  coursef-2022_gradelevel: Seconde ou plus
   accelerated_gradelevel: "De 10 à 18 ans"
   codeorg_platformtext: "Navigateurs récents, smartphones, tablettes"
   codeintl_platformtext: "Navigateurs récents, smartphones, tablettes"
-  thinkersmithspanish_platformtext: "Débranché"
+  thinkersmithspanish_platformtext: "Déconnecté"
   khan_platformtext: "Navigateurs web récents"
   khanes_platformtext: "Navigateurs web récents"
   khanpt_platformtext: "Navigateurs web récents"
@@ -1218,6 +1226,12 @@
   coursed-2021_shortdescription_congrats: Les élèves développent leur compréhension des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent la citoyenneté numérique.
   coursee-2021_shortdescription_congrats: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
   coursef-2021_shortdescription_congrats: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
+  coursea-2022_shortdescription_congrats: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
+  courseb-2022_shortdescription_congrats: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
+  coursec-2022_shortdescription_congrats: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
+  coursed-2022_shortdescription_congrats: Les élèves développent leur compréhension des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent la citoyenneté numérique.
+  coursee-2022_shortdescription_congrats: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
+  coursef-2022_shortdescription_congrats: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
   codeorg_longdescription: "Apprends les concepts de base de l'informatique avec la programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies. Découvre les boucles «&#160;Répéter&#160;», les instructions conditionnelles et les algorithmes de base. Disponibles en 34 langues."
   codeintl_longdescription: "Apprends les concepts de base de l'informatique avec le glisser-déposer. Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs Zombies. Apprends les notions de boucles, d'instructions conditionnelles et des algorithmes de base. Disponible en 34 langues."
   thinkersmithspanish_longdescription: "En utilisant un « Robot Vocabulaire » prédéfini, les élèves découvriront comment se guider pour exécuter des tâches spécifiques sans en discuter au préalable. Cette leçon apprend aux enfants la relation entre les symboles et les actions, ainsi que l'inestimable capacité du débogage."
@@ -1433,7 +1447,7 @@
   sphero_beyond_longdescription: "Que vous soyez un éducateur ou un parent, les leçons SPRK donnent aux enfants un cours accéléré et amusant de programmation de robots, tout en affûtant leurs compétences en mathématiques et en sciences."
   compatibility_hide_this_warning: "Cacher l'avertissement"
   compatibility_unsupported_browser: "Votre navigateur n'est pas supporté. Merci de le mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez essayer d’afficher la page, mais la fonctionnalité risque d’être rompue."
-  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
+  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas compatible. Merci de mettre votre navigateur à jour avec [un des navigateurs compatibles avec nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent d’être compromises. "
   flappy_shortcode: "battre des ailes"
   header_home: "Accueil"
   header_my_dashboard: "Mon Tableau de Bord"
@@ -1469,7 +1483,7 @@
   header_about: "À propos"
   header_teacher_community: "Communauté des enseignants"
   header_help_support: 'Aide et support '
-  header_report_bug: "Rapporter un problème"
+  header_report_bug: "Signaler un problème"
   header_report_abuse: "Signaler un abus"
   header_legal: "Confidentialité et légal"
   header_legal_privacy: "Politique de confidentialité"
@@ -1704,7 +1718,7 @@
   hoc2021_mc_mee_villages_description: 'Apprenez les bases du codage et explorez la diversité et l''inclusion avec vos élèves dans Minecraft : Education Edition.'
   hoc2021_mc_mee_ai_title: "AI pour de bon"
   hoc2021_mc_mee_ai_description: 'Explorez l''AI avec vos élèves et apprenez à coder dans Minecraft : Education Edition.'
-  footer_powered_by_aws: "Fourni par Amazon Web Services"
+  footer_powered_by_aws: "Amazon Web Services et le logo « Powered by AWS » sont des marques déposées d'Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d'autres pays. "
   footer_built_on_github: "Construit sur GitHub de Microsoft"
   codebytes_skinny_banner_title: "Rejoignez-nous du 7 au 11 décembre pour nos mini-leçons en direct CodeBytes !"
   codebytes_skinny_banner_description: 'Rejoignez-nous chaque jour de la CS Education Week pour CodeBytes, des leçons interactives d''informatique de 20 minutes. En streaming en direct deux fois par jour, CodeBytes est un excellent moyen pour les étudiants de participer à un #HourOfCode virtuel !'

@@ -6329,3 +6329,179 @@ pl-PL:
         display_name: Ćwiczenia
       csd-pre-survey-levelgroup_21_22:
         title: 'Ankieta uczniowska przed kursem CS Discoveries '
+      Choose 2 Test:
+        answers:
+        - text: Wiersz 2
+          correct: true
+        - text: Wiersz 3
+          correct: true
+        - text: Wiersz 4
+        - text: Wiersz 5
+        questions:
+        - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
+            Wybierz <u>dwie</u> odpowiedzi
+      Eval Contracts F:
+        answers:
+        - tekst|obraz|łańcuch|liczba|łańcuch
+        title: Umowa tekstowa
+      Multi Horizontal Scroll Test:
+        answers:
+        - text: 3 bity
+        - text: 4 bity
+        - text: 5 bitów
+        - text: 6 bitów
+        - text: 7 bitów
+          correct: true
+        - text: 12 bitów
+        questions:
+        - text: |-
+            Standardowa klawiatura QWERTY składa się z 47 klawiszy, które mogą umieszczać znaki na ekranie. Każdy z tych klawiszy może również wyświetlać drugi znak, przytrzymując jednocześnie klawisz „Shift” (Załóżmy, że wszystkie inne klawisze są ignorowane w tym pytaniu).
+
+            Ile bitów potrzebujesz, aby zakodować wszystko, co można wpisać na tej klawiaturze?
+        title: 'Ocena: kodowanie tekstu'
+      Submittable Multi:
+        answers:
+        - text: niebieski
+        - text: zielony
+        - text: morski
+        - text: żółty
+        - text: oczywiście prawdziwy pomarańczowy
+          correct: true
+        - text: czerwony
+        questions:
+        - text: 'Jaki jest Twój ulubiony kolor? '
+        title: Możliwość wielokrotnego wyboru
+      Test Contained Multi:
+        answers:
+        - text: '0'
+          feedback: Nie, to jest 1 - 1.
+        - text: '1'
+          feedback: Nie, to jest 1 * 1.
+        - text: '2'
+          correct: true
+          feedback: Tak, jesteś geniuszem
+        - text: '4'
+          feedback: Nie, to nie jest nawet blisko.
+        questions:
+        - text: Ile jest 1 + 1?
+        content1: Oto kilka informacji.
+        title: Zawiera wiele
+        markdown: 'Test **zaznacz** _tutaj_
+
+'
+      allthethings_external_displayed_as_unplugged:
+        content1: opis tutaj
+        markdown: Ten poziom zewnętrzny powinien być wyświetlany jako bez komputera.
+      allthethings_external_not_displayed_as_unplugged:
+        content1: opis tutaj
+        markdown: Ten poziom zewnętrzny nie powinien być wyświetlany jako bez komputera.
+      contained_Choose_2_Test:
+        answers:
+        - text: Wiersz 2
+          correct: true
+        - text: Wiersz 3
+          correct: true
+        - text: Wiersz 4
+        - text: Wiersz 5
+        questions:
+        - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
+            Wybierz <u>dwie</u> odpowiedzi
+        markdown: "To pytanie używa robota w siatce kwadratów. Robot jest przedstawiony
+          jako trójkąt, który początkowo jest skierowany w prawą stronę siatki. Robot
+          jest przemieszczany zgodnie z poniższymi instrukcjami.\n\n| Instrukcja       |
+          Wyjaśnienie |\n|--------------------|--------|\n|`Idź do przodu` | Robot
+          porusza się o jedno pole do przodu w kierunku, w którym jest zwrócony|\n|`Skręć
+          w prawo` | Robot obraca się w miejscu o 90 stopni zgodnie z ruchem wskazówek
+          zegara (tj. wykonuje obrót w prawo). |\n|`Skręć w lewo` | Robot obraca się
+          w miejscu o 90 stopni przeciwnie do ruchu wskazówek zegara (tj. wykonuje
+          obrót w lewo). |\n|`POWTÓRZ n RAZY` | Blok instrukcji zawarty między nawiasami
+          klamrowymi {} jest powtarzany n razy. |\n  \n  \nRozważ następujący niepoprawny
+          program, który ma na celu przemieszczenie robota po obwodzie siatki poniżej,
+          jak wskazują strzałki.\n\n![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png)\n\n![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n"
+      contained_Choose_2_Test_2:
+        answers:
+        - text: Wiersz 2
+          correct: true
+        - text: Wiersz 3
+          correct: true
+        - text: Wiersz 4
+        - text: Wiersz 5
+        questions:
+        - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
+            Wybierz **dwie** odpowiedzi
+        markdown: |
+          Rozważ następujący niepoprawny program, który ma na celu przemieszczenie robota po obwodzie siatki poniżej, jak wskazują strzałki.
+          ```
+          Wiersz 1: POWTÓRZ 4 RAZY
+                  {
+          Wiersz 2:   Idź do przodu
+          Wiersz 3:   Skręć w prawo
+          Wiersz 4:   POWTÓRZ 4 RAZY
+                          {
+          Line 5:        Move Forward
+                     }
+          Wiersz 6:   Skręć w prawo
+                  }
+          ```
+          ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: Która strzałka doprowadzi Flurba do skarbu?
+        title: Test wielokrotnego wyboru
+      test questionless single multi:
+        answers:
+        - text: |-
+            Wywoływanie parametrów funkcji
+             ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)
+        - text: "Definiowanie parametrów funkcji  \n ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)"
+          correct: true
+        - text: |-
+            Przemieszczanie żółwia po ekranie
+             ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)
+        - text: |-
+            Nadawanie kierunku żółwiowi
+             ![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)
+        - text: |-
+            Ustawianie właściwości pióra
+             ![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)
+        - text: Żadne z powyższych
+        markdown: Rozważ te różne zastosowania `randomNumber`. Każda odpowiedź opisuje
+          zastosowanie i pokazuje przykład kodu. Które z poniższych NIE jest prawidłowym
+          użyciem `randomNumber`
+      Sample CSP Assessment:
+        title: Przykład sprawdzianu CSP
+      Video - The Future of Big Data:
+        markdown: |+
+          # Przyszłość Giga Danych
+
+          [![](https://images.code.org/ff14c09d2036ff65be8af3dd63d2da24-image-1571251950161.52.16 AM.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0)
+
+          [Source](http://www.fwthinking.com/video/clips/future-big-data-video/)
+
+
+
+
+      PS U3 Assessment1 new:
+        title: Ocena testu 1
+      CSP pre-assessment survey:
+        title: Ankieta wstępna
+      PDK5 Foundations F:
+        markdown: |+
+          ## Edukacja informatyczna
+
+          Czy postrzegasz informatykę jako podstawową umiejętność swoich uczniów? Dlaczego tak lub dlaczego nie?
+
+          <div id="discourse-comments"></div>
+
+
+      allthethings_bubble_choice:
+        description: To jest poziom BubbleChoice. Wybierz jedno z poniższych ćwiczeń,
+          aby przećwiczyć to, czego się nauczyłeś!
+        display_name: 'Bąbelkowy wybór: wszystkie wybory'

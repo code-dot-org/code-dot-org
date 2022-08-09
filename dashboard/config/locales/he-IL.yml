@@ -389,7 +389,6 @@ he:
     popup:
       progress_for_user: ההתקדמות של %{name}
       progress: ההתקדמות שלך
-      lines: 'סה כ שורות קוד: %{lines}'
       close: קרוב
       mastery: עקרונות
       puzzle_map: שלבים
@@ -649,6 +648,8 @@ he:
       title: מסיבת ריקודים
     dance-2019:
       title: מסיבת ריקודים
+    poem-art:
+      title: אומנות השירה
     hoc:
       title: מבוך קלאסי
       body: נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.
@@ -1072,10 +1073,10 @@ he:
         other: 'אחר:'
       resources:
         kodable: Kodable
-        other: 'אחר:'
+        other: אחר
       robotics:
         kodable: Kodable
-        other: 'אחר:'
+        other: אחר
       email_opt_in:
         opt_in_yes: כן
         opt_in_no: לא

@@ -555,6 +555,12 @@
         "intro_to_design_mode/csd/2021": {
           "type": "Video"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Video"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Kuidas arvutid töötavad: riistvara ja tarkvara",
           "type": "Video"
@@ -659,6 +665,9 @@
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Vastastikune hindamine"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Video"

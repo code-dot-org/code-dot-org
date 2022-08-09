@@ -100,8 +100,8 @@
         "2-3 Maze 15": "Gebruik twee lussen om naar het biggetje te gaan met minder blokken.",
         "2-3 Maze 16": "Breng me naar de zonnebloem. Gebruik een lus!",
         "2-3 Maze 16 before": "Breng me naar het biggetje.",
-        "2-3 Maze 2": "Het biggetje werkt me op mijn zenuwen. Help me bij hem te komen!",
-        "2-3 Maze 3": "Volg het pad en breng me naar het malle varken. Vermijd de\nTNT, want anders zullen de veren in het rond vliegen!",
+        "2-3 Maze 2": "Breng me naar de groene slechterik! (Pas op voor TNT)",
+        "2-3 Maze 3": "Rustig blijven, help me het slechte biggetje te vinden. Anders word ik misschien nog boos!",
         "2-3 Maze 4": "Breng me naar de groene slechterik! (Pas op voor TNT)",
         "2-3 Maze 6": "Rustig blijven, help me het slechte biggetje te vinden. Anders word ik misschien nog boos!",
         "2-3 Maze 7": "Breng me naar de groene slechterik! (Pas op voor TNT)",
@@ -2133,7 +2133,15 @@
         "CSD U5 black white images pixelation 5_2021": "Teken wat je maar wil",
         "CSD U5 black white images pixelation_2021": "Vervolledig de X vorm door 0'en en 1'en in te voeren",
         "CSDU6 arrays select rainbow_2021": "Schrijf de inhoud van de array naar het scherm in numerieke volgorde. (Klik hier om de volledige instructies te zien)",
-        "U4 Model Design 1_2021": "Voeg een grote rode knop toe aan je scherm met behulp van Design Mode. (Klik voor volledige instructies)"
+        "U4 Model Design 1_2021": "Voeg een grote rode knop toe aan je scherm met behulp van Design Mode. (Klik voor volledige instructies)",
+        "2-3 Maze 1": "Breng me naar de groene slechterik! (Pas op voor TNT)",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "We beginnen met een 4x4 afbeelding die Maddie in de video gecreëerd heeft. Jouw taak is om het 4x4 raster op te vullen, gebruik makende van 12 bits/pixel. Dit zijn de vereisten:\nRij 1 - invullen met tinten rood, Rij 2 - tinten groen, Rij 3 - tinten blauw, Rij 4 - tinten grijs.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "We beginnen met de 4x2 afbeelding die Maddie aan het creëren was, maar we lieten de laatste twee vierkanten leeg. Vervolledig de afbeelding door uit te zoeken welke twee kleuren missen en codeer ze.",
+        "Artist Autorun Test": "Plaats de functie nu in de herhaling om deze 3 vierkanten te tekenen.",
+        "MC Agent Freeplay": "**Vrij spel:**  Tijd om zelf op ontdekking te gaan!",
+        "Overworld Chop Tree - allthethings": "Hout is een zeer belangrijke grondstof. Veel dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \\“vernietig blok\\”-commando om hem om te hakken.",
+        "U1L13 Text Compression": "Zoek naar patronen (herhaalde woorden of stukken van een zin) in de tekst. Voeg de patronen die je ziet toe aan het woordenboek aan de rechterkant. Wanneer je woorden toevoegt aan het woordenboek, zal het symbool voor die vermelding opgenomen worden in de tekst in plaats van het oorspronkelijke patroon.",
+        "allthethings-anigif-instructions": "Beweeg me naar het Oosten om bij het varken te komen!"
       }
     }
   }

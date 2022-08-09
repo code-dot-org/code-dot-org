@@ -1,0 +1,47 @@
+{
+  "ms-MY": {
+    "data": {
+      "standards": {
+        "ccmath/MP.1": {
+          "description": "Memahami masalah dan tabah dalam menyelesaikannya"
+        },
+        "ccmath/MP.2": {
+          "description": "Alasan secara abstrak dan kuantitatif"
+        },
+        "ccmath/MP.5": {
+          "description": "Menggunakan alatan yang sesuai secara strategik"
+        },
+        "ccmath/MP.6": {
+          "description": "Menjaga kejituan"
+        },
+        "ccmath/MP.7": {
+          "description": "Mencari dan menggunakan struktur"
+        },
+        "ccmath/MP.8": {
+          "description": "Mencari dan menyatakan kenalaran dalam penaakulan berulang"
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Tentukan makna kata dan frasa kerana ia digunakan dalam teks, termasuk makna kiasan, konotatif dan teknikal; menganalisis cara pengarang menggunakan dan menyempurnakan makna istilah atau istilah-istilah utama sepanjang teks (misalnya, cara Madison mentakrifkan"
+        },
+        "ccmath/1.OA.1": {
+          "description": "Gunakan penambahan dan penolakan dalam 20 untuk menyelesaikan masalah perkataan yang melibatkan situasi menambah, mengambil, menyatukan, memisahkan dan membandingkan, dengan yang tidak diketahui pada semua kedudukan, misalnya, dengan menggunakan objek, lukisan dan persamaan dengan simbol "
+        },
+        "ccmath/2.OA.1": {
+          "description": "Gunakan penambahan dan penolakan dalam 100 untuk menyelesaikan masalah perkataan satu dan dua langkah yang melibatkan situasi menambah, mengambil, menyatukan, memisahkan dan membandingkan, dengan yang tidak diketahui pada semua kedudukan, misalnya, dengan menggunakan lukisan dan persamaan dengan sy "
+        },
+        "ccela/11-12.L.6": {
+          "description": "Memperoleh dan menggunakan dengan tepat perkataaan dan frasa akademik am dan khusus domain, mencukupi untuk membaca, menulis, bercakap dan mendengar pada peringkat kesediaan kolej dan kerjaya; menunjukkan kebebasan dalam mengumpulkan pengetahuan perbendaharaan kata apabila mempertimbangkannya"
+        },
+        "ccela/4.L.6": {
+          "description": "Memperoleh dan menggunakan dengan tepat perkataan dan frasa akademik am dan khusus domain mengikut gred, termasuk yang menunjukkan tindakan, emosi, atau keadaan yang tepat (misalnya disoal, merengek, tergagap) dan yang merupakan asas kepada topik tertentu (misalnya"
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Darabkan nombor bulat hingga empat digit dengan nombor bulat satu digit dan darabkan dua nombor dua digit, dengan menggunakan strategi berdasarkan nilai tempat dan sifat operasi. Gambarkan dan terangkan pengiraan dengan menggunakan persamaan, segi empat tepat"
+        },
+        "ccmath/MP.4": {
+          "description": "Model dengan matematik"
+        }
+      }
+    }
+  }
+}

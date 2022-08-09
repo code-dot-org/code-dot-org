@@ -1,0 +1,44 @@
+{
+  "zh-TW": {
+    "data": {
+      "category": {
+        "ccela/SL": {
+          "description": "說話與聆聽"
+        },
+        "ccmath/MP": {
+          "description": "數學實務"
+        },
+        "csta2011/CPP": {
+          "description": "運算練習與程式設計"
+        },
+        "csta2011/CT": {
+          "description": "計算機式思維"
+        },
+        "iste/1": {
+          "description": "學生展現出創意思維、建構知識，以及使用科技來開發創新產品與流程。"
+        },
+        "iste/4": {
+          "description": "學生運用批判思維技巧，計畫與進行研究、管理專案、解決問題，並使用適當的數位工具和資源做出知情的決定。"
+        },
+        "ccela/L": {
+          "description": "語言"
+        },
+        "ccela/RI": {
+          "description": "閱讀資訊文件"
+        },
+        "ccela/W": {
+          "description": "寫作"
+        },
+        "csta2011/CL": {
+          "description": "協同合作"
+        },
+        "iste/2": {
+          "description": "學生會使用數位媒體與環境一起溝通和合作，包括遠端合作，以支援個人學習並協助別人學習。"
+        },
+        "csta/IC": {
+          "description": "運算的影響"
+        }
+      }
+    }
+  }
+}

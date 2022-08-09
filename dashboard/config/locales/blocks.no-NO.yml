@@ -2,6 +2,22 @@
 'no':
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': middels
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': middels
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -924,7 +940,7 @@
         text: er flyttbar
       gamelab_edgesDisplace:
         text: kantene blokkerer {SPRITE} fra å flytte seg
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'hver {N} {UNIT} '
         options:
           UNIT:
@@ -1053,6 +1069,12 @@
             '90': ned
             '180': venstre
             '270': opp
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': middels
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:

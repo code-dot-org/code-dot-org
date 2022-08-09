@@ -1,11 +1,25 @@
 name 'CSA U7 Assessment 2022 q11'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong 'It returns the value of the first element in `numList`.'
+wrong 'It returns the value of the last element in `numList`.'
+wrong 'It returns the sum of the elements in `numList`.'
+right 'It returns the number of the elements in `numList`.'
+wrong 'It returns nothing due to infinite recursion.'
 
 markdown <<MARKDOWN
-question
+Consider the following method.
+
+```
+public static int mystery(ArrayList<Integer> numList) {
+  if (numList.size() == 0) {
+    return 0;
+  }
+  else {
+    int val = numList.remove(0);
+    return 1 + mystery(numList);
+  }
+}
+```
+
+Which of the following best describes the value returned by the method?
 MARKDOWN

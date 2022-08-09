@@ -2,3 +2,97 @@
 title: Hour of Code How-to Guide for parents
 ---
 
+# How to do an Hour of Code with your child
+
+Isang simple at nakakatuwang paraan ang pagsubok ng Hour of Code upang ipakilala ang anak mo sa computer science, marahil sa unang pagkakataon. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+
+Maaari kang sumali sa sampu-sampung milyong mga mag-aaral sa buong mundo sa pandaigdigang event na ito. Sama-sama, maaari nating bigyan ng inspirasyon ang mga bata na matuto, alisin ang mga stereotype, at tulungan ang mga bata na tumuklas ng bagong interes. Pinakamaganda sa lahat, nasa iyo na ang lahat ng kailangan mo upang dalhin ang Hour of Code sa iyong tahanan!
+
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
+
+<h3>Anong kailangan ko upang makapagsimula?  </h3>
+
+Madaling gumana ang Hour of Code - kahit sa mga baguhan. Hindi mo kailangan ng karanasan sa computer science o pagtuturo upang gawin ang isang nakakatuwang aktibidad para sa iyong mga anak na parehong natututo at tumatawa.
+
+You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+
+* * *
+
+## 1) Tuklasin ang mga aktibidad at tutorial.
+
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+
+There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. Hinihikayat ka naming tingnan nang maaga ang ilan sa iyong mga opsyon upang makatulong ka sa paggabay sa iyong anak patungo sa mga pagsasanay na masisiyahan siya.
+
+Ang lahat ng aming mga aktibidad ay isinasama ang paglutas ng problema at kritikal na pag-iisip sa kasiyahan at pagkamalikhain, ngunit narito ang ilang paborito ng mag-aaral:
+
+- For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Para sa batang gustong-gusto na matuto: <a href="https://code.org/oceans">AI para sa mga Karagatan</a> o <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Gumawa ng Musika mula sa Pinaka-umpisa</a> 
+
+<h3>  Mahinang tech o walang tech?  </h3>
+
+<p>If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.</p>
+
+<p><a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg"></a></p>
+
+<p>You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!</p>
+
+<h2>  2) Maghanda nang maaga  </h2>
+
+<p>Ngayon na mayroon kang ilang mga tutorial, maaaring makatulong na subukan ang mga aktibidad na ito sa device mo bago ipakilala ang mga ito sa iyong anak.</p>
+
+<p><a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg"></a></p>
+
+<h3>May higit sa iisang bata sa bahay?  </h3>
+
+<p>Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.</p>
+
+<p>If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Hinihikayat ng pair programming ang mga bata na magtulungan. Kapag nag pares-pares sila, tinutulungan nila ang isa't isa upang lutasin ang problema.   Makikita din nila na ang computer science ay panlipunan at pakikipagtulungan.</p>
+
+<h3>Panabikin ang mga bata!   </h3>
+
+This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+
+- Show them an [inspirational video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) that features one of their favorite role models
+- Inspire them with a video on one of the [many careers](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) that computer science skills can lead to
+- [Order some swag](https://store.code.org/)! Maaari kang pumili mula sa mga t-shirt, sticker, o kahit na pansamantalang mga tattoo. Ibahagi ito kaagad sa kanila upang masabik sila, o i-save ito para sa pagtatapos ng Hour of Code mo bilang espesyal na premyo. 
+
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
+
+## 3) Mga tip sa pagpapakilala sa iyong anak sa CS
+
+It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+
+- Ipaliwanag ang mga paraan kung paano nakakaapekto ang teknolohiya sa ating mga buhay, na may partikular na mga halimbawa na maaaring interesado ang anak mo. Halimbawa, maaari kang makipag-usap tungkol sa medisina o pag-uugnay sa mga tao nang virtual. Also, check out [Code.org/CSforGood](https://code.org/csforgood) for suggested discussion questions.
+- Magkasamang ilista ang mga pang-araw-araw na bagay na gumagamit ng code upang gumana nang maayos.
+
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
+
+<h3>Have young women at home?</h3>
+
+<a href="https://code.org/girls">Narito ang aming mga rekomendasyon</a> upang makatulong na pukawin ang kanilang interes sa computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+
+<h3>Magkasamang lutasin ang problema  </h3>
+
+Lastly, when your child comes across difficulties it's okay to respond: - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+
+Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+
+## 4) Huwag kalimutang magdiwang! 
+
+The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+
+- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
+- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
+- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>Ano ang susunod pagkatapos ng Hour of Code?</h2>
+
+Computer science doesn’t have to end with the Hour of Code! Habang 90% ng mga magulang ay gustong matuto ng computer science ang kanilang anak, karamihan sa mga paaralan ay hindi pa rin nagtuturo nito. Upang makatulong, web-based ang kurikulum namin at libreng gamitin, magpakailanman. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
+
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

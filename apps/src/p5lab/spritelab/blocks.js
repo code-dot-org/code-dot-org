@@ -93,7 +93,7 @@ const customInputTypes = {
             }
           });
         },
-        block.getHexColour(),
+        block.getHexColour(), // Google Blockly includes block.getColour
         value => {
           if (value) {
             try {
@@ -500,7 +500,7 @@ export default {
 
         if (allowBehaviorEditing) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-          Blockly.bindEvent_(
+          Blockly.cdoUtils.bindBrowserEvent(
             editLabel.fieldGroup_,
             'mousedown',
             this,

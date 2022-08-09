@@ -63,8 +63,8 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
+      CodeReview,
       CodeReviewComment,
-      ReviewableProject
     ]
     cannot :index, Level
 
@@ -82,7 +82,7 @@ class Ability
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
-    can [:read], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 
@@ -111,16 +111,48 @@ class Ability
           (user.teacher? && user == code_review_comment.commenter) ||
           (user.teacher? && user == code_review_comment.project_owner)
       end
-      can :create,  CodeReviewComment do |_, project_owner, project_id, level_id, script_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, project_id, level_id, script_id)
+      can :view_project_commits, User do |project_owner|
+        project_owner.id === user.id || can?(:code_review, project_owner)
       end
-      can :project_comments, CodeReviewComment do |_, project_owner, project_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
+
+      can :create, CodeReview do |code_review, project|
+        code_review.user_id == user.id &&
+        project.owner_id == user.id
       end
-      can :create, ReviewableProject do |_, project_owner|
-        ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
+      can :edit, CodeReview, user_id: user.id
+      can :index_code_reviews, Project do |project|
+        # The user can see the code review if one of the following is true:
+        # 1) the user is the project owner
+        # 2) the user is the teacher of the project owner
+        # 3) the user and the project owner are in the same code reivew group
+        project.owner.id == user.id || can?(:code_review, project.owner)
       end
-      can :destroy, ReviewableProject, user_id: user.id
+
+      # A user can review the code of other_user if they are the other_user's teacher or if
+      # they're in a shared section with code review turned on and they're in the same code review group
+      can :code_review, User do |other_user|
+        return true if other_user.student_of?(user)
+
+        in_shared_section_with_code_review = user.shared_sections_with(other_user).any?(&:code_review_enabled?)
+        in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
+      end
+
+      can :create, CodeReviewNote do |code_review_note|
+        code_review_note.code_review.open? && can?(:code_review, code_review_note.code_review.owner)
+      end
+
+      can :update, CodeReviewNote do |code_review_note|
+        code_review_note.code_review.user_id == user.id
+      end
+
+      can :destroy, CodeReviewNote do |code_review_note|
+        # Teachers can delete comments on their student's projects,
+        # their own comments anywhere, and comments on their projects.
+        code_review_note.code_review.owner&.student_of?(user) ||
+          (user.teacher? && user.id == code_review_note.commenter_id) ||
+          (user.teacher? && user.id == code_review_note.code_review.user_id)
+      end
+
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -148,21 +180,16 @@ class Ability
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
         if level_to_view&.is_a?(Javalab)
-          reviewable_project = ReviewableProject.find_by(
-            user_id: user_to_assume.id,
-            script_id: script_level.script_id,
-            level_id: level_to_view&.id
-          )
+          project_level_id = level_to_view.project_template_level.try(:id) ||
+            level_to_view.id
 
-          if reviewable_project &&
-            user != user_to_assume &&
+          if user != user_to_assume &&
             !user_to_assume.student_of?(user) &&
-            CodeReviewComment.user_can_review_project?(
-              user_to_assume,
-              user,
-              reviewable_project.project_id,
-              reviewable_project.level_id,
-              reviewable_project.script_id
+            can?(:code_review, user_to_assume) &&
+            CodeReview.open_reviews.find_by(
+              user_id: user_to_assume.id,
+              script_id: script_level.script_id,
+              project_level_id: project_level_id
             )
             can_view_as_user_for_code_review = true
           end
@@ -408,21 +435,23 @@ class Ability
       end
     end
 
-    # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if user.permission?(UserPermission::LEVELBUILDER) ||
-        user.has_pilot_experiment?(CSA_PILOT) ||
-        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)} ||
-        user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
-        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
-
-        can :get_access_token, :javabuilder_session
+      # These checks control access to Javabuilder.
+      # All verified instructors and can generate a Javabuilder session token to run Java code.
+      # Students who are also assigned to a CSA section with a verified instructor can run Java code.
+      # Verified instructors can access and run Java Lab exemplars.
+      # Levelbuilders can access and update Java Lab validation code.
+      can :get_access_token, :javabuilder_session do
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
-    end
 
-    # This action allows levelbuilders to work on exemplars and validation in levelbuilder
-    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can [:get_access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
+      can :access_token_with_override_sources, :javabuilder_session do
+        user.verified_instructor?
+      end
+
+      can :access_token_with_override_validation, :javabuilder_session do
+        user.permission?(UserPermission::LEVELBUILDER)
+      end
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

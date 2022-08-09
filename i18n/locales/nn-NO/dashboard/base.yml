@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 nn:
   errors:
     messages:
@@ -401,7 +407,6 @@ nn:
     popup:
       progress_for_user: "Framgangen til %{name}"
       progress: 'Framgangen din'
-      lines: 'Totalt tal på kodeliner: %{lines}'
       close: 'LUKK'
       mastery: 'Konsept'
       puzzle_map: 'Nivå'
@@ -1007,7 +1012,7 @@ nn:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Anna:"
+        other: "Anna"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1017,7 +1022,7 @@ nn:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Anna:"
+        other: "Anna"
       workshop_course:
         csf_af: 'CS Fundamentals (Kurs A-F)'
         csf_express: 'CS Fundamentals (Pre-ekspresskurs og ekspresskurs)'

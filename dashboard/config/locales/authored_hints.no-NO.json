@@ -1542,6 +1542,15 @@
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Du trenger ikke legge til eller fjerne blokker for å løse denne oppgaven.",
           "courseB_maze_seq_challenge2_b": "Omroker blokkene og ta trappetrinn ruten"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Det er to måter å løse denne oppgaven!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "For å ferdigstille designet må artisten  rotere 120 grader mellom hver firkant."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
         }
       }
     }

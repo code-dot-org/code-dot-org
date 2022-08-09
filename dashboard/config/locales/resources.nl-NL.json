@@ -805,6 +805,12 @@
         "teacher_forum/csd/2021": {
           "name": "Lerarenforum"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Video"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "Video"
         },
@@ -918,6 +924,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Lerarenforum"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Video"

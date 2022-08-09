@@ -120,41 +120,15 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal 1, JSON.parse(nav_data).length
   end
 
-  test 'data is passed down to docs show page if using studio code docs' do
+  test 'redirected to new docs url if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).at_least_once
-    DCDO.expects(:get).with('use-studio-code-docs', false).returns(true).at_least_once
 
     programming_environment = create :programming_environment, name: 'weblab'
     category = create :programming_environment_category, programming_environment: programming_environment
     programming_expression = create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
 
     get :docs_show, params: {programming_environment_name: programming_environment.name, programming_expression_key: programming_expression.key}
-    assert_response :ok
-
-    show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
-    assert_equal programming_expression.summarize_for_show.to_json, show_data
-
-    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
-    assert_equal 1, JSON.parse(nav_data).length
-  end
-
-  test 'page is proxied to docs show page if not using studio code docs' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).with('use-studio-code-docs', false).returns(false).at_least_once
-
-    programming_environment = create :programming_environment, name: 'weblab'
-    category = create :programming_environment_category, programming_environment: programming_environment
-    programming_expression = create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
-
-    stub_request(:get, "https://curriculum.code.org/docs/#{programming_environment.name}/#{programming_expression.key}/").
-        to_return(body: 'curriculum.code.org/docs content', headers: {})
-    request.host = "studio.code.org"
-
-    get :docs_show, params: {programming_environment_name: programming_environment.name, programming_expression_key: programming_expression.key}
-    assert_response :ok
-
-    assert_equal @response.body, 'curriculum.code.org/docs content'
+    assert_response :redirect
   end
 
   test 'can destroy programming expression' do
@@ -241,47 +215,47 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       @levelbuilder = create :levelbuilder
     end
 
-    test 'get_filtered_expressions returns not_acceptable if no page providewd' do
+    test 'get_filtered_results returns not_acceptable if no page providewd' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {}
+      get :get_filtered_results, params: {}
       assert_response :not_acceptable
     end
 
-    test 'get_filtered_expressions returns paged expressions' do
+    test 'get_filtered_results returns paged results' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {page: 1}
+      get :get_filtered_results, params: {page: 1}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 2, response['numPages']
-      assert_equal 20, response['expressions'].length
+      assert_equal 20, response['results'].length
 
-      get :get_filtered_expressions, params: {page: 2}
+      get :get_filtered_results, params: {page: 2}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 2, response['numPages']
-      assert_equal 4, response['expressions'].length
+      assert_equal 4, response['results'].length
     end
 
-    test 'get_filtered_expressions only returns expressions in environment if specified' do
+    test 'get_filtered_results only returns expressions in environment if specified' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {programmingEnvironmentId: @programming_environment1.id, page: 1}
+      get :get_filtered_results, params: {programmingEnvironmentId: @programming_environment1.id, page: 1}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 1, response['numPages']
-      assert_equal 12, response['expressions'].length
+      assert_equal 12, response['results'].length
     end
 
-    test 'get_filtered_expressions only returns expressions in category if specified' do
+    test 'get_filtered_results only returns expressions in category if specified' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {programmingEnvironmentId: @programming_environment2.id, categoryId: @programming_environment2.categories.first.id, page: 1}
+      get :get_filtered_results, params: {programmingEnvironmentId: @programming_environment2.id, categoryId: @programming_environment2.categories.first.id, page: 1}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 1, response['numPages']
-      assert_equal 4, response['expressions'].length
+      assert_equal 4, response['results'].length
     end
   end
 

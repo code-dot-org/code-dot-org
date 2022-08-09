@@ -1648,6 +1648,57 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Bu yerda siz dasturni sekinlashtira olasiz."
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Kod orqali birma-bir bloklardan o'tishga harakat qiling."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         }
       }
     }

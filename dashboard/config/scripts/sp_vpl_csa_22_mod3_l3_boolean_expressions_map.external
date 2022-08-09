@@ -9,7 +9,7 @@ A **boolean expression** is a code segment that evaluates to a boolean value.  A
 
 A boolean expression can use **relational operators** which evaluate to a boolean value. 
 
-In this lesson we will be looking at the following relational operators in Java. 
+In this lesson we will be looking at the following relational operators in Java: 
 
 | Operator  | Description |
 | :---: |    :----   |
@@ -22,12 +22,19 @@ In this lesson we will be looking at the following relational operators in Java.
 
 ## Examples
 **Example 1**
+
 Assume you have a variable `int num = 10`.  Then the boolean expression `num >= 5` evaluates to `true` because the value stored in `num` (10)  is greater than 5.  
 
+---
+
 **Example 2**  
+
 Assume you have a variable `int points = 21`.  Then the boolean expression `points<21` evaluates to `false` because the value stored in `points` is not less than 21.
 
+---
+
 **Example 3**
+
 You can also combine arithmetic operators with relational operators for a boolean expression.  Assume you have the variable `int fouls = 2` and the boolean expression `fouls + 1 <   2`.  This boolean expression evaluates to `false`.  Java will first do the arithmetic operation of `+` and then evaluate the boolean expression.  For the computer, it evaluates `(2+1) < 2`.  Since 3 is not less than 2, this expression will evaluate to `false`.
 
 ## Additional resources

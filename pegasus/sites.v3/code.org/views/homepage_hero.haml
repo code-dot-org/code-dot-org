@@ -3,8 +3,8 @@
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
-  action_buttons_css_class = Homepage.get_action_buttons_css_class()
-  num_columns = Homepage.get_num_columns()
+  action_buttons_css_class = Homepage.get_action_buttons_css_class(request)
+  num_columns = Homepage.get_num_columns(request)
 
 - main_actions = capture_haml do
   - if show_single_hero == "changeworld"
@@ -49,7 +49,7 @@
         %a.herohocbutton.herolink-white{href: entry[:href]}
           %i.fa{class: entry[:icon_class]}
           %span= entry[:plain_text]
-      
+
 
   .clear{style: "clear: both"}
 
@@ -80,7 +80,7 @@
 
   - if show_single_hero
     - if num_columns == 3
-      - extra_images = Homepage.get_outer_column_images()
+      - extra_images = Homepage.get_outer_column_images(request)
       #actions{style: "padding: 0px"}
         #bars{style: "display: flex; max-width: 1680px; margin: 0 auto;"}
           .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:left_image]}); background-position: 100% 100%; background-size: contain; background-repeat: no-repeat"}

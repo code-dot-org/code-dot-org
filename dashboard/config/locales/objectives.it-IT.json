@@ -2,6 +2,24 @@
   "it-IT": {
     "data": {
       "objectives": {
+        "008a40f4-a5ee-42aa-862e-670f19129694": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "343631be-830a-44f6-a249-a6aa96ea38f0": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
         "6902d2bc-a266-487c-b0de-49de79f6fb98": {
           "description": "Illustrare i cambiamenti di umore di una poesia."
         },
@@ -10,6 +28,51 @@
         },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Sviluppa programmi che rispondano a eventi a tempo."
+        },
+        "6394fdc5-50c3-423e-8135-a64594824db3": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "3e5eebcd-2140-4152-8654-410468108ab6": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "303a2b74-af73-401c-8929-1fc1c5611f18": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "59992d8c-d194-4063-82fa-001a0b6482d9": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
         },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
@@ -22,6 +85,18 @@
         },
         "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
           "description": "suddividere forme complesse in parti più semplici"
+        },
+        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
         },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati"
@@ -38,17 +113,101 @@
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
+        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "e2745118-9d93-4e33-a607-c1927403c0c3": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "spiegare perché la crittografia è un'esigenza importante per la vita quotidiana su Internet"
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "decifrare un messaggio crittografato con un cifrario di Cesare, utilizzando il componente Caesar Cipher Widget"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "decifrare un messaggio crittografato con sostituzione casuale utilizzando l'analisi della frequenza"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "spiegare i punti deboli e la mancanza di sicurezza dei cifrari di sostituzione"
+        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
         "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
           "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
         },
+        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "creare e condividere le proprie app in Sviluppo App, utilizzando funzionalità come pulsanti, testo, immagini, suoni e schermate"
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "continuare a creare progetti in Sviluppo App completo, utilizzando le risorse fornite nella pagina code.org/applab"
+        },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "collaborare con un coetaneo per trovare una soluzione a un problema di compressione del testo utilizzando il componente di compressione del testo (schema di compressione senza perdita di dati)"
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "spiegare perché la quantità ottimale di compressione è impossibile o \"difficile\" da identificare"
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "spiegare alcuni fattori che rendono difficile la compressione"
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "descrivere lo scopo e la logica della compressione senza perdita di dati"
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -57,7 +216,19 @@
           "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
+        },
+        "63be9575-1232-47a5-991c-8bd03ac7c949": {
+          "description": "definire \"programmazione\" e \"informatica\""
+        },
+        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
+          "description": "identificare il glossario dei termini informatici"
+        },
+        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
+          "description": "creare collegamenti tra i concetti di informatica e il mondo fisico"
+        },
+        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
+          "description": "identificare ulteriori possibilità di apprendimento in informatica e programmazione"
         },
         "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -66,7 +237,7 @@
           "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati"
@@ -114,7 +285,7 @@
           "description": "Identifica gli sprite in un programma per computer in esecuzione."
         },
         "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
-          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+          "description": "creare nuovi personaggi e attribuire loro costumi e comportamenti."
         },
         "06a89cf1-1a4d-429a-9797-934770d0ed18": {
           "description": "Crea un'animazione usando sprite e comportamenti."
@@ -162,7 +333,7 @@
           "description": "Crea un programma interattivo per computer che risponda all'input dell'utente."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
           "description": "distinguere tra istruzioni che devono essere inserite in cicli per poter essere ripetute ed altre che devono essere usate singolarmente"
@@ -183,7 +354,7 @@
           "description": "riconoscere schemi ripetuti costituiti a loro volta da altri schemi ripetuti"
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "059b2997-3d05-4186-8450-066fceeb8c5b": {
           "description": "identificare le aree in cui è possibile utilizzare le variabili per modificare le quantità durante l'esecuzione"
@@ -267,7 +438,7 @@
           "description": "comportarsi correttamente in aula computer"
         },
         "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
-          "description": "sperimentare azioni della programmazione a blocchi come: clic, trascina e rilascia, ecc."
+          "description": "sperimentare azioni della programmazione a blocchi come: cliccare, trascinare e rilasciare, ecc."
         },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
           "description": "tradurre i movimenti in una serie di istruzioni"
@@ -294,7 +465,7 @@
           "description": "convertire la ripetizione di una sequenza di azioni in un unico ciclo"
         },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
           "description": "suddividere una lunga sequenza di istruzioni in una sequenza ripetibile il più piccola possibile"
@@ -306,13 +477,13 @@
           "description": "usare una combinazione di istruzioni in sequenza e ripetute per raggiungere la fine del labirinto"
         },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
           "description": "suddividere una lunga sequenza di istruzioni in una sequenza ripetibile il più piccola possibile"
         },
         "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
-          "description": "contare quante volte un'azione deve essere ripetuta e rappresentarla come un ciclo"
+          "description": "contare quante volte un'azione deve essere ripetuta e rappresentata come un ciclo"
         },
         "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
           "description": "scomporre una forma nella sequenza ripetibile più grande possibile"
@@ -345,7 +516,7 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
         },
         "8023306a-d106-4097-8205-5bc1e92ffade": {
           "description": "Applicare concetti di informatica in un progetto a tempo indeterminato."
@@ -381,7 +552,7 @@
           "description": "comportarsi correttamente in aula computer"
         },
         "6df3d067-06bb-4e95-856f-ef980543a15e": {
-          "description": "sperimentare azioni della programmazione a blocchi come: clic, trascina e rilascia, ecc."
+          "description": "sperimentare azioni della programmazione a blocchi come: cliccare, trascinare e rilasciare, ecc."
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
           "description": "costruire un programma riorganizzando sequenze di movimenti"
@@ -399,10 +570,10 @@
           "description": "riconoscere problemi o errori (\"bug\") in un programma e sviluppare un piano per risolverli"
         },
         "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "identificare le istruzioni che si ripetono e convertire una serie di azioni multiple in un unico ciclo"
+          "description": "Identificare le istruzioni che si ripetono e convertire una serie di azioni multiple in un unico ciclo"
         },
         "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
-          "description": "interpretare un programma contenente cicli come una serie di azioni multiple"
+          "description": "Interpretare un programma contenente cicli come una serie di azioni multiple"
         },
         "cb7cab91-20ca-495a-a429-621631cb0507": {
           "description": "costruire un programma usando strutture che ripetono blocchi di codice"
@@ -411,13 +582,13 @@
           "description": "migliorare il codice esistente trovando sequenze di istruzioni che si ripetono e spostandole in strutture cicliche"
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "ea6a44e1-0175-4ecc-a257-4489b703c063": {
           "description": "suddividere una lunga sequenza di istruzioni in una sequenza ripetibile il più piccola possibile"
         },
         "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
-          "description": "contare quante volte un'azione deve essere ripetuta e rappresentarla come un ciclo"
+          "description": "contare quante volte un'azione deve essere ripetuta e rappresentata come un ciclo"
         },
         "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
           "description": "scomporre una forma nella sequenza ripetibile più grande possibile"
@@ -441,7 +612,7 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
         },
         "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
           "description": "Applicare concetti di informatica in un progetto a tempo indeterminato."
@@ -474,7 +645,7 @@
           "description": "modificare un programma esistente per correggere degli errori"
         },
         "367c7a8a-4dea-494f-87c7-77cba03711a1": {
-          "description": "riflettere sul processo di debugging in modo appropriato alla propria età"
+          "description": "riflettere sul processo di correzione degli errori (debug) in modo adatto alla propria età"
         },
         "991aa440-0e71-40b0-8354-da04e3ad125b": {
           "description": "mettere in ordine le istruzioni di movimento come passaggi sequenziali di un programma"
@@ -483,7 +654,7 @@
           "description": "rappresentare un algoritmo come un programma per computer"
         },
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
-          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica del debugging"
+          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica della correzione degli errori (debug)"
         },
         "6503170b-db97-4737-ae5d-5108591497a0": {
           "description": "creare un programma costituito da una sequenza di istruzioni per completare un'immagine"
@@ -498,7 +669,7 @@
           "description": "scrivere programmi che usano le istruzioni di ripetizione (cicli) per eseguire schemi ripetuti"
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
           "description": "suddividere una lunga sequenza di istruzioni nella più grande sequenza ripetibile possibile"
@@ -516,7 +687,7 @@
           "description": "usare una combinazione di istruzioni in sequenza e ripetute per muoversi ed eseguire azioni"
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
           "description": "distinguere tra istruzioni che devono essere inserite in cicli per poter essere ripetute ed altre che devono essere usate singolarmente"
@@ -537,7 +708,7 @@
           "description": "creare un gioco utilizzando i gestori di eventi"
         },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
         },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
           "description": "creare un gioco animato interattivo, utilizzando sequenze di istruzioni e gestori di eventi"
@@ -615,7 +786,7 @@
           "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
         },
         "bafea2a8-7a23-4046-9360-77d760c54c2b": {
           "description": "creare un gioco animato interattivo, utilizzando sequenze ed eventi"
@@ -639,7 +810,7 @@
           "description": "migliorare il codice esistente trovando sequenze di istruzioni che si ripetono e spostandole in strutture cicliche"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
           "description": "distinguere tra istruzioni che devono essere inserite in cicli per poter essere ripetute ed altre che devono essere usate singolarmente"
@@ -651,7 +822,7 @@
           "description": "riconoscere schemi ripetuti costituiti a loro volta da altri schemi ripetuti"
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
           "description": "definire le circostanze in cui alcune parti di un programma devono essere eseguite e quando no"
@@ -702,7 +873,7 @@
           "description": "modificare un programma esistente per correggere degli errori"
         },
         "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
-          "description": "riflettere sul processo di debugging in modo appropriato alla propria età"
+          "description": "riflettere sul processo di correzione degli errori (debug) in modo adatto alla propria età"
         },
         "4d4f7faa-e380-483d-b873-b04e114e077e": {
           "description": "mettere in ordine le istruzioni di movimento come passaggi sequenziali di un programma"
@@ -711,7 +882,7 @@
           "description": "rappresentare un algoritmo come un programma per computer"
         },
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
-          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica del debugging"
+          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica della correzione degli errori (debug)"
         },
         "500825a3-b44f-4b99-ab77-2271fdcbb867": {
           "description": "creare un programma costituito da una sequenza di istruzioni per completare un'immagine"
@@ -723,10 +894,10 @@
           "description": "definire uno \"sprite\" come un personaggio o un oggetto sullo schermo che può essere spostato e modificato"
         },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
-          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+          "description": "creare nuovi personaggi e attribuire loro costumi e comportamenti."
         },
         "30a80046-d715-46b1-8b89-65c410d04690": {
-          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+          "description": "creare nuovi personaggi e attribuire loro costumi e comportamenti."
         },
         "e0d4a883-51dc-4647-8c9f-59652f699aec": {
           "description": "Crea un'animazione usando sprite e comportamenti."
@@ -756,7 +927,7 @@
           "description": "creare animazioni di danza con il codice"
         },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
           "description": "suddividere una lunga sequenza di istruzioni nella più grande sequenza ripetibile possibile"
@@ -765,7 +936,7 @@
           "description": "usare una combinazione di istruzioni in sequenza e ripetute per raggiungere la fine del labirinto"
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "32250c07-4872-43ce-9968-33e17f779cf3": {
           "description": "distinguere tra istruzioni che devono essere inserite in cicli per poter essere ripetute ed altre che devono essere usate singolarmente"
@@ -777,7 +948,7 @@
           "description": "riconoscere schemi ripetuti costituiti a loro volta da altri schemi ripetuti"
         },
         "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
           "description": "organizzare il codice nelle sequenze di istruzioni ripetibili più lunghe possibili, utilizzando sia i cicli singoli che i cicli annidati"
@@ -888,7 +1059,7 @@
           "description": "comportarsi correttamente in aula computer"
         },
         "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
-          "description": "sperimentare azioni della programmazione a blocchi come: clic, trascina e rilascia, ecc."
+          "description": "sperimentare azioni della programmazione a blocchi come: cliccare, trascinare e rilasciare, ecc."
         },
         "a5a52414-42a7-4b32-897b-819a70572328": {
           "description": "tradurre i movimenti in una serie di istruzioni"
@@ -918,13 +1089,13 @@
           "description": "migliorare il codice esistente trovando sequenze di istruzioni che si ripetono e spostandole in strutture cicliche"
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
           "description": "suddividere una lunga sequenza di istruzioni in una sequenza ripetibile il più piccola possibile"
         },
         "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
-          "description": "contare quante volte un'azione deve essere ripetuta e rappresentarla come un ciclo"
+          "description": "contare quante volte un'azione deve essere ripetuta e rappresentata come un ciclo"
         },
         "6aac3c12-4427-43d1-877c-727d0665ab49": {
           "description": "scomporre una forma nella sequenza ripetibile più grande possibile"
@@ -933,7 +1104,7 @@
           "description": "creare un programma che disegna forme complesse ripetendo sequenze semplici"
         },
         "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
-          "description": "contare quante volte un'azione deve essere ripetuta e rappresentarla come un ciclo"
+          "description": "contare quante volte un'azione deve essere ripetuta e rappresentata come un ciclo"
         },
         "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
           "description": "scomporre una forma nella sequenza ripetibile più grande possibile"
@@ -948,7 +1119,7 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
         },
         "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -957,13 +1128,13 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
-          "description": "condividere un artefatto creativo con altri alunni"
+          "description": "condividere una propria cerazione con altri alunni"
         },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "definire uno \"sprite\" come un personaggio o un oggetto sullo schermo che può essere spostato e modificato"
         },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
-          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+          "description": "creare nuovi personaggi e attribuire loro costumi e comportamenti."
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -975,7 +1146,7 @@
           "description": "comprendere i propri diritti sui materiali creati"
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
-          "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
+          "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "distinguere tra istruzioni che devono essere inserite in cicli per poter essere ripetute ed altre che devono essere usate singolarmente"
@@ -984,7 +1155,7 @@
           "description": "combinare forme semplici in disegni complessi sfruttando i cicli annidati"
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
-          "description": "contare quante volte un'azione deve essere ripetuta e rappresentarla come un ciclo"
+          "description": "contare quante volte un'azione deve essere ripetuta e rappresentata come un ciclo"
         },
         "5b77c883-5479-4cfe-a31a-605957dd083d": {
           "description": "suddividere attività complesse in sezioni ripetibili più piccole"

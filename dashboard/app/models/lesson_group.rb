@@ -19,7 +19,7 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :script
+  belongs_to :script, optional: true
   def script
     Script.get_from_cache(script_id)
   end
@@ -30,7 +30,7 @@ class LessonGroup < ApplicationRecord
 
   validates :position, numericality: {greater_than: 0}
 
-  validates_uniqueness_of :key, scope: :script_id
+  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true
 
   validates :key,
     presence: {
@@ -235,7 +235,7 @@ class LessonGroup < ApplicationRecord
   def copy_to_unit(destination_script, new_level_suffix = nil)
     return if script == destination_script
     raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? && !destination_script.old_professional_learning_course?
 
     copied_lesson_group = dup
     copied_lesson_group.script = destination_script

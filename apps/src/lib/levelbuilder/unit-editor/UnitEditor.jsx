@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
-import LessonDescriptions from '@cdo/apps/lib/levelbuilder/unit-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
@@ -10,9 +9,6 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExt
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
@@ -20,7 +16,7 @@ import {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -66,7 +62,6 @@ class UnitEditor extends React.Component {
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
@@ -98,26 +93,17 @@ class UnitEditor extends React.Component {
     initialUseLegacyLessonPlans: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
+    isCSDCourseOffering: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
-      .isRequired,
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
-
-    const teacherResources = [...props.initialTeacherResources];
-
-    if (!props.isMigrated) {
-      // add empty entries to get to max
-      while (teacherResources.length < Object.keys(ResourceType).length) {
-        teacherResources.push({type: '', link: ''});
-      }
-    }
 
     this.state = {
       isSaving: false,
@@ -160,9 +146,6 @@ class UnitEditor extends React.Component {
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      lessonDescriptions: this.props.i18nData.lessonDescriptions,
-      teacherResources: teacherResources,
-      hasImportedLessonDescriptions: false,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       publishedState: this.props.initialPublishedState,
@@ -305,6 +288,24 @@ class UnitEditor extends React.Component {
       }
     }
 
+    if (
+      this.state.unitPublishedState === PublishedState.in_development &&
+      this.state.unitPublishedState === this.props.initialUnitPublishedState
+    ) {
+      const msg =
+        'This unit is hidden within the course, meaning it is not ' +
+        'visible on the Course Overview page, Section Dialog, or Teacher ' +
+        'Dashboard. It is still visible to Levelbuilders. Would you ' +
+        'like to continue with saving?';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
+    }
+
     let dataToSave = {
       name: this.props.name,
       family_name: this.state.familyName,
@@ -348,11 +349,7 @@ class UnitEditor extends React.Component {
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
-      resourceLinks: this.state.teacherResources.map(resource => resource.link),
-      resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      resourceIds: this.props.migratedTeacherResources.map(
-        resource => resource.id
-      ),
+      resourceIds: this.props.teacherResources.map(resource => resource.id),
       studentResourceIds: this.props.studentResources.map(
         resource => resource.id
       ),
@@ -361,10 +358,6 @@ class UnitEditor extends React.Component {
       use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
-
-    if (this.state.hasImportedLessonDescriptions) {
-      dataToSave.stage_descriptions = this.state.lessonDescriptions;
-    }
 
     $.ajax({
       url: `/s/${this.props.id}`,
@@ -403,9 +396,6 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const useMigratedTeacherResources =
-      this.props.isMigrated && !this.state.teacherResources?.length;
-
     const allowMajorCurriculumChanges =
       this.props.initialUnitPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.in_development ||
@@ -579,23 +569,27 @@ class UnitEditor extends React.Component {
               }}
             />
           )}
-          <label>
-            Is a Maker Unit
-            <input
-              type="checkbox"
-              checked={this.state.isMakerUnit}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({isMakerUnit: !this.state.isMakerUnit})
-              }
-            />
-            <HelpTip>
-              <p>
-                If checked, this unit uses the maker toolkit and teachers who
-                teach it may be eligible for maker toolkit discounts.
-              </p>
-            </HelpTip>
-          </label>
+          {this.props.isCSDCourseOffering && (
+            <label>
+              Is a Maker Unit
+              <input
+                className="maker-unit-checkbox"
+                type="checkbox"
+                checked={this.state.isMakerUnit}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({isMakerUnit: !this.state.isMakerUnit})
+                }
+              />
+              <HelpTip>
+                <p>
+                  If checked, this unit is in CSD and uses the maker toolkit.
+                  Checking this will add this unit to the list of units that can
+                  show up on the maker homepage.
+                </p>
+              </HelpTip>
+            </label>
+          )}
           <label>
             Supported locales
             <HelpTip>
@@ -661,8 +655,9 @@ class UnitEditor extends React.Component {
         {this.props.hasCourse && (
           <CollapsibleEditorSection title="Course Type Settings">
             <p>
-              This unit is part of a course. Go to the course edit page to set
-              the course type settings for the course and its units.
+              Settings in this section change depending on whether this unit is
+              grouped with other units in a course. If this does not look as
+              expected, please add or remove this unit from a course.
             </p>
           </CollapsibleEditorSection>
         )}
@@ -683,14 +678,6 @@ class UnitEditor extends React.Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
-
-        <CollapsibleEditorSection title="Announcements">
-          <AnnouncementsEditor
-            announcements={this.state.announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
-        </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
@@ -732,8 +719,10 @@ class UnitEditor extends React.Component {
                 this.state.publishedState !== PublishedState.in_development && (
                   <div>
                     <p>
-                      This unit is part of a course. Go to the course edit page
-                      to publish the course and its units.
+                      Settings in this section change depending on whether this
+                      unit is grouped with other units in a course. If this does
+                      not look as expected, please add or remove this unit from
+                      a course.
                     </p>
                     {/*
                    Just use a checkbox instead of a dropdown to set the
@@ -805,6 +794,14 @@ class UnitEditor extends React.Component {
               )}
             </div>
           )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={this.state.announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
@@ -893,21 +890,6 @@ class UnitEditor extends React.Component {
               this.setState({projectWidgetTypes})
             }
           />
-          {!this.props.isMigrated && (
-            <LessonDescriptions
-              scriptName={this.props.name}
-              currentDescriptions={this.props.i18nData.lessonDescriptions}
-              updateLessonDescriptions={(
-                lessonDescriptions,
-                hasImportedLessonDescriptions
-              ) =>
-                this.setState({
-                  lessonDescriptions,
-                  hasImportedLessonDescriptions
-                })
-              }
-            />
-          )}
           {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
@@ -964,13 +946,8 @@ class UnitEditor extends React.Component {
               <div />
               <ResourcesEditor
                 inputStyle={styles.input}
-                resources={this.state.teacherResources}
-                updateResources={teacherResources =>
-                  this.setState({teacherResources})
-                }
-                useMigratedResources={useMigratedTeacherResources}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedResources={this.props.migratedTeacherResources}
+                resources={this.props.teacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
@@ -983,9 +960,8 @@ class UnitEditor extends React.Component {
                 </div>
                 <ResourcesEditor
                   inputStyle={styles.input}
-                  useMigratedResources
                   courseVersionId={this.props.initialCourseVersionId}
-                  migratedResources={this.props.studentResources}
+                  resources={this.props.studentResources}
                   studentFacing
                 />
               </div>
@@ -1161,7 +1137,7 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    migratedTeacherResources: state.resources,
+    teacherResources: state.resources,
     studentResources: state.studentResources
   }),
   {

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 km:
   errors:
     messages:
@@ -352,7 +358,6 @@ km:
     popup:
       progress_for_user: "ដំណើរការរបស់%{name}"
       progress: 'ដំណើរការ​របស់​អ្នក'
-      lines: 'បន្ទាត់​កូដ​សរុប៖ %{lines}'
       close: 'បិទ'
       mastery: 'គោល​គំនិត'
       puzzle_map: 'ដំណាក់កាល'
@@ -577,10 +582,13 @@ km:
         math: 'គណិត​វិទ្យា'
         science: 'វិទ្យាសាស្រ្ត'
         la: 'អក្សរសាស្រ្ត'
+        other: "ផ្សេងៗ"
       resources:
         kodable: 'Kodable'
+        other: "ផ្សេងៗ"
       robotics:
         kodable: 'Kodable'
+        other: "ផ្សេងៗ"
       email_opt_in:
         opt_in_yes: 'យល់ព្រម'
         opt_in_no: 'ទេ'

@@ -70,6 +70,7 @@ fr:
   previous_page: Page précédente
   next_page: Page suivante
   next_resource: Ressource suivante
+  done_with_module: Module d'apprentissage terminé
   cancel: Annuler
   okay: OK
   or: ou
@@ -87,7 +88,7 @@ fr:
     submit: Ajouter un indice
   appname: Code.org
   stage: étape
-  stage_number: Leçon %{number}
+  stage_number: 'Leçon %{number} '
   puzzle: Énigme
   trophies: trophées
   courses: Cours
@@ -225,7 +226,17 @@ fr:
     user_type_button: Mise à jour du type de compte
     user_type_label: Type de compte
     user_type_student: Élève
+    user_type_student_desc: 'Découvrez tous nos cours et activités et bien d''autres
+      :'
+    user_type_student_ability_1: Sauvegardez vos progrès et vos projets
+    user_type_student_ability_2: Rejoignez la section de classe de votre professeur
     user_type_teacher: Professeur
+    user_type_teacher_desc: 'Tout ce dont les étudiants ont accès et bien d''autres
+      :'
+    user_type_teacher_ability_1: Créer des sections de classe
+    user_type_teacher_ability_2: Donner et suivre les devoirs des élèves
+    user_type_teacher_ability_3: S'inscrire à une formation professionnelle
+    user_type_teacher_ability_4: Intervenez dans notre forum des enseignants
     field_is_required: est obligatoire
     accept_terms: Vous devez accepter pour créer un compte
     error: Une erreur est survenue.
@@ -360,6 +371,12 @@ fr:
       provider_managed_section: Cette section est gérée par un autre fournisseur et
         ne peut pas être rejointe. Demande à ton professeur de t’ajouter via %{provider}
         et de resynchroniser sa section.
+      restricted_section: Nous n'avons pas pu vous ajouter à la section %{section_code},
+        car elle est verrouillée. Veuillez contacter votre professeur pour obtenir
+        de l'aide.
+      full_section: Nous n'avons pas pu vous ajouter à la section %{section_code},
+        car elle contient déjà %{section_capacity} élèves. Veuillez contacter votre
+        professeur pour obtenir de l'aide.
       not_participant_type: Nous n'avons pas pu vous ajouter à la section %{section_code},
         vous ne remplissez pas les conditions pour y participer.
     mail:
@@ -387,7 +404,7 @@ fr:
     registrations:
       user:
         user_type_change_email_mismatch: L’adresse e-mail fournie ne correspond pas
-          à l’adresse e-mail pour ce compte
+          à l’adresse e-mail de ce compte
         personal_login_created_email: Vous vous êtes enregistré avec succès. Vous
           pouvez désormais vous connecter à votre compte avec votre e-mail et votre
           mot de passe
@@ -402,8 +419,8 @@ fr:
       course_catalog: Catalogue des cours
       project_gallery: Projets
       sections: Sections
-      help_support: Aide et Support
-      report_bug: Rapporter un problème
+      help_support: Aide et assistance technique
+      report_bug: Signaler un problème
       report_abuse: Signaler un abus
       teacher_community: Communauté des enseignants
       professional_learning: Apprentissage professionnel
@@ -492,13 +509,13 @@ fr:
       starwars: Star Wars
       starwarsblocks: Star Wars (blocs)
       starwarsblocks_hour: Star Wars (blocs)
+      thebadguys: Les Bad Guys
       loading: Chargement...
       weblab: Lab du Web
       view_all: Afficher tous les projets...
     popup:
       progress_for_user: progrès de %{name}
       progress: Ton progrès
-      lines: 'Total de lignes de code: %{lines}'
       close: FERMER
       mastery: Concepts
       puzzle_map: Étapes
@@ -703,9 +720,9 @@ fr:
       équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors">
       conseillers d'éducation</a> pour leur soutien à la création de Code Studio.
     help_from_html: Nous tenons particulièrement à remercier les ingénieurs d’Amazon,
-      de Google et de Microsoft,qui ont contribué à créer ce matériel.
-    help_from_html_old: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont
-      contribué à créer ces documents de formation.
+      de Google et de Microsoft, qui ont contribué à la création de ce matériel.
+    help_from_html_old: Des ingénieurs de chez Google, Microsoft, Facebook et Twitter
+      ont contribué à créer ces documents de formation.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits
       réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm.
       Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year}
@@ -719,14 +736,16 @@ fr:
       réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous
       droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous
       droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox.
-      Tous droits réservés. Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment
-      Ltd. Tous droits réservés. Plantes vs. Zombies&#8482; &copy; %{current_year}
+      Tous droits réservés. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Tous droits réservés. Plantes contre Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est
       une marque commerciale et &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org utilise p5.play, qui est distribué sous la licence <a
       href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Fourni par Amazon Web Services
+    powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des marques
+      déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d''autres
+      pays. '
     built_on_github: Construit sur GitHub de Microsoft
     google_copyright: "&copy; Google Inc. utilisé avec autorisation. Google Classroom
       est une marque déposée de Google Inc."
@@ -735,7 +754,7 @@ fr:
     copyright: Copyright
     more: Plus
     feedback: Fournir un commentaire
-    translate: Aidez-nous à traduire dans votre langue
+    translate: Portez-vous volontaire pour traduire vers votre langue
     support: Assistance
     support_url: http://support.code.org
     tos_short: Conditions Générales
@@ -766,17 +785,17 @@ fr:
     download: Télécharger la vidéo
     show_notes: Afficher les Notes
     show_video: Afficher la Vidéo
-    label: Vidéo
+    label: 'Vidéo '
   compatibility:
     upgrade:
-      unsupported_message: Votre navigateur n'est pas supporté. Merci de mettre votre
-        navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}).
-        Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être
-        rompue.
+      unsupported_message: 'Votre navigateur n''est pas compatible. Merci de mettre
+        votre navigateur à jour avec [un des navigateurs compatibles avec nos services](%{supported_browsers_url}).
+        Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent
+        d’être compromises. '
       link: En savoir plus
-      applab_unsupported_tablet: Le Labo des Applis fonctionne idéalement sur un ordinateur
-        portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez
-        des problèmes en utilisant cet outil sur votre appareil actuel.
+      applab_unsupported_tablet: Le Labo des Applis fonctionne au mieux sur un ordinateur
+        portable ou fixe équipé d'une souris et d'un clavier. Il se peut que vous
+        rencontriez des difficultés en utilisant cet outil avec votre appareil actuel.
       gamelab_unsupported_tablet: Le Labo des Jeux fonctionne idéalement sur un ordinateur
         portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez
         des problèmes en utilisant cet outil sur votre appareil actuel.
@@ -832,6 +851,13 @@ fr:
       title: Soirée Dansante
     dance-2019:
       title: Soirée Dansante
+    hello-world:
+      title: Bonjour tout le monde !
+      body: Choisis entre quatre activités amusantes pour programmer des personnages
+        interactifs dans un monde que tu as créé!
+    poem-art:
+      title: Art du poème
+      body: Exprime-toi! Programme un poème animé.
     hoc:
       title: Labyrinthe classique
       body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.
@@ -929,7 +955,7 @@ fr:
     support: Obtenir de l'aide
     support_url: "//support.code.org"
     help_resources: Aide et ressources
-    help_support: Aide et Support
+    help_support: Aide et assistance technique
     documentation: Documentation
     tutorials: Didacticiels
   free_response:
@@ -1062,18 +1088,6 @@ fr:
       être indisponibles pour vos élèves avant votre acceptation expresse des conditions
       mises à jour.
     review_terms: Consulter les éléments modifiés
-  donor_interstitial:
-    title: Vos leçons CS gratuites sont rendues possibles par...
-    subtitle: Nous voudrions remercier les généreux donateurs dont le soutien a fait
-      de Code.org un réel succès. Nous nous engageons à maintenir Code.org gratuit
-      pour les écoles et les étudiants, mondialement, grâce à la générosité continue
-      de nos donateurs [donors](%{donors_url})!
-    local_supporters: Soutiens Locaux
-    global_supporters: Soutiens Mondiaux
-    support_codeorg_1: Chaque dollar donné à Code.org apporte des opportunités à plus
-      d'étudiants.
-    support_codeorg_2: "[Faire un don maintenant](%{donate_url}) pour soutnenir Code.org."
-    get_started: Débuter avec Code.org
   school_info_interstitial:
     title: Nous voulons apporter l'Informatique à tous les étudiants - aidez-nous
       à suivre notre progression !
@@ -1202,6 +1216,7 @@ fr:
     instructor_feedback: Commentaires de l’instructeur
     peer_feedback: Commentaire par les pairs
     outdated: Ce commentaire a été émis pour une version précédente
+    review_count: Tu dois compléter %{review_count} révisions pour cette unité.
     peer_review: Commentaire par un pair
   external_links:
     disclaimer: Clause de non-responsabilité
@@ -1278,8 +1293,8 @@ fr:
   locked_stage: Les contenus ne sont pas visibles car cette étape est verrouillée
     pour l'instant. Ton professeur la déverrouillera lorsqu'il sera temps de travailler
     dessus ou pour consulter tes réponses.
-  hidden_stage: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
-    quelle leçon tu dois suivre.
+  hidden_stage: 'Ton enseignant n''avait pas prévu que tu te retrouves ici. Demande-lui
+    sur quelle leçon tu devrais travailler. '
   hidden_script: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
     quelle unité tu dois suivre.
   no_course_access_student: Vous n'avez pas accès à ce cours. S'il vous plaît informez
@@ -1292,6 +1307,16 @@ fr:
   no_script_access_teacher: Tu n’as pas accès à cette unité. Si tu penses que tu devrais
     avoir accès à cette unité, merci d’écrire à support@code.org afin que nous puissions
     corriger la situation.
+  no_level_access_student: Tu n’as pas accès à cette unité. Merci de demander à ton
+    professeur quelle unité tu devrais suivre.
+  no_level_access_teacher: Tu n’as pas accès à cette unité. Si tu penses que tu devrais
+    y avoir accès, merci d’écrire à support@code.org afin que nous puissions corriger
+    la situation.
+  no_exemplar: Aucun exemple n'existe pour ce niveau.
+  no_exemplar_access_student: Les élèves ne peuvent accéder aux programmes d'exemple.
+    Merci de demander à ton professeur quelle unité tu devrais suivre.
+  no_exemplar_access_teacher: Seul les professeurs peuvent accéder aux programmes
+    exemples. Si vous voulez devenir un professeur autorisé, prière d'écrire à support@code.org.
   return_unit_overview: Accéder à l’aperçu de l'unité
   return_course_overview: Accéder à l’aperçu du cours
   view_all_units: Afficher toutes les unités
@@ -1309,9 +1334,13 @@ fr:
       school_city: Ville de l’École
       school_city_district: École de ville/ district
       school_country: Pays de l’École
+      school_department_region: Département/région scolaire
       colombian_school_city: Ville de l’École
+      colombian_chilean_school_department: Département/région scolaire
+      colombian_school_municipality: Municipalité scolaire
       colombian_chilean_school_name: Nom de l'école
       chilean_school_commune: Commune
+      chilean_school_id: Identifiant d'école
       ages: Quelle est la tranche d'âge de vos étudiants, cette année ?
       subjects: Quelle(s) matière(s) enseignez-vous, cette année ?
       resources: Parmi les ressources d’éducation en informatique suivantes, lesquelles
@@ -1372,6 +1401,7 @@ fr:
         music: Musique
         art: Art
         other: 'Autre :'
+        na: Non applicable
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1380,7 +1410,8 @@ fr:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Autre :'
+        other: Autre
+        na: Non applicable
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1390,7 +1421,8 @@ fr:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Autre :'
+        other: Autre
+        na: Non applicable
       workshop_course:
         csf_af: Les Fondamentaux de l’Informatique (Cours A-F)
         csf_express: Les Fondamentaux de l’Informatique (Pré-Express ou Express)

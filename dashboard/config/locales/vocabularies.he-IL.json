@@ -71,6 +71,9 @@
         "debugging/basketball/unversioned": {
           "word": "מציאת טעויות"
         },
+        "machine_learning/oceans/unversioned": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
+        },
         "code/poem-art/unversioned": {
           "word": "קוד"
         },
@@ -85,6 +88,9 @@
         },
         "variable/coursef/2021": {
           "word": "משתנה"
+        },
+        "machine_learning/coursef/2021": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "dns/coursef/2021": {
           "word": "DNS"
@@ -175,6 +181,9 @@
         },
         "define/coursee/2021": {
           "word": "הגדר"
+        },
+        "machine_learning/csd/2021": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "debugging/csd/2021": {
           "word": "מציאת טעויות"

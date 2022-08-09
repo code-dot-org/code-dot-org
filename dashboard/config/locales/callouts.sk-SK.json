@@ -652,10 +652,10 @@
           "courseC_maze_programming2_1": "Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení."
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_maze_seq1_2019": {
           "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
@@ -2119,6 +2119,9 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Zmeňte číslo tu"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Klikni sem a pridaj do svojho projektu kostýmy."
         }
       }
     }

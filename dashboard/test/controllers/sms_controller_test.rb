@@ -51,7 +51,7 @@ class SmsControllerTest < ActionController::TestCase
   end
 
   test "send download url to phone succeeds when twilio succeeds" do
-    download_url = "http://test.host/foo.apk"
+    download_url = "http://test-studio.code.org/foo.apk"
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',

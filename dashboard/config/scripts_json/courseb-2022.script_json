@@ -15,12 +15,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-04-21 16:36:48 UTC",
-    "published_state": "beta",
+    "serialized_at": "2022-06-29 14:54:19 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -94,8 +95,7 @@
       "user_facing": true,
       "position": 6,
       "properties": {
-        "display_name": "End of Course Project",
-        "description": "\n\n![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
+        "display_name": "End of Course Project"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-6",

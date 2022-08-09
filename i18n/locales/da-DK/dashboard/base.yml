@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 da:
   errors:
     messages:
@@ -383,7 +389,6 @@ da:
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: 'Dine fremskridt'
-      lines: 'Total linjer kode: %{lines}'
       close: 'LUK'
       mastery: 'Begreber'
       puzzle_map: 'Etaper'
@@ -725,10 +730,6 @@ da:
     accept: "Accepter"
     print: "Udskriv"
     reminder_desc_markdown: Vi har oppdatert våre [tenestevilkår](%{tos_url}) og [vilkår for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg for dine elevar før dei oppdaterte vilkåre er akseptert.
-  donor_interstitial:
-    title: "Dine gratis datalogikurser er blevet muliggjort af..."
-    support_codeorg_2: "[Doner nu](%{donate_url}) for at støtte Code.org."
-    get_started: "Kom i gang med Code.org"
   school_info_interstitial:
     save: "Gem"
   race_interstitial:
@@ -900,12 +901,15 @@ da:
         math: 'Matematik'
         science: 'Videnskab'
         la: 'Sprog kunst'
+        other: "Andre"
       resources:
         bootstrap: 'Bootstrap'
         khan: 'Khan Academy'
         kodable: 'Kodable'
+        other: "Andre"
       robotics:
         kodable: 'Kodable'
+        other: "Andre"
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'

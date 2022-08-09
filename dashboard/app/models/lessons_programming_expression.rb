@@ -11,8 +11,8 @@
 #  programming_expression_lesson  (programming_expression_id,lesson_id)
 #
 class LessonsProgrammingExpression < ApplicationRecord
-  belongs_to :lesson
-  belongs_to :programming_expression
+  belongs_to :lesson, optional: true
+  belongs_to :programming_expression, optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.

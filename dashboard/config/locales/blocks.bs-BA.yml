@@ -886,7 +886,7 @@ bs:
             '"while"': dok
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'svako {N} {UNIT} '
         options:
           UNIT:
