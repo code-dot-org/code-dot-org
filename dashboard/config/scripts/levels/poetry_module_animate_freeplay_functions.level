@@ -49,13 +49,122 @@
   "created_at": "2022-08-03T16:51:51.000Z",
   "user_id": 13468,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-08-03T16:51:51.877+00:00\",\"changed\":[\"cloned from \\\"poetry_module_animate_freeplay\\\"\"],\"cloned_from\":\"poetry_module_animate_freeplay\"},{\"changed_at\":\"2022-08-03 16:52:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-08-03T16:51:51.877+00:00\",\"changed\":[\"cloned from \\\"poetry_module_animate_freeplay\\\"\"],\"cloned_from\":\"poetry_module_animate_freeplay\"},{\"changed_at\":\"2022-08-03 16:52:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-08-08 21:06:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-08 21:10:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-08 21:36:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
-  </block>
+        <block type="when_run" id="@MC1BE:3gr]`OFg3h%Y^"/>
+        <block type="procedures_defnoreturn" id="FJ2Hra/IQ;)uB;k7qHya">
+          <field name="NAME">Story1</field>
+          <comment pinned="false" h="80" w="160">Describe this function...</comment>
+          <statement name="STACK">
+            <block type="Poetry_setTitle" id="NR7+MsVM{^0)@cOR3l?q" disabled="true">
+              <value name="TITLE">
+                <block type="Poetry_stringValue" id=".s$3bS7fQ2iANe!+^Zb0">
+                  <field name="TEXT">This is Story 1</field>
+                </block>
+              </value>
+              <next>
+                <block type="Poetry_setAuthor" id="STpgsO6YQ0+e5S`b00~~" disabled="true">
+                  <value name="AUTHOR">
+                    <block type="Poetry_stringValue" id="xCP%[A]QZ-[H3Q@KBD{^">
+                      <field name="TEXT">By: Amy BW</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="Poetry_addLine" id="`a~$l~m#}SkB?a^J:vxg" disabled="true">
+                      <value name="LINE">
+                        <block type="Poetry_stringValue" id="hWZSQ[rKUtCD8~kwc2PX">
+                          <field name="TEXT">I like story 1</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="Poetry_addLine" id="ObH(BK_:MV]Z[x|U8Rxf" disabled="true">
+                          <value name="LINE">
+                            <block type="Poetry_stringValue" id="5e3!2*tMV:ysRj.Ux-yk">
+                              <field name="TEXT">It's the nicest story I've ever read</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="Poetry_addLine" id="S~sDr:D]c.xHo},4a2S}" disabled="true">
+                              <value name="LINE">
+                                <block type="Poetry_stringValue" id="q2C.X%%xnhGlntaY9+sx">
+                                  <field name="TEXT">This is what it will look like on screen</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="Poetry_makeNewSpriteAnon" id="b;^/0`so=2$1jh9;06gN" disabled="true">
+                                  <field name="ANIMATION_NAME">"cloud_single"</field>
+                                  <field name="LOCATION">{"x":75,"y":200}</field>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" id="]#DYRHX@6O?jB^1y*O({">
+          <field name="NAME">Story2</field>
+          <comment pinned="false" h="80" w="160">Describe this function...</comment>
+          <statement name="STACK">
+            <block type="Poetry_setTitle" id="s+gHZfH.H.0%}D=TbH;b" disabled="true">
+              <value name="TITLE">
+                <block type="Poetry_stringValue" id=";Loae-k4[Tg%DKmSjY4P">
+                  <field name="TEXT">This is Story 2</field>
+                </block>
+              </value>
+              <next>
+                <block type="Poetry_setAuthor" id="SUi*N:DXQD{Z~RS:5gm_" disabled="true">
+                  <value name="AUTHOR">
+                    <block type="Poetry_stringValue" id="6Y(0xDcoP*Gp]y3|mA-f">
+                      <field name="TEXT">By: Amy BW</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="Poetry_addLine" id="d%D;SC*eR5Vxg}_uIL^S" disabled="true">
+                      <value name="LINE">
+                        <block type="Poetry_stringValue" id="p#oyPU!o|1gQaBKNy8lR">
+                          <field name="TEXT">I'm lukewarm on Story 2</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="Poetry_addLine" id="i4lsoM%hoa/ww!h;rVJ`" disabled="true">
+                          <value name="LINE">
+                            <block type="Poetry_stringValue" id="F@aVHaVFvmJm/Y#5!=#]">
+                              <field name="TEXT">This story is probably better than Story 1</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="Poetry_addLine" id="gO:)G5{h.dP|U9cSM0W/" disabled="true">
+                              <value name="LINE">
+                                <block type="Poetry_stringValue" id="Rg5AxjwfiL;C[HH-H9U6">
+                                  <field name="TEXT">This is what it will look like on screen</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="Poetry_makeNewSpriteAnon" id="fnfH5?SuhgqkVXVVMV?q" disabled="true">
+                                  <field name="ANIMATION_NAME">"cloud_single"</field>
+                                  <field name="LOCATION">{"x":75,"y":200}</field>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -171,7 +280,48 @@
             <field name="LOCATION">{"x": 200, "y": 200}</field>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_defnoreturn" id="tnOuEX4.Y@wHon:%)EKV">
+            <field name="NAME">Story1</field>
+            <comment pinned="false" h="80" w="160">Describe this function...</comment>
+            <statement name="STACK">
+              <block type="Poetry_setTitle" id="Vf,5Cv3MV!v)giXeg,CK" disabled="true">
+                <value name="TITLE">
+                  <shadow type="Poetry_stringValue" id="M1|vlZ|L9aU0C;!wnZcn">
+                    <field name="TEXT">Story 1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="Poetry_setAuthor" id=".FVSC1:kE=JR:We,7b+j" disabled="true">
+                    <value name="AUTHOR">
+                      <shadow type="Poetry_stringValue" id="{51zuOz{sN1cqF=d}@ZF">
+                        <field name="TEXT">Amy BW</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="Poetry_addLine" id="wF]ig*B3p~KF+)+~qX.3" disabled="true">
+                        <value name="LINE">
+                          <shadow type="Poetry_stringValue" id="J=YKhKHLWx3I~j}VACm$">
+                            <field name="TEXT">This is Line 1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="Poetry_addLine" id=";o`C~AURG;-H%fJoDc(s" disabled="true">
+                            <value name="LINE">
+                              <shadow type="Poetry_stringValue" id="m^+NXofsa#[O1mxta$gI">
+                                <field name="TEXT">And this is Line 2</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>
