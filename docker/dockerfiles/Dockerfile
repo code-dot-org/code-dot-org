@@ -27,24 +27,25 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 
 # more tools
 RUN apt-get update && \
-		apt-get install -y \
-		  git \
-		  xvfb \
-		  yarn=1.22.5-1 \
-		  sudo \
-		  openssh-client \
-		  ca-certificates \
-		  tar \
-		  gzip \
-		  wget \
-		  xz-utils \
-		  autoconf \
-		  build-essential \
-		  zlib1g-dev \
-		  libssl-dev \
-		  curl \
-		  libreadline-dev \
-		  python python-dev
+    apt-get install -y \
+      git \
+      xvfb \
+      yarn=1.22.5-1 \
+      sudo \
+      openssh-client \
+      ca-certificates \
+      tar \
+      gzip \
+      wget \
+      xz-utils \
+      autoconf \
+      build-essential \
+      zlib1g-dev \
+      libssl-dev \
+      curl \
+      libreadline-dev \
+      python python-dev \
+      vim
 
 # install node
 RUN wget https://nodejs.org/dist/v14.17.1/node-v14.17.1.tar.gz && \
@@ -110,8 +111,8 @@ RUN curl -sSL -o /tmp/pdftk-java_3.0.9-1_all.deb https://mirrors.kernel.org/ubun
 RUN apt-get update
 RUN apt-get install -y libicu-dev enscript moreutils libmysqlclient-dev libsqlite3-dev
 RUN wget https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb \
-	&& dpkg -i tidy-5.4.0-64bit.deb \
-	&& rm tidy-5.4.0-64bit.deb
+  && dpkg -i tidy-5.4.0-64bit.deb \
+  && rm tidy-5.4.0-64bit.deb
 RUN mv /usr/bin/gnu_parallel /usr/bin/parallel
 
 RUN apt-get install -y rbenv
