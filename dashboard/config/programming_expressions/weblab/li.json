@@ -3,7 +3,7 @@
   "name": "List Item",
   "category": "HTML Tags",
   "category_key": "html_tags",
-  "content": "# List Item\r\n\r\nThis tag is used to create a list. The list tag `<li>` must be contained in an ordered list (`<ol>` with bullets) or an unordered list (`<ul>` with numbers).",
+  "content": "# List Item\n\nThis tag is used to create a list. The list tag `<li>` must be contained in an ordered list (`<ul>` with bullets) or an unordered list (`<ol>` with numbers).",
   "examples": [
     {
       "name": "Ordered List",
@@ -25,7 +25,7 @@
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_li.asp",
-  "short_description": "List Item\nThis tag is used to create a list. The list tag &lt;li&gt; must be contained in an ordered list (&lt;ol&gt; with bullets) or an unordered list (&lt;ul&gt; with numbers).",
+  "short_description": "List Item\nThis tag is used to create a list. The list tag &lt;li&gt; must be contained in an ordered list (&lt;ul&gt; with bullets) or an unordered list (&lt;ol&gt; with numbers).",
   "syntax": "<li></li>",
   "tips": "* Try to indent your `</li>` tags so it's clear they are contained in the `<ul>` or `<ol>` tags.\n* Make sure to start your list with either a `<ul>` or a `<ol>`. If you just use `<li></li>` without `<ul>` or `<ol>` the rendered result will be a unordered list with bullet icons preceding each list item.\n* The list items can contain content other than text such as lists of videos, images, songs, or hyperlinks. "
 }
