@@ -12,9 +12,6 @@ silenced = [
   /NOT conditions will no longer behave as NOR in Rails 6.1. To continue using NOR conditions, NOT each condition individually/,
   /Rails 6.1 will return Content-Type header without modification/,
   /Initialization autoloaded the constants/,
-  /Class level methods will no longer inherit scoping/,
-  /ActionView::Base instances should be constructed with a lookup context, assignments, and a controller/,
-  /ActionView::Base instances must implement `compiled_method_container`/,
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))

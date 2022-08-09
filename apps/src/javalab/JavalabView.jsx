@@ -61,7 +61,8 @@ class JavalabView extends React.Component {
     isSubmitted: PropTypes.bool,
     validationPassed: PropTypes.bool,
     hasRunOrTestedCode: PropTypes.bool,
-    hasOpenCodeReview: PropTypes.bool
+    hasOpenCodeReview: PropTypes.bool,
+    isJavabuilderConnecting: PropTypes.bool
   };
 
   componentDidMount() {
@@ -189,7 +190,8 @@ class JavalabView extends React.Component {
       isCodeReviewing,
       validationPassed,
       hasRunOrTestedCode,
-      hasOpenCodeReview
+      hasOpenCodeReview,
+      isJavabuilderConnecting
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -265,8 +267,16 @@ class JavalabView extends React.Component {
                     toggleTest={this.toggleTest}
                     isEditingStartSources={isEditingStartSources}
                     disableFinishButton={disableFinishButton}
-                    disableRunButton={awaitingContainedResponse || !canRun}
-                    disableTestButton={awaitingContainedResponse || !canTest}
+                    disableRunButton={
+                      awaitingContainedResponse ||
+                      !canRun ||
+                      isJavabuilderConnecting
+                    }
+                    disableTestButton={
+                      awaitingContainedResponse ||
+                      !canTest ||
+                      isJavabuilderConnecting
+                    }
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
                     showTestButton={true}
@@ -350,7 +360,8 @@ export default connect(
     isCodeReviewing: state.pageConstants.isCodeReviewing,
     validationPassed: state.javalab.validationPassed,
     hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
-    hasOpenCodeReview: state.javalab.hasOpenCodeReview
+    hasOpenCodeReview: state.javalab.hasOpenCodeReview,
+    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

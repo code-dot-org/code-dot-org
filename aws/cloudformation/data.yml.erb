@@ -217,16 +217,6 @@ Resources:
                 Resource: 'arn:aws:s3:::cdo-activities-archive'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
 <%
-  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
--%>
-  <%=key%>DBParameters:
-    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
-    Properties:
-      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
-      Family: <%=key.include?('Aurora') ? 'aurora-' : ''%>mysql5.7
-      Parameters: <%=values.compact.to_json%>
-<%end -%>
-<%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5
   %w(
