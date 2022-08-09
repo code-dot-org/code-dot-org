@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-03 14:11:23 UTC",
+    "serialized_at": "2022-08-08 17:04:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5651,6 +5651,18 @@
       }
     },
     {
+      "name": "Private Methods",
+      "url": "https://youtu.be/o9ucV54SzL8",
+      "key": "private_methods_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "private_methods_1"
+      }
+    },
+    {
       "name": "Project Planning Board",
       "url": "https://docs.google.com/document/d/1Lo6y-JONN3mQebaP30sEAeCuU6xSCo1P6vKG8NJTN3s/edit?usp=sharing",
       "key": "project_planning_board",
@@ -6152,6 +6164,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "cs_bingo_definitions_7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "private_methods_1"
       }
     },
     {
