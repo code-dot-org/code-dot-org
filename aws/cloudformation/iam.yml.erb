@@ -212,7 +212,14 @@ Resources:
             Condition:
               StringEquals:
                 SAML:aud: https://signin.aws.amazon.com/saml
-      ManagedPolicyArns: [!Ref DataAnalystPolicy]
+      ManagedPolicyArns:
+        - !Ref DataAnalystPolicy
+        - !Ref DataAnalystDmsReadOnlyPolicy
+        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
+        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
+      Tags:
+        - Key: sqlworkbench-team
+          Value: red-team
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -225,8 +232,6 @@ Resources:
             Effect: Allow
             Action:
               - 's3:ListAllMyBuckets'
-              - 'redshift:*'
-              - 'dms:*'
             Resource: '*'
           - Sid: DataAnalystS3ImportExportBucket
             Effect: Allow
@@ -239,6 +244,42 @@ Resources:
               - 'arn:aws:s3:::cdo-census'
               - 'arn:aws:s3:::cdo-nces/*'
               - 'arn:aws:s3:::cdo-nces'
+
+  DataAnalystDmsReadOnlyPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DataAnalystDmsReadOnlyPolicy
+      Path: /dataanalyst/
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - dms:DescribeOrderableReplicationInstances
+              - dms:ListTagsForResource
+              - dms:DescribeEndpointSettings
+              - dms:DescribeConnections
+              - dms:DescribeReplicationInstances
+              - dms:DescribeApplicableIndividualAssessments
+              - dms:TestConnection
+              - dms:DescribeEndpoints
+              - dms:DescribeReplicationInstanceTaskLogs
+              - dms:DescribeSchemas
+              - dms:DescribeReplicationSubnetGroups
+              - dms:DescribeReplicationTasks
+              - dms:DescribeReplicationTaskAssessmentResults
+              - dms:DescribeAccountAttributes
+              - dms:DescribeRefreshSchemasStatus
+              - dms:DescribeReplicationTaskIndividualAssessments
+              - dms:DescribeCertificates
+              - dms:DescribeEvents
+              - dms:DescribeEventSubscriptions
+              - dms:DescribeEndpointTypes
+              - dms:DescribeEventCategories
+              - dms:DescribeReplicationTaskAssessmentRuns
+              - dms:DescribeTableStatistics
+            Resource: "*"
+
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
