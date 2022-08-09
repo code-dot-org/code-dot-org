@@ -14,10 +14,10 @@ $tableWidth: 400px;
     bottom: 0px;
     background-color: $white;
     display: none;
+    &Display {
+        display: block;
+    }
 };
-.displayContainer {
-    display: block;
-}
 .dataBrowser {
     position: absolute;
     top: 0px;

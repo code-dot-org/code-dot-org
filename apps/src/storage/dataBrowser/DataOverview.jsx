@@ -53,7 +53,7 @@ class DataOverview extends React.Component {
           style.container,
           (this.props.view === DataView.OVERVIEW ||
             this.props.view === DataView.PROPERTIES) &&
-            style.displayContainer
+            style.containerDisplay
         )}
       >
         <DataLibraryPane />
