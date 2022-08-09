@@ -39,14 +39,6 @@ class DataBrowser extends React.Component {
   };
 
   render() {
-    console.log(
-      classNames(
-        style.tab,
-        this.state.selectedTab === TabType.DATA_TABLES
-          ? style.tabActive
-          : style.tabInactive
-      )
-    );
     return (
       <div style={{height: '100%'}}>
         <div id="dataBrowserTabs" className={style.workspaceTabs}>
