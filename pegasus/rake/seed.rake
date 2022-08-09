@@ -1,4 +1,5 @@
-require pegasus_dir 'data/csv'
+require lib_dir 'cdo/data/csv_to_sql_table'
+require lib_dir 'cdo/data/google_sheet_to_csv'
 
 $gdrive_ = nil
 
