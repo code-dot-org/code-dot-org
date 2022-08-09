@@ -9,7 +9,7 @@ import {
   refreshProjectName,
   setNameFailure,
   unsetNameFailure
-} from '../../headerRedux';
+} from '../../projectRedux';
 import NameFailureDialog from '../NameFailureDialog';
 import NameFailureError from '../../NameFailureError';
 
@@ -142,8 +142,8 @@ class UnconnectedEditProjectName extends React.Component {
 }
 const EditProjectName = connect(
   state => ({
-    projectName: state.header.projectName,
-    projectNameFailure: state.header.projectNameFailure
+    projectName: state.project.projectName,
+    projectNameFailure: state.project.projectNameFailure
   }),
   {
     refreshProjectName,
