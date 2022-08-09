@@ -2,7 +2,7 @@ import Dialog from '../../templates/Dialog';
 import PendingButton from '../../templates/PendingButton';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 

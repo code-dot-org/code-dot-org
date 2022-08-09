@@ -1,4 +1,4 @@
-require_relative 'test_helper'
+require_relative 'middleware_test_helper'
 require 'channels_api'
 require 'timecop'
 require 'active_support/time'
