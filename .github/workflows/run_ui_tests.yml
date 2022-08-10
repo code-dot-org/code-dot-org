@@ -15,6 +15,7 @@ jobs:
       CLOUDFRONT_PRIVATE_KEY: ${{ secrets.CLOUDFRONT_PRIVATE_KEY }}
       FIREBASE_NAME: ${{ secrets.FIREBASE_NAME }}
       FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+      PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
       
     steps:    
       - name: Get actions code
