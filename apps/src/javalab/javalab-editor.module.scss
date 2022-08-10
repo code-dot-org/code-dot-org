@@ -1,5 +1,15 @@
 @import 'color.scss';
 
+.editor {
+  width: 100%;
+  min-height: 100px;
+  background-color: $white;
+}
+
+.darkBackground {
+  background-color: $darkest_slate_gray;
+}
+
 .fileMenuToggleButton {
   padding: 0;
   height: 20px;
