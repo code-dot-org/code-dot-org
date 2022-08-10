@@ -23,6 +23,9 @@
       end
     }
 
+    # Convert domain names like "domain.com" to "DomainDotCom" because AWS
+    # Cloudformation Resource Logical ID's must be alphanumeric (A-Za-z0-9) and
+    # unique within the template.
     def camelize_domain(domain)
       domain.split(/\./).map(&:capitalize).join("Dot")
     end
