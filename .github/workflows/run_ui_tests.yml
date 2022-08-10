@@ -8,6 +8,8 @@ jobs:
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}
     steps:
+      - name: Get actions code
+        uses: actions/checkout@v3        
       - name: install-test-pre-requisites
         uses: ./.github/actions/install-test-environment
       - name: Rake run UI tests
