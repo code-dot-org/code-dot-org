@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2022-08-05 20:56:43 UTC",
+    "serialized_at": "2022-08-08 16:51:59 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -887,7 +887,7 @@
       "key": "5bc6a2ca-9a96-4b21-ae48-56105ffdb953",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. This is a video that explains how to upload your own images for your students to use as sprites. . \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. [This](https://youtu.be/8KCAvNt4jRg) is a video that explains how to upload your own images for your students to use as sprites. \n",
         "duration": "10",
         "name": "Create a Local Ecosystem"
       },
@@ -1534,6 +1534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bunny_adapt_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1556,6 +1559,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bunny_explain_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1578,6 +1584,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_counters_one_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1600,6 +1609,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_counters_two_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1622,6 +1634,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_explain_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1644,6 +1659,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gray_csc_ecosystems_survival_choice_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1666,6 +1684,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_freeplay_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
