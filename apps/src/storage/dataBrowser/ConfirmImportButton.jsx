@@ -3,7 +3,8 @@ import PendingButton from '../../templates/PendingButton';
 import React from 'react';
 import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 
 const INITIAL_STATE = {
   isConfirmDialogOpen: false,
@@ -80,7 +81,7 @@ class ConfirmImportButton extends React.Component {
           isPending={this.state.isImporting}
           onClick={() => this.importFileInput.click()}
           pendingText="Importing..."
-          style={dataStyles.whiteButton}
+          className={classNames(dataStyles.button, dataStyles.buttonWhite)}
           text="Import csv"
         />
       </span>
