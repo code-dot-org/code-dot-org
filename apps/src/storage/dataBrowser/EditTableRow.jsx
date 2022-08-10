@@ -121,9 +121,7 @@ class EditTableRow extends React.Component {
         {!this.props.readOnly && <td className={dataStyles.cell} />}
 
         {!this.props.readOnly && (
-          <td
-            className={classNames(dataStyles.cell, dataStyles.cellEditButton)}
-          >
+          <td className={classNames(dataStyles.cell, dataStyles.editButton)}>
             {!this.state.isDeleting &&
               (this.state.isEditing ? (
                 <PendingButton
@@ -132,7 +130,8 @@ class EditTableRow extends React.Component {
                   pendingText="Saving..."
                   className={classNames(
                     dataStyles.button,
-                    dataStyles.buttonSave
+                    dataStyles.buttonBlue,
+                    dataStyles.buttonBlueSave
                   )}
                   text="Save"
                 />
@@ -141,7 +140,8 @@ class EditTableRow extends React.Component {
                   type="button"
                   className={classNames(
                     dataStyles.button,
-                    dataStyles.buttonEdit
+                    dataStyles.buttonWhite,
+                    dataStyles.buttonWhiteEdit
                   )}
                   onClick={this.handleEdit}
                 >

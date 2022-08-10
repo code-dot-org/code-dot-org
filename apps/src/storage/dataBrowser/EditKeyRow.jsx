@@ -100,20 +100,28 @@ class EditKeyRow extends React.Component {
             displayableValue(this.props.value)
           )}
         </td>
-        <td className={classNames(dataStyles.cell, dataStyles.cellEditButton)}>
+        <td className={classNames(dataStyles.cell, dataStyles.editButton)}>
           {!this.state.isDeleting &&
             (this.state.isEditing ? (
               <PendingButton
                 isPending={this.state.isSaving}
                 onClick={this.handleSave}
                 pendingText="Saving..."
-                className={classNames(dataStyles.button, dataStyles.buttonSave)}
+                className={classNames(
+                  dataStyles.button,
+                  dataStyles.buttonBlue,
+                  dataStyles.buttonBlueSave
+                )}
                 text="Save"
               />
             ) : (
               <button
                 type="button"
-                className={classNames(dataStyles.button, dataStyles.buttonEdit)}
+                className={classNames(
+                  dataStyles.button,
+                  dataStyles.buttonWhite,
+                  dataStyles.buttonWhiteEdit
+                )}
                 onClick={this.handleEdit}
               >
                 Edit
