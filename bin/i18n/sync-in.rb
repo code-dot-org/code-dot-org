@@ -91,6 +91,23 @@ def get_i18n_strings(level)
       end
     end
 
+    # rubric
+    if level.mini_rubric&.to_bool
+      rubric_properties = Hash.new
+      %w(
+        rubric_key_concept
+        rubric_performance_level_1
+        rubric_performance_level_2
+        rubric_performance_level_3
+        rubric_performance_level_4
+      ).each do |prop|
+        prop_value = level.try(prop)
+        rubric_properties[prop] = prop_value unless prop_value.nil?
+      end
+      i18n_strings['mini_rubric'] = Hash.new unless rubric_properties.empty?
+      i18n_strings['mini_rubric'].merge! rubric_properties
+    end
+
     # parse markdown properties for potential placeholder texts
     documents = []
     %w(
@@ -177,6 +194,13 @@ def get_i18n_strings(level)
       %w[block_categories variable_names parameter_names].each do |type|
         i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
       end
+    end
+  end
+
+  if level.is_a? LevelGroup
+    i18n_strings["sublevels"] = {}
+    level.child_levels.map do |sublevel|
+      i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
     end
   end
 
@@ -423,7 +447,7 @@ end
 
 def redact_level_file(source_path)
   return unless File.exist? source_path
-  source_data = JSON.load(File.open(source_path))
+  source_data = JSON.parse(File.read(source_path))
   return if source_data.blank?
 
   redactable_data = source_data.map do |level_url, i18n_strings|

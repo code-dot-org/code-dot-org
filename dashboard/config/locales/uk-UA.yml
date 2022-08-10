@@ -467,7 +467,6 @@ uk:
     popup:
       progress_for_user: Прогрес %{name}
       progress: Ваш прогрес
-      lines: 'Усього рядків коду: %{lines}'
       close: ЗАКРИТИ
       mastery: Поняття
       puzzle_map: Етапи

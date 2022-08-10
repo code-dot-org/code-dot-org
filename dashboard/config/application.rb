@@ -24,11 +24,19 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    # Eventually, we want to simply call:
-    #config.load_defaults 6.0
-    config.active_record.belongs_to_required_by_default = true
-    config.action_dispatch.return_only_media_type_on_content_type = false
-    config.autoloader = :zeitwerk
+    config.load_defaults 6.0
+
+    # Temporarily disable some default values that we aren't yet ready for.
+    # Right now, these changes to cookie functionality break projects
+    #
+    # TODO infra: Figure out why, fix, and reenable.
+    #
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/28132)
+    config.action_dispatch.use_authenticated_cookie_encryption = false
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/29263)
+    config.active_support.use_authenticated_message_encryption = false
+    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
+    config.action_dispatch.use_cookies_with_metadata = false
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
