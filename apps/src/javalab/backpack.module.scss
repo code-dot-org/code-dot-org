@@ -41,6 +41,10 @@
   padding: 7px 15px;
   width: 100%;
 
+  input[type="checkbox"] {
+    margin: 0;
+  }
+
   &:hover {
     background-color: $background_gray;
   }
@@ -54,10 +58,6 @@
 
 .dropdownOpenButton {
   background-color: $cyan;
-}
-
-input[type="checkbox"] {
-  margin: 0;
 }
 
 .fileListLabel {
