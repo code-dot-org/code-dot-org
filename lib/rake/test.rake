@@ -383,6 +383,7 @@ namespace :test do
                  # currently disabled because these tests take too long to run on circle
                  # :interpreter,
                  :dashboard,
+                 :dashboard_legacy,
                  :pegasus,
                  :shared,
                  :lib,
@@ -395,7 +396,7 @@ namespace :test do
 
   task changed: ['changed:all']
 
-  task all: [:apps, :dashboard, :pegasus, :shared, :lib, :bin_i18n]
+  task all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin_i18n]
 end
 task test: ['test:changed']
 
