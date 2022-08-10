@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: install-test-pre-requisites
-        uses: ./.github/actions/install-test-requirements
+        uses: ./.github/actions/install-test-environment
       - name: Rake run UI tests
         run: bundle exec rake test:all --trace
