@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
 import {castValue, displayableValue, editableValue} from './dataUtils';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 
 const INITIAL_STATE = {
   isDeleting: false,
@@ -83,12 +84,14 @@ class EditKeyRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row} className="uitest-kv-table-row">
-        <td style={dataStyles.cell}>{JSON.stringify(this.props.keyName)}</td>
-        <td style={dataStyles.cell}>
+      <tr className={classNames(dataStyles.row, 'uitest-kv-table-row')}>
+        <td className={dataStyles.cell}>
+          {JSON.stringify(this.props.keyName)}
+        </td>
+        <td className={dataStyles.cell}>
           {this.state.isEditing ? (
             <input
-              style={dataStyles.input}
+              className={dataStyles.input}
               value={this.state.newValue || ''}
               onChange={this.handleChange}
               onKeyUp={this.handleKeyUp}
@@ -97,20 +100,20 @@ class EditKeyRow extends React.Component {
             displayableValue(this.props.value)
           )}
         </td>
-        <td style={dataStyles.editButtonCell}>
+        <td className={classNames(dataStyles.cell, dataStyles.cellEditButton)}>
           {!this.state.isDeleting &&
             (this.state.isEditing ? (
               <PendingButton
                 isPending={this.state.isSaving}
                 onClick={this.handleSave}
                 pendingText="Saving..."
-                style={dataStyles.saveButton}
+                className={classNames(dataStyles.button, dataStyles.buttonSave)}
                 text="Save"
               />
             ) : (
               <button
                 type="button"
-                style={dataStyles.editButton}
+                className={classNames(dataStyles.button, dataStyles.buttonEdit)}
                 onClick={this.handleEdit}
               >
                 Edit
@@ -123,7 +126,7 @@ class EditKeyRow extends React.Component {
               onClick={this.handleDelete}
               pendingStyle={{float: 'right'}}
               pendingText="Deleting..."
-              style={dataStyles.redButton}
+              className={classNames(dataStyles.button, dataStyles.buttonRed)}
               text="Delete"
             />
           )}

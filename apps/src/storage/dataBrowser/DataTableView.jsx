@@ -9,7 +9,7 @@ import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {changeView, showWarning, tableType} from '../redux/data';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
 import TableDescription from './TableDescription';
 import classNames from 'classnames';
@@ -100,7 +100,6 @@ class DataTableView extends React.Component {
     } = this.props;
     const visible = DataView.TABLE === view;
     const debugDataStyle = {
-      ...dataStyles.debugData,
       ...{
         display: this.state.showDebugView ? '' : 'none'
       }
@@ -115,21 +114,21 @@ class DataTableView extends React.Component {
           visible ? '' : style.containerHidden
         )}
       >
-        <div style={dataStyles.viewHeader}>
-          <span style={dataStyles.backLink}>
+        <div className={dataStyles.viewHeader}>
+          <span className={dataStyles.backLink}>
             <a
               id="tableBackToOverview"
-              style={dataStyles.link}
+              className={dataStyles.link}
               onClick={() => onViewChange(DataView.OVERVIEW)}
             >
               <FontAwesome icon="arrow-circle-left" />
               &nbsp;Back to data
             </a>
           </span>
-          <span style={dataStyles.debugLink}>
+          <span className={dataStyles.debugLink}>
             <a
               id="uitest-tableDebugLink"
-              style={dataStyles.link}
+              className={dataStyles.link}
               onClick={this.toggleDebugView}
             >
               {this.state.showDebugView ? 'Table view' : 'Debug view'}
@@ -149,7 +148,9 @@ class DataTableView extends React.Component {
             libraryTables={libraryManifest.tables}
           />
         )}
-        <div style={debugDataStyle}>{this.getTableJson()}</div>
+        <div className={dataStyles.debugData} style={debugDataStyle}>
+          {this.getTableJson()}
+        </div>
         {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
       </div>
     );
