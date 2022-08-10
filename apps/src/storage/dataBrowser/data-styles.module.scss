@@ -19,10 +19,10 @@ $maxCellWidth: 350px;
     font-size: 14px;
     max-width: $maxCellWidth;
     overflow: hidden;
-    &AddButton {
+    &.addButton {
         background-color: $lightest_teal;
     }
-    &EditButton {
+    &.editButton {
         background-color: $lightest_teal;
         width: $editButtonCellWidth;
     }
@@ -54,6 +54,11 @@ $maxCellWidth: 350px;
     &White {
         background-color: white;
         color: black;
+
+        &Edit {
+            margin-right: 10px;
+            min-width: 60px;
+        }
     }
 
     &Red {
@@ -64,16 +69,11 @@ $maxCellWidth: 350px;
     &Blue {
         background-color: $bootstrap_button_blue;
         color: white;
-    }
 
-    &Edit {
-        margin-right: 10px;
-        min-width: 60px;
-    }
-
-    &Save {
-        margin-right: 10px;
-        min-width: 60px;
+        &Save {
+            margin-right: 10px;
+            min-width: 60px;
+        }
     }
 
     &Gray {

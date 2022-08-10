@@ -92,7 +92,7 @@ class AddKeyRow extends React.Component {
             value={this.state.value || ''}
           />
         </td>
-        <td className={classNames(dataStyles.cell, dataStyles.cellAddButton)}>
+        <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
           <PendingButton
             isPending={this.state.isAdding}
             onClick={this.handleAdd}
