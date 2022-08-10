@@ -19,9 +19,7 @@ jobs:
       - name: Install mysql
         uses: ./.github/actions/install-mysql                    
       - name: Install test variables
-        uses: ./.github/actions/test-variables-installer      
-      - name: Install test variables
-        uses: ./.github/actions/install-ui-test-variables              
+        uses: ./.github/actions/install-test-environment                 
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
       - name: Install apt packages
