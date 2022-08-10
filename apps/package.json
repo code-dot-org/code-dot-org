@@ -8,9 +8,7 @@
     "npm": "^6.14.13"
   },
   "scripts": {
-    "lint": "npm run lint:scss && npm run lint:js",
-    "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
-    "lint:scss": "npx stylelint '**/*.scss'",
+    "lint": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
     "test": "TZ=UTC ./test-low-memory.sh",
     "test-low-memory": "TZ=UTC ./test-low-memory.sh",
     "test:unit": "TZ=UTC node --max_old_space_size=4096 ./node_modules/.bin/grunt unitTest",
@@ -208,8 +206,6 @@
     "sortabular": "^1.6.0",
     "sprintf-js": "^1.0.3",
     "style-loader": "^0.13.1",
-    "stylelint": "^14.9.1",
-    "stylelint-config-standard": "^26.0.0",
     "uglifyjs-webpack-plugin": "2.1.1",
     "unminified-webpack-plugin": "^2.0.0",
     "url-loader": "^0.5.7",
@@ -279,8 +275,6 @@
     "slate-react": "^0.81.0",
     "snack-build": "0.0.1",
     "snack-sdk": "2.3.6",
-    "stylelint-config-prettier-scss": "^0.0.1",
-    "stylelint-config-standard-scss": "^5.0.0",
     "survey-react": "^1.9.28",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
