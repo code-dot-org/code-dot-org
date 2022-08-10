@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-08-08 23:09:55 UTC",
+    "serialized_at": "2022-08-09 14:15:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -852,7 +852,7 @@
       "key": "dbe11eca-2c53-4275-b068-1228b45b3bbb",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -2438,9 +2438,49 @@
       "key": "1868dbf1-4e1b-4a2b-b2bb-f5f6ce1a211e",
       "position": 1,
       "properties": {
+        "description": "**Do This**: Have students work with a partner to discuss the algorithm for determining the total sentiment of the sample string provided on this level."
       },
       "seeding_key": {
         "activity_section.key": "1868dbf1-4e1b-4a2b-b2bb-f5f6ce1a211e",
+        "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb"
+      }
+    },
+    {
+      "key": "301688b1-d42d-47b4-b87a-4decbccf9651",
+      "position": 2,
+      "properties": {
+        "progression_name": "An Algorithm for Sentiment Analysis"
+      },
+      "seeding_key": {
+        "activity_section.key": "301688b1-d42d-47b4-b87a-4decbccf9651",
+        "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb"
+      }
+    },
+    {
+      "key": "c2dcdb33-0239-442b-b13f-f22ad90662ef",
+      "position": 3,
+      "properties": {
+        "description": "\n**Discuss:** What were the steps that were involved in your algorithm?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "With the class, brainstorm possible discrete steps that could be included in a sentiment analysis. \n\nTry to categorize two different types of steps: those that are essential and those that are add enrichments or features. The latter can be useful for differentiation purposes at a later point in the lab."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c2dcdb33-0239-442b-b13f-f22ad90662ef",
+        "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb"
+      }
+    },
+    {
+      "key": "ebbf1682-d7ad-40af-9b42-f20f265c5837",
+      "position": 4,
+      "properties": {
+        "description": "**Discuss:** Were any words not present in the `cleanSentiment.csv` **file? If so, how might you characterize these types of words?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebbf1682-d7ad-40af-9b42-f20f265c5837",
         "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb"
       }
     },
@@ -3417,6 +3457,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L1-L1_2022"
+        ],
         "progression": "The sentimentVal() Method"
       },
       "bonus": false,
@@ -3439,6 +3482,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L1-L2_2022"
+        ],
         "progression": "The sentimentVal() Method"
       },
       "bonus": false,
@@ -3461,6 +3507,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L1-L3_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3475,6 +3524,28 @@
       },
       "level_keys": [
         "CSA CB_Lab Sentiment-L1-L3_2022"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "An Algorithm for Sentiment Analysis"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L1_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "301688b1-d42d-47b4-b87a-4decbccf9651"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L2-L1_2022"
       ]
     }
   ],
@@ -3921,6 +3992,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022",
         "activity_section.key": "50cd7f55-91b4-4cc1-81e5-da2c90ff615e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L2-L1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L1_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "301688b1-d42d-47b4-b87a-4decbccf9651"
       }
     }
   ],
