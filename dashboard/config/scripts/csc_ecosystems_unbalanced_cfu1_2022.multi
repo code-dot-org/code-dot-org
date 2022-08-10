@@ -1,0 +1,7 @@
+name 'csc_ecosystems_unbalanced_cfu1_2022'
+question 'This code represents which of the following strategies to balance the ecosystem?'
+wrong 'Give boats a limited number of fish they are allowed to take. ', feedback: 'Incorrect.'
+right 'Create areas that are off limits to fishing .', feedback: 'Correct!'
+wrong 'Allow fishing only during specific times of the year. ', feedback: 'Incorrect.'
+wrong 'No fishing allowed.', feedback: 'Incorrect.'
+
