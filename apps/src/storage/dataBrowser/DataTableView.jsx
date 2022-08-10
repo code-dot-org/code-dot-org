@@ -114,8 +114,8 @@ class DataTableView extends React.Component {
           visible ? '' : style.containerHidden
         )}
       >
-        <div className={dataStyles.viewHeader}>
-          <span className={dataStyles.backLink}>
+        <div className={style.viewHeader}>
+          <span className={style.backLink}>
             <a
               id="tableBackToOverview"
               className={dataStyles.link}
@@ -125,7 +125,7 @@ class DataTableView extends React.Component {
               &nbsp;Back to data
             </a>
           </span>
-          <span className={dataStyles.debugLink}>
+          <span className={style.debugLink}>
             <a
               id="uitest-tableDebugLink"
               className={dataStyles.link}
@@ -148,7 +148,7 @@ class DataTableView extends React.Component {
             libraryTables={libraryManifest.tables}
           />
         )}
-        <div className={dataStyles.debugData} style={debugDataStyle}>
+        <div className={style.debugData} style={debugDataStyle}>
           {this.getTableJson()}
         </div>
         {!this.state.showDebugView && <DataTable readOnly={readOnly} />}

@@ -61,7 +61,7 @@ class TableControls extends React.Component {
           </button>
         </div>
         {/* help make the "text-align: justify;" trick work */}
-        <div className={dataStyles.clearfix} />
+        <div className={style.clearfix} />
       </div>
     );
   }
