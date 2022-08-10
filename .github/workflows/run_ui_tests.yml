@@ -43,6 +43,20 @@ jobs:
           CIRCLE_BUILD_NUM: "42:-2323"
           CIRCLE_TEST_REPORTS: /home/circleci/test_reports
           CIRCLE_ARTIFACTS: /home/circleci/artifacts
+        run: bundle exec rake circle:seed_ui_test --trace        
+      - name: Rake run UI tests
+        env: 
+          CI: true
+          RAILS_ENV: test
+          RACK_ENV: test
+          DISABLE_SPRING: 1           
+          CIRCLE_NODE_INDEX: 1
+          CIRCLE_NODE_TOTAL: 1
+          CIRCLECI: true
+          LD_LIBRARY_PATH: /usr/local/lib
+          CIRCLE_BUILD_NUM: "42:-2323"
+          CIRCLE_TEST_REPORTS: /home/circleci/test_reports
+          CIRCLE_ARTIFACTS: /home/circleci/artifacts
         run: bundle exec rake circle:run_ui_tests --trace
       - name: debugging
         run: echo "$CIRCLE_NODE_TOTAL"
