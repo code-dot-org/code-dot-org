@@ -5,6 +5,8 @@ jobs:
   run-integration-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Get actions code
+        uses: actions/checkout@v3    
       - name: install-test-pre-requisites
         uses: ./.github/actions/install-test-environment
       - name: Rake run UI tests
