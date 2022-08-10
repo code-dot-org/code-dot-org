@@ -9,7 +9,7 @@ jobs:
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}
     steps:
       - name: install-test-pre-requisites
-        uses: ./.github/workflows/install_test_requirements.yml
+        uses: ./.github/actions/install-test-requirements
       - name: Rake run UI tests
         env:
           CI: true
