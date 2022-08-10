@@ -7,7 +7,7 @@ import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
 import {valueOr} from '../../utils';
 import classNames from 'classnames';
 import style from './column-header.module.scss';
@@ -117,7 +117,6 @@ class ColumnHeader extends React.Component {
 
   render() {
     const inputStyle = {
-      ...dataStyles.input,
       ...{
         display: this.props.isEditing ? null : 'none',
         backgroundColor: this.isInputValid() ? null : color.lightest_red,
@@ -125,7 +124,12 @@ class ColumnHeader extends React.Component {
       }
     };
     return (
-      <th style={dataStyles.headerCell} className="uitest-data-table-column">
+      <th
+        className={classNames(
+          dataStyles.headerCell,
+          'uitest-data-table-column'
+        )}
+      >
         <div
           className={classNames(
             style.container,
@@ -166,6 +170,7 @@ class ColumnHeader extends React.Component {
         />
         <input
           ref={input => (this.input = input)}
+          className={dataStyles.input}
           style={inputStyle}
           value={valueOr(this.state.newName, this.props.columnName)}
           onBlur={this.handleBlur}

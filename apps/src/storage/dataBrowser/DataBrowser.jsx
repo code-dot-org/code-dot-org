@@ -4,7 +4,7 @@ import msg from '@cdo/locale';
 import AddTableListRow from './AddTableListRow';
 import EditTableListRow from './EditTableListRow';
 import KVPairs from './KVPairs';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
 import {changeView, showWarning} from '../redux/data';
 import {DataView} from '../constants';
@@ -98,10 +98,10 @@ class DataBrowser extends React.Component {
               </colgroup>
               <tbody>
                 <tr>
-                  <th style={dataStyles.headerCell}>
+                  <th className={dataStyles.headerCell}>
                     {msg.dataTableNamePlaceholder()}
                   </th>
-                  <th style={dataStyles.headerCell}>{msg.actions()}</th>
+                  <th className={dataStyles.headerCell}>{msg.actions()}</th>
                 </tr>
                 {Object.keys(this.props.tableListMap).map(tableName => (
                   <EditTableListRow

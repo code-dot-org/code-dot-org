@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '../../templates/Dialog';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 
 class ConfirmDeleteButton extends React.Component {
   static propTypes = {
@@ -44,7 +45,7 @@ class ConfirmDeleteButton extends React.Component {
           type="button"
           id={this.props.buttonId}
           onClick={() => this.setState({open: true})}
-          style={dataStyles.redButton}
+          className={classNames(dataStyles.button, dataStyles.buttonRed)}
         >
           {this.props.buttonText}
         </button>
