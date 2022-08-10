@@ -10,7 +10,7 @@ import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {showWarning} from '../redux/data';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import msg from '@cdo/locale';
@@ -225,8 +225,10 @@ class DataTable extends React.Component {
                 ))}
                 {!this.props.readOnly && (
                   <th
-                    className={style.addColumnHeader}
-                    style={dataStyles.headerCell}
+                    className={classNames(
+                      style.addColumnHeader,
+                      dataStyles.headerCell
+                    )}
                   >
                     {this.state.pendingAdd ? (
                       <FontAwesome icon="spinner" className="fa-spin" />
@@ -241,7 +243,7 @@ class DataTable extends React.Component {
                   </th>
                 )}
                 {!this.props.readOnly && (
-                  <th style={dataStyles.headerCell}>Actions</th>
+                  <th className={dataStyles.headerCell}>Actions</th>
                 )}
               </tr>
 

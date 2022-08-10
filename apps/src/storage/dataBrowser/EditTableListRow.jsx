@@ -4,7 +4,7 @@ import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
@@ -23,11 +23,11 @@ class EditTableListRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row}>
-        <td style={dataStyles.cell}>
+      <tr className={dataStyles.row}>
+        <td className={dataStyles.cell}>
           <EditLink name={this.props.tableName} onClick={this.handleEdit} />
         </td>
-        <td style={dataStyles.cell}>
+        <td className={dataStyles.cell}>
           <ConfirmDeleteButton
             title="Delete table"
             body="Do you really want to delete this entire table? You cannot undo this action."
