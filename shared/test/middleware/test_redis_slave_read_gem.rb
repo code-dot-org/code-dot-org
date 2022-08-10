@@ -3,7 +3,7 @@
 # configuration and wanted to verify that traffic would be distributed as
 # expected across nodes within a cluster.
 
-require_relative '../test_helper'
+require_relative 'middleware_test_helper'
 require 'redis-slave-read'
 require 'helpers/sharded_redis_factory'
 

@@ -1,0 +1,24 @@
+@import 'color.scss';
+
+$standard-padding: 20px;
+
+.main {
+  margin: 0;
+}
+
+.outerStyle {
+  padding-left: $standard-padding;
+  padding-right: $standard-padding;
+  padding-top: $standard-padding / 4;
+  padding-bottom: $standard-padding / 4;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $lightest_gray;
+  }
+}
+
+.actionText {
+  font-size: 13px;
+  color: $dark_charcoal;
+}

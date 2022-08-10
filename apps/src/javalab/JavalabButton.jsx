@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 
 // TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).
@@ -14,6 +14,7 @@ function JavalabButton({
   style,
   onClick,
   isHorizontal,
+  tooltipText,
   isDisabled = false
 }) {
   let textStyle = {};
@@ -36,6 +37,7 @@ function JavalabButton({
       }}
       onClick={onClick}
       disabled={isDisabled}
+      title={tooltipText}
     >
       {icon}
       {text && <div style={textStyle}>{text}</div>}
@@ -53,7 +55,8 @@ JavalabButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   isHorizontal: PropTypes.bool,
   isDisabled: PropTypes.bool,
-  id: PropTypes.string
+  id: PropTypes.string,
+  tooltipText: PropTypes.string
 };
 
 JavalabButton.defaultProps = {

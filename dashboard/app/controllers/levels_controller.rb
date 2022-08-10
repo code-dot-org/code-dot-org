@@ -161,11 +161,11 @@ class LevelsController < ApplicationController
   def get_rubric
     return head :no_content unless @level.mini_rubric&.to_bool
     render json: {
-      keyConcept: @level.rubric_key_concept,
-      performanceLevel1: @level.rubric_performance_level_1,
-      performanceLevel2: @level.rubric_performance_level_2,
-      performanceLevel3: @level.rubric_performance_level_3,
-      performanceLevel4: @level.rubric_performance_level_4
+      keyConcept: @level.localized_rubric_property('rubric_key_concept'),
+      performanceLevel1: @level.localized_rubric_property('rubric_performance_level_1'),
+      performanceLevel2: @level.localized_rubric_property('rubric_performance_level_2'),
+      performanceLevel3: @level.localized_rubric_property('rubric_performance_level_3'),
+      performanceLevel4: @level.localized_rubric_property('rubric_performance_level_4')
     }
   end
 
@@ -276,7 +276,7 @@ class LevelsController < ApplicationController
   def update
     if level_params[:name] &&
         @level.name != level_params[:name] &&
-        @level.name.downcase == level_params[:name].downcase
+        @level.name.casecmp?(level_params[:name])
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       log_save_error(@level)

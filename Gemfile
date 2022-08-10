@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '~> 2.5'
+ruby '>= 2.5', '< 2.7'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -210,16 +210,16 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.5'
+gem 'font-awesome-rails', '~> 4.7.0.8'
 
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.5.0'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.10'
+gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
