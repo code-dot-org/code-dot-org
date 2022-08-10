@@ -9,4 +9,3 @@ jobs:
         uses: ./.github/workflows/install_test_requirements.yml
       - name: Rake run UI tests
         run: bundle exec rake test:all --trace
-    needs: run-ui-tests
