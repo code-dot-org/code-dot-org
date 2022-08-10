@@ -279,6 +279,8 @@
     "slate-react": "^0.81.0",
     "snack-build": "0.0.1",
     "snack-sdk": "2.3.6",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^5.0.0",
     "survey-react": "^1.9.28",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
