@@ -8,7 +8,9 @@
     "npm": "^6.14.13"
   },
   "scripts": {
-    "lint": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
+    "lint": "npm run lint:scss && npm run lint:js",
+    "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
+    "lint:scss": "npx stylelint '**/*.scss'",
     "test": "TZ=UTC ./test-low-memory.sh",
     "test-low-memory": "TZ=UTC ./test-low-memory.sh",
     "test:unit": "TZ=UTC node --max_old_space_size=4096 ./node_modules/.bin/grunt unitTest",
