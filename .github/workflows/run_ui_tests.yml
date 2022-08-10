@@ -1,4 +1,4 @@
-name: Run UI tests composite actions
+name: Run UI tests
 on:
   workflow_dispatch:
 jobs:
