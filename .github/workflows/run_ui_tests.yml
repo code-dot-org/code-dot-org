@@ -1,23 +1,41 @@
-name: Run UI tests
+name: Run UI tests composite actions
 on:
   workflow_dispatch:
 jobs:
   run-ui-tests:
     runs-on: ubuntu-latest
-    env:
+    env:        
+      CI: true
+      RAILS_ENV: test
+      RACK_ENV: test
+      DISABLE_SPRING: 1   
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}
-    steps:
+    steps:    
       - name: Get actions code
-        uses: actions/checkout@v3        
-      - name: install-test-pre-requisites
-        uses: ./.github/actions/install-test-environment
+        uses: actions/checkout@v3    
+      - name: say-hello
+        uses: ./.github/actions/start-job-server-actions           
+      - name: Install mysql
+        uses: ./.github/actions/install-mysql                    
+      - name: Install test variables
+        uses: ./.github/actions/test-variables-installer      
+      - name: Install test variables
+        uses: ./.github/actions/install-ui-test-variables              
+      - name: Install Ruby
+        uses: ./.github/actions/install-ruby
+      - name: Install apt packages
+        uses: ./.github/actions/install-apt-packages
+      - name: Install node
+        uses: ./.github/actions/install-node        
+      - name: Install rake dependencies 
+        uses: ./.github/actions/install-rake-dependencies
       - name: Rake run UI tests
-        env:
+        env: 
           CI: true
           RAILS_ENV: test
           RACK_ENV: test
-          DISABLE_SPRING: 1
+          DISABLE_SPRING: 1           
           CIRCLE_NODE_INDEX: 1
           CIRCLE_NODE_TOTAL: 1
           CIRCLECI: true
@@ -26,3 +44,5 @@ jobs:
           CIRCLE_TEST_REPORTS: /home/circleci/test_reports
           CIRCLE_ARTIFACTS: /home/circleci/artifacts
         run: bundle exec rake circle:run_ui_tests --trace
+      - name: debugging
+        run: echo "$CIRCLE_NODE_TOTAL"
