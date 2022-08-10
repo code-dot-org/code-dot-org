@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-03 13:57:21 UTC",
+    "serialized_at": "2022-08-09 16:54:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6198,6 +6198,19 @@
       }
     },
     {
+      "name": "Station Print-outs",
+      "url": "https://docs.google.com/document/d/1Q7z2dGMiSeSD3coG21qyFqIRXsGsCLRO3DK67-yP88U/edit",
+      "key": "station_print-outs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
       "name": "The equals() Method",
       "url": "https://youtu.be/F1WhwH4abX4",
       "key": "the_equals_method",
@@ -6739,6 +6752,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "de_morgan_s_laws"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "station_print-outs"
       }
     },
     {
