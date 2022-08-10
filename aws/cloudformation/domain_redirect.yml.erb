@@ -36,6 +36,9 @@ Resources:
 <%- domains.each do |domain| -%>
   <%=camelize_domain(domain)%>HostedZone: 
     Type: "AWS::Route53::HostedZone"
+    # Hosted zones will not be deleted upon stack deletion in case other records have been added.
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Properties:
       Name: <%= domain %>
 
@@ -55,7 +58,7 @@ Resources:
     Properties:
       DistributionConfig:
         Enabled: true
-        Comment: Redirect www to root domain
+        Comment: Redirects via CloudFront functions
         PriceClass: PriceClass_All
         Aliases: <% domains.each do |domain| %>
           - <%= domain -%>
@@ -123,7 +126,7 @@ Resources:
     Properties: 
       Name: !Sub "${AWS::StackName}-www-redirect"
       FunctionConfig: 
-        Comment: Redirects a subdomain to the root domain
+        Comment: Redirects to a new URL
         Runtime: cloudfront-js-1.0
       AutoPublish: true
       FunctionCode: |
