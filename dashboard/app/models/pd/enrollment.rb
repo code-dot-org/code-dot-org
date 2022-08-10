@@ -161,21 +161,17 @@ class Pd::Enrollment < ApplicationRecord
 
     # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
     # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
-    foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
+    foorm_enrollments = enrollments.select do |enrollment|
       (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
         (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
     end
 
-    # Admin and Counselor now use foorm for enrollments.
-    admin_counselor_enrollments = other_enrollments.select do |enrollment|
-      enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR
-    end
-
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
-    # CSF Intro, and CSF Deep Dive (surveys would be too out of date), teachercon (deprecated), or any academic year workshop
+    # CSF Intro, and CSF Deep Dive (surveys would be too out of date), teachercon (deprecated),
+    # Admin (deprecated), Counselor (deprecated), or any academic year workshop
     # (there are multiple post-survey options, therefore the facilitators must provide a link themselves).
-    filter_for_foorm_survey_completion(foorm_enrollments + admin_counselor_enrollments, select_completed)
+    filter_for_foorm_survey_completion(foorm_enrollments, select_completed)
   end
 
   before_create :assign_code
