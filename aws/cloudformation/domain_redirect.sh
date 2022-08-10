@@ -1,35 +1,40 @@
 #!/bin/bash
 
 set -e
-# verbose=0
-# while getopts "v" opt
-# do
-#     case $opt in
-#     (v) verbose=1 ;;
-#     (*) printf "Illegal option '-%s'\n" "$opt" && exit 1 ;;
-#     esac
-# done
 
 # Get the options
 verbose=0
-while getopts ":vd:t:" option; do
+while getopts :vhd:t: option; do
   case $option in
-    v) # display Help
+    h) # Help
+      echo "Generate a cloudformation template for a redirected domain(s)."
+      echo ""
+      echo "Options:"
+      echo "  -v           Verbose"
+      echo "  -t TARGET    The target URL, like 'https://example.com/path'"
+      echo "  -d DOMAINS   Comma-separated list of domains, like 'test.org,test.net"
+      echo "  -h           This help text"
+      exit;;
+    v) # Display verbose logging (cat the generated template)
       verbose=1;;
     t) # Enter a target URL
       Target=$OPTARG;;
     d) #Enter a comma-separated list of domain names
       Domains=$OPTARG;;
     \?) # Invalid option
-      echo "Error: Invalid option"
-      exit;;
+      echo "Error: Invalid option. Use '-h' for help."  >&2
+      exit 1;;
   esac
 done
+
+if [ -z "$Domains" ] || [ -z "$Target" ]; then
+        echo "Missing -d or -t. Use '-h' for help." >&2
+        exit 1
+fi
 
 echo "Redirecting $Domains to $Target"
 
 echo 🐝 Transforming...
-# erb domains=csedcon.com,csedcon.net,csedcon.org redirect_to=https://cvent.me/7VYB42 -T - domain_redirect.yml.erb > domain_redirect.yml
 erb domains=$Domains redirect_to=$Target -T - domain_redirect.yml.erb > domain_redirect.yml
 (( verbose )) && cat domain_redirect.yml
 
