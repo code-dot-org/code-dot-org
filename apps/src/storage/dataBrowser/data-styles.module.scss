@@ -20,11 +20,11 @@ $maxCellWidth: 350px;
     max-width: $maxCellWidth;
     overflow: hidden;
     &AddButton {
-        background-color: $lightest_teal
+        background-color: $lightest_teal;
     }
     &EditButton {
         background-color: $lightest_teal;
-        width: $editButtonCellWidth
+        width: $editButtonCellWidth;
     }
 }
 
@@ -39,7 +39,7 @@ $maxCellWidth: 350px;
 .link {
     color: $purple;
     cursor: pointer;
-    font-family: "Gotham 7r", sans-serif
+    font-family: "Gotham 7r", sans-serif;
 }
 
 .button {
