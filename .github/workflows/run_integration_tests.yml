@@ -15,7 +15,7 @@ jobs:
       - name: Get actions code
         uses: actions/checkout@v3    
       - name: say-hello
-        uses: ./.github/actions/start-job-server-actions           
+        uses: ./.github/actions/start-server-job-actions  
       - name: Install mysql
         uses: ./.github/actions/install-mysql                    
       - name: Install test variables
