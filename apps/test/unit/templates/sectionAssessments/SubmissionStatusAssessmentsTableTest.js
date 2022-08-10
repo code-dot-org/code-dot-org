@@ -249,7 +249,10 @@ describe('SubmissionStatusAssessmentsTable', () => {
     ).to.equal('2018-10-07T20:52:05.000Z');
   });
 
-  it('renders localized submission timestamps', () => {
+  // This test is flaky based on the browser version.
+  // TODO: Re-enable it once we determine the right browser version/timestamp
+  // combination.
+  xit('renders localized submission timestamps', () => {
     const basicNonEnglishWrapper = mount(
       <SubmissionStatusAssessmentsTable
         studentOverviewData={studentOverviewData}
