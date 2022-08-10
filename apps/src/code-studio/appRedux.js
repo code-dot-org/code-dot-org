@@ -1,8 +1,8 @@
-const SET_APP_LOAD_STARTED = 'header/SET_APP_LOAD_STARTED';
-const SET_APP_LOADED = 'header/SET_APP_LOADED';
+const SET_APP_LOAD_STARTED = 'SET_APP_LOAD_STARTED';
+const SET_APP_LOADED = 'SET_APP_LOADED';
 
 const initialState = {
-  appLoading: false,
+  appLoadStarted: false,
   appLoaded: false
 };
 

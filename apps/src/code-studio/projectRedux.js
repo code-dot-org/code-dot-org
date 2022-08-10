@@ -1,13 +1,13 @@
-/** Redux actions and reducer for the inidividual projects */
+/** Redux actions and reducer for a inidividual project */
 /* globals dashboard */
 
-const SHOW_PROJECT_UPDATED_AT = 'header/SHOW_PROJECT_UPDATED_AT';
-const SET_PROJECT_UPDATED_STATUS = 'header/SET_PROJECT_UPDATED_STATUS';
-const SET_PROJECT_UPDATED_AT = 'header/SET_PROJECT_UPDATED_AT';
-const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
-const SHOW_TRY_AGAIN_DIALOG = 'header/SHOW_TRY_AGAIN_DIALOG';
-const SET_NAME_FAILURE = 'header/SET_NAME_FAILURE';
-const UNSET_NAME_FAILURE = 'header/UNSET_NAME_FAILURE';
+const SHOW_PROJECT_UPDATED_AT = 'project/SHOW_PROJECT_UPDATED_AT';
+const SET_PROJECT_UPDATED_STATUS = 'project/SET_PROJECT_UPDATED_STATUS';
+const SET_PROJECT_UPDATED_AT = 'project/SET_PROJECT_UPDATED_AT';
+const REFRESH_PROJECT_NAME = 'project/REFRESH_PROJECT_NAME';
+const SHOW_TRY_AGAIN_DIALOG = 'project/SHOW_TRY_AGAIN_DIALOG';
+const SET_NAME_FAILURE = 'project/SET_NAME_FAILURE';
+const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
 
 export const projectUpdatedStatuses = {
   default: 'default',
