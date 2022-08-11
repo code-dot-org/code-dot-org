@@ -36,9 +36,25 @@
 
     &:hover {
       color: $dark_charcoal;
-      box-shadow: none;
     }
   }
+}
+
+// for JavalabSettings (selected, main, dropdown)
+.selected {
+  background-color: $lightest_gray;
+  border-color: $lightest_gray;
+  color: $dark_charcoal;
+}
+
+.main {
+  display: inline-block;
+  float: left;
+}
+
+.dropdown {
+  bottom: 40px;
+  margin-left: 5px;
 }
 
 .leftButtons {
