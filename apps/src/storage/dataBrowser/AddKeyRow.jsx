@@ -2,10 +2,10 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {castValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
+import * as dataStyles from './dataStyles';
 import {WarningType} from '../constants';
 
 const INITIAL_STATE = {
@@ -73,31 +73,31 @@ class AddKeyRow extends React.Component {
 
   render() {
     return (
-      <tr id="uitest-addKeyValuePairRow" className={dataStyles.row}>
-        <td className={dataStyles.cell}>
+      <tr id="uitest-addKeyValuePairRow" style={dataStyles.row}>
+        <td style={dataStyles.cell}>
           <input
-            className={dataStyles.input}
+            style={dataStyles.input}
             onChange={this.handleKeyChange}
             onKeyUp={this.handleKeyUp}
             placeholder="enter text"
             value={this.state.key || ''}
           />
         </td>
-        <td className={dataStyles.cell}>
+        <td style={dataStyles.cell}>
           <input
-            className={dataStyles.input}
+            style={dataStyles.input}
             onChange={this.handleValueChange}
             onKeyUp={this.handleKeyUp}
             placeholder="enter text"
             value={this.state.value || ''}
           />
         </td>
-        <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
+        <td style={dataStyles.addButtonCell}>
           <PendingButton
             isPending={this.state.isAdding}
             onClick={this.handleAdd}
             pendingText="Adding"
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
+            style={dataStyles.blueButton}
             text="Add pair"
           />
         </td>
@@ -106,4 +106,4 @@ class AddKeyRow extends React.Component {
   }
 }
 
-export default AddKeyRow;
+export default Radium(AddKeyRow);

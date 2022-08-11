@@ -3,8 +3,9 @@ import {DataView} from '../constants';
 import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import dataStyles from './data-styles.module.scss';
+import * as dataStyles from './dataStyles';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
@@ -23,11 +24,11 @@ class EditTableListRow extends React.Component {
 
   render() {
     return (
-      <tr className={dataStyles.row}>
-        <td className={dataStyles.cell}>
+      <tr style={dataStyles.row}>
+        <td style={dataStyles.cell}>
           <EditLink name={this.props.tableName} onClick={this.handleEdit} />
         </td>
-        <td className={dataStyles.cell}>
+        <td style={dataStyles.cell}>
           <ConfirmDeleteButton
             title="Delete table"
             body="Do you really want to delete this entire table? You cannot undo this action."
@@ -41,4 +42,4 @@ class EditTableListRow extends React.Component {
   }
 }
 
-export default EditTableListRow;
+export default Radium(EditTableListRow);

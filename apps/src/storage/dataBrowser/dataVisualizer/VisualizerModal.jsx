@@ -6,8 +6,7 @@ import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import color from '../../../util/color';
-import dataStyles from '../data-styles.module.scss';
-import classNames from 'classnames';
+import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
@@ -228,7 +227,7 @@ class VisualizerModal extends React.Component {
       <span style={styles.container}>
         <button
           type="button"
-          className={classNames(dataStyles.button, dataStyles.buttonWhite)}
+          style={dataStyles.whiteButton}
           onClick={this.handleOpen}
         >
           {msg.visualizeData()}

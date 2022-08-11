@@ -6,11 +6,10 @@ import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
 import VisualizerModal from './dataVisualizer/VisualizerModal';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import msg from '@cdo/locale';
-import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
-import style from './table-controls.module.scss';
+import * as dataStyles from './dataStyles';
 
 class TableControls extends React.Component {
   static propTypes = {
@@ -23,11 +22,11 @@ class TableControls extends React.Component {
 
   render() {
     return (
-      <div className={style.container}>
-        <div className={style.tableNameWrapper}>
-          <span className={style.tableName}>{this.props.tableName}</span>
+      <div style={styles.container}>
+        <div style={styles.tableNameWrapper}>
+          <span style={styles.tableName}>{this.props.tableName}</span>
         </div>{' '}
-        <div className={style.buttonWrapper}>
+        <div style={styles.buttonWrapper}>
           <VisualizerModal key={this.props.tableName} />
 
           {!this.props.readOnly && (
@@ -51,20 +50,53 @@ class TableControls extends React.Component {
           <button
             type="button"
             onClick={this.props.exportCsv}
-            className={classNames(
-              style.exportButton,
-              dataStyles.button,
-              dataStyles.buttonWhite
-            )}
+            style={styles.exportButton}
           >
             Export to csv
           </button>
         </div>
         {/* help make the "text-align: justify;" trick work */}
-        <div className={style.clearfix} />
+        <div style={dataStyles.clearfix} />
       </div>
     );
   }
 }
 
-export default TableControls;
+const styles = {
+  buttonWrapper: {
+    display: 'inline-block',
+    marginBottom: 10,
+    marginTop: 10
+  },
+  container: {
+    // subtract the height of the clearfix element
+    marginBottom: -28,
+    // subtract the top margin of the buttonWrapper
+    marginTop: -10,
+    paddingTop: 0,
+    paddingBottom: 10,
+    paddingLeft: 0,
+    paddingRight: 0,
+    // make the buttons align right usually, but align left if they
+    // are forced to wrap onto the next line by a very long table name.
+    textAlign: 'justify'
+  },
+  exportButton: [
+    dataStyles.whiteButton,
+    {
+      marginLeft: 10,
+      width: 120
+    }
+  ],
+  tableName: {
+    fontSize: 18
+  },
+  tableNameWrapper: {
+    alignItems: 'flex-end',
+    display: 'inline-flex',
+    height: 30,
+    marginRight: 10,
+    verticalAlign: 'middle'
+  }
+};
+export default Radium(TableControls);

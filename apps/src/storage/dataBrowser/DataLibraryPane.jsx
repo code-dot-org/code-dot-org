@@ -1,3 +1,4 @@
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -6,13 +7,13 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import LibraryCategory from './LibraryCategory';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {getDatasetInfo} from './dataUtils';
+import color from '../../util/color';
 import msg from '@cdo/locale';
 import PreviewModal from './PreviewModal';
 import FirebaseStorage from '../firebaseStorage';
 import {WarningType} from '../constants';
 import experiments from '../../util/experiments';
 import _ from 'lodash';
-import style from './data-library-pane.module.scss';
 
 class DataLibraryPane extends React.Component {
   static propTypes = {
@@ -89,7 +90,7 @@ class DataLibraryPane extends React.Component {
     );
     categories = this.filterCategories(_.cloneDeep(categories));
     return (
-      <div className={style.container}>
+      <div style={styles.container}>
         <SafeMarkdown
           markdown={msg.dataLibraryDescription()}
           openExternalLinksInNewTab
@@ -99,7 +100,7 @@ class DataLibraryPane extends React.Component {
           onChange={this.search}
           clearButton={this.state.search.length > 0}
         />
-        <hr className={style.divider} />
+        <hr style={styles.divider} />
         {categories.map(category => (
           <LibraryCategory
             key={category.name}
@@ -116,6 +117,23 @@ class DataLibraryPane extends React.Component {
   }
 }
 
+const styles = {
+  container: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    width: 270,
+    boxSizing: 'border-box',
+    borderRight: '1px solid gray',
+    overflowY: 'auto',
+    padding: 10
+  },
+  divider: {
+    borderColor: color.light_gray,
+    margin: '5px 0px 10px 0px'
+  }
+};
+
 export default connect(
   state => ({
     libraryManifest: state.data.libraryManifest || {}
@@ -125,4 +143,4 @@ export default connect(
       dispatch(showWarning(warningMsg, warningTitle));
     }
   })
-)(DataLibraryPane);
+)(Radium(DataLibraryPane));

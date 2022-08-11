@@ -7,10 +7,11 @@ import {DataView} from '../constants';
 import EditKeyRow from './EditKeyRow';
 import DataEntryError from './DataEntryError';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
-import dataStyles from './data-styles.module.scss';
+import * as dataStyles from './dataStyles';
 
 class KVPairs extends React.Component {
   static propTypes = {
@@ -50,9 +51,9 @@ class KVPairs extends React.Component {
       <table style={keyValueDataStyle} className="uitest-kv-table">
         <tbody>
           <tr>
-            <th className={dataStyles.headerCell}>Key</th>
-            <th className={dataStyles.headerCell}>Value</th>
-            <th className={dataStyles.headerCell}>Actions</th>
+            <th style={dataStyles.headerCell}>Key</th>
+            <th style={dataStyles.headerCell}>Value</th>
+            <th style={dataStyles.headerCell}>Actions</th>
           </tr>
 
           <AddKeyRow
@@ -96,4 +97,4 @@ export default connect(
       dispatch(changeView(view));
     }
   })
-)(KVPairs);
+)(Radium(KVPairs));

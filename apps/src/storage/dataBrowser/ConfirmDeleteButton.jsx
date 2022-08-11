@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import Dialog from '../../templates/Dialog';
-import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
+import * as dataStyles from './dataStyles';
 
 class ConfirmDeleteButton extends React.Component {
   static propTypes = {
@@ -30,7 +30,7 @@ class ConfirmDeleteButton extends React.Component {
     let {confirmText, ...otherProps} = this.props;
     confirmText = confirmText || 'Delete';
     return (
-      <div style={{...{display: 'inline-block'}, ...this.props.containerStyle}}>
+      <div style={[{display: 'inline-block'}, this.props.containerStyle]}>
         <Dialog
           cancelText="Cancel"
           confirmText={confirmText}
@@ -45,7 +45,7 @@ class ConfirmDeleteButton extends React.Component {
           type="button"
           id={this.props.buttonId}
           onClick={() => this.setState({open: true})}
-          className={classNames(dataStyles.button, dataStyles.buttonRed)}
+          style={dataStyles.redButton}
         >
           {this.props.buttonText}
         </button>
@@ -54,4 +54,4 @@ class ConfirmDeleteButton extends React.Component {
   }
 }
 
-export default ConfirmDeleteButton;
+export default Radium(ConfirmDeleteButton);
