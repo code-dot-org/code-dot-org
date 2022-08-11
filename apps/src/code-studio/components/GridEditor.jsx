@@ -131,20 +131,7 @@ export default class GridEditor extends React.Component {
       return;
     }
 
-    // this is technically a violation of React's "thou shalt not modify
-    // state" commandment. The problem here is that we're modifying an
-    // element of an element of this.state.cells. We do then immediately
-    // update with setState, but it's still at the very least unclean.
-    //
-    // Some other potential approaches would be to clone our entire
-    // array before modifying it or to store the cells in some way that
-    // allows us to immutably update them. Storing tham as an object
-    // whose keys are their x,y coordinates, for example, and then
-    // providing some helper method to retrieve individual cells.
-    //
-    // Both of those seem a bit unnecessary, so for now this hack will
-    // remain.
-    const cells = this.state.cells;
+    const cells = [...this.state.cells];
     newCells.forEach((newRow, i) => {
       newRow.forEach((cell, j) => {
         if (cells[row + i] && cells[row + i][col + j]) {
