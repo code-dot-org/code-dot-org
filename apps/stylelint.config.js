@@ -23,7 +23,6 @@ module.exports = {
     'scss/double-slash-comment-empty-line-before': null,
     'selector-pseudo-element-colon-notation': null,
     'declaration-block-no-redundant-longhand-properties': null,
-    'selector-no-vendor-prefix': null,
     'value-keyword-case': null,
     'function-name-case': null
   }
