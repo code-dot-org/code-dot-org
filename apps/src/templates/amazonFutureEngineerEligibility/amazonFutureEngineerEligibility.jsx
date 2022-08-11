@@ -189,6 +189,14 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     });
   };
 
+  componentDidMount = () => {
+    let {formData} = this.state;
+
+    if (formData.schoolEligible && formData.consentAFE && formData.signedIn) {
+      this.loadCompletionPage();
+    }
+  }
+
   loadCompletionPage = async () => {
     let {submissionAccepted} = getSessionData();
     let {submissionSent} = this.state;
@@ -234,7 +242,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     }
 
     if (formData.schoolEligible && formData.consentAFE && formData.signedIn) {
-      this.loadCompletionPage();
       return (
         <div>
           <h2>Your request is being processed</h2>
