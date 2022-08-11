@@ -139,6 +139,7 @@ $content-view-width: $content-width - $student-list-width;
   }
 }
 
+/* stylelint-disable */
 :export {
   MAX_BODY_HEIGHT: math.div($max-height, 1px);
   STUDENT_LIST_WIDTH: math.div($student-list-width, 1px);
