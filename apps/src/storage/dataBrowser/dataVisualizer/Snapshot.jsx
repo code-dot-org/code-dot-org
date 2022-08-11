@@ -167,5 +167,5 @@ class Snapshot extends React.Component {
 
 export default connect(state => ({
   tableName: state.data.tableName || '',
-  projectName: state.header.projectName || ''
+  projectName: state.project.projectName || ''
 }))(Snapshot);
