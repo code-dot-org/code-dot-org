@@ -41,7 +41,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     # When the teacher loads the PL landing page
     load_pl_landing teacher
 
-    # They see a prompt to take the Admin workshop exit survey
+    # They do not see a prompt to take the Admin workshop exit survey
     response = assigns(:landing_page_data)
     refute response[:last_workshop_survey_url]
     refute response[:last_workshop_survey_course]
