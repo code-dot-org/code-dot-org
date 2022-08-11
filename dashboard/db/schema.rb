@@ -1795,7 +1795,7 @@ ActiveRecord::Schema.define(version: 2022_08_03_162830) do
     t.index ["user_id"], name: "index_sections_on_user_id"
   end
 
-  create_table "seed_info", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "seed_info", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "table", null: false
     t.datetime "mtime"
     t.index ["table"], name: "index_seed_info_on_table"

@@ -2,7 +2,7 @@ class UserLevelsController < ApplicationController
   before_action :authenticate_user!
   check_authorization except: [:delete_predict_level_progress]
   load_and_authorize_resource except: [:delete_predict_level_progress]
-  protect_from_forgery except: [:update] # referer is the script level page which is publically cacheable
+  protect_from_forgery except: [:update, :delete_predict_level_progress] # referer is the script level page which is publically cacheable
 
   before_action :set_user_level
 
@@ -25,10 +25,11 @@ class UserLevelsController < ApplicationController
 
   def delete_predict_level_progress
     script = Script.get_from_cache(params[:script_id])
-    return head :not_found unless script
-    return head :forbidden unless script.can_be_instructor?(current_user)
+    return head :not_found, text: 'Script not found' unless script
+    return head :forbidden, text: 'User must be instructor of course' unless script.can_be_instructor?(current_user)
     level = Level.find(params[:level_id])
-    return head :bad_request unless ['Match', 'Multi', 'FreeResponse'].include?(level.type)
+    return head :not_found, text: 'Level not found' unless level
+    return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported" unless ['Multi', 'FreeResponse'].include?(level.type)
     UserLevel.where(user_id: current_user.id, script_id: script.id, level: level.id).destroy_all
     return head :ok
   end
