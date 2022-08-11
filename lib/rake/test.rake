@@ -110,12 +110,21 @@ namespace :test do
         # Parallel tests don't seem to run more quickly over 16 processes.
         ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
 
-        # Hash of all seed-data content: All fixture files plus schema.rb.
+        # Hash of all seed-data and -config content
+        #
+        # Data:
+        # - All fixture files
+        # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
+        #
+        # Config:
+        # - schema.rb
+        # - seed.rake
         fixture_path = "#{dashboard_dir}/test/fixtures/"
         fixture_hash = Digest::MD5.hexdigest(
           Dir["#{fixture_path}/{**,*}/*.yml"].
             push(dashboard_dir('db/schema.rb')).
             push(dashboard_dir('config/videos.csv')).
+            push(dashboard_dir('lib/tasks/seed.rake')).
             select(&File.method(:file?)).
             sort.
             map(&Digest::MD5.method(:file)).
