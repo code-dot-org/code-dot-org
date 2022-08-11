@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {
   projectUpdatedStatuses as statuses,
   retryProjectSave
-} from '../../projectRedux';
+} from '../../headerRedux';
 import BaseDialog from '../../../templates/BaseDialog';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import Button from '../../../templates/Button';
@@ -69,8 +69,8 @@ const styles = {
 
 export default connect(
   state => ({
-    projectUpdatedStatus: state.project.projectUpdatedStatus,
-    isOpen: state.project.showTryAgainDialog
+    projectUpdatedStatus: state.header.projectUpdatedStatus,
+    isOpen: state.header.showTryAgainDialog
   }),
   dispatch => ({
     onTryAgain() {

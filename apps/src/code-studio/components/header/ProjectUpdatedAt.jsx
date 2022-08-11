@@ -5,7 +5,7 @@ import msg from '@cdo/locale';
 
 import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
-import {projectUpdatedStatuses as statuses} from '../../projectRedux';
+import {projectUpdatedStatuses as statuses} from '../../headerRedux';
 import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 
 class ProjectUpdatedAt extends React.Component {
@@ -76,6 +76,6 @@ const styles = {
 };
 
 export default connect(state => ({
-  status: state.project.projectUpdatedStatus,
-  updatedAt: state.project.projectUpdatedAt
+  status: state.header.projectUpdatedStatus,
+  updatedAt: state.header.projectUpdatedAt
 }))(ProjectUpdatedAt);

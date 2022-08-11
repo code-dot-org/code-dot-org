@@ -1,8 +1,6 @@
 /* eslint no-unused-vars: "error" */
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import header from './headerRedux';
-import project from './projectRedux';
-import app from './appRedux';
 import progress from './progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import lessonLock from './lessonLockRedux';
@@ -21,8 +19,6 @@ import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 
 registerReducers({
   header,
-  project,
-  app,
   progress,
   teacherSections,
   teacherPanel,
