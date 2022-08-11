@@ -215,7 +215,8 @@ export function randomKey(obj) {
  */
 export function createUuid() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = (Math.random() * 16) | 0,
+    // r is calculated from window.crypto.getRandomValues() which creates a new Uint8Array. The first and only value in the array is selected and divided by 2^8 - 1 to get a value between 0 - 1 like Math.random()
+    var r = ((window.crypto.getRandomValues(new Uint8Array(1))[0] / (Math.pow(2,8)-1)) * 16) | 0,
       v = c === 'x' ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });

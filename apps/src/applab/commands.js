@@ -553,8 +553,8 @@ applabCommands.createCanvas = function(opts) {
     opts.elementId,
     false
   );
-  apiValidateType(opts, 'createCanvas', 'width', width, 'number', OPTIONAL);
-  apiValidateType(opts, 'createCanvas', 'height', height, 'number', OPTIONAL);
+  apiValidateType(opts, 'createCanvas', 'width', opts.width, 'number', OPTIONAL);
+  apiValidateType(opts, 'createCanvas', 'height', opts.height, 'number', OPTIONAL);
 
   var newElement = document.createElement('canvas');
   var ctx = newElement.getContext('2d');
