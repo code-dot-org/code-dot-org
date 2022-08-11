@@ -6,6 +6,7 @@
   align-items: center;
   color: $white;
 
+  // should this be nested?
   &Horizontal {
     flex-direction: row;
   }

@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
 import JavalabSettings from './JavalabSettings';
-import stylez from './control-buttons.module.scss';
+import style from './control-buttons.module.scss';
 
 export default function ControlButtons({
   isRunning,
@@ -41,7 +41,7 @@ export default function ControlButtons({
 
   return (
     <div>
-      <div className={stylez.leftButtons}>
+      <div className={style.leftButtons}>
         <JavalabButton
           id="runButton"
           text={isRunning ? i18n.stop() : i18n.runProgram()}
@@ -50,7 +50,7 @@ export default function ControlButtons({
           }
           onClick={toggleRun}
           isHorizontal
-          className={stylez.buttonOrange}
+          className={style.buttonOrange}
           isDisabled={disableRunButton}
         />
         {showTestButton && (
@@ -60,18 +60,18 @@ export default function ControlButtons({
             icon={<FontAwesome icon="flask" className="fa" />}
             onClick={toggleTest}
             isHorizontal
-            className={stylez.buttonWhite}
+            className={style.buttonWhite}
             isDisabled={disableTestButton}
           />
         )}
       </div>
-      <div className={stylez.rightButtons}>
+      <div className={style.rightButtons}>
         <JavalabSettings>{renderSettings()}</JavalabSettings>
         {!isEditingStartSources && (
           <JavalabButton
             text={finishButtonText}
             onClick={isSubmittable ? null : onContinue}
-            className={stylez.buttonBlue}
+            className={style.buttonBlue}
             isDisabled={disableFinishButton}
             id={finishButtonId}
             tooltipText={finishButtonTooltipText}

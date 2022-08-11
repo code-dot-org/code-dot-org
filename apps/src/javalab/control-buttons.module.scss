@@ -41,6 +41,7 @@
 }
 
 // for JavalabSettings (selected, main, dropdown)
+// use buttonWhite in JavalabSettings, maybe move these into separate file?
 .selected {
   background-color: $lightest_gray;
   border-color: $lightest_gray;
