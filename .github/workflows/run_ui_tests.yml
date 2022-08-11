@@ -41,6 +41,15 @@ jobs:
         run: |
             echo "
             properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+            saucelabs_username: $SAUCE_USERNAME
+            sauce_username: $SAUCE_USERNAME
+            sauce_access_key: $SAUCE_ACCESS_KEY
+            cloudfront_key_pair: $CLOUDFRONT_KEY_PAIR_ID
+            cloudfront_private_key: $CLOUDFRONT_PRIVATE_KEY
+            firebase_name: $FIREBASE_NAME
+            firebase_secret: $FIREBASE_SECRET
+            aws_access_key_id: $AWS_ACCESS_KEY_ID
+            aws_secret_access_key: $AWS_SECRET_ACCESS_KEY
             " >> locals.yml        
       - name: Rake run UI tests
         env: 
