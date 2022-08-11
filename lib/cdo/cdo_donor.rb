@@ -56,8 +56,4 @@ class CdoDonor
     weight = SecureRandom.random_number
     all_donors.find {|d| d[:weight_f] - weight >= 0}
   end
-
-  def self.all_donors
-    @@all_donors ||= PEGASUS_DB[:cdo_donors].all
-  end
 end
