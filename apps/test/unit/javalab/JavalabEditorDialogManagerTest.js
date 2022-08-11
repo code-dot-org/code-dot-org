@@ -11,10 +11,9 @@ import {
 } from '@cdo/apps/redux';
 import javalabMsg from '@cdo/javalab/locale';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import {
+import JavalabEditorDialogManager, {
   DEFAULT_FILE_NAME,
   JavalabEditorDialog,
-  JavalabEditorDialogManager,
   UnconnectedJavalabEditorDialogManager
 } from '@cdo/apps/javalab/JavalabEditorDialogManager';
 import JavalabDialog from '@cdo/apps/javalab/JavalabDialog';
@@ -151,6 +150,15 @@ describe('JavalabEditorDialogManager', () => {
   });
 
   describe('Commit Dialog', () => {
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({javalab});
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
     it('Displays Commit Dialog if selected', () => {
       const commitDialogFileNames = ['file1', 'file2'];
       const wrapper = createWrapper({
@@ -169,8 +177,6 @@ describe('JavalabEditorDialogManager', () => {
 
     it('Filters non-visible sources in Redux', () => {
       // Using Redux for this test case only to verify logic in connect()
-      stubRedux();
-      registerReducers({javalab});
       const store = getStore();
 
       store.dispatch(
@@ -189,8 +195,6 @@ describe('JavalabEditorDialogManager', () => {
 
       const commitDialog = wrapper.find(CommitDialog).first();
       expect(commitDialog.props().files).to.deep.equal(['visible.java']);
-
-      restoreRedux();
     });
   });
 
