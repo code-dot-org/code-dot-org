@@ -36,6 +36,11 @@ jobs:
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies
+      - name: Setup locals
+        run: |
+            echo "
+            properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+            " >> locals.yml        
       - name: Rake run UI tests
         env: 
           CI: true
