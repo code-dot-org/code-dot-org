@@ -533,6 +533,7 @@ button.launch {
   min-width: 96px;
   margin-left: 0px;
   margin-right: 10px;
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
 }
@@ -557,6 +558,7 @@ button.blocklyLaunch {
     min-width: 111px;
   }
   padding: 7px 10px 7px 6px;
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
   img {
@@ -775,11 +777,10 @@ input[type="radio"] {
 }
 
 #puzzleRatingButtons {
-
   $red: #FF3014;
   $dark-red: $dark_red;
   $dark-blue: $dark_blue;
-  $gray: #333333;
+  $gray: #333;
   $dark-gray: #4D4D4D;
   $light-gray: $light_gray;
 
@@ -956,6 +957,7 @@ html[dir="RTL"] .prompt-icon-cell {
   .fa {
     font-size: 18px;
   }
+
   /* We don't want some of these styles to affect modal content. */
   .ml-modal {
     span {
@@ -1265,7 +1267,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   margin-right: -10px;
   border-radius: 8px 0 0 8px;
   padding: 10px 0 10px 14px;
-  background-color: #ffbb00;
+  background-color: #fb0;
 }
 
 .arrow-text {
@@ -1532,11 +1534,9 @@ $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-
 $tooltip-font: $gotham-regular;
 $function-name-font: $code-font;
 $examples-link-font: $gotham-extra-bold;
-
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,
