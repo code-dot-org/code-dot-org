@@ -121,12 +121,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
 
-    counselor_workshop = create :counselor_workshop, :ended
-    counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
-
-    admin_workshop = create :admin_workshop, :ended
-    admin_enrollment = create :pd_enrollment, workshop: admin_workshop
-
     local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
@@ -139,8 +133,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do
