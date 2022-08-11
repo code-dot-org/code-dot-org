@@ -1,10 +1,8 @@
 # Utility methods for generating certificate images.
 # Note: requires pegasus_dir to be in scope.
-
 require 'honeybadger/ruby'
 require 'rmagick'
 require_relative '../script_constants'
-require 'pegasus/helpers/pegasus_cdo_donor'
 # needed for force_8859_to_utf8
 require 'cdo/pegasus/string'
 
