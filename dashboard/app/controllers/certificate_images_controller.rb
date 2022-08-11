@@ -19,7 +19,7 @@ class CertificateImagesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    if data['donor'] && !PegasusCdoDonor.valid_donor_name?(data['donor'])
+    if data['donor'] && !DashboardCdoDonor.valid_donor_name?(data['donor'])
       return render status: :bad_request, json: {message: 'invalid donor name'}
     end
 
