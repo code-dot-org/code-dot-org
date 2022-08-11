@@ -2,9 +2,9 @@ import Dialog from '../../templates/Dialog';
 import PendingButton from '../../templates/PendingButton';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import msg from '@cdo/locale';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 
 const INITIAL_STATE = {
   isConfirmDialogOpen: false,
@@ -56,7 +56,9 @@ class ConfirmImportButton extends React.Component {
 
   render() {
     return (
-      <span style={[{display: 'inline-block'}, this.props.containerStyle]}>
+      <span
+        style={{...{display: 'inline-block'}, ...this.props.containerStyle}}
+      >
         <input
           ref={input => (this.importFileInput = input)}
           type="file"
@@ -79,11 +81,11 @@ class ConfirmImportButton extends React.Component {
           isPending={this.state.isImporting}
           onClick={() => this.importFileInput.click()}
           pendingText="Importing..."
-          style={dataStyles.whiteButton}
+          className={classNames(dataStyles.button, dataStyles.buttonWhite)}
           text="Import csv"
         />
       </span>
     );
   }
 }
-export default Radium(ConfirmImportButton);
+export default ConfirmImportButton;
