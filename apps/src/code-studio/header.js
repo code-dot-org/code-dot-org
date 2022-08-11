@@ -5,16 +5,14 @@ import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton
-} from './headerRedux';
-import {
+  showLevelBuilderSaveButton,
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName,
   setShowTryAgainDialog
-} from './projectRedux';
+} from './headerRedux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

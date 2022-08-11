@@ -139,5 +139,5 @@ const styles = {
 };
 
 export default connect(state => ({
-  showProjectUpdatedAt: state.project.showProjectUpdatedAt
+  showProjectUpdatedAt: state.header.showProjectUpdatedAt
 }))(ScriptName);
