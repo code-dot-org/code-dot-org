@@ -4,8 +4,7 @@
 require 'honeybadger/ruby'
 require 'rmagick'
 require_relative '../script_constants'
-require 'cdo/pegasus/donor'
-
+require 'pegasus/helpers/pegasus_cdo_donor'
 # needed for force_8859_to_utf8
 require 'cdo/pegasus/string'
 
@@ -169,7 +168,7 @@ class CertificateImage
     end
 
     if default_random_donor && !donor_name
-      donor = CdoDonor.get_random_donor_by_weight
+      donor = PegasusCdoDonor.get_random_donor_by_weight
       donor_name = donor[:name_s]
     end
 
