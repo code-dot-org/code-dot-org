@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import dataStyles from './data-styles.module.scss';
+import * as dataStyles from './dataStyles';
 
 class EditLink extends React.Component {
   static propTypes = {
@@ -10,11 +11,11 @@ class EditLink extends React.Component {
 
   render() {
     return (
-      <a className={dataStyles.link} onClick={this.props.onClick}>
+      <a style={dataStyles.link} onClick={this.props.onClick}>
         {this.props.name}
       </a>
     );
   }
 }
 
-export default EditLink;
+export default Radium(EditLink);

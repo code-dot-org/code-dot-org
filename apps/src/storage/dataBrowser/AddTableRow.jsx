@@ -1,10 +1,10 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {castValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
+import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 
 const INITIAL_STATE = {
@@ -59,14 +59,14 @@ class AddTableRow extends React.Component {
 
   render() {
     return (
-      <tr className={dataStyles.row} id="addDataTableRow">
+      <tr style={dataStyles.row} id="addDataTableRow">
         {this.props.columnNames.map(columnName => (
-          <td key={columnName} className={dataStyles.cell}>
+          <td key={columnName} style={dataStyles.cell}>
             {columnName === 'id' ? (
               <span style={{color: 'darkgray'}}>#</span>
             ) : (
               <input
-                className={dataStyles.input}
+                style={dataStyles.input}
                 value={this.state.newInput[columnName] || ''}
                 placeholder="enter text"
                 onChange={event => this.handleChange(columnName, event)}
@@ -76,14 +76,14 @@ class AddTableRow extends React.Component {
           </td>
         ))}
 
-        <td className={dataStyles.cell} />
+        <td style={dataStyles.cell} />
 
-        <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
+        <td style={dataStyles.addButtonCell}>
           <PendingButton
             isPending={this.state.isAdding}
             onClick={this.handleAdd}
             pendingText="Adding..."
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
+            style={dataStyles.blueButton}
             text="Add Row"
           />
         </td>
@@ -92,4 +92,4 @@ class AddTableRow extends React.Component {
   }
 }
 
-export default AddTableRow;
+export default Radium(AddTableRow);

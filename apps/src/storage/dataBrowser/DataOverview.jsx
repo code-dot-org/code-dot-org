@@ -6,13 +6,15 @@
 import {DataView, WarningType} from '../constants';
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
 import DataBrowser from './DataBrowser';
 import DataLibraryPane from './DataLibraryPane';
-import style from './data-overview.module.scss';
-import classNames from 'classnames';
+import color from '../../util/color';
+
+const tableWidth = 400;
 
 class DataOverview extends React.Component {
   static propTypes = {
@@ -46,24 +48,44 @@ class DataOverview extends React.Component {
   };
 
   render() {
+    styles.container.display =
+      this.props.view === DataView.OVERVIEW ||
+      this.props.view === DataView.PROPERTIES
+        ? 'block'
+        : 'none';
     return (
-      <div
-        id="data-library-container"
-        className={classNames(
-          style.container,
-          (this.props.view === DataView.OVERVIEW ||
-            this.props.view === DataView.PROPERTIES) &&
-            style.containerDisplay
-        )}
-      >
+      <div id="data-library-container" style={styles.container}>
         <DataLibraryPane />
-        <div id="data-browser" className={style.dataBrowser}>
+        <div id="data-browser" style={styles.dataBrowser}>
           <DataBrowser onTableAdd={this.onTableAdd} />
         </div>
       </div>
     );
   }
 }
+
+const styles = {
+  table: {
+    width: tableWidth,
+    marginTop: 10,
+    marginBottom: 10
+  },
+  container: {
+    position: 'absolute',
+    width: '100%',
+    top: 0,
+    bottom: 0,
+    backgroundColor: color.white
+  },
+  dataBrowser: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 270,
+    right: 0,
+    padding: 10
+  }
+};
 
 export default connect(
   state => ({
@@ -78,4 +100,4 @@ export default connect(
       dispatch(changeView(view, tableName));
     }
   })
-)(DataOverview);
+)(Radium(DataOverview));

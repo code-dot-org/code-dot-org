@@ -8,16 +8,17 @@ import DataEntryError from './DataEntryError';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {showWarning} from '../redux/data';
-import dataStyles from './data-styles.module.scss';
+import * as dataStyles from './dataStyles';
+import color from '../../util/color';
 import {connect} from 'react-redux';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import msg from '@cdo/locale';
 import {WarningType} from '../constants';
-import style from './data-table.module.scss';
-import classNames from 'classnames';
 
+const MIN_TABLE_WIDTH = 600;
 const MAX_ROWS_PER_PAGE = 500;
 
 const INITIAL_STATE = {
@@ -195,9 +196,7 @@ class DataTable extends React.Component {
       <div>
         <DataEntryError isVisible={this.state.showError} />
         <div style={{overflow: 'auto', height: 'calc(100vh - 300px)'}}>
-          <table
-            className={classNames(style.table, 'uitest-data-table-content')}
-          >
+          <table style={styles.table} className="uitest-data-table-content">
             <tbody>
               <tr>
                 {columnNames.map(columnName => (
@@ -224,26 +223,21 @@ class DataTable extends React.Component {
                   />
                 ))}
                 {!this.props.readOnly && (
-                  <th
-                    className={classNames(
-                      style.addColumnHeader,
-                      dataStyles.headerCell
-                    )}
-                  >
+                  <th style={styles.addColumnHeader}>
                     {this.state.pendingAdd ? (
                       <FontAwesome icon="spinner" className="fa-spin" />
                     ) : (
                       <FontAwesome
                         id="addColumnButton"
                         icon="plus"
-                        className={style.plusIcon}
+                        style={styles.plusIcon}
                         onClick={this.addColumn}
                       />
                     )}
                   </th>
                 )}
                 {!this.props.readOnly && (
-                  <th className={dataStyles.headerCell}>Actions</th>
+                  <th style={dataStyles.headerCell}>Actions</th>
                 )}
               </tr>
 
@@ -286,6 +280,29 @@ class DataTable extends React.Component {
   }
 }
 
+const styles = {
+  addColumnHeader: [
+    dataStyles.headerCell,
+    {
+      width: 19
+    }
+  ],
+  table: {
+    minWidth: MIN_TABLE_WIDTH
+  },
+  plusIcon: {
+    alignItems: 'center',
+    borderRadius: 2,
+    backgroundColor: 'white',
+    color: color.teal,
+    cursor: 'pointer',
+    display: 'inline-flex',
+    height: 18,
+    justifyContent: 'center',
+    width: 18
+  }
+};
+
 export default connect(
   state => ({
     tableColumns: state.data.tableColumns || [],
@@ -297,4 +314,4 @@ export default connect(
       dispatch(showWarning(warningMsg, warningTitle));
     }
   })
-)(DataTable);
+)(Radium(DataTable));
