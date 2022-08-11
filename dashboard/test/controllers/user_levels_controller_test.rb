@@ -93,7 +93,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     refute_nil UserLevel.find_by(id: user_level.id)
   end
 
-  [Multi, Match, FreeResponse].each do |level_type|
+  [Multi, FreeResponse].each do |level_type|
     test "teacher can delete own progress on #{level_type} level" do
       user = create :teacher
       sign_in user

@@ -1553,7 +1553,6 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.find_all_updates_for_state_year(state_code, school_year, file_extension)
     prefix = construct_object_key(state_code, school_year, 1, "") # "state_cs_offerings/AL/2020-2021."
-    puts prefix.inspect
     # sort updates by integer value of the update part of the key
     all_updates = AWS::S3.find_objects_with_ext(CENSUS_BUCKET_NAME, file_extension, prefix).sort do |a, b|
       _, _, update_a = deconstruct_object_key(a)
