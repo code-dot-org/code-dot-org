@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import classNames from 'classnames';
+import stylez from './javalab-button.module.scss';
 import color from '@cdo/apps/util/color';
 
 // TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).
 // In order for that to work, we will need to refactor <Button/> to allow a button's icon and
 // text to be vertically stacked.
-function JavalabButton({
+export default function JavalabButton({
   id,
   icon,
   text,
@@ -28,11 +29,13 @@ function JavalabButton({
     <button
       id={id}
       type="button"
-      className={className}
+      className={classNames(
+        stylez.button,
+        isHorizontal && stylez.buttonHorizontal,
+        className
+      )}
       style={{
-        ...styles.button,
         ...style,
-        ...(isHorizontal && styles.horizontal),
         ...(isDisabled && styles.disabled)
       }}
       onClick={onClick}
@@ -44,8 +47,6 @@ function JavalabButton({
     </button>
   );
 }
-
-export default Radium(JavalabButton);
 
 JavalabButton.propTypes = {
   icon: PropTypes.node,
@@ -64,19 +65,9 @@ JavalabButton.defaultProps = {
 };
 
 const styles = {
-  button: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    color: color.white
-  },
-  horizontal: {
-    flexDirection: 'row'
-  },
   disabled: {
     backgroundColor: color.light_gray,
     borderColor: color.light_gray,
-    ':hover': null,
     cursor: 'default'
   },
   verticalPadding: {
