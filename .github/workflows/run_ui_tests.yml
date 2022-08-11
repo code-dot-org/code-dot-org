@@ -15,8 +15,9 @@ jobs:
       CLOUDFRONT_PRIVATE_KEY: ${{ secrets.CLOUDFRONT_PRIVATE_KEY }}
       FIREBASE_NAME: ${{ secrets.FIREBASE_NAME }}
       FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
-      PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
-      
+      PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
+      AWS_ACCESS_KEY_ID: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
+      AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}            
     steps:    
       - name: Get actions code
         uses: actions/checkout@v3    
