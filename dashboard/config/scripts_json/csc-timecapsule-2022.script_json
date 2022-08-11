@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-08-04 15:28:22 UTC",
+    "serialized_at": "2022-08-10 23:21:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -862,29 +862,48 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-poem-art-intro-video-level_2022"
-        ],
-        "progression": "Video"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-poem-art-intro-video-level_2022"
+          "csc_timecapsule_predict2_2022"
         ],
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "526165a5-2a15-4056-b00b-ff5e5443d913"
+        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
       },
       "level_keys": [
-        "csc-poem-art-intro-video-level_2022"
+        "csc_timecapsule_predict2_2022"
       ]
     },
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_timecapsule_predict3_2022"
+        ],
+        "lesson.key": "Poem Art",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2022",
+        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
+      },
+      "level_keys": [
+        "csc_timecapsule_predict3_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -907,8 +926,8 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -932,8 +951,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -957,8 +976,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -982,8 +1001,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1007,8 +1026,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1032,8 +1051,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1057,8 +1076,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1082,8 +1101,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1107,8 +1126,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1132,7 +1151,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1160,14 +1179,26 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csc-poem-art-intro-video-level_2022",
+        "level.key": "csc_timecapsule_predict2_2022",
         "script_level.level_keys": [
-          "csc-poem-art-intro-video-level_2022"
+          "csc_timecapsule_predict2_2022"
         ],
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "526165a5-2a15-4056-b00b-ff5e5443d913"
+        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_timecapsule_predict3_2022",
+        "script_level.level_keys": [
+          "csc_timecapsule_predict3_2022"
+        ],
+        "lesson.key": "Poem Art",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2022",
+        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
       }
     },
     {

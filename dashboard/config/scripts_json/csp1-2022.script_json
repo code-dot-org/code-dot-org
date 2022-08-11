@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-09 17:23:36 UTC",
+    "serialized_at": "2022-08-11 00:45:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5740,7 +5740,7 @@
     },
     {
       "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
+      "url": "https://youtu.be/QvyTEx1wyOY",
       "key": "computer_science_is_changing_everything",
       "properties": {
         "audience": "Student",

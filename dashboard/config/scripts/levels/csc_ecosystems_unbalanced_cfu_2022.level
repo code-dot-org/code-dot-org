@@ -8,7 +8,7 @@
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
-    "embed": "true",
+    "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -54,22 +54,25 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
-    "validation_enabled": "false",
+    "validation_enabled": "true",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "contained_level_names": [
       "csc_ecosystems_unbalanced_cfu1_2022"
     ],
     "instructions_icon": "crab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-08-09T21:50:20.000Z",
-  "user_id": 182,
   "published": true,
+  "created_at": "2022-08-09T21:50:20.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-08-09T21:50:20.379+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_unbalanced_multi_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_unbalanced_multi_2022\"},{\"changed_at\":\"2022-08-09 21:51:03 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 21:51:48 +0000\",\"changed\":[\"start_blocks\",\"embed\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-08-09T21:50:20.379+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_unbalanced_multi_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_unbalanced_multi_2022\"},{\"changed_at\":\"2022-08-09 21:51:03 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 21:51:48 +0000\",\"changed\":[\"start_blocks\",\"embed\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-10 21:37:15 +0000\",\"changed\":[\"start_blocks\",\"embed\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
