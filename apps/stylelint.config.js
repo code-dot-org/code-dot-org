@@ -24,6 +24,7 @@ module.exports = {
     'selector-pseudo-element-colon-notation': null,
     'declaration-block-no-redundant-longhand-properties': null,
     'value-keyword-case': null,
-    'function-name-case': null
+    'function-name-case': null,
+    'scss/no-global-function-names': null
   }
 };
