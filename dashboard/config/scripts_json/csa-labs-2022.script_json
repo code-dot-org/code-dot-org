@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-08-09 14:15:11 UTC",
+    "serialized_at": "2022-08-11 01:28:58 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -784,7 +784,7 @@
       "position": 2,
       "properties": {
         "duration": 80,
-        "name": "Open-Eded Activity"
+        "name": "Open-Ended Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b",
@@ -1921,7 +1921,7 @@
       "key": "5953585c-a099-4068-9045-a6867fa54ecb",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out the activity guide. \n\n\nOnce students have had a chance to play Celebrity, they will be working on program design. The goal of this activity is to determine appropriate attributes and behaviors,\nwithout worrying about code. \n\nAlthough answers might have similar responses, you should encourage students to incorporate their own ideas into the design.\n\n**Do This:** Direct students to work with a partner to complete Part 1 of their activity guide. ",
+        "description": "**Distribute:** Pass out the [r introduction_to_celebrity_lab/csa-labs/unversioned] activity guide. \n\n\nOnce students have had a chance to play Celebrity, they will be working on program design. The goal of this activity is to determine appropriate attributes and behaviors,\nwithout worrying about code. \n\nAlthough answers might have similar responses, you should encourage students to incorporate their own ideas into the design.\n\n**Do This:** Direct students to work with a partner to complete Part 1 of their activity guide. \n",
         "name": "Celebrity Program Design",
         "tips": [
           {
@@ -1939,7 +1939,7 @@
       "key": "dee9dbd4-b1f4-4b69-abe0-cda839fe91d1",
       "position": 2,
       "properties": {
-        "description": "**Note:** When describing the play method, students might add a lot of detail or very little. At this point either is fine. Encourage them to start thinking about what needs to happen and explain that the details will become clearer as they work through the remaining activities.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** When students have completed the questions, show them the UML diagram for the CelebrityGame class and discuss how the provided game is similar to and different from what they came up with.",
+        "description": "**Note:** When describing the play method, students might add a lot of detail or very little. At this point either is fine. Encourage them to start thinking about what needs to happen and explain that the details will become clearer as they work through the remaining activities.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** When students have completed the questions, create a UML diagram for the provided `CelebrityGame` class in the [r student_starter_code_-_celebritygame_java/csa-labs/unversioned] with the students and then discuss how the provided class is similar to and different from what they came up with.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2160,7 +2160,7 @@
       "key": "61d9b3a5-fa20-4bc6-a827-b3ed8fa94ee4",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Direct students to go through the [r csa_celebrity_lab_extending_the_celebrity_class_1/csa-labs/unversioned] document and complete Parts 2 and 3. \n\nThis activity guide is very detailed and contains specific instructions on what code to add to their various classes and methods in their Celebrity Game program in order to update their game.\n\n",
+        "description": "**Do This:** Direct students to go through the [r csa_celebrity_lab_extending_the_celebrity_class_1/csa-labs/unversioned] activity guide and complete Parts 2 and 3. \n\nThis activity guide is very detailed and contains specific instructions on what code to add to their various classes and methods in their Celebrity Game program in order to update their game.\n\n",
         "name": "CelebrityGame UPDATE",
         "tips": [
           {
@@ -2211,7 +2211,7 @@
       "key": "21c93ccd-a1c2-43c9-826f-1cef025f74bf",
       "position": 1,
       "properties": {
-        "description": "**Do This:** As a class, spend a few minutes reviewing the requirements of the open-ended activity described in the activity guide and scoring guidelines. \n",
+        "description": "**Do This:** As a class, spend a few minutes reviewing the requirements of the open-ended activity described in the [r open-ended_activity_guide/csa-labs/unversioned] and \n[r csa_celebrity_lab_lesson_11_scoring_guidelines/csa-labs/unversioned].",
         "tips": [
           {
             "type": "teachingTip",
@@ -2228,7 +2228,7 @@
       "key": "d3247a3a-e0bf-4fc4-8654-5b3899af25f4",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Direct students to complete Part 2 of the activity guide. This will allow them to make a plan before they start on the project. \n\n",
+        "description": "**Do This:** Direct students to complete Part 2 of the \n[r open-ended_activity_guide/csa-labs/unversioned]. This will allow them to make a plan before they start on the project. \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2266,7 +2266,8 @@
       "key": "7c5099af-7503-4261-b66e-98e3cda0f634",
       "position": 4,
       "properties": {
-        "description": "---\n##IMPORTANT DISCLAIMER\n\nIf students decide to continue to work with the given classes from the previous Celebrity Lessons, unfortunately, they will not be able to use our platform for this activity as the GUI is not supported by our platform.\n\nTo run the Celebrity program, students will need to continue to use another IDE such as Replit, just as they did in the previous lessons 9 and 10.\n\nHowever, if students do are not going to work with the given classes from the previous Celebrity lessons, they can work in Level 1 below. \n\n---"
+        "description": "---\n##IMPORTANT DISCLAIMER\n\nIf students decide to continue to work with the given classes from the previous Celebrity Lessons, unfortunately, they will not be able to use our platform for this activity as the GUI is not supported by our platform.\n\nTo run the Celebrity program, students will need to continue to use another IDE such as Replit, just as they did in the previous lessons 9 and 10.\n\nHowever, if students do are not going to work with the given classes from the previous Celebrity lessons, they can work in Level 1 below. \n\n---",
+        "progression_name": "Open-Ended Activity"
       },
       "seeding_key": {
         "activity_section.key": "7c5099af-7503-4261-b66e-98e3cda0f634",
@@ -2278,7 +2279,6 @@
       "position": 5,
       "properties": {
         "description": "The scoring guidelines have been included in order to assist in the assessment of student work. There are a variety of ways that these guidelines could be used, including:\n\n* provide students with a blank copy of the guidelines and have them score their own program; or\n\n* provide students with a blank copy and ask them to evaluate the program of another student or group; or\n\n* use these when grading programs, and provide students with a printed or electronic copy with notes about each point, whether they earned or did not earn the point, and why.\n\nThis list is not comprehensive, and the guidelines may be used in ways that are not listed here. Additional rows may be added, or focus may be on just a few rows. These guidelines are meant to be flexible.\n\nAsk additional questions to better understand the development process and provide students with opportunities to improve their communication skills. One option is to ask students to identify one programming difficulty they had when completing this activity, and describe how they overcame this difficulty.",
-        "duration": "45",
         "name": "Assessment"
       },
       "seeding_key": {
@@ -2302,8 +2302,8 @@
       "key": "fee9d76c-1e1a-41e8-80ee-489fe1da6bbc",
       "position": 1,
       "properties": {
-        "description": "**Do This:** For students to show that they understand the concepts, it’s important for them to describe their work. Have them answer the questions in Part 3 of their activity guide **individually**.\n",
-        "duration": "10",
+        "description": "**Do This:** For students to show that they understand the concepts, it’s important for them to describe their work. Have them answer the questions in Part 3 of their activity guide **individually**. It is these questions that will be assessed according to the scoring guidelines.\n\n**Optional:** If you would like to have a class discussion and debrief about the process, you can choose to use the [r open-ended_activity_lab_debrief/csa-labs/unversioned]. ",
+        "duration": "45",
         "name": "Check for Understanding"
       },
       "seeding_key": {
@@ -3457,6 +3457,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Open-Ended Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Celebrity-L11-L1_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c5099af-7503-4261-b66e-98e3cda0f634"
+      },
+      "level_keys": [
+        "CSA CB_Lab Celebrity-L11-L1_2022"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSA CB_Lab Sentiment-L1-L1_2022"
         ],
@@ -3477,7 +3499,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3502,7 +3524,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3527,11 +3549,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L2-L1_2022"
+        ],
         "progression": "An Algorithm for Sentiment Analysis"
       },
       "bonus": false,
@@ -3960,6 +3985,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA CB_Lab Celebrity-L11-L1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Celebrity-L11-L1_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c5099af-7503-4261-b66e-98e3cda0f634"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA CB_Lab Sentiment-L1-L1_2022",
         "script_level.level_keys": [
           "CSA CB_Lab Sentiment-L1-L1_2022"
@@ -4117,6 +4154,18 @@
       }
     },
     {
+      "name": "Celebrity Lab Presentation",
+      "url": "https://docs.google.com/presentation/d/18Q6lxzm_GDWeFZfM34Lvvu2QJG-efoQGeoPkUhOo_X0/edit?usp=sharing",
+      "key": "celebrity_lab_presentation",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "celebrity_lab_presentation"
+      }
+    },
+    {
       "name": "Chatbot 2",
       "url": "To be determined",
       "key": "chatbot_2",
@@ -4162,6 +4211,18 @@
       },
       "seeding_key": {
         "resource.key": "csa_celebrity_lab_extending_the_celebrity_class_1"
+      }
+    },
+    {
+      "name": "CSA Celebrity Lab Lesson 11 Scoring Guidelines",
+      "url": "https://docs.google.com/document/d/1tOztK2BRSFXhi98_CdJPkZDdrXD2RQY--ULtm-Wy4IU/edit?usp=sharing",
+      "key": "csa_celebrity_lab_lesson_11_scoring_guidelines",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "csa_celebrity_lab_lesson_11_scoring_guidelines"
       }
     },
     {
@@ -4222,6 +4283,30 @@
       },
       "seeding_key": {
         "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "name": "Open-Ended Activity Guide",
+      "url": "https://docs.google.com/document/d/1rXin3ZvRzId5r3i-VOO3iksBdYaCRQ8ypJwOqmGYfqw/edit?usp=sharing",
+      "key": "open-ended_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_activity_guide"
+      }
+    },
+    {
+      "name": "Open-Ended Activity Lab Debrief",
+      "url": "https://docs.google.com/document/d/15E1yoDv9sgMAOjOHwH5c7gX9yJzOM6lOOfnLRt7pd0w/edit?usp=sharing",
+      "key": "open-ended_activity_lab_debrief",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_activity_lab_debrief"
       }
     },
     {
@@ -4474,6 +4559,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "celebrity_lab_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "csa_celebrity_lab_lesson_11_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "open-ended_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "open-ended_activity_lab_debrief"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "activity_1_-_introduction_reviews_and_sentiment_value_"
       }
@@ -4511,7 +4620,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "celebrity_lab_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "introduction_to_celebrity_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "student_starter_code_-_celebritygame_java"
       }
     },
     {
@@ -4541,6 +4662,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "celebrity_lab_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "csa_celebrity_class_lesson_7_activity_guide"
       }
     },
@@ -4548,6 +4675,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "celebrity_lab_presentation"
       }
     },
     {
@@ -4656,6 +4789,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_csa_celebrity_lab_extending_the_celebrity_class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "celebrity_lab_presentation"
       }
     },
     {

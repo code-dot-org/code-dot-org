@@ -19,9 +19,7 @@ jobs:
       - name: Install mysql
         uses: ./.github/actions/install-mysql                    
       - name: Install test variables
-        uses: ./.github/actions/test-variables-installer      
-      - name: Install test variables
-        uses: ./.github/actions/install-ui-test-variables              
+        uses: ./.github/actions/install-test-variables            
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
       - name: Install apt packages
@@ -30,5 +28,5 @@ jobs:
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies
-      - name: Rake run UI tests
+      - name: Rake run integration tests
         run: bundle exec rake test:all --trace

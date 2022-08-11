@@ -11,6 +11,13 @@ jobs:
       DISABLE_SPRING: 1   
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}
+      CLOUDFRONT_KEY_PAIR_ID: ${{ secrets.CLOUDFRONT_KEY_PAIR_ID }}
+      CLOUDFRONT_PRIVATE_KEY: ${{ secrets.CLOUDFRONT_PRIVATE_KEY }}
+      FIREBASE_NAME: ${{ secrets.FIREBASE_NAME }}
+      FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+      PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
+      AWS_ACCESS_KEY_ID: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
+      AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}            
     steps:    
       - name: Get actions code
         uses: actions/checkout@v3    
@@ -19,9 +26,9 @@ jobs:
       - name: Install mysql
         uses: ./.github/actions/install-mysql                    
       - name: Install test variables
-        uses: ./.github/actions/test-variables-installer      
-      - name: Install test variables
-        uses: ./.github/actions/install-ui-test-variables              
+        uses: ./.github/actions/install-test-variables   
+      - name: Install UI test variables        
+        uses: ./.github/actions/install-ui-test-variables
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
       - name: Install apt packages
@@ -30,6 +37,25 @@ jobs:
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies
+      - name: Setup locals
+        run: |
+            echo "
+            properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+            " >> locals.yml        
+      - name: Rake run UI tests
+        env: 
+          CI: true
+          RAILS_ENV: test
+          RACK_ENV: test
+          DISABLE_SPRING: 1           
+          CIRCLE_NODE_INDEX: 1
+          CIRCLE_NODE_TOTAL: 1
+          CIRCLECI: true
+          LD_LIBRARY_PATH: /usr/local/lib
+          CIRCLE_BUILD_NUM: "42:-2323"
+          CIRCLE_TEST_REPORTS: /home/circleci/test_reports
+          CIRCLE_ARTIFACTS: /home/circleci/artifacts
+        run: bundle exec rake circle:seed_ui_test --trace        
       - name: Rake run UI tests
         env: 
           CI: true
