@@ -1,6 +1,6 @@
 # This is an SCSS linter for the backend, using scss-lint
 # On the frontend, we are using stylelint-scss, whose
-# config can be found in apps/.stylelint.config.js
+# config can be found in apps/stylelint.config.js
 scss_files: 'dashboard/app/**/*.scss'
 
 linters:
