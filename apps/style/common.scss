@@ -5,6 +5,10 @@
 @import "curriculum/markdown";
 @import "responsive-visualization";
 @import "style-constants";
+@import "aniGif";
+@import "RotateContainer";
+@import "HideToolbarHelper";
+@import "blockly";
 
 $common_root: '/blockly/media/common_images/';
 
@@ -939,8 +943,6 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
-@import "aniGif";
-
 .workspace-header {
   text-align: center;
   white-space: nowrap;
@@ -1773,7 +1775,3 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   width: 800px;
   margin-left: -400px;
 }
-
-@import "RotateContainer";
-@import "HideToolbarHelper";
-@import "blockly";
