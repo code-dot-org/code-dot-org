@@ -18,7 +18,6 @@ $footer-text–and-arrow: #969292;
 $grabber-dots: #4f4f4f;
 $main-blockspace-background: rgb(161, 161, 161); // #8B8B8B;
 $callout-fallback-border-color: $very-dark-gray;
-
 $original-background-color: #f2f2f2;
 $button-text-white: #f1f1f1;
 $code-block-background-yellow: #d78c01;
@@ -697,6 +696,7 @@ $height-to-width: math.div(434, 477);
     @include pixelated();
     background: url('#{$root}Sliced_Parts/House_Selection_Box.png') no-repeat;
     display: table;
+
     $margin-above: 23px;
     $margin-below: 16px;
     margin: $margin-above auto $margin-below;
@@ -729,6 +729,7 @@ $height-to-width: math.div(434, 477);
     background-image: url('#{$root}Sliced_Parts/House_Option_A_v3.png');
     width: $width;
     height: $height;
+
     $margin-above-photo: ($house-outline-height - $height) * 0.5 +
       $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
@@ -747,6 +748,7 @@ $height-to-width: math.div(434, 477);
     background-image: url('#{$root}Sliced_Parts/House_Option_B_v3.png');
     width: $width;
     height: $height;
+
     $margin-above-photo: ($house-outline-height - $height) * 0.5 +
       $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
@@ -765,6 +767,7 @@ $height-to-width: math.div(434, 477);
     background-image: url('#{$root}Sliced_Parts/House_Option_C_v3.png');
     width: $width;
     height: $height;
+
     $margin-above-photo: ($house-outline-height - $height) * 0.5 +
       $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
