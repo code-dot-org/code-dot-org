@@ -26,6 +26,10 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   #runButton, #resetButton {
     display:none !important;
   }
+
+  #studio-dpad-container {
+    margin-top: -24px;
+  }
 }
 
 #visualizationOverlay {
@@ -80,12 +84,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   vertical-align: top;
   &.share-cell-none {
     display: none;
-  }
-}
-
-.legacy-share-view {
-  #studio-dpad-container {
-    margin-top: -24px;
   }
 }
 

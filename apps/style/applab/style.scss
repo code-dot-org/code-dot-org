@@ -290,6 +290,19 @@ div#visualizationResizeBar {
   position: relative;
   z-index: 1;
   background-color: white;
+
+  // While theses styles are already set by application.css (dashboard), it is
+  // important to set them explicitly for the export scenario.
+  label, input, button, select, textarea {
+    font-size: 14px;
+  }
+  select {
+    height: 30px;
+    width: 220px;
+  }
+  button, input, select, textarea {
+    vertical-align: middle;
+  }
 }
 
 // Allow design mode elements to be visible outside of designModeViz when
@@ -302,6 +315,27 @@ div#visualizationResizeBar {
 
   .screen {
     overflow: visible;
+  }
+
+  /* In design mode, show grab/grabbing cursor for all UI elements
+ * so that they look draggable. */
+  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+    &.toDelete {
+      opacity: $delete-opacity;
+    }
+  }
+
+  &.withCrosshair {
+    cursor: crosshair;
   }
 }
 
@@ -318,21 +352,6 @@ div#visualizationResizeBar {
   top: 0px;
   left: 0px;
   z-index: -1;
-}
-
-// While theses styles are already set by application.css (dashboard), it is
-// important to set them explicitly for the export scenario.
-#divApplab {
-  label, input, button, select, textarea {
-    font-size: 14px;
-  }
-  select {
-    height: 30px;
-    width: 220px;
-  }
-  button, input, select, textarea {
-    vertical-align: middle;
-  }
 }
 
 #divApplab.running {
@@ -352,29 +371,6 @@ div#visualizationResizeBar {
 #divApplab.notRunning.withCrosshair {
   cursor: crosshair;
   button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
-    cursor: crosshair;
-  }
-}
-
-/* In design mode, show grab/grabbing cursor for all UI elements
- * so that they look draggable. */
-#designModeViz {
-  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-    &:active {
-      cursor: grabbing;
-      cursor: -moz-grabbing;
-      cursor: -webkit-grabbing;
-    }
-    &.toDelete {
-      opacity: $delete-opacity;
-    }
-  }
-
-  &.withCrosshair {
     cursor: crosshair;
   }
 }
