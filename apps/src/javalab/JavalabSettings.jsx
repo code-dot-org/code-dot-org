@@ -3,7 +3,7 @@ import i18n from '@cdo/locale';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
-import stylez from './control-buttons.module.scss';
+import style from './control-buttons.module.scss';
 import JavalabButton from './JavalabButton';
 import JavalabDropdown from './components/JavalabDropdown';
 
@@ -58,15 +58,11 @@ export class JavalabSettings extends Component {
 
   render() {
     const {dropdownOpen} = this.state;
-    // const btnStyle = {
-    //   ...styles.button,
-    //   ...(dropdownOpen && styles.button.selected)
-    // };
 
     return (
-      <div className={stylez.main}>
+      <div className={style.main}>
         {dropdownOpen && (
-          <JavalabDropdown className={stylez.dropdown}>
+          <JavalabDropdown className={style.dropdown}>
             {React.Children.map(this.props.children, (child, index) => (
               <button
                 {...child.props}
@@ -82,8 +78,8 @@ export class JavalabSettings extends Component {
           icon={<FontAwesome icon="cog" />}
           text={i18n.settings()}
           className={classNames(
-            stylez.buttonWhite,
-            dropdownOpen && stylez.selected
+            style.buttonWhite,
+            dropdownOpen && style.selected
           )}
           onClick={this.toggleDropdown}
           isHorizontal
