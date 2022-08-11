@@ -29,5 +29,5 @@ class MinimalProjectHeader extends React.Component {
 }
 
 export default connect(state => ({
-  projectName: state.header.projectName
+  projectName: state.project.projectName
 }))(MinimalProjectHeader);
