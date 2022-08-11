@@ -42,7 +42,6 @@ jobs:
             echo "
             properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
             saucelabs_username: $SAUCE_USERNAME
-            sauce_username: $SAUCE_USERNAME
             sauce_access_key: $SAUCE_ACCESS_KEY
             cloudfront_key_pair: $CLOUDFRONT_KEY_PAIR_ID
             cloudfront_private_key: $CLOUDFRONT_PRIVATE_KEY
