@@ -61,7 +61,7 @@ $text-shadow-gray: #5a5a5a;
       4 3 stretch !important;
     -o-border-image: url('#{$root}Sliced_Parts/MC_Button_Pressed.png') 2 3 4 3
       stretch !important;
-    border-image: url('#{$root}Sliced_Parts/MC_Button_Pressed.png') 2 3 4 3 fill
+    border-image-source: url('#{$root}Sliced_Parts/MC_Button_Pressed.png') 2 3 4 3 fill
       stretch !important;
   }
 }
@@ -125,20 +125,19 @@ $text-shadow-gray: #5a5a5a;
   filter: FlipV;
 }
 
-@mixin scaleXBrowser($multiple) {
+@mixin scale-x-browser($multiple) {
   -moz-transform: scale($multiple);
   -webkit-transform: scale($multiple);
   transform: scale($multiple);
 }
 
-@mixin scaleXBrowserTwoParam($multipleX, $multipleY) {
+@mixin scale-x-browser-two-param($multipleX, $multipleY) {
   -moz-transform: scale($multipleX, $multipleY);
   -webkit-transform: scale($multipleX, $multipleY);
   transform: scale($multipleX, $multipleY);
 }
 
 @mixin no-interact() {
-  user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -497,7 +496,7 @@ $height-to-width: math.div(434, 477);
   }
 
   .minecraft-big-gray-header {
-    @extend .minecraft-big-yellow-header;
+    @extend .minecraft-big-yellow-header; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
 
     color: #e7e8ea;
     margin-bottom: 23px;
@@ -956,7 +955,7 @@ $height-to-width: math.div(434, 477);
     }
 
     .run26 {
-      @include scaleXBrowser(2);
+      @include scale-x-browser(2);
       width: 6px;
       height: 34px;
       margin: 16px -3px -18px 23px;
