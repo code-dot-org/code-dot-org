@@ -599,6 +599,246 @@
   "https://studio.code.org/s/allthethings/lessons/23/levels/1": {
     "short_instructions": "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly! Hint: He's South of me."
   },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/2": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "Which arrow gets the Flurb to the treasure?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 bits",
+              "correct": false
+            },
+            {
+              "text": "4 bits",
+              "correct": false
+            },
+            {
+              "text": "5 bits",
+              "correct": false
+            },
+            {
+              "text": "6 bits",
+              "correct": false
+            },
+            {
+              "text": "7 bits",
+              "correct": true
+            },
+            {
+              "text": "12 bits",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the “Shift” key at the same time (Assume that all other keys are ignored in this question).\n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+            }
+          ],
+          "title": "Assessment: Encoding Text"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Line 2",
+              "correct": true
+            },
+            {
+              "text": "Line 3",
+              "correct": true
+            },
+            {
+              "text": "Line 4",
+              "correct": false
+            },
+            {
+              "text": "Line 5",
+              "correct": false
+            }
+          ],
+          "markdown": "This question uses a robot in a grid of squares. The robot is represented as a triangle, which is initially facing toward the right side of the grid. The robot is moved according to the following instructions.\n\n| Instruction       | Explanation |\n|--------------------|--------|\n|`Move Forward` | The robot moves one square forward in the direction it is facing |\n|`Rotate right` | The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn). |\n|`Rotate left` | The robot rotates in place 90 degrees counter-clockwise (i.e., makes an in-place left turn). |\n|`REPEAT n TIMES` | The block of instructions contained between the braces {} is repeated n times. |\n\n&nbsp;\n\nConsider the following incorrect program, which is intended to move the robot around the perimeter of the grid below, as indicated by the arrows.\n\n![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png)\n\n![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers"
+            }
+          ]
+        }
+      },
+      "K-1 Plant a Seed Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/poke-hole.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
+          "questions": [
+            {
+              "text": "Which step should go at the beginning of this algorithm?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "K-1 Plant a Seed Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/cover-seed.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+          "questions": [
+            {
+              "text": "Which step should fill in the blank for this algorithm?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "K-1 Artist 1 Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/artist_images/W-S-S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S-S.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/S-E-E.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500",
+          "questions": [
+            {
+              "text": "Which blocks solve this puzzle?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "ECSPD1 computational thinker": {
+        "dsls": {
+          "markdown": "# Reflecting on the ECS Curriculum?\n\nAfter reviewing the initial units of the course, what are a few of the curricular goals of Exploring Computer Science that stood out to you?\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Sample external 2\n\nThis is a second sample of some instruction text that's stored in a .external file.  Here is some extra text so that we can hopefully get some line wrapping as we view this in our LevelGroup which will consume this to show some instructions amongst the regular embedded levels.\n\n"
+        }
+      },
+      "ECSPD your goals_test": {
+        "long_instructions": "__Optional: What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\r\n",
+        "title": "Documenting Your Goals"
+      },
+      "K-1 Maze Loops Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_N.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_NN.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r4_N.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
+          "questions": [
+            {
+              "text": "Which repeat block is the same?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "K-1 Maze Loops Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_ES.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_SE.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240",
+          "questions": [
+            {
+              "text": "Pick the correct repeat block."
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      }
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/25/levels/1": {
     "short_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the “destroy block” command to chop it down."
   },
@@ -624,6 +864,259 @@
   "https://studio.code.org/s/allthethings/lessons/26/levels/1": {
     "dsls": {
       "title": "Test Assessment 1"
+    },
+    "sublevels": {
+      "csp_unit_assessment_overview": {
+        "dsls": {
+          "content1": "description here",
+          "markdown": "# CS Principles Chapter Assessment\n\nRead the information below carefully so that you have everything you need before you start and know how to navigate the assessment.\n\n## Things you need\n\n* **Scratch paper and pencil**\n * There are a few questions for which you might want to do some scratch work on paper.\n\n## How to take the test\n\n* Read each question and select the best answer from the choices provided\n* Every selection you make is automatically saved, but you can change it if you want.\n* Use the orange buttons \"Next Page\" and \"Previous Page\" to go forward and backward in the test. Your responses will be saved whether you go forward or backward.\n    \n    ![](https://images.code.org/9e697f11d15376aa513dea510dd464d3-image-1463597394595.png)\n\n* You can also navigate using the bubbles at the top of the screen.\n    * Yellow - means you've visited a page but haven't answered all the questions yet.\n    * Green - means you've answered all the questions on a page.\n\n    ![](https://images.code.org/51c792652b3e922665221bba16a8c37c-image-1463598805414.png)\n\n* When you're ready to submit your test go to the LAST page and you'll see a purple \"Submit\" button. Once you click \"submit\" the test is sent to your teacher.\n\n    ![](https://images.code.org/194d1918efc8ce3f8621de4e6b2558f3-image-1463597268503.png)\n\n* Note that it is also possible to \"unsubmit\" your test.  You should **only do this in rare cases** - when you submit the test your teacher sees the time it was submitted.  \n* **Make sure** you are clear with your teacher that it's okay to unsubmit and re-submit - you don't want your entire test invalidated because you submitted after you were supposed to be done.  \n\n   ![](https://images.code.org/ab068a26c8a230a0180f6f9c5c8d45bf-image-1463600680236.png)\n\n## Good Luck!\n",
+          "teacher_markdown": "### CAUTION: What this assessment is and isn't\n\n* This assessment is **designed to be in the \"style\" of the AP** multiple choice assessments.\n\n* That means the questions **are not** specifically about lessons covered prior to this point.  Rather, the questions relate to the underlying AP learning objectives that have theoretically been addressed.\n\n* It **does mean** students might need to do some extrapolation from what they've learned to answer the questions.\n\n* It **does mean** the questions might be \"hard\", especially for the first-time exposure.\n\nSo overall, **USE WITH CAUTION**\n\n* Use your judgment about what stakes to attach to this assessment.\n\t* You don't have to use this assessment to grade students, or...\n    * You can grade students in a different way than simply taking the % correct.\n\n* Ensure that you use in a way that will maintain the spirit of the class in terms of investigation of knowledge.\n\t* If you are nervous that students will get discouraged, then perhaps re-frame this assessment as an opprotunity to investigate -- let students try the questions, then go research the answers, and change what they got wrong, or develop their own set of questions.\n\n\n---\n\n#### F.A.Q. -- How to prepare, administer, and review assessments\n\nPlease see our running **[F.A.Q. document here](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)** which contains:\n\n* screenshots on how to prepare, administer, and review assessments\n* addresses common issues/problems\n\n\n#### Quick summary of how to see / review student answers\n\n1. Go to your [Teacher Dashboard](https://code.org/teacher-dashboard#/)\n2. Select your CS Principles section\n3. You'll see a number of purple tabs including Text Responses, Assessments, etc.\n4. Click **Assessments/Surveys**\n5. From the course selector dropdown, **select the unit that this assessment appeared in (e.g. Unit 1: The Internet)**\n6. For all students who have *submitted* their assessment, you will see two tables:\n   * The first table is a summary view summarizing the percentage correct from all the students who submitted, including the timestamp they submitted on\n   * The second table is a comprehensive list of each answer to each question submitted by each student\n\n    Above both of these tables is a **Download (or export) as csv** button - allowing you to process answers in a spreadsheet (recommended).\n\n7. If you need to allow a student to UNSUBMIT their test, direct the student to navigate to the last page of the test and press \"Unsubmit.\"\n\n**NOTE about UNSUBMITTING:** \n\nYou should make clear rules with your students about unsubmitting a test. Students might think this is a good way to change an answer after the test is over (i.e. cheat) but you'll see a timestamp of when the student submitted the test.  \n\nIt's suggested that you simply establish that you will not consider scoring or grading any tests after a particular time.  If it was not submitted before the specified deadline, it's like you didn't receive it.\n"
+        }
+      },
+      "PS U3 Q1-1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.",
+              "correct": true
+            },
+            {
+              "text": "Compared to the number of words in a natural language, the number of defined words in a programming language is very small.",
+              "correct": true
+            },
+            {
+              "text": "The number of defined words in a programming language is about the same as the number of words in a natural language.",
+              "correct": false
+            },
+            {
+              "text": "There are typically many possible ways to interpret an instruction written in a programming language.",
+              "correct": false
+            }
+          ],
+          "markdown": "Programming languages have some similarities and differences to the “natural” language you use in everyday speech.  Select two **true** statements about programming languages:\n"
+        }
+      },
+      "PS U3 Q1-2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png",
+              "correct": true
+            },
+            {
+              "text": "https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png",
+              "correct": false
+            }
+          ],
+          "markdown": "This question and the next one use a robot in a grid of squares.  The robot is represented as a triangle, which is initially facing towards the right side of the grid.  The robot is moved according to the following instructions.\n\n| **Instruction** | **Explanation** |\n|-----------------|-----------------|\n| MOVE_FORWARD() |The robot moves one square forward in the direction it is facing.|\n| ROTATE_RIGHT() |The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn).|\n| ROTATE_LEFT()  |The robot rotates in place 90 degrees counterclockwise (i.e., makes an in-place left turn).|\n| REPEAT n TIMES  |The block of instructions contained between the braces { } is repeated n times.|\n\nConsider the following program which uses commands from the pseudocode described above.\n\n\tREPEAT 4 TIMES {\n\t\tMOVE_FORWARD()\n\t\tMOVE_FORWARD()\n\t\tMOVE_FORWARD()\n\t\tROTATE_RIGHT()\n\t\tMOVE_FORWARD()\n\t\tROTATE_RIGHT()\n\t\tMOVE_FORWARD()\n\t\tROTATE_RIGHT()\n\t}\n\n\n\nWhich of the following images shows the path and ending location of the robot that will result from executing the code above? The starting location of the robot is shown as dotted triangle for cases where the robot does not start and end at the same location.\n\n\n",
+          "title": "Robots in a grid of square Part 1"
+        }
+      },
+      "PS U3 Q1-3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Line 3 and Line 4",
+              "correct": true
+            },
+            {
+              "text": "Line 5, 6, 7, 8 and 9",
+              "correct": false
+            },
+            {
+              "text": "Line 8 and Line 9",
+              "correct": false
+            },
+            {
+              "text": "Line 9",
+              "correct": false
+            }
+          ],
+          "markdown": "Consider the following incorrect program, which is intended to move the robot around the perimeter of a grid, as indicated by the drawing below.  Note that you should still be referring to the pseudocode described in the question above.\n\n![](https://images.code.org/a442a51dc20d85327f74693a0e03a876-image-1459378505362.png)\n"
+        }
+      },
+      "PS U3 Q1-4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Functions are reusable programming abstractions.",
+              "correct": false
+            },
+            {
+              "text": "Functions help reduce the complexity of writing and maintaining programs.",
+              "correct": false
+            },
+            {
+              "text": "Functions cannot make calls to other functions within the same program.",
+              "correct": true
+            },
+            {
+              "text": "Functions help break a problem into logical chunks.",
+              "correct": false
+            },
+            {
+              "text": "Once defined, a function can be called many times from different parts of a program.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following is NOT true about functions in programming?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "A function name should indicate how long the function takes to run.",
+              "correct": false
+            },
+            {
+              "text": "Two functions with similar behavior should be given identical names to indicate the relationship between them.",
+              "correct": false
+            },
+            {
+              "text": "A function name should be as descriptive as possible to indicate what the function does.",
+              "correct": true
+            },
+            {
+              "text": "Function names should be organized alphabetically.",
+              "correct": false
+            },
+            {
+              "text": "The function name should begin with a number that indicates the order in which it should be executed.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "What is one important naming convention of functions?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "A function can change names over the course of a program.",
+              "correct": false
+            },
+            {
+              "text": "Code can be added or removed dynamically from a function while the program is running.",
+              "correct": false
+            },
+            {
+              "text": "Functions can be called using different names depending on where in the program they are called.",
+              "correct": false
+            },
+            {
+              "text": "Two functions can be given identical names as long as their code is identical.",
+              "correct": false
+            },
+            {
+              "text": "Two functions in a single program can have different names but contain identical code.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which one of the following statements about functions is TRUE"
+            }
+          ]
+        }
+      },
+      "sample external 1": {
+        "dsls": {
+          "markdown": "### Sample external\n\nThis is a first sample of some instruction text that's stored in a .external file.\n\n"
+        }
+      },
+      "PS U3 Q1-7": {
+        "dsls": {
+          "answers": [
+            "Enter answer here"
+          ],
+          "content1": "Enter prompt here",
+          "markdown": "Use Top-Down Design strategy to come up with additional functions you may want to create.\n\n**Top-Down Design Strategy:**\n\n1. Look at the big picture…\n2. Identify a sub-task…\n3. Break down that sub-task into smaller sub-task(s)...\n4. Keep going until you're down to the commands you already have access to.\n\nHere's an example for the first one:\n\n> Function name: drawSnowflake() <br> Description/Justification: Draw a 6 pointed snowflake\n\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Sample external 2\n\nThis is a second sample of some instruction text that's stored in a .external file.  Here is some extra text so that we can hopefully get some line wrapping as we view this in our LevelGroup which will consume this to show some instructions amongst the regular embedded levels.\n\n"
+        }
+      },
+      "ECSPD your goals": {
+        "long_instructions": "__What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\n",
+        "title": "Documenting Your Goals"
+      },
+      "PS U3 Q1-8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "drawStar;",
+              "correct": false
+            },
+            {
+              "text": "drawStar();",
+              "correct": true
+            },
+            {
+              "text": "![](https://images.code.org/f7d07331ddd6ff10e6825e42a286cf6b-image-1579899560773.png) ",
+              "correct": false
+            },
+            {
+              "text": "function drawStar;",
+              "correct": false
+            },
+            {
+              "text": "function drawStar()",
+              "correct": false
+            }
+          ],
+          "markdown": "Which of the following will _**call**_ the function drawStar?\n\n\n"
+        }
+      },
+      "PS U3 Q1-9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Parameters determine the number of times the function will run.",
+              "correct": false
+            },
+            {
+              "text": "Parameters allow for more flexible, generalized behaviors in functions.",
+              "correct": true
+            },
+            {
+              "text": "Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve",
+              "correct": false
+            },
+            {
+              "text": "Parameters change the order of operations within a function.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Why are parameters useful when programming?"
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/allthethings/lessons/27/levels/1": {
@@ -633,6 +1126,50 @@
   "https://studio.code.org/s/allthethings/lessons/28/levels/1": {
     "dsls": {
       "title": "Sample CSP Assessment"
+    },
+    "sublevels": {
+      "CSP PD Example Question 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The sending binary messages unit",
+              "weight": 1,
+              "lesson": "Sending Binary Messages"
+            },
+            {
+              "text": "The encoding numbers unit",
+              "weight": 1,
+              "lesson": "Encoding and Sending Numbers"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which unit will you teach first"
+            }
+          ]
+        }
+      },
+      "CSP PD Example Question 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "I will make them write",
+              "weight": 1,
+              "lesson": "Strategies for Student Writing"
+            },
+            {
+              "text": "I will make them learn from peers",
+              "weight": 1,
+              "lesson": "Supporting Peer Learning"
+            }
+          ],
+          "questions": [
+            {
+              "text": "How will you teach students?"
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/allthethings/lessons/29/levels/1": {
@@ -674,13 +1211,1258 @@
   "https://studio.code.org/s/allthethings/lessons/29/levels/9": {
     "short_instructions": "Must... get... to sunflower."
   },
+  "https://studio.code.org/s/allthethings/lessons/30/levels/1": {
+    "sublevels": {
+      "test anonymous student survey fun": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Computer science is fun."
+            }
+          ]
+        }
+      },
+      "test anonymous student survey educational": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Yes",
+              "correct": true
+            },
+            {
+              "text": "No",
+              "correct": true
+            },
+            {
+              "text": "Maybe",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Do you think computer science is educational?"
+            }
+          ]
+        }
+      },
+      "test_anonymous_student_survey_why_class": {
+        "long_instructions": "Why are you doing this class?  Give at least two reasons."
+      },
+      "test_anonymous_student_survey_next_class": {
+        "long_instructions": "What you will do next after this class?"
+      }
+    }
+  },
   "https://studio.code.org/s/allthethings/lockable/1/levels/1": {
     "dsls": {
       "title": "Pre-survey"
+    },
+    "sublevels": {
+      "pre-assessment survey heading1": {
+        "dsls": {
+          "markdown": "First, we have some questions for you about your schoolwork in general.\n"
+        }
+      },
+      "pre-assessment survey q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to do my schoolwork"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am better at schoolwork than most of the other kids at my school."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am very good at school."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can figure out how to solve the most difficult problems in school if I try."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like my schoolwork."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think my schoolwork is interesting."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q7": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I enjoy my time at school."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important for me to be good at my school work."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey heading2": {
+        "dsls": {
+          "markdown": "We also want to know what you think about computer science.  \n"
+        }
+      },
+      "pre-assessment survey q9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q10": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I will be better at computer science than most of the other kids at my school."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q11": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I will be very good at computer science."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q12": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think computer science is interesting."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q15": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like (or think I will like) doing computer science activities."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important to me to be good at computer science."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q17": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Kids like me do computer science."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q18": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like (or think I will like) computer science more than other kids at my school."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q19": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I could become a computer scientist one day."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q20": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I do computer science in my free time."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q21": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I use computer science skills in my daily life."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q22": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Computer science applies to most aspects of real life. "
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q23": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Learning computer science helps me in my other school subjects."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q24A": {
+        "long_instructions": "What computer science skills do you use in your everyday life? "
+      },
+      "pre-assessment survey heading3": {
+        "dsls": {
+          "markdown": "Now we want to hear about your prior experiences with computer science. \n"
+        }
+      },
+      "pre-assessment survey q24": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Yes",
+              "correct": true
+            },
+            {
+              "text": "No",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Before your current computer science class, had you taken any other computer science classes at school?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q25A": {
+        "long_instructions": "If yes, what computer science course(s) had you taken before your current computer science  class? "
+      },
+      "pre-assessment survey q26": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Yes",
+              "correct": true
+            },
+            {
+              "text": "No",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q27": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "After school program at my school",
+              "correct": true
+            },
+            {
+              "text": "After school program somewhere else (e.g., Boys and Girls Club, etc.)",
+              "correct": true
+            },
+            {
+              "text": "Online program",
+              "correct": true
+            },
+            {
+              "text": "Summer program/camp",
+              "correct": true
+            },
+            {
+              "text": "Other",
+              "correct": true
+            },
+            {
+              "text": "N/A",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q28": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "8",
+              "correct": true
+            },
+            {
+              "text": "9",
+              "correct": true
+            },
+            {
+              "text": "10",
+              "correct": true
+            },
+            {
+              "text": "11",
+              "correct": true
+            },
+            {
+              "text": "12",
+              "correct": true
+            },
+            {
+              "text": "Other",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What grade are you in?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q29": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Male",
+              "correct": true
+            },
+            {
+              "text": "Female",
+              "correct": true
+            },
+            {
+              "text": "Other",
+              "correct": true
+            },
+            {
+              "text": "Prefer not to answer",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I identify my gender as:"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q30": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "American Indian or Alaska Native",
+              "correct": true
+            },
+            {
+              "text": "Asian",
+              "correct": true
+            },
+            {
+              "text": "Black or African American",
+              "correct": true
+            },
+            {
+              "text": "Hispanic or Latino/Latina",
+              "correct": true
+            },
+            {
+              "text": "Native Hawaiian or Other Pacific Islander",
+              "correct": true
+            },
+            {
+              "text": "White",
+              "correct": true
+            },
+            {
+              "text": "Two or more races",
+              "correct": true
+            },
+            {
+              "text": "Other",
+              "correct": true
+            },
+            {
+              "text": "Prefer not to answer",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following best represents your racial and/or ethnic identity?"
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/allthethings/lessons/32/levels/1": {
     "long_instructions": "Make an awesome web page!\n\n1.  Look at the web page we gave you to start with. Look how lame it is. 1996 just called and wants its web page back. But don't get depressed - YOU can fix it!\n2.  Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\n3.  Add a text-align attribute to the body style in style.css to center the image and text horizontally\n4.  Change index.html to include an inspiring hashtag\n5.  Add a color attribute to the p style in style.css to make the inspiring hashtag white\n6.  Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/33/levels/1": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "Which arrow gets the Flurb to the treasure?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 bits",
+              "correct": false
+            },
+            {
+              "text": "4 bits",
+              "correct": false
+            },
+            {
+              "text": "5 bits",
+              "correct": false
+            },
+            {
+              "text": "6 bits",
+              "correct": false
+            },
+            {
+              "text": "7 bits",
+              "correct": true
+            },
+            {
+              "text": "12 bits",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the “Shift” key at the same time (Assume that all other keys are ignored in this question).\n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+            }
+          ],
+          "title": "Assessment: Encoding Text"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Line 2",
+              "correct": true
+            },
+            {
+              "text": "Line 3",
+              "correct": true
+            },
+            {
+              "text": "Line 4",
+              "correct": false
+            },
+            {
+              "text": "Line 5",
+              "correct": false
+            }
+          ],
+          "markdown": "This question uses a robot in a grid of squares. The robot is represented as a triangle, which is initially facing toward the right side of the grid. The robot is moved according to the following instructions.\n\n| Instruction       | Explanation |\n|--------------------|--------|\n|`Move Forward` | The robot moves one square forward in the direction it is facing |\n|`Rotate right` | The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn). |\n|`Rotate left` | The robot rotates in place 90 degrees counter-clockwise (i.e., makes an in-place left turn). |\n|`REPEAT n TIMES` | The block of instructions contained between the braces {} is repeated n times. |\n\n&nbsp;\n\nConsider the following incorrect program, which is intended to move the robot around the perimeter of the grid below, as indicated by the arrows.\n\n![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png)\n\n![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers"
+            }
+          ]
+        }
+      },
+      "CSD U3 drawSprites placement match": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png,300px"
+            },
+            {
+              "text": "https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png"
+            },
+            {
+              "text": "https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png"
+            },
+            {
+              "text": "https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png"
+            }
+          ],
+          "content1": "Match the code to the image that it will produce.",
+          "questions": [
+            {
+              "text": "https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png"
+            },
+            {
+              "text": "https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png"
+            },
+            {
+              "text": "https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png"
+            },
+            {
+              "text": "https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png"
+            }
+          ],
+          "title": "drawSprites"
+        }
+      },
+      "CSD U3 - conditionals - Matching_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "dog.rotation &lt; cat.rotation"
+            },
+            {
+              "text": "dog.x &lt; cat.x"
+            },
+            {
+              "text": "dog.scale &gt; cat.scale"
+            },
+            {
+              "text": "dog.x &gt; cat.x"
+            },
+            {
+              "text": "dog.x == cat.x"
+            }
+          ],
+          "content1": "Match the boolean expression to the English description.",
+          "questions": [
+            {
+              "text": "Is the dog sprite's rotation less than the cat sprite's rotation?"
+            },
+            {
+              "text": "Is the dog sprite's x less than the cat sprite's x?"
+            },
+            {
+              "text": "Is the dog sprite's scale greater than the cat sprite's scale?"
+            },
+            {
+              "text": "Is the dog sprite's x greater than the cat sprite's x?"
+            },
+            {
+              "text": "Is the dog sprite's x equal to the cat sprite's x?"
+            }
+          ],
+          "title": "Matching: Comparison Operators"
+        }
+      }
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/1": {
     "long_instructions": "All-the-things test level.",
@@ -729,13 +2511,34 @@
     "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
   },
   "https://studio.code.org/s/allthethings/lessons/38/levels/1": {
-    "long_instructions": "This level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script)."
+    "long_instructions": "This level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
+    "mini_rubric": {
+      "rubric_key_concept": "This is the key concept for this mini rubric.",
+      "rubric_performance_level_1": "You did great!",
+      "rubric_performance_level_2": "You did good.",
+      "rubric_performance_level_3": "You did okay.",
+      "rubric_performance_level_4": "You did nothing."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/38/levels/2": {
-    "long_instructions": "This level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test weblab levels (By design, weblab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script)."
+    "long_instructions": "This level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test weblab levels (By design, weblab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
+    "mini_rubric": {
+      "rubric_key_concept": "This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept. This is going to be a really long key concept.",
+      "rubric_performance_level_1": "The things you need to do to exceed.",
+      "rubric_performance_level_2": "The things you need to do to meet.",
+      "rubric_performance_level_3": "The things you need to do to approach.",
+      "rubric_performance_level_4": "You really didn't do anything."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/38/levels/3": {
-    "long_instructions": "Run\nThis level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test gamelab levels (By design, gamelab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script)."
+    "long_instructions": "Run\nThis level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test gamelab levels (By design, gamelab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
+    "mini_rubric": {
+      "rubric_key_concept": "Key Concept",
+      "rubric_performance_level_1": "Did x, y, and z.",
+      "rubric_performance_level_2": "Did x and y",
+      "rubric_performance_level_3": "Did x or y",
+      "rubric_performance_level_4": "Did not do x, y or z"
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/39/levels/1": {
     "dsls": {
@@ -1003,19 +2806,16 @@
     "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/44/levels/9": {
-    "long_instructions": "This is a sample Playground level that demonstrates the basics of the mini-app by making a slide puzzle game!\n\n**Note**: you'll need to change the value of the boolean `shuffleTiles` in the `Game.java` file to `true` if you want to play."
-  },
-  "https://studio.code.org/s/allthethings/lessons/44/levels/10": {
     "long_instructions": "This is a sample Java Lab level.",
     "teacher_markdown": "Teachers should see this extra info."
   },
-  "https://studio.code.org/s/allthethings/lessons/44/levels/11": {
+  "https://studio.code.org/s/allthethings/lessons/44/levels/10": {
     "long_instructions": "## Sample Prompter Level\n\nThis level shows an example of the prompter in the theater."
   },
-  "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
+  "https://studio.code.org/s/allthethings/lessons/44/levels/11": {
     "long_instructions": "This is a sample Java Lab level with validation tests."
   },
-  "https://studio.code.org/s/allthethings/lessons/44/levels/13": {
+  "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
     "long_instructions": "This is a Java Lab level with passing validation."
   }
 }
