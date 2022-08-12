@@ -1,11 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default function NewProgrammingExpressionForm({
   programmingEnvironmentsForSelect
 }) {
+  const defaultEnvironmentName = queryString.parse(window.location.search)[
+    'programming_environment'
+  ];
+  const defaultEnvironmentId = defaultEnvironmentName
+    ? programmingEnvironmentsForSelect.find(
+        el => el.name === defaultEnvironmentName
+      )?.id
+    : null;
   return (
     <form action="/programming_expressions" method="post">
       <RailsAuthenticityToken />
@@ -26,6 +35,7 @@ export default function NewProgrammingExpressionForm({
           name="programming_environment_id"
           style={styles.inputStyle}
           required
+          defaultValue={defaultEnvironmentId}
         >
           {programmingEnvironmentsForSelect.map(programmingEnvironment => (
             <option

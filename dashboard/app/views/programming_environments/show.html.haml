@@ -10,5 +10,7 @@
     %ul
       - if Rails.application.config.levelbuilder_mode
         %li= link_to 'Edit', edit_programming_environment_path(@programming_environment.name)
+        %li= link_to 'Create new programming class', new_programming_class_path(programming_environment: @programming_environment.name)
+        %li= link_to 'Create new programming expression', new_programming_expression_path(programming_environment: @programming_environment.name)
       - else
         %li= link_to 'Edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", edit_programming_environment_path(@programming_environment.name)).to_s
