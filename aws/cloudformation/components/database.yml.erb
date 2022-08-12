@@ -11,6 +11,19 @@
       Parameters: <%=values.compact.to_json%>
 <%end -%>
 
+<%  db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
+  DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Secrets for accessing database<%user ? " user #{user}" : ''%> from ${AWS::StackName} CloudFormation stack"
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "<%=user || '${DatabaseUsername}'%>"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+      Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
+<%  secret; end -%>
+
 # We don't provision these in production via CloudFormation ... yet!
 <% unless rack_env?(:production)%>
   AuroraCluster:
@@ -52,19 +65,6 @@
       Engine: aurora-mysql
       # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
 <%  end -%>
-
-<%  db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
-  DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Description: !Sub "Secrets for accessing database<%user ? " user #{user}" : ''%> from ${AWS::StackName} CloudFormation stack"
-      GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "<%=user || '${DatabaseUsername}'%>"}'
-        GenerateStringKey: password
-        PasswordLength: 10
-        ExcludePunctuation: True
-      Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
-<%  secret; end -%>
 
   DBProxy:
     Type: AWS::RDS::DBProxy

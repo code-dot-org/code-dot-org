@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-08-03 16:47:11 UTC",
+    "serialized_at": "2022-08-08 23:09:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -251,6 +251,8 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "The goal of the activity is to allow students to demonstrate their knowledge of\ninheritance in a way that is interesting and engaging to them. While it’s possible to\ncreate additional constraints or requirements, it’s best to provide students with as\nmuch freedom as possible.",
+        "purpose": "Providing students with the opportunity to choose how they will fulfill the requirements increases engagement by encouraging students to investigate their interests and apply the course content in a way that they find meaningful."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -266,8 +268,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "The persuasive power of words can be seen in a variety of places such as entertainment,\nnews, social media, and even reviews and comments. This activity focuses on the\nsentiment value of individual words, and you will start by reading a few online reviews of\nyour choice.",
-        "student_overview": "The persuasive power of words can be seen in a variety of places such as entertainment,\nnews, social media, and even reviews and comments. This activity focuses on the\nsentiment value of individual words, and you will start by reading a few online reviews of\nyour choice."
+        "overview": "The Consumer Review Lab provides students with the opportunity to work on a larger\nassignment involving multiple classes early in the course, before they necessarily\nknow how to write their own classes. By focusing on calling methods and using the\ncontrol structures of selection and iteration, students will have practice that directly\nrelates to the “Methods and Control Structures” free-response question type that\nthey will see on the end-of-year exam. Because students often struggle with methods\nin the String class, this lab specifically focuses on calling these methods and\nbuilding strings in an engaging and interesting way.",
+        "purpose": "We all use reviews on a regular basis, to help us determine which movie to see, which\nvideo game to play, or even which pair of headphones to buy. But how easy is it to fake\na review? The truth is that it‘s incredibly simple, and fake reviews can have significant\nimpacts on the products that are purchased or consumed, including movies that\npeople watch and restaurants where they choose to eat. If consumers knew that the\nreview they were reading and using to base a decision on came from a computer\nprogram and not a human, they might be less likely to believe it.\n\n\nWhat motivation do people have for creating these fake reviews or comments, and\nwhat should be done to prevent it, if anything? If technology can be used to create\nand post positive reviews for the company‘s own products or negative reviews of the\ncompetition, what are the ethical implications of this?\n\n\nCreating fake reviews has ethical implications, and it is important to emphasize that\nalthough students are going through the process to see one way in which they can\nbe generated, this is in no way advocating this type of behavior. This is similar to\n“white hat” hackers needing to understand the same tools and processes of criminal\nhackers in order to do their job. Discuss with students the ethical concerns and how\nunderstanding this process is important to preventing unwanted behaviors online.",
+        "student_overview": "The persuasive power of words can be seen in a variety of places such as entertainment,\nnews, social media, and even reviews and comments. This activity focuses on the\nsentiment value of individual words, and you will start by reading a few online reviews of your choice."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -763,9 +766,52 @@
       }
     },
     {
+      "key": "3c2820f2-4e26-4c1d-8f75-d526939fd151",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c2820f2-4e26-4c1d-8f75-d526939fd151",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "57742bb7-210f-4852-87e0-e5304cf5892b",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Open-Eded Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "708a1db4-d386-4217-b6f9-3203dc61c996",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "708a1db4-d386-4217-b6f9-3203dc61c996",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
       "key": "584122ca-e2a9-4439-a7f5-699121cd7577",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "584122ca-e2a9-4439-a7f5-699121cd7577",
@@ -775,12 +821,70 @@
       }
     },
     {
+      "key": "ed6aef24-be6e-476c-ad78-be18058e649a",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ed6aef24-be6e-476c-ad78-be18058e649a",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "45986da6-670b-444e-821b-ba882dc1a474",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45986da6-670b-444e-821b-ba882dc1a474",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
       "key": "dbe11eca-2c53-4275-b068-1228b45b3bbb",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "6ff4f34d-8c88-4e10-862d-56f52506476a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46",
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022"
@@ -2034,7 +2138,7 @@
       "key": "697017e6-25c6-43ca-afe7-ac9721930327",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [activity guide]. At this point you also need to ensure students can access the `LiteratureCelebrity` class starter code. \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r csa_celebrity_lab_extending_the_celebrity_class_1/csa-labs/unversioned]. \n\nOnce students have thought about the design of their sublcass to `Celebrity`, it will be helpful for them to review the `LiteratureCelebrity` class. Give them access to this class at this point in the lesson and ensure students can access the [r student_code_-_literaturecelebrity_java/csa-labs/unversioned] student resource. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "697017e6-25c6-43ca-afe7-ac9721930327",
@@ -2042,9 +2146,43 @@
       }
     },
     {
+      "key": "148eee9f-0fb0-402a-b377-a08ccaf01d3e",
+      "position": 2,
+      "properties": {
+        "description": "---\n\n##IMPORTANT DISCLAIMER\n\nThis activity requires the use of a GUI. Unfortunately, you will not be able to use our platform for this activity as the GUI is not supported by our platform.\n\nTo run the Celebrity program, you will need to direct your students to use another IDE such as Replit, just as you did in the previous lesson. \n\nIn addition, students will need to complete the previous Lesson 9 in order to complete today's lesson. If you did not have students complete Lesson 9 - Putting It All Together, please go back and have students complete it now.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "148eee9f-0fb0-402a-b377-a08ccaf01d3e",
+        "lesson_activity.key": "96b3a243-6384-456f-82d2-ee05471fae12"
+      }
+    },
+    {
+      "key": "61d9b3a5-fa20-4bc6-a827-b3ed8fa94ee4",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Direct students to go through the [r csa_celebrity_lab_extending_the_celebrity_class_1/csa-labs/unversioned] document and complete Parts 2 and 3. \n\nThis activity guide is very detailed and contains specific instructions on what code to add to their various classes and methods in their Celebrity Game program in order to update their game.\n\n",
+        "name": "CelebrityGame UPDATE",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " If you would like to have students focus on just extending the `Celebrity` class and not worry about the GUI, you can give them the updated `CelebrityGame` class code from the Teacher KEY with the changes described in the GUI update section of the activity once they have created their own extension of the `Celebrity` class. \n\nEven by providing an updated `CelebrityGame` class, it is still possible that small changes will need to be made."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Note:** If students choose to add more parameters to the constructor for their subclass, implementing the GUI changes will be much more difficult.\n\nIn addition to parameters and local variables declared in a method, a method always has access to any instance variables that are declared within the enclosing class. These instance variables are often required to complete the goal of the method. If any of the available variables are objects (reference data), then those objects may have their own methods, variables, and constants that would be accessible within the given method as well."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61d9b3a5-fa20-4bc6-a827-b3ed8fa94ee4",
+        "lesson_activity.key": "96b3a243-6384-456f-82d2-ee05471fae12"
+      }
+    },
+    {
       "key": "1aa77e09-a74c-46c9-b3e3-489b91f88418",
       "position": 1,
       "properties": {
+        "description": "**Do This:** Direct students to complete Part 4: Check Your Understanding of their activity guide. Go over the answers with the class. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "1aa77e09-a74c-46c9-b3e3-489b91f88418",
@@ -2052,13 +2190,248 @@
       }
     },
     {
+      "key": "eb91c383-092f-418a-a998-0718baaf8ccd",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Ask students to identify methods in their subclass that are overridden from the Celebrity class. \n\n* Why did they choose to override these methods? \n\n* How is the behavior in their subclass different from the behavior provided in the superclass?",
+        "name": "Check For Understanding",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "It is easy to get caught up in the GUI aspects of this lab, but the idea of inheritance and relationships is what this activity is all about. Make sure that students are understanding the relationship between the subclass that they created and the given Celebrity class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eb91c383-092f-418a-a998-0718baaf8ccd",
+        "lesson_activity.key": "3ee23329-9b47-4087-9fd9-6ce21cf43338"
+      }
+    },
+    {
+      "key": "21c93ccd-a1c2-43c9-826f-1cef025f74bf",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** As a class, spend a few minutes reviewing the requirements of the open-ended activity described in the activity guide and scoring guidelines. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal of the activity is to allow students to demonstrate their knowledge of\ninheritance in a way that is interesting and engaging to them. While it’s possible to\ncreate additional constraints or requirements, it’s best to provide students with as\nmuch freedom as possible. The use of the Celebrity GUI is intentionally not included in\nthe list of requirements; however, it’s possible that students will continue to work with\nthe given classes from this lab."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "21c93ccd-a1c2-43c9-826f-1cef025f74bf",
+        "lesson_activity.key": "3c2820f2-4e26-4c1d-8f75-d526939fd151"
+      }
+    },
+    {
+      "key": "d3247a3a-e0bf-4fc4-8654-5b3899af25f4",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Direct students to complete Part 2 of the activity guide. This will allow them to make a plan before they start on the project. \n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Be sure to indicate how much time students will have to work on this activity. The suggested time is only three class periods (~80 minutes), and students often underestimate the time it will take them to implement an idea. To avoid students underestimating the\ntime it will take for them to implement their idea, review their project idea with them beforehand. \n\nIt is possible to ask students to complete work outside of class in order to\nstay within the class periods allotted, however it’s important to provide students with at least some in-class time to answer the associated questions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d3247a3a-e0bf-4fc4-8654-5b3899af25f4",
+        "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b"
+      }
+    },
+    {
+      "key": "c785f570-f0cc-4dad-8efb-95baa8d29a83",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** When students have completed their plans in Part 2 of the activity guide, direct students to start working on their program. \n\nAs students complete this activity, the following actions can help with successful\nimplementation:\n\n* Allow and encourage collaboration during the development of the program. Either in pairs or groups, students should work together to design, implement, and test their chosen project.\n\n* If using pair programming, consider how students should rotate roles and whether\nthey will be notified as to when to switch roles or if they should determine when to\nswitch on their own.\n\n* Assist in resolving technical problems that impede work.\n\n* Determine before work begins how students should handle non-technical questions, whether students should resolve problems within their collaborative groups, with another group, or with you.\n\n* Do not allow students to begin answering the Check for Understanding questions in Part 3 of the activity guide while the program is being implemented. The questions should be answered independently after the program is complete."
+      },
+      "seeding_key": {
+        "activity_section.key": "c785f570-f0cc-4dad-8efb-95baa8d29a83",
+        "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b"
+      }
+    },
+    {
+      "key": "9f9bdf73-ba7e-462d-b73c-a9fea6945655",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9f9bdf73-ba7e-462d-b73c-a9fea6945655",
+        "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b"
+      }
+    },
+    {
+      "key": "7c5099af-7503-4261-b66e-98e3cda0f634",
+      "position": 4,
+      "properties": {
+        "description": "---\n##IMPORTANT DISCLAIMER\n\nIf students decide to continue to work with the given classes from the previous Celebrity Lessons, unfortunately, they will not be able to use our platform for this activity as the GUI is not supported by our platform.\n\nTo run the Celebrity program, students will need to continue to use another IDE such as Replit, just as they did in the previous lessons 9 and 10.\n\nHowever, if students do are not going to work with the given classes from the previous Celebrity lessons, they can work in Level 1 below. \n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c5099af-7503-4261-b66e-98e3cda0f634",
+        "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b"
+      }
+    },
+    {
+      "key": "d8bd2b34-8f6e-4b9f-8001-63c206ef7c10",
+      "position": 5,
+      "properties": {
+        "description": "The scoring guidelines have been included in order to assist in the assessment of student work. There are a variety of ways that these guidelines could be used, including:\n\n* provide students with a blank copy of the guidelines and have them score their own program; or\n\n* provide students with a blank copy and ask them to evaluate the program of another student or group; or\n\n* use these when grading programs, and provide students with a printed or electronic copy with notes about each point, whether they earned or did not earn the point, and why.\n\nThis list is not comprehensive, and the guidelines may be used in ways that are not listed here. Additional rows may be added, or focus may be on just a few rows. These guidelines are meant to be flexible.\n\nAsk additional questions to better understand the development process and provide students with opportunities to improve their communication skills. One option is to ask students to identify one programming difficulty they had when completing this activity, and describe how they overcame this difficulty.",
+        "duration": "45",
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8bd2b34-8f6e-4b9f-8001-63c206ef7c10",
+        "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b"
+      }
+    },
+    {
+      "key": "a363a4d1-6549-4e51-834e-f99a6de88929",
+      "position": 6,
+      "properties": {
+        "description": "\"Allowing students to celebrate their interests and share their work with\nother members of the class builds a culture of acceptance and collaboration\namong students.\" *-College Board Celebrity Lab*\n\nBelow are a few possible options from the College Board for grading or presenting student work:\n\n* Short interviews between the teacher and individual students about their code, how it works, and any difficulties they encountered.\n\n  * Although this is a time-consuming option for the teacher, it allows them to see and ask questions of every project while not delaying the rest of the students, who can be working on other activities while the interviews are taking place.\n\n  * One downside is that students are not exposed to the work of other students except for informally during implementation. For students who struggle with what to do in an open-ended project, seeing student work, especially early in the year, can help spark ideas for future activities.\n\n* Peer review, either in small groups or pairs.\n\n  * One benefit to this is that teachers have the reviews of other students when evaluating a student project.\n\n  * Students can see at least one, and potentially several, other student projects.\n\n  * Time must be spent teaching students how to give feedback and what feedback is expected.\n\n* Gallery walk.\n\n  * Half of the class present their work to the other half in very short (30–60 second) interactions and then the halves switch, and the presenters become the audience\n  \n  * This exposes students to more projects but does not provide as much time for thorough evaluation or discussion.\n\n* Presentations to the class\n\n  * Students will be exposed to all other student projects.\n\n  * This can be a time-consuming process, even if students help evaluate another student's work. \n\n",
+        "name": "Equity and Access"
+      },
+      "seeding_key": {
+        "activity_section.key": "a363a4d1-6549-4e51-834e-f99a6de88929",
+        "lesson_activity.key": "57742bb7-210f-4852-87e0-e5304cf5892b"
+      }
+    },
+    {
+      "key": "fee9d76c-1e1a-41e8-80ee-489fe1da6bbc",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** For students to show that they understand the concepts, it’s important for them to describe their work. Have them answer the questions in Part 3 of their activity guide **individually**.\n",
+        "duration": "10",
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fee9d76c-1e1a-41e8-80ee-489fe1da6bbc",
+        "lesson_activity.key": "708a1db4-d386-4217-b6f9-3203dc61c996"
+      }
+    },
+    {
       "key": "4f472c09-11ab-4cb0-a25b-5f70799372e4",
       "position": 1,
       "properties": {
+        "description": "This activity introduces students to the **sentiment value** of words. A word can have\na *positive* or *negative* connotation based on the context with which it is often used.\nBefore students start working with the `Review` class, it is helpful for them to read a\nfew reviews.",
+        "name": "Reading the Emotion of Reviews"
       },
       "seeding_key": {
         "activity_section.key": "4f472c09-11ab-4cb0-a25b-5f70799372e4",
         "lesson_activity.key": "584122ca-e2a9-4439-a7f5-699121cd7577"
+      }
+    },
+    {
+      "key": "79dfe2f4-aaad-4ad1-ac49-05e4f33e48d8",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When students are looking at reviews online, they could encounter language that is inappropriate for the classroom. Ensure students are familiar with classroom expectations before beginning this activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "79dfe2f4-aaad-4ad1-ac49-05e4f33e48d8",
+        "lesson_activity.key": "584122ca-e2a9-4439-a7f5-699121cd7577"
+      }
+    },
+    {
+      "key": "b799cf88-bb74-4bfe-9081-278deab77133",
+      "position": 3,
+      "properties": {
+        "description": "**Do This**: Have students read two to three online reviews of their choice. Some options include\nmusic reviews, game reviews, movie reviews, or restaurant reviews, although if a\nstudent has a specific interest not listed here, consider allowing them to pursue\nit. If students are unsure of where to find sample reviews, spend time as a class\nbrainstorming sites that contain different types of reviews that students could use.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b799cf88-bb74-4bfe-9081-278deab77133",
+        "lesson_activity.key": "584122ca-e2a9-4439-a7f5-699121cd7577"
+      }
+    },
+    {
+      "key": "5d217f71-a54a-4561-ba68-b06388a36d68",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If your school has content restrictions that do not allow for students to search for reviews of their own, choose several and provide them a curated assortment in a Google Doc or other digital format. \n\nHowever, the more connected a student feels to the reviews that they are reading and generating, the more engaged they will likely be in the activities. Allow and encourage students to choose a type of review that they find relevant to their life."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5d217f71-a54a-4561-ba68-b06388a36d68",
+        "lesson_activity.key": "584122ca-e2a9-4439-a7f5-699121cd7577"
+      }
+    },
+    {
+      "key": "29331e8a-7431-4982-a6a7-060b55b11aa8",
+      "position": 1,
+      "properties": {
+        "description": "In this and other labs in this course, students will be interacting with classes that they\nhave not written themselves. This is a useful and necessary skill, and one that they\nhave already been using by interacting with the `String` and `Math` classes. \n\nFor this lab they‘ll be using the `Review` class. This class has several existing methods and utilizes the **sentiment value** of words, which is a numerical value for the *positive* or *negative* connotation of a word. It’s not necessary that students understand all of the code contained in this class, but encourage them to take a minute to look at the public methods provided. ",
+        "name": "Exploration of the Review Class"
+      },
+      "seeding_key": {
+        "activity_section.key": "29331e8a-7431-4982-a6a7-060b55b11aa8",
+        "lesson_activity.key": "ed6aef24-be6e-476c-ad78-be18058e649a"
+      }
+    },
+    {
+      "key": "b11bbcf9-2b2e-42d6-a413-803635e8dc94",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:**: Have students download the digital version of *Activity 1 - Introduction (Reviews and Sentiment Value)* or use a printed version for students to work through."
+      },
+      "seeding_key": {
+        "activity_section.key": "b11bbcf9-2b2e-42d6-a413-803635e8dc94",
+        "lesson_activity.key": "ed6aef24-be6e-476c-ad78-be18058e649a"
+      }
+    },
+    {
+      "key": "1d8f40ad-905d-49e0-af7d-0ec30cf5a4e4",
+      "position": 3,
+      "properties": {
+        "description": "**Do This**: Students should work with a partner to complete the activity guide, basing their answers on the `Review` class that is provided. There are two levels for students to complete that align with the corresponding questions on the activity guide. "
+      },
+      "seeding_key": {
+        "activity_section.key": "1d8f40ad-905d-49e0-af7d-0ec30cf5a4e4",
+        "lesson_activity.key": "ed6aef24-be6e-476c-ad78-be18058e649a"
+      }
+    },
+    {
+      "key": "cb0b733b-515b-4dac-88a0-6c9656abd6b0",
+      "position": 4,
+      "properties": {
+        "progression_name": "The sentimentVal() Method"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb0b733b-515b-4dac-88a0-6c9656abd6b0",
+        "lesson_activity.key": "ed6aef24-be6e-476c-ad78-be18058e649a"
+      }
+    },
+    {
+      "key": "a4d11f17-fb1a-42df-b042-00cb15027d82",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** With their partner, students should complete the *Check for Understanding* portion of the activity guide. They should refer to the `Review` class as necessary.",
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4d11f17-fb1a-42df-b042-00cb15027d82",
+        "lesson_activity.key": "45986da6-670b-444e-821b-ba882dc1a474"
+      }
+    },
+    {
+      "key": "50cd7f55-91b4-4cc1-81e5-da2c90ff615e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "50cd7f55-91b4-4cc1-81e5-da2c90ff615e",
+        "lesson_activity.key": "45986da6-670b-444e-821b-ba882dc1a474"
       }
     },
     {
@@ -2069,6 +2442,91 @@
       "seeding_key": {
         "activity_section.key": "1868dbf1-4e1b-4a2b-b2bb-f5f6ce1a211e",
         "lesson_activity.key": "dbe11eca-2c53-4275-b068-1228b45b3bbb"
+      }
+    },
+    {
+      "key": "7608549d-d090-4f2b-b34e-7daa8ad5b69e",
+      "position": 1,
+      "properties": {
+        "description": "**Do This**: Have students work with a partner to discuss the algorithm for determining the total sentiment of a review (*a string with multiple words, each of which will have a\nsentiment value*)."
+      },
+      "seeding_key": {
+        "activity_section.key": "7608549d-d090-4f2b-b34e-7daa8ad5b69e",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
+      "key": "b4ae9991-0a1d-4a11-9b9d-3f869f2a4f37",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Strings are *objects* and have methods that can access information about them and create new strings. The course framework describes those methods which are part of the course, such as `length`, `indexOf`, and `substring`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4ae9991-0a1d-4a11-9b9d-3f869f2a4f37",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
+      "key": "00a696d6-430b-4452-8708-7b70b9a90beb",
+      "position": 3,
+      "properties": {
+        "description": "**Option for Differentiation**: When students are completing the `totalSentiment`\nmethod, they can use a statistic other than sum to more accurately measure the\noverall sentiment of a review."
+      },
+      "seeding_key": {
+        "activity_section.key": "00a696d6-430b-4452-8708-7b70b9a90beb",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
+      "key": "702d64b7-466c-4ed9-8045-2ec4dbdeb3a6",
+      "position": 4,
+      "properties": {
+        "description": "When calling the two-parameter substring method, the first parameter is the starting\nindex of the returned substring and will be included in the returned string object,\nwhile the second parameter is the first index not included in the returned string. This\ninformation is also included on the Java Quick Reference, and it is useful for students\nto get accustomed to using it during the year.\n\nIf students have trouble determining the algorithm for `totalSentiment` or\n`starValue`, walk them through the provided pseudocode in the activity solutions\neither in pairs or as an entire class."
+      },
+      "seeding_key": {
+        "activity_section.key": "702d64b7-466c-4ed9-8045-2ec4dbdeb3a6",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
+      "key": "e1651bf2-e93f-4085-a2c5-c7d7d0e22640",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When calling the `String` methods within the framework, such as `indexOf` and `substring`, adjustments must be made to account for strings being indexed starting at zero."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e1651bf2-e93f-4085-a2c5-c7d7d0e22640",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
+      "key": "92a8468c-49bb-419a-bd0e-f3b314767c10",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "92a8468c-49bb-419a-bd0e-f3b314767c10",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
+      "key": "d7a46c99-4caf-415d-86dc-d79b4667bb02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d7a46c99-4caf-415d-86dc-d79b4667bb02",
+        "lesson_activity.key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46"
       }
     },
     {
@@ -2952,6 +3410,72 @@
       "level_keys": [
         "CSA CB_Lab Celebrity-L2-L1_2022"
       ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The sentimentVal() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L1-L1_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "cb0b733b-515b-4dac-88a0-6c9656abd6b0"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L1-L1_2022"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The sentimentVal() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L1-L2_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "cb0b733b-515b-4dac-88a0-6c9656abd6b0"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L1-L2_2022"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L1-L3_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "50cd7f55-91b4-4cc1-81e5-da2c90ff615e"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L1-L3_2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3362,6 +3886,42 @@
         "script.name": "csa-labs-2022",
         "activity_section.key": "4a4c96a0-f0f9-4c44-9182-043391836d81"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L1-L1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L1-L1_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "cb0b733b-515b-4dac-88a0-6c9656abd6b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L1-L2_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L1-L2_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "cb0b733b-515b-4dac-88a0-6c9656abd6b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L1-L3_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L1-L3_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "50cd7f55-91b4-4cc1-81e5-da2c90ff615e"
+      }
     }
   ],
   "resources": [
@@ -3387,6 +3947,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_csa_celebrity_lab_-_putting_it_all_together_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] CSA Celebrity Lab: Extending the Celebrity Class",
+      "url": "https://docs.google.com/document/d/1qtRWFZh6S4cVPTJHkLMeQBgEVPMN56zh9wLirZIibWI/edit?usp=sharing",
+      "key": "_key_csa_celebrity_lab_extending_the_celebrity_class",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_csa_celebrity_lab_extending_the_celebrity_class"
       }
     },
     {
@@ -3500,13 +4072,13 @@
     {
       "name": "CSA Celebrity Lab: Extending the Celebrity Class",
       "url": "https://docs.google.com/document/d/1TvtAtwYWzCYvqj2ttlDJTRVmjC3jgguHSlWHAHyC1GI/edit?usp=sharing",
-      "key": "csa_celebrity_lab_extending_the_celebrity_class",
+      "key": "csa_celebrity_lab_extending_the_celebrity_class_1",
       "properties": {
         "audience": "Student",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class"
+        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class_1"
       }
     },
     {
@@ -3579,6 +4151,18 @@
       },
       "seeding_key": {
         "resource.key": "replit_java_swing_gui_example"
+      }
+    },
+    {
+      "name": "Student Code - LiteratureCelebrity.java",
+      "url": "https://docs.google.com/document/d/1txRQJZCWCI4JSDqX9pJvEG-sPKUpNxf24DZqDxLP3Zc/edit?usp=sharing",
+      "key": "student_code_-_literaturecelebrity_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_code_-_literaturecelebrity_java"
       }
     },
     {
@@ -3988,7 +4572,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class"
+        "resource.key": "_key_csa_celebrity_lab_extending_the_celebrity_class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "csa_celebrity_lab_extending_the_celebrity_class_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "student_code_-_literaturecelebrity_java"
       }
     }
   ],
@@ -4049,13 +4645,13 @@
       }
     },
     {
-      "key": "23d98694-e4cd-45f4-b053-ce07d21d90ef",
+      "key": "21f69135-3504-4158-a82e-03e6ea1b6027",
       "properties": {
-        "description": "Write program code to override methods in the superclass"
+        "description": "Create a superclass and a subclass of the the superclass"
       },
       "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "23d98694-e4cd-45f4-b053-ce07d21d90ef"
+        "lesson.key": "lesson-10",
+        "objective.key": "21f69135-3504-4158-a82e-03e6ea1b6027"
       }
     },
     {
@@ -4076,6 +4672,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "4152c400-836d-4eaa-89e7-353b672caeb1"
+      }
+    },
+    {
+      "key": "4908fe32-6f48-4548-a2cb-8c70a1c99189",
+      "properties": {
+        "description": "Write program code to override methods in the superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "4908fe32-6f48-4548-a2cb-8c70a1c99189"
       }
     },
     {
@@ -4109,6 +4715,16 @@
       }
     },
     {
+      "key": "6e07c7fb-9ba1-479e-89e5-4600735005c5",
+      "properties": {
+        "description": "Utilize polymorphism"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6e07c7fb-9ba1-479e-89e5-4600735005c5"
+      }
+    },
+    {
       "key": "6e6c4988-b98f-4424-8129-d8d1a03afe2d",
       "properties": {
         "description": "Use two-way selection as an advanced search for keywords"
@@ -4119,6 +4735,16 @@
       }
     },
     {
+      "key": "6ed0d952-c8ab-44ff-9ba3-afad54dc24e6",
+      "properties": {
+        "description": "Write program code to call methods in a superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "6ed0d952-c8ab-44ff-9ba3-afad54dc24e6"
+      }
+    },
+    {
       "key": "777b7695-3ba0-4ad8-a722-751770a7ad78",
       "properties": {
         "description": "Use an index variable to reference string elements within an array"
@@ -4126,6 +4752,26 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "objective.key": "777b7695-3ba0-4ad8-a722-751770a7ad78"
+      }
+    },
+    {
+      "key": "7ade2f54-761c-495a-b416-13ccc05e3b1f",
+      "properties": {
+        "description": "Write program code that calls methods that are in the same class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "7ade2f54-761c-495a-b416-13ccc05e3b1f"
+      }
+    },
+    {
+      "key": "80a3dba7-2fd7-46fb-85bf-6aaabbbb01b0",
+      "properties": {
+        "description": "Write the correct syntax for a class header with inheritance"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "80a3dba7-2fd7-46fb-85bf-6aaabbbb01b0"
       }
     },
     {
@@ -4169,33 +4815,23 @@
       }
     },
     {
-      "key": "c35b4e67-ad59-43be-bad4-79eb836bb991",
+      "key": "c8747ae2-104d-44bc-a42f-15b154e44832",
       "properties": {
-        "description": "Write program code that calls methods that are in the same class"
+        "description": "Override at least one method from the superclass"
       },
       "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "c35b4e67-ad59-43be-bad4-79eb836bb991"
+        "lesson.key": "lesson-10",
+        "objective.key": "c8747ae2-104d-44bc-a42f-15b154e44832"
       }
     },
     {
-      "key": "d9d3b5fb-fd31-4a0b-8718-9e53d99a2b72",
+      "key": "e28ef51b-78fa-4f49-b950-b4c4e43f570e",
       "properties": {
-        "description": "Write the correct syntax for a class header with inheritance"
+        "description": "Demonstrate their knowledge of inhertiance"
       },
       "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "d9d3b5fb-fd31-4a0b-8718-9e53d99a2b72"
-      }
-    },
-    {
-      "key": "ead66323-7961-41b9-aaeb-a111b3c6bad6",
-      "properties": {
-        "description": "Write program code to call methods in a superclass"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "ead66323-7961-41b9-aaeb-a111b3c6bad6"
+        "lesson.key": "lesson-10",
+        "objective.key": "e28ef51b-78fa-4f49-b950-b4c4e43f570e"
       }
     },
     {
