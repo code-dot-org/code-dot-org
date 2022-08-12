@@ -10,14 +10,17 @@
           "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
           "link": "",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": true
         },
         {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -32,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-01 20:39:13 UTC",
+    "serialized_at": "2022-08-11 16:18:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
