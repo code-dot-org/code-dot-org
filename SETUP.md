@@ -450,7 +450,7 @@ We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [
 
 ### SCSS
 
-We use [Stylelint](https://stylelint.io/) to lint our SCSS. There are plugins available for both [VS Code](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) and [JetBrains](https://www.jetbrains.com/help/idea/using-stylelint-code-quality-tool.html#ws_stylelint_configure).
+We use [Stylelint](https://stylelint.io/) to lint our SCSS in the `apps` directory. There are plugins available for both [VS Code](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) and [JetBrains](https://www.jetbrains.com/help/idea/using-stylelint-code-quality-tool.html#ws_stylelint_configure).
 
 ## More Information
 Please also see our other documentation, including our:
