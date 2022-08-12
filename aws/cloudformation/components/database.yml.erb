@@ -80,7 +80,7 @@
 <%end -%>
     Properties:
       DBProxyName: !Ref ReportingDBProxy
-      DBClusterIdentifiers: [<%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster'%>]
+      DBClusterIdentifiers: [<%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>]
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
