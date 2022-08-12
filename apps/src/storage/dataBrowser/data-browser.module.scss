@@ -1,0 +1,88 @@
+@import 'color.scss';
+
+$tableWidth: 400px;
+$buttonColumnWidth: 124px;
+$tabHeight: 35px;
+$borderColor: $lighter_gray;
+$bgColor: $lightest_gray;
+
+.tab {
+    border-color: $borderColor;
+    border-style: solid;
+    box-sizing: border-box;
+    height: $tabHeight;
+    padding: 0px 10px;
+    &Active {
+        background-color: $bgColor;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        float: left;
+    }
+    &Inactive {
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 0px;
+        float: left;
+    }
+    // This tab should fill the remaining horizontal space.
+    &Empty {
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 1px;
+        border-left-width: 0px;
+        width: 100%;
+    }
+  };
+
+.workspaceDescription {
+    height: 28;
+    overflow: hidden;
+}
+
+.workspaceDescriptionText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.workspaceTabs {
+    border-color: $borderColor;
+    border-style: solid;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 1px;
+}
+
+.tabLabel {
+    line-height: $tabHeight;
+    user-select: none;
+}
+
+.workspaceBody {
+    height: calc(100% - 83px);
+    padding: 10px 10px 10px 0px;
+    border-color: $borderColor;
+    border-style: solid;
+    border-top-width: 0px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    background-color: $bgColor;
+}
+
+.activeBody {
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    width: 100%
+}
+
+.inactiveBody {
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+}
