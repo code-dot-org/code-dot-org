@@ -1,3 +1,10 @@
+<%
+  require 'aws-sdk-sts'
+  PRODUCTION_DB_CLUSTER_ID = "arn:aws:rds:us-east-1:#{Aws::STS::Client.new.get_caller_identity.account}:cluster:production-aurora-cluster".freeze
+  # Integer range identifying each of the DB Instances to provision in the cluster.
+  DB_INSTANCE_RANGE=(0..1)
+-%>
+
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
 <%
@@ -24,6 +31,71 @@
       Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
 <%  secret; end -%>
 
+  DBProxyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'rds'%>
+      Policies:
+        - PolicyName: RDSProxy
+          PolicyDocument:
+            Statement:
+<%  db_secrets.each do |secret| -%>
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
+<%  end -%>
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  ReportingDBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Sub "${AWS::StackName}-reporting"
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReportingDBDomainName:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        # The method 'subdomain' returns the fully qualified domain name and 'domain' returns the base domain name.
+        - Name: <%="#{subdomain.delete_suffix('.' + domain)}-db-reporting.#{domain}"%>
+          Type: CNAME
+          TTL: <%= DNS_TTL %>
+          ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.Endpoint ]
+  ReportingDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reporting"
+      DBProxyName: !Ref ReportingDBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [ !ImportValue VPC-DBSecurityGroup ]
+  ReportingDBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+<% unless rack_env?(:production)%>
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
+    # These Database Instances are not yet provisioned by this Stack.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%end -%>
+    Properties:
+      DBProxyName: !Ref ReportingDBProxy
+      DBClusterIdentifiers: [<%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster'%>]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10
+        # Send reporting/analytics queries to the reader database instances, but use the database connection
+        # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
+        # and to permit long running queries.
+        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
+        # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
+        # exceed 5% of the total database connection capacity of a reader instance.
+        MaxConnectionsPercent: 5
+
+
+
+
+
 # We don't provision these in production via CloudFormation ... yet!
 <% unless rack_env?(:production)%>
   AuroraCluster:
@@ -49,8 +121,6 @@
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%
-    # Integer range identifying each of the DB Instances to provision in the cluster.
-    DB_INSTANCE_RANGE=(0..1)
     DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
@@ -86,18 +156,6 @@
       TargetRole: READ_ONLY
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
-  DBProxyRole:
-    Type: AWS::IAM::Role
-    Properties:
-      <%=service_role 'rds'%>
-      Policies:
-        - PolicyName: RDSProxy
-          PolicyDocument:
-            Statement:
-<%  db_secrets.each do |secret| -%>
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
-<%  end -%>
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
   DBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup
     # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
@@ -108,49 +166,4 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
-  ReportingDBProxy:
-    Type: AWS::RDS::DBProxy
-    Properties:
-      DBProxyName: !Sub "${AWS::StackName}-reporting"
-      EngineFamily: MYSQL
-      RoleArn: !GetAtt DBProxyRole.Arn
-      Auth:
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
-      VpcSubnetIds: <%=subnets.to_json%>
-      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
-  ReportingDBDomainName:
-    Type: AWS::Route53::RecordSetGroup
-    Properties:
-      HostedZoneName: <%=domain%>.
-      RecordSets:
-        # The method 'subdomain' returns the fully qualified domain name and 'domain' returns the base domain name.
-        - Name: <%="#{subdomain.delete_suffix('.' + domain)}-db-reporting.#{domain}"%>
-          Type: CNAME
-          TTL: <%= DNS_TTL %>
-          ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.Endpoint ]
-  ReportingDBProxyEndpoint:
-    Type: AWS::RDS::DBProxyEndpoint
-    Properties:
-      DBProxyEndpointName: !Sub "${AWS::StackName}-reporting"
-      DBProxyName: !Ref ReportingDBProxy
-      TargetRole: READ_ONLY
-      VpcSubnetIds: <%=subnets.to_json%>
-      VpcSecurityGroupIds: [ !ImportValue VPC-DBSecurityGroup ]
-  ReportingDBProxyTargetGroup:
-    Type: AWS::RDS::DBProxyTargetGroup
-    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
-    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
-    Properties:
-      DBProxyName: !Ref ReportingDBProxy
-      DBClusterIdentifiers: [!Ref AuroraCluster]
-      TargetGroupName: default
-      ConnectionPoolConfigurationInfo:
-        ConnectionBorrowTimeout: 10
-        # Send reporting/analytics queries to the reader database instances, but use the database connection
-        # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
-        # and to permit long running queries.
-        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
-        # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
-        # exceed 5% of the total database connection capacity of a reader instance.
-        MaxConnectionsPercent: 5
 <%end -%>
