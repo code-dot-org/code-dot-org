@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-08-11 01:28:58 UTC",
+    "serialized_at": "2022-08-11 20:40:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -866,7 +866,7 @@
       "key": "6ff4f34d-8c88-4e10-862d-56f52506476a",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 40,
         "name": "Activity"
       },
       "seeding_key": {
@@ -880,7 +880,7 @@
       "key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -894,9 +894,39 @@
       "key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "dc32bb8a-b5cd-4ad1-93a3-d6ae4fda55fc",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc32bb8a-b5cd-4ad1-93a3-d6ae4fda55fc",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "dddbcd18-551d-49d1-a3ea-32d9a0c81085",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dddbcd18-551d-49d1-a3ea-32d9a0c81085",
         "lesson.key": "lesson-14",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022"
@@ -2485,10 +2515,22 @@
       }
     },
     {
-      "key": "7608549d-d090-4f2b-b34e-7daa8ad5b69e",
+      "key": "5cc7f83b-5bd3-4cae-9181-0e91e31faaf6",
       "position": 1,
       "properties": {
-        "description": "**Do This**: Have students work with a partner to discuss the algorithm for determining the total sentiment of a review (*a string with multiple words, each of which will have a\nsentiment value*)."
+        "description": "With your partner, you discussed ways in which total sentiment can calculated from a review. In this activity you are going to extend that discussion and brainstorming in order to create a method that will calculate total sentiment of a review based on the words that it contains.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5cc7f83b-5bd3-4cae-9181-0e91e31faaf6",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
+      "key": "7608549d-d090-4f2b-b34e-7daa8ad5b69e",
+      "position": 2,
+      "properties": {
+        "description": "\n**Do This**: Students will write the following method that determines the sentiment value of a review. Utilize the existing `textToString` method to complete the implementation of this method.\n\n`public static double totalSentiment(String fileName)`"
       },
       "seeding_key": {
         "activity_section.key": "7608549d-d090-4f2b-b34e-7daa8ad5b69e",
@@ -2497,7 +2539,7 @@
     },
     {
       "key": "b4ae9991-0a1d-4a11-9b9d-3f869f2a4f37",
-      "position": 2,
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -2513,9 +2555,9 @@
     },
     {
       "key": "00a696d6-430b-4452-8708-7b70b9a90beb",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "**Option for Differentiation**: When students are completing the `totalSentiment`\nmethod, they can use a statistic other than sum to more accurately measure the\noverall sentiment of a review."
+        "description": "**Option for Differentiation**: When students are completing the `totalSentiment` method, they can use a statistic other than sum to more accurately measure the overall sentiment of a review."
       },
       "seeding_key": {
         "activity_section.key": "00a696d6-430b-4452-8708-7b70b9a90beb",
@@ -2524,9 +2566,9 @@
     },
     {
       "key": "702d64b7-466c-4ed9-8045-2ec4dbdeb3a6",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "When calling the two-parameter substring method, the first parameter is the starting\nindex of the returned substring and will be included in the returned string object,\nwhile the second parameter is the first index not included in the returned string. This\ninformation is also included on the Java Quick Reference, and it is useful for students\nto get accustomed to using it during the year.\n\nIf students have trouble determining the algorithm for `totalSentiment` or\n`starValue`, walk them through the provided pseudocode in the activity solutions\neither in pairs or as an entire class."
+        "description": "**Do This:** Have students test the method by calling `totalSentiment(“SimpleReview.txt”)` and printing the returned value."
       },
       "seeding_key": {
         "activity_section.key": "702d64b7-466c-4ed9-8045-2ec4dbdeb3a6",
@@ -2535,12 +2577,12 @@
     },
     {
       "key": "e1651bf2-e93f-4085-a2c5-c7d7d0e22640",
-      "position": 5,
+      "position": 6,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "When calling the `String` methods within the framework, such as `indexOf` and `substring`, adjustments must be made to account for strings being indexed starting at zero."
+            "markdown": "If students have trouble determining the algorithm for `totalSentiment` or `starRating`, walk them through the provided pseudocode in the activity guide solutions either in pairs or as an entire class."
           }
         ]
       },
@@ -2551,8 +2593,9 @@
     },
     {
       "key": "92a8468c-49bb-419a-bd0e-f3b314767c10",
-      "position": 6,
+      "position": 7,
       "properties": {
+        "description": "**Do This:** Students continue working with their partner to write the following method that determines the star rating of a review:\n\n`public static int starRating(String fileName)`"
       },
       "seeding_key": {
         "activity_section.key": "92a8468c-49bb-419a-bd0e-f3b314767c10",
@@ -2560,12 +2603,62 @@
       }
     },
     {
+      "key": "0f799d09-c761-4ef6-aed3-b82de7082fee",
+      "position": 8,
+      "properties": {
+        "progression_name": "Writing the Sentiment Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f799d09-c761-4ef6-aed3-b82de7082fee",
+        "lesson_activity.key": "6ff4f34d-8c88-4e10-862d-56f52506476a"
+      }
+    },
+    {
       "key": "d7a46c99-4caf-415d-86dc-d79b4667bb02",
       "position": 1,
       "properties": {
+        "description": "Now that we've added both the `totalSentiment` and the `starRating` methods to our project, use your work on both to answer questions 4 through 6 in your activity guide.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "d7a46c99-4caf-415d-86dc-d79b4667bb02",
+        "lesson_activity.key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46"
+      }
+    },
+    {
+      "key": "38fd5286-4405-4914-a55c-fa804aa110ec",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Students should continue to work through their activity guide with their partner.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "38fd5286-4405-4914-a55c-fa804aa110ec",
+        "lesson_activity.key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46"
+      }
+    },
+    {
+      "key": "515aa27a-de29-4aae-902f-ec565d513d83",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are sample responses to these questions available in the activity guide solutions document. Additionally, students have access to the methods that they wrote and the questions from the activity guide in the level that is provided with this activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "515aa27a-de29-4aae-902f-ec565d513d83",
+        "lesson_activity.key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46"
+      }
+    },
+    {
+      "key": "ca5b8af6-a3a1-4634-bfb1-78caddac405a",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca5b8af6-a3a1-4634-bfb1-78caddac405a",
         "lesson_activity.key": "cc88acd9-1e68-49d2-ab75-6e3a8920af46"
       }
     },
@@ -2577,6 +2670,39 @@
       "seeding_key": {
         "activity_section.key": "14d5c8c9-44da-403d-90f0-1dc610406850",
         "lesson_activity.key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533"
+      }
+    },
+    {
+      "key": "8d05978a-876e-4aab-8ced-44231e30d2a8",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Good and the Bad"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d05978a-876e-4aab-8ced-44231e30d2a8",
+        "lesson_activity.key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533"
+      }
+    },
+    {
+      "key": "d306d225-224b-498f-a638-3fe90fc43050",
+      "position": 1,
+      "properties": {
+        "progression_name": "Creating Autogenerated Reviews"
+      },
+      "seeding_key": {
+        "activity_section.key": "d306d225-224b-498f-a638-3fe90fc43050",
+        "lesson_activity.key": "dc32bb8a-b5cd-4ad1-93a3-d6ae4fda55fc"
+      }
+    },
+    {
+      "key": "5f2add4f-2717-4a3c-9402-68a3b4479158",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f2add4f-2717-4a3c-9402-68a3b4479158",
+        "lesson_activity.key": "dddbcd18-551d-49d1-a3ea-32d9a0c81085"
       }
     },
     {
@@ -3572,6 +3698,159 @@
       "level_keys": [
         "CSA CB_Lab Sentiment-L2-L1_2022"
       ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing the Sentiment Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L2_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "0f799d09-c761-4ef6-aed3-b82de7082fee"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L2-L2_2022"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing the Sentiment Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L3_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "0f799d09-c761-4ef6-aed3-b82de7082fee"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L2-L3_2022"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L4_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "ca5b8af6-a3a1-4634-bfb1-78caddac405a"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L2-L4_2022"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Good and the Bad"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L1_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "8d05978a-876e-4aab-8ced-44231e30d2a8"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L3-L1_2022"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Autogenerated Reviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L2_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "d306d225-224b-498f-a638-3fe90fc43050"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L3-L2_2022"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Autogenerated Reviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L3_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "d306d225-224b-498f-a638-3fe90fc43050"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L3-L3_2022"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L4_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "5f2add4f-2717-4a3c-9402-68a3b4479158"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L3-L4_2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4041,6 +4320,90 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022",
         "activity_section.key": "301688b1-d42d-47b4-b87a-4decbccf9651"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L2-L2_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L2_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "0f799d09-c761-4ef6-aed3-b82de7082fee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L2-L3_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L3_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "0f799d09-c761-4ef6-aed3-b82de7082fee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L2-L4_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L2-L4_2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "ca5b8af6-a3a1-4634-bfb1-78caddac405a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L3-L1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L1_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "8d05978a-876e-4aab-8ced-44231e30d2a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L3-L2_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L2_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "d306d225-224b-498f-a638-3fe90fc43050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L3-L3_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L3_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "d306d225-224b-498f-a638-3fe90fc43050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L3-L4_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L3-L4_2022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "5f2add4f-2717-4a3c-9402-68a3b4479158"
       }
     }
   ],
