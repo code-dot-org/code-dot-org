@@ -1,0 +1,91 @@
+/**
+ * @file Styles shared by various react components in the applab data browser.
+ */
+
+@import 'color.scss';
+
+$rowHeight: 45px;
+$cellPadding: 10px;
+$editButtonCellWidth: 142px;
+$maxCellWidth: 350px;
+
+.row {
+    height: $rowHeight;
+}
+
+.cell {
+    padding: $cellPadding;
+    border: 1px solid gray;
+    font-size: 14px;
+    max-width: $maxCellWidth;
+    overflow: hidden;
+    &.addButton {
+        background-color: $lightest_teal;
+    }
+    &.editButton {
+        background-color: $lightest_teal;
+        width: $editButtonCellWidth;
+    }
+}
+
+.headerCell {
+    background-color: $teal;
+    border: 1px solid gray;
+    max-width: $maxCellWidth;
+    padding: 6px 10px;
+    white-space: nowrap;
+}
+
+.link {
+    color: $purple;
+    cursor: pointer;
+    font-family: "Gotham 7r", sans-serif;
+}
+
+.button {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 4px 12px;
+    text-align: center;
+    vertical-align: middle;
+
+    &White {
+        background-color: white;
+        color: black;
+
+        &Edit {
+            margin-right: 10px;
+            min-width: 60px;
+        }
+    }
+
+    &Red {
+        background-color: $bootstrap_button_red;
+        color: white;
+    }
+
+    &Blue {
+        background-color: $bootstrap_button_blue;
+        color: white;
+
+        &Save {
+            margin-right: 10px;
+            min-width: 60px;
+        }
+    }
+
+    &Gray {
+        margin-left: 5px;
+        background-color: $background_gray;
+    }
+}
+
+.input {
+    width: calc(100% - 14px);
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 4px 6px;
+}
