@@ -1,6 +1,8 @@
 <%
   require 'aws-sdk-sts'
   PRODUCTION_DB_CLUSTER_ID = "arn:aws:rds:us-east-1:#{Aws::STS::Client.new.get_caller_identity.account}:cluster:production-aurora-cluster".freeze
+  # Integer range identifying each of the DB Instances to provision in the cluster.
+  DB_INSTANCE_RANGE=(0..1)
 -%>
 
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
@@ -119,8 +121,6 @@
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%
-    # Integer range identifying each of the DB Instances to provision in the cluster.
-    DB_INSTANCE_RANGE=(0..1)
     DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
