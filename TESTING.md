@@ -19,13 +19,13 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 <!---- Can use http://markdowntable.com/ for reformatting help --->
 
-|                        | ruby lint                 | scss lint                         | haml lint          | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
-|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
-| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `*.js`                 |   
-|                      |                    |                         |                    |                    |                    |
-| circle CI (via github) |                           |                                   |                    | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
-| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
-| test build             |                           |                                   |                    |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|                        | ruby lint                 | scss lint                         | haml lint          | stylelint                | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
+|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
+| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `apps/**/*.scss` / changed `*.js`                 |
+|                        |                           |                                   |                    |                          | haml lint                      |                    |
+| circle CI (via github) |                           |                                   |                    |                          | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
+| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                          |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
+| test build             |                           |                                   |                    |                          |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Running tests
 
