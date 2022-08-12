@@ -1,2 +1,8 @@
 %script{src: webpack_asset_path('js/programming_environments/index.js'), data: {programmingEnvironments: @programming_environments.to_json}}
 #container
+
+
+- if can? :create, ProgrammingEnvironment
+  = render layout: 'shared/extra_links' do
+    - if Rails.application.config.levelbuilder_mode
+      %li= link_to 'Create new programming environment', new_programming_environment_path
