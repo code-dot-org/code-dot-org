@@ -380,7 +380,7 @@ Use lodash and jQuery libraries in `/apps`.
 
 ## CSS
 
-Some lint and style rules are enforced by [Stylelint](https://stylelint.io/). You can check your changes locally by running `yarn lint:scss` from the `apps` directory. Some rules have been disabled for now, but we are moving towards enabling all of the rules that are part of the Stylelint standard configuration.
+On the frontend, some lint and style rules are enforced by [Stylelint](https://stylelint.io/). You can check your changes locally by running `yarn lint:scss` from the `apps` directory. Some rules have been disabled for now, but we are moving towards enabling all of the rules that are part of the Stylelint standard configuration.
 
 Some key points:
 - Use SCSS modules over CSS-in-JS. The module file takes the name "my-component.module.scss" and lives in the same directory as the component.
