@@ -88,7 +88,7 @@ def file_changed?(locale, file)
     JSON.parse File.read(project_options[:files_to_sync_out_json])
   end
 
-  crowdin_code = Languages.get_code_by_locale(locale)
+  crowdin_code = PegasusLanguages.get_code_by_locale(locale)
   return @change_datas.any? do |change_data|
     change_data.dig(locale, file) || change_data.dig(crowdin_code, file)
   end
@@ -99,7 +99,7 @@ end
 def rename_from_crowdin_name_to_locale
   # Move directories like `i18n/locales/Italian` to `i18n/locales/it-it` for
   # all languages in our system
-  Languages.get_crowdin_name_and_locale.each do |prop|
+  PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
     next unless File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
 
     # copy and remove rather than moving so we can easily and recursively deal
@@ -132,7 +132,7 @@ def find_malformed_links_images(locale, file_path)
 end
 
 def restore_redacted_files
-  locales = Languages.get_locale
+  locales = PegasusLanguages.get_locale
   original_dir = "i18n/locales/original"
   original_files = Dir.glob("#{original_dir}/**/*.*").to_a
   if original_files.empty?
@@ -344,7 +344,7 @@ end
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
-  locales = Languages.get_locale
+  locales = PegasusLanguages.get_locale
   puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
   Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
@@ -435,6 +435,20 @@ def distribute_translations(upload_manifests)
       FileUtils.mv(loc_file, destination)
     end
 
+    ### Docs
+    Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      basename = File.basename(loc_file, '.json')
+      destination = "dashboard/config/locales/#{basename}.#{locale}.json"
+
+      # JSON files in this directory need the root key to be set to the locale
+      loc_data = JSON.parse(File.read(loc_file))
+      loc_data = wrap_with_locale(loc_data, locale, basename)
+      sanitize_data_and_write(loc_data, destination)
+    end
+
     ### Pegasus
     loc_file = "#{locale_dir}/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
@@ -448,7 +462,7 @@ end
 def copy_untranslated_apps
   untranslated_apps = %w(applab calc eval gamelab netsim weblab)
 
-  Languages.get_locale.each do |prop|
+  PegasusLanguages.get_locale.each do |prop|
     next unless prop[:locale_s] != 'en-US'
     untranslated_apps.each do |app|
       app_locale = prop[:locale_s].tr('-', '_').downcase!
