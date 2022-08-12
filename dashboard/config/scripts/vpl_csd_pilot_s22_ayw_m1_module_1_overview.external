@@ -1,0 +1,26 @@
+name 'VPL-CSD-PILOT-S22-AYW-M1-Module 1 Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 1: CS Discoveries Virtual Professional Learning
+
+## Module 1 Overview
+
+##### The first two modules of the CS Discoveries professional learning program focus on the overarching theme of *debugging*. Debugging is a skill that is woven throughout all CS Discoveries units and reinforces problem-solving practices that students need to be successful in computer science.
+
+##### In Module 1, you will have the opportunity to:
+
+* ##### Build new knowledge related to the content covered in the synchronous Module 1 workshop.
+* ##### Engage in activities and reflections to support students in learning new programming skills and problem solving to debug their code.
+
+## How does this asynchronous work connect to the previous synchronous workshop?
+
+##### During the synchronous call, you participated in a two-hour virtual workshop with your facilitators and cohort. This asynchronous work is designed to be an *extension* of that workshop to further your development in debugging. The following levels will build on what was previously introduced to you synchronously. Further, **the asynchronous portion of Module 1 is not a prerequisite for attending and engaging in your Module 2 synchronous workshop**.
+<br>
+
+##### **Suggested time**: 1 hour
+
+
+MARKDOWN
