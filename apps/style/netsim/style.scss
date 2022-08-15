@@ -17,7 +17,7 @@ $narrow-column-width: 50px;
 $wide-column-width: 121px;
 
 // Cross-browser helper for user_select property
-@mixin user_select($val) {
+@mixin user-select($val) {
   -moz-user-select: $val;
   -webkit-user-select: $val;
   -ms-user-select: $val;
@@ -45,9 +45,7 @@ $wide-column-width: 121px;
   clear: both;
 }
 
-//
 // NetSim-specific styles
-//
 #netsim {
   position: absolute;
   top: 0;
@@ -133,7 +131,7 @@ $wide-column-width: 121px;
       font-family: monospace;
       white-space: pre-wrap;
       // Make sure table text can be selected and copied
-      @include user_select(text);
+      @include user-select(text);
     }
 
     .log-browser-limit-message {
@@ -224,7 +222,7 @@ $wide-column-width: 121px;
       font-family: $gotham-regular;
 
       // Make sure table text can be selected and copied
-      @include user_select(text);
+      @include user-select(text);
     }
 
     tbody {
@@ -237,7 +235,7 @@ $wide-column-width: 121px;
   // Span around clickable icons and text that show/hide panels.
   .minimizer {
     cursor: pointer;
-    @include user_select(none);
+    @include user-select(none);
   }
 
   .single-line-with-ellipsis {
@@ -252,7 +250,7 @@ $wide-column-width: 121px;
     font-family: monospace;
 
     // Make sure user data can always be selected and copied
-    @include user_select(text);
+    @include user-select(text);
   }
 
   // Orange SPAN button
@@ -268,7 +266,7 @@ $wide-column-width: 121px;
     cursor: pointer;
 
     // Button text should not be selectable
-    @include user_select(none);
+    @include user-select(none);
 
     &.large-button {
       font-size: 14px;
@@ -645,7 +643,7 @@ $wide-column-width: 121px;
           font-family: monospace;
 
           // Make sure table text can be selected and copied
-          @include user_select(text);
+          @include user-select(text);
         }
 
         tr.ascii td.message {
