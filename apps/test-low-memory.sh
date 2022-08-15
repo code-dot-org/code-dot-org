@@ -20,7 +20,7 @@ function linuxNumProcs() {
   if ((procs == 0)); then
     local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
     procs=1
-  fi 
+  fi
 
   echo $procs
 }
@@ -43,7 +43,7 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 ${PARALLEL} <<SCRIPT
 npm run lint
 
-PORT=9876 $GRUNT_CMD unitTest
+CDO_VERBOSE_TEST_OUTPUT=1 PORT=9876 $GRUNT_CMD unitTest
 PORT=9877 $GRUNT_CMD storybookTest
 
 PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration
