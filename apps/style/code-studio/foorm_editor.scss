@@ -12,7 +12,7 @@
   overflow-x: auto;
 }
 .CodeMirror-matchingtag {
-  background: rgba(255, 150, 0, .3);
+  background: rgb(255 150 0 / .3);
 }
 
 .container {
@@ -22,7 +22,7 @@
 div[role=dialog] {
   div.modal-content {
     margin: 0 !important;
-    @import "bootstrap-sass/assets/stylesheets/bootstrap";
+    @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule */
 
     div {
       height: auto;
