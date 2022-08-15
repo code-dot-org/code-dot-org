@@ -1,0 +1,80 @@
+name: Run UI tests
+on:
+  workflow_dispatch:
+jobs:
+  run-ui-tests:
+    runs-on: ubuntu-latest
+    env:        
+      CI: true
+      RAILS_ENV: test
+      RACK_ENV: test
+      DISABLE_SPRING: 1   
+      CLOUDFRONT_KEY_PAIR_ID: ${{ secrets.CLOUDFRONT_KEY_PAIR_ID }}
+      CLOUDFRONT_PRIVATE_KEY: ${{ secrets.CLOUDFRONT_PRIVATE_KEY }}
+      FIREBASE_NAME: ${{ secrets.FIREBASE_NAME }}
+      FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+      PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
+      AWS_ACCESS_KEY_ID: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
+      AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}            
+    steps:    
+      - name: Get actions code
+        uses: actions/checkout@v3    
+      - name: say-hello
+        uses: ./.github/actions/start-server-job-actions          
+      - name: Install mysql
+        uses: ./.github/actions/install-mysql                    
+      - name: Install test variables
+        uses: ./.github/actions/install-test-variables   
+      - name: Install UI test variables        
+        uses: ./.github/actions/install-ui-test-variables
+      - name: Install Ruby
+        uses: ./.github/actions/install-ruby
+      - name: Install apt packages
+        uses: ./.github/actions/install-apt-packages
+      - name: Install node
+        uses: ./.github/actions/install-node        
+      - name: Install rake dependencies 
+        uses: ./.github/actions/install-rake-dependencies
+      - name: Setup locals
+        run: |
+            echo "
+            properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+            saucelabs_username: $SAUCE_USERNAME
+            sauce_access_key: $SAUCE_ACCESS_KEY
+            cloudfront_key_pair: $CLOUDFRONT_KEY_PAIR_ID
+            cloudfront_private_key: $CLOUDFRONT_PRIVATE_KEY
+            firebase_name: $FIREBASE_NAME
+            firebase_secret: $FIREBASE_SECRET
+            aws_access_key_id: $AWS_ACCESS_KEY_ID
+            aws_secret_access_key: $AWS_SECRET_ACCESS_KEY
+            " >> locals.yml        
+      - name: Rake run UI tests
+        env: 
+          CI: true
+          RAILS_ENV: test
+          RACK_ENV: test
+          DISABLE_SPRING: 1           
+          CIRCLE_NODE_INDEX: 1
+          CIRCLE_NODE_TOTAL: 1
+          CIRCLECI: true
+          LD_LIBRARY_PATH: /usr/local/lib
+          CIRCLE_BUILD_NUM: "42:-2323"
+          CIRCLE_TEST_REPORTS: /home/circleci/test_reports
+          CIRCLE_ARTIFACTS: /home/circleci/artifacts
+        run: bundle exec rake circle:seed_ui_test --trace        
+      - name: Rake run UI tests
+        env: 
+          CI: true
+          RAILS_ENV: test
+          RACK_ENV: test
+          DISABLE_SPRING: 1           
+          CIRCLE_NODE_INDEX: 1
+          CIRCLE_NODE_TOTAL: 1
+          CIRCLECI: true
+          LD_LIBRARY_PATH: /usr/local/lib
+          CIRCLE_BUILD_NUM: "42:-2323"
+          CIRCLE_TEST_REPORTS: /home/circleci/test_reports
+          CIRCLE_ARTIFACTS: /home/circleci/artifacts
+        run: bundle exec rake circle:run_ui_tests --trace
+      - name: debugging
+        run: echo "$CIRCLE_NODE_TOTAL"

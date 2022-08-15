@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-13 22:57:42 UTC",
+    "serialized_at": "2022-08-11 00:45:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -153,7 +153,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
-        "preparation": "* Scissors (many pairs)\n* Printed copies of [r flippy_do/csp/2022]\t\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2021/stage/4/puzzle/1)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Scissors (many pairs)\n* Printed copies of [r flippy_do/csp/2022]\t\n* [KEY U1L4 Flippy Do Pt 1](https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "unplugged": true
@@ -5740,7 +5740,7 @@
     },
     {
       "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
+      "url": "https://youtu.be/QvyTEx1wyOY",
       "key": "computer_science_is_changing_everything",
       "properties": {
         "audience": "Student",
