@@ -78,7 +78,7 @@ $text-shadow-gray: #5a5a5a;
 }
 
 .pixelated {
-  @include pixelated();
+  @include pixelated;
 }
 
 .instructionsImage {
@@ -148,7 +148,7 @@ $text-shadow-gray: #5a5a5a;
 }
 
 .arrow {
-  @include no-interact();
+  @include no-interact;
   display: inline !important;
   padding: 0 !important;
   margin-top: 5px !important;
@@ -157,14 +157,14 @@ $text-shadow-gray: #5a5a5a;
 }
 
 @mixin arrow-icon($assetUrl) {
-  @include no-interact();
+  @include no-interact;
   background: url($assetUrl) no-repeat !important;
   background-position: center !important;
   // TODO: for offset on click, background-position: calc(50% - 50px) 50%;
   width: 40px !important;
   height: 40px !important;
 
-  @include pixelated();
+  @include pixelated;
 }
 
 #soft-buttons.soft-buttons-compact {
@@ -275,7 +275,7 @@ body {
   }
 
   .loading {
-    @include pixelated();
+    @include pixelated;
     background: url('#{$root}Sliced_Parts/MC_Loading_Spinner.gif') no-repeat
       center center;
   }
@@ -317,7 +317,7 @@ body {
 }
 
 #phaser-game canvas {
-  @include pixelated();
+  @include pixelated;
 }
 
 #phaser-game {
@@ -467,7 +467,7 @@ $height-to-width: math.div(434, 477);
   border-style: solid;
   border-width: 18px 21px 22px 19px;
   box-shadow: none;
-  @include pixelated();
+  @include pixelated;
   -moz-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
     stretch;
   -webkit-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
@@ -504,11 +504,11 @@ $height-to-width: math.div(434, 477);
 }
 
 .craft-popup {
-  @include craft-popup();
+  @include craft-popup;
 }
 
 #craft-popup-connect {
-  @include craft-popup();
+  @include craft-popup;
 
   @include popup-width-height(540px, 516px);
 
@@ -523,15 +523,15 @@ $height-to-width: math.div(434, 477);
   }
 
   #close-popup {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   .download-button {
     border-style: solid !important;
     border-width: 4px 5px 6px 5px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -544,7 +544,7 @@ $height-to-width: math.div(434, 477);
 }
 
 #craft-popup-player-selection {
-  @include craft-popup();
+  @include craft-popup;
 
   @include popup-width-height(540px, 516px);
 
@@ -634,9 +634,9 @@ $height-to-width: math.div(434, 477);
   .choose-character-button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -649,7 +649,7 @@ $height-to-width: math.div(434, 477);
 }
 
 #craft-popup-house-selection {
-  @include craft-popup();
+  @include craft-popup;
 
   .modal-content {
     margin-left: 0;
@@ -692,7 +692,7 @@ $height-to-width: math.div(434, 477);
   }
 
   .house-outline-container {
-    @include pixelated();
+    @include pixelated;
     background: url('#{$root}Sliced_Parts/House_Selection_Box.png') no-repeat;
     display: table;
 
@@ -793,15 +793,15 @@ $height-to-width: math.div(434, 477);
   }
 
   #close-house-select {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   .choose-house-button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -814,7 +814,7 @@ $height-to-width: math.div(434, 477);
 }
 
 #craft-popup-import {
-  @include craft-popup();
+  @include craft-popup;
 
   @include popup-width-height(540px, 516px);
 
@@ -823,7 +823,7 @@ $height-to-width: math.div(434, 477);
   }
 
   #close-popup {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   h2 {
@@ -841,9 +841,9 @@ $height-to-width: math.div(434, 477);
   .button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -856,7 +856,7 @@ $height-to-width: math.div(434, 477);
 }
 
 #craft-popup-error {
-  @include craft-popup();
+  @include craft-popup;
 
   @include popup-width-height(540px, 516px);
 
@@ -865,7 +865,7 @@ $height-to-width: math.div(434, 477);
   }
 
   #close-popup {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   h2 {
@@ -883,7 +883,7 @@ $height-to-width: math.div(434, 477);
   }
   border-style: solid !important;
   border-width: 3px 3px 5px 5px !important;
-  @include pixelated();
+  @include pixelated;
 
   -moz-border-image: url('#{$root}Sliced_Parts/Run_Button_Up_Slice.png') 3 3 5 5
     stretch !important;
@@ -902,7 +902,7 @@ $height-to-width: math.div(434, 477);
     outline: none;
     border-style: solid !important;
     border-width: 5px 5px 3px 3px !important;
-    @include pixelated();
+    @include pixelated;
     -moz-border-image: url('#{$root}Sliced_Parts/Run_Button_Down_Slice.png') 5 5
       3 3 stretch !important;
     -webkit-border-image: url('#{$root}Sliced_Parts/Run_Button_Down_Slice.png')
@@ -920,15 +920,15 @@ $height-to-width: math.div(434, 477);
 .minecraft button:not(.no-mc) {
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
-  @include pixelated();
-  @include gray-button();
+  @include pixelated;
+  @include gray-button;
 
   $run-width: 16px;
   $reset-width: 40px;
   $run-left-margin: 6px;
 
   &.mc-share-button {
-    @include orange-button();
+    @include orange-button;
 
     & > div {
       margin: 0;
@@ -946,7 +946,7 @@ $height-to-width: math.div(434, 477);
     padding-top: 6px;
     padding-bottom: 4px;
 
-    @include orange-button();
+    @include orange-button;
 
     & > div {
       margin-top: 4px;
@@ -962,7 +962,7 @@ $height-to-width: math.div(434, 477);
       padding-right: 13px;
       background: url('#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png')
         no-repeat 0 0;
-      @include pixelated();
+      @include pixelated;
     }
   }
 
@@ -990,7 +990,7 @@ $height-to-width: math.div(434, 477);
       width: 18px;
       height: 25px;
       margin-right: 5px;
-      @include pixelated();
+      @include pixelated;
     }
   }
 
@@ -1020,7 +1020,7 @@ $height-to-width: math.div(434, 477);
     padding-bottom: 4px;
     border-style: solid !important;
     border-width: 3px 3px 5px 5px !important;
-    @include pixelated();
+    @include pixelated;
     -moz-border-image: url('#{$root}Sliced_Parts/Reset_Button_Up_Slice.png') 3 3
       5 5 stretch !important;
     -webkit-border-image: url('#{$root}Sliced_Parts/Reset_Button_Up_Slice.png')
@@ -1039,7 +1039,7 @@ $height-to-width: math.div(434, 477);
       margin-top: -2px;
       margin-left: -6px;
       margin-bottom: -3px;
-      @include pixelated();
+      @include pixelated;
     }
 
     &:hover {
@@ -1050,7 +1050,7 @@ $height-to-width: math.div(434, 477);
       outline: none;
       border-style: solid !important;
       border-width: 5px 4px 3px 3px !important;
-      @include pixelated();
+      @include pixelated;
       -moz-border-image: url('#{$root}Sliced_Parts/Reset_Button_Down_Slice.png')
         5 4 3 3 stretch !important;
       -webkit-border-image: url('#{$root}Sliced_Parts/Reset_Button_Down_Slice.png')
@@ -1062,7 +1062,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  @include mc-text-shadow();
+  @include mc-text-shadow;
 
   color: $button-text-white !important;
   font-size: 26px;
@@ -1089,7 +1089,7 @@ $height-to-width: math.div(434, 477);
 
   border-style: solid;
   border-width: 18px 21px 22px 19px;
-  @include pixelated();
+  @include pixelated;
   -moz-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
     stretch;
   -webkit-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
@@ -1111,7 +1111,7 @@ $height-to-width: math.div(434, 477);
   }
 
   .x-close {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   .modal-content .lines-of-code-message,
@@ -1193,7 +1193,7 @@ $height-to-width: math.div(434, 477);
   }
 
   .dialog-title {
-    @include mc-text-shadow();
+    @include mc-text-shadow;
     color: $header-text-yellow;
   }
 
@@ -1229,7 +1229,7 @@ $height-to-width: math.div(434, 477);
   border-style: solid;
   border-width: 18px 21px 22px 19px;
   box-shadow: none;
-  @include pixelated();
+  @include pixelated;
   -moz-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
     stretch;
   -webkit-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
@@ -1241,7 +1241,7 @@ $height-to-width: math.div(434, 477);
 }
 
 .tooltip-x-close.qtip-icon {
-  @include pixelated();
+  @include pixelated;
   position: absolute;
   cursor: pointer;
   z-index: 1;
@@ -1332,7 +1332,7 @@ $height-to-width: math.div(434, 477);
   -webkit-border-image: url('#{$root}Events/MC_HoC_Score_9Slice.png') 7 stretch !important;
   -o-border-image: url('#{$root}Events/MC_HoC_Score_9Slice.png') 7 stretch !important;
   border-image: url('#{$root}Events/MC_HoC_Score_9Slice.png') 7 fill stretch !important;
-  @include pixelated();
+  @include pixelated;
 }
 
 .minecraft-events {
@@ -1371,7 +1371,7 @@ $height-to-width: math.div(434, 477);
     margin-bottom: -100%;
 
     #score-inner {
-      @include scoreboard-background();
+      @include scoreboard-background;
       top: -411px;
       height: 17px;
       float: left;
