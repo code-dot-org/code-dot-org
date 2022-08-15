@@ -40,9 +40,6 @@ jobs:
       - name: Setup locals
         run: |
             echo "
-      - name: Setup locals
-        run: |
-            echo "
             bundler_use_sudo: false
             cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
             cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
@@ -73,7 +70,7 @@ jobs:
             libraries_s3_directory: libraries_circle/42:-2323
             dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"          
             " >> locals.yml        
-      - name: Rake run UI tests
+      - name: Seed run UI tests
         env: 
           CI: true
           RAILS_ENV: test
