@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:19:44 UTC",
+    "serialized_at": "2022-08-12 13:49:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5681,6 +5681,18 @@
       }
     },
     {
+      "name": "Sorting Algorithms",
+      "url": "https://youtu.be/b7iasi3MfLw",
+      "key": "sorting_algorithms_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sorting_algorithms_1"
+      }
+    },
+    {
       "name": "Sorting Comparison",
       "url": "https://docs.google.com/document/d/1KEivbmbbclpbPumChYDruBnIp_Mpcjl0VTctoK_zO-c/edit?usp=sharing",
       "key": "sorting_comparison",
@@ -6245,6 +6257,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "searching_algorithms_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "sorting_algorithms_1"
       }
     },
     {
