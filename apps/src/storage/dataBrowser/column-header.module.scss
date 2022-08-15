@@ -1,8 +1,8 @@
-$maxCellWidth: 350px;
+$max-cell-width: 350px;
 
 .columnName {
     display: inline-block;
-    max-width: $maxCellWidth;
+    max-width: $max-cell-width;
     overflow: hidden;
     white-space: nowrap;
 }
