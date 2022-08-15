@@ -5,11 +5,11 @@
 
   .module_task_view {
     .not_started {
-      background-color: rgba(255, 128, 128, .25)
+      background-color: rgb(255 128 128 / .25)
     }
 
     .completed {
-      background-color: rgba(128, 255, 128, .25);
+      background-color: rgb(128 255 128 / .25);
     }
 
     width: 100%;

@@ -13,7 +13,6 @@ module.exports = {
     'declaration-empty-line-before': null,
     'scss/at-import-partial-extension': null,
     'shorthand-property-no-redundant-values': null,
-    'color-function-notation': null,
     'scss/double-slash-comment-whitespace-inside': null,
     'value-no-vendor-prefix': null,
     'alpha-value-notation': null,
