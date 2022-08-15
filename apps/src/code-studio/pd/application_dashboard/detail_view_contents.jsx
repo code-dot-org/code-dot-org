@@ -1100,7 +1100,7 @@ export class DetailViewContents extends React.Component {
           <PrincipalApprovalButtons
             applicationId={this.props.applicationId}
             showSendEmailButton={true}
-            showNotRequiredButton={true}
+            showChangeRequirementButton={true}
             onChange={this.handlePrincipalApprovalChange}
             applicationStatus={this.props.applicationData.status}
           />

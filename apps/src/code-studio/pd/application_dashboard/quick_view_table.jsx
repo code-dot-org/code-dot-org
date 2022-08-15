@@ -323,7 +323,7 @@ export class QuickViewTable extends React.Component {
           applicationId={props.rowData.id}
           applicationStatus={props.rowData.status}
           showSendEmailButton={true}
-          showNotRequiredButton={true}
+          showChangeRequirementButton={true}
           onChange={this.handlePrincipalApprovalButtonsChange}
         />
       </div>
