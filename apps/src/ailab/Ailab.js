@@ -9,11 +9,7 @@ import ailabMsg from './locale';
 import $ from 'jquery';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const {
-  initAll,
-  instructionsDismissed
-} = require('@code-dot-org/ml-playground');
-
+import { initAll, instructionsDismissed} from '@code-dot-org/ml-playground';
 
 import {
   setDynamicInstructionsDefaults,
