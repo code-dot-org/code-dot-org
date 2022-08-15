@@ -4,34 +4,34 @@
 
 @import 'color.scss';
 
-$rowHeight: 45px;
-$cellPadding: 10px;
-$editButtonCellWidth: 142px;
-$maxCellWidth: 350px;
+$row-height: 45px;
+$cell-padding: 10px;
+$edit-button-cell-width: 142px;
+$max-cell-width: 350px;
 
 .row {
-    height: $rowHeight;
+    height: $row-height;
 }
 
 .cell {
-    padding: $cellPadding;
+    padding: $cell-padding;
     border: 1px solid gray;
     font-size: 14px;
-    max-width: $maxCellWidth;
+    max-width: $max-cell-width;
     overflow: hidden;
     &.addButton {
         background-color: $lightest_teal;
     }
     &.editButton {
         background-color: $lightest_teal;
-        width: $editButtonCellWidth;
+        width: $edit-button-cell-width;
     }
 }
 
 .headerCell {
     background-color: $teal;
     border: 1px solid gray;
-    max-width: $maxCellWidth;
+    max-width: $max-cell-width;
     padding: 6px 10px;
     white-space: nowrap;
 }
