@@ -1,6 +1,5 @@
 <%
-  require 'aws-sdk-sts'
-  PRODUCTION_DB_CLUSTER_ID = "arn:aws:rds:us-east-1:#{Aws::STS::Client.new.get_caller_identity.account}:cluster:production-aurora-cluster".freeze
+  PRODUCTION_DB_CLUSTER_ID = "production-aurora-cluster".freeze
   # Integer range identifying each of the DB Instances to provision in the cluster.
   DB_INSTANCE_RANGE=(0..1)
 -%>
@@ -80,7 +79,7 @@
 <%end -%>
     Properties:
       DBProxyName: !Ref ReportingDBProxy
-      DBClusterIdentifiers: [<%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster'%>]
+      DBClusterIdentifiers: [<%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>]
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10

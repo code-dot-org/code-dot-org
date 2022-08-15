@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:19:32 UTC",
+    "serialized_at": "2022-08-12 13:47:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5691,6 +5691,18 @@
       }
     },
     {
+      "name": "Recursion",
+      "url": "https://youtu.be/W-nqR8NwaMs",
+      "key": "recursion_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "recursion_1"
+      }
+    },
+    {
       "name": "Recursion Unplugged",
       "url": "https://docs.google.com/document/d/1WbX98VhaSS552R3vQzp1vxGaBBCaWna0qRAfEAs_7to/edit?usp=sharing",
       "key": "recursion_unplugged",
@@ -6310,6 +6322,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u7l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "recursion_1"
       }
     },
     {
