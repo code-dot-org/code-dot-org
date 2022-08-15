@@ -1,6 +1,6 @@
 require_relative '../middleware_test_helper'
 require_relative '../../../middleware/helpers/projects'
-require_relative '../../../middleware/helpers/storage_id'
+require_relative '../../../../shared/middleware/helpers/storage_id'
 
 class ProjectsTest < Minitest::Test
   include SetupTest
