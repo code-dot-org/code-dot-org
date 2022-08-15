@@ -380,12 +380,11 @@ Use lodash and jQuery libraries in `/apps`.
 
 ## CSS
 
-Default: https://github.com/thoughtbot/guides/tree/master/style/sass
+On the frontend, some lint and style rules are enforced by [Stylelint](https://stylelint.io/). You can check your changes locally by running `yarn lint:scss` from the `apps` directory. Some rules have been disabled for now, but we are moving towards enabling all of the rules that are part of the Stylelint standard configuration.
 
-Fallback: https://css-tricks.com/sass-style-guide
-
-Fallback: http://css-tricks.com/css-style-guides
-
+Some key points:
+- Use SCSS modules over CSS-in-JS. The module file takes the name "my-component.module.scss" and lives in the same directory as the component.
+- Use kebab-case (not camelCase nor snake_case) for separating words in IDs, classes, mixins and filenames. 
 - Avoid inline styles in markup.
 - Use names that are as short as possible but as long as necessary.
 - Use SCSS helpers for vendor prefixing.
@@ -393,9 +392,10 @@ Fallback: http://css-tricks.com/css-style-guides
 - Extract magic numbers into named variables.
 - Use ID selectors only when there is, and only ever will be, one item on a page.
 - Nest selectors a maximum of three levels deep.
-- Use dashes instead of underscores, camel casing, etc for separating words in IDs, classes, mixins and filenames.
 - Prefix scss partials with _, e.g., _header.scss.
 - Use alphabetical order for new declarations in already-alphabetically-ordered files. Place `@extends` and `@includes` at the top of lists.
+
+  Refer to the [Sass style guide](https://sass-lang.com/styleguide/), and to CSS Tricks' [Sass](https://css-tricks.com/sass-style-guide) and [CSS](http://css-tricks.com/css-style-guides) style guides for more.
 
 ## HTML
 

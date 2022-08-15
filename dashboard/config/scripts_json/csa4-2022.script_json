@@ -10,7 +10,9 @@
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -25,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-03 13:57:21 UTC",
+    "serialized_at": "2022-08-11 16:18:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6198,6 +6200,19 @@
       }
     },
     {
+      "name": "Station Print-outs",
+      "url": "https://docs.google.com/document/d/1Q7z2dGMiSeSD3coG21qyFqIRXsGsCLRO3DK67-yP88U/edit",
+      "key": "station_print-outs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
       "name": "The equals() Method",
       "url": "https://youtu.be/F1WhwH4abX4",
       "key": "the_equals_method",
@@ -6739,6 +6754,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "de_morgan_s_laws"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "station_print-outs"
       }
     },
     {
