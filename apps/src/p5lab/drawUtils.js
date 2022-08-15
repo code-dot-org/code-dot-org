@@ -175,9 +175,13 @@ export function validationBar(
   state,
   {barHeight = 10, x = 0, y = APP_HEIGHT - barHeight} = {}
 ) {
-  const color = colors[`spritelab_${state}`];
+  const barColors = {
+    fail: colors['maximum_purple'],
+    pass: colors['emerald_starling'],
+    bonus: colors['fabulous_fuchsia']
+  };
   p5.push();
-  p5.fill(color);
+  p5.fill(barColors[state]);
   p5.stroke(colors.white);
   p5.strokeWeight(1);
   p5.rect(x, y, width, barHeight);
