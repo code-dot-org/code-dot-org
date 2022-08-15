@@ -51,7 +51,7 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :change_principal_approval_requirement,
                                 name: 'program managers can set change_principal_approval_requirement for applications they own',
                                 user: -> {@program_manager},
-                                params: -> {{id: @application.id}},
+                                params: -> {{id: @application.id, principal_approval_not_required: true}},
                                 response: :success
 
     test_user_gets_response_for :change_principal_approval_requirement,
