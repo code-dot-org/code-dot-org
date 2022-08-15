@@ -12,7 +12,6 @@ module.exports = {
     'selector-id-pattern': null,
     'property-no-vendor-prefix': null,
     'declaration-empty-line-before': null,
-    'scss/at-mixin-argumentless-call-parentheses': null,
     'scss/dollar-variable-pattern': null,
     'scss/at-import-partial-extension': null,
     'shorthand-property-no-redundant-values': null,

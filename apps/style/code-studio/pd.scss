@@ -29,7 +29,7 @@
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
 #workshop-container,#application-container,#application-header,#enroll-form {
   @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule */
-  @include buttons();
+  @include buttons;
   @include user-selects(auto);
 
   // Markdown rendered with SafeMarkdown in LabeledFormComponent is wrapped in
@@ -120,7 +120,7 @@ div[role=dialog] {
   div.modal-content {
     margin: 0 !important;
     @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line */
-    @include buttons();
+    @include buttons;
 
     div {
       height: auto;
