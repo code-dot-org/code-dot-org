@@ -21,22 +21,22 @@ $content-view-width: $content-width - $student-list-width;
   th {
     background-color: $table-header;
     color: $charcoal;
-    border-width: 0px 1px 2px 0px;
+    border-width: 0 1px 2px 0;
     border-color: $border-gray;
     height: $row-height;
   }
   th,
   td {
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
     border-right: 1px solid;
     border-color: $border-gray;
     &:last-child {
-      border-right: 0px;
+      border-right: 0;
     }
   }
   .cell-content {
-    padding: 0px 4px;
+    padding: 0 4px;
   }
   .primary-row {
     td {
@@ -46,20 +46,20 @@ $content-view-width: $content-width - $student-list-width;
   .expanded-row {
     td {
       height: $expanded-row-height;
-      border-width: 0px 1px 1px 0px;
+      border-width: 0 1px 1px 0;
       border-style: solid;
       border-color: $border-gray;
     }
     td:last-of-type {
-      border-width: 0px 0px 1px 0px;
+      border-width: 0 0 1px 0;
     }
   }
   .first-expanded-row {
     td {
-      border-width: 1px 1px 1px 0px;
+      border-width: 1px 1px 1px 0;
     }
     td:last-of-type {
-      border-width: 1px 0px;
+      border-width: 1px 0;
     }
   }
   .student-list {
@@ -91,12 +91,12 @@ $content-view-width: $content-width - $student-list-width;
     }
     .expanded-row {
       td {
-        border-width: 0px 0px 1px 0px;
+        border-width: 0 0 1px 0;
       }
     }
     .first-expanded-row {
       td {
-        border-width: 1px 0px;
+        border-width: 1px 0;
       }
     }
   }
@@ -118,7 +118,7 @@ $content-view-width: $content-width - $student-list-width;
       align-content: center;
       .line {
         width: 100%;
-        height: 0px;
+        height: 0;
         border: 1px solid;
         margin-inline-end: -7px;
         margin-inline-start: 4px;
@@ -126,19 +126,20 @@ $content-view-width: $content-width - $student-list-width;
       .arrow {
         display: inline-block;
         border-style: solid;
-        border-width: 0px 2px 2px 0px;
+        border-width: 0 2px 2px 0;
         width: 6px;
         height: 6px;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         html[dir='RTL'] & {
-          border-width: 2px 0px 0px 2px;
+          border-width: 2px 0 0 2px;
         }
       }
     }
   }
 }
 
+/* stylelint-disable */
 :export {
   MAX_BODY_HEIGHT: math.div($max-height, 1px);
   STUDENT_LIST_WIDTH: math.div($student-list-width, 1px);
