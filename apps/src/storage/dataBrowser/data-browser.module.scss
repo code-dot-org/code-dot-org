@@ -11,28 +11,28 @@ $bgColor: $lightest_gray;
     border-style: solid;
     box-sizing: border-box;
     height: $tabHeight;
-    padding: 0px 10px;
+    padding: 0 10px;
     &Active {
         background-color: $bgColor;
         border-top-width: 1px;
         border-right-width: 1px;
-        border-bottom-width: 0px;
-        border-left-width: 0px;
+        border-bottom-width: 0;
+        border-left-width: 0;
         float: left;
     }
     &Inactive {
         border-top-width: 1px;
         border-right-width: 1px;
         border-bottom-width: 1px;
-        border-left-width: 0px;
+        border-left-width: 0;
         float: left;
     }
     // This tab should fill the remaining horizontal space.
     &Empty {
-        border-top-width: 0px;
-        border-right-width: 0px;
+        border-top-width: 0;
+        border-right-width: 0;
         border-bottom-width: 1px;
-        border-left-width: 0px;
+        border-left-width: 0;
         width: 100%;
     }
   };
@@ -51,9 +51,9 @@ $bgColor: $lightest_gray;
 .workspaceTabs {
     border-color: $borderColor;
     border-style: solid;
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
     border-left-width: 1px;
 }
 
@@ -64,10 +64,10 @@ $bgColor: $lightest_gray;
 
 .workspaceBody {
     height: calc(100% - 83px);
-    padding: 10px 10px 10px 0px;
+    padding: 10px 10px 10px 0;
     border-color: $borderColor;
     border-style: solid;
-    border-top-width: 0px;
+    border-top-width: 0;
     border-right-width: 1px;
     border-bottom-width: 1px;
     border-left-width: 1px;
