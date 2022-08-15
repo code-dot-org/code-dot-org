@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-12 03:18:40 UTC",
+    "serialized_at": "2022-08-12 20:29:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -27,7 +27,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Part 1: Synchronous"
+        "display_name": "Part 1: Synchronous Session"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -39,7 +39,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Part 2: Asynchronous"
+        "display_name": "Part 2: Asynchronous Post-Work"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -337,6 +337,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-Module 1 Overview"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -359,6 +362,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-Introduction"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -381,6 +387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-DebuggingTools"
+        ],
         "progression": "Debugging Tools"
       },
       "bonus": false,
@@ -403,6 +412,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-DebuggingToolsChoice"
+        ],
         "progression": "Debugging Tools"
       },
       "bonus": false,
@@ -425,6 +437,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-DebugToolsReflection"
+        ],
         "progression": "Debugging Tools"
       },
       "bonus": false,
@@ -447,6 +462,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-DebuggingLevels"
+        ],
         "progression": "Debugging Levels"
       },
       "bonus": false,
@@ -469,6 +487,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-DebuggingLevelsChoice"
+        ],
         "progression": "Debugging Levels"
       },
       "bonus": false,
@@ -491,6 +512,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-DebuggingLevelsReflection"
+        ],
         "progression": "Debugging Levels"
       },
       "bonus": false,
@@ -513,6 +537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-AnticipatingBugs"
+        ],
         "progression": "Anticipating Bugs"
       },
       "bonus": false,
@@ -535,6 +562,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-AnticipatingBugsReflection"
+        ],
         "progression": "Anticipating Bugs"
       },
       "bonus": false,
@@ -557,6 +587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M1-WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
