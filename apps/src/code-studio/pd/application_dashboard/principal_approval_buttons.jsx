@@ -81,6 +81,7 @@ export default class PrincipalApprovalButtons extends React.Component {
   handleNotRequiredClick = () => {
     const notRequiredRequest = $.ajax({
       method: 'POST',
+      data: JSON.stringify({principal_approval_not_required: true}),
       url: `/api/v1/pd/application/teacher/${
         this.props.applicationId
       }/change_principal_approval_requirement`
