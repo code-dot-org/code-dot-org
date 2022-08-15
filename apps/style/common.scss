@@ -94,19 +94,19 @@ em strong {
 }
 
 html[dir='rtl'] #visualizationColumn {
-  right: 0;
+  right: 0px;
 }
 
 #visualizationColumn {
   position: relative;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   overflow: visible;
 }
 
 #visualizationColumn.pin_bottom {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
 
   #belowVisualization {
     position: absolute;
@@ -238,7 +238,7 @@ button.arrow {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: #fff;
-  margin: 5px 0;
+  margin: 5px 0px;
   margin-inline-end: 9px;
   display: none;
 }
@@ -266,7 +266,7 @@ button.arrow:disabled {
     }
   }
   :last-child{
-    margin-inline-end: 0;
+    margin-inline-end: 0px;
   }
   @supports not (gap: 0 9px) {
     padding-inline-end: 9px;
@@ -295,10 +295,10 @@ button.arrow:disabled {
  * such as dialogs. */
 #codeTextbox {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0px;
+  right: 0px;
   top: $workspace-headers-height;
-  bottom: 0;
+  bottom: 0px;
   font-size: 14px;
   min-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
   direction: ltr;
@@ -535,7 +535,7 @@ button.launch {
   color: $white;
   font-size: large;
   min-width: 96px;
-  margin-left: 0;
+  margin-left: 0px;
   margin-right: 10px;
 
   /* Can't use "text-align: start" due to IE. */
@@ -567,7 +567,7 @@ button.blocklyLaunch {
   text-align: left;
   img {
     float: left;
-    margin-top: 0;
+    margin-top: 0px;
     margin-left: 6px;
   }
   div {
@@ -575,14 +575,14 @@ button.blocklyLaunch {
     margin-top: 3px;
     margin-right: 4px;
     float: right;
-    padding: 0;
+    padding: 0px;
     margin-left: 6px;
     @media screen and (min-width: 1051px) {
       min-width: 45px;
     }
   }
   html[dir="RTL"] & {
-    margin-right: 0;
+    margin-right: 0px;
   }
   &#resetButton {
     border: 1px solid $cyan;
@@ -607,8 +607,8 @@ button.share {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: $white;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 button.share:focus {
   outline-style: none;
@@ -655,7 +655,7 @@ input[type="radio"] {
 
 #learn {
   h1 {
-    margin: 20px 0 0 0;
+    margin: 20px 0px 0px 0px;
   }
   img {
     margin-bottom: 5px;
@@ -666,11 +666,11 @@ input[type="radio"] {
 }
 
 #make-your-own-button {
-  margin: 5px 0 5px 0;
+  margin: 5px 0px 5px 0px;
 }
 
 #open-workspace {
-  margin: 5px 0 5px 0;
+  margin: 5px 0px 5px 0px;
 }
 
 #gameButtons {
@@ -765,7 +765,7 @@ input[type="radio"] {
 }
 .feedback {
   font-size: 30px;
-  margin: 20px 0 20px 0;
+  margin: 20px 0px 20px 0px;
   line-height: 28px;
   color: #7E5BA0;
   font-family: $gotham-extra-bold;
@@ -878,7 +878,7 @@ input[type="radio"] {
 }
 
 html[dir="RTL"] .prompt-icon-cell {
-  padding-right: 0;
+  padding-right: 0px;
   padding-left: 10px;
   &.authored_hints {
     #lightbulb {
@@ -1189,7 +1189,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   &.no-modal-icon {
     .show-code {
       .generated-code-container {
-        margin-left: 0;
+        margin-left: 0px;
       }
     }
   }
@@ -1283,7 +1283,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   background-color: $green;
   border: 1px solid $green;
   color: white;
-  margin-left: 0;
+  margin-left: 0px;
   margin-right: 10px;
   text-align: center;
 }
@@ -1292,7 +1292,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   background-color: $orange;
   border: 1px solid $orange;
   color: white;
-  margin-left: 0;
+  margin-left: 0px;
   margin-right: 10px;
   text-align: center;
 }
@@ -1412,11 +1412,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #send-to-phone-right {
     float: left;
     width: 35%;
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 
   #send-to-phone-qr-code {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 
   button.saved-to-gallery {
@@ -1462,7 +1462,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
   div#phone-charges {
     font-size: 10px;
-    margin-top: 0;
+    margin-top: 0px;
     color: $red;
   }
 }

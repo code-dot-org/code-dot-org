@@ -2,8 +2,8 @@
 
 .container {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 0px;
     width: 270px;
     box-sizing: border-box;
     border-right: 1px solid gray;
@@ -13,5 +13,5 @@
 
 .divider {
     border-color: $light_gray;
-    margin: 5px 0 10px 0;
+    margin: 5px 0px 10px 0px;
 }

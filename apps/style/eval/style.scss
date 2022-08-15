@@ -11,17 +11,17 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   background-image: url("#{$root}icons.png");
 }
 .code {
- background-position: -42px 0;
+ background-position: -42px 0px;
 }
 .link {
-  background-position: -21px 0;
+  background-position: -21px 0px;
 }
 .run {
   background-position: -63px -21px;
   margin-right: 3px;
 }
 .stop {
-  background-position: -63px 0;
+  background-position: -63px 0px;
   margin-right: 3px;
 }
 #answer {

@@ -46,13 +46,13 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   background-size: 42px 147px;
 }
 .code {
-  background-position: -21px 0;
+  background-position: -21px 0px;
 }
 .link {
-  background-position: 0 0;
+  background-position: 0px 0px;
 }
 .run {
-  background-position: 0 -21px;
+  background-position: 0px -21px;
   margin-right: 3px;
 }
 .stop {
@@ -71,11 +71,11 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   margin-right: 3px;
 }
 .up-btn {
-  background-position: 0 -63px;
+  background-position: 0px -63px;
   margin-right: 3px;
 }
 .down-btn {
-  background-position: 0 -42px;
+  background-position: 0px -42px;
   margin-right: 3px;
 }
 
@@ -106,8 +106,8 @@ $dpad-rim: #FFF;
 
 #studio-dpad-rim {
   position: absolute;
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
   border: 76px solid $dpad-rim;
   border-radius: 76px;
   box-shadow: 1px 1px 1px 0 $dpad-shadow;
@@ -116,8 +116,8 @@ $dpad-rim: #FFF;
 #studio-dpad-cone {
   position: absolute;
   margin: 2px;
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
   border: 74px solid $dpad-cone-inactive;
   border-radius: 74px;
   &.left {
@@ -208,7 +208,7 @@ $space-active-border: #9F9F9F;
   margin: 5px;
   border-color: $space-border;
   background-color: $space-fill;
-  box-shadow: inset 1px 1px 0 0 $space-shadow;
+  box-shadow: inset 1px 1px 0px 0 $space-shadow;
   &.active {
     border-radius: 39px;
     width: 78px;

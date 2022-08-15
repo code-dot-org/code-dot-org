@@ -11,8 +11,8 @@ $tableWidth: 400px;
 .container {
     position: absolute;
     width: 100%;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 0px;
     background-color: $white;
     display: none;
     &Display {
@@ -22,9 +22,9 @@ $tableWidth: 400px;
 
 .dataBrowser {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 0px;
     left: 270px;
-    right: 0;
+    right: 0px;
     padding: 10px;
 }

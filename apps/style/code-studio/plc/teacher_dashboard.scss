@@ -18,11 +18,11 @@
   }
 
   .module_task_view:first-child {
-    margin-left: 0;
+    margin-left: 0em;
   }
 
   .module_task_view:last-child {
-    margin-right: 0;
+    margin-right: 0em;
   }
 }
 
@@ -78,8 +78,8 @@
         height: 100%;
         overflow: hidden;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 0px;
+        right: 0px;
 
         .ribbon {
           transform: rotate(45deg);
