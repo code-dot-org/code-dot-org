@@ -15,7 +15,7 @@ export default class PrincipalApprovalButtons extends React.Component {
     ]).isRequired,
     showSendEmailButton: PropTypes.bool,
     showResendEmailButton: PropTypes.bool,
-    showNotRequiredButton: PropTypes.bool,
+    showChangeRequirementButton: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     applicationStatus: PropTypes.string
   };
@@ -31,7 +31,7 @@ export default class PrincipalApprovalButtons extends React.Component {
       showSendEmailButton:
         appStatusesForSendingEmail.includes(this.props.applicationStatus) &&
         (this.props.showSendEmailButton || this.props.showResendEmailButton),
-      showNotRequiredButton: this.props.showNotRequiredButton,
+      showChangeRequirementButton: this.props.showChangeRequirementButton,
       showResendEmailConfirmation: false
     };
   }
@@ -78,7 +78,7 @@ export default class PrincipalApprovalButtons extends React.Component {
     });
   };
 
-  handleNotRequiredClick = () => {
+  handleChangeRequiredStatus = () => {
     const notRequiredRequest = $.ajax({
       method: 'POST',
       data: JSON.stringify({principal_approval_not_required: true}),
@@ -90,7 +90,7 @@ export default class PrincipalApprovalButtons extends React.Component {
 
       this.setState({
         notRequiredRequest: null,
-        showNotRequiredButton: false
+        showChangeRequirementButton: false
       });
     });
 
@@ -133,7 +133,7 @@ export default class PrincipalApprovalButtons extends React.Component {
     );
   }
 
-  renderNotRequiredButton() {
+  renderChangeRequirementButton() {
     if (this.state.notRequiredRequest) {
       return <Spinner size="small" />;
     }
@@ -142,7 +142,7 @@ export default class PrincipalApprovalButtons extends React.Component {
       <Button
         bsSize="xsmall"
         target="_blank"
-        onClick={this.handleNotRequiredClick}
+        onClick={this.handleChangeRequiredStatus}
         style={styles.button}
         // This button is disabled if the other action is pending (which will be rendered as a spinner)
         disabled={!!this.state.sendEmailRequest}
@@ -156,7 +156,8 @@ export default class PrincipalApprovalButtons extends React.Component {
     return (
       <div>
         {this.state.showSendEmailButton && this.renderSendEmailButton()}
-        {this.state.showNotRequiredButton && this.renderNotRequiredButton()}
+        {this.state.showChangeRequirementButton &&
+          this.renderChangeRequirementButton()}
       </div>
     );
   }
