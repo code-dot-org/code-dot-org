@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import stylez from './javalab-button.module.scss';
+import moduleStyle from './javalab-button.module.scss';
 import color from '@cdo/apps/util/color';
 
 // TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).
@@ -30,8 +30,8 @@ export default function JavalabButton({
       id={id}
       type="button"
       className={classNames(
-        stylez.button,
-        isHorizontal && stylez.buttonHorizontal,
+        moduleStyle.button,
+        isHorizontal && moduleStyle.buttonHorizontal,
         className
       )}
       style={{
