@@ -15,7 +15,9 @@ jobs:
       FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
       PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
       AWS_ACCESS_KEY_ID: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
-      AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}            
+      AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}  
+      sauce_access_key: $${{ secrets.SAUCE_ACCESS_KEY }}
+      sauce_username: $${{ secrets.SAUCE_USERNAME }}        
     steps:    
       - name: Get actions code
         uses: actions/checkout@v3    
