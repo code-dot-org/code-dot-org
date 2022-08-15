@@ -17,6 +17,17 @@
   }
 }
 
+@mixin whiteControlButton {
+  @include controlButton;
+  background-color: $white;
+  border-color: $dark_charcoal;
+  color: $dark_charcoal;
+
+  &:hover {
+    color: $dark_charcoal;
+  }
+}
+
 .button {
   &Orange {
     @include controlButton;
@@ -29,33 +40,8 @@
   }
 
   &White {
-    @include controlButton;
-    background-color: $white;
-    border-color: $dark_charcoal;
-    color: $dark_charcoal;
-
-    &:hover {
-      color: $dark_charcoal;
-    }
+    @include whiteControlButton;
   }
-}
-
-// for JavalabSettings (selected, main, dropdown)
-// use buttonWhite in JavalabSettings, maybe move these into separate file?
-.selected {
-  background-color: $lightest_gray;
-  border-color: $lightest_gray;
-  color: $dark_charcoal;
-}
-
-.main {
-  display: inline-block;
-  float: left;
-}
-
-.dropdown {
-  bottom: 40px;
-  margin-left: 5px;
 }
 
 .leftButtons {

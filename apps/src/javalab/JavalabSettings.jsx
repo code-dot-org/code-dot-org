@@ -3,7 +3,7 @@ import i18n from '@cdo/locale';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
-import style from './control-buttons.module.scss';
+import style from './javalab-settings.module.scss';
 import JavalabButton from './JavalabButton';
 import JavalabDropdown from './components/JavalabDropdown';
 
