@@ -12,12 +12,19 @@ class ChannelsApi < Sinatra::Base
   helpers do
     %w(
       core.rb
-      projects.rb
       storage_id.rb
       auth_helpers.rb
-      profanity_privacy_helper.rb
     ).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
+    end
+  end
+
+  helpers do
+    %w(
+      projects.rb
+      profanity_privacy_helper.rb
+    ).each do |file|
+      load(CDO.dir('dashboard_legacy', 'middleware', 'helpers', file))
     end
   end
 
