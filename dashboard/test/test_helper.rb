@@ -618,31 +618,6 @@ def with_locale(locale)
   end
 end
 
-# Mock Projects to generate random tokens
-class MockProjects
-  def initialize(storage_id)
-    @storage_id = storage_id
-  end
-
-  def create(_, _)
-    # project_id must be an integer > 0
-    project_id = 1 + SecureRandom.random_number(100000)
-    storage_encrypt_channel_id(@storage_id, project_id)
-  end
-
-  def most_recent(_)
-    create(nil, nil)
-  end
-
-  def get(_)
-    {
-      'name' => "Stubbed test project name",
-      'hidden' => false,
-      'frozen' => false
-    }
-  end
-end
-
 def stub_storage_id_for_user_id(user_id)
   storage_id = fake_storage_id_for_user_id(user_id)
   stubs(:storage_id_for_user_id).with(user_id).returns(storage_id)
