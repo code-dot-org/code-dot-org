@@ -310,10 +310,10 @@ body {
   background-image: url('#{$root}icons.png');
 }
 .code {
-  background-position: -21px 0px;
+  background-position: -21px 0;
 }
 .link {
-  background-position: 0px 0px;
+  background-position: 0 0;
 }
 
 #phaser-game canvas {
@@ -372,7 +372,7 @@ a.video_link {
 $width-to-height: math.div(477, 434);
 $height-to-width: math.div(434, 477);
 
-@media screen and (min-height: 0px) {
+@media screen and (min-height: 0) {
   @include visualization-width-height-original(
     $height-to-width * 200px,
     200px,
@@ -578,7 +578,7 @@ $height-to-width: math.div(434, 477);
   }
 
   .character-portrait {
-    margin: 0px auto 10px auto;
+    margin: 0 auto 10px auto;
     background-size: 100% auto;
     background-position-x: 0; // 50% for smaller screens
     background-position-y: 0;
@@ -714,7 +714,7 @@ $height-to-width: math.div(434, 477);
   }
 
   .house-photo {
-    margin: 0px auto 10px auto;
+    margin: 0 auto 10px auto;
     background-size: 100% auto;
     background-position-x: 0; // 50% for smaller screens
     background-position-y: 0;
@@ -1175,7 +1175,7 @@ $height-to-width: math.div(434, 477);
     margin-left: 69px;
   }
   .failure-feedback p.congrats {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   // Video notes
