@@ -619,7 +619,7 @@ def with_locale(locale)
 end
 
 # Mock Projects to generate random tokens
-class Projects
+class MockProjects
   def initialize(storage_id)
     @storage_id = storage_id
   end
