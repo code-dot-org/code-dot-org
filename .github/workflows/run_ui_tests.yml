@@ -40,6 +40,7 @@ jobs:
       - name: Setup locals
         run: |
             echo "
+            properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
             bundler_use_sudo: false
             cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
             cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
