@@ -1,19 +1,17 @@
 @import 'color.scss';
 
-$tableWidth: 400px;
-$buttonColumnWidth: 124px;
-$tabHeight: 35px;
-$borderColor: $lighter_gray;
-$bgColor: $lightest_gray;
+$tab-height: 35px;
+$border-color: $lighter_gray;
+$bg-color: $lightest_gray;
 
 .tab {
-    border-color: $borderColor;
+    border-color: $border-color;
     border-style: solid;
     box-sizing: border-box;
-    height: $tabHeight;
+    height: $tab-height;
     padding: 0 10px;
     &Active {
-        background-color: $bgColor;
+        background-color: $bg-color;
         border-top-width: 1px;
         border-right-width: 1px;
         border-bottom-width: 0;
@@ -49,7 +47,7 @@ $bgColor: $lightest_gray;
 }
 
 .workspaceTabs {
-    border-color: $borderColor;
+    border-color: $border-color;
     border-style: solid;
     border-top-width: 0;
     border-right-width: 0;
@@ -58,20 +56,20 @@ $bgColor: $lightest_gray;
 }
 
 .tabLabel {
-    line-height: $tabHeight;
+    line-height: $tab-height;
     user-select: none;
 }
 
 .workspaceBody {
     height: calc(100% - 83px);
     padding: 10px 10px 10px 0;
-    border-color: $borderColor;
+    border-color: $border-color;
     border-style: solid;
     border-top-width: 0;
     border-right-width: 1px;
     border-bottom-width: 1px;
     border-left-width: 1px;
-    background-color: $bgColor;
+    background-color: $bg-color;
 }
 
 .activeBody {

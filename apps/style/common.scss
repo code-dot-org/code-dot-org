@@ -10,7 +10,7 @@
 @import "HideToolbarHelper";
 @import "blockly";
 
-$common_root: '/blockly/media/common_images/';
+$common-root: '/blockly/media/common_images/';
 
 @mixin fill-container {
   height: 100%;
@@ -347,7 +347,7 @@ html[dir='rtl'] .editor-column {
 // By defining the rule for pause icons first, the warning and error icons will take priority over showing the pause
 // icon.
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
-  background-image: url('#{$common_root}gutterPause.png');
+  background-image: url('#{$common-root}gutterPause.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
   border-radius: 15px 0 0 15px;
@@ -360,7 +360,7 @@ html[dir='rtl'] .editor-column {
 }
 
 .ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
-  background-image: url('#{$common_root}gutterError.png');
+  background-image: url('#{$common-root}gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
@@ -370,7 +370,7 @@ html[dir='rtl'] .editor-column {
 }
 
 .ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
-  background-image: url('#{$common_root}gutterWarn.png');
+  background-image: url('#{$common-root}gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
@@ -1474,7 +1474,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   $y-offset: $y * 26px;
   width: 26px;
   height: 26px;
-  background: url("#{$common_root}shared-sprites-26x26.png") $x-offset $y-offset;
+  background: url("#{$common-root}shared-sprites-26x26.png") $x-offset $y-offset;
 }
 
 .run26 {
@@ -1529,9 +1529,9 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 }
 
 // Droplet block tooltips configuration
-$parameterColor: $light_yellow;
-$linkColor: $white;
-$tooltipBackground: $cyan;
+$parameter-color: $light_yellow;
+$link-color: $white;
+$tooltip-background: $cyan;
 $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
@@ -1580,7 +1580,7 @@ $see-examples-thick-underline-color: $yellow;
 .droplet-block-tooltipster {
   border-radius: $tooltip-border-radius;
   border: none;
-  background: $tooltipBackground;
+  background: $tooltip-background;
   color: $text-color;
   -webkit-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
   -moz-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
@@ -1669,7 +1669,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 }
 
 #visualizationColumn.wireframeShare {
-  background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+  background: url("#{$common-root}phone_wireframe.png") center center no-repeat;
   background-size: 432px 757px;
 }
 

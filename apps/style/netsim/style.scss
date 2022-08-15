@@ -519,7 +519,7 @@ $wide-column-width: 121px;
   // and user controls.
 
   // How rounded are the corners of the panel?
-  $panel_border_radius: 0.3em;
+  $panel-border-radius: 0.3em;
 
   div.netsim-panel {
     margin: 0 0 0.5em;
@@ -534,7 +534,7 @@ $wide-column-width: 121px;
       line-height: 110%;
       background-color: $cyan;
       color: $white;
-      border-radius: $panel_border_radius $panel_border_radius 0 0;
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
 
       .panel-controls {
         float: right;
@@ -558,7 +558,7 @@ $wide-column-width: 121px;
       border-right: solid darkgray 1px;
       border-bottom: solid darkgray 1px;
       border-top: solid $cyan 1px;
-      border-radius: 0 0 $panel_border_radius $panel_border_radius;
+      border-radius: 0 0 $panel-border-radius $panel-border-radius;
     }
 
     .content-wrap {
@@ -568,7 +568,7 @@ $wide-column-width: 121px;
     // Minimized panel, contents are hidden.
     &.minimized {
       h1 {
-        border-radius: $panel_border_radius;
+        border-radius: $panel-border-radius;
         .clear_button {
           display: none;
         }

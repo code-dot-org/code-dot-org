@@ -1,11 +1,11 @@
 @import 'color.scss';
 
-$minTableWidth: 600px;
+$min-table-width: 600px;
 
 .container {
     flex-direction: column;
     height: 99%;
-    min-width: $minTableWidth;
+    min-width: $min-table-width;
     max-width: 99%;
     padding-left: 8px;
     display: inline-flex;
