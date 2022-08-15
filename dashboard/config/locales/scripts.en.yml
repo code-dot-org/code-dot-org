@@ -7002,11 +7002,14 @@ en:
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
           title: Digital Information ('22-'23)
-          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
+          description: 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world''s information.
+
+'
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
           name: csp1-2022
+          lessons: {}
         csp2-2022:
           lesson_groups:
             csp_unit2_2020:
@@ -8374,9 +8377,9 @@ en:
         vpl-csd1-ayw-pilot-2022:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Part 1: Synchronous'
+              display_name: 'Part 1: Synchronous Session'
             lessonGroup-3:
-              display_name: 'Part 2: Asynchronous'
+              display_name: 'Part 2: Asynchronous Post-Work'
           lessons:
             lesson-1:
               name: Workshop Opener
@@ -8489,11 +8492,13 @@ en:
               name: Inclusion Scenarios
             lesson-5:
               name: Closing
+            lesson-6:
+              name: Module 2 Asynchronous Work
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Part 1: Synchronous'
+              display_name: 'Part 1: Synchronous Session'
             lessonGroup-3:
-              display_name: 'Part 2: Asynchronous'
+              display_name: 'Part 2: Asynchronous Post-Work'
           name: vpl-csd2-ayw-pilot-2022
           title: CS Discoveries Virtual Module 2
           description_audience: ''
@@ -8519,3 +8524,6 @@ en:
           description_short: Make a soccer game
           description: Make a soccer game
           student_description: ''
+        katie-practice:
+          lessons: {}
+          lesson_groups: {}

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-08-11 20:40:01 UTC",
+    "serialized_at": "2022-08-12 14:48:03 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -337,7 +337,8 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "This open-ended activity requires you to develop a program on a topic that interests you.\nAs a class, spend a few minutes reviewing the requirements of the open-ended activity.",
+        "overview": "The goal of the activity is to allow students to demonstrate their knowledge of\nmethods and control structures in a way that is interesting and engaging to them.\nWhile it’s possible to create additional constraints or requirements, it’s best to\nprovide students with as much freedom as possible. \n\nThe use of the `Review` class is intentionally not included in the list of requirements; however, it’s possible that\nstudents will continue to work with the given classes from this lab.  If this is the case, they will need to copy the classes that they would like to use from a previous level into this blank slate.",
+        "purpose": "Providing students with the opportunity to choose how they will fulfill the requirements increases engagement by encouraging students to investigate their interests and apply the course content in a way that they find meaningful.",
         "student_overview": "This open-ended activity requires you to develop a program on a topic that interests you.\nAs a class, spend a few minutes reviewing the requirements of the open-ended activity."
       },
       "seeding_key": {
@@ -936,6 +937,8 @@
       "key": "ed645d5d-f646-4a5f-b807-dda0d0e88e2c",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ed645d5d-f646-4a5f-b807-dda0d0e88e2c",
@@ -945,12 +948,70 @@
       }
     },
     {
+      "key": "41a09dcc-2529-48c5-bcd1-d5b4d869f368",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41a09dcc-2529-48c5-bcd1-d5b4d869f368",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "675c00c9-948d-4cbf-a2b2-970e12259b40",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "675c00c9-948d-4cbf-a2b2-970e12259b40",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
       "key": "86cdde5a-a751-4ca3-addf-4933b76cc4d9",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "86cdde5a-a751-4ca3-addf-4933b76cc4d9",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "d53836d9-a458-41d4-bae0-8fa72175f5ab",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "aa1c8c55-861a-4e2c-9621-77f6638de127",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa1c8c55-861a-4e2c-9621-77f6638de127",
         "lesson.key": "lesson-16",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022"
@@ -2716,13 +2777,165 @@
       }
     },
     {
+      "key": "8bdabab8-25e1-439c-9f2d-faa4d952d583",
+      "position": 1,
+      "properties": {
+        "progression_name": "Strengthening the Sentiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "8bdabab8-25e1-439c-9f2d-faa4d952d583",
+        "lesson_activity.key": "41a09dcc-2529-48c5-bcd1-d5b4d869f368"
+      }
+    },
+    {
+      "key": "3a4ff15e-a447-457f-9205-a6b68159d536",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a4ff15e-a447-457f-9205-a6b68159d536",
+        "lesson_activity.key": "675c00c9-948d-4cbf-a2b2-970e12259b40"
+      }
+    },
+    {
       "key": "9b72da7f-7d7e-401f-aa3c-9012b3bfaf72",
       "position": 1,
       "properties": {
+        "description": "**Do This**: As a class, spend a few minutes reviewing the requirements of the activity described in the Open-Ended Activity Guide as well as the Scoring Guidelines"
       },
       "seeding_key": {
         "activity_section.key": "9b72da7f-7d7e-401f-aa3c-9012b3bfaf72",
         "lesson_activity.key": "86cdde5a-a751-4ca3-addf-4933b76cc4d9"
+      }
+    },
+    {
+      "key": "5d3a9c71-cc8e-4c6a-9275-feaf85fe2f8a",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal of the activity is to allow students to demonstrate their knowledge of\nmethods and control structures in a way that is interesting and engaging to them.\nWhile it’s possible to create additional constraints or requirements, it’s best to\nprovide students with as much freedom as possible. The use of the Review class\nis intentionally not included in the list of requirements; however, it’s possible that\nstudents will continue to work with the given classes from this lab."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5d3a9c71-cc8e-4c6a-9275-feaf85fe2f8a",
+        "lesson_activity.key": "86cdde5a-a751-4ca3-addf-4933b76cc4d9"
+      }
+    },
+    {
+      "key": "18775887-9cff-43d2-8057-b98829c14ffd",
+      "position": 1,
+      "properties": {
+        "description": "**Do This**: Direct students to the Open-Ended Activity Guide and allow them the opportunity to brainstorm possible program implementations that fit the project requirements. ",
+        "progression_name": "Open-Ended Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "18775887-9cff-43d2-8057-b98829c14ffd",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "6148b6c5-f76a-4454-af75-e0f47d511c7f",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Be sure to indicate how much time students will have to work on this activity. The\nsuggested time is only two class periods, and students often underestimate the\ntime it will take them to implement an idea. To avoid students underestimating the\ntime it will take for them to implement their idea, review their project idea with them\nbeforehand. \n\nIt is possible to ask students to complete work outside of class in\norder to stay within the two class periods allotted, however it’s important to provide\nstudents with at least some in-class time to answer the associated questions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6148b6c5-f76a-4454-af75-e0f47d511c7f",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "977a29b8-0c9c-4467-87c4-b37bf14a386a",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Conference with student groups in order to hear their plans and to offer feedback.\n\n**Do This:** When students have completed their plans, direct them to start working on their program."
+      },
+      "seeding_key": {
+        "activity_section.key": "977a29b8-0c9c-4467-87c4-b37bf14a386a",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "82ae3128-5bad-42e9-a1c7-4e8793648ab5",
+      "position": 4,
+      "properties": {
+        "description": "As students complete this activity, the following actions can help with successful\nimplementation:\n- Allow and encourage collaboration during the development of the program. Either in\npairs or groups, students should work together to design, implement, and test their\nchosen project.\n- If using pair programming, consider how students should rotate roles and whether\nthey will be notified as to when to switch roles or if they should determine when to\nswitch on their own.\n- Assist in resolving technical problems that impede work.\n- Determine before work begins how students should handle non-technical questions,\nwhether students should resolve problems within their collaborative groups, with\nanother group, or with the teacher.\n- Do not allow students to begin answering the Check for Understanding questions\nwhile the program is being implemented. The questions should be answered\nindependently after the program is complete."
+      },
+      "seeding_key": {
+        "activity_section.key": "82ae3128-5bad-42e9-a1c7-4e8793648ab5",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "980ff89d-0406-450a-962a-ee6a6b3b3dce",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "980ff89d-0406-450a-962a-ee6a6b3b3dce",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "bb2133fe-d34d-4dcb-996f-b8e822b1857a",
+      "position": 6,
+      "properties": {
+        "description": "The scoring guidelines have been included in order to assist in the assessment of student work. There are a variety of ways that these guidelines could be used, including:\n\n- Provide students with a blank copy of the guidelines and have them score their own program; or\n\n- Provide students with a blank copy and ask them to evaluate the program of another student or group; or\n\n- Use these when grading programs, and provide students with a printed or electronic copy with notes about each point, whether they earned or did not earn the point, and why.\n\nThis list is not comprehensive, and the guidelines may be used in ways that are not listed here. Additional rows may be added, or focus may be on just a few rows. These guidelines are meant to be flexible.\n\nAsk additional questions to better understand the development process and provide students with opportunities to improve their communication skills. One option is to ask students to identify one programming difficulty they had when completing this activity, and describe how they overcame this difficulty.",
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb2133fe-d34d-4dcb-996f-b8e822b1857a",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "5915a483-26ec-478e-994b-191011998459",
+      "position": 7,
+      "properties": {
+        "name": "Equity and Access",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Allowing students to celebrate their interests and share their work with\nother members of the class builds a culture of acceptance and collaboration\namong students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5915a483-26ec-478e-994b-191011998459",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "79da496d-2670-4040-afe8-6f65fe8aa12f",
+      "position": 8,
+      "properties": {
+        "description": "Below are a few possible options from the College Board for grading or presenting student work:\n\n* Short interviews between the teacher and individual students about their code, how it works, and any difficulties they encountered.\n\n  *  Although this is a time-consuming option for the teacher, it allows them to see and ask questions of every project while not delaying the rest of the students, who can be working on other activities while the interviews are taking place.\n\n  *  One downside is that students are not exposed to the work of other students except for informally during implementation. For students who struggle with what to do in an open-ended project, seeing student work, especially early in the year, can help spark ideas for future activities.\n\n* Peer review, either in small groups or pairs.\n\n  *  One benefit to this is that teachers have the reviews of other students when evaluating a student project.\n\n  *  Students can see at least one, and potentially several, other student projects.\n\n  *  Time must be spent teaching students how to give feedback and what feedback is expected.\n\n* Gallery walk.\n\n  *  Half of the class present their work to the other half in very short (30–60 second) interactions and then the halves switch, and the presenters become the audience\n\n  *  This exposes students to more projects but does not provide as much time for thorough evaluation or discussion.\n\n* Presentations to the class\n\n  *  Students will be exposed to all other student projects.\n\n  *  This can be a time-consuming process, even if students help evaluate another student's work."
+      },
+      "seeding_key": {
+        "activity_section.key": "79da496d-2670-4040-afe8-6f65fe8aa12f",
+        "lesson_activity.key": "d53836d9-a458-41d4-bae0-8fa72175f5ab"
+      }
+    },
+    {
+      "key": "263504f9-8325-4ae5-8065-56b65496960f",
+      "position": 1,
+      "properties": {
+        "description": "**Do This**: For students to show that they understand the concepts, it’s important for them to describe their work. Have them answer the questions in last part of their activity guide individually. \n\n**Optional**: If you would like to have a class discussion and debrief about the process, you can choose to use the Open-Ended Activity Lab Debrief.",
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "263504f9-8325-4ae5-8065-56b65496960f",
+        "lesson_activity.key": "aa1c8c55-861a-4e2c-9621-77f6638de127"
       }
     }
   ],
@@ -3583,6 +3796,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Celebrity-L11-L1_2022"
+        ],
         "progression": "Open-Ended Activity"
       },
       "bonus": false,
@@ -3705,6 +3921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L2-L2_2022"
+        ],
         "progression": "Writing the Sentiment Methods"
       },
       "bonus": false,
@@ -3727,6 +3946,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L2-L3_2022"
+        ],
         "progression": "Writing the Sentiment Methods"
       },
       "bonus": false,
@@ -3749,6 +3971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L2-L4_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3770,6 +3995,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L3-L1_2022"
+        ],
         "progression": "The Good and the Bad"
       },
       "bonus": false,
@@ -3792,6 +4020,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L3-L2_2022"
+        ],
         "progression": "Creating Autogenerated Reviews"
       },
       "bonus": false,
@@ -3814,6 +4045,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L3-L3_2022"
+        ],
         "progression": "Creating Autogenerated Reviews"
       },
       "bonus": false,
@@ -3836,6 +4070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L3-L4_2022"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -3850,6 +4087,72 @@
       },
       "level_keys": [
         "CSA CB_Lab Sentiment-L3-L4_2022"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Strengthening the Sentiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L4-L1_2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "8bdabab8-25e1-439c-9f2d-faa4d952d583"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L4-L1_2022"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L4-L2_2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "3a4ff15e-a447-457f-9205-a6b68159d536"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L4-L2_2022"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Open-Ended Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L5-L1_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "18775887-9cff-43d2-8057-b98829c14ffd"
+      },
+      "level_keys": [
+        "CSA CB_Lab Sentiment-L5-L1_2022"
       ]
     }
   ],
@@ -4404,6 +4707,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022",
         "activity_section.key": "5f2add4f-2717-4a3c-9402-68a3b4479158"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L4-L1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L4-L1_2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "8bdabab8-25e1-439c-9f2d-faa4d952d583"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L4-L2_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L4-L2_2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "3a4ff15e-a447-457f-9205-a6b68159d536"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Sentiment-L5-L1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Sentiment-L5-L1_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "18775887-9cff-43d2-8057-b98829c14ffd"
       }
     }
   ],
@@ -5220,6 +5559,16 @@
   ],
   "objectives": [
     {
+      "key": "02b99ec2-98b0-47f5-b902-927677d64c48",
+      "properties": {
+        "description": "Call at least two distinct methods in the String class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "02b99ec2-98b0-47f5-b902-927677d64c48"
+      }
+    },
+    {
       "key": "1267461c-0300-46a6-8673-c349a9591d7f",
       "properties": {
         "description": "Craft a new method that analyzes and responds to a user generated phrase"
@@ -5227,6 +5576,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "1267461c-0300-46a6-8673-c349a9591d7f"
+      }
+    },
+    {
+      "key": "14a0650b-316f-425c-bb3c-fd7aa5c33ce6",
+      "properties": {
+        "description": "Utilize iteration"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "14a0650b-316f-425c-bb3c-fd7aa5c33ce6"
       }
     },
     {
@@ -5267,6 +5626,16 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "objective.key": "4908fe32-6f48-4548-a2cb-8c70a1c99189"
+      }
+    },
+    {
+      "key": "53590722-a9b3-4620-a8d8-36c70747e87c",
+      "properties": {
+        "description": "Write a program with a main method"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "53590722-a9b3-4620-a8d8-36c70747e87c"
       }
     },
     {
@@ -5380,6 +5749,16 @@
       }
     },
     {
+      "key": "b60e3cfe-2117-4bce-a044-4d3ef22e7aba",
+      "properties": {
+        "description": "Utilize conditional statements or compound Boolean expressions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "b60e3cfe-2117-4bce-a044-4d3ef22e7aba"
+      }
+    },
+    {
       "key": "b6e961d3-e5dd-44de-b3f0-9e6ff4b951d5",
       "properties": {
         "description": "Add string elements to an existing array"
@@ -5427,6 +5806,16 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "objective.key": "ec2bc6b7-6ac6-4d2e-8a6a-ebfa059c48d3"
+      }
+    },
+    {
+      "key": "fb3f40c5-9265-43dc-8649-d703fc5e06a8",
+      "properties": {
+        "description": "Create at least one new method which is called from main that takes at least one parameter"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "fb3f40c5-9265-43dc-8649-d703fc5e06a8"
       }
     }
   ],
