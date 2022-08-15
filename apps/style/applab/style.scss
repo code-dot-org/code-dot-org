@@ -9,10 +9,10 @@
 @import "skins/modern.scss";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
-$defaultWidth: 320px;
-$defaultFooterlessHeight: 450px;
-$widgetWidth: 600px; // Note: This constant is also maintained in applab/constants.js.
-$widgetHeight: $defaultFooterlessHeight;
+$default-width: 320px;
+$default-footerless-height: 450px;
+$widget-width: 600px; // Note: This constant is also maintained in applab/constants.js.
+$widget-height: $default-footerless-height;
 
 div#visualization {
   height: 562.5px;
@@ -47,9 +47,9 @@ div#visualizationResizeBar {
 
 @media screen and (min-width: 1151px), screen and (min-height: 849px) {
   $width: 400px;
-  $scaleFactor: math.div($width, $defaultWidth);
-  $height: $scaleFactor * $defaultFooterlessHeight;
-  $colWidth: $width + 2;
+  $scale-factor: math.div($width, $default-width);
+  $height: $scale-factor * $default-footerless-height;
+  $col-width: $width + 2;
   div#visualization.responsive {
     max-height: $height;
     max-width: $width;
@@ -58,7 +58,7 @@ div#visualizationResizeBar {
     max-width: $width;
   }
   div#visualizationColumn.responsive.with_padding {
-    max-width: $colWidth;
+    max-width: $col-width;
   }
   .small-footer-base.responsive {
     max-width: $width;
@@ -77,17 +77,17 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale($scaleFactor);
-    -ms-transform: scale($scaleFactor);
-    transform: scale($scaleFactor);
+    -webkit-transform: scale($scale-factor);
+    -ms-transform: scale($scale-factor);
+    transform: scale($scale-factor);
   }
 }
 
 @media screen and (min-width: 1101px) and (max-width: 1150px), screen and (min-height: 777px) and (max-height: 848px) {
   $width: 350px;
-  $scaleFactor: math.div($width, $defaultWidth);
-  $height: $scaleFactor * $defaultFooterlessHeight;
-  $colWidth: $width + 2;
+  $scale-factor: math.div($width, $default-width);
+  $height: $scale-factor * $default-footerless-height;
+  $col-width: $width + 2;
   div#visualization.responsive {
     max-height: $height;
     max-width: $width;
@@ -96,7 +96,7 @@ div#visualizationResizeBar {
     max-width: $width;
   }
   div#visualizationColumn.responsive.with_padding {
-    max-width: $colWidth;
+    max-width: $col-width;
   }
   .small-footer-base.responsive {
     max-width: $width;
@@ -115,17 +115,17 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale($scaleFactor);
-    -ms-transform: scale($scaleFactor);
-    transform: scale($scaleFactor);
+    -webkit-transform: scale($scale-factor);
+    -ms-transform: scale($scale-factor);
+    transform: scale($scale-factor);
   }
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px), screen and (min-height: 708px) and (max-height: 778px) {
   $width: 300px;
-  $scaleFactor: math.div($width, $defaultWidth);
-  $height: $scaleFactor * $defaultFooterlessHeight;
-  $colWidth: $width + 2;
+  $scale-factor: math.div($width, $default-width);
+  $height: $scale-factor * $default-footerless-height;
+  $col-width: $width + 2;
   div#visualization.responsive {
     max-height: $height;
     max-width: $width;
@@ -134,7 +134,7 @@ div#visualizationResizeBar {
     max-width: $width;
   }
   div#visualizationColumn.responsive.with_padding {
-    max-width: $colWidth;
+    max-width: $col-width;
   }
   .small-footer-base.responsive {
     max-width: $width;
@@ -153,17 +153,17 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale($scaleFactor);
-    -ms-transform: scale($scaleFactor);
-    transform: scale($scaleFactor);
+    -webkit-transform: scale($scale-factor);
+    -ms-transform: scale($scale-factor);
+    transform: scale($scale-factor);
   }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px), screen and (min-height: 638px) and (max-height: 707px) {
   $width: 250px;
-  $scaleFactor: math.div($width, $defaultWidth);
-  $height: $scaleFactor * $defaultFooterlessHeight;
-  $colWidth: $width + 2;
+  $scale-factor: math.div($width, $default-width);
+  $height: $scale-factor * $default-footerless-height;
+  $col-width: $width + 2;
   div#visualization.responsive {
     max-height: $height;
     max-width: $width;
@@ -172,7 +172,7 @@ div#visualizationResizeBar {
     max-width: $width;
   }
   div#visualizationColumn.responsive.with_padding {
-    max-width: $colWidth;
+    max-width: $col-width;
   }
   .small-footer-base.responsive {
     max-width: $width;
@@ -191,17 +191,17 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale($scaleFactor);
-    -ms-transform: scale($scaleFactor);
-    transform: scale($scaleFactor);
+    -webkit-transform: scale($scale-factor);
+    -ms-transform: scale($scale-factor);
+    transform: scale($scale-factor);
   }
 }
 
 @media screen and (max-width: 1000px), screen and (max-height: 637px) {
   $width: 200px;
-  $scaleFactor: math.div($width, $defaultWidth);
-  $height: $scaleFactor * $defaultFooterlessHeight;
-  $colWidth: $width + 2;
+  $scale-factor: math.div($width, $default-width);
+  $height: $scale-factor * $default-footerless-height;
+  $col-width: $width + 2;
   div#visualization.responsive {
     max-height: $height;
     max-width: $width;
@@ -210,7 +210,7 @@ div#visualizationResizeBar {
     max-width: $width;
   }
   div#visualizationColumn.responsive.with_padding {
-    max-width: $colWidth;
+    max-width: $col-width;
   }
   .small-footer-base.responsive {
     max-width: $width;
@@ -229,9 +229,9 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale($scaleFactor);
-    -ms-transform: scale($scaleFactor);
-    transform: scale($scaleFactor);
+    -webkit-transform: scale($scale-factor);
+    -ms-transform: scale($scale-factor);
+    transform: scale($scale-factor);
   }
 }
 
@@ -270,13 +270,13 @@ div#visualizationResizeBar {
 
 #visualizationColumn, #visualization {
   &.widgetWidth {
-    width: $widgetWidth;
-    max-width: $widgetWidth;
+    width: $widget-width;
+    max-width: $widget-width;
   }
 
   &.widgetHeight {
-    height: $widgetHeight;
-    max-height: $widgetHeight;
+    height: $widget-height;
+    max-height: $widget-height;
   }
 }
 
