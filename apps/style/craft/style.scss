@@ -16,7 +16,7 @@ $flyout-background: #4e4e4e;
 $footer-background: #4e4e4e;
 $footer-text-and-arrow: #969292;
 $grabber-dots: #4f4f4f;
-$main-blockspace-background: rgb(161, 161, 161); // #8B8B8B;
+$main-blockspace-background: rgb(161 161 161); // #8B8B8B;
 $callout-fallback-border-color: $very-dark-gray;
 $original-background-color: #f2f2f2;
 $button-text-white: #f1f1f1;
@@ -1220,7 +1220,7 @@ $height-to-width: math.div(434, 477);
   .ieVersion9 &,
   .ieVersion10 & {
     // Force a background color for ie 10 and 11
-    background-color: rgb(88, 88, 88) !important;
+    background-color: rgb(88 88 88) !important;
     border-radius: 8px;
     border-color: $callout-fallback-border-color;
     border-width: 15px;
