@@ -29,4 +29,4 @@ jobs:
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies
       - name: Rake run integration tests
-        run: bundle exec rake test:all --trace
+        run:  bundle exec rake test:changed --trace
