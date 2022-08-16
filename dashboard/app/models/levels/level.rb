@@ -51,7 +51,7 @@ class Level < ApplicationRecord
   # context on these categories and level keys, see:
   # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
-  validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+  validates_uniqueness_of :level_num, case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
 
   validate :validate_game, on: [:create, :update]
 
@@ -722,6 +722,19 @@ class Level < ApplicationRecord
       )
     else
       properties['teacher_markdown']
+    end
+  end
+
+  def localized_rubric_property(property)
+    if should_localize?
+      I18n.t(
+        property,
+        scope: [:data, :mini_rubric, name],
+        default: properties[property],
+        smart: true
+      )
+    else
+      properties[property]
     end
   end
 

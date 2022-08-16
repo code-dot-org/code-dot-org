@@ -330,7 +330,6 @@ ca:
     popup:
       progress_for_user: Progrés de %{name}
       progress: El teu progrés
-      lines: 'Línies totals de codi: %{lines}'
       close: TANCA
       mastery: Conceptes
       puzzle_map: Etapes

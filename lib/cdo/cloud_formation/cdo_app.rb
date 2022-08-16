@@ -56,7 +56,7 @@ module Cdo::CloudFormation
 
       # Various option defaults.
       options.frontends     ||= rack_env?(:production)
-      options.database      ||= [:staging, :test, :levelbuilder].include?(rack_env)
+      options.database      ||= [:staging, :test, :levelbuilder, :production].include?(rack_env)
       options.load_balancer ||= !rack_env?(:adhoc) || options.frontends
       options.alarms        ||= !rack_env?(:adhoc)
       options.cdn_enabled   ||= !rack_env?(:adhoc)

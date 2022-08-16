@@ -10,14 +10,17 @@
           "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
           "link": "",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": true
         },
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -32,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-27 19:36:00 UTC",
+    "serialized_at": "2022-08-11 16:18:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6434,6 +6437,7 @@
       "key": "cs_bingo_cards_2",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6458,6 +6462,7 @@
       "key": "data_for_social_good_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6482,6 +6487,7 @@
       "key": "exploring_1d_arrays",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6494,6 +6500,7 @@
       "key": "exploring_algorithms",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6506,6 +6513,7 @@
       "key": "finding_duplicates",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6530,6 +6538,7 @@
       "key": "investigating_arrays",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6542,6 +6551,7 @@
       "key": "investigating_polymorphism",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6590,6 +6600,7 @@
       "key": "reversing_an_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6614,6 +6625,7 @@
       "key": "tickettracker_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6626,6 +6638,7 @@
       "key": "tickettracker_frq_graphic_organizer",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6638,6 +6651,7 @@
       "key": "tickettracker_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6650,6 +6664,7 @@
       "key": "tracing_loops",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6662,6 +6677,7 @@
       "key": "tracing_nested_loops",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6674,6 +6690,7 @@
       "key": "u3l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6686,6 +6703,7 @@
       "key": "u3l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6698,6 +6716,7 @@
       "key": "u3l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6710,6 +6729,7 @@
       "key": "u3l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6722,6 +6742,7 @@
       "key": "u3l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6734,6 +6755,7 @@
       "key": "u3l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6746,6 +6768,7 @@
       "key": "u3l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6758,6 +6781,7 @@
       "key": "u3l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6770,6 +6794,7 @@
       "key": "u3l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6782,6 +6807,7 @@
       "key": "u3l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6794,6 +6820,7 @@
       "key": "unit_3_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6830,6 +6857,7 @@
       "key": "unit_3_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {

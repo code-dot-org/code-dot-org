@@ -45,6 +45,7 @@ fil:
         personal_email_markdown: "Personal na email address [(mag-click dito kung wala ka pang email address)](%{url})"
         username: 'Username'
         password: 'Password'
+        verified_teacher: 'Beripikadong Guro'
         password_confirmation: 'Kumpirmahin ang password'
         current_password: 'Kasalukuyang Password'
         locale: 'Lengwahe'
@@ -435,7 +436,6 @@ fil:
     popup:
       progress_for_user: "Progreso ni %{name}"
       progress: 'Progreso mo'
-      lines: 'Kabuuang dami nang linya ng code: %{lines}'
       close: 'ISARA'
       mastery: 'Mga Konsepto'
       puzzle_map: 'Mga Stage'
@@ -607,6 +607,7 @@ fil:
     try_hour_of_code: 'Subukan ang Hour of Code!'
     store: 'Tindahan'
     cookie_notice: 'Paunawa ng Cookie'
+    view_code: 'Tingnan ang code'
   reference_area:
     title: 'Nangangailangan ng tulong?'
     subtitle: 'Tingnan ang mga video na ito at ang mga hint'
@@ -1049,6 +1050,7 @@ fil:
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
+        paraguay: 'Paraguay'
         thailand: 'Thailand'
         uzbekistan: 'Uzbekistan'
       ages:

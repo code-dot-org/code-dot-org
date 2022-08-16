@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-24 12:00:04 UTC",
+    "serialized_at": "2022-08-02 23:10:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -187,7 +187,7 @@
       "relative_position": 6,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
+        "overview": "In this mini-project, students will use the Circuit Playground to collect data, then use App Lab to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps where a person collects data on a device \"in the field\", then returns to a central location to view and analyze the data (such as cataloguing endangered species in the wild). Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Create an app that uses the Circuit Playground to collect data for a specific purpose, then has an app to analyze the data that was collected"
       },
@@ -3413,7 +3413,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, we have a sense of sight, what happens when we show or hide things from the circuit playground? We have a sense of hearing, what happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
+            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
           }
         ]
       },

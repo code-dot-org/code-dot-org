@@ -637,7 +637,6 @@
   "thankyou": "Рахмат",
   "toolboxHeaderDroplet": "Куралтакта",
   "topCourseLessonIntro": "Учурда {lessonName} менен иштеп жатасыз.",
-  "totalNumLinesOfCodeWritten": "Башынан бери: {numLines, plural, one {1 сап} other {# сап}} код.",
   "tryAgain": "Кайрадан",
   "tryBlocksBelowFeedback": "Төмөнкү блоктордун бирин колдонуп көргүлө:",
   "tryHOC": "Код саатын байкап көргүлө",

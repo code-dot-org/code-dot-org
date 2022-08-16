@@ -45,6 +45,7 @@ sk:
       Board Input and Output: Vstup a výstup dosky plošných spojov
       Boolean Comparison: Porovnanie pravdivosti
       Booleans and Comparison Operators: Logické výrazy a porovnávacie znamienka
+      Build a Platform Jumper: Vytvor si plošinovú skákaciu hru
       Build a Screen: Vytvor obrazovku
       Building an App: Vytvorenie aplikácie
       'Bunny ': 'Zajac '
@@ -53,16 +54,17 @@ sk:
       Cake Defender: Obranca koláča
       Challenge: Výzva
       Challenge Levels: Úrovne výzvy
-      Challenges: Výzvy
+      Challenges: Náročnejšie úlohy
       Change: Zmeň
       Checking for a Winner: Určuje sa víťaz
       Choose Your Own Adventure: Interaktívny príbeh
       'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
+      Code Prediction: Predpoveď kódu
       Code Your Own Flappy Game: Vytvor si hru v štýle Flappy Bird
       Collector Game: Hra Zberateľ
       Collision Detection: Detekcia kolízie
       Collision Detection Review: Detekcie kolízie - prehľad
-      Collisions: Kolízie "sprite" objektov
+      Collisions: Kolízie sprajtov
       Collisions in Games: Kolízie v hrách
       Color LEDs: Farebné LEDky
       Combining Projects: Zlúčenie projektov
@@ -71,6 +73,7 @@ sk:
       'Conditionals: If Statements': 'Podmineky: "if" (ak)'
       'Conditionals: If and If/Else Statements': 'Podmienky: "if" (ak) a "if/else"
         (ak/potom)'
+      Control Your Player: Ovládaj hráča
       Course E Sprite Lab Project: Kurz E Lab projekt s postavičkou
       'Course E: Play Lab Project': 'Kurz E: Projekt v Play Labe'
       Course F Artist Project: Projekt Umelec Kurz F
@@ -80,6 +83,7 @@ sk:
       'Course F: Play Lab Project': 'Kurz F: Projekt v Play Labe'
       'Course F: Play Lab Project - Revise': 'Kurz F: Projekt v Play Labe – opakovanie'
       Create Your Own Animation: Vytvor svoju vlastnú animáciu
+      Create Your Sprites: Vytvor si sprajty
       Create a Background: Vytvor pozadie
       Create a Story: Vytvor príbeh
       Create your project: Vytvor svoj projekt
@@ -96,6 +100,7 @@ sk:
       Designing for Accessibility: Navrhovanie s ohľadom na zjednodušenie ovládania
       Digital Sharing - Unplugged Activity: Digitálne zdieľanie – aktivita bez počítača
       Dogger Example: Príklad s loďou
+      Draw Your Background: Nakresli si pozadie
       Draw a Background: Nakresli pozadie
       Drawing: Kreslenie
       Drawing Shapes: Kreslenie tvarov
@@ -123,7 +128,7 @@ sk:
       Finish the Prototype: Dokonč prototyp
       Finishing Functions: Dokončovacie funkcie
       Finishing Touches: Dokončovanie detailov
-      Flyer Game: Lietajúca hra
+      Flyer Game: Lietacia hra
       Follow the Algorithm - Unplugged Activity: Sleduj algoritmus – aktivita bez
         počítača
       Follow the Mouse: Sleduj myš
@@ -155,7 +160,9 @@ sk:
       Inspiration!: Inšpirácia!
       Interactive Card: Interaktívna pohľadnica
       Intro to Design Mode: Úvod do dizajnového módu
+      Intro to Flyer Game: Úvod do Lietacej hry
       Intro to For Loops: Predstavenie cyklov "for"
+      Intro to Side Scrollers: Úvod do side-scrollerov
       Intro to Sprites: Predstavenie "sprite" objektov
       Intro to Variables: Predstavenie premenných
       Introducing Sprite Lab: Predstavenie Sprite Labu
@@ -175,7 +182,9 @@ sk:
       Light Show: Svetelná show
       Lists: Zoznamy
       Lists in HTML: Zoznamy v HTML
+      Looping: Cykly
       Loops with the Artist: Cykly s umelcom
+      Make Your Sprites: Vytvor si sprajty
       Make a Prediction: Odhadni výsledok
       Make an Interactive Card: Vytvor si interaktívnu pohľadnicu
       Make it Interactive: Spravte to interaktívne
@@ -226,25 +235,28 @@ sk:
       Overview: Prehľad
       Pair Programming: Programovanie v páre
       Picturing Data: Zobrazenie dát v grafoch
+      Plan Your Project: Naplánuj si projekt
       Plan Your Scene: Naplánuj si scénu
       Planning: Plánovanie
-      Platform Jumper - Background and Variables: Plošinový skokan - Pozadie a premenné
-      Platform Jumper - Items: Plošinový skokan - Prvky
-      Platform Jumper - Platforms: Plošinový skokan - Plošiny
-      Platform Jumper - Player: Plošinový skokan - Hráč
+      Platform Jumper - Background and Variables: Plošinová skákačka – Pozadie a premenné
+      Platform Jumper - Items: Plošinová skákačka – Predmety
+      Platform Jumper - Platforms: Plošinová skákačka – Plošiny
+      Platform Jumper - Player: Plošinová skákačka – Hráč
+      Platform Jumper Review: Kontrola plošinovej skákačky
+      Player Controls: Ovládanie hry
       Playing Notes: Hranie nôt
       Playing with Notes: Hranie pomocou nôt
       Plotting Shapes in Game Lab: Tvorba tvarov v Game Labe
-      Post-Course Survey Instructions: Inštrukcie pre vypĺňanie dotazníka po kurze
+      Post-Course Survey Instructions: Pokyny na vyplnenie záverečného dotazníka
       Practice: Cvičenie
-      Predict: Predvídať
+      Predict: Predpoveď
       Prediction: Predpoveď
       Problem Solving: Riešenie problémov
       Programming with Rey and BB-8: Programovanie s Rey a BB-8
       Programs that Repeat: Opakujúce sa programy
       Project: Projekt
-      Project - Background and Variables: Projekt - Pozadie a premenné
-      Project - Sprites and Interactions: Projekt - "Sprite" objekty a interakcie
+      Project - Background and Variables: Projekt – Pozadie a premenné
+      Project - Sprites and Interactions: Projekt – Sprajty a interakcie
       Project Guide: Sprievodca projektom
       Project Work: Projektová práca
       Properties: Vlastnosti
@@ -264,16 +276,22 @@ sk:
       Repeat Until Statements: Príkazy „opakuj až kým neplatí“
       Review: Opakovanie
       Review Your Animated Scene: Skontroluj svoju animovanú scénu
+      Review Your Game: Skontroluj svoju hru
       Review Your Scene: Skontroluj si scénu
       Revise Artist Project: Zreviduj projekt Umelec
       Revise Sprite Lab Project: Reviduj Sprite Lab projekt
       Robot Doodle: Robotova čmáranica
       Run a simulation: Spusť simuláciu
+      Same Game: Ukážková hra
+      Sample Game: Ukážková hra
+      Sample Games: Ukážkové hry
       Sample Platform Jumper Game: Príklad plošinovej skákacej hry
-      Sample Programs: Vzorové programy
+      Sample Programs: Ukážkové programy
+      Scoring & Scoreboard: Body a ich zobrazenie
       Screen Design: Dizajn obrazovky
       Sensor Events: Udalosti obrazovky
       Sensors to Colors: Prevod zo snímačov na farby
+      Set Up Sprites: Priprav sprajty
       Setting Properties: Nastavenie vlastností
       Shapes and Parameters: Tvary a parametre
       Shapes and the Draw Loop: Tvary  a vykresľovací cyklus
@@ -287,6 +305,7 @@ sk:
       Songwriting - Functions Unplugged Activity: 'Písanie pesničiek: funkcie – aktivita
         bez počítača'
       Speed it Up, Slow it Down: Zrýchli, spomaľ
+      Sprite Interactions: Interakcie sprajtov
       Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
       Sprite Movement: Pohyb sprajtov
