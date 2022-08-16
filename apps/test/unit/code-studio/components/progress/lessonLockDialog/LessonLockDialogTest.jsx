@@ -203,7 +203,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     lessonLockDataApi.saveLockState.restore();
   });
 
-  it('handleSave shows defult error if failed with no message', async () => {
+  it('handleSave shows default error if failed with no message', async () => {
     const initialLockStatus = [
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
       {name: 'fakeName2', lockStatus: LockStatus.Editable}
