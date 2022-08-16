@@ -324,7 +324,7 @@ class ProjectsController < ApplicationController
       no_footer: sharing || iframe_embed_app_and_code,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing || iframe_embed_app_and_code,
-      small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level.enable_scrolling?),
+      small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
       app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
