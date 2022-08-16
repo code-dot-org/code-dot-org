@@ -31,6 +31,7 @@ services:
       - $HOME/gitcred.sh:/home/circleci/gitcred.sh:delegated
       - ../../droplet/:/home/circleci/droplet:delegated
       - ../../blockly/:/home/circleci/blockly:delegated
+      - ../../maze/:/home/circleci/maze:delegated
 
     ports:
       - "3000:3000"
