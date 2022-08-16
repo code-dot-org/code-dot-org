@@ -1,8 +1,7 @@
 name: Run integration tests
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 jobs:
-  run-ui-tests:
+  run-integration-tests:
     runs-on: ubuntu-latest
     env:        
       CI: true
