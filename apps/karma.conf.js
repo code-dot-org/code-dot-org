@@ -52,6 +52,8 @@ module.exports = function(config) {
       'test/storybook-tests.js': ['webpack', 'sourcemap']
     },
 
+    processKillTimeout: 5000,
+
     webpack: {...webpackConfig, optimization: undefined, mode: 'development'},
     webpackMiddleware: {
       noInfo: true,
