@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:03.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <p>OUR FAVORITE REASONS TO PAIR PROGRAM<\\/p>\\r\\n    <p>CADIN'S REASONS<\\/p>\\r\\n    <p>1. It is more fun to do stuff with a friend<\\/p>\\r\\n    2. It's convenient to ask questions<\\/p>\\r\\n    <p>3. More cool ideas!<\\/p>\\r\\n    \\r\\n    <p>------------<\\/p>\\r\\n    \\r\\n    <p>NEVAEH'S REASONS<\\/p>\\r\\n    <p>1. You don't get stuck as much<\\/p>\\r\\n    <p>2. So much easier to debug.<\\/p>\\r\\n    <p>3. You can talk while you are programming so it's more interesting.<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
@@ -15,14 +11,18 @@
     "parent_level_id": 20006,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "true",
     "teacher_markdown": "# Debugging\r\n\r\nStudents may note that when code is organized and uses whitespace, it's much easier to find bugs, but any reasonable piece of advice around debugging could work here.\r\n\r\nAllow students to share out their advice, and continue to emphasize that getting bugs is a normal part of programming.  Students will be introduced to a formal debugging process later in the lesson."
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:03.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:03.625+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading debug_2021\\\"\"],\"cloned_from\":\"CSD U2 Heading debug_2021\"}]"
