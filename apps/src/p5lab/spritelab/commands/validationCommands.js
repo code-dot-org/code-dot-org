@@ -241,20 +241,17 @@ export const commands = {
   // If the student has not completed any criteria, they are "failing".
   // This determines things like the current color of the validation timer bar below the play area.
   getPassState(criteria, bonusCriteria) {
-    let state = 'pass';
     for (const criterion in criteria) {
       if (!criteria[criterion].complete) {
-        state = 'fail';
+        return 'fail';
       }
     }
-    if (state === 'pass') {
-      for (const criterion in bonusCriteria) {
-        if (bonusCriteria[criterion].complete) {
-          state = 'bonus';
-        }
+    for (const criterion in bonusCriteria) {
+      if (bonusCriteria[criterion].complete) {
+        return 'bonus';
       }
     }
-    return state;
+    return 'pass';
   },
 
   calculateBarScale(state) {
