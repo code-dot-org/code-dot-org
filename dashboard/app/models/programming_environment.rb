@@ -56,7 +56,7 @@ class ProgrammingEnvironment < ApplicationRecord
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
-    environment.update! properties.except(:categories)
+    environment.update! properties.except(:categories).slice(:published, *ProgrammingEnvironment.permitted_params.map(&:to_sym))
     environment.categories = properties[:categories].map do |category_config|
       category = ProgrammingEnvironmentCategory.find_or_initialize_by(programming_environment_id: environment.id, key: category_config['key'])
       category.update! category_config
