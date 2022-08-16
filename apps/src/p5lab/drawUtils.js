@@ -176,9 +176,9 @@ export function validationBar(
   {barHeight = 10, x = 0, y = APP_HEIGHT - barHeight} = {}
 ) {
   const barColors = {
-    fail: colors['maximum_purple'],
-    pass: colors['emerald_starling'],
-    bonus: colors['fabulous_fuchsia']
+    fail: colors['dark_purple'],
+    pass: colors['bright_green'],
+    bonus: colors['neon_pink']
   };
   p5.push();
   p5.fill(barColors[state]);
