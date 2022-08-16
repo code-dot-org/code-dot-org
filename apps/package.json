@@ -119,7 +119,7 @@
     "grunt-contrib-uglify": "2.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-exec": "^3.0.0",
-    "grunt-karma": "^2.0.0",
+    "grunt-karma": "3",
     "grunt-newer": "^1.3.0",
     "grunt-notify": "0.4.5",
     "grunt-sass": "3.0.2",
