@@ -1,13 +1,13 @@
 @import 'color.scss';
 
-$minTableWidth: 600px;
+$min-table-width: 600px;
 
 .addColumnHeader {
     width: 19px;
 }
 
 .table {
-    min-width: $minTableWidth;
+    min-width: $min-table-width;
 }
 
 .plusIcon {
