@@ -78,6 +78,10 @@ export default class JavaScriptModeErrorHandler {
     }
     logText += message;
 
+    if (lineNumber !== undefined) {
+      logText += '\n';
+    }
+
     // Send the assembled output to our logging service.
     this.logTarget_.log(logText, logLevel);
 
