@@ -5,8 +5,12 @@
 @import "curriculum/markdown";
 @import "responsive-visualization";
 @import "style-constants";
+@import "aniGif";
+@import "RotateContainer";
+@import "HideToolbarHelper";
+@import "blockly";
 
-$common_root: '/blockly/media/common_images/';
+$common-root: '/blockly/media/common_images/';
 
 @mixin fill-container {
   height: 100%;
@@ -90,19 +94,19 @@ em strong {
 }
 
 html[dir='rtl'] #visualizationColumn {
-  right: 0px;
+  right: 0;
 }
 
 #visualizationColumn {
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   overflow: visible;
 }
 
 #visualizationColumn.pin_bottom {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
 
   #belowVisualization {
     position: absolute;
@@ -234,7 +238,7 @@ button.arrow {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: #fff;
-  margin: 5px 0px;
+  margin: 5px 0;
   margin-inline-end: 9px;
   display: none;
 }
@@ -262,7 +266,7 @@ button.arrow:disabled {
     }
   }
   :last-child{
-    margin-inline-end: 0px;
+    margin-inline-end: 0;
   }
   @supports not (gap: 0 9px) {
     padding-inline-end: 9px;
@@ -291,10 +295,10 @@ button.arrow:disabled {
  * such as dialogs. */
 #codeTextbox {
   position: absolute;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   top: $workspace-headers-height;
-  bottom: 0px;
+  bottom: 0;
   font-size: 14px;
   min-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
   direction: ltr;
@@ -325,14 +329,14 @@ html[dir='rtl'] .editor-column {
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view
   .ace_scroller, { // droplet code view
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(0 0 0 / 0.1);
   }
   // Note: We do something similar in our DesignModeBox React component's
   // transparency layer. These two should be kept in sync as much as possible
 }
 
 .ace-chrome .ace_marker-layer .ace_error {
-  background: rgb(232, 47, 25);
+  background: rgb(232 47 25);
 }
 
 .ace_marker-layer .ace_error {
@@ -343,11 +347,11 @@ html[dir='rtl'] .editor-column {
 // By defining the rule for pause icons first, the warning and error icons will take priority over showing the pause
 // icon.
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
-  background-image: url('#{$common_root}gutterPause.png');
+  background-image: url('#{$common-root}gutterPause.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
   border-radius: 15px 0 0 15px;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgb(0 0 255 / 0.5);
   color: white;
 }
 
@@ -356,7 +360,7 @@ html[dir='rtl'] .editor-column {
 }
 
 .ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
-  background-image: url('#{$common_root}gutterError.png');
+  background-image: url('#{$common-root}gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
@@ -366,7 +370,7 @@ html[dir='rtl'] .editor-column {
 }
 
 .ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
-  background-image: url('#{$common_root}gutterWarn.png');
+  background-image: url('#{$common-root}gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
@@ -531,8 +535,9 @@ button.launch {
   color: $white;
   font-size: large;
   min-width: 96px;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 10px;
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
 }
@@ -557,11 +562,12 @@ button.blocklyLaunch {
     min-width: 111px;
   }
   padding: 7px 10px 7px 6px;
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
   img {
     float: left;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: 6px;
   }
   div {
@@ -569,14 +575,14 @@ button.blocklyLaunch {
     margin-top: 3px;
     margin-right: 4px;
     float: right;
-    padding: 0px;
+    padding: 0;
     margin-left: 6px;
     @media screen and (min-width: 1051px) {
       min-width: 45px;
     }
   }
   html[dir="RTL"] & {
-    margin-right: 0px;
+    margin-right: 0;
   }
   &#resetButton {
     border: 1px solid $cyan;
@@ -601,8 +607,8 @@ button.share {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: $white;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 button.share:focus {
   outline-style: none;
@@ -649,7 +655,7 @@ input[type="radio"] {
 
 #learn {
   h1 {
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0 0 0;
   }
   img {
     margin-bottom: 5px;
@@ -660,11 +666,11 @@ input[type="radio"] {
 }
 
 #make-your-own-button {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0 5px 0;
 }
 
 #open-workspace {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0 5px 0;
 }
 
 #gameButtons {
@@ -759,7 +765,7 @@ input[type="radio"] {
 }
 .feedback {
   font-size: 30px;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0 20px 0;
   line-height: 28px;
   color: #7E5BA0;
   font-family: $gotham-extra-bold;
@@ -775,11 +781,10 @@ input[type="radio"] {
 }
 
 #puzzleRatingButtons {
-
   $red: #FF3014;
   $dark-red: $dark_red;
   $dark-blue: $dark_blue;
-  $gray: #333333;
+  $gray: #333;
   $dark-gray: #4D4D4D;
   $light-gray: $light_gray;
 
@@ -873,7 +878,7 @@ input[type="radio"] {
 }
 
 html[dir="RTL"] .prompt-icon-cell {
-  padding-right: 0px;
+  padding-right: 0;
   padding-left: 10px;
   &.authored_hints {
     #lightbulb {
@@ -938,8 +943,6 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
-@import "aniGif";
-
 .workspace-header {
   text-align: center;
   white-space: nowrap;
@@ -956,6 +959,7 @@ html[dir="RTL"] .prompt-icon-cell {
   .fa {
     font-size: 18px;
   }
+
   /* We don't want some of these styles to affect modal content. */
   .ml-modal {
     span {
@@ -1145,10 +1149,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 .blocklyRectangularDropdownMenu {
   .goog-menuitem-highlight, .goog-menuitem-hover {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgb(255 255 255 / 0.35);
   }
   &:not(.blocklyGridDropdownMenu) {
-    border-color: rgb(84, 84, 84) !important;
+    border-color: rgb(84 84 84) !important;
   }
   &.blocklyGridDropdownMenu {
     background-color: white !important;
@@ -1185,7 +1189,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   &.no-modal-icon {
     .show-code {
       .generated-code-container {
-        margin-left: 0px;
+        margin-left: 0;
       }
     }
   }
@@ -1265,7 +1269,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   margin-right: -10px;
   border-radius: 8px 0 0 8px;
   padding: 10px 0 10px 14px;
-  background-color: #ffbb00;
+  background-color: #fb0;
 }
 
 .arrow-text {
@@ -1279,7 +1283,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   background-color: $green;
   border: 1px solid $green;
   color: white;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 10px;
   text-align: center;
 }
@@ -1288,7 +1292,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   background-color: $orange;
   border: 1px solid $orange;
   color: white;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 10px;
   text-align: center;
 }
@@ -1408,15 +1412,15 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #send-to-phone-right {
     float: left;
     width: 35%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   #send-to-phone-qr-code {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   button.saved-to-gallery {
-    font-family: "Gotham 4i";
+    font-family: 'Gotham 4i', sans-serif;
   }
 
   #sharing-input-container {
@@ -1458,7 +1462,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
   div#phone-charges {
     font-size: 10px;
-    margin-top: 0px;
+    margin-top: 0;
     color: $red;
   }
 }
@@ -1470,7 +1474,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   $y-offset: $y * 26px;
   width: 26px;
   height: 26px;
-  background: url("#{$common_root}shared-sprites-26x26.png") $x-offset $y-offset;
+  background: url("#{$common-root}shared-sprites-26x26.png") $x-offset $y-offset;
 }
 
 .run26 {
@@ -1525,18 +1529,16 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 }
 
 // Droplet block tooltips configuration
-$parameterColor: $light_yellow;
-$linkColor: $white;
-$tooltipBackground: $cyan;
+$parameter-color: $light_yellow;
+$link-color: $white;
+$tooltip-background: $cyan;
 $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-
 $tooltip-font: $gotham-regular;
 $function-name-font: $code-font;
 $examples-link-font: $gotham-extra-bold;
-
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,
@@ -1578,7 +1580,7 @@ $see-examples-thick-underline-color: $yellow;
 .droplet-block-tooltipster {
   border-radius: $tooltip-border-radius;
   border: none;
-  background: $tooltipBackground;
+  background: $tooltip-background;
   color: $text-color;
   -webkit-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
   -moz-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
@@ -1667,7 +1669,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 }
 
 #visualizationColumn.wireframeShare {
-  background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+  background: url("#{$common-root}phone_wireframe.png") center center no-repeat;
   background-size: 432px 757px;
 }
 
@@ -1773,7 +1775,3 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   width: 800px;
   margin-left: -400px;
 }
-
-@import "RotateContainer";
-@import "HideToolbarHelper";
-@import "blockly";
