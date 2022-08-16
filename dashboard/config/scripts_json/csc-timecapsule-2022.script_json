@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-07-11 18:38:42 UTC",
+    "serialized_at": "2022-08-11 16:35:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -36,14 +36,15 @@
   "lessons": [
     {
       "key": "Poem Art",
-      "name": "Poem Art",
+      "name": "Intro to Sprite Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n",
-        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
+        "overview": "In Lesson 1, students will use computer science to bring a time capsule to life! Students will learn the basics of Sprite Lab by coding the mood and imagery of a paragraph of text written about a specific, important moment in time. Students will have various examples of time capsules to choose from, ranging from the moon landing to the first iPad to the COVID-19 pandemic. Students will practice using code blocks to set a background, set text effects, create sprites with behaviors, play sounds, and trigger events to occur during certain lines of the text.",
+        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Read through the debugging tips\n- Some levels require sound to play. Hand out headphones ahead of time. ",
+        "purpose": "In Lesson 1, you will be introduced to various examples of time capsules. Your job is to learn the basics of coding on Sprite Lab so that you can bring these short stories to life with color, sounds, animation and music! Imagine you are telling someone 50 years from now about life right now. Maybe you will share about the first Electric Vehicles or the first song to reach 1 billion views on YouTube. By choosing backgrounds, text effects, sprites, and sounds you can add details that create a powerful time capsule for someone in the future. ",
         "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
       },
       "seeding_key": {
@@ -60,9 +61,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students will plan out their time capsule app before coding it. Students will reflect on their favorite things to do and their own personal experiences in order to write a short story about the current time period. ",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Review the time capsule example app\n- Print one ***Worksheet** for each student.\n",
-        "purpose": "In the previous Poem Art lesson, students were introduced to coding by representing a poem visually. In this lesson, they will create their own narrative based on lived experience. Students will then find moments in their story that can be visualized or enhanced by visual effects, sounds, or images."
+        "overview": "In this lesson, students will plan and write their own time capsule story. Students will reflect on their life and personal experiences to select an important idea for a short story about the current time period. Students should imagine what someone 50 years in the future would want to know about today.",
+        "preparation": "- Review the lesson slides.\n- Print one ***Write Your Own Time Capsule Handout** for each student.\n",
+        "purpose": "Today you will write your own time capsule. As you plan, think about what someone in the future would want to learn about your life. Imagine your future grandchildren asking you what it was like when you were young. They want to see life through your eyes. Next class you will code this time capsule to create an app. Start thinking about what backgrounds, text effects, sounds, sprites and events you may use."
       },
       "seeding_key": {
         "lesson.key": "The Time We Live In",
@@ -78,8 +79,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students will code their time capsule stories from the previous lesson. They will enhance the text by adding visual effects, imagery, and sound to their apps. \n",
-        "preparation": "- Review the lesson slides.\n- Create your own time capsule app as an example for students\n- Have students’ worksheets from the previous class accessible\n- Consider the need for headphones if students plan to add sounds to their projects\n",
+        "overview": "In this lesson, students will warm up by reading time capsule examples. Then they will start coding their own time capsule short stories. Students will be introduced to a couple new blocks: `set title`, `set author`, and `add line`.  Lastly, students will use code blocks to animate and enhance their projects. To do so, they will use the skills they learned in Lesson 1.",
+        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Make sure students have their Write Your Time Capsule handout from last class.\n- Consider the need for headphones if students plan to add sounds to their projects\n- Create your own time capsule app as an example for students\n\n",
         "purpose": "Students will be able to personalize their stories by choosing what effects they want to add to their programs. They will curate their projects according to their own interests and personal experiences.\n"
       },
       "seeding_key": {
@@ -108,14 +109,14 @@
   ],
   "lesson_activities": [
     {
-      "key": "9119d20c-cc63-4ed9-8abd-9c89e93434ca",
+      "key": "c02082e2-bb51-4029-8caf-530a961ad6ab",
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Warm-Up"
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "9119d20c-cc63-4ed9-8abd-9c89e93434ca",
+        "lesson_activity.key": "c02082e2-bb51-4029-8caf-530a961ad6ab",
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022"
@@ -136,14 +137,12 @@
       }
     },
     {
-      "key": "68d94cb8-7ec6-4ac4-aeb6-bff8fc7a36db",
+      "key": "ad961d2d-a511-4621-acf9-b00f291266dc",
       "position": 3,
       "properties": {
-        "duration": 5,
-        "name": "Wrap-Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "68d94cb8-7ec6-4ac4-aeb6-bff8fc7a36db",
+        "lesson_activity.key": "ad961d2d-a511-4621-acf9-b00f291266dc",
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022"
@@ -223,7 +222,7 @@
       "key": "0f1c9801-8140-471d-9231-0dd6bc9b574f",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -278,69 +277,37 @@
   ],
   "activity_sections": [
     {
-      "key": "c6cfae97-b1e7-4fd7-96ab-d682fc7205a7",
+      "key": "d41f9b6d-5a0e-4eac-8ed1-b3a38cf9abc1",
       "position": 1,
       "properties": {
-        "description": "####Setting the Stage\nWelcome students to class and introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide \n\n**Discuss**:\n* _What is a curator?_\n* _How do you think a curator selects which content to use?_\n* _How can we use images and sound to help represent the meaning of a story?_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Opening Paul Revere’s Time Capsule” slide\n\n**Do This**: Watch the video. Stop at 2:10.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**:  Show “Discuss” slide\n\n**Discuss**: Imagine you are creating a time capsule about life right now. What would you want to tell someone in the future about the history of today? What artifacts would be found in your time capsule?\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to a time capsule project. Students will begin to brainstorm ideas for a time capsule about events happening in their lives today.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**: \n\n- _**Mood** - The expression of a feeling, atmosphere, or emotion in art or writing_ \n- _**Imagery** - Mental images produced by a story_\n- _**Sprite** - An image or character in your program_\n- _**Event** - An action that causes something to happen_\n\n**Goal**: The mood and imagery of a short story are important concepts for students to understand. Throughout the unit they will make choices that add details and complexity to a time capsule short story to bring it to life for someone in the future.",
+        "duration": "5",
+        "name": "What is a Time Capsule?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Give students 10 seconds of **think time** before allowing responses. This will allow more students to participate and responses may be more thoughtful. \n\nHave students **turn & talk** to share initial ideas. This will allow all students to be involved in the discussion rather than just a few. "
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "c6cfae97-b1e7-4fd7-96ab-d682fc7205a7",
-        "lesson_activity.key": "9119d20c-cc63-4ed9-8abd-9c89e93434ca"
-      }
-    },
-    {
-      "key": "b557173a-1757-4de1-b88c-5e616e10d63e",
-      "position": 2,
-      "properties": {
-        "description": "Today we are going to use our creativity while we learn to code. There are lots of ways to be creative. What are some ways you like to be creative? \n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b557173a-1757-4de1-b88c-5e616e10d63e",
-        "lesson_activity.key": "9119d20c-cc63-4ed9-8abd-9c89e93434ca"
-      }
-    },
-    {
-      "key": "3d6e6599-5516-44c2-b57f-b714d2e66703",
-      "position": 3,
-      "properties": {
-        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, or writing. As a follow-up question, ask students what they use to inspire their creativity. "
-      },
-      "seeding_key": {
-        "activity_section.key": "3d6e6599-5516-44c2-b57f-b714d2e66703",
-        "lesson_activity.key": "9119d20c-cc63-4ed9-8abd-9c89e93434ca"
-      }
-    },
-    {
-      "key": "d80cfe0a-5823-49bc-aa5b-35c2e7f7cebf",
-      "position": 4,
-      "properties": {
-        "description": "Did you know that computer science can be very creative? In fact, you can make art with code. As a reminder, code is a set of instructions that a computer can understand. Just like choosing which colors of paint to use, choosing what code you write can be an opportunity to express your creativity too! \n\nWe’re going to use poetry to inspire our creative coding today. Does anyone know what poetry is? Do you have a favorite poem or poet? \n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d80cfe0a-5823-49bc-aa5b-35c2e7f7cebf",
-        "lesson_activity.key": "9119d20c-cc63-4ed9-8abd-9c89e93434ca"
-      }
-    },
-    {
-      "key": "baf1a626-b3ac-4ab9-a5a0-964da06dc395",
-      "position": 5,
-      "properties": {
-        "description": "**Read poetry together:** Read a [few poems](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. "
-      },
-      "seeding_key": {
-        "activity_section.key": "baf1a626-b3ac-4ab9-a5a0-964da06dc395",
-        "lesson_activity.key": "9119d20c-cc63-4ed9-8abd-9c89e93434ca"
+        "activity_section.key": "d41f9b6d-5a0e-4eac-8ed1-b3a38cf9abc1",
+        "lesson_activity.key": "c02082e2-bb51-4029-8caf-530a961ad6ab"
       }
     },
     {
       "key": "526165a5-2a15-4056-b00b-ff5e5443d913",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Meaning with Images and Sounds\" video\n",
-        "name": "Poem Art",
-        "progression_name": "Video"
+        "description": "**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section. \n\n",
+        "name": "Mood and Imagery",
+        "progression_name": "Video",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It will be important to support time management; students should have the opportunity to explore the various options in the drop down menus keeping in mind how much time/work lies ahead. When finished, students can test their code and progress to the next level by pressing “run”."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "526165a5-2a15-4056-b00b-ff5e5443d913",
@@ -351,7 +318,9 @@
       "key": "d3be155d-591d-4926-b920-74f7375b49f1",
       "position": 2,
       "properties": {
-        "description": "####General Support\nBy the end of this activity, students will have an animated poem that represents their visual interpretation of the poem they chose. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the poem. Staying on a level and tinkering with their code is highly encouraged. \n- **Find a poem you like:** The poem that displays for a student at a new level is just a suggestion. There is a poem dropdown menu with pre-loaded poems at the top of the playspace. Ask students to read through a few and find one that speaks to them. They can then start animating the poem they chose with code. \n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n"
+        "duration": "40",
+        "name": "Level-by-Level Support",
+        "progression_name": "Video"
       },
       "seeding_key": {
         "activity_section.key": "d3be155d-591d-4926-b920-74f7375b49f1",
@@ -362,8 +331,8 @@
       "key": "45db9776-4519-4911-95d3-06f748865b72",
       "position": 3,
       "properties": {
-        "description": "####Level-by-Level Support (40 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “All Levels\" slide\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
-        "progression_name": "Skill Building"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Prediction\" and \"Level 2 - Prediction\" slides\n\n**Levels 1-2**: Option to read the time capsule short story out loud to all students before they begin predicting. Ensure that students understand the terms background, sound, sprites. \n",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72",
@@ -374,8 +343,7 @@
       "key": "b97e9038-909e-4aea-913e-57351442e7d0",
       "position": 4,
       "properties": {
-        "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. ",
-        "progression_name": "Example"
+        "description": "**Level 3**: Students will be provided with a time capsule example during this level that they will continue to use throughout the entire level progression. Show students how to drag & drop the blocks. Explain that the blocks are like puzzle pieces that must fit together to run. Explain the difference between the different background block options. Show students how to use the drop down menu to select a background. \n\n**Level 4**: Here students may use just one text effect block though they have the option to try out all three. Explain to students the different text effect block options. Again, support time management. Consider setting a 2 minute timer when all students must move on to the next level. \n\n**Level 5**: Students may need headphones to listen to the various sound options. If there are no headphones available, remind students to use a low volume that is respectful of the other students. \n\n**Level 6**: Students will explore **sprites** in this level. Remind them of the meaning of this vocabulary word. Students will require continued time management support. Consider that this is about halfway through the level progression.\n\n**Level 7**: Decide whether to watch this video all together as a class or allow students to watch it independently at their computers. The skill building shown in this Poem Art video is applicable to how students will be coding their digital time capsule.This is a good stopping point for students to share with a partner what they have done so far."
       },
       "seeding_key": {
         "activity_section.key": "b97e9038-909e-4aea-913e-57351442e7d0",
@@ -383,10 +351,53 @@
       }
     },
     {
-      "key": "907f6935-328a-4d7e-8bc6-69c694b232e0",
+      "key": "df904cc4-577a-43ea-8ed6-bd891adf522e",
       "position": 5,
       "properties": {
-        "description": "**Level 3:** This level introduces sound. Students can use headphones if they have them. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "By viewing each other’s projects, students are able to problem-solve challenges, get inspired with new ideas, and improve on their own projects. \n\nLet students know who will be sharing first and facilitate the partners taking turns. Circulate during the pair share to listen in on conversations. Consider sharing a meaningful comment you overhear with the whole group afterwards. Identify students that would benefit from additional support.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df904cc4-577a-43ea-8ed6-bd891adf522e",
+        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
+      }
+    },
+    {
+      "key": "2f2bf68d-87c2-43a5-976e-e764b3929282",
+      "position": 6,
+      "properties": {
+        "description": "**Level 8**: Show students the line numbers on the left-hand side of the short stories. Explain that students need to type a line number into the event block.\n\n**Level 9**: Ensure that the sprite students created earlier is the same sprite in the sprite behavior block. Students may choose to have several sprites with various behaviors.\n\n**Level 10**: Decide whether to watch this video as a class all together or allow students to watch independently at their computers. The skill building in this Poem Art video is very similar to what students will need to code for their digital time capsule. This is a good stopping point for students to share with a partner what they have done so far.\n\n**Level 11**: Free Play. Encourage students to bring a new time capsule short story to life using all the new skills they’ve acquired. Have students share their work with a partner once they are finished."
+      },
+      "seeding_key": {
+        "activity_section.key": "2f2bf68d-87c2-43a5-976e-e764b3929282",
+        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
+      }
+    },
+    {
+      "key": "b192995b-dd62-40bf-ac13-97aba90f2992",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "####General Support\nBy the end of this activity, students will have an animated time capsule. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the time capsule. Staying on a level and tinkering with their code is highly encouraged.\n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b192995b-dd62-40bf-ac13-97aba90f2992",
+        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
+      }
+    },
+    {
+      "key": "907f6935-328a-4d7e-8bc6-69c694b232e0",
+      "position": 8,
+      "properties": {
+        "name": "[Delete]",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -395,117 +406,46 @@
       }
     },
     {
-      "key": "cfd463a5-fc13-431e-a182-f7d905b55760",
-      "position": 6,
-      "properties": {
-        "description": "**Level 4:** Ask students to read the poem and find the line where the poem’s mood shifts or if there is a new image that the poet introduces. Use the event block to add corresponding effects to the identified lines of the poem.",
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "cfd463a5-fc13-431e-a182-f7d905b55760",
-        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
-      }
-    },
-    {
-      "key": "778f2acc-f3ce-4e12-9719-03ce5ab61803",
-      "position": 7,
-      "properties": {
-        "description": "**Level 5:** In this exemplar, students should read the poem on their own first, then press Run. Ask the student whether the images matched the words of the poem. Ask them to elaborate on their answer. ",
-        "progression_name": "Example"
-      },
-      "seeding_key": {
-        "activity_section.key": "778f2acc-f3ce-4e12-9719-03ce5ab61803",
-        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
-      }
-    },
-    {
-      "key": "246e1723-c307-438c-8260-1a4c0d1d7ee3",
-      "position": 8,
-      "properties": {
-        "description": "**Levels 6, 7, 8:** See “Celebrate bugs” under the General Support section. Encourage students to build programs with more than one transition with their event blocks. ",
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "246e1723-c307-438c-8260-1a4c0d1d7ee3",
-        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
-      }
-    },
-    {
-      "key": "c960bfa0-994a-462d-a740-0865692f0d3b",
-      "position": 9,
-      "properties": {
-        "description": "**Level 9:** Encourage students to read through all the poems in the dropdown menu to find one they like. Tell students that they can share what they make in this final level with their friends and family. Now is the time to put all the coding and ELA skills together! ",
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "c960bfa0-994a-462d-a740-0865692f0d3b",
-        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
-      }
-    },
-    {
-      "key": "84b4436e-e1d8-4b4e-9f42-4a4bab378671",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Great work! What’s next?\" slide\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "84b4436e-e1d8-4b4e-9f42-4a4bab378671",
-        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
-      }
-    },
-    {
-      "key": "2e3938c5-0022-46aa-ba7c-4dbe3cbc4102",
+      "key": "f766701f-2a80-4fbb-a60e-a46f46adf399",
       "position": 1,
       "properties": {
-        "description": "If you enjoyed learning to code today, you can continue learning by visiting code.org/learn. If you want to share what you made with your friends and family, click the “Share” button and send the link to whoever you like!",
-        "progression_name": "Video",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _How did adding backgrounds, text effects, sounds and sprites add to your time capsule?_\n\n**Discussion Goal**: The purpose of this reflection is for students to articulate the power of computer science in adding details and complexity to a short story bringing it to life. Students may share a favorite block that they feel evokes the biggest effect on mood and imagery.\n",
+        "duration": "10",
+        "name": "Bringing a Time Capsule to Life"
       },
       "seeding_key": {
-        "activity_section.key": "2e3938c5-0022-46aa-ba7c-4dbe3cbc4102",
-        "lesson_activity.key": "68d94cb8-7ec6-4ac4-aeb6-bff8fc7a36db"
+        "activity_section.key": "f766701f-2a80-4fbb-a60e-a46f46adf399",
+        "lesson_activity.key": "ad961d2d-a511-4621-acf9-b00f291266dc"
       }
     },
     {
-      "key": "3a9a6cd3-73dd-4a78-ba67-7e37efda4dd2",
+      "key": "206f721c-17f4-46a0-aa62-1853152e54a2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unique Time Capsules” slide\n\n**Do This**: Read the caption for each time capsule. Allow students to share observations about each time capsule. This could be a quick turn and talk or brief class discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What are the pros and cons of each of these unique time capsules?_ \n\n**Anticipated student responses:**\n \n**Message in a bottle**\n\nPros - This message in a bottle was free to make. \n\nCons - You don’t know if it will be lost out at sea; the ocean currents could drag the bottle to the middle of the ocean and it would add to ocean pollution. You don’t know when someone will find it; it is hard to predict when the bottle would wash up on shore again. \n\n**Paris Apartment**\n\nPros - This time capsule was able to show a lot of what life was like; it is a house full of preserved items. The items were all kept safe from damage because they were kept indoors.\n\nCons - It costs a lot of money to rent an apartment for 70 years. No one might know to go look inside the apartment. \n\n**Plymouth Belvedere Sport Coupe**\n\nPros - A lot of people love vintage cars; this is an interesting item to preserve. It would be interesting to compare old cars to cars today.\n\nCons - This time capsule was completely ruined by water. It hasn’t been possible to restore it and museums don’t even want to show it because of too much water damage.\n\n**Space Time Capsule**\n\nPros - They used images to communicate with someone in any language. They used strong materials so that it could withstand traveling through space.\n\nCons - It is unknown whether anyone will ever receive this time capsule.\n",
+        "name": "Unique Time Capsules"
+      },
+      "seeding_key": {
+        "activity_section.key": "206f721c-17f4-46a0-aa62-1853152e54a2",
+        "lesson_activity.key": "7ebbe822-76b3-47ab-b9c0-3e54e8bede19"
+      }
+    },
+    {
+      "key": "ba87dfdd-4f2f-4f2d-8f55-f9836dd1c56e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect\" slide\n\n* _What decisions did you make when you curated the image effects and sounds to go with the words of the poem you chose?_\n* _Do you think curating different images and effects would have made your poem feel different? How?_\n"
+        "description": "**Discuss**: _What are the pros and cons of using computer science to create a time capsule?_ \n\n**Discussion Goal**: The purpose of this warm up question is to shift student thinking to computer science and this specific project. Students should activate background knowledge from Lesson 1 – computer science is a powerful tool for a time capsule because you can add complexity and details to really bring it to life. Reading a short story becomes an immersive experience when you use computer science."
       },
       "seeding_key": {
-        "activity_section.key": "3a9a6cd3-73dd-4a78-ba67-7e37efda4dd2",
-        "lesson_activity.key": "68d94cb8-7ec6-4ac4-aeb6-bff8fc7a36db"
-      }
-    },
-    {
-      "key": "f6895c79-ddb7-43cd-9b99-0706ae3026a8",
-      "position": 3,
-      "properties": {
-        "description": "####(Optional) Assessment: Check For Understanding (4 minutes)\n\nPass out two sticky notes per student. "
-      },
-      "seeding_key": {
-        "activity_section.key": "f6895c79-ddb7-43cd-9b99-0706ae3026a8",
-        "lesson_activity.key": "68d94cb8-7ec6-4ac4-aeb6-bff8fc7a36db"
-      }
-    },
-    {
-      "key": "f5214f4b-eccf-4fa5-91a4-3f98c43f5fb3",
-      "position": 4,
-      "properties": {
-        "description": "You have two sticky notes. On one, write one thing you learned about coding today. \nOn the second, write one thing you learned about poetry today. \n\nLet’s share with the whole class by raising your hand to answer this question: What else do you hope you can learn about coding and computer science next? ",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "f5214f4b-eccf-4fa5-91a4-3f98c43f5fb3",
-        "lesson_activity.key": "68d94cb8-7ec6-4ac4-aeb6-bff8fc7a36db"
+        "activity_section.key": "ba87dfdd-4f2f-4f2d-8f55-f9836dd1c56e",
+        "lesson_activity.key": "7ebbe822-76b3-47ab-b9c0-3e54e8bede19"
       }
     },
     {
       "key": "9b078c3e-8a6f-47b1-8033-7c0bfeeb0395",
-      "position": 1,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n- **Time Capsule** - A place to hold memories and everyday items which represent a day in the life of someone living during a specific time period. \n- **Curator** - A person who selects content for presentation, such as in a museum \n- **Enhance** -  To increase or improve the quality of something",
-        "name": "Introduction"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n\n- **Time Capsule** - A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. "
       },
       "seeding_key": {
         "activity_section.key": "9b078c3e-8a6f-47b1-8033-7c0bfeeb0395",
@@ -513,25 +453,13 @@
       }
     },
     {
-      "key": "8157bf6e-c1a1-442d-8d89-11ebda7c6e08",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Example” slide \n\n**Do This**: Show students the [time capsule example app](https://studio.code.org/projects/poetry_hoc/GQIx_bn2YCfP7z892faOmnGVbrXb9CUG41_vp66vWFo) provided in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**:\n- _What words stood out to you?_\n- _How were the words enhanced by the sounds and images in the project?_\n- _What decisions did the author make to curate their app?_\n- _What can you tell about the person who made this project?_\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to an example time capsule app. Students should understand how sounds and images can be used to visually represent and enhance a story. Students should also begin noticing how each author of a story has their own way of curating and personalizing the content they wish to use.\n",
-        "name": "Time Capsule Example"
-      },
-      "seeding_key": {
-        "activity_section.key": "8157bf6e-c1a1-442d-8d89-11ebda7c6e08",
-        "lesson_activity.key": "7ebbe822-76b3-47ab-b9c0-3e54e8bede19"
-      }
-    },
-    {
       "key": "6a648cd0-a426-40e3-b0ac-2d1ca95b4215",
-      "position": 3,
+      "position": 4,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The discussion questions serve as a great opportunity to do a Think, Pair, Share activity. Students will first watch the time capsule app as a class. Then they will pair up and discuss the questions with a partner. After providing time for students to discuss in pairs, bring students together for a full class discussion."
+            "markdown": "Give students 10 seconds of **think time** before allowing responses. This will allow more students to participate and responses may be more thoughtful. \n\nHave students **turn & talk** to share initial ideas. This will allow all students to be involved in the discussion rather than just a few. "
           }
         ]
       },
@@ -544,9 +472,9 @@
       "key": "b2409699-c5e4-4910-b7aa-4254be931b67",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Your Task” slide\n\n**Say**: _Today you will plan out your time capsule app before coding it next class. As you plan, think about what someone in the future would want to learn about your life._\n\n_Imagine your future grandchildren ask you what it was like when you were young. They want to see life through your eyes._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Plan Your Time Capsule” slide\n\n**Discuss**: \n- _What do you do when you go home?_\n- _What are your favorite subjects?_\n- _Who are your best friends?_\n- _What does your family do on weekends?_\n- _What are your favorite foods?_\n- _What are your favorite shows, videos or books_ \n- _Who is your favorite streamer or YouTuber?_\n- _What else would you want to share about your life?_\n\n**Do This**: Hand out the Plan Your Time Capsule Questions sheet to students. Have them pair up with a partner and answer the questions about their own lives.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Plan Your Time Capsule” slide\n\n**Do this**: Have students pair up with a partner and read through the brainstorming questions. Explain to students that today they will pick 3 questions to answer. They should decide which 3 questions they have the most to say about and would be excited to answer for someone in the future. Students should tell their partner which questions they are going to pick and how they are going to answer those questions.",
         "duration": "10",
-        "name": "Plan Your Time Capsule"
+        "name": "Brainstorming"
       },
       "seeding_key": {
         "activity_section.key": "b2409699-c5e4-4910-b7aa-4254be931b67",
@@ -554,8 +482,19 @@
       }
     },
     {
-      "key": "83121f96-6464-4778-af3c-0f0922e7cd6c",
+      "key": "43ba1f1e-090d-4354-a300-c1c2f6a70568",
       "position": 2,
+      "properties": {
+        "description": "**1. What is something important or interesting that has happened recently?** \n\n   - _Think of something that someone in the future has to know or would enjoy knowing._ \n\n   - _Think about things you have seen in the news recently._\n\n**2. What is something that has changed recently?** \n\n   - _Think of something that is different now than in the past._\n\n   - _Think about things your parents have told you from when they were kids._\n\n**3. What is something popular recently?**\n\n   - _Think of something that is exciting for you and many others right now._\n\n**4. What is something new?** \n    \n   - _Think of something that was invented recently._\n\n**5. What is something you are worried about?**\n\n   - _Think of something that you hope has a solution in the future._\n\n**6. What is something you do every single day?** \n   \n   - _Think of someone in the future hearing about a regular day in your life._\n\n**7. What else would you want to share about your life?** \n    \n   - _This is more of an open question for students to get creative._\n\n**Do this**: Once students have had a chance to discuss with a partner, pass out the brainstorming handout. Students should write in their answers for at least 3 of the questions."
+      },
+      "seeding_key": {
+        "activity_section.key": "43ba1f1e-090d-4354-a300-c1c2f6a70568",
+        "lesson_activity.key": "e9b8f568-f523-4605-9d7f-c47e32e92379"
+      }
+    },
+    {
+      "key": "83121f96-6464-4778-af3c-0f0922e7cd6c",
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -571,9 +510,9 @@
     },
     {
       "key": "a9e12d73-0945-4824-888b-5b3d445aec96",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story: Example” slide\n\n**Say**: _Before you begin writing your time capsule story, we are going to look at an example. This is the same story we saw at the beginning of class. Just like this student, before you begin coding, you are going to write out each line of your story._\n\n_Title: A New World_\n\n_By: Nate M._ \n\n_1. When our school closed its doors_\n\n_2. And we went home to learn_ \n\n_3. I felt very alone_\n\n_4. But then I got really into Minecraft_ \n\n_5. And played Roblox with my friends!_\n\n_6. And now I'm back in school_\n\n_7. Where other people like games, too_\n\n_8. And I have so many more friends now!_\n\n**Do This**: Read the example time capsule story aloud to students. Make sure students recognize that it is the same story from the example app at the beginning of class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story” slide\n\n**Say**: _Now you will take what you said to your partner and use it to guide your writing as you craft an original time capsule story. Your story should have 5-8 lines, at least three different pieces of information about you, and clear details that describe life through your eyes_\n\n**Do This**: Hand out the Write Your Own Story worksheet and have students complete it independently for the next 15 minutes. Make sure students can see the connection between their responses to the seven questions and their time capsule story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Visualize Your Story” slide\n\n**Say**: _Now that we’ve finished writing our stories, it is time to plan out what our apps will look like. You are going to circle words or phrases from your story that you can enhance using visual effects, sounds, or images._ \n\n_What words or phrases did this student circle? How did he represent those words or phrases in his time capsule app?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule” slide\n\n**Discuss**: _What are some potential ideas for your time capsule short stories?_\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule short story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule?_\n\n- _What **text effects** might go with your time capsule?_\n\n- _What **sounds** might go with your time capsule?_\n\n- _What **sprites** might go with your time capsule?_\n\n**Do This**: Have students flip their handout to the other side. They will select one idea from the brainstorming session to use for their time capsule short story. Students should come up with a title and about 8 lines of story. Afterwards, students will begin thinking about how they will code their time capsule to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short story.",
         "duration": "20",
         "name": "Write Your Time Capsule"
       },
@@ -583,35 +522,13 @@
       }
     },
     {
-      "key": "3d2ace9e-aac7-4e02-a8b3-82cbe1fef976",
-      "position": 4,
-      "properties": {
-        "description": "\n\n\n![](https://images.code.org/595afd9736ea14fe4f54aa3a6db8ef13-Screen Shot 2022-04-27 at 12.52.25 PM.png)"
-      },
-      "seeding_key": {
-        "activity_section.key": "3d2ace9e-aac7-4e02-a8b3-82cbe1fef976",
-        "lesson_activity.key": "e9b8f568-f523-4605-9d7f-c47e32e92379"
-      }
-    },
-    {
-      "key": "96caf993-5cea-4bc8-926f-99759361a79a",
-      "position": 5,
-      "properties": {
-        "description": "\n**Do This**: Call students’ attention to the “Visualize Your Story” slide. See if students can remember how the student chose to visually represent the words circled. Now direct students back to their handouts to circle specific words or phrases in their own stories that can be enhanced by visual effects, sounds, or images."
-      },
-      "seeding_key": {
-        "activity_section.key": "96caf993-5cea-4bc8-926f-99759361a79a",
-        "lesson_activity.key": "e9b8f568-f523-4605-9d7f-c47e32e92379"
-      }
-    },
-    {
       "key": "a3315060-1eea-41f9-b43a-fb3f72ae37d5",
-      "position": 6,
+      "position": 5,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students read over their story a few times to help them visualize how it would look with visual effects and images. If students are having trouble thinking of words or phrases to animate, have them reflect on the poem apps they saw in the Poem Art lesson."
+            "markdown": "Have students read over their story a few times to help them imagine how it would look with visual effects and images. If students are having trouble thinking of words or phrases to animate, have them reflect on the examples they saw in the Poem Art lesson."
           }
         ]
       },
@@ -624,7 +541,7 @@
       "key": "f4eb408f-86cf-4da0-9ed6-4dd6c5113b85",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Look at the words you circled._ \n\n_How might someone else interpret those words?_ \n\n_What feelings or thoughts do you hope the viewer gets from reading your story?_\n\n**Discussion Goal**: Students should be able to name specific emotions or thoughts that the viewer will be left with after reading their time capsule story. Students should also understand the power of curation and how every person can interpret the same content differently.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your short story to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short story to use in their time capsule app. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -637,7 +554,7 @@
       "key": "c596146a-a029-4d5d-bbfe-bed1b4c034c2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Life in a Pandemic” slide\n\n***Life in a Pandemic*** \\\n*No school in two years. \\\nMy friends wear masks. \\\nSome parents hate them but we like them. \\\nI’m sad I can’t play with my friends. \\\nWe can’t visit grandma, could get her sick. \\\nBut we get to video call her a lot.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Stories: March on Washington” slide\n\n***March on Washington*** \\\n*I went with my family to Washington, DC. \\\nWe came all the way from Little Rock, Arkansas. \\\nTo hear Dr. Martin Luther King speak. \\\nHe said “I have a dream that my four little children\\\nWill one day live in a nation \\\nWhere they will not be judged \\\nBy the color of their skin \\\nBut by the content of their character.\"*\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule?_",
         "duration": "5",
         "name": "Read Time Capsule Examples"
       },
@@ -650,7 +567,13 @@
       "key": "42dc9a29-397f-4814-811f-819cffa02af7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Cafeteria Lunches” slide\n\n**Cafeteria Lunches** \\\n*The menu for this week: \\\nMonday - Chicken Patty with Gravy \\\nTuesday - Spaghetti \\\nWednesday - Pepperoni Pizza \\\nThursday - Chicken Patty (again!?) \\\nFriday - Salisbury Steak (AKA mystery meat) \\\nI heard in other countries \\\nThey get fresh fruit \\\nSure sounds nice* \n\n**Do This**: Read the time capsule stories aloud as a class. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Stories: A Special Day in 1969” slide\n\n***A Special Day in 1969*** \\\n*This is how our evening goes \\\nAnother bowl of new Spaghettios \\\nThe Beatles are on our radios \\\nSiblings play Rock 'em Sock 'em delivering blows \\\nBut I sit and wait to hear \\\nThe news that's near \\\nThe country waits in fear \\\nSuccess! We stand and cheer! \\\nIt's one small step for man. \\\nOne giant leap for mankind.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule?_\n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Optional: The two stories featured in the slides are student examples to use with your class. Instead of using the provided time capsule short stories, you can insert your own original time capsule short story or use student examples from the previous lesson. Try to pick stories that have words or phrases that students can easily visualize.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "42dc9a29-397f-4814-811f-819cffa02af7",
@@ -658,37 +581,9 @@
       }
     },
     {
-      "key": "a5e05876-af58-460d-9c04-ce7b2bb79469",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: Discuss with a partner what images you visualize and what sounds you hear when you read the stories.  How would you curate these stories? How is your idea similar to or different from your partner’s idea? \n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized.  The warm-up discussion is a review for students to practice visualizing stories and understand how curating content is often dependent upon the creator."
-      },
-      "seeding_key": {
-        "activity_section.key": "a5e05876-af58-460d-9c04-ce7b2bb79469",
-        "lesson_activity.key": "5876fe21-0d3e-4ed2-a244-380e6b80479f"
-      }
-    },
-    {
-      "key": "a21fc34f-8c7a-4b7e-9702-e79cfe4e0005",
-      "position": 4,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The two stories featured in the slides are student examples to use with your class. If you prefer, you can instead feature your own students’ stories the Warm Up section. Try to pick stories that have words or phrases that students can easily visualize."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a21fc34f-8c7a-4b7e-9702-e79cfe4e0005",
-        "lesson_activity.key": "5876fe21-0d3e-4ed2-a244-380e6b80479f"
-      }
-    },
-    {
       "key": "1c1ae9b5-fb30-44b1-84b7-7ed158a6975a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Free Play” slide\n",
         "name": "Code Your Own Time Capsule",
         "progression_name": "Free Play "
       },
@@ -701,7 +596,7 @@
       "key": "72c175e8-720f-4990-9daa-645efa456603",
       "position": 2,
       "properties": {
-        "description": "Now it is time to start coding our time capsule stories. You are going to take the story you wrote last class and code it as a time capsule app. As you add blocks to your program, refer back to the handout you completed to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go back to the Poem Art tutorial to refresh your memory. \n\nI will briefly walk through the steps you need to complete in order to create your time capsule app and then you will begin coding.\n",
+        "description": "Now it is time to start coding our time capsule stories. You are going to take the story you wrote last class and code it as a time capsule app. As you add blocks to your program, refer back to the handout you completed to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go back to the tutorial in Lesson 1 to refresh your memory. \n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -713,7 +608,7 @@
       "key": "8e35c560-12b3-44a6-9bc1-12441ac96fb3",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Your Story” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add a Background” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Sprites” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Effects and Sounds” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Events” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Review” slide\n\n**Do This**: Have students move to their computers and sign in. Students will now code their time capsule apps in Poem Art. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from Poem Art tutorial to enhance their time capsule stories. Circulate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story."
+        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule story. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule stories. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Story” slide \n\n**Debugging tips**: \n\n**Level 1**: Students will be introduced to a couple new blocks: set title, set author and add line. Students will fill in the text for each block using the time capsule short story they wrote last class. They will write in their title, their own name or nickname, and each line of their short story. They may need to add additional blocks to match the number of lines in their short story. \n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 2-7 - Bring Your Time Capsule to Life\" slide\n\n**Levels 2-7**: In levels 2-7, students will use the skills from lesson 1 to add backgrounds, text effects, sounds, sprites, events and sprite behaviors. Students have the option to rewatch any of the videos.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8e35c560-12b3-44a6-9bc1-12441ac96fb3",
@@ -721,24 +616,51 @@
       }
     },
     {
-      "key": "3b92a933-cc16-49f5-bda5-b71f1cc22dbf",
+      "key": "944ffb74-2d51-476f-aa4c-323cee994d84",
       "position": 4,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Walk around and observe how students are doing with their code.  Refer them back to the Poem Art Tutorial if they need a refresher on adding in blocks. Additionally, you can encourage students to pair program. They can ask their classmates for help with adding in code and debugging their programs."
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on:\n\n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "3b92a933-cc16-49f5-bda5-b71f1cc22dbf",
+        "activity_section.key": "944ffb74-2d51-476f-aa4c-323cee994d84",
+        "lesson_activity.key": "cd54ee3d-d28c-4cd7-b3b3-abe50058208a"
+      }
+    },
+    {
+      "key": "ffd1b276-3636-461f-82fd-6c9fd8b4030d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Lesson 8 - Partner Share and Final Revisions\" slide\n\n**Level 8**: Before starting this level, students should show their work to a partner. After a brief discussion, students have the opportunity to finish their time capsule and make any last revisions."
+      },
+      "seeding_key": {
+        "activity_section.key": "ffd1b276-3636-461f-82fd-6c9fd8b4030d",
+        "lesson_activity.key": "cd54ee3d-d28c-4cd7-b3b3-abe50058208a"
+      }
+    },
+    {
+      "key": "2e7afe35-71e6-40ac-8504-45f071a57bb7",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "By viewing each other’s projects, students are able to problem-solve challenges, get inspired with new ideas, and improve on their own projects.\n\nLet students know who will be sharing first and facilitate the partners taking turns. Circulate during the pair share to listen in on conversations. Consider sharing a meaningful comment you overhear with the whole group afterwards. Identify students that would benefit from additional support."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2e7afe35-71e6-40ac-8504-45f071a57bb7",
         "lesson_activity.key": "cd54ee3d-d28c-4cd7-b3b3-abe50058208a"
       }
     },
     {
       "key": "022a53ca-c1aa-42bc-8632-eef1d37feb84",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "My Time Capsule"
       },
@@ -751,8 +673,8 @@
       "key": "bda85075-aa54-4eeb-973c-2c68a545d744",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Watch your program run again._\n\n_What do you hope a future historian might learn from your program?_ \n\n_What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
-        "duration": "10",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What do you hope someone in the future might learn from your time capsule app?_\n- _What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
+        "duration": "5",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -863,23 +785,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-poem-art-intro-video-level_2022"
-        ],
         "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-poem-art-intro-video-level_2022"
+          "csc_time capsule_intro video_2022"
         ],
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "526165a5-2a15-4056-b00b-ff5e5443d913"
+        "activity_section.key": "d3be155d-591d-4926-b920-74f7375b49f1"
       },
       "level_keys": [
-        "csc-poem-art-intro-video-level_2022"
+        "csc_time capsule_intro video_2022"
       ]
     },
     {
@@ -888,9 +807,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_backgroundEffects_2022"
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_timecapsule_predict3_2022"
         ],
+        "lesson.key": "Poem Art",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2022",
+        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
+      },
+      "level_keys": [
+        "csc_timecapsule_predict3_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -901,22 +839,19 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_backgroundEffects_2022"
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_exemplar1_2022"
-        ],
-        "progression": "Example"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -926,16 +861,16 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "b97e9038-909e-4aea-913e-57351442e7d0"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_exemplar1_2022"
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 1,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -958,14 +893,11 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 1,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_events1_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -976,22 +908,19 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "cfd463a5-fc13-431e-a182-f7d905b55760"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_events1_2022"
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 1,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_exemplar2_2022"
-        ],
-        "progression": "Example"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1001,21 +930,18 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "778f2acc-f3ce-4e12-9719-03ce5ab61803"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_exemplar2_2022"
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 1,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_addSprites_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1026,21 +952,18 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "246e1723-c307-438c-8260-1a4c0d1d7ee3"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_addSprites_2022"
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 2,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_spriteBehaviors_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1051,21 +974,18 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "246e1723-c307-438c-8260-1a4c0d1d7ee3"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_spriteBehaviors_2022"
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 3,
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_spriteSizes_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1076,22 +996,19 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "246e1723-c307-438c-8260-1a4c0d1d7ee3"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_spriteSizes_2022"
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 1,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_hoc_freeplay_2022"
-        ],
-        "progression": "Free Play"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1101,22 +1018,19 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "c960bfa0-994a-462d-a740-0865692f0d3b"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "poetry_hoc_freeplay_2022"
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 1,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-poem-art-outro-video-level_2022"
-        ],
-        "progression": "Video"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1126,14 +1040,14 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "2e3938c5-0022-46aa-ba7c-4dbe3cbc4102"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       },
       "level_keys": [
         "csc-poem-art-outro-video-level_2022"
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1161,14 +1075,26 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csc-poem-art-intro-video-level_2022",
+        "level.key": "csc_time capsule_intro video_2022",
         "script_level.level_keys": [
-          "csc-poem-art-intro-video-level_2022"
+          "csc_time capsule_intro video_2022"
         ],
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "526165a5-2a15-4056-b00b-ff5e5443d913"
+        "activity_section.key": "d3be155d-591d-4926-b920-74f7375b49f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_timecapsule_predict3_2022",
+        "script_level.level_keys": [
+          "csc_timecapsule_predict3_2022"
+        ],
+        "lesson.key": "Poem Art",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2022",
+        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
       }
     },
     {
@@ -1180,7 +1106,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "45db9776-4519-4911-95d3-06f748865b72"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1192,7 +1118,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "b97e9038-909e-4aea-913e-57351442e7d0"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1216,7 +1142,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "cfd463a5-fc13-431e-a182-f7d905b55760"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1228,7 +1154,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "778f2acc-f3ce-4e12-9719-03ce5ab61803"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1240,7 +1166,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "246e1723-c307-438c-8260-1a4c0d1d7ee3"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1252,7 +1178,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "246e1723-c307-438c-8260-1a4c0d1d7ee3"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1264,7 +1190,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "246e1723-c307-438c-8260-1a4c0d1d7ee3"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1276,7 +1202,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "c960bfa0-994a-462d-a740-0865692f0d3b"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1288,7 +1214,7 @@
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2022",
-        "activity_section.key": "2e3938c5-0022-46aa-ba7c-4dbe3cbc4102"
+        "activity_section.key": "907f6935-328a-4d7e-8bc6-69c694b232e0"
       }
     },
     {
@@ -1330,8 +1256,8 @@
       }
     },
     {
-      "name": "Plan Your Time Capsule",
-      "url": "https://docs.google.com/document/d/1E6Ev3uJ-J31471jMnPjQnFoXCL_xUbyi8aTiP_o_dUI/template/preview",
+      "name": "Write Your Own Time Capsule",
+      "url": "https://docs.google.com/document/d/1Bs4DV4Da2etiOJIjd6GxmVfAbJeS4YRfmg69BxKIZ60/template/preview",
       "key": "plan_your_time_capsule",
       "properties": {
         "audience": "Student",
@@ -1390,44 +1316,74 @@
       }
     },
     {
+      "name": "Poem Art Celebration Video (optional)",
+      "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+      "key": "poem_art_celebration_video_optional_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_celebration_video_optional_"
+      }
+    },
+    {
+      "name": "Poem Art Events Video (optional)",
+      "url": "https://youtu.be/XGwYYUEb6jQ",
+      "key": "poem_art_events_video_optional_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_events_video_optional_"
+      }
+    },
+    {
+      "name": "Poem Art Video (optional)",
+      "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+      "key": "poem_art_video_optional_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_video_optional_"
+      }
+    },
+    {
       "name": "Time Capsule",
-      "url": "https://docs.google.com/presentation/d/1wVDXMaozOJXt-gqN0Kgp_rCy0U_CYKdkQOywN0S6tWI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1bxTI55bz0KT6j4ru3_mtu2Eskiba2W1W-TW7ewRX8oo/template/preview",
       "key": "time_capsule",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1wVDXMaozOJXt-gqN0Kgp_rCy0U_CYKdkQOywN0S6tWI/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1bxTI55bz0KT6j4ru3_mtu2Eskiba2W1W-TW7ewRX8oo/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "time_capsule"
       }
-    },
-    {
-      "name": "Time Capsule App",
-      "url": "https://studio.code.org/projects/poetry_hoc/GQIx_bn2YCfP7z892faOmnGVbrXb9CUG41_vp66vWFo",
-      "key": "time_capsule_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "time_capsule_app"
-      }
-    },
-    {
-      "name": "Write Your Own Story",
-      "url": "https://docs.google.com/document/d/1Pqc7lV1s3sUx5YfdEsWCbjq9g49GbyKrRx_ujjQQjh4/template/preview",
-      "key": "write_your_own_story",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "write_your_own_story"
-      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "resource.key": "poem_art_celebration_video_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "resource.key": "poem_art_events_video_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "resource.key": "poem_art_video_optional_"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Coding My Time Capsule",
@@ -1493,18 +1449,6 @@
         "lesson.key": "The Time We Live In",
         "resource.key": "time_capsule"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "resource.key": "time_capsule_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "resource.key": "write_your_own_story"
-      }
     }
   ],
   "scripts_resources": [
@@ -1514,36 +1458,6 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "code",
-      "word": "Code",
-      "definition": "(v) to write instructions for a computer.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "code"
-      }
-    },
-    {
-      "key": "curator",
-      "word": "Curator",
-      "definition": "A person who selects content for presentation, such as in a museum",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "curator"
-      }
-    },
-    {
-      "key": "enhance",
-      "word": "Enhance",
-      "definition": "To increase or improve the quality of something",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "enhance"
-      }
-    },
     {
       "key": "event",
       "word": "Event",
@@ -1555,19 +1469,19 @@
       }
     },
     {
-      "key": "line",
-      "word": "Line",
-      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin.",
+      "key": "imagery",
+      "word": "Imagery",
+      "definition": "Mental images produced by a story",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "line"
+        "vocabulary.key": "imagery"
       }
     },
     {
       "key": "mood",
       "word": "Mood",
-      "definition": "the expression of a feeling, atmosphere, or emotion in art or writing.",
+      "definition": "The expression of a feeling, atmosphere, or emotion in art or writing.",
       "properties": {
       },
       "seeding_key": {
@@ -1575,19 +1489,19 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "An image or character in your program",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "program"
+        "vocabulary.key": "sprite"
       }
     },
     {
       "key": "time_capsule",
       "word": "Time Capsule",
-      "definition": "A place to hold memories and everyday items which represent a day in the life of someone living during a specific time period. ",
+      "definition": "A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. ",
       "properties": {
       },
       "seeding_key": {
@@ -1596,18 +1510,6 @@
     }
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Coding My Time Capsule",
-        "vocabulary.key": "curator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Coding My Time Capsule",
-        "vocabulary.key": "enhance"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Coding My Time Capsule",
@@ -1623,19 +1525,13 @@
     {
       "seeding_key": {
         "lesson.key": "Poem Art",
-        "vocabulary.key": "code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Poem Art",
         "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Poem Art",
-        "vocabulary.key": "line"
+        "vocabulary.key": "imagery"
       }
     },
     {
@@ -1647,19 +1543,7 @@
     {
       "seeding_key": {
         "lesson.key": "Poem Art",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "vocabulary.key": "curator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Time We Live In",
-        "vocabulary.key": "enhance"
+        "vocabulary.key": "sprite"
       }
     },
     {
@@ -1676,7 +1560,7 @@
     {
       "key": "22a573dd-737a-4593-8219-1e0085a559fa",
       "properties": {
-        "description": "Code visual effects, sounds, and images that enhance their time capsule narratives"
+        "description": "Animate their time capsule story using blocks that set background, text effects, sprites, sounds, and events."
       },
       "seeding_key": {
         "lesson.key": "Coding My Time Capsule",
@@ -1694,33 +1578,13 @@
       }
     },
     {
-      "key": "5d11c315-974d-4cdc-bd82-dffc68b39464",
+      "key": "61cd5ca7-ebc5-425d-a240-677ba29fbccb",
       "properties": {
-        "description": "Represent figurative and literal language in a text."
+        "description": "Animate an existing time capsule story using blocks that set background, text effects, sounds, sprite and events"
       },
       "seeding_key": {
         "lesson.key": "Poem Art",
-        "objective.key": "5d11c315-974d-4cdc-bd82-dffc68b39464"
-      }
-    },
-    {
-      "key": "610b920c-aa7b-41dd-942e-e7e03f581c06",
-      "properties": {
-        "description": "Illustrate shifts in the mood of a poem."
-      },
-      "seeding_key": {
-        "lesson.key": "Poem Art",
-        "objective.key": "610b920c-aa7b-41dd-942e-e7e03f581c06"
-      }
-    },
-    {
-      "key": "617a39d6-d7fb-41bc-933e-8bff8e7a40bc",
-      "properties": {
-        "description": "Develop programs that respond to timed events."
-      },
-      "seeding_key": {
-        "lesson.key": "Poem Art",
-        "objective.key": "617a39d6-d7fb-41bc-933e-8bff8e7a40bc"
+        "objective.key": "61cd5ca7-ebc5-425d-a240-677ba29fbccb"
       }
     },
     {
@@ -1744,13 +1608,13 @@
       }
     },
     {
-      "key": "9c0de44f-db64-4776-afa7-687b380e3552",
+      "key": "9a260dfd-9dab-4787-85b4-4d6b5d07988c",
       "properties": {
-        "description": "Discuss how a viewer might interpret art in different ways"
+        "description": " Define mood and imagery"
       },
       "seeding_key": {
-        "lesson.key": "Coding My Time Capsule",
-        "objective.key": "9c0de44f-db64-4776-afa7-687b380e3552"
+        "lesson.key": "Poem Art",
+        "objective.key": "9a260dfd-9dab-4787-85b4-4d6b5d07988c"
       }
     },
     {
@@ -1766,7 +1630,7 @@
     {
       "key": "ae6e35c2-c792-4c9e-8dd1-9bac7d3aa196",
       "properties": {
-        "description": "Embody the role of a curator by planning their own time capsule narratives"
+        "description": "Plan and write their own time capsule narratives"
       },
       "seeding_key": {
         "lesson.key": "The Time We Live In",
@@ -1776,7 +1640,7 @@
     {
       "key": "ae7a4f34-f6e7-4561-9879-305e0d4043a2",
       "properties": {
-        "description": "Reflect on their life in the current time they're living in and choose memories and items that reflect their identity"
+        "description": "Define a time capsule"
       },
       "seeding_key": {
         "lesson.key": "The Time We Live In",
@@ -1784,13 +1648,13 @@
       }
     },
     {
-      "key": "f3c230b8-8a47-44e9-a4e0-de6a3f0d560c",
+      "key": "d0543f33-3892-4cb3-bed8-7d7b0f946a85",
       "properties": {
-        "description": "Review and discuss how other curators used visual storytelling to create an experience for their viewers"
+        "description": "Brainstorm ideas for their own time capsule all about the history of now"
       },
       "seeding_key": {
-        "lesson.key": "Coding My Time Capsule",
-        "objective.key": "f3c230b8-8a47-44e9-a4e0-de6a3f0d560c"
+        "lesson.key": "Poem Art",
+        "objective.key": "d0543f33-3892-4cb3-bed8-7d7b0f946a85"
       }
     }
   ],

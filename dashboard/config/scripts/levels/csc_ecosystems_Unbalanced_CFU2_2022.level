@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "## Predict\r\n\r\nDescribe why the coral stays healthy in the simulation. \r\n\r\n\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2021"
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2022-08-09T22:45:04.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-08-09T22:45:04.286+00:00\",\"changed\":[\"cloned from \\\"poem art predict_library\\\"\"],\"cloned_from\":\"poem art predict_library\"},{\"changed_at\":\"2022-08-09 22:45:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

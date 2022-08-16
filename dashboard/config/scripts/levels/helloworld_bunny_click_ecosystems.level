@@ -63,21 +63,18 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "What makes these sprites talk?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the sprites while the program is running.\",\"hint_id\":\"hw_click_sprites\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5ccdc39ffb113caab99c572f56a16df/helloworld_food_click.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to change any of the code in this level.\",\"hint_id\":\"hw_no_changes\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ec039212f05e3efb2779a92da1ee94a/helloworld_food_click.mp3\"}]",
-    "instructions_icon": "pizza",
+    "instructions_icon": "rabbit",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel4();",
     "skip_autosave": true,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-07-25T00:42:58.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-07-25T00:42:58.000Z",
   "user_id": 9,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-07-25T00:42:58.403+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_click_ecosystems\"},{\"changed_at\":\"2022-07-25 00:46:08 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-07-25T00:42:58.403+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_click_ecosystems\"},{\"changed_at\":\"2022-07-25 00:46:08 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-02 17:31:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-02 20:53:04 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-08 23:22:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-08 23:24:33 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -87,21 +84,21 @@
         <block type="when_run" movable="false">
           <next>
             <block type="gamelab_setBackgroundImageAs" can_disconnect_from_parent="false">
-              <title name="IMG">"gradient_10_1"</title>
+              <field name="IMG">"meadow"</field>
               <next>
                 <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
-                  <title name="ANIMATION_NAME">"face_cupcake_1"</title>
+                  <field name="ANIMATION_NAME">"rabbit-1"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                      <title name="LOCATION">{"x":100,"y":200}</title>
+                      <field name="LOCATION">{"x":160,"y":283}</field>
                     </block>
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
-                      <title name="ANIMATION_NAME">"face_icecreamcone_1"</title>
+                      <field name="ANIMATION_NAME">"rabbit-snowy"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                          <title name="LOCATION">{"x":300,"y":200}</title>
+                          <field name="LOCATION">{"x":275,"y":284}</field>
                         </block>
                       </value>
                     </block>
@@ -112,36 +109,36 @@
           </next>
         </block>
         <block type="gamelab_spriteClicked" movable="false">
-          <title name="CONDITION">"when"</title>
+          <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_cupcake_1"</title>
+              <field name="ANIMATION">"rabbit-1"</field>
             </block>
           </value>
           <next>
             <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
-              <title name="SPEECH">Sweet!</title>
+              <field name="SPEECH">Hi!</field>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                  <title name="ANIMATION">"face_cupcake_1"</title>
+                  <field name="ANIMATION">"rabbit-1"</field>
                 </block>
               </value>
             </block>
           </next>
         </block>
         <block type="gamelab_spriteClicked" movable="false">
-          <title name="CONDITION">"when"</title>
+          <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_icecreamcone_1"</title>
+              <field name="ANIMATION">"rabbit-snowy"</field>
             </block>
           </value>
           <next>
             <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
-              <title name="SPEECH">Cool!</title>
+              <field name="SPEECH">Hello!</field>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                  <title name="ANIMATION">"face_icecreamcone_1"</title>
+                  <field name="ANIMATION">"rabbit-snowy"</field>
                 </block>
               </value>
             </block>

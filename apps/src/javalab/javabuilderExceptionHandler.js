@@ -5,7 +5,6 @@ import {
   SoundExceptionType,
   MediaExceptionType,
   TheaterExceptionType,
-  PlaygroundExceptionType,
   EXCEPTION_PREFIX
 } from './constants';
 
@@ -120,17 +119,6 @@ export function getExceptionMessage(exceptionDetails, type) {
       break;
     case TheaterExceptionType.VIDEO_TOO_LARGE:
       error = msg.errorTheaterVideoTooLarge();
-      break;
-
-    // Playground exceptions
-    case PlaygroundExceptionType.PLAYGROUND_RUNNING:
-      error = msg.errorPlaygroundRunning();
-      break;
-    case PlaygroundExceptionType.PLAYGROUND_NOT_RUNNING:
-      error = msg.errorPlaygroundNotRunning();
-      break;
-    case PlaygroundExceptionType.INVALID_MESSAGE:
-      error = msg.errorPlaygroundInvalidMessage();
       break;
 
     default:

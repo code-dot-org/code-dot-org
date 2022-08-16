@@ -725,6 +725,19 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_rubric_property(property)
+    if should_localize?
+      I18n.t(
+        property,
+        scope: [:data, :mini_rubric, name],
+        default: properties[property],
+        smart: true
+      )
+    else
+      properties[property]
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
