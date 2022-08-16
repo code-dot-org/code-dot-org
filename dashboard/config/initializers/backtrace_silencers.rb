@@ -8,10 +8,7 @@
 
 # In addition to backtrace silencing, we also want to silence annoying deprecations:
 silenced = [
-  # Added in Rails 6.0
-  /NOT conditions will no longer behave as NOR in Rails 6.1. To continue using NOR conditions, NOT each condition individually/,
-  /Rails 6.1 will return Content-Type header without modification/,
-  /Initialization autoloaded the constants/,
+  # No deprecations being silenced right now!
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))
