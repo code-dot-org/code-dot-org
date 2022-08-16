@@ -16,8 +16,8 @@ jobs:
       PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
       AWS_ACCESS_KEY_ID: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
       AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}  
-      sauce_access_key: $${{ secrets.SAUCE_ACCESS_KEY }}
-      sauce_username: $${{ secrets.SAUCE_USERNAME }}        
+      SAUCE_ACCESS_KEY: $${{ secrets.SAUCE_ACCESS_KEY }}
+      SAUCE_USERNAME: $${{ secrets.SAUCE_USERNAME }}        
     steps:    
       - name: Get actions code
         uses: actions/checkout@v3    
@@ -41,8 +41,37 @@ jobs:
         run: |
             echo "
             properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+            bundler_use_sudo: false
+            cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
+            cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+            saucelabs_username: $SAUCE_USERNAME
+            saucelabs_authkey: $SAUCE_ACCESS_KEY
+            ignore_eyes_mismatches: true
+            disable_all_eyes_running: true
+            firebase_name: $FIREBASE_NAME
+            firebase_secret: $FIREBASE_SECRET
+            firebase_shared_secret: $FIREBASE_SHARED_SECRET
+            use_my_apps: true
+            build_dashboard: true
+            build_pegasus: true
+            build_apps: true
+            localize_apps: true
+            dashboard_enable_pegasus: true
+            dashboard_workers: 5
+            skip_seed_all: true
+            no_https_store: true
+            override_dashboard: \"localhost-studio.code.org\"
+            override_pegasus: \"localhost.code.org\"
+            dashboard_port: 3000
+            pegasus_port: 3000
+            animations_s3_directory: animations_circle/42:-2323
+            assets_s3_directory: assets_circle/42:-2323
+            files_s3_directory: files_circle/42:-2323
+            sources_s3_directory: sources_circle/42:-2323
+            libraries_s3_directory: libraries_circle/42:-2323
+            dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"          
             " >> locals.yml        
-      - name: Rake run UI tests
+      - name: Seed run UI tests
         env: 
           CI: true
           RAILS_ENV: test
