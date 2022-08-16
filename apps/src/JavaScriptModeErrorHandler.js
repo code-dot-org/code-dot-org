@@ -29,7 +29,6 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputError(errorString, lineNumber, libraryName) {
-    errorString += '\n';
     this.output_(errorString, LogLevel.ERROR, lineNumber, libraryName);
   }
 
@@ -41,7 +40,6 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputWarning(errorString, lineNumber) {
-    errorString += '\n';
     this.output_(errorString, LogLevel.WARNING, lineNumber);
   }
 
@@ -78,7 +76,7 @@ export default class JavaScriptModeErrorHandler {
     if (lineNumber !== undefined) {
       logText += `Line: ${lineNumber}: `;
     }
-    logText += message;
+    logText += message + '\n';
 
     // Send the assembled output to our logging service.
     this.logTarget_.log(logText, logLevel);
