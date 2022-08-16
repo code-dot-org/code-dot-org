@@ -10,7 +10,8 @@ jobs:
       RACK_ENV: test
       DISABLE_SPRING: 1   
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-      SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}
+      SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
+      LD_LIBRARY_PATH: "/usr/local/lib"
     steps:    
       - name: Get actions code
         uses: actions/checkout@v3    
