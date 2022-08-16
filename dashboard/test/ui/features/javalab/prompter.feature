@@ -1,11 +1,12 @@
 @eyes
+@skip
 Feature: Prompter
 
   @no_ie @no_circle
   Scenario: Upload an image via the prompter
     When I open my eyes to test "Javalab Prompter Image Upload"
     Given I create a levelbuilder named "Simone"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/11"
+    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/10"
     And I wait for the page to fully load
     And I dismiss the teacher panel
     Then I press "#levelbuilder-menu-toggle" using jQuery

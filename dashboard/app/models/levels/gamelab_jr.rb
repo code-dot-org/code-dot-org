@@ -189,6 +189,7 @@ check();
 'if (World.frameCount == 1) {
   setFailTime(150); // Frames to wait before failing student
   setDelayTime(90); // Frames to wait after success before stopping program
+  setSuccessMessage("genericExplore"); // Translated string to show upon success.
 
   addCriteria(function() {
     return minimumSprites(1); // Check whether or not the student created a sprite.

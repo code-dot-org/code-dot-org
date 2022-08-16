@@ -113,7 +113,7 @@ module Poste
     def initialize(path)
       @path = path
       @template_type = File.extname(path)[1..-1]
-      @header, @html, @text = parse_template(IO.read(path))
+      @header, @html, @text = parse_template(File.read(path))
     end
 
     def render(params={})

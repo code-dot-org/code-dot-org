@@ -30,31 +30,31 @@
 }
 
 .nav {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .nav-tabs {
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 .nav-tabs > li {
-  border: 0px;
-  border-radius: 0px;
+  border: 0;
+  border-radius: 0;
 }
 
 // Selected tab
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
-  margin-right: 0px;
+  margin-right: 0;
   color: black;
 }
 
 // Unselected tabs
 .nav-tabs > li > a {
   color: $charcoal;
-  border: 0px;
-  border-radius: 0px;
-  margin-right: 0px;
+  border: 0;
+  border-radius: 0;
+  margin-right: 0;
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -65,18 +65,18 @@
   .nav-tabs > .active > a,
   .nav-tabs > .active > a:hover,
   .nav-tabs > .active > a:focus {
-    border-width: 0px;
-    background-color: rgb(40, 44, 52);
+    border-width: 0;
+    background-color: rgb(40 44 52);
     color: white;
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   // Tabs
   ul > li > a {
     color: $dark_charcoal;
-    border: 0px;
-    border-radius: 0px;
-    margin-right: 0px;
+    border: 0;
+    border-radius: 0;
+    margin-right: 0;
   }
 }
 
