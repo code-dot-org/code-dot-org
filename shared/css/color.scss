@@ -65,20 +65,17 @@ $dark_color: $purple;
 $hdr_color: $purple;
 
 // Some extra colors.
-$lightest_red: #fcc;
 $red: #c00;
-$google_red: #a5201a;
+$lightest_red: #fcc;
 $dark_red: #d62911;
 $realgreen: #008000;
-$emerald_starling: #0ebe0e;
 $realyellow: #ff0;
 $mustardyellow: #efcd1c;
 $twitter_blue: #00aced;
 $facebook_blue: #3b5998;
 $microsoft_blue: #2a5cb2;
 $dark_blue: #00647f;
-$maximum_purple: #682A77;
-$fabulous_fuchsia: #e9118f;
+$google_red: #a5201a;
 $blockly_flyout_gray: #ddd;
 $default_text: #333;
 $border_gray: #bbb;
@@ -99,7 +96,10 @@ $level_review_accepted: rgb(11, 142, 11); // TODO: $level_passed;
 $assessment: $cyan;
 $workspace_running_background: #e5e5e5;
 
-// Sprite Lab validation colors.
+// Experimental Sprite Lab validation colors.
+$dark_purple: #682A77;
+$bright_green: #0ebe0e;
+$neon_pink: #e9118f;
 
 // Links (used in apps).
 $link_color: #0596ce;
