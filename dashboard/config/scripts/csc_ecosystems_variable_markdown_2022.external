@@ -1,0 +1,54 @@
+name 'csc_ecosystems_variable_markdown_2022'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Variables as counters
+##What is a variable?
+Computers can store information like numbers and letters in a **variable.** Variables are like containers for the information to be stored in. 
+<div style="text-align: center;">
+<img src="https://images.code.org/9b8cda09e9b9ac80ca9b5c36ecfe8d0e-image-1660602452690.27.27 PM.png" style="width: 20%"/>
+</div>
+
+
+
+The programmer labels each variable with a name that tells us what kind of information to expect.
+<div style="text-align: center;">
+<img src="https://images.code.org/7c971e4a1061382bf69a39f7e6faaf4f-image-1660602773196.gif" style="width: 20%"/>
+</div>
+
+The information in a variable can be updated over time, which comes in handy when we need a way to keep track of how many times something happens. Programmers refer to this type of variable as a **“counter”.** 
+<div style="text-align: center;">
+<img src="https://images.code.org/1240db89bd0b830497276451882ada6a-image-1660602896786.34.51 PM.png" style="width: 20%"/>
+</div>
+
+##Example
+This programmer created a fishing game for preschoolers. Every time the user clicks on a fish, the program will update heir score and print it on the screen. 
+<div style="text-align: center;">
+<img src="https://images.code.org/19653ca36048056802ae951ac4cd8f31-image-1660603331264.gif"/>
+</div>
+
+##Set the Counter to 0
+
+In this program we are using the variable labeled `score` to keep track of how many times the fish is clicked. The value of `score` is set to 0 when the user clicks “Run.” 
+<div style="text-align: center;">
+<img src="https://images.code.org/4dcd28d53ce971a0de65bc25629014c4-image-1660604260189.57.34 PM.png"/>
+</div>
+
+##Adding +1 to the Counter
+
+Each time a fish is clicked, the computer will add 1 to the number stored inside the `score` variable. If three fish are clicked the value of the `score` variable will be 3. 
+<div style="text-align: center;">
+<img src="https://images.code.org/571c8800cca4dbcbd502260ddf7db3db-image-1660604454541.00.50 PM.png"/>
+</div>
+
+##Showing the Score
+
+How will the preschooler know their score? There is a `print score` block that shows the user the current value of the variable at the top of the screen. 
+<div style="text-align: center;">
+<img src="https://images.code.org/dce41046880a9778ea07300c98f1251c-image-1660604500216.01.37 PM.png"/>
+</div>
+
+
+
+MARKDOWN
