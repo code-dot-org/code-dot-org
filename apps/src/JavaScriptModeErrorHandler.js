@@ -29,6 +29,7 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputError(errorString, lineNumber, libraryName) {
+    errorString += '\n';
     this.output_(errorString, LogLevel.ERROR, lineNumber, libraryName);
   }
 
@@ -40,6 +41,7 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputWarning(errorString, lineNumber) {
+    errorString += '\n';
     this.output_(errorString, LogLevel.WARNING, lineNumber);
   }
 
