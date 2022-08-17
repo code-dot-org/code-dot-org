@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2022-08-12 18:24:53 UTC",
+    "serialized_at": "2022-08-16 19:18:58 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1658,6 +1658,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Solution 1 - Fishing Limits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_variable_markdown_2022"
+        ],
+        "lesson.key": "Model Animal Adaptations",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2022",
+        "activity_section.key": "a3f4a1e4-cbe2-4eb4-bf4a-823024d4f9e2"
+      },
+      "level_keys": [
+        "csc_ecosystems_variable_markdown_2022"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "csc_ecosystems_solution1_2022"
         ],
@@ -1678,9 +1700,9 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1703,8 +1725,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 4,
+      "chapter": 28,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1728,8 +1750,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 5,
+      "chapter": 29,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1753,8 +1775,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 6,
+      "chapter": 30,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1778,8 +1800,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 7,
+      "chapter": 31,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1803,8 +1825,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 8,
+      "chapter": 32,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1828,8 +1850,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 9,
+      "chapter": 33,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1853,8 +1875,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 10,
+      "chapter": 34,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2165,6 +2187,18 @@
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
         "activity_section.key": "8d362481-04d8-464a-a8c2-d78ba21cd768"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_variable_markdown_2022",
+        "script_level.level_keys": [
+          "csc_ecosystems_variable_markdown_2022"
+        ],
+        "lesson.key": "Model Animal Adaptations",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2022",
+        "activity_section.key": "a3f4a1e4-cbe2-4eb4-bf4a-823024d4f9e2"
       }
     },
     {
