@@ -81,18 +81,16 @@ export default class SetupChecklist extends Component {
 
       // Are we using a compatible browser?
       .then(() =>
-        this.detectStep(STATUS_SUPPORTED_BROWSER, () => {
-          console.log('ALPHA');
-          return setupChecker.detectSupportedBrowser();
-        })
+        this.detectStep(STATUS_SUPPORTED_BROWSER, () =>
+          setupChecker.detectSupportedBrowser()
+        )
       )
 
       // Is board plugged in?
       .then(() =>
-        this.detectStep(STATUS_BOARD_PLUG, () => {
-          console.log('BETA');
-          return setupChecker.detectBoardPluggedIn();
-        })
+        this.detectStep(STATUS_BOARD_PLUG, () =>
+          setupChecker.detectBoardPluggedIn()
+        )
       )
 
       // What type of board is this?
@@ -200,27 +198,37 @@ export default class SetupChecklist extends Component {
         />
       );
     } else if (isChromeOS() || isChrome()) {
-      // Chromebooks - Chrome App
-      return (
-        <ValidationStep
-          stepName={
-            applabI18n.makerSetupAppInstalled() +
-            (isChromeOS() ? '' : applabI18n.legacy())
-          }
-          stepStatus={this.state[STATUS_APP_INSTALLED]}
-        >
-          <SafeMarkdown
-            markdown={applabI18n.makerSetupInstallSerialConnector({
-              webstoreURL: CHROME_APP_WEBSTORE_URL
-            })}
+      if (experiments.isEnabled('webserial')) {
+        // Chromebooks use WebSerial for connection
+        return (
+          <ValidationStep
+            stepName={applabI18n.makerSetupBrowserSupported()}
+            stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
           />
-          <br />
-          {applabI18n.makerSetupRedetect()}
-          <br />
-          {applabI18n.makerSetupAcceptPrompt()}
-          {this.contactSupport()}
-        </ValidationStep>
-      );
+        );
+      } else {
+        // Chromebooks - Chrome App
+        return (
+          <ValidationStep
+            stepName={
+              applabI18n.makerSetupAppInstalled() +
+              (isChromeOS() ? '' : applabI18n.legacy())
+            }
+            stepStatus={this.state[STATUS_APP_INSTALLED]}
+          >
+            <SafeMarkdown
+              markdown={applabI18n.makerSetupInstallSerialConnector({
+                webstoreURL: CHROME_APP_WEBSTORE_URL
+              })}
+            />
+            <br />
+            {applabI18n.makerSetupRedetect()}
+            <br />
+            {applabI18n.makerSetupAcceptPrompt()}
+            {this.contactSupport()}
+          </ValidationStep>
+        );
+      }
     } else {
       // Unsupported Browser
       return (
