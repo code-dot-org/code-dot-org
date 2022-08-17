@@ -87,13 +87,13 @@ export default class SetupChecklist extends Component {
       )
 
       // Is Chrome App Installed?
-      .then(
-        () =>
-          (isChromeOS() || isChrome()) &&
-          this.detectStep(STATUS_APP_INSTALLED, () =>
-            setupChecker.detectChromeAppInstalled()
-          )
-      )
+      // .then(
+      //   () =>
+      //     (isChromeOS() || isChrome()) &&
+      //     this.detectStep(STATUS_APP_INSTALLED, () =>
+      //       setupChecker.detectChromeAppInstalled()
+      //     )
+      // )
 
       // Is board plugged in?
       .then(() =>
