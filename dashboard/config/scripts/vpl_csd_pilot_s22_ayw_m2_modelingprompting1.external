@@ -4,35 +4,47 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# Module 2: CS Discoveries Virtual Professional Learning
+# Debugging Practices
 
-## Module 2 Overview
+## Modeling vs. Prompting
 
-##### The first two modules of the CS Discoveries professional learning program focus on the overarching theme of *debugging*. Debugging is a skill that is woven throughout all CS Discoveries units and reinforces problem-solving practices that students need to be successful in computer science.
+##### When helping a student debug, how do you know when to model coding practices for a student, and how do you know when to prompt? Both are useful strategies, but their use is dependent on context.
 
-## How does this asynchronous work connect to the previous synchronous workshop?
+## Modeling
 
-##### During the synchronous call, you participated in a two-hour virtual workshop with your facilitators and cohort. This asynchronous work is designed to be an *extension* of that workshop to further your development in debugging. The following levels will build on what was previously introduced to you synchronously. Further, **the asynchronous portion of Module 2 is not a prerequisite for attending and engaging in your Module 3 synchronous workshop**.
+##### Crafting the *just-right* question for students to help them solve a problem is an important skill to have. However, questioning can confuse students further if they have a shaky understanding of the coding concept at hand. In cases **where a student demonstrates a fundamental mistake that requires re-teaching**, modeling is a great strategy to use.
 
-##### Both synchronous and asynchronous portions of this module fit together to help develop your skills as a CS Discoveries teacher. Here's how debugging content builds on each other in Module 2:
+### Tips for Modeling
 
-### Synchronous Work
+<img src="https://images.code.org/169ef0d1a9ffd58441de25ce3e7b6536-image-1660692843216.jpg" alt="Two students sit at a computer. One student points at the screen while the other looks on." style="border-radius:10px; float: right; height: 180px; clear: both; margin: 0 20px 20px 20px; ">
 
-<img src="https://images.code.org/dfee2a73dc44178a86840fd84ba0e630-image-1660619070902.jpg" alt="Three students sit around a laptop and smile at a camera." style="border-radius:10px; float: right; height: 180px; clear: both; margin: 0 20px 20px 20px; ">
+* ##### **Model one to two items at a time.** Take the time to consider what will be highest-impact for your student when modeling. Limit yourself to one to two items to model so as not to overwhelm students or debug their entire program for them.
 
-##### In the synchronous portion of Module 2, you and your cohort:
+* ##### **Make thinking visible!** Model your thinking for each step of the debugging process to clearly show students the habits and skills that make a good coder. Instead of narrating with, "I'm fixing the mistake...", be specific: "I'm scanning line-by-line and noticing that the variable name on Line 3 is, *dogSprite*, but on Line 26, I see *dog_Sprite* with an underscore..."
 
-* ##### Reviewed sample student projects to identify bugs and help interpret purpose,
-* ##### Discussed how to help students debug projects in small groups, and 
-* ##### Discussed about common inclusion scenarios in the CS Discoveries classroom.
+* ##### **Give students space to try again.** Once you've finished modeling for a student, ask them to try fixing another, similar bug or continue coding. This should give you an idea of how they are progressing and give them an opportunity to debug their own program.
 
-### Asynchronous Work
+## Prompting
 
-##### In the asynchronous portion of Module 2, you will:
+##### A less-invasive technique to help students debug is prompting. This might look like asking students a targeted question or reminding them of a key point from your lesson. In cases **where a student demonstrates general understanding of your lesson objectives but has made a mistake(s)**, prompting is a great strategy to use.
 
-* ##### 
-* ##### 
-* ##### 
+### Tips for Prompting
 
-##### **Suggested time**: 1 hour
+
+<img src="https://images.code.org/0a1e6b2923d655de116602e54d2d1e22-image-1660692947878.jpg" alt="Three students and one teacher look at a desktop computer screen together." style="border-radius:10px; float: right; height: 180px; clear: both; margin: 0 20px 20px 20px; ">
+
+* ##### **Ask students to pinpoint the bug.** Having students articulate what they *wanted* their program to do versus what their program is *actually* doing will help to narrow the scope of debugging.
+
+* ##### **Ask specific questions.** Avoid additional confusion through targeted questions, such as:
+	* ##### "What do you notice on line 21 that's different from line 22?"
+	* ##### "What code in the CSS style sheet do you think is making your headings green?"
+    * ##### "How many sprites have you created in your code so far?"
+    
+* ##### **Restate a key point from your lesson.** In cases where a student might just need a gentle reminder, prompt them with hint and allow them to work it out.
+
+___
+
+## Revisiting Synchronous Work
+
+##### In the next level, you will revisit the programs you discussed during the synchronous portion of this module to decide what should be modeled for a student, and what can be resolved through prompting.
 MARKDOWN
