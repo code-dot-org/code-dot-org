@@ -541,7 +541,7 @@ export var blocks = [
     func: 'startWebRequest',
     parent: api,
     category: 'Data',
-    paletteParams: ['url', 'callback'],
+    paletteParams: ['url', 'header', 'callback'],
     params: [
       '"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"',
       'function(status, type, content) {\n  \n}'
@@ -552,7 +552,7 @@ export var blocks = [
     func: 'startWebRequestSync',
     parent: api,
     category: 'Data',
-    paletteParams: ['url'],
+    paletteParams: ['url', 'header'],
     params: [
       '"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"'
     ],
