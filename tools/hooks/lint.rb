@@ -26,7 +26,7 @@ def filter_eslint_shared(modified_files)
 end
 
 def filter_scss_apps(modified_files)
-  modified_files.select {|f| f.end_with?(".scss")}
+  modified_files.select {|f| f.match(/apps\//) && f.end_with?(".scss")}
 end
 
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile', 'Gemfile'].freeze
