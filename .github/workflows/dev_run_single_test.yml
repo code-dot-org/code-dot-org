@@ -32,8 +32,8 @@ jobs:
       - name: Rake run integration tests
         run:  |
           echo "testing failure"
+          bundle install
           pwd
-          ls
           cd dashboard    
           RAILS_ENV=test bundle exec spring testunit ~/code-dot-org/dashboard/test/lib/image_lib_test.rb
         continue-on-error: true
