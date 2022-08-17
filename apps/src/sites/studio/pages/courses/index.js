@@ -17,7 +17,6 @@ function showCourses() {
   const isEnglish = coursesData.english;
   const isTeacher = coursesData.teacher;
   const linesCount = coursesData.linescount;
-  const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
   const signedOut = coursesData.signedout;
   const modernElementaryCoursesAvailable =
@@ -30,7 +29,6 @@ function showCourses() {
         isEnglish={isEnglish}
         isTeacher={isTeacher}
         linesCount={linesCount}
-        studentsCount={studentsCount}
         codeOrgUrlPrefix={codeOrgUrlPrefix}
         isSignedOut={signedOut}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
