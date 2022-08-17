@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:30.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -113,18 +109,18 @@
     "name_suffix": "_2022",
     "long_instructions": "<img src=\"https://images.code.org/6b0df2eb4a2b61ae12ded3249a4ed1ab-image-1585766972590.gif\" style=\"float:right\">\r\n\r\n# World.mouseX\r\n\r\nThis program uses an `if` block to shake the blender when the mouse is on left side of the screen.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it works.\r\n* Add an `else` to make the mixer shake when the mouse is on the other side of the screen.\r\n\r\n",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables"
     ],
-    "map_reference": "/docs/concepts/javascript/if-else-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-else-statements",
     "video_key": "csd_gamelab_if_else",
     "mini_rubric": "false",
     "encrypted": "false",
@@ -133,6 +129,10 @@
     "thumbnail_url": "https://images.code.org/6b0df2eb4a2b61ae12ded3249a4ed1ab-image-1585766972590.gif",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:30.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:30.097+00:00\",\"changed\":[\"cloned from \\\"CSD U3 If Else_2021\\\"\"],\"cloned_from\":\"CSD U3 If Else_2021\"}]"
