@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:38:26.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -59,7 +55,7 @@
     "encrypted_examples": "Jy9OFLzL2LwVAGemxr9yoIjFkVkEBVZ4VYKDf4yADKmD/Nvgh//+39Lkuja4\nCa7O67sG4ti7mXrruMBNid2f9g==\n",
     "parent_level_id": 20644,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
+    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -68,6 +64,10 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:38:26.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:38:26.778+00:00\",\"changed\":[\"cloned from \\\"CSD U3 fill_2021\\\"\"],\"cloned_from\":\"CSD U3 fill_2021\"}]"
