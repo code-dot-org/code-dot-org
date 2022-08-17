@@ -505,7 +505,6 @@ Dashboard::Application.routes.draw do
     # internal report dashboards
     get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
     get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
-    get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
     get '/admin/debug', to: 'admin_reports#debug'
 
     # internal search tools
