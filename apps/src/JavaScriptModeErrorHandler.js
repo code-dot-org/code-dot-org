@@ -76,8 +76,9 @@ export default class JavaScriptModeErrorHandler {
     if (lineNumber !== undefined) {
       logText += `Line: ${lineNumber}: `;
     }
+    logText += message;
     if (!IN_UNIT_TEST) {
-      logText += message + '\n';
+      logText += '\n';
     }
     // Send the assembled output to our logging service.
     this.logTarget_.log(logText, logLevel);
