@@ -33,6 +33,7 @@ export default class SetupChecker {
         // TODO: Check browser version
         resolve();
       } else if (isChromeOS()) {
+        console.log('Is Chrome OS');
         resolve();
       } else if (isChrome() && gtChrome33()) {
         // Legacy support for Chrome App on Desktop
