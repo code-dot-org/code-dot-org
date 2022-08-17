@@ -1,9 +1,5 @@
 <StandaloneVideo>
   <config><![CDATA[{
-  "game_id": 54,
-  "created_at": "2022-03-30T23:32:55.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "video_key": "csd_weblab_intro_3",
@@ -16,6 +12,10 @@
     "parent_level_id": 20059,
     "name_suffix": "_2022"
   },
+  "level_num": "custom",
+  "game_id": 54,
+  "created_at": "2022-03-30T23:32:55.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:55.592+00:00\",\"changed\":[\"cloned from \\\"CSD U2 publish video_2021\\\"\"],\"cloned_from\":\"CSD U2 publish video_2021\"}]"
