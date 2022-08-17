@@ -63,9 +63,9 @@
     "parent_level_id": 20566,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/accelerometer-events/",
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/accelerometer-events",
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/board-events"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -78,9 +78,9 @@
     "encrypted_examples": "PtOW++z3aBPdWUo2QT0G9tMahvQeh6V+zsR+WGrNtpR32Z75lhRKhxABCP4i\nXlDb72/r0LL1N4BI0HvNmTyKVg==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
   "game_id": 41,
   "created_at": "2022-04-08T17:06:51.000Z",
-  "level_num": "custom",
   "user_id": 568,
   "published": true,
   "notes": "",
