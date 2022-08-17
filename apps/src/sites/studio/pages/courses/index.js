@@ -16,7 +16,6 @@ function showCourses() {
   const coursesData = JSON.parse(script.dataset.courses);
   const isEnglish = coursesData.english;
   const isTeacher = coursesData.teacher;
-  const linesCount = coursesData.linescount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
   const signedOut = coursesData.signedout;
   const modernElementaryCoursesAvailable =
@@ -28,7 +27,6 @@ function showCourses() {
       <Courses
         isEnglish={isEnglish}
         isTeacher={isTeacher}
-        linesCount={linesCount}
         codeOrgUrlPrefix={codeOrgUrlPrefix}
         isSignedOut={signedOut}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
