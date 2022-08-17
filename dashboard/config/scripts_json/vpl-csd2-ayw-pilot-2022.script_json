@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-16 21:11:25 UTC",
+    "serialized_at": "2022-08-16 23:57:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -298,19 +298,8 @@
       }
     },
     {
-      "key": "93ac50aa-8896-49da-8ecc-54a7aee99f88",
-      "position": 3,
-      "properties": {
-        "progression_name": "Using Project Resources"
-      },
-      "seeding_key": {
-        "activity_section.key": "93ac50aa-8896-49da-8ecc-54a7aee99f88",
-        "lesson_activity.key": "a2120e93-8cdf-4b89-9e07-c74767a34899"
-      }
-    },
-    {
       "key": "ed51cbfe-8b60-4db1-ac50-aa65b2c22371",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -498,6 +487,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging Practices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
         ],
         "lesson.key": "lesson-6",
@@ -507,28 +518,6 @@
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Using Project Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M2-UsingProjectResources"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd2-ayw-pilot-2022",
-        "activity_section.key": "93ac50aa-8896-49da-8ecc-54a7aee99f88"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-AYW-M2-UsingProjectResources"
       ]
     },
     {
@@ -641,9 +630,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect",
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
@@ -653,14 +642,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-UsingProjectResources",
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M2-UsingProjectResources"
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd2-ayw-pilot-2022",
-        "activity_section.key": "93ac50aa-8896-49da-8ecc-54a7aee99f88"
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
       }
     },
     {
