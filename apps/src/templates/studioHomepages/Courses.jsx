@@ -34,12 +34,12 @@ class Courses extends Component {
   }
 
   getHeroStrings() {
-    const {isTeacher, isSignedOut, studentsCount} = this.props;
+    const {isTeacher, isSignedOut} = this.props;
 
     // Default to "Learn" view strings
     let heroStrings = {
       headingText: i18n.coursesLearnHeroHeading(),
-      subHeadingText: i18n.coursesLearnHeroSubHeading({studentsCount}),
+      subHeadingText: i18n.coursesMillionsLearnHeroSubHeading(),
       buttonText: i18n.coursesLearnHeroButton()
     };
 
