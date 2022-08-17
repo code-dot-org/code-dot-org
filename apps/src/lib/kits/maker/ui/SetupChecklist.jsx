@@ -81,25 +81,18 @@ export default class SetupChecklist extends Component {
 
       // Are we using a compatible browser?
       .then(() =>
-        this.detectStep(STATUS_SUPPORTED_BROWSER, () =>
-          setupChecker.detectSupportedBrowser()
-        )
+        this.detectStep(STATUS_SUPPORTED_BROWSER, () => {
+          console.log('ALPHA');
+          return setupChecker.detectSupportedBrowser();
+        })
       )
-
-      // Is Chrome App Installed?
-      // .then(
-      //   () =>
-      //     (isChromeOS() || isChrome()) &&
-      //     this.detectStep(STATUS_APP_INSTALLED, () =>
-      //       setupChecker.detectChromeAppInstalled()
-      //     )
-      // )
 
       // Is board plugged in?
       .then(() =>
-        this.detectStep(STATUS_BOARD_PLUG, () =>
-          setupChecker.detectBoardPluggedIn()
-        )
+        this.detectStep(STATUS_BOARD_PLUG, () => {
+          console.log('BETA');
+          return setupChecker.detectBoardPluggedIn();
+        })
       )
 
       // What type of board is this?
