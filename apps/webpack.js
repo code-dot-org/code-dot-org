@@ -248,30 +248,47 @@ function devtool(options) {
   }
 }
 
-var storybookConfig = _.extend({}, baseConfig, {
-  devtool: devtool(),
-  resolve: _.extend({}, baseConfig.resolve, {
-    alias: _.extend({}, baseConfig.resolve.alias, {
-      '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
-    })
-  }),
-  externals: {
-    blockly: 'this Blockly'
-  },
-  plugins: [
-    new webpack.ProvidePlugin({React: 'react'}),
-    new webpack.DefinePlugin({
-      IN_UNIT_TEST: JSON.stringify(false),
-      IN_STORYBOOK: JSON.stringify(true),
-      'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
-      'process.env.NODE_ENV': JSON.stringify(
-        envConstants.NODE_ENV || 'development'
-      ),
-      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
-    }),
-    new webpack.IgnorePlugin(/^serialport$/)
-  ]
-});
+// Customize webpack config for storybook.
+// @param {Object} sbConfig - Webpack configuration from storybook library.
+function storybookConfig(sbConfig) {
+  return {
+    ...sbConfig,
+    // Overwrite aliases
+    resolve: {
+      ...sbConfig.resolve,
+      ...baseConfig.resolve,
+      alias: {
+        ...baseConfig.resolve.alias,
+        '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
+      }
+    },
+    // Overwrite rules
+    module: {
+      ...sbConfig.module,
+      ...baseConfig.module,
+      rules: baseConfig.module.rules
+    },
+    // Overwrite externals
+    externals: {
+      blockly: 'this Blockly'
+    },
+    // Extend plugins
+    plugins: [
+      ...sbConfig.plugins,
+      new webpack.ProvidePlugin({React: 'react'}),
+      new webpack.DefinePlugin({
+        IN_UNIT_TEST: JSON.stringify(false),
+        IN_STORYBOOK: JSON.stringify(true),
+        'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
+        'process.env.NODE_ENV': JSON.stringify(
+          envConstants.NODE_ENV || 'development'
+        ),
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
+      }),
+      new webpack.IgnorePlugin(/^serialport$/)
+    ]
+  };
+}
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
