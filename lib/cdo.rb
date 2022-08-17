@@ -143,7 +143,7 @@ module Cdo
       else
         # TODO: Update to use this URL once we have Route53 set up for API Gateway
         # site_url('javabuilder.code.org', '', 'wss')
-        'wss://javabuilderbeta.code.org'
+        'wss://javabuilder.code.org'
       end
     end
 
@@ -153,7 +153,7 @@ module Cdo
         # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
         'http://localhost:8080/javabuilderfiles/seedsources'
       else
-        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
+        'https://javabuilder-http.code.org/seedsources/sources.json'
       end
     end
 
