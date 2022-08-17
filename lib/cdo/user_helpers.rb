@@ -60,11 +60,6 @@ module UserHelpers
     username
   end
 
-  def self.random_donor
-    weight = SecureRandom.random_number
-    PEGASUS_DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
-  end
-
   def self.age_from_birthday(birthday)
     ((Date.today - birthday) / 365).to_i
   end
