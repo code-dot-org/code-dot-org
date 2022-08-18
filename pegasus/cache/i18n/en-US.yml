@@ -1854,6 +1854,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Machine Learning for Kids'
   ai_ecs: 'ECS: Artificial Intelligence (AI)'
   ai_ecs_description: "A new alternate curriculum unit for the Exploring Computer Science (ECS) curriculum."
+  ai_aiedu_intro: 'aiEDU: Introduction to Artificial Intelligence'
+  ai_aiedu_intro_description: "Intro to AI is a free, innovative, culturally relevant curriculum where students develop conceptual knowledge about what AI is and how it's used in the real world."
   ai_elements: "Elements of AI"
   ai_elements_description: "A series of free online courses created by Reaktor and the University of Helsinki."
   ai_cognimates: "Cognimates"
