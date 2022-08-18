@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:49:00.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -56,15 +52,19 @@
     "ai_model_id": "OV8kuQzp3Yuh",
     "ai_model_name": "Class Book Recommender",
     "reference_links": [
-      "/docs/concepts/app-lab/design-mode/"
+      "/courses/csd-2022/guides/design-mode"
     ],
-    "map_reference": "/docs/concepts/app-lab/multi-screen-apps/",
+    "map_reference": "/courses/csd-2022/guides/multi-screen-apps",
     "video_key": "applab_intro_designmode",
     "teacher_markdown": "**Additional Resources:** Students can use the Help and Tips tab to access additional resources for working in App Lab. These resources are from other activities or courses that focus on App Lab, and can help assist students who have never seen App Lab before. If enough students in the class are struggling, consider extending this lesson and completing additional App Lab activities such as:\r\n\r\n- [App Lab with Hour of Code](https://studio.code.org/s/applab-intro/stage/1/puzzle/1)\r\n- The first few lessons from the [App Lab Self-Paced Module](https://studio.code.org/s/csp5-virtual)",
     "encrypted_examples": "Il4qMYOAAnGWvsS6ZLOIN7n6S6prSiOZu0/gCQ5hUgXpyTWetYvZ1Jz+yzxs\nJZiGjcSMA11eJTySc8JLoU3xZA==\n",
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:00.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:00.669+00:00\",\"changed\":[\"cloned from \\\"ml-intro app lab-book recommender 3-2021\\\"\"],\"cloned_from\":\"ml-intro app lab-book recommender 3-2021\"}]"

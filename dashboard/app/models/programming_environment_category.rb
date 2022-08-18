@@ -51,10 +51,25 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
   def summarize_for_navigation
     {
       key: key,
-      name: name,
+      name: localized_name,
       color: color,
       docs: (programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)).sort_by {|doc| doc[:name]}
     }
+  end
+
+  def localized_name
+    I18n.t(
+      'name',
+      scope: [
+        :data,
+        :programming_environments,
+        programming_environment.name,
+        :categories,
+        key
+      ],
+      default: name,
+      smart: true
+    )
   end
 
   def summarize_for_get
