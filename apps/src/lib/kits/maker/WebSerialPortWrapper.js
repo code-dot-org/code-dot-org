@@ -61,7 +61,13 @@ export default class WebSerialPortWrapper extends EventEmitter {
     if (!this.portOpen) {
       throw new Error('Requested port cannot be written to until it is open');
     }
-    return this.writer.write(buffer).then(() => callback());
+    return this.writer
+      .write(buffer)
+      .then(() => callback())
+      .catch(() => {
+        console.log('Failed Write');
+        console.log(callback);
+      });
   }
 
   async close() {
