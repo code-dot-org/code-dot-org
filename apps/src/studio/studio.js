@@ -5656,6 +5656,9 @@ Studio.setSprite = function(opts) {
     throw new RangeError('Incorrect parameter: ' + spriteIndex);
   }
   var sprite = Studio.sprite[spriteIndex];
+  if (!sprite) {
+    return;
+  }
 
   sprite.visible = spriteValue !== 'hidden' && !opts.forceHidden;
 
