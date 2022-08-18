@@ -107,7 +107,7 @@ class DSLDefined < Level
     text = set_editor_experiment(text, level_params[:editor_experiment])
     transaction do
       # Parse data, save updated level data to database
-      data, _ = dsl_class.parse(text, '')
+      data, = dsl_class.parse(text, '')
       level_params.delete(:name)
       level_params.delete(:type) if data[:properties][:type]
       data[:properties].merge! level_params

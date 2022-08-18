@@ -751,12 +751,6 @@ Style/StringConcatenation:
 Style/TernaryParentheses:
   Enabled: false
 
-# Offense count: 42
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowNamedUnderscoreVariables.
-Style/TrailingUnderscoreVariable:
-  Enabled: false
-
 # Offense count: 13
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: EnforcedStyle.

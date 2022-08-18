@@ -84,7 +84,7 @@ rescue RSpec::Expectations::ExpectationNotMetError
   raise if (tries += 1) >= 5
   sleep 1
 
-  email, _ = generate_user(name)
+  email, = generate_user(name)
   steps %Q{
     And I type "#{email}" into "#user_email"
   }

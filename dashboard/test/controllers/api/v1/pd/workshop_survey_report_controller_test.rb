@@ -104,7 +104,7 @@ module Api::V1::Pd
     end
 
     test 'local workshop survey report for the first of two facilitators' do
-      workshop_1, _ = build_sample_data
+      workshop_1, = build_sample_data
       sign_in(workshop_1.facilitators.first)
       get :local_workshop_survey_report, params: {workshop_id: workshop_1.id}
       assert_response :success

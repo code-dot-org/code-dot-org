@@ -315,9 +315,9 @@ class AssetsTest < FilesApiTestBase
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
 
-    response, _ = post_asset_file(src_api, image_filename, image_body, 'image/jpeg')
+    response, = post_asset_file(src_api, image_filename, image_body, 'image/jpeg')
     image_filename = JSON.parse(response)['filename']
-    response, _ = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
+    response, = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
     sound_filename = JSON.parse(response)['filename']
     src_api.patch_abuse(10)
 

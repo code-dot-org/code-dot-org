@@ -77,6 +77,6 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
     hash = sanitize_form_data_hash
     zipcode = hash[:zip]
 
-    self.regional_partner, _ = RegionalPartner.find_by_zip(zipcode)
+    self.regional_partner, = RegionalPartner.find_by_zip(zipcode)
   end
 end

@@ -662,7 +662,7 @@ class User < ApplicationRecord
   end
 
   def self.find_channel_owner(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
@@ -1949,7 +1949,7 @@ class User < ApplicationRecord
 
     if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
       pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level, _ = User.track_level_progress(
+        navigator_user_level, = User.track_level_progress(
           user_id: navigator_user_id,
           level_id: level_id,
           script_id: script_id,

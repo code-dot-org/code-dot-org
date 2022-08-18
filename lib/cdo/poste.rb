@@ -218,7 +218,7 @@ class Deliverer
     params = JSON.parse(delivery[:params])
     unsubscribe_url = poste_url("/u/#{CGI.escape(encrypted_id)}")
 
-    header, html, _ = load_template(message[:name]).render(
+    header, html, = load_template(message[:name]).render(
       params.merge(
         {
           recipient: OpenStruct.new(recipient),

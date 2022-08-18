@@ -83,7 +83,7 @@ class Census::ApSchoolCode < ApplicationRecord
     # "ap_school_codes/<start_year>-<end_year>.<file_extension>"
     _, filename = object_key.split('/')
     name, extension = filename.rpartition('.')
-    start_year, _ = name.split('-')
+    start_year, = name.split('-')
     [
       start_year.to_i,
       extension

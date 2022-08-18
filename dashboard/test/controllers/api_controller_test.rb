@@ -577,7 +577,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should update lockable state for new user_levels" do
-    script, level, _ = create_script_with_lockable_lesson
+    script, level, = create_script_with_lockable_lesson
 
     user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
     user_level_data2 = {user_id: @student_2.id, level_id: level.id, script_id: script.id}
@@ -648,7 +648,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should update lockable state for existing levels" do
     Timecop.freeze do
-      script, level, _ = create_script_with_lockable_lesson
+      script, level, = create_script_with_lockable_lesson
 
       user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
       user_level = create :user_level, user_level_data
@@ -742,7 +742,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should fail to update lockable state if given bad data" do
-    script, level, _ = create_script_with_lockable_lesson
+    script, level, = create_script_with_lockable_lesson
 
     user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
     create :user_level, user_level_data
@@ -1377,7 +1377,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "teacher_panel_progress returns progress when called with script and level" do
-    script, _, regular_level, _ = create_script_with_bonus_levels
+    script, _, regular_level, = create_script_with_bonus_levels
 
     # create progress for student_1 on regular_level
     create :user_level, user: @student_1, script: script, level: regular_level, best_result: ActivityConstants::BEST_PASS_RESULT

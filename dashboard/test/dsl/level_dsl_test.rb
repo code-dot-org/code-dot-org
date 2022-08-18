@@ -76,7 +76,7 @@ class LevelDslTest < ActiveSupport::TestCase
       answer 'answer 3', lesson_name: '#{lesson2.name}'
     DSL
 
-    output, _ = EvaluationMulti.parse(input_dsl, 'test')
+    output, = EvaluationMulti.parse(input_dsl, 'test')
     expected = {
       name: 'Test question',
       properties: {
@@ -170,7 +170,7 @@ class LevelDslTest < ActiveSupport::TestCase
     level.destroy
 
     # check parsed data
-    new_level_data, _ = External.parse(encrypted_dsl_text, 'text_external_3.external', 'test external 3')
+    new_level_data, = External.parse(encrypted_dsl_text, 'text_external_3.external', 'test external 3')
     assert new_level_data[:properties]['encrypted']
     assert_equal 'visible to teachers only', new_level_data[:properties][:teacher_markdown]
 

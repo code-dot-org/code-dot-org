@@ -79,7 +79,7 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     # This verifies that the hidden project was not shown.
     assert_equal 2, projects_list.size
     project_row = projects_list.first
-    storage_id, _ = storage_decrypt_channel_id(project_row['channel'])
+    storage_id, = storage_decrypt_channel_id(project_row['channel'])
     assert_equal STUDENT_STORAGE_ID, storage_id
     assert_equal 'Bobs App', project_row['name']
     assert_equal @student.name, project_row['studentName']
@@ -87,7 +87,7 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
 
     project_row = projects_list.last
-    storage_id, _ = storage_decrypt_channel_id(project_row['channel'])
+    storage_id, = storage_decrypt_channel_id(project_row['channel'])
     assert_equal STUDENT_STORAGE_ID, storage_id
     assert_equal 'Bobs Other App', project_row['name']
     assert_equal @student.name, project_row['studentName']

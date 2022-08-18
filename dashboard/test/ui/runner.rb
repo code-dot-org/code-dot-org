@@ -520,7 +520,7 @@ def parallel_config(parallel_limit)
     # This 'finish' lambda runs on the main thread after each Parallel.map work
     # item is completed.
     finish: lambda do |_, _, result|
-      feature_succeeded, _, _ = result
+      feature_succeeded, = result
       # Count failures so we can abort the whole test run if we exceed the limit
       $failed_features += 1 unless feature_succeeded
     end

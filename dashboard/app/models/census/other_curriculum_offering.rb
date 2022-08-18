@@ -72,7 +72,7 @@ class Census::OtherCurriculumOffering < ApplicationRecord
     # "other_curriculum_offerings/<provider_code>/<start_year>-<end_year>.<file_extension>"
     _, provider_code, filename = object_key.split('/')
     name, extension = filename.rpartition('.')
-    start_year, _ = name.split('-')
+    start_year, = name.split('-')
     [
       provider_code,
       start_year.to_i,

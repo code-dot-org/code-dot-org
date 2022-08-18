@@ -6,7 +6,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test "lockable_state with swapped level without user_level" do
-    _, level1, _, lesson, _ = create_swapped_lockable_lesson
+    _, level1, _, lesson, = create_swapped_lockable_lesson
 
     lockable_state = lesson.lockable_state [@student]
 
@@ -26,7 +26,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test "lockable_state with swapped level with user_level for inactive level" do
-    script, _, level2, lesson, _ = create_swapped_lockable_lesson
+    script, _, level2, lesson, = create_swapped_lockable_lesson
     create :user_level, user: @student, script: script, level: level2, locked: false
 
     lockable_state = lesson.lockable_state [@student]
@@ -36,7 +36,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test "lockable_state with swapped level with user_level for active level" do
-    script, level1, _, lesson, _ = create_swapped_lockable_lesson
+    script, level1, _, lesson, = create_swapped_lockable_lesson
     create :user_level, user: @student, script: script, level: level1, locked: false
 
     lockable_state = lesson.lockable_state [@student]

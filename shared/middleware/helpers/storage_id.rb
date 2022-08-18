@@ -38,7 +38,7 @@ def storage_decrypt(encrypted)
 end
 
 def storage_decrypt_id(encrypted)
-  _, id, _ = storage_decrypt(encrypted).split(':')
+  _, id, = storage_decrypt(encrypted).split(':')
   id = id.to_i
   raise ArgumentError, "`id` must be an integer > 0" unless id > 0
   return id
@@ -155,7 +155,7 @@ def storage_id_from_cookie
 end
 
 def owns_channel?(encrypted_channel_id)
-  owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+  owner_storage_id, = storage_decrypt_channel_id(encrypted_channel_id)
   owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError
   false

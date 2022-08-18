@@ -72,7 +72,7 @@ module RakeUtils
   end
 
   def self.system_(*args)
-    status, _ = system__(command_(*args))
+    status, = system__(command_(*args))
     status
   end
 

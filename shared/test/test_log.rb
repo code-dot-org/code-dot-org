@@ -10,7 +10,7 @@ class LogTest < Minitest::Test
   end
 
   def test_default_log
-    out, _ = capture_subprocess_io do
+    out, = capture_subprocess_io do
       CDO.log.info 'test'
     end
     assert_equal "test\n", out
@@ -23,7 +23,7 @@ class LogTest < Minitest::Test
       end
     end
 
-    out, _ = capture_subprocess_io do
+    out, = capture_subprocess_io do
       CDO.log.info 'test'
     end
     assert_equal 'TEST LOG: test', out
