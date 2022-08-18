@@ -1,4 +1,3 @@
-// This gets replaced by karma webpack with the updated files on rebuild
 import '@babel/polyfill';
 import 'whatwg-fetch';
 import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
@@ -7,6 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
+// This gets replaced by karma webpack with the updated files on rebuild
 var __karmaWebpackManifest__ = [];
 
 function inManifest(path) {
@@ -21,7 +21,7 @@ var runnable = testsContext.keys().filter(inManifest);
 
 // Run all tests if we didn't find any changes
 if (!runnable.length) {
-  runnable = testsContext.keys();
+  runnable = testsContext.keys().filter(path => !path.includes('/p5lab/'));
 }
 
 describe('unit tests', function() {
