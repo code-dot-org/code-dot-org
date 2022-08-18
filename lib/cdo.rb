@@ -139,7 +139,8 @@ module Cdo
         # the service directly.
         # To use a developer instance of Javabuilder instead, replace this url with
         # 'wss://<your-javabuilder-domain>.dev-code.org'
-        'ws://localhost:8080/javabuilder'
+        'wss://javabuilder-test.code.org'
+        #'ws://localhost:8080/javabuilder'
       else
         # TODO: Update to use this URL once we have Route53 set up for API Gateway
         # site_url('javabuilder.code.org', '', 'wss')
@@ -151,7 +152,8 @@ module Cdo
       if rack_env?(:development)
         # To use a developer instance of Javabuilder instead, replace this url with
         # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
-        'http://localhost:8080/javabuilderfiles/seedsources'
+        'https://javabuilder-test-http.code.org/seedsources/sources.json'
+        #'http://localhost:8080/javabuilderfiles/seedsources'
       else
         'https://javabuilderbeta-http.code.org/seedsources/sources.json'
       end

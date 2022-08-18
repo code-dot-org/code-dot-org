@@ -20,7 +20,9 @@ const PageAction = makeEnum(
   'MapboxMarkerLoadError',
   'LoadScriptProgressStarted',
   'LoadScriptProgressFinished',
-  'SectionProgressRenderedWithData'
+  'SectionProgressRenderedWithData',
+  'JavabuilderHttpConnectionError',
+  'JavabuilderWebSocketConnectionError'
 );
 
 const MAX_FIELD_LENGTH = 4095;

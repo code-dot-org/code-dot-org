@@ -74,7 +74,7 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
-    mini_app_type = params[:miniAppType]
+    # mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
     can_access_dashboard_assets = !rack_env?(:development)
 
@@ -90,7 +90,7 @@ class JavabuilderSessionsController < ApplicationController
       uid: current_user.id,
       level_id: level_id,
       execution_type: execution_type,
-      mini_app_type: mini_app_type,
+      mini_app_type: 'fish',
       options: options,
       verified_teachers: teacher_list,
       can_access_dashboard_assets: can_access_dashboard_assets
