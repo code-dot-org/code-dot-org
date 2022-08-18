@@ -301,13 +301,6 @@ Rails/DynamicFindBy:
 Rails/FilePath:
   Enabled: false
 
-# Offense count: 31
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: numeric, symbolic
-Rails/HttpStatus:
-  Enabled: false
-
 # Offense count: 90
 Rails/I18nLocaleTexts:
   Enabled: false
