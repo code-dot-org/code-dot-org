@@ -48,7 +48,6 @@ const styles = {
   },
   projectTemplateIcon: {
     marginRight: 5,
-    marginTop: -1,
-    width: 22
+    marginTop: -1
   }
 };
