@@ -102,7 +102,7 @@ export function getLevelIds() {
 }
 
 /**
- * Lock the answer fo the contained level
+ * Lock the answer for the contained level
  */
 export function lockContainedLevelAnswers() {
   const levelIds = getLevelIds();
@@ -143,4 +143,31 @@ export function getContainedLevelResult() {
  */
 export function hasValidContainedLevelResult() {
   return getContainedLevelResult().result.valid;
+}
+
+export function resetContainedLevel() {
+  const levelIds = getLevelIds();
+  if (levelIds.length !== 1) {
+    throw new Error(
+      `Expected exactly one contained level. Got ${levelIds.length}`
+    );
+  }
+  fetch('/delete_predict_level_progress', {
+    method: 'POST',
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify({
+      script_id: appOptions.scriptId,
+      level_id: levelIds[0]
+    })
+  }).then(response => {
+    if (response.ok) {
+      getLevel(levelIds[0]).resetAnswers();
+    } else {
+      console.log(response);
+    }
+  });
 }
