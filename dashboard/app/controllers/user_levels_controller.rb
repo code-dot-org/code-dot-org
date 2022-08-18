@@ -1,7 +1,7 @@
 class UserLevelsController < ApplicationController
   before_action :authenticate_user!
-  check_authorization except: [:delete_predict_level_progress]
-  load_and_authorize_resource except: [:delete_predict_level_progress]
+  check_authorization
+  load_and_authorize_resource
   protect_from_forgery except: [:update, :delete_predict_level_progress] # referer is the script level page which is publically cacheable
 
   before_action :set_user_level
