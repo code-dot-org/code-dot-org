@@ -448,6 +448,10 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 
 We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
 
+### SCSS
+
+We use [Stylelint](https://stylelint.io/) to lint our SCSS in the `apps` directory. There are plugins available for both [VS Code](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) and [JetBrains](https://www.jetbrains.com/help/idea/using-stylelint-code-quality-tool.html#ws_stylelint_configure).
+
 ## More Information
 Please also see our other documentation, including our:
 * [Main README](./README.md)
