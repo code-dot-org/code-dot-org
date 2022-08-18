@@ -4471,6 +4471,17 @@
           "function 2": {
             "name": "funkcja 2"
           }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+            "name": "narysuj 3 sześciokąty"
+          },
+          "draw 4 hexagons": {
+            "name": "narysuj 4 sześciokąty"
+          },
+          "draw 5 hexagons": {
+            "name": "narysuj 5 sześciokątów"
+          }
         }
       }
     }

@@ -10,7 +10,8 @@ import color from '@cdo/apps/util/color';
 export function SingleMethod({
   method,
   programmingEnvironmentName,
-  programmingEnvironmentLanguage
+  programmingEnvironmentLanguage,
+  isSmallWindow
 }) {
   return (
     <div id={`method-${method.key}`}>
@@ -29,6 +30,7 @@ export function SingleMethod({
           <ParametersTable
             parameters={method.parameters}
             programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+            isSmallWindow={isSmallWindow}
           />
         </div>
       )}
@@ -61,7 +63,8 @@ export function SingleMethod({
 export function MethodOverloadSection({
   overloads,
   programmingEnvironmentName,
-  programmingEnvironmentLanguage
+  programmingEnvironmentLanguage,
+  isSmallWindow
 }) {
   const [isOpen, setIsOpen] = useState(true);
   const icon = isOpen ? 'caret-down' : 'caret-up';
@@ -82,6 +85,7 @@ export function MethodOverloadSection({
               method={overload}
               programmingEnvironmentName={programmingEnvironmentName}
               programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+              isSmallWindow={isSmallWindow}
             />
           ))}
         </div>
@@ -93,7 +97,8 @@ export function MethodOverloadSection({
 export default function MethodWithOverloads({
   method,
   programmingEnvironmentName,
-  programmingEnvironmentLanguage
+  programmingEnvironmentLanguage,
+  isSmallWindow
 }) {
   return (
     <div style={styles.container}>
@@ -101,12 +106,14 @@ export default function MethodWithOverloads({
         method={method}
         programmingEnvironmentName={programmingEnvironmentName}
         programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+        isSmallWindow={isSmallWindow}
       />
       {method.overloads?.length > 0 && (
         <MethodOverloadSection
           overloads={method.overloads}
           programmingEnvironmentName={programmingEnvironmentName}
           programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+          isSmallWindow={isSmallWindow}
         />
       )}
     </div>
@@ -127,19 +134,22 @@ const methodShape = PropTypes.shape({
 SingleMethod.propTypes = {
   method: methodShape.isRequired,
   programmingEnvironmentName: PropTypes.string,
-  programmingEnvironmentLanguage: PropTypes.string
+  programmingEnvironmentLanguage: PropTypes.string,
+  isSmallWindow: PropTypes.bool
 };
 
 MethodOverloadSection.propTypes = {
   overloads: PropTypes.arrayOf(methodShape),
   programmingEnvironmentName: PropTypes.string,
-  programmingEnvironmentLanguage: PropTypes.string
+  programmingEnvironmentLanguage: PropTypes.string,
+  isSmallWindow: PropTypes.bool
 };
 
 MethodWithOverloads.propTypes = {
   method: methodShape.isRequired,
   programmingEnvironmentName: PropTypes.string,
-  programmingEnvironmentLanguage: PropTypes.string
+  programmingEnvironmentLanguage: PropTypes.string,
+  isSmallWindow: PropTypes.bool
 };
 
 const styles = {
@@ -149,7 +159,8 @@ const styles = {
     borderWidth: 1,
     borderRadius: 5,
     padding: 5,
-    marginBottom: 10
+    marginBottom: 10,
+    minWidth: 'fit-content'
   },
   openOverloadHeader: {
     backgroundColor: color.lightest_gray,

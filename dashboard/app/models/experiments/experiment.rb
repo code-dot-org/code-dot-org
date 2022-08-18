@@ -72,7 +72,7 @@ class Experiment < ApplicationRecord
       e,
       error_message: 'Error getting experiments',
       context: {
-        user_id: user && user.id
+        user_id: user&.id
       }
     )
     []

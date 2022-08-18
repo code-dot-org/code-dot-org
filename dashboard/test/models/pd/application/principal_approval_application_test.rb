@@ -47,7 +47,7 @@ module Pd::Application
     test 'corresponding teacher application is required' do
       principal_application = build :pd_principal_approval_application, teacher_application: nil
       refute principal_application.valid?
-      assert_equal ['Teacher application is required'], principal_application.errors.full_messages
+      assert_equal ['Teacher application must exist'], principal_application.errors.full_messages
 
       # fake guid won't work
       principal_application.application_guid = SecureRandom.uuid

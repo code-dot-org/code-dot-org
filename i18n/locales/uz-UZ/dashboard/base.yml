@@ -417,7 +417,6 @@ uz:
     popup:
       progress_for_user: "%{name} progressi"
       progress: 'Progressingiz'
-      lines: 'Jami kod satrlari: %{lines}'
       close: 'YOPISH'
       mastery: 'Ma''ruza/Konseptsiya'
       puzzle_map: 'Pog`onalar'
@@ -1030,6 +1029,7 @@ uz:
         music: 'Musiqa'
         art: 'San''at'
         other: "Boshqa:"
+        na: 'Mavjud emas'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1038,7 +1038,8 @@ uz:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Boshqa:"
+        other: "Boshqa"
+        na: 'Mavjud emas'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1048,7 +1049,8 @@ uz:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Boshqa:"
+        other: "Boshqa"
+        na: 'Mavjud emas'
       workshop_course:
         csf_af: 'CS Fundamentals - Informatika asoslari (A-F kurslar)'
         csf_express: 'CS Fundamentals  - Informatika asoslari (Pre-Express yoki Express)'

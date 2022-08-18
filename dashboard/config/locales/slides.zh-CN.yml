@@ -2423,23 +2423,163 @@ zh-CN:
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: 我叫Caia，是一名诗人，也是一名计算机科学专业的学生。我从编程中学到了很多东西，这些东西让我成为了一个更好的诗人，而我的诗歌也让我在编程方面做得更好，因为你必须认真思考你选择的词语，还有当它们汇集在一起时你会创造什么。
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: 在接下来的一个小时里，你将通过创作一首动画诗来学习计算机科学和诗歌。从本质上讲，诗歌是用文字创造艺术。我创作诗歌是为了表达我自己；我试图用自己独特的风格和韵律去激发受众的想象力和情感。
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: 就像艺术一样，诗歌可以有很多不同的解释。同一首诗对不同的人可能有不同的含义，每首诗都有自己的意境。意境是你从一首诗中得到的感觉。有时人们会将某些颜色和意象与不同的意境联系起来。
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: 例如，黄色使我感到愉悦。当我想到恐惧之类的情绪时，我有时会在脑海中浮现一个漆黑的暴风雨之夜。在这个活动中，你将有机会根据你的感受来阐述和动画化一首诗的意境。
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: 让我们看看如何使用代码来实现这一点。你将看到屏幕被分为三个主要部分。左边是游戏空间。你的动画诗将在这里出现。每首诗都有一个标题和一个作者。
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: 中间是工具箱。课程中新的代码模块会出现在这里。
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: 右边是工作区。可将工具箱的模块拖放到这里，来构建自己的程序。
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
+        text: 每个关卡的说明会在屏幕的上方显示。如果需要提示，可以点击小灯泡。
       9:
         image: notes/hoc_poem_art_2021_introduction_09.jpg
+        text: 首先，选择一首你喜欢的诗。这里有各种各样的诗歌，你可以在每个级别选择新的。
       10:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
+        text: 接下来，你将从工具箱拖模动块到你的工作区，以动画化你的诗。 你可以选择与诗歌意境相匹配的背景颜色或效果，然后点击“运行”来查看诗歌的效果。
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+        text: 花点时间阅读不同的诗歌，找到一首能激发你情感的诗。考虑你的感受以及你如何通过图像和代码来传达这种感受。
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+        text: 有时一首诗的意境会在诗的一部分发生变化。一开始可能是一首听起来欢快的诗，然后变成悲伤，或者黑暗变成光明。
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+        text: 在这个活动中，你将使用事件。当你的诗歌中的某一行出现时，你可以使用这个事件模块来改变程序的进程。 注意，事件模块并没有插入到主程序中。相反，它们会创建自己的小程序。
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+        text: 通读你的诗，寻找一个意境转变的时刻。数一下发生在哪一行：一、二、三。在事件模块中，输入行号。
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+        text: 然后编写一些程序来反映当那该行出现在屏幕上时意境的变化。当你按下“运行”，你可以看到你编码了什么。
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+        text: 在诗歌中，作者用意象在读者的脑海中描绘一幅画面。当我们看到“鳄鱼”这个词时，我们脑海中会自动想象出一条绿色的鳄鱼。为了将这样的图像变成动画，我们将使用精灵图。
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+        text: 这将创造一个新的精灵图模块，让你能够制作一个精灵图并为它选择服装。选择一套你认为与诗歌匹配的服装。
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+        text: 要改变精灵图的位置，你可以点击位置模块中的大头针图标，然后点击播放区中你想让它前往的位置。
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+        text: 在接下来的几个级别中，你会看到一些新的模块。这个模块允许你改变精灵图的大小。这个模块允许你使用行为让你的精灵图动起来。
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+        text: 如果一首诗提到徘徊的云朵，首先制作云精灵图，然后选择这个行为模块，将其拖出来，选择徘徊。
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+        text: 确保你的精灵图服装相配。当你按下运行键时，你会读到并看到一片徘徊的云朵。
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+        text: 现在你可以添加文字图像来说明诗中的文字。玩得开心！
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+        text: 恭喜！你刚刚学习了计算机科学的基础知识以及如何找到一首诗的意境。现在，你可以创建自己的动画诗歌，与朋友们分享。
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+        text: 你会仔细地为整首诗选择一个简单的场景吗？
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+        text: 还是会用大量事件为你的每一行诗创造一个新的场景？
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+        text: 在教程的最后，你可以与朋友分享作品的链接。
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+        text: 发挥你的想象力，玩得开心！
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+        text: 大家好！我叫Erin，是Code.org的一名软件工程师。太令人激动了，因为我要做你们使用的教程了！我们称之为“你好世界”。
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+        text: "“你好世界”是计算机科学中的一个著名短语，展示这个短语是学习计算机科学常见的第一步。在接下来的一个小时里，你将在精灵图实验室中通过编程开始学习计算机科学。"
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+        text: 精灵图实验室是一个你可以用来创建富有想象力和有趣项目的工具。你将看到屏幕被分为三个主要部分。左边是播放区，这是你的精灵图将出现的地方。
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+        text: 精灵图是屏幕上你可以与之互动的对象，就像故事或游戏中的角色或道具。
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: 中间是工具箱。课程中新的代码模块会出现在这里。
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+        text: 右边是工作区。可将工具箱的模块拖放到这里，来构建自己的程序。
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+        text: 每个关卡的说明会在屏幕的上方显示。如果需要提示，可以点击小灯泡。
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+        text: 首先，让我们制作一个精灵图！这个模块让你赋予精灵图一个服装和一个位置。我们用服装这个词来形容精灵图的外表。要改变精灵图的位置，你可以点击位置模块中的大头针图标，然后点击你想要它去的地方。
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+        text: 现在让我们让精灵图介绍自己！为了让精灵图说些什么，使用这个“Say”模块，并将其添加到你的程序中。确保在“Say”模块中选择的服装与精灵图中的服装相匹配。
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+        text: 当你按下“运行”时，精灵图将说出你所告知它的任何文本。现在开始使用精灵图实验室，看看你的想象力会把你带到哪里！
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+        text: 现在你已经学习了如何使用精灵图实验室，你想让你的程序在有人使用它时做出反应。要做到这一点，你需要使用事件。事件告诉程序监听将要发生的事情，然后立即做出反应。
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+        text: 事件的一些例子是监听鼠标点击、箭头按钮或屏幕上的点击。"when clicked"这样的模块被称为事件模块。当检测到适当的操作时，连接到事件模块的代码就会运行。
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+        text: 例如，如果我将这个“say”模块附加到“when clicked”事件中，那么当用户点击它时，我的精灵图就会说话。注意，事件模块并没有插入到主程序中。相反，他们会创建自己的小程序。
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+        text: 如果你有多个精灵图，你可以使用额外的事件来讲述一个互动故事。
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+        text: 你将很快学习如何在精灵图实验室中做更多的事情，包括改变一个精灵图的大小或外观，设置不同的背景，播放声音等等。 当有人与你的精灵图互动时，你希望它们做什么？这由你来决定！
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+        text: 恭喜！你刚刚学习了计算机科学的基础知识。现在你可以使用精灵图实验室创建任何你想要的东西。
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+        text: 你会看到一个写着服装的按钮。当你点击它时，你可以从库中选择新的精灵图服装。
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+        text: 你也可以自己绘制！一旦你有喜欢的服装，就可以回到代码中。
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+        text: 现在，为你的精灵图选择服装。
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+        text: 如果你看一下工具箱，你会发现一些你之前没有见过的全新模块。例如，有许多行为模块能够让你的精灵图以有趣的方式移动。
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+        text: 你可以使用“when touches”事件模块来控制两个精灵图碰撞时发生的事情。
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+        text: 找到“create effect”模块。这个强大的模块可以用来制作大量根据命令爆炸、爆破或下雨的精灵图。
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+        text: 看看周围，尝试试验这些新的模块和功能。在教程的最后，点击“分享”按钮，与朋友分享你的作品链接。
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+        text: 在精灵图实验室，你拥有开始开发应用程序、游戏和其他新程序所需的所有强大技能！用你的新能力做好的事情。要友善和尊重，就像你在纸上创作东西或与朋友交谈一样。
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg
+        text: 那么你会创造什么呢？你可以讲一个关于你自己的故事，或者用你自己的特殊角色编一个。也许你会在学校的下一个项目中使用你的新计算机科学技能！发挥你的想象力，玩得开心！

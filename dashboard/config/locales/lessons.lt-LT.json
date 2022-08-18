@@ -38,6 +38,33 @@
         "infinity/Infinity": {
           "name": "Disnėjaus Infinity laboratorija"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Programavimo valanda 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Kartojimas"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Įvykiai"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Kintamieji"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Kartojimas"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Kiti žingsniai"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Kiti žingsniai"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Judėk, judėk"
         },
@@ -350,6 +377,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremalus iššūkis - Visapusiškumas"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Informatikos įvadas"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirintas"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Skaičiuojamasis mąstymas"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "20-hour/The Artist": {
+          "name": "Menininkas"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmai"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Menininkas 2"
+        },
+        "20-hour/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "20-hour/The Farmer": {
+          "name": "Ūkininkas"
+        },
+        "20-hour/Conditionals": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Menininkas 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Dainos ir funkcijos"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Ūkininkas 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Komandos su parametrais"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Menininkas 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programavimas komandoje"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Ūkininkas 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internetas"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Menininkas 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Apibendrinimas"
+        },
         "course2/Graph Paper Programming": {
           "name": "Programavimas ant languoto popieriaus"
         },
@@ -526,6 +613,39 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Dėlionės"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Dėlionės"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintas"
+        },
+        "allthethings/Artist": {
+          "name": "Menininkas"
+        },
+        "allthethings/Bee": {
+          "name": "Bitė"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "Variantai"
+        },
+        "allthethings/Match": {
+          "name": "Sujungimas"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pikseliavimas"
+        },
+        "allthethings/Studio": {
+          "name": "Studija"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/Internet": {
           "name": "Internetas"

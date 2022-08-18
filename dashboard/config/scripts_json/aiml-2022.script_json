@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-05-23 23:42:45 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-07-15 15:16:22 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -5704,10 +5704,23 @@
       "key": "996ab1d2-b6b8-4b6d-bdb5-2e5bb881edc4",
       "position": 1,
       "properties": {
-        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed."
+        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed.",
+        "name": "Ethics in AI"
       },
       "seeding_key": {
         "activity_section.key": "996ab1d2-b6b8-4b6d-bdb5-2e5bb881edc4",
+        "lesson_activity.key": "a9f71b73-8e75-470a-96ce-9d326191bb32"
+      }
+    },
+    {
+      "key": "1a8b1bdd-9860-4451-9133-cce485aee39d",
+      "position": 2,
+      "properties": {
+        "description": "This lesson provides an opportunity for students to be critical of existing AI programs, developing a Code of Ethics as a potential solution to existing issues in the industry. This critical lens can be extended to additional learning objectives and activities as outlined in the [Artificial Intelligence](https://criticallyconsciouscomputing.org/ai) chapter of the [Critically Conscious Computing: Methods for Secondary Education](https://criticallyconsciouscomputing.org/) online textbook from Dr. Amy Ko.\n\nThis chapter provides an overview of additional concepts related to AI and Machine Learning, and ends with a \"unit sketch\" which outlines additional lessons and activities that could be introduces in a unit on AI and Machine Learning from a critical lens. These activities could be appropriate if you would like to continue exploring artificial intelligence from a critical lens with your students.",
+        "name": "Critically Conscious AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a8b1bdd-9860-4451-9133-cce485aee39d",
         "lesson_activity.key": "a9f71b73-8e75-470a-96ce-9d326191bb32"
       }
     },

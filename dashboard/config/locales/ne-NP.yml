@@ -261,7 +261,6 @@ ne:
     popup:
       progress_for_user: "%{name}'s progress"
       progress: तपाईँको प्रगति
-      lines: 'Total lines of code: %{lines}'
       close: बन्द गर्नुहोस्
       mastery: Concepts
       puzzle_map: Stages
@@ -850,10 +849,13 @@ ne:
         math: Math
         science: Science
         la: Language Arts
+        other: अन्य
       resources:
         kodable: Kodable
+        other: अन्य
       robotics:
         kodable: Kodable
+        other: अन्य
       workshop_course:
         csp: "'16-'17 CS Principles"
       email_opt_in:

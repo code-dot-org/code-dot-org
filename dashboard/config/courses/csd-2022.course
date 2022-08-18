@@ -10,12 +10,13 @@
     "csd7-2022",
     "csd-post-survey-2022"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csd",
+    "has_numbered_units": true,
     "has_verified_resources": true,
     "version_year": "2022"
   },

@@ -333,7 +333,6 @@ sv:
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
-      lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
       mastery: koncept
       puzzle_map: Nivåer
@@ -975,12 +974,12 @@ sv:
         codecademy: CodeCademy
         khan: Khan Academy
         kodable: Kodable
-        other: 'Övrigt:'
+        other: Annat
       robotics:
         kodable: Kodable
         microbit: Microbit
         raspberry: Raspberry Pi
-        other: 'Övrigt:'
+        other: Annat
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej

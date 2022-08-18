@@ -10,7 +10,8 @@
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
           "link": "",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "buttonText": ""
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -28,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-22 15:34:22 UTC",
+    "serialized_at": "2022-08-15 17:01:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -153,7 +154,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
-        "preparation": "* Scissors (many pairs)\n* Printed copies of [r flippy_do/csp/2022]\t\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2021/stage/4/puzzle/1)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Scissors (many pairs)\n* Printed copies of [r flippy_do/csp/2022]\t\n* [KEY U1L4 Flippy Do Pt 1](https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "unplugged": true
@@ -174,7 +175,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. ",
-        "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers.\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1gCIVlV9pXKbqQsUWvZNv-Yojl_SVK5JXjpZdbtf8Gxw/edit?usp=sharing)",
         "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "student_overview": "Explore the limitations or representing numbers with bits.",
         "unplugged": true
@@ -276,7 +277,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
-        "preparation": "* Explore each of the widgets for this lesson\n* Decide how you will let students share their lossy compressions with each other or the whole class\n* Have [r csp_unit_1_-_digital_information_1/csp/2022] ready for the discussion towards the end of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "* Explore each of the widgets for this lesson\n* Decide how you will let students share their lossy compressions with each other or the whole class\n* Have [r csp_unit_1_-_digital_information/csp/2022] ready for the discussion towards the end of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost."
       },
@@ -5679,11 +5680,10 @@
     },
     {
       "name": "Article - Fortnite Stealing Dance Moves",
-      "url": "https://drive.google.com/file/d/1zs-d_4L53qgPCtdg1e9Gw00QMx8NQpt0/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1RshIPOF9Sm9AYPLehNouZus4rkRDWX-7/view?usp=sharing",
       "key": "article_-_fortnite_stealing_dance_moves",
       "properties": {
-        "audience": "Student",
-        "type": "Article"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "article_-_fortnite_stealing_dance_moves"
@@ -5741,7 +5741,7 @@
     },
     {
       "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
+      "url": "https://youtu.be/QvyTEx1wyOY",
       "key": "computer_science_is_changing_everything",
       "properties": {
         "audience": "Student",
@@ -5921,7 +5921,7 @@
     },
     {
       "name": "Personal Innovations",
-      "url": "https://docs.google.com/document/d/14UBbBCYtaWskax2UOcE-vMdSBUelte9qdKRhgQ6SeJU/",
+      "url": "https://docs.google.com/document/d/1rUAaOVwSMBDYLoXKGhL5lxZix-Hgw51mzDvcgiF8RuE/view",
       "key": "personal_innovations",
       "properties": {
         "audience": "Student",
@@ -5934,7 +5934,7 @@
     },
     {
       "name": "Personal Innovations",
-      "url": "https://docs.google.com/document/d/1_ULIYnSwsMxOEZr0SHP_ueopo4qlIHFCyrfFcMhuDgE/",
+      "url": "https://docs.google.com/document/d/1v3BHA47QuQu9USBcrQvALigzlNNtQzaojlDQuZ57LZA/view",
       "key": "personal_innovations_1",
       "properties": {
         "audience": "Student",

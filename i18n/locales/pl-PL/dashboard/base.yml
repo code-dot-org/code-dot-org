@@ -45,6 +45,7 @@ pl:
         personal_email_markdown: "Osobisty adres e-mail [(kliknij tutaj, jeśli nie masz adresu e-mail)](%{url})"
         username: 'Nazwa użytkownika'
         password: 'Hasło'
+        verified_teacher: 'Zweryfikowany nauczyciel'
         password_confirmation: 'Potwierdzenie hasła'
         current_password: 'Aktualne hasło'
         locale: 'Język'
@@ -434,7 +435,6 @@ pl:
     popup:
       progress_for_user: "%{name} w toku"
       progress: 'Twoje postępy'
-      lines: 'Łączna ilość linii kodu: %{lines}'
       close: 'ZAMKNIJ'
       mastery: 'Pojęcia'
       puzzle_map: 'Etapy'
@@ -606,6 +606,7 @@ pl:
     try_hour_of_code: 'Wypróbuj Godzinę Kodowania!'
     store: 'Skład'
     cookie_notice: 'Informacja o plikach cookie'
+    view_code: 'Obejrzyj kod'
   reference_area:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
@@ -1048,6 +1049,7 @@ pl:
         israel: 'Izrael'
         malaysia: 'Malezja'
         mexico: 'Meksyk'
+        paraguay: 'Paragwaj'
         thailand: 'Tajlandia'
         uzbekistan: 'Uzbekistan'
       ages:
@@ -1070,6 +1072,7 @@ pl:
         music: 'Muzyka'
         art: 'Sztuka'
         other: "Inne:"
+        na: 'Nie dotyczy'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1079,7 +1082,8 @@ pl:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       robotics:
         grok: 'Nauka Grok'
         kodable: 'Kodable'
@@ -1089,7 +1093,8 @@ pl:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Warsztaty Wonder'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       workshop_course:
         csf_af: 'Podstawy informatyki (Kursy A-F)'
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'

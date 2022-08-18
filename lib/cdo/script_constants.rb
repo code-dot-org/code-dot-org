@@ -69,6 +69,16 @@ module ScriptConstants
       EXPRESS_2021_NAME = 'express-2021'.freeze,
       PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
     ],
+    csf_2022: [
+      COURSEA_2022_NAME = 'coursea-2022'.freeze,
+      COURSEB_2022_NAME = 'courseb-2022'.freeze,
+      COURSEC_2022_NAME = 'coursec-2022'.freeze,
+      COURSED_2022_NAME = 'coursed-2022'.freeze,
+      COURSEE_2022_NAME = 'coursee-2022'.freeze,
+      COURSEF_2022_NAME = 'coursef-2022'.freeze,
+      EXPRESS_2022_NAME = 'express-2022'.freeze,
+      PRE_READER_EXPRESS_2022_NAME = 'pre-express-2022'.freeze,
+    ],
     csc_2021: [
       POETRY_2021_NAME = 'poetry-2021'.freeze,
       AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
@@ -137,6 +147,15 @@ module ScriptConstants
       CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
       CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
       CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
+    ],
+    csd_2022: [
+      CSD1_2022_NAME = 'csd1-2022'.freeze,
+      CSD2_2022_NAME = 'csd2-2022'.freeze,
+      CSD3_2022_NAME = 'csd3-2022'.freeze,
+      CSD4_2022_NAME = 'csd4-2022'.freeze,
+      CSD5_2022_NAME = 'csd5-2022'.freeze,
+      CSD6_2022_NAME = 'csd6-2022'.freeze,
+      CSD7_2022_NAME = 'csd7-2022'.freeze,
     ],
     csd_2021: [
       CSD1_2021_NAME = 'csd1-2021'.freeze,
@@ -345,7 +364,7 @@ module ScriptConstants
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
-  def self.has_congrats_page?(script)
+  def self.has_csf_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
@@ -358,7 +377,7 @@ module ScriptConstants
       "course2" => "course3",
       "course3" => "course4",
       "accelerated" => "course4",
-      "course4" => "applab"
+      "course4" => "applab-intro"
     }
 
     return static_mapping[course_name] if static_mapping.include?(course_name)
@@ -374,7 +393,7 @@ module ScriptConstants
       prefix = match_data[1]
       year = match_data[2]
 
-      return "applab" if %w(coursef express).include?(prefix)
+      return "applab-intro" if %w(coursef express).include?(prefix)
 
       prefix_mapping = {
         "coursea" => "courseb",
@@ -402,6 +421,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd_2018, script) ||
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
       ScriptConstants.unit_in_category?(:csd_2021, script) ||
+      ScriptConstants.unit_in_category?(:csd_2022, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||

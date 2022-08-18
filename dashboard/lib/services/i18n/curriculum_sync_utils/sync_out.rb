@@ -18,7 +18,7 @@ module Services
         # sync in. Ultimately, we want one file per content type; one for all
         # lessons, one for all activities, one for all resources, etc.
         def self.reorganize
-          Languages.get_locale.each do |prop|
+          PegasusLanguages.get_locale.each do |prop|
             locale = prop[:locale_s]
             next if locale == 'en-US'
             locale_dir = File.join('i18n/locales', locale, 'curriculum_content')
@@ -34,7 +34,7 @@ module Services
 
             # Then we recursively flatten all of our hashes of objects, to group them
             # by type rather than by script
-            result = flatten(script_objects, ScriptCrowdinSerializer, :scripts)
+            result = flatten(script_objects, Serializers::ScriptCrowdinSerializer, :scripts)
 
             # Then we apply some postprocessing.
             postprocess(result)
@@ -58,16 +58,22 @@ module Services
           if result.key?(:lessons)
             rekeyed_lessons = result[:lessons].map do |lesson_url, lesson_data|
               route_params = Rails.application.routes.recognize_path(lesson_url)
-              lesson = Lesson.joins(:script).
-                find_by(
+              # Filter for only lessons which are "numbered".
+              # Only these lessons guarantee that their relative position is unique.
+              lessons = Lesson.joins(:script).
+                where(
                   "scripts.name": route_params[:script_id],
                   relative_position: route_params[:position].to_i,
-                  has_lesson_plan: true
-                )
-              unless lesson.present?
-                STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
+                ).select(&:numbered_lesson?)
+              if lessons.count == 0
+                STDERR.puts "Could not find lesson for url #{lesson_url.inspect}"
                 next
               end
+              if lessons.count > 1
+                STDERR.puts "More than one lesson found for url #{lesson_url.inspect}. This should be investigated."
+                next
+              end
+              lesson = lessons.first
               [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
             end
             result[:lessons] = rekeyed_lessons.compact.to_h

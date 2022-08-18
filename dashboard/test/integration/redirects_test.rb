@@ -124,4 +124,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
       assert_redirected_to "/s/#{after}"
     end
   end
+
+  test 'redirects weblab code studio share link to codeprojects' do
+    get "http://#{CDO.dashboard_hostname}/projects/weblab/abcdef"
+    assert_redirected_to "http://#{CDO.codeprojects_hostname}/abcdef/"
+  end
 end

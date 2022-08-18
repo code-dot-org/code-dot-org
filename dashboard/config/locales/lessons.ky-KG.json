@@ -23,6 +23,27 @@
         "infinity/Infinity": {
           "name": "Disney Infinity оюн лабораториясы"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Код сааты 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Циклдер"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Окуялар"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Шартуулар"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функциялар"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Өзгөрмөлөр"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Код сааты 2017 чогултуучу"
+        },
         "courseb-2018/Loops in Artist": {
           "name": "Циклдар менен бакчаларды тартуу"
         },
@@ -335,6 +356,66 @@
         "course4/Artist Binary": {
           "name": "Сүрөтчү бинардык система"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Компүтер илимине киришүү"
+        },
+        "20-hour/The Maze": {
+          "name": "Лабиринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Эсептөөчү ой жүгүртүү"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "20-hour/The Artist": {
+          "name": "Сүрөтчү"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритмдер"
+        },
+        "20-hour/The Artist 2": {
+          "name": "2-Сүрөтчү"
+        },
+        "20-hour/Functions": {
+          "name": "Функциялар"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермер"
+        },
+        "20-hour/Conditionals": {
+          "name": "Шартуулар"
+        },
+        "20-hour/The Artist 3": {
+          "name": "3-Сүрөтчү"
+        },
+        "20-hour/Song Writing": {
+          "name": "Ыр жазуу"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "2-фермер"
+        },
+        "20-hour/Abstraction": {
+          "name": "Абстракция"
+        },
+        "20-hour/The Artist 4": {
+          "name": "4-Сүрөтчү"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Релени програмдоо"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "3-фермер"
+        },
+        "20-hour/The Internet": {
+          "name": "Интернет"
+        },
+        "20-hour/The Artist 5": {
+          "name": "5-Сүрөтчү"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Жыйынтыктоо"
+        },
         "course2/Graph Paper Programming": {
           "name": "Графикалык кагазды програмдоо"
         },
@@ -421,6 +502,21 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Сүрөтчү"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат."

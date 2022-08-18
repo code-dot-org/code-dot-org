@@ -15,10 +15,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {
-  setAllSources,
-  setDisableFinishButton
-} from '@cdo/apps/javalab/javalabRedux';
+import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/javalabRedux';
 
 describe('Javalab', () => {
   let javalab;
@@ -68,49 +65,6 @@ describe('Javalab', () => {
     });
   });
 
-  describe('finish button', () => {
-    it('is disabled when reviewing code', () => {
-      config.isCodeReviewing = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(true)
-      );
-    });
-
-    it('is disabled on readonly workspaces', () => {
-      config.readonlyWorkspace = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(true)
-      );
-    });
-
-    it('is disabled when reviewing code on submittable levels', () => {
-      config.isCodeReviewing = true;
-      config.level.submittable = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(true)
-      );
-    });
-
-    it('is enabled on submitted levels', () => {
-      config.readonlyWorkspace = true;
-      config.level.submittable = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(false)
-      );
-    });
-
-    it('is enabled by default', () => {
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(false)
-      );
-    });
-  });
-
   describe('populates sources', () => {
     it('with start_sources if there are any and there is no lastAttempt', () => {
       config.level = {
@@ -125,7 +79,7 @@ describe('Javalab', () => {
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.startSources)
+        setAllSourcesAndFileMetadata(config.level.startSources)
       );
     });
 
@@ -147,7 +101,7 @@ describe('Javalab', () => {
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.lastAttempt)
+        setAllSourcesAndFileMetadata(config.level.lastAttempt)
       );
     });
 
@@ -173,7 +127,7 @@ describe('Javalab', () => {
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.exemplarSources)
+        setAllSourcesAndFileMetadata(config.level.exemplarSources)
       );
     });
   });

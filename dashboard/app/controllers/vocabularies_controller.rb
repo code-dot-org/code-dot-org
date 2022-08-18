@@ -40,7 +40,7 @@ class VocabulariesController < ApplicationController
         lesson.script.write_script_json
       end
     end
-    if vocabulary && vocabulary.update!(vocabulary_params.except(:lesson_ids))
+    if vocabulary&.update!(vocabulary_params.except(:lesson_ids))
       vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
     else

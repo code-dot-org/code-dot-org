@@ -25,7 +25,7 @@ require 'cdo/script_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
-  include SharedCourseConstants
+  include Curriculum::SharedCourseConstants
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
@@ -60,7 +60,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
-  validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
     !!plc_course
@@ -70,7 +70,6 @@ class UnitGroup < ApplicationRecord
   include SerializedProperties
 
   serialized_attrs %w(
-    teacher_resources
     has_verified_resources
     has_numbered_units
     family_name
@@ -98,11 +97,11 @@ class UnitGroup < ApplicationRecord
   # Any course with a plc_course is considered stable.
   # All other courses must specify a published_state.
   def stable?
-    plc_course || (published_state == SharedCourseConstants::PUBLISHED_STATE.stable)
+    plc_course || (published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 
   def in_development?
-    published_state == SharedCourseConstants::PUBLISHED_STATE.in_development
+    published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   def self.file_path(name)
@@ -128,10 +127,10 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
     unit_group.properties = hash['properties']
-    unit_group.published_state = hash['published_state'] || SharedCourseConstants::PUBLISHED_STATE.in_development
-    unit_group.instruction_type = hash['instruction_type'] || SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-    unit_group.instructor_audience = hash['instructor_audience'] || SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-    unit_group.participant_audience = hash['participant_audience'] || SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    unit_group.instructor_audience = hash['instructor_audience'] || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    unit_group.participant_audience = hash['participant_audience'] || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
@@ -202,15 +201,6 @@ class UnitGroup < ApplicationRecord
     save!
   end
 
-  # @param types [Array<string>]
-  # @param links [Array<string>]
-  def update_teacher_resources(types, links)
-    return if types.nil? || links.nil? || types.length != links.length
-    # Only take those pairs in which we have both a type and a link
-    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    save!
-  end
-
   def write_serialization
     # Only save non-plc course, and only in LB mode
     return unless Rails.application.config.levelbuilder_mode && !plc_course
@@ -241,7 +231,7 @@ class UnitGroup < ApplicationRecord
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
-        unit.course_version.destroy if unit.course_version
+        unit.course_version&.destroy
 
         unit.reload
         unit.write_script_json
@@ -300,7 +290,7 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def summarize(user = nil, for_edit: false, locale_code: nil)
@@ -324,8 +314,7 @@ class UnitGroup < ApplicationRecord
         include_lessons = false
         unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
       end,
-      teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
@@ -455,7 +444,7 @@ class UnitGroup < ApplicationRecord
   # @return [String] URL to the course the user should be redirected to.
   def redirect_to_course_url(user)
     # Only redirect students.
-    return nil unless user && user.student?
+    return nil unless user&.student?
     # No redirect unless user is allowed to view this course version, they are not assigned to the course,
     # and it is versioned.
     return nil unless can_view_version?(user) && !user.assigned_course?(self) && version_year
@@ -494,7 +483,7 @@ class UnitGroup < ApplicationRecord
 
     all_courses.select do |course|
       course.family_name == family_name &&
-        course.published_state == SharedCourseConstants::PUBLISHED_STATE.stable
+        course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     end.sort_by(&:version_year).last
   end
 

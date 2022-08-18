@@ -429,7 +429,6 @@ hi:
     popup:
       progress_for_user: "%{Name} की प्रगति"
       progress: 'आपकी प्रगति'
-      lines: 'कोड की कुल लाइनें: %{lines}'
       close: 'बंद करें'
       mastery: 'धारणाएं'
       puzzle_map: 'चरण'
@@ -1064,6 +1063,7 @@ hi:
         music: 'संगीत'
         art: 'कला'
         other: "अन्य:"
+        na: 'लागू नहीं'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1072,7 +1072,8 @@ hi:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "अन्य:"
+        other: "अन्य"
+        na: 'लागू नहीं'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1082,7 +1083,8 @@ hi:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "अन्य:"
+        other: "अन्य"
+        na: 'लागू नहीं'
       workshop_course:
         csf_af: 'CS मूल सिद्धांत (पाठ्यक्रम A-F)'
         csf_express: 'CS मूल सिद्धांत (प्री-एक्सप्रेस या एक्सप्रेस)'

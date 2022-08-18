@@ -194,6 +194,9 @@
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
           "student_overview": "Žiaci všetkých vekových kategórií získajú ďalšiu skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hodina Kódu 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.",
           "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Tanečná párty](https://studio.code.org/s/dance-2019) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n-   Prečítajte si doplnkový plán lekcie [Veľká tanečná párty](https://studio.code.org/s/dance-unplugged/lessons/1) a rozhodnite sa, či by ste si pred Hodinou kódu nechceli so žiakmi prejsť ešte aj túto lekciu.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](http://code.org/certificates). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n-   (Nepovinné) Motivujte žiakov k tomu, aby si na aktivitu priniesli slúchadlá.",
@@ -206,8 +209,95 @@
           "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com).\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci.\n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať certifikát. Vopred vytlačte po jednom [certifikáte](https://code.org/certificates?script=oceans) pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
           "purpose": "Cieľom tohto kurzu je poskytnúť žiakom rýchly úvod do **strojového učenia**, čo je typ **umelej inteligencie**. Žiaci preskúmajú, ako sa používajú **trénovacie údaje** na to, aby model strojového učenia dokázal klasifikovať nové údaje. Žiaci by mali získať pozitívne skúsenosti počas tohto kurzu a, čo je ešte dôležitejšie, mali by byť motivovaní ďalej sa učiť informatiku. "
         },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Postupnosť"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cykly"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Udalosti"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Podmienené príkazy"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Záverečné projekty"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcie"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Premenné"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Cykly \"Pre\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Štúdia nálady"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Digitálny dizajn"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Začíname"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Plánovanie"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Ďalšie kroky"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Prehľad a inštrukcie k nastaveniu"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Rovný s rovným - posielanie bitov na zdieľanej sieti"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Rovný s rovným - posielanie čísel"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Rovný s rovným - posielanie Ascii (americký štandardný kód)"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Vysielanie správ"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Smerovače a adresy"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakety a spoľahlivosť"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuálne DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatický DNS uzol"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Bezplatný internetový simulátor - Freeplay"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Útek z miestnosti"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Začíname"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Plánovanie"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Ďalšie kroky"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Pohni sa, pohni sa"
@@ -752,6 +842,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Včela Hláskovanie"
         },
+        "csd3-2018/Programming for Entertainment": {
+          "name": "Programovanie pre zábavu"
+        },
         "csd3-2018/Plotting Shapes": {
           "name": "Tvorba tvarov"
         },
@@ -765,7 +858,7 @@
           "name": "Premenné"
         },
         "csd3-2018/Sprites": {
-          "name": "Objekt \"sprite\""
+          "name": "Sprajty"
         },
         "csd3-2018/The Draw Loop": {
           "name": "Cyklus kreslenia"
@@ -774,7 +867,7 @@
           "name": "Kód pre počítanie (bez počítača)"
         },
         "csd3-2018/Sprite Movement": {
-          "name": "Pohyb \"sprite\" objektu"
+          "name": "Pohyb sprajtov"
         },
         "csd3-2018/Booleans Unplugged": {
           "name": "Logické výrazy – lekcia bez počítača"
@@ -798,10 +891,10 @@
           "name": "Detekcia kolízie"
         },
         "csd3-2018/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov"
         },
         "csd3-2018/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov"
         },
         "csd3-2018/Functions": {
           "name": "Funkcie"
@@ -1287,10 +1380,10 @@
           "name": "Kráľovská bitka s udalosťami"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Záverečný test po projekte"
+          "name": "Programovanie pre zábavu"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
+          "name": "Tvorba tvarov"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe"
@@ -1302,7 +1395,7 @@
           "name": "Premenné"
         },
         "csd3-2019/Sprites": {
-          "name": "Objekt \"sprite\""
+          "name": "Sprajty"
         },
         "csd3-2019/The Draw Loop": {
           "name": "Cyklus kreslenia"
@@ -1311,7 +1404,7 @@
           "name": "Kód pre počítanie (bez počítača)"
         },
         "csd3-2019/Sprite Movement": {
-          "name": "Pohyb \"sprite\" objektu"
+          "name": "Pohyb sprajtov"
         },
         "csd3-2019/Booleans Unplugged": {
           "name": "Logické výrazy – lekcia bez počítača"
@@ -1335,10 +1428,10 @@
           "name": "Detekcia kolízie"
         },
         "csd3-2019/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov"
         },
         "csd3-2019/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov"
         },
         "csd3-2019/Functions": {
           "name": "Funkcie"
@@ -1352,35 +1445,20 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Projekt - Vytvor vlastnú hru"
         },
-        "csd6-2019/Innovations in Computing": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
-        },
         "csd6-2019/Functions with Parameters": {
           "name": "Funkcie s parametrami"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd4-2019/Understanding Your User": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
+          "name": "Analýza dizajnu"
         },
         "csd4-2019/Digital Design": {
           "name": "Digitálny dizajn"
-        },
-        "csd5-2019/Representation Matters": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd5-2019/Patterns and Representation": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Úvod do riešenia problémov"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Záverečný test po projekte"
+          "name": "Postup riešenia problémov"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Objavujeme riešenie problémov"
@@ -1399,12 +1477,6 @@
         },
         "csd1-2019/Project - Propose an App": {
           "name": "Projekt - Navrhnite aplikáciu"
-        },
-        "csd2-2019/Exploring Websites": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd2-2019/Websites for Expression ": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd2-2019/Headings": {
           "name": "Nadpisy"
@@ -1865,6 +1937,12 @@
         "express-2017/Present Your Project": {
           "name": "Prezentuj svoj projekt"
         },
+        "csd3-2017/Programming for Entertainment": {
+          "name": "Programovanie pre zábavu"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Tvorba tvarov"
+        },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe"
         },
@@ -1875,7 +1953,7 @@
           "name": "Premenné"
         },
         "csd3-2017/Sprites": {
-          "name": "Objekt \"sprite\""
+          "name": "Sprajty"
         },
         "csd3-2017/The Draw Loop": {
           "name": "Cyklus kreslenia"
@@ -1884,7 +1962,7 @@
           "name": "Kód pre počítanie (bez počítača)"
         },
         "csd3-2017/Sprite Movement": {
-          "name": "Pohyb \"sprite\" objektu"
+          "name": "Pohyb sprajtov"
         },
         "csd3-2017/Booleans Unplugged": {
           "name": "Logické výrazy – lekcia bez počítača"
@@ -1908,10 +1986,10 @@
           "name": "Detekcia kolízie"
         },
         "csd3-2017/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov"
         },
         "csd3-2017/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov"
         },
         "csd3-2017/Functions": {
           "name": "Funkcie"
@@ -1967,8 +2045,26 @@
         "csd1-2017/Project - Propose an App": {
           "name": "Projekt - Navrhnite aplikáciu"
         },
+        "csd4-2017/Analysis of Design": {
+          "name": "Analýza dizajnu"
+        },
         "csd4-2017/Digital Design": {
           "name": "Digitálny dizajn"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Návod na čiernobiele rozpixelovanie"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Čiernobiele rozpixelovanie - voľná hra"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Návod na farebné rozpixelovanie"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Príklady farebného rozpixelovania"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Farebné rozpixelovanie - voľná hra"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Bez počítača: Tangramy"
@@ -2035,6 +2131,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extrémna výzva - súhrnná"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Úvod do informatiky"
+        },
+        "20-hour/The Maze": {
+          "name": "Bludisko"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Algoritmické myslenie"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programovanie na štvorčekový papier"
+        },
+        "20-hour/The Artist": {
+          "name": "Umelec"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmy"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Umelec 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkcie"
+        },
+        "20-hour/The Farmer": {
+          "name": "Farmárka"
+        },
+        "20-hour/Conditionals": {
+          "name": "Podmienené príkazy"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Umelec 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Napísanie piesne"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Farmárka 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakcia"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Umelec 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Štafetové programovanie"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Farmárka 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Umelec 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Zhrnutie"
         },
         "course2/Graph Paper Programming": {
           "name": "Programovanie na štvorčekový papier"
@@ -2216,6 +2372,63 @@
           "preparation": "-   Viac obsahu o online bezpečnosti nájdete na webovej stránke [Common Sense Education](https://www.commonsense.org/education/digital-citizenship).",
           "purpose": "Hlavným cieľom tejto lekcie je umožniť žiakom, aby sa zlepšovali v práci s počítačom. Pokrytím najzákladnejších funkcií počítača, ako je klikanie, presúvanie a púšťanie, stierame rozdiely medzi žiakmi a dávame všetkým možnosť zvládnuť budúce úlohy rovnako dobre. Táto lekcia tiež poskytuje skvelú príležitosť predstaviť žiakom základné termíny týkajúce sa počítačového hardvéru, napríklad „myš“, „touchpad“ či „dotyková obrazovka“ (v závislosti od toho, aké zariadenia používate).",
           "student_overview": "Dokonči úlohy presúvaním objektov."
+        },
+        "allthethings/Jigsaw": {
+          "name": "Skladačka"
+        },
+        "allthethings/Maze": {
+          "name": "Bludisko"
+        },
+        "allthethings/Artist": {
+          "name": "Umelec"
+        },
+        "allthethings/Bee": {
+          "name": "Včela"
+        },
+        "allthethings/Farmer": {
+          "name": "Farmárka"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Match": {
+          "name": "Zápas"
+        },
+        "allthethings/Text Compression": {
+          "name": "Kompresia textu"
+        },
+        "allthethings/AppLab": {
+          "name": "App Lab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Game Lab"
+        },
+        "allthethings/Studio": {
+          "name": "Štúdio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Free Response": {
+          "name": "Voľná odpoveď"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Vymenené levely."
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Anonymný študentský dotazník"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "Predstavenie Sprite Labu",
@@ -3091,14 +3304,8 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Záverečný test po projekte"
-        },
         "csd4-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
-        },
-        "csd6-2021/Innovations in Computing": {
-          "name": "Záverečný test po projekte"
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funkcie s parametrami"
@@ -3106,60 +3313,100 @@
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
-        "csd5-2021/Representation Matters": {
-          "name": "Záverečný test po projekte"
-        },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Záverečný test po projekte"
+          "name": "Programovanie pre zábavu",
+          "student_overview": "**Otázka dňa: Ako sa informatika využíva pre zábavu?**\n\nV tejto lekcii preskúmaš, akú úlohu zohráva informatika a najmä programovanie v zábavnom priemysle a pri sebavyjadrovaní."
         },
         "csd3-2021/Plotting Shapes": {
-          "name": "Tvorba tvarov"
+          "name": "Tvorba tvarov",
+          "student_overview": "**Otázka dňa: Ako dokážeme jasne komunikovať, ako niečo nakresliť na obrazovke?**\n\nV tejto lekcii preskúmaš výzvy, ktoré musí človek prekonať, keď chce jasne odkomunikovať pokyny. V prostredí Game Lab budeš kresliť tvary na mriežke."
         },
         "csd3-2021/Drawing in Game Lab": {
-          "name": "Kreslenie v Game Labe"
+          "name": "Kreslenie v Game Labe",
+          "student_overview": "**Otázka dňa: Ako dokážeme počítaču odkomunikovať, ako má na obrazovke kresliť tvary?**\n\nV tejto lekcii začneš využívať prostredie Game Lab na rozmiestnenie tvarov na obrazovke a popri tom si precvičíš koncepty postupností a ladenia. "
+        },
+        "csd3-2021/Shapes and Parameters": {
+          "name": "Tvary a parametre",
+          "student_overview": "**Otázka dňa: Ako dokážeme pomocou parametrov zadať počítaču konkrétnejšie pokyny?**\n\nV tejto lekcii budeš pokračovať s prácou v prostredí Game Lab a lepšie sa oboznámiš s kreslením tvarov na obrazovke vďaka tomu, že budeš upravovať parametre tvarov, pomocou ktorých kreslíš obrázky. "
         },
         "csd3-2021/Variables": {
           "name": "Premenné",
-          "overview": "**Otázka dňa:  Ako vieme využiť premenné na skladovanie konkrétnej hodnoty a jej využitie v našom programe?**\n\nV tejto lekcii si predstavíme premenné ako spôsob na označenie čísla alebo uloženie náhodne vygenerovanej hodnoty. Začneme jednoduchým popisom premenných a ich využitia a vyskúšame ich použitie v praxi. "
+          "overview": "**Otázka dňa:  Ako vieme využiť premenné na skladovanie konkrétnej hodnoty a jej využitie v našom programe?**\n\nV tejto lekcii si predstavíme premenné ako spôsob na označenie čísla alebo uloženie náhodne vygenerovanej hodnoty. Začneme jednoduchým popisom premenných a ich využitia a vyskúšame ich použitie v praxi. ",
+          "student_overview": "**Otázka dňa: Ako môžeme pomocou premenných ukladať informácie do našich programov?**\n\nV tejto lekcii sa oboznámiš s premennými, ktoré sú v programovaní dôležité, pretože sa do nich ukladajú hodnoty používané v programoch."
+        },
+        "csd3-2021/Random Numbers": {
+          "name": "Náhodné čísla",
+          "student_overview": "**Otázka dňa: Ako môžeme dosiahnuť, aby sa naše programy správali pri každom spustení inak?**\n\nV tejto lekcii sa naučíš používať vytvárať vo svojich programoch rôzne správania pomocou bloku randomNumber()."
         },
         "csd3-2021/Sprites": {
-          "name": "Objekt \"sprite\""
+          "name": "Sprajty",
+          "student_overview": "**Otázka dňa: Ako nám dokážu sprajty pomôcť uchovávať v našich programoch väčšie množstvo údajov?**\n\nDnes sa naučíš o sprajtoch, ktoré ti umožnia nielen uchovávať v programe rôzne druhy informácií, ale aj vytvárať zaujímavejšie a zábavnejšie obrázky!"
         },
         "csd3-2021/Sprite Properties": {
-          "name": "Vlastnosti postáv"
+          "name": "Vlastnosti postáv",
+          "student_overview": "**Otázka dňa: Ako dokážeme pomocou vlastností sprajtov meniť ich vzhľad na obrazovke?**\n\nV tejto lekcii budeš pokračovať v práci so sprajtmi – budeš im meniť vzhľad pomocou vlastností. "
         },
         "csd3-2021/Text": {
-          "name": "Text"
+          "name": "Text",
+          "student_overview": "**Otázka dňa: Ako si môžeme pomocou textu zlepšiť scény a animácie?**\n\nV tejto lekcii sa naučíš využívať textové príkazy prostredia Game Lab na pridanie popisu k scéne. "
+        },
+        "csd3-2021/Mini-Project: Captioned Scenes": {
+          "name": "Miniprojekt – Scény s popismi",
+          "student_overview": "**Otázka dňa: Ako dokážeme pomocou prostredia Game Lab ukázať svoju tvorivosť?**\n\nV tejto lekcii budeš mať príležitosť ukázať svoju tvorivosť tým, že využiješ postup riešenia problémov na navrhnutie a naprogramovanie scény podľa svojho výberu. "
         },
         "csd3-2021/The Draw Loop": {
-          "name": "Cyklus kreslenia"
+          "name": "Cyklus kreslenia",
+          "student_overview": "**Otázka dňa: Ako dokážeme v Game Labe spraviť z obrázkov animácie?**\n\nV tejto lekcii sa naučíš, ako pomocou cyklu draw() a náhodných čísel vytvoriť svoje prvé jednoduché animácie. "
         },
         "csd3-2021/Sprite Movement": {
-          "name": "Pohyb \"sprite\" objektu"
+          "name": "Pohyb sprajtov",
+          "student_overview": "**Otázka dňa: Ako dokážeme ovládať pohyb sprajtov v Game Labe?**\n\nV tejto lekcii sa naučíš ovládať pohyb sprajtov pomocou počítadla. "
+        },
+        "csd3-2021/Mini-Project: Animation": {
+          "name": "Miniprojekt – Animácia",
+          "student_overview": "**Otázka dňa: Ako môžeme skombinovať rôzne programovacie vzory na vytvorenie kompletnej animácie?**\n\nV tejto lekcii skombinuješ všetky koncepty z predchádzajúcich lekcií a vytvoríš si pomocou nich svoju prvú vlastnú animovanú scénu!"
         },
         "csd3-2021/Conditionals": {
-          "name": "Podmienené príkazy"
+          "name": "Podmienené príkazy",
+          "student_overview": "**Otázka dňa: Ako dokážu programy reagovať na zmeny, keď už sú spustené?**\n\nV tejto lekcii sa naučíš o logických výrazoch a podmienených príkazoch. Tie ti umožnia vyvárať programy, ktoré fungujú rôzne v závislosti od toho, či je podmienka splnená alebo nie."
         },
         "csd3-2021/Keyboard Input": {
-          "name": "Stlačenie kláves ako vstup"
+          "name": "Stlačenie kláves ako vstup",
+          "student_overview": "**Otázka dňa: Ako dokáže program reagovať na vstupy používateľa?**\n\nV tejto lekcii sa naučíš používať blok keyDown(), ktorý tvojim programom umožní reagovať na vstupy používateľa. "
+        },
+        "csd3-2021/Mouse Input": {
+          "name": "Vstup myši",
+          "student_overview": "**Otázka dňa: Akými ďalšími spôsobmi dokáže počítač reagovať na vstupy používateľa?**\n\nV tejto lekcii získaš ďalšie poznatky o podmienkach „ak“, oboznámiš sa s podmienkami „ak/tak“ a dozvieš sa o tom, ako dokážeme pomocou myši získať od používateľa vstupy, ktoré sa dajú využiť v podmienených príkazoch. "
         },
         "csd3-2021/Project - Interactive Card": {
-          "name": "Projekt - Interaktívna pohľadnica"
+          "name": "Projekt - Interaktívna pohľadnica",
+          "student_overview": "**Otázka dňa:  Aké zručnosti a techniky sú dôležité pri vytváraní interaktívneho programu?**\n\nV tejto lekcii si pomocou všetkých programovacích konceptov a techník, ktoré sme si doteraz predstavili, naplánuješ a vytvoríš interaktívnu pohľadnicu."
         },
         "csd3-2021/Velocity": {
-          "name": "Rýchlosť"
+          "name": "Rýchlosť",
+          "student_overview": "**Otázka dňa: Ako dokážu programovacie jazyky ukryť komplikované vzory tak, aby zjednodušili programovanie?**\n\nV tejto lekcii sa naučíš nastavovať rýchlosť sprajtu, pričom na pohyb sprajtov budeš používať počítadlo. "
         },
         "csd3-2021/Collision Detection": {
-          "name": "Detekcia kolízie"
+          "name": "Detekcia kolízie",
+          "student_overview": "**Otázka dňa: Ako dokáže programovanie zjednodušiť komplikované problémy?**\n\nV tejto lekcii sa budeš učiť o detekcii kolízií tým, že sa pozrieš na to, ako dokáže počítač pomocou matematiky, polohy sprajtov a ich veľkosti určiť, či sa sprajty dotýkajú alebo nie. "
+        },
+        "csd3-2021/Mini-Project: Side Scroller": {
+          "name": "Miniprojekt – Side-scroller",
+          "student_overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nV tejto lekcii využiješ získané vedomosti o rýchlosti a detekcii kolízií na vytvorenie jednoduchej počítačovej hry typu side-scroller!"
         },
         "csd3-2021/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov",
+          "student_overview": "**Otázka dňa: Ako sa dajú predchádzajúce bloky skombinovať do nových vzorov, aby vytvorili zaujímavé pohyby?**\n\nV tejto lekcii sa naučíš spojiť rýchlostné vlastnosti sprajtov s počítadlom, a nastaviť tak sprajtom zložitejšie pohyby. "
         },
         "csd3-2021/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov",
+          "student_overview": "**Otázka dňa: Ako dokážu programátori stavať na abstrakciách, a vytvárať tak ďalšie abstrakcie?**\n\nV tejto lekcii sa naučíš používať bloky kolízií („collide“, „displace“, „bounce“ a „bounceOff“), a prinútiť tak sprajty interagovať zaujímavými novými spôsobmi. "
+        },
+        "csd3-2021/Mini-Project: Flyer Game": {
+          "name": "Miniprojekt – Lietacia hra"
         },
         "csd3-2021/Functions": {
           "name": "Funkcie"
@@ -3184,7 +3431,7 @@
           "student_overview": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**\n\nBudete v skupine navrhovať a testovať loďku z hliníkovej fólie. Cieľom je navrhnúť loďku, ktorá udrží čo najviac jednocentových mincí."
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Záverečný test po projekte",
+          "name": "Postup riešenia problémov",
           "overview": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**\n\nTáto lekcia predstavuje formálny postup riešenia problémov, podľa ktorého budú žiaci počas roka postupovať. Postup pozostáva zo štyroch krokov: definuj – priprav – vyskúšaj– vyhodnoť. Lekcia sa začína tým, že žiaci dostanú za úlohu vymenovať rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Žiaci sa potom oboznámia so štvoricou krokov, z ktorých pozostáva postup riešenia problémov, a spoločne sa snažia spojiť si tieto abstraktné kroky s vlastnými skúsenosťami s riešením problémov. Žiaci si tieto kroky najprv spoja s problémami, s ktorými sa stretli v predchádzajúcej lekcii, potom s nejakým problémom, ktorý už vedia dobre riešiť, a nakoniec s problémom, v riešení ktorého by sa chceli zlepšiť. Na konci hodiny žiaci v rámci triedy vytvoria zoznam všeobecne užitočných stratégií pre každý krok postupu riešenia problémov. Stratégie následne spíšu na plagáty, ktoré budú používať po zvyšok tematického celku a roka.",
           "preparation": "Pre každého žiaka \n\n-   Vytlačte kópiu sprievodcu aktivitou\n\nPre triedu\n\n-   Plagátový papier\n-   Fixky alebo pastelky",
           "purpose": "Cieľom tejto lekcie je ukotviť formálny postup riešenia problémov, ktorý budú žiaci využívať počas kurzu, jeho prepojením s reálnymi skúsenosťami žiakov s riešením problémov. V nasledujúcich tematických celkoch v kurze Objavujeme informatiku budú úlohy prezentované v kontextoch, ktoré žiakom môžu, no nemusia byť povedomé. Štruktúrovaný postup riešenia problémov preto bude pre žiakov dôležitým nástrojom, ktorý im pomôže úspešne riešiť aj nové a zložité úlohy.",
@@ -3245,9 +3492,6 @@
         "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
           "name": "Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)",
           "purpose": "Táto lekcia žiakom poskytuje možnosť viac si vyskúšať postup riešenia problémov v praxi a v rôznych kontextoch. Vyzdvihuje fakt, že postup riešenia problémov je užitočný najmä vtedy, keď treba riešiť zle zadefinované problémy. Záverečný brainstorming v lekcii poskytne žiakom stratégie a otázky, pomocou ktorých budú schopní lepšie definovať problémy, keďže práve tento krok je často najdôležitejší. Problémy rozoberané v tejto lekcii slúžia aj na to, aby v nasledujúcej lekcii podporili diskusiu o tom, na riešenie akých typov problémov sú počítače stavané výnimočne dobre."
-        },
-        "csd2-2021/Exploring Web Pages": {
-          "name": "Záverečný test po projekte"
         },
         "csd2-2021/Headings": {
           "name": "Nadpisy"

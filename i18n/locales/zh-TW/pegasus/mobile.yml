@@ -366,6 +366,7 @@
   homepage_slot_text_link_buy: "加入我們"
   homepage_slot_text_link_donate: "贊助"
   homepage_slot_text_link_shop: "T 恤、帽子等更多"
+  homepage_slot_text_link_thebadguys: "壞蛋聯盟編程"
   homepage_slot_text_link_administrators: "將 CS 帶入校園"
   homepage_gallery_header: "已經建立了超過 %{project_count} 萬個專案"
   homepage_header_donors: "Code.org 感謝所有支持者"
@@ -373,6 +374,11 @@
   homepage_donors_donate: "贊助"
   homepage_below_hero_announcement_text: "我們尊重您的隱私權，並且正在對我們的隱私權政策做一些更新，更新後的政策將於 5 月 25 日生效。"
   homepage_below_hero_announcement_link_text: "進一步了解"
+  homepage_higher_power_body: "與舞蹈派對一起創作，獲得觀看樂隊現場表演的機會。"
+  homepage_thebadguys_body: "利用狼蛛女士、狼先生和**壞蛋聯盟**的其他角色編寫一個冒險故事！"
+  homepage_csa_subhead: "一個新方法-"
+  homepage_csa_title: "AP®電腦科學A"
+  homepage_csa_body: "在我們以公平為導向的課程中，為學生提供與現實世界相連的創意項目。"
   contact_form_topic_student: "我是學生"
   contact_form_topic_parent: "我是家長"
   contact_form_topic_teacher: "我是老師"
@@ -504,6 +510,8 @@
   video_title_marco_belinelli: "和 Marco Belinelli 玩一小時程式"
   video_title_chris_bosh: "Chris Bosh 談計算機科學"
   video_title_my_name_is_aracely: "我是 Aracely"
+  video_title_change_face_of_cs: "改變電腦科學的面貌"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 分鐘"
   video_2min: "2 分鐘"
   video_3min: "3 分鐘"
@@ -971,6 +979,7 @@
   express-2020_name: 速學課程（2019）
   pre-express-2020_name: 學前兒童的速學課程（2020）
   pre-express-2021_name: 學前兒童的速學課程（2021）
+  pre-express-2022_name: 學前兒童快捷課程（2022）
   csd2_name: '單元 2：網頁開發'
   csd3_name: '單元 3：動畫與遊戲'
   accelerated_name: "速成課程"
@@ -1483,6 +1492,7 @@
   header_educate_beyond: "超越 Code.org"
   header_educate_inspire: "激勵學生"
   header_educate_community: "線上社群"
+  header_educate_requirements: "技術要求"
   header_educate_tools: "工具和影片"
   header_about_us: "關於我們"
   header_about_leadership: "管理團隊"
@@ -1705,6 +1715,8 @@
   hoc2018_dance_video2: "舞蹈派對 - 事件（Evnets）"
   hoc2018_dance_video3: "舞蹈派對 - 屬性（Properties）"
   hoc2018_dance_video4: "舞蹈派對 - 恭喜"
+  dance_box_higher_power_line_1: "為酷玩樂隊的“更高的力量”編碼一支舞蹈，你就有機會看到樂隊的現場表演！"
+  dance_box_higher_power_line_2: "查看<a href=\"%{path}\">code.org/coldplay</a>獲取更多資訊。"
   page_not_found_title: "找不到頁面"
   page_not_found_header: ' 404：找不到頁面'
   page_not_found_description: "你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。"
@@ -1798,4 +1810,7 @@
   ai_try_activity: "嘗試紀錄"
   outbreak_tile_title: "疫情爆發"
   outbreak_tile_subtitle: "病毒感染了怪物鎮編寫疫情爆發模擬器，並預測怪物鎮的鄰居會發生什麼事。"
+  outbreak_tile_alt: "模擬病毒如何通過一群紫色怪物傳播。"
   footer_cookie_notice: "Cookie通知"
+  top_hoc_tutorial_applab_alt_text: "一只用食指觸碰觸屏平板電腦的棕色手，在藍色背景下發射星星和光線"
+  minecraft_tile_alt: "我的世界中的兩個角色：史蒂夫和亞曆克斯，背景是一個帶珊瑚、海豚和海帶的水生我的世界場景"

@@ -16,17 +16,21 @@ export default class PrincipalApprovalButtons extends React.Component {
     showSendEmailButton: PropTypes.bool,
     showResendEmailButton: PropTypes.bool,
     showNotRequiredButton: PropTypes.bool,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    applicationStatus: PropTypes.string
   };
 
   constructor(props) {
     super(props);
 
+    const appStatusesForSendingEmail = ['unreviewed', 'pending', 'waitlisted'];
+
     this.state = {
       sendEmailRequest: null,
       notRequiredRequest: null,
       showSendEmailButton:
-        this.props.showSendEmailButton || this.props.showResendEmailButton,
+        appStatusesForSendingEmail.includes(this.props.applicationStatus) &&
+        (this.props.showSendEmailButton || this.props.showResendEmailButton),
       showNotRequiredButton: this.props.showNotRequiredButton,
       showResendEmailConfirmation: false
     };

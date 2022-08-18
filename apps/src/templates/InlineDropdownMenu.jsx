@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import {KeyCodes} from '@cdo/apps/constants';

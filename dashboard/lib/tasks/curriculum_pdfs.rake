@@ -1,6 +1,8 @@
 namespace :curriculum_pdfs do
   def get_pdf_enabled_scripts
     Script.all.select do |script|
+      next false if [Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script.get_published_state)
+      next false if script.use_legacy_lesson_plans
       script.is_migrated && script.seeded_from.present?
     end
   end
@@ -8,7 +10,7 @@ namespace :curriculum_pdfs do
   def get_pdfless_lessons(script)
     script.lessons.select(&:has_lesson_plan).select do |lesson|
       !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson) ||
-        !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson, true)
+        (script.include_student_lesson_plans && !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson, true))
     end
   end
 
@@ -34,6 +36,10 @@ namespace :curriculum_pdfs do
     puts "No missing PDFs found" unless any_missing_pdfs_found
   end
 
+  # In order to run this in development, you may first need to install puppeteer via:
+  #   cd bin/generate-pdf
+  #   yarn install
+  # on the staging machine, this is taken care of in cookbooks/cdo-apps/recipes/generate_pdf.rb
   desc 'Generate any PDFs that we would expect to have been generated automatically but for whatever reason haven\'t been.'
   task generate_missing_pdfs: :environment do
     get_pdf_enabled_scripts.each do |script|
@@ -47,13 +53,13 @@ namespace :curriculum_pdfs do
           any_pdf_generated = true
         end
 
-        unless Services::CurriculumPdfs.script_overview_pdf_exists_for?(script)
+        if !Services::CurriculumPdfs.script_overview_pdf_exists_for?(script) && Services::CurriculumPdfs.should_generate_overview_pdf?(script)
           puts "Generating missing Script Overview PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_overview_pdf(script, dir)
           any_pdf_generated = true
         end
 
-        unless Services::CurriculumPdfs.script_resources_pdf_exists_for?(script)
+        if !Services::CurriculumPdfs.script_resources_pdf_exists_for?(script) && Services::CurriculumPdfs.should_generate_resource_pdf?(script)
           puts "Generating missing Script Resources PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_resources_pdf(script, dir)
           any_pdf_generated = true

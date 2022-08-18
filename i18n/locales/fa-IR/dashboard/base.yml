@@ -303,7 +303,6 @@ fa:
     popup:
       progress_for_user: "درصد پیشرفت %{name}"
       progress: 'پیشرفت شما'
-      lines: 'تعداد خطوط کد: %{lines}'
       close: 'بستن'
       mastery: 'مفاهیم'
       puzzle_map: 'مراحل'
@@ -689,10 +688,13 @@ fa:
         cs: 'علوم کامپیوتر'
         math: 'ریاضی'
         science: 'علم'
+        other: "دیگر"
       resources:
         kodable: 'Kodable'
+        other: "دیگر"
       robotics:
         kodable: 'Kodable'
+        other: "دیگر"
       email_opt_in:
         opt_in_yes: 'بله'
         opt_in_no: 'نه'

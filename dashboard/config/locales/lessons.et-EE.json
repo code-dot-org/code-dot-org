@@ -44,6 +44,36 @@
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "KoodiTund 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Tsüklid"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Sündmused"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Tingimuslaused"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funktsioonid"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Muutujad"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For tsükkel"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Järgmised sammud"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuaalne DNS"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Järgmised sammud"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Liiguta, liiguta"
         },
@@ -410,6 +440,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstreemne väljakutse - kõikehõlmav"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Sissejuhatus arvutiõpetusse"
+        },
+        "20-hour/The Maze": {
+          "name": "Labürint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Arvutuslik mõtlemine"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "20-hour/The Artist": {
+          "name": "Kunstnik"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmid"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Kunstnik tase 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funktsioonid"
+        },
+        "20-hour/The Farmer": {
+          "name": "Talunik"
+        },
+        "20-hour/Conditionals": {
+          "name": "Tingimuslaused"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Kunstnik tase 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Laulu kirjutamine"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Talunik tase 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraktsus"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Kunstnik tase 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relee programmeerimine"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Talunik tase 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Kunstnik tase 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Kokkuvõte"
+        },
         "course2/Graph Paper Programming": {
           "name": "Millimeetripaberi programmeerimine"
         },
@@ -586,6 +676,33 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Pusle"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Pusle"
+        },
+        "allthethings/Maze": {
+          "name": "Labürint"
+        },
+        "allthethings/Artist": {
+          "name": "Kunstnik"
+        },
+        "allthethings/Bee": {
+          "name": "Mesilane"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Põrkama"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Studio": {
+          "name": "Stuudio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For Loop Fun"

@@ -87,11 +87,7 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def studio_documentation_path
-    if DCDO.get('use-studio-code-docs', false) && ['applab', 'gamelab', 'spritelab', 'weblab'].include?(name)
-      "/docs/#{name}"
-    else
-      programming_environment_path(name)
-    end
+    programming_environment_path(name)
   end
 
   def summarize_for_lesson_edit
@@ -116,7 +112,7 @@ class ProgrammingEnvironment < ApplicationRecord
   def summarize_for_show
     {
       title: title,
-      description: description,
+      description: localize_description,
       projectUrl: project_url,
       categories: categories_for_navigation
     }
@@ -130,6 +126,19 @@ class ProgrammingEnvironment < ApplicationRecord
       description: description,
       showPath: studio_documentation_path
     }
+  end
+
+  def localize_description
+    I18n.t(
+      'description',
+      scope: [
+        :data,
+        :programming_environments,
+        name,
+      ],
+      default: description,
+      smart: true
+    )
   end
 
   def categories_for_navigation

@@ -27,7 +27,7 @@ title: ಅವರ್ ಆಫ್ ಕೋಡ್ ಮಾಡುವುದು ಹೇಗೆ
 
 <a id="how-to-video"></a>
 
-## 1. ಅವರ್ ಆಫ್ ಕೋಡ್ ಮಾಡುವುದು ಹೇಗೆ ಎಂಬ ವೀಡಿಯೋ ವೀಕ್ಷಿಸಿ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. ಅವರ್ ಆಫ್ ಕೋಡ್ ಮಾಡುವುದು ಹೇಗೆ ಎಂಬ ವೀಡಿಯೋ ವೀಕ್ಷಿಸಿ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 /**
  * List item control (usable in animation or frame lists) for adding
@@ -24,23 +24,30 @@ class NewListItem extends React.Component {
         type="button"
       >
         <div style={styles.wrapper}>
-          <div
-            style={[styles.dottedBorder, hovered && styles.dottedBorderHovered]}
-          >
-            <i className="fa fa-plus-circle" style={styles.addButton} />
+          <div style={[styles.border, hovered && styles.borderHovered]}>
+            <i
+              className="fa fa-plus-circle"
+              style={[styles.addButton, hovered && styles.borderHovered_add]}
+            />
+            <div
+              className="animation-name"
+              style={[
+                styles.animationName,
+                hovered && styles.borderHovered_animationName
+              ]}
+            >
+              {this.props.label}
+            </div>
           </div>
-        </div>
-        <div className="animation-name" style={styles.animationName}>
-          {this.props.label}
         </div>
       </button>
     );
   }
 }
-
+const polar_blue = '#0094CA';
 const styles = {
   tile: {
-    width: '100%',
+    width: '95%',
     padding: '0 0 4px 0',
     marginBottom: 0,
     boxShadow: 'none',
@@ -48,41 +55,49 @@ const styles = {
       cursor: 'pointer'
     },
     background: 'none',
-    border: 0,
+    border: 20,
     marginRight: 0,
-    marginLeft: 0
+    marginLeft: 5
   },
   wrapper: {
     position: 'relative',
     display: 'block',
     paddingTop: '100%'
   },
-  dottedBorder: {
+  border: {
     position: 'absolute',
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
     borderRadius: 10,
-    border: 'dashed 2px ' + color.light_gray,
+    backgroundColor: color.white,
+    border: 'solid 2px ' + polar_blue,
     textAlign: 'center',
     paddingTop: '50%'
   },
-  dottedBorderHovered: {
-    backgroundColor: color.lighter_purple
-  },
   addButton: {
-    color: color.light_gray,
-    fontSize: 60,
-    marginTop: '-32px'
+    color: polar_blue,
+    fontSize: 76,
+    marginTop: '-45px'
   },
   animationName: {
-    marginTop: 4,
+    marginTop: 5,
     textAlign: 'center',
     userSelect: 'none',
-    fontWeight: 'bold',
-    color: color.light_gray,
-    fontSize: '13px'
+    fontWeight: 'normal',
+    color: polar_blue,
+    fontSize: '14px'
+  },
+  borderHovered: {
+    backgroundColor: polar_blue,
+    border: 'solid 4px ' + polar_blue
+  },
+  borderHovered_add: {
+    color: color.white
+  },
+  borderHovered_animationName: {
+    color: color.white
   }
 };
 

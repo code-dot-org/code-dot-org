@@ -435,7 +435,6 @@ de:
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: 'Dein Fortschritt'
-      lines: 'Gesamte Codezeilen: %{lines}'
       close: 'SCHLIESSEN'
       mastery: 'Konzepte'
       puzzle_map: 'Level'
@@ -1074,6 +1073,7 @@ de:
         music: 'Musik'
         art: 'Kunst'
         other: "Andere:"
+        na: 'Nicht anwendbar'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1082,7 +1082,8 @@ de:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Andere:"
+        other: "Andere"
+        na: 'Nicht anwendbar'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1092,7 +1093,8 @@ de:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Andere:"
+        other: "Andere"
+        na: 'Nicht anwendbar'
       workshop_course:
         csf_af: 'CS Grundlagen (Kurse A-F)'
         csf_express: 'CS Grundlagen (Pre-Express oder Express)'

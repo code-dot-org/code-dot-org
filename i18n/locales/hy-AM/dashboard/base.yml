@@ -231,7 +231,6 @@ hy:
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: 'Ձեր առաջընթացը'
-      lines: 'Ընդհանուր կոդի տողերի քանակի: %{lines}'
       close: 'ՓԱԿԵԼ'
       mastery: 'Concepts'
       puzzle_map: 'փուլերը'
@@ -625,10 +624,13 @@ hy:
       subjects:
         cs: 'Համակարգչային գիտություն'
         math: 'Մաթեմատիկա'
+        other: "Այլ"
       resources:
         kodable: 'Kodable'
+        other: "Այլ"
       robotics:
         kodable: 'Kodable'
+        other: "Այլ"
       workshop_course:
         csp: '''16-''17 CS Principles'
       email_opt_in:

@@ -2552,7 +2552,8 @@
           "": "使用此模块在屏幕上放置文本"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "点击这里为你的项目添加服装。"
+          "costumes_tab": "点击这里为你的项目添加服装。",
+          "make_sprite": "使用这里的模块来制作一个精灵图！"
         }
       }
     }

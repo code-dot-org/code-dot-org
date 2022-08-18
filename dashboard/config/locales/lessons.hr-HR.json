@@ -32,6 +32,30 @@
         "infinity/Infinity": {
           "name": "Disney Infinity Laboratorij igara"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Sat programiranja 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Petlje"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Događaji"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Varijable"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Petlja brojača"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Lab likova"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Pomakni, pomakni"
         },
@@ -353,6 +377,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremni izazov - sveobuhvatno"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Uvod u Informatiku"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Razmišljati poput računala"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Grafičko programiranje"
+        },
+        "20-hour/The Artist": {
+          "name": "Umjetnik"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmi"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Umjetnik 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkcije"
+        },
+        "20-hour/The Farmer": {
+          "name": "Farmer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Umjetnik 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Skladanje pjesmi"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Farmer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Apstrakcija"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Umjetnik 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Odnosno programiranje"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Farmer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Umjetnik 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Zamotavanje"
+        },
         "course2/Graph Paper Programming": {
           "name": "Grafičko programiranje"
         },
@@ -529,6 +613,36 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Slagalica"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Slagalica"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Umjetnik"
+        },
+        "allthethings/Bee": {
+          "name": "Pčela"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Odskok"
+        },
+        "allthethings/Multi": {
+          "name": "Višestruki izbor"
+        },
+        "allthethings/Match": {
+          "name": "Spoji parove"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Lab likova"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For Petlja Zabava"

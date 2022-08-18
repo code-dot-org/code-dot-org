@@ -20,8 +20,8 @@
 class ReferenceGuide < ApplicationRecord
   include CurriculumHelper
 
-  belongs_to :course_version
-  validates_uniqueness_of :key, scope: :course_version_id
+  belongs_to :course_version, optional: true
+  validates_uniqueness_of :key, scope: :course_version_id, case_sensitive: true
   validate :validate_key_format
 
   def course_offering_version

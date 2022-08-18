@@ -301,7 +301,6 @@ et:
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
-      lines: 'Koodiridade koguarv: %{lines}'
       close: SULGE
       mastery: Mõisted
       puzzle_map: Etapid
@@ -911,12 +910,15 @@ et:
         math: Matemaatika
         science: Teadus
         la: Keeled
+        other: Muu
       resources:
         khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
+        other: Muu
       robotics:
         kodable: Kodable
+        other: Muu
       email_opt_in:
         opt_in_yes: Jah
         opt_in_no: Ei

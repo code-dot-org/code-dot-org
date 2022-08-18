@@ -732,8 +732,8 @@ id:
     komputer sama sekali! Anda dapat bergabung di manapun Anda berada, dengan apapun
     yang Anda miliki.  <p><i>Berikut beberapa opsi yang tersedia:_</i> <br> <ul> <li><b>Belajar
     berpasangan.</b> <a href='%{pair_programming_research}'>Riset menunjukkan</a>bahwa
-    siswa belajar dengan sangat baik dengan <a href='%{pair_programming_video}'>pair
-    programming</a>, berbagi komputer, dan belajar bersama. Dorong siswa Anda untuk
+    siswa belajar dengan sangat baik dengan <a href='%{pair_programming_video}'>pemrograman
+    berpasangan</a>, berbagi komputer, dan belajar bersama. Dorong siswa Anda untuk
     berbagi bersama.<li><b>Gunakan layar proyektor.</b>Jika Anda memiliki proyektor
     dan layar untuk komputer yang terhubung ke Web, seluruh grup Anda dapat melakukan
     Hour of Code bersama-sama. Tonton bagian video bersama-sama dan menyelesaikan
@@ -745,7 +745,7 @@ id:
 
     _Berikut beberapa opsi yang tersedia:_
 
-    - **Belajar berpasangan.** [Riset menunjukkan](%{pair_programming_research}) bahwa siswa belajar dengan sangat baik dengan [pair programming](%{pair_programming_video}), berbagi komputer, dan belajar bersama. Dorong siswa Anda untuk berbagi bersama.
+    - **Belajar berpasangan.** [Riset menunjukkan](%{pair_programming_research}) bahwa siswa belajar dengan sangat baik dengan [pemrograman berpasangan](%{pair_programming_video}), berbagi komputer, dan belajar bersama. Dorong siswa Anda untuk berbagi bersama.
     - **Gunakan layar proyektor. **Jika Anda memiliki proyektor dan layar untuk komputer yang terhubung ke Web, seluruh grup Anda dapat melakukan Hour of Code bersama-sama. Tonton bagian video bersama-sama dan menyelesaikan puzzle atau menjawab pertanyaan secara bergiliran.
     - **Tanpa komputer. **Kami menawarkan [tutorial yang tidak memerlukan komputer](%{unplugged_url}) sama sekali.
   hoc_faq_international_q: Saya tinggal di <country>. Bagaimana cara untuk berpartisipasi
@@ -871,14 +871,12 @@ id:
     Code?
   hoc_faq_keep_learning_a: Siapapun dapat menyelenggarakan Hour of Code kapan saja.
     Tutorial tetap tersedia sepanjang tahun. Semua tutorial dan kurikulum kami sediakan
-    di situs kami selamanya. Kunjungi <a href='/promote'>sumber daya</a> kami untuk
-    panduan tentang event dan sumber daya lain untuk membantu menyukseskan acara Hour
-    of Code Anda.
+    di situs kami selamanya. Kunjungi <a href='/promote'>materi kami</a> untuk panduan
+    tentang acara dan materi lain untuk membantu menyukseskan acara Hour of Code Anda.
   hoc_faq_keep_learning_a_markdown: Siapapun dapat menyelenggarakan Hour of Code kapan
     saja. Tutorial tetap tersedia sepanjang tahun. Semua tutorial dan kurikulum kami
-    sediakan di situs kami selamanya. Kunjungi [sumber daya kami](%{promote}) untuk
-    panduan tentang event dan sumber daya lain untuk membantu menyukseskan acara Hour
-    of Code Anda.
+    sediakan di situs kami selamanya. Kunjungi [materi kami](%{promote}) untuk panduan
+    tentang acara dan materi lain untuk membantu menyukseskan acara Hour of Code Anda.
   hoc_faq_certificates_q: Dimana saya bisa mencetak sertifikat untuk siswa saya?
   hoc_faq_certificates_a: Buka <a href='%{codeorg_url}/certificate'>halaman sertifikat</a>
     kami di mana Anda dapat mencetak sertifikat untuk seluruh kelas Anda lebih dahulu.

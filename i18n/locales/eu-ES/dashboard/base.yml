@@ -235,7 +235,6 @@ eu:
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: 'Zure aurrerapena'
-      lines: 'Kode lerro kopuru osoa: %{lines}'
       close: 'ITXI'
       mastery: 'Kontzeptuak'
       puzzle_map: 'Mailak'
@@ -568,11 +567,14 @@ eu:
         math: 'Matematika'
         science: 'Zientzia'
         la: 'Hizkuntzalaritza'
+        other: "Beste bat"
       resources:
         kodable: 'Kodable'
         lightbot: 'Argibot'
+        other: "Beste bat"
       robotics:
         kodable: 'Kodable'
+        other: "Beste bat"
       email_opt_in:
         opt_in_yes: 'Bai'
         opt_in_no: 'Ez'

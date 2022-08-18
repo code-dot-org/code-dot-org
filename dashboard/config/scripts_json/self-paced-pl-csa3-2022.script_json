@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "CSA Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-04 23:32:36 UTC",
+    "serialized_at": "2022-06-03 14:31:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -557,6 +559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-printing-in-java-video"
+        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
@@ -1851,6 +1856,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-2"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1898,6 +1906,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-indices-map"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1945,6 +1956,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-accessing-mutating-mc"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,

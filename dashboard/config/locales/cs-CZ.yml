@@ -35,6 +35,7 @@ cs:
           e-mailovou adresu)](%{url})
         username: Uživatelské jméno
         password: Heslo
+        verified_teacher: Ověřený učitel
         password_confirmation: Potvrzení hesla
         current_password: Současné heslo
         locale: Jazyk
@@ -65,6 +66,7 @@ cs:
   previous_page: Předchozí stránka
   next_page: Další strana
   next_resource: Další zdroj
+  done_with_module: Tenhle výukový modul mám splněný
   cancel: Zrušit
   okay: Dobře
   or: nebo
@@ -351,6 +353,10 @@ cs:
       restricted_section: Do části %{section_code} jsme Vás nemohli přidat, protože
         je zablokovaná. Kontaktujte prosím svého učitele nebo učitelku a požádejte
         jej/ji o pomoc.
+      full_section: Nemohli jsme tě přidat do sekce %{section_code}, protože už je
+        v ní %{section_capacity} studentů. Požádej učitele o pomoc.
+      not_participant_type: 'Nemohli jsme tě přidat do sekce %{section_code}, protože
+        tvůj profil neodpovídá požadovanému typu účasti v této sekci:'
     mail:
       student_disassociated:
         subject: 'Code.org upozornění: %{student_name} už není vašim studentem.'
@@ -412,6 +418,7 @@ cs:
       educate_beyond: Nad rámec Code.org
       educate_inspire: Inspirujte studenta
       educate_community: Online komunita
+      educate_requirements: Technické požadavky
       educate_tools: Nástroje a videa
       about_us: O nás
       about_leadership: Koordinátoři
@@ -479,13 +486,13 @@ cs:
       starwars: Hvězdné války
       starwarsblocks: Hvězdné války (kostky)
       starwarsblocks_hour: Hvězdné války (kostky)
+      thebadguys: Zlouni
       loading: Načítání...
       weblab: Web Lab
       view_all: Ukázat všechny projekty...
     popup:
       progress_for_user: Pokrok užívatele %{name}
       progress: Tvůj pokrok
-      lines: 'Celkem řádků kódu: %{lines}'
       close: ZAVŘÍT
       mastery: Pojmy
       puzzle_map: Úrovně
@@ -660,6 +667,8 @@ cs:
       v nové sekci.
     third_party_login: Studenty nemůžete přemístit do části, která je synchronizována
       s nástrojem od třetí strany.
+    not_correct_participant_type: Tyto účastníky nelze přesunout, protože nemají oprávnění
+      účastnit se nové sekce.
   share:
     title: Code studio
     description: Každý se může naučit informatiku. Udělejte hry, aplikace a umění
@@ -724,6 +733,8 @@ cs:
     how_it_works: Jak to funguje
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
     store: Obchod
+    cookie_notice: Oznámení o souborech cookie
+    view_code: Zobrazit kód
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tato videa a tipy
@@ -805,8 +816,11 @@ cs:
       title: Taneční večírek
     hello-world:
       title: Ahoj, světe
+      body: Vyberte si jeden ze čtyř zábavných motivů a naprogramujte interaktivní
+        postavičky ve světě, co si sami vytvoříte.
     poem-art:
       title: Básnické umění
+      body: Vyjádřete se napsáním kódu animovaných básní.
     hoc:
       title: Klasické bludiště
       body: Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.
@@ -1073,6 +1087,8 @@ cs:
       jen v rámci školy.
     embed: Vložit
     advanced_share: Zobrazit pokročilé možnosti
+    no_projects: Momentálně nemáte žádný projekt. Kliknutím na některé tlačítko nahoře
+      zahajte projekt.
     name: Jméno
     updated: Aktualizováno
     project_type: Typ projektu
@@ -1080,10 +1096,17 @@ cs:
       něco</strong> níže se vytvoří nový projekt Play Lab nebo umělec! <br/> Můžete
       se vrátit a pracovat na vašich projektech v kteroukoli dobu.
     need_help: Potřebujete pomoc, začneme?
+    thumbnail_help: 'Nezobrazuje se správná miniatura projektu? Spusť aplikaci, aby
+      se vygenerovala nová miniatura. Poznámka: Může trvat několik hodin, než se miniatura
+      aktualizuje všude.'
     saved: Uloženo
     not_saved: Neuloženo
     view_all: Zobrazit mé projekty
     edit_project: Upravit projekt
+    sharing_disabled: Je nám líto, ale tento projekt není dostupný ke sdílení. Pokud
+      je to váš projekt nebo projekt některého z vašich studentů, můžete si ho zobrazit,
+      jakmile se <a href='https://studio.code.org/users/sign_in'>přihlásíte</a> ke
+      svému účtu.
     abuse:
       tos: Tento projekt byl nahlášen pro Code.org-si <a href='http://code.org/tos'>
         Podmínky služby</a> a nemůže být sdílen s ostatními.
@@ -1126,6 +1149,7 @@ cs:
     instructor_feedback: Připomínky instruktora
     peer_feedback: Připomínky spoluřešitele
     outdated: Tato zpětná vazba byla přidána k dříve odeslané verzi
+    review_count: Musíte dokončit %{review_count} kontrol pro tuto jednotku
     peer_review: Nezávislý posudek
   external_links:
     disclaimer: Zřeknutí se
@@ -1205,6 +1229,24 @@ cs:
     které jednotce byste měl(a) být.
   no_course_access_student: K tomuto kurzu nemáte přístup. Zeptejte se prosím svého
     učitele, v kterém kurzu byste měl(a) být.
+  no_course_access_teacher: K tomuto kurzu nemáš přístup. Pokud se domníváš, že bys
+    přístup mít měl(a), napiš prosím na adresu support@code.org, ať můžeme situaci
+    řešit.
+  no_script_access_student: K této jednotce nemáš přístup. Zeptej se prosím svého
+    učitele, ve které jednotce bys měl(a) být.
+  no_script_access_teacher: K této jednotce nemáš přístup. Pokud se domníváš, že bys
+    přístup mít měl(a), napiš prosím na adresu support@code.org, ať můžeme situaci
+    řešit.
+  no_level_access_student: K této úrovni nemáš přístup. Zeptej se prosím svého učitele,
+    ve které úrovni bys měl(a) být.
+  no_level_access_teacher: K této úrovni nemáš přístup. Pokud se domníváš, že bys
+    přístup mít měl(a), napiš prosím na adresu support@code.org, ať můžeme situaci
+    řešit.
+  no_exemplar: K této úrovni není žádný příklad.
+  no_exemplar_access_student: Studenti nemají přístup k ukázkovému kódu. Zeptej se
+    prosím svého učitele, ve které úrovni bys měl(a) být.
+  no_exemplar_access_teacher: K ukázkovému kódu mají přístup pouze ověření učitelé.
+    Pokud se chcete stát ověřeným učitele, napište na adresu support@code.org.
   return_unit_overview: Přejít na přehled kapitoly
   return_course_overview: Přejít na přehled
   view_all_units: Zobrazit všechny kapitoly
@@ -1264,6 +1306,7 @@ cs:
         israel: Izrael
         malaysia: Malajsie
         mexico: Mexiko
+        paraguay: Paraguay
         thailand: Thajsko
         uzbekistan: Uzbekistán
       ages:
@@ -1286,6 +1329,7 @@ cs:
         music: Hudba
         art: Umění
         other: 'Ostatní:'
+        na: Nemá význam
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1294,7 +1338,8 @@ cs:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Ostatní:'
+        other: Ostatní
+        na: Nemá význam
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1304,7 +1349,8 @@ cs:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Divotvorná dílna
-        other: 'Ostatní:'
+        other: Ostatní
+        na: Nemá význam
       workshop_course:
         csf_af: Základy informatiky (Kurzy A-F)
         csf_express: Základy informatiky (Zrychlené kurzy)
@@ -1333,6 +1379,19 @@ cs:
       organizer_not_listed: Můj organizátor není uveden
     logged_out:
       heading: Děkujeme Vám za Váš zájem o profesionální výukový program!
+      body: Abyste mohli začít, nejprve je potřeba být přihlášený k účtu Code.org.
+        Pokud se chcete ještě před zahájením registrace o programu dozvědět víc, projděte
+        si <a href="%{url}">přehled programu profesního vzdělávání</a>.
+    not_teacher:
+      body_markdown: Děkujeme za zájem o program profesního vzdělávání Code.org. Momentálně
+        jste přihlášeni ke studentskému účtu. Buď vytvořte učitelský účet, nebo si
+        [v uživatelském nastavení](%{user_settings}) změňte účet ze studentského na
+        učitelský.
+      more_markdown: Pokud se chcete ještě před zahájením registrace o programu dozvědět
+        víc, projděte si [přehled programu profesního vzdělávání](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Váš účet nemá e-mailovou adresu. Přidejte si před odesláním tohoto
+        formuláře [v uživatelském nastavení](%{user_registration}) e-mailovou adresu.
   courses_category: Kompletní kurzy
   cookie_banner:
     message: Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím",
@@ -1350,6 +1409,17 @@ cs:
   maker:
     google_oauth:
       login_with_google: Přihlášení do Maker App s Google
+      enter_code: Zadejte kód, který jste obdrželi při přihlášení přes účet Google
+        ve svém výchozím prohlížeči.
+      copy_code: Pro přihlášení ke Code.org je potřeba zkopírovat tento kód do aplikace
+        Maker.
+      error_token_expired: Platnost tokenu vypršela. Přihlaste se prosím znovu, aby
+        se vygeneroval nový token.
+      error_wrong_provider: Chybný poskytovatel. Ověřte, že jste přihlášeni přes účet
+        Google.
+      error_invalid_user: Neplatné ID uživatele. Zkuste se prosím přihlásit znovu.
+      error_no_code: Zadejte kód pro přihlášení.
+      confirm_login: Zvolením možnosti Potvrdit se přihlaste přes svůj účet Google.
   parent_email_banner:
     text: "**Jste rodič nebo zákonný zástupce?** Připojte k tomuto účtu svůj e-mail
       a budete dostávat aktuální informace o pokroku a projektech svého dítěte!"

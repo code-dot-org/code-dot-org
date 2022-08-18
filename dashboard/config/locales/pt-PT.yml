@@ -488,7 +488,6 @@ pt:
     popup:
       progress_for_user: Progresso de %{name}
       progress: O teu progresso
-      lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
       mastery: Conceitos
       puzzle_map: Etapas
@@ -1317,6 +1316,7 @@ pt:
         music: Música
         art: Arte
         other: 'Outro:'
+        na: Não aplicável
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1325,7 +1325,8 @@ pt:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Outro:'
+        other: Outro
+        na: Não aplicável
       robotics:
         grok: Grok Learning (Aprendizagem Grok)
         kodable: Kodable
@@ -1335,7 +1336,8 @@ pt:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Oficina de Maravilhas
-        other: 'Outro:'
+        other: Outro
+        na: Não aplicável
       workshop_course:
         csf_af: Fundamentos de Ciência da Computação (Cursos A-F)
         csf_express: Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)

@@ -161,6 +161,10 @@
                   "text": "AP Computer Science A"
                 },
                 {
+                  "value": "ap_csp",
+                  "text": "AP Computer Science Principles"
+                },
+                {
                   "value": "ap_calc",
                   "text": "AP Calculus (AB or BC)"
                 },
@@ -408,7 +412,7 @@
             {
               "type": "radiogroup",
               "name": "certificate",
-              "title": "Does your state or district require you to have a specific certification to teach CSA?",
+              "title": "Do you have a certificate to teach CSA?",
               "visibleIf": "{certificate_required}='y' or {certificate_required}='not_sure'",
               "choices": [
                 {
@@ -551,7 +555,7 @@
             {
               "type": "rating",
               "name": "cs_knowledge",
-              "title": "How would you rate your overall knowledge of CS?",
+              "title": "How would you rate your overall knowledge of computer science?",
               "rateMin": 0,
               "rateMax": 6,
               "minRateDescription": "Very Low (e.g no prior knowledge)",

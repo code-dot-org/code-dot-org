@@ -3,7 +3,8 @@ import {
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
-  AuthorizerSignalType
+  AuthorizerSignalType,
+  CsaViewMode
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -26,7 +27,10 @@ export default class JavabuilderConnection {
     miniAppType,
     currentUser,
     onMarkdownLog,
-    csrfToken
+    csrfToken,
+    onValidationPassed,
+    onValidationFailed,
+    onConnectDone
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -42,6 +46,14 @@ export default class JavabuilderConnection {
     this.currentUser = currentUser;
     this.onMarkdownLog = onMarkdownLog;
     this.csrfToken = csrfToken;
+    this.onValidationPassed = onValidationPassed;
+    this.onValidationFailed = onValidationFailed;
+    this.onConnectDone = onConnectDone;
+
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
+    this.sawValidationTests = false;
+    this.allValidationPassed = true;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -95,6 +107,12 @@ export default class JavabuilderConnection {
   }
 
   connectJavabuilderHelper(url, data, checkProjectEdited, usePostRequest) {
+    this.initiateConnection(url, data, checkProjectEdited, usePostRequest).then(
+      this.onConnectDone
+    );
+  }
+
+  async initiateConnection(url, data, checkProjectEdited, usePostRequest) {
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
@@ -125,17 +143,18 @@ export default class JavabuilderConnection {
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();
 
-    $.ajax(ajaxPayload)
-      .done(result => this.establishWebsocketConnection(result.token))
-      .fail(error => {
-        if (error.status === 403) {
-          this.displayUnauthorizedMessage(error);
-        } else {
-          this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
-          this.onNewlineMessage();
-          console.error(error.responseText);
-        }
-      });
+    try {
+      const result = await $.ajax(ajaxPayload);
+      this.establishWebsocketConnection(result.token);
+    } catch (error) {
+      if (error.status === 403) {
+        this.displayUnauthorizedMessage(error);
+      } else {
+        this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
+        this.onNewlineMessage();
+        console.error(error.responseText);
+      }
+    }
   }
 
   getDefaultRequestData() {
@@ -234,6 +253,7 @@ export default class JavabuilderConnection {
 
   onMessage(event) {
     const data = JSON.parse(event.data);
+    let testResult;
     switch (data.type) {
       case WebSocketMessageType.STATUS:
         this.onStatusMessage(data.value, data.detail);
@@ -242,13 +262,28 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.TEST_RESULT:
-        onTestResult(data, this.onOutputMessage);
+        testResult = onTestResult(data, this.onOutputMessage);
+        if (testResult.isValidation) {
+          this.sawValidationTests = true;
+          if (!testResult.success) {
+            this.allValidationPassed = false;
+          }
+        }
         this.onNewlineMessage();
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
+        if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+          this.miniApp.handleSignal(data);
+        } else {
+          this.onUnsupportedNeighborhoodMessage();
+        }
+        break;
       case WebSocketMessageType.THEATER:
-      case WebSocketMessageType.PLAYGROUND:
-        this.miniApp.handleSignal(data);
+        if (this.miniAppType === CsaViewMode.THEATER) {
+          this.miniApp.handleSignal(data);
+        } else {
+          this.onUnsupportedTheaterMessage();
+        }
         break;
       case WebSocketMessageType.EXCEPTION:
         this.onNewlineMessage();
@@ -310,6 +345,22 @@ export default class JavabuilderConnection {
     this.setIsRunning(false);
   }
 
+  onUnsupportedNeighborhoodMessage() {
+    if (!this.seenUnsupportedNeighborhoodMessage) {
+      this.onOutputMessage(javalabMsg.unsupportedNeighborhoodMessage());
+      this.onNewlineMessage();
+      this.seenUnsupportedNeighborhoodMessage = true;
+    }
+  }
+
+  onUnsupportedTheaterMessage() {
+    if (!this.seenUnsupportedTheaterMessage) {
+      this.onOutputMessage(javalabMsg.unsupportedTheaterMessage());
+      this.onNewlineMessage();
+      this.seenUnsupportedTheaterMessage = true;
+    }
+  }
+
   // Send a message across the websocket connection to Javabuilder
   sendMessage(message) {
     if (this.socket) {
@@ -321,10 +372,22 @@ export default class JavabuilderConnection {
   closeConnection() {
     if (this.socket) {
       this.socket.close();
+      this.onOutputMessage(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
+      );
     }
   }
 
   handleExecutionFinished() {
+    if (this.sawValidationTests && this.allValidationPassed) {
+      this.onValidationPassed();
+    } else if (this.sawValidationTests) {
+      this.onValidationFailed();
+    }
+    this.sawValidationTests = false;
+    this.allValidationPassed = true;
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
     switch (this.executionType) {
       case ExecutionType.RUN:
         this.setIsRunning(false);

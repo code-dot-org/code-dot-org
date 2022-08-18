@@ -356,7 +356,6 @@ se:
     popup:
       progress_for_user: "%{name} ovdáneapmi"
       progress: 'Du ovdáneapmi'
-      lines: 'Oktiibuot linjját kodas: %{lines}'
       close: 'GIDDE'
       mastery: 'Konseaptat'
       puzzle_map: 'Dásit'
@@ -920,6 +919,7 @@ se:
         music: 'Musihkka'
         art: 'Dáidda'
         other: "Eará:"
+        na: 'Ii leat guoskevaš'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -927,7 +927,8 @@ se:
         khan: 'Khan Academy'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Eará:"
+        other: "Eará"
+        na: 'Ii leat guoskevaš'
       robotics:
         grok: 'Grok Learning'
         lego: 'LEGO Education'
@@ -936,7 +937,8 @@ se:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Eará:"
+        other: "Eará"
+        na: 'Ii leat guoskevaš'
       workshop_course:
         csf_af: 'CS Vuođut (Kurssat A-F)'
         csf_express: 'CS Vuođut (Pre-Ekspreassa or Ekspreassa)'

@@ -2,48 +2,578 @@
 el:
   data:
     progressions:
+      '"If/Else" with the Bee': '"Αν/διαφορετικά" με την Μέλισσα'
+      8-Bit Binary Number Widget: Γραφικό στοιχείο με δυαδικό αριθμό 8-μπιτ
+      AI Lab and Isaac's Data: Εργαστήρι Τεχνητής Νοημοσύνης και τα Δεδομένα του Ισαάκ
+      AI Lab and Kim's Data: Εργαστήρι Τεχνητής Νοημοσύνης και τα Δεδομένα της Κιμ
+      AI Machine Learning - Video: Μηχανική Μάθηση Τεχνητή Νοημοσύνη - Βίντεο
+      'AI for Oceans: Fish vs Not Fish': 'Τεχνητή Νοημοσύνη για τους Ωκεανούς: Τι
+        είναι και τι δεν είναι Ψάρι'
+      'AI for Oceans: Types of Fish': 'Τεχνητή Νοημοσύνη για τους Ωκεανούς: Είδη Ψαριών'
+      'AI: Impact on Society - Video': 'Τεχνητή Νοημοσύνη: Αντίκτυπος στην Κοινωνία
+        - Βίντεο'
+      'AI: Training Data & Bias - Video': 'Τεχνητή Νοημοσύνη: Δεδομένα Εκπαίδευσης
+        και Προκατάληψη - Βίντεο'
+      Accelerometer Events: Γεγονότα Επιταχυνσιόμετρου
+      Add Content and HTML: Προσθέστε Περιεχόμενο και HTML
+      Add Content and Structure to Your Page: Προσθέστε Περιεχόμενο και Δομή στη Σελίδα
+        Σας
+      Add Movement: Προσθέστε Κίνηση
+      Add Sprites: Προσθέστε χαρακτήρες
+      Add Style: Προσθέστε Στιλ
+      Add Style to Your Page: Προσθέστε Στιλ στη Σελίδα Σας
+      Add Text: Προσθέστε Κείμενο
+      Add a Welcome Screen: Προσθέστε μια Οθόνη Καλωσορίσματος
+      Adding Images: Προσθέτοντας Εικόνας
+      Adding New Screens: Προσθέτοντας Νέες Οθόνες
+      Adding Pages: Προσθέτοντας Σελίδες
+      Adding Screens: Προσθέτοντας Οθόνες
+      Alternative Datasets: Εναλλακτικό σύνολο δεδομένων
+      Animate Your Scene: Δώστε κίνηση και ζωή στο Σκηνικό Σας
+      App Lab Intro - Video: Εισαγωγή στο Εργαστήρι Εφαρμογών - Βίντεο
+      'App Project: Screen Design': 'Έργο Εφαρμογών: Σχεδιασμός Οθόνης'
+      'App: Choose a Kid''s Movie': 'Εφαρμογές: Διαλέξτε μια Παιδική Ταινία'
+      'App: Friend Finder': 'Εφαρμογές: Friend Finder'
+      'App: Guess the Number': 'Εφαρμογές: Μαντέψτε τον Αριθμό'
+      'App: How Many Countries': 'Εφαρμογές: Πόσες χώρες'
+      'App: Improved Pet App': 'Εφαρμογή:  Εφαρμογή Βελτιωμένο Κατοικίδιο'
+      'App: Is It Your Birthday?': 'Εφαρμογές: Είναι τα γενέθλιά σας;'
+      'App: My Famous Birthday': 'Εφαρμογές: Τα περίφημα γενέθλιά μου'
+      'App: National Parks': 'Εφαρμογές: Εθνικά Πάρκα'
+      'App: Outfit Picker': 'Εφαρμογές: Επιλογέας Εμφάνισης'
+      'App: Pet Chooser': Εφαρμογές:Επιλογέας Κατοικίδιου
+      'App: Stamp Notebook': 'Εφαρμογές: Αρχείο Σημειωματάριου Γραμματόσημων'
+      'App: Story Creator': 'Εφαρμογές: Δημιουργός παζλ/παιχνιδιού'
+      'App: The Fastest Finger': 'Εφαρμογές: Το Γρηγορότερο Δάχτυλο'
+      'App: Where Should I Live?': 'Εφαρμογές: Που θα έπρεπε να ζούσα;'
+      Artist Intro with JR Hildebrand: Εισαγωγή Καλλιτέχνη με JR Hildebrand
+      Artist Intro with JR Hildebrande: Εισαγωγή Καλλιτέχνη με JR Hildebrand
+      Artist Project: Έργο Καλλιτέχνης
       'Artist: Variables': 'Καλλιτέχνης: Μεταβλητές'
+      Assessment: Αξιολόγηση
+      Attribution: Καταλογισμός
       Back and Forth: Μπρος-πίσω
+      Basic Conditionals: Βασικές Συνθήκες
       Bass, Mid, and Treble: Μπάσα, Μεσαία, και Πρίμα
+      Be a Super Digital Citizen: Γίνε ένας Σούπερ Ψηφιακός Πολίτης
+      Begin planning your project: Ξεκίνα να σχεδιάζεις την εργασία σου
+      Begin planning your project_2018: Ξεκίνα να σχεδιάζεις την εργασία σου_2018
+      Binary Bracelets - Unplugged Activity: Δυαδικά βραχιόλια - Δραστηριότητα εκτός
+        σύνδεσης
+      Binary Number Widget: Γραφικό στοιχείο Δυαδικού Αριθμού
+      Binary Numbers: Δυαδικοί Αριθμοί
+      Board Events: Γεγονότα Πίνακα
+      Board Input and Output: Είσοδος και Έξοδος Πίνακα
+      Book Recommender App: Εφαρμογή Συστήματος Προτάσεων Βιβλίων
+      Book Recommender Model Card: Μοντέλο Κάρτας Συστήματος Πρότασης Βιβλίων
+      Boolean Comparison: Λογική Σύγκριση
+      Build a Platform Jumper: Χτίστε μια γέφυρα μια πλατφόρμες
+      Build a Screen: Δημιουργία μιας Οθόνης
+      Building a UI with Design Mode: Δημιουργία μιας διεπαφής χρήστη με τον τρόπο
+        λειτουργίας Σχεδίασης
+      Building an App: Δημιουργία μιας Εφαρμογής
+      Button Circuits: Κυκλώματά Κουμπιών
+      CS Discoveries Post-Course Survey: Μελέτη μετά το μάθημα για τις Ανακαλύψεις
+        της Επιστήμης της Πληροφορικής
+      CS Discoveries Post-course Survey: Μελέτη μετά το μάθημα για τις Ανακαλύψεις
+        της Επιστήμης της Πληροφορικής
+      CSD U3 Interactive Card Exemplar: CSD Ενότητα 3 Παράδειγμα Διαδραστικής Κάρτας
+      CSD U3 platform intro: CSD Ενότητα 3 εισαγωγή στην πλατφόρμα
+      'CSD: For Loop': 'CSD: Για βρόχους'
+      Cake Defender: Cake Defender
+      Cake Survey: Έρευνα για Κέικ
       Challenge: Εξάσκηση
+      Challenge Levels: Επίπεδα πρόκλησης
       'Challenge: Draw an Image': 'Εξάσκηση: Σχεδιασμός εικόνας'
+      'Challenge: Lists': 'Πρόκληση: Λίστες'
+      'Challenge: RGB Colors': 'Πρόκληση: Χρώματα RGB (κόκκινο, πράσινο, μπλε).'
+      Challenges: Προκλήσεις
+      Change: Αλλαγή
+      Check Your Work: Ελέγξτε Την Εργασία Σας
+      Check-In Survey: Έρευνα Εισόδου
+      Checking for a Winner: Ελέγχοντας για ένα Νικητή
+      'Choice Levels: Customize Your App': 'Επίπεδα Επιλογών: Προσαρμόστε την Εφαρμογή
+        Σας'
+      Choose Your Own Adventure: Διαλέξτε Τη Δική Σας Περιπέτεια
+      Choosing Good IDs: Επιλέγοντας Καλές Ταυτότητες
+      Club Datasets: Σύνολα Δεδομένων Ομίλου
+      Code Prediction: Πρόβλεψη Κώδικα
+      Code Your Own Flappy Game: Προγραμματίστε με κώδικα το δικό σας Flappy παιχνίδι
+      Code Your Page: Κωδικοποιήστε Την Σελίδα σας
+      Collector Game: Παιχνίδι Συλλέκτη
+      Collisions: Συγκρούσεις
+      Collisions in Games: Συγκρούσεις σε Παιχνίδια
+      Color LEDs: Χρωματισμός των LED
+      Combining Projects: Συνδυάζοντας Εργασίες
+      Combining Representations: Συνδυάζοντας Αναπαραστάσεις
+      Conditionals with Cards - Unplugged Activity: Συνθήκες με Κάρτες  - Δραστηριότητα
+        εκτός διαδικτύου
+      'Conditionals: If Statements': 'Συνθήκες: Εντολές Αν'
+      'Conditionals: If and If/Else Statements': 'Συνθήκες: Εντολές Αν και Αν/Διαφορετικά'
+      Control Your Player: Ελέγξτε Τον Παίχτη Σας
+      'Course E: Play Lab Project': 'Μάθημα Ε: Έργο Εργαστηρίου Παιχνιδιών'
+      'Course F: Artist Project': 'Μάθημα F: Εργασία με Καλλιτέχνη'
+      'Course F: Artist Project - Revise': 'Μάθημα F: Εργασία με Καλλιτέχνη - Αναθεώρηση'
+      'Course F: Play Lab Project': 'Μάθημα F: Έργο Εργαστηρίου Παιχνιδιών'
+      'Course F: Play Lab Project - Revise': 'Μάθημα F: Έργο Εργαστηρίου Παιχνιδιών
+        - Αναθεώρηση'
+      Crack Random Substitution: Σπάστε την τυχαία αντικατάσταση
+      Crack a Caesar Cipher: Σπάστε μια γραφή Καίσαρα
+      Create Your Own Animation: Δημιουργήστε Τη Δική Σας Κινούμενη και Ζωντανή Εικόνα
+      Create Your Sprites: Δημιουργήστε τους χαρακτήρες σας
+      Create a Background: Δημιουργήστε ένα Φόντο
+      Create a Google Form: Δημιουργήστε ένα έντυπο Google
+      Create a Story: Δημιουργήστε ένα παινίδι/παζλ
+      Create an App in App Lab: Δημιουργήστε μια Εφαρμογή στο Εργαστήρι Εφαρμογών
+      Create your project: Δημιουργήστε την εργασία σας
+      Customize: Προσαρμογή
+      Customize Your App: Προσαρμόστε την Εφαρμογή Σας
       Dance Crews: Ομάδες Χορού
+      Data Visualization: Οπτικοποίηση Δεδομένων
+      De-bugging with the Step Button: Αποσφαλμάτωση με το Κουμπι Βήμα
       Debugging: Εντοπισμός σφαλμάτων
+      Debugging with the Step Button: Αποσφαλμάτωση με το Κουμπι Βήμα
+      'Demo App: Interactive Card': 'Εφαρμογή Επίδειξης: Διαδραστική Κάρτα'
+      Demo Apps: Εφαρμογές Επίδειξης
       Design Mode: Κατάσταση Σχεδίασης
+      Design Your Game: Σχεδιάστε Το Παιχνίδι Σας
+      Design Your Prototype: Σχεδιάστε Το Πρωτότυπό Σας
+      Design a Screen for your App: Σχεδιάστε μια Οθόνη για την Εφαρμογή σας
+      Design an AI App - AI Lab: Σχεδιάστε μια Εφαρμογή Τεχνητής Νοημοσύνης - Εργαστήρι
+        Τεχνητής Νοημοσύνης
+      Design an AI App - App Lab: Σχεδιάστε μια Εφαρμογή Τεχνητής Νοημοσύνης - Εργαστήρι
+        Εφαρμογών
+      Designing for Accessibility: Σχεδιάζοντας για Προσβασιμότητα
+      Digital Sharing - Unplugged Activity: Ψηφιακή κοινή χρήση- Αυτονομη Δραστηριότητα
+      Draw Your Background: Σχεδιάστε τον φόντο σας
+      Draw a Background: Σχεδιάστε έναν φόντο
       Drawing: Σχεδίαση
+      Driver Alert System: Σύστημα Ειδοποιήσεων Οδηγού
+      Escape Room Example: Παράδειγμα Δωματίου Διαφυγής
       Events: Συμβάντα
+      Events and Linking Screens: Οθόνες γεγονότων και Συνδέσεων
+      Events and Properties: Γεγονότα και Ιδιότητες
       Example: Παράδειγμα
+      Example Animated Scene: Παράδειγμα Κινούμενης και με ζωή σκηνής
+      Example App Types: Παράδειγμα Ειδών Εφαρμογής
+      'Example App: Zoo Classification': 'Παράδειγμα Εφαρμογών: Ταξινόμηση ζωολογικού
+        κήπου'
+      Example Apps: Παράδειγμα Εφαρμογών
+      Example Projects: Παράδειγμα Εργασιών
+      Example projects: Παράδειγμα εργασιών
+      Exemplar Personal Websites: Παραδειγματικοί Προσωπικοί Ιστότοποι
+      Expanding Personal Website: Επεκτείνοντας Προσωπικό Ιστότοπο
+      Expanding Your Website: Επεκτείνοντας Τον Ιστότοπο Σας
+      Experiment with Web Lab: Πειραματιστείτε με το Εργαστήρι Ιστού
+      Exploration: Εξερεύνηση
       'Exploration: Adding Style': 'Εξερεύνηση: Προσθήκη Στυλ'
+      'Exploration: For Loops': 'Εξερεύνηση: Για Βρόχους'
+      'Exploration: Rikki''s Poster': 'Εξερεύνηση: Η Αφίσα του Ρίκι'
+      'Exploration: Sample Apps': 'Εξερεύνηση: Δείγματα Εφαρμογών'
+      'Exploration: Sample Programs': 'Εξερεύνηση: Δείγματα Προγραμμάτων'
+      'Exploration: Sample Project': 'Εξερεύνηση: Δείγματα Προγράμματος'
       Explore HTML: Εξερεύνηση γλώσσας HTML
+      Exploring CS in Entertainment: Εξερευνώντας την Επιστήμη των Υπολογιστών στη
+        Διασκέδαση
+      Exploring more CSS: Εξερευνώντας παραπάνω CSS
+      Extra Challenge: Επιπρόσθετη Πρόκληση
+      'Extra Challenge: Sound Board': 'Επιπρόσθετη Πρόκληση: Πίνακας ήχου'
+      Final Room Escape App: Τελική εφαρμογή Room Escape
+      Find the Wizard: Βρείτε τον Μάγο
+      Finish a Screen: Τελειώστε μια Οθόνη
+      Finish the Prototype: Τελειώστε το Πρωτότυπο
+      Finishing Functions: Τελειώνοντας τις Λειτουργίες
+      Finishing Touches: Τελευταίες Πινελιές
+      Flyer Game: Παιχνίδι δημιουργίας διαφημιστικού  εντύπου
+      Follow the Algorithm - Unplugged Activity: Ακολουθήστε τον Αλγόριθμο - Δραστηριότητα
+        εκτός διαδικτύου
+      Follow the Mouse: Ακολουθήστε το ποντίκι
+      Fonts and Style: Γραμματοσειρά και Στυλ
+      FoodFight: FoodFight
+      For Loop Fun - Unplugged Activity: Για Διασκέδαση με Βρόχους - Δραστηριότητα
+        εκτός Διαδικτύου
       For Loops: Βρόχοι Για
+      For Loops and Color LEDs: Για βρόχους και Χρωματισμούς των LED
+      For Loops and Repeat Blocks: Για βρόχους και Κύβους Επανάληψης
       Free Play: Ελεύθερο παιχνίδι
+      'Free Play: Make a Scene': 'Ελεύθερο Παιχνίδι: Φτιάξτε μια Σκηνή'
+      'Free Play: Make an Interactive Scene': 'Ελεύθερο Παιχνίδι: Φτιάξτε μια Διαδραστική
+        Σκηνή'
+      Fruit and Veggie Explorer: Εξερευνητής Φρούτων και Λαχανικών
       Functions: Συναρτήσεις
       Functions with Parameters: Συναρτήσεις με παραμέτρους
       Get In Formation: Μπείτε σε Σχηματισμό
+      Getting Properties: Αποκτώντας Ιδιότητες
+      Graph Paper Programming - Unplugged Activity: Προγραμματισμός σε χαρτί γραφήματος
+        - Αυτόνομη Δραστηριότητα
+      Green Glass Door: Πράσινη γυάλινη πόρτα
+      Guess The Number: Μαντέψτε τον Αριθμό
+      Headings: Επικεφαλίδες
       Headings in HTML: Κεφαλίδες στο HTML
+      How to Create a Simple Function: Πώς να Δημιουργήσετε μια Απλή Λειτουργία
       Hyperlinks: Υπερσύνδεσμοι
+      Ice Age Loops: Βρόχοι Εποχής Παγετώνων
+      Images and Sounds: Εικόνες και Ήχοι
+      Import Your Model: Εισάγετε το μοντέλο σας
+      Import a Model: Εισάγετε ένα Μοντέλο
+      Importing Your Model: Εισάγοντας Το Μοντέλο σας
+      Improved Shoe Recommender: Βελτιωμένο Σύστημα Προτάσεων Παπουτσιών
+      Incorporate Feedback: Ενσωματώστε Σχολιασμό
+      Innovation Research: Έρευνα Καινοτομίας
+      Input Examples: Εισάγετε Παραδείγματα
+      Input with If-Else: Εισάγετε με Αν-Διαφορετικά
+      InspirationalArtwork: InspirationalArtwork
+      Intro to Flyer Game: Εισαγωγή στο Παιχνίδι δημιουργίας Διαφημιστικού Εντύπου
+      Intro to For Loops: Εισαγωγή σε Για Βρόχους
+      Intro to Side Scrollers: Εισαγωγή σε Side Scrollers
+      Intro to Sprites: Εισαγωγή στα μοτίβα
+      Intro to Variables: Εισαγωγή σε Μεταβλητές
       Introduction to Game Lab: Εισαγωγή στο Εργαστήριο Παιχνιδιού
+      Isaac's Survey Data: Δεδομένα Εκτίμησης του Ισαάκ
+      Iteration and Parameters: Επανάληψη και Παράμετρος
+      Keep On Dancing!: Συνεχίστε να Χορεύετε!
+      Keeping Data Secret: Κρατώντας τα Δεδομένα Μυστικά
+      Keyboard Input: Είσοδος Πληκτρολογίου
+      Kim's Survey: Η εκτίμηση της Κιμ
+      Kim's Survey Data: Δεδομένα Εκτίμησης της Κιμ
+      LED Apps: Εφαρμογές LED
       Layout Properties: Ιδιότητες Διάταξης
+      Layout with CSS: Διάταξη με CSS
+      Learning from Simulations: Μαθαίνοντας από Προσομοιώσεις
+      Lesson Extras: Επιπρόσθετο υλικό μαθήματος
+      Level Overview: Σύνοψη Επιπέδου
+      Levels: Επίπεδα
+      Light Show: Επίδειξη Φωτός
+      Linking Pages: Συνδέοντας Σελίδες
+      Linking Screens: Συνδέοντας Οθόνες
       Lists: Λίστες
       Lists in HTML: Δημιουργία Λίστας στο HTML
+      Looking for Patterns: Αναζητώντας για Μοτίβα
+      Looping: Βρόχοι επαναλήψεων
+      Loops with the Artist: Βρόχοι με τον Καλλιτέχνη
+      Make Your Sprites: Φτιάξτε τους χαρακτήρες σας
+      Make a Prediction: Κάντε μια Πρόβλεψη
+      Make an Interactive Card: Φτιάξτε μια Διαδραστική Κάρτα
+      Make it Interactive: Κάντε το Διαδραστικό
+      Making Scenes: Φτιάχνοντας Σκηνές
+      Making Songs: Γράφοντας Τραγούδια
+      Making Sounds: Φτιάχνοντας Ήχους
+      Making an Interactive Card: Φτιάχνοντας μια Διαδραστική Κάρτα
+      'Maze Intro: Programming with Blocks': 'Εισαγωγή στο Λαβύρινθο: Προγραμματίζοντας
+        με Κύβους'
       Measures: Μέτρα
+      Medical Dataset Model Cards: Κάρτες μοντέλου συνόλου δεδομένων ιατρικού χαρακτήρα
+      Medical Priority App: Εφαρμογές Ιατρικής Προτεραιότητας
+      'Minecraft: Hero''s Journey': 'Ναρκαλιευτής: Το Ταξίδι του Ήρωα'
+      'Mini-Project: About Me': 'Μικρή Εργασία: Σχετικά με Εμένα'
+      'Mini-Project: Alien Dance Moves': 'Μικρή Εργασία: Κινήσεις Χορού Εξωγήινου'
+      'Mini-Project: Alien Dance Party': 'Μικρή Εργασία: Πάρτι Χορού Εξωγήινου'
+      'Mini-Project: Create a Virtual Pet': 'Μικρή Εργασία: Δημιουργήστε ένα Εικονικό
+        Κατοικίδιο'
+      'Mini-Project: Outbreak Simulator': 'Μικρή Εργασία: Προσομοιωτής Εξάπλωσης'
+      'Mini-Project: Royal Battle': 'Mini-Project: Βασιλική Μάχη'
+      'Mini-Project: Snowflake #1': 'Mini-Project: Χιονονιφάδα #1'
+      'Mini-Project: Snowflake #2': 'Mini-Project: Χιονονιφάδα #2'
+      'Mini-Project: Swimming Fish': 'Mini-Project: Ψάρι που κολυμπάει'
+      'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Ψάρι που κολυμπάει
+        (συνέχεια)'
+      'Mini-Project: User Input Programs': 'Mini-Project: Προγράμματα Εισόδου Χρήστη'
+      'Mini-Project: Virtual Pet': 'Μικρή Εργασία: Δημιουργήστε ένα Εικονικό Κατοικίδιο'
+      'Mini-project: Chase Game': 'Μικρή Εργασία: Παιχνίδι Κυνηγητού'
+      'Mini-project: Flappy Game': 'Μικρή Εργασία: Παιχνίδι Flappy'
+      'Mini-project: Interactive Poster': 'Μικρή Εργασία: Διαδραστική Αφίσα'
+      'Mini-project: Jorge the Dog': 'Μικρή Εργασία: Jorge ο Σκύλος'
+      'Mini-project: Sticker Art': 'Μικρή Εργασία: Τέχνη με Αυτοκόλλητα'
+      'Mini-project: Sticker Design': 'Μικρή Εργασία: Σχεδιασμός Αυτοκόλλητου'
+      Modify simulation variables: Τροποποίηση μεταβλητών προσομοίωσης
       More Buttons: Περισσότερα κουμπιά
+      More Input: Περισσότερα Εισαγώμενα
+      More Parameters: Περισσότερες Παράμετροι
+      Motorcycle: Μηχανή
+      Move It Move it Video  - Unplugged Activity: Κουνησέ το Κούνησε το Βίντεο -
+        Αυτόνομη δραστηριότητα
+      Movement with the Counter Pattern: Κίνηση με το αντίστροφο μοτίβο
+      Multiframe Animations: Κινήσεις πολλαπλών καρέ
+      Musical Arrays: Μουσικοί Πίνακες
+      My Loopy Robotic Friends - Unplugged Activity: Οι επαναλαμβανόμενοι ρομποτικοί
+        φίλοι μου - αυτόνομη δραστηρίοτητα
+      My Robotic Friends - Unplugged Activity: Οι ρομποτικοί φίλοι μου - αυτόνομη
+        δραστηριότητα
       Naming Variables: Ορίζοντας Μεταβλητές
+      Nested Loops with the Bee: "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+      New Challenge Introduction: Εισαγωγή σε Καινούρια Πρόκληση
+      New Shapes: Καινούρια Μεγέθη
+      Orientation: Προσανατολισμός
       Overview: Επισκόπηση
+      'Overview: Design Mode': 'Επισκόπηση: Λειτουργία Σχεδιασμού'
+      'Overview: If Statements': 'Επισκόπηση: Εντολές Αν'
+      'Overview: Images': 'Επισκόπηση: Εικόνες'
+      'Overview: onEvent': 'Επισκόπηση: onEvent'
+      'Overview: setPosition': 'Επισκόπηση: setPosition'
       Pair Programming: Προγραμματισμός κατά ζεύγη
+      Pet Recommender: Σύστημα Πρότασης Κατοικίδιου
+      Picturing Data: Οπτικοποίηση Δεδομένων
+      Pizza Party Data: Δεδομένα σχετικά με το Πάρτι με Πίτσες
+      Pizza Recommendations: Προτάσεις Πίτσας
+      Plan Your Project: Σχεδιάστε το έργο σας
+      Plan Your Scene: Σχεδιάστε Τη Σκηνή Σας
+      Planning: Σχεδιασμός
+      Platform Jumper - Background and Variables: Γέφυρα πλατφόρμας Φόντο και Μεταβλητές
+      Platform Jumper - Items: Γέφυρα πλατφόρμας - Αντικείμενα
+      Platform Jumper - Platforms: Γέφυρα πλατφόρμας - Πλατφόρμες
+      Platform Jumper - Player: Γέφυρα πλατφόρμας - Παίχτης
+      Platform Jumper Review: " Ανασκόπηση Γέφυρας πλατφόρμας "
+      Player Controls: Έλεγχοι Παίκτη
+      Playing Notes: Παίζοντας Νότες
+      Playing with Notes: Παίζοντας με Νότες
+      Post-Course Survey Instructions: Οδηγίες Αξιολόγησης έπειτα από το μάθημα
+      Practice: Εξάσκηση
+      Predict: Προβλέψτε
+      Prediction: Πρόβλεψη
+      Prepare for your presentation: Προετοιμαστείτε για την παρουσίαση σας
+      Prepare for your presentation_2018: Προετοιμαστείτε για την παρουσίασή σας_2018
+      Problem Solving: Επίλυση Προβλημάτων
+      Problem Solving Process for Programming: Διαδικασίες Επίλυσης Προβλημάτων για
+        τον Προγραμματισμό
+      Programming with Rey and BB-8: Προγραμματίζοντας με τον Ρέι και BB-8
+      Programs that Repeat: Προγράμματα που Επαναλαμβάνονται
       Project: Έργο
+      Project - Background and Variables: Εργασία - Φόντο και Μεταβλητές
+      Project - Sprites and Interactions: Έργο - χαρακτήρες και αλληλεπιδράσεις
+      Project Guide: Οδηγός Προγράμματος
+      Project Work: Δουλεία έργου
       Properties: Ιδιότητες
+      Publishing Your Website: Δημοσιοποιώντας Τον Ιστότοπό Σας
       Quarter Notes: Τέταρτα Νότας
+      Quick Check: Γρήγορος Έλεγχος
+      RGB Exploration: Εξερεύνηση RGB (κόκκινου, πράσινου, μπλε)
       Random Numbers: Τυχαίοι αριθμοί
+      Raspado Recommender: Σύστημα Πρότασης Raspado
+      Reading Sensors: Αισθητήρες Ανάγνωσης
+      Recognizing Expressions: Αναγνωρίζοντας Εκφράσεις
+      Recognizing Fish: Αναγνωρίζοντας Ψάρια
+      Recognizing Fish Features: Αναγνωρίζοντας τα Χαρακτηριστικά Ψαριών
+      Recognizing Shapes: Αναγνωρίζοντας Σχήματα
+      Reflection: Αντανάκλαση
+      Relay Programming - Unplugged Activity: Προγραμματισμός αξιοπιστίας  - Αυτόνομη
+        Δραστηριότητα
+      Repeat Blocks: Κύβοι Επανάληψης
+      Repeat Blocks with BB-8: Κύβοι Επανάληψης με BB-8
+      Repeat Blocks with the Artist: Κύβοι Επανάληψης με τον Καλλιτέχνη
+      Repeat Unit Statements: Επανάληψη Εντολών Έως
+      Repeat Until Statements: Επανάληψη Εντολών Έως
+      Representing Images: Αναπαριστώντας Εικόνες
+      Review: Ανασκόπηση
+      Review Your Animated Scene: Αναθεωρήστε Την Κινούμενη και με ζωή Σκηνή Σας
+      Review Your App: Αναθεωρήστε Τις Εφαρμογές Σας
+      Review Your Game: Αναθεωρήστε Το Παιχνίδι Σας
+      Review Your Page: Αναθεωρήστε Τη Σελίδα Σας
+      Review Your Scene: Αναθεωρήστε Τη Σκηνή Σας
+      'Review: CSS': 'Ανασκόπηση: CSS'
+      'Review: HTML': 'Αναθεώρηση: HTML'
+      Run a simulation: Εκτέλεση μιας προσομοίωσης
+      Safari App: Εφαρμογές Σαφάρι
+      Safari Model: Μοντέλο Σαφάρι
+      Same Game: Το ίδιο παιχνίδι
+      Sample Apps for Good: Παράδειγμα εφαρμογών για καλό
+      Sample Games: Δείγματα Παιχνιδιών
+      Sample Personal Web Pages: Δείγματα Προσωπικών Σελίδων Ιστού
+      Sample Personal Websites: Δείγματα Προσωπικών Ιστοτόπων
+      Sample Programs: Δείγματα Προγραμμάτων
+      Sample Web Page: Δείγματα Σελίδας Ιστού
+      Sample Website: Δείγματα Ιστοτόπου
+      Scoring & Scoreboard: Βαθμολόγηση & Πίνακας Βαθμολογίας
+      Screen Design: Σχεδιασμός Οθόνης
+      Sensor Events: Γεγονότα Αισθητήρα
+      Sensors to Colors: Αισθητήρες σε Χρώματα
+      Set Up Sprites: Ρυθμίσετε τους Χαρακτήρες
+      Setting Properties: Ορίζοντας Ιδιότητες
+      Shapes and the Draw Loop: Σχήματα και ο Βρόχος Σχεδιασμού
+      Share Your App: Μοιράσου Την Εφαρμογή Σου
+      Share Your Pages: Μοιράσου Τις Σελίδες Σου
+      Share Your Stylesheets: Μοιραστείτε τα φύλλα στιλ σας
+      Shoe Recommendation Survey: Εκτίμηση Πρότασης Παπουτσιών
+      Shoe Recommender: Σύστημα Πρότασης Παπουτσιών
+      Side Scroller: Side Scroller
+      Simple Circuits: Απλά Κυκλώματα
+      Skill Building: Καλλιέργεια Δεξιοτήτων
+      Skill-Building: Καλλιέργεια Δεξιοτήτων
+      Sliders: παράμετροι
+      Smart Bike - Blinkers: Έξυπνο Ποδήλατο - Φανοί δείκτες πορείας
+      Social Sleuth: Ανίχνευση στα μέσα κοινωνικής δικτύωσης
+      Songwriting - Functions Unplugged Activity: Γραφή ποίησης - Λειτουργίες Αυτόνομη
+        Δραστηριότητα
       Speed it Up, Slow it Down: Πιο γρήγορα, Πιο αργά
+      Sprite Lab Project: Εργαστήριο εφαρμογής
       Sprite Properties: Ιδιότητες Χαρακτήρα
+      Sprites and the Draw Loop: Χαρακτήρες και ο Βρόχος Σχεδιασμού
+      Star Chaser: Κυνηγός Άστρων
+      Styling Text: Κείμενο στάιλινγκ
+      Styling with Classes: Στάιλινγκ με Τάξεις
+      Styling your Website: Δίνοντας στιλ στον Ιστότοπό σας
+      Teach A.I. a new word: Διδάξτε μια νεα λέξη την Τ.Ν
+      Teach AI a New Word: Διδάξτε μια νεα λέξη την Τ.Ν
+      'Technique: Frequency Analysis': 'Τεχνική: Ανάλυση Συχνότητας'
+      Terminology Recap: Ανακεφαλαίωση Ορολογίας
       Text Compression: Συμπίεση κειμένου
       The Animation Tab: Η Καρτέλα Κίνησης
+      The Artist in Code Studio: Ο καλλιτέχνης στο Code Studio
+      The Big Event - Unplugged Activity: Το Μεγάλο Γεγονός - Δραστηριότητα εκτός
+        Διαδικτύου
+      The Buzzer: Ο δονητής
+      The Collector: Ο Συλλέκτης
       The Harvester: Ο Θεριστής
+      The Internet - Unplugged Activity: Το Διαδίκτυο - Δραστηριότητα εκτός διαδικτύου
+      The Power of Words - Unplugged Activity: Η Δύναμη των Λέξεων - Δραστηριότητα
+        εκτός διαδικτύου
+      The Right App - Unplugged Activity: Η Σωστή Εφαρμογή - Δραστηριότητα εκτός διαδικτύου
+      Top Websites: Κορυφαίοι Ιστότοποι
+      Train AI to Clean the Ocean: Εκπαιδεύστε την Τεχνητή Νοημοσύνη να Καθαρίζει
+        τον Ωκεανό
+      Train a Model in AI Lab: Εκπαιδεύστε ένα Μοντέλο στο Εργαστήρι Τεχνητής Νοημοσύνης
+      Train an AI to Clean the Ocean: Εκπαιδεύστε την Τεχνητή Νοημοσύνη να Καθαρίζει
+        τον Ωκεανό
+      UI Element Properties: Ιδιότητες Στοιχείου Διεπαφής Χρήστη
+      Ultimate Shoe Recommender: Υπέρτατο Σύστημα Πρότασης Παπουτσιών
+      Unit 5 Lesson 1 Overview: Σύνοψη Μαθήματος 1 Ενότητας 5
+      Upload Your Images: Μεταφορτώστε Τις Εικόνες Σας
+      User Interface: Διεπαφή Χρήστη
+      Using Getters and Setters: Χρήση βελτιωτικών και ρυθμιστικών
+      Using HTML Tags: Χρήση HTML Tags
+      Using Random Numbers: Χρησιμοποιώντας Τυχαίους Αριθμούς
+      Using Training Data: Χρησιμοποιώντας  Δεδομένα Εκπαίδευσης
+      Using the LED: Χρησιμοποιώντας LED
+      Using the Switch: Χρησιμοποιώντας το Διακόπτη
       Variables: Μεταβλητές
       Velocity: Ταχύτητα
+      Velocity and the Counter Pattern: Ταχύτητα και το μοτίβο αντίθετης φοράς
+      Video: Βίντεο
+      Video - Encryption and Public Keys: Βίντεο - Κρυπτογράφηση και Δημόσια Κλειδιά
+      'Video - Maze Intro: Programming with Blocks': 'Βίντεο - Εισαγωγή στον Λαβύρινθο:
+        Προγραμματισμός με Κύβους'
+      'Video:  Debugging with the Step Button': 'Βίντεο: Αποσφαλμάτωση με το Κουμπί
+        Βήμα'
+      'Video:  Minecraft - The Agent': 'Βίντεο: Ναρκαλιευτής - Ο πράκτορας λογισμικού'
+      'Video:  Text  and Prompts': 'Βίντεο: Κείμενο και Προτροπές'
+      'Video: "If/Else"': 'Βίντεο: "Αν/Διαφορετικά"'
+      'Video: AI: What is Machine Learning?': 'Βίντεο: Τεχνητή Νοημοσύνη: Τι είναι
+        Μηχανική Μάθηση;'
+      'Video: Amazon and Data': 'Βίντεο: Amazon και Δεδομένα'
+      'Video: Artist Intro with JR Hildebrand': 'Βίντεο: Εισαγωγή Καλλιτέχνη με τον
+        JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Βίντεο: Εισαγωγή Καλλιτέχνη με τον
+        JR Hildebrand'
+      'Video: Circuits and Logic': 'Βίντεο: Κυκλώματα και Λογική'
+      'Video: Code Your Own Flappy Game': 'Βίντεο: Προγραμματίστε με κώδικα το δικό
+        σας Flappy παιχνίδι'
+      'Video: Conditionals: If Statements': 'Βίντεο: Συνθήκες: Εντολές Αν'
+      'Video: Conditionals: If and If/Else Statements': 'Βίντεο: Συνθήκες: Εντολές
+        Αν και Αν/Διαφορετικά'
+      'Video: Dance Party Events': 'Βίντεο: Γεγονότα Πάρτι Χορού'
+      'Video: Dance Party Measures': 'Βίντεο: Μέτρα Πάρτι Χορού '
+      'Video: Dance Party Party On!': 'Βίντεο: Το πάρτι ξεκινά Πάρτι Χορού!'
+      'Video: Dance Party Properties': 'Βίντεο: Ιδιότητες Πάρτι Χορού'
+      'Video: Dance Party Warm Up': 'Βίντεο: Προθέρμανση για το Πάρτι Χορού'
+      'Video: De-bugging with the Step Button': 'Βίντεο: Αποσφαλμάτωση με το Κουμπί
+        Βήμα'
+      'Video: Debugging': 'Βίντεο: Αποσφαλμάτωση'
+      'Video: Debugging with Scrat ': 'Βίντεο: Αποσφαλμάτωση με Scrat'
+      'Video: Debugging with the Step Button': 'Βίντεο: Αποσφαλμάτωση με το Κουμπί
+        Βήμα'
       'Video: Drawing in Game Lab - Part 1': 'Βίντεο: Σχεδίαση στο Εργαστήριο Παιχνιδιού-Μέρος
         1'
+      'Video: Events': 'Βίντεο: Γεγονότα'
+      'Video: Follow The Digital Trail': 'Βίντεο: Ακολουθήστε το Ψηφιακό Ίχνος'
+      'Video: Getting Loopy': 'Βίντεο: Εμφωλευμένοι Βρόχοι'
+      'Video: Happy Maps - Unplugged Activity': 'Βίντεο: Χαρούμενοι Χάρτες - Δραστηριότητα
+        εκτός Διαδικτύου'
+      'Video: Harvesting with Conditionals': 'Βίντεο: Σοδειά με "Υπό Συνθήκες"'
+      'Video: How Search Works': 'Βίντεο: Πώς Λειτουργεί η Αναζήτηση'
+      'Video: How to Create a Simple Function': 'Βίντεο: Πώς να Δημιουργήσετε μια
+        Απλή Λειτουργία'
+      'Video: How to Make a Sprite': 'Βίντεο: Πώς να φτιάξετε χαρακτήρες'
+      'Video: IOSP Model': 'Βίντεο: Μοντέλο IOSP'
+      'Video: Ice Age Loops': 'Βίντεο: Βρόχοι Εποχής Παγετώνων'
+      'Video: Impact on Society': 'Βίντεο: Αντίκτυπος στην Κοινωνία'
+      'Video: Impacts on Society': 'Βίντεο: Αντίκτυποι στην Κοινωνία'
+      'Video: Intro to CSS - Part 1': 'Βίντεο: Εισαγωγή στη CSS - μέρος 1'
+      'Video: Intro to CSS - Part 2': 'Βίντεο: Εισαγωγή στη CSS - μέρος 2'
+      'Video: Intro to Design Mode': 'Βίντεο: Εισαγωγή στη Λειτουργία Σχεδιασμού'
+      'Video: Introducing Sprite Lab': 'Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων'
+      'Video: Introduction to Play Lab': 'Βίντεο: Εισαγωγή στο εργαστήριο παιχνιδιού'
+      'Video: Introduction to Variables': 'Βίντεο: Εισαγωγή στις Μεταβλητές'
+      'Video: Loops in Artist': 'Βίντεο: Βρόχοι σε Καλλιτέχνη'
+      'Video: Loops with the Artist': 'Βίντεο: Βρόχοι με τον Καλλιτέχνη'
+      'Video: Managing Disagreement': 'Βίντεο: Διαχείριση Διαφωνιών'
+      'Video: Maze Intro - Programming with Blocks': 'Βίντεο: Εισαγωγή στον Λαβύρινθο
+        - Προγραμματισμός με Κύβους'
+      'Video: Maze Intro - Programming with Blocks ': 'Βίντεο: Εισαγωγή στον Λαβύρινθο
+        - Προγραμματισμός με Κύβους '
+      'Video: Maze Intro: Programming with Blocks': 'Βίντεο: Εισαγωγή στον Λαβύρινθο:
+        Προγραμματισμός με Κύβους'
+      'Video: Measures': 'Βίντεο: Μέτρα'
+      'Video: Minecraft - Congratulations': 'Βίντεο: Ναρκαλιευτής (Minecraft) - Συγχαρητήρια'
+      'Video: Minecraft - Functions': 'Βίντεο: Ναρκαλιευτής (Minecraft) - Λειτουργίες'
+      'Video: Minecraft - Repeat Loops': 'Βίντεο: Ναρκαλιευτής (Minecraft) - Βρόχοι
+        Επανάληψης'
+      'Video: Minecraft - The Agent': 'Βίντεο: Ναρκαλιευτής - Ο πράκτορας λογισμικού'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Βίντεο: Ναρκαλιευτής (Minecraft):
+        Υδάτινο Ταξίδι Συνθήκες'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Βίντεο: Ναρκαλιευτής (Minecraft):
+        Υδάτινο Ταξίδι Συγχαρητήρια'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Βίντεο: Ναρκαλιευτής (Minecraft):
+        Υδάτινο Ταξίδι Εισαγωγή'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Βίντεο: Ναρκαλιευτής (Minecraft):
+        Υδάτινο Ταξίδι Επανάλαβε Μέχρι'
+      'Video: Nested Loops': 'Βίντεο: Εμφωλευμένοι Βρόχοι'
+      'Video: Nested Loops with the Bee': 'Βίντεο: ''Ενθετοι/Περιεχόμενοι Βρόχοι με
+        την Μέλισσα'
+      'Video: Netflix and Data': 'Βίντεο: Netflix και Δεδομένα'
+      'Video: Pair Programming': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
+      'Video: Pair Programming ': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
       'Video: Problem Solving Process': 'Βίντεο: Διαδικασία Επίλυσης Προβλημάτων'
+      'Video: Programming with Blocks': 'Βίντεο: Προγραμματισμός με Κύβους'
+      'Video: Programming with Rey and BB-8': 'Βίντεο: Προγραμματίζοντας με τον Ρέι
+        και BB-8'
+      'Video: Properties': 'Βίντεο: Ιδιότητες'
+      'Video: Publishing Your Website': 'Βίντεο: Δημοσιοποιώντας Τον Ιστότοπό Σας'
+      'Video: Repeat Blocks': 'Βίντεο: Κύβοι Επανάληψης'
+      'Video: Repeat Blocks with BB-8': 'Βίντεο: Κύβοι Επανάληψης με BB-8'
+      'Video: Repeat Blocks with the Artist': 'Βίντεο: Κύβοι Επανάληψης με τον Καλλιτέχνη'
+      'Video: Repeat Until Blocks': 'Βίντεο: Κύβοι Επανάληψης Έως'
+      'Video: Repeat Until Statements': 'Βίντεο: Εντολές Επανάλαβε Μέχρι'
+      'Video: Sprites in Action': 'Βίντεο: Χαρακτήρες σε Δράση'
+      'Video: Star Wars Project': 'Βίντεο: Έργο Star Wars (Πόλεμος των Άστρων)'
+      'Video: Teamwork': 'Βίντεο: Ομαδική εργασία'
+      'Video: Text and Prompts': 'Βίντεο: Κείμενο και Προτροπές'
+      'Video: The Artist in Code Studio': 'Βίντεο: Ο καλλιτέχνης στο Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Βίντεο: Το Μεγάλο Γεγονός - Δραστηριότητα
+        εκτός Διαδικτύου'
+      'Video: The Collector': 'Βίντεο: Ο Συλλέκτης'
+      'Video: The Harvester': 'Βίντεο: Η συλλεκτική μηχανή'
+      'Video: Training Data & Bias': 'Βίντεο: Δεδομένα εκπαίδευσης & Προκαταλήψεις'
+      'Video: Training Data and Bias': 'Βίντεο: Δεδομένα εκπαίδευσης και Προκαταλήψεις'
+      'Video: Unplugged Variables in Envelopes': 'Βίντεο: Μεταβλητές σε Φακέλους για
+        εκτός διαδικτύου'
+      'Video: Using the Repeat Block': 'Βίντεο: Χρησιμοποιώντας τον Κύβο Επανάληψης'
+      'Video: Variables in Artist': Βίντεο; Μεταβλητές σε Καλλιτέχνη
+      'Video: Warm Up': 'Βίντεο: Προθέρμανση'
+      'Video: Waze and Data': 'Βίντεο: Waze και Δεδομένα'
+      'Video: What is Machine Learning?': 'Βίντεο: Τι είναι Μηχανική Μάθηση;'
+      'Video: While Loops with the Farmer': 'Βίντεο: Βρόχοι Ενώ με τον Αγρότη'
+      'Video: Wrap-up': 'Βίντεο: Περίληψη'
+      Warm Up: Προθέρμανση
+      Website Project: Εργασία Ιστότοπου
+      Welcome to Monster Town: Καλωσορίσατε στην Πόλη Τεράτων
       Where'd They Go?: Πού θα πήγαιναν;
+      While Loops with the Farmer: Βρόχοι Ενώ με τον Αγρότη
+      'Widget: Text Compression': 'Γραφικό στοιχείο: Συμπύκνωση Κειμένου'
       Wrap-up: συνοψίζω
+      'You Choose: Improve Your App': 'Εσείς επιλέγετε: Βελτιώστε την Εφαρμογή Σας'
+      'You Choose: Restaurant Recommendations': 'Εσείς Επιλέγετε: Προτάσεις Εστιατορίων '
+      Your Personal Website: Το προσωπικό σας σάιτ
+      Your Team Project: Το ομαδικό σας έργο
+      Zoo Predictions: Πρόβλεψη Ζωολογικού Κήπου
+      getText vs getNumber: getText εναντίον getNumber
+      isTouching: isTouching
+      setProperty: setProperty

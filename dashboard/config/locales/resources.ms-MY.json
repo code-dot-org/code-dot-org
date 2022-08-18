@@ -63,6 +63,9 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/courseb/2018": {
           "name": "Pemetaan Standard"
         },
@@ -71,6 +74,9 @@
         },
         "vocabulary/courseb/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursea/2018": {
           "name": "Pemetaan Standard"
@@ -81,6 +87,9 @@
         "vocabulary/coursea/2018": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/coursed/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursed/2018": {
           "name": "Pemetaan Standard"
         },
@@ -89,6 +98,9 @@
         },
         "vocabulary/coursed/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursef/2018": {
           "name": "Pemetaan Standard"
@@ -99,6 +111,9 @@
         "vocabulary/coursef/2018": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/express/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/express/2018": {
           "name": "Pemetaan Standard"
         },
@@ -108,6 +123,9 @@
         "vocabulary/express/2018": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/coursee/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursee/2018": {
           "name": "Pemetaan Standard"
         },
@@ -116,6 +134,9 @@
         },
         "vocabulary/coursee/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursec/2018": {
           "name": "Pemetaan Standard"
@@ -129,6 +150,9 @@
         "code_introduced_1/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_2/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_2/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -141,6 +165,9 @@
         "code_introduced_3/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_5/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_5/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -149,6 +176,9 @@
         },
         "vocabulary_5/csd/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_4/csd/2018": {
           "name": "Pemetaan Standard"
@@ -162,6 +192,9 @@
         "code_introduced_2/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_3/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_3/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -174,6 +207,9 @@
         "code_introduced/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_1/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_1/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -182,6 +218,9 @@
         },
         "vocabulary_1/csd/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/csd/2018": {
           "name": "Pemetaan Standard"
@@ -195,6 +234,9 @@
         "curriculum_guide/coursea/2019": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursea/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursea/2019": {
           "name": "Pemetaan Standard"
         },
@@ -206,6 +248,9 @@
         },
         "curriculum_guide/courseb/2019": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/courseb/2019": {
           "name": "Pemetaan Standard"
@@ -219,6 +264,9 @@
         "curriculum_guide/coursed/2019": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursed/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursed/2019": {
           "name": "Pemetaan Standard"
         },
@@ -230,6 +278,9 @@
         },
         "curriculum_guide/coursef/2019": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursef/2019": {
           "name": "Pemetaan Standard"
@@ -243,6 +294,9 @@
         "curriculum_guide/coursee/2019": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursee/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursee/2019": {
           "name": "Pemetaan Standard"
         },
@@ -251,6 +305,9 @@
         },
         "vocabulary/coursee/2019": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/express/2019": {
           "name": "Pemetaan Standard"
@@ -263,6 +320,9 @@
         },
         "curriculum_guide/coursec/2019": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursec/2019": {
           "name": "Pemetaan Standard"
@@ -279,6 +339,9 @@
         "code_introduced_1/csd/2019": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_2/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_2/csd/2019": {
           "name": "Pemetaan Standard"
         },
@@ -287,6 +350,9 @@
         },
         "code_introduced_3/csd/2019": {
           "name": "Kod Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_5/csd/2019": {
           "name": "Pemetaan Standard"
@@ -297,17 +363,26 @@
         "code_introduced_2/csd/2019": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_3/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_3/csd/2019": {
           "name": "Pemetaan Standard"
         },
         "vocabulary_3/csd/2019": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans_4/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_4/csd/2019": {
           "name": "Pemetaan Standard"
         },
         "vocabulary_4/csd/2019": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/csd/2019": {
           "name": "Pemetaan Standard"
@@ -318,6 +393,9 @@
         "code_introduced/csd/2019": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_1/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_1/csd/2019": {
           "name": "Pemetaan Standard"
         },
@@ -326,6 +404,9 @@
         },
         "code_introduced_1/csd/2017": {
           "name": "Kod Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_2/csd/2017": {
           "name": "Pemetaan Standard"
@@ -339,6 +420,9 @@
         "code_introduced_3/csd/2017": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_5/csd/2017": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_5/csd/2017": {
           "name": "Pemetaan Standard"
         },
@@ -351,6 +435,9 @@
         "code_introduced/csd/2017": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_1/csd/2017": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_1/csd/2017": {
           "name": "Pemetaan Standard"
         },
@@ -360,6 +447,9 @@
         "vocabulary_1/csd/2017": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/csd/2017": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/csd/2017": {
           "name": "Pemetaan Standard"
         },
@@ -368,6 +458,9 @@
         },
         "vocabulary/csd/2017": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_4/csd/2017": {
           "name": "Pemetaan Standard"
@@ -380,6 +473,9 @@
         },
         "code_introduced_2/csd/2017": {
           "name": "Kod Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_3/csd/2017": {
           "name": "Pemetaan Standard"
@@ -414,6 +510,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
+          "name": "Dokumentasi Lab Sprite",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
@@ -478,6 +575,7 @@
           "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://youtu.be/mX857v5B4gE"
         },
         "flf-assessment-teacher-key/coursef/2021": {
@@ -485,15 +583,19 @@
           "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
           "type": "Penilaian"
         },
@@ -628,6 +730,7 @@
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
+          "name": "Move it, Move it",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "feeling_faces_emotion_image/courseb/2021": {
@@ -682,16 +785,20 @@
           "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Getting Loopy",
           "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Getting Loopy",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Getting Loopy",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "Penilaian"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Getting Loopy",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-lesson-recommend/courseb/2021": {
@@ -708,14 +815,17 @@
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "unplugged-video-big-event/courseb/2021": {
+          "name": "The Big Event",
           "url": "https://youtu.be/u0WV9shCoak",
           "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
+          "name": "The Big Event",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "Penilaian"
         },
         "assessment-answer-big-event/courseb/2021": {
+          "name": "The Big Event",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
@@ -896,13 +1006,16 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "unplugged-video-big-event/coursea/2021": {
+          "name": "The Big Event",
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursea/2021": {
+          "name": "The Big Event",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "Penilaian"
         },
         "assessment-answer-big-event/coursea/2021": {
+          "name": "The Big Event",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
@@ -986,18 +1099,23 @@
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Rakan-rakan Robotik Saya",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Rakan-rakan Robotik Saya",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Rakan-rakan Robotik Saya",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Rakan-rakan Robotik Saya",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Rakan-rakan Robotik Saya",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
@@ -1039,13 +1157,16 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
         },
         "unplugged-video-big-event/coursec/2021": {
+          "name": "The Big Event",
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursec/2021": {
+          "name": "The Big Event",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "Penilaian"
         },
         "assessment-answer-big-event/coursec/2021": {
+          "name": "The Big Event",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_course_c_/coursec/2021": {
@@ -1074,19 +1195,24 @@
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets",
           "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets",
           "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binary Bracelets",
           "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binary Bracelets",
           "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
           "type": "Penilaian"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets",
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
@@ -1266,9 +1392,11 @@
           "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Bersyarat dengan Kad",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Bersyarat dengan Kad",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
@@ -1276,18 +1404,22 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Bersyarat dengan Kad",
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "Penilaian"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Bersyarat dengan Kad",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Bersyarat dengan Kad",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "Tamat Kursus Panduan Perancangan Projek CSF Course D",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Panduan Projek"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Pemetaan Standard CSTA",
@@ -1362,6 +1494,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "Dokumentasi Lab Sprite",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
@@ -1369,6 +1502,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "Dokumentasi Lab Sprite",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -1421,12 +1555,13 @@
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
-          "name": "Pembolehubah",
+          "name": "Pemboleh ubah",
           "url": "https://youtu.be/DI7DprN4FtE"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Tamat Kursus Panduan Perancangan Projek CSF Express",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Panduan Projek"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Projek Akhir Asas CS",
@@ -1500,6 +1635,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "Dokumentasi Lab Sprite",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -1701,14 +1837,23 @@
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
         },
+        "computer-science-practices/csd/2021": {
+          "type": "Refleksi"
+        },
         "paper-prototypes/csd/2021": {
           "type": "Rubrik"
+        },
+        "design_mode/csd/2021": {
+          "name": "Mod Reka Bentuk"
         },
         "whats-for-lunch-testing/csd/2021": {
           "type": "Video"
         },
         "intro_to_design_mode/csd/2021": {
           "type": "Video"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Mod Reka Bentuk"
         },
         "app-presentation/csd/2021": {
           "type": "Rubrik"
@@ -1726,8 +1871,14 @@
         "how_computers_word_hardware_software/csd/2021": {
           "type": "Video"
         },
+        "board_events/csd/2021": {
+          "name": "Acara Papan"
+        },
         "analog-digital-video/csd/2021": {
           "type": "Video"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Panduan Projek"
         },
         "functions_2/csd/2021": {
           "name": "Fungsi"
@@ -1738,14 +1889,26 @@
         "introduction_to_arrays/csd/2021": {
           "type": "Video"
         },
+        "playing_notes/csd/2021": {
+          "name": "Bermain Nota"
+        },
         "loops_in_app_lab/csd/2021": {
           "type": "Video"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Peristiwa Accelerometer"
         },
         "circuits-logic-video/csd/2021": {
           "type": "Video"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Panduan Projek"
+        },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Rubrik"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Panduan Projek"
         },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Video"
@@ -1763,6 +1926,7 @@
           "type": "Video"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Video: Kesan ke atas Masyarakat",
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
@@ -1771,10 +1935,17 @@
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Data Latihan dan Bias",
           "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Rubrik"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Panduan Projek"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Video"
@@ -1786,7 +1957,7 @@
           "type": "Video"
         },
         "variables_1/csd/2021": {
-          "name": "Pembolehubah"
+          "name": "Pemboleh ubah"
         },
         "introduction_to_sprites/csd/2021": {
           "type": "Video"
@@ -1824,6 +1995,12 @@
         "if_else_statements/csd/2021": {
           "type": "Video"
         },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Panduan Projek"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
+        },
         "interactive_card/csd/2021": {
           "type": "Rubrik"
         },
@@ -1831,10 +2008,23 @@
           "type": "Video"
         },
         "side-scroller-1/csd/2021": {
+          "name": "Skrol Sisi",
           "type": "Rubrik"
         },
+        "side-scroller/csd/2021": {
+          "name": "Skrol Sisi",
+          "type": "Panduan Projek"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Halaju dan Corak Kaunter"
+        },
         "flyer-game-1/csd/2021": {
+          "name": "Permainan Flyer",
           "type": "Rubrik"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Permainan Flyer",
+          "type": "Panduan Projek"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Fungsi",
@@ -1842,6 +2032,12 @@
         },
         "functions_1/csd/2021": {
           "name": "Fungsi"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Panduan Projek"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
         },
         "make_your_own_game/csd/2021": {
           "type": "Rubrik"
@@ -1858,6 +2054,9 @@
         "what-do-computers-do/csd/2021": {
           "type": "Video"
         },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
+        },
         "apps_and_problem_solving/csd/2021": {
           "type": "Rubrik"
         },
@@ -1868,16 +2067,30 @@
           "type": "Video"
         },
         "video_pair_programming/csd/2021": {
+          "name": "Video: Pengaturcaraan Berpasangan",
           "type": "Video"
         },
         "video_debugging/csd/2021": {
+          "name": "Video: Menyahpepijat",
           "type": "Video"
         },
         "html-web-page-1/csd/2021": {
           "type": "Rubrik"
         },
+        "html-web-page/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "html-page/csd/2021": {
+          "type": "Panduan Projek"
+        },
         "lists/csd/2021": {
           "name": "Senarai"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Sleuth Sosial"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Sleuth Sosial"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "type": "Video"
@@ -1888,26 +2101,57 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "Rubrik"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "Panduan Projek"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Video"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Panduan Projek"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Panduan Projek"
         },
         "personal-web-page/csd/2021": {
           "type": "Rubrik"
         },
         "publishing_your_website/csd/2021": {
+          "name": "Menerbitkan Tapak Web Anda",
           "type": "Video"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Menguruskan Perselisihan faham",
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Kerja berpasukan",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: Cara Carian Berfungsi",
           "type": "Video"
         },
         "website-for-a-purpose-1/csd/2021": {
           "type": "Rubrik"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Panduan Projek"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Panduan Projek"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/pre-express/2020": {
           "name": "Pemetaan Standard"
@@ -1917,6 +2161,9 @@
         },
         "vocabulary/pre-express/2020": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/express/2020": {
           "name": "Pemetaan Standard"
@@ -1930,6 +2177,9 @@
         "curriculum_guide/courseb/2020": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/courseb/2020": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/courseb/2020": {
           "name": "Pemetaan Standard"
         },
@@ -1941,6 +2191,9 @@
         },
         "curriculum_guide/coursed/2020": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursed/2020": {
           "name": "Pemetaan Standard"
@@ -1954,6 +2207,9 @@
         "curriculum_guide/coursec/2020": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursec/2020": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursec/2020": {
           "name": "Pemetaan Standard"
         },
@@ -1965,6 +2221,9 @@
         },
         "curriculum_guide/coursee/2020": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursee/2020": {
           "name": "Pemetaan Standard"
@@ -1978,6 +2237,9 @@
         "curriculum_guide/coursea/2020": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursea/2020": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursea/2020": {
           "name": "Pemetaan Standard"
         },
@@ -1989,6 +2251,9 @@
         },
         "curriculum_guide/coursef/2020": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursef/2020": {
           "name": "Pemetaan Standard"
