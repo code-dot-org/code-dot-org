@@ -37,7 +37,7 @@
     // IE9 cant get rid of the native dropdown, so dont show our custom image and
     // get rid of our right padding so that the arrow is properly aligned
     padding-right: 0\9;
-    background: transparent\9;
+    background-color: transparent\9;
 
     &::-ms-expand {
       display: none;
@@ -61,12 +61,14 @@
   }
 }
 
+/* stylelint-disable */
 // IE 11 dropdown arrow position
 _:-ms-fullscreen, :root #divApplab.appModern, #designModeViz.appModern, .draggingParent {
   select {
     background-position-x: right -35px;
   }
 }
+/* stylelint-enable */
 
 #divApplab.notRunning, #designModeViz.appModern, .draggingParent {
   img[data-canonical-image-url=''], canvas:not(#turtleCanvas), .chart {

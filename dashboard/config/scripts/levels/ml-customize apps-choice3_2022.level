@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:49:34.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -60,6 +56,10 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:34.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:34.433+00:00\",\"changed\":[\"cloned from \\\"ml-customize apps-choice3\\\"\"],\"cloned_from\":\"ml-customize apps-choice3\"}]"

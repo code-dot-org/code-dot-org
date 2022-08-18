@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2022-08-09 23:31:01 UTC",
+    "serialized_at": "2022-08-16 19:18:58 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -433,7 +433,7 @@
       "key": "9e4eb200-8f4b-487d-8b3b-ddd0dd245639",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -865,7 +865,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas."
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on:\n\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. "
           }
         ]
       },
@@ -1308,6 +1308,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gray_csc_ecosystems_survival_choice_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1355,6 +1358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ecosystem_lesson1_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1627,6 +1633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1654,6 +1663,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "csc_ecosystems_variable_markdown_2022"
+        ],
+        "lesson.key": "Model Animal Adaptations",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2022",
+        "activity_section.key": "a3f4a1e4-cbe2-4eb4-bf4a-823024d4f9e2"
+      },
+      "level_keys": [
+        "csc_ecosystems_variable_markdown_2022"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution1_2022"
+        ],
+        "progression": "Solution 1 - Fishing Limits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "csc_ecosystems_solution1_2022"
         ],
         "lesson.key": "Model Animal Adaptations",
@@ -1666,11 +1700,14 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution1b_2022"
+        ],
         "progression": "Solution 1 - Fishing Limits"
       },
       "bonus": false,
@@ -1688,11 +1725,14 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 4,
+      "chapter": 28,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_multi_2022"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1710,11 +1750,14 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 5,
+      "chapter": 29,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution2_2022"
+        ],
         "progression": "Solution 2 - Off Limits"
       },
       "bonus": false,
@@ -1732,11 +1775,14 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 6,
+      "chapter": 30,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_cfu_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1754,11 +1800,14 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 7,
+      "chapter": 31,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution3A_2022"
+        ],
         "progression": "Solution 3 - Fishing Season"
       },
       "bonus": false,
@@ -1776,11 +1825,14 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 8,
+      "chapter": 32,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution3B_2022"
+        ],
         "progression": "Solution 3 - Fishing Season"
       },
       "bonus": false,
@@ -1798,11 +1850,14 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 9,
+      "chapter": 33,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_cfu2_parent_2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1820,11 +1875,14 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 10,
+      "chapter": 34,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2129,6 +2187,18 @@
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
         "activity_section.key": "8d362481-04d8-464a-a8c2-d78ba21cd768"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_variable_markdown_2022",
+        "script_level.level_keys": [
+          "csc_ecosystems_variable_markdown_2022"
+        ],
+        "lesson.key": "Model Animal Adaptations",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2022",
+        "activity_section.key": "a3f4a1e4-cbe2-4eb4-bf4a-823024d4f9e2"
       }
     },
     {
