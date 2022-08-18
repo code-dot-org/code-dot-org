@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:52.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -79,16 +75,16 @@
     "name_suffix": "_2022",
     "long_instructions": "# Swimming Right and Left\r\n\r\nThe code below should make the fish start moving right once you press the right-arrow, and then it should continually swim back and forth. You should use conditional statements and the `.velocity` block to make the fish swim.\r\n\r\n# Do This\r\n* Look at the three `if` statements inside the draw loop.\r\n\r\n* Use a `sprite.velocityX` block inside each `if` statement to make the three following movements:\r\n  * If the user presses the right arrow key, move the fish to the right.\r\n  * If the fish gets to the right-hand side of the screen, move the fish to the left.\r\n  * If the fish gets to the left-hand side of the screen, move the fish to the right.\r\n* The fish should always be facing the same direction it's moving, so you will need to update the fish's animation to either `fishL` or `fishR` based on the direction it's facing",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/csd-2022/guides/velocity",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/if-else-statements",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/multi-frame-animations"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
+    "map_reference": "/courses/csd-2022/guides/velocity",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "true",
     "encrypted": "false",
@@ -100,6 +96,10 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:52.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:52.897+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction velocityX control_2021\\\"\"],\"cloned_from\":\"CSD U3 abstraction velocityX control_2021\"}]"
