@@ -182,7 +182,10 @@ export class DetailViewContents extends React.Component {
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
-      cantSaveStatusReason: ''
+      cantSaveStatusReason: '',
+      principalApprovalIsRequired: !this.props.applicationData.principal_approval_state?.startsWith(
+        'Not required'
+      )
     };
   }
 
@@ -988,6 +991,9 @@ export class DetailViewContents extends React.Component {
 
   handlePrincipalApprovalChange = (_id, principalApproval) => {
     this.setState({principalApproval});
+    this.setState({
+      principalApprovalIsRequired: !this.state.principalApprovalIsRequired
+    });
   };
 
   renderDetailViewTableLayout = () => {
@@ -1100,7 +1106,6 @@ export class DetailViewContents extends React.Component {
 
     const principalApprovalStartsWith = state =>
       this.props.applicationData.principal_approval_state?.startsWith(state);
-    const isRequired = !principalApprovalStartsWith('Not required');
 
     if (principalApprovalStartsWith('Incomplete')) {
       const principalApprovalUrl = `${
@@ -1132,7 +1137,7 @@ export class DetailViewContents extends React.Component {
             showChangeRequirementButton={true}
             showSendEmailButton={false}
             applicationStatus={this.props.applicationData.status}
-            approvalRequired={isRequired}
+            approvalRequired={this.state.principalApprovalIsRequired}
           />
         </div>
       );
@@ -1140,13 +1145,18 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <h3>Principal Approval</h3>
-          <h4>{isRequired ? 'Is Required' : 'Not Required'}</h4>
-          {!isRequired && (
+          <h4>
+            {this.state.principalApprovalIsRequired
+              ? 'Is Required'
+              : 'Not Required'}
+          </h4>
+          {!this.state.principalApprovalIsRequired && (
             <p>
               If you would like to require principal approval for this teacher,
               please click “Make required." If this application is unreviewed,
               pending, or waitlisted, then clicking this button will also send
-              an email to the principal asking for approval,
+              an email to the principal asking for approval, given one hasn't
+              been sent in the past 5 days.
             </p>
           )}
           <PrincipalApprovalButtons
@@ -1155,7 +1165,7 @@ export class DetailViewContents extends React.Component {
             showChangeRequirementButton={true}
             onChange={this.handlePrincipalApprovalChange}
             applicationStatus={this.props.applicationData.status}
-            approvalRequired={isRequired}
+            approvalRequired={this.state.principalApprovalIsRequired}
           />
         </div>
       );
