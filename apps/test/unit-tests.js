@@ -10,7 +10,9 @@ enzyme.configure({adapter: new Adapter()});
 var __karmaWebpackManifest__ = [];
 
 function inManifest(path) {
-  return __karmaWebpackManifest__.indexOf(path) >= 0;
+  return (
+    __karmaWebpackManifest__.indexOf(path) >= 0 && !path.includes('/p5lab/')
+  );
 }
 
 var testsContext = require.context('./unit', true, /\.jsx?$/);
