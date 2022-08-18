@@ -5,22 +5,27 @@ title 'Making Counters'
 markdown <<MARKDOWN
 #Variables as counters
 ##What is a variable?
-Computers can store information like numbers and letters in a **variable.** Variables are like containers for the information to be stored in. 
+
 <div style="text-align: center;">
-<img src="https://images.code.org/9b8cda09e9b9ac80ca9b5c36ecfe8d0e-image-1660602452690.27.27 PM.png" style="width: 20%"/>
+<img src="https://images.code.org/42a2ca1a2c3df14ddbdaa11fb783ecae-image-1660670589537.gif" style="width: 15%; "/>
 </div>
 
+Computers can store information like numbers and letters in a **variable.** Variables are like containers for the information to be stored in.
 
+##What is a label?
+<div style="text-align: center;">
+<img src="https://images.code.org/7103b4661780d7074f2b5e92eea92787-image-1660670806682.gif" style="width: 15%"/>
+</div>
 
 The programmer labels each variable with a name that tells us what kind of information to expect.
+
+##What is a counter?
 <div style="text-align: center;">
-<img src="https://images.code.org/7c971e4a1061382bf69a39f7e6faaf4f-image-1660602773196.gif" style="width: 20%"/>
+<img src="https://images.code.org/7ccb982afd2fd9dddbe0e7de1b5bbc87-image-1660671111553.gif" style="width: 15%"/>
 </div>
 
 The information in a variable can be updated over time, which comes in handy when we need a way to keep track of how many times something happens. Programmers refer to this type of variable as a **“counter”.** 
-<div style="text-align: center;">
-<img src="https://images.code.org/1240db89bd0b830497276451882ada6a-image-1660602896786.34.51 PM.png" style="width: 20%"/>
-</div>
+
 
 ##Example
 This programmer created a fishing game for preschoolers. Every time the user clicks on a fish, the program will update heir score and print it on the screen. 
@@ -51,4 +56,7 @@ How will the preschooler know their score? There is a `print score` block that s
 
 
 
+![]()
+
+![]()
 MARKDOWN
