@@ -54,5 +54,5 @@ PORT=9883 LEVEL_TYPE='applab1' $GRUNT_CMD karma:integration
 PORT=9884 LEVEL_TYPE='applab2' $GRUNT_CMD karma:integration
 PORT=9885 LEVEL_TYPE='studio' $GRUNT_CMD karma:integration
 
-PORT=9886 npm run test:entry --entry=./test/unit/p5lab/
+PORT=9886 $GRUNT_CMD p5UnitTest
 SCRIPT
