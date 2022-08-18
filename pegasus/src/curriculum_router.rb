@@ -61,7 +61,7 @@ class HttpDocument
 
   def self.from_file(path, headers={}, status=200)
     content_type = content_type_from_path(path)
-    new(IO.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
+    new(File.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
   end
 
   def charset?(charset)

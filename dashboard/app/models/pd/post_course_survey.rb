@@ -44,10 +44,7 @@ module Pd
     validates_uniqueness_of :user_id, scope: [:form_id, :year, :course],
                             message: 'already has a submission for this form, year, and course'
 
-    validates_presence_of(
-      :user_id,
-      :course
-    )
+    validates_presence_of :course
     validates_inclusion_of :year, in: VALID_YEARS
     validates_inclusion_of :course, in: VALID_COURSES
 

@@ -14,10 +14,12 @@
         },
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +29,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:43:09 UTC",
+    "serialized_at": "2022-08-12 13:49:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1570,7 +1573,7 @@
       "key": "3ef3df02-b1b0-4d8d-8c63-70c357737393",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses variables to keep track of the low, middle, and high values in each iteration. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder how the binary search algorithm compares to a linear search.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *binary search* and demonstrate the example.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the execution counts for their trace table option as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *How does increasing the length of the array impact the execution count?*\n* *How does the execution counts for the binary search algorithm compare to the execution counts for the linear search algorithm?*\n\n**Discussion Goal:** Students share that the length of the array did not significantly increase the execution count for the binary search. Students realize that the binary search algorithm is faster than the linear search algorithm."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses variables to keep track of the low, middle, and high values in each iteration. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder how the binary search algorithm compares to a linear search.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *binary search* and demonstrate the example.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned."
       },
       "seeding_key": {
         "activity_section.key": "3ef3df02-b1b0-4d8d-8c63-70c357737393",
@@ -1578,8 +1581,31 @@
       }
     },
     {
-      "key": "c3152fe9-53dc-4b10-878a-d0b2f54ac275",
+      "key": "bfbe87fa-f71d-4950-9a4a-b6dc828c7b5a",
       "position": 4,
+      "properties": {
+        "description": "If you tried changing the order of the cards, you may have noticed that the binary search algorithm does not work as effectively. For a binary search algorithm to work, the data must already be sorted.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bfbe87fa-f71d-4950-9a4a-b6dc828c7b5a",
+        "lesson_activity.key": "8711f551-7484-42aa-b807-a0f7b900ea10"
+      }
+    },
+    {
+      "key": "dd47759f-d338-4edf-a82a-04d6bd4f351b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the execution counts for their trace table option as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *How does increasing the length of the array impact the execution count?*\n* *How does the execution counts for the binary search algorithm compare to the execution counts for the linear search algorithm?*\n\n**Discussion Goal:** Students share that the length of the array did not significantly increase the execution count for the binary search. Students realize that the binary search algorithm is faster than the linear search algorithm."
+      },
+      "seeding_key": {
+        "activity_section.key": "dd47759f-d338-4edf-a82a-04d6bd4f351b",
+        "lesson_activity.key": "8711f551-7484-42aa-b807-a0f7b900ea10"
+      }
+    },
+    {
+      "key": "c3152fe9-53dc-4b10-878a-d0b2f54ac275",
+      "position": 6,
       "properties": {
         "description": "You did some brainstorming for your Creative Coding Project in a previous lesson. Let's now take some time to create an initial plan to guide your development processes in upcoming lessons. Your planning might include outlines, rough drafts, flowcharts, UML diagrams, or pseudocode for key algorithms in your program. Take a look at your Project Planning Board to decide what task you need to tackle first.",
         "duration": "15",
@@ -1593,7 +1619,7 @@
     },
     {
       "key": "b63438cc-f79c-4d8f-9863-4500224b6174",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with the Console Project.",
         "tips": [
@@ -1610,7 +1636,7 @@
     },
     {
       "key": "c3bee1d5-3d4d-41b3-bb4e-5330d5c7e7f2",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
@@ -2327,7 +2353,7 @@
       "key": "315676b2-9a76-4f4d-aa5d-019ccf15bd8c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students observe different parts of the recursive merge sort algorithm, including its parameters, conditional statements, return value, and recursive calls. They notice that three methods contribute to the overall merge sort algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *helper method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the base cases?*\n* *What is the recursive call?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item. Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Merge Sort handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge Sort handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students observe different parts of the recursive merge sort algorithm, including its parameters, conditional statements, return value, and recursive calls. They notice that three methods contribute to the overall merge sort algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *merge sort*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *helper method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the base cases?*\n* *What is the recursive call?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item. Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Merge Sort handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge Sort handout."
       },
       "seeding_key": {
         "activity_section.key": "315676b2-9a76-4f4d-aa5d-019ccf15bd8c",
@@ -2885,7 +2911,7 @@
       "key": "0e165286-a89f-4f5f-84f9-678f8fa997e2",
       "position": 1,
       "properties": {
-        "description": "Now let's think about what you would do if you were a software engineer in those scenarios as a producer of technology.",
+        "description": "When using the computer, personal privacy is at risk. Programmers should attempt to safeguard personal privacy. Let's think about what you would do if you were a software engineer in those scenarios as a producer of technology.",
         "duration": "20",
         "name": "Data, Privacy, and Security",
         "remarks": true
@@ -2910,7 +2936,7 @@
       "key": "ab91ddb1-4502-49a5-a71c-ebe556082f57",
       "position": 3,
       "properties": {
-        "description": "Let's think about the tradeoffs between data collection and privacy and security.",
+        "description": "Computer use and the creation of programs have an impact on personal security. These impacts can be beneficial or harmful. Let's think about the tradeoffs between data collection and privacy and security.",
         "duration": "15",
         "name": "Debate",
         "remarks": true
@@ -5481,6 +5507,7 @@
       "key": "binary_search",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -5493,6 +5520,7 @@
       "key": "counting_executions_with_code",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5505,6 +5533,7 @@
       "key": "creative_coding_with_the_console_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5517,6 +5546,7 @@
       "key": "cs_bingo_cards_6",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5541,6 +5571,7 @@
       "key": "data_privacy_and_security",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5553,6 +5584,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -5565,6 +5597,7 @@
       "key": "merge_sort",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5577,10 +5610,23 @@
       "key": "project_planning_feedback_3",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "project_planning_feedback_3"
+      }
+    },
+    {
+      "name": "Searching Algorithms",
+      "url": "https://youtu.be/gRK5BUw7TCk",
+      "key": "searching_algorithms_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "searching_algorithms_1"
       }
     },
     {
@@ -5589,6 +5635,7 @@
       "key": "seatingchart_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5601,6 +5648,7 @@
       "key": "seatingchart_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5613,6 +5661,7 @@
       "key": "selection_sort",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5632,11 +5681,24 @@
       }
     },
     {
+      "name": "Sorting Algorithms",
+      "url": "https://youtu.be/b7iasi3MfLw",
+      "key": "sorting_algorithms_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sorting_algorithms_1"
+      }
+    },
+    {
       "name": "Sorting Comparison",
       "url": "https://docs.google.com/document/d/1KEivbmbbclpbPumChYDruBnIp_Mpcjl0VTctoK_zO-c/edit?usp=sharing",
       "key": "sorting_comparison",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5649,6 +5711,7 @@
       "key": "u8l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5661,6 +5724,7 @@
       "key": "u8l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5673,6 +5737,7 @@
       "key": "u8l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5685,6 +5750,7 @@
       "key": "u8l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5697,6 +5763,7 @@
       "key": "u8l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5709,6 +5776,7 @@
       "key": "u8l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5721,6 +5789,7 @@
       "key": "u8l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5733,6 +5802,7 @@
       "key": "u8l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5745,6 +5815,7 @@
       "key": "u8l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5757,6 +5828,7 @@
       "key": "u8l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5769,6 +5841,7 @@
       "key": "unit_8_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5788,7 +5861,7 @@
       }
     },
     {
-      "name": "Unit 8 Presentation Slides",
+      "name": "Unit 8 Presentation",
       "url": "https://docs.google.com/presentation/d/1rp9ZSNCOOctRKgNzQ5xwJa5r5Q_mUL2xOFrgOMgsdUc/edit?usp=sharing",
       "key": "unit_8_presentation_slides",
       "properties": {
@@ -5805,6 +5878,7 @@
       "key": "unit_8_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6177,6 +6251,18 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u8l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "searching_algorithms_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "sorting_algorithms_1"
       }
     },
     {

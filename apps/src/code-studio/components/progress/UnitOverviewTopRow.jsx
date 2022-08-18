@@ -6,8 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -32,8 +31,7 @@ class UnitOverviewTopRow extends React.Component {
   static propTypes = {
     assignedSectionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -112,7 +110,6 @@ class UnitOverviewTopRow extends React.Component {
       viewAs,
       isRtl,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       showAssignButton,
       assignedSectionId,
@@ -125,8 +122,6 @@ class UnitOverviewTopRow extends React.Component {
       courseOfferingId,
       courseVersionId
     } = this.props;
-
-    const useMigratedTeacherResources = isMigrated && !teacherResources.length;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
@@ -156,9 +151,8 @@ class UnitOverviewTopRow extends React.Component {
             />
             {studentResources.length > 0 && (
               <ResourcesDropdown
-                migratedResources={studentResources}
+                resources={studentResources}
                 unitId={scriptId}
-                useMigratedResources={true}
                 studentFacing
               />
             )}
@@ -177,14 +171,10 @@ class UnitOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Instructor &&
-            ((!useMigratedTeacherResources && teacherResources.length > 0) ||
-              (useMigratedTeacherResources &&
-                migratedTeacherResources.length > 0)) && (
+            (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
                 resources={teacherResources}
-                migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources={useMigratedTeacherResources}
               />
             )}
           {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (

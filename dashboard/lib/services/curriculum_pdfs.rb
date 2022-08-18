@@ -22,7 +22,7 @@ require 'dynamic_config/dcdo'
 # - unit calendar
 # - four rollup pages for unit, unit group, one for each of:
 #   - vocab
-#   - resouces
+#   - resources
 #   - standards
 #   - programming expressions
 #
@@ -99,12 +99,15 @@ module Services
     #    cautious with the more-expensive PDFs generation process.
     #
     # In addition, we support manually disabling this feature with DCDO
+    #
+    # IMPORTANT: If you make updates to this method make sure to update the rake task for
+    # generate_missing_pdfs as well.
     def self.generate_pdfs?(script_data)
       return true if DEBUG
 
       return false unless rack_env?(:staging)
       return false unless script_data['properties'].fetch('is_migrated', false)
-      return false if [SharedCourseConstants::PUBLISHED_STATE.pilot, SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script_data['published_state'])
+      return false if [Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script_data['published_state'])
       return false if script_data['properties'].fetch('use_legacy_lesson_plans', false)
       return false if DCDO.get('disable_curriculum_pdf_generation', false)
 
@@ -124,7 +127,7 @@ module Services
     # Do no generate the resources pdf is there are no lesson plans since
     # resources are attached to lesson plans
     def self.should_generate_resource_pdf?(unit)
-      !unit.unit_without_lesson_plans?
+      !unit.unit_without_lesson_plans? && unit.lessons.map(&:resources).flatten.any?
     end
 
     # Actually generate PDFs for the given script, and upload the results to S3.

@@ -433,6 +433,9 @@ ko-KR:
   homepage_below_hero_announcement_link_text: 더 알아보기
   homepage_higher_power_body: 댄스 파티를 갖고 만들며, 밴드를 라이브로 볼 기회를 얻으세요.
   homepage_thebadguys_body: '영화 **더 배드 가이즈**의 미세스 타란튤라와 미스터 울프, 나머지 캐릭터로 어드벤처를 코딩하세요!  '
+  homepage_csa_subhead: 다음에 대한 새로운 접근
+  homepage_csa_title: AP® 컴퓨터 과학 A
+  homepage_csa_body: 학생들이 공평한 커리큘럼에서 실제 세계에 연결된 창의적인 프로젝트를 하도록 권한을 부여하세요.
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.
@@ -1145,6 +1148,7 @@ ko-KR:
   express-2020_name: 익스프레스 과정(2020)
   pre-express-2020_name: 프리 리더 익스프레스 과정 (2020)
   pre-express-2021_name: 프리 리더 익스프레스 과정 (2021)
+  pre-express-2022_name: 프리 리더 익스프레스 과정 (2022)
   csd2_name: '단원 2: 웹 개발'
   csd3_name: '단원 3: 애니메이션과 게임'
   accelerated_name: 빠른 과정

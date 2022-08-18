@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
@@ -74,41 +73,47 @@ class InstructionsCsfRightCol extends React.Component {
   getColumnWidth() {
     const collapserWidth = this.shouldDisplayCollapserButton()
       ? $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true)
-      : 0;
-    const scrollButtonWidth = this.props.displayScrollButtons
-      ? $(ReactDOM.findDOMNode(this.scrollButtons)).outerWidth(true)
-      : 0;
-    return Math.max(collapserWidth, scrollButtonWidth);
+      : this.props.collapsed
+      ? 10
+      : this.props.isMinecraft
+      ? 100
+      : 80;
+    return collapserWidth;
   }
 
   getColumnHeight() {
-    const collapseButtonHeight = getOuterHeight(this.collapser, true);
-    const scrollButtonsHeight = this.scrollButtons
-      ? this.scrollButtons.getMinHeight()
-      : 0;
-    return collapseButtonHeight + scrollButtonsHeight;
+    if (this.collapser) {
+      // Include 20 pixels for any scroll buttons that need to be shown.
+      return getOuterHeight(this.collapser, true) + 20;
+    } else {
+      return 0;
+    }
   }
 
   render() {
     const displayCollapserButton = this.shouldDisplayCollapserButton();
 
+    const scrollButtonsBelowCollapserStyle = this.props.isMinecraft
+      ? styles.craftStyles.scrollButtonsBelowCollapser
+      : styles.scrollButtonsBelowCollapser;
+
     const scrollButtonsHeight =
       this.props.height -
       HEADER_HEIGHT -
       RESIZER_HEIGHT -
-      (displayCollapserButton ? styles.scrollButtonsBelowCollapser.top : 0);
+      (displayCollapserButton ? scrollButtonsBelowCollapserStyle.top : 10);
 
     return (
-      <div style={styles.column}>
+      <div>
         {displayCollapserButton && (
           <CollapserButton
             ref={c => {
               this.collapser = c;
             }}
-            style={[
-              styles.collapserButton,
-              this.props.isMinecraft && styles.craftStyles.collapserButton
-            ]}
+            style={{
+              ...styles.collapserButton,
+              ...(this.props.isMinecraft && styles.craftStyles.collapserButton)
+            }}
             collapsed={this.props.collapsed}
             onClick={this.props.handleClickCollapser}
             isMinecraft={this.props.isMinecraft}
@@ -117,14 +122,14 @@ class InstructionsCsfRightCol extends React.Component {
         )}
         {this.props.displayScrollButtons && (
           <ScrollButtons
-            style={[
-              styles.scrollButtons,
-              this.props.isMinecraft &&
+            style={{
+              ...styles.scrollButtons,
+              ...(this.props.isMinecraft &&
                 (this.props.isRtl
                   ? styles.craftStyles.scrollButtonsRtl
-                  : styles.craftStyles.scrollButtons),
-              displayCollapserButton && styles.scrollButtonsBelowCollapser
-            ]}
+                  : styles.craftStyles.scrollButtons)),
+              ...(displayCollapserButton && scrollButtonsBelowCollapserStyle)
+            }}
             ref={c => {
               this.scrollButtons = c;
             }}
@@ -140,19 +145,16 @@ class InstructionsCsfRightCol extends React.Component {
 }
 
 const styles = {
-  column: {
-    display: 'flex',
-    justifyContent: 'center'
-  },
   collapserButton: {
     position: 'absolute',
     right: 0,
-    marginTop: 5,
+    marginTop: 9,
     marginRight: 5
   },
   scrollButtons: {
-    margin: '0px 5px',
-    minWidth: '40px'
+    margin: '10px 0px 5px 0px',
+    minWidth: '40px',
+    position: 'relative'
   },
   scrollButtonsBelowCollapser: {
     position: 'relative',
@@ -165,17 +167,20 @@ const styles = {
       marginBottom: 0
     },
     scrollButtons: {
-      left: 38
+      left: 0
     },
     scrollButtonsRtl: {
-      right: 38
+      right: 0
+    },
+    scrollButtonsBelowCollapser: {
+      position: 'relative',
+      top: 60,
+      margin: '0px'
     }
   }
 };
 
-export const UnconnectedInstructionsCsfRightCol = Radium(
-  InstructionsCsfRightCol
-);
+export const UnconnectedInstructionsCsfRightCol = InstructionsCsfRightCol;
 
 export default connect(
   function propsFromStore(state) {
@@ -191,4 +196,4 @@ export default connect(
   null,
   null,
   {withRef: true}
-)(Radium(InstructionsCsfRightCol));
+)(InstructionsCsfRightCol);

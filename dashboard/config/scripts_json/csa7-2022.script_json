@@ -14,10 +14,12 @@
         },
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +29,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:42:54 UTC",
+    "serialized_at": "2022-08-12 13:47:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1555,7 +1558,7 @@
       "key": "06fbcc8d-498c-43e9-93f2-32295bfe44a5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\nWhy did we use overloading with constructors?\nHow might overloading be helpful with methods?\n\n**Discussion Goal:** Students recall that orders can vary with the Project Mercury Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Students suggest that overloading methods make code more flexible for program requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *Why did we use overloading with constructors?*\n* *How might overloading be helpful with methods?*\n\n**Discussion Goal:** Students recall that orders can vary with the Project Mercury Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Students suggest that overloading methods make code more flexible for program requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Overloaded Methods"
       },
       "seeding_key": {
@@ -1567,7 +1570,7 @@
       "key": "94c18e71-07a7-4971-af36-9c4c58948c7d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is the difference between each version of the overloaded method?*\n* *Why do you think the different methods exist?*\n\n**Discussion Goal:** Students note that the different versions of the methods take in different combinations of parameters. Students share that the methods all perform the same task but give the user different options for performing the task. Students realize that overloaded methods can also call another version of the method by passing in default values to keep things DRY (Don't Repeat Yourself).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students complete a choice level by writing overloaded methods using the console, The Neighborhood, or The Theater. Students continue to complete a Check for Understanding on Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is the difference between each version of the overloaded method?*\n* *Why do you think the different methods exist?*\n\n**Discussion Goal:** Students note that the different versions of the methods take in different combinations of parameters. Students share that the methods all perform the same task but give the user different options for performing the task. Students realize that overloaded methods can also call another version of the method by passing in default values to keep things DRY (Don't Repeat Yourself).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that methods are said to be overloaded when there are multiple methods with the same name but a different signature.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students complete a choice level by writing overloaded methods using the console, The Neighborhood, or The Theater. Students continue to complete a Check for Understanding on Level 3.",
         "progression_name": "Writing Overloaded Methods"
       },
       "seeding_key": {
@@ -2085,7 +2088,7 @@
       "key": "02bf3f80-7ee1-4fb5-8e08-533c31d5efeb",
       "position": 1,
       "properties": {
-        "description": "Companies often protect their code as intellectual property. Intellectual property is a creative work or invention that is protected by copyright laws. This includes copyrights, patents, trade secrets, and trademarks.",
+        "description": "Legal issues and concerns often arise when creating programs, so companies often protect their code as intellectual property. Intellectual property is a creative work or invention that is protected by copyright laws. This includes copyrights, patents, trade secrets, and trademarks.",
         "duration": "20",
         "name": "Algorithms",
         "remarks": true
@@ -2286,7 +2289,7 @@
       "key": "bf703ea8-fb3a-49b3-bdf4-a922ea29e8a0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout by expanding the recursive sample code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the solution and the trace table. Have students copy the trace table onto Part C of the Recursion Unplugged handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the code segments on the Recursion Unplugged handout and complete a trace table to find the output of the code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code."
       },
       "seeding_key": {
         "activity_section.key": "bf703ea8-fb3a-49b3-bdf4-a922ea29e8a0",
@@ -2294,8 +2297,31 @@
       }
     },
     {
-      "key": "fc592a1a-0e77-4a93-9cbb-e377397af0a1",
+      "key": "2a48ec78-4d94-462b-8dd6-17199622d92e",
       "position": 6,
+      "properties": {
+        "description": "As we saw in this example, the recursive call has its own set of local variables, including the formal parameters. The parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2a48ec78-4d94-462b-8dd6-17199622d92e",
+        "lesson_activity.key": "62dfbccf-692b-49b9-9fa2-dc34376a3824"
+      }
+    },
+    {
+      "key": "b63edf5b-f6c7-4b5d-b6f3-fc5e52dcbe7a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout by expanding the recursive sample code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the solution and the trace table. Have students copy the trace table onto Part C of the Recursion Unplugged handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the code segments on the Recursion Unplugged handout and complete a trace table to find the output of the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "b63edf5b-f6c7-4b5d-b6f3-fc5e52dcbe7a",
+        "lesson_activity.key": "62dfbccf-692b-49b9-9fa2-dc34376a3824"
+      }
+    },
+    {
+      "key": "fc592a1a-0e77-4a93-9cbb-e377397af0a1",
+      "position": 8,
       "properties": {
         "description": "Using the items on your Project Planning Board, begin developing your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
         "duration": "15",
@@ -2309,7 +2335,7 @@
     },
     {
       "key": "bb57f210-9918-4d8a-924f-de959af797f5",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with The Theater Project.",
         "progression_name": "Creative Coding with The Theater Project",
@@ -2327,7 +2353,7 @@
     },
     {
       "key": "7b753846-5b96-48b8-ad87-ca0332c7a6cb",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
@@ -5445,6 +5471,7 @@
       "key": "algorithms",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5490,6 +5517,7 @@
       "key": "coloring_page",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5502,6 +5530,7 @@
       "key": "creative_coding_with_the_theater",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5514,6 +5543,7 @@
       "key": "cs_bingo_cards_5",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5538,6 +5568,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -5562,6 +5593,7 @@
       "key": "musicqueue_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5574,6 +5606,7 @@
       "key": "musicqueue_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5586,6 +5619,7 @@
       "key": "open_source_bugs_version_a_",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5598,6 +5632,7 @@
       "key": "open_source_bugs_version_b_",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5610,10 +5645,23 @@
       "key": "open_source_bugs_version_c_",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "open_source_bugs_version_c_"
+      }
+    },
+    {
+      "name": "Private Methods",
+      "url": "https://youtu.be/o9ucV54SzL8",
+      "key": "private_methods_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "private_methods_1"
       }
     },
     {
@@ -5622,6 +5670,7 @@
       "key": "project_planning_board",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5634,10 +5683,23 @@
       "key": "project_planning_feedback",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "project_planning_feedback"
+      }
+    },
+    {
+      "name": "Recursion",
+      "url": "https://youtu.be/W-nqR8NwaMs",
+      "key": "recursion_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "recursion_1"
       }
     },
     {
@@ -5646,10 +5708,23 @@
       "key": "recursion_unplugged",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "recursion_unplugged"
+      }
+    },
+    {
+      "name": "Software Engineering: User Stories",
+      "url": "https://youtu.be/jN26YGTFOa4",
+      "key": "software_engineering_user_stories",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_user_stories"
       }
     },
     {
@@ -5670,6 +5745,7 @@
       "key": "tracing_recursion",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5682,6 +5758,7 @@
       "key": "u7l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5694,6 +5771,7 @@
       "key": "u7l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5706,6 +5784,7 @@
       "key": "u7l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5718,6 +5797,7 @@
       "key": "u7l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5730,6 +5810,7 @@
       "key": "u7l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5742,6 +5823,7 @@
       "key": "u7l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5754,6 +5836,7 @@
       "key": "u7l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5766,6 +5849,7 @@
       "key": "u7l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5778,6 +5862,7 @@
       "key": "u7l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5790,6 +5875,7 @@
       "key": "u7l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5802,6 +5888,7 @@
       "key": "unit_7_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5838,6 +5925,7 @@
       "key": "unit_7_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6041,6 +6129,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "software_engineering_user_stories"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "u7l2_extra_practice"
       }
     },
@@ -6084,6 +6178,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "cs_bingo_definitions_7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "private_methods_1"
       }
     },
     {
@@ -6222,6 +6322,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u7l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "recursion_1"
       }
     },
     {

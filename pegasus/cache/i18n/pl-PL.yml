@@ -482,13 +482,19 @@ pl-PL:
   homepage_slot_text_link_administrators: Wprowadź informatykę do swojej szkoły
   homepage_gallery_header: Utworzono ponad %{project_count} mln projektów w Code.org
   homepage_header_donors: Code.org dziękuje za wsparcie
-  homepage_donors_seall: Zobacz wszystkich
+  homepage_donors_seall: 'Zobacz więcej wspierających '
   homepage_donors_donate: Podaruj
   homepage_below_hero_announcement_text: Dbamy o Twoją prywatność i dokonujemy kilku
     aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja.
   homepage_below_hero_announcement_link_text: Dowiedz się więcej
   homepage_higher_power_body: Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu
     na żywo.
+  homepage_thebadguys_body: Zakoduj przygodę z panią Tarantulą, panem Wolf i resztą
+    bohaterów filmu **The Bad Guys**!
+  homepage_csa_subhead: Nowe podejście do
+  homepage_csa_title: AP® Computer Science A
+  homepage_csa_body: Zapewnij uczniom kreatywne projekty związane ze światem rzeczywistym
+    w naszym programie nauczania opartym na równości.
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -1334,6 +1340,7 @@ pl-PL:
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
   pre-express-2021_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2021)
+  pre-express-2022_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2022)
   csd2_name: 'Jednostka 2: Tworzenie stron'
   csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: Przyspieszony kurs
@@ -1348,6 +1355,8 @@ pl-PL:
   iceage_name: Epoka lodowcowa
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bloki)
+  hoc-impact-study_name: Klasyczny labirynt z ankietą
+  flappy-impact-study_name: Kod Flappiego z ankietą
   hoc-encryption_name: Proste szyfrowanie
   text-compression_name: Kompresja tekstu
   applab_name: App Lab
@@ -1655,8 +1664,8 @@ pl-PL:
   courseb-2020_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
     w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
     udostępnić.
-  coursec-2020_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji,
-    pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+  coursec-2020_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i
+    zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
     rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
     utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2020_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
@@ -1667,7 +1676,7 @@ pl-PL:
     drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
     udostępnić znajomym i rodzinie.
   coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
-    wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
     oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
     tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
     znajomym i rodzinie.
@@ -1677,8 +1686,8 @@ pl-PL:
   courseb-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
     w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
     udostępnić.
-  coursec-2021_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji,
-    pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+  coursec-2021_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i
+    zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
     rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
     utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2021_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
@@ -1689,7 +1698,7 @@ pl-PL:
     drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
     udostępnić znajomym i rodzinie.
   coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
-    wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
     oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
     tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
     znajomym i rodzinie.
@@ -1699,8 +1708,8 @@ pl-PL:
   courseb-2022_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
     w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
     udostępnić.
-  coursec-2022_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji,
-    pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+  coursec-2022_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i
+    zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
     rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
     utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2022_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
@@ -1711,7 +1720,7 @@ pl-PL:
     drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
     udostępnić znajomym i rodzinie.
   coursef-2022_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
-    wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
     oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
     tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
     znajomym i rodzinie.

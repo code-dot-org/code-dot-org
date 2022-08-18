@@ -1,5 +1,4 @@
 require_relative '../../shared/middleware/helpers/storage_id'
-require_relative '../../shared/middleware/helpers/projects'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
@@ -35,23 +34,23 @@ class DeleteAccountsHelper
 
     @log.puts "Deleting project backed progress"
 
-    project_ids = Projects.table.where(storage_id: user.user_storage_id).map(:id)
+    project_ids = DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
     channel_count = project_ids.count
     encrypted_channel_ids = project_ids.map do |project_id|
       storage_encrypt_channel_id user.user_storage_id, project_id
     end
 
     # Clear potential PII from user's channels
-    Projects.table.
+    DASHBOARD_DB[:projects].
       where(id: project_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
     # Clear any comments associated with specific versions of projects.
     # At time of writing, this feature is in use only in Javalab when a student
     # commits their code.
-    project_versions = ProjectVersion.where(project_id: project_ids)
-    project_versions.each {|version| version.update!(comment: nil)}
-    @log.puts "Cleared #{project_versions.count} ProjectVersion comments" if project_versions.count > 0
+    project_commits = ProjectCommit.where(project_id: project_ids)
+    project_commits.each {|version| version.update!(comment: nil)}
+    @log.puts "Cleared #{project_commits.count} ProjectCommit comments" if project_commits.count > 0
 
     # Clear S3 contents for user's channels
     @log.puts "Deleting S3 contents for #{channel_count} channels"

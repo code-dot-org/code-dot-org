@@ -89,7 +89,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
-  test 'pre_workshop_survey_url' do
+  # test 'pre_workshop_survey_url' do
+  test 'test2' do
     csp_summer_workshop = build :csp_summer_workshop
     csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
 
@@ -104,7 +105,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
-    assert_nil csp_academic_year_workshop_enrollment.pre_workshop_survey_url
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_academic_year_workshop_enrollment.code}",
+      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).query
     assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
     assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
   end
@@ -113,14 +115,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
+    csf_district_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8), subject: SUBJECT_CSF_DISTRICT
+    csf_district_enrollment = create :pd_enrollment, workshop: csf_district_workshop
+
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
-
-    counselor_workshop = create :counselor_workshop, :ended
-    counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
-
-    admin_workshop = create :admin_workshop, :ended
-    admin_enrollment = create :pd_enrollment, workshop: admin_workshop
 
     local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
@@ -128,12 +127,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_wfrt = create :csp_wfrt, :ended
     csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
 
-    code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
-    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
-
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
@@ -262,22 +258,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
 
     assert create :pd_enrollment, email: 'valid@example.net'
-  end
-
-  test 'completed_survey?' do
-    # no survey
-    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: false)))
-    enrollment = create :pd_enrollment
-    refute enrollment.completed_survey?
-
-    # survey just completed, not yet processed
-    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: true)))
-    assert enrollment.completed_survey?
-
-    # survey processed, model up to date. Pegasus should not be contacted.
-    PEGASUS_DB.expects('[]').with(:forms).never
-    enrollment.update!(completed_survey_id: 1234)
-    assert enrollment.completed_survey?
   end
 
   test 'filter_for_survey_completion argument check' do

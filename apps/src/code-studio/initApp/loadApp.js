@@ -3,12 +3,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore} from '../redux';
-import {
-  setAppLoadStarted,
-  setAppLoaded
-} from '@cdo/apps/code-studio/headerRedux';
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
+import renderProjectNotFound from './renderProjectNotFound';
+import renderVersionNotFound from './renderVersionNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -71,7 +70,10 @@ export function setupApp(appOptions) {
         const isTeacher =
           getStore().getState().currentUser?.userType === 'teacher';
         const isViewingStudent = !!queryParams('user_id');
-        if (project.isOwner() || (isTeacher && isViewingStudent)) {
+        if (
+          project.isOwner() ||
+          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+        ) {
           $('#versions-header').show();
         }
       }
@@ -239,26 +241,37 @@ function tryToUploadShareImageToS3({image, level}) {
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
-    project.load().then(() => {
-      if (project.hideBecauseAbusive()) {
-        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
-        return;
-      }
-      if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(project, msg.policyViolation());
-        return;
-      }
-      if (project.getSharingDisabled()) {
-        renderAbusive(
-          project,
-          msg.sharingDisabled({
-            sign_in_url: 'https://studio.code.org/users/sign_in'
-          })
-        );
-        return;
-      }
-      resolve(appOptions);
-    });
+    project
+      .load()
+      .then(() => {
+        if (project.hideBecauseAbusive()) {
+          renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
+          return;
+        }
+        if (project.hideBecausePrivacyViolationOrProfane()) {
+          renderAbusive(project, msg.policyViolation());
+          return;
+        }
+        if (project.getSharingDisabled()) {
+          renderAbusive(
+            project,
+            msg.sharingDisabled({
+              sign_in_url: 'https://studio.code.org/users/sign_in'
+            })
+          );
+          return;
+        }
+        resolve(appOptions);
+      })
+      .catch(() => {
+        if (project.channelNotFound()) {
+          renderProjectNotFound();
+          return;
+        } else if (project.sourceNotFound()) {
+          renderVersionNotFound();
+          return;
+        }
+      });
   });
 }
 
@@ -350,6 +363,7 @@ async function loadAppAsync(appOptions) {
     const data = await userAppOptionsRequest;
 
     appOptions.disableSocialShare = data.disableSocialShare;
+    appOptions.isInstructor = data.isInstructor;
 
     if (data.isStarted) {
       appOptions.level.isStarted = data.isStarted;

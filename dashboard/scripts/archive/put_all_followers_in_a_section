@@ -21,7 +21,7 @@ def create_default_sections
   users_with_followers_without_sections.find_each do |teacher|
     section = Section.create!(name: 'Default', user_id: teacher.id)
     teacher.followers.where(section_id: nil).each do |follower|
-      follower.update_attributes!(section_id: section.id)
+      follower.update!(section_id: section.id)
     end
   end
 

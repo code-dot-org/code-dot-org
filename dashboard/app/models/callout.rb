@@ -15,7 +15,7 @@
 
 class Callout < ApplicationRecord
   include Seeded
-  belongs_to :script_level, inverse_of: :callouts
+  belongs_to :script_level, inverse_of: :callouts, optional: true
 
   CSV_HEADERS = {
     element_id: 'element_id',

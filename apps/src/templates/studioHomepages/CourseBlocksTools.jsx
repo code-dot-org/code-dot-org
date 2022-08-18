@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
@@ -48,7 +48,7 @@ class CourseBlocksTools extends Component {
         heading: i18n.courseBlocksToolsAi(),
         callout: i18n.newExclame(),
         description: i18n.courseBlocksToolsAiDescription(),
-        link: studio('/s/aiml-2021')
+        link: studio('/s/aiml')
       });
     } else {
       this.cards.push({

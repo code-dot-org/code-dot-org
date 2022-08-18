@@ -10,14 +10,17 @@
           "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
           "link": "",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": true
         },
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +30,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:42:36 UTC",
+    "serialized_at": "2022-08-11 16:19:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1373,7 +1377,7 @@
       "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 1*."
       },
       "seeding_key": {
         "activity_section.key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
@@ -1398,7 +1402,7 @@
       "key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the Integer and Double constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 2*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
       },
       "seeding_key": {
         "activity_section.key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
@@ -1443,10 +1447,33 @@
       }
     },
     {
-      "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
+      "key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing."
+      },
+      "seeding_key": {
+        "activity_section.key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "0225c47d-f493-40e7-b5cd-16b01930d533",
+      "position": 11,
+      "properties": {
+        "description": "Autoboxing also occurs when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class. On the other hand, unboxing occurs when a wrapper class object is passed as a parameter to a method that expects a value of the corresponding primitive type.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0225c47d-f493-40e7-b5cd-16b01930d533",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
         "progression_name": "Using Wrapper Classes"
       },
       "seeding_key": {
@@ -1590,7 +1617,7 @@
       "key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` and `size()` methods."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the constructor for an `ArrayList`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` and `size()` methods."
       },
       "seeding_key": {
         "activity_section.key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
@@ -1773,8 +1800,31 @@
       }
     },
     {
-      "key": "ea74ab24-9dc5-47d9-a071-4c54b54fd102",
+      "key": "410f1e39-fa61-4041-9b50-5a922d1f015c",
       "position": 4,
+      "properties": {
+        "description": "We can traverse an `ArrayList` similar to how we traverse a 1D array. We can use either a `for` or a `while` loop and use the loop control variable to refer to the index of a value in the list. Let's take a look at how a `for` loop can be used to access each element in an `ArrayList`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "410f1e39-fa61-4041-9b50-5a922d1f015c",
+        "lesson_activity.key": "65f59731-d6b4-4578-8ffa-e0f31777503d"
+      }
+    },
+    {
+      "key": "3af9240c-ed70-4c2c-84ce-8f5737bc22cf",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate traversing an `ArrayList` and review the `ArrayIndexOutofBoundsException`."
+      },
+      "seeding_key": {
+        "activity_section.key": "3af9240c-ed70-4c2c-84ce-8f5737bc22cf",
+        "lesson_activity.key": "65f59731-d6b4-4578-8ffa-e0f31777503d"
+      }
+    },
+    {
+      "key": "ea74ab24-9dc5-47d9-a071-4c54b54fd102",
+      "position": 6,
       "properties": {
         "description": "What if we wanted to find words in a list that met certain criteria, like words with a certain number of characters? Since a `String` is an object, the `String` class has a method to help us solve this problem!",
         "duration": "15",
@@ -1788,7 +1838,7 @@
     },
     {
       "key": "2256bbd7-afa0-40ff-bef9-d8b7fba5f854",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `teamList1.length()` return?*\n* *How many characters will `teamList3.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `teamList1` and 17 for `teamList3`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
         "progression_name": "Working with ArrayLists"
@@ -2094,7 +2144,7 @@
       "key": "e8de4dff-bdc6-4c68-bc32-306659c7b397",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `remove()` method removes items from the `ArrayList` and updates the size accordingly. Students may wonder how they could use this method in other algorithms or scenarios.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How is the `remove()` method different from how we would remove items from an array?*\n\n**Discussion Goal:** Students identify that since arrays are immutable, they would need to set the item's index to remove to `null` to remove it and then shift the other items in the array. Doing so would leave an empty index. In an `ArrayList`, using `remove()` allows the item to be completely removed, shifting the rest of the items up in the `ArrayList`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Removing Data from an ArrayList*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using `remove()` with a `for` loop and how to avoid skipping elements."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `remove()` method removes items from the `ArrayList` and updates the size accordingly. Students may wonder how they could use this method in other algorithms or scenarios."
       },
       "seeding_key": {
         "activity_section.key": "e8de4dff-bdc6-4c68-bc32-306659c7b397",
@@ -2102,8 +2152,54 @@
       }
     },
     {
-      "key": "1bcc8c25-7d69-4d3f-a513-53fe974bc975",
+      "key": "632ba3db-67a5-4f1f-b74d-066993c7d728",
       "position": 4,
+      "properties": {
+        "description": "As we saw in this program, the `remove()` method removes elements from the specified index. The elements in the `ArrayList` that are at the specified index and higher are then shifted to the left by one place, subtracting one from their indices and subtracting one from the size. We also saw that the value that was at the specified index is returned from calling the `remove()` method.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "632ba3db-67a5-4f1f-b74d-066993c7d728",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "97e37f93-627e-4655-a0f8-db615469e388",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How is the `remove()` method different from how we would remove items from an array?*\n\n**Discussion Goal:** Students identify that since arrays are immutable, they would need to set the item's index to remove to `null` to remove it and then shift the other items in the array. Doing so would leave an empty index. In an `ArrayList`, using `remove()` allows the item to be completely removed, shifting the rest of the items up in the `ArrayList`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Removing Data from an ArrayList*."
+      },
+      "seeding_key": {
+        "activity_section.key": "97e37f93-627e-4655-a0f8-db615469e388",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "d492f023-8143-4764-9726-991e014fcd19",
+      "position": 6,
+      "properties": {
+        "description": "When we use the `remove()` method to remove an element from a specified index, the elements that are at the specified index and higher are then shifted to the left by one place. This can result in elements being skipped during traversal since the loop control variable continues to increase by one. We need a way to avoid skipping elements when an element is removed from the list.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d492f023-8143-4764-9726-991e014fcd19",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "b563e131-eeb6-42aa-9d10-b4e2fdaf285f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using `remove()` with a `for` loop and how to avoid skipping elements."
+      },
+      "seeding_key": {
+        "activity_section.key": "b563e131-eeb6-42aa-9d10-b4e2fdaf285f",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "1bcc8c25-7d69-4d3f-a513-53fe974bc975",
+      "position": 8,
       "properties": {
         "description": "Like with 1D and 2D arrays, we can also use an enhanced `for` loop to traverse an `ArrayList`. Let's look at some similarities and differences between using enhanced `for` loops with arrays and `ArrayList`s.",
         "duration": "10",
@@ -2117,7 +2213,7 @@
     },
     {
       "key": "bc0c1a29-0bc3-4516-b92f-7ed8e6e0b345",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to predict the outcome of the program, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Using an Enhanced For Loop"
@@ -2129,7 +2225,7 @@
     },
     {
       "key": "ff74cd10-914a-4947-92c2-0bdbb5a7cb27",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What differences do you notice between these two pieces of code?*\n\n**Discussion Goal:** Students notice that while the structures look similar, the enhanced `for` loop used with an array uses a primitive data type (`int`) whereas the enhanced `for` loop with an `ArrayList` uses an object (`Integer`).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Removing with an Enhanced For Loop"
@@ -2141,7 +2237,7 @@
     },
     {
       "key": "bc091993-f59c-4cb0-82fb-c2fb116a7ec3",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain `ConcurrentModificationException` and how to avoid it."
       },
@@ -2152,9 +2248,9 @@
     },
     {
       "key": "5dac9d95-0de7-4926-ad73-8a7102fd1327",
-      "position": 8,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *stop word` and `stop word removal* and demonstrate how it is applied in natural language processing.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *stop word* and *stop word removal* and demonstrate how it is applied in natural language processing.",
         "duration": "10",
         "name": "Stop Word Removal"
       },
@@ -2165,7 +2261,7 @@
     },
     {
       "key": "d5b51ae3-8a87-4d02-8fa8-89a4de84cb44",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "You learned in a previous lesson about using the `equals()` method to compare objects for equality, which includes `String`s. We can use this to find and remove stop words.",
         "remarks": true
@@ -2177,7 +2273,7 @@
     },
     {
       "key": "a542134b-6cc3-4cf9-853c-8bcb6f8d90f2",
-      "position": 10,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. On Level 4, students debug code that results in a `ConcurrentModificationException`. On Level 5, students complete a choice level to use the `remove()` method to remove values from an `ArrayList`.",
         "progression_name": "Removing Values from an ArrayList"
@@ -5824,6 +5920,7 @@
       "key": "cs_bingo_cards_4",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5848,6 +5945,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -5860,6 +5958,7 @@
       "key": "natural_language_processing_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5872,10 +5971,23 @@
       "key": "project_characteristics",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "project_characteristics"
+      }
+    },
+    {
+      "name": "Removing Data from an ArrayList",
+      "url": "https://youtu.be/_xuo7Z40sRY",
+      "key": "removing_data_from_an_arraylist",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "removing_data_from_an_arraylist"
       }
     },
     {
@@ -5884,6 +5996,7 @@
       "key": "temperatureaction_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5896,10 +6009,23 @@
       "key": "temperatureaction_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "temperatureaction_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "The ArrayList Class",
+      "url": "https://youtu.be/Wqk9PrPIkXs",
+      "key": "the_arraylist_class",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_arraylist_class"
       }
     },
     {
@@ -5908,6 +6034,7 @@
       "key": "u6l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5920,6 +6047,7 @@
       "key": "u6l1_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5932,6 +6060,7 @@
       "key": "u6l2_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5944,6 +6073,7 @@
       "key": "u6l3_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5956,6 +6086,7 @@
       "key": "u6l4_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5968,6 +6099,7 @@
       "key": "u6l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5980,6 +6112,7 @@
       "key": "u6l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5992,6 +6125,7 @@
       "key": "u6l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6004,6 +6138,7 @@
       "key": "u6l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6016,6 +6151,7 @@
       "key": "u6l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6040,6 +6176,7 @@
       "key": "unit_6_guide_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6076,6 +6213,7 @@
       "key": "unit_6_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6092,6 +6230,42 @@
       },
       "seeding_key": {
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Working with ArrayList Data",
+      "url": "https://youtu.be/C8i8q-07OUI",
+      "key": "working_with_arraylist_data",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_arraylist_data"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 1",
+      "url": "https://youtu.be/PrhYsHlqxMs",
+      "key": "wrapper_classes_-_part_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 2",
+      "url": "https://youtu.be/kog78g2fvqU",
+      "key": "wrapper_classes_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_2"
       }
     }
   ],
@@ -6242,8 +6416,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "wrapper_classes_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u6l3_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "the_arraylist_class"
       }
     },
     {
@@ -6290,6 +6482,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "working_with_arraylist_data"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u6l5_extra_practice"
       }
@@ -6310,6 +6508,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u6l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "removing_data_from_an_arraylist"
       }
     },
     {

@@ -6,18 +6,13 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +22,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:41:46 UTC",
+    "serialized_at": "2022-08-11 16:18:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -557,7 +553,7 @@
       "position": 3,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6f73ae3d-c63a-42a6-b584-86824bb799c3",
@@ -2314,7 +2310,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may struggle to identify why the `Math` class is `final` and has only static methods. A few guiding questions might include:\n* *What might happen if we could change different mathematical formulas or calculations depending on the input?*\n* *If we were to create `Math` objects, what would you want to change about them? In other words, what instance variables would you declare? *"
+            "markdown": "Students may struggle to identify why the `Math` class is `final` and has only static methods. A few guiding questions might include:\n* *What might happen if we could change different mathematical formulas or calculations depending on the input?*\n* *If we were to create `Math` objects, what would you want to change about them? In other words, what instance variables would you declare?*"
           }
         ]
       },
@@ -3051,7 +3047,13 @@
       "key": "11a2c844-9c0f-40fa-a71f-ba45515cbbd4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each project level on Lessons 11, 12, and 13 has a different exemplar to provide multiple examples and ideas for the Abstract Data Art Project. You can choose to show one or more of these exemplars to students to provide inspiration and guidance."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "11a2c844-9c0f-40fa-a71f-ba45515cbbd4",
@@ -5981,10 +5983,23 @@
       "key": "abstract_data_art_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "abstract_data_art_project_planning_guide"
+      }
+    },
+    {
+      "name": "Aliasing",
+      "url": "https://youtu.be/9GLT7oQnW4I",
+      "key": "aliasing",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "aliasing"
       }
     },
     {
@@ -6026,6 +6041,7 @@
       "key": "bingocaller_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6038,6 +6054,7 @@
       "key": "bingocaller_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6062,6 +6079,7 @@
       "key": "cs_bingo_cards_3",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6086,6 +6104,7 @@
       "key": "dataset_summaries",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6098,6 +6117,7 @@
       "key": "de_morgan_s_laws",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6110,6 +6130,7 @@
       "key": "finding_patterns",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6122,6 +6143,7 @@
       "key": "investigating_casting",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6134,6 +6156,7 @@
       "key": "investigating_the_theater",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6165,11 +6188,49 @@
       }
     },
     {
+      "name": "Static Methods",
+      "url": "https://youtu.be/k3QLkzascYI",
+      "key": "static_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_methods"
+      }
+    },
+    {
+      "name": "Station Print-outs",
+      "url": "https://docs.google.com/document/d/1Q7z2dGMiSeSD3coG21qyFqIRXsGsCLRO3DK67-yP88U/edit",
+      "key": "station_print-outs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
+      "name": "The equals() Method",
+      "url": "https://youtu.be/F1WhwH4abX4",
+      "key": "the_equals_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_equals_method"
+      }
+    },
+    {
       "name": "The Math Class",
       "url": "https://docs.google.com/document/d/1974ITAM6lklyjb0xEY6G1VP-X14WsrOa1G-r66OmB9g/edit?usp=sharing",
       "key": "the_math_class",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6182,6 +6243,7 @@
       "key": "truth_tables",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6194,6 +6256,7 @@
       "key": "u4l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6206,6 +6269,7 @@
       "key": "u4l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6218,6 +6282,7 @@
       "key": "u4l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6230,6 +6295,7 @@
       "key": "u4l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6242,6 +6308,7 @@
       "key": "u4l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6254,6 +6321,7 @@
       "key": "u4l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6266,6 +6334,7 @@
       "key": "u4l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6278,6 +6347,7 @@
       "key": "u4l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6290,6 +6360,7 @@
       "key": "u4l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6302,6 +6373,7 @@
       "key": "u4l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6314,6 +6386,7 @@
       "key": "unit_4_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6350,6 +6423,7 @@
       "key": "unit_4_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6583,6 +6657,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "aliasing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "the_equals_method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "u4l2_extra_practice"
       }
     },
@@ -6673,6 +6759,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u4l5_extra_practice"
       }
     },
@@ -6698,6 +6790,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "dataset_summaries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "static_methods"
       }
     },
     {

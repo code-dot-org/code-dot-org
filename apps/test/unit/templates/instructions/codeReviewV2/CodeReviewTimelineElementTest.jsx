@@ -1,17 +1,20 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import CodeReviewTimelineElement, {
+import {
+  UnconnectedCodeReviewTimelineElement as CodeReviewTimelineElement,
   codeReviewTimelineElementType
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/code-studio/utils';
 
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,
   isLast: false,
   projectVersionId: 'asdfjkl',
-  isProjectVersionExpired: false
+  viewAsCodeReviewer: false
 };
 
 const setUp = (overrideProps = {}, child) => {
@@ -60,28 +63,54 @@ describe('CodeReviewTimelineElement', () => {
   });
 
   describe('Commit', () => {
-    it('displays an eyeball link if there is a version and it is not expired', () => {
+    it('displays an eyeball link if there is a version and viewAsCodeReviewer is false', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT,
         projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: false
+        viewAsCodeReviewer: false
       });
-      expect(wrapper.find('EyeballLink')).to.have.length(1);
+      const eyeballLink = wrapper.find('EyeballLink');
+      expect(eyeballLink).to.have.length(1);
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).to.be
+        .true;
+    });
+
+    it('has expected params in eyeball link', () => {
+      // Params existing in the url should be included and version param is overridden if one already exists in the url
+      sinon.stub(utils, 'queryParams').returns({
+        user_id: 123,
+        section_id: 456,
+        version: 'viewingOldVersion'
+      });
+      const wrapper = setUp({
+        type: codeReviewTimelineElementType.COMMIT,
+        projectVersionId: 'asdfjkl',
+        viewAsCodeReviewer: false
+      });
+      const eyeballLink = wrapper.find('EyeballLink');
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).to.be
+        .true;
+      expect(eyeballLink.props().versionHref.includes('user_id=123')).to.be
+        .true;
+      expect(eyeballLink.props().versionHref.includes('section_id=456')).to.be
+        .true;
+      utils.queryParams.restore();
     });
 
     it('hides eyeball link if there is not a version', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT,
-        projectVersionId: null
+        projectVersionId: null,
+        viewAsCodeReviewer: false
       });
       expect(wrapper.find('EyeballLink')).to.have.length(0);
     });
 
-    it('hides eyeball link if the version is expired', () => {
+    it('hides eyeball link if viewAsCodeReviewer is true', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT,
         projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: true
+        viewAsCodeReviewer: true
       });
       expect(wrapper.find('EyeballLink')).to.have.length(0);
     });
@@ -116,11 +145,10 @@ describe('CodeReviewTimelineElement', () => {
   });
 
   describe('Code review', () => {
-    it('displays an eyeball link if there is a version and it is not expired', () => {
+    it('displays an eyeball link if there is a version', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.CODE_REVIEW,
-        projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: false
+        projectVersionId: 'asdfjkl'
       });
       expect(wrapper.find('EyeballLink')).to.have.length(1);
     });
@@ -129,15 +157,6 @@ describe('CodeReviewTimelineElement', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.CODE_REVIEW,
         projectVersionId: null
-      });
-      expect(wrapper.find('EyeballLink')).to.have.length(0);
-    });
-
-    it('hides eyeball link if the version is expired', () => {
-      const wrapper = setUp({
-        type: codeReviewTimelineElementType.CODE_REVIEW,
-        projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: true
       });
       expect(wrapper.find('EyeballLink')).to.have.length(0);
     });

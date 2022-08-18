@@ -1657,7 +1657,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "soft-deletes all of a soft-deleted user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       assert_equal 'active', projects_table.where(id: project_id).first[:state]
@@ -1675,7 +1674,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-deletes all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       assert_equal 'active', projects_table.where(id: project_id).first[:state]
@@ -1695,7 +1693,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not soft-delete anyone else's projects" do
-    skip
     student_a = create :student
     student_b = create :student
     with_channel_for student_a do |project_id_a|
@@ -1712,7 +1709,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "sets updated_at when soft-deleting projects" do
-    skip
     student = create :student
     Timecop.freeze do
       with_channel_for student do |project_id|
@@ -1731,7 +1727,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-delete does not set updated_at on already soft-deleted projects" do
-    skip
     student = create :student
     Timecop.freeze do
       with_channel_for student do |project_id|
@@ -1752,7 +1747,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "user purge does set updated_at on already soft-deleted projects" do
-    skip
     student = create :student
     Timecop.freeze do
       with_channel_for student do |project_id|
@@ -1773,7 +1767,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'value' for all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       refute_nil projects_table.where(id: project_id).first[:value]
@@ -1791,7 +1784,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'updated_ip' for all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       refute_empty projects_table.where(id: project_id).first[:updated_ip]
@@ -1809,59 +1801,57 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.project_versions
+  # Table: dashboard.project_commits
   #
 
   test "clears 'comment' on any version of all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id|
       comment_text = 'a comment'
-      ProjectVersion.create(
+      ProjectCommit.create(
         project_id: project_id,
         object_version_id: 'xyz',
         comment: comment_text
       )
-      assert_equal 1, ProjectVersion.where(project_id: project_id).count
-      assert_equal comment_text, ProjectVersion.where(project_id: project_id).first.comment
+      assert_equal 1, ProjectCommit.where(project_id: project_id).count
+      assert_equal comment_text, ProjectCommit.where(project_id: project_id).first.comment
 
       purge_user student
 
-      assert_equal 1, ProjectVersion.where(project_id: project_id).count
-      assert_nil ProjectVersion.where(project_id: project_id).first.comment
-      assert_logged "Cleared 1 ProjectVersion comments"
+      assert_equal 1, ProjectCommit.where(project_id: project_id).count
+      assert_nil ProjectCommit.where(project_id: project_id).first.comment
+      assert_logged "Cleared 1 ProjectCommit comments"
     end
   end
 
   test "does not clear 'comment' on any version of anyone else's projects" do
-    skip
     student_to_purge = create :student
     other_student = create :student
     with_channel_for student_to_purge do |project_id_to_purge|
       with_channel_for other_student do |project_id_other|
         comment_text = 'a comment'
-        ProjectVersion.create(
+        ProjectCommit.create(
           project_id: project_id_to_purge,
           object_version_id: 'xyz',
           comment: comment_text
         )
-        ProjectVersion.create(
+        ProjectCommit.create(
           project_id: project_id_other,
           object_version_id: 'xyz',
           comment: comment_text
         )
 
-        assert_equal 1, ProjectVersion.where(project_id: project_id_to_purge).count
-        assert_equal comment_text, ProjectVersion.where(project_id: project_id_to_purge).first.comment
-        assert_equal 1, ProjectVersion.where(project_id: project_id_other).count
-        assert_equal comment_text, ProjectVersion.where(project_id: project_id_other).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_to_purge).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_other).first.comment
 
         purge_user student_to_purge
 
-        assert_equal 1, ProjectVersion.where(project_id: project_id_to_purge).count
-        assert_nil ProjectVersion.where(project_id: project_id_to_purge).first.comment
-        assert_equal 1, ProjectVersion.where(project_id: project_id_other).count
-        assert_equal comment_text, ProjectVersion.where(project_id: project_id_other).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_to_purge).count
+        assert_nil ProjectCommit.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_other).first.comment
       end
     end
   end
@@ -1871,7 +1861,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "unfeatures any featured projects owned by soft-deleted user" do
-    skip
     student = create :student
     with_channel_for student do |project_id|
       featured_project = create :featured_project,
@@ -1888,7 +1877,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "unfeatures any featured projects owned by purged user" do
-    skip
     student = create :student
     with_channel_for student do |project_id|
       featured_project = create :featured_project,
@@ -1905,7 +1893,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not change unfeature time on previously unfeatured projects" do
-    skip
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
@@ -1939,22 +1926,18 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "SourceBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents SourceBucket
   end
 
   test "AssetBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents AssetBucket
   end
 
   test "AnimationBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents AnimationBucket
   end
 
   test "FileBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents FileBucket
   end
 
@@ -1985,7 +1968,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "Firebase: deletes content for all of user's channels" do
-    skip
     student = create :student
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, storage_id|
@@ -2028,7 +2010,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test 'with_channel_for owns channel' do
-    skip
     student = create :student
 
     with_storage_id_for student do |storage_id|

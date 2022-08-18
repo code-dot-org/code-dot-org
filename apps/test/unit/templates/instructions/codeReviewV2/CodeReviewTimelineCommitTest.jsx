@@ -14,7 +14,6 @@ const DEFAULT_PROPS = {
     createdAt: '2022-03-31T04:58:42.000Z',
     comment: 'This is a comment from your teacher',
     projectVersion: 'asdfjkl',
-    isVersionExpired: false,
     timelineElementType: timelineElementType.commit
   },
   isLastElementInTimeline: false
@@ -34,7 +33,7 @@ describe('CodeReviewTimelineCommit', () => {
     );
   });
 
-  it('passes isLastElementInTimeline, projectVersion and isVersionExpired to CodeReviewTimelineElement', () => {
+  it('passes isLastElementInTimeline and projectVersion to CodeReviewTimelineElement', () => {
     const wrapper = setUp();
     const timelineElementProps = wrapper
       .find(CodeReviewTimelineElement)
@@ -42,7 +41,6 @@ describe('CodeReviewTimelineCommit', () => {
     expect(timelineElementProps.projectVersionId).to.equal(
       DEFAULT_PROPS.commit.projectVersion
     );
-    expect(timelineElementProps.isProjectVersionExpired).to.equal(false);
     expect(timelineElementProps.isLast).to.equal(false);
   });
 

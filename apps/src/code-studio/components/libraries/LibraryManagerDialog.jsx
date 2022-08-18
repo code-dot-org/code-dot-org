@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -154,7 +154,7 @@ export class LibraryManagerDialog extends React.Component {
     }
   };
 
-  fetchLatestLibrary = (channelId, callback) => {
+  fetchLatestLibrary = (channelId, callback, event) => {
     const {cachedClassLibraries} = this.state;
     const cachedLibrary = cachedClassLibraries.find(
       library => library.channelId === channelId
@@ -186,7 +186,8 @@ export class LibraryManagerDialog extends React.Component {
           },
           errorCallback
         ),
-      errorCallback
+      errorCallback,
+      event
     );
   };
 
@@ -207,8 +208,10 @@ export class LibraryManagerDialog extends React.Component {
     }
 
     const onUpdate = channelId => {
-      this.fetchLatestLibrary(channelId, lib =>
-        this.viewCode(lib, DisplayLibraryMode.UPDATE)
+      this.fetchLatestLibrary(
+        channelId,
+        lib => this.viewCode(lib, DisplayLibraryMode.UPDATE),
+        'update' /* event */
       );
     };
 
@@ -248,10 +251,18 @@ export class LibraryManagerDialog extends React.Component {
           key={library.channel}
           library={library}
           onAdd={() =>
-            this.fetchLatestLibrary(library.channel, this.addLibraryToProject)
+            this.fetchLatestLibrary(
+              library.channel,
+              this.addLibraryToProject,
+              'add' /* event */
+            )
           }
           onViewCode={() =>
-            this.fetchLatestLibrary(library.channel, this.viewCode)
+            this.fetchLatestLibrary(
+              library.channel,
+              this.viewCode,
+              'view' /* event */
+            )
           }
         />
       );
@@ -384,7 +395,11 @@ export class LibraryManagerDialog extends React.Component {
               style={styles.add}
               onClick={() => {
                 this.setState({isLoading: true});
-                this.fetchLatestLibrary(importLibraryId, this.addLibraryById);
+                this.fetchLatestLibrary(
+                  importLibraryId,
+                  this.addLibraryById,
+                  'import' /* event */
+                );
               }}
               type="button"
               disabled={!importLibraryId}
