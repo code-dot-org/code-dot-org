@@ -398,10 +398,6 @@ Rails/WhereExists:
 Security/MarshalLoad:
   Enabled: false
 
-# Offense count: 21
-Security/Open:
-  Enabled: false
-
 # Offense count: 52
 # Configuration parameters: EnforcedStyle, AllowModifiersOnSymbols.
 # SupportedStyles: inline, group
