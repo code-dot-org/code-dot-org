@@ -303,30 +303,20 @@ export class QuickViewTable extends React.Component {
   };
 
   formatPrincipalApprovalCell = (principal_approval_state, props) => {
-    if (principal_approval_state) {
-      return (
-        <div>
-          <span>{principal_approval_state}</span>
-          <PrincipalApprovalButtons
-            applicationId={props.rowData.id}
-            applicationStatus={props.rowData.status}
-            showResendEmailButton={props.rowData.allow_sending_principal_email}
-            onChange={this.handlePrincipalApprovalButtonsChange}
-          />
-        </div>
-      );
-    }
+    const isRequired = !principal_approval_state?.startsWith('Not required');
 
     return (
-      <div>
-        <PrincipalApprovalButtons
-          applicationId={props.rowData.id}
-          applicationStatus={props.rowData.status}
-          showSendEmailButton={true}
-          showChangeRequirementButton={true}
-          onChange={this.handlePrincipalApprovalButtonsChange}
-        />
-      </div>
+      <PrincipalApprovalButtons
+        applicationId={props.rowData.id}
+        applicationStatus={props.rowData.status}
+        showSendEmailButton={false}
+        showResendEmailButton={
+          isRequired && props.rowData.allow_sending_principal_email
+        }
+        showChangeRequirementButton={true}
+        onChange={this.handlePrincipalApprovalButtonsChange}
+        approvalRequired={isRequired}
+      />
     );
   };
 

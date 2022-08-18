@@ -262,20 +262,6 @@ module Pd::Application
       pd_application_principal_approval_url(application_guid) if application_guid
     end
 
-    def principal_approval_state
-      principal_approval = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-
-      if principal_approval
-        if principal_approval.placeholder?
-          'Sent'
-        else
-          sanitize_form_data_hash[:principal_approval]
-        end
-      else
-        'No approval sent'
-      end
-    end
-
     # @override
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
