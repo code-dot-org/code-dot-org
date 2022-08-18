@@ -140,14 +140,6 @@ class Pd::Enrollment < ApplicationRecord
     user_id
   end
 
-  def completed_survey?
-    return true if completed_survey_id.present?
-
-    # Until the survey is processed (via process_forms cron job), it won't show up in the enrollment model.
-    # Check pegasus forms directly to be sure.
-    PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
-  end
-
   def survey_class
     if workshop.local_summer?
       Pd::LocalSummerWorkshopSurvey
@@ -169,24 +161,17 @@ class Pd::Enrollment < ApplicationRecord
 
     # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
     # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
-    foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
+    foorm_enrollments = enrollments.select do |enrollment|
       (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
         (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
     end
 
-    # Admin and Counselor still use Pegasus form
-    pegasus_enrollments, _ = other_enrollments.partition do |enrollment|
-      enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR
-    end
-
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
-    # CSF Intro, and CSF Deep Dive (surveys would be too out of date), teachercon (deprecated), or any academic year workshop
+    # CSF Intro, and CSF Deep Dive (surveys would be too out of date), teachercon (deprecated),
+    # Admin (deprecated), Counselor (deprecated), or any academic year workshop
     # (there are multiple post-survey options, therefore the facilitators must provide a link themselves).
-    (
-      filter_for_pegasus_survey_completion(pegasus_enrollments, select_completed) +
-      filter_for_foorm_survey_completion(foorm_enrollments, select_completed)
-    )
+    filter_for_foorm_survey_completion(foorm_enrollments, select_completed)
   end
 
   before_create :assign_code
@@ -215,8 +200,6 @@ class Pd::Enrollment < ApplicationRecord
   def exit_survey_url
     if workshop.course == Pd::Workshop::COURSE_CSF && (workshop.subject == Pd::Workshop::SUBJECT_CSF_101 || workshop.subject == Pd::Workshop::SUBJECT_CSF_DISTRICT)
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
-    elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
-      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
     # any other non-academic year workshop uses foorm. We don't automatically provide survey urls for AYW
@@ -379,24 +362,6 @@ class Pd::Enrollment < ApplicationRecord
 
   def authorize_teacher_account
     user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
-  end
-
-  private_class_method def self.filter_for_pegasus_survey_completion(enrollments, select_completed)
-    ids_with_processed_surveys, ids_without_processed_surveys =
-      enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
-
-    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(
-      kind: 'PdWorkshopSurvey',
-      source_id: ids_without_processed_surveys
-    ).map do |survey|
-      survey[:source_id].to_i
-    end
-
-    filtered_ids = select_completed ?
-                     ids_with_processed_surveys + ids_with_unprocessed_surveys :
-                     ids_without_processed_surveys - ids_with_unprocessed_surveys
-
-    enrollments.select {|e| filtered_ids.include? e.id}
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)

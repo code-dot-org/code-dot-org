@@ -254,12 +254,12 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 
 ### Style Guide
 
-- In general follow Google's javascript style [guide](https://google.github.io/styleguide/jsguide.html).
+- In general, we follow Google's javascript style [guide](https://google.github.io/styleguide/jsguide.html).
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.
-- `npm run lint` should report 0 warnings or errors.
-- See our [project style guide](../STYLEGUIDE.md) for details.
+- `yarn lint` should report 0 warnings or errors.
+- See our [project style guide](../STYLEGUIDE.md) for more details, including CSS/SCSS styling.
 
 ## Other Docs
 
