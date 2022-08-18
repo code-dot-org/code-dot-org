@@ -100,13 +100,13 @@ def process_image(path, ext_names, language=nil, site=nil)
 
   begin
     image_list = load_manipulated_image(path, mode, width, height, scale)
-    image_blob = image_list.to_blob do
-      self.format = image_format
+    image_blob = image_list.to_blob do |blob|
+      blob.format = image_format
       if CDO.image_optim && %w(jpg jpeg).include?(image_format)
-        self.compression = Magick::LosslessJPEGCompression
-        self.quality = 100
+        blob.compression = Magick::LosslessJPEGCompression
+        blob.quality = 100
       else
-        self.quality = 90
+        blob.quality = 90
       end
     end
     output.merge(content: image_blob)
