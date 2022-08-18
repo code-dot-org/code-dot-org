@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:34.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <p>Gymnastics involves balance, strength, flexibility, and coordination. Events for women include the vault, uneven bars, balance beam, and floor. Events for men are vault, parallel bars, floor, pummel horse, and still rings. <br> <br>\\r\\nImage by Rolf Dober from German Wikipedia<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"gymnast.gif\",\r\n      \"url\": \"https://images.code.org/a630b7919c4daac3965bc03959aa74f6-image-1568307036084.gif\"\r\n    }\r\n  ]\r\n}",
     "instructions_important": "false",
@@ -14,21 +10,25 @@
     "parent_level_id": 18921,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/images-in-html/",
+    "map_reference": "/courses/csd-2022/guides/images-in-html",
     "encrypted": "false",
     "mini_rubric": "false",
     "display_name": "Add image link",
     "bubble_choice_description": "Add an image link to make the image appear in the web page.",
     "thumbnail_url": "https://images.code.org/35e3560f1c74500ef1c310007bf524e4-image-1564421741446.gif"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:34.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:34.171+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Add Image Link_2021\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Add Image Link_2021\"}]"
