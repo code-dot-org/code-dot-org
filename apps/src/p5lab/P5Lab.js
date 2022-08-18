@@ -794,7 +794,6 @@ export default class P5Lab {
     clearMarks(DRAW_LOOP_START);
     clearMeasures(DRAW_LOOP_MEASURE);
     this.spriteTotalCount = 0;
-
     this.eventHandlers = {};
     this.stopTickTimer();
     this.tickCount = 0;

@@ -19,6 +19,10 @@ function addSpriteSpeechBubble(
   seconds,
   bubbleType
 ) {
+  const BIG_NUMBER_GUARD = 500;
+  if (coreLibrary.getNumberOfSprites() >= BIG_NUMBER_GUARD) {
+    return;
+  }
   coreLibrary.getSpriteArray(spriteArg)?.forEach(sprite => {
     coreLibrary.addSpeechBubble(sprite, text, seconds, bubbleType);
   });

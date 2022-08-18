@@ -1,5 +1,6 @@
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../../redux/textConsole';
+import {setTextsReachLimit} from '../../redux/limits';
 import {
   addTextPrompt,
   addMultipleChoicePrompt
@@ -54,6 +55,13 @@ export const commands = {
   },
 
   printText(text) {
+    const BIG_NUMBER_GUARD = 100;
+    if (this.printLog.length === BIG_NUMBER_GUARD - 1) {
+      getStore().dispatch(setTextsReachLimit());
+    }
+    if (this.printLog.length >= BIG_NUMBER_GUARD) {
+      return;
+    }
     this.printLog.push(text);
     getStore().dispatch(addConsoleMessage({text: text}));
   },
