@@ -16,7 +16,12 @@ class NewListItem extends React.Component {
 
   render() {
     return (
-      <button className={style.tile} onClick={this.props.onClick} type="button">
+      <button
+        id="newListItem"
+        className={style.tile}
+        onClick={this.props.onClick}
+        type="button"
+      >
         <div className={style.wrapper}>
           <div className={style.border}>
             <i className={classNames(style.addButton, 'fa fa-plus-circle')} />
