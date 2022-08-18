@@ -44,6 +44,7 @@ module Api::V1::Pd::Application
 
     def change_principal_approval_requirement
       @application.update!(principal_approval_not_required: params[:principal_approval_not_required].to_bool)
+      @application.queue_email :principal_approval, deliver_now: true if @application.allow_sending_principal_email?
       render json: {principal_approval: @application.principal_approval_state}
     end
 

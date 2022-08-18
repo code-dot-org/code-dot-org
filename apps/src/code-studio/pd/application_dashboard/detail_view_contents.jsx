@@ -1091,42 +1091,18 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  renderResendOrUnrequirePrincipalApprovalSection = () => {
-    if (!this.props.applicationData.principal_approval_state) {
-      return (
-        <div>
-          <h3>Principal Approval</h3>
-          <h4>Select option</h4>
-          <PrincipalApprovalButtons
-            applicationId={this.props.applicationId}
-            showSendEmailButton={true}
-            showChangeRequirementButton={true}
-            onChange={this.handlePrincipalApprovalChange}
-            applicationStatus={this.props.applicationData.status}
-          />
-        </div>
-      );
-    } else if (
-      this.props.applicationData.principal_approval_state === 'Not required'
-    ) {
-      return (
-        <div>
-          <h3>Principal Approval</h3>
-          <h4>Not required</h4>
-          <p>
-            If you would like to require principal approval for this teacher,
-            please click “Send email” to the principal asking for approval.
-          </p>
-          <PrincipalApprovalButtons
-            applicationId={this.props.applicationId}
-            showSendEmailButton={true}
-            onChange={this.handlePrincipalApprovalChange}
-            applicationStatus={this.props.applicationData.status}
-          />
-        </div>
-      );
-    } else {
-      // Approval sent but is not complete
+  renderModifyPrincipalApprovalSection = () => {
+    // principal_approval_state can be 'Not required', 'Incomplete - Principal email sent on ...', or 'Complete - ...'
+    // If 'Complete,' this function will not be run.
+    // If 'Incomplete', we show a link to the application and a button to re-send the request.
+    // If 'Not required', we show a button to make the principal approval required.
+    // If none of these, then the principal approval is required, and we show a button to make it not required.
+
+    const principalApprovalStartsWith = state =>
+      this.props.applicationData.principal_approval_state?.startsWith(state);
+    const isRequired = !principalApprovalStartsWith('Not required');
+
+    if (principalApprovalStartsWith('Incomplete')) {
       const principalApprovalUrl = `${
         window.location.origin
       }/pd/application/principal_approval/${
@@ -1153,7 +1129,33 @@ export class DetailViewContents extends React.Component {
               this.props.applicationData.allow_sending_principal_email
             }
             onChange={this.handlePrincipalApprovalChange}
+            showChangeRequirementButton={true}
+            showSendEmailButton={false}
             applicationStatus={this.props.applicationData.status}
+            approvalRequired={isRequired}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h3>Principal Approval</h3>
+          <h4>{isRequired ? 'Is Required' : 'Not Required'}</h4>
+          {!isRequired && (
+            <p>
+              If you would like to require principal approval for this teacher,
+              please click “Make required." If this application is unreviewed,
+              pending, or waitlisted, then clicking this button will also send
+              an email to the principal asking for approval,
+            </p>
+          )}
+          <PrincipalApprovalButtons
+            applicationId={this.props.applicationId}
+            showSendEmailButton={false}
+            showChangeRequirementButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
+            approvalRequired={isRequired}
           />
         </div>
       );
@@ -1267,7 +1269,7 @@ export class DetailViewContents extends React.Component {
         {this.props.applicationData.application_type ===
           ApplicationTypes.teacher &&
           !this.showPrincipalApprovalTable() &&
-          this.renderResendOrUnrequirePrincipalApprovalSection()}
+          this.renderModifyPrincipalApprovalSection()}
         {this.props.applicationData.application_type ===
           ApplicationTypes.facilitator && this.renderInterview()}
         {this.renderNotes()}
