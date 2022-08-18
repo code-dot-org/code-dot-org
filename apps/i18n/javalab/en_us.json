@@ -90,6 +90,7 @@
   "internalRuntimeException": "Oops. We hit an error on our side while running your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "invalidJavaFilename": "Invalid file name. Java file names cannot have spaces.",
   "invalidJavaFilenameFormat": "Invalid file name. A Java file name must be in the format 'ClassName.java'.",
+  "invalidMainMethod": "There was an error in your main method. Make sure your main method is public, static, has a void return type, and has only one argument (String[] args).",
   "generatingProgress": "{progressTime} seconds generated...",
   "javaExtensionMissing": "Invalid file name. File names must end in '.java'.",
   "javabuilderInvalidClassError": "{causeMessage} is not supported by Java Lab.",
