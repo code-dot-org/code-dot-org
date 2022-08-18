@@ -1,8 +1,9 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
+import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-
+import {setSpritesReachLimit} from '../redux/limits';
 export default class CoreLibrary {
   constructor(p5) {
     this.p5 = p5;
@@ -343,6 +344,10 @@ export default class CoreLibrary {
     return spriteIds;
   }
 
+  getNumberOfSprites() {
+    return Object.keys(this.nativeSpriteMap).length;
+  }
+
   getLastSpeechBubbleForSpriteId(spriteId) {
     const speechBubbles = this.speechBubbles.filter(
       ({sprite}) => sprite.id === parseInt(spriteId)
@@ -356,7 +361,14 @@ export default class CoreLibrary {
    * @returns {Number} A unique id to reference the sprite.
    */
   addSprite(opts) {
+    const BIG_NUMBER_GUARD = 500;
     opts = opts || {};
+    if (this.getNumberOfSprites() === BIG_NUMBER_GUARD - 1) {
+      getStore().dispatch(setSpritesReachLimit());
+    }
+    if (this.getNumberOfSprites() >= BIG_NUMBER_GUARD) {
+      return;
+    }
     let name = opts.name;
     let location = opts.location || {x: 200, y: 200};
     if (typeof location === 'function') {

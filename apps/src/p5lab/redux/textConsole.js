@@ -7,8 +7,7 @@ export default function textConsole(state, action) {
       return [];
     case ADD_MESSAGE:
       return [
-        // 1000 items is an arbitrary limit. Change as needed.
-        ...state.slice(0, 999),
+        ...state,
         {
           name: action.name,
           text: action.text
