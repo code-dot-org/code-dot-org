@@ -692,7 +692,6 @@ class JavalabEditor extends React.Component {
           onRenameFile={this.onRenameFile}
           filenameToRename={fileMetadata[editTabKey]}
           onCreateFile={this.onCreateFile}
-          commitDialogFileNames={Object.keys(sources)}
           onCommitCode={onCommitCode}
           handleClearPuzzle={handleClearPuzzle}
           isProjectTemplateLevel={isProjectTemplateLevel}
