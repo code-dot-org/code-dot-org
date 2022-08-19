@@ -2,7 +2,7 @@ class UserLevelsController < ApplicationController
   before_action :authenticate_user!
   check_authorization
   load_and_authorize_resource
-  protect_from_forgery except: [:update, :delete_predict_level_progress] # referer is the script level page which is publically cacheable
+  protect_from_forgery except: [:update] # referer is the script level page which is publically cacheable
 
   before_action :set_user_level
 
@@ -31,6 +31,12 @@ class UserLevelsController < ApplicationController
     return head :not_found, text: 'Level not found' unless level
     return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported" unless ['Multi', 'FreeResponse'].include?(level.type)
     UserLevel.where(user_id: current_user.id, script_id: script.id, level: level.id).destroy_all
+    return head :ok
+  end
+
+  # GET /user_levels/get_token
+  def get_token
+    headers['csrf-token'] = form_authenticity_token
     return head :ok
   end
 
