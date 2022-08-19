@@ -4,18 +4,25 @@ import {expect} from '../../util/reconfiguredChai';
 import {createStatefulP5Wrapper} from '../../util/gamelab/TestableP5Wrapper';
 
 describe('P5GroupWrapper', function() {
-  let p5Wrapper, createSprite, createGroup;
+  let p5Wrapper, createSprite, createGroup, originalDocumentBody;
 
   // TODO: Re-enable sandboxDocumentBody and fix state leakage caused by
   // test/unit/p5lab/ tests.
   // Using the aggressive sandbox here because the P5 library generates
   // a default canvas when it's not attached to an existing one.
   // sandboxDocumentBody();
+  before(() => {
+    originalDocumentBody = document.body.innerHTML;
+  });
 
   beforeEach(function() {
     p5Wrapper = createStatefulP5Wrapper();
     createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
     createGroup = p5Wrapper.p5.createGroup.bind(p5Wrapper.p5);
+  });
+
+  after(() => {
+    document.body.innerHTML = originalDocumentBody;
   });
 
   describe('methods applying to each sprite', function() {
