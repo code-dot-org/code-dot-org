@@ -6,6 +6,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
     <WorkshopDashboard {...getScriptData('props')} />,
-    document.getElementById('workshop-container')
+    document.getElementById('workshopContainer')
   );
 });

@@ -8,6 +8,6 @@ import 'survey-react/survey.css';
 document.addEventListener('DOMContentLoaded', function(event) {
   ReactDOM.render(
     <Foorm {...getScriptData('props')} />,
-    document.getElementById('application-container')
+    document.getElementById('applicationContainer')
   );
 });

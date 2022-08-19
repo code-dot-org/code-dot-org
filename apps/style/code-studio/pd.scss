@@ -27,7 +27,7 @@
 // doesn't conflict with the footer and header that are still using
 // Bootstrap 2.2.3
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
-#workshop-container,#application-container,#application-header,#enroll-form {
+#workshopContainer,#applicationContainer,#applicationHeader,#enrollForm {
   @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule */
   @include buttons;
   @include user-selects(auto);
@@ -63,7 +63,7 @@
     font-weight: normal;
   }
 
-  #error_explanation {
+  #errorExplanation {
     padding: 0;
     h2 {
       padding: 0;
@@ -155,7 +155,7 @@ form .form-required-field {
     margin-bottom: 15px;
   }
 
-  #regional-partner-mini-contact-popup-link-container {
+  #regionalPartnerMiniContactPopupLinkContainer {
     display: inline-block;
     font-family: "Gotham 7r", sans-serif;
     font-weight: normal;
@@ -208,6 +208,6 @@ form .form-required-field {
   font-family: "Gotham 4r", sans-serif;
 }
 
-#application-container .form-group {
+#applicationContainer .form-group {
   margin-bottom: 0
 }
