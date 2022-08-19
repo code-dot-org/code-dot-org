@@ -43,7 +43,7 @@ export function showDialog(component, callback, onHidden) {
 
   // Clicking the okay button in the dialog box dismisses it, and calls the callback.
   $(content)
-    .find('#ok-button')
+    .find('#okButton')
     .click(function() {
       dialog.hide();
       if (callback) {

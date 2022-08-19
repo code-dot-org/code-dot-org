@@ -26,7 +26,7 @@ function PlayerSelectionDialog({
         <h1 className="minecraft-big-yellow-header">{name}</h1>
         <div className="character-portrait" id={`${formattedName}-portrait`} />
         <div
-          className="choose-character-button"
+          className="chooseCharacterButton"
           onClick={() => handlePlayerSelection(name)}
         >
           {i18n.selectChooseButton()}

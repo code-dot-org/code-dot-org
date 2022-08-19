@@ -1251,7 +1251,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(appStrings) {
     defaultBtnSelector: '#ok-button'
   });
 
-  var okayButton = codeDiv.querySelector('#ok-button');
+  var okayButton = codeDiv.querySelector('#okButton');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
       dialog.hide();
@@ -1380,7 +1380,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function() {
     defaultBtnSelector: '#ok-button'
   });
 
-  var okayButton = buttons.querySelector('#ok-button');
+  var okayButton = buttons.querySelector('#okButton');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
       dialog.hide();

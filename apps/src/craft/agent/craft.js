@@ -306,7 +306,7 @@ export default class Craft {
             const resetButton = document.getElementById('resetButton');
             dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
 
-            const phaserGame = document.getElementById('phaser-game');
+            const phaserGame = document.getElementById('phaserGame');
             const hammerToButton = {
               [Hammer.DIRECTION_LEFT]: 'leftButton',
               [Hammer.DIRECTION_RIGHT]: 'rightButton',
@@ -603,7 +603,7 @@ export default class Craft {
     if (first) {
       return;
     }
-    captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
+    captureThumbnailFromCanvas($('#minecraftFrame canvas')[0]);
     Craft.gameController.codeOrgAPI.resetAttempt();
   }
 

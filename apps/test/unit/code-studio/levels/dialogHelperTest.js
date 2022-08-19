@@ -61,14 +61,14 @@ describe('dialogHelper', () => {
     it('calls callback when ok button is clicked', () => {
       const callback = sinon.spy();
       showDialog(<MyComponent />, callback);
-      $('#ok-button').click();
+      $('#okButton').click();
       assert(callback.calledOnce);
     });
 
     it('calls onHidden when ok button is clicked', () => {
       const onHidden = sinon.spy();
       showDialog(<MyComponent />, null, onHidden);
-      $('#ok-button').click();
+      $('#okButton').click();
       assert(onHidden.calledOnce);
     });
 

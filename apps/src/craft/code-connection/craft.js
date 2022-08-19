@@ -86,7 +86,7 @@ export const executeUserCode = function(client, code) {
     client.async_command(
       command,
       result => {
-        var log = document.getElementById('code-connection-log');
+        var log = document.getElementById('codeConnectionLog');
         log.innerText += `${commandName} command executed.`;
         if (resultKey !== null) {
           log.innerText += ` ${resultKey}: ${result}`;
@@ -631,7 +631,7 @@ export default class Craft {
       }.bind(this)
     );
     dom.addClickTouchEvent(
-      document.getElementById('close-popup'),
+      document.getElementById('closePopup'),
       function() {
         popupDialog.hide();
       }.bind(this)
@@ -654,7 +654,7 @@ export default class Craft {
       shareLink = $('#share-link').val();
       popupDialog.hide();
     });
-    dom.addClickTouchEvent(document.getElementById('close-popup'), () => {
+    dom.addClickTouchEvent(document.getElementById('closePopup'), () => {
       popupDialog.hide();
     });
     dom.addClickTouchEvent(document.getElementById('cancel-button'), () => {
@@ -676,7 +676,7 @@ export default class Craft {
       id: 'craft-popup-error'
     });
 
-    dom.addClickTouchEvent(document.getElementById('close-popup'), () => {
+    dom.addClickTouchEvent(document.getElementById('closePopup'), () => {
       popupDialog.hide();
     });
 

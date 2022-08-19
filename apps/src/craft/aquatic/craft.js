@@ -464,7 +464,7 @@ Craft.reset = function(first) {
   if (first) {
     return;
   }
-  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
+  captureThumbnailFromCanvas($('#minecraftFrame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 

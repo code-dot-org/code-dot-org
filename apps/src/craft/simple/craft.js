@@ -520,7 +520,7 @@ Craft.showHouseSelectionPopup = function(onSelectedCallback) {
   });
 
   dom.addClickTouchEvent(
-    $('#close-house-select')[0],
+    $('#closeHouseSelect')[0],
     function() {
       popupDialog.hide();
     }.bind(this)
@@ -681,7 +681,7 @@ Craft.reset = function(first) {
   if (first) {
     return;
   }
-  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
+  captureThumbnailFromCanvas($('#minecraftFrame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
