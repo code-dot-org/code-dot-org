@@ -4,16 +4,23 @@ import {assert, expect} from '../../util/reconfiguredChai';
 import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 
 describe('GameLabP5', function() {
-  let p5Wrapper;
+  let p5Wrapper, originalDocumentBody;
 
   // TODO: Re-enable sandboxDocumentBody and fix state leakage caused by
   // test/unit/p5lab/ tests.
   // Using the aggressive sandbox here because the P5 library generates
   // a default canvas when it's not attached to an existing one.
   // sandboxDocumentBody();
+  before(() => {
+    originalDocumentBody = document.body.innerHTML;
+  });
 
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
+  });
+
+  after(() => {
+    document.body.innerHTML = originalDocumentBody;
   });
 
   describe('mouseIsOver method', function() {
