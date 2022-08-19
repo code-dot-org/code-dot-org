@@ -65,7 +65,10 @@ export default class WebSerialPortWrapper extends EventEmitter {
     console.log(callback);
     return this.writer
       .write(buffer)
-      .then(() => callback())
+      .then(() => {
+        console.log('Beta');
+        return callback();
+      })
       .catch(() => {
         console.log('Failed Write');
         console.log(callback);
