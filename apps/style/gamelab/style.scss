@@ -82,7 +82,7 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 #share-cell {
   display: inline-block;
   vertical-align: top;
-  &.share-cell-none {
+  &.shareCellNone {
     display: none;
   }
 }

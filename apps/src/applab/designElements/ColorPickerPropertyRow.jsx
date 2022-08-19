@@ -87,7 +87,7 @@ export default class ColorPickerPropertyRow extends React.Component {
             ref="button"
             type="button"
             className={
-              this.state.colorPickerText === '' ? 'rainbow-gradient' : undefined
+              this.state.colorPickerText === '' ? 'rainbowGradient' : undefined
             }
             style={buttonStyle}
             onClick={this.toggleColorPicker}

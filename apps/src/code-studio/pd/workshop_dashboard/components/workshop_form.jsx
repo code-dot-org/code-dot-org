@@ -997,7 +997,7 @@ export class WorkshopForm extends React.Component {
                   value={this.state.location_address || ''}
                   readOnly={this.props.readOnly}
                   style={this.getInputStyle()}
-                  className={'form-control'}
+                  className={'formControl'}
                 />
               </FormGroup>
             </Col>

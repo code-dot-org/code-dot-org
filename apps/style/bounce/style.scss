@@ -60,7 +60,7 @@ $root: '/blockly/media/bounce/'; //TODO: Parameterize for asset pipeline
 }
 #share-cell {
   display: block;
-  &.share-cell-none {
+  &.shareCellNone {
     display: none;
   }
 }
