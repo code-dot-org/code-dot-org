@@ -1204,7 +1204,7 @@ Applab.runButtonClick = function() {
   Applab.execute();
 
   // Enable the Finish button if is present:
-  var shareCell = document.getElementById('share-cell');
+  var shareCell = document.getElementById('shareCell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
     // adding finish button changes layout. force a resize

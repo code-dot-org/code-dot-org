@@ -79,7 +79,7 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   margin-right: 3px;
 }
 
-#share-cell {
+#shareCell {
   display: inline-block;
   vertical-align: top;
   &.share-cell-none {
@@ -95,7 +95,7 @@ $dpad-cone-active: #FFD080;
 $dpad-cone-inactive: #9C9C9C;
 $dpad-rim: #FFF;
 
-#studio-dpad {
+#studioDpad {
   position: absolute;
   height: 152px;
   width: 390px;
@@ -104,7 +104,7 @@ $dpad-rim: #FFF;
   -webkit-touch-callout: none;
 }
 
-#studio-dpad-rim {
+#studioDpadRim {
   position: absolute;
   width: 0;
   height: 0;
@@ -113,7 +113,7 @@ $dpad-rim: #FFF;
   box-shadow: 1px 1px 1px 0 $dpad-shadow;
 }
 
-#studio-dpad-cone {
+#studioDpadCone {
   position: absolute;
   margin: 2px;
   width: 0;
@@ -150,7 +150,7 @@ $dpad-rim: #FFF;
   }
 }
 
-#studio-dpad-button {
+#studioDpadButton {
   display: inline;
   position: relative;
   border-radius: 40px;
@@ -199,7 +199,7 @@ $space-shadow: #FFD07F;
 $space-border: #666;
 $space-active-border: #9F9F9F;
 
-#studio-space-button {
+#studioSpaceButton {
   position: absolute;
   border-radius: 40px;
   width: 80px;

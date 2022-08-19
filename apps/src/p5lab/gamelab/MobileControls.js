@@ -72,7 +72,7 @@ export default class MobileControls {
       );
     }
     dom.addMouseDownTouchEvent(
-      document.getElementById('studio-dpad-button'),
+      document.getElementById('studioDpadButton'),
       this.onMouseDown
     );
     // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
@@ -89,18 +89,16 @@ export default class MobileControls {
 
     const dpadDisplayStyle =
       dpadVisible && mobileControlsOk ? 'inline' : 'none';
-    document.getElementById('studio-dpad-rim').style.display = dpadDisplayStyle;
+    document.getElementById('studioDpadRim').style.display = dpadDisplayStyle;
+    document.getElementById('studioDpadCone').style.display = dpadDisplayStyle;
     document.getElementById(
-      'studio-dpad-cone'
-    ).style.display = dpadDisplayStyle;
-    document.getElementById(
-      'studio-dpad-button'
+      'studioDpadButton'
     ).style.display = dpadDisplayStyle;
 
     const spaceButtonDisplayStyle =
       spaceButtonVisible && mobileControlsOk ? 'inline' : 'none';
     document.getElementById(
-      'studio-space-button'
+      'studioSpaceButton'
     ).style.display = spaceButtonDisplayStyle;
 
     if (this.dpadFourWay !== dpadFourWay) {
@@ -219,7 +217,7 @@ export default class MobileControls {
       this.dPadState.previousY = e.clientY;
     }
 
-    $('#studio-dpad-button').addClass('active');
+    $('#studioDpadButton').addClass('active');
 
     e.preventDefault(); // Stop normal events so we see mouseup later.
   };
@@ -263,8 +261,8 @@ export default class MobileControls {
   }
 
   notifyKeyEightWayDPad(keyCode, cssClass, currentX, currentY) {
-    const dPadButton = $('#studio-dpad-button');
-    const dPadCone = $('#studio-dpad-cone');
+    const dPadButton = $('#studioDpadButton');
+    const dPadCone = $('#studioDpadCone');
     const {startingX, previousX, startingY, previousY} = this.dPadState;
     const {notifyKeyCodeDown, notifyKeyCodeUp} = this.opts;
     let curPrimary, curSecondary, prevPrimary, prevSecondary;
@@ -322,8 +320,8 @@ export default class MobileControls {
   }
 
   notifyKeysFourWayDPad(currentX, currentY) {
-    const dPadButton = $('#studio-dpad-button');
-    const dPadCone = $('#studio-dpad-cone');
+    const dPadButton = $('#studioDpadButton');
+    const dPadCone = $('#studioDpadCone');
     const {startingX, previousX, startingY, previousY} = this.dPadState;
     const {notifyKeyCodeDown, notifyKeyCodeUp} = this.opts;
 
@@ -401,7 +399,7 @@ export default class MobileControls {
         );
       }
 
-      $('#studio-dpad-button').removeClass('active');
+      $('#studioDpadButton').removeClass('active');
 
       this.dPadState = {};
       this.dPadFourWay = true;

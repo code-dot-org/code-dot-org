@@ -554,7 +554,7 @@ Dance.prototype.runButtonClick = async function() {
   }
 
   // Enable the Finish button if is present:
-  const shareCell = document.getElementById('share-cell');
+  const shareCell = document.getElementById('shareCell');
   if (shareCell && !this.level.validationCode) {
     shareCell.className = 'share-cell-enabled';
 

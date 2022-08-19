@@ -1068,7 +1068,7 @@ Bounce.runButtonClick = function() {
   Bounce.execute();
 
   if (level.freePlay && !level.isProjectLevel && !studioApp().hideSource) {
-    var shareCell = document.getElementById('share-cell');
+    var shareCell = document.getElementById('shareCell');
     shareCell.className = 'share-cell-enabled';
   }
   if (Bounce.goalLocated_) {
