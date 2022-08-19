@@ -21,6 +21,7 @@ Dashboard::Application.routes.draw do
 
     resources :user_levels, only: [:update, :destroy]
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
+    get '/user_levels/get_token', to: 'user_levels#get_token'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
