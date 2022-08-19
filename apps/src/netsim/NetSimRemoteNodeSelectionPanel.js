@@ -245,7 +245,7 @@ function unlessDisabled(callback) {
  */
 NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function() {
   var lobbyTable = this.getBody().find('#netsim-scrolling-lobby');
-  var container = this.getBody().closest('#netsim-disconnected');
+  var container = this.getBody().closest('#netsimDisconnected');
 
   if (lobbyTable.is(':visible')) {
     lobbyTable.height('auto');

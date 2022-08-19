@@ -142,7 +142,7 @@ $wide-column-width: 121px;
     }
   }
 
-  #netsim-disconnected {
+  #netsimDisconnected {
     display: block;
     position: relative;
     max-width: 1000px;
@@ -150,12 +150,12 @@ $wide-column-width: 121px;
     margin: auto;
     overflow-y: auto;
 
-    #netsim-scrolling-lobby {
+    #netsimScrollingLobby {
       overflow-y: auto;
     }
   }
 
-  #netsim-leftcol {
+  #netsimLeftcol {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -169,7 +169,7 @@ $wide-column-width: 121px;
     }
   }
 
-  #netsim-rightcol {
+  #netsimRightcol {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -178,7 +178,7 @@ $wide-column-width: 121px;
     overflow-y: hidden;
   }
 
-  #netsim-send {
+  #netsimSend {
     position: absolute;
     bottom: 0;
     // "top" determined dynamically from content
@@ -186,7 +186,7 @@ $wide-column-width: 121px;
     right: 0;
   }
 
-  #netsim-logs {
+  #netsimLogs {
     position: absolute;
     top: 0;
     left: 0;
@@ -286,7 +286,7 @@ $wide-column-width: 121px;
   }
 
   // Visualization styles
-  #netsim-visualization {
+  #netsimVisualization {
     svg {
       background-color: $white;
       border: solid darkgray thin;
