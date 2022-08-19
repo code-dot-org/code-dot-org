@@ -95,10 +95,12 @@
     padding: 0 2px;
   }
 
+  /* stylelint-disable max-line-length */
   // React-Select does not provide a way to override the .Select-control class for the underlying input.
   // For consistent UI, apply the same error highlighting to .Select-control that Bootstrap uses for .form-control
   // See https://github.com/twbs/bootstrap-sass/blob/51486a8bd836d32b9f413e911ed83b433ef4ad39/assets/stylesheets/bootstrap/_forms.scss#L432-L434
   // and https://github.com/twbs/bootstrap-sass/blob/51486a8bd836d32b9f413e911ed83b433ef4ad39/assets/stylesheets/bootstrap/mixins/_forms.scss#L20-L29
+  /* stylelint-enable max-line-length */
   .has-error {
     .Select-control {
       border-color: $state-danger-text;
