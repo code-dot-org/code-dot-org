@@ -24,7 +24,7 @@ const customSimpleDialog = function({
   }
 };
 
-Blockly.inject(document.getElementById('blockly-container'), {
+Blockly.inject(document.getElementById('blocklyContainer'), {
   assetUrl,
   customSimpleDialog,
   valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),

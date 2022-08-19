@@ -34,7 +34,7 @@ function initializeEditPage(defaultSprites) {
 
   poolField = document.getElementById('block_pool');
   nameField = document.getElementById('block_name');
-  Blockly.inject(document.getElementById('blockly-container'), {
+  Blockly.inject(document.getElementById('blocklyContainer'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
     typeHints: true
