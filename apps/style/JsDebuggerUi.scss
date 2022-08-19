@@ -14,7 +14,7 @@
   white-space: nowrap;
 }
 
-#debug-buttons {
+#debugButtons {
   display: inline;
   white-space: normal;
 }
@@ -48,7 +48,7 @@
 // renders over the debug console. Setting the z-index to 2 is a work-around for
 // this issue. See JsDebugger.jsx.
 $debug-area-initial-height: 43px;
-#debug-area {
+#debugArea {
   position: absolute;
   bottom: 0;
   height: $debug-area-initial-height;
@@ -68,7 +68,7 @@ $debug-console-min-column-width: 130px;
 $debug-watch-max-column-width: 200px;
 $debug-header-border-width: 1px;
 
-#debug-commands-header {
+#debugCommandsHeader {
   width: $debug-commands-column-width;
   float: left;
   border-right: $debug-header-border-width solid gray;
@@ -78,7 +78,7 @@ $debug-header-border-width: 1px;
   }
 }
 
-#debug-watch-header {
+#debugWatchHeader {
   width: $debug-watch-max-column-width + $debug-header-border-width;
   float: right;
   border-left: $debug-header-border-width solid gray;
