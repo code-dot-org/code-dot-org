@@ -152,10 +152,11 @@ module Cdo
       if rack_env?(:development)
         # To use a developer instance of Javabuilder instead, replace this url with
         # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
-        'https://javabuilder-test-http.code.org/seedsources/sources.json'
-        #'http://localhost:8080/javabuilderfiles/seedsources'
+        #'https://javabuilder-test-http.code.org/seedsources/sources.json'
+        'http://localhost:8080/javabuilderfiles/seedsources'
       else
-        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
+        'http://localhost:8080/javabuilderfiles/seedsources'
+        #'https://javabuilderbeta-http.code.org/seedsources/sources.json'
       end
     end
 

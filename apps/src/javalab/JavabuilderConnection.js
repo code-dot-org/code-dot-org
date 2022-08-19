@@ -455,10 +455,13 @@ export default class JavabuilderConnection {
     );
   }
 
-  reportWebSocketConnectionError(error) {
-    this.reportConnectionError(
+  reportWebSocketConnectionError(errorMessage) {
+    logToCloud.addPageAction(
       logToCloud.PageAction.JavabuilderWebSocketConnectionError,
-      error.message
+      {
+        errorMessage,
+        channelId: this.channelId
+      }
     );
   }
 
