@@ -159,6 +159,7 @@ P5Wrapper.prototype.init = function(options) {
  */
 P5Wrapper.prototype.resetExecution = function() {
   p5SpriteWrapper.setCreateWithDebug(false);
+
   if (this.p5) {
     this.p5.remove();
     this.p5 = null;

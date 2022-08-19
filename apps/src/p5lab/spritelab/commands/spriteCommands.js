@@ -1,7 +1,5 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
-import {setSpritesReachLimit} from '../../redux/limits';
-import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/p5lab/utils';
 
 // Big numbers in some blocks can cause performance issues. Combined with live-preview,
@@ -73,9 +71,6 @@ export const commands = {
 
   makeNumSprites(num, animation) {
     var numSprites = this.getNumberOfSprites();
-    if (numSprites === BIG_NUMBER_GUARD - 1) {
-      getStore().dispatch(setSpritesReachLimit());
-    }
     if (numSprites >= BIG_NUMBER_GUARD) {
       return;
     }
@@ -90,9 +85,6 @@ export const commands = {
 
   makeBurst(num, animation, effectName) {
     var numSprites = this.getNumberOfSprites();
-    if (numSprites === BIG_NUMBER_GUARD - 1) {
-      getStore().dispatch(setSpritesReachLimit());
-    }
     if (numSprites > BIG_NUMBER_GUARD - 1) {
       return;
     }
