@@ -1,6 +1,6 @@
-@import 'color.scss';
+@import "color.scss";
 
-$polar-blue: #0094CA;
+$polar-blue: #0094ca;
 
 .tile {
   width: 95%;
@@ -21,7 +21,7 @@ $polar-blue: #0094CA;
     }
 
     .addButton {
-      color: $white
+      color: $white;
     }
 
     .animationName {
