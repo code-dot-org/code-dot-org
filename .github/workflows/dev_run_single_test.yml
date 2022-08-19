@@ -12,17 +12,14 @@ jobs:
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
       LD_LIBRARY_PATH: "/usr/local/lib"
-    steps:    
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3       
+      LANG: en_US.UTF-8
+    steps:   
       - name: Get actions code
         uses: actions/checkout@v3    
         
       - name: Rake run integration tests
         run:  |
-          echo "testing failure"  
-          RUN locale-gen C.UTF-8 || true
-          ENV LANG=C.UTF-8          
+          locale-gen
       - name: say-hello
         uses: ./.github/actions/start-server-job-actions  
       - name: Install mysql
@@ -42,4 +39,5 @@ jobs:
           echo "testing failure"  
           bundle exec rake test:changed --trace
         continue-on-error: true       
- 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3        
