@@ -1185,7 +1185,7 @@ module.exports = {
           '#designModeButton is visible'
         );
         assert.equal(
-          $('#versions-header').is(':visible'),
+          $('#versionsHeader').is(':visible'),
           true,
           '#versions-header is visible'
         );

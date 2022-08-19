@@ -167,7 +167,7 @@ $text-shadow-gray: #5a5a5a;
   @include pixelated;
 }
 
-#soft-buttons.soft-buttons-compact {
+#softButtons.soft-buttons-compact {
   margin-left: 0;
   button {
     margin: 0;
@@ -175,7 +175,7 @@ $text-shadow-gray: #5a5a5a;
 }
 
 @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-  #soft-buttons {
+  #softButtons {
     margin: 0 -5px 0 0;
     button {
       margin: 0;
@@ -244,8 +244,8 @@ body {
 }
 
 .small-footer-base,
-#copyright-flyout,
-#more-menu {
+#copyrightFlyout,
+#moreMenu {
   background-color: $below-header-background;
   color: $footer-text-and-arrow;
   h4 {
@@ -344,7 +344,7 @@ body {
   background-size: 100%;
 }
 
-#right-button-cell {
+#rightButtonCell {
   display: none;
   vertical-align: top;
   &.right-button-cell-enabled {
@@ -1074,7 +1074,7 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-#prompt-icon {
+#promptIcon {
   width: 100%;
 }
 
@@ -1119,7 +1119,7 @@ $height-to-width: math.div(434, 477);
     color: $lighter_gray;
   }
 
-  #show-code,
+  #showCode,
   #feedbackButtons,
   #puzzleRatingButtons,
   #sharing {
@@ -1260,7 +1260,7 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-.ieVersion9 #open-workspace {
+.ieVersion9 #openWorkspace {
   background-color: $very-dark-gray;
 }
 
@@ -1342,7 +1342,7 @@ $height-to-width: math.div(434, 477);
     color: $white;
   }
 
-  #toolbox-header {
+  #toolboxHeader {
     border-right: none !important;
   }
 

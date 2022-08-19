@@ -65,7 +65,7 @@ export function setupApp(appOptions) {
         appOptions.app === 'poetry' ||
         appOptions.app === 'weblab'
       ) {
-        $('#clear-puzzle-header').hide();
+        $('#clearPuzzleHeader').hide();
         // Only show version history if user is project owner, or teacher viewing student work
         const isTeacher =
           getStore().getState().currentUser?.userType === 'teacher';
@@ -74,7 +74,7 @@ export function setupApp(appOptions) {
           project.isOwner() ||
           (isTeacher && isViewingStudent && appOptions.level.isStarted)
         ) {
-          $('#versions-header').show();
+          $('#versionsHeader').show();
         }
       }
       $(document).trigger('appInitialized');

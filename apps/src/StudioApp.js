@@ -516,7 +516,7 @@ StudioApp.prototype.init = function(config) {
 
   // Bind listener to 'Clear Puzzle' button
   var hideIcon = utils.valueOr(config.skin.hideIconInClearPuzzle, false);
-  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  var clearPuzzleHeader = document.getElementById('clearPuzzleHeader');
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(
       clearPuzzleHeader,
@@ -720,7 +720,7 @@ StudioApp.prototype.initTimeSpent = function() {
 
 StudioApp.prototype.initVersionHistoryUI = function(config) {
   // Bind listener to 'Version History' button
-  var versionsHeader = document.getElementById('versions-header');
+  var versionsHeader = document.getElementById('versionsHeader');
   if (versionsHeader) {
     dom.addClickTouchEvent(
       versionsHeader,
@@ -874,7 +874,7 @@ StudioApp.prototype.handleSharing_ = function(options) {
   // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
   var belowVisualization = document.getElementById('belowVisualization');
   if (dom.isMobile()) {
-    var sliderCell = document.getElementById('slider-cell');
+    var sliderCell = document.getElementById('sliderCell');
     if (sliderCell) {
       sliderCell.style.display = 'none';
     }
@@ -1485,15 +1485,15 @@ StudioApp.prototype.resizeVisualization = function(width) {
 
   const cssScale = `scale(${scale})`;
   applyTransformScaleToChildren(visualization, cssScale);
-  const dpadContainer = document.getElementById('studio-dpad-container');
+  const dpadContainer = document.getElementById('studioDpadContainer');
   if (dpadContainer) {
     applyTransformScaleToChildren(dpadContainer, cssScale);
   }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
-    $('#soft-buttons').removeClass('soft-buttons-compact');
+    $('#softButtons').removeClass('soft-buttons-compact');
   } else if (oldVizWidth > 230 && newVizWidth <= 230) {
-    $('#soft-buttons').addClass('soft-buttons-compact');
+    $('#softButtons').addClass('soft-buttons-compact');
   }
 
   var smallFooter = document.querySelector(
@@ -1525,7 +1525,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
-  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('toolboxHeader').style.width = toolboxWidth + 'px';
 };
 
 /**
@@ -2420,10 +2420,10 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
-  const hideToolboxIcon = document.getElementById('hide-toolbox-icon');
-  const showToolboxHeader = document.getElementById('show-toolbox-header');
+  const hideToolboxIcon = document.getElementById('hideToolboxIcon');
+  const showToolboxHeader = document.getElementById('showToolboxHeader');
   const showToolboxClickTarget = document.getElementById(
-    'show-toolbox-click-target'
+    'showToolboxClickTarget'
   );
   if (hideToolboxIcon && showToolboxHeader) {
     hideToolboxIcon.style.display = 'inline-block';

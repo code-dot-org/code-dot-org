@@ -361,7 +361,7 @@ Craft.updateUIForCharacter = function(character) {
   Craft.initialConfig.skin.failureAvatar = characters[character].failureAvatar;
   Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
   studioApp().setIconsFromSkin(Craft.initialConfig.skin);
-  $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
+  $('#promptIcon').attr('src', characters[character].smallStaticAvatar);
 };
 
 Craft.clearPlayerState = function() {
@@ -499,7 +499,7 @@ Craft.runButtonClick = function() {
   Craft.executeUserCode();
 
   if (Craft.level.freePlay && !studioApp().hideSource) {
-    var finishBtnContainer = $('#right-button-cell');
+    var finishBtnContainer = $('#rightButtonCell');
 
     if (
       finishBtnContainer.length &&

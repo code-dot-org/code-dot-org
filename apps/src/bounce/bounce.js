@@ -929,7 +929,7 @@ Bounce.reset = function(first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    var softButtonsCell = document.getElementById('soft-buttons');
+    var softButtonsCell = document.getElementById('softButtons');
     getStore().dispatch(showArrowButtons());
     softButtonsCell.className = 'soft-buttons-' + softButtonCount;
   }

@@ -451,7 +451,7 @@ Dance.prototype.reset = function() {
   }
   if (softButtonCount) {
     getStore().dispatch(showArrowButtons());
-    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
+    $('#softButtons').addClass('soft-buttons-' + softButtonCount);
   }
 };
 

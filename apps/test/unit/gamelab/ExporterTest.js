@@ -238,14 +238,14 @@ describe('The Gamelab Exporter,', function() {
 
         it('should have a #soft-buttons element', () => {
           assert.isNotNull(
-            el.querySelector('#soft-buttons'),
+            el.querySelector('#softButtons'),
             'no #soft-buttons element'
           );
         });
 
         it('should have a #studio-dpad-container element', () => {
           assert.isNotNull(
-            el.querySelector('#studio-dpad-container'),
+            el.querySelector('#studioDpadContainer'),
             'no #studio-dpad-container element'
           );
         });
@@ -375,14 +375,14 @@ describe('The Gamelab Exporter,', function() {
 
         it('should have a #soft-buttons element', () => {
           assert.isNotNull(
-            el.querySelector('#soft-buttons'),
+            el.querySelector('#softButtons'),
             'no #soft-buttons element'
           );
         });
 
         it('should have a #studio-dpad-container element', () => {
           assert.isNotNull(
-            el.querySelector('#studio-dpad-container'),
+            el.querySelector('#studioDpadContainer'),
             'no #studio-dpad-container element'
           );
         });

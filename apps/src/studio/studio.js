@@ -2666,7 +2666,7 @@ Studio.reset = function(first) {
   }
   if (softButtonCount) {
     getStore().dispatch(showArrowButtons());
-    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
+    $('#softButtons').addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay
