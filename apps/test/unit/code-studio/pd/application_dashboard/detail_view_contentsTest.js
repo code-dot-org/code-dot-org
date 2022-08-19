@@ -361,7 +361,7 @@ describe('DetailViewContents', () => {
       });
 
       it(`incomplete status is in dropdown if ${applicationType} application is incomplete`, () => {
-        const detailView = mountDetailView('Teacher', {
+        const detailView = mountDetailView(applicationType, {
           applicationData: {
             ...DEFAULT_APPLICATION_DATA,
             status: 'incomplete',
@@ -378,6 +378,31 @@ describe('DetailViewContents', () => {
       });
     });
   }
+
+  describe('Principal Approvals', () => {
+    it(`Shows principal responses if approval is complete`, () => {
+      const detailView = mountDetailView('Teacher');
+      expect(detailView.text()).to.contain(
+        'Principal Approval and School Information'
+      );
+    });
+    it(`Shows URL to principal approval if sent and incomplete`, () => {
+      const guid = '1020304';
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          application_guid: guid,
+          principal_approval_state: 'Incomplete'
+        }
+      });
+      expect(
+        detailView
+          .find('a')
+          .last()
+          .props().href
+      ).to.contain(`principal_approval/${guid}`);
+    });
+  });
 
   describe('Regional Partner View', () => {
     it('has delete button', () => {
