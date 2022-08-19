@@ -4,7 +4,6 @@ import P5Lab from '../P5Lab';
 import {P5LabType} from '../constants';
 import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
-import {resetSpritesReachLimit, resetTextsReachLimit} from '../redux/limits';
 import {clearConsole} from '../redux/textConsole';
 import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
@@ -76,10 +75,6 @@ export default class SpriteLab extends P5Lab {
   }
 
   reset() {
-    getStore().dispatch(resetTextsReachLimit());
-    getStore().dispatch(resetSpritesReachLimit());
-    console.log('inside reset in SpriteLab.js');
-    console.log(getStore().getState());
     super.reset();
     getStore().dispatch(clearPrompts());
     this.clearExecutionErrorWorkspaceAlert();
