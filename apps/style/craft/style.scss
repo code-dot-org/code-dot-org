@@ -443,8 +443,8 @@ $height-to-width: math.div(434, 477);
 }
 
 @mixin popup-width-height($width, $height) {
-  $offset-y: -($height*0.5);
-  $offset-x: -($width*0.5);
+  $offset-y: -($height * 0.5);
+  $offset-x: -($width * 0.5);
 
   position: fixed;
   top: 50%;
@@ -720,8 +720,7 @@ $height-to-width: math.div(434, 477);
 
     @media screen and (max-height: 630px) {
       $fudge-factor-to-match-bottoms: 7px;
-      $smaller-height: ($house-outline-height * 0.5) +
-        $fudge-factor-to-match-bottoms;
+      $smaller-height: ($house-outline-height * 0.5) + $fudge-factor-to-match-bottoms;
       $smaller-width: $house-outline-width * 0.5;
       width: $smaller-width;
       height: $smaller-height;
@@ -745,8 +744,7 @@ $height-to-width: math.div(434, 477);
     width: $width;
     height: $height;
 
-    $margin-above-photo: ($house-outline-height - $height) * 0.5 +
-      $extra-offset-for-shadow;
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
@@ -764,8 +762,7 @@ $height-to-width: math.div(434, 477);
     width: $width;
     height: $height;
 
-    $margin-above-photo: ($house-outline-height - $height) * 0.5 +
-      $extra-offset-for-shadow;
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
@@ -783,8 +780,7 @@ $height-to-width: math.div(434, 477);
     width: $width;
     height: $height;
 
-    $margin-above-photo: ($house-outline-height - $height) * 0.5 +
-      $extra-offset-for-shadow;
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 

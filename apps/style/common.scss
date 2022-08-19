@@ -1523,7 +1523,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   font-size: 14px;
 }
 
-// body.readonly is used in cases where we are just displaying uneditable blocks (like feedback dialogs) with no workspace
+// body.readonly is used in cases where we are just displaying
+// uneditable blocks (like feedback dialogs) with no workspace
 
 body.readonly {
   margin: 0;
