@@ -44,7 +44,23 @@ class CourseVersionTest < ActiveSupport::TestCase
     @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
     @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-112', version_year: '1991', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@partner_unit)
+
+    populate_cache
   end
+
+  def populate_cache
+    Script.stubs(:should_cache?).returns true
+    # Only need to populate cache once per test-suite run
+    @@script_cached ||= Script.unit_cache_to_cache
+    Script.script_cache
+    Script.unit_family_cache
+
+    # Also populate course_cache, as it's used by course_link
+    UnitGroup.stubs(:should_cache?).returns true
+    @@course_cached ||= UnitGroup.course_cache_to_cache
+    UnitGroup.course_cache
+  end
+
   test 'get courses with participant progress for student should return no courses' do
     assert_equal CourseVersion.courses_for_unit_selector([]).length, 0
   end
