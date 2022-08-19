@@ -5640,7 +5640,7 @@ body.modal-open,
   margin-left: auto;
 }
 
-.modal-content {
+.modalContent {
   position: relative;
   background-color: #ffffff;
   border: 1px solid #999999;
@@ -5740,7 +5740,7 @@ body.modal-open,
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .modal-content {
+  .modalContent {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }

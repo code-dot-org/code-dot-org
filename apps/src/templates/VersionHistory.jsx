@@ -151,7 +151,7 @@ export default class VersionHistory extends React.Component {
         <div>
           <p>{i18n.versionHistory_clearProgress_prompt()}</p>
           {this.props.isProjectTemplateLevel && (
-            <p className="template-level-warning">
+            <p className="templateLevelWarning">
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
             </p>
           )}
@@ -228,7 +228,7 @@ export default class VersionHistory extends React.Component {
     }
 
     return (
-      <div className="modal-content" style={{margin: 0}}>
+      <div className="modalContent" style={{margin: 0}}>
         <h1 className="dialog-title">{title}</h1>
         {body}
         {this.state.statusMessage}

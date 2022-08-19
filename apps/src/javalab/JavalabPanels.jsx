@@ -206,7 +206,7 @@ class JavalabPanels extends React.Component {
     });
 
     // Also adjust the width of the small footer at the bottom.
-    $('#page-small-footer .small-footer-base').css(
+    $('#page-small-footer .smallFooterBase').css(
       'max-width',
       availableWidth - styleConstants['resize-bar-width']
     );
@@ -290,7 +290,7 @@ class JavalabPanels extends React.Component {
               height: editorColumnHeight,
               width: rightWidth
             }}
-            className="editor-column"
+            className="editorColumn"
           >
             {topRightPanel(this.getEditorHeight())}
             <HeightResizer

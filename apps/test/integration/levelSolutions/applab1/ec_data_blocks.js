@@ -259,7 +259,7 @@ export default {
       xml: ``,
 
       runBeforeClick(assert) {
-        $('.droplet-palette-group-header:contains(Data)').click();
+        $('.dropletPaletteGroupHeader:contains(Data)').click();
         const actualBlocks = $('.droplet-palette-canvas > g')
           .map((i, el) =>
             $(el)

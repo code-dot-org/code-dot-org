@@ -114,7 +114,7 @@ export default class DesignModeHeaders extends React.Component {
       >
         <PaneSection
           id="design-toolbox-header"
-          className="workspace-header"
+          className="workspaceHeader"
           style={styles.toolboxHeader}
         >
           {this.hideToolboxIcon()}
@@ -122,12 +122,12 @@ export default class DesignModeHeaders extends React.Component {
           <span>{applabMsg.designToolboxHeader()}</span>
         </PaneSection>
         <PaneSection
-          className="workspace-header"
+          className="workspaceHeader"
           style={styles.showToolboxHeader}
         >
           <span
             key="show-toolbox-clickable"
-            className="workspace-header-clickable"
+            className="workspaceHeaderClickable"
             style={styles.showToolboxClickable}
             onClick={this.onToggleToolbox}
           >
@@ -144,7 +144,7 @@ export default class DesignModeHeaders extends React.Component {
           isRtl={this.props.isRtl}
           onClick={this.props.handleVersionHistory}
         />
-        <PaneSection id="design-workspace-header" className="workspace-header">
+        <PaneSection id="design-workspace-header" className="workspaceHeader">
           {this.props.showProjectTemplateWorkspaceIcon && (
             <ProjectTemplateWorkspaceIcon />
           )}

@@ -63,7 +63,7 @@ export default class GameLab extends P5Lab {
     if (!this.studioApp_.config.readonlyWorkspace) {
       $('.droplet-main-canvas').css('background-color', color.white);
       $('.droplet-transition-container').css('background-color', color.white);
-      $('.ace_scroller').css('background-color', color.white);
+      $('.aceScroller').css('background-color', color.white);
     }
     super.resetHandler(ignore);
   }
@@ -78,7 +78,7 @@ export default class GameLab extends P5Lab {
         'background-color',
         color.workspace_running_background
       );
-      $('.ace_scroller').css(
+      $('.aceScroller').css(
         'background-color',
         color.workspace_running_background
       );

@@ -59,7 +59,7 @@ $debug-area-initial-height: 43px;
 }
 
 // Make sure the workspace default lines up with the debug area default
-#codeTextbox.pin_bottom {
+#codeTextbox.pinBottom {
   bottom: $debug-area-initial-height;
 }
 

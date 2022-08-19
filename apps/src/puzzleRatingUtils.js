@@ -25,7 +25,7 @@ puzzleRatingUtils.buildPuzzleRatingButtons = function() {
     label: locale.puzzleRatingQuestion()
   });
 
-  var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
+  var buttons = buttonContainer.querySelectorAll('.puzzleRatingBtn');
   var buttonClickHandler = function() {
     for (var i = 0, button; (button = buttons[i]); i++) {
       if (button !== this) {

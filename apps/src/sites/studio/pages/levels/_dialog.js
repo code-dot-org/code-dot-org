@@ -29,7 +29,7 @@ $(document).ready(() => {
     }
 
     // Set the entire page background to be light grey.
-    $('.full_container').addClass('submitted_readonly');
+    $('.fullContainer').addClass('submitted_readonly');
   }
 
   // Unsubmit button should only be available when this is a standalone level.

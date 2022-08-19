@@ -658,7 +658,7 @@ class ExportDialog extends React.Component {
       <div>
         <div
           id="project-export"
-          className="modal-content no-modal-icon"
+          className="modalContent noModalIcon"
           style={{position: 'relative'}}
         >
           <p className="dialog-title">Export your project</p>

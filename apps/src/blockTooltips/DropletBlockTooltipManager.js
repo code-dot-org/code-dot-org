@@ -70,7 +70,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function(
 };
 
 DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled_ = function() {
-  if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
+  if (!$('.dropletHoverDiv').hasClass('tooltipstered')) {
     this.installTooltipsForCurrentCategoryBlocks_();
   }
 };
@@ -80,7 +80,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
     return;
   }
 
-  $('.droplet-hover-div').each(
+  $('.dropletHoverDiv').each(
     function(_, blockHoverDiv) {
       if ($(blockHoverDiv).hasClass('tooltipstered')) {
         return;

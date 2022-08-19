@@ -90,7 +90,7 @@ class InstructionsCsfLeftCol extends React.Component {
         }}
       >
         <div
-          className={classNames('prompt-icon-cell', {
+          className={classNames('promptIconCell', {
             authored_hints: hasAuthoredHints
           })}
           onClick={this.handleClickLightbulb}

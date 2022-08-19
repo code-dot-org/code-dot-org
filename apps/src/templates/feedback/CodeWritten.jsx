@@ -25,7 +25,7 @@ class CodeWritten extends React.Component {
 
     const showCode = (
       <details
-        className="show-code"
+        className="showCode"
         style={useChallengeStyles ? styles.details : null}
       >
         <summary

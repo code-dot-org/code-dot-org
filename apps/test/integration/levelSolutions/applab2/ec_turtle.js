@@ -59,14 +59,14 @@ module.exports = {
       runBeforeClick: function(assert) {
         $('#show-code-header').click();
         assert.equal(
-          $('.tooltipster-content').text(),
+          $('.tooltipsterContent').text(),
           '',
           'No tooltip to start'
         );
         testUtils.typeAceText('getX(');
 
         assert.equal(
-          /getX\(\)/.test($('.tooltipster-content').text()),
+          /getX\(\)/.test($('.tooltipsterContent').text()),
           true,
           'get tooltip'
         );

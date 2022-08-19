@@ -101,7 +101,7 @@ export default class SoundPicker extends React.Component {
         />
       );
     return (
-      <div className="modal-content" style={styles.root}>
+      <div className="modalContent" style={styles.root}>
         {title}
         {!this.props.libraryOnly && (
           <div>

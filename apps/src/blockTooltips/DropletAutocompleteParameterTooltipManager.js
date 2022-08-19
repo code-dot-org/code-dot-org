@@ -243,7 +243,7 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
 
   if (this.showExamplesLink) {
     var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find(
-      '.tooltip-example-link > a'
+      '.tooltipExampleLink > a'
     )[0];
     dom.addClickTouchEvent(
       seeExamplesLink,
@@ -262,7 +262,7 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     tooltipInfo.parameterInfos[paramInfo.currentParameterIndex].assetTooltip;
   if (chooseAsset) {
     var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find(
-      '.tooltip-choose-link > a'
+      '.tooltipChooseLink > a'
     )[0];
     dom.addClickTouchEvent(
       chooseAssetLink,

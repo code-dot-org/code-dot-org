@@ -618,7 +618,7 @@ class JavalabEditor extends React.Component {
                         ref={`${tabKey}-file-toggle`}
                         type="button"
                         className={classNames(
-                          'no-focus-outline',
+                          'noFocusOutline',
                           style.fileMenuToggleButton,
                           displayTheme === DisplayTheme.DARK &&
                             style.darkFileMenuToggleButton

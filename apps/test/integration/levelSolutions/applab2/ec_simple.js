@@ -158,7 +158,7 @@ module.exports = {
           'Variables',
           'Functions'
         ];
-        const actualCategories = $('.droplet-palette-group-header')
+        const actualCategories = $('.dropletPaletteGroupHeader')
           .map((i, el) => $(el).text())
           .toArray();
         assert.deepEqual(expectedCategories, actualCategories);

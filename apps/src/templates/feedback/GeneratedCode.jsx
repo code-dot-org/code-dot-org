@@ -12,7 +12,7 @@ export default class GeneratedCode extends React.Component {
 
   render() {
     return (
-      <div className="generated-code-container" style={this.props.style}>
+      <div className="generatedCodeContainer" style={this.props.style}>
         <div className="generatedCodeMessage">
           <SafeMarkdown markdown={this.props.message} />
         </div>

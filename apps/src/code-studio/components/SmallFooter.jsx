@@ -186,7 +186,7 @@ export default class SmallFooter extends React.Component {
     return (
       <div className={this.props.className} style={styles.smallFooter}>
         <div
-          className="small-footer-base"
+          className="smallFooterBase"
           ref="base"
           style={combinedBaseStyle}
           onClick={this.clickBase}

@@ -11,7 +11,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export const LegacySingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
-    <div className="modal-content no-modal-icon">
+    <div className="modalContent noModalIcon">
       <p className="dialog-title">{title}</p>
       <p className="dialog-body">{body}</p>
       <button type="button" id="cancel-button" style={{float: 'left'}}>
@@ -39,7 +39,7 @@ export const LegacyUnsubmitDialog = (
 
 export const LegacyMatchAngiGifDialog = () => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon scrollable-element">
+    <div className="modalContent noModalIcon scrollable-element">
       <p className="dialog-title">{i18n.instructions()}</p>
       <p>{i18n.dragBlocksToMatch()}</p>
       <div className="aniGif example-image" style={{overflow: 'hidden'}}>
@@ -56,7 +56,7 @@ export const LegacyMatchAngiGifDialog = () => (
 
 export const LegacyTooFewDialog = () => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon scrollable-element">
+    <div className="modalContent noModalIcon scrollable-element">
       <p className="dialog-title">{i18n.tooFewTitle()}</p>
       <p>{i18n.tooFewBody()}</p>
       <div className="farSide">
@@ -70,7 +70,7 @@ export const LegacyTooFewDialog = () => (
 
 export const LegacyContractMatchErrorDialog = ({text}) => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon">
+    <div className="modalContent noModalIcon">
       <p className="dialog-title">{i18n.incorrectAnswer()}</p>
       <p>{text}</p>
       <div className="farSide">
@@ -87,7 +87,7 @@ LegacyContractMatchErrorDialog.propTypes = {
 
 export const LegacyMatchErrorDialog = () => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon scrollable-element">
+    <div className="modalContent noModalIcon scrollable-element">
       <p className="dialog-title">{i18n.incorrectSolution()}</p>
       <p>{i18n.incorrectSolutionBody()}</p>
       <div className="farSide">
@@ -101,7 +101,7 @@ export const LegacyMatchErrorDialog = () => (
 
 export const LegacyErrorDialog = () => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon scrollable-element">
+    <div className="modalContent noModalIcon scrollable-element">
       <p className="dialog-title">{i18n.incorrectAnswer()}</p>
       <p>{i18n.incorrectAnswerBody()}</p>
       <div className="farSide">
@@ -115,7 +115,7 @@ export const LegacyErrorDialog = () => (
 
 export const LegacyStartOverDialog = () => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon scrollable-element">
+    <div className="modalContent noModalIcon scrollable-element">
       <p className="dialog-title">{i18n.startOverTitle()}</p>
       <p>{i18n.startOverBody()}</p>
       <div id="buttons">
@@ -137,7 +137,7 @@ export const LegacyStartOverDialog = () => (
 
 export const LegacyInstructionsDialog = ({title, markdown}) => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon markdown-instructions-container">
+    <div className="modalContent noModalIcon markdown-instructions-container">
       <p className="dialog-title">{title}</p>
       <p />
       <div className="instructions-markdown scrollable-element">
@@ -158,7 +158,7 @@ LegacyInstructionsDialog.propTypes = {
 
 export const LegacySuccessDialog = ({title, body}) => (
   <ProtectedStatefulDiv>
-    <div className="modal-content no-modal-icon scrollable-element">
+    <div className="modalContent noModalIcon scrollable-element">
       <p className="dialog-title">{title}</p>
       <p>{body}</p>
       <div className="farSide">

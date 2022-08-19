@@ -2,10 +2,10 @@
 @import "mixins";
 @import "style-constants";
 
-div.editor-column {
+div.editorColumn {
   left: 0;
 }
-html[dir='rtl'] div.editor-column {
+html[dir='rtl'] div.editorColumn {
   right: 0;
 }
 

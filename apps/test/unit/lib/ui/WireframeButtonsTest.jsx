@@ -51,7 +51,7 @@ describe('WireframeButtons', () => {
       wrapper.setProps({isLegacyShare: true});
       expect(wrapper).to.containMatchingElement(
         <span>
-          <a className="WireframeButtons_button" href="/s/artist">
+          <a className="wireframeButtonsButton" href="/s/artist">
             <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
           </a>
         </span>
@@ -60,7 +60,7 @@ describe('WireframeButtons', () => {
       wrapper.setProps({isLegacyShare: false});
       expect(wrapper).to.containMatchingElement(
         <span>
-          <a className="WireframeButtons_button" href="/p/artist">
+          <a className="wireframeButtonsButton" href="/p/artist">
             <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
           </a>
         </span>
@@ -71,7 +71,7 @@ describe('WireframeButtons', () => {
   describe('View Code button', () => {
     const VIEW_CODE_BUTTON_TEMPLATE = (
       <span>
-        <a className="WireframeButtons_button">
+        <a className="wireframeButtonsButton">
           <i className="fa fa-code" /> {i18n.viewCode()}
         </a>
       </span>

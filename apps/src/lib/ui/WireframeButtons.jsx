@@ -76,10 +76,7 @@ export default class WireframeButtons extends React.Component {
 
 const ViewCodeButton = () => (
   <span style={{display: 'inline-block'}}>
-    <a
-      className="WireframeButtons_button"
-      href={project.getProjectUrl('/view')}
-    >
+    <a className="wireframeButtonsButton" href={project.getProjectUrl('/view')}>
       <i className="fa fa-code" /> {i18n.viewCode()}
     </a>
   </span>
@@ -87,7 +84,7 @@ const ViewCodeButton = () => (
 
 const NewProjectButton = ({url}) => (
   <span style={{display: 'inline-block'}}>
-    <a className="WireframeButtons_button" href={url}>
+    <a className="wireframeButtonsButton" href={url}>
       <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
     </a>
   </span>
@@ -99,7 +96,7 @@ NewProjectButton.propTypes = {
 const SendToPhoneButton = ({active, onClick}) => (
   <span style={{display: 'inline-block'}}>
     <a
-      className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
+      className={active ? 'wireframeButtonsActive' : 'wireframeButtonsButton'}
       onClick={onClick}
     >
       <i className="fa fa-mobile" /> {i18n.sendToPhone()}
@@ -114,7 +111,7 @@ SendToPhoneButton.propTypes = {
 // ESLint doesn't seem to understand our inherited-proptypes pattern here
 /* eslint-disable react/prop-types */
 const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
-  <div className="WireframeButtons_active">
+  <div className="wireframeButtonsActive">
     <SendToPhone
       styles={styles.sendToPhone}
       channelId={channelId}

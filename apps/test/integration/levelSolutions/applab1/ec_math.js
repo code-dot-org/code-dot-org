@@ -240,14 +240,14 @@ module.exports = {
       runBeforeClick: function(assert) {
         $('#show-code-header').click();
         assert.equal(
-          $('.tooltipster-content').text(),
+          $('.tooltipsterContent').text(),
           '',
           'No tooltip to start'
         );
         testUtils.typeAceText('randomNumber(');
 
         assert.equal(
-          /randomNumber\(min, max\)/.test($('.tooltipster-content').text()),
+          /randomNumber\(min, max\)/.test($('.tooltipsterContent').text()),
           true,
           'get tooltip'
         );
@@ -278,20 +278,20 @@ module.exports = {
       runBeforeClick: function(assert) {
         $('#show-code-header').click();
         assert.equal(
-          $('.tooltipster-content').text(),
+          $('.tooltipsterContent').text(),
           '',
           'No tooltip to start'
         );
         testUtils.typeAceText('Math.min(');
 
         assert.equal(
-          /Math.min\(n1, n2, ..., nX\)/.test($('.tooltipster-content').text()),
+          /Math.min\(n1, n2, ..., nX\)/.test($('.tooltipsterContent').text()),
           true,
           'tooltip has full signature'
         );
 
         assert.equal(
-          /See examples/.test($('.tooltipster-content').text()),
+          /See examples/.test($('.tooltipsterContent').text()),
           true,
           'tooltip has examples link'
         );
