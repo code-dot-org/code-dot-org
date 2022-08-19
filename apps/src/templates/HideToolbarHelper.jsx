@@ -120,7 +120,7 @@ export default class HideToolbarHelper extends React.Component {
   render() {
     if (this.state.showHelper) {
       return (
-        <div className="hide_toolbar_helper" onClick={this.onClick}>
+        <div className="hideToolbarHelper" onClick={this.onClick}>
           <SafeMarkdown markdown={msg.hideToolbarHelper()} />
           <i className="fa fa-times" style={styles.closeX} />
         </div>
