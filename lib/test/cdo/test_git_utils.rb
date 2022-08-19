@@ -2,7 +2,7 @@ require_relative '../test_helper'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 
-DASHBOARD_MATCH_GLOBS = ['dashboard/**/*', 'lib/**/*', 'shared/**/*'].freeze
+DASHBOARD_MATCH_GLOBS = ['dashboard/**/*', 'dashboard_legacy/**/*', 'lib/**/*', 'shared/**/*'].freeze
 DASHBOARD_IGNORE_GLOBS = ['dashboard/test/ui/**/*'].freeze
 
 class GitUtilsTest < Minitest::Test

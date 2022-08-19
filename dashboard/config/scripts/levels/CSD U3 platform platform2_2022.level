@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:42:23.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -48,23 +44,27 @@
     "name_suffix": "_2022",
     "long_instructions": "# Loop the Platform Sprite\r\n\r\n<img src=\"https://images.code.org/6bfe6dd078b2022315a7f54a38c90826-image-1476211068588.gif\" style=\"float: right;\">\r\n\r\nRight now, your platform sprite moves down, but it doesn't loop back up to the top of the screen. You can look at [Lesson 20 Level 6](../../20/levels/6) to see an example of a sprite looping around a screen.\r\n\r\n# Do This\r\n\r\n* Use the `function` block to create a `loopPlatforms` function at the bottom of your code.\r\n* Use the `if` block inside the function to check whether the platform has gone off the bottom of screen and, if it has, move it back to the top of the screen.\r\n* Call the function inside the draw loop, in the \"update sprites\" area.\r\n* Run the code to test your sprite.\r\n\r\n_Hint: What will platform.y be when the sprite moves off the bottom of the screen?  What should platform.y be when you put it back at the top of the screen?_",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/",
-      "/docs/concepts/javascript/functions/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/velocity",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/if-else-statements",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/functions"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:42:23.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:42:23.979+00:00\",\"changed\":[\"cloned from \\\"CSD U3 platform platform2_2021\\\"\"],\"cloned_from\":\"CSD U3 platform platform2_2021\"}]"
