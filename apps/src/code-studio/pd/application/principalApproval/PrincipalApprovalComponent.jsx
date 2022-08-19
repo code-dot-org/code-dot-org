@@ -369,7 +369,7 @@ const PrincipalApprovalComponent = props => {
 
           {data.doYouApprove !== 'No' && renderSchoolInfoSection()}
 
-          <label className="control-label">Submit your approval</label>
+          <label className="controlLabel">Submit your approval</label>
           <LabeledSingleCheckbox
             name="confirmPrincipal"
             label={

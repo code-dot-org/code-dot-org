@@ -381,7 +381,7 @@ export default class EnrollForm extends React.Component {
     return (
       <form id="enroll-form">
         <p>
-          Fields marked with a<span className="form-required-field"> * </span>
+          Fields marked with a<span className="formRequiredField"> * </span>
           are required.
         </p>
         <FormGroup>

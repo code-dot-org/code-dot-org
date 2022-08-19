@@ -97,7 +97,7 @@ export default function NewCourseForm(props) {
           )}
           <br />
           <button
-            className="btn btn-primary"
+            className="btn btnPrimary"
             type="submit"
             style={styles.buttonStyle}
           >

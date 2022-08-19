@@ -21,7 +21,7 @@
     }
   }
 
-  input.has-error, select.has-error {
+  input.hasError, select.hasError {
     border-color: #a94442;
 
     &:focus {
@@ -122,7 +122,7 @@
       margin: 10px 0 0 0;
     }
 
-    .form-group {
+    .formGroup {
       margin: 10px 0 0 0;
       width: 160px;
     }

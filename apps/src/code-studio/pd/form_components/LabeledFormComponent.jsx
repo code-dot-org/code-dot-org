@@ -22,7 +22,7 @@ export default class LabeledFormComponent extends FormComponent {
       // renderer which didn't do that for single-line entries, and so we rely
       // on some CSS styling in pd.scss to set these elements to
       // "display: inline" to maintain backwards compatibility.
-      <div className="inline_markdown">
+      <div className="inlineMarkdown">
         <SafeMarkdown
           openExternalLinksInNewTab
           markdown={this.constructor.labels[name]}

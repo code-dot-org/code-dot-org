@@ -50,7 +50,7 @@ const AdditionalDemographicInformation = props => {
             }}
             required={false}
           />
-          <label className="control-label">Submit your application</label>
+          <label className="controlLabel">Submit your application</label>
           <LabeledSingleCheckbox
             name="agree"
             label={

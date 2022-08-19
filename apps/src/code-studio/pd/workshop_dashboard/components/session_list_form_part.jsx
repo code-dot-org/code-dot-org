@@ -72,13 +72,13 @@ export default class SessionListFormPart extends React.Component {
       <div>
         <Row>
           <Col sm={4}>
-            <label className="control-label">Date</label>
+            <label className="controlLabel">Date</label>
           </Col>
           <Col sm={3}>
-            <label className="control-label">Start Time</label>
+            <label className="controlLabel">Start Time</label>
           </Col>
           <Col sm={3}>
-            <label className="control-label">End Time</label>
+            <label className="controlLabel">End Time</label>
           </Col>
         </Row>
         {sessionForms}

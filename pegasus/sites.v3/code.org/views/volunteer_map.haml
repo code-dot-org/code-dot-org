@@ -25,28 +25,28 @@
 
     .filter-options{style: "display: none"}
       .form-group.col-xs-4
-        %label.control-label.small{for: "location-flexibility"} How a volunteer can help
+        %label.controlLabel.small{for: "location-flexibility"} How a volunteer can help
         %div
           %select#location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select"}
             %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}= "any"
             -VolunteerEngineerSubmission2015.locations.each do |key, value|
               %option{value: key, selected: (location_flexibility_ss||[]).include?(key.to_s)}= value
       .form-group.col-xs-4
-        %label.control-label.small{for: "experience-level"} Experience level
+        %label.controlLabel.small{for: "experience-level"} Experience level
         %div
           %select#experience-level.form-control{name: "experience_s", type: "select"}
             %option{selected: experience_s.nil_or_empty?, value: ""}= "any"
             -VolunteerEngineerSubmission2015.experiences.each do |key, value|
               %option{value: key, selected: (experience_s||[]).include?(key.to_s)}= value
       .form-group.col-xs-2
-        %label.control-label.small{for: "distance"} Within
+        %label.controlLabel.small{for: "distance"} Within
         %div
           %select#distance.form-control{name: "distance", type: "select"}
             %option{selected: distance.nil_or_empty?, value: ""}= "#{VolunteerEngineerSubmission2015::DEFAULT_DISTANCE_MILES} miles"
             -VolunteerEngineerSubmission2015.distances.each do |key, value|
               %option{value: key, selected: (distance||[]).include?(key.to_s)}= value
       .form-group.col-xs-2
-        %label.control-label.small{for: "num_volunteers"} Show no more than
+        %label.controlLabel.small{for: "num_volunteers"} Show no more than
         %div
           %select#num_volunteers.form-control{name: "num_volunteers", type: "select"}
             %option{selected: num_volunteers.nil_or_empty?, value: ""}= "#{VolunteerEngineerSubmission2015::DEFAULT_NUM_VOLUNTEERS} volunteers"

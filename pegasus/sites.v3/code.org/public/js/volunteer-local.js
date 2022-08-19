@@ -603,7 +603,7 @@ function processResponse(data) {
 }
 
 function processError(data) {
-  $(".has-error").removeClass("has-error");
+  $(".hasError").removeClass("hasError");
 
   var errors = Object.keys(data.responseJSON);
   var errors_count = errors.length;
@@ -612,8 +612,8 @@ function processError(data) {
     var error_id = "#volunteer-contact-" + errors[i].replace(/_/g, "-");
     error_id = error_id.replace(/-[sb]s?$/, "");
     $(error_id)
-      .parents(".form-group")
-      .addClass("has-error");
+      .parents(".formGroup")
+      .addClass("hasError");
   }
 
   var error =

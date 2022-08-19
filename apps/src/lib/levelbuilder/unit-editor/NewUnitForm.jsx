@@ -187,7 +187,7 @@ function SavingDetailsAndButton() {
       <input name="lesson_groups" value={'[]'} type="hidden" />
       <br />
       <button
-        className="btn btn-primary"
+        className="btn btnPrimary"
         type="submit"
         style={styles.buttonStyle}
       >

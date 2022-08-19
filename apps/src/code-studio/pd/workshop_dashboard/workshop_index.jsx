@@ -100,7 +100,7 @@ export class WorkshopIndex extends React.Component {
         <ButtonToolbar>
           {canCreate && (
             <Button
-              className="btn-primary"
+              className="btnPrimary"
               onClick={this.handleNewWorkshopClick}
             >
               New Workshop

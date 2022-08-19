@@ -13,7 +13,7 @@
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     .main-form
       .form-group
-        %label.control-label{for: "hoc-name"}
+        %label.controlLabel{for: "hoc-name"}
           = hoc_s(:signup_name_label)
           %span.required*
         %div
@@ -22,7 +22,7 @@
           = hoc_s(:signup_name_error)
 
       .form-group
-        %label.control-label{for: "hoc-email"}
+        %label.controlLabel{for: "hoc-email"}
           = hoc_s(:signup_email_label)
           %span.required*
         %div
@@ -33,7 +33,7 @@
           = hoc_s(:signup_invalid_email_error)
 
       .form-group
-        %label.control-label{for: "hoc-event-country"}
+        %label.controlLabel{for: "hoc-event-country"}
           = hoc_s(:signup_event_country_label)
           %span.required*
         %select#country.form-control{name: "hoc_event_country_s", type: "select"}
@@ -44,7 +44,7 @@
           = hoc_s(:signup_event_country_error)
 
       .form-group
-        %label.control-label{for: "hoc-event-type"}
+        %label.controlLabel{for: "hoc-event-type"}
           = hoc_s(:signup_event_type_label)
           %span.required*
         %div
@@ -59,7 +59,7 @@
         .form-group#school-selector
 
       .form-group#school-name-field{style: "display: none;"}
-        %label.control-label{for: "school-name"}
+        %label.controlLabel{for: "school-name"}
           = hoc_s(:school_name)
           %span.required*
         %div
@@ -68,7 +68,7 @@
           = hoc_s(:school_name_error)
 
       .form-group#organization-name-field{style: "display: none;"}
-        %label.control-label{for: "hoc-organization-name"}
+        %label.controlLabel{for: "hoc-organization-name"}
           = hoc_s(:signup_organization_name_label)
           %span.required*
         %div
@@ -77,7 +77,7 @@
           = hoc_s(:signup_organization_name_error)
 
       .form-group#hoc-event-location-field{style: "display: none;"}
-        %label.control-label{for: "hoc-event-location"}
+        %label.controlLabel{for: "hoc-event-location"}
           = hoc_s(:signup_event_location_label)
           %span.required*
         %div#hoc-event-location-selector
@@ -97,7 +97,7 @@
             = hoc_s(:signup_special_event_flag_label)
 
       .form-group{style: "display: none;"}
-        %label.control-label{for: "hoc-special-event-details"}
+        %label.controlLabel{for: "hoc-special-event-details"}
           = hoc_s(:signup_special_event_details_label)
         %div
           %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
@@ -109,7 +109,7 @@
             = hoc_s(:signup_match_volunteer)
 
       .form-group
-        %label.control-label{for: "hoc-email-preference-opt-in"}
+        %label.controlLabel{for: "hoc-email-preference-opt-in"}
           = hoc_s(:signup_email_preference_opt_in)
           %a{href: codeorg_url('/privacy'), target: '_blank'}
             = hoc_s(:signup_email_preference_privacy)

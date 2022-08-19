@@ -50,15 +50,15 @@ theme: responsive
         %label{style: 'font-weight: normal; cursor: pointer'}
           %input#volunteer-age-18-plus-unsubscribe{name: 'age_18_plus_b', type: 'checkbox', value: '1', checked: true}
             = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
-          %span.form-required-field *
+          %span.formRequiredField *
 
   .form-group
-    %label.control-label{for: "volunteer-email-preference"}
+    %label.controlLabel{for: "volunteer-email-preference"}
       = I18n.t(:volunteer_engineer_submission_field_email_preference)
       %a{href: '/privacy', target: '_blank'}
         = I18n.t(:volunteer_engineer_submission_field_email_preference_privacy)
       -unless form.data['email_preference_opt_in_s']
-        %span.form-required-field *
+        %span.formRequiredField *
     %div
       %select#volunteer-email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
         %option{value: "", selected: true, disabled: true}

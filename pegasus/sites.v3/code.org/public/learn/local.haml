@@ -67,7 +67,7 @@ theme: responsive
   #class-search-facets.form-section.row
     %h3.col-xs-12{style: 'margin-top: 0;'} Narrow your search
     .form-group.col-xs-3
-      %label.control-label.small{for: "class-format-category", style: "font-weight: normal;"} Class format
+      %label.controlLabel.small{for: "class-format-category", style: "font-weight: normal;"} Class format
       %div
         %select#class-format-category.form-control{name: "class_format_category_s", type: "select"}
           %option{selected: class_format_s.nil_or_empty?, value: ""}
@@ -75,21 +75,21 @@ theme: responsive
             -if key != 'online'
               %option{value: key, selected: key == class_format_category_s}= group['label']
     .form-group.col-xs-3
-      %label.control-label.small{for: "class-languages", style: "font-weight: normal;"} Language(s)
+      %label.controlLabel.small{for: "class-languages", style: "font-weight: normal;"} Language(s)
       %div
         %select#class-languages.form-control{name: "class_languages_all_ss[]", type: "select", multiple: true}
           %option{selected: class_languages_all_ss.nil_or_empty?, value: ""}
           -ClassSubmission.languages.each do |label|
             %option{value: label, selected: (class_languages_all_ss||[]).include?(label.to_s)}= label
     .form-group.col-xs-3
-      %label.control-label.small{for: "school-level", style: "font-weight: normal;"} Level(s)
+      %label.controlLabel.small{for: "school-level", style: "font-weight: normal;"} Level(s)
       %div
         %select#school-level.form-control{name: "school_level_ss[]", type: "select", multiple: true}
           %option{selected: school_level_ss.nil_or_empty?, value: ""}
           -ClassSubmission.levels.each_pair do |key,label|
             %option{value: key, selected: (school_level_ss||[]).include?(key.to_s)}= label
     .form-group.col-xs-3
-      %label.control-label.small{for: "class-tuition", style: "font-weight: normal;"} Public/private
+      %label.controlLabel.small{for: "class-tuition", style: "font-weight: normal;"} Public/private
       %div
         %select#school-tuition.form-control{name: "school_tuition_s", type: "select"}
           %option{selected: school_tuition_s.nil_or_empty?, value: ""}

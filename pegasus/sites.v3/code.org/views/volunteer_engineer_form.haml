@@ -22,20 +22,20 @@
   .alert.alert-danger.error-message{style: 'display: none', role: 'alert'}
 
   .form-group
-    %label.control-label{for: "volunteer-name"}= I18n.t(:volunteer_engineer_submission_field_name)
-    %span.form-required-field *
+    %label.controlLabel{for: "volunteer-name"}= I18n.t(:volunteer_engineer_submission_field_name)
+    %span.formRequiredField *
     %div
       %input#volunteer-name.form-control{name: "name_s", placeholder: I18n.t(:volunteer_engineer_submission_field_name_placeholder), type: "text", required: true, value: form.data['name_s']}/
 
   .form-group
-    %label.control-label{for: "volunteer-company"}= I18n.t(:volunteer_engineer_submission_field_company)
+    %label.controlLabel{for: "volunteer-company"}= I18n.t(:volunteer_engineer_submission_field_company)
     %span
     %div
       %input#volunteer-company.form-control{name: "company_s", placeholder: I18n.t(:volunteer_engineer_submission_field_company_placeholder), type: "text", required: false, value: form.data['company_s']}/
 
   .form-group
-    %label.control-label{for: "volunteer-experience"}= I18n.t(:volunteer_engineer_submission_field_experience_level)
-    %span.form-required-field *
+    %label.controlLabel{for: "volunteer-experience"}= I18n.t(:volunteer_engineer_submission_field_experience_level)
+    %span.formRequiredField *
     %div
       %select#volunteer-experience.form-control{name: "experience_s", type: "select", required: true}
         %option{selected: form.data['experience_s'].nil_or_empty?, value: ""}
@@ -43,14 +43,14 @@
           %option{value: key, selected: key == form.data['experience_s']}= label
 
   .form-group
-    %label.control-label{for: "volunteer-location"}= I18n.t(:volunteer_engineer_submission_field_location)
-    %span.form-required-field *
+    %label.controlLabel{for: "volunteer-location"}= I18n.t(:volunteer_engineer_submission_field_location)
+    %span.formRequiredField *
     %p= I18n.t(:volunteer_engineer_submission_field_location_desc)
     %div#volunteer-location-selector
 
   .form-group
-    %label.control-label{for: "volunteer-location-flexibility"}= I18n.t(:volunteer_engineer_submission_field_location_flexibility)
-    %span.form-required-field *
+    %label.controlLabel{for: "volunteer-location-flexibility"}= I18n.t(:volunteer_engineer_submission_field_location_flexibility)
+    %span.formRequiredField *
     %div
       %select#volunteer-location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select", required: true, multiple: true}
         %option{selected: form.data['location_flexibility_ss'].nil_or_empty?, value: ""}
@@ -64,7 +64,7 @@
         = I18n.t(:volunteer_engineer_submission_checkbox_after_hoc)
 
   .form-group{style: "display: none;"}
-    %label.control-label{for: "volunteer-time-commitment"}= I18n.t(:volunteer_engineer_submission_field_time_commitment)
+    %label.controlLabel{for: "volunteer-time-commitment"}= I18n.t(:volunteer_engineer_submission_field_time_commitment)
     %div
       %select#volunteer-time-commitment.form-control{name: "time_commitment_s", type: "select", required: false}
         %option{selected: form.data['time_commitment_s'].nil_or_empty?, value: ""}
@@ -72,17 +72,17 @@
           %option{value: key, selected: key == form.data['time_commitment_s']}= label
 
   .form-group
-    %label.control-label{for: "volunteer-linkedin"}= I18n.t(:volunteer_engineer_submission_field_linkedin)
+    %label.controlLabel{for: "volunteer-linkedin"}= I18n.t(:volunteer_engineer_submission_field_linkedin)
     %div
       %input#volunteer-linkedin.form-control{name: "linkedin_s", placeholder: I18n.t(:volunteer_engineer_submission_field_linkedin_placeholder), type: "text", required: false, value: form.data['linkedin_s']}/
   .form-group
-    %label.control-label{for: "volunteer-facebook"}= I18n.t(:volunteer_engineer_submission_field_facebook)
+    %label.controlLabel{for: "volunteer-facebook"}= I18n.t(:volunteer_engineer_submission_field_facebook)
     %div
       %input#volunteer-facebook.form-control{name: "facebook_s", placeholder: I18n.t(:volunteer_engineer_submission_field_facebook_placeholder), type: "text", required: false, value: form.data['facebook_s']}/
 
   .form-group
-    %label.control-label{for: "volunteer-description"}= I18n.t(:volunteer_engineer_submission_field_description)
-    %span.form-required-field *
+    %label.controlLabel{for: "volunteer-description"}= I18n.t(:volunteer_engineer_submission_field_description)
+    %span.formRequiredField *
     %p= I18n.t(:volunteer_engineer_submission_field_description_desc)
     %div
       %textarea#volunteer-description.form-control{name: "description_s", placeholder: I18n.t(:volunteer_engineer_submission_field_description_placeholder), required: true, style: "height: 10em;"}
@@ -91,8 +91,8 @@
   %h2= I18n.t(:volunteer_engineer_submission_header_private)
 
   .form-group
-    %label.control-label{for: "volunteer-email"}= I18n.t(:volunteer_engineer_submission_field_email)
-    %span.form-required-field *
+    %label.controlLabel{for: "volunteer-email"}= I18n.t(:volunteer_engineer_submission_field_email)
+    %span.formRequiredField *
     %p= I18n.t(:volunteer_engineer_submission_field_email_desc)
     %div
       %input#volunteer-email.form-control{name: "email_s", placeholder: I18n.t(:volunteer_engineer_submission_field_email_placeholder), type: "text", required: true, value: form.data['email_s']}/
@@ -104,21 +104,21 @@
       %label{style: 'font-weight: normal; cursor: pointer', for: 'volunteer-allow-contact'}
         %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: '1', required: true, checked: false}
           = I18n.t(:volunteer_engineer_submission_checkbox_contact)
-        %span.form-required-field *
+        %span.formRequiredField *
 
   .form-group
     %div
       %label{style: 'font-weight: normal; cursor: pointer'}
         %input#volunteer-age-18-plus{name: 'age_18_plus_b', type: 'checkbox', value: '1', required: true, checked: false}
           = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
-        %span.form-required-field *
+        %span.formRequiredField *
 
   .form-group
-    %label.control-label{for: "volunteer-email-preference"}
+    %label.controlLabel{for: "volunteer-email-preference"}
       = I18n.t(:volunteer_engineer_submission_field_email_preference)
       %a{href: '/privacy', target: '_blank'}
         = I18n.t(:volunteer_engineer_submission_field_email_preference_privacy)
-      %span.form-required-field *
+      %span.formRequiredField *
     %div
       %select#volunteer-email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
         %option{value: "", selected: true, disabled: true}
@@ -165,6 +165,192 @@
     margin-top: 0;
   }
 :javascript
+  $(document).ready(function() {
+    mapboxGeocoder = new MapboxGeocoder({
+      accessToken: "#{CDO.mapbox_access_token}",
+      types: "country,region,place,postcode,locality,neighborhood",
+      placeholder: "#{I18n.t(:volunteer_engineer_submission_field_location_placeholder)}"
+    });
+    mapboxGeocoder.addTo("#volunteer-location-selector");
+    // The the form fields for the input generated by the mapboxGeocoder
+    $('#volunteer-location-selector input').attr('name', 'location_s');
+    $('#volunteer-location-selector input').attr('required', true)
+
+    $('#volunteer-engineer-submit-form select').selectize({plugins: ["remove_button"]});
+
+    $('#volunteer-languages').change(function() {
+      if ($.inArray('other', $(this).val()) > -1) {
+        $('#volunteer-languages-other-wrapper').show();
+      } else {
+        $('#volunteer-languages-other').val('');
+        $('#volunteer-languages-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+    $('#volunteer-after-hoc').change(function() {
+      if($(this).is(':checked')) {
+        $('#volunteer-time-commitment').closest('.form-group').slideDown();
+      } else {
+        $('#volunteer-time-commitment').closest('.form-group').slideUp();
+      }
+    }).triggerHandler('change');
+  });
+
+  function processVolunteerEngineerFormResponse(data)
+  {
+    $('form').hide();
+    $('#volunteer-engineer-thanks').fadeIn();
+    $('#edit-link-tag').attr('href', '/volunteer/engineer/edit/' + data.secret);
+  }
+
+  function processVolunteerEngineerFormError(data)
+  {
+    $('.has-error').removeClass('has-error');
+
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#volunteer-' + errors[i].replace(/_/g, '-');
+      error_id = error_id.replace(/-[sb]s?$/, '');
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#volunteer-engineer-submit-form .error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('html, body').animate({
+      scrollTop: $('#volunteer-engineer-submit-form').offset().top
+    }, 1000);
+
+    $('#volunteer-engineer-submit-form .btn-submit').removeAttr('disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function volunteerEngineerFormSubmit()
+  {
+    $('#volunteer-engineer-submit-form .btn-submit').attr('disabled','disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_enabled").addClass("button_disabled");
+
+    var serializedData = $('#volunteer-engineer-submit-form').serializeArray();
+
+    // Send null when checkbox is unchecked to reset the value. Otherwise nothing will be updated for the field.
+    serializedData = serializedData.concat(
+      $('input[type=checkbox]:not(:checked)#volunteer-after-hoc').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-allow-contact').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-age-18-plus').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
+    );
+
+    $.ajax({
+      url: "/forms/VolunteerEngineerSubmission2015#{'/' + form.secret if form && form.secret}",
+      type: "post",
+      dataType: "json",
+      data: serializedData
+    }).done(processVolunteerEngineerFormResponse).fail(processVolunteerEngineerFormError);
+
+    return false;
+  }
+
+  $(document).ready(function() {
+    mapboxGeocoder = new MapboxGeocoder({
+      accessToken: "#{CDO.mapbox_access_token}",
+      types: "country,region,place,postcode,locality,neighborhood",
+      placeholder: "#{I18n.t(:volunteer_engineer_submission_field_location_placeholder)}"
+    });
+    mapboxGeocoder.addTo("#volunteer-location-selector");
+    // The the form fields for the input generated by the mapboxGeocoder
+    $('#volunteer-location-selector input').attr('name', 'location_s');
+    $('#volunteer-location-selector input').attr('required', true)
+
+    $('#volunteer-engineer-submit-form select').selectize({plugins: ["remove_button"]});
+
+    $('#volunteer-languages').change(function() {
+      if ($.inArray('other', $(this).val()) > -1) {
+        $('#volunteer-languages-other-wrapper').show();
+      } else {
+        $('#volunteer-languages-other').val('');
+        $('#volunteer-languages-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+    $('#volunteer-after-hoc').change(function() {
+      if($(this).is(':checked')) {
+        $('#volunteer-time-commitment').closest('.form-group').slideDown();
+      } else {
+        $('#volunteer-time-commitment').closest('.form-group').slideUp();
+      }
+    }).triggerHandler('change');
+  });
+
+  function processVolunteerEngineerFormResponse(data)
+  {
+    $('form').hide();
+    $('#volunteer-engineer-thanks').fadeIn();
+    $('#edit-link-tag').attr('href', '/volunteer/engineer/edit/' + data.secret);
+  }
+
+  function processVolunteerEngineerFormError(data)
+  {
+    $('.has-error').removeClass('has-error');
+
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#volunteer-' + errors[i].replace(/_/g, '-');
+      error_id = error_id.replace(/-[sb]s?$/, '');
+      $(error_id).parents('.form-group').addClass('hasError');
+    }
+
+    $('#volunteer-engineer-submit-form .error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('html, body').animate({
+      scrollTop: $('#volunteer-engineer-submit-form').offset().top
+    }, 1000);
+
+    $('#volunteer-engineer-submit-form .btn-submit').removeAttr('disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function volunteerEngineerFormSubmit()
+  {
+    $('#volunteer-engineer-submit-form .btn-submit').attr('disabled','disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_enabled").addClass("button_disabled");
+
+    var serializedData = $('#volunteer-engineer-submit-form').serializeArray();
+
+    // Send null when checkbox is unchecked to reset the value. Otherwise nothing will be updated for the field.
+    serializedData = serializedData.concat(
+      $('input[type=checkbox]:not(:checked)#volunteer-after-hoc').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-allow-contact').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-age-18-plus').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
+    );
+
+    $.ajax({
+      url: "/forms/VolunteerEngineerSubmission2015#{'/' + form.secret if form && form.secret}",
+      type: "post",
+      dataType: "json",
+      data: serializedData
+    }).done(processVolunteerEngineerFormResponse).fail(processVolunteerEngineerFormError);
+
+    return false;
+  }
+
   $(document).ready(function() {
     mapboxGeocoder = new MapboxGeocoder({
       accessToken: "#{CDO.mapbox_access_token}",

@@ -55,7 +55,7 @@ export default function SaveBar({
           Save and Keep Editing
         </button>
         <button
-          className="btn btn-primary"
+          className="btn btnPrimary"
           type="submit"
           style={styles.saveButton}
           onClick={e => handleSave(e, true)}

@@ -23,7 +23,7 @@
   ]
 
 .form-group
-  %label.control-label=hoc_s(:census_connection)
+  %label.controlLabel=hoc_s(:census_connection)
   %select#role.form-control{name: "role_s", type: "select"}
     %option{value: "", selected: true, disabled: true}
     %option{value: "TEACHER"}=hoc_s(:teacher)
@@ -38,7 +38,7 @@
     %br
     %br
   - how_many_questions.each do |question|
-    %label.control-label=question[:label]
+    %label.controlLabel=question[:label]
     %select.form-control{name: question[:name], type: "select", id: "#{question[:id]}"}
       %option{value: "", selected: true, disabled: true}
       %option{value: "NONE"}=hoc_s(:none)

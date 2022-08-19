@@ -223,7 +223,7 @@ export default function SchoolInfoManager(existingOptions) {
   }
 
   function closestFormGroupOrItemBlock(selector) {
-    var closest = $(selector).closest('.form-group');
+    var closest = $(selector).closest('.formGroup');
     if (closest.length === 0) {
       closest = $(selector).closest('.itemblock');
     }
