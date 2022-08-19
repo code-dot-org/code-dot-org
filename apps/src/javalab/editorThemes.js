@@ -1,10 +1,11 @@
 import {EditorView} from '@codemirror/view';
-import {
-  HighlightStyle,
-  tags,
-  defaultHighlightStyle
-} from '@codemirror/highlight';
 import color from '@cdo/apps/util/color';
+import {
+  syntaxHighlighting,
+  defaultHighlightStyle,
+  HighlightStyle
+} from '@codemirror/language';
+import {tags} from '@lezer/highlight';
 
 // modified from @codemirror/theme-one-dark
 const chalky = '#e5c07b',
@@ -152,7 +153,7 @@ export const darkHighlightStyle = HighlightStyle.define([
 Extension to enable the dark theme (both the editor theme and
 the highlight style).
 */
-export const darkMode = [darkTheme, darkHighlightStyle];
+export const darkMode = [darkTheme, syntaxHighlighting(darkHighlightStyle)];
 
 // The default light theme styles for codemirror
 export const lightTheme = EditorView.theme(
@@ -170,4 +171,7 @@ export const lightTheme = EditorView.theme(
 );
 
 // Extension to enable the light theme (both the editor theme and the highlight style).
-export const lightMode = [lightTheme, defaultHighlightStyle];
+export const lightMode = [
+  lightTheme,
+  syntaxHighlighting(defaultHighlightStyle)
+];
