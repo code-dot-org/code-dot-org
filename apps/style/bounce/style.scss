@@ -54,7 +54,7 @@ $root: '/blockly/media/bounce/'; //TODO: Parameterize for asset pipeline
 
 /* make the share button take up an entire line, so it doesn't move other 
  * buttons when it appears. */
-#share-cell-wrapper {
+#shareCellWrapper {
   display: inline-block;
   width: 100%;
 }
