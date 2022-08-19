@@ -5,7 +5,7 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
 var SpellingControls = function(props) {
   return (
-    <ProtectedStatefulDiv id="spelling-table-wrapper">
+    <ProtectedStatefulDiv id="spellingTableWrapper">
       <table id="spelling-table" className="float-right">
         <tbody>
           <tr>
