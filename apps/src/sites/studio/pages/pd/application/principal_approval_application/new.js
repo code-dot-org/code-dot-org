@@ -6,6 +6,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener('DOMContentLoaded', function(event) {
   ReactDOM.render(
     <PrincipalApprovalApplication {...getScriptData('props')} />,
-    document.getElementById('application-container')
+    document.getElementById('applicationContainer')
   );
 });

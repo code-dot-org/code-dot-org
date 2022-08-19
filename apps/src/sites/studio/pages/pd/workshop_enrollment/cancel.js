@@ -6,6 +6,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
     <EnrollmentCancelButton {...getScriptData('props')} />,
-    document.getElementById('workshop-container')
+    document.getElementById('workshopContainer')
   );
 });

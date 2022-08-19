@@ -40,7 +40,7 @@ window.showRegionalPartnerMiniContact = function() {
 
 window.showRegionalPartnerMiniContactPopupLink = function() {
   const regionalPartnerMiniContactPopupLinkElement = $(
-    '#regional-partner-mini-contact-popup-link-container'
+    '#regionalPartnerMiniContactPopupLinkContainer'
   );
 
   const sourcePageId = regionalPartnerMiniContactPopupLinkElement.data(
