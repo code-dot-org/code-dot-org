@@ -222,7 +222,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.single_unit_course_offerings_containing_units(unit_ids)
-    CourseOffering.all_course_offerings.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
+    CourseOffering.all_course_offerings.select {|co| co.units_included_in_any_version?(unit_ids) || co.any_version_is_unit?}
   end
 
   def csd?
