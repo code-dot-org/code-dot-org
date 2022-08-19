@@ -13,8 +13,11 @@ jobs:
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
       LD_LIBRARY_PATH: "/usr/local/lib"
     steps:    
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3       
       - name: Get actions code
         uses: actions/checkout@v3    
+        
       - name: Rake run integration tests
         run:  |
           echo "testing failure"  
@@ -38,7 +41,5 @@ jobs:
         run:  |
           echo "testing failure"  
           bundle exec rake test:changed --trace
-        continue-on-error: true
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3          
+        continue-on-error: true       
  
