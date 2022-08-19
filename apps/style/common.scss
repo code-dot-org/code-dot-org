@@ -216,7 +216,7 @@ div.droplet-palette-group-header-selected.orange {
   outline-style: none;
 }
 
-#show-code-button {
+#showCodeButton {
   @media screen and (max-device-width: 540px) {
     display: none;
   }
@@ -254,7 +254,7 @@ button.arrow:disabled {
   background-color: #C7C7C7;
 }
 
-#soft-buttons {
+#softButtons {
   display: inline-block;
   vertical-align: top;
   -webkit-touch-callout: none;
@@ -440,7 +440,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
-#studio-dpad-container.responsive > * {
+#studioDpadContainer.responsive > * {
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
@@ -465,7 +465,7 @@ html[dir='rtl'] div#visualizationResizeBar {
 
 @mixin studio-dpad-container-width($width) {
   $scale: math.div($width, 400px);
-  #studio-dpad-container.responsive > * {
+  #studioDpadContainer.responsive > * {
     -webkit-transform: scale($scale);
     -ms-transform: scale($scale);
     transform: scale($scale);
@@ -506,7 +506,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include studio-dpad-container-width(200px);
   @include karel-counter(32px, 2px);
 
-  #soft-buttons {
+  #softButtons {
     margin: 5px 0 0 0;
     button {
       margin: 0 4px 0 0;
@@ -665,11 +665,11 @@ input[type="radio"] {
   }
 }
 
-#make-your-own-button {
+#makeYourOwnButton {
   margin: 5px 0 5px 0;
 }
 
-#open-workspace {
+#openWorkspace {
   margin: 5px 0 5px 0;
 }
 
@@ -697,7 +697,7 @@ input[type="radio"] {
   line-height:0;
 }
 
-#slider-cell {
+#sliderCell {
   display: inline-block;
   vertical-align: top;
   touch-action: none;
@@ -771,7 +771,7 @@ input[type="radio"] {
   font-family: $gotham-extra-bold;
   font-weight: normal;
 }
-#show-code {
+#showCode {
   margin-bottom: 5px;
 }
 #hint {
@@ -850,7 +850,7 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-#prompt-table {
+#promptTable {
   display: inline-block;
   vertical-align: top;
 }
@@ -866,7 +866,7 @@ input[type="radio"] {
   &.authored_hints {
     width: 80px;
 
-    #prompt-icon {
+    #promptIcon {
       padding-top: 20px;
     }
 
@@ -904,7 +904,7 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
-#prompt-cell {
+#promptCell {
   vertical-align: top;
 }
 
@@ -921,7 +921,7 @@ html[dir="RTL"] .prompt-icon-cell {
     line-height: 20px;
   }
 
-  #hint-button {
+  #hintButton {
     margin-left: 35px;
   }
 
@@ -999,11 +999,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-#versions-header {
+#versionsHeader {
   display: none;
 }
 
-#design-headers {
+#designHeaders {
   height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
@@ -1016,13 +1016,13 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 .readonly {
   #headers,
-  #design-headers {
+  #designHeaders {
     background-color: $charcoal;
   }
 }
 
 #headers, .purple-header {
-  #show-toolbox-icon, #hide-toolbox-icon {
+  #showToolboxIcon, #hideToolboxIcon {
     position: absolute;
     top: 0;
     left: 8px;
@@ -1034,21 +1034,21 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     }
   }
 
-  #hide-toolbox-icon {
+  #hideToolboxIcon {
     @include horizontal-flip;
   }
 
-  #toolbox-header {
+  #toolboxHeader {
     width: 270px;
     border-right: 1px solid gray;
     float: left;
   }
-  #show-toolbox-header {
+  #showToolboxHeader {
     border: 0;
     float: left;
     padding: 0 10px;
     cursor: pointer;
-    #show-toolbox-click-target:hover  .fa {
+    #showToolboxClickTarget:hover  .fa {
       color: $white;
     }
 
@@ -1060,7 +1060,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     display: inline-block;
   }
 
-  #clear-puzzle-header:hover {
+  #clearPuzzleHeader:hover {
     background-color: $red;
   }
   .block-counter-overflow {
@@ -1078,25 +1078,25 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin-right: 0;
   }
 
-  #show-toolbox-icon, #hide-toolbox-icon {
+  #showToolboxIcon, #hideToolboxIcon {
     left: auto;
     right: 8px;
   }
 
-  #show-toolbox-icon {
+  #showToolboxIcon {
     @include horizontal-flip;
   }
 
-  #hide-toolbox-icon {
+  #hideToolboxIcon {
     @include no-transform;
   }
 
-  #toolbox-header {
+  #toolboxHeader {
     border-right: 0;
     border-left: 1px solid gray;
     float: right;
   }
-  #show-toolbox-header {
+  #showToolboxHeader {
     float: right;
   }
   .workspace-header-button {
@@ -1279,7 +1279,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   height: 44px;
 }
 
-#again-button:not(.arrow-container) {
+#againButton:not(.arrow-container) {
   background-color: $green;
   border: 1px solid $green;
   color: white;
@@ -1288,7 +1288,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   text-align: center;
 }
 
-#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
+#continueButton:not(.arrow-container), #confirmButton:not(.arrow-container) {
   background-color: $orange;
   border: 1px solid $orange;
   color: white;
@@ -1398,24 +1398,24 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     }
   }
 
-  #send-to-phone {
+  #sendToPhone {
     clear: both;
   }
 
-  #send-to-phone-left {
+  #sendToPhoneLeft {
     float: left;
     width: 65%;
     padding-right: 20px;
     box-sizing: border-box;
   }
 
-  #send-to-phone-right {
+  #sendToPhoneRight {
     float: left;
     width: 35%;
     margin-bottom: 0;
   }
 
-  #send-to-phone-qr-code {
+  #sendToPhoneQrCode {
     margin-bottom: 0;
   }
 
@@ -1423,18 +1423,18 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-family: 'Gotham 4i', sans-serif;
   }
 
-  #sharing-input-container {
+  #sharingInputContainer {
     overflow: hidden;
   }
 
-  #sharing-input {
+  #sharingInput {
     margin: 0;
     width: calc(100% - 70px);
     padding: 10px;
     cursor: text;
   }
 
-  #sharing-dialog-copy-button {
+  #sharingDialogCopyButton {
     margin-top: 1px;
     box-sizing: border-box;
   }
@@ -1443,11 +1443,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     background-color: $light_purple;
   }
 
-  #copy-button {
+  #copyButton {
     max-width: 100px;
   }
 
-  #sharing-phone i.fa {
+  #sharingPhone i.fa {
     font-size: 24px;
   }
 
@@ -1460,7 +1460,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-family: sans-serif;
   }
 
-  div#phone-charges {
+  div#phoneCharges {
     font-size: 10px;
     margin-top: 0;
     color: $red;
@@ -1490,7 +1490,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   text-align: center;
 }
 
-#share-fail-explanation {
+#shareFailExplanation {
   font-size: 20px;
 }
 
@@ -1735,10 +1735,10 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   #gameButtons {
     width: auto;
     padding: 4px 5%;
-    #right-button-cell {
+    #rightButtonCell {
       display: none; /* don't show Finish button in share view */
     }
-    #soft-buttons button {
+    #softButtons button {
         margin: 5px 1px;
       }
     }
@@ -1749,7 +1749,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
     width: auto !important;
   }
 
-  #more-menu, #copyright-flyout {
+  #moreMenu, #copyrightFlyout {
     border-top: solid thin #202b34;
     left: 0;
     right: 0;

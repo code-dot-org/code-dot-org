@@ -300,7 +300,7 @@ export default class Craft {
             }
 
             dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
-            $('#soft-buttons').addClass('soft-buttons-' + 4);
+            $('#softButtons').addClass('soft-buttons-' + 4);
             getStore().dispatch(showArrowButtons());
 
             const resetButton = document.getElementById('resetButton');
@@ -659,7 +659,7 @@ export default class Craft {
     Craft.executeUserCode();
 
     if (Craft.level.freePlay && !studioApp().hideSource) {
-      const finishBtnContainer = $('#right-button-cell');
+      const finishBtnContainer = $('#rightButtonCell');
 
       if (
         finishBtnContainer.length &&

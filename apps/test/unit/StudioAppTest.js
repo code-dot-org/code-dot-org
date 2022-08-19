@@ -44,7 +44,7 @@ describe('StudioApp', () => {
       <button id="runButton" />
       <button id="resetButton" />
       <div id="visualizationColumn" />
-      <div id="toolbox-header" />
+      <div id="toolboxHeader" />
       `;
       document.body.appendChild(containerDiv);
     });

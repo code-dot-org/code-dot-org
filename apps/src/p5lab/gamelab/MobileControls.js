@@ -253,7 +253,7 @@ export default class MobileControls {
       buttonId => (document.getElementById(buttonId).style.display = 'inline')
     );
     if (softButtonIds.length) {
-      $('#soft-buttons').addClass('soft-buttons-' + softButtonIds.length);
+      $('#softButtons').addClass('soft-buttons-' + softButtonIds.length);
       getStore().dispatch(showArrowButtons());
     }
     // For export mode only:

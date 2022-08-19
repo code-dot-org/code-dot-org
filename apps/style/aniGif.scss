@@ -23,7 +23,7 @@ $ani-gif-preview-height: 60px;
 
 /* Place ani-gif next to text for column width 300px or wider. */
 @media screen and (min-width: 1051px) {
-  #prompt-table.with-ani-gif {
+  #promptTable.with-ani-gif {
     margin-right: $ani-gif-preview-width;
     padding-right: 5px;
   }

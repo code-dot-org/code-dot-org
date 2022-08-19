@@ -753,7 +753,7 @@ Flappy.runButtonClick = function() {
   Flappy.execute();
 
   if (level.freePlay && !level.isProjectLevel) {
-    var rightButtonCell = document.getElementById('right-button-cell');
+    var rightButtonCell = document.getElementById('rightButtonCell');
     rightButtonCell.className = 'right-button-cell-enabled';
   }
   if (level.score) {

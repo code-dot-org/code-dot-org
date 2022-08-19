@@ -123,14 +123,14 @@ function showConfirmationDialog(config) {
     defaultBtnSelector: '#confirm-button'
   });
 
-  const cancelButton = buttons.querySelector('#again-button');
+  const cancelButton = buttons.querySelector('#againButton');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
       dialog.hide();
     });
   }
 
-  const confirmButton = buttons.querySelector('#confirm-button');
+  const confirmButton = buttons.querySelector('#confirmButton');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function() {
       if (config.onConfirm) {

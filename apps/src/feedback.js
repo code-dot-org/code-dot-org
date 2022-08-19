@@ -187,9 +187,9 @@ FeedbackUtils.prototype.displayFeedback = function(
     })
   );
 
-  var againButton = feedback.querySelector('#again-button');
+  var againButton = feedback.querySelector('#againButton');
   var hintRequestButton = feedback.querySelector('#hint-request-button');
-  var continueButton = feedback.querySelector('#continue-button');
+  var continueButton = feedback.querySelector('#continueButton');
 
   // Don't show the continue button on share pages.
   if (this.studioApp_.share) {
@@ -980,9 +980,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       .click(window.dashboard.popupWindow);
   }
 
-  var sharingCopyButton = sharingDiv.querySelector(
-    '#sharing-dialog-copy-button'
-  );
+  var sharingCopyButton = sharingDiv.querySelector('#sharingDialogCopyButton');
   if (sharingCopyButton) {
     dom.addClickTouchEvent(sharingCopyButton, function() {
       copyToClipboard(options.shareLink, () => {
@@ -1008,13 +1006,13 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   }
 
   //  QR Code & SMS-to-phone feature
-  var sharingPhone = sharingDiv.querySelector('#sharing-phone');
+  var sharingPhone = sharingDiv.querySelector('#sharingPhone');
   dom.addClickTouchEvent(sharingPhone, function() {
-    var sendToPhone = sharingDiv.querySelector('#send-to-phone');
+    var sendToPhone = sharingDiv.querySelector('#sendToPhone');
     if ($(sendToPhone).is(':hidden')) {
       $(sendToPhone).show();
 
-      var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
+      var qrCode = sharingDiv.querySelector('#sendToPhoneQrCode');
       var annotatedShareLink = options.shareLink + '?qr=true';
       ReactDOM.render(<QRCode value={annotatedShareLink} size={90} />, qrCode);
 
@@ -1333,7 +1331,7 @@ FeedbackUtils.prototype.showSimpleDialog = function(options) {
     defaultBtnSelector: '#again-button'
   });
 
-  var cancelButton = contentDiv.querySelector('#again-button');
+  var cancelButton = contentDiv.querySelector('#againButton');
   var textBox = contentDiv.querySelector('input');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
@@ -1348,7 +1346,7 @@ FeedbackUtils.prototype.showSimpleDialog = function(options) {
     });
   }
 
-  var confirmButton = contentDiv.querySelector('#confirm-button');
+  var confirmButton = contentDiv.querySelector('#confirmButton');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function() {
       if (options.onConfirm) {
