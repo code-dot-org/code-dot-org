@@ -1,10 +1,10 @@
-#ani-gif-preview-wrapper {
+#aniGifPreviewWrapper {
   vertical-align: top;
 }
 
 $ani-gif-preview-width: 80px;
 $ani-gif-preview-height: 60px;
-#ani-gif-preview {
+#aniGifPreview {
   display: table-cell;
   background-size: $ani-gif-preview-width $ani-gif-preview-height;
   // background-image set via javascript
@@ -14,7 +14,7 @@ $ani-gif-preview-height: 60px;
   text-align: center;
   border-radius: 12px;
 
-  #play-button {
+  #playButton {
     clear: both;
     height: 40px;
     position: relative;
@@ -28,7 +28,7 @@ $ani-gif-preview-height: 60px;
     padding-right: 5px;
   }
 
-  #ani-gif-preview-wrapper {
+  #aniGifPreviewWrapper {
     position: absolute;
     right: 0;
     top: 0;
