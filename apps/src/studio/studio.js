@@ -3007,7 +3007,7 @@ Studio.runButtonClick = function() {
     !level.isProjectLevel &&
     (!studioApp().hideSource || level.showFinish)
   ) {
-    var shareCell = document.getElementById('share-cell');
+    var shareCell = document.getElementById('shareCell');
     if (shareCell.className !== 'share-cell-enabled') {
       shareCell.className = 'share-cell-enabled';
       studioApp().onResize();

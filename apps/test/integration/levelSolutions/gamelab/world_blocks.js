@@ -127,18 +127,18 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output').textContent;
         const done = debugOutput.includes('done');
         if (done) {
-          assert.equal($('#studio-space-button').is(':visible'), false);
-          assert.equal($('#studio-dpad-button').is(':visible'), false);
-          assert.equal($('#studio-dpad-rim').is(':visible'), false);
-          assert.equal($('#studio-dpad-cone').is(':visible'), false);
+          assert.equal($('#studioSpaceButton').is(':visible'), false);
+          assert.equal($('#studioDpadButton').is(':visible'), false);
+          assert.equal($('#studioDpadRim').is(':visible'), false);
+          assert.equal($('#studioDpadCone').is(':visible'), false);
         }
         return done;
       },
       function validateResult(assert) {
-        assert.equal($('#studio-space-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-rim').is(':visible'), false);
-        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+        assert.equal($('#studioSpaceButton').is(':visible'), false);
+        assert.equal($('#studioDpadButton').is(':visible'), false);
+        assert.equal($('#studioDpadRim').is(':visible'), false);
+        assert.equal($('#studioDpadCone').is(':visible'), false);
       }
     ),
     testAsyncProgramGameLab(
@@ -151,18 +151,18 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output').textContent;
         const done = debugOutput.includes('"done"');
         if (done) {
-          assert.equal($('#studio-space-button').is(':visible'), true);
-          assert.equal($('#studio-dpad-button').is(':visible'), true);
-          assert.equal($('#studio-dpad-rim').is(':visible'), true);
-          assert.equal($('#studio-dpad-cone').is(':visible'), true);
+          assert.equal($('#studioSpaceButton').is(':visible'), true);
+          assert.equal($('#studioDpadButton').is(':visible'), true);
+          assert.equal($('#studioDpadRim').is(':visible'), true);
+          assert.equal($('#studioDpadCone').is(':visible'), true);
         }
         return done;
       },
       function validateResult(assert) {
-        assert.equal($('#studio-space-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-rim').is(':visible'), false);
-        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+        assert.equal($('#studioSpaceButton').is(':visible'), false);
+        assert.equal($('#studioDpadButton').is(':visible'), false);
+        assert.equal($('#studioDpadRim').is(':visible'), false);
+        assert.equal($('#studioDpadCone').is(':visible'), false);
       }
     ),
     testAsyncProgramGameLab(
@@ -175,18 +175,18 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output').textContent;
         const done = debugOutput.includes('"done"');
         if (done) {
-          assert.equal($('#studio-space-button').is(':visible'), false);
-          assert.equal($('#studio-dpad-button').is(':visible'), true);
-          assert.equal($('#studio-dpad-rim').is(':visible'), true);
-          assert.equal($('#studio-dpad-cone').is(':visible'), true);
+          assert.equal($('#studioSpaceButton').is(':visible'), false);
+          assert.equal($('#studioDpadButton').is(':visible'), true);
+          assert.equal($('#studioDpadRim').is(':visible'), true);
+          assert.equal($('#studioDpadCone').is(':visible'), true);
         }
         return done;
       },
       function validateResult(assert) {
-        assert.equal($('#studio-space-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-rim').is(':visible'), false);
-        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+        assert.equal($('#studioSpaceButton').is(':visible'), false);
+        assert.equal($('#studioDpadButton').is(':visible'), false);
+        assert.equal($('#studioDpadRim').is(':visible'), false);
+        assert.equal($('#studioDpadCone').is(':visible'), false);
       }
     ),
     testAsyncProgramGameLab(
@@ -199,18 +199,18 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output').textContent;
         const done = debugOutput.includes('done');
         if (done) {
-          assert.equal($('#studio-space-button').is(':visible'), true);
-          assert.equal($('#studio-dpad-button').is(':visible'), false);
-          assert.equal($('#studio-dpad-rim').is(':visible'), false);
-          assert.equal($('#studio-dpad-cone').is(':visible'), false);
+          assert.equal($('#studioSpaceButton').is(':visible'), true);
+          assert.equal($('#studioDpadButton').is(':visible'), false);
+          assert.equal($('#studioDpadRim').is(':visible'), false);
+          assert.equal($('#studioDpadCone').is(':visible'), false);
         }
         return done;
       },
       function validateResult(assert) {
-        assert.equal($('#studio-space-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-button').is(':visible'), false);
-        assert.equal($('#studio-dpad-rim').is(':visible'), false);
-        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+        assert.equal($('#studioSpaceButton').is(':visible'), false);
+        assert.equal($('#studioDpadButton').is(':visible'), false);
+        assert.equal($('#studioDpadRim').is(':visible'), false);
+        assert.equal($('#studioDpadCone').is(':visible'), false);
       }
     )
   ]

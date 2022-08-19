@@ -1017,7 +1017,7 @@ export default class P5Lab {
     this.execute();
 
     // Enable the Finish button if is present:
-    var shareCell = document.getElementById('share-cell');
+    var shareCell = document.getElementById('shareCell');
     if (shareCell && !this.level.validationCode) {
       shareCell.className = 'share-cell-enabled';
 

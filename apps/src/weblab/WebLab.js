@@ -671,7 +671,7 @@ WebLab.prototype.onBrambleReady = function() {
   }
 
   // Enable the Finish/Submit/Unsubmit button if it is present.
-  let shareCell = document.getElementById('share-cell');
+  let shareCell = document.getElementById('shareCell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
