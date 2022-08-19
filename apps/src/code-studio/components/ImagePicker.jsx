@@ -178,7 +178,7 @@ export default class ImagePicker extends React.Component {
     }
 
     return (
-      <div className="modal-content" style={styles.root}>
+      <div className="modalContent" style={styles.root}>
         {title}
         {this.props.showUnderageWarning && (
           <p style={styles.warning}>

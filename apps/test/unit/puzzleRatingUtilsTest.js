@@ -56,7 +56,7 @@ describe('Puzzle Rating Utils', function() {
 
     it('saves the rating if a button is enabled', function() {
       container
-        .querySelectorAll('.puzzle-rating-btn')[0]
+        .querySelectorAll('.puzzleRatingBtn')[0]
         .classList.add('enabled');
       puzzleRatingUtils.cachePuzzleRating(container, {});
       assert.equal(
@@ -68,7 +68,7 @@ describe('Puzzle Rating Utils', function() {
     it("doesn' squash existing ratings", function() {
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
       container
-        .querySelectorAll('.puzzle-rating-btn')[0]
+        .querySelectorAll('.puzzleRatingBtn')[0]
         .classList.add('enabled');
       puzzleRatingUtils.cachePuzzleRating(container, {});
       assert.equal(

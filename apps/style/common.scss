@@ -44,7 +44,7 @@ $common-root: '/blockly/media/common_images/';
   100% { transform: rotate(0deg); }
 }
 
-.animate-hint {
+.animateHint {
   animation-name: wiggle;
   animation-duration: 200ms;
   transform-origin: 50% 50%;
@@ -104,7 +104,7 @@ html[dir='rtl'] #visualizationColumn {
   overflow: visible;
 }
 
-#visualizationColumn.pin_bottom {
+#visualizationColumn.pinBottom {
   position: absolute;
   bottom: 0;
 
@@ -117,101 +117,101 @@ html[dir='rtl'] #visualizationColumn {
 // Use the focus-visible pseudoclass to hide the outline when clicked.
 // This leaves the outline behavior unchanged for keyboard navigation.
 // Note: this isn't supported in every browser yet.
-.no-focus-outline:focus:not(:focus-visible) {
+.noFocusOutline:focus:not(:focus-visible) {
   outline: none;
 }
 
-div.droplet-palette-group-header {
+div.dropletPaletteGroupHeader {
   @include font;
   line-height: 24px;
 }
 
-div.droplet-palette-header-row {
+div.dropletPaletteHeaderRow {
   height: 24px;
 }
 
-div.droplet-palette-group-header:active {
+div.dropletPaletteGroupHeader:active {
   color: $black;
 }
 
-div.droplet-palette-group-header-selected {
+div.dropletPaletteGroupHeaderSelected {
   font-weight: 400;
   color: $black;
 }
 
-div.droplet-palette-group-header.yellow {
+div.dropletPaletteGroupHeader.yellow {
   border-left: 10px solid $droplet_yellow;
 }
 
-div.droplet-palette-group-header-selected.yellow {
+div.dropletPaletteGroupHeaderSelected.yellow {
   background-color: $droplet_yellow;
 }
 
-div.droplet-palette-group-header.red {
+div.dropletPaletteGroupHeader.red {
   border-left: 10px solid $droplet_red;
 }
 
-div.droplet-palette-group-header-selected.red {
+div.dropletPaletteGroupHeaderSelected.red {
   background-color: $droplet_red;
 }
 
-div.droplet-palette-group-header.cyan {
+div.dropletPaletteGroupHeader.cyan {
   border-left: 10px solid $droplet_cyan;
 }
 
-div.droplet-palette-group-header-selected.cyan {
+div.dropletPaletteGroupHeaderSelected.cyan {
   background-color: $droplet_cyan;
 }
 
-div.droplet-palette-group-header.pink {
+div.dropletPaletteGroupHeader.pink {
   border-left: 10px solid $droplet_pink;
 }
 
-div.droplet-palette-group-header-selected.pink {
+div.dropletPaletteGroupHeaderSelected.pink {
   background-color: $droplet_pink;
 }
 
-div.droplet-palette-group-header.lightgreen {
+div.dropletPaletteGroupHeader.lightgreen {
   border-left: 10px solid $droplet_light_green;
 }
 
-div.droplet-palette-group-header-selected.lightgreen {
+div.dropletPaletteGroupHeaderSelected.lightgreen {
   background-color: $droplet_light_green;
 }
 
-div.droplet-palette-group-header.purple {
+div.dropletPaletteGroupHeader.purple {
   border-left: 10px solid $droplet_purple;
 }
 
-div.droplet-palette-group-header-selected.purple {
+div.dropletPaletteGroupHeaderSelected.purple {
   background-color: $droplet_purple;
 }
 
-div.droplet-palette-group-header.blue {
+div.dropletPaletteGroupHeader.blue {
   border-left: 10px solid $droplet_blue;
 }
 
-div.droplet-palette-group-header-selected.blue {
+div.dropletPaletteGroupHeaderSelected.blue {
   background-color: $droplet_blue;
 }
 
-div.droplet-palette-group-header.green {
+div.dropletPaletteGroupHeader.green {
   border-left: 10px solid $droplet_green;
 }
 
-div.droplet-palette-group-header-selected.green {
+div.dropletPaletteGroupHeaderSelected.green {
   background-color: $droplet_green;
 }
 
-div.droplet-palette-group-header.orange {
+div.dropletPaletteGroupHeader.orange {
   border-left: 10px solid $droplet_orange;
 }
 
-div.droplet-palette-group-header-selected.orange {
+div.dropletPaletteGroupHeaderSelected.orange {
   background-color: $droplet_orange;
 }
 
-.droplet-wrapper-div {
+.dropletWrapperDiv {
   overflow: hidden;
   outline-style: none;
 }
@@ -229,7 +229,7 @@ div.droplet-palette-group-header-selected.orange {
   color: white;
 }
 
-.share-code-spacer {
+.shareCodeSpacer {
   clear: both;
   min-height: 25px;
 }
@@ -258,7 +258,7 @@ button.arrow:disabled {
   display: inline-block;
   vertical-align: top;
   -webkit-touch-callout: none;
-  &.soft-buttons-compact {
+  &.softButtonsCompact {
     margin: 0;
     button {
       margin: 0;
@@ -273,19 +273,19 @@ button.arrow:disabled {
   }
 }
 
-.soft-buttons-1 {
+.softButtons1 {
   display: table-cell;
   vertical-align: top;
 }
-.soft-buttons-2 {
+.softButtons2 {
   display: table-cell;
   vertical-align: top;
 }
-.soft-buttons-3 {
+.softButtons3 {
   display: table-cell;
   vertical-align: top;
 }
-.soft-buttons-4 {
+.softButtons4 {
   display: table-cell;
   vertical-align: top;
 }
@@ -305,19 +305,19 @@ button.arrow:disabled {
   z-index: 1;
 }
 
-#codeTextbox.pin_bottom {
+#codeTextbox.pinBottom {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] .editor-column {
+html[dir='rtl'] .editorColumn {
    right: 400px;
 }
 
-.editor-column {
+.editorColumn {
   left: 400px
 }
 
-#codeWorkspace.pin_bottom {
+#codeWorkspace.pinBottom {
   border: none;
   border-top: 1px solid #ddd;
 }
@@ -327,26 +327,26 @@ html[dir='rtl'] .editor-column {
 #codeWorkspace.readonly, #codeWorkspace.dimmed, .libraryCodeViewerContainer {
   // special cases for:
   .blocklySvg, // blockly
-  .droplet-main-scroller, // droplet block view
-  .ace_scroller, { // droplet code view
+  .dropletMainScroller, // droplet block view
+  .aceScroller, { // droplet code view
     background-color: rgb(0 0 0 / 0.1);
   }
   // Note: We do something similar in our DesignModeBox React component's
   // transparency layer. These two should be kept in sync as much as possible
 }
 
-.ace-chrome .ace_marker-layer .ace_error {
+.aceChrome .aceMarkerLayer .aceError {
   background: rgb(232 47 25);
 }
 
-.ace_marker-layer .ace_error {
+.aceMarkerLayer .aceError {
   position: absolute;
   z-index: 3;
 }
 
 // By defining the rule for pause icons first, the warning and error icons will take priority over showing the pause
 // icon.
-.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
+.aceGutterCell.aceBreakpoint, .dropletGutterLine.dropletBreakpoint {
   background-image: url('#{$common-root}gutterPause.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -355,31 +355,31 @@ html[dir='rtl'] .editor-column {
   color: white;
 }
 
-.droplet-gutter-line.droplet_breakpoint {
+.dropletGutterLine.dropletBreakpoint {
   background-position: 4px 4px;
 }
 
-.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
+.aceGutterCell.aceError, .dropletGutterLine.dropletError {
   background-image: url('#{$common-root}gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
 
-.droplet-gutter-line.droplet_error, .droplet-gutter-line.droplet_warning {
+.dropletGutterLine.dropletError, .dropletGutterLine.dropletWarning {
   background-position: 2px center;
 }
 
-.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
+.aceGutterCell.aceWarning, .dropletGutterLine.dropletWarning {
   background-image: url('#{$common-root}gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
 
-.ace_gutter-cell.ace_error, .ace_gutter-cell.ace_warning {
+.aceGutterCell.aceError, .aceGutterCell.aceWarning {
   background-position: 2px 0;
 }
 
-.droplet-gutter-line.droplet_warning {
+.dropletGutterLine.dropletWarning {
   background-position: 2px 2px;
 }
 
@@ -406,7 +406,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   margin-bottom: 5px;
 }
 
-.karel-counter-text {
+.karelCounterText {
   text-anchor: end;
   font-size: 16px;
   font-family: Verdana, Geneva, sans-serif;
@@ -421,7 +421,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
-.karel-counter-text.paint {
+.karelCounterText.paint {
   font-size: 33px;
   stroke-width: 2;
 }
@@ -473,7 +473,7 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 @mixin karel-counter($font-size, $stroke-width) {
-  .karel-counter-text {
+  .karelCounterText {
     font-size: $font-size;
     stroke-width: $stroke-width;
   }
@@ -512,7 +512,7 @@ html[dir='rtl'] div#visualizationResizeBar {
       margin: 0 4px 0 0;
     }
   }
-  .small-footer-base.responsive {
+  .smallFooterBase.responsive {
     small {
       float: left;
     }
@@ -520,7 +520,7 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 /* Buttons */
-button, label.img-upload {
+button, label.imgUpload {
   margin: 5px;
   padding: 10px;
   border-radius: 4px;
@@ -639,7 +639,7 @@ button.disabled {
 button.notext {
   font-size: 10%;
 }
-label.img-upload {
+label.imgUpload {
   display: inline-block;
   vertical-align: middle;
 }
@@ -809,7 +809,7 @@ input[type="radio"] {
     pointer-events: none;
   }
 
-  .puzzle-rating-btn {
+  .puzzleRatingBtn {
     fill: $light-gray;
     padding: 0 5px;
     cursor: pointer;
@@ -843,7 +843,7 @@ input[type="radio"] {
 }
 
 /* Instructions. Not netsim-bubbles are styled in JSX */
-#bubble.netsim-bubble {
+#bubble.netsimBubble {
   color: $black;
   margin-bottom: 10px;
   position: relative;
@@ -855,7 +855,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 
-.prompt-icon-cell {
+.promptIconCell {
   vertical-align: top;
   text-align: center;
   width: 50px;
@@ -863,7 +863,7 @@ input[type="radio"] {
   height: auto;
 
   /* authored hints */
-  &.authored_hints {
+  &.authoredHints {
     width: 80px;
 
     #prompt-icon {
@@ -877,10 +877,10 @@ input[type="radio"] {
   }
 }
 
-html[dir="RTL"] .prompt-icon-cell {
+html[dir="RTL"] .promptIconCell {
   padding-right: 0;
   padding-left: 10px;
-  &.authored_hints {
+  &.authoredHints {
     #lightbulb {
       right: 40px;
       left: auto;
@@ -888,8 +888,8 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
-.qtip.cdo-qtips.qtip-authored-hint {
-  .qtip-content {
+.qtip.cdoQtips.qtipAuthoredHint {
+  .qtipContent {
     font-family: $gotham-regular;
     padding: 10px 10px 0 10px;
     color: $charcoal;
@@ -913,7 +913,7 @@ html[dir="RTL"] .prompt-icon-cell {
   color: $charcoal;
 }
 
-.authored-hints {
+.authoredHints {
 
   h1, p, pre {
     color: $charcoal;
@@ -943,13 +943,13 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
-.workspace-header {
+.workspaceHeader {
   text-align: center;
   white-space: nowrap;
   overflow-x: hidden;
   height: $workspace-headers-height;
   color: white;
-  .workspace-header-clickable:hover {
+  .workspaceHeaderClickable:hover {
     cursor: pointer;
     color: $yellow;
   }
@@ -961,7 +961,7 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 
   /* We don't want some of these styles to affect modal content. */
-  .ml-modal {
+  .mlModal {
     span {
       line-height: 12px;
     }
@@ -973,7 +973,7 @@ html[dir="RTL"] .prompt-icon-cell {
 
 $workspace-header-button-height: 24px;
 $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) * 0.5;
-.workspace-header-button {
+.workspaceHeaderButton {
   cursor: pointer;
   float: right;
   overflow: hidden;
@@ -1021,7 +1021,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-#headers, .purple-header {
+#headers, .purpleHeader {
   #show-toolbox-icon, #hide-toolbox-icon {
     position: absolute;
     top: 0;
@@ -1063,11 +1063,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #clear-puzzle-header:hover {
     background-color: $red;
   }
-  .block-counter-overflow {
+  .blockCounterOverflow {
     color: $yellow;
   }
-  &.is-running {
-    .block-counter-overflow {
+  &.isRunning {
+    .blockCounterOverflow {
       color: $dark_orange;
     }
   }
@@ -1099,7 +1099,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #show-toolbox-header {
     float: right;
   }
-  .workspace-header-button {
+  .workspaceHeaderButton {
     margin-left: $workspace-header-button-margin;
     margin-right: 0;
     float: left;
@@ -1108,7 +1108,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       padding-right: 0;
       padding-left: 8px;
     }
-    .blocks-glyph {
+    .blocksGlyph {
       @include horizontal-flip;
       padding-right: 0;
       padding-left: 8px;
@@ -1133,7 +1133,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     background-color: $lightest_purple;
   }
 
-  .template-level-warning {
+  .templateLevelWarning {
     font-family: 'Gotham 7r', sans-serif;
     color: $red;
     line-height: normal;
@@ -1143,12 +1143,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
-    .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
+    .blocklyIconMark, .blocklyTooltipText, .googMenuitemContent {
   @include font;
 }
 
 .blocklyRectangularDropdownMenu {
-  .goog-menuitem-highlight, .goog-menuitem-hover {
+  .googMenuitemHighlight, .googMenuitemHover {
     background-color: rgb(255 255 255 / 0.35);
   }
   &:not(.blocklyGridDropdownMenu) {
@@ -1158,26 +1158,26 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     background-color: white !important;
     padding-top: 5px !important;
 
-    .goog-menuitem {
+    .googMenuitem {
       display: inline-block;
       margin-left: 4px;
       margin-top: 4px;
     }
 
-    .goog-menuitem-highlight, .goog-menuitem-hover {
+    .googMenuitemHighlight, .googMenuitemHover {
       margin: -4px -4px 0 0 !important
     }
   }
 }
 
-.modal-content {
-  .show-code {
+.modalContent {
+  .showCode {
     summary {
       color: $charcoal;
       font-family: $gotham-bold;
     }
 
-    .generated-code-container {
+    .generatedCodeContainer {
       margin: 25px 10px 25px -80px;
 
       html[dir=rtl] & {
@@ -1186,16 +1186,16 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     }
   }
 
-  &.no-modal-icon {
-    .show-code {
-      .generated-code-container {
+  &.noModalIcon {
+    .showCode {
+      .generatedCodeContainer {
         margin-left: 0;
       }
     }
   }
 }
 
-.generated-code-container {
+.generatedCodeContainer {
   margin-top: 10px;
   .generatedCodeMessage {
     html[dir=rtl] & {
@@ -1225,61 +1225,61 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-.light-yellow-background {
+.lightYellowBackground {
   background-color: $lightest_yellow;
 }
 
-.white-background {
+.whiteBackground {
   background-color: white;
 }
 
-.arrow-container {
+.arrowContainer {
   background-color: white !important;
 }
 
-.arrow-container.arrow-left {
+.arrowContainer.arrowLeft {
   float: left;
 }
 
-.arrow-container.arrow-right {
+.arrowContainer.arrowRight {
   float: right;
 }
 
-.arrow-head, .arrow-text {
+.arrowHead, .arrowText {
   float: left;
   line-height: normal;
   margin-bottom: 25px;
   cursor: pointer;
 }
 
-.arrow-right .arrow-head {
+.arrowRight .arrowHead {
   float: right;
 }
 
-.arrow-left .arrow-head {
+.arrowLeft .arrowHead {
   margin-right: -10px;
 }
 
-.arrow-left .arrow-text {
+.arrowLeft .arrowText {
   border-radius: 0 8px 8px 0;
   padding: 10px 14px 10px 0;
   background-color: #babf33;
 }
-.arrow-right .arrow-text {
+.arrowRight .arrowText {
   margin-right: -10px;
   border-radius: 8px 0 0 8px;
   padding: 10px 0 10px 14px;
   background-color: #fb0;
 }
 
-.arrow-text {
+.arrowText {
   color: white;
   font-size: 35px;
   margin-top: 35px;
   height: 44px;
 }
 
-#again-button:not(.arrow-container) {
+#again-button:not(.arrowContainer) {
   background-color: $green;
   border: 1px solid $green;
   color: white;
@@ -1288,7 +1288,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   text-align: center;
 }
 
-#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
+#continue-button:not(.arrowContainer), #confirm-button:not(.arrowContainer) {
   background-color: $orange;
   border: 1px solid $orange;
   color: white;
@@ -1303,7 +1303,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .invisible {
   visibility: hidden;
 }
-.hide-source {
+.hideSource {
   #visualization {
     display: inline-block;
   }
@@ -1325,7 +1325,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   $image-width: 180px;
   $image-height: $image-width;
 
-  .feedback-image {
+  .feedbackImage {
     width: $image-width;
     height: $image-height;
     margin: 0;
@@ -1340,10 +1340,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
   div {
     margin: 5px 0;
-    &.sharing-content {
+    &.sharingContent {
       margin-left: $image_width + 15px;
       margin-right: 25px;
-      &.no-image {
+      &.noImage {
         margin-left: 0;
 
         html[dir=rtl] & {
@@ -1363,7 +1363,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-size: 16px;
   }
 
-  .social-buttons {
+  .socialButtons {
     a,
     a:hover,
     a:link,
@@ -1419,7 +1419,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin-bottom: 0;
   }
 
-  button.saved-to-gallery {
+  button.savedToGallery {
     font-family: 'Gotham 4i', sans-serif;
   }
 
@@ -1439,7 +1439,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     box-sizing: border-box;
   }
 
-  .sharing-dialog-copy-button-shared {
+  .sharingDialogCopyButtonShared {
     background-color: $light_purple;
   }
 
@@ -1494,7 +1494,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   font-size: 20px;
 }
 
-.share-fail-excerpt .generatedCode {
+.shareFailExcerpt .generatedCode {
   font-size: 14px;
 }
 
@@ -1524,7 +1524,7 @@ body.readonly #codeWorkspace>svg {
   border: none;
 }
 
-body.readonly.embed-block #codeWorkspace .userHidden {
+body.readonly.embedBlock #codeWorkspace .userHidden {
   display: none;
 }
 
@@ -1541,16 +1541,16 @@ $function-name-font: $code-font;
 $examples-link-font: $gotham-extra-bold;
 $see-examples-thick-underline-color: $yellow;
 
-.tooltip-example-link,
-.tooltip-choose-link,
-.tooltip-code-link {
+.tooltipExampleLink,
+.tooltipChooseLink,
+.tooltipCodeLink {
   margin-top: 5px;
   float: right;
 }
 
-.tooltip-example-link > a,
-.tooltip-choose-link > a,
-.tooltip-code-link > a {
+.tooltipExampleLink > a,
+.tooltipChooseLink > a,
+.tooltipCodeLink > a {
   &:hover,
   &:link,
   &:active,
@@ -1561,23 +1561,23 @@ $see-examples-thick-underline-color: $yellow;
   }
 }
 
-.tooltip-choose-link {
+.tooltipChooseLink {
   float: left;
 }
 
-.function-name {
+.functionName {
   font-family: $function-name-font;
   font-size: 16px;
   margin-top: 3px;
   margin-bottom: 7px;
 }
 
-.current-tooltip-parameter-name {
+.currentTooltipParameterName {
   border-bottom: 3px solid $yellow;
 }
 
 // Tooltipster theme class
-.droplet-block-tooltipster {
+.dropletBlockTooltipster {
   border-radius: $tooltip-border-radius;
   border: none;
   background: $tooltip-background;
@@ -1587,7 +1587,7 @@ $see-examples-thick-underline-color: $yellow;
   box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
 }
 
-.droplet-block-tooltipster .tooltipster-content {
+.dropletBlockTooltipster .tooltipsterContent {
   font-family: $tooltip-font;
   font-size: 12px;
   line-height: 16px;
@@ -1596,15 +1596,15 @@ $see-examples-thick-underline-color: $yellow;
   font-weight: normal;
 }
 
-.droplet-hover-div {
+.dropletHoverDiv {
   max-width: 100% !important;
 }
 
-.WireframeButtons_container {
+.wireframeButtonsContainer {
   display: flex;
 }
 
-.WireframeButtons_containerLeft {
+.wireframeButtonsContainerLeft {
   flex: 1 1 372px;
   overflow: hidden;
   padding-top: 20px;
@@ -1616,7 +1616,7 @@ $see-examples-thick-underline-color: $yellow;
   margin-bottom: 0;
 }
 
-.WireframeButtons_containerRight {
+.wireframeButtonsContainerRight {
   flex: 1 0 372px;
   overflow: hidden;
   padding-top: 20px;
@@ -1625,16 +1625,16 @@ $see-examples-thick-underline-color: $yellow;
 }
 
 @media (max-width: 845px) {
-  .WireframeButtons_containerRight {
+  .wireframeButtonsContainerRight {
     flex: 1 1 372px;
   }
 
-  .WireframeButtons_containerLeft {
+  .wireframeButtonsContainerLeft {
     flex: 1 1 auto;
   }
 }
 
-a.WireframeButtons_button {
+a.wireframeButtonsButton {
   background-color: $purple;
   border-radius: 5px;
   color: $white;
@@ -1647,18 +1647,18 @@ a.WireframeButtons_button {
   white-space: nowrap;
 }
 
-a.WireframeButtons_active {
+a.wireframeButtonsActive {
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
 }
 
-div.WireframeButtons_active {
+div.wireframeButtonsActive {
   cursor: default;
   display: inline-block;
 }
 
-a.WireframeButtons_active, div.WireframeButtons_active {
+a.wireframeButtonsActive, div.wireframeButtonsActive {
   background-color: $lightest-purple;
   border-radius: 5px;
   color: $dark-charcoal;
@@ -1674,7 +1674,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 }
 
 @media screen and (max-height: 780px) {
-  .legacy-share-view {
+  .legacyShareView {
     div#visualizationColumn.wireframeShare {
       width: 402px !important;
       height: 602px !important;
@@ -1690,14 +1690,14 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   }
 }
 
-.legacy-share-view {
+.legacyShareView {
   overflow: hidden;
 
-  &.legacy-share-view-mobile {
+  &.legacyShareViewMobile {
     position: fixed;
   }
 
-  #belowVisualization, .hide-source #belowVisualization {
+  #belowVisualization, .hideSource #belowVisualization {
     display: none;
   }
 
@@ -1743,7 +1743,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
       }
     }
 
-  .small-footer-base {
+  .smallFooterBase {
     left: 0;
     right: 0;
     width: auto !important;
@@ -1756,7 +1756,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
     width: auto !important;
   }
 
-  .full_container {
+  .fullContainer {
     padding: 0;
   }
 
@@ -1765,7 +1765,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   }
 }
 
-.embedded_iframe {
+.embeddedIframe {
   #visualizationColumn.wireframeShare {
     padding: 0;
   }

@@ -155,7 +155,7 @@ class CodeWorkspace extends React.Component {
           id="headers"
           dir={isRtl ? 'rtl' : 'ltr'}
           hasFocus={hasFocus}
-          className={props.isRunning ? 'is-running' : ''}
+          className={props.isRunning ? 'isRunning' : ''}
         >
           <div id="codeModeHeaders">
             {this.renderToolboxHeaders()}
@@ -209,7 +209,7 @@ class CodeWorkspace extends React.Component {
           <ProtectedStatefulDiv
             ref={codeTextbox => (this.codeTextbox = codeTextbox)}
             id="codeTextbox"
-            className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
+            className={this.props.pinWorkspaceToBottom ? 'pinBottom' : ''}
           />
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (

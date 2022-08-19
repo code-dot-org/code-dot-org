@@ -105,7 +105,7 @@ export default function(storybook) {
             }
           }}
         >
-          <div className="embedded_iframe">
+          <div className="embeddedIframe">
             <ApplabVisualizationColumn
               isEditingProject={false}
               screenIds={[]}
@@ -134,7 +134,7 @@ export default function(storybook) {
             }
           }}
         >
-          <div className="embedded_iframe">
+          <div className="embeddedIframe">
             <ApplabVisualizationColumn
               isEditingProject={false}
               screenIds={[]}

@@ -310,9 +310,9 @@ StudioApp.prototype.init = function(config) {
   copyrightStrings = config.copyrightStrings;
 
   if (config.legacyShareStyle && config.hideSource) {
-    $('body').addClass('legacy-share-view');
+    $('body').addClass('legacyShareView');
     if (dom.isMobile()) {
-      $('body').addClass('legacy-share-view-mobile');
+      $('body').addClass('legacyShareViewMobile');
       $('#main-logo').hide();
     }
   }
@@ -1346,7 +1346,7 @@ StudioApp.prototype.onResize = function() {
  */
 function resizePinnedBelowVisualizationArea() {
   const pinnedBelowVisualization = document.querySelector(
-    '#visualizationColumn.pin_bottom #belowVisualization'
+    '#visualizationColumn.pinBottom #belowVisualization'
   );
   if (!pinnedBelowVisualization) {
     return;
@@ -1384,7 +1384,7 @@ function resizePinnedBelowVisualizationArea() {
 
   let bottom = 0;
   const smallFooter = document.querySelector(
-    '#page-small-footer .small-footer-base'
+    '#page-small-footer .smallFooterBase'
   );
   if (smallFooter) {
     const codeApp = $('#codeApp');
@@ -1444,7 +1444,7 @@ StudioApp.prototype.resizeVisualization = function(width) {
 
   // We set styles on each of the elements directly, overriding the normal
   // responsive classes that would typically adjust width and scale.
-  var editorColumn = $('.editor-column');
+  var editorColumn = $('.editorColumn');
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById(
     'visualizationResizeBar'
@@ -1491,13 +1491,13 @@ StudioApp.prototype.resizeVisualization = function(width) {
   }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
-    $('#soft-buttons').removeClass('soft-buttons-compact');
+    $('#soft-buttons').removeClass('softButtonsCompact');
   } else if (oldVizWidth > 230 && newVizWidth <= 230) {
-    $('#soft-buttons').addClass('soft-buttons-compact');
+    $('#soft-buttons').addClass('softButtonsCompact');
   }
 
   var smallFooter = document.querySelector(
-    '#page-small-footer .small-footer-base'
+    '#page-small-footer .smallFooterBase'
   );
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
@@ -2110,7 +2110,7 @@ StudioApp.prototype.configureDom = function(config) {
   }
 
   var smallFooter = document.querySelector(
-    '#page-small-footer .small-footer-base'
+    '#page-small-footer .smallFooterBase'
   );
   if (smallFooter) {
     if (config.noPadding) {
@@ -2494,7 +2494,7 @@ StudioApp.prototype.handleEditCode_ = function(config) {
     $(window).trigger('droplet_change', ['scrollpalette']);
   });
 
-  $('.droplet-main-scroller').on('scroll', function(e) {
+  $('.dropletMainScroller').on('scroll', function(e) {
     $(window).trigger('droplet_change', ['scrolleditor']);
   });
 

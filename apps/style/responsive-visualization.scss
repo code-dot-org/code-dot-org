@@ -10,16 +10,16 @@
   #visualizationColumn.responsive {
     max-width: $width;
   }
-  .small-footer-base.responsive {
+  .smallFooterBase.responsive {
     max-width: $width;
   }
-  .editor-column {
+  .editorColumn {
     left: $width;
   }
-  html[dir='rtl'] .editor-column {
+  html[dir='rtl'] .editorColumn {
     right: $width;
   }
-  html[dir='rtl'] body.readonly .editor-column {
+  html[dir='rtl'] body.readonly .editorColumn {
     right: 0;
   }
   div#visualizationResizeBar {

@@ -1159,7 +1159,7 @@ applabCommands.getImageURL = function(opts) {
       return element.getAttribute('data-canonical-image-url');
     } else if (
       element.tagName === 'LABEL' &&
-      $(element).hasClass('img-upload')
+      $(element).hasClass('imgUpload')
     ) {
       var fileObj = element.children[0].files[0];
       if (fileObj) {

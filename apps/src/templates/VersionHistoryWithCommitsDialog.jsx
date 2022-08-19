@@ -155,7 +155,7 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
         <div style={styles.defaultBody}>
           <p>{i18n.versionHistory_clearProgress_prompt()}</p>
           {this.props.isProjectTemplateLevel && (
-            <p className="template-level-warning">
+            <p className="templateLevelWarning">
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
             </p>
           )}

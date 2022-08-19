@@ -1081,7 +1081,7 @@
          'position:'+self.options.position.type+';">' +
          '  <div class="qtip-wrapper" style="position:relative; overflow:hidden; text-align:left;">' +
          '    <div class="qtip-contentWrapper" style="overflow:hidden;">' +
-         '       <div class="qtip-content '+self.options.style.classes.content+'"></div>' +
+         '       <div class='+self.options.style.classes.content+'"qtipContent "></div>' +
          '</div></div></div>';
 
       // Append to container element

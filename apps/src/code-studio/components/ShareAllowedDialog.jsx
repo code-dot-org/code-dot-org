@@ -315,7 +315,7 @@ class ShareAllowedDialog extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="social-buttons">
+                <div className="socialButtons">
                   <a
                     id="sharing-phone"
                     href=""

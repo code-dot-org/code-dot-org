@@ -34,7 +34,7 @@ export default function createCallouts(callouts) {
   // Hide callouts when the function editor is closed (otherwise they jump to
   // the top left corner)
   $(window).on('function_editor_closed', function() {
-    $('.cdo-qtips').qtip('hide');
+    $('.cdoQtips').qtip('hide');
   });
 
   // Update callout positions when a blockly editor is scrolled.
@@ -51,7 +51,7 @@ export default function createCallouts(callouts) {
         // number to a different DOM element, so the only ways to track with the
         // gutter movement would be to manually adjust position or to destroy
         // the qtips and manually recreate new ones with each scroll.
-        $('.cdo-qtips').each(function() {
+        $('.cdoQtips').each(function() {
           var api = $(this).qtip('api');
           var target = $(api.elements.target);
           if ($('.ace_gutter').has(target)) {
@@ -217,7 +217,7 @@ export function addCallouts(callouts) {
 function snapCalloutsToTargets() {
   var triggerEvent = null;
   var animate = false;
-  $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
+  $('.cdoQtips').qtip('reposition', triggerEvent, animate);
 }
 
 export var showHideWorkspaceCallouts = showOrHideCalloutsByTargetVisibility(
@@ -249,7 +249,7 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
   var calloutsHiddenByContainerVisibility = {};
   return function() {
     var container = $(containerSelector);
-    $('.cdo-qtips').each(function() {
+    $('.cdoQtips').each(function() {
       var api = $(this).qtip('api');
       var target = $(api.elements.target);
 

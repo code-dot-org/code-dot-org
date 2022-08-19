@@ -29,7 +29,7 @@ describe('VersionRow', () => {
       </a>
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="img-upload">
+      <button type="button" className="imgUpload">
         {msg.restore()}
       </button>
     );

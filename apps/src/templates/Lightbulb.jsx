@@ -38,7 +38,7 @@ export default class Lightbulb extends React.Component {
           'syXeeznPU1JK8vtJKo0QAiGE7gMVvCzLMA0F3/c9hHvGZdT/APfyQc3umPvfAAAAAElFTkSuQmCC';
 
       bulbDisplay = (
-        <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
+        <g className={this.props.shouldAnimate ? 'animateHint' : ''}>
           <image
             width="450"
             height="450"
@@ -194,7 +194,7 @@ export default class Lightbulb extends React.Component {
         : [];
 
       bulbDisplay = (
-        <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
+        <g className={this.props.shouldAnimate ? 'animateHint' : ''}>
           <path
             fill={this.props.lit ? '#EFB834' : '#C9C9C9'}
             d="M453.775,353.156c0,24.012-57.189,128.942-61.414,132.265c-12.384,9.741-48.514,15.318-82.869,16.518

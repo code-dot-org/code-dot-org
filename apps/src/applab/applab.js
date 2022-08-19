@@ -796,7 +796,7 @@ Applab.init = function(config) {
             'transform',
             'scale(' + ratio + ', ' + ratio + ')'
           );
-          $('.small-footer-base').css('transform', 'scale(' + ratio + ', 1)');
+          $('.smallFooterBase').css('transform', 'scale(' + ratio + ', 1)');
         } else {
           //includes the frame on the edit page
           $('#phoneFrameWrapper').css(

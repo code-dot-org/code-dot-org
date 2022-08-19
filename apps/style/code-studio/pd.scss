@@ -117,7 +117,7 @@
 }
 
 div[role=dialog] {
-  div.modal-content {
+  div.modalContent {
     margin: 0 !important;
     @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule, no-duplicate-at-import-rules */
     @include buttons;

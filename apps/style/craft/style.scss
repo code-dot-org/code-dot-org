@@ -167,7 +167,7 @@ $text-shadow-gray: #5a5a5a;
   @include pixelated;
 }
 
-#soft-buttons.soft-buttons-compact {
+#soft-buttons.softButtonsCompact {
   margin-left: 0;
   button {
     margin: 0;
@@ -219,7 +219,7 @@ body {
   -ms-touch-action: none;
 }
 
-.workspace-header {
+.workspaceHeader {
   background-color: $blockly-header;
 }
 
@@ -243,7 +243,7 @@ body {
   background-color: transparent !important;
 }
 
-.small-footer-base,
+.smallFooterBase,
 #copyright-flyout,
 #more-menu {
   background-color: $below-header-background;
@@ -270,7 +270,7 @@ body {
 #codeApp {
   top: 75px !important;
 
-  &.hide-source {
+  &.hideSource {
     top: 0 !important;
   }
 
@@ -281,7 +281,7 @@ body {
   }
 }
 
-#codeWorkspace.pin_bottom {
+#codeWorkspace.pinBottom {
   border: none;
   border-top: 1px solid $blockly-header;
 }
@@ -356,7 +356,7 @@ a.video_link {
   color: $lighter_cyan;
 }
 
-#visualizationColumn.pin_bottom {
+#visualizationColumn.pinBottom {
   width: 100%;
   top: -11px;
 }
@@ -414,7 +414,7 @@ $height-to-width: math.div(434, 477);
 
 #visualization {
   height: 677px !important;
-  .legacy-share-view & {
+  .legacyShareView & {
     height: auto !important;
   }
 }
@@ -481,7 +481,7 @@ $height-to-width: math.div(434, 477);
     background-color: $almost-very-dark-gray;
   }
 
-  .modal-content.no-modal-icon {
+  .modalContent.noModalIcon {
     margin-left: 0;
     html[dir='rtl'] & {
       margin-right: 0;
@@ -651,7 +651,7 @@ $height-to-width: math.div(434, 477);
 #craft-popup-house-selection {
   @include craft-popup;
 
-  .modal-content {
+  .modalContent {
     margin-left: 0;
     html[dir='rtl'] & {
       margin-right: 0;
@@ -1114,8 +1114,8 @@ $height-to-width: math.div(434, 477);
     @include mc-x-close-button;
   }
 
-  .modal-content .lines-of-code-message,
-  .show-code summary {
+  .modalContent .lines-of-code-message,
+  .showCode summary {
     color: $lighter_gray;
   }
 
@@ -1129,13 +1129,13 @@ $height-to-width: math.div(434, 477);
       margin-left: 0;
     }
 
-    .generated-code-container {
+    .generatedCodeContainer {
       margin-left: 0;
     }
   }
 
   @media screen and (max-height: 630px) {
-    .win-feedback #sharing .feedback-image {
+    .win-feedback #sharing .feedbackImage {
       margin-left: 80px;
       width: 90px;
       height: 90px;
@@ -1150,13 +1150,13 @@ $height-to-width: math.div(434, 477);
       height: 40px;
       padding: 5px;
     }
-    .social-buttons a:hover {
+    .socialButtons a:hover {
       background: none !important;
       fill: white !important;
     }
   }
 
-  #puzzleRatingButtons a:hover.puzzle-rating-btn {
+  #puzzleRatingButtons a:hover.puzzleRatingBtn {
     background: none !important;
     fill: white !important;
   }
@@ -1184,7 +1184,7 @@ $height-to-width: math.div(434, 477);
   }
 
   // "Show Code" explanation
-  .generated-code-container .generatedCodeMessage p {
+  .generatedCodeContainer .generatedCodeMessage p {
     color: $lightest_gray;
 
     a {
@@ -1204,7 +1204,7 @@ $height-to-width: math.div(434, 477);
 
 // callout styling
 
-.qtip-content {
+.qtipContent {
   color: white;
 }
 
@@ -1264,7 +1264,7 @@ $height-to-width: math.div(434, 477);
   background-color: $very-dark-gray;
 }
 
-.cdo-qtips .qtip-tip {
+.cdoQtips .qtip-tip {
   background: url('#{$root}Sliced_Parts/Callout_Tail.png') no-repeat center
     center;
   width: 66px !important;
@@ -1358,7 +1358,7 @@ $height-to-width: math.div(434, 477);
     border-radius: 0 0 $workspace-corner-rounding $workspace-corner-rounding;
   }
 
-  .small-footer-base {
+  .smallFooterBase {
     border-radius: 0 $workspace-corner-rounding 0 0;
   }
 

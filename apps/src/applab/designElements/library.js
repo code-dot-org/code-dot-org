@@ -131,7 +131,7 @@ export default {
       case 'button':
         return ElementType.BUTTON;
       case 'label':
-        if ($(element).hasClass('img-upload')) {
+        if ($(element).hasClass('imgUpload')) {
           return ElementType.PHOTO_SELECT;
         } else {
           return ElementType.LABEL;

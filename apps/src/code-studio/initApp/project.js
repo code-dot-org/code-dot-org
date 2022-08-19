@@ -792,7 +792,7 @@ var projects = (module.exports = {
       this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
-      $('.full_container').css({padding: '0px'});
+      $('.fullContainer').css({padding: '0px'});
     }
 
     // Updates the contents of the admin box for admins. We have no knowledge

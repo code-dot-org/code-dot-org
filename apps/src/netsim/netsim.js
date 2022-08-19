@@ -988,13 +988,13 @@ NetSim.configureDomOverride_ = function(config) {
  * Resize the left column so it pins above the footer.
  */
 function resizeLeftColumnToSitAboveFooter() {
-  var pinnedLeftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  var pinnedLeftColumn = document.querySelector('#netsim-leftcol.pinBottom');
   if (!pinnedLeftColumn) {
     return;
   }
 
   var smallFooter = document.querySelector(
-    '#page-small-footer .small-footer-base'
+    '#page-small-footer .smallFooterBase'
   );
 
   var bottom = 0;
@@ -1010,10 +1010,10 @@ function resizeLeftColumnToSitAboveFooter() {
 }
 
 function resizeFooterToFitToLeftOfContent() {
-  var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  var leftColumn = document.querySelector('#netsim-leftcol.pinBottom');
   var instructions = document.querySelector('.instructions');
   var smallFooter = document.querySelector(
-    '#page-small-footer .small-footer-base'
+    '#page-small-footer .smallFooterBase'
   );
 
   if (!smallFooter) {

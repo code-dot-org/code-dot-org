@@ -7,7 +7,7 @@
 }
 
 /* Use this next selector to style things like font-size and line-height: */
-.tooltipster-default .tooltipster-content {
+.tooltipster-default .tooltipsterContent {
 	font-family: Arial, sans-serif;
 	font-size: 14px;
 	line-height: 16px;
@@ -47,7 +47,7 @@
 	width: auto;
 	overflow: visible;
 }
-.tooltipster-base .tooltipster-content {
+.tooltipster-base .tooltipsterContent {
 	overflow: hidden;
 }
 
