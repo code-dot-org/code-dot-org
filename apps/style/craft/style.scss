@@ -316,11 +316,11 @@ body {
   background-position: 0 0;
 }
 
-#phaser-game canvas {
+#phaserGame canvas {
   @include pixelated;
 }
 
-#phaser-game {
+#phaserGame {
   $frame-width: 434;
   $native-game-width: 400;
   $game-offset-x: (($frame-width - $native-game-width) * 0.5);
@@ -336,7 +336,7 @@ body {
   display: inline-block;
 }
 
-#minecraft-frame {
+#minecraftFrame {
   //@include pixelated();
   width: 434px;
   height: 477px;
@@ -444,7 +444,7 @@ $height-to-width: math.div(434, 477);
   margin: $offset-y 0 0 $offset-x;
 }
 
-#code-connection-log {
+#codeConnectionLog {
   width: 400px;
   height: 400px;
   margin-left: 17px;
@@ -453,7 +453,7 @@ $height-to-width: math.div(434, 477);
   display: inline-block;
   background-color: $darkest-gray;
   color: $original-background-color;
-  #log-text {
+  #logText {
     line-height: 50px;
     font-size: 22px;
     color: $lightest_gray;
@@ -477,7 +477,7 @@ $height-to-width: math.div(434, 477);
   border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19 fill
     stretch;
 
-  #modal-body {
+  #modalBody {
     background-color: $almost-very-dark-gray;
   }
 
@@ -507,7 +507,7 @@ $height-to-width: math.div(434, 477);
   @include craft-popup;
 }
 
-#craft-popup-connect {
+#craftPopupConnect {
   @include craft-popup;
 
   @include popup-width-height(540px, 516px);
@@ -516,13 +516,13 @@ $height-to-width: math.div(434, 477);
     @include popup-width-height(540px, 400px);
   }
 
-  #download-text {
+  #downloadText {
     line-height: 50px;
     font-size: 22px;
     color: $lightest_gray;
   }
 
-  #close-popup {
+  #closePopup {
     @include mc-x-close-button;
   }
 
@@ -543,7 +543,7 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-#craft-popup-player-selection {
+#craftPopupPlayerSelection {
   @include craft-popup;
 
   @include popup-width-height(540px, 516px);
@@ -558,7 +558,7 @@ $height-to-width: math.div(434, 477);
     visibility: visible;
   }
 
-  #select-character-text {
+  #selectCharacterText {
     line-height: 50px;
     font-size: 22px;
     color: $lightest_gray;
@@ -585,7 +585,7 @@ $height-to-width: math.div(434, 477);
     background-repeat: no-repeat;
   }
 
-  #steve-portrait {
+  #stevePortrait {
     $width: 144px;
     $height: 268px;
     background-image: url('#{$root}Sliced_Parts/Steve_Character_Select.png');
@@ -603,7 +603,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  #alex-portrait {
+  #alexPortrait {
     $width: 136px;
     $height: 271px;
     background-image: url('#{$root}Sliced_Parts/Alex_Character_Select.png');
@@ -619,7 +619,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  #choose-character-container {
+  #chooseCharacterContainer {
     // center content (IE8+)
     display: table;
     margin: 0 auto;
@@ -631,7 +631,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  .choose-character-button {
+  .chooseCharacterButton {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
     @include pixelated;
@@ -648,7 +648,7 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-#craft-popup-house-selection {
+#craftPopupHouseSelection {
   @include craft-popup;
 
   .modal-content {
@@ -664,12 +664,12 @@ $height-to-width: math.div(434, 477);
     @include popup-width-height(654px, 300px);
   }
 
-  #getting-started-header {
+  #gettingStartedHeader {
     margin-left: 125px;
     margin-bottom: 25px;
   }
 
-  #select-house-text {
+  #selectHouseText {
     line-height: 50px;
     font-size: 22px;
     color: $lightest_gray;
@@ -722,7 +722,7 @@ $height-to-width: math.div(434, 477);
   }
 
   $extra-offset-for-shadow: 5px;
-  #house-a-picture {
+  #houseAPicture {
     $width: 112px;
     $height: 111px;
     background-image: url('#{$root}Sliced_Parts/House_Option_A_v3.png');
@@ -741,7 +741,7 @@ $height-to-width: math.div(434, 477);
       margin-bottom: -($margin-above-photo * 0.5);
     }
   }
-  #house-c-picture {
+  #houseCPicture {
     $width: 127px;
     $height: 129px;
     background-image: url('#{$root}Sliced_Parts/House_Option_B_v3.png');
@@ -760,7 +760,7 @@ $height-to-width: math.div(434, 477);
       margin-bottom: -($margin-above-photo * 0.5);
     }
   }
-  #house-b-picture {
+  #houseBPicture {
     $width: 98px;
     $height: 152px;
     background-image: url('#{$root}Sliced_Parts/House_Option_C_v3.png');
@@ -780,7 +780,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  #choose-house-container {
+  #chooseHouseContainer {
     // center content (IE8+)
     display: table;
     margin: 0 auto;
@@ -792,7 +792,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  #close-house-select {
+  #closeHouseSelect {
     @include mc-x-close-button;
   }
 
@@ -813,7 +813,7 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-#craft-popup-import {
+#craftPopupImport {
   @include craft-popup;
 
   @include popup-width-height(540px, 516px);
@@ -822,7 +822,7 @@ $height-to-width: math.div(434, 477);
     @include popup-width-height(540px, 400px);
   }
 
-  #close-popup {
+  #closePopup {
     @include mc-x-close-button;
   }
 
@@ -855,7 +855,7 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-#craft-popup-error {
+#craftPopupError {
   @include craft-popup;
 
   @include popup-width-height(540px, 516px);
@@ -864,7 +864,7 @@ $height-to-width: math.div(434, 477);
     @include popup-width-height(540px, 400px);
   }
 
-  #close-popup {
+  #closePopup {
     @include mc-x-close-button;
   }
 
@@ -1068,7 +1068,7 @@ $height-to-width: math.div(434, 477);
   font-size: 26px;
   font-family: $gotham-bold !important;
 
-  &#ok-button {
+  &#okButton {
     background-color: inherit;
     border: inherit;
   }
@@ -1362,7 +1362,7 @@ $height-to-width: math.div(434, 477);
     border-radius: 0 $workspace-corner-rounding 0 0;
   }
 
-  #score-container {
+  #scoreContainer {
     float: left;
     position: relative;
     left: 50%;
@@ -1370,7 +1370,7 @@ $height-to-width: math.div(434, 477);
     height: 0;
     margin-bottom: -100%;
 
-    #score-inner {
+    #scoreInner {
       @include scoreboard-background;
       top: -411px;
       height: 17px;

@@ -358,7 +358,7 @@ Craft.init = function(config) {
         $('#softButtons').addClass('soft-buttons-' + 4);
         Craft.hideSoftButtons();
 
-        const phaserGame = document.getElementById('phaser-game');
+        const phaserGame = document.getElementById('phaserGame');
         const hammerToButton = {
           [Hammer.DIRECTION_LEFT]: 'leftButton',
           [Hammer.DIRECTION_RIGHT]: 'rightButton',
@@ -672,7 +672,7 @@ Craft.reset = function(first) {
   if (Craft.level.usePlayer) {
     Craft.hideSoftButtons();
   }
-  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
+  captureThumbnailFromCanvas($('#minecraftFrame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
