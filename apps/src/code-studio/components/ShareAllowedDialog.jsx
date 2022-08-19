@@ -182,7 +182,7 @@ class ShareAllowedDialog extends React.Component {
     let image;
     let modalClass = 'modal-content';
     if (this.props.icon) {
-      image = <img className="modal-image" src={this.props.icon} />;
+      image = <img className="modalImage" src={this.props.icon} />;
     } else {
       modalClass += ' no-modal-icon';
     }
@@ -271,7 +271,7 @@ class ShareAllowedDialog extends React.Component {
                 className={modalClass}
                 style={{position: 'relative'}}
               >
-                <p className="dialog-title">{i18n.shareTitle()}</p>
+                <p className="dialogTitle">{i18n.shareTitle()}</p>
                 {this.props.isAbusive && (
                   <AbuseError
                     i18n={{
@@ -414,14 +414,14 @@ class ShareAllowedDialog extends React.Component {
                 )}
                 {canPublish && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                    <span style={{fontSize: 12}} className="thumbnailWarning">
                       {i18n.thumbnailWarning()}
                     </span>
                   </div>
                 )}
                 {this.state.replayVideoUnavailable && (
                   <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                    <span style={{fontSize: 12}} className="thumbnailWarning">
                       {i18n.downloadReplayVideoButtonError()}
                     </span>
                   </div>

@@ -183,30 +183,30 @@ $text-shadow-gray: #5a5a5a;
   }
 }
 
-.left-btn {
+.leftBtn {
   @include arrow-icon('#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png');
   @include flip-horizontal(1);
   background-size: 16px 32px !important;
 }
-.right-btn {
+.rightBtn {
   @include arrow-icon('#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png');
   background-size: 16px 32px !important;
 }
-.down-btn {
+.downBtn {
   @include arrow-icon('#{$root}Sliced_Parts/MC_Down_Arrow_Icon.png');
   background-size: 28px 20px !important;
 }
-.up-btn {
+.upBtn {
   @include arrow-icon('#{$root}Sliced_Parts/MC_Up_Arrow_Icon.png');
   background-size: 28px 20px !important;
 }
-.scroll-up-btn {
+.scrollUpBtn {
   @include arrow-icon('#{$root}CDO_MC_ScrollUp.png');
   background-size: 21px 15px !important;
   width: 30px !important;
   height: 30px !important;
 }
-.scroll-down-btn {
+.scrollDownBtn {
   @include arrow-icon('#{$root}CDO_MC_ScrollDown.png');
   background-size: 21px 15px !important;
   width: 30px !important;
@@ -229,7 +229,7 @@ body {
 
 .blocklySvg {
   background-color: $main-blockspace-background;
-  .csf-top-instructions & {
+  .csfTopInstructions & {
     background-color: $very-dark-gray;
   }
 }
@@ -347,12 +347,12 @@ body {
 #right-button-cell {
   display: none;
   vertical-align: top;
-  &.right-button-cell-enabled {
+  &.rightButtonCellEnabled {
     display: inline-block;
   }
 }
 
-a.video_link {
+a.videoLink {
   color: $lighter_cyan;
 }
 
@@ -426,9 +426,9 @@ $height-to-width: math.div(434, 477);
   border-radius: 0;
   height: auto;
 
-  // TODO: Overriding .x-close visibility can be removed once all Minecraft dialogs
+  // TODO: Overriding .xClose visibility can be removed once all Minecraft dialogs
   // use <CraftDialog/> instead of EJS templates.
-  .x-close {
+  .xClose {
     visibility: hidden;
   }
 }
@@ -488,22 +488,22 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  .minecraft-big-yellow-header {
+  .minecraftBigYellowHeader {
     text-shadow: 2px 2px $darker-gray !important;
     color: $header-text-yellow;
     line-height: 11px;
     font-size: 30px;
   }
 
-  .minecraft-big-gray-header {
-    @extend .minecraft-big-yellow-header; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
+  .minecraftBigGrayHeader {
+    @extend .minecraftBigYellowHeader; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
 
     color: #e7e8ea;
     margin-bottom: 23px;
   }
 }
 
-.craft-popup {
+.craftPopup {
   @include craft-popup;
 }
 
@@ -526,7 +526,7 @@ $height-to-width: math.div(434, 477);
     @include mc-x-close-button;
   }
 
-  .download-button {
+  .downloadButton {
     border-style: solid !important;
     border-width: 4px 5px 6px 5px !important;
     @include pixelated;
@@ -552,9 +552,9 @@ $height-to-width: math.div(434, 477);
     @include popup-width-height(540px, 400px);
   }
 
-  // TODO: Overriding .x-close visibility can be removed once all Minecraft dialogs
+  // TODO: Overriding .xClose visibility can be removed once all Minecraft dialogs
   // use <CraftDialog/> instead of EJS templates.
-  .x-close {
+  .xClose {
     visibility: visible;
   }
 
@@ -564,7 +564,7 @@ $height-to-width: math.div(434, 477);
     color: $lightest_gray;
   }
 
-  .minecraft-character {
+  .minecraftCharacter {
     float: left;
     width: 150px;
     text-align: center;
@@ -577,7 +577,7 @@ $height-to-width: math.div(434, 477);
     margin-top: 8px;
   }
 
-  .character-portrait {
+  .characterPortrait {
     margin: 0 auto 10px auto;
     background-size: 100% auto;
     background-position-x: 0; // 50% for smaller screens
@@ -589,7 +589,7 @@ $height-to-width: math.div(434, 477);
     $width: 144px;
     $height: 268px;
     background-image: url('#{$root}Sliced_Parts/Steve_Character_Select.png');
-    .minecraft-events & {
+    .minecraftEvents & {
       background-image: url('#{$root}Events/Steve_Character_Select.png');
     }
     width: $width;
@@ -607,7 +607,7 @@ $height-to-width: math.div(434, 477);
     $width: 136px;
     $height: 271px;
     background-image: url('#{$root}Sliced_Parts/Alex_Character_Select.png');
-    .minecraft-events & {
+    .minecraftEvents & {
       background-image: url('#{$root}Events/Alex_Character_Select.png');
     }
     width: $width;
@@ -631,7 +631,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  .choose-character-button {
+  .chooseCharacterButton {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
     @include pixelated;
@@ -678,7 +678,7 @@ $height-to-width: math.div(434, 477);
   $house-outline-height: 168px;
   $house-outline-width: 167px;
 
-  .minecraft-house {
+  .minecraftHouse {
     float: left;
     width: $house-outline-width;
     text-align: center;
@@ -691,7 +691,7 @@ $height-to-width: math.div(434, 477);
     margin-top: 8px;
   }
 
-  .house-outline-container {
+  .houseOutlineContainer {
     @include pixelated;
     background: url('#{$root}Sliced_Parts/House_Selection_Box.png') no-repeat;
     display: table;
@@ -713,7 +713,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  .house-photo {
+  .housePhoto {
     margin: 0 auto 10px auto;
     background-size: 100% auto;
     background-position-x: 0; // 50% for smaller screens
@@ -796,7 +796,7 @@ $height-to-width: math.div(434, 477);
     @include mc-x-close-button;
   }
 
-  .choose-house-button {
+  .chooseHouseButton {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
     @include pixelated;
@@ -914,10 +914,10 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-// Use the .no-mc class on a button to prevent it from picking up minecraft
+// Use the .noMc class on a button to prevent it from picking up minecraft
 // styles. This is useful in react which does not support !important.
-.dash_modal button:not(.no-mc),
-.minecraft button:not(.no-mc) {
+.dashModal button:not(.noMc),
+.minecraft button:not(.noMc) {
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
   @include pixelated;
@@ -927,7 +927,7 @@ $height-to-width: math.div(434, 477);
   $reset-width: 40px;
   $run-left-margin: 6px;
 
-  &.mc-share-button {
+  &.mcShareButton {
     @include orange-button;
 
     & > div {
@@ -979,10 +979,10 @@ $height-to-width: math.div(434, 477);
     }
 
     .toggle26 {
-      &.more-btn {
+      &.moreBtn {
         background: url('#{$root}CDO_MC_More.png') no-repeat;
       }
-      &.less-btn {
+      &.lessBtn {
         background: url('#{$root}CDO_MC_Less.png') no-repeat;
       }
       background-position: center !important;
@@ -1078,7 +1078,7 @@ $height-to-width: math.div(434, 477);
   width: 100%;
 }
 
-.minecraft .dash_modal {
+.minecraft .dashModal {
   top: 80px;
   margin-left: -340px;
 
@@ -1099,7 +1099,7 @@ $height-to-width: math.div(434, 477);
   border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19 fill
     stretch;
 
-  .modal-image {
+  .modalImage {
     margin-left: -21px;
     html[dir='rtl'] & {
       margin-left: 0;
@@ -1110,11 +1110,11 @@ $height-to-width: math.div(434, 477);
     width: auto;
   }
 
-  .x-close {
+  .xClose {
     @include mc-x-close-button;
   }
 
-  .modalContent .lines-of-code-message,
+  .modalContent .linesOfCodeMessage,
   .showCode summary {
     color: $lighter_gray;
   }
@@ -1135,7 +1135,7 @@ $height-to-width: math.div(434, 477);
   }
 
   @media screen and (max-height: 630px) {
-    .win-feedback #sharing .feedbackImage {
+    .winFeedback #sharing .feedbackImage {
       margin-left: 80px;
       width: 90px;
       height: 90px;
@@ -1167,14 +1167,14 @@ $height-to-width: math.div(434, 477);
     color: $lightest_gray;
   }
 
-  span.thumbnail-warning {
+  span.thumbnailWarning {
     color: $lightest_gray;
   }
 
   p.congrats {
     margin-left: 69px;
   }
-  .failure-feedback p.congrats {
+  .failureFeedback p.congrats {
     margin-left: 0;
   }
 
@@ -1192,7 +1192,7 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  .dialog-title {
+  .dialogTitle {
     @include mc-text-shadow;
     color: $header-text-yellow;
   }
@@ -1208,7 +1208,7 @@ $height-to-width: math.div(434, 477);
   color: white;
 }
 
-.qtip-default {
+.qtipDefault {
   padding: 10px;
   border: 0;
   border-radius: 0;
@@ -1240,7 +1240,7 @@ $height-to-width: math.div(434, 477);
     stretch;
 }
 
-.tooltip-x-close.qtip-icon {
+.tooltipXClose.qtipIcon {
   @include pixelated;
   position: absolute;
   cursor: pointer;
@@ -1264,7 +1264,7 @@ $height-to-width: math.div(434, 477);
   background-color: $very-dark-gray;
 }
 
-.cdoQtips .qtip-tip {
+.cdoQtips .qtipTip {
   background: url('#{$root}Sliced_Parts/Callout_Tail.png') no-repeat center
     center;
   width: 66px !important;
@@ -1290,33 +1290,33 @@ $height-to-width: math.div(434, 477);
 // Rotate and tweak positioning of tip asset to line up at different
 // orientations.
 
-.qtip-pos-lc .qtip-tip {
+.qtipPosLc .qtipTip {
   @include translate-x-y-rotate(2px, 0, -90deg);
   margin-top: -33px !important;
   left: -66px !important;
 }
 
-.qtip-pos-rc .qtip-tip {
+.qtipPosRc .qtipTip {
   @include translate-x-y-rotate(-5px, 0, 90deg);
   margin-top: -33px !important;
   right: -66px !important;
 }
 
-.qtip-pos-tc .qtip-tip {
+.qtipPosTc .qtipTip {
   @include translate-x-y-rotate(0, 1px, 0deg);
   top: -66px !important;
   left: 66px !important;
 }
 
-.qtip-pos-bc .qtip-tip {
+.qtipPosBc .qtipTip {
   @include translate-x-y-rotate(0, -5px, 180deg);
   bottom: -66px !important;
   margin-left: -33px !important;
 }
 
 // Overrides style in application.css.scss from dashboard
-.csf-top-instructions,
-.instructions-markdown {
+.csfTopInstructions,
+.instructionsMarkdown {
   p {
     color: $white;
   }
@@ -1335,7 +1335,7 @@ $height-to-width: math.div(434, 477);
   @include pixelated;
 }
 
-.minecraft-events {
+.minecraftEvents {
   code {
     background-color: $code-block-background-yellow;
     border: 1px solid $code-block-outline-yellow;

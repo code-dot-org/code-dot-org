@@ -35,19 +35,19 @@ $root: '/blockly/media/flappy/'; //TODO: Parameterize for asset pipeline
   background-position: -21px -21px;
   margin-right: 3px;
 }
-.left-btn {
+.leftBtn {
   background-position: -21px -42px;
   margin-right: 3px;
 }
-.right-btn {
+.rightBtn {
   background-position: 0 -21px;
   margin-right: 3px;
 }
-.up-btn {
+.upBtn {
   background-position: 0 -63px;
   margin-right: 3px;
 }
-.down-btn {
+.downBtn {
   background-position: 0 -42px;
   margin-right: 3px;
 }
@@ -55,7 +55,7 @@ $root: '/blockly/media/flappy/'; //TODO: Parameterize for asset pipeline
 #right-button-cell {
   display: none;
   vertical-align: top;
-  &.right-button-cell-enabled {
+  &.rightButtonCellEnabled {
     display: inline-block;
   }
 }

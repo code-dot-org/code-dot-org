@@ -21,7 +21,7 @@ module.exports = function activateReferenceAreaOnLoad() {
       return;
     }
 
-    $('.video_link').each(function() {
+    $('.videoLink').each(function() {
       addClickTouchEvent(
         $(this),
         $.proxy(function() {

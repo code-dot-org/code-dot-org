@@ -184,11 +184,7 @@ export default class BaseDialog extends React.Component {
                 onClick={this.closeDialog}
               />
             ) : (
-              <div
-                id="x-close"
-                className="x-close"
-                onClick={this.closeDialog}
-              />
+              <div id="x-close" className="xClose" onClick={this.closeDialog} />
             ))}
           {this.props.children}
         </div>

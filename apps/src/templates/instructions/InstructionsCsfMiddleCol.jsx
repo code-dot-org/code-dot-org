@@ -137,7 +137,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         ref={c => {
           this.instructions = c;
         }}
-        className="csf-top-instructions"
+        className="csfTopInstructions"
         style={{...styles.instructions, ...tipsStyle}}
       >
         <ChatBubble
