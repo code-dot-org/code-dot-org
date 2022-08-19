@@ -17,7 +17,7 @@ export default {
       editCode: true,
       xml: '',
       startHtml: `
-          <div id="designModeViz" class="appModern withCrosshair clip-content" data-radium="true"
+          <div id="designModeViz" class="appModern withCrosshair clipContent" data-radium="true"
           style="width: 320px; height: 450px; display: block;">
             <div class="screen" tabindex="1" id="screen1" style=
             "display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">
@@ -46,7 +46,7 @@ export default {
       editCode: true,
       xml: '',
       startHtml: `
-          <div id="designModeViz" class="appModern withCrosshair clip-content" data-radium="true"
+          <div id="designModeViz" class="appModern withCrosshair clipContent" data-radium="true"
           style="width: 320px; height: 450px; display: block;">
             <div class="screen" tabindex="1" id="screen1" style=
             "display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">
@@ -56,7 +56,7 @@ export default {
             </div>
           </div>`,
       levelHtml: `
-          <div id="designModeViz" class="appModern withCrosshair clip-content" data-radium="true"
+          <div id="designModeViz" class="appModern withCrosshair clipContent" data-radium="true"
           style="width: 320px; height: 450px; display: block;">
             <div class="screen" tabindex="1" id="screen1" style=
             "display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">
@@ -85,7 +85,7 @@ export default {
       editCode: true,
       xml: '',
       startHtml: `
-          <div id="designModeViz" class="appModern withCrosshair clip-content" data-radium="true"
+          <div id="designModeViz" class="appModern withCrosshair clipContent" data-radium="true"
           style="width: 320px; height: 450px; display: block;">
             <div class="screen" tabindex="1" id="screen1" style=
             "display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">
@@ -95,7 +95,7 @@ export default {
             </div>
           </div>`,
       levelHtml: `
-          <div id="designModeViz" class="appModern withCrosshair clip-content" data-radium="true"
+          <div id="designModeViz" class="appModern withCrosshair clipContent" data-radium="true"
           style="width: 320px; height: 450px; display: block;">
             <div class="screen" tabindex="1" id="screen1" style=
             "display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">

@@ -315,7 +315,7 @@
   background-color: #ffffff;
 }
 .selectize-dropdown,
-.selectize-dropdown.form-control {
+.selectize-dropdown.formControl {
   height: auto;
   padding: 0;
   margin: 2px 0 0 0;
@@ -388,7 +388,7 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.form-control.selectize-control {
+.formControl.selectize-control {
   padding: 0;
   height: auto;
   border: none;

@@ -29,7 +29,7 @@ export default class EventRow extends React.Component {
         <div style={style.name}>{this.props.name}</div>
         <div style={style.desc}>{this.props.desc}</div>
         <div>
-          <a onClick={this.props.handleInsert} className="hover-pointer">
+          <a onClick={this.props.handleInsert} className="hoverPointer">
             Insert and show code
           </a>
         </div>

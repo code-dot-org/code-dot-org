@@ -35,7 +35,7 @@ export default class ThemeDropdown extends React.Component {
       return {
         value: themeOption.option,
         label: (
-          <div className="theme-dropdown-label" style={styles.dropdownLabel}>
+          <div className="themeDropdownLabel" style={styles.dropdownLabel}>
             <img style={styles.icon} src={themeOption.icon} />
             <div style={styles.label}>{themeOption.displayName}</div>
             <div className="checkbox">
@@ -48,7 +48,7 @@ export default class ThemeDropdown extends React.Component {
       };
     });
     return (
-      <div style={styles.outerContainer} className="theme-dropdown">
+      <div style={styles.outerContainer} className="themeDropdown">
         <div style={styles.description}>{description}</div>
         <Select
           className="form-control"

@@ -185,7 +185,7 @@ export default class DesignProperties extends React.Component {
                 ? styles.activeTab
                 : styles.inactiveTab
             }
-            className="hover-pointer"
+            className="hoverPointer"
             onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}
           >
             <span style={styles.tabLabel}>PROPERTIES</span>
@@ -197,7 +197,7 @@ export default class DesignProperties extends React.Component {
                 ? styles.activeTab
                 : styles.inactiveTab
             }
-            className="hover-pointer"
+            className="hoverPointer"
             onClick={this.handleTabClick.bind(this, TabType.EVENTS)}
           >
             <span style={styles.tabLabel}>EVENTS</span>

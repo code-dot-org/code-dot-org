@@ -14,11 +14,11 @@ $line-height: 30px;
   vertical-align: middle;
   margin: 0 5px;
 
-  .Select-control {
+  .selectControl {
     height: $line-height - 2px;
     line-height: $line-height - 2px;
 
-    .Select-placeholder, .Select-value {
+    .Select-placeholder, .selectValue {
       line-height: $line-height - 2px;
     }
 
