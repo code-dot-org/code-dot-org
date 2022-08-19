@@ -1,9 +1,7 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
-import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {setSpritesReachLimit} from '../redux/limits';
 export default class CoreLibrary {
   constructor(p5) {
     this.p5 = p5;
@@ -363,9 +361,6 @@ export default class CoreLibrary {
   addSprite(opts) {
     const BIG_NUMBER_GUARD = 500;
     opts = opts || {};
-    if (this.getNumberOfSprites() === BIG_NUMBER_GUARD - 1) {
-      getStore().dispatch(setSpritesReachLimit());
-    }
     if (this.getNumberOfSprites() >= BIG_NUMBER_GUARD) {
       return;
     }
