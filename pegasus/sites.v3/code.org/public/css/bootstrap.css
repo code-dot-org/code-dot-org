@@ -5029,31 +5029,31 @@ a.thumbnail:focus {
   color: inherit;
 }
 
-.alert-success {
+.alertSuccess {
   color: #468847;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-.alert-success hr {
+.alertSuccess hr {
   border-top-color: #c9e2b3;
 }
 
-.alert-success .alert-link {
+.alertSuccess .alert-link {
   color: #356635;
 }
 
-.alert-info {
+.alertInfo {
   color: #3a87ad;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
 
-.alert-info hr {
+.alertInfo hr {
   border-top-color: #a6e1ec;
 }
 
-.alert-info .alert-link {
+.alertInfo .alert-link {
   color: #2d6987;
 }
 
@@ -5328,27 +5328,27 @@ a.list-group-item:focus {
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-.panel-body {
+.panelBody {
   padding: 15px;
 }
 
-.panel-body:before,
-.panel-body:after {
+.panelBody:before,
+.panelBody:after {
   display: table;
   content: " ";
 }
 
-.panel-body:after {
+.panelBody:after {
   clear: both;
 }
 
-.panel-body:before,
-.panel-body:after {
+.panelBody:before,
+.panelBody:after {
   display: table;
   content: " ";
 }
 
-.panel-body:after {
+.panelBody:after {
   clear: both;
 }
 
@@ -5377,7 +5377,7 @@ a.list-group-item:focus {
   margin-bottom: 0;
 }
 
-.panel > .panel-body + .table {
+.panel > .panelBody + .table {
   border-top: 1px solid #dddddd;
 }
 
@@ -5398,7 +5398,7 @@ a.list-group-item:focus {
   color: inherit;
 }
 
-.panel-footer {
+.panelFooter {
   padding: 10px 15px;
   background-color: #f5f5f5;
   border-top: 1px solid #dddddd;
@@ -5420,15 +5420,15 @@ a.list-group-item:focus {
   border-bottom: 0;
 }
 
-.panel-group .panel-heading + .panel-collapse .panel-body {
+.panel-group .panel-heading + .panel-collapse .panelBody {
   border-top: 1px solid #dddddd;
 }
 
-.panel-group .panel-footer {
+.panel-group .panelFooter {
   border-top: 0;
 }
 
-.panel-group .panel-footer + .panel-collapse .panel-body {
+.panel-group .panelFooter + .panel-collapse .panelBody {
   border-bottom: 1px solid #dddddd;
 }
 
@@ -5442,11 +5442,11 @@ a.list-group-item:focus {
   border-color: #dddddd;
 }
 
-.panel-default > .panel-heading + .panel-collapse .panel-body {
+.panel-default > .panel-heading + .panel-collapse .panelBody {
   border-top-color: #dddddd;
 }
 
-.panel-default > .panel-footer + .panel-collapse .panel-body {
+.panel-default > .panelFooter + .panel-collapse .panelBody {
   border-bottom-color: #dddddd;
 }
 
@@ -5460,11 +5460,11 @@ a.list-group-item:focus {
   border-color: #428bca;
 }
 
-.panel-primary > .panel-heading + .panel-collapse .panel-body {
+.panel-primary > .panel-heading + .panel-collapse .panelBody {
   border-top-color: #428bca;
 }
 
-.panel-primary > .panel-footer + .panel-collapse .panel-body {
+.panel-primary > .panelFooter + .panel-collapse .panelBody {
   border-bottom-color: #428bca;
 }
 
@@ -5478,11 +5478,11 @@ a.list-group-item:focus {
   border-color: #d6e9c6;
 }
 
-.panel-success > .panel-heading + .panel-collapse .panel-body {
+.panel-success > .panel-heading + .panel-collapse .panelBody {
   border-top-color: #d6e9c6;
 }
 
-.panel-success > .panel-footer + .panel-collapse .panel-body {
+.panel-success > .panelFooter + .panel-collapse .panelBody {
   border-bottom-color: #d6e9c6;
 }
 
@@ -5496,11 +5496,11 @@ a.list-group-item:focus {
   border-color: #fbeed5;
 }
 
-.panel-warning > .panel-heading + .panel-collapse .panel-body {
+.panel-warning > .panel-heading + .panel-collapse .panelBody {
   border-top-color: #fbeed5;
 }
 
-.panel-warning > .panel-footer + .panel-collapse .panel-body {
+.panel-warning > .panelFooter + .panel-collapse .panelBody {
   border-bottom-color: #fbeed5;
 }
 
@@ -5514,11 +5514,11 @@ a.list-group-item:focus {
   border-color: #eed3d7;
 }
 
-.panel-danger > .panel-heading + .panel-collapse .panel-body {
+.panel-danger > .panel-heading + .panel-collapse .panelBody {
   border-top-color: #eed3d7;
 }
 
-.panel-danger > .panel-footer + .panel-collapse .panel-body {
+.panel-danger > .panelFooter + .panel-collapse .panelBody {
   border-bottom-color: #eed3d7;
 }
 
@@ -5532,11 +5532,11 @@ a.list-group-item:focus {
   border-color: #bce8f1;
 }
 
-.panel-info > .panel-heading + .panel-collapse .panel-body {
+.panel-info > .panel-heading + .panel-collapse .panelBody {
   border-top-color: #bce8f1;
 }
 
-.panel-info > .panel-footer + .panel-collapse .panel-body {
+.panel-info > .panelFooter + .panel-collapse .panelBody {
   border-bottom-color: #bce8f1;
 }
 
@@ -5687,7 +5687,7 @@ body.modal-open,
   line-height: 1.428571429;
 }
 
-.modal-body {
+.modalBody {
   position: relative;
   padding: 20px;
 }

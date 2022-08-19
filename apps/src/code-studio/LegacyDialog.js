@@ -82,7 +82,7 @@ var LegacyDialog = (module.exports = function(options) {
   if (options.id) {
     this.div.attr('id', options.id);
   }
-  var modalBody = $('<div/>').addClass('modal-body');
+  var modalBody = $('<div/>').addClass('modalBody');
   modalBody.addClass('dash_modal_body');
 
   if (header) {

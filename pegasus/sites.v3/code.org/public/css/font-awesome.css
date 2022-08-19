@@ -443,7 +443,7 @@
 .fa-question-circle:before {
   content: "\f059";
 }
-.fa-info-circle:before {
+.faInfoCircle:before {
   content: "\f05a";
 }
 .fa-crosshairs:before {

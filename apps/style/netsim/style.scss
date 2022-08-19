@@ -56,7 +56,7 @@ $wide-column-width: 121px;
   // Alerts
 
   $netsim-alert-container-width: 450px;
-  .netsim-alert-container {
+  .netsimAlertContainer {
     position: absolute;
     top: -15px;
     left: 50%;
@@ -70,29 +70,29 @@ $wide-column-width: 121px;
     border-radius: 5px;
     transition-duration: 1s;
 
-    &.netsim-alert {
+    &.netsimAlert {
       margin-bottom: 5px;
     }
 
-    &.alert-info {
+    &.alertInfo {
       color: $dark_charcoal;
       background-color: $lightest-cyan;
       border-color: $light-cyan;
     }
 
-    &.alert-warn {
+    &.alertWarn {
       color: $dark_charcoal;
       background-color: $lightest-orange;
       border-color: $light-orange;
     }
 
-    &.alert-success {
+    &.alertSuccess {
       color: $dark_charcoal;
       background-color: $lightest-green;
       border-color: $light-green;
     }
 
-    &.alert-error {
+    &.alertError {
       color: $dark_charcoal;
       background-color: lighten($red, 50%);
       border-color: lighten($red, 20%);
@@ -100,11 +100,11 @@ $wide-column-width: 121px;
 
   }
 
-  .netsim-alert-button {
+  .netsimAlertButton {
     margin: 0;
   }
 
-  .old-router-log-modal {
+  .oldRouterLogModal {
     display: none;
     width: 90%;
     margin-left: -45%;
@@ -118,7 +118,7 @@ $wide-column-width: 121px;
       vertical-align: middle;
     }
 
-    .modal-body {
+    .modalBody {
       max-height: 450px;
       overflow-y: auto;
     }
@@ -134,7 +134,7 @@ $wide-column-width: 121px;
       @include user-select(text);
     }
 
-    .log-browser-limit-message {
+    .logBrowserLimitMessage {
       padding: 0.5em;
       text-align: center;
       font-style: italic;
@@ -164,7 +164,7 @@ $wide-column-width: 121px;
     overflow-x: hidden;
     overflow-y: auto;
 
-    & > .column-width-limiter {
+    & > .columnWidthLimiter {
       width: 300px;
     }
   }
@@ -238,7 +238,7 @@ $wide-column-width: 121px;
     @include user-select(none);
   }
 
-  .single-line-with-ellipsis {
+  .singleLineWithEllipsis {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -246,7 +246,7 @@ $wide-column-width: 121px;
     padding-right: 1em;
   }
 
-  .user-data {
+  .userData {
     font-family: monospace;
 
     // Make sure user data can always be selected and copied
@@ -254,7 +254,7 @@ $wide-column-width: 121px;
   }
 
   // Orange SPAN button
-  .netsim-button {
+  .netsimButton {
     display: inline-block;
     color: $white;
     background-color: $orange;
@@ -268,14 +268,14 @@ $wide-column-width: 121px;
     // Button text should not be selectable
     @include user-select(none);
 
-    &.large-button {
+    &.largeButton {
       font-size: 14px;
       line-height: 20px;
       border-radius: 5px;
       padding: 7px 14px;
     }
 
-    &.netsim-button-secondary {
+    &.netsimButtonSecondary {
       background-color: $light_cyan;
     }
 
@@ -291,12 +291,12 @@ $wide-column-width: 121px;
       background-color: $white;
       border: solid darkgray thin;
 
-      .viz-node {
+      .vizNode {
         text {
           fill: $black;
           text-anchor: middle;
 
-          &.address-box {
+          &.addressBox {
             font-weight: bold;
           }
         }
@@ -314,7 +314,7 @@ $wide-column-width: 121px;
         }
       }
 
-      .local-node {
+      .localNode {
         circle {
           stroke: $light_teal;
           fill: $light_teal;
@@ -324,7 +324,7 @@ $wide-column-width: 121px;
           stroke: $light_teal;
         }
       }
-      .router-node {
+      .routerNode {
         circle {
           stroke: $light_purple;
           fill: $light_purple;
@@ -334,7 +334,7 @@ $wide-column-width: 121px;
           stroke: $light_purple;
         }
       }
-      .auto-dns-node {
+      .autoDnsNode {
         circle {
           stroke: $light_yellow;
           fill: $light_yellow;
@@ -345,14 +345,14 @@ $wide-column-width: 121px;
         }
       }
 
-      .viz-wire {
+      .vizWire {
         stroke: $charcoal;
         stroke-width: 2;
         @include transition(
                 stroke 1s,
                 stroke-width 1s); // Fade back to normal stroke color
 
-        &.hidden-wire {
+        &.hiddenWire {
           display: none;
         }
 
@@ -364,49 +364,49 @@ $wide-column-width: 121px;
           text-anchor: middle;
           @include transition(fill 1s);
 
-          &.question-mark {
+          &.questionMark {
             @include transition(fill 1.2s);
           }
         }
 
-        &.state-unknown {
+        &.stateUnknown {
           stroke: $lighter_gray;
 
-          .state-label {
+          .stateLabel {
             fill: transparent;
           }
 
-          .question-mark {
+          .questionMark {
             fill: $lighter-gray;
           }
         }
 
-        &.state-on, &.state-off {
+        &.stateOn, &.stateOff {
           stroke-width: 4;
           @include transition(none); // Snap to this state
 
-          .state-label {
+          .stateLabel {
             @include transition(none);
           }
 
-          .question-mark {
+          .questionMark {
             fill: transparent;
             @include transition(none); // Snap to this state
           }
         }
 
-        &.state-off {
+        &.stateOff {
           stroke: $black;
 
-          .state-label {
+          .stateLabel {
             fill: $black;
           }
         }
 
-        &.state-on {
+        &.stateOn {
           stroke: $orange;
 
-          .state-label {
+          .stateLabel {
             fill: $orange;
           }
         }
@@ -414,10 +414,10 @@ $wide-column-width: 121px;
     }
   }
 
-  .netsim-shard-selection-panel {
+  .netsimShardSelectionPanel {
     overflow: hidden;
 
-    .field-box {
+    .fieldBox {
       float: left;
       margin-right: 1em;
     }
@@ -427,7 +427,7 @@ $wide-column-width: 121px;
     }
   }
 
-  .netsim-lobby-panel {
+  .netsimLobbyPanel {
     .instructions {
       float: left;
       width: 30%;
@@ -455,22 +455,22 @@ $wide-column-width: 121px;
       vertical-align: middle;
     }
 
-    .empty-row {
+    .emptyRow {
       text-align: center;
       border: none;
     }
 
-    .button-column {
+    .buttonColumn {
       width: 1px;
       text-align: center;
     }
   }
 
-  .netsim-panel.netsim-lobby div.panel-body {
+  .netsimPanel.netsimLobby div.panelBody {
     padding: 1em;
   }
 
-  .netsim-lobby-list {
+  .netsimLobbyList {
     background-color: $white;
     padding: 0.5em;
     border: inset darkslategray thin;
@@ -483,33 +483,33 @@ $wide-column-width: 121px;
       padding: 0.3em 0.8em;
     }
 
-    .empty-row {
+    .emptyRow {
       text-align: center;
       color: $lightest_gray;
       font-style: italic;
     }
 
-    .own-row {
+    .ownRow {
       background-color: $own-node-background-color;
       font-style: italic;
     }
 
-    .user-row {
-      &.selectable-row:hover {
+    .userRow {
+      &.selectableRow:hover {
         background-color: $user-row-hover-color;
         color: $black;
       }
     }
 
-    .router-row {
-      &.selectable-row:hover {
+    .routerRow {
+      &.selectableRow:hover {
         background-color: $router-row-hover-color;
         color: $black;
       }
     }
   }
 
-  .netsim-lobby-buttons {
+  .netsimLobbyButtons {
     text-align: center;
     padding-top: 4px;
   }
@@ -521,7 +521,7 @@ $wide-column-width: 121px;
   // How rounded are the corners of the panel?
   $panel-border-radius: 0.3em;
 
-  div.netsim-panel {
+  div.netsimPanel {
     margin: 0 0 0.5em;
     padding: 0;
 
@@ -536,23 +536,23 @@ $wide-column-width: 121px;
       color: $white;
       border-radius: $panel-border-radius $panel-border-radius 0 0;
 
-      .panel-controls {
+      .panelControls {
         float: right;
         margin-top: -0.3em;
         padding-top: 2px;
 
         // Special margin for buttons in this control area, so they don't squish together.
-        .netsim-button {
+        .netsimButton {
           margin-left: 3px;
         }
       }
 
-      .pad-left {
+      .padLeft {
         padding-left: 0.2em;
       }
     }
 
-    div.panel-body {
+    div.panelBody {
       background-color: $white;
       border-left: solid darkgray 1px;
       border-right: solid darkgray 1px;
@@ -561,7 +561,7 @@ $wide-column-width: 121px;
       border-radius: 0 0 $panel-border-radius $panel-border-radius;
     }
 
-    .content-wrap {
+    .contentWrap {
       margin: 1em;
     }
 
@@ -569,21 +569,21 @@ $wide-column-width: 121px;
     &.minimized {
       h1 {
         border-radius: $panel-border-radius;
-        .clear_button {
+        .clearButton {
           display: none;
         }
       }
 
-      div.panel-body {
+      div.panelBody {
         display: none;
       }
     }
 
-    .panel-footer {
+    .panelFooter {
       margin: 10px;
       overflow: hidden;
 
-      .right-side-controls {
+      .rightSideControls {
         float: right;
         text-align: right;
       }
@@ -592,7 +592,7 @@ $wide-column-width: 121px;
 
   // Log panel rules
   // Panel that shows a history of sent or received messages in a table.
-  .netsim-log-panel {
+  .netsimLogPanel {
 
     .packet {
       margin: 10px;
@@ -615,17 +615,17 @@ $wide-column-width: 121px;
       }
 
       // The top-left cell that contains the expander icon
-      .maximized-packet thead th.encodingLabel {
+      .maximizedPacket thead th.encodingLabel {
         text-align: left;
       }
 
       // Nudge the minimized expander to line up with the maximized one
-      .minimized-packet .expander {
+      .minimizedPacket .expander {
         padding: 0 5px;
       }
     }
 
-    .scroll-area {
+    .scrollArea {
       margin: 0.5em 0;
       width: 100%;
       overflow-y: auto;
@@ -692,21 +692,21 @@ $wide-column-width: 121px;
   // Send panel rules
   // Panel that lets the user enter and send messages
   // Mimics the log panel styles as much as possible.
-  .netsim-send-panel {
+  .netsimSendPanel {
 
-    .send-panel-packets {
+    .sendPanelPackets {
       max-height: 265px;
       overflow-y: auto;
     }
 
-    .netsim-packet {
+    .netsimPacket {
       border: solid darkgray thin;
       background-color: $lightest_gray;
       margin: 10px;
       padding: 0.5em;
       border-radius: 0.5em;
 
-      .packet-controls {
+      .packetControls {
         float: right;
         text-align: right;
       }
@@ -737,7 +737,7 @@ $wide-column-width: 121px;
         color: $lightest_gray;
       }
 
-      .bit-counter {
+      .bitCounter {
         text-align: right;
         color: $light_gray;
         &.oversized {
@@ -800,7 +800,7 @@ $wide-column-width: 121px;
       }
     }
 
-    .packet-size {
+    .packetSize {
       width: 50%;
       max-width: 400px;
     }
@@ -808,77 +808,77 @@ $wide-column-width: 121px;
 
   // Packet size slider and labels, which appear in the
   // send widget footer.
-  .netsim_packet_size_control {
+  .netsimPacketSizeControl {
     label {
       display: inline-block;
     }
 
-    .slider-inline-wrap {
+    .sliderInlineWrap {
       display: inline-block;
       margin-top: 3.5px;
       width: 300px;
 
-      .slider-labels {
+      .sliderLabels {
         margin-bottom: 1px;
 
-        .max-value {
+        .maxValue {
           float: right;
           text-align: right;
           width: 5em;
         }
 
-        .min-value {
+        .minValue {
           float: left;
           text-align: left;
           width: 5em;
         }
 
-        .current-value {
+        .currentValue {
           text-align: center;
         }
       }
 
-      .packet-size-slider {
+      .packetSizeSlider {
         clear: both;
       }
     }
   }
 
-  .netsim-slider {
+  .netsimSlider {
     text-align: center;
 
     label {
       display: inline-block;
     }
 
-    .slider-inline-wrap {
+    .sliderInlineWrap {
       display: inline-block;
       margin-top: 3.5px;
       width: 95%;
       margin-right: 0.5em;
 
-      .slider-labels {
+      .sliderLabels {
         margin-bottom: 1px;
 
-        .max-value {
+        .maxValue {
           float: right;
           text-align: right;
           width: 3em;
         }
 
-        .min-value {
+        .minValue {
           float: left;
           text-align: left;
           width: 3em;
         }
 
-        &.wide-labels {
-          .max-value, .min-value {
+        &.wideLabels {
+          .maxValue, .minValue {
             width: 4em;
           }
         }
 
-        .current-value {
+        .currentValue {
           text-align: center;
         }
       }
@@ -889,7 +889,7 @@ $wide-column-width: 121px;
     }
   }
 
-  .netsim-tabs {
+  .netsimTabs {
     margin-bottom: 10px;
 
     h1 {
@@ -900,18 +900,18 @@ $wide-column-width: 121px;
     }
 
     // Modify actual tabs at top of tab area
-    .ui-tabs-nav {
+    .uiTabsNav {
       background: $cyan;
       border-left: none;
       border-right: none;
       border-top: none;
       li {
         // Custom colors
-        &.ui-state-default {
+        &.uiStateDefault {
           background-color: $light_cyan;
           a { color: $white; }
         }
-        &.ui-state-active {
+        &.uiStateActive {
           background-color: white;
           a { color: $dark_charcoal; }
         }
@@ -928,7 +928,7 @@ $wide-column-width: 121px;
     }
 
     // Less padding around tab content divs
-    .ui-tabs-panel {
+    .uiTabsPanel {
       padding: 0.8em 0.5em;
 
       // But extra margin around paragraphs of text (instructions)
@@ -938,20 +938,20 @@ $wide-column-width: 121px;
     }
   }
 
-  .netsim-metronome {
+  .netsimMetronome {
     text-align: center;
 
-    .pulse-dot {
+    .pulseDot {
       fill: $purple;
     }
 
-    .progress-meter {
+    .progressMeter {
       fill: $purple;
     }
   }
 
-  .netsim-encoding-selector {
-    div.hidden-control {
+  .netsimEncodingSelector {
+    div.hiddenControl {
       display: none;
     }
 
@@ -966,7 +966,7 @@ $wide-column-width: 121px;
     }
   }
 
-  .netsim-router-log {
+  .netsimRouterLog {
     max-height: 200px;
     overflow-y: scroll;
 
@@ -977,7 +977,7 @@ $wide-column-width: 121px;
     }
   }
 
-  .dns-mode-control {
+  .dnsModeControl {
     input[type="radio"] {
       vertical-align: middle;
       margin: 0;
@@ -989,19 +989,19 @@ $wide-column-width: 121px;
     }
   }
 
-  .netsim-dns-table {
-    tr.local-node {
+  .netsimDnsTable {
+    tr.localNode {
       font-weight: bold;
       background-color: $own-node-background-color;
     }
 
-    tr.dns-node {
+    tr.dnsNode {
       color: $white;
       background-color: $orange;
     }
   }
 
-  .dns-notes {
+  .dnsNotes {
     div {
       textarea {
         resize: none;
@@ -1013,7 +1013,7 @@ $wide-column-width: 121px;
   }
 
   // Really garish terrible style for debug buttons that we should not ship.
-  input.debug-button {
+  input.debugButton {
     background: #f9f968;
     background: -moz-linear-gradient(top,  #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f968), color-stop(82%,#ffa73d), color-stop(100%,#ff7f04));
@@ -1027,11 +1027,11 @@ $wide-column-width: 121px;
     font-weight:bold;
   }
 
-  .lobby-hint {
+  .lobbyHint {
     display: block;
     padding: 20px 40px 40px 40px;
 
-    .fa-info-circle {
+    .faInfoCircle {
       float: left;
       margin: 0 20px;
       font-size: 40px;
@@ -1045,10 +1045,10 @@ $wide-column-width: 121px;
       margin-left: 100px;
     }
   }
-  .netsim-shard-selection-panel .lobby-hint {
+  .netsimShardSelectionPanel .lobbyHint {
     clear: both;
   }
-  .netsim-lobby-panel .lobby-hint {
+  .netsimLobbyPanel .lobbyHint {
     clear: right;
   }
 }

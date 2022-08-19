@@ -2,7 +2,7 @@
   .panel-heading
     Current state:
     %span{style: "font-weight: bold"}= review || 'Unreviewed'
-  .panel-body
+  .panelBody
     %button#btn-review-approve.btn.btn-success{type: "submit"}= (review == 'approved') ? 'Un-approve' : 'Approve'
     %button#btn-review-reject.btn.btn-danger{type: "submit"}= (review == 'rejected') ? 'Un-reject' : 'Reject'
     %button#btn-review-cancel.btn.btn-link{type: "button"} Cancel

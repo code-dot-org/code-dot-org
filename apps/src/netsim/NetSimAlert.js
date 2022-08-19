@@ -20,10 +20,10 @@ var NetSimAlert = (module.exports = {});
  * @return {jQuery}
  */
 NetSimAlert.getOrCreateAlertContainer_ = function() {
-  var alertContainer = $('.netsim-alert-container');
+  var alertContainer = $('.netsimAlertContainer');
 
   if (alertContainer.length === 0) {
-    alertContainer = $('<div>').addClass('netsim-alert-container');
+    alertContainer = $('<div>').addClass('netsimAlertContainer');
     $('#netsim').append(alertContainer);
 
     alertContainer.on('closed', function() {
