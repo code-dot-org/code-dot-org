@@ -38,7 +38,7 @@ export default function NewProgrammingExpressionForm({
         </select>
       </label>
       <br />
-      <button className="btn btn-primary" type="submit">
+      <button className="btn btnPrimary" type="submit">
         Save Changes
       </button>
     </form>

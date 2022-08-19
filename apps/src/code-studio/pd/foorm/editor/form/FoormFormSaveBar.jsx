@@ -320,7 +320,7 @@ class FoormFormSaveBar extends Component {
           )}
           {this.props.isLatestVersion && (
             <button
-              className="btn btn-primary"
+              className="btn btnPrimary"
               type="button"
               style={styles.button}
               onClick={() => this.handleSaveNewVersion()}
@@ -330,7 +330,7 @@ class FoormFormSaveBar extends Component {
             </button>
           )}
           <button
-            className="btn btn-primary"
+            className="btn btnPrimary"
             type="button"
             style={styles.button}
             onClick={() => this.handleSave(false)}

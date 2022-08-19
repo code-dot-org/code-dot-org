@@ -22,7 +22,7 @@ export default class ContinueButton extends React.Component {
     return (
       <button
         type="button"
-        className="btn btn-primary pull-right"
+        className="btn btnPrimary pull-right"
         disabled={submitting}
         onClick={submitting ? null : this.onClick}
       >

@@ -647,7 +647,7 @@ const FormController = props => {
 
     const saveButton = (
       <Button
-        className="btn-gray"
+        className="btnGray"
         style={styles.saveButton}
         disabled={saving}
         key="save"

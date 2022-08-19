@@ -11,7 +11,7 @@
       - items.map do |item|
         %tr.form-group
           %td
-            %label.control-label{for: item[:name]}
+            %label.controlLabel{for: item[:name]}
               = item[:label]
           - form.agree_scale_options.map do |option|
             %td

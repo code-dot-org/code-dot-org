@@ -121,7 +121,7 @@
     width: 100%;
     max-width: 100%;
 }
-label.has-error {
+label.hasError {
   color: #b94a48;
 }
 

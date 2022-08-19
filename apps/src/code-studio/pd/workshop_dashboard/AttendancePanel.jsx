@@ -83,7 +83,7 @@ export default class AttendancePanel extends React.Component {
                   <Button
                     className={
                       session['show_link?'] && session.attendance_count === 0
-                        ? 'btn-orange'
+                        ? 'btnOrange'
                         : null
                     }
                     data-session_id={session.id}

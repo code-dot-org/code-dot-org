@@ -22,7 +22,7 @@ const FieldGroup = ({
         componentClass={componentClass}
         className={classNames(
           'field',
-          isErrored ? 'has-error' : '',
+          isErrored ? 'hasError' : '',
           stylingForComponent(componentClass)
         )}
         {...props}

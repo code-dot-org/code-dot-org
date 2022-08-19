@@ -13,28 +13,28 @@
 %form#contact-volunteer-form{role: "form", onsubmit: "return sendEmail()"}
 
   .form-group
-    %label.control-label{for: "teacher-name"} Your name
+    %label.controlLabel{for: "teacher-name"} Your name
     %div
       %input#volunteer-contact-name.form-control{name: "teacher_name_s", placeholder: "Full name", required: true, type: "text"}
 
   .form-group
-    %label.control-label{for: "teacher-email"} Your email
+    %label.controlLabel{for: "teacher-email"} Your email
     %p Your email address will be shared with the volunteer you contact.
     %div
       %input#volunteer-contact-email.form-control{name: "teacher_email_s", placeholder: "Email address", required: true, type: "text"}
 
   .form-group
-    %label.control-label{for: "school-name"} School name
+    %label.controlLabel{for: "school-name"} School name
     %div
       %input#volunteer-contact-school-name.form-control{name: "school_name_s", placeholder: "School name", required: true, type: "text"}
 
   .form-group
-    %label.control-label{for: "school-location"} School address
+    %label.controlLabel{for: "school-location"} School address
     %div
       %input#volunteer-contact-school-location.form-control{name: "school_location_s", placeholder: "School address", required: true, type: "text"}
 
   .form-group
-    %label.control-label{for: "type-task"} Select all of the following ways that you'd like this volunteer to help you.
+    %label.controlLabel{for: "type-task"} Select all of the following ways that you'd like this volunteer to help you.
     #volunteer-type-task{style: "margin-left: 20px;"}
       -VolunteerContact2015.type_tasks.each_pair do |key,label|
         .checkbox

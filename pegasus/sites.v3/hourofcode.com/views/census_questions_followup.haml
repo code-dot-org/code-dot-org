@@ -51,7 +51,7 @@
         =option[:label]
 
 .form-group
-  %label.control-label=hoc_s(:census_followup_frequency)
+  %label.controlLabel=hoc_s(:census_followup_frequency)
   %select#frequency.form-control{name: "class_frequency", type: "select"}
     %option{value: "", selected: true, disabled: true}
     %option{value: "LESS THAN ONE HOUR PER WEEK"}=hoc_s(:less_than_one)
@@ -60,6 +60,6 @@
     %option{value: "I DON'T KNOW"}=hoc_s(:dont_know)
 
 .form-group
-  %label.control-label{for: "followup_more"}=hoc_s(:census_followup_more)
+  %label.controlLabel{for: "followup_more"}=hoc_s(:census_followup_more)
   %div
     %textarea#followup-more.form-control{name: "followup_more_s", type: "text_area", placeholder: hoc_s(:census_followup_more_placeholder), style: 'height: 5em;'}

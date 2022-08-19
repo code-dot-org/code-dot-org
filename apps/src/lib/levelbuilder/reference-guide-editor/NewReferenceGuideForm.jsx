@@ -21,7 +21,7 @@ const NewReferenceGuideForm = props => {
         <input className="input" name="key" required />
       </label>
       <br />
-      <button className="btn btn-primary" type="submit">
+      <button className="btn btnPrimary" type="submit">
         Save Changes
       </button>
     </form>

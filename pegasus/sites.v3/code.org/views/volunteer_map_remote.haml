@@ -14,7 +14,7 @@
 %form#volunteer-search-form{role: "form", onsubmit: "event.preventDefault();"}
   #volunteer-search-facets.form-section.row
     .form-group.col-xs-4
-      %label.control-label.small{for: "experience-level"} Volunteer experience level
+      %label.controlLabel.small{for: "experience-level"} Volunteer experience level
       %div
         %select#experience-level.form-control{name: "experience_s", type: "select"}
           %option{selected: experience_s.nil_or_empty?, value: ""}= "any"

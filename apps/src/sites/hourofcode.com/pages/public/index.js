@@ -88,11 +88,11 @@ $(document).ready(function() {
   $('#hoc-special-event-flag').change(function() {
     if ($(this).is(':checked')) {
       $('#hoc-special-event-details')
-        .closest('.form-group')
+        .closest('.formGroup')
         .slideDown();
     } else {
       $('#hoc-special-event-details')
-        .closest('.form-group')
+        .closest('.formGroup')
         .slideUp();
     }
   });

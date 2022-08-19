@@ -20,7 +20,7 @@ export default function NewProgrammingEnvironmentForm() {
         </HelpTip>
       </label>
       <br />
-      <button className="btn btn-primary" type="submit">
+      <button className="btn btnPrimary" type="submit">
         Save Changes
       </button>
     </form>

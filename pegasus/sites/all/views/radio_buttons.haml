@@ -1,7 +1,7 @@
 -css_id = field.gsub("_", "-").downcase
 
 .form-group
-  %p.control-label<
+  %p.controlLabel<
     %strong= radio_buttons['label']
   %div{:id=>css_id}
     -radio_buttons['values'].each_pair do |key, value|

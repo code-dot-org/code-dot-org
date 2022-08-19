@@ -399,7 +399,7 @@ class FoormLibrarySaveBar extends Component {
             </div>
           )}
           <button
-            className="btn btn-primary"
+            className="btn btnPrimary"
             type="button"
             style={styles.button}
             onClick={this.handleSave}
