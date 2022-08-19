@@ -366,7 +366,7 @@ NetSim.prototype.initWithUser_ = function(user) {
   });
 
   this.visualization_ = new NetSimVisualization(
-    $('#netsim-visualization'),
+    $('#netsimVisualization'),
     this.runLoop_
   );
 
@@ -408,7 +408,7 @@ NetSim.prototype.initWithUser_ = function(user) {
     this.tabs_.attachToRunLoop(this.runLoop_);
   }
 
-  this.sendPanel_ = new NetSimSendPanel($('#netsim-send'), this.level, this);
+  this.sendPanel_ = new NetSimSendPanel($('#netsimSend'), this.level, this);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.level.defaultChunkSizeBits);
@@ -971,7 +971,7 @@ NetSim.configureDomOverride_ = function(config) {
   var container = document.getElementById(config.containerId);
 
   var vizHeight = this.MIN_WORKSPACE_HEIGHT;
-  var visualizationColumn = document.getElementById('netsim-leftcol');
+  var visualizationColumn = document.getElementById('netsimLeftcol');
 
   if (config.pinWorkspaceToBottom) {
     document.body.style.overflow = 'hidden';
@@ -988,7 +988,7 @@ NetSim.configureDomOverride_ = function(config) {
  * Resize the left column so it pins above the footer.
  */
 function resizeLeftColumnToSitAboveFooter() {
-  var pinnedLeftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  var pinnedLeftColumn = document.querySelector('#netsimLeftcol.pin_bottom');
   if (!pinnedLeftColumn) {
     return;
   }
@@ -1010,7 +1010,7 @@ function resizeLeftColumnToSitAboveFooter() {
 }
 
 function resizeFooterToFitToLeftOfContent() {
-  var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  var leftColumn = document.querySelector('#netsimLeftcol.pin_bottom');
   var instructions = document.querySelector('.instructions');
   var smallFooter = document.querySelector(
     '#page-small-footer .small-footer-base'
@@ -1306,9 +1306,9 @@ NetSim.prototype.animateReadWireState = function(newState) {
  *    c) If both log widgets are closed, they float at the top of the space.
  */
 NetSim.prototype.updateLayout = function() {
-  var rightColumn = $('#netsim-rightcol');
-  var sendPanel = $('#netsim-send');
-  var logWrap = $('#netsim-logs');
+  var rightColumn = $('#netsimRightcol');
+  var sendPanel = $('#netsimSend');
+  var logWrap = $('#netsimLogs');
 
   netsimDebouncedResizeFooter();
 
