@@ -676,7 +676,8 @@ class JavalabEditor extends React.Component {
                       className={classNames(
                         style.editor,
                         displayTheme === DisplayTheme.DARK &&
-                          style.darkBackground
+                          style.darkBackground,
+                        'codemirror-container'
                       )}
                       style={{height: height - HEADER_OFFSET}}
                     />
@@ -692,7 +693,6 @@ class JavalabEditor extends React.Component {
           onRenameFile={this.onRenameFile}
           filenameToRename={fileMetadata[editTabKey]}
           onCreateFile={this.onCreateFile}
-          commitDialogFileNames={Object.keys(sources)}
           onCommitCode={onCommitCode}
           handleClearPuzzle={handleClearPuzzle}
           isProjectTemplateLevel={isProjectTemplateLevel}
