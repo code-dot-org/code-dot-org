@@ -1356,7 +1356,7 @@ function resizePinnedBelowVisualizationArea() {
 
   const possibleElementsAbove = [
     'playSpaceHeader',
-    'spelling-table-wrapper',
+    'spellingTableWrapper',
     'gameButtons',
     'gameButtonExtras',
     'song-selector-wrapper',
