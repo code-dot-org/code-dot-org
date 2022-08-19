@@ -3,8 +3,8 @@
 
 @media print {
   /* we have many components that we never want to include in a print view */
-  #unit-breadcrumb,
-  #teacher-panel-container,
+  #unitBreadcrumb,
+  #teacherPanelContainer,
   .__react_component_tooltip,
   .unit-overview-top-row,
   .progress-legend,
