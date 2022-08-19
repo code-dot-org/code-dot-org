@@ -99,13 +99,13 @@ class JsDebugger extends React.Component {
       debuggerWidth = document.getElementById('debug-area-header').offsetWidth;
     }
     let commandsWidth = 0;
-    if (document.getElementById('debug-commands-header')) {
-      commandsWidth = document.getElementById('debug-commands-header')
+    if (document.getElementById('debugCommandsHeader')) {
+      commandsWidth = document.getElementById('debugCommandsHeader')
         .offsetWidth;
     }
     let watchersWidth = 0;
-    if (document.getElementById('debug-watch-header')) {
-      watchersWidth = document.getElementById('debug-watch-header').offsetWidth;
+    if (document.getElementById('debugWatchHeader')) {
+      watchersWidth = document.getElementById('debugWatchHeader').offsetWidth;
     }
     const consoleWidth = debuggerWidth - commandsWidth - watchersWidth;
     this.setState({consoleWidth});
@@ -152,7 +152,7 @@ class JsDebugger extends React.Component {
         document.getElementById('debug-watch');
       watchersReferences.watchersHeaderDiv =
         watchersReferences.watchersHeaderDiv ||
-        document.getElementById('debug-watch-header');
+        document.getElementById('debugWatchHeader');
       watchersReferences.debugConsoleDiv =
         watchersReferences.debugConsoleDiv ||
         document.getElementById('debug-console');
