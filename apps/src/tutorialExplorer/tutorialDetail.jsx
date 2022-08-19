@@ -144,10 +144,7 @@ export default class TutorialDetail extends React.Component {
                 </button>
                 <div style={{clear: 'both'}} />
               </div>
-              <div
-                className="modal-body"
-                style={styles.tutorialDetailModalBody}
-              >
+              <div className="modalBody" style={styles.tutorialDetailModalBody}>
                 {!this.props.disabledTutorial && (
                   <a
                     href={this.props.item.url}

@@ -129,7 +129,7 @@
     %button.primary.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
 #volunteer-engineer-thanks{:style=>"display: none;"}
-  .alert.alert-success{role:"alert"}
+  .alert.alertSuccess{role:"alert"}
     %p!= I18n.t(:volunteer_engineer_submission_thankyou, url: '/volunteer/local', markdown: :inline)
   - if !form.secret
     #edit-information

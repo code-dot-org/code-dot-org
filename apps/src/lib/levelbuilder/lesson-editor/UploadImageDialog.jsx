@@ -91,7 +91,7 @@ export default function UploadImageDialog({
       />
 
       {error && (
-        <div className="alert alert-error" role="alert">
+        <div className="alert alertError" role="alert">
           <span>{error.toString()}</span>
         </div>
       )}

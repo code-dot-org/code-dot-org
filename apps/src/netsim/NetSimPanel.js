@@ -171,7 +171,7 @@ NetSimPanel.prototype.addButton = function(buttonText, pressCallback, options) {
   options = ArgumentUtils.extendOptionsObject(options || {});
 
   var button = $('<span>')
-    .addClass('netsim-button')
+    .addClass('netsimButton')
     .html(buttonText)
     .click(pressCallback);
 

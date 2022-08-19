@@ -165,7 +165,7 @@ var NetSimPacketEditor = (module.exports = function(initialConfig) {
    * @type {jQuery}
    * @private
    */
-  this.rootDiv_ = $('<div>').addClass('netsim-packet');
+  this.rootDiv_ = $('<div>').addClass('netsimPacket');
 
   /**
    * @type {MessageGranularity}

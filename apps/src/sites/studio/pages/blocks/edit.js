@@ -71,7 +71,7 @@ function initializeEditPage(defaultSprites) {
     updateBlockPreview();
   }
 
-  $('.alert.alert-success')
+  $('.alert.alertSuccess')
     .delay(5000)
     .fadeOut(1000);
 }
