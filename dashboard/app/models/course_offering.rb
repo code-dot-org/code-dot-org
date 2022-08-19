@@ -29,7 +29,6 @@ class CourseOffering < ApplicationRecord
     with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
-  # The set of models which may be touched by ScriptSeed
   scope :with_versions, -> do
     includes(
       [
