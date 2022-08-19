@@ -1,13 +1,13 @@
-$root: '/blockly/media/bounce/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/bounce/"; //TODO: Parameterize for asset pipeline
 
-@import 'font';
+@import "font";
 
 #svgBounce {
   overflow: hidden;
 }
 
 /* 'Look' icon */
-#look>path {
+#look > path {
   display: none;
   fill: none;
   stroke-width: 10;
