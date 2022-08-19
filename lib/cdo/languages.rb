@@ -1,12 +1,9 @@
 require 'cdo/db'
 require 'cdo/cache_method'
-
+# Do not use this static methods directly and only use them on a parent class that defines how to get the table
+# This allow us to share logic between dashboard and pegasus.
 class Languages
   using CacheMethod
-
-  def self.table
-    @@table ||= PEGASUS_DB[:cdo_languages]
-  end
 
   cached def self.get_crowdin_languages
     table.select(:crowdin_code_s, :crowdin_name_s).where("crowdin_code_s != 'en'").to_a

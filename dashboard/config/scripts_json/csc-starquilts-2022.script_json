@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2022-07-13 17:43:31 UTC",
+    "serialized_at": "2022-08-08 20:55:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -397,7 +397,7 @@
       "key": "cd37c7fa-ef01-4d7e-976f-e8c27219d0b5",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Goal:** The next few levels mirror the first levels but with increased complexity. The biggest difference is students will be stamping a rhombus shape, instead of drawing lines.\n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Goal:** The next few levels mirror the first levels but with increased complexity. \n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
