@@ -12,7 +12,7 @@ jobs:
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
       LD_LIBRARY_PATH: "/usr/local/lib"
-      LANG: en_US.UTF-8
+      LANG: C.UTF-8
     steps:   
       - name: Get actions code
         uses: actions/checkout@v3    
