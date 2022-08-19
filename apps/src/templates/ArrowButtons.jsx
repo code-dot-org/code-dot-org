@@ -23,7 +23,7 @@ class ArrowButtons extends React.Component {
           disabled={disabled}
           className="arrow"
         >
-          <img src="/blockly/media/1x1.gif" className="left-btn icon21" />
+          <img src="/blockly/media/1x1.gif" className="leftBtn icon21" />
         </button>
         <button
           type="button"
@@ -31,7 +31,7 @@ class ArrowButtons extends React.Component {
           disabled={disabled}
           className="arrow"
         >
-          <img src="/blockly/media/1x1.gif" className="right-btn icon21" />
+          <img src="/blockly/media/1x1.gif" className="rightBtn icon21" />
         </button>
         <button
           type="button"
@@ -39,7 +39,7 @@ class ArrowButtons extends React.Component {
           disabled={disabled}
           className="arrow"
         >
-          <img src="/blockly/media/1x1.gif" className="up-btn icon21" />
+          <img src="/blockly/media/1x1.gif" className="upBtn icon21" />
         </button>
         <button
           type="button"
@@ -47,7 +47,7 @@ class ArrowButtons extends React.Component {
           disabled={disabled}
           className="arrow"
         >
-          <img src="/blockly/media/1x1.gif" className="down-btn icon21" />
+          <img src="/blockly/media/1x1.gif" className="downBtn icon21" />
         </button>
       </div>
     );

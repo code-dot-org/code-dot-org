@@ -130,9 +130,9 @@ export default class ImagePicker extends React.Component {
 
     let modeSwitch,
       title = this.props.assetChosen ? (
-        <p className="dialog-title">{i18n.chooseAssets()}</p>
+        <p className="dialogTitle">{i18n.chooseAssets()}</p>
       ) : (
-        <p className="dialog-title">{i18n.manageAssets()}</p>
+        <p className="dialogTitle">{i18n.manageAssets()}</p>
       );
 
     const imageTypeFilter =

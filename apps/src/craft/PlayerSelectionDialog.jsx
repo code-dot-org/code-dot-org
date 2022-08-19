@@ -22,11 +22,11 @@ function PlayerSelectionDialog({
   function renderPlayer(name) {
     const formattedName = name.toLowerCase();
     return (
-      <div key={formattedName} className="minecraft-character">
-        <h1 className="minecraft-big-yellow-header">{name}</h1>
-        <div className="character-portrait" id={`${formattedName}-portrait`} />
+      <div key={formattedName} className="minecraftCharacter">
+        <h1 className="minecraftBigYellowHeader">{name}</h1>
+        <div className="characterPortrait" id={`${formattedName}-portrait`} />
         <div
-          className="choose-character-button"
+          className="chooseCharacterButton"
           onClick={() => handlePlayerSelection(name)}
         >
           {i18n.selectChooseButton()}

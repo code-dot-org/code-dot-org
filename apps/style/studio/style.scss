@@ -28,19 +28,19 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   background-position: -21px -21px;
   margin-right: 3px;
 }
-.left-btn {
+.leftBtn {
   background-position: -21px -42px;
   margin-right: 3px;
 }
-.right-btn {
+.rightBtn {
   background-position: -21px -63px;
   margin-right: 3px;
 }
-.up-btn {
+.upBtn {
   background-position: 0 -63px;
   margin-right: 3px;
 }
-.down-btn {
+.downBtn {
   background-position: 0 -42px;
   margin-right: 3px;
 }
@@ -137,7 +137,7 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   }
 }
 
-.instructions-markdown {
+.instructionsMarkdown {
   // Imitates the text style of the first line of instructions text in our
   // classic dialogues, useful for creating that effect in markdown.
   .character-text {

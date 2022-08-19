@@ -67,7 +67,7 @@ var LegacyDialog = (module.exports = function(options) {
   var close = options.close === undefined ? true : options.close;
 
   var closeLink = $('<div id="x-close"/>')
-    .addClass('x-close')
+    .addClass('xClose')
     .attr('data-dismiss', 'modal');
   this.div = $('<div tabindex="-1"/>').addClass('modal');
 

@@ -12,7 +12,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 export const LegacySingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
     <div className="modalContent noModalIcon">
-      <p className="dialog-title">{title}</p>
+      <p className="dialogTitle">{title}</p>
       <p className="dialog-body">{body}</p>
       <button type="button" id="cancel-button" style={{float: 'left'}}>
         {i18n.cancel()}
@@ -40,7 +40,7 @@ export const LegacyUnsubmitDialog = (
 export const LegacyMatchAngiGifDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon scrollable-element">
-      <p className="dialog-title">{i18n.instructions()}</p>
+      <p className="dialogTitle">{i18n.instructions()}</p>
       <p>{i18n.dragBlocksToMatch()}</p>
       <div className="aniGif example-image" style={{overflow: 'hidden'}}>
         <img src="/script_assets/images/matching_ani.gif" />
@@ -57,7 +57,7 @@ export const LegacyMatchAngiGifDialog = () => (
 export const LegacyTooFewDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon scrollable-element">
-      <p className="dialog-title">{i18n.tooFewTitle()}</p>
+      <p className="dialogTitle">{i18n.tooFewTitle()}</p>
       <p>{i18n.tooFewBody()}</p>
       <div className="farSide">
         <button type="button" id="ok-button">
@@ -71,7 +71,7 @@ export const LegacyTooFewDialog = () => (
 export const LegacyContractMatchErrorDialog = ({text}) => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon">
-      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p className="dialogTitle">{i18n.incorrectAnswer()}</p>
       <p>{text}</p>
       <div className="farSide">
         <button type="button" id="ok-button">
@@ -88,7 +88,7 @@ LegacyContractMatchErrorDialog.propTypes = {
 export const LegacyMatchErrorDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon scrollable-element">
-      <p className="dialog-title">{i18n.incorrectSolution()}</p>
+      <p className="dialogTitle">{i18n.incorrectSolution()}</p>
       <p>{i18n.incorrectSolutionBody()}</p>
       <div className="farSide">
         <button type="button" id="ok-button">
@@ -102,7 +102,7 @@ export const LegacyMatchErrorDialog = () => (
 export const LegacyErrorDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon scrollable-element">
-      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p className="dialogTitle">{i18n.incorrectAnswer()}</p>
       <p>{i18n.incorrectAnswerBody()}</p>
       <div className="farSide">
         <button type="button" id="ok-button">
@@ -116,7 +116,7 @@ export const LegacyErrorDialog = () => (
 export const LegacyStartOverDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon scrollable-element">
-      <p className="dialog-title">{i18n.startOverTitle()}</p>
+      <p className="dialogTitle">{i18n.startOverTitle()}</p>
       <p>{i18n.startOverBody()}</p>
       <div id="buttons">
         <button type="button" id="cancel-button">
@@ -138,9 +138,9 @@ export const LegacyStartOverDialog = () => (
 export const LegacyInstructionsDialog = ({title, markdown}) => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon markdown-instructions-container">
-      <p className="dialog-title">{title}</p>
+      <p className="dialogTitle">{title}</p>
       <p />
-      <div className="instructions-markdown scrollable-element">
+      <div className="instructionsMarkdown scrollable-element">
         <SafeMarkdown markdown={markdown} />
       </div>
       <div id="buttons">
@@ -159,7 +159,7 @@ LegacyInstructionsDialog.propTypes = {
 export const LegacySuccessDialog = ({title, body}) => (
   <ProtectedStatefulDiv>
     <div className="modalContent noModalIcon scrollable-element">
-      <p className="dialog-title">{title}</p>
+      <p className="dialogTitle">{title}</p>
       <p>{body}</p>
       <div className="farSide">
         <button type="button" id="ok-button">

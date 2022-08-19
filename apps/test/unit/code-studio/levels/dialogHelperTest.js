@@ -41,7 +41,7 @@ describe('dialogHelper', () => {
     const MyComponent = () => (
       <div>
         <div className="modalContent noModalIcon">
-          <p className="dialog-title">Title</p>
+          <p className="dialogTitle">Title</p>
           <p className="dialog-body">Body</p>
           <button type="button" id="cancel-button">
             Cancel

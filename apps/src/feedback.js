@@ -1312,7 +1312,7 @@ FeedbackUtils.prototype.showSimpleDialog = function(options) {
   var contentDiv = ReactDOM.render(
     <div>
       {options.headerText && (
-        <p className="dialog-title">{options.headerText}</p>
+        <p className="dialogTitle">{options.headerText}</p>
       )}
       {options.bodyText && <p>{options.bodyText}</p>}
       {options.prompt && (

@@ -661,7 +661,7 @@ class ExportDialog extends React.Component {
           className="modalContent noModalIcon"
           style={{position: 'relative'}}
         >
-          <p className="dialog-title">Export your project</p>
+          <p className="dialogTitle">Export your project</p>
           {isAbusive && (
             <AbuseError
               i18n={{

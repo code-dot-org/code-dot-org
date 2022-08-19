@@ -101,7 +101,7 @@ function showConfirmationDialog(config) {
 
   const contentDiv = document.createElement('div');
   contentDiv.innerHTML =
-    '<p class="dialog-title">' +
+    '<p class="dialogTitle">' +
     config.title +
     '</p>' +
     '<p>' +

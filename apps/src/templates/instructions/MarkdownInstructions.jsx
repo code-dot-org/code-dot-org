@@ -82,7 +82,7 @@ class MarkdownInstructions extends React.Component {
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
       <div
-        className="instructions-markdown"
+        className="instructionsMarkdown"
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,

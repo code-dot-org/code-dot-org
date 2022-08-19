@@ -384,7 +384,7 @@ export default class Craft {
         img.src = url;
       });
 
-      const shareButton = $('.mc-share-button');
+      const shareButton = $('.mcShareButton');
       if (shareButton.length) {
         dom.addClickTouchEvent(shareButton[0], function() {
           Craft.reportResult(true);

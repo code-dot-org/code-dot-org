@@ -9,7 +9,7 @@ $root: '/blockly/media/dance/'; //TODO: Parameterize for asset pipeline
   background: url("#{$root}spinner-big.gif") no-repeat center center;
 }
 
-.modal-image {
+.modalImage {
   margin-top: -60px;
   margin-left: -25px;
   width: 140px;
@@ -44,19 +44,19 @@ $root: '/blockly/media/dance/'; //TODO: Parameterize for asset pipeline
 .dpad-btn {
   background-position: -21px -63px;
 }
-.left-btn {
+.leftBtn {
   background-position: -21px -42px;
   margin-right: 3px;
 }
-.right-btn {
+.rightBtn {
   background-position: -21px -126px;
   margin-right: 3px;
 }
-.up-btn {
+.upBtn {
   background-position: 0 -63px;
   margin-right: 3px;
 }
-.down-btn {
+.downBtn {
   background-position: 0 -42px;
   margin-right: 3px;
 }

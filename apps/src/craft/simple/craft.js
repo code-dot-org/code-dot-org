@@ -435,7 +435,7 @@ Craft.init = function(config) {
       preloadImage(url);
     });
 
-    var shareButton = $('.mc-share-button');
+    var shareButton = $('.mcShareButton');
     if (shareButton.length) {
       dom.addClickTouchEvent(shareButton[0], function() {
         Craft.reportResult(true);
