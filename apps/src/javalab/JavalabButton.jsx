@@ -48,7 +48,7 @@ JavalabButton.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string,
   inlineStyle: PropTypes.object,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   isHorizontal: PropTypes.bool,
   isDisabled: PropTypes.bool,
   id: PropTypes.string,
