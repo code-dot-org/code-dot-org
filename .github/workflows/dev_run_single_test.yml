@@ -34,10 +34,11 @@ jobs:
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3           
       - name: Rake run integration tests
         run:  |
           echo "testing failure"  
           bundle exec rake test:changed --trace
         continue-on-error: true       
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3        
+     
