@@ -61,7 +61,9 @@ export default class AnimationPickerListItem extends React.Component {
             category,
             style.thumbnail,
             icon && style.thumbnailIcon,
-            style.thumbnailWithHover,
+            hover && style.multiSelectBorder,
+            hover && style.hoverBorder,
+            selected && style.selectBorder,
             animationProps && loaded && style.block,
             animationProps && !loaded && style.none
           )}
@@ -90,7 +92,9 @@ export default class AnimationPickerListItem extends React.Component {
             <i
               className={classNames(
                 multiSelectIconClassName,
-                style.multiSelectIcon
+                style.multiSelectIcon,
+                hover && style.hoverIcon,
+                selected && style.selectIcon
               )}
             />
           )}
