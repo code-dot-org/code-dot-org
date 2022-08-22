@@ -35,7 +35,7 @@ $hover-plus-size: 24px;
     background-color: $purple;
     border-color: $purple;
     font-size: calc($thumbnail-size / 2);
-    line-height: calc($thumbnail-size + px);
+    line-height: $thumbnail-size;
     &:hover {
       background-color: $light_purple;
       border-color: $light_purple;
