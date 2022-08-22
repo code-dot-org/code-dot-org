@@ -1,10 +1,6 @@
 @use 'control-buttons.module';
 @import 'color.scss';
 
-.buttonWhite {
-  @include control-buttons.whiteControlButton;
-}
-
 .selected {
   background-color: $lightest_gray;
   border-color: $lightest_gray;
