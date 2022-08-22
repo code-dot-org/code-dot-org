@@ -6,6 +6,12 @@ import {
 } from '../../redux/spritelabInput';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
+// Big numbers in some blocks can cause performance issues. Combined with live-preview,
+// this results in hanging the tab and students unable to edit their blocks.
+// We guard against this by capping numbers where needed.
+// This constant limits the print statements to 250.
+const TEXT_BIG_NUMBER_GUARD = 250;
+
 export const commands = {
   comment(text) {
     /* no-op */
@@ -54,8 +60,7 @@ export const commands = {
   },
 
   printText(text) {
-    const BIG_NUMBER_GUARD = 100;
-    if (this.printLog.length >= BIG_NUMBER_GUARD) {
+    if (this.printLog.length >= TEXT_BIG_NUMBER_GUARD) {
       return;
     }
     this.printLog.push(text);

@@ -2,6 +2,12 @@ import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
+
+// Big numbers in some blocks can cause performance issues. Combined with live-preview,
+// this results in hanging the tab and students unable to edit their blocks. We
+// guard against this by capping numbers where needed.
+const SPRITE_BIG_NUMBER_GUARD = 1000;
+
 export default class CoreLibrary {
   constructor(p5) {
     this.p5 = p5;
@@ -359,9 +365,8 @@ export default class CoreLibrary {
    * @returns {Number} A unique id to reference the sprite.
    */
   addSprite(opts) {
-    const BIG_NUMBER_GUARD = 500;
     opts = opts || {};
-    if (this.getNumberOfSprites() >= BIG_NUMBER_GUARD) {
+    if (this.getNumberOfSprites() >= SPRITE_BIG_NUMBER_GUARD) {
       return;
     }
     let name = opts.name;
