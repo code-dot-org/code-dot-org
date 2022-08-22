@@ -83,6 +83,11 @@
     border-radius: 0;
     margin-right: 0;
   }
+
+  .cm-textfield::placeholder {
+    color: $lighter_gray;
+    opacity: 1;
+  }
 }
 
 /* Slider. */
