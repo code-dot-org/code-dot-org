@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:19:16 UTC",
+    "serialized_at": "2022-08-19 17:17:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1962,7 +1962,7 @@
       "key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Generic Types*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`."
       },
       "seeding_key": {
         "activity_section.key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
