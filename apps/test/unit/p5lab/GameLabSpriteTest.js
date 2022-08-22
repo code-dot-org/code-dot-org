@@ -1,31 +1,23 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
 import {expect} from '../../util/reconfiguredChai';
-import {forEveryBooleanPermutation} from '../../util/testUtils';
+import {
+  forEveryBooleanPermutation,
+  sandboxDocumentBody
+} from '../../util/testUtils';
 import createP5Wrapper, {
   createStatefulP5Wrapper,
   expectAnimationsAreClones
 } from '../../util/gamelab/TestableP5Wrapper';
 
 describe('P5SpriteWrapper', function() {
-  let p5Wrapper, createSprite, originalDocumentBody;
+  let p5Wrapper, createSprite;
 
-  // TODO: Re-enable sandboxDocumentBody and fix state leakage caused by
-  // test/unit/p5lab/ tests.
-  // Using the aggressive sandbox here because the P5 library generates
-  // a default canvas when it's not attached to an existing one.
-  // sandboxDocumentBody();
-  before(() => {
-    originalDocumentBody = document.body.innerHTML;
-  });
+  sandboxDocumentBody(false);
 
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
     createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
-  });
-
-  after(() => {
-    document.body.innerHTML = originalDocumentBody;
   });
 
   describe('property aliases', function() {
