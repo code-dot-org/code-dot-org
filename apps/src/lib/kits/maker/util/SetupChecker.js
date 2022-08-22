@@ -28,7 +28,6 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectSupportedBrowser() {
-    console.log('Supported Browser');
     return new Promise((resolve, reject) => {
       if (isCodeOrgBrowser()) {
         // TODO: Check browser version
@@ -56,7 +55,6 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    console.log('Board Plugged In');
     if (!isWebSerialPort(this.port)) {
       return findPortWithViableDevice().then(port => (this.port = port));
     }
@@ -69,7 +67,6 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectCorrectFirmware(boardType) {
-    console.log('Correct Firmware');
     if (boardType === BOARD_TYPE.MICROBIT) {
       this.boardController = new MicroBitBoard(this.port);
       return this.boardController.checkExpectedFirmware().catch(err => {
@@ -86,7 +83,6 @@ export default class SetupChecker {
    * @return {string}
    */
   detectBoardType() {
-    console.log('Detect Board Type');
     return detectBoardTypeFromPort(this.port);
   }
 
@@ -94,7 +90,6 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectComponentsInitialize() {
-    console.log('Components Initialize');
     return this.boardController.initializeComponents();
   }
 
@@ -102,7 +97,6 @@ export default class SetupChecker {
    * @return {Promise}
    */
   celebrate() {
-    console.log('Celebrate');
     return this.boardController.celebrateSuccessfulConnection();
   }
 

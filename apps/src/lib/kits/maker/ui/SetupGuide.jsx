@@ -54,12 +54,10 @@ export default class SetupGuide extends React.Component {
 
     // Experiment 'webserial' uses the WebSerial protocol and requires no downloads.
     let isWebSerial = experiments.isEnabled('webserial');
-    console.log('Is WebSerial: ' + isWebSerial);
 
     // WebSerial requires user input for user to select port.
     // Add a button for user interaction before initiated Setup Checklist
     if (isWebSerial && !webSerialPort) {
-      console.log('Get the WebSerialPort');
       return (
         <input
           style={{marginLeft: 9, marginTop: -4}}
@@ -78,7 +76,6 @@ export default class SetupGuide extends React.Component {
     }
 
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
-      console.log('Browser or ChromeOS or WebSerial');
       return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (
