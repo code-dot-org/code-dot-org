@@ -38,3 +38,7 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
     lastTabKeyIndex: orderedTabKeys.length - 1
   };
 };
+
+export const isJavaFile = filename => {
+  return filename.endsWith('.java');
+};
