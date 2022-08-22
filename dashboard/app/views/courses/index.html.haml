@@ -1,8 +1,9 @@
 :ruby
   lines_count = fetch_metrics['lines_of_code']
   lines_count = number_with_delimiter(lines_count, :delimiter => ',')
-  students_count = fetch_user_metrics['number_students']
-  students_count /= 1000000
+
+  # Number of students in millions, rounded down to the nearest 10M
+  students_count = 70
   students_count = students_count.to_s
 
   courses_data = {}
