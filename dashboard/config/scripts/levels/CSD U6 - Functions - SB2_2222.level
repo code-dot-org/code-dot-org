@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:10:13.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -62,14 +58,14 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/",
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/random-numbers/"
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/random-numbers"
     ],
     "start_blocks": "//Events\r\nonEvent(\"redAlien1\", \"click\", function() {\r\n  //Turn the LEDs red\r\n  redLEDs();\r\n});\r\nonEvent(\"redAlien2\", \"click\", function() {\r\n  //Turn the LEDs red\r\n  redLEDs();\r\n});\r\n\r\n//2) Calling our Functions\r\nonEvent(\"blueAlien1\", \"click\", function() {\r\n  //Turn the LEDs blue\r\n  \r\n});\r\nonEvent(\"blueAlien2\", \"click\", function() {\r\n  //Turn the LEDs blue\r\n  \r\n});\r\n\r\n\r\n// Functions\r\nfunction redLEDs() {\r\n  colorLeds[0].color(\"red\");\r\n  colorLeds[1].color(\"red\");\r\n  colorLeds[2].color(\"red\");\r\n  colorLeds[3].color(\"red\");\r\n  colorLeds[4].color(\"red\");\r\n  colorLeds[5].color(\"red\");\r\n  colorLeds[6].color(\"red\");\r\n  colorLeds[7].color(\"red\");\r\n  colorLeds[8].color(\"red\");\r\n  colorLeds[9].color(\"red\");\r\n}\r\n//1) Defining our Functions\r\n//Add Your Function Here!\r\n",
-    "map_reference": "/docs/concepts/javascript/functions/",
+    "map_reference": "/courses/csd-2022/guides/functions",
     "starter_assets": {
       "Alien_11.png": "fd9d0576-c852-4806-8e94-3e9442e542d8.png",
       "Alien_13.png": "2741f080-4a17-42e1-a8e6-5beb05495966.png",
@@ -82,6 +78,10 @@
     "encrypted_examples": "td00VTc1ROyUFfFc5Y6OTy7C4jlXbLapnqy6Foh/U+pkbyu60MZLPOzV5/Iw\nHQdEFYHF4lKdLnTOH2WkwQ3b0Q==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:10:13.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:10:13.302+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB2_2022\"}]"

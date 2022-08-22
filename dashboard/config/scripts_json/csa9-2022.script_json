@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-27 19:42:06 UTC",
+    "serialized_at": "2022-08-03 14:13:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3051,6 +3051,7 @@
       "key": "ap_classroom_user_guide_for_students",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -3094,11 +3095,12 @@
       }
     },
     {
-      "name": "Course Exam Description",
+      "name": "Course and Exam Description",
       "url": "https://docs.google.com/document/d/13plMgDK_6RDMdtAs52nP8R9obQf9i4RM6UsdhD0GnRU/edit?usp=sharing",
       "key": "course_exam_description",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -3123,6 +3125,7 @@
       "key": "exploring_exam_expectations",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3135,6 +3138,7 @@
       "key": "frq_answer_sheet",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3147,6 +3151,7 @@
       "key": "frq_choice_board",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3171,6 +3176,7 @@
       "key": "frq_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3195,6 +3201,7 @@
       "key": "frq_study_plan",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3207,6 +3214,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -3219,6 +3227,7 @@
       "key": "mcq_choice_board",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3243,6 +3252,7 @@
       "key": "mcq_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3267,6 +3277,7 @@
       "key": "mcq_pre-assessment_scoring_reflection",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3279,6 +3290,7 @@
       "key": "mcq_study_plan",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {

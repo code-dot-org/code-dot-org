@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import ThreeColumns from './ThreeColumns';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
@@ -291,17 +290,20 @@ class InstructionsCSF extends React.Component {
   }
 
   render() {
-    const mainStyle = [
-      styles.main,
-      {
+    const mainStyle = {
+      ...styles.main,
+      ...{
         height: this.props.height - HEADER_HEIGHT
       },
-      this.props.noVisualization && styles.noViz,
-      this.props.overlayVisible && styles.withOverlay
-    ];
+      ...(this.props.noVisualization && styles.noViz),
+      ...(this.props.overlayVisible && styles.withOverlay)
+    };
 
     const threeColumnsStyles = {
-      container: [styles.body, this.props.isMinecraft && craftStyles.body],
+      container: {
+        ...styles.body,
+        ...(this.props.isMinecraft && craftStyles.body)
+      },
       left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
     };
 
@@ -413,4 +415,4 @@ export default connect(
   },
   null,
   {withRef: true}
-)(Radium(InstructionsCSF));
+)(InstructionsCSF);
