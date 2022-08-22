@@ -8,6 +8,7 @@
   padding: 0;
 }
 
+// cm prefixed classes are from codemirror
 .cm-content,
 .cm-gutter {
   min-height: 390px;
@@ -23,6 +24,10 @@
 
 .cm-wrap {
   height: 100%;
+}
+
+.codemirror-container .cm-editor.cm-focused {
+  outline: none;
 }
 
 #codeWorkspace {
