@@ -70,7 +70,6 @@ export default class SetupChecklist extends Component {
   }
 
   detect() {
-    console.log('Detect');
     const {webSerialPort} = this.props;
     const wrappedSerialPort = webSerialPort
       ? new WebSerialPortWrapper(webSerialPort)

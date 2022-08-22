@@ -30,17 +30,13 @@ export default class WebSerialPortWrapper extends EventEmitter {
       throw new Error(`Requested port is already open.`);
     }
 
-    console.log('Open');
-
     this.port
       .open({baudRate: SERIAL_BAUD})
       .then(() => {
-        console.log('Set writer and reader');
         this.writer = this.port.writable.getWriter();
         this.reader = this.port.readable.getReader();
       })
       .then(async () => {
-        console.log('Emit open');
         this.portOpen = true;
         this.emit('open');
         while (this.port.readable?.locked) {
@@ -68,15 +64,10 @@ export default class WebSerialPortWrapper extends EventEmitter {
     if (!this.portOpen) {
       throw new Error('Requested port cannot be written to until it is open');
     }
-    console.log('Alpha');
-    console.log(callback);
     return this.writer
       .write(buffer)
       .then(() => (callback ? callback() : null))
-      .catch(() => {
-        console.log('Failed Write');
-        console.log(callback);
-      });
+      .catch(() => throw new Error('Write to port failed'));
   }
 
   async close() {
