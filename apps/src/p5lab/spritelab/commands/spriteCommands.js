@@ -3,9 +3,9 @@ import {commands as behaviorCommands} from './behaviorCommands';
 import * as utils from '@cdo/apps/p5lab/utils';
 
 // Big numbers in some blocks can cause performance issues. Combined with live-preview,
-// this results in hanging the tab and students unable to edit their blocks. We should
-// guard against this by silently capping numbers where needed.
-const BIG_NUMBER_GUARD = 500;
+// this results in hanging the tab and students unable to edit their blocks. We
+// guard against this by capping numbers where needed.
+const SPRITE_BIG_NUMBER_GUARD = 1000;
 
 export const commands = {
   countByAnimation(spriteArg) {
@@ -71,10 +71,10 @@ export const commands = {
 
   makeNumSprites(num, animation) {
     var numSprites = this.getNumberOfSprites();
-    if (numSprites >= BIG_NUMBER_GUARD) {
+    if (numSprites >= SPRITE_BIG_NUMBER_GUARD) {
       return;
     }
-    num = Math.min(num, BIG_NUMBER_GUARD - numSprites);
+    num = Math.min(num, SPRITE_BIG_NUMBER_GUARD - numSprites);
     for (let i = 0; i < num; i++) {
       this.addSprite({
         animation,
@@ -85,7 +85,7 @@ export const commands = {
 
   makeBurst(num, animation, effectName) {
     var numSprites = this.getNumberOfSprites();
-    if (numSprites > BIG_NUMBER_GUARD - 1) {
+    if (numSprites >= SPRITE_BIG_NUMBER_GUARD) {
       return;
     }
     const behaviorFuncs = {
@@ -94,7 +94,7 @@ export const commands = {
       rain: behaviorCommands.rainFunc,
       spiral: behaviorCommands.spiralFunc
     };
-    num = Math.min(num, BIG_NUMBER_GUARD);
+    num = Math.min(num, SPRITE_BIG_NUMBER_GUARD);
     //Makes sure that same-frame multiple spiral effects start at a different angles
     const spiralRandomizer = utils.randomInt(0, 359);
     for (let i = 0; i < num; i++) {
