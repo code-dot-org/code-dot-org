@@ -206,6 +206,35 @@ describe('DetailViewContents', () => {
     });
   });
 
+  describe('Edit controls in Teacher', () => {
+    it(`cannot make status incomplete from dropdown`, () => {
+      const detailView = mountDetailView('Teacher');
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="incomplete"]')
+      ).to.have.lengthOf(0);
+    });
+
+    it(`incomplete status is in dropdown if teacher application is incomplete`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'incomplete',
+          scholarship_status: null,
+          update_emails_sent_by_system: false
+        }
+      });
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="incomplete"]')
+      ).to.have.lengthOf(1);
+    });
+  });
+
   const expectedTestData = ['Teacher', 'Facilitator'];
 
   for (const applicationType of expectedTestData) {
@@ -348,33 +377,6 @@ describe('DetailViewContents', () => {
         ).to.be.true;
         expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
         expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
-      });
-
-      it(`cannot make status incomplete from dropdown in ${applicationType}`, () => {
-        const detailView = mountDetailView(applicationType);
-        expect(
-          detailView
-            .find('#DetailViewHeader select')
-            .find('option')
-            .find('[value="incomplete"]')
-        ).to.have.lengthOf(0);
-      });
-
-      it(`incomplete status is in dropdown if ${applicationType} application is incomplete`, () => {
-        const detailView = mountDetailView(applicationType, {
-          applicationData: {
-            ...DEFAULT_APPLICATION_DATA,
-            status: 'incomplete',
-            scholarship_status: null,
-            update_emails_sent_by_system: false
-          }
-        });
-        expect(
-          detailView
-            .find('#DetailViewHeader select')
-            .find('option')
-            .find('[value="incomplete"]')
-        ).to.have.lengthOf(1);
       });
     });
   }
