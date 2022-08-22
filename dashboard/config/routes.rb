@@ -650,7 +650,7 @@ Dashboard::Application.routes.draw do
           resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
             member do
               post :send_principal_approval
-              post :principal_approval_not_required
+              post :change_principal_approval_requirement
             end
           end
           post :principal_approval, to: 'principal_approval_applications#create'
