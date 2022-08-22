@@ -127,7 +127,7 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   onCategoryChange = event => {
-    const categoryQuery = event.target.className;
+    const categoryQuery = event.target.className.split(' ')[0];
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery
@@ -199,12 +199,7 @@ export default class AnimationPickerBody extends React.Component {
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
-    console.log(this.state);
     let {searchQuery, categoryQuery, results} = this.state;
-    //TODO: Fix this... (Mike 8/4)
-    //Where/why is categoryQuery looking at class names?
-    categoryQuery = categoryQuery.split(' ')[0];
-    console.log('render with category: ' + categoryQuery);
     const {
       hideUploadOption,
       is13Plus,
