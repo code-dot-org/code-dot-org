@@ -58,7 +58,6 @@ export default class AnimationPickerListItem extends React.Component {
         <button
           onClick={onClick}
           className={classNames(
-            category,
             style.thumbnail,
             icon && style.thumbnailIcon,
             hover && style.multiSelectBorder,
@@ -83,7 +82,8 @@ export default class AnimationPickerListItem extends React.Component {
             {icon && <i className={'fa fa-' + icon} />}
             {category && (
               <img
-                className={classNames(category, style.categoryImage)}
+                data-category={category}
+                className={style.categoryImage}
                 src={iconImageSrc}
               />
             )}
@@ -114,4 +114,8 @@ export default class AnimationPickerListItem extends React.Component {
       </div>
     );
   }
+}
+
+export function getCategory(element) {
+  return element.getAttribute('data-category');
 }

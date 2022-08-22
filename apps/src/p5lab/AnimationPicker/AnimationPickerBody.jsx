@@ -5,7 +5,9 @@ import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import * as dialogStyles from './styles';
-import AnimationPickerListItem from './AnimationPickerListItem.jsx';
+import AnimationPickerListItem, {
+  getCategory
+} from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
@@ -127,7 +129,7 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   onCategoryChange = event => {
-    const categoryQuery = event.target.className.split(' ')[0];
+    const categoryQuery = getCategory(event.target);
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery
@@ -242,9 +244,7 @@ export default class AnimationPickerBody extends React.Component {
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
                 )}
-                <span>
-                  {msg[`animationCategory_${categoryQuery.split(' ')[0]}`]()}
-                </span>
+                <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
               </div>
             )}
           </div>
