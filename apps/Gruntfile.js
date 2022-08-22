@@ -737,8 +737,6 @@ describe('entry tests', () => {
   };
 
   var professionalDevelopmentEntries = {
-    'code.org/public/pd-workshop-survey/splat':
-      './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
     'code.org/views/professional_learning_apply_banner':
