@@ -13,6 +13,8 @@ import createP5Wrapper, {
 describe('P5SpriteWrapper', function() {
   let p5Wrapper, createSprite;
 
+  // Using the aggressive sandbox here because the P5 library generates
+  // a default canvas when it's not attached to an existing one.
   sandboxDocumentBody(false);
 
   beforeEach(function() {
