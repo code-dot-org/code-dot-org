@@ -12,14 +12,14 @@ jobs:
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
       LD_LIBRARY_PATH: "/usr/local/lib"
-    steps:    
+      LANG: C.UTF-8
+    steps:   
       - name: Get actions code
         uses: actions/checkout@v3    
+        
       - name: Rake run integration tests
         run:  |
-          echo "testing failure"  
-          RUN locale-gen C.UTF-8 || true
-          ENV LANG=C.UTF-8          
+          locale-gen
       - name: say-hello
         uses: ./.github/actions/start-server-job-actions  
       - name: Install mysql
@@ -34,11 +34,17 @@ jobs:
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies
+      - name: Install imagemagic
+        run:  |  
+          brew install imagemagick@6
+          brew unlink imagemagick
+          brew link imagemagick@6 --force
       - name: Rake run integration tests
         run:  |
           echo "testing failure"  
-          bundle exec rake test:changed --trace
-        continue-on-error: true
+          brew install imagemagick@6
+        continue-on-error: true               
       - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3          
- 
+        uses: mxschmitt/action-tmate@v3                
+  
+     
