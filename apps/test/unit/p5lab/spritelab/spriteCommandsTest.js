@@ -140,11 +140,11 @@ describe('Sprite Commands', () => {
       ).to.equal(10);
     });
 
-    it('caps at 500 sprites', () => {
+    it('caps at 1000 sprites', () => {
       commands.makeNumSprites.apply(coreLibrary, [100000000, 'costume_label']);
       expect(
         coreLibrary.getSpriteArray({costume: 'costume_label'}).length
-      ).to.equal(500);
+      ).to.equal(1000);
     });
   });
 });
