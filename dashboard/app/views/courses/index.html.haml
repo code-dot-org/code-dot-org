@@ -1,7 +1,4 @@
 :ruby
-  lines_count = fetch_metrics['lines_of_code']
-  lines_count = number_with_delimiter(lines_count, :delimiter => ',')
-
   # Number of students in millions, rounded down to the nearest 10M
   students_count = 70
   students_count = students_count.to_s
@@ -9,7 +6,6 @@
   courses_data = {}
   courses_data[:english] = @is_english
   courses_data[:teacher] = @is_teacher
-  courses_data[:linescount] = lines_count
   courses_data[:studentscount] = students_count
   courses_data[:codeorgurlprefix] = CDO.code_org_url
   courses_data[:signedout] = @is_signed_out
