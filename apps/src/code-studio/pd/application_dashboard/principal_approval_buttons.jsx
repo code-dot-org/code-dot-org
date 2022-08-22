@@ -15,9 +15,10 @@ export default class PrincipalApprovalButtons extends React.Component {
     ]).isRequired,
     showSendEmailButton: PropTypes.bool,
     showResendEmailButton: PropTypes.bool,
-    showNotRequiredButton: PropTypes.bool,
+    showChangeRequirementButton: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    applicationStatus: PropTypes.string
+    applicationStatus: PropTypes.string,
+    approvalRequired: PropTypes.bool
   };
 
   constructor(props) {
@@ -31,8 +32,9 @@ export default class PrincipalApprovalButtons extends React.Component {
       showSendEmailButton:
         appStatusesForSendingEmail.includes(this.props.applicationStatus) &&
         (this.props.showSendEmailButton || this.props.showResendEmailButton),
-      showNotRequiredButton: this.props.showNotRequiredButton,
-      showResendEmailConfirmation: false
+      showChangeRequirementButton: this.props.showChangeRequirementButton,
+      showResendEmailConfirmation: false,
+      approvalRequired: this.props.approvalRequired
     };
   }
 
@@ -78,22 +80,25 @@ export default class PrincipalApprovalButtons extends React.Component {
     });
   };
 
-  handleNotRequiredClick = () => {
-    const notRequiredRequest = $.ajax({
+  handleChangeRequiredStatus = () => {
+    const newApprovalRequiredStatus = !this.state.approvalRequired;
+
+    const changeRequirementRequest = $.ajax({
       method: 'POST',
+      data: {principal_approval_not_required: !newApprovalRequiredStatus},
       url: `/api/v1/pd/application/teacher/${
         this.props.applicationId
-      }/principal_approval_not_required`
+      }/change_principal_approval_requirement`
     }).done(data => {
       this.props.onChange(this.props.applicationId, data.principal_approval);
 
       this.setState({
-        notRequiredRequest: null,
-        showNotRequiredButton: false
+        changeRequirementRequest: null,
+        approvalRequired: newApprovalRequiredStatus
       });
     });
 
-    this.setState({notRequiredRequest});
+    this.setState({changeRequirementRequest});
   };
 
   renderSendEmailButton() {
@@ -116,7 +121,7 @@ export default class PrincipalApprovalButtons extends React.Component {
           onClick={buttonOnClick}
           style={styles.button}
           // This button is disabled if the other action is pending (which will be rendered as a spinner)
-          disabled={!!this.state.notRequiredRequest}
+          disabled={!!this.state.changeRequirementRequest}
         >
           {buttonText}
         </Button>
@@ -132,8 +137,8 @@ export default class PrincipalApprovalButtons extends React.Component {
     );
   }
 
-  renderNotRequiredButton() {
-    if (this.state.notRequiredRequest) {
+  renderChangeRequirementButton() {
+    if (this.state.changeRequirementRequest) {
       return <Spinner size="small" />;
     }
 
@@ -141,12 +146,12 @@ export default class PrincipalApprovalButtons extends React.Component {
       <Button
         bsSize="xsmall"
         target="_blank"
-        onClick={this.handleNotRequiredClick}
+        onClick={this.handleChangeRequiredStatus}
         style={styles.button}
         // This button is disabled if the other action is pending (which will be rendered as a spinner)
         disabled={!!this.state.sendEmailRequest}
       >
-        Not required
+        {this.state.approvalRequired ? 'Make not required' : 'Make required'}
       </Button>
     );
   }
@@ -155,7 +160,8 @@ export default class PrincipalApprovalButtons extends React.Component {
     return (
       <div>
         {this.state.showSendEmailButton && this.renderSendEmailButton()}
-        {this.state.showNotRequiredButton && this.renderNotRequiredButton()}
+        {this.state.showChangeRequirementButton &&
+          this.renderChangeRequirementButton()}
       </div>
     );
   }
