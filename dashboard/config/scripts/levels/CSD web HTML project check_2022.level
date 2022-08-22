@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:11.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "project_template_level_name": "CSD web html project template_2022",
@@ -12,16 +8,20 @@
     "parent_level_id": 23016,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/formatting-html/",
+    "map_reference": "/courses/csd-2022/guides/formatting-html",
     "submittable": "false",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "false"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:11.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:11.371+00:00\",\"changed\":[\"cloned from \\\"CSD web HTML project check_2021\\\"\"],\"cloned_from\":\"CSD web HTML project check_2021\"}]"
