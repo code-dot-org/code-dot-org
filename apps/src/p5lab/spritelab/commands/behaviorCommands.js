@@ -1,11 +1,7 @@
 import {commands as actionCommands} from './actionCommands';
 import {commands as spriteCommands} from './spriteCommands';
+import {BEHAVIOR_BIG_NUMBER_GUARD} from '../constants';
 import * as utils from '@cdo/apps/p5lab/utils';
-
-// Big numbers in some blocks can cause performance issues. Combined with live-preview,
-// this results in hanging the tab and students unable to edit their blocks. We
-// guard against this by capping numbers where needed.
-const BEHAVIOR_BIG_NUMBER_GUARD = 1000;
 
 export const commands = {
   addBehaviorSimple(spriteArg, behavior) {

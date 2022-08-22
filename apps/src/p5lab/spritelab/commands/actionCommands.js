@@ -1,12 +1,5 @@
 import {commands as behaviorCommands} from './behaviorCommands';
-
-// Big numbers in some blocks can cause performance issues. Combined with live-preview,
-// this results in hanging the tab and students unable to edit their blocks. We
-// guard against this by capping numbers where needed.
-// This constant limits the speech bubbles to 250 - a limit determined by the
-// set size of a speech bubble so that there is not a noticeable difference in visual output
-// but performance is negatively impacted when greater number of speech bubbles are allowed.
-const SPEECH_BUBBLE_BIG_NUMBER_GUARD = 250;
+import {SPEECH_BUBBLE_BIG_NUMBER_GUARD} from '../constants';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
