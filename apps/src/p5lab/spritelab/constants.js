@@ -97,3 +97,11 @@ export const exampleSprites = {
     }
   }
 };
+
+// Big numbers in some blocks can cause performance issues. Combined with live-preview,
+// this results in hanging the tab and students unable to edit their blocks. We
+// guard against this by capping numbers where needed.
+export const BEHAVIOR_BIG_NUMBER_GUARD = 1000;
+export const SPEECH_BUBBLE_BIG_NUMBER_GUARD = 250;
+export const SPRITE_BIG_NUMBER_GUARD = 1000;
+export const TEXT_BIG_NUMBER_GUARD = 250;

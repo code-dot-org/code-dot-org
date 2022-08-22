@@ -2,11 +2,7 @@ import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-
-// Big numbers in some blocks can cause performance issues. Combined with live-preview,
-// this results in hanging the tab and students unable to edit their blocks. We
-// guard against this by capping numbers where needed.
-const SPRITE_BIG_NUMBER_GUARD = 1000;
+import {SPRITE_BIG_NUMBER_GUARD} from './constants';
 
 export default class CoreLibrary {
   constructor(p5) {

@@ -1,11 +1,7 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import * as utils from '@cdo/apps/p5lab/utils';
-
-// Big numbers in some blocks can cause performance issues. Combined with live-preview,
-// this results in hanging the tab and students unable to edit their blocks. We
-// guard against this by capping numbers where needed.
-const SPRITE_BIG_NUMBER_GUARD = 1000;
+import {SPRITE_BIG_NUMBER_GUARD} from '../constants.js';
 
 export const commands = {
   countByAnimation(spriteArg) {
