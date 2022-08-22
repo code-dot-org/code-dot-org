@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moduleStyle from './javalab-button.module.scss';
-import color from '@cdo/apps/util/color';
 
 // TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).
 // In order for that to work, we will need to refactor <Button/> to allow a button's icon and
@@ -18,11 +17,11 @@ export default function JavalabButton({
   tooltipText,
   isDisabled = false
 }) {
-  let textStyle = {};
+  let textStyle;
   if (icon) {
     textStyle = isHorizontal
-      ? styles.horizontalPadding
-      : styles.verticalPadding;
+      ? moduleStyle.horizontalPadding
+      : moduleStyle.verticalPadding;
   }
 
   return (
@@ -32,18 +31,18 @@ export default function JavalabButton({
       className={classNames(
         moduleStyle.button,
         isHorizontal && moduleStyle.buttonHorizontal,
+        isDisabled && moduleStyle.disabled,
         className
       )}
       style={{
-        ...style,
-        ...(isDisabled && styles.disabled)
+        ...style
       }}
       onClick={onClick}
       disabled={isDisabled}
       title={tooltipText}
     >
       {icon}
-      {text && <div style={textStyle}>{text}</div>}
+      {text && <div className={textStyle}>{text}</div>}
     </button>
   );
 }
@@ -62,18 +61,4 @@ JavalabButton.propTypes = {
 
 JavalabButton.defaultProps = {
   isHorizontal: false
-};
-
-const styles = {
-  disabled: {
-    backgroundColor: color.light_gray,
-    borderColor: color.light_gray,
-    cursor: 'default'
-  },
-  verticalPadding: {
-    paddingTop: 5
-  },
-  horizontalPadding: {
-    paddingLeft: 8
-  }
 };
