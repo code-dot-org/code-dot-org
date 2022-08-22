@@ -45,21 +45,26 @@ $hover-plus-size: 24px;
       border-color: $light_purple;
     }
 }
+
 .label {
     margin-top: 3px;
     font-size: 12px;
     white-space: nowrap;
     overflow: hidden;
 }
+
 .noLabel {
     padding-bottom: 10px;
 }
+
 .labelIcon {
     font-style: italic;
 }
+
 .categoryImage {
     border-radius: 10px
 }
+
 .multiSelectIcon {
     position: absolute;
     border-style: solid;
@@ -70,31 +75,36 @@ $hover-plus-size: 24px;
     border-radius: 5px;
     top: calc($thumbnail-size / 2 - $hover-plus-size / 2);
     left: calc($thumbnail-size / 2 - $hover-plus-size / 2);
-    &:hover {
-        color: $purple;
-        background-color: $white;
-        border-color: $purple;
-    }
-    &:active {
-        color: $white;
-        background-color: $level_perfect;
-        border-color: $level_perfect;
-    }
 }
-.thumbnailWithHover {
-    &:hover {
-        border-style: solid;
-        border-radius: 12px;
-        cursor: pointer;
-        border-width: 3px;
-        padding: 0;
-        border-color: $purple;
-    }
-    &:active {
-        border-width: 3px;
-        padding: 0;
-        border-color: $level_perfect;
-    }
+
+.hoverIcon {
+    color: $purple;
+    background-color: $white;
+    border-color: $purple;
+}
+
+.selectIcon {
+    color: $white;
+    background-color: $level_perfect;
+    border-color: $level_perfect;
+}
+
+.multiSelectBorder {
+    border-style: solid;
+    border-radius: 12px;
+    cursor: pointer;
+    border-width: 3px;
+    padding: 0;
+}
+
+.hoverBorder {
+    border-color: $purple;
+}
+
+.selectBorder {
+    border-width: 3px;
+    padding: 0;
+    border-color: $level_perfect;
 }
 
 .block {
