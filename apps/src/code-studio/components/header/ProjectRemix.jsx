@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
-import {refreshProjectName} from '../../headerRedux';
+import {refreshProjectName} from '../../projectRedux';
 import {styles} from './EditableProjectName';
 
 class ProjectRemix extends React.Component {
