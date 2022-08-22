@@ -10,4 +10,18 @@
   &Horizontal {
     flex-direction: row;
   }
+
+  &.disabled {
+    background-color: $light_gray;
+    border-color: $light_gray;
+    cursor: default;
+  }
+}
+
+.horizontalPadding {
+  padding-left: 8px;
+}
+
+.verticalPadding {
+  padding-top: 5px;
 }
