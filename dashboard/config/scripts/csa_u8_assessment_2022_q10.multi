@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 Consider the following code segment.
 
 ```
-public int getLocation(int[] arr, String findMe) {
+public static int getLocation(int[] arr, int findMe) {
   for (int i = 0; i < arr.length; i++) {
     if (arr[i] == findMe) {    // check
       return i;
