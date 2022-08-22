@@ -201,7 +201,7 @@ export default class AnimationPickerBody extends React.Component {
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
-    let {searchQuery, categoryQuery, results} = this.state;
+    const {searchQuery, categoryQuery, results} = this.state;
     const {
       hideUploadOption,
       is13Plus,
