@@ -5,14 +5,14 @@ $thumbnail-border-width: 1px;
 $hover-plus-size: 24px;
 
 .root {
-    float: left;
-    width: $thumbnail-size;
-    text-align: center;
-    margin: 1px 1px 10px 1px;
-    position: relative;
-    border: 0;
-    padding-right: 10px;
-    outline: none;
+  float: left;
+  width: $thumbnail-size;
+  text-align: center;
+  margin: 1px 1px 10px 1px;
+  position: relative;
+  border: 0;
+  padding-right: 10px;
+  outline: none;
 }
 
 .thumbnail {
