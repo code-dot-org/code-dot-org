@@ -404,6 +404,28 @@ describe('DetailViewContents', () => {
           .props().href
       ).to.contain(`principal_approval/${guid}`);
     });
+    it(`Shows button to make principal approval required if not`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: 'Not required'
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Make required'
+      );
+    });
+    it(`Shows button to make principal approval not required if it is`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: null // principal approval is required
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Make not required'
+      );
+    });
   });
 
   describe('Regional Partner View', () => {
