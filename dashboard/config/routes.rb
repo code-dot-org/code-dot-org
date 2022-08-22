@@ -495,9 +495,6 @@ Dashboard::Application.routes.draw do
     get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
     post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
 
-    # HOC dashboards.
-    get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
-
     # NPS dashboards
     get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
     post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
@@ -505,7 +502,6 @@ Dashboard::Application.routes.draw do
     # internal report dashboards
     get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
     get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
-    get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
     get '/admin/debug', to: 'admin_reports#debug'
 
     # internal search tools
@@ -840,6 +836,7 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'

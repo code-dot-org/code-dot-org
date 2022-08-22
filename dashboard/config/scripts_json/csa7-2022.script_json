@@ -17,7 +17,9 @@
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -32,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-20 17:43:16 UTC",
+    "serialized_at": "2022-08-12 13:47:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5469,6 +5471,7 @@
       "key": "algorithms",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5514,6 +5517,7 @@
       "key": "coloring_page",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5526,6 +5530,7 @@
       "key": "creative_coding_with_the_theater",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5538,6 +5543,7 @@
       "key": "cs_bingo_cards_5",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5562,6 +5568,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -5586,6 +5593,7 @@
       "key": "musicqueue_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5598,6 +5606,7 @@
       "key": "musicqueue_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5610,6 +5619,7 @@
       "key": "open_source_bugs_version_a_",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5622,6 +5632,7 @@
       "key": "open_source_bugs_version_b_",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5634,10 +5645,23 @@
       "key": "open_source_bugs_version_c_",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "open_source_bugs_version_c_"
+      }
+    },
+    {
+      "name": "Private Methods",
+      "url": "https://youtu.be/o9ucV54SzL8",
+      "key": "private_methods_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "private_methods_1"
       }
     },
     {
@@ -5646,6 +5670,7 @@
       "key": "project_planning_board",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5658,10 +5683,23 @@
       "key": "project_planning_feedback",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "project_planning_feedback"
+      }
+    },
+    {
+      "name": "Recursion",
+      "url": "https://youtu.be/W-nqR8NwaMs",
+      "key": "recursion_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "recursion_1"
       }
     },
     {
@@ -5670,6 +5708,7 @@
       "key": "recursion_unplugged",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5706,6 +5745,7 @@
       "key": "tracing_recursion",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5718,6 +5758,7 @@
       "key": "u7l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5730,6 +5771,7 @@
       "key": "u7l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5742,6 +5784,7 @@
       "key": "u7l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5754,6 +5797,7 @@
       "key": "u7l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5766,6 +5810,7 @@
       "key": "u7l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5778,6 +5823,7 @@
       "key": "u7l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5790,6 +5836,7 @@
       "key": "u7l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5802,6 +5849,7 @@
       "key": "u7l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5814,6 +5862,7 @@
       "key": "u7l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5826,6 +5875,7 @@
       "key": "u7l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5838,6 +5888,7 @@
       "key": "unit_7_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5874,6 +5925,7 @@
       "key": "unit_7_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6131,6 +6183,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "private_methods_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "project_planning_feedback"
       }
     },
@@ -6264,6 +6322,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u7l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "recursion_1"
       }
     },
     {

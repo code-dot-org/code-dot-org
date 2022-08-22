@@ -7002,11 +7002,14 @@ en:
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
           title: Digital Information ('22-'23)
-          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
+          description: 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world''s information.
+
+'
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
           name: csp1-2022
+          lessons: {}
         csp2-2022:
           lesson_groups:
             csp_unit2_2020:
@@ -7259,7 +7262,7 @@ en:
             ### AP Classroom Personal Progress Checks
             To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa1-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
 
-            ## Finished This Unit?
+            ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) to let the Code.org curriculum team know how the unit went.
           student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
           lessons: {}
@@ -7302,7 +7305,7 @@ en:
 
             ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
 
-            ## Finished This Unit?
+            ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went.
           student_description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
           lessons: {}
@@ -7330,7 +7333,7 @@ en:
 
             ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
 
-            ## Finished This Unit?
+            ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went.
           student_description: This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to represent lists of data while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, you identify the preconditions and postconditions that an algorithm must satisfy. Additionally, you learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
           lessons: {}
@@ -7372,7 +7375,7 @@ en:
           title: Conditions and Logic ('22-'23)
           description_audience: ''
           description_short: Students improve decision-making in their programs using relational and logical operators to evaluate primitive values and object references and use the Math class to perform calculations and generate random numbers.
-          description: "This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.\n\n### AP Classroom Personal Progress Checks\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org\t/s/csa4-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n* Personal Progress Check 3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*\n\n## Finished This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4) to let the Code.org curriculum team know how the unit went."
+          description: "This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.\n\n### AP Classroom Personal Progress Checks\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org\t/s/csa4-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n* Personal Progress Check 3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4) to let the Code.org curriculum team know how the unit went."
           student_description: This unit revisits the use of packages to access existing functionalities in your programs, such as The Neighborhood, to expand your knowledge of APIs and libraries and explore The Theater. With The Theater, you learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, you expand your knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, you use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.
           lessons: {}
         csa5-2022:
@@ -7399,7 +7402,7 @@ en:
 
             ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
 
-            ## Finished This Unit?
+            ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5) to let the Code.org curriculum team know how the unit went.
           student_description: This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As you analyze problems involving 2D arrays, you revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. You apply these concepts to manipulate pixels using The Theater to create image filters in addition to working with primitive values and various object references. Additionally, you use the programming knowledge and skills you have acquired to consider the impacts of programs on society, economies, and culture.
           lessons: {}
@@ -7616,7 +7619,7 @@ en:
 
             ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
 
-            ## Finished This Unit?
+            ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went.
           student_description: This unit continues to expand on data structures to introduce you to creating lists using the `ArrayList` class. In the process, you learn about the `Integer` and `Double` classes and use their methods to parse data from text files and explore the limits of integer values. You differentiate between when to use each type of data structure while learning about the structure and functionality of an `ArrayList`. You apply standard algorithms to find and manipulate data in an `ArrayList` of numerical and object data. Throughout the unit, you learn to use the `String` class to analyze and process text obtained from a user and from file input while learning about basic natural language processing techniques and applications. Additionally, you further develop software engineering skills by writing Javadoc comments to create API documentation for your programs.
           description_short: Students use ArrayLists to store program data and work with methods in the String class to manipulate and evaluate String objects.
@@ -7640,7 +7643,7 @@ en:
             ###AP Classroom Personal Progress Checks
             To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa7-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
 
-            ## Finished This Unit?
+            ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went.
           student_description: This unit allows you to practice software design and development using the skills you have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your project meet specified requirements. In the process, you learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, you practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills acquired throughout the year, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
           description_short: Students practice software design and development using the skills and programming constructs they have learned and explore recursion.
@@ -7669,7 +7672,7 @@ en:
 
             ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
 
-            ## Finished This Unit?
+            ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) to let the Code.org curriculum team know how the unit went.
           student_description: In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.
           description_short: ''
@@ -8372,7 +8375,40 @@ en:
           lesson_groups: {}
           name: csc-timecapsule-2022
         vpl-csd1-ayw-pilot-2022:
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Debugging on the Code.org Platform
+            lesson-4:
+              name: Identity and Debugging
+            lesson-5:
+              name: Closing
+            lesson-6:
+              name: Asynchronous Debugging Extension
+          name: vpl-csd1-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 1
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Revisit debugging content and learn about platform and curriculum tools to support students.
+            * Reflect on personal moments of failure and debugging to consider their role in building classroom culture.
+          student_description: |-
+            **You will:**
+
+            * Reconnect with your community to celebrate successes, vent frustrations, and troubleshoot roadblocks.
+            * Build confidence and skill in core computer science concepts.
+            * Reflect on personal moments of failure and debugging to consider your role in building classroom culture.
         alltheblocklythings:
           lesson_groups:
             lessonGroup-2:
@@ -8442,5 +8478,52 @@ en:
             lesson-16:
               name: Open-Ended Activity
         csa-draft-pl:
+          lessons: {}
+          lesson_groups: {}
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Debugging Projects
+            lesson-4:
+              name: Inclusion Scenarios
+            lesson-5:
+              name: Closing
+            lesson-6:
+              name: Module 2 Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd2-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 2
+          description_audience: ''
+          description_short: ''
+          description: |
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Extend their knowledge of debugging by looking at longer, more complex sections of code.
+            * Examine common classroom scenarios to reflect on threats to inclusion and belonging, and how to avoid them.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Extend your knowledge of debugging by looking at longer, more complex sections of code.
+            * Examine common classroom scenarios to reflect on threats to inclusion and belonging, and how to avoid them.
+        soccer:
+          lessons: {}
+          lesson_groups: {}
+          name: soccer
+          title: Code your own soccer game
+          description_audience: ''
+          description_short: Make a soccer game
+          description: Make a soccer game
+          student_description: ''
+        katie-practice:
           lessons: {}
           lesson_groups: {}

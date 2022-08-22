@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "video_key": "poemart_intro",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2022",
+    "long_instructions": "#Hold Space For Intro Video"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2022-08-11T16:32:43.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-08-11T16:32:43.001+00:00\",\"changed\":[\"cloned from \\\"csc-poem-art-outro-video-level_2022\\\"\"],\"cloned_from\":\"csc-poem-art-outro-video-level_2022\"},{\"changed_at\":\"2022-08-11 16:33:33 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
