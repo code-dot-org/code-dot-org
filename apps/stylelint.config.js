@@ -1,9 +1,6 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-standard-scss',
-    'stylelint-config-prettier-scss'
-  ],
+  ignoreFiles: ['./build/**/*.scss'],
+  extends: ['stylelint-config-standard', 'stylelint-config-standard-scss'],
   rules: {
     'no-descending-specificity': null,
     'rule-empty-line-before': null,

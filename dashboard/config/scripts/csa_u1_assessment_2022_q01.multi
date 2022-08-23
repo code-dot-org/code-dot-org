@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 A `Painter` object called `myPainter` is facing north. Consider the following code segment.
 
 ```
-while (!myPainter.facingSouth()) { 
+while (!myPainter.isFacingSouth()) { 
   myPainter.turnLeft();
 }
 
