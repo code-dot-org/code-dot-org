@@ -7,6 +7,7 @@ export default function textConsole(state, action) {
       return [];
     case ADD_MESSAGE:
       return [
+        // 1000 is an arbitrary limit - the last 1000 text console statements will be displayed
         ...state.slice(-999),
         {
           name: action.name,
