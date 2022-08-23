@@ -985,4 +985,61 @@ class BlocklyTest < ActiveSupport::TestCase
     updated_xml = Nokogiri::XML(updated_xml_string, &:noblanks)
     assert_equal updated_xml.xpath('//mutation').count, 1
   end
+
+  test 'localizes loop blocks' do
+    test_locale = 'te-ST'
+    level_name = 'test localize loop blocks'
+    original_variable_str = 'counter'
+    localized_variable_str = 'contador'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+    )
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'variable_names' => {
+          original_variable_str => localized_variable_str
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Create a simple blockly level XML structure containing the
+    # original string, then localize the XML structure.
+    block_xml = <<~XML
+      <block type="controls_for">
+        <title name="VAR">counter</title>
+        <value name="FROM">
+          <block type="math_number">
+            <title name="NUM">1</title>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <title name="NUM">10</title>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number">
+            <title name="NUM">1</title>
+          </block>
+        </value>
+      </block>
+    XML
+
+    # Localized output to be tested
+    localized_block_xml = level.localized_loop_blocks(block_xml)
+
+    # Expected output
+    parsed_xml = Nokogiri::XML(block_xml, &:noblanks)
+    expected_localized_block_xml = parsed_xml.serialize(save_with: Blockly::XML_OPTIONS)
+    expected_localized_block_xml.gsub!(original_variable_str, localized_variable_str)
+    expected_localized_block_xml.strip!.gsub!(/\s*\n\s*/, '')
+
+    assert_equal expected_localized_block_xml, localized_block_xml
+  end
 end
