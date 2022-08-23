@@ -45,11 +45,11 @@ Then /^I do not see "([^"]*)" in the Game Lab console$/ do |message|
 end
 
 Then /^I see (\d+) animations in the animation column$/ do |num_animations|
-  expect(@browser.execute_script('return $(".animationList>div>button").not(".newListItem").length')).to eq num_animations.to_i
+  expect(@browser.execute_script('return $(".animationList>div>button").not("#newListItem").length')).to eq num_animations.to_i
 end
 
 Then /^I open the animation picker$/ do
-  @browser.execute_script("$(\".newListItem\")[0].click();")
+  @browser.execute_script("$(\"#newListItem\")[0].click();")
 end
 
 Then /^I select a blank animation$/ do
