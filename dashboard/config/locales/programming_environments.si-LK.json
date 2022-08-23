@@ -1,0 +1,67 @@
+{
+  "si-LK": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "math": {
+              "name": "ගණිත"
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
+            },
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            }
+          }
+        },
+        "applab": {
+          "name": "මෘදුකාංග විද්‍යාගාරය",
+          "description": "App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා කර යෙදුම් නිර්මාණය කලහැක . යෙදුම් සැලසුම් කිරීම, JavaScript භාවිතා කර කේතනය කිරීම මෙය මගින් සිදුකල හැක. පසුව තත්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහැරීම සිදුකල හැක.",
+          "categories": {
+            "data": {
+              "name": "දත්ත"
+            },
+            "math": {
+              "name": "ගණිත"
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
+            },
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "ක්‍රියාවන්"
+            },
+            "events": {
+              "name": "වැඩසටහන්"
+            },
+            "loops": {
+              "name": "ලූපයන්"
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
+            },
+            "math": {
+              "name": "ගණිත"
+            },
+            "logic": {
+              "name": "තර්කය"
+            },
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            },
+            "text": {
+              "name": "පෙළ"
+            }
+          }
+        }
+      }
+    }
+  }
+}
