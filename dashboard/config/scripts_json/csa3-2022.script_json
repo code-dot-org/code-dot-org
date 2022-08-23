@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:18:33 UTC",
+    "serialized_at": "2022-08-22 14:42:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -109,9 +109,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How do I add and change elements in a one-dimensional (1D) array?**\n\nStudents explore how to add, modify, and obtain elements stored in a one-dimensional (1D) array. Students learn about common errors when working with 1D arrays and identify strategies for debugging these errors. Students practice adding, modifying, and printing elements in a 1D array individually and using a `while` loop.",
+        "overview": "**How do I modify elements in a one-dimensional (1D) array?**\n\nStudents explore how to modify and obtain elements stored in a one-dimensional (1D) array. Students learn about common errors when working with 1D arrays and identify strategies for debugging these errors. Students practice modifying and printing elements in a 1D array individually and using a `while` loop.",
         "preparation": "* Print copies of the Investigating Arrays handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-2-array-elements/36383/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How do I add and change elements in a one-dimensional (1D) array?**\n\nOne-dimensional (1D) arrays can store multiple elements. In this lesson, you learn how to add, modify, and obtain elements stored in a 1D array and identify strategies for debugging common errors that can occur while working with 1D arrays. You practice adding, modifying, and printing elements in a 1D array individually and using a `while` loop."
+        "student_overview": "**How do I modify elements in a one-dimensional (1D) array?**\n\nOne-dimensional (1D) arrays can store multiple elements. In this lesson, you learn how to modify and obtain elements stored in a 1D array and identify strategies for debugging common errors that can occur while working with 1D arrays. You practice modifying and printing elements in a 1D array individually and using a `while` loop."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -1298,9 +1298,9 @@
       "key": "2e6985ca-8b76-48ac-97ac-edcf1b57dc53",
       "position": 1,
       "properties": {
-        "description": "We learned how to declare and initialize a 1D array using the `new` keyword and an initializer list in the previous lesson. We can also add and modify values to a 1D array after it has been initialized.",
+        "description": "We learned how to declare and initialize a 1D array using the `new` keyword and an initializer list in the previous lesson. We can also modify values to a 1D array after it has been initialized.",
         "duration": "15",
-        "name": "Adding and Changing Values",
+        "name": "Modifying Values",
         "remarks": true
       },
       "seeding_key": {
@@ -1313,7 +1313,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
-        "progression_name": "Predict: Adding and Changing Values"
+        "progression_name": "Predict: Modifying Values"
       },
       "seeding_key": {
         "activity_section.key": "feca7dd5-934c-4967-83d3-fe3344d4ac0e",
@@ -1324,7 +1324,7 @@
       "key": "a6b9d82c-92bc-46ca-a577-4926558f2f22",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the variable name, square brackets, and index refer to a position in the array. Students also notice that the assignment operator is used to assign a value to the specified position. Students may wonder if they can only add or change values one index at a time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the variable name, square brackets, and index refer to a position in the array. Students also notice that the assignment operator is used to assign a value to the specified position. Students may wonder if they can only change values one index at a time.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1353,7 +1353,7 @@
       "key": "89d26b41-82af-4763-b260-5267ffe90e60",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Adding Values to a 1D Array*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to store values in a 1D array."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Modifying Values in a 1D Array*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to modify values in a 1D array."
       },
       "seeding_key": {
         "activity_section.key": "89d26b41-82af-4763-b260-5267ffe90e60",
@@ -1396,7 +1396,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a choice level on Level 4 to assign and change individual elements in a 1D array. On Level 5, students print the contents of the 1D array using a `while` loop.",
-        "progression_name": "Using and Changing Values"
+        "progression_name": "Modifying Values"
       },
       "seeding_key": {
         "activity_section.key": "becc8e9d-c868-43cc-9101-f796de1630f8",
@@ -3959,7 +3959,7 @@
         "level_keys": [
           "CSA U3L2-L1_2022"
         ],
-        "progression": "Predict: Adding and Changing Values"
+        "progression": "Predict: Modifying Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -4034,7 +4034,7 @@
         "level_keys": [
           "CSA U3L2-L4_2022"
         ],
-        "progression": "Using and Changing Values"
+        "progression": "Modifying Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -4059,7 +4059,7 @@
         "level_keys": [
           "CSA U3L2-L5_2022"
         ],
-        "progression": "Using and Changing Values"
+        "progression": "Modifying Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -6363,7 +6363,7 @@
       }
     },
     {
-      "name": "Adding Values to a 1D Array",
+      "name": "Modifying Values in a 1D Array",
       "url": "https://youtu.be/bL4BAs9Kfx8",
       "key": "adding_values_to_a_1d_array",
       "properties": {
