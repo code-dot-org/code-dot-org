@@ -5,7 +5,7 @@ import {
   addMultipleChoicePrompt
 } from '../../redux/spritelabInput';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
-import {TEXT_BIG_NUMBER_GUARD} from '../constants';
+// import {TEXT_BIG_NUMBER_GUARD} from '../constants';
 
 export const commands = {
   comment(text) {
@@ -55,9 +55,9 @@ export const commands = {
   },
 
   printText(text) {
-    if (this.printLog.length >= TEXT_BIG_NUMBER_GUARD) {
-      return;
-    }
+    // if (this.printLog.length >= TEXT_BIG_NUMBER_GUARD) {
+    //   return;
+    // }
     this.printLog.push(text);
     getStore().dispatch(addConsoleMessage({text: text}));
   },

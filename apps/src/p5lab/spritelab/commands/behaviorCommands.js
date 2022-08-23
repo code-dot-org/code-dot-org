@@ -1,14 +1,9 @@
 import {commands as actionCommands} from './actionCommands';
 import {commands as spriteCommands} from './spriteCommands';
-import {BEHAVIOR_BIG_NUMBER_GUARD} from '../constants';
 import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
   addBehaviorSimple(spriteArg, behavior) {
-    var numSprites = this.getNumberOfSprites();
-    if (numSprites >= BEHAVIOR_BIG_NUMBER_GUARD) {
-      return;
-    }
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.addBehavior(sprite, behavior));
   },

@@ -1,7 +1,7 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import * as utils from '@cdo/apps/p5lab/utils';
-import {SPRITE_BIG_NUMBER_GUARD} from '../constants.js';
+import {MAX_NUM_SPRITES} from '../constants.js';
 
 export const commands = {
   countByAnimation(spriteArg) {
@@ -67,10 +67,10 @@ export const commands = {
 
   makeNumSprites(num, animation) {
     var numSprites = this.getNumberOfSprites();
-    if (numSprites >= SPRITE_BIG_NUMBER_GUARD) {
+    if (numSprites >= MAX_NUM_SPRITES) {
       return;
     }
-    num = Math.min(num, SPRITE_BIG_NUMBER_GUARD - numSprites);
+    num = Math.min(num, MAX_NUM_SPRITES - numSprites);
     for (let i = 0; i < num; i++) {
       this.addSprite({
         animation,
@@ -81,7 +81,7 @@ export const commands = {
 
   makeBurst(num, animation, effectName) {
     var numSprites = this.getNumberOfSprites();
-    if (numSprites >= SPRITE_BIG_NUMBER_GUARD) {
+    if (numSprites >= MAX_NUM_SPRITES) {
       return;
     }
     const behaviorFuncs = {
@@ -90,7 +90,7 @@ export const commands = {
       rain: behaviorCommands.rainFunc,
       spiral: behaviorCommands.spiralFunc
     };
-    num = Math.min(num, SPRITE_BIG_NUMBER_GUARD);
+    num = Math.min(num, MAX_NUM_SPRITES);
     //Makes sure that same-frame multiple spiral effects start at a different angles
     const spiralRandomizer = utils.randomInt(0, 359);
     for (let i = 0; i < num; i++) {
