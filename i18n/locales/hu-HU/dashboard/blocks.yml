@@ -1457,15 +1457,6 @@ hu:
         text: "{SPRITE} gondolkozik {SPEECH} beszédről"
       gamelab_spriteThinkTime:
         text: "{SPRITE} gondolkozik {TEXT1} szövegről {NUM} másodpercig"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Én is éhes vagyok.
-            '"I only want the biggest goat."': A legnagyobb kecskét akarom.
-            '"I''m a green troll."': Én egy zöld troll vagyok.
-            '"No one will cross my bridge."': Senki nem megy át a hídamon.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
         options:
