@@ -64,7 +64,7 @@ Se não for possível entrar em contato com a escola, [fale conosco](https://sup
 
 Se você quiser ajudar ainda mais, a sua empresa também poderá receber um evento Hora do Código. Não há uma fórmula específica para receber um evento, por isso incentivamos que você tenha criatividade! Visto que a nossa equipe é pequena (mas poderosa!), o Code.org não tem uma equipe dedicada à coordenação e eventos Hora do Código. Contudo, veja algumas dicas para dar os primeiros passos.
 
-### 1. Veja esse guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Veja esse guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Determine uma data, formato e local para o seu evento
 
