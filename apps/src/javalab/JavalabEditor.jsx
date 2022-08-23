@@ -36,13 +36,18 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
-import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
+import {
+  getDefaultFileContents,
+  getTabKey,
+  isJavaFile
+} from './JavalabFileHelper';
 import {darkMode, lightMode} from './editorThemes';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import JavalabEditorDialogManager, {
   JavalabEditorDialog
 } from './JavalabEditorDialogManager';
 import JavalabEditorHeader from './JavalabEditorHeader';
+import {java} from '@codemirror/lang-java';
 
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
@@ -116,6 +121,8 @@ class JavalabEditor extends React.Component {
     this.editorEditableCompartment = new Compartment();
     this.editorReadOnlyCompartment = new Compartment();
 
+    this.languageCompartment = new Compartment();
+
     this.state = {
       showMenu: false,
       contextTarget: null,
@@ -176,7 +183,7 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {displayTheme, isReadOnlyWorkspace} = this.props;
+    const {displayTheme, isReadOnlyWorkspace, fileMetadata} = this.props;
     const extensions = [...editorSetup];
 
     extensions.push(
@@ -193,6 +200,14 @@ class JavalabEditor extends React.Component {
         EditorState.readOnly.of(isReadOnlyWorkspace)
       )
     );
+
+    // Set the language, which determines syntax highlighting.
+    // We only support Java or no language (no highlighting, good for text files)
+    if (isJavaFile(fileMetadata[key])) {
+      extensions.push(this.languageCompartment.of(java()));
+    } else {
+      extensions.push(this.languageCompartment.of([]));
+    }
 
     this.editors[key] = new EditorView({
       state: EditorState.create({
@@ -381,6 +396,18 @@ class JavalabEditor extends React.Component {
     // update sources with new filename
     renameFile(oldFilename, newFilename);
     setFileMetadata(newFileMetadata);
+
+    // change syntax highlighting if there was a change from non-java to java or vice-versa
+    if (isJavaFile(newFilename) && !isJavaFile(oldFilename)) {
+      this.editors[editTabKey].dispatch({
+        effects: this.languageCompartment.reconfigure(java())
+      });
+    } else if (!isJavaFile(newFilename) && isJavaFile(oldFilename)) {
+      this.editors[editTabKey].dispatch({
+        effects: this.languageCompartment.reconfigure([])
+      });
+    }
+
     projectChanged();
     closeEditorDialog();
     clearRenameFileError();
