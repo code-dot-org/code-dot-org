@@ -3591,3 +3591,5 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Maligayang Pagdating
+        soccer:
+          name: soccer
