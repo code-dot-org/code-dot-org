@@ -14,9 +14,17 @@ const containerStyle = {
   padding: 10
 };
 
+//
+// TEMPLATE
+//
+
 const Template = args => (
   <Meter max={10} containerStyle={containerStyle} {...args} />
 );
+
+//
+// STORIES
+//
 
 export const HalfFull = Template.bind({});
 HalfFull.args = {
