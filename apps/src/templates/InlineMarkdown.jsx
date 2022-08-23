@@ -31,6 +31,6 @@ export default class InlineMarkdown extends React.Component {
     // rendered will be a paragraph element because we kept the 'paragraph'
     // block method enabled in the parser above for structural reasons; we want
     // to simply swap that out for a span element.
-    return <span>{rendered.props.children}</span>;
+    return <span>{rendered.props?.children}</span>;
   }
 }
