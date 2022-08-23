@@ -29,6 +29,12 @@ module.exports = {
       {
         ignoreSelectors: [':export']
       }
+    ],
+    'property-case': [
+      true,
+      {
+        ignoreSelectors: [':export']
+      }
     ]
   }
 };
