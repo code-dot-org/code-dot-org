@@ -21,6 +21,13 @@ module.exports = {
     'declaration-block-no-redundant-longhand-properties': null,
     'value-keyword-case': null,
     'function-name-case': null,
-    'scss/no-global-function-names': null
+    'scss/no-global-function-names': null,
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['export']
+      }
+    ],
+    ignoreSelectors: [':export']
   }
 };
