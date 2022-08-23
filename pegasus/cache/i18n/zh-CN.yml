@@ -1829,13 +1829,12 @@ zh-CN:
   hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中学习编程基础知识，与学生一起探索多样性和包容性。
   hoc2021_mc_mee_ai_title: 人工智能为行善
   hoc2021_mc_mee_ai_description: 与学生一起探索 AI，并在 Minecraft：教育版中学习编程。
-  footer_powered_by_aws: 由亚马逊网络服务
-  footer_built_on_github: 在微软的GitHub上构建
-  codebytes_skinny_banner_title: 加入我们12月7-11日的CodeBytes直播迷你课程！
-  codebytes_skinny_banner_description: '加入我们CodeBytes计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes是学生参与虚拟
-    #HourOfCode 的好方法！'
+  footer_built_on_github: 在微软的 GitHub 上构建
+  codebytes_skinny_banner_title: 加入我们12月7-11日的 CodeBytes 直播迷你课程！
+  codebytes_skinny_banner_description: '加入我们 CodeBytes 计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes
+    是学生参与虚拟 #HourOfCode 的好方法！'
   codebytes_skinny_banner_english_only: 仅英语
-  codebytes_skinny_banner_learn: 更多信息请访问[code.org/codebytes](%{code_bytes_url})。
+  codebytes_skinny_banner_learn: 更多信息请访问 [code.org/codebytes](%{code_bytes_url})。
   footer_privacy_policy: 隐私政策
   footer_privacy_policy_updated: 隐私政策（已更新）
   footer_about: 关于
@@ -1890,7 +1889,7 @@ zh-CN:
   ai_ecs_description: 探索计算机科学（ECS）课程的新的替代课程单元。
   ai_elements: 人工智能的要素
   ai_elements_description: Reaktor 和赫尔辛基大学创建的一系列免费在线课程。
-  ai_cognimates: COGNIMATES
+  ai_cognimates: Cognimates
   ai_cognimates_description: 一个用于构建游戏、编程机器人和训练的 AI 教育平台。
   ai_try_activity: 尝试活动
   outbreak_tile_title: 疫情爆发
