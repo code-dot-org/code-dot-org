@@ -27,10 +27,7 @@
 // doesn't conflict with the footer and header that are still using
 // Bootstrap 2.2.3
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
-#workshop-container,
-#application-container,
-#application-header,
-#enroll-form {
+#workshop-container,#application-container,#application-header,#enroll-form {
   @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule */
   @include buttons;
   @include user-selects(auto);
@@ -52,7 +49,7 @@
 
   a:not(.btn) {
     color: $purple;
-    font-family: "Gotham 7r", sans-serif;
+    font-family: 'Gotham 7r', sans-serif;
     &:hover {
       color: $purple;
     }
@@ -95,22 +92,18 @@
     padding: 0 2px;
   }
 
-  /* stylelint-disable max-line-length */
   // React-Select does not provide a way to override the .Select-control class for the underlying input.
   // For consistent UI, apply the same error highlighting to .Select-control that Bootstrap uses for .form-control
   // See https://github.com/twbs/bootstrap-sass/blob/51486a8bd836d32b9f413e911ed83b433ef4ad39/assets/stylesheets/bootstrap/_forms.scss#L432-L434
   // and https://github.com/twbs/bootstrap-sass/blob/51486a8bd836d32b9f413e911ed83b433ef4ad39/assets/stylesheets/bootstrap/mixins/_forms.scss#L20-L29
-  /* stylelint-enable max-line-length */
   .has-error {
     .Select-control {
       border-color: $state-danger-text;
-
-      @include box-shadow(inset 0 1px 1px rgba(0,0,0,0.075)); // Redeclare so transitions work
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
       &:focus {
         border-color: darken($state-danger-text, 10%);
 
-        $shadow: inset 0 1px 1px rgb(0 0 0 / 0.075), 0 0 6px lighten($state-danger-text, 20%);
-
+        $shadow: inset 0 1px 1px rgb(0 0 0 / .075), 0 0 6px lighten($state-danger-text, 20%);
         @include box-shadow($shadow);
       }
     }
@@ -119,14 +112,13 @@
   // Set React-Select popup dropdown z-index > 2 (the Bootstrap form control z-index),
   // so it shows up on top as intended.
   .Select .Select-menu-outer {
-    z-index: 3;
+    z-index: 3
   }
 }
 
-div[role="dialog"] {
+div[role=dialog] {
   div.modal-content {
     margin: 0 !important;
-
     @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule, no-duplicate-at-import-rules */
     @include buttons;
 
@@ -143,8 +135,8 @@ form .form-required-field {
 .error_with_action {
   padding-bottom: 10px;
   ul {
-    margin-bottom: 0;
-  }
+      margin-bottom: 0;
+    }
   .error_action {
     font-weight: bold;
     padding: 5px 0 5px 10px;
@@ -204,7 +196,7 @@ form .form-required-field {
 }
 
 .submission-download-datepicker .form-control {
-  z-index: -1 !important;
+    z-index: -1 !important;
 }
 
 //Keep styling consistent when we use react-bootstrap
@@ -217,5 +209,5 @@ form .form-required-field {
 }
 
 #application-container .form-group {
-  margin-bottom: 0;
+  margin-bottom: 0
 }
