@@ -1,7 +1,7 @@
 name 'CSA U6 Assessment 2022 q04'
 
 wrong '`squid and whale`'
-right '`squid and octopus`'
+right '`whale and octopus`'
 wrong '`octopus and turtle`'
 wrong '`whale and turtle`'
 wrong '`shark and octopus`'
