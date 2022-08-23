@@ -2602,6 +2602,248 @@
         },
         "Eval Strings Images .2": {
           "": "Los bloques de color turquesa, como éste, devuelven valores de cadena"
+        },
+        "CSD U3 - conditionals - transition_2022": {
+          "CSD_U3_L8_S6_C1": "Pon la instrucción de registro de la consola aquí"
+        },
+        "CSD U3 Boolean Predict_2022": {
+          "": "Este programa imprimirá un resultado aquí"
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "Observa atentamente este código."
+        },
+        "CSD U3 Sprites anitab 1_2022": {
+          "anicallout": "Haz clic aquí para abrir la pestaña Animación"
+        },
+        "CSD U3 Sprites intro sprites_2022": {
+          "": "Usa este bloque para crear un sprite"
+        },
+        "CSD U3 Sprites text_2022": {
+          "": "Usa este bloque para poner texto en la pantalla"
+        },
+        "CSD U3 UP_ARROW_2022": {
+          "": "Agrega una sentencia si y coloca tu código de movimiento dentro de ella"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Haz click aquí para mostrar la cuadrícula."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Cambia el número aquí"
+        },
+        "CSD U3 abstraction accelerateX_2022": {
+          "CSD_U3_L11_S6_C1": "Agrega tu código aquí."
+        },
+        "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "Agrega tu código aquí."
+        },
+        "CSD U3 abstraction jump_2022": {
+          "CSD_U3_L11_S17_C1": "Observa esta sentencia si",
+          "CSD_U3_L11_S17_C2": "Envía la rana de vuelta aquí"
+        },
+        "CSD U3 abstraction jumping_2022": {
+          "CSD_U3_L13_S8_C1": "Establece la velocidad aquí"
+        },
+        "CSD U3 abstraction looping_2022": {
+          "CSD_U3_L11_S17_C1": "Observa esta sentencia si"
+        },
+        "CSD U3 abstraction rotation control_2022": {
+          "CSD_U3_L11_S5_C1": "Observa este código."
+        },
+        "CSD U3 abstraction rotation_2022": {
+          "CSD_U3_L11_S4_C1": "Usa el bloque velocidadRotación aquí"
+        },
+        "CSD U3 abstraction tumbleweed_2022": {
+          "CSD_U3_L11_S17_C1": "Observa esta sentencia si"
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "CSD_U3_L11_S5_C1": "Observa este código."
+        },
+        "CSD U3 abstraction velocityX if-statements_2022": {
+          "CSD_U3_L11_S5_C1": "Observa este código."
+        },
+        "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "Agrega tu bloque aquí."
+        },
+        "CSD U3 abstraction velocityY control_2022": {
+          "CSD_U3_L11_S5_C1": "Observa este código."
+        },
+        "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "Agrega tu bloque aquí."
+        },
+        "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "Agrega tu bloque aquí."
+        },
+        "CSD U3 collisions try blocks_2022": {
+          "CSD_U3_L13_S6_C1": "Cambia este bloque."
+        },
+        "CSD U3 collisions types2_2022": {
+          "CSD_U3_L13_S6_C1": "Agrega tu código aquí."
+        },
+        "CSD U3 collisions types3_2022": {
+          "CSD_U3_L13_S6_C1": "Agrega tu código aquí."
+        },
+        "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "Agrega tu código aquí."
+        },
+        "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "Agrega tu código aquí."
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 game backgrounds_2022": {
+          "CSD_U3_S18_L4_C1": "Este bloque llama a tu función.",
+          "CSD_U3_L18_S4_C2": "Área de funciones"
+        },
+        "CSD U3 game variables_2022": {
+          "CSD_U3_S18_L3_C1": "Este bloque crea una nueva variable.",
+          "CSD_U3_L18_S3_C2": "Área de variables"
+        },
+        "CSD U3 keydown conditional_2022": {
+          "": "Agrega tu bloque dentro de esta sentencia si"
+        },
+        "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C1": "la función que dibuja el fondo",
+          "CSD_U3_L16_S3_C2": "el código que llama a la función",
+          "CSD_U3_L16_S3_C3": "Cambia esta función."
+        },
+        "CSD U3 platform platform1_2022": {
+          "CSD_U3_S17_L8_C1": "Este bloque crea un nuevo sprite."
+        },
+        "CSD U3 platform scoreboard_2022": {
+          "CSD_U3_L17_S7_C1": "La puntuación se imprime aquí."
+        },
+        "CSD U3 platform variable1_2022": {
+          "callout": "Este bloque crea una variable."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Aquí está el código",
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Agrega tu código aquí"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Añade tu sentencia `if` aquí"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Añade tu sentencia `if` aquí"
+        },
+        "CSD games sidescroll background_2022": {
+          "CSD_U3_L11_S17_C1": "Observa esta sentencia si"
+        },
+        "CSD games velocity bee_2022": {
+          "CSD_U3_L11_S5_C1": "Observa este código."
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Cambia el número aquí"
+        },
+        "CSD web text size_2022": {
+          "": "Usa este bloque para poner texto en la pantalla"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Añade el bloque reproduceSonido aquí"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Añade tu sentencia `if` aquí"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Esta es la función de la temperatura"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Esta es la función de la Hora del Día"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Esta es la función del Número de Coches"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Esta es la función del tiempo"
         }
       }
     }

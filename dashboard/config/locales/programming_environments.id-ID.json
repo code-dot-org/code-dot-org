@@ -1,0 +1,110 @@
+{
+  "id-ID": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web lab",
+          "categories": {
+            "html_tags": {
+              "name": "Tag HTML"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Game Lab",
+          "categories": {
+            "game_lab": {
+              "name": "Game Lab"
+            },
+            "sprites": {
+              "name": "Sprites"
+            },
+            "groups": {
+              "name": "Grup"
+            },
+            "drawing": {
+              "name": "Menggambar"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "variabel"
+            },
+            "functions": {
+              "name": "fungsi"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratorium Aplikasi",
+          "description": "App Lab adalah sebuah lingkungan pemrograman untuk membuat berbagai aplikasi sederhana. Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik.",
+          "categories": {
+            "data": {
+              "name": "Data"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "variabel"
+            },
+            "functions": {
+              "name": "fungsi"
+            },
+            "advanced": {
+              "name": "Tingkat lanjut"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "sprites": {
+              "name": "Sprites"
+            },
+            "world": {
+              "name": "Dunia"
+            },
+            "location": {
+              "name": "Lokasi"
+            },
+            "actions": {
+              "name": "Aksi"
+            },
+            "events": {
+              "name": "kegiatan"
+            },
+            "behaviors": {
+              "name": "Perilaku"
+            },
+            "loops": {
+              "name": "Loop"
+            },
+            "variables": {
+              "name": "variabel"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "functions": {
+              "name": "fungsi"
+            },
+            "text": {
+              "name": "Teks"
+            },
+            "comments": {
+              "name": "Komentar"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Lab"
+        }
+      }
+    }
+  }
+}

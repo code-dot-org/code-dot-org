@@ -68,6 +68,27 @@
         "debugging/basketball/unversioned": {
           "word": "Arazketa"
         },
+        "input/csd/2022": {
+          "word": "Sarrera"
+        },
+        "debugging/csd/2022": {
+          "word": "Arazketa"
+        },
+        "variable/csd/2022": {
+          "word": "Aldagaia"
+        },
+        "conditionals/csd/2022": {
+          "word": "Baldintzak"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakzioa"
+        },
+        "function/csd/2022": {
+          "word": "Funtzioa"
+        },
+        "copyright/csd/2022": {
+          "word": "Egile-eskubideak"
+        },
         "code/poem-art/unversioned": {
           "word": "Kodea"
         },

@@ -1,17 +1,17 @@
 import {EditorView} from '@codemirror/view';
-import {
-  HighlightStyle,
-  tags,
-  defaultHighlightStyle
-} from '@codemirror/highlight';
 import color from '@cdo/apps/util/color';
+import {
+  syntaxHighlighting,
+  defaultHighlightStyle,
+  HighlightStyle
+} from '@codemirror/language';
+import {tags} from '@lezer/highlight';
 
 // modified from @codemirror/theme-one-dark
 const chalky = '#e5c07b',
   coral = '#e06c75',
   cyan = '#56b6c2',
   invalid = '#ffffff',
-  ivory = '#abb2bf',
   stone = '#7d8799',
   malibu = '#61afef',
   sage = '#98c379',
@@ -28,7 +28,7 @@ The editor theme styles for dark mode.
 export const darkTheme = EditorView.theme(
   {
     '&': {
-      color: ivory,
+      color: color.lighter_gray,
       backgroundColor: color.darkest_slate_gray
     },
     '.cm-content': {
@@ -38,7 +38,8 @@ export const darkTheme = EditorView.theme(
     '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection': {
       backgroundColor: selection
     },
-    '.cm-panels': {backgroundColor: darkBackground, color: ivory},
+    '.cm-panels': {backgroundColor: darkBackground, color: color.lighter_gray},
+    '.cm-panels button': {color: color.lightest_gray},
     '.cm-panels.cm-panels-top': {borderBottom: '2px solid black'},
     '.cm-panels.cm-panels-bottom': {borderTop: '2px solid black'},
     '.cm-searchMatch': {
@@ -74,9 +75,10 @@ export const darkTheme = EditorView.theme(
     '.cm-tooltip-autocomplete': {
       '& > ul > li[aria-selected]': {
         backgroundColor: highlightBackground,
-        color: ivory
+        color: color.lighter_gray
       }
-    }
+    },
+    '.cm-textfield': {color: color.lightest_gray}
   },
   {dark: true}
 );
@@ -107,7 +109,7 @@ export const darkHighlightStyle = HighlightStyle.define([
   },
   {
     tag: [tags.separator],
-    color: ivory
+    color: color.lighter_gray
   },
   {
     tag: [
@@ -152,7 +154,7 @@ export const darkHighlightStyle = HighlightStyle.define([
 Extension to enable the dark theme (both the editor theme and
 the highlight style).
 */
-export const darkMode = [darkTheme, darkHighlightStyle];
+export const darkMode = [darkTheme, syntaxHighlighting(darkHighlightStyle)];
 
 // The default light theme styles for codemirror
 export const lightTheme = EditorView.theme(
@@ -170,4 +172,7 @@ export const lightTheme = EditorView.theme(
 );
 
 // Extension to enable the light theme (both the editor theme and the highlight style).
-export const lightMode = [lightTheme, defaultHighlightStyle];
+export const lightMode = [
+  lightTheme,
+  syntaxHighlighting(defaultHighlightStyle)
+];

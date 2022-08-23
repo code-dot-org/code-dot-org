@@ -331,6 +331,55 @@
           "word": "Învățare Automată",
           "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
         },
+        "input/csd/2022": {
+          "word": "Intrare"
+        },
+        "bug/csd/2022": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "debugging/csd/2022": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "variable/csd/2022": {
+          "word": "Variabilă",
+          "definition": "O etichetă pentru un fragment de informație utilizat într-un program."
+        },
+        "sprite/csd/2022": {
+          "word": "Spiriduș"
+        },
+        "condition/csd/2022": {
+          "word": "Condiție"
+        },
+        "conditionals/csd/2022": {
+          "word": "Condiţionale"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstractizare"
+        },
+        "function/csd/2022": {
+          "word": "Funcţie"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Amprenta digitală"
+        },
+        "copyright/csd/2022": {
+          "word": "Drept de autor",
+          "definition": "dreptul legal exclusiv de a tipări, publica, interpreta, filma sau înregistra opere literare, artistice sau muzicale și de a autoriza pe alții să facă acest lucru"
+        },
+        "user/csd/2022": {
+          "word": "Utilizator",
+          "definition": "O persoană care utilizează un obiect, inclusiv software și hardware."
+        },
+        "machine_learning/csd/2022": {
+          "word": "Învățare Automată",
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
+        },
         "code/poem-art/unversioned": {
           "word": "Cod",
           "definition": "(v) a scrie instrucțiuni pentru un calculator."

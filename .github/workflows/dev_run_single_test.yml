@@ -12,9 +12,10 @@ jobs:
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
       LD_LIBRARY_PATH: "/usr/local/lib"
-    steps:    
+      LANG: C.UTF-8
+    steps:   
       - name: Get actions code
-        uses: actions/checkout@v3    
+        uses: actions/checkout@v3            
       - name: say-hello
         uses: ./.github/actions/start-server-job-actions  
       - name: Install mysql
@@ -28,15 +29,12 @@ jobs:
       - name: Install node
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
-        uses: ./.github/actions/install-rake-dependencies
-      - name: Rake run integration tests
+        uses: ./.github/actions/install-rake-dependencies              
+      - name: Run tests
         run:  |
-          echo "testing failure"
-          bundle install
-          pwd
-          cd dashboard    
-          RAILS_ENV=test bundle exec spring testunit ~/code-dot-org/dashboard/test/lib/image_lib_test.rb
-        continue-on-error: true
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3          
- 
+          brew reinstall imagemagick
+          bundle exec rake test:changed --trace
+
+        
+  
+     

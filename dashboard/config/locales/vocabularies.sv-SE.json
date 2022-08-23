@@ -259,6 +259,82 @@
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
+        "ascii/csd/2022": {
+          "word": "ASCII"
+        },
+        "pixel/csd/2022": {
+          "word": "Pixel"
+        },
+        "computer/csd/2022": {
+          "word": "Dator"
+        },
+        "processing/csd/2022": {
+          "word": "Bearbetar"
+        },
+        "bug/csd/2022": {
+          "word": "Bugg"
+        },
+        "debugging/csd/2022": {
+          "word": "Felsökning"
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "parameter/csd/2022": {
+          "word": "Parameter"
+        },
+        "variable/csd/2022": {
+          "word": "Variabel"
+        },
+        "property/csd/2022": {
+          "word": "Egenskap"
+        },
+        "conditionals/csd/2022": {
+          "word": "Villkor"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2022": {
+          "word": "Funktion"
+        },
+        "html/csd/2022": {
+          "word": "HTML"
+        },
+        "css/csd/2022": {
+          "word": "CSS"
+        },
+        "copyright/csd/2022": {
+          "word": "Copyright"
+        },
+        "user/csd/2022": {
+          "word": "Användare"
+        },
+        "prototype/csd/2022": {
+          "word": "Prototyp"
+        },
+        "feature/csd/2022": {
+          "word": "Funktion"
+        },
+        "circuit/csd/2022": {
+          "word": "Krets"
+        },
+        "features/csd/2022": {
+          "word": "Funktioner"
+        },
+        "label/csd/2022": {
+          "word": "Etikett"
+        },
+        "model/csd/2022": {
+          "word": "Modell"
+        },
+        "training/csd/2022": {
+          "word": "Träning"
+        },
+        "ethics/csd/2022": {
+          "word": "Etik"
+        },
         "code/poem-art/unversioned": {
           "word": "Kod",
           "definition": "(v) att skriva instruktioner för en dator."

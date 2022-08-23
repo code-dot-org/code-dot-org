@@ -1463,15 +1463,6 @@ ko:
         text: "{SPRITE}이(가) {SPEECH}을(를) 생각합니다"
       gamelab_spriteThinkTime:
         text: "{SPRITE}이(가) {TEXT1}을(를) {NUM}초 동안 생각합니다"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
-        options:
-          THOUGHT:
-            '"Hmm..."': 흠……
-            '"I am hungry, too."': 나도 배고파요.
-            '"I only want the biggest goat."': 가장 큰 염소만을 원해요.
-            '"I''m a green troll."': 나는 녹색 트롤입니다.
-            '"No one will cross my bridge."': 아무도 내 다리를 건너가질 못합니다.
       gamelab_spriteThink_fables2:
         text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
         options:

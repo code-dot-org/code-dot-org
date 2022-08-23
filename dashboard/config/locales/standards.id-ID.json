@@ -2,6 +2,18 @@
   "id-ID": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Menntukan arti kata dan frasa seperti yang digunakan dalam teks, membedakan bahasa harfiah dan non-harfiah."
+        },
+        "ccela/4.RL.7": {
+          "description": "Membuat hubungan antara teks cerita atau drama dan presentasi visual atau lisan dari teks, mengidentifikasi di bagian mana dari tiap versi versi tersebut yang menggambarkan deskripsi dan arah tertentu dalam teks."
+        },
+        "ccela/5.RL.4": {
+          "description": "Menentukan arti kata dan frasa seperti yang digunakan dalam teks, misalnya bahasa kiasan seperti metafora dan perumpamaan."
+        },
+        "ccela/5.RL.7": {
+          "description": "Menganalisis kontribusi elemen visual dan multimedia terhadap makna, nada, atau keindahan teks (misalnya, novel grafis, presentasi multimedia untuk fiksi, cerita rakyat, mitos, puisi)."
+        },
         "ccela/6.SL.1": {
           "description": "Libatkan diri secara efektif dalam berbagai diskusi kolaboratif (satu lawan satu, berkelompok, dan dipandu guru) dengan bermacam-macam mitra seputar topik, teks, dan masalah kelas 6, dengan membangun gagasan orang lain dan menyampaikan gagasan sendiri dengan jelas."
         },
@@ -173,8 +185,38 @@
         "iste/4.d": {
           "description": "Gunakan banyak proses dan beragam perspektif untuk mengeksplorasi solusi alternatif."
         },
+        "csp2021/IOC-2.B.5": {
+          "description": "Enkripsi adalah proses penyandian data untuk mencegah akses tanpa izin. Dekripsi adalah proses decoding (membaca sandi) data. Dua pendekatan enkripsi yang umum adalah: ●       Enkripsi symmetric key melibatkan satu key untuk enkripsi dan dekripsi.●       Enkripsi public key menggunakan public key untuk enkripsi dan private key untuk dekripsi. Pengirim tidak memerlukan private key penerima untuk mengenkripsi pesan, akan tetapi private key penerima diperlukan untuk mendekripsi pesan. PERNYATAAN PENGECUALIAN (EKIOC-2.B.5): Prosedur matematika khusus untuk enkripsi dan dekripsi berada di luar lingkup kursus ini dan Ujian AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Rekomendasikan langkah keamanan untuk menghadapi berbagai skenario berdasarkan faktor-faktor seperti efisiensi, kelayakan, dan dampak etis."
+        },
+        "csta/3A-NI-07": {
+          "description": "Bandingkan berbagai langkah keamanan, dengan mempertimbangkan pertukaran antara kegunaan dan keamanan sistem komputer."
+        },
+        "csta/3B-NI-04": {
+          "description": "Bandingkan cara-cara pengembang perangkat lunak dalam melindungi perangkat dan informasi dari akses yang tidak sah."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "Kompresi data dapat mengurangi ukuran (jumlah bit) dari data yang dikirimkan atau disimpan."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Bit yang lebih kecil tidak selalu berarti informasi yan lebih sedikit."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "Jumlah pengurangan ukuran dari kompresi tergantung pada jumlah redundansi dalam representasi data asli serta algoritma kompresi yang digunakan."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Algoritma kompresi data lossless biasanya dapat mengurangi jumlah bit yang disimpan atau ditransmisikan, serta dapat menjamin rekonstruksi lengkap dari data yang asli."
+        },
+        "csta/3A-DA-10": {
+          "description": "Mengevaluasi tradeoff (pergantian) dalam cara mengatur elemen data serta lokasi penyimpanannya."
+        },
         "csta/1B-IC-18": {
           "description": "Bahas teknologi komputasi yang telah mengubah dunia dan nyatakan Bagaimana teknologi memengaruhi, dan dipengaruhi oleh, praktik budaya."
+        },
+        "csta/1B-DA-07": {
+          "description": "Menggunakan data untuk menyoroti atau mengajukan hubungan sebab-akibat, memprediksi hasil, atau menyampaikan gagasan."
         }
       }
     }

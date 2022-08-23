@@ -239,6 +239,159 @@
         "csta/1B-CS-02": {
           "description": "Modelar cómo el hardware y el software del computador funcionan juntos como un sistema para realizar tareas."
         },
+        "csta/2-DA-07": {
+          "description": "Representar datos usando múltiples esquemas de codificación."
+        },
+        "csta/2-NI-05": {
+          "description": "Explicar cómo las medidas de la seguridad física y digital pueden proteger la información."
+        },
+        "csta/2-NI-06": {
+          "description": "Aplicar métodos de encriptado para ejemplificar la transferencia segura de datos."
+        },
+        "csta/2-AP-10": {
+          "description": "Utilizar diagramas de flujo y/o pseudocódigo para enfrentar problemas complejos como algoritmos."
+        },
+        "csta/2-AP-13": {
+          "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
+        },
+        "csta/2-DA-08": {
+          "description": "Recopilar datos utilizando herramientas computacionales y transformarlos para hacerlos más útiles y confiables."
+        },
+        "csta/2-IC-22": {
+          "description": "Colaborar con muchos colaboradores en estrategias como crowdsourcing o encuestas al crear un artefacto computacional."
+        },
+        "csta/2-IC-20": {
+          "description": "Comparar los intercambios asociados a las tecnologías de la computación que afectan a la vida diaria y opciones profesionales de las personas."
+        },
+        "csta/2-IC-23": {
+          "description": "Describa las compensaciones entre permitir que la información sea pública y mantener la información privada y segura."
+        },
+        "csta/2-AP-15": {
+          "description": "Buscar e incorporar los comentarios de sus compañeros de equipo y usuarios para refinar una solución que satisfaga las necesidades de los usuarios."
+        },
+        "csta/2-AP-18": {
+          "description": "Distribuir tareas y mantener una línea temporal del proyecto cuando se trabaja colaborativamente para diseñar artefactos computacionales."
+        },
+        "csta/1B-AP-08": {
+          "description": "Compara y perfecciona varios algoritmos para la misma tarea y determina cuál es el más adecuado."
+        },
+        "csta/1B-AP-11": {
+          "description": "Descomponer (desglosar) problemas en subproblemas más pequeños y manejables para facilitar el proceso de desarrollo del programa."
+        },
+        "csta/1B-AP-16": {
+          "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
+        },
+        "csta/2-AP-17": {
+          "description": "Probar y refinar programas sistemáticamente utilizando un rango de casos de prueba."
+        },
+        "csta/2-CS-02": {
+          "description": "Diseñar proyectos que combinen componentes de hardware y software para recolectar e intercambiar información."
+        },
+        "csta/2-IC-21": {
+          "description": "Analizar problemas de sesgo y accesibilidad en el diseño de tecnologías existentes."
+        },
+        "csta/2-AP-19": {
+          "description": "Documentar programas con el objetivo de hacerlos más simples de seguir, probar y depurar."
+        },
+        "csta/2-AP-11": {
+          "description": "Crear variables con nombres claros que representen distintos tipos de datos y realicen operaciones con sus valores."
+        },
+        "csta/2-AP-16": {
+          "description": "Incorporar el código existente, medios y bibliotecas en programas originales y dar atribuciones."
+        },
+        "csta/2-AP-12": {
+          "description": "Diseñar y desarrollar iterativamente  programas que combinen estructuras de control, incluyendo ciclos alojados y condicionales compuestas."
+        },
+        "csta/2-AP-14": {
+          "description": "Crear procedimientos con parámetros para organizar el código y hacer más fácil su reutilización."
+        },
+        "csta/1B-NI-05": {
+          "description": "Discutir problemas de ciberseguridad del mundo real y cómo se proteger la información personal."
+        },
+        "csta/1B-IC-21": {
+          "description": "Usar medios de dominio público o creative commons y abstenerse de copiar o usar material creado por otros sin permiso."
+        },
+        "csta/3A-AP-20": {
+          "description": "Evaluar licencias que limiten o restrinjan el uso de artefactos computacionales al utilizar recursos tales como bibliotecas."
+        },
+        "csta/1B-IC-18": {
+          "description": "Discute las tecnologías informáticas que han cambiado el mundo y expresa cómo esas tecnologías influyen y son influenciadas por las prácticas culturales."
+        },
+        "csta/1B-AP-14": {
+          "description": "Prestar atención a los derechos de propiedad intelectual y otorgar la atribución adecuada al crear o reutilizar programas."
+        },
+        "csta/1B-IC-20": {
+          "description": "Buscar diversas perspectivas con el fin de mejorar los dispositivos informáticos."
+        },
+        "csta/2-CS-01": {
+          "description": "Recomendar mejoras al diseño de dispositivos de computación, a partir del análisis de la interacción del usuario con los dispositivos."
+        },
+        "csta/2-DA-09": {
+          "description": "Perfeccionar modelos computacionales a partir de la información que generaron."
+        },
+        "csta/2-CS-03": {
+          "description": "Identifique y resuelva sistemáticamente problemas con los dispositivos computacionales y sus componentes."
+        },
+        "ai4k12-2021/3-A-ii.3-5": {
+          "description": "Modelar cómo el aprendizaje supervisado identifica patrones en datos etiquetados."
+        },
+        "ai4k12-2021/3-A-iv.3-5": {
+          "description": "Demostrar cómo los datos de entrenamiento son etiquetados al utilizar una herramienta de aprendizaje automático."
+        },
+        "ai4k12-2021/3-A-i.6-8": {
+          "description": "Contrastar las características únicas del aprendizaje humano con las formas en las que operan los sistemas de aprendizaje automático."
+        },
+        "ai4k12-2021/3-A-i.9-12": {
+          "description": "Definir los algoritmos de aprendizaje supervisado, no supervisado, y por refuerzo. Dar ejemplos de aprendizaje humano que sean similares a cada uno de los algoritmos."
+        },
+        "ai4k12-2021/3-A-ii.K-2": {
+          "description": "Identificar patrones en datos etiquetados y determinar las características que predicen etiquetas."
+        },
+        "ai4k12-2021/3-C-i.K-2": {
+          "description": "Crear un conjunto de datos etiquetados con características explícitas para ilustrar cómo las computadoras pueden aprender a clasificar cosas como alimentos, películas, o juguetes."
+        },
+        "ai4k12-2021/3-A-iii.6-8": {
+          "description": "Entrenar y evaluar un modelo de clasificación o predicción usando aprendizaje automático en un conjunto de datos tabulados."
+        },
+        "csta/3A-DA-12": {
+          "description": "Crear modelos computacionales que representen las relaciones entre diferentes elementos de datos recopilados de un fenómeno o proceso."
+        },
+        "ai4k12-2021/3-C-i.3-5": {
+          "description": "Crear un conjunto de datos etiquetados con características explícitas de varios tipos y utilizar una herramienta de aprendizaje automático para entrenar un clasificador con estos datos."
+        },
+        "ai4k12-2021/3-C-i.6-8": {
+          "description": "Crear un conjunto de datos para entrenar un clasificador o predictor de árbol de decisión y explorar el impacto que las diferentes codificaciones de características tienen en el árbol de decisión."
+        },
+        "csta/3B-DA-05": {
+          "description": "Utilizar herramientas y técnicas de análisis de datos para identificar patrones en datos que representan sistemas complejos."
+        },
+        "csta/3A-AP-16": {
+          "description": "Diseñar e iterativamente desarrollar artefactos computacionales con intenciones prácticas, como forma de demostrar la expresión personal, o para abordar un asunto social, utilizando eventos para iniciar instrucciones."
+        },
+        "ai4k12-2021/3-A-iii.3-5": {
+          "description": "Entrenar un modelo de clasificación utilizando el aprendizaje automático, y luego examine la precisión de este modelo con nuevas entradas"
+        },
+        "ai4k12-2021/3-C-i.9-12": {
+          "description": "Comparar dos conjuntos de datos del mundo real en función de las características que contienen y de cómo estas se codifican."
+        },
+        "ai4k12-2021/3-C-iii.3-5": {
+          "description": "Examinar las características y las etiquetas de los datos de entrenamiento para detectar posibles fuentes de sesgo."
+        },
+        "ai4k12-2021/3-C-iii.6-8": {
+          "description": "Explicar cómo la elección de los datos de entrenamiento determina el comportamiento del clasificador, y cómo puede introducirse un sesgo si el conjunto de datos de entrenamiento no está equilibrado correctamente."
+        },
+        "csta/3A-IC-25": {
+          "description": "Probar y perfeccionar los artefactos computacionales para reducir los sesgos y los déficits de equidad."
+        },
+        "csta/3A-IC-24": {
+          "description": "Evaluar el impacto de la computación en las prácticas personales, éticas, sociales, económicas, y culturales."
+        },
+        "ai4k12-2021/3-A-ii.9-12": {
+          "description": "Utilizar un algoritmo de aprendizaje supervisado o no supervisado para entrenar un modelo con datos del mundo real, y luego evaluar los resultados."
+        },
+        "ai4k12-2021/3-A-iv.9-12": {
+          "description": "Ilustre lo que sucede durante cada uno de los pasos necesarios cuando se utiliza el aprendizaje automático para construir un clasificador o predictor."
+        },
         "csta/1A-IC-18": {
           "description": "Conserva la privacidad de los datos de acceso y cierra la sesión de los dispositivos de forma adecuada."
         },
@@ -260,23 +413,11 @@
         "csta/1A-NI-04": {
           "description": "Explica qué son las contraseñas y por qué las usamos, así como el uso de contraseñas seguras para proteger los dispositivos y la información del acceso no autorizado."
         },
-        "csta/1B-IC-18": {
-          "description": "Discute las tecnologías informáticas que han cambiado el mundo y expresa cómo esas tecnologías influyen y son influenciadas por las prácticas culturales."
-        },
         "csta/1A-CS-01": {
           "description": "Seleccionar y utilizar el software adecuado para realizar una serie de tareas y reconocer que los usuarios tienen diferentes necesidades y preferencias en cuanto a la tecnología que utilizan."
         },
         "csta/1A-IC-16": {
           "description": "Comparar cómo viven y trabajan las personas antes y después de la implantación o adopción de una nueva tecnología informática."
-        },
-        "csta/1B-AP-11": {
-          "description": "Descomponer (desglosar) problemas en subproblemas más pequeños y manejables para facilitar el proceso de desarrollo del programa."
-        },
-        "csta/1B-NI-05": {
-          "description": "Discutir problemas de ciberseguridad del mundo real y cómo se proteger la información personal."
-        },
-        "csta/1B-AP-08": {
-          "description": "Compara y perfecciona varios algoritmos para la misma tarea y determina cuál es el más adecuado."
         },
         "csta/1B-AP-09": {
           "description": "Crear programas que usen variables para almacenar y modificar datos."
@@ -290,20 +431,8 @@
         "csta/1B-NI-04": {
           "description": "Hacer un ejemplo de cómo la información se divide en trozos más pequeños, se transmite en forma de paquetes a través de múltiples dispositivos en las redes e Internet y se vuelve a ensamblar en el destino."
         },
-        "csta/1B-IC-20": {
-          "description": "Buscar diversas perspectivas con el fin de mejorar los dispositivos informáticos."
-        },
-        "csta/1B-IC-21": {
-          "description": "Usar medios de dominio público o creative commons y abstenerse de copiar o usar material creado por otros sin permiso."
-        },
         "csta/1B-AP-13": {
           "description": "Utiliza un proceso iterativo para planificar el desarrollo de un programa incluyendo las perspectivas de otros y considerando las preferencias de los usuarios."
-        },
-        "csta/1B-AP-14": {
-          "description": "Prestar atención a los derechos de propiedad intelectual y otorgar la atribución adecuada al crear o reutilizar programas."
-        },
-        "csta/1B-AP-16": {
-          "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
         },
         "csta/1B-AP-17": {
           "description": "Describir las deciciones tomadas durante el desarrollo del programa utilizando comentarios de código, presentaciones y demostraciones."
@@ -328,135 +457,6 @@
         },
         "csta/1A-AP-15": {
           "description": "Utilizando una terminología correcta, describe los pasos dados y las decisiones tomadas durante el proceso iterativo de desarrollo del programa."
-        },
-        "ai4k12-2021/3-A-ii.3-5": {
-          "description": "Modelar cómo el aprendizaje supervisado identifica patrones en datos etiquetados."
-        },
-        "ai4k12-2021/3-A-iv.3-5": {
-          "description": "Demostrar cómo los datos de entrenamiento son etiquetados al utilizar una herramienta de aprendizaje automático."
-        },
-        "csta/2-AP-17": {
-          "description": "Probar y refinar programas sistemáticamente utilizando un rango de casos de prueba."
-        },
-        "csta/2-IC-21": {
-          "description": "Analizar problemas de sesgo y accesibilidad en el diseño de tecnologías existentes."
-        },
-        "ai4k12-2021/3-A-i.6-8": {
-          "description": "Contrastar las características únicas del aprendizaje humano con las formas en las que operan los sistemas de aprendizaje automático."
-        },
-        "ai4k12-2021/3-A-i.9-12": {
-          "description": "Definir los algoritmos de aprendizaje supervisado, no supervisado, y por refuerzo. Dar ejemplos de aprendizaje humano que sean similares a cada uno de los algoritmos."
-        },
-        "csta/2-IC-20": {
-          "description": "Comparar los intercambios asociados a las tecnologías de la computación que afectan a la vida diaria y opciones profesionales de las personas."
-        },
-        "ai4k12-2021/3-A-ii.K-2": {
-          "description": "Identificar patrones en datos etiquetados y determinar las características que predicen etiquetas."
-        },
-        "ai4k12-2021/3-C-i.K-2": {
-          "description": "Crear un conjunto de datos etiquetados con características explícitas para ilustrar cómo las computadoras pueden aprender a clasificar cosas como alimentos, películas, o juguetes."
-        },
-        "csta/2-DA-09": {
-          "description": "Perfeccionar modelos computacionales a partir de la información que generaron."
-        },
-        "ai4k12-2021/3-A-iii.6-8": {
-          "description": "Entrenar y evaluar un modelo de clasificación o predicción usando aprendizaje automático en un conjunto de datos tabulados."
-        },
-        "csta/3A-DA-12": {
-          "description": "Crear modelos computacionales que representen las relaciones entre diferentes elementos de datos recopilados de un fenómeno o proceso."
-        },
-        "ai4k12-2021/3-C-i.3-5": {
-          "description": "Crear un conjunto de datos etiquetados con características explícitas de varios tipos y utilizar una herramienta de aprendizaje automático para entrenar un clasificador con estos datos."
-        },
-        "ai4k12-2021/3-C-i.6-8": {
-          "description": "Crear un conjunto de datos para entrenar un clasificador o predictor de árbol de decisión y explorar el impacto que las diferentes codificaciones de características tienen en el árbol de decisión."
-        },
-        "csta/3B-DA-05": {
-          "description": "Utilizar herramientas y técnicas de análisis de datos para identificar patrones en datos que representan sistemas complejos."
-        },
-        "csta/2-AP-13": {
-          "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
-        },
-        "csta/3A-AP-16": {
-          "description": "Diseñar e iterativamente desarrollar artefactos computacionales con intenciones prácticas, como forma de demostrar la expresión personal, o para abordar un asunto social, utilizando eventos para iniciar instrucciones."
-        },
-        "ai4k12-2021/3-A-iii.3-5": {
-          "description": "Entrenar un modelo de clasificación utilizando el aprendizaje automático, y luego examine la precisión de este modelo con nuevas entradas"
-        },
-        "ai4k12-2021/3-C-i.9-12": {
-          "description": "Comparar dos conjuntos de datos del mundo real en función de las características que contienen y de cómo estas se codifican."
-        },
-        "ai4k12-2021/3-C-iii.3-5": {
-          "description": "Examinar las características y las etiquetas de los datos de entrenamiento para detectar posibles fuentes de sesgo."
-        },
-        "ai4k12-2021/3-C-iii.6-8": {
-          "description": "Explicar cómo la elección de los datos de entrenamiento determina el comportamiento del clasificador, y cómo puede introducirse un sesgo si el conjunto de datos de entrenamiento no está equilibrado correctamente."
-        },
-        "csta/3A-IC-25": {
-          "description": "Probar y perfeccionar los artefactos computacionales para reducir los sesgos y los déficits de equidad."
-        },
-        "csta/2-AP-19": {
-          "description": "Documentar programas con el objetivo de hacerlos más simples de seguir, probar y depurar."
-        },
-        "csta/2-AP-11": {
-          "description": "Crear variables con nombres claros que representen distintos tipos de datos y realicen operaciones con sus valores."
-        },
-        "csta/2-AP-12": {
-          "description": "Diseñar y desarrollar iterativamente  programas que combinen estructuras de control, incluyendo ciclos alojados y condicionales compuestas."
-        },
-        "csta/3A-IC-24": {
-          "description": "Evaluar el impacto de la computación en las prácticas personales, éticas, sociales, económicas, y culturales."
-        },
-        "ai4k12-2021/3-A-ii.9-12": {
-          "description": "Utilizar un algoritmo de aprendizaje supervisado o no supervisado para entrenar un modelo con datos del mundo real, y luego evaluar los resultados."
-        },
-        "ai4k12-2021/3-A-iv.9-12": {
-          "description": "Ilustre lo que sucede durante cada uno de los pasos necesarios cuando se utiliza el aprendizaje automático para construir un clasificador o predictor."
-        },
-        "csta/2-AP-15": {
-          "description": "Buscar e incorporar los comentarios de sus compañeros de equipo y usuarios para refinar una solución que satisfaga las necesidades de los usuarios."
-        },
-        "csta/2-IC-22": {
-          "description": "Colaborar con muchos colaboradores en estrategias como crowdsourcing o encuestas al crear un artefacto computacional."
-        },
-        "csta/2-DA-08": {
-          "description": "Recopilar datos utilizando herramientas computacionales y transformarlos para hacerlos más útiles y confiables."
-        },
-        "csta/2-CS-01": {
-          "description": "Recomendar mejoras al diseño de dispositivos de computación, a partir del análisis de la interacción del usuario con los dispositivos."
-        },
-        "csta/2-CS-02": {
-          "description": "Diseñar proyectos que combinen componentes de hardware y software para recolectar e intercambiar información."
-        },
-        "csta/2-AP-10": {
-          "description": "Utilizar diagramas de flujo y/o pseudocódigo para enfrentar problemas complejos como algoritmos."
-        },
-        "csta/2-AP-16": {
-          "description": "Incorporar el código existente, medios y bibliotecas en programas originales y dar atribuciones."
-        },
-        "csta/2-AP-18": {
-          "description": "Distribuir tareas y mantener una línea temporal del proyecto cuando se trabaja colaborativamente para diseñar artefactos computacionales."
-        },
-        "csta/2-AP-14": {
-          "description": "Crear procedimientos con parámetros para organizar el código y hacer más fácil su reutilización."
-        },
-        "csta/2-CS-03": {
-          "description": "Identifique y resuelva sistemáticamente problemas con los dispositivos computacionales y sus componentes."
-        },
-        "csta/2-DA-07": {
-          "description": "Representar datos usando múltiples esquemas de codificación."
-        },
-        "csta/2-NI-05": {
-          "description": "Explicar cómo las medidas de la seguridad física y digital pueden proteger la información."
-        },
-        "csta/2-NI-06": {
-          "description": "Aplicar métodos de encriptado para ejemplificar la transferencia segura de datos."
-        },
-        "csta/2-IC-23": {
-          "description": "Describa las compensaciones entre permitir que la información sea pública y mantener la información privada y segura."
-        },
-        "csta/3A-AP-20": {
-          "description": "Evaluar licencias que limiten o restrinjan el uso de artefactos computacionales al utilizar recursos tales como bibliotecas."
         }
       }
     }

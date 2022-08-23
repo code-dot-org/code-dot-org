@@ -1,0 +1,68 @@
+{
+  "lt-LT": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "name": "Žaidimų laboratorija",
+          "categories": {
+            "game_lab": {
+              "name": "Žaidimų laboratorija"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Kintamieji"
+            },
+            "functions": {
+              "name": "Komandų kūrimas"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab yra programavimo aplinka, su kuria galima sukurti paprastas programėles. Kurti galima su blokeliais arba su JavaScript, o po to ja pasidalinti su draugais.",
+          "categories": {
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Kintamieji"
+            },
+            "functions": {
+              "name": "Komandų kūrimas"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Komandos"
+            },
+            "events": {
+              "name": "Įvykiai"
+            },
+            "loops": {
+              "name": "Kartojimas"
+            },
+            "variables": {
+              "name": "Kintamieji"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "functions": {
+              "name": "Komandų kūrimas"
+            },
+            "text": {
+              "name": "Tekstas"
+            }
+          }
+        }
+      }
+    }
+  }
+}
