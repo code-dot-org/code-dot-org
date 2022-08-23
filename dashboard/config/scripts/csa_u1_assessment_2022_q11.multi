@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 Consider the following code segment. 
 
 ```
-while(!myPainter.facingWest()) {		
+while(!myPainter.isFacingWest()) {		
   myPainter.turnLeft();
 }
 ```
