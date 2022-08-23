@@ -116,7 +116,7 @@ Als u de gastheer of -vrouw bent van een evenement in een klas, gebruik dan het 
 
 Als u overweegt thuis of in de gemeenschap een 'Hour of Code' te organiseren, dan raden wij u aan enkele van onze gebruiksgidsen voor [ouders](https://hourofcode.com/us/how-to/parents) en [organisaties of bedrijven](https://hourofcode.com/us/how-to/companies) te bekijken. 
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Leg de datum, format, en locatie van uw evenement vast.
 

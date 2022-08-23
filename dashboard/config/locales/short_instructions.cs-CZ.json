@@ -3308,7 +3308,12 @@
         "Test embedded K1 Blockly in instructions": "K vyřešení tohoto hlavolamu použijte tři bloky `posuv na západ` a jeden blok `sebrat kukuřici`.",
         "U1L13 Text Compression": "Hledej v textu vzory (opakující se slova nebo sousloví). Zadej vzory, které vidíš, do slovníku napravo. Když píšeš záznamy do slovníku, symbol pro záznam se vloží do textu na místo vzoru.",
         "U2L10 NetSim Automatic DNS": "V téhle verzi Simulátoru internetu máš k dispozici službu DNS (Domain Name System) a jsou známy IP adresy všech připojených počítačů. Pošli zprávu ve formátu GET [název_hostitele] do služby DNS na adresu \\<čísloTvéhoRouterur>.15 a dostaneš adresu studenta.",
-        "allthethings-anigif-instructions": "Posun mne na východ, abys mne dostal k prasátku!"
+        "allthethings-anigif-instructions": "Posun mne na východ, abys mne dostal k prasátku!",
+        "CSD U5 black white images pixelation 2_2022": "Namaluj usměváka (klikni sem pro zobrazení obrázku)",
+        "CSD U5 black white images pixelation 3_2022": "Změň slidery pro šířku a výšku abys našel obrázek (klikni sem pro více informací)",
+        "CSD U5 black white images pixelation 4_2022": "Doplň usměvákovi obočí (klikni sem pro zobrazení obrázku)",
+        "CSD U5 black white images pixelation 5_2022": "Namaluj cokoliv budeš chtít",
+        "CSD U5 black white images pixelation_2022": "Dokonči tvar X vepsáním nul a jedniček"
       }
     }
   }

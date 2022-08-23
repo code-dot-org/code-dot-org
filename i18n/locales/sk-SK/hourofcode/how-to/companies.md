@@ -64,7 +64,7 @@ Dobrovoľník zapojený do Hodiny kódu
 
 Ak chcete urobiť niečo navyše, aj vaša firma môže usporiadať podujatie v rámci Hodiny kódu. Neexistuje presný návod, ako takéto podujatie usporiadať, preto vám odporúčame pristupovať k tomu tvorivo! Vzhľadom na to, že zamestnancov máme málo (ale zato dobrých!), Code.org nemá tím, ktorý by koordinoval podujatia organizované v rámci Hodiny kódu. Pripravili sme však pre vás niekoľko tipov, ako začať.
 
-### 1. Pozrite si video, ako na organizáciu podujatia <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Pozrite si video, ako na organizáciu podujatia <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Vyberte si dátum, formát a miesto konania podujatia
 

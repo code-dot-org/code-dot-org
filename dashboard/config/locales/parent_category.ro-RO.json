@@ -1,0 +1,14 @@
+{
+  "ro-RO": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Utilizarea inovațiilor informatice poate implica riscuri pentru siguranța și identitatea personală."
+        },
+        "csp2021/DAT-1": {
+          "description": "Modul în care computerul reprezintă date este diferite de modul în care datele sunt interpretate și afișate pentru utilizator. Programele sunt utilizate pentru traducerea datelor într-o reprezentare, care este mai ușoară de înțeles pentru oameni."
+        }
+      }
+    }
+  }
+}

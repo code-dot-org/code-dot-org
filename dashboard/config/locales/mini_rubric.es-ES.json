@@ -1,0 +1,23 @@
+{
+  "es-ES": {
+    "data": {
+      "mini_rubric": {
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "CSD U6 for loop led personalize_2019": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "CSD U6 for loop led personalize_2021": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Concepto clave"
+        }
+      }
+    }
+  }
+}

@@ -44,7 +44,7 @@ it:
         personal_email: "E-mail personale<a href=\"%{url}\">(clicca qui se non hai un indirizzo e-mail)</a>"
         personal_email_markdown: "E-mail personale[(clicca qui se non hai un indirizzo e-mail)](%{url})"
         username: 'Nome utente'
-        password: 'password'
+        password: 'Password'
         password_confirmation: 'Conferma della password'
         current_password: 'Password attuale'
         locale: 'Linguaggio'

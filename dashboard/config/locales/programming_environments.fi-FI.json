@@ -1,0 +1,92 @@
+{
+  "fi-FI": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Nettilabra"
+        },
+        "gamelab": {
+          "name": "Pelilabra",
+          "categories": {
+            "game_lab": {
+              "name": "Pelilabra"
+            },
+            "groups": {
+              "name": "Ryhmät"
+            },
+            "drawing": {
+              "name": "Piirustus"
+            },
+            "math": {
+              "name": "Matematiikka"
+            },
+            "variables": {
+              "name": "Muuttujat"
+            },
+            "functions": {
+              "name": "Funktiot"
+            }
+          }
+        },
+        "applab": {
+          "name": "Sovelluslabra",
+          "description": "Sovelluslabra on koodausympäristö, jossa voit tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa lohkoilla tai javaScriptillä kunnes se toimii, ja jaa työsi sekunneissa.",
+          "categories": {
+            "math": {
+              "name": "Matematiikka"
+            },
+            "variables": {
+              "name": "Muuttujat"
+            },
+            "functions": {
+              "name": "Funktiot"
+            },
+            "advanced": {
+              "name": "Edistyneet"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Maailma"
+            },
+            "location": {
+              "name": "Sijainnit"
+            },
+            "actions": {
+              "name": "Toiminnot"
+            },
+            "events": {
+              "name": "Tapahtumat"
+            },
+            "behaviors": {
+              "name": "Käyttäytymiset"
+            },
+            "loops": {
+              "name": "Silmukat"
+            },
+            "variables": {
+              "name": "Muuttujat"
+            },
+            "math": {
+              "name": "Matematiikka"
+            },
+            "logic": {
+              "name": "Logiikka"
+            },
+            "functions": {
+              "name": "Funktiot"
+            },
+            "text": {
+              "name": "teksti"
+            },
+            "comments": {
+              "name": "Kommentit"
+            }
+          }
+        }
+      }
+    }
+  }
+}

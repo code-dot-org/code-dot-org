@@ -64,7 +64,7 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 
 ប្រសិនបើអ្នកចង់ទៅអោយបានឆ្ងាយលើលពីនេះទៀត ក្រុមហ៊ុនរបស់អ្នកក៏អាចធ្វើជាម្ចាស់កម្មវិធី Hour of Code ផងដែរ។ មិនមានរូបមន្តជាក់លាក់ណាមួយសម្រាប់ធ្វើជាម្ចាស់កម្មវិធីនោះទេ ដូច្នេះយើងលើកទឹកចិត្តឱ្យអ្នកចេះច្នៃប្រឌិត! ដោយសារទំហំបុគ្គលិករបស់យើងតូច (ប៉ុន្តែអស្ចារ្យ!) Code.org មិនមានក្រុមការងារដែលផ្តោតទៅលើការសម្របសម្រួលកម្មវិធី Hour of Code នោះទេ។ ទោះយ៉ាងណាមិញនេះគឺជាគន្លឹះមួយចំនួនដើម្បីចាប់ផ្តើម។
 
-### 1. មើលវីឌីអូរបៀបរៀបចំនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. មើលវីឌីអូរបៀបរៀបចំនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. កំណត់ថ្ងៃ បែបបទនិងទីតាំងសំរាប់កម្មវិធីរបស់អ្នក
 

@@ -1,0 +1,81 @@
+{
+  "sl-SI": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "Skupine"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Spremenljivke"
+            },
+            "functions": {
+              "name": "Funkcije"
+            }
+          }
+        },
+        "applab": {
+          "description": "App Lab je okolje za programiranje, kjer lahko narediš enostavne aplikacije. Oblikuješ izgled aplikacije, kodiraš z bloki ali JavaScriptom. Ko aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah.",
+          "categories": {
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Spremenljivke"
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "advanced": {
+              "name": "Napredno"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Svet"
+            },
+            "location": {
+              "name": "Lokacije"
+            },
+            "actions": {
+              "name": "Dejanja"
+            },
+            "events": {
+              "name": "Dogodki"
+            },
+            "behaviors": {
+              "name": "Vedenje"
+            },
+            "loops": {
+              "name": "Zanke"
+            },
+            "variables": {
+              "name": "Spremenljivke"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "text": {
+              "name": "Besedilo"
+            },
+            "comments": {
+              "name": "Komentarji"
+            }
+          }
+        }
+      }
+    }
+  }
+}

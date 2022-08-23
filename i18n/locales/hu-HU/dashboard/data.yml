@@ -368,6 +368,10 @@ hu:
         infinity_playlab_intro: Játéklabor - bevezetés
         infinity_playlab_events: Játéklabor - események
         infinity_playlab_repeat_forever: Játéklabor - végtelen ciklus
+        csd_concept_computer: 'Hogyan Működnek a Számítógépek: Mi tesz egy Számítógépet, Számítógéppé?'
+        csd_gamelab_velocity: Sebesség
+        csd_weblab_intro_1: Bevezetés a Web Labba - 1. Rész
+        csd_weblab_intro_2: Bevezetés a Web Labba - 2. Rész
         csp_applab_functions: Bevezetés a függvényekbe
         csp_applab_functions_parameters: Paraméteres függvények
         csp_applab_loops: hurkok
@@ -453,6 +457,7 @@ hu:
         poetry_module_multichoiceprompts: Feleletválasztós promptok – Kódolás költészettel
         poetry_module_conditionals: Kondicionálisok – Kódolás költészettel
         poemart_intro: Költészet - bevezetés
+        csd_u6_input_output: Bemenet és Kimenet
         CSA-PL-for-loops: Ciklusok Java-nyelven
         CSA-PL-variables: Változók létrehozása Javaban
         PL_CS_Journeys_Overview: Számítástechnikai utazások

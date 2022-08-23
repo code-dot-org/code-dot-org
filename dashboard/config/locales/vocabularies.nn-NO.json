@@ -68,6 +68,27 @@
         "debugging/basketball/unversioned": {
           "word": "Feilsøking"
         },
+        "input/csd/2022": {
+          "word": "Inngang"
+        },
+        "debugging/csd/2022": {
+          "word": "Feilsøking"
+        },
+        "variable/csd/2022": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2022": {
+          "word": "Betingelser"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraksjon"
+        },
+        "function/csd/2022": {
+          "word": "Funksjon"
+        },
+        "copyright/csd/2022": {
+          "word": "Opphavsrett"
+        },
         "code/poem-art/unversioned": {
           "word": "Kode"
         },
