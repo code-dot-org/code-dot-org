@@ -1,13 +1,13 @@
-$root: "/blockly/media/bounce/"; //TODO: Parameterize for asset pipeline
+$root: '/blockly/media/bounce/'; //TODO: Parameterize for asset pipeline
 
-@import "font";
+@import 'font';
 
 #svgBounce {
   overflow: hidden;
 }
 
 /* 'Look' icon */
-#look > path {
+#look>path {
   display: none;
   fill: none;
   stroke-width: 10;
@@ -52,7 +52,7 @@ $root: "/blockly/media/bounce/"; //TODO: Parameterize for asset pipeline
   margin-right: 3px;
 }
 
-/* make the share button take up an entire line, so it doesn't move other
+/* make the share button take up an entire line, so it doesn't move other 
  * buttons when it appears. */
 #share-cell-wrapper {
   display: inline-block;
