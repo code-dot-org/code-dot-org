@@ -33,11 +33,11 @@ class TableControls extends React.Component {
           {!this.props.readOnly && (
             <ConfirmDeleteButton
               body={msg.confirmClearTable()}
-              buttonText="Clear table"
+              buttonText={msg.clearTable()}
               containerStyle={{width: 103, marginLeft: 10}}
               buttonId="clearTableButton"
               onConfirmDelete={this.props.clearTable}
-              title="Clear table"
+              title={msg.clearTable()}
             />
           )}
 
