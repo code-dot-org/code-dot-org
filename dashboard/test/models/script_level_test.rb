@@ -141,15 +141,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
       assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"]
     end
 
-    # Should be removed as part of this task:
-    # https://codedotorg.atlassian.net/browse/JAVA-525
-    test 'get_example_solutions for javalab level with example (deprecated)' do
-      level = create(:javalab, :with_example_solutions)
-      sl = create(:script_level, levels: [level])
-
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/s/csa-examples/lessons/1/levels/1/"]
-    end
-
     test 'get_example_solutions for javalab level with exemplar' do
       level = create(:javalab, exemplar_sources: 'some code')
       script = create(:script)
