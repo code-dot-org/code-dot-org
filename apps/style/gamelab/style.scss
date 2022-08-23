@@ -1,10 +1,10 @@
-$root: "/blockly/media/gamelab/"; //TODO: Parameterize for asset pipeline
+$root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 
-@import "font";
-@import "color.scss";
-@import "mixins";
+@import 'font';
+@import 'color.scss';
+@import 'mixins';
 @import "../JsDebuggerUi.scss";
-@import "../VisualizationOverlay.scss";
+@import '../VisualizationOverlay.scss';
 
 #divGameLab {
   overflow: hidden;
@@ -23,9 +23,8 @@ $root: "/blockly/media/gamelab/"; //TODO: Parameterize for asset pipeline
 }
 
 .legacy-share-view {
-  #runButton,
-  #resetButton {
-    display: none !important;
+  #runButton, #resetButton {
+    display:none !important;
   }
 
   #studio-dpad-container {
@@ -88,13 +87,13 @@ $root: "/blockly/media/gamelab/"; //TODO: Parameterize for asset pipeline
   }
 }
 
-$dpad-button: #fff;
-$dpad-border: #efefef;
-$dpad-shadow: #7f7f7f;
-$dpad-active-border: #9f9f9f;
-$dpad-cone-active: #ffd080;
-$dpad-cone-inactive: #9c9c9c;
-$dpad-rim: #fff;
+$dpad-button: #FFF;
+$dpad-border: #EFEFEF;
+$dpad-shadow: #7F7F7F;
+$dpad-active-border: #9F9F9F;
+$dpad-cone-active: #FFD080;
+$dpad-cone-inactive: #9C9C9C;
+$dpad-rim: #FFF;
 
 #studio-dpad {
   position: absolute;
@@ -195,10 +194,10 @@ $dpad-rim: #fff;
   }
 }
 
-$space-fill: #ffa000;
-$space-shadow: #ffd07f;
+$space-fill: #FFA000;
+$space-shadow: #FFD07F;
 $space-border: #666;
-$space-active-border: #9f9f9f;
+$space-active-border: #9F9F9F;
 
 #studio-space-button {
   position: absolute;
@@ -221,3 +220,4 @@ $space-active-border: #9f9f9f;
     outline: 0;
   }
 }
+
