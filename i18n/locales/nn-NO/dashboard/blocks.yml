@@ -1536,6 +1536,7 @@ nn:
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høgre
+            '"space"': mellomrom
             '"w"': V
             '"a"': A
             '"s"': S
@@ -1547,6 +1548,7 @@ nn:
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høgre
+            '"space"': mellomrom
             '"w"': V
             '"a"': A
             '"s"': S
@@ -1564,6 +1566,7 @@ nn:
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høgre
+            '"space"': mellomrom
       Mikelab_xLocationOf:
         text: x-koordinator til {SPRITE}
       Mikelab_yLocationOf:
