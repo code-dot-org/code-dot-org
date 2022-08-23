@@ -3747,7 +3747,13 @@
         "Test embedded K1 Blockly in instructions": "Benutze drei `bewege nach Westen` Bausteine und einen `pflücke Mais` Baustein, um dieses Rätsel zu lösen.",
         "U1L13 Text Compression": "Suche im Text nach Mustern (Worte oder Sätze die sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags die Muster im Text ersetzen.",
         "U2L10 NetSim Automatic DNS": "In dieser Version des Internet-Simulators wird dir ein Domain Name System (DNS) zur Verfügung gestellt, das die IP-Adressen aller angeschlossenen Rechner kennt. Sende eine Nachricht in der Form GET [hostname] an den DNS-Dienst unter der Adresse <yourRouterNumber>.15, um die Adresse eines Schülers zu erhalten.",
-        "allthethings-anigif-instructions": "Bewege mich nach Osten, um mich zum Schwein zu bringen!"
+        "allthethings-anigif-instructions": "Bewege mich nach Osten, um mich zum Schwein zu bringen!",
+        "CSD U3 Mouse Input Bee 2_2022": "Mache Folgendes",
+        "CSD U3 Sprites intro sprites_2022": "Mache Folgendes",
+        "CSD U5 black white images pixelation 2_2022": "Zeichne ein Smiley-Gesicht (schau hier um ein Bild zu sehen)",
+        "CSD U5 black white images pixelation 5_2022": "Zeichne was du willst",
+        "CSD U5 black white images pixelation_2022": "Vervollständige das X durch Eingabe von Nullen und Einsen",
+        "U4 Model Design 1_2022": "Füge im Designmodus eine große rote Schaltfläche zu deinem Bildschirm hinzu. (Klicke für vollständige Anweisungen)."
       }
     }
   }

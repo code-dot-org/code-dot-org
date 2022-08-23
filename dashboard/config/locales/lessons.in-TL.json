@@ -384,6 +384,945 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "crwdns2919816:0crwdne2919816:0"
         },
+        "csd5-2022/Representation Matters": {
+          "name": "crwdns2959232:0crwdne2959232:0",
+          "overview": "crwdns2959236:0crwdne2959236:0",
+          "preparation": "crwdns2959240:0[0]crwdnd2959240:0[1]crwdne2959240:0",
+          "purpose": "crwdns2959242:0crwdne2959242:0",
+          "student_overview": "crwdns2959246:0crwdne2959246:0"
+        },
+        "csd5-2022/Patterns and Representation": {
+          "name": "crwdns2959414:0crwdne2959414:0",
+          "overview": "crwdns2959416:0crwdne2959416:0",
+          "preparation": "crwdns2959420:0[0]crwdnd2959420:0[1]crwdne2959420:0",
+          "purpose": "crwdns2959424:0crwdne2959424:0",
+          "student_overview": "crwdns2959426:0crwdne2959426:0"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "crwdns2959574:0crwdne2959574:0",
+          "overview": "crwdns2959576:0crwdne2959576:0",
+          "preparation": "crwdns2959580:0[0]crwdnd2959580:0[1]crwdne2959580:0",
+          "purpose": "crwdns2959582:0crwdne2959582:0",
+          "student_overview": "crwdns2959586:0crwdne2959586:0"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "crwdns2959714:0crwdne2959714:0",
+          "overview": "crwdns2959718:0crwdne2959718:0",
+          "preparation": "crwdns2959720:0[0]crwdnd2959720:0[1]crwdne2959720:0",
+          "purpose": "crwdns2959724:0crwdne2959724:0",
+          "student_overview": "crwdns2959726:0crwdne2959726:0"
+        },
+        "csd5-2022/Representing Numbers": {
+          "name": "crwdns2959842:0crwdne2959842:0",
+          "overview": "crwdns2959846:0crwdne2959846:0",
+          "preparation": "crwdns2959848:0[0]crwdnd2959848:0[1]crwdne2959848:0",
+          "purpose": "crwdns2959852:0crwdne2959852:0",
+          "student_overview": "crwdns2959854:0crwdne2959854:0"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "crwdns2960006:0crwdne2960006:0",
+          "overview": "crwdns2960008:0crwdne2960008:0",
+          "preparation": "crwdns2960012:0[0]crwdnd2960012:0[1]crwdne2960012:0",
+          "purpose": "crwdns2960016:0crwdne2960016:0",
+          "student_overview": "crwdns2960018:0crwdne2960018:0"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "crwdns2960150:0crwdne2960150:0",
+          "overview": "crwdns2960154:0crwdne2960154:0",
+          "preparation": "crwdns2960156:0[0]crwdnd2960156:0[1]crwdne2960156:0",
+          "purpose": "crwdns2960160:0crwdne2960160:0",
+          "student_overview": "crwdns2960162:0crwdne2960162:0"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "crwdns2960304:0crwdne2960304:0",
+          "overview": "crwdns2960306:0crwdne2960306:0",
+          "preparation": "crwdns2960310:0[0]crwdnd2960310:0[1]crwdne2960310:0",
+          "purpose": "crwdns2960312:0crwdne2960312:0",
+          "student_overview": "crwdns2960316:0crwdne2960316:0"
+        },
+        "csd5-2022/Problem Solving and Data": {
+          "name": "crwdns2960480:0crwdne2960480:0",
+          "overview": "crwdns2960482:0crwdne2960482:0",
+          "preparation": "crwdns2960486:0[0]crwdnd2960486:0[1]crwdne2960486:0",
+          "purpose": "crwdns2960488:0crwdne2960488:0",
+          "student_overview": "crwdns2960492:0crwdne2960492:0"
+        },
+        "csd5-2022/Structuring Data": {
+          "name": "crwdns2960648:0crwdne2960648:0",
+          "overview": "crwdns2960652:0crwdne2960652:0",
+          "preparation": "crwdns2960654:0[0]crwdnd2960654:0[1]crwdne2960654:0",
+          "purpose": "crwdns2960656:0crwdne2960656:0",
+          "student_overview": "crwdns2960660:0crwdne2960660:0"
+        },
+        "csd5-2022/Interpreting Data": {
+          "name": "crwdns2960766:0crwdne2960766:0",
+          "overview": "crwdns2960768:0crwdne2960768:0",
+          "preparation": "crwdns2960770:0[0]crwdnd2960770:0[1]crwdne2960770:0",
+          "purpose": "crwdns2960772:0crwdne2960772:0",
+          "student_overview": "crwdns2960774:0crwdne2960774:0"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "crwdns2960860:0crwdne2960860:0",
+          "overview": "crwdns2960862:0crwdne2960862:0",
+          "preparation": "crwdns2960864:0[0]crwdnd2960864:0[1]crwdne2960864:0",
+          "purpose": "crwdns2960866:0crwdne2960866:0",
+          "student_overview": "crwdns2960868:0crwdne2960868:0"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "crwdns2960978:0crwdne2960978:0",
+          "overview": "crwdns2960982:0crwdne2960982:0",
+          "preparation": "crwdns2960986:0[0]crwdnd2960986:0[1]crwdne2960986:0",
+          "purpose": "crwdns2960988:0crwdne2960988:0",
+          "student_overview": "crwdns2960992:0crwdne2960992:0"
+        },
+        "csd5-2022/Problem Solving with Big Data": {
+          "name": "crwdns2961126:0crwdne2961126:0",
+          "overview": "crwdns2961128:0crwdne2961128:0",
+          "preparation": "crwdns2961132:0[0]crwdnd2961132:0[1]crwdne2961132:0",
+          "purpose": "crwdns2961134:0crwdne2961134:0",
+          "student_overview": "crwdns2961138:0crwdne2961138:0"
+        },
+        "csd5-2022/Data and Machine Learning": {
+          "name": "crwdns2961326:0crwdne2961326:0",
+          "overview": "crwdns2961328:0crwdne2961328:0",
+          "preparation": "crwdns2961332:0[0]crwdnd2961332:0[1]crwdne2961332:0",
+          "purpose": "crwdns2961334:0crwdne2961334:0",
+          "student_overview": "crwdns2961338:0crwdne2961338:0"
+        },
+        "csd5-2022/Project - Make a Recommendation": {
+          "name": "crwdns2961476:0crwdne2961476:0",
+          "overview": "crwdns2961478:0crwdne2961478:0",
+          "preparation": "crwdns2961482:0[0]crwdnd2961482:0[1]crwdne2961482:0",
+          "purpose": "crwdns2961484:0crwdne2961484:0",
+          "student_overview": "crwdns2961488:0crwdne2961488:0"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "crwdns2961746:0crwdne2961746:0"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "crwdns2982354:0crwdne2982354:0",
+          "overview": "crwdns2982356:0[0]crwdnd2982356:0[1]crwdnd2982356:0[2]crwdne2982356:0",
+          "preparation": "crwdns2982358:0[0]crwdnd2982358:0[1]crwdne2982358:0",
+          "purpose": "crwdns2982360:0crwdne2982360:0",
+          "student_overview": "crwdns2982362:0crwdne2982362:0"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "crwdns2982498:0crwdne2982498:0",
+          "overview": "crwdns2982500:0crwdne2982500:0",
+          "preparation": "crwdns2982502:0[0]crwdnd2982502:0[1]crwdne2982502:0",
+          "purpose": "crwdns2982504:0crwdne2982504:0",
+          "student_overview": "crwdns2982506:0crwdne2982506:0"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "crwdns2982628:0crwdne2982628:0",
+          "overview": "crwdns2982630:0[0]crwdnd2982630:0[1]crwdne2982630:0",
+          "preparation": "crwdns2982632:0[0]crwdnd2982632:0[1]crwdne2982632:0",
+          "purpose": "crwdns2982634:0crwdne2982634:0",
+          "student_overview": "crwdns2982636:0crwdne2982636:0"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "crwdns2982730:0crwdne2982730:0",
+          "overview": "crwdns2982732:0crwdne2982732:0",
+          "preparation": "crwdns2982734:0[0]crwdnd2982734:0[1]crwdne2982734:0",
+          "purpose": "crwdns2982736:0crwdne2982736:0",
+          "student_overview": "crwdns2982738:0crwdne2982738:0"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "crwdns2982854:0crwdne2982854:0",
+          "overview": "crwdns2982856:0crwdne2982856:0",
+          "preparation": "crwdns2982858:0[0]crwdnd2982858:0[1]crwdne2982858:0",
+          "purpose": "crwdns2982860:0crwdne2982860:0",
+          "student_overview": "crwdns2982862:0crwdne2982862:0"
+        },
+        "csd1-2022/Processing": {
+          "name": "crwdns2982976:0crwdne2982976:0",
+          "overview": "crwdns2982978:0crwdne2982978:0",
+          "preparation": "crwdns2982980:0[0]crwdnd2982980:0[1]crwdne2982980:0",
+          "purpose": "crwdns2982982:0crwdne2982982:0",
+          "student_overview": "crwdns2982984:0crwdne2982984:0"
+        },
+        "csd1-2022/Storage": {
+          "name": "crwdns2983126:0crwdne2983126:0",
+          "overview": "crwdns2983128:0crwdne2983128:0",
+          "preparation": "crwdns2983130:0[0]crwdnd2983130:0[1]crwdne2983130:0",
+          "purpose": "crwdns2983132:0crwdne2983132:0",
+          "student_overview": "crwdns2983134:0crwdne2983134:0"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "crwdns2983264:0crwdne2983264:0",
+          "overview": "crwdns2983266:0crwdne2983266:0",
+          "preparation": "crwdns2983268:0[0]crwdnd2983268:0[1]crwdnd2983268:0[2]crwdne2983268:0",
+          "purpose": "crwdns2983270:0crwdne2983270:0",
+          "student_overview": "crwdns2983272:0crwdne2983272:0"
+        },
+        "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "crwdns2983420:0crwdne2983420:0",
+          "overview": "crwdns2983422:0[0]crwdne2983422:0",
+          "preparation": "crwdns2983424:0[0]crwdnd2983424:0[1]crwdne2983424:0",
+          "purpose": "crwdns2983426:0crwdne2983426:0",
+          "student_overview": "crwdns2983428:0crwdne2983428:0"
+        },
+        "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "crwdns2983570:0crwdne2983570:0",
+          "overview": "crwdns2983572:0[0]crwdne2983572:0",
+          "preparation": "crwdns2983574:0[0]crwdnd2983574:0[1]crwdne2983574:0",
+          "purpose": "crwdns2983576:0crwdne2983576:0",
+          "student_overview": "crwdns2983578:0crwdne2983578:0"
+        },
+        "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "crwdns2983724:0crwdne2983724:0",
+          "overview": "crwdns2983726:0[0]crwdne2983726:0",
+          "preparation": "crwdns2983728:0[0]crwdnd2983728:0[1]crwdne2983728:0",
+          "purpose": "crwdns2983730:0crwdne2983730:0",
+          "student_overview": "crwdns2983732:0crwdne2983732:0"
+        },
+        "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "crwdns2983874:0crwdne2983874:0",
+          "overview": "crwdns2983876:0[0]crwdne2983876:0",
+          "preparation": "crwdns2983878:0[0]crwdnd2983878:0[1]crwdne2983878:0",
+          "purpose": "crwdns2983880:0crwdne2983880:0",
+          "student_overview": "crwdns2983882:0crwdne2983882:0"
+        },
+        "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "crwdns2983984:0crwdne2983984:0",
+          "overview": "crwdns2983986:0[0]crwdne2983986:0",
+          "preparation": "crwdns2983988:0[0]crwdnd2983988:0[1]crwdne2983988:0",
+          "purpose": "crwdns2983990:0crwdne2983990:0",
+          "student_overview": "crwdns2983992:0crwdne2983992:0"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "crwdns2962564:0crwdne2962564:0",
+          "overview": "crwdns2962566:0crwdne2962566:0",
+          "preparation": "crwdns2962568:0[0]crwdnd2962568:0[1]crwdne2962568:0",
+          "purpose": "crwdns2962570:0crwdne2962570:0",
+          "student_overview": "crwdns2962572:0crwdne2962572:0"
+        },
+        "csd3-2022/Plotting Shapes": {
+          "name": "crwdns2962656:0crwdne2962656:0",
+          "overview": "crwdns2962658:0crwdne2962658:0",
+          "preparation": "crwdns2962660:0[0]crwdnd2962660:0[1]crwdne2962660:0",
+          "purpose": "crwdns2962662:0crwdne2962662:0",
+          "student_overview": "crwdns2962664:0crwdne2962664:0"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "crwdns2962776:0crwdne2962776:0",
+          "overview": "crwdns2962778:0crwdne2962778:0",
+          "preparation": "crwdns2962780:0[0]crwdnd2962780:0[1]crwdne2962780:0",
+          "purpose": "crwdns2962782:0[0]crwdnd2962782:0[1]crwdnd2962782:0[2]crwdne2962782:0",
+          "student_overview": "crwdns2962784:0crwdne2962784:0"
+        },
+        "csd3-2022/Shapes and Parameters": {
+          "name": "crwdns2962906:0crwdne2962906:0",
+          "overview": "crwdns2962908:0[0]crwdnd2962908:0[1]crwdnd2962908:0[2]crwdne2962908:0",
+          "preparation": "crwdns2962910:0[0]crwdnd2962910:0[1]crwdne2962910:0",
+          "purpose": "crwdns2962912:0crwdne2962912:0",
+          "student_overview": "crwdns2962914:0crwdne2962914:0"
+        },
+        "csd3-2022/Variables": {
+          "name": "crwdns2962996:0crwdne2962996:0",
+          "overview": "crwdns2962998:0crwdne2962998:0",
+          "preparation": "crwdns2963000:0[0]crwdnd2963000:0[1]crwdne2963000:0",
+          "purpose": "crwdns2963002:0crwdne2963002:0",
+          "student_overview": "crwdns2963004:0crwdne2963004:0"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "crwdns2963118:0crwdne2963118:0",
+          "overview": "crwdns2963120:0[0]crwdne2963120:0",
+          "preparation": "crwdns2963122:0[0]crwdnd2963122:0[1]crwdne2963122:0",
+          "purpose": "crwdns2963124:0crwdne2963124:0",
+          "student_overview": "crwdns2963126:0crwdne2963126:0"
+        },
+        "csd3-2022/Sprites": {
+          "name": "crwdns2963212:0crwdne2963212:0",
+          "overview": "crwdns2963214:0crwdne2963214:0",
+          "preparation": "crwdns2963216:0[0]crwdnd2963216:0[1]crwdne2963216:0",
+          "purpose": "crwdns2963218:0crwdne2963218:0",
+          "student_overview": "crwdns2963220:0crwdne2963220:0"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "crwdns2963366:0crwdne2963366:0",
+          "overview": "crwdns2963368:0crwdne2963368:0",
+          "preparation": "crwdns2963370:0[0]crwdnd2963370:0[1]crwdne2963370:0",
+          "purpose": "crwdns2963372:0crwdne2963372:0",
+          "student_overview": "crwdns2963374:0crwdne2963374:0"
+        },
+        "csd3-2022/Text": {
+          "name": "crwdns2963452:0crwdne2963452:0",
+          "overview": "crwdns2963454:0crwdne2963454:0",
+          "preparation": "crwdns2963456:0[0]crwdnd2963456:0[1]crwdne2963456:0",
+          "purpose": "crwdns2963458:0crwdne2963458:0",
+          "student_overview": "crwdns2963460:0crwdne2963460:0"
+        },
+        "csd3-2022/Mini-Project - Captioned Scenes": {
+          "name": "crwdns2963534:0crwdne2963534:0",
+          "overview": "crwdns2963536:0crwdne2963536:0",
+          "preparation": "crwdns2963538:0[0]crwdnd2963538:0[1]crwdne2963538:0",
+          "purpose": "crwdns2963540:0crwdne2963540:0",
+          "student_overview": "crwdns2963542:0crwdne2963542:0"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "crwdns2963644:0crwdne2963644:0",
+          "overview": "crwdns2963646:0crwdne2963646:0",
+          "preparation": "crwdns2963648:0[0]crwdnd2963648:0[1]crwdne2963648:0",
+          "purpose": "crwdns2963650:0crwdne2963650:0",
+          "student_overview": "crwdns2963652:0crwdne2963652:0"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "crwdns2963780:0crwdne2963780:0",
+          "overview": "crwdns2963782:0crwdne2963782:0",
+          "preparation": "crwdns2963784:0[0]crwdnd2963784:0[1]crwdne2963784:0",
+          "purpose": "crwdns2963786:0[0]crwdne2963786:0",
+          "student_overview": "crwdns2963788:0crwdne2963788:0"
+        },
+        "csd3-2022/Mini-Project - Animation": {
+          "name": "crwdns2963894:0crwdne2963894:0",
+          "overview": "crwdns2963896:0crwdne2963896:0",
+          "preparation": "crwdns2963898:0[0]crwdnd2963898:0[1]crwdne2963898:0",
+          "purpose": "crwdns2963900:0crwdne2963900:0",
+          "student_overview": "crwdns2963902:0crwdne2963902:0"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "crwdns2964010:0crwdne2964010:0",
+          "overview": "crwdns2964012:0crwdne2964012:0",
+          "preparation": "crwdns2964014:0[0]crwdnd2964014:0[1]crwdne2964014:0",
+          "purpose": "crwdns2964016:0[0]crwdne2964016:0",
+          "student_overview": "crwdns2964018:0crwdne2964018:0"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "crwdns2964154:0crwdne2964154:0",
+          "overview": "crwdns2964156:0[0]crwdne2964156:0",
+          "preparation": "crwdns2964158:0[0]crwdnd2964158:0[1]crwdne2964158:0",
+          "purpose": "crwdns2964160:0crwdne2964160:0",
+          "student_overview": "crwdns2964162:0crwdne2964162:0"
+        },
+        "csd3-2022/Mouse Input": {
+          "name": "crwdns2964240:0crwdne2964240:0",
+          "overview": "crwdns2964242:0crwdne2964242:0",
+          "preparation": "crwdns2964244:0[0]crwdnd2964244:0[1]crwdne2964244:0",
+          "purpose": "crwdns2964246:0crwdne2964246:0",
+          "student_overview": "crwdns2964248:0crwdne2964248:0"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "crwdns2964362:0crwdne2964362:0",
+          "overview": "crwdns2964364:0crwdne2964364:0",
+          "preparation": "crwdns2964366:0[0]crwdnd2964366:0[1]crwdne2964366:0",
+          "purpose": "crwdns2964368:0crwdne2964368:0",
+          "student_overview": "crwdns2964370:0crwdne2964370:0"
+        },
+        "csd3-2022/Velocity": {
+          "name": "crwdns2964542:0crwdne2964542:0",
+          "overview": "crwdns2964544:0crwdne2964544:0",
+          "preparation": "crwdns2964546:0[0]crwdnd2964546:0[1]crwdne2964546:0",
+          "purpose": "crwdns2964548:0crwdne2964548:0",
+          "student_overview": "crwdns2964550:0crwdne2964550:0"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "crwdns2964664:0crwdne2964664:0",
+          "overview": "crwdns2964666:0[0]crwdne2964666:0",
+          "preparation": "crwdns2964668:0[0]crwdnd2964668:0[1]crwdne2964668:0",
+          "purpose": "crwdns2964670:0[0]crwdne2964670:0",
+          "student_overview": "crwdns2964672:0crwdne2964672:0"
+        },
+        "csd3-2022/Mini-Project - Side Scroller": {
+          "name": "crwdns2964802:0crwdne2964802:0",
+          "overview": "crwdns2964804:0crwdne2964804:0",
+          "preparation": "crwdns2964806:0[0]crwdnd2964806:0[1]crwdne2964806:0",
+          "purpose": "crwdns2964808:0crwdne2964808:0",
+          "student_overview": "crwdns2964810:0crwdne2964810:0"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "crwdns2964896:0crwdne2964896:0",
+          "overview": "crwdns2964898:0crwdne2964898:0",
+          "preparation": "crwdns2964900:0[0]crwdnd2964900:0[1]crwdne2964900:0",
+          "purpose": "crwdns2964902:0crwdne2964902:0",
+          "student_overview": "crwdns2964904:0crwdne2964904:0"
+        },
+        "csd3-2022/Collisions": {
+          "name": "crwdns2965010:0crwdne2965010:0",
+          "overview": "crwdns2965012:0[0]crwdnd2965012:0[1]crwdnd2965012:0[2]crwdnd2965012:0[3]crwdnd2965012:0[4]crwdnd2965012:0[5]crwdne2965012:0",
+          "preparation": "crwdns2965014:0[0]crwdnd2965014:0[1]crwdne2965014:0",
+          "purpose": "crwdns2965016:0crwdne2965016:0",
+          "student_overview": "crwdns2965018:0crwdne2965018:0"
+        },
+        "csd3-2022/Mini-Project - Flyer Game": {
+          "name": "crwdns2965112:0crwdne2965112:0",
+          "overview": "crwdns2965114:0crwdne2965114:0",
+          "preparation": "crwdns2965116:0[0]crwdnd2965116:0[1]crwdne2965116:0",
+          "purpose": "crwdns2965118:0crwdne2965118:0",
+          "student_overview": "crwdns2965120:0crwdne2965120:0"
+        },
+        "csd3-2022/Functions": {
+          "name": "crwdns2965210:0crwdne2965210:0",
+          "overview": "crwdns2965212:0crwdne2965212:0",
+          "preparation": "crwdns2965214:0[0]crwdnd2965214:0[1]crwdne2965214:0",
+          "purpose": "crwdns2965216:0crwdne2965216:0",
+          "student_overview": "crwdns2965218:0crwdne2965218:0"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "crwdns2965344:0crwdne2965344:0",
+          "overview": "crwdns2965346:0crwdne2965346:0",
+          "preparation": "crwdns2965348:0[0]crwdnd2965348:0[1]crwdne2965348:0",
+          "purpose": "crwdns2965350:0crwdne2965350:0",
+          "student_overview": "crwdns2965352:0crwdne2965352:0"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "crwdns2965454:0crwdne2965454:0",
+          "overview": "crwdns2965456:0crwdne2965456:0",
+          "preparation": "crwdns2965458:0[0]crwdnd2965458:0[1]crwdne2965458:0",
+          "purpose": "crwdns2965460:0crwdne2965460:0",
+          "student_overview": "crwdns2965462:0crwdne2965462:0"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "crwdns2965578:0crwdne2965578:0",
+          "overview": "crwdns2965580:0crwdne2965580:0",
+          "preparation": "crwdns2965582:0[0]crwdnd2965582:0[1]crwdne2965582:0",
+          "purpose": "crwdns2965584:0crwdne2965584:0",
+          "student_overview": "crwdns2965586:0crwdne2965586:0"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "crwdns2965786:0crwdne2965786:0"
+        },
+        "csd2-2022/Exploring Web Pages": {
+          "name": "crwdns2985316:0crwdne2985316:0",
+          "overview": "crwdns2985318:0crwdne2985318:0",
+          "preparation": "crwdns2985320:0[0]crwdnd2985320:0[1]crwdne2985320:0",
+          "purpose": "crwdns2985322:0crwdne2985322:0",
+          "student_overview": "crwdns2985324:0crwdne2985324:0"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "crwdns2985408:0crwdne2985408:0",
+          "overview": "crwdns2985410:0crwdne2985410:0",
+          "preparation": "crwdns2985412:0[0]crwdnd2985412:0[1]crwdne2985412:0",
+          "purpose": "crwdns2985414:0crwdne2985414:0",
+          "student_overview": "crwdns2985416:0crwdne2985416:0"
+        },
+        "csd2-2022/Headings": {
+          "name": "crwdns2985560:0crwdne2985560:0",
+          "overview": "crwdns2985562:0crwdne2985562:0",
+          "preparation": "crwdns2985564:0[0]crwdnd2985564:0[1]crwdne2985564:0",
+          "purpose": "crwdns2985566:0crwdne2985566:0",
+          "student_overview": "crwdns2985568:0crwdne2985568:0"
+        },
+        "csd2-2022/Mini-Project: HTML Web Page": {
+          "name": "crwdns2985700:0crwdne2985700:0",
+          "overview": "crwdns2985702:0crwdne2985702:0",
+          "preparation": "crwdns2985704:0[0]crwdnd2985704:0[1]crwdne2985704:0",
+          "purpose": "crwdns2985706:0crwdne2985706:0",
+          "student_overview": "crwdns2985708:0crwdne2985708:0"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "crwdns2985842:0crwdne2985842:0",
+          "overview": "crwdns2985844:0crwdne2985844:0",
+          "preparation": "crwdns2985846:0[0]crwdnd2985846:0[1]crwdne2985846:0",
+          "purpose": "crwdns2985848:0[0]crwdne2985848:0",
+          "student_overview": "crwdns2985850:0crwdne2985850:0"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "crwdns2985942:0crwdne2985942:0",
+          "overview": "crwdns2985944:0crwdne2985944:0",
+          "preparation": "crwdns2985946:0[0]crwdnd2985946:0[1]crwdne2985946:0",
+          "purpose": "crwdns2985948:0crwdne2985948:0",
+          "student_overview": "crwdns2985950:0crwdne2985950:0"
+        },
+        "csd2-2022/Mini-Project: Your Personal Style": {
+          "name": "crwdns2986088:0crwdne2986088:0",
+          "overview": "crwdns2986090:0crwdne2986090:0",
+          "preparation": "crwdns2986092:0[0]crwdnd2986092:0[1]crwdne2986092:0",
+          "purpose": "crwdns2986094:0crwdne2986094:0",
+          "student_overview": "crwdns2986096:0crwdne2986096:0"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "crwdns2986212:0crwdne2986212:0",
+          "overview": "crwdns2986214:0crwdne2986214:0",
+          "preparation": "crwdns2986216:0[0]crwdnd2986216:0[1]crwdne2986216:0",
+          "purpose": "crwdns2986218:0crwdne2986218:0",
+          "student_overview": "crwdns2986220:0crwdne2986220:0"
+        },
+        "csd2-2022/Using Images": {
+          "name": "crwdns2986332:0crwdne2986332:0",
+          "overview": "crwdns2986334:0crwdne2986334:0",
+          "preparation": "crwdns2986336:0[0]crwdnd2986336:0[1]crwdne2986336:0",
+          "purpose": "crwdns2986338:0crwdne2986338:0",
+          "student_overview": "crwdns2986340:0crwdne2986340:0"
+        },
+        "csd2-2022/Websites for Expression": {
+          "name": "crwdns2986430:0crwdne2986430:0",
+          "overview": "crwdns2986432:0crwdne2986432:0",
+          "preparation": "crwdns2986434:0[0]crwdnd2986434:0[1]crwdne2986434:0",
+          "purpose": "crwdns2986436:0crwdne2986436:0",
+          "student_overview": "crwdns2986438:0crwdne2986438:0"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "crwdns2986530:0crwdne2986530:0",
+          "overview": "crwdns2986532:0crwdne2986532:0",
+          "preparation": "crwdns2986534:0[0]crwdnd2986534:0[1]crwdne2986534:0",
+          "purpose": "crwdns2986536:0crwdne2986536:0",
+          "student_overview": "crwdns2986538:0crwdne2986538:0"
+        },
+        "csd2-2022/Your Web Page - Prepare": {
+          "name": "crwdns2986614:0crwdne2986614:0",
+          "overview": "crwdns2986616:0crwdne2986616:0",
+          "preparation": "crwdns2986618:0[0]crwdnd2986618:0[1]crwdne2986618:0",
+          "purpose": "crwdns2986620:0crwdne2986620:0",
+          "student_overview": "crwdns2986622:0crwdne2986622:0"
+        },
+        "csd2-2022/Project - Personal Web Page": {
+          "name": "crwdns2986698:0crwdne2986698:0",
+          "overview": "crwdns2986700:0crwdne2986700:0",
+          "preparation": "crwdns2986702:0[0]crwdnd2986702:0[1]crwdne2986702:0",
+          "purpose": "crwdns2986704:0crwdne2986704:0",
+          "student_overview": "crwdns2986706:0crwdne2986706:0"
+        },
+        "csd2-2022/Websites for a Purpose": {
+          "name": "crwdns2986878:0crwdne2986878:0",
+          "overview": "crwdns2986880:0crwdne2986880:0",
+          "preparation": "crwdns2986882:0[0]crwdnd2986882:0[1]crwdne2986882:0",
+          "purpose": "crwdns2986884:0crwdne2986884:0",
+          "student_overview": "crwdns2986886:0crwdne2986886:0"
+        },
+        "csd2-2022/Team Problem Solving": {
+          "name": "crwdns2986970:0crwdne2986970:0",
+          "overview": "crwdns2986972:0crwdne2986972:0",
+          "preparation": "crwdns2986974:0[0]crwdnd2986974:0[1]crwdne2986974:0",
+          "purpose": "crwdns2986976:0crwdne2986976:0",
+          "student_overview": "crwdns2986978:0crwdne2986978:0"
+        },
+        "csd2-2022/Sources and Research": {
+          "name": "crwdns2987110:0crwdne2987110:0",
+          "overview": "crwdns2987112:0crwdne2987112:0",
+          "preparation": "crwdns2987114:0[0]crwdnd2987114:0[1]crwdne2987114:0",
+          "purpose": "crwdns2987116:0crwdne2987116:0",
+          "student_overview": "crwdns2987118:0crwdne2987118:0"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "crwdns2987238:0crwdne2987238:0",
+          "overview": "crwdns2987240:0crwdne2987240:0",
+          "preparation": "crwdns2987242:0[0]crwdnd2987242:0[1]crwdne2987242:0",
+          "purpose": "crwdns2987244:0crwdne2987244:0",
+          "student_overview": "crwdns2987246:0crwdne2987246:0"
+        },
+        "csd2-2022/Planning a Multi-Page Site": {
+          "name": "crwdns2987326:0crwdne2987326:0",
+          "overview": "crwdns2987328:0crwdne2987328:0",
+          "preparation": "crwdns2987330:0[0]crwdnd2987330:0[1]crwdne2987330:0",
+          "purpose": "crwdns2987332:0crwdne2987332:0",
+          "student_overview": "crwdns2987334:0crwdne2987334:0"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "crwdns2987478:0crwdne2987478:0",
+          "overview": "crwdns2987480:0crwdne2987480:0",
+          "preparation": "crwdns2987482:0[0]crwdnd2987482:0[1]crwdne2987482:0",
+          "purpose": "crwdns2987484:0crwdne2987484:0",
+          "student_overview": "crwdns2987486:0crwdne2987486:0"
+        },
+        "csd2-2022/Project - Website for a Purpose": {
+          "name": "crwdns2987584:0crwdne2987584:0",
+          "overview": "crwdns2987586:0crwdne2987586:0",
+          "preparation": "crwdns2987588:0[0]crwdnd2987588:0[1]crwdne2987588:0",
+          "purpose": "crwdns2987590:0crwdne2987590:0",
+          "student_overview": "crwdns2987592:0crwdne2987592:0"
+        },
+        "csd2-2022/Peer Review and Final Touches": {
+          "name": "crwdns2987692:0crwdne2987692:0",
+          "overview": "crwdns2987694:0crwdne2987694:0",
+          "preparation": "crwdns2987696:0[0]crwdne2987696:0",
+          "purpose": "crwdns2987698:0crwdne2987698:0",
+          "student_overview": "crwdns2987700:0crwdne2987700:0"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "crwdns2987842:0crwdne2987842:0"
+        },
+        "csd4-2022/Designing With Empathy": {
+          "name": "crwdns2967910:0crwdne2967910:0",
+          "overview": "crwdns2967912:0crwdne2967912:0",
+          "preparation": "crwdns2967914:0[0]crwdnd2967914:0[1]crwdne2967914:0",
+          "purpose": "crwdns2967916:0crwdne2967916:0",
+          "student_overview": "crwdns2967918:0crwdne2967918:0"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "crwdns2968016:0crwdne2968016:0",
+          "overview": "crwdns2968018:0crwdne2968018:0",
+          "preparation": "crwdns2968020:0[0]crwdnd2968020:0[1]crwdne2968020:0",
+          "purpose": "crwdns2968022:0crwdne2968022:0",
+          "student_overview": "crwdns2968024:0crwdne2968024:0"
+        },
+        "csd4-2022/User Centered Design   Define and Prepare": {
+          "name": "crwdns2968160:0crwdne2968160:0",
+          "overview": "crwdns2968162:0crwdne2968162:0",
+          "preparation": "crwdns2968164:0[0]crwdnd2968164:0[1]crwdne2968164:0",
+          "purpose": "crwdns2968166:0[0]crwdne2968166:0",
+          "student_overview": "crwdns2968168:0crwdne2968168:0"
+        },
+        "csd4-2022/User Centered Design   Try and Reflect": {
+          "name": "crwdns2968298:0crwdne2968298:0",
+          "overview": "crwdns2968300:0crwdne2968300:0",
+          "preparation": "crwdns2968302:0[0]crwdnd2968302:0[1]crwdne2968302:0",
+          "purpose": "crwdns2968304:0[0]crwdne2968304:0",
+          "student_overview": "crwdns2968306:0crwdne2968306:0"
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "crwdns2968396:0crwdne2968396:0",
+          "overview": "crwdns2968398:0crwdne2968398:0",
+          "preparation": "crwdns2968400:0[0]crwdnd2968400:0[1]crwdne2968400:0",
+          "purpose": "crwdns2968402:0crwdne2968402:0",
+          "student_overview": "crwdns2968404:0crwdne2968404:0"
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "crwdns2968594:0crwdne2968594:0",
+          "overview": "crwdns2968598:0crwdne2968598:0",
+          "preparation": "crwdns2968602:0[0]crwdnd2968602:0[1]crwdne2968602:0",
+          "purpose": "crwdns2968608:0crwdne2968608:0",
+          "student_overview": "crwdns2968610:0crwdne2968610:0"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "crwdns2968802:0crwdne2968802:0",
+          "overview": "crwdns2968804:0crwdne2968804:0",
+          "preparation": "crwdns2968806:0[0]crwdnd2968806:0[1]crwdne2968806:0",
+          "purpose": "crwdns2968808:0crwdne2968808:0",
+          "student_overview": "crwdns2968810:0crwdne2968810:0"
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "crwdns2968934:0crwdne2968934:0",
+          "overview": "crwdns2968936:0crwdne2968936:0",
+          "preparation": "crwdns2968938:0[0]crwdnd2968938:0[1]crwdne2968938:0",
+          "purpose": "crwdns2968940:0crwdne2968940:0",
+          "student_overview": "crwdns2968942:0crwdne2968942:0"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "crwdns2969190:0crwdne2969190:0",
+          "overview": "crwdns2969196:0crwdne2969196:0",
+          "preparation": "crwdns2969200:0[0]crwdnd2969200:0[1]crwdne2969200:0",
+          "purpose": "crwdns2969204:0crwdne2969204:0",
+          "student_overview": "crwdns2969210:0crwdne2969210:0"
+        },
+        "csd4-2022/Market Research": {
+          "name": "crwdns2969450:0crwdne2969450:0",
+          "overview": "crwdns2969456:0crwdne2969456:0",
+          "preparation": "crwdns2969460:0[0]crwdnd2969460:0[1]crwdne2969460:0",
+          "purpose": "crwdns2969464:0crwdne2969464:0",
+          "student_overview": "crwdns2969468:0crwdne2969468:0"
+        },
+        "csd4-2022/Exploring UI Elements": {
+          "name": "crwdns2969648:0crwdne2969648:0",
+          "overview": "crwdns2969650:0crwdne2969650:0",
+          "preparation": "crwdns2969652:0[0]crwdnd2969652:0[1]crwdne2969652:0",
+          "purpose": "crwdns2969654:0crwdne2969654:0",
+          "student_overview": "crwdns2969656:0crwdne2969656:0"
+        },
+        "csd4-2022/Build a Paper Prototype": {
+          "name": "crwdns2969750:0crwdne2969750:0",
+          "overview": "crwdns2969752:0crwdne2969752:0",
+          "preparation": "crwdns2969754:0[0]crwdnd2969754:0[1]crwdne2969754:0",
+          "purpose": "crwdns2969756:0crwdne2969756:0",
+          "student_overview": "crwdns2969758:0crwdne2969758:0"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "crwdns2969870:0crwdne2969870:0",
+          "overview": "crwdns2969872:0crwdne2969872:0",
+          "preparation": "crwdns2969874:0[0]crwdnd2969874:0[1]crwdne2969874:0",
+          "purpose": "crwdns2969876:0crwdne2969876:0",
+          "student_overview": "crwdns2969878:0crwdne2969878:0"
+        },
+        "csd4-2022/Design Mode in App Lab": {
+          "name": "crwdns2970008:0crwdne2970008:0",
+          "overview": "crwdns2970010:0crwdne2970010:0",
+          "preparation": "crwdns2970012:0[0]crwdnd2970012:0[1]crwdne2970012:0",
+          "purpose": "crwdns2970014:0crwdne2970014:0",
+          "student_overview": "crwdns2970016:0crwdne2970016:0"
+        },
+        "csd4-2022/Build a Digital Prototype": {
+          "name": "crwdns2970170:0crwdne2970170:0",
+          "overview": "crwdns2970172:0crwdne2970172:0",
+          "preparation": "crwdns2970174:0[0]crwdnd2970174:0[1]crwdne2970174:0",
+          "purpose": "crwdns2970176:0crwdne2970176:0",
+          "student_overview": "crwdns2970178:0crwdne2970178:0"
+        },
+        "csd4-2022/Events in AppLab": {
+          "name": "crwdns2970288:0crwdne2970288:0",
+          "overview": "crwdns2970290:0crwdne2970290:0",
+          "preparation": "crwdns2970292:0[0]crwdnd2970292:0[1]crwdne2970292:0",
+          "purpose": "crwdns2970294:0crwdne2970294:0",
+          "student_overview": "crwdns2970296:0crwdne2970296:0"
+        },
+        "csd4-2022/Linking Prototype Screens": {
+          "name": "crwdns2970410:0crwdne2970410:0",
+          "overview": "crwdns2970412:0crwdne2970412:0",
+          "preparation": "crwdns2970414:0[0]crwdnd2970414:0[1]crwdne2970414:0",
+          "purpose": "crwdns2970416:0crwdne2970416:0",
+          "student_overview": "crwdns2970418:0crwdne2970418:0"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "crwdns2970538:0crwdne2970538:0",
+          "overview": "crwdns2970540:0crwdne2970540:0",
+          "preparation": "crwdns2970542:0[0]crwdnd2970542:0[1]crwdne2970542:0",
+          "purpose": "crwdns2970544:0crwdne2970544:0",
+          "student_overview": "crwdns2970546:0crwdne2970546:0"
+        },
+        "csd4-2022/Bugs and Features": {
+          "name": "crwdns2970654:0crwdne2970654:0",
+          "overview": "crwdns2970656:0crwdne2970656:0",
+          "preparation": "crwdns2970658:0[0]crwdnd2970658:0[1]crwdne2970658:0",
+          "purpose": "crwdns2970660:0crwdne2970660:0",
+          "student_overview": "crwdns2970662:0crwdne2970662:0"
+        },
+        "csd4-2022/Updating Your Prototype": {
+          "name": "crwdns2970820:0crwdne2970820:0",
+          "overview": "crwdns2970822:0crwdne2970822:0",
+          "preparation": "crwdns2970824:0[0]crwdnd2970824:0[1]crwdne2970824:0",
+          "purpose": "crwdns2970826:0crwdne2970826:0",
+          "student_overview": "crwdns2970828:0crwdne2970828:0"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "crwdns2970944:0crwdne2970944:0",
+          "overview": "crwdns2970946:0crwdne2970946:0",
+          "preparation": "crwdns2970948:0[0]crwdnd2970948:0[1]crwdne2970948:0",
+          "purpose": "crwdns2970950:0crwdne2970950:0",
+          "student_overview": "crwdns2970952:0crwdne2970952:0"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "crwdns2971134:0crwdne2971134:0"
+        },
+        "csd6-2022/Innovations in Computing": {
+          "name": "crwdns2973986:0crwdne2973986:0",
+          "overview": "crwdns2973988:0crwdne2973988:0",
+          "preparation": "crwdns2973990:0[0]crwdnd2973990:0[1]crwdnd2973990:0[2]crwdne2973990:0",
+          "student_overview": "crwdns2973992:0crwdne2973992:0"
+        },
+        "csd6-2022/The Circuit Playground": {
+          "name": "crwdns2974106:0crwdne2974106:0",
+          "overview": "crwdns2974108:0crwdne2974108:0",
+          "preparation": "crwdns2974110:0[0]crwdnd2974110:0[1]crwdne2974110:0",
+          "student_overview": "crwdns2974112:0crwdne2974112:0"
+        },
+        "csd6-2022/Updating Screen Elements": {
+          "name": "crwdns2974222:0crwdne2974222:0",
+          "overview": "crwdns2974224:0crwdne2974224:0",
+          "preparation": "crwdns2974226:0[0]crwdne2974226:0",
+          "student_overview": "crwdns2974228:0crwdne2974228:0"
+        },
+        "csd6-2022/Board Events": {
+          "name": "crwdns2974324:0crwdne2974324:0",
+          "overview": "crwdns2974326:0[0]crwdnd2974326:0[1]crwdne2974326:0",
+          "preparation": "crwdns2974330:0[0]crwdne2974330:0",
+          "student_overview": "crwdns2974332:0crwdne2974332:0"
+        },
+        "csd6-2022/Variables and If Statements": {
+          "name": "crwdns2974474:0crwdne2974474:0",
+          "overview": "crwdns2974478:0crwdne2974478:0",
+          "preparation": "crwdns2974480:0[0]crwdne2974480:0",
+          "student_overview": "crwdns2974484:0crwdne2974484:0"
+        },
+        "csd6-2022/Mini-Project: On-The-Go App": {
+          "name": "crwdns2974672:0crwdne2974672:0",
+          "overview": "crwdns2974676:0crwdne2974676:0",
+          "preparation": "crwdns2974678:0[0]crwdne2974678:0",
+          "student_overview": "crwdns2974682:0crwdne2974682:0"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "crwdns2974862:0crwdne2974862:0",
+          "overview": "crwdns2974866:0crwdne2974866:0",
+          "preparation": "crwdns2974868:0[0]crwdne2974868:0",
+          "student_overview": "crwdns2974872:0crwdne2974872:0"
+        },
+        "csd6-2022/Getting Screen Inputs": {
+          "name": "crwdns2974994:0crwdne2974994:0",
+          "overview": "crwdns2974996:0crwdne2974996:0",
+          "preparation": "crwdns2975000:0[0]crwdne2975000:0",
+          "student_overview": "crwdns2975002:0crwdne2975002:0"
+        },
+        "csd6-2022/Combining Inputs and Outputs": {
+          "name": "crwdns2975112:0crwdne2975112:0",
+          "overview": "crwdns2975114:0crwdne2975114:0",
+          "preparation": "crwdns2975118:0[0]crwdne2975118:0",
+          "student_overview": "crwdns2975120:0crwdne2975120:0"
+        },
+        "csd6-2022/Project: Human Device Interaction": {
+          "name": "crwdns2975254:0crwdne2975254:0",
+          "overview": "crwdns2975256:0crwdne2975256:0",
+          "preparation": "crwdns2975260:0[0]crwdne2975260:0"
+        },
+        "csd6-2022/Board Sensors": {
+          "name": "crwdns2975558:0crwdne2975558:0",
+          "overview": "crwdns2975562:0crwdne2975562:0",
+          "preparation": "crwdns2975566:0[0]crwdne2975566:0",
+          "student_overview": "crwdns2975568:0crwdne2975568:0"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "crwdns2975752:0crwdne2975752:0",
+          "overview": "crwdns2975756:0crwdne2975756:0",
+          "preparation": "crwdns2975758:0[0]crwdne2975758:0",
+          "student_overview": "crwdns2975762:0crwdne2975762:0"
+        },
+        "csd6-2022/Making Music": {
+          "name": "crwdns2975906:0crwdne2975906:0",
+          "overview": "crwdns2975910:0crwdne2975910:0",
+          "preparation": "crwdns2975912:0[0]crwdne2975912:0",
+          "student_overview": "crwdns2975916:0crwdne2975916:0"
+        },
+        "csd6-2022/Functions": {
+          "name": "crwdns2976080:0crwdne2976080:0",
+          "overview": "crwdns2976082:0crwdne2976082:0",
+          "preparation": "crwdns2976086:0[0]crwdne2976086:0",
+          "student_overview": "crwdns2976088:0crwdne2976088:0"
+        },
+        "csd6-2022/Mini-Project: Interactive Art": {
+          "name": "crwdns2976234:0crwdne2976234:0",
+          "overview": "crwdns2976238:0crwdne2976238:0",
+          "preparation": "crwdns2976240:0[0]crwdne2976240:0",
+          "student_overview": "crwdns2976244:0crwdne2976244:0"
+        },
+        "csd6-2022/Physical Outputs and LEDs": {
+          "name": "crwdns2976434:0crwdne2976434:0",
+          "overview": "crwdns2976438:0crwdne2976438:0",
+          "preparation": "crwdns2976440:0[0]crwdne2976440:0",
+          "student_overview": "crwdns2976444:0crwdne2976444:0"
+        },
+        "csd6-2022/Physical Inputs and Buttons": {
+          "name": "crwdns2976584:0crwdne2976584:0",
+          "overview": "crwdns2976588:0crwdne2976588:0",
+          "preparation": "crwdns2976592:0[0]crwdne2976592:0",
+          "student_overview": "crwdns2976594:0crwdne2976594:0"
+        },
+        "csd6-2022/Project - Prototype an Innovation": {
+          "name": "crwdns2976720:0crwdne2976720:0",
+          "overview": "crwdns2976722:0crwdne2976722:0",
+          "preparation": "crwdns2976724:0[0]crwdne2976724:0",
+          "purpose": "crwdns2976728:0crwdne2976728:0",
+          "student_overview": "crwdns2976730:0crwdne2976730:0"
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "crwdns2977004:0crwdne2977004:0"
+        },
+        "csd7-2022/Introduction to Machine Learning": {
+          "name": "crwdns2977672:0crwdne2977672:0",
+          "overview": "crwdns2977674:0crwdne2977674:0",
+          "preparation": "crwdns2977676:0[0]crwdne2977676:0",
+          "student_overview": "crwdns2977678:0crwdne2977678:0"
+        },
+        "csd7-2022/Types of Machine Learning": {
+          "name": "crwdns2977828:0crwdne2977828:0",
+          "overview": "crwdns2977830:0crwdne2977830:0",
+          "preparation": "crwdns2977832:0[0]crwdne2977832:0",
+          "purpose": "crwdns2977834:0crwdne2977834:0",
+          "student_overview": "crwdns2977836:0crwdne2977836:0"
+        },
+        "csd7-2022/Innovations in AI": {
+          "name": "crwdns2977986:0crwdne2977986:0",
+          "overview": "crwdns2977988:0crwdne2977988:0",
+          "preparation": "crwdns2977990:0[0]crwdne2977990:0",
+          "student_overview": "crwdns2977992:0crwdne2977992:0"
+        },
+        "csd7-2022/Patterns in Data": {
+          "name": "crwdns2978078:0crwdne2978078:0",
+          "overview": "crwdns2978080:0crwdne2978080:0",
+          "preparation": "crwdns2978082:0[0]crwdne2978082:0",
+          "student_overview": "crwdns2978084:0crwdne2978084:0"
+        },
+        "csd7-2022/Classification Models": {
+          "name": "crwdns2978222:0crwdne2978222:0",
+          "overview": "crwdns2978224:0crwdne2978224:0",
+          "preparation": "crwdns2978226:0[0]crwdne2978226:0",
+          "student_overview": "crwdns2978228:0crwdne2978228:0"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "crwdns2978358:0crwdne2978358:0",
+          "overview": "crwdns2978360:0crwdne2978360:0",
+          "preparation": "crwdns2978362:0[0]crwdne2978362:0",
+          "student_overview": "crwdns2978364:0crwdne2978364:0"
+        },
+        "csd7-2022/Importing Models in App Lab": {
+          "name": "crwdns2978558:0crwdne2978558:0",
+          "overview": "crwdns2978560:0crwdne2978560:0",
+          "preparation": "crwdns2978562:0[0]crwdne2978562:0",
+          "student_overview": "crwdns2978564:0crwdne2978564:0"
+        },
+        "csd7-2022/Model Cards": {
+          "name": "crwdns2978696:0crwdne2978696:0",
+          "overview": "crwdns2978698:0crwdne2978698:0",
+          "preparation": "crwdns2978700:0[0]crwdne2978700:0",
+          "student_overview": "crwdns2978702:0crwdne2978702:0"
+        },
+        "csd7-2022/Saving Models in AI Lab": {
+          "name": "crwdns2978860:0crwdne2978860:0",
+          "overview": "crwdns2978862:0crwdne2978862:0",
+          "preparation": "crwdns2978864:0[0]crwdne2978864:0",
+          "student_overview": "crwdns2978866:0crwdne2978866:0"
+        },
+        "csd7-2022/Model Cards in App Lab": {
+          "name": "crwdns2978998:0crwdne2978998:0",
+          "overview": "crwdns2979000:0crwdne2979000:0",
+          "preparation": "crwdns2979002:0[0]crwdne2979002:0",
+          "student_overview": "crwdns2979004:0crwdne2979004:0"
+        },
+        "csd7-2022/Numerical Models": {
+          "name": "crwdns2979148:0crwdne2979148:0",
+          "overview": "crwdns2979150:0crwdne2979150:0",
+          "preparation": "crwdns2979152:0[0]crwdne2979152:0",
+          "student_overview": "crwdns2979154:0crwdne2979154:0"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "crwdns2979292:0crwdne2979292:0",
+          "overview": "crwdns2979294:0crwdne2979294:0",
+          "preparation": "crwdns2979296:0[0]crwdne2979296:0",
+          "student_overview": "crwdns2979298:0crwdne2979298:0"
+        },
+        "csd7-2022/Customizing Apps": {
+          "name": "crwdns2979448:0crwdne2979448:0",
+          "overview": "crwdns2979450:0crwdne2979450:0",
+          "preparation": "crwdns2979452:0[0]crwdne2979452:0",
+          "student_overview": "crwdns2979454:0crwdne2979454:0"
+        },
+        "csd7-2022/AI Code of Ethics": {
+          "name": "crwdns2979538:0crwdne2979538:0",
+          "overview": "crwdns2979540:0crwdne2979540:0",
+          "preparation": "crwdns2979542:0[0]crwdne2979542:0",
+          "student_overview": "crwdns2979544:0crwdne2979544:0"
+        },
+        "csd7-2022/Mini-Project: Make a Machine Learning App": {
+          "name": "crwdns2979642:0crwdne2979642:0",
+          "overview": "crwdns2979644:0crwdne2979644:0",
+          "preparation": "crwdns2979646:0[0]crwdne2979646:0",
+          "student_overview": "crwdns2979648:0crwdne2979648:0"
+        },
+        "csd7-2022/Issue Statements": {
+          "name": "crwdns2979770:0crwdne2979770:0",
+          "overview": "crwdns2979772:0crwdne2979772:0",
+          "preparation": "crwdns2979774:0[0]crwdne2979774:0",
+          "student_overview": "crwdns2979776:0crwdne2979776:0"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "crwdns2979888:0crwdne2979888:0",
+          "overview": "crwdns2979890:0crwdne2979890:0",
+          "preparation": "crwdns2979892:0[0]crwdne2979892:0",
+          "student_overview": "crwdns2979894:0crwdne2979894:0"
+        },
+        "csd7-2022/Survey Data in AI Lab": {
+          "name": "crwdns2980038:0crwdne2980038:0",
+          "overview": "crwdns2980040:0crwdne2980040:0",
+          "preparation": "crwdns2980042:0[0]crwdne2980042:0",
+          "student_overview": "crwdns2980044:0crwdne2980044:0"
+        },
+        "csd7-2022/Troubleshooting Models": {
+          "name": "crwdns2980218:0crwdne2980218:0",
+          "overview": "crwdns2980220:0crwdne2980220:0",
+          "preparation": "crwdns2980222:0[0]crwdne2980222:0",
+          "student_overview": "crwdns2980224:0crwdne2980224:0"
+        },
+        "csd7-2022/Creating an App": {
+          "name": "crwdns2980348:0crwdne2980348:0",
+          "overview": "crwdns2980350:0crwdne2980350:0",
+          "preparation": "crwdns2980352:0[0]crwdne2980352:0",
+          "student_overview": "crwdns2980354:0crwdne2980354:0"
+        },
+        "csd7-2022/Design an AI App": {
+          "name": "crwdns2980418:0crwdne2980418:0",
+          "overview": "crwdns2980420:0crwdne2980420:0",
+          "preparation": "crwdns2980422:0[0]crwdne2980422:0",
+          "student_overview": "crwdns2980424:0crwdne2980424:0"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "crwdns2980694:0crwdne2980694:0"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "crwdns2919818:0crwdne2919818:0"
         },

@@ -1860,3 +1860,5 @@ mr:
         aiml-2022:
           name: aiml-2022
           description_short: आर्टिफिशियल इंटेलिजन्स आणि मशीन लर्निंगबद्दल जाणून घ्या
+        soccer:
+          name: फुटबॉल

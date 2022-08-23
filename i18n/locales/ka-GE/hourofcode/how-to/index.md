@@ -27,7 +27,7 @@ title: Hour of Code How-to Guide
 
 <a id="how-to-video"></a>
 
-## 1. უყურეთ ვიდეოს კოდის ერთი საათის შესახებ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. უყურეთ ვიდეოს კოდის ერთი საათის შესახებ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

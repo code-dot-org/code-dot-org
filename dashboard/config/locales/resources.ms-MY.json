@@ -7,15 +7,22 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
+          "name": "Seni Pantun HoC",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
+          "name": "Seni Pantun 4 - Raikan",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "Seni Pantun 2 - Peristiwa",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "Seni Pantun 3 - Imejan",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -27,7 +34,13 @@
           "name": "Pengenalan Artis",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Pusingan dan Sudut",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "Risalah Pelajar"
+        },
         "csf-turns-angles-video/artist/unversioned": {
+          "name": "Pusingan dan Sudut",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
@@ -35,10 +48,44 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Penyulitan dan Kunci Awam",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "Video"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Widget Penyulitan pada Studio Kod",
+          "url": "https://studio.code.org/s/hoc-encryption"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Panduan Aktiviti - Pemampatan Teks",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Aktiviti Imbas Kembali - Nyahkodkan Mesej ini",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
+          "type": "Aktiviti Imbas Kembali"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Nyahkodkan Mesej ini",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Widget Pemampatan Teks pada Code Studio",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
+          "type": "Widget"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: Pemampatan Teks dengan Aloe Blacc",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "Peristiwa dalam Bounce - Bagaimana Ia Berlaku?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "Peristiwa dalam Bounce - Bagaimana Ia Berlaku?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Senarai Main Spotify (semua peringkat umur)",
@@ -62,6 +109,431 @@
           "name": "AI: Data Latihan & Kepincangan",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
+        },
+        "representing_images/csd/2022": {
+          "name": "Mewakili Imej"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Menggabungkan Perwakilan"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Menyimpan Rahsia Data"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Refleksi"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubrik"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "Video: Kesan ke atas Masyarakat",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Pembelajaran Mesin",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "Video: Data Latihan dan Bias",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubrik"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Forum Guru"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Video"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Video"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "Rubrik"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Video"
+        },
+        "variables/csd/2022": {
+          "name": "Pemboleh ubah"
+        },
+        "variables_3/csd/2022": {
+          "name": "Pemboleh ubah"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
+        },
+        "sprites/csd/2022": {
+          "name": "Jin"
+        },
+        "the_animation_tab/csd/2022": {
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Jin"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Sifat Peperi"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Sifat Peperi"
+        },
+        "text/csd/2022": {
+          "name": "teks"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubrik"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "Video"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubrik"
+        },
+        "boolean_expressions/csd/2022": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2022": {
+          "type": "Video"
+        },
+        "conditionals/csd/2022": {
+          "name": "Bersyarat"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Input Papan Kekunci"
+        },
+        "if_else_statements/csd/2022": {
+          "type": "Video"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Rubrik"
+        },
+        "velocity/csd/2022": {
+          "type": "Video"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Skrol Sisi",
+          "type": "Rubrik"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Skrol Sisi",
+          "type": "Panduan Projek"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Halaju dan Corak Kaunter"
+        },
+        "collisions/csd/2022": {
+          "name": "Perlanggaran"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Permainan Flyer",
+          "type": "Rubrik"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Permainan Flyer",
+          "type": "Panduan Projek"
+        },
+        "functions/csd/2022": {
+          "name": "Fungsi",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Fungsi"
+        },
+        "functions_4/csd/2022": {
+          "name": "Fungsi"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubrik"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2022": {
+          "name": "Video: Menyahpepijat",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "Video: Pengaturcaraan Berpasangan",
+          "type": "Video"
+        },
+        "headings/csd/2022": {
+          "name": "Headings"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Rubrik"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "lists/csd/2022": {
+          "name": "Senarai"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Sleuth Sosial"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Sleuth Sosial"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubrik"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Video"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubrik"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Menerbitkan Tapak Web Anda",
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "Video: Menguruskan Perselisihan faham",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "Video: Kerja berpasukan",
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "Video: Cara Carian Berfungsi",
+          "type": "Video"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubrik"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Memautkan Halaman"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Panduan Projek"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Semakan Rakan Sebaya"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "Rubrik"
+        },
+        "design_mode/csd/2022": {
+          "name": "Mod Reka Bentuk"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "app_presentation/csd/2022": {
+          "type": "Rubrik"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Sains Komputer Mengubah Segalanya",
+          "type": "Video"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "board_events/csd/2022": {
+          "name": "Acara Papan"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Acara Papan"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "Pemboleh ubah"
+        },
+        "variables_2/csd/2022": {
+          "name": "Pemboleh ubah",
+          "type": "Video"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubrik"
+        },
+        "color_leds/csd/2022": {
+          "name": "LED berwarna"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubrik"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "Peristiwa Accelerometer"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "type": "Video"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Bermain Nota"
+        },
+        "functions_2/csd/2022": {
+          "name": "Fungsi"
+        },
+        "functions_3/csd/2022": {
+          "name": "Fungsi",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Fungsi-fungsi dengan parameter",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Fungsi"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubrik"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubrik"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "Melihat AI",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "AI: Data Latihan & Kepincangan",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Risalah Pelajar"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubrik"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubrik"
         },
         "lesson_plans/courseb/2018": {
           "name": "Rancangan Pelajaran"
@@ -714,11 +1186,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Jejak Digital: Petak Segi Empat Jejak Digital",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Risalah Pelajar"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Jejak Digital: Trek Haiwan",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Risalah Pelajar"
         },
         "mimi-activity/courseb/2021": {
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
@@ -898,7 +1372,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Keselamatan Kejiranan Dalam Talian Saya: Berhenti Sementara dan Fikir Seketika",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Risalah Pelajar"
         },
         "pair-programming-vid/coursea/2021": {
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
@@ -1096,7 +1571,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Meletakkan STOP kepada Kezaliman Dalam Talian: STOP Kezaliman Dalam Talian",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Risalah Pelajar"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Rakan-rakan Robotik Saya",
@@ -1147,10 +1623,13 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
+          "name": "Pusingan dan Sudut",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Pusingan dan Sudut",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Risalah Pelajar"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Imej Wajah Beremosi",
@@ -1352,6 +1831,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "Peristiwa dalam Bounce - Bagaimana Ia Berlaku?",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1483,10 +1963,12 @@
           "type": "Video"
         },
         "turns_angles/express/2021": {
+          "name": "Pusingan dan Sudut",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
+          "name": "Pusingan dan Sudut",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
@@ -1656,7 +2138,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "Maklumat Sulit dan Peribadi: Tiket Keluar",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Risalah Pelajar"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Maklumat Sulit dan Peribadi: Kuiz Pelajaran",
@@ -1685,9 +2168,12 @@
           "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Pusingan dan Sudut",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Risalah Pelajar"
         },
         "csf-turns-angles-video/coursee/2021": {
+          "name": "Pusingan dan Sudut",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
@@ -1818,6 +2304,9 @@
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Risalah Pelajar"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"

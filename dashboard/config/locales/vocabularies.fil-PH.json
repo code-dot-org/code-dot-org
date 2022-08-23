@@ -250,6 +250,40 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "input/csd/2022": {
+          "word": "Input"
+        },
+        "processing/csd/2022": {
+          "word": "Pagproseso"
+        },
+        "debugging/csd/2022": {
+          "word": "Pagdedebug"
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "variable/csd/2022": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2022": {
+          "word": "Mga conditional"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraction"
+        },
+        "function/csd/2022": {
+          "word": "Function"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Digital na Bakas"
+        },
+        "copyright/csd/2022": {
+          "word": "Karapatang-ari"
+        },
+        "user_interface/csd/2022": {
+          "word": "Interface ng User"
+        },
         "code/poem-art/unversioned": {
           "word": "Code"
         },

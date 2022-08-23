@@ -2,6 +2,24 @@
   "mk-MK": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "Променливи"
+        },
+        "variables_3/csd/2022": {
+          "name": "Променливи"
+        },
+        "text/csd/2022": {
+          "name": "Текст"
+        },
+        "lists/csd/2022": {
+          "name": "Листи"
+        },
+        "variables_1/csd/2022": {
+          "name": "Променливи"
+        },
+        "variables_2/csd/2022": {
+          "name": "Променливи"
+        },
         "variables_video/express/2021": {
           "name": "Променливи"
         },

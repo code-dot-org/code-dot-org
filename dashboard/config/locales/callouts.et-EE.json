@@ -622,6 +622,90 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Muuda numbrit siin"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Klikka siin võrgustiku näitamiseks."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Muuda numbrit siin"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Siin on kood"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Muuda numbrit siin"
         }
       }
     }

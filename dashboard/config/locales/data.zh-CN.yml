@@ -535,7 +535,7 @@ zh-CN:
         hoc_dance_congrats_2019: 舞蹈派对 2019 - 开跳！
         hoc_dance_warmup_2019: 舞蹈派对 2019 - 热身！
         hoc_dance_events_2019: 舞蹈派对 2019 - 事件
-        hoc_dance_measures_2019: 舞蹈派对 2019 - 小节
+        hoc_dance_measures_2019: 舞蹈派对 2019 - 方法
         hoc_dance_properties_2019: 舞蹈派对 2019 - 属性
         csd_what_computers_do: 计算机做什么？
         csf_my_online_neighborhood_2020: 我的在线邻居
@@ -556,14 +556,14 @@ zh-CN:
         codebreak_e10: 编程解密 10.0：跟 Kat Graham 和 Kate Park 一起学AI
         codebreak_e11: 编程解密 11.0：跟Susan Wojcicki 和 China Anne McClain 一起学抽象概念
         codebreak_e12: 编程解密 12.0：跟 Aloe Blacc、Bret Taylor 和 Paula Mejia 一起学硬件
-        csf21pilot_events: 精灵图实验室：在活动的精灵图 （计算机科学基础 2021 试航）
-        csf21pilot_prompts: 精灵图实验室：精灵实验室：文本和提示 (CSF 2021 Pilot)
-        outbreak_mike: 麦克的CodeBytes第3集-爆发模拟器
+        csf21pilot_events: 精灵图实验室：行动的精灵图
+        csf21pilot_prompts: 精灵图实验室：精灵实验室：文本和提示
+        outbreak_mike: 麦克的 CodeBytes 第3集—爆发模拟器
         poembot-pilot-prompts: 俳句机器人-带选择的提示[PILOT]
         poembot-pilot-text: 俳句机器人-存储文本[PILOT]
         poembot-pilot-haiku: 俳句机器人-显示你的俳句[PILOT]
         csd_ml_intro_to_ai_lab: 人工智能实验室的介绍
-        csd_ml_import_model: 导入AI模型
+        csd_ml_import_model: 导入 AI 模型
         csf_lots_of_sprites: 精灵图实验室：许多精灵
         playlab_2021: 游戏实验室的介绍
         playlab_2021_reader: 游戏实验室的介绍
@@ -614,19 +614,19 @@ zh-CN:
         outbreak_scientist: 爆发模拟器：像科学家一样思考
         outbreak_outro: 爆发模拟：自由发挥
         PL_overview_CSP: 什么是计算机科学原则？
-        PL_CSP_EIPMOverview: EIPM课程指南
-        CSA-PL-debugging-temp: 在Java实验室中调试简介-temp
-        csd_app_lab_design_mode: CSD应用程序实验室设计模式
-        csd_app_lab_events: CSD应用程序实验室活动
+        PL_CSP_EIPMOverview: EIPM 课程指南
+        CSA-PL-debugging-temp: 在 Java 实验室中调试简介—temp
+        csd_app_lab_design_mode: CSD 应用程序实验室设计模式
+        csd_app_lab_events: CSD 应用程序实验室活动
         csd_u6_circuit_playground: 物理计算
         csd_u6_input_output: 输入和输出
-        CSA-PL-for-loops: Java中的For循环
-        CSA-PL-variables: 在Java中创建变量
+        CSA-PL-for-loops: Java 中的 For 循环
+        CSA-PL-variables: 在 Java 中创建变量
         PL_CS_Journeys_Overview: CS旅行
-        CSA-PL-intro-to-java-lab: Java实验室基础
-        CSA-PL-first-program: 在Java中编写程序
+        CSA-PL-intro-to-java-lab: Java 实验室基础
+        CSA-PL-first-program: 在 Java 中编写程序
         CSD_u6_variables_part1: CSD：变量
-        csd_u6_if_statements: CSD：If語句
+        csd_u6_if_statements: CSD：If 语句
         csc-poem-art-intro: 简介视频
         csc-poem-art-outro: 结尾视频
         csd_u6_call_define_functions: CSD：调用和定义函数

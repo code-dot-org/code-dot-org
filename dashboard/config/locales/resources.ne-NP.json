@@ -2,6 +2,75 @@
   "ne-NP": {
     "data": {
       "resources": {
+        "video_machine_learning/csd/2022": {
+          "name": "भिडियोः Machine Learning"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Peer Review"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Peer Review"
+        },
+        "variables/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_3/csd/2022": {
+          "name": "Variables"
+        },
+        "text/csd/2022": {
+          "name": "Text"
+        },
+        "conditionals/csd/2022": {
+          "name": "Conditionals"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Peer Review"
+        },
+        "functions/csd/2022": {
+          "name": "Functions"
+        },
+        "functions_1/csd/2022": {
+          "name": "Functions"
+        },
+        "functions_4/csd/2022": {
+          "name": "Functions"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Peer Review"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Peer Review"
+        },
+        "lists/csd/2022": {
+          "name": "Lists"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Peer Review"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Peer Review"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Peer Review"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variables"
+        },
+        "functions_2/csd/2022": {
+          "name": "Functions"
+        },
+        "functions_3/csd/2022": {
+          "name": "Functions"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Functions with Parameters"
+        },
+        "functions_5/csd/2022": {
+          "name": "Functions"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Lesson Plans"
         },

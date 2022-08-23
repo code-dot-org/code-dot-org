@@ -2,6 +2,9 @@
   "de-DE": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "Lesen von Literatur"
+        },
         "csta/AP": {
           "description": "Algorithmen und Programmierung"
         },
@@ -9,7 +12,7 @@
           "description": "Sprechen und zuhören"
         },
         "ccmath/MP": {
-          "description": "Mathematische Praktik"
+          "description": "Mathematische Übungen"
         },
         "csta2011/CPP": {
           "description": "Praxis und Programmierung in der Datenverarbeitung"
@@ -32,8 +35,23 @@
         "ccela/RI": {
           "description": "Lesen von informativen"
         },
+        "ccmath/OA": {
+          "description": "Operationen und mathematisches Denken"
+        },
+        "csta2011/CD": {
+          "description": "Computer und Kommunikationsgeräte"
+        },
+        "csta2011/CI": {
+          "description": "Gesellschaftliche, globale und ethische Auswirkungen"
+        },
         "ccmath/MD": {
           "description": "Entscheidungsfindung mithilfe der Wahrscheinlichkeitsrechnung"
+        },
+        "ccmath/NBT": {
+          "description": "Zahlen und Operationen im Dezimalsystem"
+        },
+        "ccmath/G": {
+          "description": "Geometrie"
         },
         "ccela/W": {
           "description": "Schreiben"
@@ -47,8 +65,17 @@
         "csta/IC": {
           "description": "Auswirkungen der Datenverarbeitung"
         },
+        "csp2021/IOC-2.B": {
+          "description": "Erklären Sie, wie Computerressourcen geschützt und wie sie missbraucht werden können."
+        },
         "csta/NI": {
           "description": "Netzwerke und das Internet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Vergleichen Sie den Algorithmus der Datenkomprimierung, der am besten in einen bestimmten Kontext passt."
+        },
+        "csta/DA": {
+          "description": "Daten und Analyse"
         },
         "csta/CS": {
           "description": "Computersysteme"

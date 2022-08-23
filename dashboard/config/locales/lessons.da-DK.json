@@ -62,6 +62,24 @@
         "k5-onlinepd-2019/Sprite Lab": {
           "name": "SpriteLab"
         },
+        "csd3-2022/Variables": {
+          "name": "Variabler"
+        },
+        "csd3-2022/Sprites": {
+          "name": "figure"
+        },
+        "csd3-2022/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Betingelser"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funktioner"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funktioner"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Flyt det, flyt det"
         },
