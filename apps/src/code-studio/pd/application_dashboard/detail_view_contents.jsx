@@ -112,6 +112,7 @@ export class DetailViewContents extends React.Component {
       status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,
       principal_approval_state: PropTypes.string,
+      principal_approval_not_required: PropTypes.bool,
       allow_sending_principal_email: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -183,9 +184,8 @@ export class DetailViewContents extends React.Component {
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
       cantSaveStatusReason: '',
-      principalApprovalIsRequired: !this.props.applicationData.principal_approval_state?.startsWith(
-        'Not required'
-      )
+      principalApprovalIsRequired: !this.props.applicationData
+        .principal_approval_not_required
     };
   }
 
@@ -984,9 +984,9 @@ export class DetailViewContents extends React.Component {
   }
 
   showPrincipalApprovalTable = () => {
-    return (
-      this.props.applicationData.principal_approval_state || ''
-    ).startsWith('Complete');
+    return this.props.applicationData.principal_approval_state?.startsWith(
+      'Complete'
+    );
   };
 
   handlePrincipalApprovalChange = (_id, principalApproval) => {
@@ -1100,7 +1100,8 @@ export class DetailViewContents extends React.Component {
   renderModifyPrincipalApprovalSection = () => {
     // principal_approval_state can be 'Not required', 'Incomplete - Principal email sent on ...', or 'Complete - ...'
     // If 'Complete,' this function will not be run.
-    // If 'Incomplete', we show a link to the application and a button to re-send the request.
+    // If 'Incomplete', we show a link to the application and a button to re-send the request,
+    // and a button to change the principal approval requirement.
     // If 'Not required', we show a button to make the principal approval required.
     // If none of these, then the principal approval is required, and we show a button to make it not required.
 
