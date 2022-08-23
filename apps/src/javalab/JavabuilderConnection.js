@@ -11,6 +11,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import logToCloud from '@cdo/apps/logToCloud';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -339,6 +340,7 @@ export default class JavabuilderConnection {
     this.onNewlineMessage();
     this.handleExecutionFinished();
     console.error(`[error] ${error.message}`);
+    this.reportWebSocketConnectionError(error.message);
   }
 
   onTimeout() {
@@ -442,5 +444,15 @@ export default class JavabuilderConnection {
     // for further details.
     this.onMarkdownLog(unauthorizedMessage);
     this.onNewlineMessage();
+  }
+
+  reportWebSocketConnectionError(errorMessage) {
+    logToCloud.addPageAction(
+      logToCloud.PageAction.JavabuilderWebSocketConnectionError,
+      {
+        errorMessage,
+        channelId: this.channelId
+      }
+    );
   }
 }
