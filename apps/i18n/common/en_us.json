@@ -463,7 +463,7 @@
   "coursesLearnHeroButton": "Get started",
   "coursesLearnHeroDescription": "Get started coding today. Our courses and activities are free! It’s easier - and way more fun - than you ever thought. Create an account to save your projects.",
   "coursesLearnHeroHeading": "Anyone can learn computer science",
-  "coursesLearnHeroSubHeading": "{studentsCount} million students have learned on Code.org!",
+  "coursesLearnHeroSubHeading": "Over {studentsCount} million students have learned on Code.org!",
   "courseOfferingSelfPacedPl": "Self-Paced Professional Learning",
   "courseOfferingVirtualPl": "Virtual Professional Learning",
   "courseOfferingOtherPl": "Other Professional Learning",
