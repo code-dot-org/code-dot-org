@@ -14,8 +14,8 @@ jobs:
       FIREBASE_NAME: ${{ secrets.FIREBASE_NAME }}
       FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
       PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
-      AWS_ACCESS_KEY_ID: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
-      AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}  
+      AWS_ACCESS_KEY_ID: $${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: $${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}  
       SAUCE_ACCESS_KEY: $${{ secrets.SAUCE_ACCESS_KEY }}
       SAUCE_USERNAME: $${{ secrets.SAUCE_USERNAME }}        
     steps:    

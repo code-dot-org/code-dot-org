@@ -290,11 +290,22 @@ export function restoreOnWindow(key) {
  * to elements within the body will go away because their targets go away,
  * but handlers attached to body, document, or window will persist - and may
  * depend on DOM that gets removed during cleanup.
+ *
+ * @param {boolean} [runOncePerTest=true] By default, sandbox document body
+ * before and after each test, instead of just once at the end of the test suite.
  */
-export function sandboxDocumentBody() {
+export function sandboxDocumentBody(runOncePerTest = true) {
   let originalDocumentBody;
-  beforeEach(() => (originalDocumentBody = document.body.innerHTML));
-  afterEach(() => (document.body.innerHTML = originalDocumentBody));
+  const storeBody = () => (originalDocumentBody = document.body.innerHTML);
+  const restoreBody = () => (document.body.innerHTML = originalDocumentBody);
+
+  if (runOncePerTest) {
+    beforeEach(storeBody);
+    afterEach(restoreBody);
+  } else {
+    before(storeBody);
+    after(restoreBody);
+  }
 }
 
 /**
