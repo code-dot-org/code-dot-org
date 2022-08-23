@@ -27,7 +27,7 @@ export default class InlineMarkdown extends React.Component {
   };
 
   render() {
-    const rendered = markdownToReact.processSync(this.props.markdown).contents;
+    const rendered = markdownToReact.processSync(this.props.markdown).result;
     // rendered will be a paragraph element because we kept the 'paragraph'
     // block method enabled in the parser above for structural reasons; we want
     // to simply swap that out for a span element.
