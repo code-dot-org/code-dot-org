@@ -41,6 +41,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :registered_fit_weekend,
     :attending_teachercon,
     :principal_approval_state,
+    :principal_approval_not_required,
     :meets_scholarship_criteria,
     :school_stats,
     :status_change_log,
@@ -151,6 +152,10 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def principal_approval_state
     object.try(:principal_approval_state)
+  end
+
+  def principal_approval_not_required
+    object.try(:principal_approval_not_required)
   end
 
   # update emails are sent by the system if there is no regional partner or if the regional partner

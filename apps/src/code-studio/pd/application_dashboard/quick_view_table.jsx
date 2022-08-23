@@ -160,7 +160,25 @@ export class QuickViewTable extends React.Component {
         {
           property: 'principal_approval_state',
           header: {
-            label: 'Principal Approval',
+            label: 'Princ Approval State',
+            transforms: [sortable]
+          },
+          cell: {
+            formatters: [
+              // Only show 'Incomplete' or 'Complete' states. Otherwise, the principal_approval_not_required
+              // field shows required states.
+              principal_approval_state =>
+                principal_approval_state?.startsWith('Incomplete') ||
+                principal_approval_state?.startsWith('Complete')
+                  ? principal_approval_state
+                  : ''
+            ]
+          }
+        },
+        {
+          property: 'principal_approval_not_required',
+          header: {
+            label: 'Princ Approval Required',
             transforms: [sortable]
           },
           cell: {
@@ -302,8 +320,8 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatPrincipalApprovalCell = (principal_approval_state, props) => {
-    const isRequired = !principal_approval_state?.startsWith('Not required');
+  formatPrincipalApprovalCell = (principal_approval_not_required, props) => {
+    const isRequired = !principal_approval_not_required;
 
     return (
       <PrincipalApprovalButtons

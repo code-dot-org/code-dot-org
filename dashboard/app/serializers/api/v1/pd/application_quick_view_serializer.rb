@@ -14,6 +14,7 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :notes_5,
     :regional_partner_id,
     :principal_approval_state,
+    :principal_approval_not_required,
     :total_score,
     :meets_criteria,
     :meets_scholarship_criteria,
