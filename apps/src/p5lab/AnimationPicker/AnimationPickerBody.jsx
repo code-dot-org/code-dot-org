@@ -301,8 +301,6 @@ export default class AnimationPickerBody extends React.Component {
   }
 }
 
-export const UnconnectedAnimationPickerBody = AnimationPickerBody;
-
 export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
 );
