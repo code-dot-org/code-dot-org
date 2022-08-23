@@ -1,10 +1,10 @@
-@import 'color.scss';
+@import "color.scss";
 
 $thumbnail-size: 105px;
 $thumbnail-border-width: 1px;
 $hover-plus-size: 24px;
 
-// Used for the width and height properties of AnimationPreview.
+// Used for the width and height properties of AnimationPreview
 :export {
   previewSize: calc(($thumbnail-size - 2 * $thumbnail-border-width) / 1px);
 }
