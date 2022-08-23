@@ -88,6 +88,7 @@
         "self-paced-pl-csd5": "self-paced-pl-csd5",
         "tesstest921": "tesstest921",
         "csd-playground": "csd-playground",
+        "csa-pilot-extra": "csa-pilot-extra",
         "csd6-projects": "csd6-projects",
         "coursef-2022-pilot": "coursef-2022-pilot",
         "vpl-csd-summer-pilot": "vpl-csd-summer-pilot",
@@ -358,7 +359,9 @@
         "csa-labs": "csa-labs",
         "csa-draft-pl": "csa-draft-pl",
         "dlp-csd-mod4": "dlp-csd-mod4",
-        "vpl-csa": "CSA Wirtualne profesjonalne uczenie się"
+        "vpl-csa": "CSA Wirtualne profesjonalne uczenie się",
+        "katie-practice": "katie-practice",
+        "soccer": "piłka nożna"
       }
     }
   }
