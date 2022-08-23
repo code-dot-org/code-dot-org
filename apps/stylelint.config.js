@@ -28,6 +28,11 @@ module.exports = {
         ignorePseudoClasses: ['export']
       }
     ],
-    ignoreSelectors: [':export']
+    'property-no-unknown': [
+      true,
+      {
+        ignoreSelectors: [':export']
+      }
+    ]
   }
 };
