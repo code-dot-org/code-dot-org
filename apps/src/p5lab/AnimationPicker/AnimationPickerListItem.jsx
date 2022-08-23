@@ -8,9 +8,6 @@ import style from './animation-picker-list-item.module.scss';
 
 import classNames from 'classnames';
 
-const THUMBNAIL_SIZE = 105;
-const THUMBNAIL_BORDER_WIDTH = 1;
-
 export default class AnimationPickerListItem extends React.Component {
   static propTypes = {
     animationProps: shapes.AnimationProps,
@@ -73,8 +70,8 @@ export default class AnimationPickerListItem extends React.Component {
               <AnimationPreview
                 animationProps={animationProps}
                 sourceUrl={animationProps.sourceUrl}
-                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                width={style.previewSize}
+                height={style.previewSize}
                 playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
                 onPreviewLoad={() => this.setState({loaded: true})}
               />
