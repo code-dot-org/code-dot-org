@@ -10,7 +10,11 @@ module JavalabFilesHelper
       http.request(upload_request)
     end
     return response
-  rescue StandardError
+  rescue StandardError => e
+    event_details = {
+      error_details: e.to_json
+    }
+    NewRelic::Agent.record_custom_event("JavabuilderHttpConnectionError", event_details) if CDO.newrelic_logging
     nil
   end
 

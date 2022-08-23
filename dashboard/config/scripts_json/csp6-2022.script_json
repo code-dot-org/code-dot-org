@@ -8,9 +8,10 @@
         {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=6",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "buttonText": "Learn More"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -28,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-23 00:56:06 UTC",
+    "serialized_at": "2022-08-23 00:26:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2595,7 +2596,7 @@
     },
     {
       "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/view",
+      "url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/copy",
       "key": "csp_unit_6_-_algorithms",
       "properties": {
         "audience": "Teacher",
