@@ -68,6 +68,21 @@
         "debugging/basketball/unversioned": {
           "word": "Atkļūdošana"
         },
+        "debugging/csd/2022": {
+          "word": "Atkļūdošana"
+        },
+        "variable/csd/2022": {
+          "word": "Mainīgais"
+        },
+        "conditionals/csd/2022": {
+          "word": "Sazarojumi"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2022": {
+          "word": "Funkcija"
+        },
         "code/poem-art/unversioned": {
           "word": "Kods"
         },
