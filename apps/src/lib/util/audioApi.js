@@ -91,7 +91,8 @@ export const commands = {
     //            since we now allow students to upload and serve audio assets
     //            from our domain via the Assets API now.
     //
-    let forceHTML5 = false;
+    // Not sure if this was actually doing anything (ended up forcing HTML5 on each Sound construction
+    let forceHTML5 = true;
     if (window.location.protocol === 'file:') {
       // There is no way to make ajax requests from html on the filesystem.  So
       // the only way to play sounds is using HTML5. This scenario happens when

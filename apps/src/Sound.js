@@ -30,6 +30,8 @@ function isIE9() {
  */
 export default function Sound(config, audioContext) {
   this.config = config;
+  this.config.forceHTML5 = true;
+  this.config.allowHTML5Mobile = true;
   this.audioContext = audioContext;
   this.audioElement = null; // if HTML5 Audio
   this.reusableBuffer = null; // if Web Audio
@@ -97,6 +99,11 @@ Sound.prototype.play = function(options) {
     return;
   }
 
+  // If I do comment out preloading, I get the same error here when I drag the "make a new cat"
+  // block into the workspace.
+  // Oh, maybe its trying to play the click into place sound
+  // Unhandled Promise Rejection: NotAllowedError:
+  // The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
   var volume =
     typeof options.volume === 'undefined'
       ? 1
@@ -418,9 +425,12 @@ Sound.prototype.preloadAudioElement = function(audioElement) {
   }
 
   if (!isIE9()) {
+    // If you don't comment this out, loading in safari on iphone fails here.
+    // Unhandled Promise Rejection: NotAllowedError:
+    // The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
     // Pre-cache audio
-    audioElement.play();
-    audioElement.pause();
+    // audioElement.play();
+    // audioElement.pause();
   }
   this.audioElement = audioElement;
 
