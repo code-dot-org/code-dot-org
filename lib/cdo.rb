@@ -153,7 +153,8 @@ module Cdo
         'http://localhost:8080/javabuilderfiles/seedsources'
       else
         # TODO: change the default to javabuilder once we have switched over
-        DCDO.get("javabuilder_upload_url", 'https://javabuilderbeta-http.code.org/seedsources/sources.json')
+        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilderbeta-http.code.org')
+        http_url + "/seedsources/sources.json"
       end
     end
 
