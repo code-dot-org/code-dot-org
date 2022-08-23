@@ -949,7 +949,6 @@ DEPENDENCIES
   devise (~> 4.7.0)
   devise_invitable (~> 1.6.0)
   dotiw
-  execjs
   eyes_selenium (= 3.18.4)
   factory_girl_rails
   fakeredis
