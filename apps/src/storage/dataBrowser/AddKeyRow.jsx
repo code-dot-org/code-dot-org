@@ -7,6 +7,7 @@ import {castValue} from './dataUtils';
 import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import {WarningType} from '../constants';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -79,7 +80,7 @@ class AddKeyRow extends React.Component {
             className={dataStyles.input}
             onChange={this.handleKeyChange}
             onKeyUp={this.handleKeyUp}
-            placeholder="enter text"
+            placeholder={msg.enterText()}
             value={this.state.key || ''}
           />
         </td>
@@ -88,7 +89,7 @@ class AddKeyRow extends React.Component {
             className={dataStyles.input}
             onChange={this.handleValueChange}
             onKeyUp={this.handleKeyUp}
-            placeholder="enter text"
+            placeholder={msg.enterText()}
             value={this.state.value || ''}
           />
         </td>
@@ -96,9 +97,9 @@ class AddKeyRow extends React.Component {
           <PendingButton
             isPending={this.state.isAdding}
             onClick={this.handleAdd}
-            pendingText="Adding"
+            pendingText={msg.addingToTable()}
             className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text="Add pair"
+            text={msg.addPairToTable()}
           />
         </td>
       </tr>
