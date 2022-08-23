@@ -7020,6 +7020,7 @@ en:
           description_short: Build the internet from the ground up using the Internet Simulator.
           description_audience: ''
           name: csp2-2022
+          lessons: {}
         csp3-2022:
           lesson_groups:
             csp_unit3_2020:
@@ -7030,6 +7031,7 @@ en:
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description_audience: ''
           name: csp3-2022
+          lessons: {}
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -7046,6 +7048,7 @@ en:
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
           name: csp4-2022
+          lessons: {}
         csp5-2022:
           lesson_groups:
             csp_lists:
@@ -7064,6 +7067,7 @@ en:
           description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
           description_audience: ''
           name: csp5-2022
+          lessons: {}
         courseb-2022:
           lesson_groups:
             csf_digcit:
@@ -7116,6 +7120,7 @@ en:
           description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
           description_audience: ''
           name: csp6-2022
+          lessons: {}
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -7130,6 +7135,7 @@ en:
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description_audience: ''
           name: csp7-2022
+          lessons: {}
         csp8-2022:
           title: Create PT Prep ('22-'23)
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
@@ -7144,6 +7150,7 @@ en:
             lessonGroup-3:
               display_name: Post-Course Survey
           name: csp8-2022
+          lessons: {}
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -7156,6 +7163,7 @@ en:
           description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
           description_audience: ''
           name: csp9-2022
+          lessons: {}
         csp10-2022:
           lesson_groups:
             csp_unit10_2020:
@@ -7170,6 +7178,7 @@ en:
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description_audience: ''
           name: csp10-2022
+          lessons: {}
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
