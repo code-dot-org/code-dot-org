@@ -7,7 +7,7 @@ export default function textConsole(state, action) {
       return [];
     case ADD_MESSAGE:
       return [
-        ...state,
+        ...state.slice(-999),
         {
           name: action.name,
           text: action.text

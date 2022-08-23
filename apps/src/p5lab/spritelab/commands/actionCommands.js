@@ -1,5 +1,4 @@
 import {commands as behaviorCommands} from './behaviorCommands';
-import {SPEECH_BUBBLE_BIG_NUMBER_GUARD} from '../constants';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -20,9 +19,6 @@ function addSpriteSpeechBubble(
   seconds,
   bubbleType
 ) {
-  if (coreLibrary.getNumberOfSprites() >= SPEECH_BUBBLE_BIG_NUMBER_GUARD) {
-    return;
-  }
   coreLibrary.getSpriteArray(spriteArg)?.forEach(sprite => {
     coreLibrary.addSpeechBubble(sprite, text, seconds, bubbleType);
   });

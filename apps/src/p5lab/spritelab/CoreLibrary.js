@@ -2,7 +2,7 @@ import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {SPRITE_BIG_NUMBER_GUARD} from './constants';
+import {MAX_NUM_SPRITES} from './constants';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -362,7 +362,7 @@ export default class CoreLibrary {
    */
   addSprite(opts) {
     opts = opts || {};
-    if (this.getNumberOfSprites() >= SPRITE_BIG_NUMBER_GUARD) {
+    if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
       return;
     }
     let name = opts.name;
