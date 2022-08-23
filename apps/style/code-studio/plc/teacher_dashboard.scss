@@ -5,11 +5,11 @@
 
   .module_task_view {
     .not_started {
-      background-color: rgb(255 128 128 / 0.25);
+      background-color: rgb(255 128 128 / .25)
     }
 
     .completed {
-      background-color: rgb(128 255 128 / 0.25);
+      background-color: rgb(128 255 128 / .25);
     }
 
     width: 100%;
@@ -44,7 +44,7 @@
     .course_unit_title {
       a {
         color: $dark_charcoal !important;
-        font-family: "Gotham 4r", sans-serif;
+        font-family: 'Gotham 4r', sans-serif;
       }
 
       font-size: 18px;
@@ -101,7 +101,7 @@
     }
 
     .in_progress {
-      background-color: #efcd1c !important;
+      background-color: #EFCD1C !important;
     }
 
     .completed {
