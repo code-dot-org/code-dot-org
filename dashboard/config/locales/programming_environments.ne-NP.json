@@ -1,0 +1,70 @@
+{
+  "ne-NP": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "समूहहरु"
+            },
+            "math": {
+              "name": "Math"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Functions"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
+          "categories": {
+            "math": {
+              "name": "Math"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Functions"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "विश्व"
+            },
+            "actions": {
+              "name": "Actions"
+            },
+            "events": {
+              "name": "घटनाहरु"
+            },
+            "loops": {
+              "name": "Loops"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Math"
+            },
+            "logic": {
+              "name": "लजिक"
+            },
+            "functions": {
+              "name": "Functions"
+            },
+            "text": {
+              "name": "Text"
+            }
+          }
+        }
+      }
+    }
+  }
+}

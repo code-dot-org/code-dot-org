@@ -1129,3 +1129,5 @@ bs:
             csd5_2:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+        soccer:
+          name: nogomet

@@ -1,0 +1,14 @@
+{
+  "id-ID": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Penggunaan inovasi komputasi dapat melibatkan risiko terhadap keamanan dan identitas pribadi Anda."
+        },
+        "csp2021/DAT-1": {
+          "description": "Cara komputer dalam menyatakan data berbeda dengan cara data ditafsirkan dan ditampilkan kepada pengguna. Program digunakan untuk mengubah data menjadi pernyataan yang lebih mudah dipahami oleh pengguna."
+        }
+      }
+    }
+  }
+}

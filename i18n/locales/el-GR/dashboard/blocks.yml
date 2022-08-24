@@ -1356,15 +1356,6 @@ el:
         text: "{SPRITE} σκέφτεται {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}σκέφτεται{TEXT1}για{NUM}δευτερόλεπτα"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} σκέφτεται {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Χμμ...
-            '"I am hungry, too."': Και εγώ πεινάω.
-            '"I only want the biggest goat."': Δε θέλω τίποτα παραπάνω από τη μεγαλύτερη κατσίκα.
-            '"I''m a green troll."': Είμαι ένα πράσινο τρολ.
-            '"No one will cross my bridge."': Κανένας δε θα διασχίσει τη γέφυρά μου.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} σκέφτεται {THOUGHT}"
         options:

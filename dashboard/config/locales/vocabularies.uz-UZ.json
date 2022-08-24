@@ -302,6 +302,63 @@
           "word": "Mashinalar o‘rganishi",
           "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
         },
+        "input/csd/2022": {
+          "word": "Kiritish"
+        },
+        "processing/csd/2022": {
+          "word": "Processing"
+        },
+        "bug/csd/2022": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "debugging/csd/2022": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/csd/2022": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "variable/csd/2022": {
+          "word": "O‘zgaruvchi",
+          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprait"
+        },
+        "condition/csd/2022": {
+          "word": "Shart"
+        },
+        "conditionals/csd/2022": {
+          "word": "Shartli bayonotlar"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraksiya"
+        },
+        "function/csd/2022": {
+          "word": "Funksiya"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Digital Footprint"
+        },
+        "copyright/csd/2022": {
+          "word": "Mualliflik huquqi",
+          "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
+        },
+        "user/csd/2022": {
+          "word": "Foydalanuvchi"
+        },
+        "user_interface/csd/2022": {
+          "word": "UI - Foydalanuvchi interfeysi"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Mashinalar o‘rganishi",
+          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
+        },
+        "ethics/csd/2022": {
+          "word": "Etika"
+        },
         "code/poem-art/unversioned": {
           "word": "Kod"
         },

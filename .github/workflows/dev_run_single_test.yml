@@ -15,11 +15,7 @@ jobs:
       LANG: C.UTF-8
     steps:   
       - name: Get actions code
-        uses: actions/checkout@v3    
-        
-      - name: Rake run integration tests
-        run:  |
-          locale-gen
+        uses: actions/checkout@v3            
       - name: say-hello
         uses: ./.github/actions/start-server-job-actions  
       - name: Install mysql
@@ -33,18 +29,12 @@ jobs:
       - name: Install node
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
-        uses: ./.github/actions/install-rake-dependencies
-      - name: Install imagemagic
-        run:  |  
-          brew install imagemagick@6
-          brew unlink imagemagick
-          brew link imagemagick@6 --force
-      - name: Rake run integration tests
+        uses: ./.github/actions/install-rake-dependencies              
+      - name: Run tests
         run:  |
-          echo "testing failure"  
-          brew install imagemagick@6
-        continue-on-error: true               
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3                
+          brew reinstall imagemagick
+          bundle exec rake test:changed --trace
+
+        
   
      

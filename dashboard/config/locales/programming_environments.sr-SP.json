@@ -1,0 +1,80 @@
+{
+  "sr-SP": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "Групе"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променљиве"
+            },
+            "functions": {
+              "name": "Функције"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променљиве"
+            },
+            "functions": {
+              "name": "Функције"
+            },
+            "advanced": {
+              "name": "Напредна подешавања"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Свет"
+            },
+            "location": {
+              "name": "Локације"
+            },
+            "actions": {
+              "name": "Акције"
+            },
+            "events": {
+              "name": "Догађаји"
+            },
+            "behaviors": {
+              "name": "Понашање"
+            },
+            "loops": {
+              "name": "Петље"
+            },
+            "variables": {
+              "name": "Променљиве"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "functions": {
+              "name": "Функције"
+            },
+            "text": {
+              "name": "текст"
+            },
+            "comments": {
+              "name": "Коментари"
+            }
+          }
+        }
+      }
+    }
+  }
+}

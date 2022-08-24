@@ -1945,3 +1945,5 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Välkommen
+        soccer:
+          name: fotboll

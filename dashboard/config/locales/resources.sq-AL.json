@@ -2,6 +2,75 @@
   "sq-AL": {
     "data": {
       "resources": {
+        "make_a_recommendation/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "variables/csd/2022": {
+          "name": "variabla"
+        },
+        "variables_3/csd/2022": {
+          "name": "variabla"
+        },
+        "text/csd/2022": {
+          "name": "Tekst"
+        },
+        "conditionals/csd/2022": {
+          "name": "Kushtet"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "functions/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_1/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_4/csd/2022": {
+          "name": "funksione"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "lists/csd/2022": {
+          "name": "Listat"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "design_mode/csd/2022": {
+          "name": "dan is a masive dick- "
+        },
+        "variables_1/csd/2022": {
+          "name": "variabla"
+        },
+        "variables_2/csd/2022": {
+          "name": "variabla"
+        },
+        "functions_2/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_3/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funksionet me parametra"
+        },
+        "functions_5/csd/2022": {
+          "name": "funksione"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Plani Mësimor"
         },

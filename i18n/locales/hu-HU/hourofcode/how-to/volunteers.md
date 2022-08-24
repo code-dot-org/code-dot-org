@@ -144,12 +144,12 @@ Az iskolával vagy a tanárral közösen beszéljétek meg, hogy mi a legcélrav
 
 #### Eszközök:
 
-A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. De nincs szükség minden gyereknek számítógépre, sőt a Kódolás Óráját akár számítógép nélkül is lehet csinálni! Erősítést nem igénylő tevékenységek esetében egyszerűen szűrje le a Classroom Technology (Tantermi technológia) résznél a „No computers or devices” (Számítógépek és eszközök nélkül) lehetőséget.
+A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. De nincs szükség minden gyereknek számítógépre, sőt a Kódolás Óráját akár számítógép nélkül is lehet csinálni! Számítógépet nem igénylő tevékenységek esetében egyszerűen szűrje le a Classroom Technology (Tantermi technológia) résznél a „No computers or devices” (Számítógépek és eszközök nélkül) lehetőséget.
 
 - **Tesztelje a tevékenységeket** számítógépen vagy más eszközökön. Ellenőrizze, hogy a hang és a videó megfelelően működik-e a böngészőkön.
 - **Nincs elég eszköz?** Használja a páros programozást. Ha a tanulók összefognak, akkor tudják segíteni egymást és kevésbé támaszkodnak a tanárra. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.
 - **Adjon fejhallgatót** a résztvevőknek, vagy kérje meg őket, hogy hozzák magukkal a saját fejhallgatójukat, ha olyan gyakorlatot végeznek, amelyek hanggal működnek a legjobban.
-- **Kicsi a sávszélesség**? Vetítse le a videókat a rendezvény elején, így a résztvevőknek nem kell letölteniük a saját videóikat. Vagy válasszon erősítés nélküli / offline tevékenységeket.
+- **Kicsi a sávszélesség**? Vetítse le a videókat a rendezvény elején, így a résztvevőknek nem kell letölteniük a saját videóikat. Vagy válasszon számÍtógép nélküli / offline tevékenységeket.
 
 #### Virtuális rendezvények:
 

@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "코드",
           "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
         },
         "event/dance-extras/unversioned": {
@@ -254,7 +255,8 @@
           "definition": " 무언가를 일으키는 행위."
         },
         "code/sports/unversioned": {
-          "word": "코드"
+          "word": "코드",
+          "definition": "(v) 코드 작성 또는 컴퓨터에게 내릴 지시사항 작성."
         },
         "debugging/sports/unversioned": {
           "word": "디버깅",
@@ -315,6 +317,64 @@
         "machine_learning/oceans/unversioned": {
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
+        },
+        "input/csd/2022": {
+          "word": "입력"
+        },
+        "processing/csd/2022": {
+          "word": "프로세싱"
+        },
+        "bug/csd/2022": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/csd/2022": {
+          "word": "디버깅",
+          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+        },
+        "program/csd/2022": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "variable/csd/2022": {
+          "word": "변수",
+          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
+        },
+        "sprite/csd/2022": {
+          "word": "스프라이트"
+        },
+        "condition/csd/2022": {
+          "word": "조건"
+        },
+        "conditionals/csd/2022": {
+          "word": "조건"
+        },
+        "abstraction/csd/2022": {
+          "word": "추상화"
+        },
+        "function/csd/2022": {
+          "word": "함수"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "디지털 발자국"
+        },
+        "copyright/csd/2022": {
+          "word": "저작권",
+          "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
+        },
+        "user/csd/2022": {
+          "word": "사용자",
+          "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
+        },
+        "user_interface/csd/2022": {
+          "word": "사용자 인터페이스"
+        },
+        "machine_learning/csd/2022": {
+          "word": "머신 러닝",
+          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
+        },
+        "ethics/csd/2022": {
+          "word": "윤리"
         },
         "code/poem-art/unversioned": {
           "word": "코드",

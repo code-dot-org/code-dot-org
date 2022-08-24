@@ -299,6 +299,12 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Creează o animație interactivă, utilizând personaje și evenimente."
         },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
+          "description": "Antrenați și testați un model de învățare automată."
+        },
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
+          "description": "Motivul despre modul în care părtinirea umană joacă un rol în învățarea automată."
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Dezvoltați programe care reacționează la evenimente cu limită de timp"
         },

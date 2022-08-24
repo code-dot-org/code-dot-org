@@ -3,18 +3,26 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Список воспроизведения Spotify (для всех возрастов)"
+          "name": "Список воспроизведения Spotify (для всех возрастов)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
+          "name": "Поэтическое искусство - HoC",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
+          "name": "Поэтическое искусство 4 - Торжественная часть",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "Видео"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "Поэтическое искусство 2 - События",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "Видео"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "Поэтическое искусство 3 - Система образов",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "Видео"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -23,60 +31,610 @@
           "type": "Видео"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "Введение в среду Художника"
+          "name": "Введение в среду Художника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "Повороты и углы",
-          "type": "Учебный раздаточный материал"
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "Раздаточный материал для учащихся"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Повороты и углы"
+          "name": "Повороты и углы",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Список воспроизведения Spotify (для всех возрастов)"
+          "name": "Список воспроизведения Spotify (для всех возрастов)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "name": "Шифрование и открытые ключи",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "Видео"
         },
         "hocencryption/hoc-encryption/unversioned": {
-          "name": "Виджеты шифрования в Студии кода"
+          "name": "Виджеты шифрования в Студии кода",
+          "url": "https://studio.code.org/s/hoc-encryption"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "Руководство по занятию – Сжатие текста"
+          "name": "Руководство по занятию – Сжатие текста",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
         },
         "activity-recap-decode-this-message/text-compression/unversioned": {
           "name": "Резюме по занятию – Декодируйте это сообщение",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
           "type": "Резюме по занятию"
         },
         "decode-this-message/text-compression/unversioned": {
-          "name": "Декодируй это сообщение"
+          "name": "Декодируйте это сообщение",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
         },
         "textcompressioncodestudio/text-compression/unversioned": {
           "name": "Виджет сжатия текста в Студии кода",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
           "type": "Виджет"
         },
         "video-text-compression/text-compression/unversioned": {
           "name": "Видео: сжатие текстов с Алоэ Блэкк",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Видео"
         },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "События при отскоке — Как они происходят?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "События при отскоке — Как они происходят?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Список воспроизведения Spotify (для всех возрастов)"
+          "name": "Список воспроизведения Spotify (для всех возрастов)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Список воспроизведения Spotify (для всех возрастов)"
+          "name": "Список воспроизведения Spotify (для всех возрастов)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
           "name": " Машинное обучение",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "ai-societal/oceans/unversioned": {
           "name": "Искусственный интеллект: воздействие на общество",
+          "url": "https://youtu.be/ng4c1g3COfs>",
           "type": "Видео"
         },
         "ai-training/oceans/unversioned": {
           "name": "Искусственный интеллект: обучающие данные и искажения",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "ASCII и Двоичное Представление"
+        },
+        "representing_images/csd/2022": {
+          "name": "Представление изображений"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "representing_numbers/csd/2022": {
+          "name": "Представления чисел"
+        },
+        "representing_numbers_1/csd/2022": {
+          "name": "Представления чисел"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Комбинирование представлений"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Сохранение данных в тайне"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Размышление"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Рубрика"
+        },
+        "making_decisions_with_data_1/csd/2022": {
+          "name": "Использование данных для принятия решений"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "Использование данных для принятия решений"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Видео"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Видео: Машинное Обучение",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Видео"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "Видео"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Рубрика"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Форум учителей"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Видео"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Процесс решения проблем"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Процесс решения проблем"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Видео"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Что такое компьютер?"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Видео"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "Рубрика"
+        },
+        "plotting_shapes/csd/2022": {
+          "name": "Рисование фигур"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Видео"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Видео"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Видео"
+        },
+        "naming_variables/csd/2022": {
+          "name": "Именование переменных"
+        },
+        "variables/csd/2022": {
+          "name": "Переменные"
+        },
+        "variables_3/csd/2022": {
+          "name": "Переменные"
+        },
+        "random_numbers/csd/2022": {
+          "name": "Случайные числа"
+        },
+        "random_numbers_2/csd/2022": {
+          "name": "Случайные числа"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Видео"
+        },
+        "sprites/csd/2022": {
+          "name": "Спрайты"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Вкладка Анимация",
+          "type": "Видео"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Спрайты"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Свойства спрайтов"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Свойства спрайтов"
+        },
+        "text/csd/2022": {
+          "name": "Текст"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Рубрика"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Видео"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Видео"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "Видео"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Рубрика"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Логические выражения",
+          "type": "Видео"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Условные операторы",
+          "type": "Видео"
+        },
+        "if_statements/csd/2022": {
+          "name": "Операторы Если"
+        },
+        "conditionals/csd/2022": {
+          "name": "Условные команды"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Ввод с клавиатуры"
+        },
+        "if-else_statements/csd/2022": {
+          "name": "Операторы \"если-иначе\""
+        },
+        "if_else_statements/csd/2022": {
+          "name": "Операторы Если/Иначе",
+          "type": "Видео"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Рубрика"
+        },
+        "velocity/csd/2022": {
+          "name": "Скорость",
+          "type": "Видео"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Скорость"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Скорость"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Обнаружение столкновений"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Обнаружение столкновений"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Обнаружение столкновений"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Боковая прокрутка",
+          "type": "Рубрика"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Боковая прокрутка",
+          "type": "Руководство по проекту"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Скорость и шаблон Счетчика"
+        },
+        "collisions/csd/2022": {
+          "name": "Столкновения"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Игра «Flyer»",
+          "type": "Рубрика"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Игра «Flyer»",
+          "type": "Руководство по проекту"
+        },
+        "functions/csd/2022": {
+          "name": "функции",
+          "type": "Видео"
+        },
+        "functions_1/csd/2022": {
+          "name": "функции"
+        },
+        "functions_4/csd/2022": {
+          "name": "функции"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Рубрика"
+        },
+        "html_tags/csd/2022": {
+          "name": "HTML тэги"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Видео"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Видео"
+        },
+        "headings_and_paragraphs/csd/2022": {
+          "name": "Заголовки и параграфы"
+        },
+        "video_debugging/csd/2022": {
+          "type": "Видео"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "Видео: Программирование в парах",
+          "type": "Видео"
+        },
+        "headings/csd/2022": {
+          "name": "Заголовки"
+        },
+        "formatting_html/csd/2022": {
+          "name": "Форматирование HTML"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Рубрика"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "lists/csd/2022": {
+          "name": "Списки"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "Цифровое присутствие"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Введение в CSS - Часть 1",
+          "type": "Видео"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Введение в CSS - Часть 2",
+          "type": "Видео"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Рубрика"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Видео"
+        },
+        "creative_commons_search/csd/2022": {
+          "name": "Поиск Creative Commons"
+        },
+        "layout_properties/csd/2022": {
+          "name": "Свойства макета"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Рубрика"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Публикация своего веб-сайта",
+          "type": "Видео"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "Видео"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "Видео"
+        },
+        "video_how_search_works/csd/2022": {
+          "type": "Видео"
+        },
+        "css_classes/csd/2022": {
+          "name": "CSS классы"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Рубрика"
+        },
+        "hyperlinks/csd/2022": {
+          "name": "Гиперссылки"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Связывание страниц"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Руководство по проекту"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Рецензирование"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Видео"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "Рубрика"
+        },
+        "design_mode/csd/2022": {
+          "name": "Режим дизайна"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Видео"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Видео"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Видео"
+        },
+        "changing_screens/csd/2022": {
+          "name": "Изменение экранов"
+        },
+        "importing_screens/csd/2022": {
+          "name": "Импорт экранов"
+        },
+        "app_presentation/csd/2022": {
+          "type": "Рубрика"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Информатика изменяет всё",
+          "type": "Видео"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Видео"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Видео"
+        },
+        "random_numbers_1/csd/2022": {
+          "name": "Случайные числа"
+        },
+        "board_events/csd/2022": {
+          "name": "События на доске"
+        },
+        "board_events_1/csd/2022": {
+          "name": "События на доске"
+        },
+        "if_statements_1/csd/2022": {
+          "name": "Операторы Если"
+        },
+        "if_statements_2/csd/2022": {
+          "name": "Операторы Если",
+          "type": "Видео"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Видео"
+        },
+        "variables_1/csd/2022": {
+          "name": "Переменные"
+        },
+        "variables_2/csd/2022": {
+          "name": "Переменные",
+          "type": "Видео"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Рубрика"
+        },
+        "color_leds/csd/2022": {
+          "name": "Цветные светодиоды"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Видео"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Рубрика"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "События акселерометра"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Введение в массивы",
+          "type": "Видео"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Игра в Notes"
+        },
+        "modifying_arrays/csd/2022": {
+          "name": "Изменение и создание массивов"
+        },
+        "functions_2/csd/2022": {
+          "name": "функции"
+        },
+        "functions_3/csd/2022": {
+          "name": "функции",
+          "type": "Видео"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Процедуры с параметрами",
+          "type": "Видео"
+        },
+        "functions_5/csd/2022": {
+          "name": "функции"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Рубрика"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "Проект: Прототип Инновации"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Рубрика"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Видео"
+        },
+        "seeing_ai/csd/2022": {
+          "type": "Видео"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Видео"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Введение в AI лаборатории"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Введение в AI лаборатории",
+          "type": "Видео"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Тренировка и Тесты в AI Lab",
+          "type": "Видео"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "Искусственный интеллект: обучающие данные и искажения",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Видео"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "name": "Карточки моделей в AI Lab",
+          "type": "Видео"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Видео"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Видео"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Раздаточный материал для учащихся"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Видео"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Рубрика"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Видео"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Видео"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Видео"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Рубрика"
         },
         "lesson_plans/courseb/2018": {
           "name": "Планы уроков"
@@ -621,14 +1179,17 @@
         },
         "ai-ml/coursef/2021": {
           "name": " Машинное обучение",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "ai-training/coursef/2021": {
           "name": "Искусственный интеллект: обучающие данные и искажения",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
         "ai-societal/coursef/2021": {
           "name": "Искусственный интеллект: воздействие на общество",
+          "url": "https://youtu.be/ng4c1g3COfs>",
           "type": "Видео"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -724,12 +1285,12 @@
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Цифровые следы: квадраты цифровых следов",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Цифровые следы: следы животных",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "mimi-activity/courseb/2021": {
           "name": "Вперед, вперед",
@@ -916,7 +1477,7 @@
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Безопасность в моем интернет-окружении: Момент «Сделай паузу и подумай»",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Программирование в парах",
@@ -1116,7 +1677,7 @@
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Стоп грубости в Интернете: СТОП грубости в онлайн",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Мои друзья роботы",
@@ -1164,15 +1725,17 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Введение в среду Художника"
+          "name": "Введение в среду Художника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Повороты и углы"
+          "name": "Повороты и углы",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Повороты и углы",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Эмотиконы, Изображение эмоций",
@@ -1375,6 +1938,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "События при отскоке — Как они происходят?",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1395,7 +1959,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Список воспроизведения Spotify (для всех возрастов)"
+          "name": "Список воспроизведения Spotify (для всех возрастов)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": " Танцевальная вечеринка: оффлайн",
@@ -1503,10 +2068,12 @@
         },
         "artist_introduction/express/2021": {
           "name": "Введение в среду Художника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Видео"
         },
         "turns_angles/express/2021": {
           "name": "Повороты и углы",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Видео"
         },
         "turns_angles_1/express/2021": {
@@ -1543,7 +2110,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Список воспроизведения Spotify (для всех возрастов)"
+          "name": "Список воспроизведения Spotify (для всех возрастов)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Уровни многовариантного программирования",
@@ -1680,7 +2248,7 @@
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "Личная конфиденциальная информация и информация о себе: Лист для контроля усвоения материала",
           "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Личная конфиденциальная информация и информация о себе: Контрольная работа к уроку",
@@ -1711,10 +2279,11 @@
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Повороты и углы",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Повороты и углы"
+          "name": "Повороты и углы",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Написание песен с функциями",
@@ -1815,6 +2384,7 @@
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "seeing_ai/csd/2021": {
@@ -1836,6 +2406,7 @@
         },
         "ai_training_data_bias/csd/2021": {
           "name": "Искусственный интеллект: обучающие данные и искажения",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
         "model_cards_in_ai_lab/csd/2021": {
@@ -1849,7 +2420,7 @@
           "type": "Видео"
         },
         "ai_ethics_research_reflection/csd/2021": {
-          "type": "Учебный раздаточный материал"
+          "type": "Раздаточный материал для учащихся"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Видео"
@@ -1990,6 +2561,7 @@
         },
         "video_machine_learning/csd/2021": {
           "name": "Видео: Машинное Обучение",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "video_training_data_and_bias/csd/2021": {
