@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:23.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Do all objects have access to the constant? Try printing `PRICE`(#e7e8ea) for the `veggieSandwich`(#e7e8ea) object.\r\n\r\n2. What happens if you try to assign a new value to the constant? Add the following code in `MyConsole.java`(#e7e8ea):\r\n\r\n```\r\nturkeySandwich.PRICE = 4.50;\r\nSystem.out.println(\"Veggie Sandwich Price: \" + veggieSandwich.PRICE);\r\n```\r\n\r\n3. Can you use the constant in an expression? Add the following code in `MyConsole.java`(#e7e8ea):\r\n\r\n```\r\ndouble discountedPrice = turkeySandwich.PRICE - 1.50;\r\nSystem.out.println(discountedPrice);\r\n```",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Sandwich turkeySandwich = new Sandwich(\"turkey\");\n    System.out.println(\"Turkey Sandwich Price: \" + turkeySandwich.PRICE);\n\n    Sandwich veggieSandwich = new Sandwich(\"veggie\");\n\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Sandwich.java": {
+        "text": "/*\n * Represents a sandwich\n */\npublic class Sandwich {\n\n  private String type;                      // The type of sandwich\n\n  public static final double PRICE = 2.75;  // The price for all sandwiches\n\n  /*\n   * Constructor to create a Sandwich object\n   * with a specified type\n   */\n  public Sandwich(String type) {\n    this.type = type;\n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:23.618+00:00\",\"changed\":[\"cloned from \\\"CSA U3L6-L2_2022\\\"\"],\"cloned_from\":\"CSA U3L6-L2_2022\"}]"
+}]]></config>
+</Javalab>
