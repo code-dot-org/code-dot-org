@@ -3,7 +3,7 @@
   "properties": {
     "instructions_important": "false",
     "project_template_level_name": "CSD U2 Project Template_2022",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "submittable": "false",
     "parent_level_id": 20054,
     "name_suffix": "_2022",
@@ -22,14 +22,17 @@
     ],
     "encrypted": "false",
     "mini_rubric": "false",
-    "validation_enabled": "true"
+    "validation_enabled": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 58,
-  "created_at": "2022-03-30T23:32:54.000Z",
-  "user_id": 324,
   "published": true,
+  "created_at": "2022-03-30T23:32:54.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:54.800+00:00\",\"changed\":[\"cloned from \\\"CSD U2 upload images_2021\\\"\"],\"cloned_from\":\"CSD U2 upload images_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:54.800+00:00\",\"changed\":[\"cloned from \\\"CSD U2 upload images_2021\\\"\"],\"cloned_from\":\"CSD U2 upload images_2021\"},{\"changed_at\":\"2022-08-23 21:24:19 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab>
