@@ -1722,3 +1722,5 @@ ta:
         aiml-2022:
           name: aiml-2022
           description_short: செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் பற்றி அறிக
+        soccer:
+          name: காற்பந்து

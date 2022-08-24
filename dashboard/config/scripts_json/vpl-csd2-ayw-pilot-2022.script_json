@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-13 06:24:24 UTC",
+    "serialized_at": "2022-08-17 17:34:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -248,6 +248,7 @@
       "key": "c06ce723-96a3-4b27-85d8-27074a1bb822",
       "position": 1,
       "properties": {
+        "progression_name": "Sample Student Projects"
       },
       "seeding_key": {
         "activity_section.key": "c06ce723-96a3-4b27-85d8-27074a1bb822",
@@ -284,6 +285,39 @@
         "activity_section.key": "85252f8d-33a4-469f-934f-18c189cca85c",
         "lesson_activity.key": "a2120e93-8cdf-4b89-9e07-c74767a34899"
       }
+    },
+    {
+      "key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Debugging Practices"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0",
+        "lesson_activity.key": "a2120e93-8cdf-4b89-9e07-c74767a34899"
+      }
+    },
+    {
+      "key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Additional Support "
+      },
+      "seeding_key": {
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0",
+        "lesson_activity.key": "a2120e93-8cdf-4b89-9e07-c74767a34899"
+      }
+    },
+    {
+      "key": "ed51cbfe-8b60-4db1-ac50-aa65b2c22371",
+      "position": 4,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed51cbfe-8b60-4db1-ac50-aa65b2c22371",
+        "lesson_activity.key": "a2120e93-8cdf-4b89-9e07-c74767a34899"
+      }
     }
   ],
   "script_levels": [
@@ -293,6 +327,84 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-WebDevSample"
+        ],
+        "progression": "Sample Student Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-WebDevSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c06ce723-96a3-4b27-85d8-27074a1bb822"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-WebDevSample"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample"
+        ],
+        "progression": "Sample Student Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c06ce723-96a3-4b27-85d8-27074a1bb822"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-PhysCompSample"
+        ],
+        "progression": "Sample Student Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-PhysCompSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c06ce723-96a3-4b27-85d8-27074a1bb822"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-PhysCompSample"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Module 1 Overview"
+        ],
         "progression": "Module 2 Overview"
       },
       "bonus": false,
@@ -310,29 +422,237 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 5,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Module 2 Overview"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPractices1"
+        ],
+        "progression": "Debugging Practices"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M2-Introduction"
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPractices1"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd2-ayw-pilot-2022",
-        "activity_section.key": "85252f8d-33a4-469f-934f-18c189cca85c"
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-AYW-M2-Introduction"
+        "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPractices1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPracticesReflect"
+        ],
+        "progression": "Debugging Practices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPracticesReflect"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPracticesReflect"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPrompting1"
+        ],
+        "progression": "Debugging Practices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPrompting1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-ModelingPrompting1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
+        ],
+        "progression": "Debugging Practices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
+        ],
+        "progression": "Debugging Practices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional Support "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional Support "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-WrapUp1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-WrapUp1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "ed51cbfe-8b60-4db1-ac50-aa65b2c22371"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-WrapUp1"
       ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-WebDevSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-WebDevSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c06ce723-96a3-4b27-85d8-27074a1bb822"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c06ce723-96a3-4b27-85d8-27074a1bb822"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-PhysCompSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-PhysCompSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c06ce723-96a3-4b27-85d8-27074a1bb822"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-AYW-M2-Module 1 Overview",
@@ -347,18 +667,122 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-Introduction",
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPractices1",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M2-Introduction"
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPractices1"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd2-ayw-pilot-2022",
-        "activity_section.key": "85252f8d-33a4-469f-934f-18c189cca85c"
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPracticesReflect",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPracticesReflect"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-ModelingPrompting1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPrompting1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-WrapUp1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-WrapUp1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "ed51cbfe-8b60-4db1-ac50-aa65b2c22371"
       }
     }
   ],
   "resources": [
+    {
+      "name": "CSD 2022 M2 Pilot Agenda",
+      "url": "https://docs.google.com/document/d/1hbgE5Xwi-7iZhCJbCqppqJR_vQfNC4uktrJ88HwFeDg/edit?usp=sharing",
+      "key": "csd_2022_m2_pilot_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_2022_m2_pilot_agenda"
+      }
+    },
+    {
+      "name": "CSD 2022 M2 Pilot Slides",
+      "url": "https://docs.google.com/presentation/d/1NX5H6_psQX5qJKrNete0xtJkXTixbo25heZ7WxhDnPk/edit?usp=sharing",
+      "key": "csd_2022_m2_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_2022_m2_pilot_slides"
+      }
+    },
     {
       "name": "Web Development: Personal Web Page Project Guide",
       "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/edit?usp=sharing",
@@ -459,7 +883,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_2022_m2_pilot_agenda",
+        "script.name": "vpl-csd2-ayw-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_2022_m2_pilot_slides",
+        "script.name": "vpl-csd2-ayw-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 

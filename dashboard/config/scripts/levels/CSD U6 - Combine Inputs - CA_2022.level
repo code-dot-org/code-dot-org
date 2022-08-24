@@ -53,25 +53,25 @@
     "encrypted_examples": "EG/gPkvX5wEE+4EKhnfN6kCQOfNvQwsfblRzjpi/ZdD5dYySEs+0riH9A+0D\nmotYzzcwaqfrM+waRRlVK8nmWw==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/taking-input-with-getproperty/"
+      "/courses/csd-2022/guides/taking-input-with-getproperty"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/physical-input/",
+    "map_reference": "/courses/csd-2022/guides/physical-input",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
     "display_name": "Debugging",
     "teacher_markdown": "**1) Turning on the LED** - Students need to update the `\"Blink\"` if-statement to be lowercase instead of uppercase\r\n\r\n**2) Turning off the LED** - Students need to update the `onBoardEvent` to use the `closed` event instead of the `change` event\r\n\r\n**3) Controlling the Buzzer** - Students need to switch the sliders that the variables are using so they match correctly (ie: the `duration` variable's `getProperty` also uses the `duration` slider)",
     "bubble_choice_description": "This program is supposed to control the LED and buzzer, but it has some problems. See if you can debug the code to make it work correctly!",
-    "thumbnail_url": "https://images.code.org/68eddc0b61b1969d88521e5a4ca7ec15-image-1650648032590.png"
+    "thumbnail_url": "https://images.code.org/68eddc0b61b1969d88521e5a4ca7ec15-image-1650648032590.png",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2021-08-31T21:15:04.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2021-08-31T21:15:04.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2021-08-31T21:15:04.121+00:00\",\"changed\":[\"cloned from \\\"CSD U6 getters debug_2021\\\"\"],\"cloned_from\":\"CSD U6 getters debug_2021\"},{\"changed_at\":\"2021-08-31 21:15:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-22 17:09:05 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-22 17:14:10 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-22 17:14:50 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-22 17:17:11 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-22 17:17:32 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-22 17:18:43 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-22 17:27:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_html\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

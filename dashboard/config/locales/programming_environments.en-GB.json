@@ -1,0 +1,50 @@
+{
+  "en-GB": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "math": {
+              "name": "Mathematics"
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "math": {
+              "name": "Mathematics"
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Actions"
+            },
+            "loops": {
+              "name": "Loops"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Mathematics"
+            },
+            "logic": {
+              "name": "Logic"
+            },
+            "text": {
+              "name": "Text"
+            }
+          }
+        }
+      }
+    }
+  }
+}

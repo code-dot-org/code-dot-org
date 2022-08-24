@@ -27,7 +27,7 @@
           "description": "Rappresentare il linguaggio figurato e letterale in un testo."
         },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati."
         },
         "6394fdc5-50c3-423e-8135-a64594824db3": {
           "description": "definire \"programmazione\" e \"informatica\""
@@ -216,7 +216,7 @@
           "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
         },
         "63be9575-1232-47a5-991c-8bd03ac7c949": {
           "description": "definire \"programmazione\" e \"informatica\""
@@ -237,7 +237,7 @@
           "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati"
@@ -263,8 +263,14 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
+          "description": "addestrare e testare un modello di apprendimento automatico"
+        },
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
+          "description": "ragionare su come i pregiudizi umani giocano un ruolo nell'apprendimento automatico"
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati."
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
           "description": "Illustrare i cambiamenti di umore di una poesia."
@@ -279,58 +285,58 @@
           "description": "utilizzare la terminologia appropriata quando si fa riferimento al mouse, al trackpad o al touchscreen di un computer"
         },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
-          "description": "Descrivi l'importanza dell'utente nel processo di progettazione."
+          "description": "descrivere quanto sia importante  l'utente nel processo di progettazione."
         },
         "d67e0be9-d618-464a-9f80-4549d63a2e03": {
-          "description": "Identifica gli sprite in un programma per computer in esecuzione."
+          "description": "identificare i personaggi in un programma per computer in esecuzione."
         },
         "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
           "description": "creare nuovi personaggi e attribuire loro costumi e comportamenti."
         },
         "06a89cf1-1a4d-429a-9797-934770d0ed18": {
-          "description": "Crea un'animazione usando sprite e comportamenti."
+          "description": "creare un'animazione usando personaggi e comportamenti."
         },
         "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
-          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati."
         },
         "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
-          "description": "Sviluppa programmi che rispondano all'input dell'utente."
+          "description": "sviluppare programmi che rispondono all'input dell'utente."
         },
         "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
-          "description": "Crea un'animazione interattiva utilizzando gli eventi."
+          "description": "creare un'animazione interattiva utilizzando gli eventi."
         },
         "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
-          "description": "Crea un animale domestico virtuale interattivo utilizzando eventi, comportamenti e grafica personalizzata."
+          "description": "creare un animaletto virtuale interattivo utilizzando eventi, comportamenti e grafica personalizzata"
         },
         "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
-          "description": "Programmare soluzioni ai problemi che si presentano quando si progetta un animale domestico virtuale, come nutrirlo."
+          "description": "programmare soluzioni ai problemi che sorgono durante la progettazione di un animaletto virtuale, come dargli da mangiare."
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Decidi quali tipi di dichiarazioni è giusto dire online e quali no."
+          "description": "Decidi quali tipi di affermazioni è giusto fare online e quali no."
         },
         "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
-          "description": "Assegna un valore a una variabile"
+          "description": "assegnare un valore a una variabile"
         },
         "41ddf297-8c92-42c1-8157-97ba0660483d": {
-          "description": "Chiama una variabile più volte in un programma."
+          "description": "chiamare più volte una variabile in un programma."
         },
         "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
-          "description": "Determina la relazione tra il modo in cui una variabile viene definita, memorizzata e recuperata quando premiamo «Esegui» su un programma."
+          "description": "determinare la relazione tra il modo in cui una variabile viene definita, memorizzata e recuperata quando premiamo «Esegui» su un programma."
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "usare le variabili per contenere parole e frasi"
         },
         "66e1fe88-3957-437f-a065-66909844fcd1": {
-          "description": "Usa le variabili insieme ai prompt."
+          "description": "usare le variabili insieme alle richieste all'utente"
         },
         "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
           "description": "usare le variabili per contenere parole e frasi"
         },
         "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
-          "description": "Usa le variabili insieme ai prompt."
+          "description": "usare le variabili insieme alle richieste all'utente"
         },
         "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
-          "description": "Crea un programma interattivo per computer che risponda all'input dell'utente."
+          "description": "creare un programma interattivo per computer che risponda all'input dell'utente."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "individuare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
@@ -363,31 +369,31 @@
           "description": "esaminare il programma per trovare i punti in cui le variabili possono essere sostituite con valori specifici"
         },
         "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": "Determina il valore iniziale, il valore di arresto e il valore di passo per un «ciclo for»."
+          "description": "determinare il valore iniziale, il valore finale ed il passo di un \"ciclo con contatore\""
         },
         "1e676bcd-e312-4827-88ce-d6befc87d61c": {
-          "description": "Illustrare i valori dei contatori colpiti ogni volta attraverso un «ciclo for» durante il runtime."
+          "description": "illustrare i valori che assume la variabile \"contatore\" durante ogni iterazione del ciclo"
         },
         "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
-          "description": "Determina il valore iniziale, il valore di arresto e il valore di passo per un ciclo for."
+          "description": "determinare il valore iniziale, il valore finale ed il passo di un \"ciclo con contatore\""
         },
         "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
-          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
+          "description": "riconoscere quando usare un ciclo con contatore e quando usare altri cicli come i cicli `ripeti ... volte` o `mentre`"
         },
         "68c038c1-990a-4009-ad61-619ba6ea71af": {
-          "description": "Utilizzare for loop per cambiare loop più volte con valori diversi."
+          "description": "usare i cicli con contatore per gestire valori differenti ad ogni esecuzione del ciclo"
         },
         "7ad09074-8899-4330-bb54-6a00c5164299": {
-          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
+          "description": "riconoscere quando usare un ciclo con contatore e quando usare altri cicli come i cicli `ripeti ... volte` o `mentre`"
         },
         "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
-          "description": "Utilizzare una simulazione al computer per raccogliere dati su un modello"
+          "description": "utilizzare una simulazione al computer per raccogliere dati su un modello"
         },
         "519c1444-230e-4182-a4eb-09414a7d09fb": {
-          "description": "Crea un grafico a doppia linea per confrontare i dati su due fonti diverse"
+          "description": "creare un grafico a doppia linea per confrontare i dati da due fonti diverse"
         },
         "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": "Effettuare e testare una previsione modificando le variabili di simulazione"
+          "description": "fare una previsione e testarla modificando le variabili di simulazione"
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "discutere il ruolo che l'intelligenza artificiale gioca nelle nostre vite"
@@ -420,10 +426,10 @@
           "description": "articolare il processo di progettazione ed evidenziare in che modo questo ha contribuito a dare forma al progetto di finale"
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
-          "description": "Scopri che le informazioni che condividono online lasciano un'impronta digitale o una «traccia»."
+          "description": "scoprire che le informazioni che condividono online lasciano un'impronta digitale o una «traccia»."
         },
         "5efa6c72-000c-40a0-ace0-55f47117305b": {
-          "description": "Scopri quali informazioni possono essere condivise online."
+          "description": "scoprire quali sono le informazioni adatte da mettere online"
         },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
           "description": "definire un elenco di passaggi (algoritmo) per portare un amico dalla sua posizione di partenza al suo obiettivo"
@@ -444,10 +450,10 @@
           "description": "tradurre i movimenti in una serie di istruzioni"
         },
         "bffe609e-4319-4507-b643-b2a2ab2507b9": {
-          "description": "Costruisci un programma riorganizzando i movimenti sequenziali."
+          "description": "costruire un programma riorganizzando sequenze di movimenti."
         },
         "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
-          "description": "Crea un programma per computer da una serie di istruzioni scritte."
+          "description": "costruire un programma per computer partendo da una lista di istruzioni."
         },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "tradurre i movimenti in una serie di istruzioni"
@@ -492,19 +498,19 @@
           "description": "creare un programma che disegna forme complesse ripetendo sequenze semplici"
         },
         "11d46ade-3342-4157-932b-ce46acd1e6b4": {
-          "description": "Elenca diversi esempi di app per smartphone."
+          "description": "passare in rassegna diversi esempi di app per smartphone."
         },
         "595564b5-94b4-4104-9613-05eadc30663e": {
-          "description": "Raccomandare la tecnologia ad altri in base alle loro esigenze specifiche. "
+          "description": "consigliare la tecnologia agli altri in base alle loro particolari esigenze. "
         },
         "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
-          "description": "Applica empatia e creatività alla tecnologia di progettazione per gli altri. "
+          "description": "aggiungere empatia e creatività alla tecnologia di progettazione per gli altri. "
         },
         "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
           "description": "ripetere i comandi impartiti dall'insegnante"
         },
         "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
-          "description": "riconoscere i movimenti del docente come segnali per avviare certe istruzioni"
+          "description": "riconoscere certi movimenti dell'insegnante come segnali per avviare particolari comandi"
         },
         "86c93634-0b7d-46de-82dd-50b86576bd56": {
           "description": "notare la differenza tra azioni predefinite e azioni guidate da eventi"
@@ -516,10 +522,10 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
         },
         "8023306a-d106-4097-8205-5bc1e92ffade": {
-          "description": "Applicare concetti di informatica in un progetto a tempo indeterminato."
+          "description": "Applicare concetti di informatica in un progetto senza limiti di tempo."
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "superare ostacoli come vincoli di tempo o errori"
@@ -528,7 +534,7 @@
           "description": "Scopri che internet può essere usato per visitare luoghi lontani e imparare cose nuove."
         },
         "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "Confronta in che modo rimanere al sicuro online è simile a rimanere al sicuro nel mondo reale."
+          "description": "Confronta le somiglianze tra il modo di restare al sicuro online o nel mondo reale."
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "Spiegare le regole per viaggiare in sicurezza su internet."
@@ -540,7 +546,7 @@
           "description": "utilizzare la terminologia appropriata quando si fa riferimento al mouse, al trackpad o al touchscreen di un computer"
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "tradurre un algoritmo in un programma"
+          "description": "trasformare un algoritmo in un programma"
         },
         "95ef707d-603d-4106-955e-3138f0f16a5d": {
           "description": "decifrare ed eseguire un programma creato da qualcun altro"
@@ -561,7 +567,7 @@
           "description": "costruire un programma per computer partendo da una lista di istruzioni"
         },
         "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "scegliere le appropriate tecniche di debugging per la risoluzione dei problemi"
+          "description": "scegliere le appropriate tecniche di correzione degli errori (debugging) per la risoluzione dei problemi"
         },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
           "description": "dare un ordine logico ad una sequenza di istruzioni"
@@ -600,7 +606,7 @@
           "description": "ripetere i comandi impartiti dall'insegnante"
         },
         "b7973aec-afbf-4f81-820c-daced7731b0f": {
-          "description": "riconoscere i movimenti del docente come segnali per avviare certe istruzioni"
+          "description": "riconoscere certi movimenti dell'insegnante come segnali per avviare particolari comandi"
         },
         "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
           "description": "notare la differenza tra azioni predefinite e azioni guidate da eventi"
@@ -612,19 +618,19 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
         },
         "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
-          "description": "Applicare concetti di informatica in un progetto a tempo indeterminato."
+          "description": "Applicare concetti di informatica in un progetto senza limiti di tempo."
         },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "superare ostacoli come vincoli di tempo o errori"
         },
         "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
-          "description": "Comprendi come può essere la cattiveria online e come può far sentire le persone."
+          "description": "comprendere come può essere la cattiveria online e come può far sentire le persone."
         },
         "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
-          "description": "Identifica i modi per rispondere alle parole cattive online, utilizzando S-T-O-P."
+          "description": "individuare i modi giusti per rispondere alle parole cattive online, utilizzando S-T-O-P."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
           "description": "focalizzarsi sulla precisione durante la creazione delle istruzioni"
@@ -645,7 +651,7 @@
           "description": "modificare un programma esistente per correggere degli errori"
         },
         "367c7a8a-4dea-494f-87c7-77cba03711a1": {
-          "description": "riflettere sul processo di correzione degli errori (debug) in modo adatto alla propria età"
+          "description": "riflettere sul processo di correzione degli errori (debugging) in modo adatto alla propria età"
         },
         "991aa440-0e71-40b0-8354-da04e3ad125b": {
           "description": "mettere in ordine le istruzioni di movimento come passaggi sequenziali di un programma"
@@ -654,7 +660,7 @@
           "description": "rappresentare un algoritmo come un programma per computer"
         },
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
-          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica della correzione degli errori (debug)"
+          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica della correzione degli errori (debugging)"
         },
         "6503170b-db97-4737-ae5d-5108591497a0": {
           "description": "creare un programma costituito da una sequenza di istruzioni per completare un'immagine"
@@ -708,7 +714,7 @@
           "description": "creare un gioco utilizzando i gestori di eventi"
         },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
         },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
           "description": "creare un gioco animato interattivo, utilizzando sequenze di istruzioni e gestori di eventi"
@@ -717,13 +723,13 @@
           "description": "identificare le azioni correlate agli eventi in ingresso"
         },
         "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
-          "description": "Raccogliere e registrare dati su quantità di oggetti reali o caratteri su uno schermo"
+          "description": "raccogliere e memorizzare dati inerenti le quantità di oggetti reali o le quantità di caratteri su uno schermo"
         },
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": "Crea un grafico a barre e un grafico a torta per rappresentare dati semplici."
+          "description": "creare un grafico a barre e un grafico a torta per rappresentare dati semplici."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Effettuare confronti tra visualizzazioni di dati effettuate da altri e utilizzarle per fare una previsione."
+          "description": "effettuare confronti tra visualizzazioni di dati effettuate da altri e utilizzarle per fare una previsione."
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "codificare le lettere in binario"
@@ -735,16 +741,16 @@
           "description": "collegare il concetto di memorizzare le lettere sulla carta con il concetto di memorizzare le informazioni in un computer"
         },
         "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
-          "description": "Usa un progetto pianificato come modello per la creazione."
+          "description": "seguire la pianificazione come modello per la creazione"
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "superare ostacoli come vincoli di tempo o errori"
         },
         "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
-          "description": "Definire il termine «password» e descrivere lo scopo di una password."
+          "description": "definire il termine «password» e descrivere lo scopo di una password."
         },
         "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
-          "description": "Esercitati a creare una password memorabile e sicura."
+          "description": "esercitarsi a creare una password memorizzabile e sicura."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "riformulare una sequenza di passaggi, traducendola in un programma codificato"
@@ -786,7 +792,7 @@
           "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
         },
         "bafea2a8-7a23-4046-9360-77d760c54c2b": {
           "description": "creare un gioco animato interattivo, utilizzando sequenze ed eventi"
@@ -873,7 +879,7 @@
           "description": "modificare un programma esistente per correggere degli errori"
         },
         "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
-          "description": "riflettere sul processo di correzione degli errori (debug) in modo adatto alla propria età"
+          "description": "riflettere sul processo di correzione degli errori (debugging) in modo adatto alla propria età"
         },
         "4d4f7faa-e380-483d-b873-b04e114e077e": {
           "description": "mettere in ordine le istruzioni di movimento come passaggi sequenziali di un programma"
@@ -882,7 +888,7 @@
           "description": "rappresentare un algoritmo come un programma per computer"
         },
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
-          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica della correzione degli errori (debug)"
+          "description": "sviluppare capacità di risoluzione di problemi e pensiero critico tramite la pratica della correzione degli errori (debugging)"
         },
         "500825a3-b44f-4b99-ab77-2271fdcbb867": {
           "description": "creare un programma costituito da una sequenza di istruzioni per completare un'immagine"
@@ -900,22 +906,22 @@
           "description": "creare nuovi personaggi e attribuire loro costumi e comportamenti."
         },
         "e0d4a883-51dc-4647-8c9f-59652f699aec": {
-          "description": "Crea un'animazione usando sprite e comportamenti."
+          "description": "creare un'animazione usando personaggi e comportamenti."
         },
         "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
-          "description": "Crea un'animazione interattiva utilizzando gli eventi."
+          "description": "creare un'animazione interattiva utilizzando gli eventi."
         },
         "d9604b08-064f-43e3-83ac-d3a91f321627": {
-          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati."
         },
         "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
-          "description": "Sviluppa programmi che rispondano all'input dell'utente."
+          "description": "sviluppare programmi che rispondono all'input dell'utente."
         },
         "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
-          "description": "creare un animale domestico virtuale interattivo utilizzando eventi, comportamenti, variabili e grafica personalizzata"
+          "description": "creare un animaletto virtuale interattivo utilizzando eventi, comportamenti, variabili e grafica personalizzata"
         },
         "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
-          "description": "programmare soluzioni ai problemi che sorgono durante la progettazione di un animale domestico virtuale, come dargli da mangiare o gestire il suo livello di felicità"
+          "description": "programmare soluzioni ai problemi che sorgono durante la progettazione di un animaletto virtuale, come dargli da mangiare o gestire il suo livello di felicità"
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati"
@@ -1014,10 +1020,10 @@
           "description": "usare funzioni predeterminate per completare attività ripetute"
         },
         "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
-          "description": "Azioni Usa le variabili per contenere parole e frasi."
+          "description": "usare le variabili per contenere parole e frasi"
         },
         "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
-          "description": "Usa le variabili insieme ai prompt."
+          "description": "usare le variabili insieme alle richieste all'utente"
         },
         "16854174-125c-4c79-9a42-064ef84535e3": {
           "description": "assegnare valori a variabili esistenti"
@@ -1035,16 +1041,16 @@
           "description": "esaminare il programma per trovare i punti in cui le variabili possono essere sostituite con valori specifici"
         },
         "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
-          "description": "Determina il valore iniziale, il valore di arresto e il valore di passo per un ciclo for."
+          "description": "determinare il valore iniziale, il valore finale ed il passo di un \"ciclo con contatore\""
         },
         "3abab07c-e404-45d4-ab89-f92a34c68356": {
-          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
+          "description": "riconoscere quando usare un ciclo con contatore e quando usare altri cicli come i cicli `ripeti ... volte` o `mentre`"
         },
         "1b705c64-cbba-4dfe-8d47-549eb6754326": {
-          "description": "Utilizzare for loop per cambiare loop più volte con valori diversi."
+          "description": "usare i cicli con contatore per gestire valori differenti ad ogni esecuzione del ciclo"
         },
         "a5169230-8faf-4492-bc49-ca11dca864fa": {
-          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
+          "description": "riconoscere quando usare un ciclo con contatore e quando usare altri cicli come i cicli `ripeti ... volte` o `mentre`"
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "superare ostacoli come vincoli di tempo o errori"
@@ -1119,7 +1125,7 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
         },
         "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -1128,7 +1134,10 @@
           "description": "creare una storia animata ed interattiva, utilizzando sequenze di istruzioni e gestori di eventi"
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
-          "description": "condividere una propria cerazione con altri alunni"
+          "description": "condividere una propria creazione con altri alunni"
+        },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "iniziare a creare collegamenti su un modo nuovo di scrivere programmi"
         },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "definire uno \"sprite\" come un personaggio o un oggetto sullo schermo che può essere spostato e modificato"
@@ -1138,6 +1147,24 @@
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "creare un'animazione interattiva utilizzando personaggi, comportamenti ed eventi."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "individuare i motivi per cui le persone condividono online informazioni su se stesse."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "comprendere la differenza tra dati personali e altri dati."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "spiegare perché è rischioso condividere dati personali online."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "scegliere quali informazioni su di loro sono sicure da condividere online."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "creare un programma per computer interattivo che esprima la loro identità con testo e immagini personalizzate."
         },
         "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
           "description": "interpretare la condivisione etica di materiale protetto da copyright rispetto alla condivisione che non è etica"
@@ -1207,6 +1234,15 @@
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
           "description": "usare funzioni predeterminate per completare attività ripetute"
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "descrivere l'impatto delle app mobili nel mondo di oggi."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "spiegare perché l'accessibilità è una parte importante della progettazione di un'app per gli utenti."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "migliorare la progettazione di un'app esistente affrontando le esigenze di accessibilità degli utenti."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "imparare a pianificare in anticipo un'attività da svolgere"

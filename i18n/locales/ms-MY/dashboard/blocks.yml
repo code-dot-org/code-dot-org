@@ -1466,15 +1466,6 @@ ms:
         text: "{SPRITE} fikir {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}fikir{TEXT1}selama{NUM}saat"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} fikir {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Saya juga lapar.
-            '"I only want the biggest goat."': Saya hanya mahu kambing yang paling besar.
-            '"I''m a green troll."': Saya troll hijau.
-            '"No one will cross my bridge."': Tiada siapa yang akan menyeberangi jambatan saya
       gamelab_spriteThink_fables2:
         text: "{SPRITE} fikir {THOUGHT}"
         options:

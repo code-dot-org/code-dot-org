@@ -49,6 +49,36 @@
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ"
         },
+        "csd3-2022/Shapes and Parameters": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "csd3-2022/Variables": {
+          "name": "អ​ថេរ"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "លេខចៃដន្យ"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "csd3-2022/Text": {
+          "name": "អត្ថ​​បទ"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "csd3-2022/Functions": {
+          "name": "អនុ​គមន៍"
+        },
+        "csd6-2022/Functions": {
+          "name": "អនុ​គមន៍"
+        },
         "courseb-2018/Your Digital Footprint": {
           "name": "Your Digital Footprint"
         },

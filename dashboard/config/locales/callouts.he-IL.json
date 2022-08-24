@@ -786,6 +786,96 @@
         },
         "New Sprite Lab Project": {
           "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "": " "
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "לחצו כאן על מנת להציג את הרשת."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "שנו את המספר כאן"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "שנו את המספר כאן"
         }
       }
     }

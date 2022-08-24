@@ -158,6 +158,129 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "სიხშირის ანალიზი"
         },
+        "csd5-2022/Representing Numbers": {
+          "name": "რიცხვების წარმოდგენა"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "პროექტი - შექმენით წარმოდგენა"
+        },
+        "csd5-2022/Interpreting Data": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "გადაწყვეტილების მიღება მონაცემებთან ერთად"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "შესავალი პრობლემების გადაწყვეტაში"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "რა არის კომპიუტერი?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "csd1-2022/Processing": {
+          "name": "დამუშავება"
+        },
+        "csd1-2022/Storage": {
+          "name": "საცავი"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "პროექტი - შემოგვთავაზეთ აპლიკაცია"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "ხატვა თამაშების ლაბორატორიაში"
+        },
+        "csd3-2022/Variables": {
+          "name": "ცვლადები"
+        },
+        "csd3-2022/Sprites": {
+          "name": "სპრაიტები"
+        },
+        "csd3-2022/Text": {
+          "name": "ტექსტი"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "ხატვის ციკლი"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "სპრაიტების მოძრაობა"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "პირობითი ბრძანებები"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "კლავიატურიდან შეყვანილი ინფორმაცია"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "პროექტი - ინტერაქტიული ბარათი"
+        },
+        "csd3-2022/Velocity": {
+          "name": "სიჩქარე"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "სპრაიტების რთული მოძრაობა"
+        },
+        "csd3-2022/Collisions": {
+          "name": "შეჯახებები"
+        },
+        "csd3-2022/Functions": {
+          "name": "ფუნქციები"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "თამაშის დიზაინის პროცესი"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "თამაშის დიზაინის პროცესის გამოყენება"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "პროექტი - შექმენით თამაშის დიზაინი"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "შესავალი HTML-ში"
+        },
+        "csd2-2022/Headings": {
+          "name": "სათაურები"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "ციფრული ნაკვალევი"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "ტექსტის გასტილვა CSS-ით"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "ინტელექტუალური ქონება"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "ელემენტების გასტილვა CSS-ით"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "მომხმარებლის მოთხოვნილებების განსაზღვრა"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "პროტოტიპების ტესტირება"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "აპლიკაციების ტესტირება"
+        },
+        "csd6-2022/Making Music": {
+          "name": "მუსიკის შექმნა"
+        },
+        "csd6-2022/Functions": {
+          "name": "ფუნქციები"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "ვისწავლოთ გადაადგილება"
         },

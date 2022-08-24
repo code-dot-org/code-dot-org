@@ -1682,3 +1682,5 @@ fi:
               display_name: 'Luku 2: Laitteiston syöte'
             lessonGroup-4:
               display_name: Kysely
+        soccer:
+          name: Jalkapallo

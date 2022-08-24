@@ -1,8 +1,10 @@
-@import 'color.scss';
+@import "color.scss";
 
 .progress-bubble {
   &.enabled {
-    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
+    transition:
+      background-color 0.2s ease-out,
+      border-color 0.2s ease-out,
       color 0.2s ease-out;
     &:hover {
       text-decoration: none;

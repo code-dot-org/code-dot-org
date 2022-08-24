@@ -1642,7 +1642,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
@@ -1731,7 +1731,7 @@ fr:
               display_name: Enquête
           student_description: Bienvenue dans l'Enquête de Mi-Année sur CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes--ton enseignant peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et pour Code.org afin de maintenir et améliorer le cours. Merci pour ton temps et considération.
         gamelab:
-          title: Labo des Jeux
+          title: Labo Jeux
           description: Didacticiels, face à l'enseignant, pour le développement dans le Labo des Jeux. Ces didacticiels vont au-delà des concepts couverts dans CSD.
           student_description: Didacticiels, face à l'enseignant, pour le développement dans le Labo des Jeux. Ces didacticiels vont au-delà des concepts couverts dans CSD.
         coursea-2019:
@@ -1762,7 +1762,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
@@ -2384,7 +2384,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             ramp_up:
               display_name: Progression
         time4cs-experiment-unit-1:
@@ -2403,7 +2403,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             ramp_up:
               display_name: Progression
         csp7-pilot:
@@ -2546,7 +2546,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
@@ -2609,7 +2609,7 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
               display_name: Fin du projet.
           student_description: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
@@ -2960,7 +2960,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
             lessonGroup-6:
@@ -3020,11 +3020,11 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
               display_name: Fin du projet.
             lessonGroup-7:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
         coursef-2021:
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
@@ -3038,7 +3038,7 @@ fr:
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
               display_name: Fin du projet.
             lessonGroup-8:
@@ -3587,7 +3587,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
             lessonGroup-6:
@@ -3674,7 +3674,7 @@ fr:
             csf_nested_loops:
               display_name: Instructions conditionnelles
             lessonGroup-7:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
               display_name: Fin du projet.
           description_audience: 'Âge : 8 à 12 ans'
@@ -3898,3 +3898,5 @@ fr:
               display_name: Bienvenue
         dlp-csp-mod1-2022:
           title: CS Principles Apprentissage Approfondi Module 1
+        soccer:
+          name: foot

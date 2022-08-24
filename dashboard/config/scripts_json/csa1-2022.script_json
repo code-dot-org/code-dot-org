@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:17:57 UTC",
+    "serialized_at": "2022-08-23 20:18:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -466,7 +466,7 @@
     },
     {
       "key": "lesson-21",
-      "name": "Console",
+      "name": "Sandbox: Console",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
@@ -481,7 +481,7 @@
     },
     {
       "key": "lesson-22",
-      "name": "The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
@@ -4280,7 +4280,13 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their chosen problem on Level 2.",
-        "progression_name": "Code Review: More PainterPlus Methods"
+        "progression_name": "Code Review: More PainterPlus Methods",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Conducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peer completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "38068426-5d74-4bfe-a003-e7957be7bfd9",

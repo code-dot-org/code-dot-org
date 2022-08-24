@@ -3809,7 +3809,16 @@
         "2-3 Artist 3": "Czy chcesz zobaczyć, co się stanie, kiedy będziemy powtarzać ten kształt wiele razy za pomocą pętli?",
         "Applab test": "Ten poziom można zgłosić. Tylko do testów!",
         "Test embedded Blockly in instructions": "Jako element blokowy powinniśmy być w stanie dołączyć XML reprezentujący prawidłowy blok Blockly lub bloki.\n\n<xml>\n  <block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nObsługujemy również Blockly XML jako element wbudowany, taki jak: <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>. Różnica w formacie wejściowym polega na tym, że ten jest osadzony w akapicie, podczas gdy poprzedni znajduje się we własnym bloku tekstowym. Różnica w wydajności jest porównywalna.",
-        "U1L4 NetSim SendAB": "Opracuj, udokumentuj i przetestuj protokół, który umożliwia używanie Internet Simulator do przekazywania wiadomości. Zobacz arkusz, aby uzyskać bardziej szczegółowe instrukcje."
+        "U1L4 NetSim SendAB": "Opracuj, udokumentuj i przetestuj protokół, który umożliwia używanie Internet Simulator do przekazywania wiadomości. Zobacz arkusz, aby uzyskać bardziej szczegółowe instrukcje.",
+        "CSD U3 L5 Freeplay_2022": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U3 Variables change circle size_2022": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U3 Variables naming rules v2_2022": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U3 Variables random with assignment_2022": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U5 black white images pixelation 2_2022": "Narysuj uśmiechniętą buźkę (kliknij tutaj aby zobaczyć obrazek)",
+        "CSD U5 black white images pixelation 3_2022": "Zmień szerokość i wysokość suwaka aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)",
+        "CSD U5 black white images pixelation 4_2022": "Dodaj brwi do uśmiechniętej\nbuźki (kliknij tutaj, aby zobaczyć obraz)",
+        "CSD U5 black white images pixelation 5_2022": "Teraz narysuj coś, co Ci się spodoba!",
+        "CSD U5 black white images pixelation_2022": "Uzupełnij kształt X poprzez\ndopisywanie zer i jedynek"
       }
     }
   }

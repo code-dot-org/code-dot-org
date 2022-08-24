@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:49:16.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -54,8 +50,8 @@
     "ai_enabled": "true",
     "callout_json": "[]",
     "reference_links": [
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/if-statements/"
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/if-statements-2"
     ],
     "video_key": "csp_applab_conditionals_2A",
     "ai_model_id": "j5MH8AtyV1sw",
@@ -70,6 +66,10 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:16.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:16.727+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-choice if quotes\\\"\"],\"cloned_from\":\"ml-models in applab-choice if quotes\"}]"

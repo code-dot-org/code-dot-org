@@ -639,7 +639,7 @@ it:
         C3_internet: Internet
         C3_crowdsourcing: Intelligenza collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
-        C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
+        C3_songwriting_with_parameters: Scrittura musicale di un programma - Parametri
         C4_intro: Introduzione
         C4_loops_zombie: Cicli
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
@@ -825,7 +825,7 @@ it:
         MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
         mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
         mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
-        hoc_dance_warmup: Ballando col codice - Introduzione
+        hoc_dance_warmup: Ballando col codice - Preparazione
         hoc_dance_events: Ballando col codice - Eventi
         hoc_dance_properties: Ballando col codice - Proprietà
         hoc_dance_congrats: Ballando col codice - Parte la festa!
@@ -904,6 +904,8 @@ it:
           McClain'
         codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor e Paula
           Mejia'
+        csf21pilot_events: 'Laboratorio dei personaggi: personaggi in azione'
+        csf21pilot_prompts: 'Laboratorio dei personaggi:  testo  e richieste all''utente'
         csd_ml_intro_to_ai_lab: Lezione 6
         playlab_2021: Introduzione al Laboratorio
         playlab_2021_reader: Introduzione al Laboratorio
@@ -941,6 +943,10 @@ it:
         poemart_events: L'arte della poesia - Eventi
         poemart_imagery: L'arte della poesia  - Metafore
         poemart_celebration: L'arte della poesia  - Celebrazione
+        outbreak_intro: Simulatore di focolaio - Introduzione
+        outbreak_events: Simulatore di focolaio - Eventi
+        outbreak_scientist: Simulatore di focolaio - Pensa come uno scienziato
+        outbreak_outro: Simulatore di focolaio - Gioco libero
         CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
         PL_CS_Journeys_Overview: CS Journeys
         csp_applab_parameters: Funzioni con parametri
