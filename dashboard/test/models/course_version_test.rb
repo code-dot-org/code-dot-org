@@ -45,6 +45,8 @@ class CourseVersionTest < ActiveSupport::TestCase
     @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-112', version_year: '1991', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@partner_unit)
 
+    UnitGroup.clear_cache
+    Script.clear_cache
     populate_cache
   end
 
