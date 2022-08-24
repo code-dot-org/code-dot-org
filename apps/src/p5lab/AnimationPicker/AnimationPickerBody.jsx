@@ -1,13 +1,12 @@
 /** Body of the animation picker dialog */
 import PropTypes from 'prop-types';
 import React from 'react';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import * as dialogStyles from './styles';
-import AnimationPickerListItem, {
-  getCategory
-} from './AnimationPickerListItem.jsx';
+import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
@@ -17,7 +16,6 @@ import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
-import style from './animation-picker-body.module.scss';
 
 const MAX_SEARCH_RESULTS = 40;
 
@@ -129,7 +127,7 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   onCategoryChange = event => {
-    const categoryQuery = getCategory(event.target);
+    const categoryQuery = event.target.className;
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery
@@ -213,6 +211,7 @@ export default class AnimationPickerBody extends React.Component {
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
+
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -233,13 +232,13 @@ export default class AnimationPickerBody extends React.Component {
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div className={style.navigation}>
+          <div style={styles.navigation}>
             {categoryQuery !== '' && (
-              <div className={style.breadCrumbs}>
+              <div style={styles.breadCrumbs}>
                 {this.props.navigable && (
                   <span
                     onClick={this.onClearCategories}
-                    className={style.allAnimations}
+                    style={styles.allAnimations}
                   >
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
@@ -258,7 +257,7 @@ export default class AnimationPickerBody extends React.Component {
             {' '}
             {(searchQuery !== '' || categoryQuery !== '') &&
               results.length === 0 && (
-                <div className={style.emptyResults}>
+                <div style={styles.emptyResults}>
                   {msg.animationPicker_noResultsFound()}
                 </div>
               )}
@@ -287,7 +286,7 @@ export default class AnimationPickerBody extends React.Component {
           </ScrollableList>
         </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div className={style.footer}>
+          <div style={styles.footer}>
             <Button
               className="ui-test-selector-done-button"
               text={msg.done()}
@@ -301,9 +300,40 @@ export default class AnimationPickerBody extends React.Component {
   }
 }
 
+export const UnconnectedAnimationPickerBody = Radium(AnimationPickerBody);
+
 export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
 );
 WarningLabel.propTypes = {
   children: PropTypes.node
+};
+
+const styles = {
+  allAnimations: {
+    color: color.purple,
+    fontFamily: "'Gotham 7r', sans-serif",
+    cursor: 'pointer'
+  },
+  breadCrumbs: {
+    margin: '8px 0',
+    fontSize: 14,
+    display: 'inline-block'
+  },
+  pagination: {
+    float: 'right',
+    display: 'inline',
+    marginTop: 10
+  },
+  emptyResults: {
+    paddingBottom: 10
+  },
+  navigation: {
+    minHeight: 30
+  },
+  footer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    marginTop: 5
+  }
 };

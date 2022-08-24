@@ -2,8 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 const msg = require('@cdo/locale');
-import AnimationPickerBody, {
-  WarningLabel
+import {
+  WarningLabel,
+  UnconnectedAnimationPickerBody as AnimationPickerBody
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
 import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
