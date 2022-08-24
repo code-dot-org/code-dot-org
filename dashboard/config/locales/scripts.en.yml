@@ -8536,3 +8536,14 @@ en:
         katie-practice:
           lessons: {}
           lesson_groups: {}
+        music-2022:
+          lessons:
+            lesson-1:
+              name: Getting started
+          lesson_groups: {}
+          name: music-2022
+          title: Music
+          description_audience: ''
+          description_short: Let's make music.
+          description: ''
+          student_description: ''
