@@ -119,7 +119,7 @@ export default class PrincipalApprovalButtons extends React.Component {
           bsSize="xsmall"
           target="_blank"
           onClick={buttonOnClick}
-          style={styles.button}
+          style={styles.element}
           // This button is disabled if the other action is pending (which will be rendered as a spinner)
           disabled={!!this.state.changeRequirementRequest}
         >
@@ -147,7 +147,7 @@ export default class PrincipalApprovalButtons extends React.Component {
         bsSize="xsmall"
         target="_blank"
         onClick={this.handleChangeRequiredStatus}
-        style={styles.button}
+        style={styles.element}
         // This button is disabled if the other action is pending (which will be rendered as a spinner)
         disabled={!!this.state.sendEmailRequest}
       >
@@ -159,6 +159,9 @@ export default class PrincipalApprovalButtons extends React.Component {
   render() {
     return (
       <div>
+        <div style={styles.element}>
+          {this.state.approvalRequired ? 'Is Required' : 'Not Required'}
+        </div>
         {this.state.showSendEmailButton && this.renderSendEmailButton()}
         {this.state.showChangeRequirementButton &&
           this.renderChangeRequirementButton()}
@@ -168,10 +171,7 @@ export default class PrincipalApprovalButtons extends React.Component {
 }
 
 const styles = {
-  button: {
-    marginTop: 10,
-    marginBottom: 10,
-    marginLeft: 5,
-    marginRight: 5
+  element: {
+    margin: 5
   }
 };
