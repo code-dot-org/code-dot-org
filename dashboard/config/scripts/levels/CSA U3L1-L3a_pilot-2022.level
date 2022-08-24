@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A social media analyst wants to create a list of the number of Twitter followers for Beyonce, Stephen Curry, Lena Waithe, Glory Edim, and Kezia Williams (in order).\r\n\r\n##In SocialMediaAnalyzer.java:\r\n\r\n1. Write the `createNumFollowers()`(#e7e8ea) method to declare, initialize, and return an `int`(#e7e8ea) array using an initializer list. The array should contain the following values:\r\n\r\n```\r\n15360340, 13716022, 189690, 53274, 4625\r\n```\r\n\r\n2. Write the `getNumUsers()`(#e7e8ea) method to return the length of the `numFollowers`(#e7e8ea) array.\r\n\r\n##In MyConsole.java:\r\n\r\n3. Call the `getNumUsers()`(#e7e8ea) method and print the result.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://interactives.theroot.com/root-100-2019/)!*\r\n\r\n::: details [**Show Me How**]\r\nA 1D array is declared and initialized with an initializer list using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = {value1, value2, . . . };\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. Inside the curly braces ( `{ }`(#e7e8ea) ), list the values the array will store.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Twitter Followers",
+    "bubble_choice_description": "Create a 1D array to store the number of Twitter followers each user has.",
+    "thumbnail_url": "https://images.code.org/af9302ce0059f1572d8ff047ef429243-image-1648484465356.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    SocialMediaAnalyzer mySocialMedia = new SocialMediaAnalyzer();\n    \n    // TO DO #3: Call the getNumUsers() method and print the result.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "SocialMediaAnalyzer.java": {
+        "text": "/*\n * Manages data for social media services\n */\npublic class SocialMediaAnalyzer {\n\n  private int[] numFollowers;\n\n  /*\n   * Creates a SocialMediaAnalyzer by initializing the numFollowers array\n   */\n  public SocialMediaAnalyzer() {\n    this.numFollowers = createNumFollowers();\n  }\n\n  /*\n   * Creates and returns an array containing the number of followers for each user\n   */\n  public int[] createNumFollowers() {\n    // TO DO #1: Declare, initialize, and return an int array containing the values.\n\n    \n  }\n\n  /*\n   * Returns the number of users in the numFollowers array\n   */\n  public int getNumUsers() {\n    // TO DO #2: Return the length of the numFollowers array.\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M3OPqE6G99egM4/ESLS\nHxM0EwCrac+6F9A9Baxd1ehKo4c32OmQVK2nRsVz7jk/VGkXDhz5dSiqjCTF\nOB78BpBVaZFIhaAIJ2v7BQ3D8+oH7osH/pRJ00i1f7Kc7VE+rC7mMxOyIgZU\nt/mlxdM1WUcp9815bz+ffRAPaNquAZ/nr7TIoe0H+71hThUAayRxjxO1h2vR\nGfUarNWPFjUOvnlO9M2qMEA2TlxCxRwZ9fXXLGX7wZU3H6dJgLhQfpihgAv0\nPQ+5Z2M2DBUoGkUVNcFbYDHGVi0/CbYwI7qoSujoE41FZV6D2Jcd61jeOuJc\nTkXmUrpbk35gR/HAeZXAdGuAhNPY+FxqVikeOuacyMD7ISfMQ9IMVeJUkj+7\njGG4TVwvTeqWLHv6W2vr1OQSGZ9RKoidLu2RA5e+070CbCOX9HU+86sW5cJW\n2/LRVLp6x7Kcbs6JMK6lBN0DeFe7EMutR6SIW6KNyFL+0quJ5PHVeHkWPyMK\nYKKB9l76CTRTsVrHybvXNadR7vOW/2fsrpElz4Zau4tCjt39Klrhn/YsIy46\nDJXRz17I+GWivKQWUeN7X+Vn9ESeE6dyprWW73h5XiX6ItTJ5E7Sy9RGb1uT\n7bymBaNxPsijWuZf6Zn82rYnshG1gkD6U7REcorg6eUKK/k6vk2r1IKnxc8D\naLCQuXmVLVb8qUgNH1bYHeH1ViLoVVK2ZIQXa7ArcdZiOVC/AtxKZP6drJ2N\nHQSkl2WcOWtqzjiraVOeYknQvq9AKw5WeblPB+nVTC6Wlu+E9RcuK/42frqy\nb+V+uiWVB7t7HuNL1AkhVFsreyvzOtEFSddvxL3+CYC50tTD46LraXLxOYCg\npNdBVuZbO96z7kb0NaA7Sy9Otx5DPNfuNWqcpkxellqEj2iLxdFZyeG7BwVG\nab8tw5X91UerVtxuY/1zF7ThT3BCJIg8/hgKQRc6IYb7xSPpE56VITku9GZ/\nKmjDFKdc050EAqb2+MF6yw72JhW21ldDgPUqjhK7KC/nLQbaG7BeJx238XgX\nuQHN1J8qh4pAwPq2lVSRp2YbtKvq1Lfg2WFob/KVAXyEDPN2KNVP/3Fd2mTd\nKZXxHLKpnjKoyaywzlQgP5DmQYTWqNUVAI0XOPTCSoYBKP8NVWVHSMJ+LA9A\nL7BUO8lqNBFEyMgeAJhUBScvYxArxp1SUmNrmb4U1fZ1beHHJNv3JmUooT8M\neH5H99GCsczHj155dbMvSDWbUmHx/UETyg4YbYD9WoTGSA7nuONb0sTH1/1w\nLvfX7bzJG9OoqJ/tt2BxaWSPp/8a6BxxI7GIXr13gTm6cUIEfni4ubHoLQQB\nBFVym9bAqi8h71+XusHr1cqkmaLSZTziU+/kbYECYsxe6mYkNwbuqqvWIN3R\n5qp77DObyOLrMRh2Zf/YbBmy9sgq6G2E6ofmpjzzV19axQi0DJaz+YtB6bGj\nTcm2GCS0vfSTEt9cMwv5aVX9/So2I077zvUjlafANkqg7Ggal4jIDpVFAs85\ni27QhaDPVMnxaYp72oVdp/tsPcs+vf7G+1wRHlPE1bNpgrbBWI4txHWOaHez\nEw==\n",
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:00.512+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L3a_2022\\\"\"],\"cloned_from\":\"CSA U3L1-L3a_2022\"}]"
+}]]></config>
+</Javalab>
