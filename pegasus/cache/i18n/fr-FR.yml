@@ -1391,7 +1391,7 @@ fr-FR:
   hoc-encryption_name: Cryptage simple
   text-compression_name: Compression de texte
   applab_name: Labo des applis
-  gamelab_name: Labo des Jeux
+  gamelab_name: Labo Jeux
   basketball_name: Faire un match de basket
   sports_name: Coder ton propre jeu de sports
   applab_gradelevel: 'Âge recommandé: 13 ans et plus'
@@ -2297,9 +2297,9 @@ fr-FR:
     de nos navigateurs supportés</a>. Vous pouvez essayer d’afficher la page, mais
     la fonctionnalité risque d’être rompue.
   compatibility_unsupported_browser_markdown: 'Votre navigateur n''est pas compatible.
-    Merci de mettre votre navigateur à jour avec [un des navigateurs compatibles avec
-    nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page,
-    mais les fonctionnalités risquent d’être compromises. '
+    Merci de mettre votre navigateur à jour avec [l''un des navigateurs compatibles
+    avec nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher
+    la page, mais les fonctionnalités risquent d’être compromises. '
   flappy_shortcode: battre des ailes
   header_home: Accueil
   header_my_dashboard: Mon Tableau de Bord
@@ -2337,7 +2337,7 @@ fr-FR:
   header_help_support: 'Aide et support '
   header_report_bug: Signaler un problème
   header_report_abuse: Signaler un abus
-  header_legal: Confidentialité et légal
+  header_legal: Confidentialité et mentions légales
   header_legal_privacy: Politique de confidentialité
   header_legal_tos: Conditions Générales d'Utilisation
   header_tutorials: Didacticiels
@@ -2359,7 +2359,7 @@ fr-FR:
   user_header_create: 'Créer '
   user_header_applab: 'Labo des applis '
   user_header_artist: 'Artiste '
-  user_header_gamelab: Labo des Jeux
+  user_header_gamelab: Labo Jeux
   user_header_playlab: Labo de jeux
   user_header_dance: Soirée Dansante
   user_header_spritelab: Le Labo des Lutins
@@ -2710,7 +2710,7 @@ fr-FR:
   footer_powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des
     marques déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans
     d''autres pays. '
-  footer_built_on_github: Construit sur GitHub de Microsoft
+  footer_built_on_github: Construit avec GitHub de Microsoft
   codebytes_skinny_banner_title: Rejoignez-nous du 7 au 11 décembre pour nos mini-leçons
     en direct CodeBytes !
   codebytes_skinny_banner_description: 'Rejoignez-nous chaque jour de la CS Education
@@ -2726,7 +2726,7 @@ fr-FR:
   footer_partners: Partenaires
   footer_blog: Blogue
   footer_donate: Donner
-  footer_store: Magasin
+  footer_store: Boutique
   footer_support: Assistance
   footer_terms: Conditions Générales
   ai_for_oceans: IA pour les Océans

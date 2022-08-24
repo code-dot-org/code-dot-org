@@ -1,0 +1,365 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:21:22.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "start_sources": {
+      "MyNeighborhood.java": {
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    myPainter.move();\n    myPainter.move();\n\n    myPainter.turnLeft();\n    myPainter.turnLeft();\n    myPainter.turnLeft();\n\n    myPainter.move();\n\n    myPainter.takePaint();\n\n    myPainter.move();\n    myPainter.paint(\"white\");\n    \n  }\n}\n",
+        "isVisible": true
+      }
+    },
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 1,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "long_instructions": "##Debug the Program\r\n\r\nThis program is supposed to make the `Painter`(#e7e8ea) object paint the space in front of the paint bucket, but it has an error!\r\n\r\nFind and fix the error in this program.\r\n\r\n![](https://images.code.org/37c67e427de97e635ebb3877dc6374fb-image-1646321106628.gif)\r\n\r\n::: details [**Show Me How**]\r\nThe `cannot find symbol`(#e7e8ea) error means that Java does not know what `myPainter`(#e7e8ea) is supposed to refer to. Was a `Painter`(#e7e8ea) object called `myPainter`(#e7e8ea) instantiated?\r\n:::",
+    "teacher_markdown": "Remind students to refer to the console for error messages and consider the meaning of the errors. The `cannot find symbol` error means that Java doesn't know what the reference variable is supposed to point to. Ask probing questions to help students interpret the meaning of the error and find that the `Painter` object was not first instantiated.",
+    "encrypted_exemplar_sources": "KNjm63MQ86iRZeyLht9Rk62smWHrvRJhg0SD7xLvYFTaHwb0EQYXEmT5IITQ\ncca8Lh8O1Wu/l6FsLjsjAuLQ3mldl9rcgJNoCMW46cQPqLAq6y7Exa1O+DPR\ngdRCfANRJfwOBD6UyZJciGgXRbK3U4OcD9mUTHpbAOhsOwtnDLbeClEuBcci\nwAdVHjldw0/6KrUyBefsIWX6zx+VjhmH0cRlVouCmFoSlcTvd3IK5F8ILFa9\nq7D42YCisvyJpyVREeRRgU9MQXqEGCmtiueZDh0eid2//5+3hRV+4g7MgeKK\njf0q7kVTMefqJNQTHnpDdMS05BIMTwn/Zk+jb8gSCqrvI11Pf0yMuFxEo+hI\nu1+RgXjvYWYPcqsEhhjdtkpKdSROS7+zCjrI+Bgf4ubE3gpic6afJthaD/dT\nxItdq/DdS2v6ty1SKoe8mRLTzfuFk60lygIMdvvHHyhomMoSFm7m6hYPTcPD\nc772YPsqXqfxi3aQwbZT0RvfMMsrnTC9gHQkzEBWRNO3YyW74L5OIwI/f8ug\nZZ5J9KvGn8PzUHmv33ZZQ3Z7vEzjuGGYyOcG/MjjWi0BKRGnnEOw4Elu91MT\nfCNmCpOWCN6wxJbKN1Q=\n",
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:22.855+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L5_2022\\\"\"],\"cloned_from\":\"CSA U1L4-L5_2022\"}]"
+}]]></config>
+</Javalab>
