@@ -237,20 +237,21 @@ export default class SpriteUpload extends React.Component {
 
     return (
       <div>
-        <a href="/sprites">Back to Sprite Management</a>
-        <h1>Sprite Lab Sprite Upload</h1>
+        <a href="/sprites">Back to Asset Management</a>
+        <h1>Sprite Lab Animation Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <h2 style={styles.spriteUploadStep}>
-            Step 1: Select where the sprite should be uploaded
+            Step 1: Select how the animation should be uploaded
           </h2>
-          <h3>Sprite Category:</h3>
+          <h3>Destination:</h3>
           <p>
-            Select whether the sprite should only be available in a specific
-            level or whether it should be available in the sprite library.
+            Select whether the animation (sprite costume or background) should
+            available just in certain curriculum levels or whether it should be
+            available in the Costume/Background Library.
           </p>
           <div>
             <label>
-              Level-specific sprite:
+              Level-specific animation:
               <input
                 type="radio"
                 name="spriteAvailability"
@@ -260,7 +261,7 @@ export default class SpriteUpload extends React.Component {
               />
             </label>
             <label>
-              Library sprite:
+              Library animation:
               <input
                 type="radio"
                 name="spriteAvailability"
@@ -294,10 +295,10 @@ export default class SpriteUpload extends React.Component {
           )}
 
           <h2 style={styles.spriteUploadStep}>
-            Step 2: Select the sprite to upload
+            Step 2: Select an animation image to upload
           </h2>
           <label>
-            <h3>Select Sprite to Add to Library:</h3>
+            <h3>Choose a file from your computer:</h3>
             <p>Filename cannot contain spaces or capital letters.</p>
             <input
               type="file"
@@ -308,7 +309,7 @@ export default class SpriteUpload extends React.Component {
           </label>
           <br />
           <label>
-            <h3>Image Preview:</h3>
+            <h3>Animation Preview:</h3>
             <img ref="spritePreview" src={filePreviewURL} />
           </label>
           {badImageFile && (
@@ -323,11 +324,12 @@ export default class SpriteUpload extends React.Component {
           )}
           <br />
 
-          <h2 style={styles.spriteUploadStep}>
-            Step 3: Generate metadata for the sprite
-          </h2>
+          <h2 style={styles.spriteUploadStep}>Step 3: Generate metadata</h2>
           <label>
-            <h3>Enter the aliases for this sprite</h3>
+            <h3>
+              Enter the aliases for this{' '}
+              {category === 'backgrounds' ? 'background' : 'sprite costume'}
+            </h3>
             <p>
               Separate aliases by commas. Example: "peach, stonefruit,
               delicious"
@@ -335,7 +337,7 @@ export default class SpriteUpload extends React.Component {
             <input type="text" onChange={this.handleAliasChange} />
           </label>
           <button type="button" onClick={this.generateMetadata}>
-            Generate Sprite Metadata
+            Generate Metadata
           </button>
           <h3>Metadata JSON</h3>
           {!!this.state.metadata && (
@@ -348,7 +350,7 @@ export default class SpriteUpload extends React.Component {
           {!uploadButtonDisabled && (
             <div>
               <h2 style={styles.spriteUploadStep}>
-                Step 4: Upload the sprite and metadata to sprite library
+                Step 4: Upload the image file and metadata to library
               </h2>
               <button type="submit">Upload to Library</button>
             </div>
