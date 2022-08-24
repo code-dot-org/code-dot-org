@@ -348,6 +348,12 @@ export default class CoreLibrary {
     return Object.keys(this.nativeSpriteMap).length;
   }
 
+  getCappedNumSprites(numRequested) {
+    const numSpritesSoFar = this.getNumberOfSprites();
+    const numSpritesPossible = Math.max(0, MAX_NUM_SPRITES - numSpritesSoFar);
+    return Math.min(numRequested, numSpritesPossible);
+  }
+
   getLastSpeechBubbleForSpriteId(spriteId) {
     const speechBubbles = this.speechBubbles.filter(
       ({sprite}) => sprite.id === parseInt(spriteId)

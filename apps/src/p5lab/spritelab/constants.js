@@ -102,4 +102,3 @@ export const exampleSprites = {
 // this results in hanging the tab and students unable to edit their blocks. We
 // guard against this by capping numbers where needed.
 export const MAX_NUM_SPRITES = 1000;
-// export const TEXT_BIG_NUMBER_GUARD = 250;
