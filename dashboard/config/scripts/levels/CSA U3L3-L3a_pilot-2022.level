@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:07.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U3L3-L3a PBT_pilot-2022",
+    "long_instructions": "The `TexasWeather`(#e7e8ea) class has instance variables for the name of the city and a 1D array containing temperatures for the specified city.\r\n\r\n##In TexasWeather.java:\r\n\r\nWrite the method `getTemperatures()`(#e7e8ea) to return a `String`(#e7e8ea) containing the values in its instance variable `temperatures`(#e7e8ea). In the method `getTemperatures()`(#e7e8ea),\r\n\r\n1. Write a `for`(#e7e8ea) loop to traverse the `temperatures`(#e7e8ea) array and concatenate each value to the `result`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `getTemperatures()`(#e7e8ea) method on the `dfw`(#e7e8ea) object and print the result.\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n\r\nWrite a Boolean expression to establish the condition that the loop should continue.\r\n\r\nChange the `variableName`(#e7e8ea) by some value, like increasing by `1`(#e7e8ea) each time.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Daily Temperatures",
+    "bubble_choice_description": "Use a for loop to print the daily temperatures stored in a 1D array.",
+    "thumbnail_url": "https://images.code.org/07f352265475de7414b4b6b05adaf482-image-1648558812658.png",
+    "encrypted_exemplar_sources": "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\nM84ROinC\n",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    double[] dfwTemperatures = {72.13, 61.69, 59.58, 60.15, 66.41};\n    TexasWeather dfw = new TexasWeather(\"Dallas-Fort Worth\", dfwTemperatures);\n\n    // TO DO #2: Call the getTemperatures() method and print the result.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "TexasWeather.java": {
+        "text": "/*\n * Represents the weather in Texas\n */\npublic class TexasWeather {\n\n  private String city;              // the name of the city\n  private double[] temperatures;    // array containing the average temperatures\n\n  /*\n   * Constructor to create a TexasWeather object with a\n   * specified city name and array of temperatures\n   */\n  public TexasWeather(String city, double[] temperatures) {\n    this.city = city;\n    this.temperatures = temperatures;\n  }\n\n  /*\n   * Returns the name of the city\n   */\n  public String getCity() {\n    return city;\n  }\n\n  /*\n   * Returns the temperatures array\n   */\n  public double[] getAllTemperatures() {\n    return temperatures;\n  }\n\n  /*\n   * Returns a String containing each value in the temperatures array\n   */\n  public String getTemperatures() {\n    String result = \"\";\n\n    // TO DO #1: Write a for loop to traverse the temperatures\n    // array to create a String containing each value.\n\n    \n\n    return result;\n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:07.696+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L3a_2022\\\"\"],\"cloned_from\":\"CSA U3L3-L3a_2022\"}]"
+}]]></config>
+</Javalab>

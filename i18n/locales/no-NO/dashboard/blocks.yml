@@ -1419,6 +1419,7 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+            '"space"': mellomrom
             '"w"': V
             '"a"': A
             '"s"': S
@@ -1430,6 +1431,7 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+            '"space"': mellomrom
             '"w"': V
             '"a"': A
             '"s"': S
@@ -1447,6 +1449,7 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+            '"space"': mellomrom
       Poetry_addFrame:
         options:
           BRUSH:

@@ -3184,3 +3184,5 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Добро пожаловать
+        soccer:
+          name: футбол

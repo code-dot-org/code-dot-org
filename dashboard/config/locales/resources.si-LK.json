@@ -2,6 +2,78 @@
   "si-LK": {
     "data": {
       "resources": {
+        "computer_science_practices/csd/2022": {
+          "type": "අන්තරාවලෝකනය"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "variables/csd/2022": {
+          "name": "විචල්‍යන්"
+        },
+        "variables_3/csd/2022": {
+          "name": "විචල්‍යන්"
+        },
+        "text/csd/2022": {
+          "name": "පෙළ"
+        },
+        "conditionals/csd/2022": {
+          "name": "කන්ඩිෂනලස්"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "functions/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_1/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_4/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "lists/csd/2022": {
+          "name": "ලැයිස්තු"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "variables_1/csd/2022": {
+          "name": "විචල්‍යන්"
+        },
+        "variables_2/csd/2022": {
+          "name": "විචල්‍යන්"
+        },
+        "functions_2/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_3/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "පරාමිතියන් සහිත ශ්‍රිත"
+        },
+        "functions_5/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
         "lesson_plans/courseb/2018": {
           "name": "පාඩම් සැලසුම්"
         },

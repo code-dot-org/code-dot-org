@@ -80,9 +80,6 @@
         "csta/CS": {
           "description": ""
         },
-        "ngss/ETS1": {
-          "description": ""
-        },
         "ai4k12-2021/3-A-ii": {
           "description": ""
         },
@@ -99,6 +96,9 @@
           "description": ""
         },
         "ai4k12-2021/3-C-iii": {
+          "description": ""
+        },
+        "ngss/ETS1": {
           "description": ""
         }
       }

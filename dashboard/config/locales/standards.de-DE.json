@@ -2,6 +2,18 @@
   "de-DE": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Bestimmen Sie die Bedeutung von Wörtern und Sätzen, wie sie in einem Text verwendet werden, und unterscheiden Sie dabei zwischen wörtlicher und nicht-wörtlicher Rede."
+        },
+        "ccela/4.RL.7": {
+          "description": "Stellen Sie Verbindungen zwischen dem Text einer Geschichte oder eines Dramas und einer visuellen oder mündlichen Darstellung des Textes her und erkennen Sie, wo jede Version bestimmte Beschreibungen und Anweisungen im Text wiedergibt."
+        },
+        "ccela/5.RL.4": {
+          "description": "Bestimmen Sie die Bedeutung von Wörtern und Sätzen, wie sie in einem Text verwendet werden, einschließlich bildhafter Sprache wie Metaphern und Gleichnisse."
+        },
+        "ccela/5.RL.7": {
+          "description": "Analysieren Sie, wie visuelle und multimediale Elemente zur Bedeutung, zur Stimmung oder zur Schönheit eines Textes beitragen (z. B. Graphic Novel, multimediale Präsentation von Fiktion, Volksmärchen, Mythen, Gedichten)."
+        },
         "csta/1B-AP-10": {
           "description": "Programme erstellen, die Sequenzen, Ereignisse, Schleifen und Konditionalitäten enthalten."
         },
@@ -191,20 +203,38 @@
         "csta/1A-AP-14": {
           "description": "Fehler in einem Algorithmus oder Programm, das Sequenzen und einfache Schleifen enthält, zu identifizieren und zu beheben."
         },
+        "csp2021/IOC-2.B.5": {
+          "description": "Verschlüsselung ist der Prozess der Verschlüsselung von Daten, um unbefugten Zugriff zu verhindern. Entschlüsselung ist der Prozess der Entschlüsselung der Daten. Es gibt zwei gängige Verschlüsselungsansätze: ● Bei der symmetrischen Verschlüsselung wird ein Schlüssel sowohl für die Verschlüsselung als auch für die Entschlüsselung verwendet.● Bei der Verschlüsselung mit öffentlichem Schlüssel wird ein öffentlicher Schlüssel für die Verschlüsselung und ein privater Schlüssel für die Entschlüsselung verwendet. Der Absender benötigt den privaten Schlüssel des Empfängers nicht, um eine Nachricht zu verschlüsseln, aber der private Schlüssel des Empfängers ist erforderlich, um die Nachricht zu entschlüsseln. AUSSCHLUSSERKLÄRUNG (EKIOC-2.B.5): Spezifische mathematische Verfahren zur Ver- und Entschlüsselung liegen außerhalb des Rahmens dieses Kurses und der AP-Prüfung."
+        },
+        "csta/3A-NI-06": {
+          "description": "Empfehlen Sie Sicherheitsmaßnahmen für verschiedene Szenarien auf der Grundlage von Faktoren wie Effizienz, Machbarkeit und ethische Auswirkungen."
+        },
+        "csta/3A-NI-07": {
+          "description": "Vergleichen Sie verschiedene Sicherheitsmaßnahmen und berücksichtigen Sie dabei Kompromisse zwischen der Benutzerfreundlichkeit und der Sicherheit eines Computersystems."
+        },
+        "csta/3B-NI-04": {
+          "description": "Vergleichen Sie, wie Softwareentwickler Geräte und Informationen vor unbefugtem Zugriff schützen."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "Datenkomprimierung reduziert die Größe (Anzahl der Bits) der übertragenen oder gespeicherten Daten."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Weniger Bits bedeutet nicht weniger Informationen."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "Wie stark sich die Größe durch die Komprimierung verringert, hängt sowohl von der Redundanz der ursprünglichen Datendarstellung als auch vom angewendeten Komprimierungsalgorithmus ab."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Komprimierungsalgorithmen ohne Datenverluste reduzieren in der Regel die Anzahl der gespeicherten und übertragenen Bits und garantieren gleichzeitig die komplette Rekonstruktion der Originaldaten."
+        },
+        "csta/3A-DA-10": {
+          "description": "Bewerten Sie die Kompromisse bei der Organisation der Datenelemente und beim Speicherort der Daten."
+        },
         "csta/1B-CS-01": {
           "description": "Beschreiben Sie, wie interne und externe Teile von Computergeräten funktionieren und ein System bilden."
         },
         "csta/1B-CS-02": {
           "description": "Modellieren, wie Computerhardware und -software als System zusammenarbeiten, um Aufgaben zu bewältigen."
-        },
-        "csta/1A-CS-03": {
-          "description": "Beschreibung grundlegender Hardware- und Softwareprobleme unter Verwendung präziser Terminologie."
-        },
-        "csta/1A-AP-10": {
-          "description": "Programme mit Sequenzen und einfachen Schleifen entwickeln, um Ideen auszudrücken oder ein Problem zu lösen."
-        },
-        "csta/1B-IC-18": {
-          "description": "Bespreche die Computertechnologien welche die Welt verändert haben, und mache deutlich wie diese Technologien die Kultur beeinflussen und, umgekehrt, wie kulturelle Praktiken die Technologie beeinflusst haben."
         },
         "csta/1B-AP-11": {
           "description": "Dekomposition (Zerlegung) von Problemen in kleinere, überschaubare Teilprobleme, um den Programmentwicklungsprozess zu erleichtern."
@@ -212,14 +242,26 @@
         "csta/1B-NI-05": {
           "description": "Erörtern Sie reale Probleme der Cybersicherheit und wie persönliche Daten geschützt werden können."
         },
-        "csta/1B-AP-09": {
-          "description": "Programme erstellen, die Variablen zum Speichern und Ändern von Daten verwenden."
-        },
         "csta/1B-IC-21": {
           "description": "Verwenden Sie gemeinfreie oder Creative-Commons-Medien und unterlassen Sie das Kopieren oder Verwenden von Material, das von anderen ohne Genehmigung erstellt wurde."
         },
+        "csta/1B-IC-18": {
+          "description": "Bespreche die Computertechnologien welche die Welt verändert haben, und mache deutlich wie diese Technologien die Kultur beeinflussen und, umgekehrt, wie kulturelle Praktiken die Technologie beeinflusst haben."
+        },
         "csta/1B-AP-14": {
           "description": "Beachten Sie die Rechte an geistigem Eigentum und geben Sie bei der Erstellung oder beim Remixen von Programmen die entsprechenden Urheberrechte an."
+        },
+        "csta/1A-CS-03": {
+          "description": "Beschreibung grundlegender Hardware- und Softwareprobleme unter Verwendung präziser Terminologie."
+        },
+        "csta/1A-AP-10": {
+          "description": "Programme mit Sequenzen und einfachen Schleifen entwickeln, um Ideen auszudrücken oder ein Problem zu lösen."
+        },
+        "csta/1B-AP-09": {
+          "description": "Programme erstellen, die Variablen zum Speichern und Ändern von Daten verwenden."
+        },
+        "csta/1B-DA-07": {
+          "description": "Zeigen Sie anhand der Daten Ursache-Wirkungs-Beziehungen oder sagen Sie Ergebnisse vorher oder kommunizieren Sie eine Idee."
         },
         "csta/1B-AP-17": {
           "description": "Beschreiben Sie die während der Programmentwicklung getroffenen Entscheidungen anhand von Codekommentaren, Präsentationen und Demonstrationen."

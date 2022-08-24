@@ -43,6 +43,664 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "representation_matters/csd/2022": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representation_matters_1/csd/2022": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representation_matters_2/csd/2022": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representing_information/csd/2022": {
+          "name": "Pagrepresenta ng Impormasyon"
+        },
+        "patterns_and_representation/csd/2022": {
+          "name": "Mga Pattern at Representasyon"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "ASCII at Binary na Representasyon"
+        },
+        "representing_images/csd/2022": {
+          "name": "Pagkakatawan sa mga Larawan"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "representing_numbers/csd/2022": {
+          "name": "Pagrepresenta ng mga Numero"
+        },
+        "representing_numbers_1/csd/2022": {
+          "name": "Pagrepresenta ng mga Numero"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Pagsasama-sama ng mga Representasyon"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Pagiging Sekreto ng mga Datos"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Pagmumuni-muni"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubric"
+        },
+        "structuring_data/csd/2022": {
+          "name": "Pagsasaayos ng mga Datos"
+        },
+        "structuring_data_1/csd/2022": {
+          "name": "Pagsasaayos ng mga Datos"
+        },
+        "interpreting_data/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting_data_1/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting_data_2/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting_data_3/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "making_decisions_with_data_1/csd/2022": {
+          "name": "Paggawa ng mga Desisyon na may mga Datos"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "Paggawa ng mga Desisyon na may mga Datos"
+        },
+        "automating_data_decisions/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "automating_data_decisions_1/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "automating_data_decisions_2/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "automating_data_decisions_3/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "name": "Mga Datos sa Tunay na Mundo"
+        },
+        "data_in_the_real_world_1/csd/2022": {
+          "name": "Mga Datos sa Tunay na Mundo"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2022": {
+          "name": "Paglutas ng Problema kasama ang Malalaking mga Datos"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "Video: Epekto sa Lipunan",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Machine Learning",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "Video: Data ng Pagsasanay at Pagkiling",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubric"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "intro_to_problem_solving/csd/2022": {
+          "name": "Panimula sa Paglutas ng Problema"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "Pagtuklas sa Paglutas ng Problema"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Ano ang isang Kompyuter?"
+        },
+        "input_and_output/csd/2022": {
+          "name": "Input at Output"
+        },
+        "input_and_output_1/csd/2022": {
+          "name": "Input at Output"
+        },
+        "input_and_output_2/csd/2022": {
+          "name": "Input at Output"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2022": {
+          "name": "Mga App at Paglutas ng Problema"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "name": "Mga App at Paglutas ng Problema",
+          "type": "Pagsusuri ng Peer"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "Mga App at Paglutas ng Problema",
+          "type": "Rubric"
+        },
+        "project_-_propose_an_app/csd/2022": {
+          "name": "Proyekto - Pagmungkahi ng App"
+        },
+        "programming_for_entertainment/csd/2022": {
+          "name": "Pag-program para sa Libangan"
+        },
+        "plotting_shapes/csd/2022": {
+          "name": "Pag-plot ng mga Hugis"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab/csd/2022": {
+          "name": "Pagguhit sa Game Lab"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Video"
+        },
+        "variables/csd/2022": {
+          "name": "Mga variable"
+        },
+        "variables_3/csd/2022": {
+          "name": "Mga variable"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
+        },
+        "sprites/csd/2022": {
+          "name": "Mga Sprites"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Ang Animation na Tab",
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Mga Sprites"
+        },
+        "text/csd/2022": {
+          "name": "Text"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubric"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2022": {
+          "name": "Ang Draw na Loop"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "name": "Ang Draw na Loop"
+        },
+        "sprite_movement/csd/2022": {
+          "name": "Galaw ng mga Sprite",
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "Galaw ng mga Sprite"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubric"
+        },
+        "boolean_expressions/csd/2022": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2022": {
+          "type": "Video"
+        },
+        "conditionals/csd/2022": {
+          "name": "Mga conditional"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Keyboard na Input"
+        },
+        "if_else_statements/csd/2022": {
+          "type": "Video"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_-_interactive_card/csd/2022": {
+          "name": "Proyekto - Inter-aktib na Baraha"
+        },
+        "velocity/csd/2022": {
+          "name": "Belosidad",
+          "type": "Video"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Belosidad"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Belosidad"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Scroller sa Gilid",
+          "type": "Rubric"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Scroller sa Gilid",
+          "type": "Gabay sa Proyekto"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Bilis at ang Counter Pattern"
+        },
+        "complex_sprite_movement/csd/2022": {
+          "name": "Kumplikadong Sprite na Kilusan"
+        },
+        "collisions/csd/2022": {
+          "name": "Mga Banggaan"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Flyer Game",
+          "type": "Rubric"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Flyer Game",
+          "type": "Gabay sa Proyekto"
+        },
+        "functions/csd/2022": {
+          "name": "Mga function",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Mga function"
+        },
+        "functions_4/csd/2022": {
+          "name": "Mga function"
+        },
+        "the_game_design_process/csd/2022": {
+          "name": "Ang Proseso ng Pagdisenyo ng Laro"
+        },
+        "using_the_game_design_process/csd/2022": {
+          "name": "Gamitin ang Proseso ng Pagdisenyo ng Laro"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_-_design_a_game/csd/2022": {
+          "name": "Proyekto - Pagdisenyo ng Laro"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_html/csd/2022": {
+          "name": "Panimula sa HTML"
+        },
+        "video_debugging/csd/2022": {
+          "name": "Video: Pag-dedebug",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "Video: Pair Programming",
+          "type": "Video"
+        },
+        "headings/csd/2022": {
+          "name": "Mga Heading"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Rubric"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "lists/csd/2022": {
+          "name": "Mga listahan"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "Digital na Bakas"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Social Sleuth"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Social Sleuth"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Intro sa CSS - Yugto 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Intro sa CSS - Yugto 2",
+          "type": "Video"
+        },
+        "styling_text_with_css/csd/2022": {
+          "name": "Pag-style ng Teksto gamit ang CSS"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubric"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2022": {
+          "name": "Intelektwal na Pag-aari"
+        },
+        "images_in_html/csd/2022": {
+          "name": "Mga Larawan sa HTML"
+        },
+        "styling_elements_with_css/csd/2022": {
+          "name": "Pag-istilo sa mga Elemento gamit ang CSS"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubric"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Pag-publish ng Website Mo",
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "Video: Pamamahala ng Di-pagkakasundo",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "Video: Teamwork",
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "Video: Paano Gumagana ang Paghahanap",
+          "type": "Video"
+        },
+        "classes/csd/2022": {
+          "name": "Mga Klase"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubric"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Pag-uugnay ng Mga Pahina"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "understanding_your_user/csd/2022": {
+          "name": "Pag-uunawa sa Iyong Gumagamit"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "user_interfaces/csd/2022": {
+          "name": "Mga interface ng Gumagamit"
+        },
+        "feedback_and_testing/csd/2022": {
+          "name": "Feedback at Pagsubok"
+        },
+        "identifying_user_needs/csd/2022": {
+          "name": "Pagtukoy sa mga Pangangailangan ng Gumagamit"
+        },
+        "paper_prototypes/csd/2022": {
+          "name": "Papel na mga Prototype",
+          "type": "Rubric"
+        },
+        "project_-_paper_prototype/csd/2022": {
+          "name": "Proyekto - Papel na Prototype"
+        },
+        "designing_apps_for_good/csd/2022": {
+          "name": "Pagdidisenyo ng mga App para sa Ikabubuti"
+        },
+        "market_research/csd/2022": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "market_research_1/csd/2022": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "market_research_2/csd/2022": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "design_mode/csd/2022": {
+          "name": "Mode ng Pag-disenyo"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "prototype_testing/csd/2022": {
+          "name": "Prototype na Pagsusuri"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "testing_the_app/csd/2022": {
+          "name": "Pag-test ng App"
+        },
+        "app_presentation/csd/2022": {
+          "name": "Pagpresenta ng App",
+          "type": "Rubric"
+        },
+        "app_presentation_1/csd/2022": {
+          "name": "Pagpresenta ng App"
+        },
+        "project_-_app_presentation/csd/2022": {
+          "name": "Proyekto - Pagpapakita ng App"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "type": "Video"
+        },
+        "computing_innovations_1/csd/2022": {
+          "name": "Pag-compute na mga Pagbabago"
+        },
+        "innovations_in_computing/csd/2022": {
+          "name": "Mga Pagbabago sa Pag-Compute"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "the_circuit_playground/csd/2022": {
+          "name": "Ang Circuit na Playground"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "name": "Pagdidisenyo ng mga Screen gamit ang Code"
+        },
+        "board_events/csd/2022": {
+          "name": "Mga Pangyayari sa Board"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Mga Pangyayari sa Board"
+        },
+        "physical_input/csd/2022": {
+          "name": "Pisikal na Input"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "Mga variable"
+        },
+        "variables_2/csd/2022": {
+          "name": "Mga variable",
+          "type": "Video"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubric"
+        },
+        "color_leds/csd/2022": {
+          "name": "Mga LED na may kulay"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubric"
+        },
+        "accelerometer/csd/2022": {
+          "name": "Accelerometer"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "Mga Event sa Accelerometer"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Introduksyon sa mga Array",
+          "type": "Video"
+        },
+        "making_music/csd/2022": {
+          "name": "Paglikha ng Musika"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Mga Tala ng Laro"
+        },
+        "arrays/csd/2022": {
+          "name": "Mga Array"
+        },
+        "functions_2/csd/2022": {
+          "name": "Mga function"
+        },
+        "functions_3/csd/2022": {
+          "name": "Mga function",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Mga function na meron mga parameter",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Mga function"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "Proyekto: Mag-Prototype ng isang Pagbabago"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubric"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "Nakikita ang AI",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubric"
+        },
+        "survey_planning/csd/2022": {
+          "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubric"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Mga Banghay-Aralin"
         },

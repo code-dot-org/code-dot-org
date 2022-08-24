@@ -294,6 +294,57 @@
           "word": "Apprentissage Automatique",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
+        "input/csd/2022": {
+          "word": "Entrée"
+        },
+        "processing/csd/2022": {
+          "word": "Le Traitement"
+        },
+        "bug/csd/2022": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "debugging/csd/2022": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "program/csd/2022": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "variable/csd/2022": {
+          "word": "Variable",
+          "definition": "Un espace réservé pour une information qui peut changer."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite"
+        },
+        "condition/csd/2022": {
+          "word": "Condition"
+        },
+        "conditionals/csd/2022": {
+          "word": "Instructions conditionnelles"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraction"
+        },
+        "function/csd/2022": {
+          "word": "Fonction"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "L'Empreinte Numérique"
+        },
+        "copyright/csd/2022": {
+          "word": "Copyright"
+        },
+        "user/csd/2022": {
+          "word": "Utilisateur",
+          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
+        },
+        "machine_learning/csd/2022": {
+          "word": "Apprentissage Automatique",
+          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
+        },
         "code/poem-art/unversioned": {
           "word": "Code",
           "definition": "(v) écrire des instructions pour un ordinateur."

@@ -1154,3 +1154,5 @@ da:
               display_name: figure
             lessonGroup-8:
               display_name: Variabler
+        soccer:
+          name: fodbold

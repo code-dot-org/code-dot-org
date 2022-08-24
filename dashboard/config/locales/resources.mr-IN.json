@@ -6,13 +6,23 @@
           "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "list_of_poems/poem-art/2021": {
+          "name": "HoC पोयम आर्ट",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
         "poem_art_celebration/poem-art/2021": {
+          "name": "पोयम आर्ट  4 - सेलिब्रेशन",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "व्हिडीओ"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "पोयम आर्ट 2- इव्हेंट्स ",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "व्हिडीओ"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "पोयम आर्ट 3 - इमेजरी ",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "व्हिडीओ"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -25,7 +35,9 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "वळण आणि कोन"
+          "name": "वळण आणि कोन",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "वळण आणि कोन",
@@ -36,16 +48,44 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "एनक्रिप्शन आणि पब्लिक की",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "व्हिडीओ"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "कोड स्टुडिओवरील एनक्रिप्शन विजेट्स",
+          "url": "https://studio.code.org/s/hoc-encryption"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "गतिविधी मार्गदर्शक - टेक्स्ट कॉम्प्रेशन",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "अ‍ॅक्टिव्हिटी रिकॅप- हा संदेश डीकोड करा",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
+          "type": "अ‍ॅक्टिव्हिटी रिकॅप"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "हा संदेश डीकोड करा",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "कोड स्टुडिओवर टेक्स्ट कम्प्रेशन विजेट",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
+          "type": "विजेट"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "व्हिडिओ: अ‍ॅलो ब्लॅक सह मजकूर कॉम्प्रेशन",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "व्हिडीओ"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
+          "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
+          "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
@@ -69,6 +109,410 @@
           "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "व्हिडीओ"
+        },
+        "representing_images/csd/2022": {
+          "name": "प्रतिमांचे प्रतिनिधित्व करणे"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "combining_representations/csd/2022": {
+          "name": "एकत्रित प्रतिनिधित्व"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "डेटा गोपनीय ठेवणे"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "प्रतिबिंब"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "नियम"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "व्हिडिओ: समाजावर परिणाम",
+          "type": "व्हिडीओ"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "व्हिडिओ: मशीन अभ्यास",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "व्हिडिओ: प्रशिक्षण डेटा आणि पूर्वाग्रह",
+          "type": "व्हिडीओ"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "नियम"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "शिक्षक फोरम"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "नियम"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "variables/csd/2022": {
+          "name": "व्हेरीएबल्स"
+        },
+        "variables_3/csd/2022": {
+          "name": "व्हेरीएबल्स"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "the_animation_tab/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "स्प्राईट प्रॉपर्टीज"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "स्प्राईट प्रॉपर्टीज"
+        },
+        "text/csd/2022": {
+          "name": "टेक्स्ट"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "नियम"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "animated_scene/csd/2022": {
+          "type": "नियम"
+        },
+        "boolean_expressions/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "conditional_statements/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "conditionals/csd/2022": {
+          "name": "कंडीशनल्स "
+        },
+        "keyboard_input/csd/2022": {
+          "name": "कीबोर्ड इनपुट"
+        },
+        "if_else_statements/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "नियम"
+        },
+        "velocity/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "side_scroller/csd/2022": {
+          "name": "साइड स्क्रोलर",
+          "type": "नियम"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "साइड स्क्रोलर",
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "वेग आणि काउंटर पॅटर्न"
+        },
+        "collisions/csd/2022": {
+          "name": "कोलिषन /टक्कर"
+        },
+        "flyer_game/csd/2022": {
+          "name": "फ्लायर गेम",
+          "type": "नियम"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "फ्लायर गेम",
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "functions/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "नियम"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "video_debugging/csd/2022": {
+          "name": "व्हिडिओ: डीबगिंग",
+          "type": "व्हिडीओ"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "व्हिडिओ: पेअर प्रोग्रामिंग",
+          "type": "व्हिडीओ"
+        },
+        "headings/csd/2022": {
+          "name": "मथळे /हेडिंग्ज "
+        },
+        "html_web_page/csd/2022": {
+          "type": "नियम"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "lists/csd/2022": {
+          "name": "याद्या"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "सोशल स्लीथ"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "सोशल स्लीथ"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "नियम"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "नियम"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "आपली वेबसाइट प्रकाशित करणे",
+          "type": "व्हिडीओ"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "व्हिडिओ: असहमती व्यवस्थापित करणे",
+          "type": "व्हिडीओ"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "व्हिडिओ: टीमवर्क",
+          "type": "व्हिडीओ"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "व्हिडिओ: शोध कसे काम करते",
+          "type": "व्हिडीओ"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "नियम"
+        },
+        "linking_pages/csd/2022": {
+          "name": "लिंकिंग पेजेस "
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "नियम"
+        },
+        "design_mode/csd/2022": {
+          "name": "डिझाइन मोड"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "app_presentation/csd/2022": {
+          "type": "नियम"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "संगणक शास्त्रामुळे सगळे काही बदलत आहे",
+          "type": "व्हिडीओ"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "board_events/csd/2022": {
+          "name": "बोर्ड इव्हेंट्स"
+        },
+        "board_events_1/csd/2022": {
+          "name": "बोर्ड इव्हेंट्स"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "variables_1/csd/2022": {
+          "name": "व्हेरीएबल्स"
+        },
+        "variables_2/csd/2022": {
+          "name": "व्हेरीएबल्स",
+          "type": "व्हिडीओ"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "नियम"
+        },
+        "color_leds/csd/2022": {
+          "name": "रंगीत LEDs"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "नियम"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "एक्सीलरोमीटर इव्हेंट्स"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "playing_notes/csd/2022": {
+          "name": "प्लेइंग नोट्स "
+        },
+        "functions_3/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "functions_with_parameters/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "नियम"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "नियम"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "AI पाहणे",
+          "type": "व्हिडीओ"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "व्हिडीओ"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "विद्यार्थ्यांचे हँडआउट"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "नियम"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "व्हिडीओ"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "नियम"
         },
         "lesson_plans/courseb/2018": {
           "name": "धड्याचे प्लॅन्स"
@@ -716,11 +1160,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "डिजिटल ट्रेल्स: डिजिटल ट्रेल स्क्वेअर",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "डिजिटल ट्रेल्स: अॅनिमल ट्रॅक",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "mimi-activity/courseb/2021": {
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
@@ -900,7 +1346,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "माझ्या ऑनलाइन अतिपरिचित क्षेत्रातील सुरक्षितता: पॉज़ आणि थिंक मोमेंट",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "pair-programming-vid/coursea/2021": {
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
@@ -1098,7 +1545,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "ऑनलाइन मीननेसला थांबा: ऑनलाइन मीननेस थांबवा",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "माझे रोबोटिक मित्र",
@@ -1154,7 +1602,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "वळण आणि कोन",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
@@ -1652,7 +2101,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "खाजगी आणि वैयक्तिक माहिती: एक्झिट तिकीट",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "खाजगी आणि वैयक्तिक माहिती: लेसन क्विझ",
@@ -1682,7 +2132,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "वळण आणि कोन",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "वळण आणि कोन",
@@ -1816,6 +2267,9 @@
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "व्हिडीओ"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "विद्यार्थ्यांचे हँडआउट"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "व्हिडीओ"

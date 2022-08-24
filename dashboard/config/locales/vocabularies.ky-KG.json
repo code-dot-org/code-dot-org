@@ -20,6 +20,18 @@
         "code/sports/unversioned": {
           "word": "Код жазуу"
         },
+        "variable/csd/2022": {
+          "word": "Өзгөрмө"
+        },
+        "conditionals/csd/2022": {
+          "word": "Шартуулар"
+        },
+        "abstraction/csd/2022": {
+          "word": "Абстракция"
+        },
+        "function/csd/2022": {
+          "word": "Функция"
+        },
         "code/poem-art/unversioned": {
           "word": "Код жазуу"
         },

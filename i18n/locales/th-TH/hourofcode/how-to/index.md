@@ -27,7 +27,7 @@ title: วิธีแนะนำการใช้งาน Hour of Code
 
 <a id="how-to-video"></a>
 
-## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

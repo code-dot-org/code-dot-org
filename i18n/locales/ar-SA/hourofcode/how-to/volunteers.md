@@ -116,7 +116,7 @@ title: دليل "ساعة من البرمجة" الإرشادي للمتطوّع
 
 إذا كنت تفكِّر في أن تضيِّف أنشطة "ساعة من البرمجة" في المنزل أو في المجتمع، فنوصي بإلقاء نظرة على بعض أدلة الإرشادات التفصيلية الخاصة بنا لكلٍ من [أولياء الأمور](https://hourofcode.com/us/how-to/parents) و[الشركات أو المؤسسات](https://hourofcode.com/us/how-to/companies).
 
-### ١. شاهد هذا الفيديو الإرشادي <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### ١. شاهد هذا الفيديو الإرشادي <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. حدِّد تاريخًا وتنسيقًا وموقعًا لفعاليتك
 
