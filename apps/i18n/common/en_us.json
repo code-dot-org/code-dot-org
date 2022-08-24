@@ -1632,6 +1632,7 @@
   "projectsViewProjectGallery": "View projects",
   "projects": "Projects",
   "projectsSubHeading": "{project_count} projects created",
+  "projectsSubHeadingMillions": "Over {project_count} million projects created",
   "print": "Print",
   "privacyPolicy": "Privacy Policy",
   "privacyPracticesForChildren": "See our privacy practices for children",
