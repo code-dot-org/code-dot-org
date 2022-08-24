@@ -117,6 +117,60 @@
         "kodea-pd-2021/Next Steps": {
           "name": "Следващи стъпки"
         },
+        "csd5-2022/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Какво е Компютър?"
+        },
+        "csd3-2022/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Спрайт"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Свойства на Спрайта"
+        },
+        "csd3-2022/Text": {
+          "name": "Текст"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Условия"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Скорост"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Сблъсъци"
+        },
+        "csd3-2022/Functions": {
+          "name": "Функции"
+        },
+        "csd2-2022/Headings": {
+          "name": "Заглавия"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Цветни LEDs"
+        },
+        "csd6-2022/Functions": {
+          "name": "Функции"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Въведение в AI Lab"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Преместете го, преместете го"
         },

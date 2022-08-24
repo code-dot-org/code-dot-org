@@ -346,14 +346,37 @@ hu:
             practice:
               display_name: Tanítási gyakorlatok
         csd3-2017:
+          title: CSD 3. Egység - Animációk és Játékok ('17-'18)
+          description: A 3. Egységben a kódolási tapasztalatszerzés lesz a cél, animáció
+            programozással, interaktív művészettel és játékokkal a Game Labban. Az
+            egység egyszerű formákkal kezdődik és kifinomultabb sprite alapú játékokkkal
+            folytatódik, ugyanazokkal a programozási fogalmakkal és tervezési folyamattal,
+            mint amit az informatikusok nap mint nap használnak. A végső projektben
+            egy személyre szabott, interaktív programot fogsz fejleszteni.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+            csd_survey:
+              display_name: Tanfomlyam Utáni Felmérés
+          student_description: A 3. Egységben a kódolási tapasztalatszerzés lesz a
+            cél, animáció programozással, interaktív művészettel és játékokkal a Game
+            Labban. Az egység egyszerű formákkal kezdődik és kifinomultabb sprite
+            alapú játékokkkal folytatódik, ugyanazokkal a programozási fogalmakkal
+            és tervezési folyamattal, mint amit az informatikusok nap mint nap használnak.
+            A végső projektben egy személyre szabott, interaktív programot fogsz fejleszteni.
         grade2:
           description_audience: 5-tól 18 éves korig
         csd1-2017:
+          title: CSD 1. Egység - Problémamegoldás ('17-'18)
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
             számítógépek a problémák megoldásában."
+          description: Az 1. Egység egy nagyon interaktív és kollaboratív bemutató
+            a számítástudomány világába, a problémamegoldás szélesebb körébe illesztve.
+            Egy problémamegoldási folyamat segítségével fogsz egy sornyi rejtvényt,
+            kihívást és valós helyzetet megoldani. Továbbá meg fogod tanulni a számítógép
+            hogyan viszi be, adja ki, tárolja és dolgozza fel az adatokat. Az egység
+            egy általad választott projektel zárul, amiben neked kell megtervezni
+            egy alkalmazást, ami egy általad választott problémát segít megoldani.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
@@ -361,6 +384,13 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             csd1_2:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+          student_description: Az 1. Egység egy nagyon interaktív és kollaboratív
+            bemutató a számítástudomány világába, a problémamegoldás szélesebb körébe
+            illesztve. Egy problémamegoldási folyamat segítségével fogsz egy sornyi
+            rejtvényt, kihívást és valós helyzetet megoldani. Továbbá meg fogod tanulni
+            a számítógép hogyan viszi be, adja ki, tárolja és dolgozza fel az adatokat.
+            Az egység egy általad választott projektel zárul, amiben neked kell megtervezni
+            egy alkalmazást, ami egy általad választott problémát segít megoldani.
         csp-online-test:
           lesson_groups:
             required:
@@ -385,6 +415,27 @@ hu:
           student_description: Válaszd ki a csapatodat, majd készíts egy kosárlabda
             játékot
           name: kosárlabda
+        csd2-2017:
+          title: CSD 2. Egység - Webfejlesztés ('17-'18)
+          description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
+          lesson_groups:
+            csd2_1:
+              display_name: '1.  Fejezet: Webtartalom és HTML'
+            csd2_2:
+              display_name: '2.  Fejezet: Stilizálás és CSS'
+            csd_survey:
+              display_name: Tanfomlyam Utáni Felmérés
+          student_description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
         csp2-support:
           lesson_groups:
             required:
@@ -393,6 +444,27 @@ hu:
               display_name: Tartalom
             practice:
               display_name: Tanítási gyakorlatok
+        csd4-2017:
+          title: CSD 4. Egység - A Tervezési Folyamat ('17-'18)
+          description: A 4. Egység bemutatja az informatika szélesebb körű társadalmi
+            hatásait mutatja be. Egy sor tervezési kihíváson keresztül megtanulod
+            hogyan értsd meg mások igényeit miközben egy megoldást dolgozol ki egy
+            problémára. Az egység második felét egy iteratív csapatprojekt alkotja,
+            amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
+          lesson_groups:
+            csd_survey:
+              display_name: Tanfomlyam Utáni Felmérés
+          student_description: A 4. Egység bemutatja az informatika szélesebb körű
+            társadalmi hatásait mutatja be. Egy sor tervezési kihíváson keresztül
+            megtanulod hogyan értsd meg mások igényeit miközben egy megoldást dolgozol
+            ki egy problémára. Az egység második felét egy iteratív csapatprojekt
+            alkotja, amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
         minecraft:
           title: Minecraft Kódolás órája tervező
           description_short: Programozz állatokat és egyéb Minecraft lényeket a saját
@@ -474,6 +546,52 @@ hu:
               display_name: Tartalom
             cspSurvey:
               display_name: Kérdőív
+        csd6-2017:
+          title: CSD 6. Egység - Fizikai Számítás ('17-'18)
+          description: A 6. Egység a hardverplatformok szerepét vizsgálja a számítástechnikában,
+            valamint azt, hogy a különböző érzékelők hogyan biztosíthatnak hatékonyabb
+            be- és kimenetet a hagyományos billentyűzetnél, egérnél és monitornál.
+            Az App Lab és az Adafruit Circuit Playground segítségével olyan programokat
+            fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket és kimeneteket
+            használják, mint az intelligens eszközök, és megvizsgálod, hogyan vezet
+            egy egyszerű, durva prototípus egy kész termékhez. Az egység egy tervezési
+            kihívással zárul, amelynek során a Circuit Playgroundot kell felhasználnod
+            egy saját tervezésű innováció alapjául.
+          lesson_groups:
+            csd_survey:
+              display_name: Tanfomlyam Utáni Felmérés
+          student_description: A 6. Egység a hardverplatformok szerepét vizsgálja
+            a számítástechnikában, valamint azt, hogy a különböző érzékelők hogyan
+            biztosíthatnak hatékonyabb be- és kimenetet a hagyományos billentyűzetnél,
+            egérnél és monitornál. Az App Lab és az Adafruit Circuit Playground segítségével
+            olyan programokat fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket
+            és kimeneteket használják, mint az intelligens eszközök, és megvizsgálod,
+            hogyan vezet egy egyszerű, durva prototípus egy kész termékhez. Az egység
+            egy tervezési kihívással zárul, amelynek során a Circuit Playgroundot
+            kell felhasználnod egy saját tervezésű innováció alapjául.
+        csd5-2017:
+          title: CSD 5. Egység - Adat és Társadalom ('17-'18)
+          description: Az 5. Egység az adat fontosságáról szól a problémák megoldása
+            során és kiemeli a számítógépek hogyan segítenek a folyamatban. Az első
+            fejezet az információk számítógépes reprezentációjára használt különböző
+            rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
+          lesson_groups:
+            csd_survey:
+              display_name: Tanfomlyam Utáni Felmérés
+          student_description: Az 5. Egység az adat fontosságáról szól a problémák
+            megoldása során és kiemeli a számítógépek hogyan segítenek a folyamatban.
+            Az első fejezet az információk számítógépes reprezentációjára használt
+            különböző rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -704,17 +822,57 @@ hu:
             end_of_course_project:
               display_name: Kurzus Projekt vége
         csd3-1819draft:
+          description: A 3. Egységben a kódolási tapasztalatszerzés lesz a cél, animáció
+            programozással, interaktív művészettel és játékokkal a Game Labban. Az
+            egység egyszerű formákkal kezdődik és kifinomultabb sprite alapú játékokkkal
+            folytatódik, ugyanazokkal a programozási fogalmakkal és tervezési folyamattal,
+            mint amit az informatikusok nap mint nap használnak. A végső projektben
+            egy személyre szabott, interaktív programot fogsz fejleszteni.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 3. Egységben a kódolási tapasztalatszerzés lesz a
+            cél, animáció programozással, interaktív művészettel és játékokkal a Game
+            Labban. Az egység egyszerű formákkal kezdődik és kifinomultabb sprite
+            alapú játékokkkal folytatódik, ugyanazokkal a programozási fogalmakkal
+            és tervezési folyamattal, mint amit az informatikusok nap mint nap használnak.
+            A végső projektben egy személyre szabott, interaktív programot fogsz fejleszteni.
         csd3-2018:
+          description: A 3. Egységben a kódolási tapasztalatszerzés lesz a cél, animáció
+            programozással, interaktív művészettel és játékokkal a Game Labban. Az
+            egység egyszerű formákkal kezdődik és kifinomultabb sprite alapú játékokkkal
+            folytatódik, ugyanazokkal a programozási fogalmakkal és tervezési folyamattal,
+            mint amit az informatikusok nap mint nap használnak. A végső projektben
+            egy személyre szabott, interaktív programot fogsz fejleszteni.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 3. Egységben a kódolási tapasztalatszerzés lesz a
+            cél, animáció programozással, interaktív művészettel és játékokkal a Game
+            Labban. Az egység egyszerű formákkal kezdődik és kifinomultabb sprite
+            alapú játékokkkal folytatódik, ugyanazokkal a programozási fogalmakkal
+            és tervezési folyamattal, mint amit az informatikusok nap mint nap használnak.
+            A végső projektben egy személyre szabott, interaktív programot fogsz fejleszteni.
         csd2-2018:
+          description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
           lesson_groups:
+            csd2_1:
+              display_name: '1.  Fejezet: Webtartalom és HTML'
+            csd2_2:
+              display_name: '2.  Fejezet: Stilizálás és CSS'
             cspSurvey:
               display_name: Kérdőív
+          student_description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
         coursea-2018:
           title: A tanfolyam (2018)
           assignment_family_title: A tanfolyam
@@ -758,9 +916,27 @@ hu:
             a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted,
             amit megoszthatsz!
         csd6-2018:
+          description: A 6. Egység a hardverplatformok szerepét vizsgálja a számítástechnikában,
+            valamint azt, hogy a különböző érzékelők hogyan biztosíthatnak hatékonyabb
+            be- és kimenetet a hagyományos billentyűzetnél, egérnél és monitornál.
+            Az App Lab és az Adafruit Circuit Playground segítségével olyan programokat
+            fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket és kimeneteket
+            használják, mint az intelligens eszközök, és megvizsgálod, hogyan vezet
+            egy egyszerű, durva prototípus egy kész termékhez. Az egység egy tervezési
+            kihívással zárul, amelynek során a Circuit Playgroundot kell felhasználnod
+            egy saját tervezésű innováció alapjául.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 6. Egység a hardverplatformok szerepét vizsgálja
+            a számítástechnikában, valamint azt, hogy a különböző érzékelők hogyan
+            biztosíthatnak hatékonyabb be- és kimenetet a hagyományos billentyűzetnél,
+            egérnél és monitornál. Az App Lab és az Adafruit Circuit Playground segítségével
+            olyan programokat fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket
+            és kimeneteket használják, mint az intelligens eszközök, és megvizsgálod,
+            hogyan vezet egy egyszerű, durva prototípus egy kész termékhez. Az egység
+            egy tervezési kihívással zárul, amelynek során a Circuit Playgroundot
+            kell felhasználnod egy saját tervezésű innováció alapjául.
         coursee-2018:
           title: E tanfolyam (2018)
           assignment_family_title: E tanfolyam
@@ -802,6 +978,13 @@ hu:
             csp1_2:
               display_name: '2.  fejezet: Az internet feltalálása'
         csd1-2018:
+          description: Az 1. Egység egy nagyon interaktív és kollaboratív bemutató
+            a számítástudomány világába, a problémamegoldás szélesebb körébe illesztve.
+            Egy problémamegoldási folyamat segítségével fogsz egy sornyi rejtvényt,
+            kihívást és valós helyzetet megoldani. Továbbá meg fogod tanulni a számítógép
+            hogyan viszi be, adja ki, tárolja és dolgozza fel az adatokat. Az egység
+            egy általad választott projektel zárul, amiben neked kell megtervezni
+            egy alkalmazást, ami egy általad választott problémát segít megoldani.
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
             számítógépek a problémák megoldásában."
           lesson_groups:
@@ -811,14 +994,55 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             csd1_2:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+          student_description: Az 1. Egység egy nagyon interaktív és kollaboratív
+            bemutató a számítástudomány világába, a problémamegoldás szélesebb körébe
+            illesztve. Egy problémamegoldási folyamat segítségével fogsz egy sornyi
+            rejtvényt, kihívást és valós helyzetet megoldani. Továbbá meg fogod tanulni
+            a számítógép hogyan viszi be, adja ki, tárolja és dolgozza fel az adatokat.
+            Az egység egy általad választott projektel zárul, amiben neked kell megtervezni
+            egy alkalmazást, ami egy általad választott problémát segít megoldani.
         csd4-2018:
+          description: A 4. Egység bemutatja az informatika szélesebb körű társadalmi
+            hatásait mutatja be. Egy sor tervezési kihíváson keresztül megtanulod
+            hogyan értsd meg mások igényeit miközben egy megoldást dolgozol ki egy
+            problémára. Az egység második felét egy iteratív csapatprojekt alkotja,
+            amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 4. Egység bemutatja az informatika szélesebb körű
+            társadalmi hatásait mutatja be. Egy sor tervezési kihíváson keresztül
+            megtanulod hogyan értsd meg mások igényeit miközben egy megoldást dolgozol
+            ki egy problémára. Az egység második felét egy iteratív csapatprojekt
+            alkotja, amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
         csd5-2018:
+          description: Az 5. Egység az adat fontosságáról szól a problémák megoldása
+            során és kiemeli a számítógépek hogyan segítenek a folyamatban. Az első
+            fejezet az információk számítógépes reprezentációjára használt különböző
+            rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: Az 5. Egység az adat fontosságáról szól a problémák
+            megoldása során és kiemeli a számítógépek hogyan segítenek a folyamatban.
+            Az első fejezet az információk számítógépes reprezentációjára használt
+            különböző rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -935,6 +1159,10 @@ hu:
               display_name: Összefoglaló
             content:
               display_name: Tartalom
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Tanfomlyam Utáni Felmérés
         csd-novice-18:
           lesson_groups:
             required:
@@ -1170,25 +1398,105 @@ hu:
             csf_events:
               display_name: Események
         csd2-2019:
+          description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
           lesson_groups:
+            csd2_1:
+              display_name: '1.  Fejezet: Webtartalom és HTML'
+            csd2_2:
+              display_name: '2.  Fejezet: Stilizálás és CSS'
             cspSurvey:
               display_name: Kérdőív
+          student_description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
         csd3-2019:
+          description: A 3. Egységben a kódolási tapasztalatszerzés lesz a cél, animáció
+            programozással, interaktív művészettel és játékokkal a Game Labban. Az
+            egység egyszerű formákkal kezdődik és kifinomultabb sprite alapú játékokkkal
+            folytatódik, ugyanazokkal a programozási fogalmakkal és tervezési folyamattal,
+            mint amit az informatikusok nap mint nap használnak. A végső projektben
+            egy személyre szabott, interaktív programot fogsz fejleszteni.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 3. Egységben a kódolási tapasztalatszerzés lesz a
+            cél, animáció programozással, interaktív művészettel és játékokkal a Game
+            Labban. Az egység egyszerű formákkal kezdődik és kifinomultabb sprite
+            alapú játékokkkal folytatódik, ugyanazokkal a programozási fogalmakkal
+            és tervezési folyamattal, mint amit az informatikusok nap mint nap használnak.
+            A végső projektben egy személyre szabott, interaktív programot fogsz fejleszteni.
         csd4-2019:
+          description: A 4. Egység bemutatja az informatika szélesebb körű társadalmi
+            hatásait mutatja be. Egy sor tervezési kihíváson keresztül megtanulod
+            hogyan értsd meg mások igényeit miközben egy megoldást dolgozol ki egy
+            problémára. Az egység második felét egy iteratív csapatprojekt alkotja,
+            amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 4. Egység bemutatja az informatika szélesebb körű
+            társadalmi hatásait mutatja be. Egy sor tervezési kihíváson keresztül
+            megtanulod hogyan értsd meg mások igényeit miközben egy megoldást dolgozol
+            ki egy problémára. Az egység második felét egy iteratív csapatprojekt
+            alkotja, amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
         csd5-2019:
+          description: Az 5. Egység az adat fontosságáról szól a problémák megoldása
+            során és kiemeli a számítógépek hogyan segítenek a folyamatban. Az első
+            fejezet az információk számítógépes reprezentációjára használt különböző
+            rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: Az 5. Egység az adat fontosságáról szól a problémák
+            megoldása során és kiemeli a számítógépek hogyan segítenek a folyamatban.
+            Az első fejezet az információk számítógépes reprezentációjára használt
+            különböző rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
         csd6-2019:
+          description: A 6. Egység a hardverplatformok szerepét vizsgálja a számítástechnikában,
+            valamint azt, hogy a különböző érzékelők hogyan biztosíthatnak hatékonyabb
+            be- és kimenetet a hagyományos billentyűzetnél, egérnél és monitornál.
+            Az App Lab és az Adafruit Circuit Playground segítségével olyan programokat
+            fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket és kimeneteket
+            használják, mint az intelligens eszközök, és megvizsgálod, hogyan vezet
+            egy egyszerű, durva prototípus egy kész termékhez. Az egység egy tervezési
+            kihívással zárul, amelynek során a Circuit Playgroundot kell felhasználnod
+            egy saját tervezésű innováció alapjául.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 6. Egység a hardverplatformok szerepét vizsgálja
+            a számítástechnikában, valamint azt, hogy a különböző érzékelők hogyan
+            biztosíthatnak hatékonyabb be- és kimenetet a hagyományos billentyűzetnél,
+            egérnél és monitornál. Az App Lab és az Adafruit Circuit Playground segítségével
+            olyan programokat fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket
+            és kimeneteket használják, mint az intelligens eszközök, és megvizsgálod,
+            hogyan vezet egy egyszerű, durva prototípus egy kész termékhez. Az egység
+            egy tervezési kihívással zárul, amelynek során a Circuit Playgroundot
+            kell felhasználnod egy saját tervezésű innováció alapjául.
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -1379,13 +1687,41 @@ hu:
             csd1_2:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
         csd2-pilot:
+          description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
           lesson_groups:
+            csd2_1:
+              display_name: '1.  Fejezet: Webtartalom és HTML'
+            csd2_2:
+              display_name: '2.  Fejezet: Stilizálás és CSS'
             cspSurvey:
               display_name: Kérdőív
+          student_description: "  A 2. Egységben meg fogod tanulni hogyan kell létrehozni
+            és megosztani tartalmat a saját weboldaladon. Miután eldöntötted, hogy
+            milyen tartalmat akarsz megosztani a világgal, megtanulod hogyan kell
+            elrendezni és stilizálni az oldalaidat HTML-el és CSS-el. Gyakorolni fogsz
+            hasznos programozási készségeket, mint a debugolás és a komment készítés.
+            Az egység végére lesz egy saját oldalad amit megoszthatsz az interneten."
         csd3-pilot:
+          description: A 3. Egységben a kódolási tapasztalatszerzés lesz a cél, animáció
+            programozással, interaktív művészettel és játékokkal a Game Labban. Az
+            egység egyszerű formákkal kezdődik és kifinomultabb sprite alapú játékokkkal
+            folytatódik, ugyanazokkal a programozási fogalmakkal és tervezési folyamattal,
+            mint amit az informatikusok nap mint nap használnak. A végső projektben
+            egy személyre szabott, interaktív programot fogsz fejleszteni.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 3. Egységben a kódolási tapasztalatszerzés lesz a
+            cél, animáció programozással, interaktív művészettel és játékokkal a Game
+            Labban. Az egység egyszerű formákkal kezdődik és kifinomultabb sprite
+            alapú játékokkkal folytatódik, ugyanazokkal a programozási fogalmakkal
+            és tervezési folyamattal, mint amit az informatikusok nap mint nap használnak.
+            A végső projektben egy személyre szabott, interaktív programot fogsz fejleszteni.
         csp3-pilot:
           lesson_groups:
             content:
@@ -1545,6 +1881,8 @@ hu:
               display_name: funkciók
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -1553,8 +1891,18 @@ hu:
               display_name: hurkok
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp7-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
         csd2-2020:
           lesson_groups:
+            csd2_1:
+              display_name: '1.  Fejezet: Webtartalom és HTML'
+            csd2_2:
+              display_name: '2.  Fejezet: Stilizálás és CSS'
             cspSurvey:
               display_name: Kérdőív
         csd1-2020:
@@ -1568,21 +1916,85 @@ hu:
             csd1_2:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
         csd4-2020:
+          description: A 4. Egység bemutatja az informatika szélesebb körű társadalmi
+            hatásait mutatja be. Egy sor tervezési kihíváson keresztül megtanulod
+            hogyan értsd meg mások igényeit miközben egy megoldást dolgozol ki egy
+            problémára. Az egység második felét egy iteratív csapatprojekt alkotja,
+            amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 4. Egység bemutatja az informatika szélesebb körű
+            társadalmi hatásait mutatja be. Egy sor tervezési kihíváson keresztül
+            megtanulod hogyan értsd meg mások igényeit miközben egy megoldást dolgozol
+            ki egy problémára. Az egység második felét egy iteratív csapatprojekt
+            alkotja, amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
         csd5-2020:
+          description: Az 5. Egység az adat fontosságáról szól a problémák megoldása
+            során és kiemeli a számítógépek hogyan segítenek a folyamatban. Az első
+            fejezet az információk számítógépes reprezentációjára használt különböző
+            rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: Az 5. Egység az adat fontosságáról szól a problémák
+            megoldása során és kiemeli a számítógépek hogyan segítenek a folyamatban.
+            Az első fejezet az információk számítógépes reprezentációjára használt
+            különböző rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
         csd6-2020:
+          description: A 6. Egység a hardverplatformok szerepét vizsgálja a számítástechnikában,
+            valamint azt, hogy a különböző érzékelők hogyan biztosíthatnak hatékonyabb
+            be- és kimenetet a hagyományos billentyűzetnél, egérnél és monitornál.
+            Az App Lab és az Adafruit Circuit Playground segítségével olyan programokat
+            fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket és kimeneteket
+            használják, mint az intelligens eszközök, és megvizsgálod, hogyan vezet
+            egy egyszerű, durva prototípus egy kész termékhez. Az egység egy tervezési
+            kihívással zárul, amelynek során a Circuit Playgroundot kell felhasználnod
+            egy saját tervezésű innováció alapjául.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 6. Egység a hardverplatformok szerepét vizsgálja
+            a számítástechnikában, valamint azt, hogy a különböző érzékelők hogyan
+            biztosíthatnak hatékonyabb be- és kimenetet a hagyományos billentyűzetnél,
+            egérnél és monitornál. Az App Lab és az Adafruit Circuit Playground segítségével
+            olyan programokat fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket
+            és kimeneteket használják, mint az intelligens eszközök, és megvizsgálod,
+            hogyan vezet egy egyszerű, durva prototípus egy kész termékhez. Az egység
+            egy tervezési kihívással zárul, amelynek során a Circuit Playgroundot
+            kell felhasználnod egy saját tervezésű innováció alapjául.
         csd3-2020:
+          description: A 3. Egységben a kódolási tapasztalatszerzés lesz a cél, animáció
+            programozással, interaktív művészettel és játékokkal a Game Labban. Az
+            egység egyszerű formákkal kezdődik és kifinomultabb sprite alapú játékokkkal
+            folytatódik, ugyanazokkal a programozási fogalmakkal és tervezési folyamattal,
+            mint amit az informatikusok nap mint nap használnak. A végső projektben
+            egy személyre szabott, interaktív programot fogsz fejleszteni.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 3. Egységben a kódolási tapasztalatszerzés lesz a
+            cél, animáció programozással, interaktív művészettel és játékokkal a Game
+            Labban. Az egység egyszerű formákkal kezdődik és kifinomultabb sprite
+            alapú játékokkkal folytatódik, ugyanazokkal a programozási fogalmakkal
+            és tervezési folyamattal, mint amit az informatikusok nap mint nap használnak.
+            A végső projektben egy személyre szabott, interaktív programot fogsz fejleszteni.
         coursea-2020:
           title: A tanfolyam (2020)
           description: Ismerje meg a számítástechnika és az internetbiztonság alapjait.
@@ -1735,10 +2147,36 @@ hu:
               display_name: '1.  fejezet: Digitális információ'
             cspSurvey:
               display_name: Kérdőív
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
               display_name: '2.  lecke: Az internet'
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Tanfomlyam Utáni Felmérés
+        csd2-virtual:
+          lesson_groups:
+            csd2_1:
+              display_name: '1.  Fejezet: Webtartalom és HTML'
+            csd2_2:
+              display_name: '2.  Fejezet: Stilizálás és CSS'
         virtual-holding-place:
           lesson_groups:
             content:
@@ -1809,18 +2247,50 @@ hu:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 3. Egységben a kódolási tapasztalatszerzés lesz a
+            cél, animáció programozással, interaktív művészettel és játékokkal a Game
+            Labban. Az egység egyszerű formákkal kezdődik és kifinomultabb sprite
+            alapú játékokkkal folytatódik, ugyanazokkal a programozási fogalmakkal
+            és tervezési folyamattal, mint amit az informatikusok nap mint nap használnak.
+            A végső projektben egy személyre szabott, interaktív programot fogsz fejleszteni.
         csd4-2021:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 4. Egység bemutatja az informatika szélesebb körű
+            társadalmi hatásait mutatja be. Egy sor tervezési kihíváson keresztül
+            megtanulod hogyan értsd meg mások igényeit miközben egy megoldást dolgozol
+            ki egy problémára. Az egység második felét egy iteratív csapatprojekt
+            alkotja, amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
         csd5-2021:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: Az 5. Egység az adat fontosságáról szól a problémák
+            megoldása során és kiemeli a számítógépek hogyan segítenek a folyamatban.
+            Az első fejezet az információk számítógépes reprezentációjára használt
+            különböző rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
         csd6-2021:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: A 6. Egység a hardverplatformok szerepét vizsgálja
+            a számítástechnikában, valamint azt, hogy a különböző érzékelők hogyan
+            biztosíthatnak hatékonyabb be- és kimenetet a hagyományos billentyűzetnél,
+            egérnél és monitornál. Az App Lab és az Adafruit Circuit Playground segítségével
+            olyan programokat fejlesztesz, amelyek ugyanazokat a hardveres bemeneteket
+            és kimeneteket használják, mint az intelligens eszközök, és megvizsgálod,
+            hogyan vezet egy egyszerű, durva prototípus egy kész termékhez. Az egység
+            egy tervezési kihívással zárul, amelynek során a Circuit Playgroundot
+            kell felhasználnod egy saját tervezésű innováció alapjául.
         csp1-2021:
           lesson_groups:
             cspSurvey:
@@ -1851,10 +2321,14 @@ hu:
               display_name: hurkok
             csp_project:
               display_name: Projekt
+            lessonGroup-5:
+              display_name: Tanfomlyam Utáni Felmérés
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
               display_name: algoritmusok
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
         csp7-2021:
           lesson_groups:
             lessonGroup-3:
@@ -2006,15 +2480,49 @@ hu:
             variables:
               display_name: változók
         csd4-preview-2021:
+          description: A 4. Egység bemutatja az informatika szélesebb körű társadalmi
+            hatásait mutatja be. Egy sor tervezési kihíváson keresztül megtanulod
+            hogyan értsd meg mások igényeit miközben egy megoldást dolgozol ki egy
+            problémára. Az egység második felét egy iteratív csapatprojekt alkotja,
+            amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
             csdSurvey:
               display_name: Kérdőív
+          student_description: A 4. Egység bemutatja az informatika szélesebb körű
+            társadalmi hatásait mutatja be. Egy sor tervezési kihíváson keresztül
+            megtanulod hogyan értsd meg mások igényeit miközben egy megoldást dolgozol
+            ki egy problémára. Az egység második felét egy iteratív csapatprojekt
+            alkotja, amelynek során a csapatoknak lehetőségük van arra, hogy azonosítsanak
+            egy számukra fontos igényt, prototípus megoldásokat készítsenek papíron
+            és az App Labban, és valós felhasználókkal teszteljék a megoldásokat,
+            hogy visszajelzést kapjanak és további iterációt hajtsanak végre.
         csd5-preview-2021:
+          description: Az 5. Egység az adat fontosságáról szól a problémák megoldása
+            során és kiemeli a számítógépek hogyan segítenek a folyamatban. Az első
+            fejezet az információk számítógépes reprezentációjára használt különböző
+            rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          student_description: Az 5. Egység az adat fontosságáról szól a problémák
+            megoldása során és kiemeli a számítógépek hogyan segítenek a folyamatban.
+            Az első fejezet az információk számítógépes reprezentációjára használt
+            különböző rendszereket, valamint az ezek használata során felmerülő kihívásokat
+            és kompromisszumokat vizsgálja. A második fejezetben megtudhatja, hogyan
+            használják az adatgyűjteményeket a problémák megoldására, és hogyan segítik
+            a számítógépek ennek a folyamatnak a lépéseit automatizálni. A fejezet
+            annak mérlegelésével záródik, hogy az adat problémák megoldási folyamatát
+            hogyan lehet alkalmazni egy általad választott területen.
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -2402,6 +2910,8 @@ hu:
               display_name: hurkok
             csp_project:
               display_name: Projekt
+            lessonGroup-5:
+              display_name: Tanfomlyam Utáni Felmérés
         courseb-2022:
           lesson_groups:
             csf_digcit:
@@ -2434,6 +2944,26 @@ hu:
             amit megoszthatsz!
           description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre
             saját műalkotásokat, történeteket és játékokat.
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp9-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
@@ -2599,3 +3129,5 @@ hu:
         aiml-2022:
           name: aiml-2022
           description_short: Ismerkedés a mesterséges intelligenciával és a gépi tanulással
+        soccer:
+          name: foci

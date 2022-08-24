@@ -27,7 +27,7 @@ Provimi i një Ore Kodi është një mënyrë e thjeshtë dhe argëtuese për t�
 
 <a id="how-to-video"></a>
 
-## 1. Shikoni videon e orës së kodit si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Shikoni videon e orës së kodit si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

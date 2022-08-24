@@ -741,15 +741,6 @@ kn:
         text: "{SPRITE} ಯೋಚಿಸಿ {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}ಯೋಚಿಸಿ{TEXT1}{NUM}ಸೆಕೆಂಡುಗಳಿಗೆ"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': ಹಂ...
-            '"I am hungry, too."': ನನಗೂ ಹಸಿವಾಗಿದೆ.
-            '"I only want the biggest goat."': ನನಗೆ ದೊಡ್ಡ ಮೇಕೆ ಮಾತ್ರ ಬೇಕು.
-            '"I''m a green troll."': ನಾನೊಬ್ಬ ಹಸಿರು ಟ್ರೋಲ್.
-            '"No one will cross my bridge."': No one will cross my bridge.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
         options:

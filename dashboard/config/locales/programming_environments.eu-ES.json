@@ -1,0 +1,97 @@
+{
+  "eu-ES": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab"
+        },
+        "gamelab": {
+          "name": "Jolas laborategia",
+          "categories": {
+            "game_lab": {
+              "name": "Jolas laborategia"
+            },
+            "sprites": {
+              "name": "Pertsonaiak"
+            },
+            "groups": {
+              "name": "Taldeak"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Aldagaiak"
+            },
+            "functions": {
+              "name": "Funtzioak"
+            }
+          }
+        },
+        "applab": {
+          "name": "App laborategia",
+          "categories": {
+            "data": {
+              "name": "Datu"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Aldagaiak"
+            },
+            "functions": {
+              "name": "Funtzioak"
+            },
+            "advanced": {
+              "name": "Aurreratua"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "sprites": {
+              "name": "Pertsonaiak"
+            },
+            "world": {
+              "name": "Mundua"
+            },
+            "location": {
+              "name": "Kokalekuak"
+            },
+            "actions": {
+              "name": "Ekintzak"
+            },
+            "events": {
+              "name": "Gertaerak"
+            },
+            "behaviors": {
+              "name": "Jokabideak"
+            },
+            "loops": {
+              "name": "Itzuliak"
+            },
+            "variables": {
+              "name": "Aldagaiak"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "functions": {
+              "name": "Funtzioak"
+            },
+            "text": {
+              "name": "Testua"
+            },
+            "comments": {
+              "name": "Iruzkinak"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 @use "sass:math";
-
-@import 'color.scss';
-@import 'style-constants';
+@import "color.scss";
+@import "style-constants";
 
 $scrollbar-height: 15px;
 $row-height: 42px;
@@ -84,7 +83,7 @@ $content-view-width: $content-width - $student-list-width;
       white-space: nowrap;
       overflow: hidden;
       .fa {
-        html[dir='RTL'] & {
+        html[dir="RTL"] & {
           transform: scaleX(-1);
         }
       }
@@ -131,7 +130,7 @@ $content-view-width: $content-width - $student-list-width;
         height: 6px;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
-        html[dir='RTL'] & {
+        html[dir="RTL"] & {
           border-width: 2px 0 0 2px;
         }
       }

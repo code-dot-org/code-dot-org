@@ -64,7 +64,7 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 
 Якщо ви хочете пройти зайву милю, ваша компанія також може провести подію "Година коду". Не існує конкретної формули для проведення заходу, тож ми закликаємо вас до творчості! З огляду на, що у нас невеликий (але потужний!) штат, У Code.org немає команди, яка займається координацією подій "Години Кодексу". Однак ось кілька порад, щоб розпочати.
 
-### 1. Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Визначте дату, формат та місце проведення вашої події
 

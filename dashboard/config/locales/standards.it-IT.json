@@ -2,8 +2,14 @@
   "it-IT": {
     "data": {
       "standards": {
+        "csta/1B-AP-10": {
+          "description": "Crea programmi con sequenze di istruzioni, eventi, cicli ed istruzioni condizionali."
+        },
         "csta/1B-AP-12": {
           "description": "Modifica, rimescola o incorpora parti di un programma esistente, personalizzandolo, per sviluppare qualcosa di nuovo o aggiungere funzionalità più avanzate."
+        },
+        "csta/1B-AP-15": {
+          "description": "Esegui test e debugging (identificare e correggi errori) di un programma o di un algoritmo per assicurarti che funzioni come previsto."
         },
         "ccela/6.SL.1": {
           "description": "Impegnarsi efficacemente in una serie di discussioni collaborative (in coppia, in gruppo e sotto la guida di un insegnante) con diversi partner su argomenti di prima media, basandosi sulle idee degli altri ed esprimendo chiaramente le proprie."
@@ -188,6 +194,36 @@
         "csta/1A-AP-14": {
           "description": "Fai il debug (identifica e correggi) degli errori in un algoritmo o in un programma che include sequenze e cicli semplici."
         },
+        "csta/1B-CS-01": {
+          "description": "Spiega come funzionano le parti interne ed esterne dei dispositivi informatici per formare un sistema."
+        },
+        "csta/1B-CS-02": {
+          "description": "Illustra come l'hardware e il software del computer sono un unico sistema che lavora insieme per svolgere delle attività."
+        },
+        "csta/1B-AP-08": {
+          "description": "Confronta e perfeziona più algoritmi per la stessa attività e determina qual è quello più adatto."
+        },
+        "csta/1B-AP-11": {
+          "description": "Scompone (suddivide) i problemi in sotto-problemi più piccoli e gestibili per facilitare il processo di sviluppo del programma."
+        },
+        "csta/1B-AP-16": {
+          "description": "Assumi ruoli diversi, con la guida dell'insegnante, quando collabori con i compagni durante le fasi di progettazione, implementazione e revisione dello sviluppo del programma."
+        },
+        "csta/1B-NI-05": {
+          "description": "Analizza problemi di sicurezza informatica nel mondo reale e come proteggere i dati personali."
+        },
+        "csta/1B-IC-21": {
+          "description": "Utilizzare media di pubblico dominio o creative commons e astenersi dal copiare o utilizzare materiale creato da altri senza autorizzazione."
+        },
+        "csta/1B-IC-18": {
+          "description": "Discutere delle tecnologie informatiche che hanno cambiato il mondo ed esprimere in che modo tali tecnologie influenzano e sono influenzate dalle abitudini culturali."
+        },
+        "csta/1B-AP-14": {
+          "description": "Rispettare i diritti di proprietà intellettuale e attribuire un'adeguata attribuzione durante la creazione o il remix dei programmi."
+        },
+        "csta/1B-IC-20": {
+          "description": "Cerca diverse prospettive allo scopo di migliorare le realizzazioni digitali."
+        },
         "csta/1A-IC-18": {
           "description": "Mantieni private le informazioni di accesso e disconnettiti dai dispositivi in modo opportuno."
         },
@@ -197,11 +233,56 @@
         "csta/1A-CS-03": {
           "description": "Descrivere i problemi hardware e software di base utilizzando una terminologia accurata."
         },
+        "csta/1A-AP-08": {
+          "description": "Modella i processi quotidiani creando e seguendo algoritmi (set di istruzioni passo-passo) per completare le attività."
+        },
+        "csta/1A-AP-12": {
+          "description": "Sviluppa schemi che descrivono la sequenza di eventi, obiettivi e risultati attesi di un programma."
+        },
         "csta/1A-AP-10": {
           "description": "Sviluppa programmi con sequenze e cicli semplici, per dare forma alle tue idee o per affrontare un problema."
         },
-        "csta/1B-IC-18": {
-          "description": "Discutere delle tecnologie informatiche che hanno cambiato il mondo ed esprimere in che modo tali tecnologie influenzano e sono influenzate dalle abitudini culturali."
+        "csta/1A-CS-01": {
+          "description": "Selezionare e utilizzare il software più adatto per eseguire le più diverse attività e rendersi conto che gli utenti hanno esigenze e preferenze diverse a seconda della tecnologia che utilizzano."
+        },
+        "csta/1A-IC-16": {
+          "description": "Confronta come le persone vivono e lavorano prima e dopo l'implementazione o l'adozione di nuove tecnologie informatiche."
+        },
+        "csta/1B-AP-09": {
+          "description": "Crea programmi che utilizzano variabili per memorizzare e modificare i dati."
+        },
+        "csta/1B-DA-06": {
+          "description": "Organizzare e rappresentare visivamente i dati raccolti per evidenziare le relazioni e supportare un reclamo."
+        },
+        "csta/1B-DA-07": {
+          "description": "Utilizzare i dati per evidenziare o proporre relazioni di causa ed effetto, prevedere i risultati o comunicare un'idea."
+        },
+        "csta/1B-NI-04": {
+          "description": "Illustra il modo in cui i dati vengono suddivisi in parti più piccole, trasmessi come pacchetti attraverso più dispositivi in Internet e riassemblati a destinazione."
+        },
+        "csta/1B-AP-13": {
+          "description": "Usa un processo iterativo per pianificare lo sviluppo di un programma includendo le prospettive altrui e considerando le preferenze degli utenti."
+        },
+        "csta/1B-AP-17": {
+          "description": "Descrivere le scelte effettuate durante lo sviluppo del programma utilizzando commenti, presentazioni e dimostrazioni sul codice."
+        },
+        "csta/1B-IC-19": {
+          "description": "Trova modi per migliorare l'accessibilità e l'usabilità dei prodotti tecnologici per le diverse esigenze e i diversi desideri degli utenti."
+        },
+        "csta/1A-DA-05": {
+          "description": "memorizzare, copiare, cercare, recuperare, modificare ed eliminare informazioni utilizzando un dispositivo informatico e definire le informazioni archiviate come dati."
+        },
+        "csta/1A-DA-06": {
+          "description": "raccogliere e rappresentare gli stessi dati in formati diversi di visualizzazione."
+        },
+        "csta/1A-DA-07": {
+          "description": "identificare e descrivere i modelli nelle visualizzazioni dei dati, come grafici o grafici, allo scopo di fare previsioni."
+        },
+        "csta/1A-AP-13": {
+          "description": "Dare l'attribuzione quando si utilizzano le idee e le creazioni di altri durante lo sviluppo dei programmi."
+        },
+        "csta/1A-AP-15": {
+          "description": "Usando una terminologia corretta, descrivi i passi avanti compiuti e le scelte operate durante il processo iterativo di sviluppo del programma."
         }
       }
     }

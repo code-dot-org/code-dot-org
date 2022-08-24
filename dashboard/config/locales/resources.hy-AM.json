@@ -2,6 +2,48 @@
   "hy-AM": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "փոփոխականների"
+        },
+        "variables_3/csd/2022": {
+          "name": "փոփոխականների"
+        },
+        "text/csd/2022": {
+          "name": "տեքստ"
+        },
+        "conditionals/csd/2022": {
+          "name": "conditionals"
+        },
+        "functions/csd/2022": {
+          "name": "գործառույթները"
+        },
+        "functions_1/csd/2022": {
+          "name": "գործառույթները"
+        },
+        "functions_4/csd/2022": {
+          "name": "գործառույթները"
+        },
+        "lists/csd/2022": {
+          "name": "ցուցակները"
+        },
+        "variables_1/csd/2022": {
+          "name": "փոփոխականների"
+        },
+        "variables_2/csd/2022": {
+          "name": "փոփոխականների"
+        },
+        "functions_2/csd/2022": {
+          "name": "գործառույթները"
+        },
+        "functions_3/csd/2022": {
+          "name": "գործառույթները"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Գործառույթները պարամետրերով"
+        },
+        "functions_5/csd/2022": {
+          "name": "գործառույթները"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Lesson Plans"
         },

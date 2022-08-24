@@ -20,6 +20,21 @@
         "code/sports/unversioned": {
           "word": "কোড"
         },
+        "variable/csd/2022": {
+          "word": "চলক"
+        },
+        "conditionals/csd/2022": {
+          "word": "শর্তযুক্ত"
+        },
+        "abstraction/csd/2022": {
+          "word": "অপসারণ"
+        },
+        "function/csd/2022": {
+          "word": "ফাংশন"
+        },
+        "copyright/csd/2022": {
+          "word": "কপিরাইট"
+        },
         "code/poem-art/unversioned": {
           "word": "কোড"
         },

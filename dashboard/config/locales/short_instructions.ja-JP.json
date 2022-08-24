@@ -3668,7 +3668,12 @@
         "Overworld Chop Tree - allthethings": "木はいろいろな物の材料になります。木を切り倒すには、近づいて“ブロックを破壊”コマンドを使います。",
         "Test embedded K1 Blockly in instructions": "`西` を3つ と `ピック トウモロコシ` を 1つ つかいます。",
         "U2L10 NetSim Automatic DNS": "このバージョンのインターネットシミュレータでは、ドメインネームシステム（DNS）が提供されており、これが接続されているすべてのコンピュータのIPアドレスを認識します。 GET [hostname]の形式でアドレス <yourRouterNumber>.15 のDNSサービスにメッセージを送信して、生徒用アドレスを取得しましょう。",
-        "allthethings-anigif-instructions": "東にうごかして、ブタさんのところまで つれていって ください！"
+        "allthethings-anigif-instructions": "東にうごかして、ブタさんのところまで つれていって ください！",
+        "CSD U5 black white images pixelation 2_2022": "スマイリーフェイスを描く (画像を表示するにはここをクリック)",
+        "CSD U5 black white images pixelation 3_2022": "イメージを検索するスライダーの幅と高さを変更します(詳細はこちら)",
+        "CSD U5 black white images pixelation 4_2022": "スマイリーフェイスに眉毛を追加(画像を表示するにはここをクリック)",
+        "CSD U5 black white images pixelation 5_2022": "好きなものをかく",
+        "CSD U5 black white images pixelation_2022": "0 と 1 を入力して X の形を完成させる"
       }
     }
   }

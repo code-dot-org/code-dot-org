@@ -71,6 +71,30 @@
         "debugging/basketball/unversioned": {
           "word": "Virheen etsintä"
         },
+        "input/csd/2022": {
+          "word": "Syöte"
+        },
+        "debugging/csd/2022": {
+          "word": "Virheen etsintä"
+        },
+        "variable/csd/2022": {
+          "word": "Muuttuja"
+        },
+        "condition/csd/2022": {
+          "word": "Ehtolause"
+        },
+        "conditionals/csd/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraktio"
+        },
+        "function/csd/2022": {
+          "word": "Funktio"
+        },
+        "copyright/csd/2022": {
+          "word": "Copyright"
+        },
         "code/poem-art/unversioned": {
           "word": "Koodi"
         },

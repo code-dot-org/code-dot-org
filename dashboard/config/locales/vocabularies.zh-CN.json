@@ -254,7 +254,8 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/sports/unversioned": {
-          "word": "代码"
+          "word": "代码",
+          "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/sports/unversioned": {
           "word": "调试",
@@ -313,6 +314,61 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "machine_learning/oceans/unversioned": {
+          "word": "机器学习",
+          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
+        },
+        "input/csd/2022": {
+          "word": "输入"
+        },
+        "processing/csd/2022": {
+          "word": "正在处理中"
+        },
+        "bug/csd/2022": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "debugging/csd/2022": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/csd/2022": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "variable/csd/2022": {
+          "word": "变量",
+          "definition": "程序中使用的一段信息的标签。"
+        },
+        "sprite/csd/2022": {
+          "word": "精灵"
+        },
+        "condition/csd/2022": {
+          "word": "条件"
+        },
+        "conditionals/csd/2022": {
+          "word": "条件语句"
+        },
+        "abstraction/csd/2022": {
+          "word": "抽象化"
+        },
+        "function/csd/2022": {
+          "word": "函数"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "数字足迹"
+        },
+        "copyright/csd/2022": {
+          "word": "版权",
+          "definition": "版权：印刷、出版、表演、拍摄或记录文学、艺术或音乐材料并授权他人这样做的独家法律权利"
+        },
+        "user/csd/2022": {
+          "word": "用户",
+          "definition": "使用某物（包括软件和硬件）的人。"
+        },
+        "user_interface/csd/2022": {
+          "word": "用户界面"
+        },
+        "machine_learning/csd/2022": {
           "word": "机器学习",
           "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
         },

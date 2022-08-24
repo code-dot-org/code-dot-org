@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-extras/unversioned": {
@@ -14,6 +15,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/minecraft/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/minecraft/unversioned": {
@@ -33,6 +35,7 @@
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
         "code/hero/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/hero/unversioned": {
@@ -80,6 +83,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/hourofcode/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/hourofcode/unversioned": {
@@ -91,6 +95,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/frozen/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/frozen/unversioned": {
@@ -102,6 +107,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/iceage/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/iceage/unversioned": {
@@ -125,6 +131,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/gumball/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/gumball/unversioned": {
@@ -144,9 +151,11 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "code/aquatic/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/aquatic/unversioned": {
@@ -194,6 +203,7 @@
           "definition": "technika szyfrowania, która odwzorowuje każdą literę alfabetu na losowo wybrane inne litery alfabetu."
         },
         "code/starwars/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/starwars/unversioned": {
@@ -205,6 +215,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/mc/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/mc/unversioned": {
@@ -216,6 +227,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/playlab/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/playlab/unversioned": {
@@ -227,6 +239,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/starwarsblocks/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -266,6 +279,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/infinity/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/infinity/unversioned": {
@@ -281,6 +295,7 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/basketball/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/basketball/unversioned": {
@@ -292,6 +307,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-extras-2019/unversioned": {
@@ -303,6 +319,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance-2019/unversioned": {
+          "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-2019/unversioned": {
@@ -316,6 +333,83 @@
         "machine_learning/oceans/unversioned": {
           "word": "Uczenie maszynowe",
           "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "input/csd/2022": {
+          "word": "Wejście"
+        },
+        "processing/csd/2022": {
+          "word": "Przetwarzanie"
+        },
+        "bug/csd/2022": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/csd/2022": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "parameter/csd/2022": {
+          "word": "Parametr",
+          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
+        },
+        "variable/csd/2022": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "property/csd/2022": {
+          "word": "Właściwość"
+        },
+        "sprite/csd/2022": {
+          "word": "Duszek"
+        },
+        "condition/csd/2022": {
+          "word": "Warunek"
+        },
+        "conditionals/csd/2022": {
+          "word": "Zdania z warunkami"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakcja"
+        },
+        "function/csd/2022": {
+          "word": "Funkcja"
+        },
+        "html/csd/2022": {
+          "word": "HTML"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Cyfrowy ślad"
+        },
+        "css/csd/2022": {
+          "word": "CSS"
+        },
+        "copyright/csd/2022": {
+          "word": "Prawa autorskie",
+          "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
+        },
+        "empathy/csd/2022": {
+          "word": "Empatia"
+        },
+        "user/csd/2022": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        },
+        "user_interface/csd/2022": {
+          "word": "Interfejs użytkownika"
+        },
+        "innovation/csd/2022": {
+          "word": "Innowacja"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "ethics/csd/2022": {
+          "word": "Etyka"
         },
         "code/poem-art/unversioned": {
           "word": "Kod",

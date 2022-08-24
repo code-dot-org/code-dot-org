@@ -3032,3 +3032,5 @@ cs:
         aiml-2022:
           name: aiml-2022
           description_short: Naučte se něco o umělé inteligenci a strojovém učení
+        soccer:
+          name: fotbal
