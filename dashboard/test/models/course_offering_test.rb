@@ -10,7 +10,9 @@ class CourseOfferingTest < ActiveSupport::TestCase
     @levelbuilder = create :levelbuilder
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
 
+  setup do
     @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student2', family_name: 'family-2', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_teacher_to_students)
     @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student3', family_name: 'family-2', version_year: '1992', is_course: true, published_state: 'stable')
@@ -43,10 +45,15 @@ class CourseOfferingTest < ActiveSupport::TestCase
     @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-11', version_year: '1991', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@partner_unit)
 
+    UnitGroup.clear_cache
+    Script.clear_cache
     populate_cache
   end
 
   def populate_cache
+    # Clear the cache?
+    # Populate course offering cache?
+
     Script.stubs(:should_cache?).returns true
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Script.unit_cache_to_cache

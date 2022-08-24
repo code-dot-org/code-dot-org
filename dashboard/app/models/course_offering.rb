@@ -210,7 +210,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.all_course_offerings
-    @@all_course_offerings ||= CourseOffering.with_versions.all
+    @@all_course_offerings ||= CourseOffering.with_versions.all #maybe try breaking this up to see what the difference is in drone
   end
 
   def units_included_in_any_version?(unit_ids)
