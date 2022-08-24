@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:18:45 UTC",
+    "serialized_at": "2022-08-23 20:31:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -349,7 +349,7 @@
     },
     {
       "key": "Console",
-      "name": "Console",
+      "name": "Sandbox: Console",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
@@ -364,7 +364,7 @@
     },
     {
       "key": "The Neighborhood",
-      "name": "The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -379,7 +379,7 @@
     },
     {
       "key": "lesson-16",
-      "name": "The Theater",
+      "name": "Sandbox: The Theater",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
