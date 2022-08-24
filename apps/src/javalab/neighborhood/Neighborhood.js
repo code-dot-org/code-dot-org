@@ -157,7 +157,7 @@ export default class Neighborhood {
         break;
       }
       default:
-        console.log(signal.value);
+        // Ignore signals we don't know about.
         break;
     }
   }
