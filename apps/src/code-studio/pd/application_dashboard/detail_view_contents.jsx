@@ -1146,11 +1146,6 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <h3>Principal Approval</h3>
-          <h4>
-            {this.state.principalApprovalIsRequired
-              ? 'Is Required'
-              : 'Not Required'}
-          </h4>
           {!this.state.principalApprovalIsRequired && (
             <p>
               If you would like to require principal approval for this teacher,
