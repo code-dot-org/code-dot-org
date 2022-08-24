@@ -408,7 +408,7 @@ describe('DetailViewContents', () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
-          principal_approval_state: 'Not required'
+          principal_approval_not_required: true
         }
       });
       expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
@@ -419,7 +419,7 @@ describe('DetailViewContents', () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
-          principal_approval_state: null // principal approval is required
+          principal_approval_not_required: null // principal approval is required
         }
       });
       expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
