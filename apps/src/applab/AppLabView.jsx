@@ -13,7 +13,6 @@ import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
 import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
 import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
-
 /**
  * Top-level React wrapper for App Lab.
  */

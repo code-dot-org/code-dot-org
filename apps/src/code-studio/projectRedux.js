@@ -4,6 +4,7 @@
 const SHOW_PROJECT_UPDATED_AT = 'project/SHOW_PROJECT_UPDATED_AT';
 const SET_PROJECT_UPDATED_STATUS = 'project/SET_PROJECT_UPDATED_STATUS';
 const SET_PROJECT_UPDATED_AT = 'project/SET_PROJECT_UPDATED_AT';
+const SET_WORKSPACE_ALERT = 'project/SET_WORKSPACE_ALERT';
 const REFRESH_PROJECT_NAME = 'project/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'project/SHOW_TRY_AGAIN_DIALOG';
 const SET_NAME_FAILURE = 'project/SET_NAME_FAILURE';
@@ -22,7 +23,9 @@ const initialState = {
   projectUpdatedAt: undefined,
   projectName: '',
   projectNameFailure: undefined,
-  showTryAgainDialog: false
+  showTryAgainDialog: false,
+  displayWorkspaceAlert: false,
+  errorMsg: ''
 };
 
 export default (state = initialState, action) => {
@@ -44,9 +47,27 @@ export default (state = initialState, action) => {
   if (action.type === SET_PROJECT_UPDATED_STATUS) {
     return {
       ...state,
-      projectUpdatedStatus: action.status
+      projectUpdatedStatus: action.status,
+      errorCode: action.errorCode
     };
   }
+
+  if (action.type === SET_WORKSPACE_ALERT) {
+    console.log('inside SET_WORKSPACE_ALERT');
+    console.log(action.displayWorkspaceAlert);
+    var ret = {
+      ...state,
+      errorMsg: action.errorMsg,
+      displayWorkspaceAlert: action.displayWorkspaceAlert
+    };
+    console.log(ret);
+    return {
+      ...state,
+      errorMsg: action.errorMsg,
+      displayWorkspaceAlert: action.displayWorkspaceAlert
+    };
+  }
+
   if (action.type === REFRESH_PROJECT_NAME) {
     return {
       ...state,
@@ -82,19 +103,35 @@ export const showProjectUpdatedAt = () => ({
   type: SHOW_PROJECT_UPDATED_AT
 });
 
-export const setProjectUpdatedError = () => ({
-  type: SET_PROJECT_UPDATED_STATUS,
-  status: projectUpdatedStatuses.error
+export const setProjectUpdatedError = () => {
+  return {
+    type: SET_PROJECT_UPDATED_STATUS,
+    status: projectUpdatedStatuses.error
+  };
+};
+
+export const displayWorkspaceAlertOn = errorMsg => ({
+  type: SET_WORKSPACE_ALERT,
+  displayWorkspaceAlert: true,
+  errorMsg
+});
+
+export const displayWorkspaceAlertOff = () => ({
+  type: SET_WORKSPACE_ALERT,
+  displayWorkspaceAlert: false,
+  errorMsg: ''
 });
 
 export const setProjectUpdatedSaving = () => ({
   type: SET_PROJECT_UPDATED_STATUS,
-  status: projectUpdatedStatuses.saving
+  status: projectUpdatedStatuses.saving,
+  errorType: undefined
 });
 
 export const setProjectUpdatedSaved = () => ({
   type: SET_PROJECT_UPDATED_STATUS,
-  status: projectUpdatedStatuses.saved
+  status: projectUpdatedStatuses.saved,
+  errorType: undefined
 });
 
 export const setProjectUpdatedAt = updatedAt => ({

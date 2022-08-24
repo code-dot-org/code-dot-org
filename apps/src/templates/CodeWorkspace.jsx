@@ -266,6 +266,7 @@ const styles = {
 };
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
+
 export default connect(state => ({
   displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
   displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
