@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-06-13T21:00:33.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -35,7 +31,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "start_in_animation_tab": "false",
@@ -65,15 +61,22 @@
     "hide_pause_button": "false",
     "callout_json": "[]",
     "instructions_icon": "bear",
-    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make 4 dolphins like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\"><next><block type=\\\"gamelab_setBackgroundImageAs\\\"><field name=\\\"IMG\\\">\\\"background_landscape_10\\\"</field><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":91,\\\"y\\\":231}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":274,\\\"y\\\":275}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":141,\\\"y\\\":316}</field></block></value></block></next></block></next></block></next></block></next></block></next></block></xml>\\n\",\"hint_id\":\"make_sprite_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/82c20ca2d6d6ae04bd99899a427954c8/csc_ecosystems_survival_choice_dolphins.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Set the new sprite’s location next to the first shark by clicking on the pin on the yellow location block <xml><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</field></block></xml> and then click where you want to place it on the stage.\",\"hint_id\":\"location_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/652471e48332b36733fe1b408db57380/csc_ecosystems_survival_choice_dolphins.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make 4 dolphins like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\"><next><block type=\\\"gamelab_setBackgroundImageAs\\\"><field name=\\\"IMG\\\">\\\"background_landscape_10\\\"</field><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":91,\\\"y\\\":231}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":274,\\\"y\\\":275}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":141,\\\"y\\\":316}</field></block></value></block></next></block></next></block></next></block></next></block></next></block></xml>\\n\",\"hint_id\":\"make_sprite_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/82c20ca2d6d6ae04bd99899a427954c8/csc_ecosystems_survival_choice_dolphins_2022.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Set the new sprite’s location next to the first dolphin by clicking on the pin on the yellow location block <xml><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</field></block></xml> and then click where you want to place it on the stage.\",\"hint_id\":\"location_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1a99c86b413114516d1ffdf244f455cc/csc_ecosystems_survival_choice_dolphins_2022.mp3\"}]",
     "skip_autosave": true,
     "display_name": "Dolphin Pods",
     "thumbnail_url": "https://images.code.org/239662fcb0e6bf3a8c588f6d8b70adc1-image-1650394330084.49.35 AM.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-06-13T21:00:33.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:33.798+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:33.798+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins\"},{\"changed_at\":\"2022-08-23 15:17:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-23 16:55:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
