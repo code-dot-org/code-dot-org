@@ -1,0 +1,14 @@
+<Music>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black"
+  },
+  "game_id": 70,
+  "published": true,
+  "created_at": "2022-08-17T05:19:47.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "audit_log": "[{\"changed_at\":\"2022-08-17 05:32:36 +0000\",\"changed\":[\"published\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Music>
