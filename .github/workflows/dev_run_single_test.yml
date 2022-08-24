@@ -30,10 +30,13 @@ jobs:
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies              
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3                    
       - name: Run tests
         run:  |
           brew reinstall imagemagick
-          bundle exec rake test:changed --trace
+          bundle exec rake test:changed:pegasus --trace
+        continue-on-error: true
 
         
   
