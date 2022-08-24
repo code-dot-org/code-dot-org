@@ -350,8 +350,11 @@ export default class CoreLibrary {
 
   getCappedNumSprites(numRequested) {
     const numSpritesSoFar = this.getNumberOfSprites();
-    const numSpritesPossible = Math.max(0, MAX_NUM_SPRITES - numSpritesSoFar);
-    return Math.min(numRequested, numSpritesPossible);
+    const numNewSpritesPossible = Math.max(
+      0,
+      MAX_NUM_SPRITES - numSpritesSoFar
+    );
+    return Math.min(numRequested, numNewSpritesPossible);
   }
 
   getLastSpeechBubbleForSpriteId(spriteId) {
