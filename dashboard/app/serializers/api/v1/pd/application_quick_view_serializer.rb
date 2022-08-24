@@ -30,6 +30,10 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     object.try(:principal_approval_state)
   end
 
+  def principal_approval_not_required
+    object.try(:principal_approval_not_required)
+  end
+
   def meets_criteria
     object.try(:meets_criteria)
   end
