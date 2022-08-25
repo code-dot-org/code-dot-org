@@ -37,6 +37,9 @@ export function getExceptionMessage(exceptionDetails, type) {
     case JavabuilderExceptionType.NO_MAIN_METHOD:
       error = msg.noMainMethod();
       break;
+    case JavabuilderExceptionType.INVALID_MAIN_METHOD:
+      error = msg.invalidMainMethod();
+      break;
     case JavabuilderExceptionType.COMPILER_ERROR:
       error = msg.compilerError();
       break;

@@ -5,6 +5,9 @@
         "ccela": {
           "name": "Obecné základní normy umění v anglickém jazyce"
         },
+        "csta": {
+          "name": "Standardy informatiky CSTA K-12 (2017)"
+        },
         "ccmath": {
           "name": "Obecné základní normy matematiky"
         },
@@ -13,6 +16,9 @@
         },
         "iste": {
           "name": "Normy ISTE pro studenty"
+        },
+        "csp2021": {
+          "name": "Principy informatiky Konceptuální framework"
         }
       }
     }

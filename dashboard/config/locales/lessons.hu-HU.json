@@ -169,6 +169,120 @@
         "kodea-pd-2021/Planning": {
           "name": "Tervezés"
         },
+        "csd5-2022/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Bevezetés a problémamegoldásba"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Mi az a számítógép?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2022/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2022/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd3-2022/Variables": {
+          "name": "változók"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Véletlen számok"
+        },
+        "csd3-2022/Sprites": {
+          "name": "sprite-ok"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprite tulajdonságok"
+        },
+        "csd3-2022/Text": {
+          "name": "szöveg"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Feltételek"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Sebesség"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Ütközések"
+        },
+        "csd3-2022/Functions": {
+          "name": "funkciók"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
+        "csd2-2022/Headings": {
+          "name": "Címsorok"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "CSS osztályok"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Oldalak összekapcsolása"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Színes LED-ek"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Zene Készítése"
+        },
+        "csd6-2022/Functions": {
+          "name": "funkciók"
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
         },
@@ -331,6 +445,9 @@
         "csd3-2018/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2018/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2018/Collisions": {
           "name": "Ütközések"
         },
@@ -345,6 +462,9 @@
         },
         "csd6-2018/Getting Properties": {
           "name": "Tulajdonságok szerzése"
+        },
+        "csd6-2018/Making Music": {
+          "name": "Zene Készítése"
         },
         "csd6-2018/Functions with Parameters": {
           "name": "Paraméteres függvények"
@@ -370,11 +490,47 @@
         "csd4-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
+        "csd2-2018/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
+        },
+        "csd2-2018/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
+        },
+        "csd2-2018/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
         "csd2-2018/Headings": {
           "name": "Címsorok"
         },
+        "csd2-2018/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
         "csd2-2018/Lists": {
           "name": "Listák"
+        },
+        "csd2-2018/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2018/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2018/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2018/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2018/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2018/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
+        },
+        "csd2-2018/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
+        },
+        "csd2-2018/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
         },
         "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -385,8 +541,20 @@
         "csd1-2018/The Problem Solving Process": {
           "name": "A probléma-megoldási folyamat"
         },
+        "csd1-2018/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2018/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd1-2018/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2018/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2018/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Biztonságos utazás"
@@ -508,6 +676,9 @@
         "csd3-2019/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2019/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2019/Collisions": {
           "name": "Ütközések"
         },
@@ -519,6 +690,9 @@
         },
         "csd6-2019/Getting Properties": {
           "name": "Tulajdonságok szerzése"
+        },
+        "csd6-2019/Making Music": {
+          "name": "Zene Készítése"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Paraméteres függvények"
@@ -541,14 +715,62 @@
         "csd1-2019/The Problem Solving Process": {
           "name": "A probléma-megoldási folyamat"
         },
+        "csd1-2019/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd1-2019/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2019/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2019/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
+        },
+        "csd2-2019/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
         },
         "csd2-2019/Headings": {
           "name": "Címsorok"
         },
+        "csd2-2019/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
         "csd2-2019/Lists": {
           "name": "Listák"
+        },
+        "csd2-2019/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2019/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2019/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2019/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2019/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2019/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
+        },
+        "csd2-2019/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
+        },
+        "csd2-2019/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
         },
         "coursef-2017/Building a Foundation": {
           "name": "Az alap megépítése"
@@ -561,6 +783,9 @@
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Valós algoritmusok: Ültess el egy magot!"
+        },
+        "pre-express-2017/Programming: Star Wars": {
+          "name": "Programozás: Star Wars"
         },
         "pre-express-2017/Spelling Bee": {
           "name": "Betüző méh"
@@ -607,6 +832,9 @@
         "csd3-2017/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2017/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2017/Collisions": {
           "name": "Ütközések"
         },
@@ -619,14 +847,53 @@
         "csd6-2017/Getting Properties_": {
           "name": "Tulajdonságok szerzése"
         },
+        "csd6-2017/Making Music_": {
+          "name": "Zene Készítése"
+        },
         "csd6-2017/Functions with Parameters_": {
           "name": "Paraméteres függvények"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
+        },
+        "csd2-2017/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
+        },
+        "csd2-2017/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
         },
         "csd2-2017/Headings": {
           "name": "Címsorok"
         },
+        "csd2-2017/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
         "csd2-2017/Lists": {
           "name": "Listák"
+        },
+        "csd2-2017/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2017/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2017/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2017/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2017/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2017/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
+        },
+        "csd2-2017/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
+        },
+        "csd2-2017/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
         },
         "csd1-2017/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
@@ -634,8 +901,26 @@
         "csd1-2017/The Problem Solving Process": {
           "name": "A probléma-megoldási folyamat"
         },
+        "csd1-2017/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2017/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd1-2017/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2017/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2017/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2017/Apps and Problem Solving": {
+          "name": "Appok és Problémamegoldás"
+        },
+        "csd1-2017/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
         },
         "csd5-2017/Representing Images": {
           "name": "Képek ábrázolása"
@@ -1217,6 +1502,9 @@
         "csd6-2021/Getting Properties": {
           "name": "Tulajdonságok szerzése"
         },
+        "csd6-2021/Making Music": {
+          "name": "Zene Készítése"
+        },
         "csd6-2021/Functions with Parameters": {
           "name": "Paraméteres függvények"
         },
@@ -1256,6 +1544,9 @@
         "csd3-2021/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2021/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2021/Collisions": {
           "name": "Ütközések"
         },
@@ -1271,11 +1562,38 @@
         "csd1-2021/The Problem Solving Process": {
           "name": "A probléma-megoldási folyamat"
         },
+        "csd1-2021/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2021/What is a Computer?": {
           "name": "Mi az a számítógép?"
         },
+        "csd1-2021/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2021/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2021/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2021/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2021/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
         "csd2-2021/Headings": {
           "name": "Címsorok"
+        },
+        "csd2-2021/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2021/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2021/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
         },
         "csd2-2021/CSS Classes": {
           "name": "CSS osztályok"

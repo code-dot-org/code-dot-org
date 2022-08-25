@@ -1639,6 +1639,9 @@
         "New Sprite Lab Project": {
           "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy.",
           "make_sprite": "Pomocí těchto bloků vytvoř sprajta."
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "K zobrazení mřížky klikněte zde."
         }
       }
     }

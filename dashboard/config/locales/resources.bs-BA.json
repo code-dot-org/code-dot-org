@@ -2,6 +2,75 @@
   "bs-BA": {
     "data": {
       "resources": {
+        "apps_and_problem_solving/csd/2022": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "variables/csd/2022": {
+          "name": "Varijable"
+        },
+        "variables_3/csd/2022": {
+          "name": "Varijable"
+        },
+        "text/csd/2022": {
+          "name": "Tekst"
+        },
+        "conditionals/csd/2022": {
+          "name": "Uvjeti"
+        },
+        "velocity/csd/2022": {
+          "name": "Brzina"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Brzina"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Brzina"
+        },
+        "functions/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funkcije"
+        },
+        "lists/csd/2022": {
+          "name": "Liste"
+        },
+        "classes/csd/2022": {
+          "name": "Razredi"
+        },
+        "design_mode/csd/2022": {
+          "name": "Način Dizajniranje"
+        },
+        "variables_1/csd/2022": {
+          "name": "Varijable"
+        },
+        "variables_2/csd/2022": {
+          "name": "Varijable"
+        },
+        "making_music/csd/2022": {
+          "name": "Pravljenje muzike"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funkcije sa Parametrima"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funkcije"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Nastavni Plan"
         },

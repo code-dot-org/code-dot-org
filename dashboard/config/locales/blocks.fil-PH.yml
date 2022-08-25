@@ -1502,15 +1502,6 @@ fil:
         text: "{SPRITE} isipin {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}isipin{TEXT1}for{NUM}segundo"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} isipin {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Nagugutom na rin ako.
-            '"I only want the biggest goat."': Gusto ko lang ang pinakamalaking kambing.
-            '"I''m a green troll."': Isa akong berdeng troll.
-            '"No one will cross my bridge."': Walang tatawid sa tulay ko.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} isipin {THOUGHT}"
         options:

@@ -1349,3 +1349,5 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        soccer:
+          name: futbolas

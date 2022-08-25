@@ -1062,3 +1062,5 @@ hr:
               display_name: Likovi
             lessonGroup-8:
               display_name: Varijable
+        soccer:
+          name: nogomet

@@ -86,10 +86,10 @@
     "parent_level_id": 20462,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/maker-toolkit/analog-sensors/"
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/analog-sensors"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+    "map_reference": "/courses/csd-2022/guides/changing-sensor-scale",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -103,11 +103,11 @@
     "encrypted_examples": "kmDaWesv+fkHj4rWVobgKUMjr+Hw6E5ohr1dLrd+pigy31NykB1QSs41FMdK\nQVwz1uD6lAtq27RDvG8RuYjyuw==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T17:06:10.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:10.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:10.814+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CB_2022\"},{\"changed_at\":\"2022-04-08 22:43:31 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

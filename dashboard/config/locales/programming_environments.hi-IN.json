@@ -1,0 +1,105 @@
+{
+  "hi-IN": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "वेब लैब"
+        },
+        "gamelab": {
+          "name": "गेम लैब",
+          "categories": {
+            "game_lab": {
+              "name": "गेम लैब"
+            },
+            "sprites": {
+              "name": "स्प्राइट्स"
+            },
+            "groups": {
+              "name": "समूह"
+            },
+            "drawing": {
+              "name": "ड्राइंग"
+            },
+            "math": {
+              "name": "गणित"
+            },
+            "variables": {
+              "name": "चर"
+            },
+            "functions": {
+              "name": "कार्य"
+            }
+          }
+        },
+        "applab": {
+          "name": "ऐप लैब",
+          "description": "ऐप लैब एक प्रोग्रामिंग वातावरण है जहां आप सरल ऐप बना सकते हैं। एक ऐप डिज़ाइन करें, इसे काम करने के लिए ब्लॉक या जावास्क्रिप्ट के साथ कोड करें, फिर सेकंडो में अपना ऐप साझा करें।",
+          "categories": {
+            "data": {
+              "name": "डेटा"
+            },
+            "math": {
+              "name": "गणित"
+            },
+            "variables": {
+              "name": "चर"
+            },
+            "functions": {
+              "name": "कार्य"
+            },
+            "advanced": {
+              "name": "उन्नत"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "स्प्राइट लैब",
+          "categories": {
+            "sprites": {
+              "name": "स्प्राइट्स"
+            },
+            "world": {
+              "name": "विश्व"
+            },
+            "location": {
+              "name": "स्थान"
+            },
+            "actions": {
+              "name": "क्रियाएँ"
+            },
+            "events": {
+              "name": "घटनाएँ"
+            },
+            "behaviors": {
+              "name": "व्यवहार"
+            },
+            "loops": {
+              "name": "फंदे"
+            },
+            "variables": {
+              "name": "चर"
+            },
+            "math": {
+              "name": "गणित"
+            },
+            "logic": {
+              "name": "तर्क"
+            },
+            "functions": {
+              "name": "कार्य"
+            },
+            "text": {
+              "name": "पाठ"
+            },
+            "comments": {
+              "name": "टिप्पणियां"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Lab"
+        }
+      }
+    }
+  }
+}

@@ -3,18 +3,26 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Seznam na Spotify (pro každý věk)"
+          "name": "Seznam na Spotify (pro každý věk)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
+          "name": "Hodina kódu – Básnické umění",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
+          "name": "Básnické umění 4 – Gratulace",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "Básnické umění 2 – Události",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "Básnické umění 3 – Obrazotvornost",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -23,31 +31,73 @@
           "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "Představení umělce"
+          "name": "Představení umělce",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Zatáčky a úhly"
+          "name": "Zatáčky a úhly",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "Materiál pro studenty"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Zatáčky a úhly"
+          "name": "Zatáčky a úhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Seznam na Spotify (pro každý věk)"
+          "name": "Seznam na Spotify (pro každý věk)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Šifrování a veřejné klíče",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "Video"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Šifrovací widgety v Code Studiu",
+          "url": "https://studio.code.org/s/hoc-encryption"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Průvodce aktivitou – Komprese textu",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Zopakování aktivity – Dekóduj tuhle zprávu",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
+          "type": "Zopakování aktivity"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Dekóduj tuhle zprávu",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Widget na kompresi textu v Code Studiu",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
+          "type": "Widget"
         },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: Komprese textu s Aloe Blaccem",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
         },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "Události s odrážením – jak to funguje?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "Události s odrážením – jak to funguje?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Seznam na Spotify (pro každý věk)"
+          "name": "Seznam na Spotify (pro každý věk)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Seznam na Spotify (pro každý věk)"
+          "name": "Seznam na Spotify (pro každý věk)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
           "name": "Umělá inteligence: strojové učení",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
@@ -59,6 +109,459 @@
           "name": "Umělá inteligence: školící data a podjatost",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
+        },
+        "representing_images/csd/2022": {
+          "name": "Reprezentace obrázků"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Kombinování reprezentací"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Reflexe"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubrika"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "Video: Dopad na společnost",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Strojové učení",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "Video: Školicí data a podjatost",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubrika"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Fórum učitelů"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Video"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Video"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "Rubrika"
+        },
+        "drawing_shapes/csd/2022": {
+          "name": "Kreslení tvarů"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2022": {
+          "name": "Kreslení tvarů"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Video"
+        },
+        "variables/csd/2022": {
+          "name": "Proměnné"
+        },
+        "variables_3/csd/2022": {
+          "name": "Proměnné"
+        },
+        "random_numbers/csd/2022": {
+          "name": "Náhodná čísla"
+        },
+        "random_numbers_2/csd/2022": {
+          "name": "Náhodná čísla"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
+        },
+        "sprites/csd/2022": {
+          "name": "Postavy"
+        },
+        "the_animation_tab/csd/2022": {
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Postavy"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Vlastnosti sprajtu"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Vlastnosti sprajtu"
+        },
+        "text/csd/2022": {
+          "name": "Text"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubrika"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "Video"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubrika"
+        },
+        "boolean_expressions/csd/2022": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2022": {
+          "type": "Video"
+        },
+        "conditionals/csd/2022": {
+          "name": "Podmínky"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Vstup z klávesnice"
+        },
+        "if_else_statements/csd/2022": {
+          "type": "Video"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Rubrika"
+        },
+        "velocity/csd/2022": {
+          "name": "Rychlost",
+          "type": "Video"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Rychlost"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Rychlost"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Side scroller",
+          "type": "Rubrika"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Side scroller",
+          "type": "Průvodce projektem"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Rychlost a přičítací vzor"
+        },
+        "collisions/csd/2022": {
+          "name": "Kolize"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Hra Flyer",
+          "type": "Rubrika"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Hra Flyer",
+          "type": "Průvodce projektem"
+        },
+        "functions/csd/2022": {
+          "name": "Funkce",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funkce"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funkce"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubrika"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2022": {
+          "name": "Video: Ladění",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "Video: Programování ve dvojicích",
+          "type": "Video"
+        },
+        "headings/csd/2022": {
+          "name": "Záhlaví"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Rubrika"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "lists/csd/2022": {
+          "name": "Seznamy"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Sociální slídil"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Sociální slídil"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Úvod do CSS - část 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Úvod do CSS - část 2",
+          "type": "Video"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubrika"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Video"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubrika"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Publikování webu",
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "Video: Jak vyjádřit nesouhlas",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "Video: Týmová práce",
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "Video: Jak funguje hledání",
+          "type": "Video"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubrika"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Propojení stránek"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Průvodce projektem"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Nezávislý posudek"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "Rubrika"
+        },
+        "design_mode/csd/2022": {
+          "name": "Dizajnový mód"
+        },
+        "design_mode_elements/csd/2022": {
+          "name": "Prvky dizajnového módu"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "name": "Úvod do dizajnového módu",
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "app_presentation/csd/2022": {
+          "type": "Rubrika"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Informatika mění vše",
+          "type": "Video"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "random_numbers_1/csd/2022": {
+          "name": "Náhodná čísla"
+        },
+        "board_events/csd/2022": {
+          "name": "Události desky"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Události desky"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "Proměnné"
+        },
+        "variables_2/csd/2022": {
+          "name": "Proměnné",
+          "type": "Video"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubrika"
+        },
+        "color_leds/csd/2022": {
+          "name": "Barevné LED"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubrika"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "Události akcelerometru"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "type": "Video"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Poznámky k hraní"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funkce"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funkce",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funkce s Parametry",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funkce"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubrika"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubrika"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "Umělá inteligence vidění",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "Umělá inteligence: školící data a podjatost",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Materiál pro studenty"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubrika"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubrika"
         },
         "lesson_plans/courseb/2018": {
           "name": "Plány hodin"
@@ -606,6 +1109,7 @@
         },
         "ai-ml/coursef/2021": {
           "name": "Umělá inteligence: strojové učení",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
@@ -710,11 +1214,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Digitální stezky: Čtverce digitálních stezek",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Materiál pro studenty"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Digitální stezky: Stopy zvířat",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Materiál pro studenty"
         },
         "mimi-activity/courseb/2021": {
           "name": "Pohyb, pohyb",
@@ -900,7 +1406,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Bezpečnost v mém online sousedství: Chvilka zastavení a zamyšlení",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Materiál pro studenty"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Párové programování",
@@ -1099,7 +1606,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Dát STOP online zlovolnostem: STOP online zlovolnostem",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Materiál pro studenty"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Moji robotičtí přátelé",
@@ -1147,14 +1655,17 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Představení umělce"
+          "name": "Představení umělce",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Zatáčky a úhly"
+          "name": "Zatáčky a úhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Zatáčky a úhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Materiál pro studenty"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Obrázek emoce na tvářích s pocity",
@@ -1357,6 +1868,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "Události s odrážením – jak to funguje?",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1377,7 +1889,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Seznam na Spotify (pro každý věk)"
+          "name": "Seznam na Spotify (pro každý věk)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "Taneční večírek: bez připojení",
@@ -1485,10 +1998,12 @@
         },
         "artist_introduction/express/2021": {
           "name": "Představení umělce",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video"
         },
         "turns_angles/express/2021": {
           "name": "Zatáčky a úhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
@@ -1524,7 +2039,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Seznam na Spotify (pro každý věk)"
+          "name": "Seznam na Spotify (pro každý věk)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Otevřené úrovně programování",
@@ -1662,7 +2178,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "Soukromé a osobní údaje: Výstupní lístek",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Materiál pro studenty"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Soukromé a osobní údaje: Kvíz k lekci",
@@ -1692,10 +2209,12 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Zatáčky a úhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Materiál pro studenty"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Zatáčky a úhly"
+          "name": "Zatáčky a úhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Psaní písní s funkcemi",
@@ -1796,6 +2315,7 @@
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "seeing_ai/csd/2021": {
@@ -1824,6 +2344,9 @@
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Materiál pro studenty"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
@@ -1953,6 +2476,7 @@
         },
         "video_machine_learning/csd/2021": {
           "name": "Video: Strojové učení",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {

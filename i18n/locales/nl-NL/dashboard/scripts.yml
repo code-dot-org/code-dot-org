@@ -2388,3 +2388,5 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Welkom
+        soccer:
+          name: voetbal

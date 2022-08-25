@@ -1,0 +1,94 @@
+{
+  "sv-SE": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "Grupper"
+            },
+            "drawing": {
+              "name": "Ritning"
+            },
+            "math": {
+              "name": "Matte"
+            },
+            "variables": {
+              "name": "variabler"
+            },
+            "functions": {
+              "name": "funktioner"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab är en programmeringsmiljö där du kan göra enkla appar. Skapa en app, koda med block eller JavaScript och få den att fungera. Dela sedan med dig av den till andra inom några sekunder.",
+          "categories": {
+            "data": {
+              "name": "Data"
+            },
+            "math": {
+              "name": "Matte"
+            },
+            "variables": {
+              "name": "variabler"
+            },
+            "functions": {
+              "name": "funktioner"
+            },
+            "advanced": {
+              "name": "Avancerat"
+            },
+            "circuit": {
+              "name": "Krets"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Världen"
+            },
+            "location": {
+              "name": "Platser"
+            },
+            "actions": {
+              "name": "Åtgärder"
+            },
+            "events": {
+              "name": "Händelser"
+            },
+            "behaviors": {
+              "name": "Beteenden"
+            },
+            "loops": {
+              "name": "loopar"
+            },
+            "variables": {
+              "name": "variabler"
+            },
+            "math": {
+              "name": "Matte"
+            },
+            "logic": {
+              "name": "Logik"
+            },
+            "functions": {
+              "name": "funktioner"
+            },
+            "text": {
+              "name": "text"
+            },
+            "comments": {
+              "name": "Kommentarer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

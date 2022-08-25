@@ -3416,7 +3416,16 @@
         "Pixelation Bee": "Gambar lebah yang lebih besar ini mengodekan warna dengan 12 bit per piksel, namun dengan melihatnya dalam hex akan memudahkan untuk melihat warna setiap piksel. Jika Anda beralih ke mode biner - lihat apa yang akan terjadi - bitnya sangat banyak. Ingin melihat yang lebih menakjubkan? Coba hal ini: geser bitnya per piksel hingga 24 bit per piksel. Apa yang terjadi? Bisakah Anda menjelaskannya?",
         "Pixelation Flappy": "Berikut adalah gambar yang lebih besar dengan 9 bit per piksel. Dengan 9 bit per piksel, Anda dapat mengekspresikan 512 warna berbeda. Klik untuk melihat gambar berikutnya yang bahkan jauh lebih kompleks, namun lebih mudah dipahami.",
         "U2L10 NetSim Automatic DNS": "Dalam versi Internet Simulator ini, Domain Name System (DNS) disediakan untuk kalian dan mengetahui alamat IP dari semua komputer yang terhubung. Kirim pesan dalam bentuk GET [hostname] ke layanan DNS di alamat <yourRouterNumber>.15 untuk mendapatkan alamat siswa.",
-        "Vigenere": "Tes"
+        "Vigenere": "Tes",
+        "CSD U3 L5 Freeplay_2022": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U3 Variables change circle size_2022": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U3 Variables naming rules v2_2022": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U3 Variables random with assignment_2022": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U5 black white images pixelation 2_2022": "Gambarlah wajah tersenyum (klik\ndi sini untuk melihat gambar)",
+        "CSD U5 black white images pixelation 3_2022": "Ubah alat pengendali lebar dan tinggi untuk menemukan gambar (klik disini untuk melihat lebih lanjut)",
+        "CSD U5 black white images pixelation 4_2022": "Tambahkan alis pada wajah\ntersenyum (klik di sini untuk melihat gambar)",
+        "CSD U5 black white images pixelation 5_2022": "Gambar apa saja yang Anda suka",
+        "CSD U5 black white images pixelation_2022": "Selesaikan bentuk X dengan\ncara mengetik 0s dan 1s"
       }
     }
   }

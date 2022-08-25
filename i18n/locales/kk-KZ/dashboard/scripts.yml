@@ -1303,3 +1303,5 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        soccer:
+          name: футбол

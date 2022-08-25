@@ -14,8 +14,8 @@ jobs:
       FIREBASE_NAME: ${{ secrets.FIREBASE_NAME }}
       FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
       PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
-      AWS_ACCESS_KEY_ID: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
-      AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}  
+      AWS_ACCESS_KEY_ID: $${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: $${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}  
       SAUCE_ACCESS_KEY: $${{ secrets.SAUCE_ACCESS_KEY }}
       SAUCE_USERNAME: $${{ secrets.SAUCE_USERNAME }}        
     steps:    
@@ -84,7 +84,7 @@ jobs:
           CIRCLE_BUILD_NUM: "42:-2323"
           CIRCLE_TEST_REPORTS: /home/circleci/test_reports
           CIRCLE_ARTIFACTS: /home/circleci/artifacts
-        run: bundle exec rake circle:seed_ui_test --trace        
+        run: bundle exec rake circle:seed_ui_test --trace   
       - name: Rake run UI tests
         env: 
           CI: true

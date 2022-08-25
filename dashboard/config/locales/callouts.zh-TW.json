@@ -2246,6 +2246,132 @@
         "New Sprite Lab Project": {
           "costumes_tab": "點擊這裡為你的項目添加服裝。",
           "make_sprite": "使用這裡的模組來製作一個精靈圖！"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "點擊此處以顯示格線。"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "在此修改數值"
+        },
+        "CSD U3 abstraction accelerateX_2022": {
+          "CSD_U3_L11_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction jumping_2022": {
+          "CSD_U3_L13_S8_C1": "在此設定速度"
+        },
+        "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions types2_2022": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types3_2022": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C3": "修改這個函式。"
+        },
+        "CSD U3 platform platform1_2022": {
+          "CSD_U3_S17_L8_C1": "這個積木創建了一個新的角色。"
+        },
+        "CSD U3 platform scoreboard_2022": {
+          "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
+        },
+        "CSD U3 platform variable1_2022": {
+          "callout": "這個積木創建了一個變數。"
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "在此修改數值"
         }
       }
     }

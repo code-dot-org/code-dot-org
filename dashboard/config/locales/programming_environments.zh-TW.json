@@ -1,0 +1,110 @@
+{
+  "zh-TW": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab",
+          "categories": {
+            "html_tags": {
+              "name": "HTML 標籤"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Game Lab",
+          "categories": {
+            "game_lab": {
+              "name": "Game Lab"
+            },
+            "sprites": {
+              "name": "角色"
+            },
+            "groups": {
+              "name": "群組"
+            },
+            "drawing": {
+              "name": "繪圖"
+            },
+            "math": {
+              "name": "運算"
+            },
+            "variables": {
+              "name": "變數"
+            },
+            "functions": {
+              "name": "函式"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab 是個編程環境，你可以在裡頭做些簡單的應用程式。可以用積木或是 JavaScript 的方式設計，製作完後也能分享。",
+          "categories": {
+            "data": {
+              "name": "數據"
+            },
+            "math": {
+              "name": "運算"
+            },
+            "variables": {
+              "name": "變數"
+            },
+            "functions": {
+              "name": "函式"
+            },
+            "advanced": {
+              "name": "進階設定"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "sprites": {
+              "name": "角色"
+            },
+            "world": {
+              "name": "世界"
+            },
+            "location": {
+              "name": "座標"
+            },
+            "actions": {
+              "name": "動作"
+            },
+            "events": {
+              "name": "事件"
+            },
+            "behaviors": {
+              "name": "行為"
+            },
+            "loops": {
+              "name": "迴圈"
+            },
+            "variables": {
+              "name": "變數"
+            },
+            "math": {
+              "name": "運算"
+            },
+            "logic": {
+              "name": "邏輯"
+            },
+            "functions": {
+              "name": "函式"
+            },
+            "text": {
+              "name": "文字"
+            },
+            "comments": {
+              "name": "註解"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java 實驗室"
+        }
+      }
+    }
+  }
+}

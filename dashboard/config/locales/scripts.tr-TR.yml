@@ -127,8 +127,13 @@ tr:
             biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar
           student_description: Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
             biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar
+        K5PD:
+          title: K5 Profesyönel Gelişim (eski)
         netsim:
           title: İnternet Simülatörü
+          description: İnternetin nasıl çalıştığını öğren.
+          description_short: İnternetin nasıl çalıştığını öğren.
+          student_description: İnternetin nasıl çalıştığını öğren.
         pixelation:
           title: Pikselleşme
           description: Bitler ve baytlar ile görüntüler oluştur.
@@ -183,16 +188,47 @@ tr:
           student_description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz
             Devrinden sincap Scrat ile birlikte bilgisayar biliminin temel yapısını
             dene!
+        CodeStudioPuzzleChallenge:
+          description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en iyisini
+            yapmayı dene!
+          description_short: Kendinle yarış!
+          student_description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en
+            iyisini yapmayı dene!
+        Tutorial Video - Code Studio Puzzle Challenge:
+          description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en iyisini
+            yapmayı dene!
+          description_short: Kendinle yarış!
+          student_description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en
+            iyisini yapmayı dene!
         algebraPD:
           title: Algebra PD'de Bilgisayar Bilimi
         algPDmiami:
           title: Algebra PD'de Bilgisayar Bilimi
         text-compression:
           title: Metin Sıkıştırma
+        Test Wednesday:
+          title: Deneme Çarşamba
+          description: Deneme Çarşamba
+          student_description: Deneme Çarşamba
+        ECSPD-NexTech:
+          logo_image: nextech\_logo.png
+        ECSPD-iZone:
+          logo_image: izone\_logo.png
         algebraPD-NexTech:
           title: Algebra PD'de Bilgisayar Bilimi
+          logo_image: nextech\_logo.png
         algebraPD-iZone:
           title: Algebra PD'de Bilgisayar Bilimi
+          logo_image: izone\_logo.png
+        sciencePD-NexTech:
+          logo_image: nextech\_logo.png
+        sciencePD-iZone:
+          logo_image: izone\_logo.png
+        Testing:
+          title: Deneniyor
+          description: Deneniyor
+          description_short: Deneniyor
+          student_description: Deneniyor
         algebraPD2a:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -222,6 +258,10 @@ tr:
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
+        algebraPD2:
+          description: Akademik Yıl Yardımı
+          description_short: Akademik Yıl Yardımı
+          student_description: Akademik Yıl Yardımı
         sciencePD2b:
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -241,6 +281,7 @@ tr:
         asUnplugged:
           description_audience: 6-13 yaş grubu
         afterschool1:
+          title: Okulsonrası 1
           description_audience: 7-13 yaş grubu
         vigenere:
           description: Vigenere Cipher Widget uygulamasını şifrelenmiş ve çözülmüş
@@ -262,6 +303,7 @@ tr:
         Special Fun:
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
         SpecialSeries:
+          title: Özel Seviyeler
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
         iceage:
           title: Buz Devri Oyun Laboratuvarı
@@ -280,6 +322,7 @@ tr:
           student_description: Bir hikaye oluşturmak veya bir oyun yaratmak için Gumball
             Lab kullanın!
         starwars:
+          title: 'Star Wars: Galaksiyi Kod ile Yapmak (Javascript)'
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
@@ -287,6 +330,7 @@ tr:
           student_description: Droidleri programlamayı ve çok çok uzaklardaki bir
             galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
         starwarsblocks:
+          title: 'Star Wars: Galaksiyi Kod ile Yapmak (Blockly)'
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
@@ -309,6 +353,10 @@ tr:
           student_description: Yapay zekâ ve makine öğreniminin dünyanın sorunlarını
             yönlendirmek için nasıl kullanılabileceğini öğrenin.
           name: okyanuslar
+        CSPPD3-Unit4:
+          description: CSP Unit 4 için Çevrim içi Yardım
+          description_short: CSP Unit 4 için Yardım
+          student_description: CSP Unit 4 için Çevrim içi Yardım
         cspunit6:
           description_short: App Lab uygulamalarında veri toplama ve kullanmayı öğren
         AlgebraA:
@@ -5283,3 +5331,5 @@ tr:
               display_name: Hoşgeldiniz
         dlp-csp-mod1-2022:
           title: Bilgisayar Bilimi İlkeleri Derinlemesine Öğrenim Modülü 1
+        soccer:
+          name: futbol

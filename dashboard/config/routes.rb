@@ -495,9 +495,6 @@ Dashboard::Application.routes.draw do
     get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
     post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
 
-    # HOC dashboards.
-    get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
-
     # NPS dashboards
     get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
     post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
@@ -505,7 +502,6 @@ Dashboard::Application.routes.draw do
     # internal report dashboards
     get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
     get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
-    get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
     get '/admin/debug', to: 'admin_reports#debug'
 
     # internal search tools
@@ -654,7 +650,7 @@ Dashboard::Application.routes.draw do
           resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
             member do
               post :send_principal_approval
-              post :principal_approval_not_required
+              post :change_principal_approval_requirement
             end
           end
           post :principal_approval, to: 'principal_approval_applications#create'
