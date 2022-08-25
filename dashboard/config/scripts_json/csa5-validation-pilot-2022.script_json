@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-24 08:23:21 UTC",
+    "serialized_at": "2022-08-23 20:51:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3774,9 +3774,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L1-L1_pilot-2022"
-        ],
         "progression": "Investigate: Two-Dimensional (2D) Arrays"
       },
       "bonus": false,
@@ -3799,9 +3796,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L1-L2_pilot-2022"
-        ],
         "progression": "Using 2D Arrays"
       },
       "bonus": false,
@@ -3824,9 +3818,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L1-L3_pilot-2022"
-        ],
         "progression": "Using 2D Arrays"
       },
       "bonus": false,
@@ -3849,9 +3840,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L1-L4_pilot-2022"
-        ],
         "progression": "Using 2D Arrays"
       },
       "bonus": false,
@@ -3874,9 +3862,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L1-L5_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3899,9 +3884,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L2-L1_pilot-2022"
-        ],
         "progression": "Investigate: Nested Loops and 2D Arrays"
       },
       "bonus": false,
@@ -3924,9 +3906,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L2-L2_pilot-2022"
-        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3949,9 +3928,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L2-L3_pilot-2022"
-        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3974,9 +3950,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L2-L4_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3999,9 +3972,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L3-L1_pilot-2022"
-        ],
         "progression": "Predict: Column-Major Traversal"
       },
       "bonus": false,
@@ -4024,9 +3994,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L3-L2_pilot-2022"
-        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4049,9 +4016,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L3-L3_pilot-2022"
-        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4074,9 +4038,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L3-L4_pilot-2022"
-        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4099,9 +4060,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L3-L5_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4124,9 +4082,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L4-L1_pilot-2022"
-        ],
         "progression": "Reversing 2D Arrays"
       },
       "bonus": false,
@@ -4149,9 +4104,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L4-L2_pilot-2022"
-        ],
         "progression": "Reversing 2D Arrays"
       },
       "bonus": false,
@@ -4174,9 +4126,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L4-L3 CR_pilot-2022"
-        ],
         "progression": "Code Review: Reversing 2D Arrays"
       },
       "bonus": false,
@@ -4199,9 +4148,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L4-L4_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4224,9 +4170,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L5-L1_pilot-2022"
-        ],
         "progression": "Predict: Enhanced For Loops and Objects"
       },
       "bonus": false,
@@ -4249,9 +4192,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L5-L2_pilot-2022"
-        ],
         "progression": "Investigate: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4274,9 +4214,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L5-L3_pilot-2022"
-        ],
         "progression": "Using Enhanced For Loops with 2D Arrays"
       },
       "bonus": false,
@@ -4299,9 +4236,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L5-L4 CR_pilot-2022"
-        ],
         "progression": "Code Review: Using Enhanced For Loops with 2D Arrays"
       },
       "bonus": false,
@@ -4324,9 +4258,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L5-L5_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4349,9 +4280,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L6-L1_pilot-2022"
-        ],
         "progression": "Investigate: Modifying Pixels"
       },
       "bonus": false,
@@ -4374,9 +4302,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L6-L2_pilot-2022"
-        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4399,9 +4324,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L6-L3_pilot-2022"
-        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4424,9 +4346,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L6-L4_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4449,9 +4368,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L7-L1_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4474,9 +4390,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L1_pilot-2022"
-        ],
         "progression": "Investigate: Changing Colors in an Image"
       },
       "bonus": false,
@@ -4499,9 +4412,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L2_pilot-2022"
-        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4524,9 +4434,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L3_pilot-2022"
-        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4549,9 +4456,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L4_pilot-2022"
-        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4574,9 +4478,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L5 CR_pilot-2022"
-        ],
         "progression": "Code Review: Creating Image Filters"
       },
       "bonus": false,
@@ -4599,9 +4500,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L6_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4624,9 +4522,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L9-L1_pilot-2022"
-        ],
         "progression": "Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4649,9 +4544,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L9-L2_pilot-2022"
-        ],
         "progression": "Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4674,9 +4566,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L9-L3 CR_pilot-2022"
-        ],
         "progression": "Code Review: Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4699,9 +4588,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L9-L4_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4724,9 +4610,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L10-L1_pilot-2022"
-        ],
         "progression": "Investigate: Shifting Elements"
       },
       "bonus": false,
@@ -4749,9 +4632,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L10-L2_pilot-2022"
-        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4774,9 +4654,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L10-L3_pilot-2022"
-        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4799,9 +4676,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L10-L4_pilot-2022"
-        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4824,9 +4698,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L10-L5 CR_pilot-2022"
-        ],
         "progression": "Code Review: Shifting a 2D Array"
       },
       "bonus": false,
@@ -4849,9 +4720,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L10-L6_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4874,9 +4742,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L11-L1_pilot-2022"
-        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4899,9 +4764,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L12-L1_pilot-2022"
-        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4924,9 +4786,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L12-L2 CR_pilot-2022"
-        ],
         "progression": "Code Review: Personal Narrative Project"
       },
       "bonus": false,
@@ -4949,9 +4808,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U5L13-L1_pilot-2022"
-        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4974,9 +4830,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa5_pilot-2022"
-        ],
         "progression": "Unit 5 Survey"
       },
       "bonus": false,
@@ -4999,9 +4852,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA Unit 5 Assessment 2022_pilot-2022"
-        ],
         "progression": "Unit 5 Assessment"
       },
       "bonus": false,
@@ -5024,9 +4874,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Console Sandbox_pilot-2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5048,9 +4895,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Neighborhood Sandbox_pilot-2022"
-        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5073,9 +4917,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
-        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5098,9 +4939,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Theater Sandbox_pilot-2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5768,22 +5606,1397 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Creating Image Filters",
+      "url": "https://docs.google.com/document/d/1asmP2dvVlNDTDDfzTnGbdDftuqBDF5ojtptFDSwzJDI/edit?usp=sharing",
+      "key": "_key_creating_image_filters",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_creating_image_filters"
+      }
+    },
+    {
+      "name": "[KEY] Data Collection",
+      "url": "https://docs.google.com/document/d/1eEBLQtcNYopYxqIOzlLD2D6U0dheujMkG6xMZt13zkY/edit?usp=sharing",
+      "key": "_key_data_collection",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_collection"
+      }
+    },
+    {
+      "name": "[KEY] Enhanced For Loops Anticipation Guide",
+      "url": "https://docs.google.com/document/d/1Hm7ASTM5S77BM2s9i3x-HM6Pb0MFWp3b4ACqUzSJfzw/edit?usp=sharing",
+      "key": "_key_enhanced_for_loops_anticipation_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_enhanced_for_loops_anticipation_guide"
+      }
+    },
+    {
+      "name": "[KEY] Finding Duplicates",
+      "url": "https://docs.google.com/document/d/1wiIqzjBVUNrjE_SfjnRsDm-SB6vfTe_0dYtt8Rcp5Ds/edit?usp=sharing",
+      "key": "_key_finding_duplicates_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_finding_duplicates_1"
+      }
+    },
+    {
+      "name": "[KEY] Grayscale Images",
+      "url": "https://docs.google.com/document/d/10s8P_cfDij9gTelOEGx_eE61OdVheV0HBiLx_UVZZGQ/edit?usp=sharing",
+      "key": "_key_grayscale_images",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_grayscale_images"
+      }
+    },
+    {
+      "name": "[KEY] GrayscaleImage FRQ",
+      "url": "https://docs.google.com/document/d/1boZyrPh1a3zuWeOGM4e8Wq9st-MNL8hua6ZFn6ADd9A/edit?usp=sharing",
+      "key": "_key_grayscaleimage_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_grayscaleimage_frq"
+      }
+    },
+    {
+      "name": "[KEY] Personal Narrative Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1l2F-0jlkQEwOFcljGjPGObE1cPvyvu2B5mTNu70iHME/edit?usp=sharing",
+      "key": "_key_personal_narrative_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_personal_narrative_project_planning_guide"
+      }
+    },
+    {
+      "name": "[KEY] Reversing a 2D Array",
+      "url": "https://docs.google.com/document/d/1-7tMLZBoifMwUTQ4dT1nj_glNNrJt_tPV7rOWddz5tg/edit?usp=sharing",
+      "key": "_key_reversing_a_2d_array",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_reversing_a_2d_array"
+      }
+    },
+    {
+      "name": "[KEY] Shifting a 2D Array",
+      "url": "https://docs.google.com/document/d/1e7zvzrX4XKKZ_-ALhFWp7BM8FUT53pLUOCgAHQVsUrQ/edit?usp=sharing",
+      "key": "_key_shifting_a_2d_array",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_shifting_a_2d_array"
+      }
+    },
+    {
+      "name": "[KEY] Tracing 2D Array Traversals",
+      "url": "https://docs.google.com/document/d/1uk0onVV8J816Y6PaPanln7zpIJKu7C0p1_kLVmr2RSE/edit?usp=sharing",
+      "key": "_key_tracing_2d_array_traversals",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_tracing_2d_array_traversals"
+      }
+    },
+    {
+      "name": "[KEY] Tracing Column-Major Traversals",
+      "url": "https://docs.google.com/document/d/1nix2GjSuW9SGU0hXSZ38WZ7GfEgKXxSLSJrIkMfQiYU/edit?usp=sharing",
+      "key": "_key_tracing_column-major_traversals",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_tracing_column-major_traversals"
+      }
+    },
+    {
+      "name": "[KEY] Tracing Enhanced For Loops",
+      "url": "https://docs.google.com/document/d/1AOxZvWCG-Q9euPatGjUHfkFfDLbGDWJE6zlR-nP3hzU/edit?usp=sharing",
+      "key": "_key_tracing_enhanced_for_loops",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "[KEY] U5L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1uB_RIqsrshw0jV7c6oEQpOzz_-G9X7aBpuELAHuYUSA/edit?usp=sharing",
+      "key": "_key_u5l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l10_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1T-lrGoBmKp0G4gR_p0U7z_sqrAFCD1n-F6XFaOFn2O0/edit?usp=sharing",
+      "key": "_key_u5l1_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/19c5QhVYL79H7vqjpbko-KsA9ixZZZILCmNrR-5x_sTE/edit?usp=sharing",
+      "key": "_key_u5l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1FbQNiaZ4HTkQ5PgWFY5TomuzGSQFjbAE_IqkhLcVC6M/edit?usp=sharing",
+      "key": "_key_u5l3_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1lyKN-FhSU6QzDTzM8mmx-9CK4ypDxee6CRSGNfZB62I/edit?usp=sharing",
+      "key": "_key_u5l4_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1XDv0pduLeJ7vngifjHu6_MV_dnZMl4-P8kzGrwgVfRo/edit?usp=sharing",
+      "key": "_key_u5l5_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1g7T6fExLHcIAlCMnjTv6r3QJtUcb7woanR-uMjteEew/edit?usp=sharing",
+      "key": "_key_u5l6_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l6_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/10g0VJqBGhXq4hma1MuAr_8ZXKpTYUu3QazGqbfP7NzA/edit?usp=sharing",
+      "key": "_key_u5l7_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1sf1oBfCvnRUw82PIPILhzksyH5vFOe_e2Ve8ha_KW8s/edit?usp=sharing",
+      "key": "_key_u5l8_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1r7v9J-9Cf0el6QFaOgUMiVGA2-q4RCey5nPlaEFrsF8/edit?usp=sharing",
+      "key": "_key_u5l9_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa5-2022/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa5-2022/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa5-2022/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
+      "name": "Column-Major Traversal",
+      "url": "https://youtu.be/wgYqBhDDNEc",
+      "key": "column-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "column-major_traversal"
+      }
+    },
+    {
+      "name": "Creating Image Filters",
+      "url": "https://docs.google.com/document/d/1roMH6K4FHugoTNiOwls50lZLvpk_pGpzPKjbRaVaK-8/edit?usp=sharing",
+      "key": "creating_image_filters",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "creating_image_filters"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/16qhMybtO3vrR0sUUWUEfZm2jw-1U_ydKoH5K0CwTjaw/edit?usp=sharing",
+      "key": "cs_bingo_definitions_4",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_4"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/presentation/d/1AQwPa-7VUblfOh8XGPPxHi6ycMXqr_g681HyKfSSDzo/edit?usp=sharing",
+      "key": "cs_bingo_definitions_5",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_5"
+      }
+    },
+    {
+      "name": "Data Collection",
+      "url": "https://docs.google.com/document/d/1Dpulq-6DqTkObdQzDM4R65nx_Pt-jwKzK4JlsX_x6pA/edit?usp=sharing",
+      "key": "data_collection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_collection"
+      }
+    },
+    {
+      "name": "Enhanced For Loops and 2D Arrays",
+      "url": "https://youtu.be/N-ePqqu_D9w",
+      "key": "enhanced_for_loops_and_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
+      }
+    },
+    {
+      "name": "Enhanced For Loops Anticipation Guide",
+      "url": "https://docs.google.com/document/d/1qrEaP944UEUiUoR3h1K4A9WEe5fiwZR8i6kPT6rw2nk/edit?usp=sharing",
+      "key": "enhanced_for_loops_anticipation_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops_anticipation_guide"
+      }
+    },
+    {
+      "name": "Finding Duplicates",
+      "url": "https://docs.google.com/document/d/1Gi6z0hXOsJWBZOK7cza3CgvpTS6ADsp_rK0B7pgYIwk/edit?usp=sharing",
+      "key": "finding_duplicates_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "finding_duplicates_1"
+      }
+    },
+    {
+      "name": "Grayscale Images",
+      "url": "https://docs.google.com/document/d/1Y_ee9svKQq9Sj2q3L7rc1vk7n8e_9XZzRd2w3eDubTI/edit?usp=sharing",
+      "key": "grayscale_images",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "grayscale_images"
+      }
+    },
+    {
+      "name": "GrayscaleImage FRQ",
+      "url": "https://docs.google.com/document/d/1Mxz5moGO4bLuXM9hkFvPzuSl0-1_XvMdxaf8rZhY15I/edit?usp=sharing",
+      "key": "grayscaleimage_frq",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "grayscaleimage_frq"
+      }
+    },
+    {
+      "name": "GrayscaleImage FRQ Scoring Guidelines",
+      "url": "https://docs.google.com/document/d/15hDVMaCx7jyWcZee4NjGC_6qWobQMfRyxu5rBi_XOt4/edit?usp=sharing",
+      "key": "grayscaleimage_frq_scoring_guidelines",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
+      "key": "java_quick_reference",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "name": "Personal Narrative Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1_pLVScOHrt4G8SzRUwizkf-UnQ_TqZ7nYWiF2s77CO8/edit?usp=sharing",
+      "key": "personal_narrative_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "personal_narrative_project_planning_guide"
+      }
+    },
+    {
+      "name": "Reversing a 2D Array",
+      "url": "https://docs.google.com/document/d/1WsONFIOOzOeVWWAkBgyE44ze_PQpJSBvTdU6k0Muy6Q/edit?usp=sharing",
+      "key": "reversing_a_2d_array",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "reversing_a_2d_array"
+      }
+    },
+    {
+      "name": "Row-Major Traversal",
+      "url": "https://youtu.be/vS_yPc-2Eb8",
+      "key": "row-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "row-major_traversal"
+      }
+    },
+    {
+      "name": "Shifting a 2D Array",
+      "url": "https://docs.google.com/document/d/1HhjeF2KfrdBrC5fnNmNw86vSj7Yail9Zu6YSdwXXKig/edit?usp=sharing",
+      "key": "shifting_a_2d_array",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "shifting_a_2d_array"
+      }
+    },
+    {
+      "name": "This is Not Morgan Freeman",
+      "url": "https://youtu.be/oxXpB9pSETo",
+      "key": "this_is_not_morgan_freeman",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "this_is_not_morgan_freeman"
+      }
+    },
+    {
+      "name": "Tracing 2D Array Traversals",
+      "url": "https://docs.google.com/document/d/1-PGaBIPDJZgg2Fopt_tqHCwcGyVn-CYEWRuO7EQPIaQ/edit?usp=sharing",
+      "key": "tracing_2d_array_traversals",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "tracing_2d_array_traversals"
+      }
+    },
+    {
+      "name": "Tracing Column-Major Traversals",
+      "url": "https://docs.google.com/document/d/1UWfohgVCmVwrV9XqPIIa6jf2mAzt_X3g2rqUxmSVCQM/edit?usp=sharing",
+      "key": "tracing_column-major_traversals",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "tracing_column-major_traversals"
+      }
+    },
+    {
+      "name": "Tracing Enhanced For Loops",
+      "url": "https://docs.google.com/document/d/1hSiRGT4ap4s5YF7gHGGiPFo_32sIDq9SxgeMqKftyCw/edit?usp=sharing",
+      "key": "tracing_enhanced_for_loops",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "Two-Dimensional (2D) Arrays",
+      "url": "https://youtu.be/QIPNA3p6FBo",
+      "key": "two-dimensional_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-dimensional_2d_arrays"
+      }
+    },
+    {
+      "name": "U5L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1N7VKXBk0Rgwfc8F73QXXamB2lj7fMzroLklRnDE18-k/edit?usp=sharing",
+      "key": "u5l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l10_extra_practice"
+      }
+    },
+    {
+      "name": "U5L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1rsAdnvo1idqwucbiuunYCNtsnZAOeA9g24zkg4qFCz4/edit?usp=sharing",
+      "key": "u5l1_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l1_extra_practice"
+      }
+    },
+    {
+      "name": "U5L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1wDsZC7mXl7vs3Qbe-38qd5lIobaeADJBCFdapCItoIk/edit?usp=sharing",
+      "key": "u5l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l2_extra_practice"
+      }
+    },
+    {
+      "name": "U5L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1YFx6UJp__LG3Ywbk5F6in8T3xgaour8xWTSllqa9i-I/edit?usp=sharing",
+      "key": "u5l3_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l3_extra_practice"
+      }
+    },
+    {
+      "name": "U5L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Qh9rQvkKQ2fb4gxqz7-XVNBfMBiQiMDaFVgFSE0ievE/edit?usp=sharing",
+      "key": "u5l4_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l4_extra_practice"
+      }
+    },
+    {
+      "name": "U5L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1quezLgazUtr0j2n11Q_kJmsU_QtVPMx-JJnxH8TR6hA/edit?usp=sharing",
+      "key": "u5l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l5_extra_practice"
+      }
+    },
+    {
+      "name": "U5L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1lWtNFoyqgGSJjEWbNziHeASaQCH9MxGIiCumN_uahXE/edit?usp=sharing",
+      "key": "u5l6_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l6_extra_practice"
+      }
+    },
+    {
+      "name": "U5L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BHrgpzGZ8u-a5ppylHgmHXmqct23bVuuyzmkLqFmk6g/edit?usp=sharing",
+      "key": "u5l7_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l7_extra_practice"
+      }
+    },
+    {
+      "name": "U5L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1G8GCTW8dbapunJtU1OGanR0Fk_EmnhFKbkXLHq2hwxY/edit?usp=sharing",
+      "key": "u5l8_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l8_extra_practice"
+      }
+    },
+    {
+      "name": "U5L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Lz_WwPhojyaXUdriLnzPfurbVldYLh9MO54VoqibQaY/edit?usp=sharing",
+      "key": "u5l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 5 Guide",
+      "url": "https://docs.google.com/document/d/1Bkn9O58hQarNhiuFOxx5audry1k4BB-skRUsizx2Un4/edit?usp=sharing",
+      "key": "unit_5_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Overview",
+      "url": "https://docs.google.com/document/d/1lausMFcUUBRtnEwWVz02o2fayHWtDPzrOzeRZK1Yxq8/edit?usp=sharing",
+      "key": "unit_5_overview",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_overview"
+      }
+    },
+    {
+      "name": "Unit 5 Presentation",
+      "url": "https://docs.google.com/presentation/d/1r5FQ_vKi8vyPpT_f6qo6qELkO7K4dCz3MLrMFgaHGiw/edit?usp=sharing",
+      "key": "unit_5_presentation",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "name": "Unit 5 Study Guide",
+      "url": "https://docs.google.com/document/d/1SLq__8s9HeiSOhlKIp6doJQfrOf3955_oimoqd_CNDw/edit?usp=sharing",
+      "key": "unit_5_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Working with 2D Array Elements",
+      "url": "https://youtu.be/t0ZyG6uWSLE",
+      "key": "working_with_2d_array_elements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_2d_array_elements"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Column-Major Traversal",
+        "resource.key": "_key_tracing_column-major_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Column-Major Traversal",
+        "resource.key": "_key_u5l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Column-Major Traversal",
+        "resource.key": "column-major_traversal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Column-Major Traversal",
+        "resource.key": "tracing_column-major_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Column-Major Traversal",
+        "resource.key": "u5l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Column-Major Traversal",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "_key_enhanced_for_loops_anticipation_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "_key_tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "_key_u5l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "enhanced_for_loops_anticipation_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "u5l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Enhanced For Loops",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "_key_grayscaleimage_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "grayscaleimage_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Finding Duplicates",
+        "resource.key": "_key_finding_duplicates_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Finding Duplicates",
+        "resource.key": "_key_u5l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Finding Duplicates",
+        "resource.key": "finding_duplicates_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Finding Duplicates",
+        "resource.key": "u5l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Finding Duplicates",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Images in The Theater",
+        "resource.key": "_key_creating_image_filters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Images in The Theater",
+        "resource.key": "_key_u5l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Images in The Theater",
+        "resource.key": "creating_image_filters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Images in The Theater",
+        "resource.key": "u5l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Images in The Theater",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Impacts of Programs",
+        "resource.key": "_key_data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Impacts of Programs",
+        "resource.key": "_key_u5l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Impacts of Programs",
+        "resource.key": "data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Impacts of Programs",
+        "resource.key": "this_is_not_morgan_freeman"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Impacts of Programs",
+        "resource.key": "u5l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Impacts of Programs",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Images",
+        "resource.key": "_key_grayscale_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Images",
+        "resource.key": "_key_u5l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Images",
+        "resource.key": "grayscale_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Images",
+        "resource.key": "u5l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Images",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project – Day 1",
+        "resource.key": "_key_personal_narrative_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project – Day 1",
+        "resource.key": "personal_narrative_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project – Day 1",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project – Day 2",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project – Day 3",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Reverse a 2D Array",
+        "resource.key": "_key_reversing_a_2d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Reverse a 2D Array",
+        "resource.key": "_key_u5l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Reverse a 2D Array",
+        "resource.key": "cs_bingo_definitions_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Reverse a 2D Array",
+        "resource.key": "cs_bingo_definitions_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Reverse a 2D Array",
+        "resource.key": "reversing_a_2d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Reverse a 2D Array",
+        "resource.key": "u5l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Reverse a 2D Array",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Row-Major Traversal",
+        "resource.key": "_key_tracing_2d_array_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Row-Major Traversal",
+        "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Row-Major Traversal",
+        "resource.key": "row-major_traversal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Row-Major Traversal",
+        "resource.key": "tracing_2d_array_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Row-Major Traversal",
+        "resource.key": "u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Row-Major Traversal",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shifting a 2D Array",
+        "resource.key": "_key_shifting_a_2d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shifting a 2D Array",
+        "resource.key": "_key_u5l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shifting a 2D Array",
+        "resource.key": "shifting_a_2d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shifting a 2D Array",
+        "resource.key": "u5l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shifting a 2D Array",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shifting a 2D Array",
+        "resource.key": "unit_5_study_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "resource.key": "_key_u5l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "resource.key": "two-dimensional_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "resource.key": "u5l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "resource.key": "working_with_2d_array_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unit 5 Assessment",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unit 5 Assessment",
+        "resource.key": "unlocking_assessments"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csa5-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csa5-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csa5-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide",
+        "script.name": "csa5-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_overview",
+        "script.name": "csa5-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide",
+        "script.name": "csa5-validation-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "column",
+      "word": "column",
+      "definition": "a vertical (up and down) series of data in a two-dimensional (2D) array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "key": "column_major_order",
+      "word": "column-major order",
+      "definition": "traversing a 2D array by accessing each column from left to right",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column_major_order"
+      }
+    },
+    {
+      "key": "inner_array",
+      "word": "inner array",
+      "definition": "an array that is nested inside another array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inner_array"
+      }
+    },
+    {
+      "key": "outer_array",
+      "word": "outer array",
+      "definition": "the outermost array of a two-dimensional array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "key": "pixel",
+      "word": "pixel",
+      "definition": "the smallest unit of information in an image",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "key": "rgb",
+      "word": "RGB",
+      "definition": "a color model consisting of red, green, and blue lights to display images",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "rgb"
+      }
+    },
+    {
+      "key": "row",
+      "word": "row",
+      "definition": "a horizontal (left to right) series of data in a two-dimensional (2D) array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row"
+      }
+    },
+    {
+      "key": "row_major_order",
+      "word": "row-major order",
+      "definition": "traversing a 2D array by accessing each row from top to bottom",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row_major_order"
+      }
+    },
+    {
+      "key": "two_dimensional_d_array",
+      "word": "two-dimensional (2D) array",
+      "definition": "an array of arrays often represented as a table with rows and columns",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "two_dimensional_d_array"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Column-Major Traversal",
+        "vocabulary.key": "column_major_order"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Images in The Theater",
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Images in The Theater",
+        "vocabulary.key": "rgb"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Row-Major Traversal",
+        "vocabulary.key": "row_major_order"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "vocabulary.key": "inner_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "vocabulary.key": "row"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "vocabulary.key": "two_dimensional_d_array"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
