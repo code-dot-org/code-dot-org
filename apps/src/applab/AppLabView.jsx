@@ -13,8 +13,6 @@ import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
 import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
 import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
-import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {displayWorkspaceAlertOff} from '../code-studio/projectRedux';
 
 /**
  * Top-level React wrapper for App Lab.
@@ -37,10 +35,7 @@ class AppLabView extends React.Component {
       ApplabInterfaceMode.DATA
     ]).isRequired,
     isRtl: PropTypes.bool,
-    widgetMode: PropTypes.bool,
-    displayWorkspaceAlertOff: PropTypes.func,
-    displayWorkspaceAlert: PropTypes.bool.isRequired,
-    errorMsg: PropTypes.string.isRequired
+    widgetMode: PropTypes.bool
   };
 
   componentDidMount() {
@@ -93,16 +88,6 @@ class AppLabView extends React.Component {
             style={{display: codeWorkspaceVisible ? 'block' : 'none'}}
             autogenerateML={autogenerateML}
           />
-          {this.props.displayWorkspaceAlert && (
-            <WorkspaceAlert
-              type="error"
-              onClose={this.props.displayWorkspaceAlertOff}
-              isBlockly={false}
-              displayBottom={true}
-            >
-              <div>{this.props.errorMsg}</div>
-            </WorkspaceAlert>
-          )}
           {hasDesignMode && <ProtectedDesignWorkspace />}
           {hasDataMode && (
             <DataWorkspace handleVersionHistory={handleVersionHistory} />
@@ -113,20 +98,13 @@ class AppLabView extends React.Component {
   }
 }
 
-export default connect(
-  state => ({
-    hasDataMode: state.pageConstants.hasDataMode || false,
-    hasDesignMode: state.pageConstants.hasDesignMode || false,
-    interfaceMode: state.interfaceMode,
-    isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode,
-    displayWorkspaceAlert: state.project.displayWorkspaceAlert,
-    errorMsg: state.project.errorMsg
-  }),
-  dispatch => ({
-    displayWorkspaceAlertOff: () => dispatch(displayWorkspaceAlertOff())
-  })
-)(AppLabView);
+export default connect(state => ({
+  hasDataMode: state.pageConstants.hasDataMode || false,
+  hasDesignMode: state.pageConstants.hasDesignMode || false,
+  interfaceMode: state.interfaceMode,
+  isRtl: state.isRtl,
+  widgetMode: state.pageConstants.widgetMode
+}))(AppLabView);
 
 const styles = {
   widgetInstructions: {
