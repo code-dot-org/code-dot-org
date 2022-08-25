@@ -45,6 +45,10 @@ class Music < Blockly
     )
   end
 
+  def uses_google_blockly?
+    true
+  end
+  
   # Return an 'appOptions' hash derived from the level contents
   def non_blockly_puzzle_level_options
     options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
