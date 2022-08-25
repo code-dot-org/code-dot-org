@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-24 08:23:21 UTC",
+    "serialized_at": "2022-08-23 20:54:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3575,9 +3575,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L1-L1_pilot-2022"
-        ],
         "progression": "Natural Language Processing Project Examples"
       },
       "bonus": false,
@@ -3600,9 +3597,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L1-L2_pilot-2022"
-        ],
         "progression": "Documenting Program Code"
       },
       "bonus": false,
@@ -3625,9 +3619,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L1-L3v2_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3650,9 +3641,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L2-L1_pilot-2022"
-        ],
         "progression": "Investigate: Integer and Double Objects"
       },
       "bonus": false,
@@ -3675,9 +3663,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L2-L2_pilot-2022"
-        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3700,9 +3685,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L2-L3_pilot-2022"
-        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3725,9 +3707,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L2-L4_pilot-2022"
-        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3750,9 +3729,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L2-L5v2_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3775,9 +3751,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L3-L1_pilot-2022"
-        ],
         "progression": "Investigate: ArrayLists"
       },
       "bonus": false,
@@ -3800,9 +3773,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L3-L2v2_pilot-2022"
-        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3825,9 +3795,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L3-L3_pilot-2022"
-        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3850,9 +3817,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L3-L4v2_pilot-2022"
-        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3875,9 +3839,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L3-L5v2_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3900,9 +3861,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L4-L1_pilot-2022"
-        ],
         "progression": "Investigate: Working with ArrayList Data"
       },
       "bonus": false,
@@ -3925,9 +3883,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L4-L2v2_pilot-2022"
-        ],
         "progression": "Working with ArrayLists"
       },
       "bonus": false,
@@ -3950,9 +3905,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L4-L3v2_pilot-2022"
-        ],
         "progression": "Working with ArrayLists"
       },
       "bonus": false,
@@ -3975,9 +3927,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L4-L4v2_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4000,9 +3949,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L5-L1_pilot-2022"
-        ],
         "progression": "Investigate: ArrayList of Objects"
       },
       "bonus": false,
@@ -4025,9 +3971,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L5-L2v2_pilot-2022"
-        ],
         "progression": "ArrayList Algorithms"
       },
       "bonus": false,
@@ -4050,9 +3993,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L5-L3v2_pilot-2022"
-        ],
         "progression": "ArrayList Algorithms"
       },
       "bonus": false,
@@ -4075,9 +4015,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L5-L4 CR_pilot-2022"
-        ],
         "progression": "Code Review: ArrayList Algorithms"
       },
       "bonus": false,
@@ -4100,9 +4037,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L5-L5_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4125,9 +4059,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L6-L1_pilot-2022"
-        ],
         "progression": "Investigate: Removing Values"
       },
       "bonus": false,
@@ -4150,9 +4081,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L6-L2_pilot-2022"
-        ],
         "progression": "Predict: Using an Enhanced For Loop"
       },
       "bonus": false,
@@ -4175,9 +4103,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L6-L3_pilot-2022"
-        ],
         "progression": "Investigate: Removing with an Enhanced For Loop"
       },
       "bonus": false,
@@ -4200,9 +4125,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L6-L4_pilot-2022"
-        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -4225,9 +4147,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L6-L5_pilot-2022"
-        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -4250,9 +4169,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L6-L6v2_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4275,9 +4191,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L7-L1_pilot-2022"
-        ],
         "progression": "Investigate: String Methods"
       },
       "bonus": false,
@@ -4300,9 +4213,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L7-L2v2_pilot-2022"
-        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -4325,9 +4235,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L7-L3v2_pilot-2022"
-        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -4350,9 +4257,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L7-L4v2_pilot-2022"
-        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -4375,9 +4279,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L7-L5v2_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4400,9 +4301,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L8-L1_pilot-2022"
-        ],
         "progression": "Investigate: Comparing Strings"
       },
       "bonus": false,
@@ -4425,9 +4323,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L8-L2_pilot-2022"
-        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4450,9 +4345,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L8-L3_pilot-2022"
-        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4475,9 +4367,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L8-L4v2_pilot-2022"
-        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4500,9 +4389,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L8-L5v2_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4525,9 +4411,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L9-L1v2_pilot-2022"
-        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4550,9 +4433,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L9-L2_pilot-2022"
-        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4575,9 +4455,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L9-L3v2_pilot-2022"
-        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4600,9 +4477,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L9-L4 CR_pilot-2022"
-        ],
         "progression": "Code Review: String Algorithms"
       },
       "bonus": false,
@@ -4625,9 +4499,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L9-L5_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4650,9 +4521,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L10-L1_pilot-2022"
-        ],
         "progression": "Investigate: Obtaining Individual Digits"
       },
       "bonus": false,
@@ -4675,9 +4543,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L10-L2v2_pilot-2022"
-        ],
         "progression": "Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4700,9 +4565,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L10-L3v2_pilot-2022"
-        ],
         "progression": "Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4725,9 +4587,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L10-L4 CR_pilot-2022"
-        ],
         "progression": "Code Review: Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4750,9 +4609,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L10-L5_pilot-2022"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4775,9 +4631,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L11-L1_pilot-2022"
-        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4800,9 +4653,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L12-L1_pilot-2022"
-        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4825,9 +4675,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L12-L2 CR_pilot-2022"
-        ],
         "progression": "Code Review: Natural Language Processing Project"
       },
       "bonus": false,
@@ -4850,9 +4697,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U6L13-L1_pilot-2022"
-        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4875,9 +4719,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa6_pilot-2022"
-        ],
         "progression": "Unit 6 Survey"
       },
       "bonus": false,
@@ -4900,9 +4741,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA Unit 6 Assessment 2022_pilot-2022"
-        ],
         "progression": "Unit 6 Assessment"
       },
       "bonus": false,
@@ -4925,9 +4763,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Console Sandbox_pilot-2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4949,9 +4784,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Neighborhood Sandbox_pilot-2022"
-        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4974,9 +4806,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
-        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4999,9 +4828,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA 2022 Theater Sandbox_pilot-2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5717,22 +5543,1264 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[EXEMPLAR] Natural Language Processing Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1EXz23AUtOWOrpaQNiqa36m6h4aTQ600T36ofgJqMdlU/edit?usp=sharing",
+      "key": "_exemplar_natural_language_processing_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_natural_language_processing_project_planning_guide"
+      }
+    },
+    {
+      "name": "[KEY] TemperatureAction FRQ",
+      "url": "https://docs.google.com/document/d/1QnXsBIFkKqIkebYbgjBmKzanh9nmh9iuvB7vZQyOzio/edit?usp=sharing",
+      "key": "_key_temperatureaction_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_temperatureaction_frq"
+      }
+    },
+    {
+      "name": "[KEY] U6L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/11R4dndYbd4EMntCVL21St1Sv3mg75F99aUXwN7T0LJg/edit?usp=sharing",
+      "key": "_key_u6l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l10_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1G7Xs0m-f_OXpFmVnM5eSKaaF0s3_d-HcGAfVPXYn9U4/edit?usp=sharing",
+      "key": "_key_u6l1_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1cWN6RP4sFSfxfpidsevJ9opurOg2sjsCcqzDI9YOX1A/edit?usp=sharing",
+      "key": "_key_u6l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1yFogflIdvMbI19xasCPGhFR0aGkwcvXsiVfxR06Zjx4/edit?usp=sharing",
+      "key": "_key_u6l3_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1sCFYrj7nIVD7X0so-_grENLyiGTNAV6sDSfgNk8v0fA/edit?usp=sharing",
+      "key": "_key_u6l4_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1jWvzNLWeOXhyc5Pq7pm95hub4U6SZr01IKjWoDcvG7o/edit?usp=sharing",
+      "key": "_key_u6l5_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1D01YCIfxDN8-YwNGRgD2MRR6TqDjHaVNYpyHpUx5yxA/edit?usp=sharing",
+      "key": "_key_u6l6_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l6_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1OfAoES9zPE-o84TbxfsFJRRQS5y2EFY-9e0aRScq56w/edit?usp=sharing",
+      "key": "_key_u6l7_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/15Za3Wr690BrP1ipd9czL5alvAnjXuFuXoENo4jkQauU/edit?usp=sharing",
+      "key": "_key_u6l8_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/18oU7aOa0CtQGkMY3MnvUmrlgv_gplttuf2Wi8VKx4KE/edit?usp=sharing",
+      "key": "_key_u6l9_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa6-2022/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa6-2022/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa6-2022/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
+      }
+    },
+    {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1d6wlrYMUCmyMxHdUAi-n-KZIDQbUW1F8cWNv6apnzhc/edit?usp=sharing",
+      "key": "cs_bingo_cards_4",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_4"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1ywaPCOCsqkJtQAGvbTwYvD1T5nF-1qWfU_TMYWdnILE/edit?usp=sharing",
+      "key": "cs_bingo_definitions_6",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_6"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
+      "key": "java_quick_reference",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "name": "Natural Language Processing Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1w6mf1p4k3IWRiAb3090SyYvVKavPVxRcUZYmL3CZNWM/edit?usp=sharing",
+      "key": "natural_language_processing_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "natural_language_processing_project_planning_guide"
+      }
+    },
+    {
+      "name": "Project Characteristics",
+      "url": "https://docs.google.com/document/d/1F4REIiOPekn8Umu2wIFP2RRE_DMyBXL65_qVnU1yKx0/edit?usp=sharing",
+      "key": "project_characteristics",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "project_characteristics"
+      }
+    },
+    {
+      "name": "Removing Data from an ArrayList",
+      "url": "https://youtu.be/_xuo7Z40sRY",
+      "key": "removing_data_from_an_arraylist",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "removing_data_from_an_arraylist"
+      }
+    },
+    {
+      "name": "TemperatureAction FRQ",
+      "url": "https://docs.google.com/document/d/1oCTbq9nuoZC3ggSbD3zzg2N-n41UvSczWzHlwSizrwY/edit?usp=sharing",
+      "key": "temperatureaction_frq",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "temperatureaction_frq"
+      }
+    },
+    {
+      "name": "TemperatureAction FRQ Scoring Guidelines",
+      "url": "https://docs.google.com/document/d/1F5oJ1ltRN7W_ZaDLeh0PiMjn3mhDtcUP0x-zsTNB5sA/edit?usp=sharing",
+      "key": "temperatureaction_frq_scoring_guidelines",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "temperatureaction_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "The ArrayList Class",
+      "url": "https://youtu.be/Wqk9PrPIkXs",
+      "key": "the_arraylist_class",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_arraylist_class"
+      }
+    },
+    {
+      "name": "U6L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1eEN0Y46G0H8hOQpwJWtgBbB9WT3VAcsTSyIhcygS9pc/edit?usp=sharing",
+      "key": "u6l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l10_extra_practice"
+      }
+    },
+    {
+      "name": "U6L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1lXZ3RMlOkZQRiL0KT1CCIMImZxM-MNwoxQug89sVoiI/edit?usp=sharing",
+      "key": "u6l1_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l1_extra_practice"
+      }
+    },
+    {
+      "name": "U6L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1kURZ-P3kYtdSUSB8zvF5nx7ErHCE6cOmaU1dkYAMp1o/edit?usp=sharing",
+      "key": "u6l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l2_extra_practice"
+      }
+    },
+    {
+      "name": "U6L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1muvcso7ooc2nAkYv46AxvcWpxgVBgWnV3ihHskJABvI/edit?usp=sharing",
+      "key": "u6l3_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l3_extra_practice"
+      }
+    },
+    {
+      "name": "U6L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1t-kAetfD-T2LNSdM8ZpSYYo7ql35Rh5kPK3SJzi6sDk/edit?usp=sharing",
+      "key": "u6l4_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l4_extra_practice"
+      }
+    },
+    {
+      "name": "U6L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1WtFOefiNaWr67LF-SfYlWYH5YUCBqB5FyjZONxv4gbQ/edit?usp=sharing",
+      "key": "u6l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l5_extra_practice"
+      }
+    },
+    {
+      "name": "U6L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/19p4mTf4su-ngYQg6R7wL4VFTa0Hl5ZxBXbZ0sLAZDL8/edit?usp=sharing",
+      "key": "u6l6_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l6_extra_practice"
+      }
+    },
+    {
+      "name": "U6L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1QseAUQLwtPYlXAZa9lyP3spomGYDXLly3ofzAfaNS0o/edit?usp=sharing",
+      "key": "u6l7_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l7_extra_practice"
+      }
+    },
+    {
+      "name": "U6L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Tv8S9ETUUGirGWydB79q3NaFJrg1WO62ZxsQJrjE5C8/edit?usp=sharing",
+      "key": "u6l8_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l8_extra_practice"
+      }
+    },
+    {
+      "name": "U6L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1cl933OPNFu7r4mArJIR9NPVAgWTCQ9OjhBYj1hKFaFQ/edit?usp=sharing",
+      "key": "u6l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 6 Guide",
+      "url": "https://docs.google.com/document/d/1-Kwx3qvUpaTit5A1e69GrfnSPnoluupyJf1HdnRs_iM/edit?usp=sharing",
+      "key": "unit_6_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_guide"
+      }
+    },
+    {
+      "name": "Unit 6 Guide",
+      "url": "https://docs.google.com/document/d/1adl-rqpAW8FvKofCVfMt997IVLzvzhnDW87Q3bG3t_k/edit?usp=sharing",
+      "key": "unit_6_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_guide_1"
+      }
+    },
+    {
+      "name": "Unit 6 Overview",
+      "url": "https://docs.google.com/document/d/1836auHbzJtC_6S9DLmx5SJFUco3VMAs6-p7W76IjcOA/edit?usp=sharing",
+      "key": "unit_6_overview",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_overview"
+      }
+    },
+    {
+      "name": "Unit 6 Presentation",
+      "url": "https://docs.google.com/presentation/d/1eBQDmu1tqHfdvQATSawQfbwwO5ShZowEEZ2TpdM73Rw/edit?usp=sharing",
+      "key": "unit_6_presentation",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "name": "Unit 6 Study Guide",
+      "url": "https://docs.google.com/document/d/1KBf15perVzQS17bgSp-3IqffgrQynlERy01L1MwlgVQ/edit?usp=sharing",
+      "key": "unit_6_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_study_guide"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Working with ArrayList Data",
+      "url": "https://youtu.be/C8i8q-07OUI",
+      "key": "working_with_arraylist_data",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_arraylist_data"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 1",
+      "url": "https://youtu.be/PrhYsHlqxMs",
+      "key": "wrapper_classes_-_part_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 2",
+      "url": "https://youtu.be/kog78g2fvqU",
+      "key": "wrapper_classes_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_2"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayList Algorithms",
+        "resource.key": "_key_u6l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayList Algorithms",
+        "resource.key": "u6l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayList Algorithms",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayList Algorithms",
+        "resource.key": "unit_6_study_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "resource.key": "_key_u6l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "resource.key": "the_arraylist_class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "resource.key": "u6l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Comparing Strings",
+        "resource.key": "_key_u6l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Comparing Strings",
+        "resource.key": "u6l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Comparing Strings",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "_key_temperatureaction_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "temperatureaction_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "temperatureaction_frq_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "resource.key": "_key_u6l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "resource.key": "u6l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "resource.key": "wrapper_classes_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists of Objects",
+        "resource.key": "_key_u6l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists of Objects",
+        "resource.key": "u6l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists of Objects",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Elements",
+        "resource.key": "_key_u6l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Elements",
+        "resource.key": "cs_bingo_cards_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Elements",
+        "resource.key": "cs_bingo_definitions_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Elements",
+        "resource.key": "u6l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Elements",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Elements",
+        "resource.key": "working_with_arraylist_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Natural Language Processing Project – Day 1",
+        "resource.key": "_exemplar_natural_language_processing_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Natural Language Processing Project – Day 1",
+        "resource.key": "natural_language_processing_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Natural Language Processing Project – Day 1",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Natural Language Processing Project – Day 2",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Natural Language Processing Project – Day 3",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "resource.key": "_key_u6l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "resource.key": "project_characteristics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "resource.key": "u6l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "resource.key": "unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Removing Elements",
+        "resource.key": "_key_u6l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Removing Elements",
+        "resource.key": "removing_data_from_an_arraylist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Removing Elements",
+        "resource.key": "u6l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Removing Elements",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Algorithms",
+        "resource.key": "_key_u6l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Algorithms",
+        "resource.key": "u6l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Algorithms",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Methods",
+        "resource.key": "_key_u6l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Methods",
+        "resource.key": "u6l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Methods",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unit 6 Assessment",
+        "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unit 6 Assessment",
+        "resource.key": "unlocking_assessments"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csa6-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "csa6-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
+        "script.name": "csa6-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_guide_1",
+        "script.name": "csa6-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_overview",
+        "script.name": "csa6-validation-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_study_guide",
+        "script.name": "csa6-validation-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "arraylist",
+      "word": "ArrayList",
+      "definition": "A class that represents a resizable list",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "arraylist"
+      }
+    },
+    {
+      "key": "autoboxing",
+      "word": "Autoboxing",
+      "definition": "The process of automatically converting a primitive type value into an object of the corresponding wrapper class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "autoboxing"
+      }
+    },
+    {
+      "key": "concurrentmodificationexception",
+      "word": "ConcurrentModificationException",
+      "definition": "An exception that occurs when code attempts to change the size of an `ArrayList` while traversing it using an enhanced `for` loop",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "concurrentmodificationexception"
+      }
+    },
+    {
+      "key": "documentation",
+      "word": "documentation",
+      "definition": "written descriptions of the purpose and functionality of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "key": "dynamic_data_structure",
+      "word": "dynamic data structure",
+      "definition": "a data structure that grows and shrinks as needed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dynamic_data_structure"
+      }
+    },
+    {
+      "key": "generic_type",
+      "word": "Generic Type",
+      "definition": "Allows a class, or type, to be used as the parameter to an `ArrayList` and is indicated by `< >`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "generic_type"
+      }
+    },
+    {
+      "key": "html",
+      "word": "HTML",
+      "definition": "Stands for Hypertext Markup Language; the standard system for tagging text files to be displayed on the World Wide Web",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "html"
+      }
+    },
+    {
+      "key": "indexoutofboundsexception",
+      "word": "IndexOutOfBoundsException",
+      "definition": "An error that occurs when a program attempts to access an index that is negative or an index that is greater than or equal to the length of the object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "indexoutofboundsexception"
+      }
+    },
+    {
+      "key": "javadocs",
+      "word": "Javadocs",
+      "definition": "The documentation tool for Java that generates an HTML document from comments written inside `/** */` and formatted using `@` tags",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "javadocs"
+      }
+    },
+    {
+      "key": "lexicographical_order",
+      "word": "Lexicographical Order",
+      "definition": "Placing words in alphabetical order",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lexicographical_order"
+      }
+    },
+    {
+      "key": "mutable",
+      "word": "Mutable",
+      "definition": "The ability to change after initialization",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "mutable"
+      }
+    },
+    {
+      "key": "natural_language_processing_nlp_",
+      "word": "Natural Language Processing (NLP)",
+      "definition": "The ability of a computer program to understand human language",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "natural_language_processing_nlp_"
+      }
+    },
+    {
+      "key": "overflow_error",
+      "word": "Overflow Error",
+      "definition": "An error that occurs when an operation makes an integer value greater than its maximum",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "key": "palindrome",
+      "word": "Palindrome",
+      "definition": "A word or phrase that reads the same backward as it does forward",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "palindrome"
+      }
+    },
+    {
+      "key": "parsing",
+      "word": "Parsing",
+      "definition": "The process of dividing text into parts for analysis or conversion",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parsing"
+      }
+    },
+    {
+      "key": "sentiment_value",
+      "word": "Sentiment Value",
+      "definition": "The positive or negative emotional value of a word",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sentiment_value"
+      }
+    },
+    {
+      "key": "static_data_structure",
+      "word": "static data structure",
+      "definition": "a data structure that is fixed in size",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_data_structure"
+      }
+    },
+    {
+      "key": "stop_word",
+      "word": "Stop Word",
+      "definition": "A word that is filtered out of a list before or after processing text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "stop_word"
+      }
+    },
+    {
+      "key": "stop_word_removal",
+      "word": "Stop Word Removal",
+      "definition": "The process of removing commonly used words from a list before or after processing text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "stop_word_removal"
+      }
+    },
+    {
+      "key": "text_segmentation",
+      "word": "text segmentation",
+      "definition": "the process of dividing text into words, sentences, or topics",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "text_segmentation"
+      }
+    },
+    {
+      "key": "unboxing",
+      "word": "Unboxing",
+      "definition": "Automatically converting an object of a wrapper class to its corresponding primitive type",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "unboxing"
+      }
+    },
+    {
+      "key": "underflow_error",
+      "word": "Underflow Error",
+      "definition": "An error that occurs when an operation makes an integer value less than its minimum",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "underflow_error"
+      }
+    },
+    {
+      "key": "wrapper_class",
+      "word": "Wrapper Class",
+      "definition": "A class used to convert primitive data types into objects",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "wrapper_class"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayList Algorithms",
+        "vocabulary.key": "sentiment_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "vocabulary.key": "arraylist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "vocabulary.key": "dynamic_data_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "vocabulary.key": "mutable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ArrayLists",
+        "vocabulary.key": "static_data_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Comparing Strings",
+        "vocabulary.key": "lexicographical_order"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "vocabulary.key": "autoboxing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "vocabulary.key": "parsing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "vocabulary.key": "unboxing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "vocabulary.key": "underflow_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Integer and Double Objects",
+        "vocabulary.key": "wrapper_class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists of Objects",
+        "vocabulary.key": "generic_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "vocabulary.key": "html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "vocabulary.key": "javadocs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Planning",
+        "vocabulary.key": "natural_language_processing_nlp_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Removing Elements",
+        "vocabulary.key": "concurrentmodificationexception"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Removing Elements",
+        "vocabulary.key": "stop_word"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Removing Elements",
+        "vocabulary.key": "stop_word_removal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Algorithms",
+        "vocabulary.key": "palindrome"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Methods",
+        "vocabulary.key": "indexoutofboundsexception"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "String Methods",
+        "vocabulary.key": "text_segmentation"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
