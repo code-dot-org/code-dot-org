@@ -2,6 +2,8 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
+import commonI18n from '@cdo/locale';
+import sinon from 'sinon';
 
 import {
   getStore,
@@ -84,4 +86,25 @@ describe('TableControls', () => {
       children: React.cloneElement(wrapper.props().children, newProps)
     });
   }
+
+  describe('localization', () => {
+    afterEach(() => {
+      sinon.restore();
+    });
+
+    it('should render a localized string for "Clear Table"', () => {
+      sinon.stub(commonI18n, 'clearTable').returns('i18n-clear-table');
+
+      const store = getStore();
+      const wrapper = mount(
+        <Provider store={store}>
+          <TableControls {...DEFAULT_PROPS} />
+        </Provider>
+      );
+
+      let clearButton = wrapper.find('ConfirmDeleteButton');
+      expect(clearButton.text()).to.contain('i18n-clear-table');
+      expect(clearButton.prop('title')).to.contain('i18n-clear-table');
+    });
+  });
 });
