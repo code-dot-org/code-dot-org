@@ -6,11 +6,12 @@ import {withReduxStore} from '../../util/withReduxStore';
  * Generate and run a suite of simple tests that make sure all of provided
  * stories render without errors and without generating console errors or
  * warnings.
- * @param {function(Storybook)} storiesFn
+ * @param {function(Storybook)|Object} storyFile
+ * The deprecated `storiesOf` format exports stories as a single function.
+ * The new CSF format exports stories as an object.
+ * Both formats are supported in unit tests while we refactor away the deprecated format.
  */
 export default function testStorybook(storyFile) {
-  // The deprecated `storiesOf` format exports stories as a single function.
-  // The new CSF format exports stories as an object.
   if (typeof storyFile === 'function') {
     const testBook = new FakeStorybook_DEPRECATED();
     storyFile(testBook);
