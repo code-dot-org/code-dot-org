@@ -1,0 +1,99 @@
+{
+  "ga-IE": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Saotharlann an Ghréasáin"
+        },
+        "gamelab": {
+          "name": "An tSaotharlann Cluichíochta",
+          "categories": {
+            "game_lab": {
+              "name": "An tSaotharlann Cluichíochta"
+            },
+            "sprites": {
+              "name": "Sprideanna"
+            },
+            "groups": {
+              "name": "Grúpaí"
+            },
+            "drawing": {
+              "name": "Líníocht"
+            },
+            "math": {
+              "name": "Matamaitic"
+            },
+            "variables": {
+              "name": "Athróga"
+            },
+            "functions": {
+              "name": "Feidhmeanna"
+            }
+          }
+        },
+        "applab": {
+          "name": "Saotharlann Aipeanna",
+          "description": "Is timpeallacht ríomhchláraithe é an tSaotharlann Aipeanna lenar féidir aipeanna simplí a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript í, ansin foilsigh an aip ar an toirt.",
+          "categories": {
+            "math": {
+              "name": "Matamaitic"
+            },
+            "variables": {
+              "name": "Athróga"
+            },
+            "functions": {
+              "name": "Feidhmeanna"
+            },
+            "advanced": {
+              "name": "Ardroghanna"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Saotharlann na Sprideanna",
+          "categories": {
+            "sprites": {
+              "name": "Sprideanna"
+            },
+            "world": {
+              "name": "Domhan"
+            },
+            "location": {
+              "name": "Áiteanna"
+            },
+            "actions": {
+              "name": "Gníomhartha"
+            },
+            "events": {
+              "name": "Teagmhais"
+            },
+            "behaviors": {
+              "name": "Iompar"
+            },
+            "loops": {
+              "name": "Lúba"
+            },
+            "variables": {
+              "name": "Athróga"
+            },
+            "math": {
+              "name": "Matamaitic"
+            },
+            "logic": {
+              "name": "Loighic"
+            },
+            "functions": {
+              "name": "Feidhmeanna"
+            },
+            "text": {
+              "name": "Téacs"
+            },
+            "comments": {
+              "name": "Nótaí"
+            }
+          }
+        }
+      }
+    }
+  }
+}

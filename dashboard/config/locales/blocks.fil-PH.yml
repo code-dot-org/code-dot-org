@@ -5,6 +5,7 @@ fil:
       BadGuys_makeNewBadGuysSprite:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: itakda ang laki ng lahat ng mga Sprite sa {SIZE}
         options:
           SIZE:
             '0.50': sobrang liit
@@ -13,6 +14,7 @@ fil:
             '2.00': malaki
             '3.00': extra large
       BadGuys_setSize_dropdown:
+        text: itakda ang laki ng {SPRITE} sa {SIZE}
         options:
           SIZE:
             '0.50': sobrang liit
@@ -996,6 +998,12 @@ fil:
         text: i-setup
       Dancelab_whenSetup2:
         text: i-setup
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
       gamelab_addTarget:
@@ -1028,6 +1036,8 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
             '"speed"': bilis
+      gamelab_changeVarBy:
+        text: palitan ang {VARIABLE} ng {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:
@@ -1039,6 +1049,7 @@ fil:
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
       gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(spinning_right, []): umiikot pakanan
@@ -1111,6 +1122,7 @@ fil:
           kung {NUM} ={VAL}
           {STATEMENT}
       gamelab_int10:
+        text: "{VALUE}"
         options:
           VALUE:
             '1': '1'
@@ -1327,6 +1339,7 @@ fil:
       gamelab_playSpeech:
         text: i-play ang salita {SOUND}
       gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): gumagalaw gamit ang mga arrow
@@ -1489,15 +1502,6 @@ fil:
         text: "{SPRITE} isipin {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}isipin{TEXT1}for{NUM}segundo"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} isipin {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Nagugutom na rin ako.
-            '"I only want the biggest goat."': Gusto ko lang ang pinakamalaking kambing.
-            '"I''m a green troll."': Isa akong berdeng troll.
-            '"No one will cross my bridge."': Walang tatawid sa tulay ko.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} isipin {THOUGHT}"
         options:

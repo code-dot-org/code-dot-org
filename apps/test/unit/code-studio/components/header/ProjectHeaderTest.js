@@ -6,6 +6,7 @@ import {mount} from 'enzyme';
 import headerReducer, {
   showProjectHeader
 } from '@cdo/apps/code-studio/headerRedux';
+import projectReducer from '@cdo/apps/code-studio/projectRedux';
 
 import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
@@ -20,7 +21,9 @@ describe('ProjectHeader', () => {
     replaceOnWindow('appOptions', {
       level: {}
     });
-    store = createStore(combineReducers({header: headerReducer}));
+    store = createStore(
+      combineReducers({header: headerReducer, project: projectReducer})
+    );
     store.dispatch(showProjectHeader(false /* showExport */));
   });
 

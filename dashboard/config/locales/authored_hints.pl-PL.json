@@ -10831,11 +10831,13 @@
         },
         "Farmer for Authored Hint testing": {
           "second_hint": "To jest druga wskazówka. Ma wideo z podpowiedziami.",
-          "last_hint": "To trzecia i ostatnia wskazówka. Nie ma nic specjalnego."
+          "last_hint": "To trzecia i ostatnia wskazówka. Nie ma nic specjalnego.",
+          "first_hint": "Pierwsza podpowiedź.\n\nMa _kilka_ **podstawowych** `znaczników`"
         },
         "Farmer for TTS testing": {
           "second_hint": "To jest druga wskazówka. Zawiera obraz. \n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)",
-          "last_hint": "To trzecia i ostatnia wskazówka. Nie ma nic specjalnego."
+          "last_hint": "To trzecia i ostatnia wskazówka. Nie ma nic specjalnego.",
+          "first_hint": "Pierwsza podpowiedź.\n\nMa _kilka_ **podstawowych** `znaczników`"
         }
       }
     }

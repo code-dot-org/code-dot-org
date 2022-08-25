@@ -2,6 +2,12 @@
   "zu-ZA": {
     "data": {
       "resources": {
+        "text/csd/2022": {
+          "name": "Umbhalo"
+        },
+        "lists/csd/2022": {
+          "name": "Umbhalo olandelanayo"
+        },
         "lists/csd/2021": {
           "name": "Umbhalo olandelanayo"
         }

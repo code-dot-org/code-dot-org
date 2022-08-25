@@ -9,7 +9,7 @@
         "coursee": "E tanfolyam",
         "coursef": "F tanfolyam",
         "express": "Expressz tanfolyam",
-        "csd": "Számítógép-tudományi Felfedezések",
+        "csd": "Számítástechnikai Felfedezések",
         "csp": "Számítógép-tudományi Alapelvek",
         "20-hour": "Gyorsított bemutató a CS tanfolyamra",
         "flappy": "Flappy kód",
@@ -45,7 +45,8 @@
         "allthethingscourse": "minden-dolog tanfolyam",
         "halloween": "halloween",
         "step": "lépés",
-        "csa5-exemplars": "csa5-exemplars"
+        "csa5-exemplars": "csa5-exemplars",
+        "soccer": "foci"
       }
     }
   }

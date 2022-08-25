@@ -239,6 +239,69 @@
         "csta/1B-CS-02": {
           "description": "Explica cómo el hardware y el software del ordenador funcionan juntos como un sistema para realizar tareas."
         },
+        "csta/2-AP-10": {
+          "description": "Utilizar diagramas de flujo y/o pseudocódigo para abordar problemas complejos como algoritmos."
+        },
+        "csta/2-AP-13": {
+          "description": "Descomponer los problemas y subproblemas en partes para facilitar el diseño, la ejecución y la revisión de los programas."
+        },
+        "csta/2-AP-15": {
+          "description": "Buscar e incorporar los comentarios de los miembros del equipo y de los usuarios para perfeccionar una solución que satisfaga las necesidades de los usuarios."
+        },
+        "csta/2-AP-18": {
+          "description": "Distribuir las tareas y mantener un calendario del proyecto cuando se desarrollan artefactos computacionales en colaboración."
+        },
+        "csta/1B-AP-08": {
+          "description": "Compara y perfecciona varios algoritmos para la misma tarea y determina cuál es el más adecuado."
+        },
+        "csta/1B-AP-11": {
+          "description": "Descomponer (desglosar) los problemas en subproblemas más pequeños y manejables para facilitar el proceso de desarrollo del programa."
+        },
+        "csta/1B-AP-16": {
+          "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
+        },
+        "csta/2-AP-17": {
+          "description": "Probar y perfeccionar sistemáticamente los programas utilizando una serie de situaciones de prueba."
+        },
+        "csta/2-AP-19": {
+          "description": "Documentar los programas para que sean más fáciles de seguir, probar y depurar."
+        },
+        "csta/2-AP-11": {
+          "description": "Crear variables con nombres claros que representen diferentes tipos de datos y realizar operaciones con sus valores."
+        },
+        "csta/2-AP-16": {
+          "description": "Incorpora el código, los medios y las bibliotecas existentes en los programas originales, y concede la autorización."
+        },
+        "csta/2-AP-12": {
+          "description": "Diseñar y desarrollar repetidamente programas que combinen estructuras de control, incluyendo bucles anidados y condicionales compuestas."
+        },
+        "csta/2-AP-14": {
+          "description": "Crear procedimientos con parámetros para organizar el código y facilitar su reutilización."
+        },
+        "csta/1B-NI-05": {
+          "description": "Debatir los problemas de ciberseguridad del mundo real y cómo se puede proteger la información personal."
+        },
+        "csta/1B-IC-21": {
+          "description": "Utiliza medios de dominio público o creative commons y abstente de copiar o utilizar material creado por otros sin permiso."
+        },
+        "csta/3A-AP-20": {
+          "description": "Evaluar las licencias que limitan o restringen el uso de dispositivos informáticos cuando se utilizan recursos como las bibliotecas."
+        },
+        "csta/1B-IC-18": {
+          "description": "Discute las tecnologías informáticas que han cambiado el mundo y expresa cómo esas tecnologías influyen y son influenciadas por las prácticas culturales."
+        },
+        "csta/1B-AP-14": {
+          "description": "Observa los derechos de propiedad intelectual y otorga la atribución adecuada al crear o remezclar programas."
+        },
+        "csta/1B-IC-20": {
+          "description": "Buscar diversas perspectivas con el fin de mejorar los dispositivos informáticos."
+        },
+        "csta/2-CS-03": {
+          "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."
+        },
+        "csta/3A-AP-16": {
+          "description": "Diseñar y desarrollar de forma iterativa dispositivos informáticos con fines prácticos, de expresión personal o para abordar un problema social utilizando eventos para iniciar instrucciones."
+        },
         "csta/1A-IC-18": {
           "description": "Conserva la privacidad de los datos de acceso y cierra la sesión de los dispositivos de forma adecuada."
         },
@@ -260,23 +323,11 @@
         "csta/1A-NI-04": {
           "description": "Explica qué son las contraseñas y por qué las usamos, así como el uso de contraseñas seguras para proteger los dispositivos y la información del acceso no autorizado."
         },
-        "csta/1B-IC-18": {
-          "description": "Discute las tecnologías informáticas que han cambiado el mundo y expresa cómo esas tecnologías influyen y son influenciadas por las prácticas culturales."
-        },
         "csta/1A-CS-01": {
           "description": "Seleccionar y utilizar el software adecuado para realizar una serie de tareas y reconocer que los usuarios tienen diferentes necesidades y preferencias en cuanto a la tecnología que utilizan."
         },
         "csta/1A-IC-16": {
           "description": "Comparar cómo viven y trabajan las personas antes y después de la implantación o adopción de una nueva tecnología informática."
-        },
-        "csta/1B-AP-11": {
-          "description": "Descomponer (desglosar) los problemas en subproblemas más pequeños y manejables para facilitar el proceso de desarrollo del programa."
-        },
-        "csta/1B-NI-05": {
-          "description": "Debatir los problemas de ciberseguridad del mundo real y cómo se puede proteger la información personal."
-        },
-        "csta/1B-AP-08": {
-          "description": "Compara y perfecciona varios algoritmos para la misma tarea y determina cuál es el más adecuado."
         },
         "csta/1B-AP-09": {
           "description": "Crea programas que usen variables para almacenar y modificar datos."
@@ -290,20 +341,8 @@
         "csta/1B-NI-04": {
           "description": "Hacer un ejemplo de cómo la información se divide en trozos más pequeños, se transmite en forma de paquetes a través de múltiples dispositivos en las redes e Internet y se vuelve a ensamblar en el destino."
         },
-        "csta/1B-IC-20": {
-          "description": "Buscar diversas perspectivas con el fin de mejorar los dispositivos informáticos."
-        },
-        "csta/1B-IC-21": {
-          "description": "Utiliza medios de dominio público o creative commons y abstente de copiar o utilizar material creado por otros sin permiso."
-        },
         "csta/1B-AP-13": {
           "description": "Utiliza un proceso iterativo para planificar el desarrollo de un programa incluyendo las perspectivas de otros y considerando las preferencias de los usuarios."
-        },
-        "csta/1B-AP-14": {
-          "description": "Observa los derechos de propiedad intelectual y otorga la atribución adecuada al crear o remezclar programas."
-        },
-        "csta/1B-AP-16": {
-          "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
         },
         "csta/1B-AP-17": {
           "description": "Describe las decisiones tomadas durante el desarrollo del programa mediante comentarios de código, presentaciones y demostraciones."
@@ -328,42 +367,6 @@
         },
         "csta/1A-AP-15": {
           "description": "Utilizando una terminología correcta, describe los pasos dados y las decisiones tomadas durante el proceso iterativo de desarrollo del programa."
-        },
-        "csta/2-AP-17": {
-          "description": "Probar y perfeccionar sistemáticamente los programas utilizando una serie de situaciones de prueba."
-        },
-        "csta/2-AP-13": {
-          "description": "Descomponer los problemas y subproblemas en partes para facilitar el diseño, la ejecución y la revisión de los programas."
-        },
-        "csta/3A-AP-16": {
-          "description": "Diseñar y desarrollar de forma iterativa dispositivos informáticos con fines prácticos, de expresión personal o para abordar un problema social utilizando eventos para iniciar instrucciones."
-        },
-        "csta/2-AP-19": {
-          "description": "Documentar los programas para que sean más fáciles de seguir, probar y depurar."
-        },
-        "csta/2-AP-11": {
-          "description": "Crear variables con nombres claros que representen diferentes tipos de datos y realizar operaciones con sus valores."
-        },
-        "csta/2-AP-12": {
-          "description": "Diseñar y desarrollar repetidamente programas que combinen estructuras de control, incluyendo bucles anidados y condicionales compuestas."
-        },
-        "csta/2-AP-15": {
-          "description": "Buscar e incorporar los comentarios de los miembros del equipo y de los usuarios para perfeccionar una solución que satisfaga las necesidades de los usuarios."
-        },
-        "csta/2-AP-10": {
-          "description": "Utilizar diagramas de flujo y/o pseudocódigo para abordar problemas complejos como algoritmos."
-        },
-        "csta/2-AP-16": {
-          "description": "Incorpora el código, los medios y las bibliotecas existentes en los programas originales, y concede la autorización."
-        },
-        "csta/2-AP-18": {
-          "description": "Distribuir las tareas y mantener un calendario del proyecto cuando se desarrollan artefactos computacionales en colaboración."
-        },
-        "csta/2-CS-03": {
-          "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."
-        },
-        "csta/3A-AP-20": {
-          "description": "Evaluar las licencias que limitan o restringen el uso de dispositivos informáticos cuando se utilizan recursos como las bibliotecas."
         }
       }
     }

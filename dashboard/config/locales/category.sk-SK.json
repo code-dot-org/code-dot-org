@@ -70,6 +70,24 @@
         },
         "csta/CS": {
           "description": "Výpočtové systémy"
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": "Podstata učenia – hľadanie vzorov v údajoch"
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": "Podstata učenia – konštrukcia a používanie argumentov"
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": "Podstata učenia – ľudia a stroje"
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": "Množiny údajov – množiny vlastností"
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": "Podstata učenia – trénovanie modelu"
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": "Množiny údajov – skreslenie"
         }
       }
     }

@@ -39,6 +39,7 @@ tr:
           yoksa buraya tıklayın)](%{url})
         username: kullanıcı adı
         password: Parola
+        verified_teacher: Doğrulanmış Öğretmen
         password_confirmation: Şifre doğrulama
         current_password: Geçerli Şifre
         locale: Dil
@@ -489,7 +490,6 @@ tr:
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: İlerlemeniz
-      lines: 'Toplam kod satırı: %{lines}'
       close: kapat
       mastery: Kavramlar
       puzzle_map: aşamalar
@@ -731,6 +731,7 @@ tr:
     try_hour_of_code: Kodlama Saati'ni Deneyin!
     store: Mağaza
     cookie_notice: Çerez Bildirimi
+    view_code: Koda Bak
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın

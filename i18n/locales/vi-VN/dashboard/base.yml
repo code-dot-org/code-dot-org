@@ -436,7 +436,6 @@ vi:
     popup:
       progress_for_user: "Tiến trình của %{name}"
       progress: 'Qua trình của bạn'
-      lines: 'Tổng số dòng mã: %{lines}'
       close: 'ĐÓNG'
       mastery: 'Khái niệm'
       puzzle_map: 'Màn'

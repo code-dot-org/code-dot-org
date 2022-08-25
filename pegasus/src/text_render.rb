@@ -51,7 +51,7 @@ module TextRender
   end
 
   def self.f(engine, path, locals={})
-    r(engine, IO.read(path), locals)
+    r(engine, File.read(path), locals)
   end
 
   #

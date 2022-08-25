@@ -1,4 +1,4 @@
-$root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/turtle/"; //TODO: Parameterize for asset pipeline
 
 #visualization {
   background-color: #fff;
@@ -6,7 +6,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
 /* Slider. */
 .sliderContainer {
-  float: left
+  float: left;
 }
 .sliderTrack {
   stroke: #aaa;
@@ -30,17 +30,17 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   background-image: url("#{$root}icons.png");
 }
 .code {
- background-position: -42px 0px;
+  background-position: -42px 0;
 }
 .link {
-  background-position: -21px 0px;
+  background-position: -21px 0;
 }
 .run {
   background-position: -63px -21px;
   margin-right: 3px;
 }
 .stop {
-  background-position: -63px 0px;
+  background-position: -63px 0;
   margin-right: 3px;
 }
 

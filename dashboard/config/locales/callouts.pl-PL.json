@@ -2157,6 +2157,120 @@
         "New Sprite Lab Project": {
           "costumes_tab": "Kliknij tutaj, aby dodać kostiumy do swojego projektu.",
           "make_sprite": "Użyj bloków tutaj, aby utworzyć duszka!"
+        },
+        "Big Game Vars 1": {
+          "big_game_finish": "Kliknij przycisk Zakończ, gdy będziesz gotowy przejść na następny poziom."
+        },
+        "Calc Circles of Eval .2": {
+          "calc_question_marks": "Wybierz właściwą liczbę z tego rozwijanego menu "
+        },
+        "Calc Vars 1": {
+          "Calc Vars 1_edit_option": "Kliknij edytuj, aby zmienić wartość tej zmiennej"
+        },
+        "Eval Booleans 2": {
+          "Eval Booleans 2 1": "Wybierz liczbę, która sprawi, że to wyrażenie zostanie ocenione jako prawda"
+        },
+        "Eval Define Funcs 3": {
+          "Eval Define Funcs 3": "Spraw, aby nasza funkcja używała parametru 'radius' zamiast zawsze mieć promień równy 50."
+        },
+        "Eval Define Funcs Test": {
+          "Eval Define Funcs 3": "Spraw, aby nasza funkcja używała parametru 'radius' zamiast zawsze mieć promień równy 50."
+        },
+        "Eval Strings Images .2": {
+          "": "Bloki w kolorze turkusowym, takie jak ten, wyświetlają wartości łańcucha znaków"
+        },
+        "Luigi's Pizza 1": {
+          "luigi's pizza 1": "Spróbuj zamówić pizzę pepperoni"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Kliknij tutaj, by wyświetlić siatkę."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Zmień liczbę tutaj"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C3": "Zmień tą funkcję."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Oto kod"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Tutaj dodaj swój kod"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Zmień liczbę tutaj"
         }
       }
     }

@@ -334,6 +334,246 @@
           "word": "",
           "definition": ""
         },
+        "decode/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "encode/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "ascii/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "binary_system/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bit/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "pixel/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "decrypt/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "encrypt/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "computer/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "input/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "output/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "processing/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "storage/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/csd/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "parameter/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/csd/2022": {
+          "word": "متغیر",
+          "definition": ""
+        },
+        "dot_notation/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "property/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "sprite/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "boolean_expression/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/csd/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "abstraction/csd/2022": {
+          "word": "انتزاع",
+          "definition": ""
+        },
+        "function/csd/2022": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "html/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "html_element/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "html_tag/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "website_content/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "website_structure/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "heading/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "digital_footprint/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "css/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "css_selector/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "copyright/csd/2022": {
+          "word": "حق کپی برداری و نشر",
+          "definition": ""
+        },
+        "relevant/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "search_engine/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "trustworthy/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "css_class/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "empathy/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "user/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "usability/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "prototype/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "user_interface/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "feature/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "innovation/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "circuit/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "features/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "label/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "model/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "supervised_learning/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "training/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "categorical_data/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "classification/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bias/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "numerical_data/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "ethics/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
         "code/poem-art/unversioned": {
           "word": "کد",
           "definition": ""

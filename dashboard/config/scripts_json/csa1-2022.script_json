@@ -10,7 +10,9 @@
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -25,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-20 16:35:12 UTC",
+    "serialized_at": "2022-08-23 20:18:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -464,7 +466,7 @@
     },
     {
       "key": "lesson-21",
-      "name": "Console",
+      "name": "Sandbox: Console",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
@@ -479,7 +481,7 @@
     },
     {
       "key": "lesson-22",
-      "name": "The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
@@ -4278,7 +4280,13 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their chosen problem on Level 2.",
-        "progression_name": "Code Review: More PainterPlus Methods"
+        "progression_name": "Code Review: More PainterPlus Methods",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Conducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peer completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "38068426-5d74-4bfe-a003-e7957be7bfd9",
@@ -8662,6 +8670,7 @@
       "key": "asphalt_art_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8674,6 +8683,7 @@
       "key": "backgroundpainter",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8722,6 +8732,7 @@
       "key": "code_reviews_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -8782,6 +8793,7 @@
       "key": "cs_bingo_cards",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8806,6 +8818,7 @@
       "key": "decomposition",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8818,6 +8831,7 @@
       "key": "exploring_open_source_code",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8866,6 +8880,7 @@
       "key": "patternpainter",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8902,6 +8917,7 @@
       "key": "software_engineering_characteristics",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8938,6 +8954,7 @@
       "key": "spiralpainter_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8986,6 +9003,7 @@
       "key": "u1l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -8998,6 +9016,7 @@
       "key": "u1l11_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9010,6 +9029,7 @@
       "key": "u1l12_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9022,6 +9042,7 @@
       "key": "u1l13_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9034,6 +9055,7 @@
       "key": "u1l14_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9046,6 +9068,7 @@
       "key": "u1l15_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9058,6 +9081,7 @@
       "key": "u1l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9070,6 +9094,7 @@
       "key": "u1l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9082,6 +9107,7 @@
       "key": "u1l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9094,6 +9120,7 @@
       "key": "u1l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9106,6 +9133,7 @@
       "key": "u1l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9118,6 +9146,7 @@
       "key": "u1l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9130,6 +9159,7 @@
       "key": "u1l8_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9142,6 +9172,7 @@
       "key": "u1l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9154,6 +9185,7 @@
       "key": "unit_1_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9190,6 +9222,7 @@
       "key": "unit_1_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -9226,6 +9259,7 @@
       "key": "using_two-way_selection_and_not",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9274,6 +9308,7 @@
       "key": "writing_algorithms",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9310,12 +9345,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "software_engineering_skills_and_characteristics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "unit_1_guide"
       }
     },
     {

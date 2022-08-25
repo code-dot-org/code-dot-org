@@ -2693,7 +2693,19 @@
         "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "# Barevná pixelace: Úkol 1\n\n**Pokyny:**\n\n-   Začneme s obrázkem 4x2, který Maddie vytvořila, ale vynechali jsme poslední dva čtverce. \n-   Dokonči obrázek tak, že vymyslíš, které dvě barvy chybí a zakóduj je.",
         "Artist Autorun Test": "Nyní vlož funkci do bloku \"opakuj\" tak, aby se nakreslily tři črverce.",
         "MC Agent Freeplay": "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu.",
-        "U1L13 Text Compression": "Hledej v textu vzory (opakující se slova nebo sousloví). Zadej vzory, které vidíš, do slovníku napravo. Když píšeš záznamy do slovníku, symbol pro záznam se vloží do textu na místo vzoru."
+        "U1L13 Text Compression": "Hledej v textu vzory (opakující se slova nebo sousloví). Zadej vzory, které vidíš, do slovníku napravo. Když píšeš záznamy do slovníku, symbol pro záznam se vloží do textu na místo vzoru.",
+        "CSD U3 - Booleans Video_2022": "## Otázky k zamyšlení\n\n-   Co je to pravdivostní výraz?\n-   Co je výraz, který by se vyhodnotil jako pravdivý (true)?\n-   Co je výraz, který by se vyhodnotil jako nepravdivý (false)?",
+        "CSD U3 Entertainment Sample 4_2022": "# Razítkovací panel\n\nPro spuštění programu klikněte \"Spustit\" a pak použijte razítkovací panel k nakreslení obrázků s jednoduchými barvami a razítky zvířat.",
+        "CSD U5 binary video_2022": "## Otázky k zamyšlení\n\n-   Proč jsou všechny typy dat na počítači uložené jako čísla?\n-   Když je všechno uloženo jako číslo, jak si myslíš, že počítač rozezná rozdíl mezi čísly, písmeny, obrázky a zvukem?",
+        "CSD: Animating Sprite Movement_2022": "## Otázky k zamyšlení\n\n-   Co je to přičítací vzor?\n-   Jak přičítací vzor pohybuje spritem napříč obrazovkou?",
+        "CSD: Animation Tab_2022": "## Otázky k zamyšlení\n\n-   Jaké jsou kroky přidání obrázku do spritu?\n-   Jaké jsou různé způsoby získání obrázku?",
+        "CSD: Drawing in Game Lab 1_2022": "## Otázky k zamyšlení\n\n-   Kde můžete najít více informací jak použít jednotlivé bloky?\n-   Co je výhoda použití módu s bloky (blokového zobrazení)?",
+        "CSD: Drawing in Game Lab 2_2022": "## Otázky k zamyšlení\n\n-   Jaký je rozdíl mezi tahem (stroke) a výplní (fill)?",
+        "CSD: Introduction to the Draw Loop_2022": "## Otázky k zamyšlení\n\n-   Co dělá funkce draw?",
+        "CSD: Sprites in Game Lab_2022": "## Otázky k zamyšlení\n\n-   Co je to sprite?\n-   Co jsou to vlastnosti?\n-   Jaké problémy sprite vyřeší?",
+        "Introduction to Variables - Part 1_2022": "## Otázky k zamyšlení\n\n-   K čemu se proměnné používají?\n-   Jak vytvoříš proměnnou a jak do ní nastavíš hodnotu?\n-   Co můžeš nastavit do proměnné?",
+        "U4 Model Program 5_2022": "# Zapoj ostatní tlačítka\n\nTeď, když jsi přiměl jedno tlačítko, aby fungovalo, použij stejný vzor pro všechna ostatní.\n\n# Udělej toto\n\n-   Pro každé tlačítko vytvoř událost, která vede na odpovídající obrazovku, když se tlačítko zmáčkne.\n-   Spusť svou aplikaci a otestuj, že všechna tlačítka fungují.",
+        "csd U3 conditional statements video_2022": "## Otázky k zamyšlení\n\n-   Kdy budeš chtít použít příkaz `if`?"
       }
     }
   }

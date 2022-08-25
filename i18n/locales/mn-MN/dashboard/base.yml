@@ -404,7 +404,6 @@ mn:
     popup:
       progress_for_user: "%{name}-н ахиц дэвшил"
       progress: 'Таны ахиц дэвшил'
-      lines: 'Кодын нийт мөр: %{lines}'
       close: 'ХААХ'
       mastery: 'Үзэл баримтлал'
       puzzle_map: 'Үеүд'

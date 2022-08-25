@@ -433,7 +433,6 @@ ar:
     popup:
       progress_for_user: "تقدم %{name}"
       progress: 'إنجازاتك'
-      lines: 'عدد أسطر الكود البرمجي : %{lines}'
       close: 'إغلاق'
       mastery: 'مفاهيم'
       puzzle_map: 'مراحل'

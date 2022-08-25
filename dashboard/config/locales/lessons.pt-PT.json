@@ -307,6 +307,249 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "Análise de Freqüência"
         },
+        "csd5-2022/Representation Matters": {
+          "name": "Representação Importa"
+        },
+        "csd5-2022/Patterns and Representation": {
+          "name": "Padrões e Representações"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "ASCII e Representações Binárias"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Representando Imagens"
+        },
+        "csd5-2022/Representing Numbers": {
+          "name": "Representando Números"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Combinando Representações"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Mantendo o segredo dos dados"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "Projeto - Criando uma Representação"
+        },
+        "csd5-2022/Structuring Data": {
+          "name": "Estruturação de dados"
+        },
+        "csd5-2022/Interpreting Data": {
+          "name": "Interpretando Dados"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "Tomando Decisões com Dados"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "Automatizando decisões de dados"
+        },
+        "csd5-2022/Problem Solving with Big Data": {
+          "name": "Solução de Problemas com Big Data"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "Pesquisa pós-curso da CS Discoveries"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Introdução a Resolução de problemas"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "O Processo de Resolução de Problemas"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Explorando a solução de problemas"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "O que é um computador?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Entrada e saída"
+        },
+        "csd1-2022/Processing": {
+          "name": "Processando"
+        },
+        "csd1-2022/Storage": {
+          "name": "Armazenamento"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Projeto - Propor um Aplicativo"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "Programação para entretenimento"
+        },
+        "csd3-2022/Plotting Shapes": {
+          "name": "Formas de plotagem"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Desenhando no Laboratório de Jogos"
+        },
+        "csd3-2022/Shapes and Parameters": {
+          "name": "Formas e Parâmetros"
+        },
+        "csd3-2022/Variables": {
+          "name": "Variáveis"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Números Aleatórios"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Sprite"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Propriedades do Sprite"
+        },
+        "csd3-2022/Text": {
+          "name": "Texto"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "O laço de desenho"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "Movimento sprite"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Condicionais"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Entrada do teclado"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "Projeto - Cartão Interativo"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Velocidade"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "Detecção de Colisão"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Movimento complexo de Sprite"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Colisões"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funções"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "O processo de design de jogos"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Usando o processo de design de jogos"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "Projeto - Projetar um Jogo"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "Pesquisa pós-curso da CS Discoveries"
+        },
+        "csd2-2022/Exploring Web Pages": {
+          "name": "Explorando páginas da Web"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Introdução a HTML"
+        },
+        "csd2-2022/Headings": {
+          "name": "Cabeçalhos"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Pegada Digital"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Estilo de texto com CSS"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "Propriedade intelectual"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Estilizando elementos com CSS"
+        },
+        "csd2-2022/Team Problem Solving": {
+          "name": "Solução de problemas da equipe"
+        },
+        "csd2-2022/Sources and Research": {
+          "name": "Fontes e Pesquisa"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "Classes CSS"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Vinculando páginas"
+        },
+        "csd2-2022/Project - Website for a Purpose": {
+          "name": "Projeto - Site para uma finalidade"
+        },
+        "csd2-2022/Peer Review and Final Touches": {
+          "name": "Revisão por pares e retoques finais"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "Pesquisa pós-curso da CS Discoveries"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "Entendendo seu usuário"
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "Interfaces de Usuário"
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "Teste e Feedback"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Identificando Necessidades do Usuário"
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "Projeto - Protótipo de Papel"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Criando aplicativos para o bem"
+        },
+        "csd4-2022/Market Research": {
+          "name": "Pesquisa de mercado"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Protótipo de Teste"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "Testando o aplicativo"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "Projeto - Apresentação do App"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "Pesquisa pós-curso da CS Discoveries"
+        },
+        "csd6-2022/Innovations in Computing": {
+          "name": "Inovações em Computação"
+        },
+        "csd6-2022/The Circuit Playground": {
+          "name": "O parque de diversões do circuito"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Eventos de borda"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "LEDs Coloridos"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "Acelerômetro"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Fazendo Música"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funções"
+        },
+        "csd6-2022/Project - Prototype an Innovation": {
+          "overview": "Neste projeto final do curso, os alunos se unem para desenvolver e testar um protótipo para um dispositivo de computação inovador baseado no parque de diversões do circuito. Usando as entradas e saídas disponíveis no quadro, os grupos criarão programas que permitem interações interessantes e exclusivas do usuário. "
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "Pesquisa pós-curso da CS Discoveries"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Projetando a coleta de dados"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "Pesquisa pós-curso da CS Discoveries"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Criando caminhos"
         },

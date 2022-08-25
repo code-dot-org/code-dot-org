@@ -44,7 +44,7 @@ it:
         personal_email: "E-mail personale<a href=\"%{url}\">(clicca qui se non hai un indirizzo e-mail)</a>"
         personal_email_markdown: "E-mail personale[(clicca qui se non hai un indirizzo e-mail)](%{url})"
         username: 'Nome utente'
-        password: 'password'
+        password: 'Password'
         password_confirmation: 'Conferma della password'
         current_password: 'Password attuale'
         locale: 'Linguaggio'
@@ -383,7 +383,7 @@ it:
       district_dashboard: 'Dashboard'
       label: 'Ciao %{username}'
       stats: 'Code Studio'
-      my_projects: 'Collezione Privata'
+      my_projects: 'I miei progetti'
       settings: 'Il mio account'
       logout: 'Esci'
       signin: 'Accedi'
@@ -432,7 +432,6 @@ it:
     popup:
       progress_for_user: "%{name} in corso"
       progress: 'I tuoi progressi'
-      lines: 'Totale delle linee di codice:  %{lines}'
       close: 'CHIUDI'
       mastery: 'Concetti'
       puzzle_map: 'Fasi'

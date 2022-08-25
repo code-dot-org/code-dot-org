@@ -64,7 +64,7 @@ Dacă nu reușești să iei legătura cu o școală, te rugăm să [ne contactez
 
 Dacă vrei să mergi mai departe, compania ta poate găzdui și un eveniment Hour of Code. Nu există o formulă specifică pentru organizarea unui eveniment, așa că te încurajăm să fii creativ! Deoarece echipa noastră este mică (dar puternică!), Code.org nu poate dedica resurse coordonării evenimentelor Hour of Code. Cu toate acestea, iată câteva sfaturi pentru început.
 
-### 1. Vizionați acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Vizionați acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Stabilește data, formatul și locul în care se va organiza evenimentul tău
 

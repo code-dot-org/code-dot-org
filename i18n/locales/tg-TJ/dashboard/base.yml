@@ -103,7 +103,6 @@ tg:
       create: 'Сохтан'
     popup:
       progress: 'Муваффақияти шумо'
-      lines: 'Хатҳои умумии рамз: %{lines}'
       close: 'ПӮШИДАН'
       puzzle_map: 'Давраҳо'
       prizes_link: 'маълумоти бештар'

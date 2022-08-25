@@ -73,6 +73,786 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vidéo"
         },
+        "representation_matters/csd/2022": {
+          "name": "Questions de Représentation"
+        },
+        "representation_matters_1/csd/2022": {
+          "name": "Questions de Représentation"
+        },
+        "representation_matters_2/csd/2022": {
+          "name": "Questions de Représentation"
+        },
+        "representing_information/csd/2022": {
+          "name": "Représenter l'Information"
+        },
+        "patterns_and_representation/csd/2022": {
+          "name": "Modèles et Représentation"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "La Représentation ASCII et binaire"
+        },
+        "representing_images/csd/2022": {
+          "name": "Représenter des Images"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Vidéo"
+        },
+        "representing_numbers/csd/2022": {
+          "name": "Représenter les Nombres"
+        },
+        "representing_numbers_1/csd/2022": {
+          "name": "Représenter les Nombres"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Combiner des Représentations"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Garder les Données Secrètes"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Réflexion"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubrique"
+        },
+        "structuring_data/csd/2022": {
+          "name": "Structurer les Données"
+        },
+        "structuring_data_1/csd/2022": {
+          "name": "Structurer les Données"
+        },
+        "interpreting_data/csd/2022": {
+          "name": "Interpréter les Données"
+        },
+        "interpreting_data_1/csd/2022": {
+          "name": "Interpréter les Données"
+        },
+        "interpreting_data_2/csd/2022": {
+          "name": "Interpréter les Données"
+        },
+        "interpreting_data_3/csd/2022": {
+          "name": "Interpréter les Données"
+        },
+        "making_decisions_with_data_1/csd/2022": {
+          "name": "Prendre des Décisions avec des Données"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "Prendre des Décisions avec des Données"
+        },
+        "automating_data_decisions/csd/2022": {
+          "name": "Automatiser les Décisions Relatives Aux Données"
+        },
+        "automating_data_decisions_1/csd/2022": {
+          "name": "Automatiser les Décisions Relatives Aux Données"
+        },
+        "automating_data_decisions_2/csd/2022": {
+          "name": "Automatiser les Décisions Relatives Aux Données"
+        },
+        "automating_data_decisions_3/csd/2022": {
+          "name": "Automatiser les Décisions Relatives Aux Données"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Vidéo"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "name": "Les Données dans le Monde Réel"
+        },
+        "data_in_the_real_world_1/csd/2022": {
+          "name": "Les Données dans le Monde Réel"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Vidéo"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Vidéo"
+        },
+        "problem_solving_with_big_data/csd/2022": {
+          "name": "Résolution de Problèmes avec les Mégadonnées"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Vidéo"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Vidéo : Apprentissage automatique",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Vidéo"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "Vidéo"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Commentaire par un pair"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubrique"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Guide projet"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Forum des Enseignants"
+        },
+        "intro_to_problem_solving/csd/2022": {
+          "name": "Introduction à la Résolution de Problèmes"
+        },
+        "problem_solving_process/csd/2022": {
+          "name": "Processus de Résolution De Problème"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "name": "Processus de Résolution De Problème",
+          "type": "Vidéo"
+        },
+        "problem_solving_process_2/csd/2022": {
+          "name": "Processus de Résolution De Problème"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Le Processus de Résolution de Problèmes"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Le Processus de Résolution de Problèmes"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "Explorer la Résolution de Problèmes"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Vidéo"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Qu'est ce qu'un Ordinateur ?"
+        },
+        "input_and_output/csd/2022": {
+          "name": "Entrée et Sortie"
+        },
+        "input_and_output_1/csd/2022": {
+          "name": "Entrée et Sortie"
+        },
+        "input_and_output_2/csd/2022": {
+          "name": "Entrée et Sortie"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Vidéo"
+        },
+        "apps_and_problem_solving/csd/2022": {
+          "name": "Les Applications et La Résolution de Problèmes"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "name": "Les Applications et La Résolution de Problèmes",
+          "type": "Commentaire par un pair"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "Les Applications et La Résolution de Problèmes",
+          "type": "Rubrique"
+        },
+        "project_-_propose_an_app/csd/2022": {
+          "name": "Projet - Propose une Application"
+        },
+        "programming_for_entertainment/csd/2022": {
+          "name": "Programmer pour le Divertissement"
+        },
+        "drawing_shapes/csd/2022": {
+          "name": "Dessiner des formes"
+        },
+        "plotting_shapes/csd/2022": {
+          "name": "Tracer Des Formes"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Vidéo"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Vidéo"
+        },
+        "drawing_shapes_1/csd/2022": {
+          "name": "Dessiner des formes"
+        },
+        "drawing_in_game_lab/csd/2022": {
+          "name": "Dessiner dans le Labo des Jeux"
+        },
+        "shapes_and_parameters_1/csd/2022": {
+          "name": "Formes et paramètres"
+        },
+        "shapes_and_parameters_2/csd/2022": {
+          "name": "Formes et paramètres"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Vidéo"
+        },
+        "naming_variables/csd/2022": {
+          "name": "Nommer les variables"
+        },
+        "variables/csd/2022": {
+          "name": "variables"
+        },
+        "variables_3/csd/2022": {
+          "name": "variables"
+        },
+        "random_numbers/csd/2022": {
+          "name": "Nombres aléatoires"
+        },
+        "random_numbers_2/csd/2022": {
+          "name": "Nombres aléatoires"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Vidéo"
+        },
+        "sprites/csd/2022": {
+          "name": "Les Lutins"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "L’onglet Animation",
+          "type": "Vidéo"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Les Lutins"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Propriétés du sprite"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Propriétés du sprite"
+        },
+        "text/csd/2022": {
+          "name": "Texte"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubrique"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Vidéo"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Vidéo"
+        },
+        "the_draw_loop/csd/2022": {
+          "name": "La Boucle Dessiner"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "name": "La Boucle Dessiner"
+        },
+        "sprite_movement/csd/2022": {
+          "name": "Le Déplacement du Lutin",
+          "type": "Vidéo"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "Le Déplacement du Lutin"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubrique"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Expressions Booléennes",
+          "type": "Vidéo"
+        },
+        "booleans_and_comparison_operators/csd/2022": {
+          "name": "Booléens et opérateurs de comparaison"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Déclarations Conditionnelles",
+          "type": "Vidéo"
+        },
+        "if_statements/csd/2022": {
+          "name": "Instructions « si »"
+        },
+        "conditionals/csd/2022": {
+          "name": "Instructions conditionnelles"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Entrée Au Clavier"
+        },
+        "if-else_statements/csd/2022": {
+          "name": "Instructions « si-alors »"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "Instructions « Si/Sinon »",
+          "type": "Vidéo"
+        },
+        "interactive_card/csd/2022": {
+          "name": "Carte interactive"
+        },
+        "interactive_card_1/csd/2022": {
+          "name": "Carte interactive",
+          "type": "Guide projet"
+        },
+        "interactive_card_2/csd/2022": {
+          "name": "Carte interactive",
+          "type": "Commentaire par un pair"
+        },
+        "interactive_card_3/csd/2022": {
+          "name": "Carte interactive",
+          "type": "Rubrique"
+        },
+        "project_-_interactive_card/csd/2022": {
+          "name": "Projet - Carte Interactive"
+        },
+        "velocity/csd/2022": {
+          "name": "Vitesse",
+          "type": "Vidéo"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Vitesse"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Vitesse"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Détection de collision"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Détection de collision"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Détection de collision"
+        },
+        "side_scroller/csd/2022": {
+          "type": "Rubrique"
+        },
+        "side_scroller_1/csd/2022": {
+          "type": "Guide projet"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Vélocité et le contre-modèle"
+        },
+        "complex_sprite_movement/csd/2022": {
+          "name": "Déplacement Complexe du Lutin"
+        },
+        "collisions/csd/2022": {
+          "name": "Collisions"
+        },
+        "flyer_game/csd/2022": {
+          "type": "Rubrique"
+        },
+        "flyer_game_1/csd/2022": {
+          "type": "Guide projet"
+        },
+        "functions/csd/2022": {
+          "name": "Fonctions",
+          "type": "Vidéo"
+        },
+        "functions_1/csd/2022": {
+          "name": "Fonctions"
+        },
+        "functions_4/csd/2022": {
+          "name": "Fonctions"
+        },
+        "the_game_design_process/csd/2022": {
+          "name": "Le Processus de Conception d'un Jeu"
+        },
+        "using_the_game_design_process/csd/2022": {
+          "name": "Utiliser le Processus de Conception d'un Jeu"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Guide projet"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Commentaire par un pair"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubrique"
+        },
+        "project_-_design_a_game/csd/2022": {
+          "name": "Projet - Concevoir un Jeu"
+        },
+        "exploring_web_pages/csd/2022": {
+          "name": "Explorer des Pages Web"
+        },
+        "exploring_web_pages_1/csd/2022": {
+          "name": "Explorer des Pages Web"
+        },
+        "exploring_web_pages_2/csd/2022": {
+          "name": "Explorer des Pages Web"
+        },
+        "html_tags/csd/2022": {
+          "name": "Balises HTML"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Vidéo"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Vidéo"
+        },
+        "intro_to_html/csd/2022": {
+          "name": "Initiation au HTML"
+        },
+        "headings_and_paragraphs/csd/2022": {
+          "name": "Titres et paragraphes"
+        },
+        "video_debugging/csd/2022": {
+          "type": "Vidéo"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": " Programmation en Binôme",
+          "type": "Vidéo"
+        },
+        "headings/csd/2022": {
+          "name": "Rubriques"
+        },
+        "formatting_html/csd/2022": {
+          "name": "Mise en forme HTML"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Rubrique"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Commentaire par un pair"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Guide projet"
+        },
+        "lists/csd/2022": {
+          "name": "Listes"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "L'Empreinte Numérique"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Introduction à CSS - Partie 1",
+          "type": "Vidéo"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Introduction à CSS - Partie 2",
+          "type": "Vidéo"
+        },
+        "styling_text_with_css/csd/2022": {
+          "name": "Styliser le texte avec CSS"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubrique"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Commentaire par un pair"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Guide projet"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Vidéo"
+        },
+        "intellectual_property/csd/2022": {
+          "name": "Propriété intellectuelle"
+        },
+        "creative_commons_search/csd/2022": {
+          "name": "Recherche sur la licence Creative Commons"
+        },
+        "images_in_html/csd/2022": {
+          "name": "Les Images dans le HTML"
+        },
+        "layout_properties/csd/2022": {
+          "name": "Propriétés de la mise en page"
+        },
+        "styling_elements_with_css/csd/2022": {
+          "name": "Styliser des Éléments avec CSS"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Guide projet"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Commentaire par un pair"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Guide projet"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubrique"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Publiez votre site Web",
+          "type": "Vidéo"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "Vidéo"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "Vidéo"
+        },
+        "team_problem_solving/csd/2022": {
+          "name": "La Résolution De Problèmes en Équipe"
+        },
+        "video_how_search_works/csd/2022": {
+          "type": "Vidéo"
+        },
+        "sources_and_research/csd/2022": {
+          "name": "Les Sources et la Recherche"
+        },
+        "classes/csd/2022": {
+          "name": "Classes"
+        },
+        "css_classes/csd/2022": {
+          "name": "Les classes CSS"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Guide projet"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubrique"
+        },
+        "hyperlinks/csd/2022": {
+          "name": "Liens hypertexte"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Relier des Pages"
+        },
+        "project_-_website_for_a_purpose/csd/2022": {
+          "name": "Projet - Site Web avec un But"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Guide projet"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Commentaire par un pair"
+        },
+        "peer_review_and_final_touches/csd/2022": {
+          "name": "L'Examen par les Pairs et la Touche Finale"
+        },
+        "understanding_your_user/csd/2022": {
+          "name": "Comprendre Votre Utilisateur"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Vidéo"
+        },
+        "user_interfaces/csd/2022": {
+          "name": "Les Interfaces Utilisateurs"
+        },
+        "feedback_and_testing/csd/2022": {
+          "name": "Commentaires et Tests"
+        },
+        "identifying_user_needs/csd/2022": {
+          "name": "Identifier les Besoins des Utilisateurs"
+        },
+        "paper_prototypes/csd/2022": {
+          "name": "Prototypes Papier",
+          "type": "Rubrique"
+        },
+        "project_-_paper_prototype/csd/2022": {
+          "name": "Projet - Prototype Papier"
+        },
+        "designing_apps_for_good/csd/2022": {
+          "name": "Concevoir des Applications pour de Bon"
+        },
+        "market_research/csd/2022": {
+          "name": "Étude de Marché"
+        },
+        "market_research_1/csd/2022": {
+          "name": "Étude de Marché"
+        },
+        "market_research_2/csd/2022": {
+          "name": "Étude de Marché"
+        },
+        "design_mode/csd/2022": {
+          "name": "Mode création"
+        },
+        "design_mode_elements/csd/2022": {
+          "name": "Éléments en mode création"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Vidéo"
+        },
+        "prototype_testing/csd/2022": {
+          "name": "Les Essais de Prototype"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "name": "Introduction au mode création",
+          "type": "Vidéo"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Vidéo"
+        },
+        "changing_screens/csd/2022": {
+          "name": "Changer d’écran"
+        },
+        "importing_screens/csd/2022": {
+          "name": "Importation d’écrans"
+        },
+        "multi-screen_apps/csd/2022": {
+          "name": "Applications Multi-Écrans"
+        },
+        "responding_to_user_input/csd/2022": {
+          "name": "Répondre à l’entrée de l’utilisateur"
+        },
+        "testing_the_app/csd/2022": {
+          "name": "Tester l'Application"
+        },
+        "app_presentation/csd/2022": {
+          "name": "Présentation de l'Application",
+          "type": "Rubrique"
+        },
+        "app_presentation_1/csd/2022": {
+          "name": "Présentation de l'Application"
+        },
+        "project_-_app_presentation/csd/2022": {
+          "name": "Projet - Présentation de l'Application"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "L'informatique est en Train de Tout Changer",
+          "type": "Vidéo"
+        },
+        "computing_innovations_1/csd/2022": {
+          "name": "Innovations Informatiques"
+        },
+        "innovations_in_computing/csd/2022": {
+          "name": "Innovations en informatique"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Vidéo"
+        },
+        "circuits_and_logic/csd/2022": {
+          "name": "Circuits et logique",
+          "type": "Vidéo"
+        },
+        "the_circuit_playground/csd/2022": {
+          "name": "Le Circuit Playground"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "name": "Dessiner des écrans en codant"
+        },
+        "random_numbers_1/csd/2022": {
+          "name": "Nombres aléatoires"
+        },
+        "board_events/csd/2022": {
+          "name": "Évènements en provenance du circuit"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Évènements en provenance du circuit"
+        },
+        "physical_input/csd/2022": {
+          "name": "Entrée physique"
+        },
+        "if_statements_1/csd/2022": {
+          "name": "Instructions « si »"
+        },
+        "if_statements_2/csd/2022": {
+          "name": "Instructions « si »",
+          "type": "Vidéo"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Vidéo"
+        },
+        "variables_1/csd/2022": {
+          "name": "variables"
+        },
+        "variables_2/csd/2022": {
+          "name": "variables",
+          "type": "Vidéo"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubrique"
+        },
+        "color_leds/csd/2022": {
+          "name": "Couleurs des LED"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Vidéo"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubrique"
+        },
+        "analog_sensors/csd/2022": {
+          "name": "Capteurs analogiques"
+        },
+        "changing_sensor_scale/csd/2022": {
+          "name": "Modifier l’échelle des capteurs"
+        },
+        "accelerometer/csd/2022": {
+          "name": "Accéléromètre"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "Événements d'accéléromètre"
+        },
+        "the_accelerometer/csd/2022": {
+          "name": "L’accéléromètre"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Introduction aux Tableaux",
+          "type": "Vidéo"
+        },
+        "making_music/csd/2022": {
+          "name": "Créer de la Musique"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Jouer des notes"
+        },
+        "arrays/csd/2022": {
+          "name": "Tableaux"
+        },
+        "modifying_arrays/csd/2022": {
+          "name": "Modifier et créer des tableaux"
+        },
+        "functions_2/csd/2022": {
+          "name": "Fonctions"
+        },
+        "functions_3/csd/2022": {
+          "name": "Fonctions",
+          "type": "Vidéo"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Fonctions avec Paramètres",
+          "type": "Vidéo"
+        },
+        "functions_5/csd/2022": {
+          "name": "Fonctions"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubrique"
+        },
+        "circuits_and_leds/csd/2022": {
+          "name": "Circuits et LEDs"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "Projet: Réaliser un prototype innovant"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubrique"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Vidéo"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "Voir l'IA",
+          "type": "Vidéo"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Vidéo"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Vidéo"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Vidéo"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "IA : Les Données de Formation et la Déformation",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Vidéo"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Vidéo"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Vidéo"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Vidéo"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Vidéo"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubrique"
+        },
+        "survey_planning/csd/2022": {
+          "name": "Concevoir la Collecte de Données"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Vidéo"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Vidéo"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Vidéo"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubrique"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Plans des Cours"
         },

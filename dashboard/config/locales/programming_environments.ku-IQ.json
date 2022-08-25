@@ -1,0 +1,79 @@
+{
+  "ku-IQ": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "name": "تاقیگەی یاری",
+          "categories": {
+            "game_lab": {
+              "name": "تاقیگەی یاری"
+            },
+            "groups": {
+              "name": "کۆمەڵەکان"
+            },
+            "math": {
+              "name": "بیرکاری"
+            },
+            "variables": {
+              "name": "گۆڕاوەکان"
+            },
+            "functions": {
+              "name": "فرمانەکان"
+            }
+          }
+        },
+        "applab": {
+          "name": "تاقیگەی ئاپ",
+          "categories": {
+            "math": {
+              "name": "بیرکاری"
+            },
+            "variables": {
+              "name": "گۆڕاوەکان"
+            },
+            "functions": {
+              "name": "فرمانەکان"
+            },
+            "advanced": {
+              "name": "پێشکەوتوو"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "location": {
+              "name": "شوێنەکان"
+            },
+            "actions": {
+              "name": "کردەوەکان"
+            },
+            "behaviors": {
+              "name": "ڕەفتارەکان"
+            },
+            "loops": {
+              "name": "گرێکان"
+            },
+            "variables": {
+              "name": "گۆڕاوەکان"
+            },
+            "math": {
+              "name": "بیرکاری"
+            },
+            "logic": {
+              "name": "لۆژيك"
+            },
+            "functions": {
+              "name": "فرمانەکان"
+            },
+            "text": {
+              "name": "دەق"
+            },
+            "comments": {
+              "name": "سەرنجەکان"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -376,7 +376,7 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
-      legal: "Confidentialité et légal"
+      legal: "Confidentialité et mentions légales"
       legal_privacy: "Politique de confidentialité"
       legal_tos: "Conditions Générales d'Utilisation"
     user:
@@ -406,7 +406,7 @@ fr:
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'La Reine des neiges'
-      gamelab: 'Labo des Jeux'
+      gamelab: 'Labo Jeux'
       gamelab_jr: 'Labo des jeux (beta)'
       gumball: 'Le monde incroyable de Gumball'
       iceage: 'L’âge de Glace'
@@ -434,7 +434,6 @@ fr:
     popup:
       progress_for_user: "progrès de %{name}"
       progress: 'Ton progrès'
-      lines: 'Total de lignes de code: %{lines}'
       close: 'FERMER'
       mastery: 'Concepts'
       puzzle_map: 'Étapes'
@@ -566,7 +565,7 @@ fr:
     not_correct_participant_type: "Impossible de déplacer ces utilisateurs car ils n'ont pas les autorisations nécessaires pour participer à la nouvelle section."
   share:
     title: "Apprends avec Code Studio"
-    description: "N'importe qui peut apprendre l’informatique. Crée des jeux, des applications et de l'art avec du code."
+    description: "Tout le monde peut apprendre l’informatique. Crée des jeux, des applications et de l'art avec du code."
     try_hour_of_code: 'Essaie une Heure du Code !'
   gender:
     male: 'Masculin'
@@ -578,14 +577,14 @@ fr:
     student: 'Élève'
     teacher: 'Professeur'
   footer:
-    thank_you: 'Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien à la création de Code Studio.'
-    help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs d’Amazon, de Google et de Microsoft,qui ont contribué à créer ce matériel.'
+    thank_you: 'Nous tenons à remercier nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, nos <a href="https://code.org/about/team"> équipes</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien lors de la création de Code Studio.'
+    help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs d’Amazon, de Google et de Microsoft, qui ont contribué à la création de ce matériel.'
     help_from_html_old: 'Des ingénieurs de chez Google, Microsoft, Facebook et Twitter ont contribué à créer ces documents de formation.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’Âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plantes contre Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés.<br />DreamWorks Les Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tous droits réservés.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes contre Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Fourni par Amazon Web Services'
-    built_on_github: 'Construit sur GitHub de Microsoft'
+    powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des marques déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d''autres pays. '
+    built_on_github: 'Construit avec GitHub de Microsoft'
     google_copyright: '&copy; Google Inc. utilisé avec autorisation. Google Classroom est une marque déposée de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour of Code&reg; sont des marques déposées de Code.org.'
     copyright: 'Copyright'
@@ -604,7 +603,7 @@ fr:
     make_my_own_app: 'Développer ma propre application'
     how_it_works: 'Comment ça marche'
     try_hour_of_code: 'Essaie une Heure du Code !'
-    store: 'Magasin'
+    store: 'Boutique'
     cookie_notice: ' Utilisation de cookies'
   reference_area:
     title: 'Besoin d''aide ?'
@@ -616,7 +615,7 @@ fr:
     direction: 'Direction au départ (en degrés)'
   video:
     tab: 'Vidéo.'
-    notes: 'Pas de vidéo ? Montre les notes.'
+    notes: 'Pas de vidéo ? Voir les notes.'
     notes_coming_soon: 'Il y aura bientôt des notes pour cette vidéo.'
     autoplay_option: 'Lire les vidéos automatiquement'
     download: 'Télécharger la vidéo'
@@ -625,11 +624,11 @@ fr:
     label: 'Vidéo '
   compatibility:
     upgrade:
-      unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
+      unsupported_message: "Votre navigateur n'est pas compatible. Merci de mettre votre navigateur à jour avec [l'un des navigateurs compatibles avec nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent d’être compromises. "
       link: "En savoir plus"
-      applab_unsupported_tablet: "Le Labo des Applis fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
-      gamelab_unsupported_tablet: "Le Labo des Jeux fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
-      weblab_unsupported_locale_storage: "Il se peut que vous rencontriez des difficultés en utilisant le Labo du Web, en mode incognito. Merci de recharger votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée."
+      applab_unsupported_tablet: "Le Labo des Applis fonctionne au mieux sur un ordinateur portable ou fixe équipé d'une souris et d'un clavier. Il se peut que vous rencontriez des difficultés en utilisant cet outil avec votre appareil actuel."
+      gamelab_unsupported_tablet: "Le Labo Jeux fonctionne au mieux sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil avec votre appareil actuel."
+      weblab_unsupported_locale_storage: "Il se peut que vous rencontriez des difficultés en utilisant le Labo Web en mode Navigation Privée. Merci de réactualiser votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée."
   slow_loading: 'Cela prend plus de temps que d''habitude...'
   try_reloading: 'Essaie de recharger la page'
   next_stage: 'Terminé! Continue vers l''étape suivante'
@@ -695,7 +694,7 @@ fr:
       title: "Galerie"
       body: "Regarde une galerie des applications et des images d'artistes créées par nos utilisateurs."
     gamelab:
-      title: "Labo des Jeux"
+      title: "Labo Jeux"
       body: "Le Labo des Jeux est un environnement de programmation où vous pouvez créer des animations simples et des jeux avec des objets et des personnages qui interagissent entre eux."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
@@ -995,7 +994,7 @@ fr:
     windows: 'Windows (64 bits)'
     mac: 'Mac OS X'
   locked_stage: 'Les contenus ne sont pas visibles car cette étape est verrouillée pour l''instant. Ton professeur la déverrouillera lorsqu''il sera temps de travailler dessus ou pour consulter tes réponses.'
-  hidden_stage: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle leçon tu dois suivre."
+  hidden_stage: "Ton enseignant n'avait pas prévu que tu te retrouves ici. Demande-lui sur quelle leçon tu devrais travailler. "
   hidden_script: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle unité tu dois suivre."
   no_course_access_student: "Vous n'avez pas accès à ce cours. S'il vous plaît informez votre professeur quel cours vous devriez suivre."
   no_course_access_teacher: "Vous n'avez pas accès à ce cours. Si vous penser que vous devriez avoir accès à ce cours, s'il vous plaît écrivez à support@code.org afin que nous puissions arranger la situation."
@@ -1008,7 +1007,7 @@ fr:
   no_exemplar_access_teacher: "Seul les professeurs peuvent accéder aux programmes exemples. Si vous voulez devenir un professeur autorisé, prière d'écrire à support@code.org."
   return_unit_overview: 'Accéder à l’aperçu de l''unité'
   return_course_overview: 'Accéder à l’aperçu du cours'
-  view_all_units: 'Afficher toutes les unités'
+  view_all_units: 'Voir toutes les unités'
   view_teacher_guide: 'Voir le guide de l''enseignant'
   pd:
     form_labels:
@@ -1124,7 +1123,7 @@ fr:
       body_markdown: 'Votre compte n’est pas associé à une adresse e-mail. Veuillez [consulter les paramètres de votre compte](%{user_registration}) pour ajouter votre adresse e-mail avant de remplir ce formulaire.'
   courses_category: 'Cours Complets'
   cookie_banner:
-    message: 'En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou appareil mobile.'
+    message: 'En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou appareil.'
     more_information: "Consulter la Politique de Confidentialité de Code.org."
     accept: 'J''accepte'
   page_not_found_title: "Page Introuvable"
@@ -1150,5 +1149,5 @@ fr:
   behaviors:
     this_sprite: "ce sprite"
   unit_prefix: "Unité %{n}"
-  code_org_logo_alt: "Code.org Accueil"
+  code_org_logo_alt: "Accueil Code.org"
   teacher_feedback: "FeedBack enseignants"

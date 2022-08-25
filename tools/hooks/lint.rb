@@ -25,6 +25,10 @@ def filter_eslint_shared(modified_files)
   end
 end
 
+def filter_scss_apps(modified_files)
+  modified_files.select {|f| f.match(/apps\//) && f.end_with?(".scss")}
+end
+
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile', 'Gemfile'].freeze
 def filter_rubocop(modified_files)
   modified_rb_rake_files = modified_files.select do |f|
@@ -64,11 +68,15 @@ def run_eslint_shared(files)
   run("../../apps/node_modules/eslint/bin/eslint.js #{files.join(' ')}", SHARED_JS_DIR)
 end
 
+def run_stylelint_apps(files)
+  run("./node_modules/.bin/stylelint #{files.join(' ')} --config stylelint.config.js", APPS_DIR)
+end
+
 def run_haml(files)
   run("bundle exec haml-lint #{files.join(' ')}", REPO_DIR)
 end
 
-def run_scss(files)
+def run_scss_dashboard(files)
   run("bundle exec scss-lint #{files.join(' ')}", REPO_DIR)
 end
 
@@ -82,9 +90,10 @@ def do_linting
   modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
-    Object.method(:run_scss) => filter_scss(modified_files),
+    Object.method(:run_scss_dashboard) => filter_scss(modified_files),
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
+    Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 

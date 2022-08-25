@@ -12,11 +12,11 @@ Consider the following class definition.
 ```
 public class ScoreBoard {
 
-   private int score = 0;
+   private int score;
    private static int attempts = 0;
 
    public ScoreBoard(int newScore) {
-      score = newScore;
+      this.score = newScore;
       attempts++;
    }
 
@@ -29,7 +29,7 @@ public class ScoreBoard {
    }
 
    public int getAttempts() {
-      return y;
+      return attempts;
    }
 }
 ```

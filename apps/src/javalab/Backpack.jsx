@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
+import classNames from 'classnames';
 import JavalabButton from './JavalabButton';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
+import moduleStyles from './backpack.module.scss';
 import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
@@ -197,13 +198,13 @@ class Backpack extends Component {
     return (
       <div>
         <p>{message}</p>
-        <ul style={styles.importMessageList}>
+        <ul className={moduleStyles.importMessageList}>
           {overwriteFileList.map(filename => {
             return <li key={filename}>{filename}</li>;
           })}
         </ul>
         {isWarning && (
-          <p style={styles.importWarningConfirm}>
+          <p className={moduleStyles.importWarningConfirm}>
             {javalabMsg.fileImportWarningConfirm()}
           </p>
         )}
@@ -241,7 +242,7 @@ class Backpack extends Component {
         <img
           src="/blockly/media/javalab/backpack.png"
           alt="backpack icon"
-          style={styles.backpackIcon}
+          className={moduleStyles.backpackIcon}
         />
       </i>
     );
@@ -266,28 +267,29 @@ class Backpack extends Component {
         />
         {dropdownOpen && (
           <div
-            className="ignore-react-onclickoutside"
-            style={{
-              ...styles.dropdownContainer,
-              ...(displayTheme === DisplayTheme.DARK && styles.dropdownDark)
-            }}
+            className={classNames(
+              'ignore-react-onclickoutside',
+              moduleStyles.dropdownContainer,
+              displayTheme === DisplayTheme.DARK &&
+                moduleStyles.dropdownContainerDark
+            )}
           >
             {showFiles && (
               <>
                 <div
-                  style={styles.dropdown}
+                  className={moduleStyles.dropdown}
                   ref={ref => (this.dropdownList = ref)}
                 >
                   {/* In the case of a very long filename, this div adds styling
                   that maintains highlighting even when scrolled to the right */}
-                  <div style={styles.listContainer}>
+                  <div className={moduleStyles.listContainer}>
                     {backpackFilenames.map((filename, index) => (
                       <div
-                        style={{
-                          ...styles.fileListItem,
-                          ...(displayTheme === DisplayTheme.DARK &&
-                            styles.fileListItemDark)
-                        }}
+                        className={classNames(
+                          moduleStyles.fileListItem,
+                          displayTheme === DisplayTheme.DARK &&
+                            moduleStyles.fileListItemDark
+                        )}
                         key={`backpack-file-${index}`}
                       >
                         <input
@@ -298,7 +300,7 @@ class Backpack extends Component {
                         />
                         <label
                           htmlFor={`backpack-file-${index}`}
-                          style={styles.fileListLabel}
+                          className={moduleStyles.fileListLabel}
                         >
                           {filename}
                         </label>
@@ -315,20 +317,24 @@ class Backpack extends Component {
               </>
             )}
             {backpackFilesLoading && (
-              <div style={styles.spinnerContainer}>
+              <div className={moduleStyles.spinnerContainer}>
                 <span
-                  className="fa fa-spin fa-spinner"
-                  style={styles.spinner}
+                  className={classNames(
+                    'fa',
+                    'fa-spin',
+                    'fa-spinner',
+                    moduleStyles.spinner
+                  )}
                 />
               </div>
             )}
             {backpackLoadError && (
-              <div style={styles.message}>
+              <div className={moduleStyles.message}>
                 {javalabMsg.backpackListLoadError()}
               </div>
             )}
             {showNoFiles && (
-              <div style={styles.message}>
+              <div className={moduleStyles.message}>
                 {javalabMsg.emptyBackpackMessage()}
               </div>
             )}
@@ -358,57 +364,8 @@ class Backpack extends Component {
 }
 
 const styles = {
-  dropdownContainer: {
-    display: 'flex',
-    position: 'absolute',
-    flexDirection: 'column',
-    top: 30,
-    backgroundColor: color.white,
-    zIndex: 20,
-    borderWidth: 1,
-    borderColor: color.light_gray,
-    borderStyle: 'solid',
-    borderRadius: 4,
-    maxWidth: '35%',
-    maxHeight: '80%',
-    minWidth: 150,
-    color: color.dark_charcoal,
-    marginLeft: 3
-  },
-  dropdown: {
-    overflow: 'auto',
-    padding: '10px 0',
-    minWidth: 'inherit'
-  },
-  dropdownDark: {
-    backgroundColor: color.darkest_slate_gray,
-    color: color.background_gray
-  },
-  listContainer: {
-    width: 'fit-content',
-    minWidth: 'inherit'
-  },
   dropdownOpenButton: {
     backgroundColor: color.cyan
-  },
-  fileListItem: {
-    display: 'flex',
-    flexDirection: 'row',
-    boxSizing: 'border-box',
-    padding: '5px 15px',
-    width: '100%',
-    ':hover': {
-      backgroundColor: color.background_gray
-    }
-  },
-  fileListItemDark: {
-    ':hover': {
-      backgroundColor: color.dark_charcoal
-    }
-  },
-  fileListLabel: {
-    marginLeft: 5,
-    width: 'inherit'
   },
   importButton: {
     backgroundColor: color.orange,
@@ -416,33 +373,7 @@ const styles = {
     fontSize: 13,
     padding: '5px 16px',
     width: 'fit-content',
-    borderColor: color.orange,
-    ':disabled': {
-      borderColor: color.light_gray
-    }
-  },
-  backpackIcon: {
-    height: 15,
-    opacity: 1
-  },
-  spinner: {
-    fontSize: 22
-  },
-  message: {
-    fontStyle: 'italic',
-    fontSize: 12,
-    lineHeight: '12px',
-    padding: 10
-  },
-  importMessageList: {
-    marginBottom: 0
-  },
-  importWarningConfirm: {
-    marginTop: 10,
-    marginBottom: 0
-  },
-  spinnerContainer: {
-    textAlign: 'center'
+    borderColor: color.orange
   }
 };
 
@@ -452,4 +383,4 @@ export default connect(state => ({
   sources: state.javalab.sources,
   validation: state.javalab.validation,
   backpackEnabled: state.javalab.backpackEnabled
-}))(onClickOutside(Radium(UnconnectedBackpack)));
+}))(onClickOutside(UnconnectedBackpack));

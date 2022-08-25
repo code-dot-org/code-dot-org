@@ -2810,7 +2810,17 @@
         "U1L13 Text Compression": "Maghanap ng mga pattern (paulit-ulit na salita o parirala) sa teksto. Ilagay ang mga pattern na nakikita mo sa diksyunaryo sa kanan. Habang nagta-type ka ng mga entry sa diksyunaryo, ipinapasok sa teksto bilang kapalit ng pattern ang simbolo sa entry.",
         "U2L10 NetSim Automatic DNS": "Sa bersiyong ito ng Internet Simulator, isang Domain Name System (DNS) ang ibinigay sa iyo at alam ang mga IP address ng lahat ng konektadong computer. Magpadala ng mensahe sa form na GET [hostname] sa serbisyo ng DNS sa address <yourRouterNumber>. 15 upang makuha ang address ng estudyante.",
         "Vigenere": "Test",
-        "allthethings-anigif-instructions": "Dalhin ako sa Kanluran para marating ko ang baboy!"
+        "allthethings-anigif-instructions": "Dalhin ako sa Kanluran para marating ko ang baboy!",
+        "CSD U3 L5 Freeplay_2022": "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?",
+        "CSD U3 Variables change circle size_2022": "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?",
+        "CSD U3 Variables naming rules v2_2022": "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?",
+        "CSD U3 Variables random with assignment_2022": "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?",
+        "CSD U5 black white images pixelation 2_2022": "Gumuhit ng isang smiley na mukha (mag-click dito para makita ang larawan)",
+        "CSD U5 black white images pixelation 3_2022": "Palitan ang lapad at taas ng mga slider para mahanap ang larawan (mag-click dito para makakita ng higit pa)",
+        "CSD U5 black white images pixelation 4_2022": "Magdagdag ng mga kilay sa smiley na mukha (mag-click dito para makita ang larawan)",
+        "CSD U5 black white images pixelation 5_2022": "Gumuhit ng kahit anong gusto mo",
+        "CSD U5 black white images pixelation_2022": "Kumpletohin ang X na hugis sa pamamagitan ng pag-type na mga 0 at mga 1",
+        "U4 Model Design 1_2022": "Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)"
       }
     }
   }

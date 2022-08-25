@@ -254,7 +254,8 @@
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "code/sports/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/sports/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -313,6 +314,61 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
+        },
+        "input/csd/2022": {
+          "word": "Eingabe"
+        },
+        "processing/csd/2022": {
+          "word": "Verarbeitung"
+        },
+        "bug/csd/2022": {
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
+        },
+        "debugging/csd/2022": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/csd/2022": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "variable/csd/2022": {
+          "word": "Variable",
+          "definition": "Eine Bezeichnung für eine Information, die in einem Programm verwendet wird."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite"
+        },
+        "condition/csd/2022": {
+          "word": "Bedingung"
+        },
+        "conditionals/csd/2022": {
+          "word": "Bedingungen"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2022": {
+          "word": "Funktion"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Digitaler Fußabdruck"
+        },
+        "copyright/csd/2022": {
+          "word": "Copyright",
+          "definition": "das ausschließliche Recht, literarisches, künstlerisches oder musikalisches Material zu drucken, zu veröffentlichen, aufzuführen, zu verfilmen oder aufzuzeichnen und andere zu ermächtigen, dasselbe zu tun"
+        },
+        "user/csd/2022": {
+          "word": "Benutzer",
+          "definition": "Die Person, die ein Objekt verwendet, einschließlich Software und Hardware."
+        },
+        "user_interface/csd/2022": {
+          "word": "Benutzeroberfläche"
+        },
+        "machine_learning/csd/2022": {
           "word": "Maschinelles Lernen",
           "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
         },

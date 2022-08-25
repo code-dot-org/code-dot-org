@@ -65,7 +65,6 @@ class Ability
       :javabuilder_session,
       CodeReview,
       CodeReviewComment,
-      ReviewableProject
     ]
     cannot :index, Level
 
@@ -112,16 +111,6 @@ class Ability
           (user.teacher? && user == code_review_comment.commenter) ||
           (user.teacher? && user == code_review_comment.project_owner)
       end
-      can :create,  CodeReviewComment do |_, project_owner, project_id, level_id, script_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, project_id, level_id, script_id)
-      end
-      can :project_comments, CodeReviewComment do |_, project_owner, project_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
-      end
-      can :create, ReviewableProject do |_, project_owner|
-        ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
-      end
-      can :destroy, ReviewableProject, user_id: user.id
       can :view_project_commits, User do |project_owner|
         project_owner.id === user.id || can?(:code_review, project_owner)
       end
@@ -191,27 +180,6 @@ class Ability
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
         if level_to_view&.is_a?(Javalab)
-          # Code review V1
-          reviewable_project = ReviewableProject.find_by(
-            user_id: user_to_assume.id,
-            script_id: script_level.script_id,
-            level_id: level_to_view&.id
-          )
-
-          if reviewable_project &&
-            user != user_to_assume &&
-            !user_to_assume.student_of?(user) &&
-            CodeReviewComment.user_can_review_project?(
-              user_to_assume,
-              user,
-              reviewable_project.project_id,
-              reviewable_project.level_id,
-              reviewable_project.script_id
-            )
-            can_view_as_user_for_code_review = true
-          end
-
-          # Code review V2
           project_level_id = level_to_view.project_template_level.try(:id) ||
             level_to_view.id
 
@@ -293,7 +261,7 @@ class Ability
           # regional partners cannot see or update incomplete teacher applications
           cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
 
-          can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
+          can [:send_principal_approval, :change_principal_approval_requirement], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
 

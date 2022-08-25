@@ -25,7 +25,10 @@ export default class CoreLibrary {
     this.speechBubbles = [];
     this.soundLog = [];
     this.criteria = [];
+    this.bonusCriteria = [];
     this.previous = {};
+    this.successMessage = 'genericSuccess';
+    this.bonusSuccessMessage = 'genericBonusSuccess';
     this.validationFrames = {
       delay: 90,
       fail: 150,

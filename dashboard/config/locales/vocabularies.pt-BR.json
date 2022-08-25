@@ -250,7 +250,8 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/sports/unversioned": {
-          "word": "Código"
+          "word": "Código",
+          "definition": "(v) para escrever o código ou as instruções em um computador."
         },
         "debugging/sports/unversioned": {
           "word": "Analisando",
@@ -309,6 +310,60 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Máquina de aprendizado",
+          "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados diretamente."
+        },
+        "input/csd/2022": {
+          "word": "Entrada"
+        },
+        "processing/csd/2022": {
+          "word": "Processando"
+        },
+        "bug/csd/2022": {
+          "word": "Bug",
+          "definition": "Parte de um programa que não funciona corretamente."
+        },
+        "debugging/csd/2022": {
+          "word": "Analisando",
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/csd/2022": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "variable/csd/2022": {
+          "word": "Variável",
+          "definition": "Espaço reservado para uma informação que pode mudar."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite"
+        },
+        "condition/csd/2022": {
+          "word": "Condição"
+        },
+        "conditionals/csd/2022": {
+          "word": "Condições"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstração"
+        },
+        "function/csd/2022": {
+          "word": "Função"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Pegada Digital"
+        },
+        "copyright/csd/2022": {
+          "word": "Direitos Autorais"
+        },
+        "user/csd/2022": {
+          "word": "Usuário",
+          "definition": "Alguém que usa um objeto, incluindo software e hardware."
+        },
+        "user_interface/csd/2022": {
+          "word": "Interface do Usuário"
+        },
+        "machine_learning/csd/2022": {
           "word": "Máquina de aprendizado",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados diretamente."
         },

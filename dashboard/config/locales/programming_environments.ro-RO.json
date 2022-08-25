@@ -1,0 +1,105 @@
+{
+  "ro-RO": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Laboratorul de web"
+        },
+        "gamelab": {
+          "name": "Game Lab",
+          "categories": {
+            "game_lab": {
+              "name": "Game Lab"
+            },
+            "sprites": {
+              "name": "Spiriduși"
+            },
+            "groups": {
+              "name": "Grupuri"
+            },
+            "drawing": {
+              "name": "Desen"
+            },
+            "math": {
+              "name": "Matematică"
+            },
+            "variables": {
+              "name": "Variabile"
+            },
+            "functions": {
+              "name": "Funcţii"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratului Aplicației",
+          "description": "App Lab este un mediu de programare în care poți crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.",
+          "categories": {
+            "data": {
+              "name": "Date"
+            },
+            "math": {
+              "name": "Matematică"
+            },
+            "variables": {
+              "name": "Variabile"
+            },
+            "functions": {
+              "name": "Funcţii"
+            },
+            "advanced": {
+              "name": "Avansat"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laborator Sprite",
+          "categories": {
+            "sprites": {
+              "name": "Spiriduși"
+            },
+            "world": {
+              "name": "Lume"
+            },
+            "location": {
+              "name": "Locaţii"
+            },
+            "actions": {
+              "name": "Acţiuni"
+            },
+            "events": {
+              "name": "Evenimente"
+            },
+            "behaviors": {
+              "name": "Comportamente"
+            },
+            "loops": {
+              "name": "Bucle"
+            },
+            "variables": {
+              "name": "Variabile"
+            },
+            "math": {
+              "name": "Matematică"
+            },
+            "logic": {
+              "name": "Logică"
+            },
+            "functions": {
+              "name": "Funcţii"
+            },
+            "text": {
+              "name": "Text"
+            },
+            "comments": {
+              "name": "Comentarii"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Laboratorul Java"
+        }
+      }
+    }
+  }
+}

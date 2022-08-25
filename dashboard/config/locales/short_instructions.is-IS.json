@@ -3638,7 +3638,18 @@
         "Overworld Chop Tree - allthethings": "Viður er mjög mikilvægt hráefni. Alls konar hlutir eru búnir til úr viði. Gakktu að trénu og notaðu \"eyða blokk\" skipunina til að höggva það niður.",
         "Test embedded K1 Blockly in instructions": "Notaðu þrjá `fara í vestur` kubba og einn `tína maís` kubb til að leysa þessa þraut.",
         "U1L13 Text Compression": "Leitaðu að mynstrum ( endurteknum orðum eða klausum) í textanum. Færðu mynstrin sem þú greinir inn í orðabókina til hægri. Þegar þú ritar í orðabókina, er tákn færslunnar sett í textann í stað mynstursins.",
-        "allthethings-anigif-instructions": "Færðu mig í Austur svo ég nái svíninu!"
+        "allthethings-anigif-instructions": "Færðu mig í Austur svo ég nái svíninu!",
+        "CSD U3 L5 Freeplay_2022": "Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?",
+        "CSD U3 Mouse Input Bee 2_2022": "Gerðu þetta",
+        "CSD U3 Variables change circle size_2022": "Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?",
+        "CSD U3 Variables naming rules v2_2022": "Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?",
+        "CSD U3 Variables random with assignment_2022": "Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?",
+        "CSD U5 black white images pixelation 2_2022": "Teiknaðu broskall (smelltu hér til að sjá mynd)",
+        "CSD U5 black white images pixelation 3_2022": "Færðu sleðana fyrir breidd og hæð til að finna myndina (smelltu hér til að sjá meira)",
+        "CSD U5 black white images pixelation 4_2022": "Bættu augabrúnum á broskallinn (smelltu hér til að sjá myndina)",
+        "CSD U5 black white images pixelation 5_2022": "Teiknaðu hvað sem þú vilt",
+        "CSD U5 black white images pixelation_2022": "Ljúktu við X-ið með því að nota 0 og 1",
+        "U4 Model Design 1_2022": "Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)"
       }
     }
   }

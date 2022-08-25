@@ -1902,6 +1902,120 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Athraigh an uimhir anseo"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Cliceáil anseo chun an greille a thaispeáint."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Athraigh an uimhir anseo"
+        },
+        "CSD U3 abstraction accelerateX_2022": {
+          "CSD_U3_L11_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 collisions types2_2022": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types3_2022": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Cuir do chuid cóid anseo"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Athraigh an uimhir anseo"
         }
       }
     }

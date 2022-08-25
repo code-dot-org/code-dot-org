@@ -2311,6 +2311,7 @@ it-IT:
   compatibility_unsupported_browser_markdown: Il tuo browser non è supportato. Per
     favore aggiorna il browser ad [uno dei nostri browser supportati](%{supported_browsers_url}).
     Prova comunque a visualizzare la pagina, ma aspettati che qualcosa non funzioni.
+  hourofcode_shortcode: programmare (to code)
   flappy_shortcode: sbatti le ali
   header_home: Home
   header_my_dashboard: Controllo
@@ -2363,7 +2364,7 @@ it-IT:
   header_documentation: Documentazione
   user_header_label: Ciao %{username}
   user_header_team: Squadra
-  user_header_my_projects: Collezione Privata
+  user_header_my_projects: I miei progetti
   user_header_settings: Il mio account
   user_header_logout: Esci
   user_header_signin: Accedi

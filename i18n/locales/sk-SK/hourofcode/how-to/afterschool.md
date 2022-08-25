@@ -16,7 +16,7 @@ Hodina kódu poskytuje jednoduchý a zábavný spôsob, ako žiakom priblíži�
 
 * * *
 
-## 1. Pozrite si video, ako na organizáciu podujatia <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Pozrite si video, ako na organizáciu podujatia <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Vyberte si aktivity
 

@@ -329,7 +329,6 @@ th:
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
-      lines: 'จำนวนบรรทัดของโค้ด: %{lines}'
       close: ปิด
       mastery: แนวคิด
       puzzle_map: ขั้นตอน

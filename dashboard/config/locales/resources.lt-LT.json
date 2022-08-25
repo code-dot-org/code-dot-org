@@ -2,6 +2,84 @@
   "lt-LT": {
     "data": {
       "resources": {
+        "make_a_recommendation/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "variables/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "variables_3/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "text/csd/2022": {
+          "name": "Tekstas"
+        },
+        "conditionals/csd/2022": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "velocity/csd/2022": {
+          "name": "Greitis"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Greitis"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Greitis"
+        },
+        "functions/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_1/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_4/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "lists/csd/2022": {
+          "name": "Sąrašai"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "design_mode/csd/2022": {
+          "name": "Dizaino režimas"
+        },
+        "variables_1/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "variables_2/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "functions_2/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_3/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Komandos su parametrais"
+        },
+        "functions_5/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Pamokos planai"
         },

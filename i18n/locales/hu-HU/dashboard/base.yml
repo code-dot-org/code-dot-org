@@ -432,7 +432,6 @@ hu:
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Haladásod'
-      lines: 'A kód teljes hossza: %{lines} sor'
       close: 'BEZÁRÁS'
       mastery: 'Fogalmak'
       puzzle_map: 'Szakaszok'
@@ -602,7 +601,7 @@ hu:
     make_my_own_app: 'Készítsd el saját alkalmazásod'
     how_it_works: 'Hogyan működik (Kód megtekintése)'
     try_hour_of_code: 'Próbáld ki a Kódolás Óráját!'
-    store: 'Store'
+    store: 'Áruház'
     cookie_notice: 'Sütikre vonatkozó figyelmeztetés'
     view_code: 'Kódok megtekintése'
   reference_area:
@@ -628,7 +627,7 @@ hu:
       link: "Tudj meg többet"
       applab_unsupported_tablet: "Az App Lab legjobban asztali számítógépen vagy laptopon működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe ütközhet."
       gamelab_unsupported_tablet: "A Game Lab legjobban asztali számítógépen vagy laptopon működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe ütközhet."
-      weblab_unsupported_locale_storage: "A Weblabor használata magánböngészési módban problémával járhat. Töltsd be újra a projektet normál módban. Elnézést a kellemetlenségért."
+      weblab_unsupported_locale_storage: "A Web Lab használata Privát Böngészési módban problémákat okozhat. Kérjük töltsd újra a projektet normál módban. Elnézést a kellemetlenségért."
   slow_loading: 'Ez a megszokottnál tovább tart...'
   try_reloading: 'Próbálja meg újratölteni az oldalt'
   next_stage: 'Végeztél! Folytasd a következő leckével!'
