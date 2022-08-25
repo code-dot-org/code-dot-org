@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2022-06-13T21:01:11.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "properties": {
     "skin": "artist",
     "short_instructions": "Draw something awesome! Your code is saved as a project that you can return to at any time.",
@@ -48,11 +44,16 @@
     "project_template_level_name": "csc-starquilts-template_2022",
     "long_instructions": "**Free Play: Now it’s your turn to customize your star quilt.** \r\n\r\nYou could:\r\n- Add a border to each rhombus\r\n- Change the color pattern of your quilt\r\n- Make more or less points using different rhombuses with different angles \r\n",
     "name_suffix": "_2022",
+    "encrypted_examples": "1JkOkEMgWCncWy6jUqzHfDvLBhW39qcp4DtS2c7S0orZ14wTxRu2oXEVnfKo\nLo0DR7S6orZaKDIj1e03F7+HPA==\n",
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2022-06-13T21:01:11.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:11.532+00:00\",\"changed\":[\"cloned from \\\"csc_starquilts_freeplay\\\"\"],\"cloned_from\":\"csc_starquilts_freeplay\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:11.532+00:00\",\"changed\":[\"cloned from \\\"csc_starquilts_freeplay\\\"\"],\"cloned_from\":\"csc_starquilts_freeplay\"},{\"changed_at\":\"2022-08-24 14:54:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
