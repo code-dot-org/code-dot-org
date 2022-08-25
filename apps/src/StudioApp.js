@@ -86,7 +86,7 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {displayWorkspaceAlertOff} from '../projectRedux';
+import {displayWorkspaceAlertOff} from './code-studio/projectRedux';
 
 var copyrightStrings;
 
