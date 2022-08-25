@@ -655,6 +655,9 @@ module LevelsHelper
       view_options(no_header: true, no_footer: true, white_background: true)
     end
 
+    # Temp for Music
+    view_options(no_footer: true)
+
     view_options(has_contained_levels: @level.try(:contained_levels).present?)
 
     # Add all level view options to the level_options hash
