@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-
-import GoogleBlockly from 'blockly/core';
-
+//import GoogleBlockly from 'blockly/core';
 import FontAwesome from '../templates/FontAwesome';
-
 import {InitSound, GetCurrentAudioTime, PlaySound} from './sound';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {parseElement as parseXmlElement} from '../xml';
 
 const songData = {
-  events: [
+  events: [/*
     {
       type: 'play',
       id: 'baddie-seen',
@@ -26,18 +25,43 @@ const songData = {
       type: 'play',
       id: 'baddie-seen',
       when: 3
-    }
+    }*/
   ]
 };
 
-/**
- * Top-level React wrapper for Fish
- */
+
+
+
+var hooks = {};
+
 class MusicView extends React.Component {
   static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     onMount: PropTypes.func.isRequired
+  };
+
+  api = {
+    play_sound: (id, measure) => {
+      console.log('play sound', id, measure);
+
+      songData.events.push({
+        type: 'play',
+        id: id,
+        when: measure
+      });
+    }
+  };
+
+  callUserGeneratedCode = fn => {
+    try {
+      fn.call(MusicView, this.api);
+    } catch (e) {
+      // swallow error. should we also log this somewhere?
+      if (console) {
+        console.log(e);
+      }
+    }
   };
 
   constructor(props) {
@@ -108,54 +132,11 @@ class MusicView extends React.Component {
         {
           kind: 'block',
           type: 'play_sound'
-        } /*
-        {
-          "kind": "block",
-          "type": "controls_repeat_ext"
-        },
-        {
-          "kind": "block",
-          "type": "logic_compare"
-        },
-        {
-          "kind": "block",
-          "type": "math_number"
-        },
-        {
-          "kind": "block",
-          "type": "math_arithmetic"
-        },
-        {
-          "kind": "block",
-          "type": "text"
-        },
-        {
-          "kind": "block",
-          "type": "text_print"
-        }, */
+        }
       ]
     };
 
-    /*GoogleBlockly.Blocks['string_length'] = {
-      init: function() {
-        this.jsonInit({
-          "message0": 'length of %1',
-          "args0": [
-            {
-              "type": "input_value",
-              "name": "VALUE",
-              "check": "String"
-            }
-          ],
-          "output": "Number",
-          "colour": 160,
-          "tooltip": "Returns number of letters in the provided text.",
-          "helpUrl": "http://www.w3schools.com/jsref/jsref_length_string.asp"
-        });
-      }
-    };*/
-
-    GoogleBlockly.Blocks['play_sound'] = {
+    Blockly.Blocks['play_sound'] = {
       init: function() {
         this.jsonInit({
           type: 'play_sound',
@@ -173,19 +154,21 @@ class MusicView extends React.Component {
               type: 'field_dropdown',
               name: 'sound',
               options: [
-                ['drum loop', 'OPTIONNAME'],
-                ['vocals', 'OPTIONNAME'],
-                ['main tune', 'OPTIONNAME']
+                ['drum loop', 'baddie-seen'],
+                ['vocals', 'vocals'],
+                ['main tune', 'maintune']
               ]
             },
             {
               type: 'field_number',
-              name: 'NAME',
+              name: 'measure',
               value: 1,
               min: 1
             }
           ],
           inputsInline: true,
+          previousStatement: null,
+          nextStatement: null,
           colour: 230,
           tooltip: 'play sound',
           helpUrl: ''
@@ -193,10 +176,49 @@ class MusicView extends React.Component {
       }
     };
 
-    var workspace = GoogleBlockly.inject('blocklyDiv', {
+    Blockly.Blocks['when_run'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'when_run',
+          message0: 'when run',
+          inputsInline: true,
+          //"previousStatement": null,
+          //"nextStatement": true,
+          nextStatement: null,
+          colour: 230,
+          tooltip: 'play sound',
+          helpUrl: ''
+        });
+      }
+    };
+
+    Blockly.JavaScript.when_run = function() {
+      // Generate JavaScript for handling click event.
+      return '\n';
+    };
+
+    Blockly.JavaScript.play_sound = function(ctx) {
+      return (
+        'Music.play_sound("' +
+        ctx.getFieldValue('sound') +
+        '", ' +
+        ctx.getFieldValue('measure') +
+        ');\n'
+      );
+    };
+
+    //Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
+    const container = document.getElementById('blocklyDiv');
+
+    this.workspace = Blockly.inject(container, {
       toolbox: toolbox,
       horizontalLayout: true
     });
+
+    const xml = parseXmlElement(
+      '<xml><block type="when_run" deletable="false" x="20" y="20"></block></xml>'
+    );
+    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
   };
 
   onResize = () => {
@@ -224,6 +246,34 @@ class MusicView extends React.Component {
     const currentAudioTime = GetCurrentAudioTime();
 
     if (panel == 'timeline') {
+      /*
+      const generator = GoogleBlockly.Generator.blockSpaceToCode.bind(
+        GoogleBlockly.Blockly.Generator,
+        'JavaScript'
+      );
+      */
+      //var code = Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+
+      var generator = Blockly.Generator.blockSpaceToCode.bind(
+        Blockly.Generator,
+        'JavaScript'
+      );
+
+      const events = {
+        whenRunButton: {code: generator('when_run')}
+      };
+
+      CustomMarshalingInterpreter.evalWithEvents(
+        {Music: this.api},
+        events
+      ).hooks.forEach(hook => {
+        console.log('hook', hook);
+        hooks[hook.name] = hook.func;
+        //Flappy[hook.name] = hook.func;
+      });
+
+      this.callUserGeneratedCode(hooks.whenRunButton);
+
       for (const songEvent of songData.events) {
         if (songEvent.type == 'play') {
           PlaySound(songEvent.id, '', currentAudioTime + songEvent.when);
@@ -365,27 +415,6 @@ class MusicView extends React.Component {
                     </div>
                   );
                 })}
-
-                {/*
-                <div style={{width: 100, borderLeft: '1px white solid', float: 'left'}}>
-                  <img src={filenameToImgUrl['waveform']} style={{width: 90, paddingRight: 20}}/>
-                </div>
-                <div style={{width: 100, borderLeft: '1px white solid', float: 'left'}}>
-                  <img src={filenameToImgUrl['waveform']} style={{width: 90, paddingRight: 20}}/>
-                </div>
-                <div style={{width: 100, borderLeft: '1px white solid', float: 'left'}}>
-                  <img src={filenameToImgUrl['waveform']} style={{width: 90, paddingRight: 20}}/>
-                </div>
-                <div style={{width: 100, borderLeft: '1px white solid', float: 'left'}}>
-                  <img src={filenameToImgUrl['waveform']} style={{width: 90, paddingRight: 20}}/>
-                </div>
-                <div style={{width: 100, borderLeft: '1px white solid', float: 'left'}}>
-                  <img src={filenameToImgUrl['waveform']} style={{width: 90, paddingRight: 20}}/>
-                </div>
-                <div style={{width: 100, borderLeft: '1px white solid', float: 'left'}}>
-                  <img src={filenameToImgUrl['waveform']} style={{width: 90, paddingRight: 20}}/>
-                </div>
-                */}
               </div>
 
               <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
@@ -404,9 +433,6 @@ class MusicView extends React.Component {
                   </div>
                 )}
               </div>
-            </div>
-            <div style={{display: 'none', fontSize: 25}}>
-              | . . . | . . | . .. |
             </div>
           </div>
         )}
