@@ -10,8 +10,6 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import * as utils from '../utils';
 import commonStyles from '../commonStyles';
-import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {displayWorkspaceAlertOff} from '../code-studio/projectRedux';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
@@ -21,10 +19,7 @@ class CodeWorkspaceContainer extends React.Component {
     // Provided by redux
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    noVisualization: PropTypes.bool.isRequired,
-    displayWorkspaceAlertOff: PropTypes.func,
-    displayWorkspaceAlert: PropTypes.bool.isRequired,
-    errorMsg: PropTypes.string.isRequired
+    noVisualization: PropTypes.bool.isRequired
   };
 
   /**
@@ -56,16 +51,6 @@ class CodeWorkspaceContainer extends React.Component {
       <div style={mainStyle} className="editor-column">
         <div id="codeWorkspace" style={styles.codeWorkspace}>
           {children}
-          {this.props.displayWorkspaceAlert && (
-            <WorkspaceAlert
-              type="error"
-              onClose={this.props.displayWorkspaceAlertOff}
-              isBlockly={false}
-              displayBottom={true}
-            >
-              <div>{this.props.errorMsg}</div>
-            </WorkspaceAlert>
-          )}
         </div>
       </div>
     );
@@ -79,13 +64,9 @@ export default connect(
       state.pageConstants.hideSource &&
       !state.pageConstants.visualizationInWorkspace,
     isRtl: state.isRtl,
-    noVisualization: state.pageConstants.noVisualization,
-    displayWorkspaceAlert: state.project.displayWorkspaceAlert,
-    errorMsg: state.project.errorMsg
+    noVisualization: state.pageConstants.noVisualization
   }),
-  dispatch => ({
-    displayWorkspaceAlertOff: () => dispatch(displayWorkspaceAlertOff())
-  }),
+  undefined,
   null,
   {withRef: true}
 )(CodeWorkspaceContainer);
