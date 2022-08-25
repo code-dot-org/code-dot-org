@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:24:40 UTC",
+    "serialized_at": "2022-08-24 08:23:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3985,6 +3985,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Creating Variables"
       },
       "bonus": false,
@@ -4007,6 +4010,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2v2_pilot-2022"
+        ],
         "progression": "Investigate: Working with Variables"
       },
       "bonus": false,
@@ -4029,6 +4035,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L3v2_pilot-2022"
+        ],
         "progression": "Creating and Printing Variables"
       },
       "bonus": false,
@@ -4051,6 +4060,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4v2_pilot-2022"
+        ],
         "progression": "Creating and Printing Variables"
       },
       "bonus": false,
@@ -4073,6 +4085,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L5_pilot-2022"
+        ],
         "progression": "Creating and Printing Variables"
       },
       "bonus": false,
@@ -4095,6 +4110,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4117,6 +4135,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Evaluating Expressions"
       },
       "bonus": false,
@@ -4139,6 +4160,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_pilot-2022"
+        ],
         "progression": "Investigate: Exploring Expressions"
       },
       "bonus": false,
@@ -4161,6 +4185,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4183,6 +4210,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L1_pilot-2022"
+        ],
         "progression": "Predict: Accessing Attributes"
       },
       "bonus": false,
@@ -4205,6 +4235,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4227,6 +4260,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Parameterized Constructor"
       },
       "bonus": false,
@@ -4249,6 +4285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2v2_pilot-2022"
+        ],
         "progression": "Writing and Using Constructors"
       },
       "bonus": false,
@@ -4271,6 +4310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3v2_pilot-2022"
+        ],
         "progression": "Writing and Using Constructors"
       },
       "bonus": false,
@@ -4293,6 +4335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4v2_pilot-2022"
+        ],
         "progression": "Writing and Using Constructors"
       },
       "bonus": false,
@@ -4315,6 +4360,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4337,6 +4385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Getting User Input"
       },
       "bonus": false,
@@ -4359,6 +4410,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L2v2_pilot-2022"
+        ],
         "progression": "Getting User Input"
       },
       "bonus": false,
@@ -4381,6 +4435,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L3v2_pilot-2022"
+        ],
         "progression": "Getting User Input"
       },
       "bonus": false,
@@ -4403,6 +4460,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4425,6 +4485,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Redundant Code"
       },
       "bonus": false,
@@ -4447,6 +4510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L2v2_pilot-2022"
+        ],
         "progression": "Investigate: Superclasses and Subclasses"
       },
       "bonus": false,
@@ -4469,6 +4535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L3v2_pilot-2022"
+        ],
         "progression": "Refactoring Desserts"
       },
       "bonus": false,
@@ -4491,6 +4560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L4v2_pilot-2022"
+        ],
         "progression": "Code Review: Refactoring Desserts"
       },
       "bonus": false,
@@ -4513,6 +4585,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L5v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4535,6 +4610,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L1_pilot-2022"
+        ],
         "progression": "Writing Accessor Methods"
       },
       "bonus": false,
@@ -4557,6 +4635,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L2_pilot-2022"
+        ],
         "progression": "Writing Accessor Methods"
       },
       "bonus": false,
@@ -4579,6 +4660,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L3_pilot-2022"
+        ],
         "progression": "Writing Accessor Methods"
       },
       "bonus": false,
@@ -4601,6 +4685,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L4_pilot-2022"
+        ],
         "progression": "Writing Accessor Methods"
       },
       "bonus": false,
@@ -4623,6 +4710,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L5_pilot-2022"
+        ],
         "progression": "Writing Accessor Methods"
       },
       "bonus": false,
@@ -4645,6 +4735,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4667,6 +4760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Mutator Methods"
       },
       "bonus": false,
@@ -4689,6 +4785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L2v2_pilot-2022"
+        ],
         "progression": "Investigate: Exploring Edge Cases"
       },
       "bonus": false,
@@ -4711,6 +4810,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L3v2_pilot-2022"
+        ],
         "progression": "Writing Mutator Methods"
       },
       "bonus": false,
@@ -4733,6 +4835,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L4v2_pilot-2022"
+        ],
         "progression": "Writing Mutator Methods"
       },
       "bonus": false,
@@ -4755,6 +4860,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L5v2_pilot-2022"
+        ],
         "progression": "Writing Mutator Methods"
       },
       "bonus": false,
@@ -4777,6 +4885,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4799,6 +4910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L1_pilot-2022"
+        ],
         "progression": "Predict: Printing an Object"
       },
       "bonus": false,
@@ -4821,6 +4935,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L2_pilot-2022"
+        ],
         "progression": "Overriding Object Class Methods"
       },
       "bonus": false,
@@ -4843,6 +4960,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_pilot-2022"
+        ],
         "progression": "Overriding Object Class Methods"
       },
       "bonus": false,
@@ -4865,6 +4985,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L4_pilot-2022"
+        ],
         "progression": "Overriding Object Class Methods"
       },
       "bonus": false,
@@ -4887,6 +5010,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4909,6 +5035,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L0-L1_pilot-2022"
+        ],
         "progression": "Using the this Keyword"
       },
       "bonus": false,
@@ -4931,6 +5060,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L2_pilot-2022"
+        ],
         "progression": "Using the this Keyword"
       },
       "bonus": false,
@@ -4953,6 +5085,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L3_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4975,6 +5110,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L11-L1_pilot-2022"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -4997,6 +5135,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L12-L1_pilot-2022"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -5019,6 +5160,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L12-L2 CR_pilot-2022"
+        ],
         "progression": "Code Review: Store Management Project"
       },
       "bonus": false,
@@ -5041,6 +5185,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L13-L1_pilot-2022"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -5063,6 +5210,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa2_pilot-2022"
+        ],
         "progression": "Unit 2 Survey"
       },
       "bonus": false,
@@ -5085,6 +5235,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -5107,6 +5260,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5128,6 +5284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5150,6 +5309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5818,1752 +5980,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "[EXEMPLAR] Store Management Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1z2TQjB981QXFB7qzuTCUfPCtHPVc33jiQC1JgjJNjhA/edit?usp=sharing",
-      "key": "_exemplar_store_management_project_planning_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_store_management_project_planning_guide"
-      }
-    },
-    {
-      "name": "[KEY] Burger Class FRQ",
-      "url": "https://docs.google.com/document/d/1RQ4S50vXqd7goHpTU6PDN4joNKAxlmJCrjbgQSgJdHo/edit?usp=sharing",
-      "key": "_key_burger_class_frq",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_burger_class_frq"
-      }
-    },
-    {
-      "name": "[KEY] Burger Class FRQ Graphic Organizer",
-      "url": "https://docs.google.com/document/d/1iCUGO4Qt6UFzOagovTT9RJI5SyngTerObGAoxDBt7qg/edit?usp=sharing",
-      "key": "_key_burger_class_frq_graphic_organizer",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_burger_class_frq_graphic_organizer"
-      }
-    },
-    {
-      "name": "[KEY] Diagramming Scope",
-      "url": "https://docs.google.com/document/d/1xxeyof5_kxnf16Wova5OMcvgss4XAKdBHyqv_kZLT3g/edit?usp=sharing",
-      "key": "_key_diagramming_scope",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_diagramming_scope"
-      }
-    },
-    {
-      "name": "[KEY] U2L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1V6RzkOVfNI_fqFH0LEjYR_yNHFbPuS3jaH6Hf28eZQQ/edit?usp=sharing",
-      "key": "_key_u2l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1n6xEhE4ajp_vcU1cC6tyzzZmiukRFJ5vtHeVcgunlaU/edit?usp=sharing",
-      "key": "_key_u2l1_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l1_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Ooka_EsCAcfa6rc6HQPRZMbACUjiW2CkHJQQ_0m1Uzg/edit?usp=sharing",
-      "key": "_key_u2l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1dOFPIaHAgKxIT8aDUgwlhSMluS7t6ZfjbW2n-9VJJBw/edit?usp=sharing",
-      "key": "_key_u2l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1jYMuXx9utXClR9rdYz2IDbfuvjL5FobGAfiLWaynnCA/edit?usp=sharing",
-      "key": "_key_u2l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1H9x4KXzebFK_4bEiLbIvrff8qNxT48p1B-H4WYmQ69A/edit?usp=sharing",
-      "key": "_key_u2l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1CxwGZXBtOl9pDkEb_y-lNb3LI-gFlTIi49JlxNxejk4/edit?usp=sharing",
-      "key": "_key_u2l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1JiXqnyfb0utp3hQu6KR0xUt8-EPGmrkTVdaGvTJk3KY/edit?usp=sharing",
-      "key": "_key_u2l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1zASndSk5oIckBdCajS0LNKBezMxpeJXljcfeE0ATDZI/edit?usp=sharing",
-      "key": "_key_u2l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U2L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/15q80JedF448in_yPCzzuDX7fCGdNdmpIEnhwQD-X31w/edit?usp=sharing",
-      "key": "_key_u2l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l9_extra_practice"
-      }
-    },
-    {
-      "name": "Accessor Methods",
-      "url": "https://youtu.be/F5plZ3f5B3c",
-      "key": "accessor_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "accessor_methods"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csa2-2022/resources",
-      "key": "all_resources_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_1"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csa2-2022/standards",
-      "key": "all_standards_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_1"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csa2-2022/vocab",
-      "key": "all_vocabulary_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_1"
-      }
-    },
-    {
-      "name": "Burger Class FRQ",
-      "url": "https://docs.google.com/document/d/1ozFTgrPpDtKvkN3g_AFYXQ9as-t8lLMggnArSlI9jug/edit?usp=sharing",
-      "key": "burger_class_frq",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "burger_class_frq"
-      }
-    },
-    {
-      "name": "Burger Class FRQ Graphic Organizer",
-      "url": "https://docs.google.com/document/d/1RxRxoO3Ml_lzsoJaN8S9ZCuZjUuE5h6eZbH2ZesVJDw/edit?usp=sharing",
-      "key": "burger_class_frq_graphic_organizer",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "burger_class_frq_graphic_organizer"
-      }
-    },
-    {
-      "name": "Burger Class FRQ Scoring Guidelines",
-      "url": "https://docs.google.com/document/d/1ON9LT3xxK7QfeOaf8g_x1tcZwnhNCyeyoTJ55pLI-7I/edit?usp=sharing",
-      "key": "burger_class_frq_scoring_guidelines",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "burger_class_frq_scoring_guidelines"
-      }
-    },
-    {
-      "name": "Burger Class FRQ Stations",
-      "url": "https://docs.google.com/document/d/1ucDcXIKg4QTGaqOX0xVQSovc5r0UwK3R3dT0YUGV_bI/edit?usp=sharing",
-      "key": "burger_class_frq_stations",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "burger_class_frq_stations"
-      }
-    },
-    {
-      "name": "Classes and Objects Manipulatives",
-      "url": "https://docs.google.com/presentation/d/1jDs4rxSItK6A5rhDZiEgEMUNfUSrXd6CVSd4609DPuM/edit?usp=sharing",
-      "key": "classes_and_objects_manipulatives",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "classes_and_objects_manipulatives"
-      }
-    },
-    {
-      "name": "Constructors",
-      "url": "https://youtu.be/1vXP8R2i-wg",
-      "key": "constructors",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "constructors"
-      }
-    },
-    {
-      "name": "Creating a Scanner Object",
-      "url": "https://youtu.be/43PYFmSyupI",
-      "key": "creating_a_scanner_object",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "creating_a_scanner_object"
-      }
-    },
-    {
-      "name": "Creating Variables",
-      "url": "https://youtu.be/VHwlxlqrquM",
-      "key": "creating_variables",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "creating_variables"
-      }
-    },
-    {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/presentation/d/1rEKCHgR74oOaHyLUmRGPWji4ISyRxdmNzXveysEG6OQ/edit?usp=sharing",
-      "key": "cs_bingo_cards_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards_1"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1tEXiR_diNbI75bK-RLoBxa6OVSRW32sqIrqGBQRJdDM/edit?usp=sharing",
-      "key": "cs_bingo_definitions_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions_1"
-      }
-    },
-    {
-      "name": "CSA Manipulatives Demo",
-      "url": "https://youtu.be/4QbHVC9HkkY",
-      "key": "csa_manipulatives_demo",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "csa_manipulatives_demo"
-      }
-    },
-    {
-      "name": "Diagramming Scope",
-      "url": "https://docs.google.com/document/d/1INolQrMjM7CUxH70jCOiZjg-LDlOZGwQARFtICWumqY/edit?usp=sharing",
-      "key": "diagramming_scope",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "diagramming_scope"
-      }
-    },
-    {
-      "name": "Instance Variables and Attributes",
-      "url": "https://youtu.be/49XzLCs8wgU",
-      "key": "instance_variables_and_attributes",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "instance_variables_and_attributes"
-      }
-    },
-    {
-      "name": "Mutator Methods",
-      "url": "https://youtu.be/unh7__NcIS8",
-      "key": "mutator_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "mutator_methods"
-      }
-    },
-    {
-      "name": "Overloaded Constructors",
-      "url": "https://youtu.be/rYTRK8R9ZM8",
-      "key": "overloaded_constructors",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "overloaded_constructors"
-      }
-    },
-    {
-      "name": "Scanner Class Methods",
-      "url": "https://youtu.be/v1xPNK2hzzg",
-      "key": "scanner_class_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "scanner_class_methods"
-      }
-    },
-    {
-      "name": "Store Management Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1h46bWv6EKByAP0uDXQRgwKGLN32RaWA_wz6-yS6bmtQ/edit?usp=sharing",
-      "key": "store_management_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "store_management_project_planning_guide"
-      }
-    },
-    {
-      "name": "The toString() Method",
-      "url": "https://youtu.be/dPH01DBWlZ8",
-      "key": "the_tostring_method",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_tostring_method"
-      }
-    },
-    {
-      "name": "U2L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xYvqBsOIfRxiGILRvDK-YeQBo_NXLl3rG--HtGBpdMo/edit?usp=sharing",
-      "key": "u2l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l10_extra_practice"
-      }
-    },
-    {
-      "name": "U2L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1e_iaBTTV0srizdsC0oNzjgECyKMl9aLILm9TW6Qbobs/edit?usp=sharing",
-      "key": "u2l1_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l1_extra_practice"
-      }
-    },
-    {
-      "name": "U2L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1HBSM_QFJVx8krzl6YAUOt-H-x8Jpxcn1kvIClCPBK-I/edit?usp=sharing",
-      "key": "u2l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l2_extra_practice"
-      }
-    },
-    {
-      "name": "U2L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1vIxRV6Bz1gOcYBEV3awI2k3vSP4_ddRkQLLQ7XJaY3Y/edit?usp=sharing",
-      "key": "u2l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l3_extra_practice"
-      }
-    },
-    {
-      "name": "U2L3 Manipulatives Demo",
-      "url": "https://youtu.be/gC2yirf2H8I",
-      "key": "u2l3_manipulatives_demo",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "u2l3_manipulatives_demo"
-      }
-    },
-    {
-      "name": "U2L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1u5jg_ra-1DBrAAJE5vJKI5f-UG9Smomfzb85BbHp084/edit?usp=sharing",
-      "key": "u2l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l4_extra_practice"
-      }
-    },
-    {
-      "name": "U2L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1cbVbyZYlPdn7LT0etlrXklRBU6ngKYpct0xm11J-E4w/edit?usp=sharing",
-      "key": "u2l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l5_extra_practice"
-      }
-    },
-    {
-      "name": "U2L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Hn0IfIEIpZo1vqkyVq6OZh9KRmygfCFQQ2pjuZIK8HM/edit?usp=sharing",
-      "key": "u2l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l6_extra_practice"
-      }
-    },
-    {
-      "name": "U2L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1MtNdTfZR4TU3qFjGt2A22-_gdNmu1o22geovyp40dTM/edit?usp=sharing",
-      "key": "u2l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l7_extra_practice"
-      }
-    },
-    {
-      "name": "U2L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1c6A3aHC15YpLu8taRWj1xWJtuhYWAehtkv-ANxdWkwI/edit?usp=sharing",
-      "key": "u2l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l8_extra_practice"
-      }
-    },
-    {
-      "name": "U2L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1LV_u-HF6wafh6Wa-wB40Sr68RZKdwsF74ePCo8L5JM8/edit?usp=sharing",
-      "key": "u2l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l9_extra_practice"
-      }
-    },
-    {
-      "name": "Unit 2 Guide",
-      "url": "https://docs.google.com/document/d/1FjdUqh94hmb2mAFRwLxYK-no8brQ3ze77y37hDJThTA/edit?usp=sharing",
-      "key": "unit_2_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_guide"
-      }
-    },
-    {
-      "name": "Unit 2 Overview",
-      "url": "https://docs.google.com/document/d/1bXHCFLjbFcZVIL6TqwxlPplRVhdVH8oivRK8BYC1mQU/edit?usp=sharing",
-      "key": "unit_2_overview",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_overview"
-      }
-    },
-    {
-      "name": "Unit 2 Presentation",
-      "url": "https://docs.google.com/presentation/d/1fq1A8RfwFaBJvIiFFcuETFLw5ahY2FVcTSwcODUUncM/edit?usp=sharing",
-      "key": "unit_2_presentation",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "name": "Unit 2 Study Guide",
-      "url": "https://docs.google.com/document/d/1U_rftbSaeWgCtk16mD4ckrQKcQVU4yRlFgFe_OyN18c/edit?usp=sharing",
-      "key": "unit_2_study_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_study_guide"
-      }
-    },
-    {
-      "name": "Unlocking Assessments",
-      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
-      "key": "unlocking_assessments",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "resource.key": "_key_u2l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "resource.key": "accessor_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "resource.key": "u2l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "resource.key": "_key_u2l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "resource.key": "classes_and_objects_manipulatives"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "resource.key": "csa_manipulatives_demo"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "resource.key": "instance_variables_and_attributes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "resource.key": "u2l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "resource.key": "u2l3_manipulatives_demo"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Class Hierarchies",
-        "resource.key": "_key_u2l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Class Hierarchies",
-        "resource.key": "u2l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Class Hierarchies",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "resource.key": "_key_u2l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "resource.key": "constructors"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "resource.key": "overloaded_constructors"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "resource.key": "u2l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_burger_class_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_burger_class_frq_graphic_organizer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "burger_class_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "burger_class_frq_graphic_organizer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "burger_class_frq_scoring_guidelines"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "burger_class_frq_stations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "resource.key": "_key_u2l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "resource.key": "mutator_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "resource.key": "u2l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "resource.key": "_key_u2l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "resource.key": "u2l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "_key_u2l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "cs_bingo_cards_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "cs_bingo_definitions_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "the_tostring_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "u2l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "resource.key": "_key_diagramming_scope"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "resource.key": "_key_u2l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "resource.key": "diagramming_scope"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "resource.key": "u2l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "resource.key": "unit_2_study_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Store Management Project – Day 1",
-        "resource.key": "_exemplar_store_management_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Store Management Project – Day 1",
-        "resource.key": "store_management_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Store Management Project – Day 1",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Store Management Project – Day 2",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Store Management Project – Day 3",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 2 Assessment",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 2 Assessment",
-        "resource.key": "unlocking_assessments"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "_key_u2l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "creating_a_scanner_object"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "scanner_class_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "u2l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "unit_2_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "_key_u2l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "creating_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "u2l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "unit_2_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "unit_2_presentation"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_1",
-        "script.name": "csa2-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_1",
-        "script.name": "csa2-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_1",
-        "script.name": "csa2-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_2_guide",
-        "script.name": "csa2-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_2_overview",
-        "script.name": "csa2-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_2_study_guide",
-        "script.name": "csa2-validation-pilot-2022"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "_arithmeticexception_",
-      "word": "`ArithmeticException`",
-      "definition": "an error caused by dividing by zero",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_arithmeticexception_"
-      }
-    },
-    {
-      "key": "_null_",
-      "word": "`null`",
-      "definition": "indicates that the variable does not refer to any object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_null_"
-      }
-    },
-    {
-      "key": "_nullpointerexception_",
-      "word": "`NullPointerException`",
-      "definition": "an error that occurs when a reference does not point to an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_nullpointerexception_"
-      }
-    },
-    {
-      "key": "_return_keyword",
-      "word": "`return` keyword",
-      "definition": "exits a method and provides the value to where the method is called",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_return_keyword"
-      }
-    },
-    {
-      "key": "_this_keyword",
-      "word": "`this` keyword",
-      "definition": "a keyword used to refer to the current object in a method or constructor",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_this_keyword"
-      }
-    },
-    {
-      "key": "access_modifier",
-      "word": "access modifier",
-      "definition": "a keyword used to set the visibility of classes, variables, constructors, and methods",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "access_modifier"
-      }
-    },
-    {
-      "key": "accessor_method",
-      "word": "accessor method",
-      "definition": "gives the value stored in an instance variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "accessor_method"
-      }
-    },
-    {
-      "key": "actual_parameter",
-      "word": "actual parameter",
-      "definition": "the value given to an attribute when initializing an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "actual_parameter"
-      }
-    },
-    {
-      "key": "application_program_interface_api_",
-      "word": "application program interface (API)",
-      "definition": "a library of prewritten classes",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "application_program_interface_api_"
-      }
-    },
-    {
-      "key": "assignment",
-      "word": "assignment",
-      "definition": "using the assignment operator ( `=` ) to initialize or change the value stored in a variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "assignment"
-      }
-    },
-    {
-      "key": "boolean_expression",
-      "word": "Boolean expression",
-      "definition": "a logical statement that gives either a `true` or `false` value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "key": "call_by_value",
-      "word": "call by value",
-      "definition": "copying the value of the actual parameter to the constructor's formal parameter",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "call_by_value"
-      }
-    },
-    {
-      "key": "compound_assignment_operator",
-      "word": "compound assignment operator",
-      "definition": "shortcut syntax ( `+=` , `-=` , `*=` , `/=` , `%=` ) to perform an operation (`+` , `-` , `*` , `/` , or `%` ) on both operands and store the result into the variable on the left",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "compound_assignment_operator"
-      }
-    },
-    {
-      "key": "compound_expression",
-      "word": "compound expression",
-      "definition": "a combination of expressions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "compound_expression"
-      }
-    },
-    {
-      "key": "data_type",
-      "word": "data type",
-      "definition": "the format of the data that can be stored in a variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_type"
-      }
-    },
-    {
-      "key": "declaration",
-      "word": "declaration",
-      "definition": "giving a name and data type to a variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "declaration"
-      }
-    },
-    {
-      "key": "default_value",
-      "word": "default value",
-      "definition": "a predefined value that is used by a program when the user does not provide a value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "default_value"
-      }
-    },
-    {
-      "key": "dry_principle",
-      "word": "DRY principle",
-      "definition": "a software development principle that stands for \"Don't Repeat Yourself\" which aims to reduce repetition in code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dry_principle"
-      }
-    },
-    {
-      "key": "encapsulation",
-      "word": "encapsulation",
-      "definition": "an object-oriented programming concept where the instance variables of a class are hidden from other classes and can be accessed only through the methods of the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "encapsulation"
-      }
-    },
-    {
-      "key": "escape_sequence",
-      "word": "escape sequence",
-      "definition": "starts with a `\\` to indicate how to display a `String`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "escape_sequence"
-      }
-    },
-    {
-      "key": "expression",
-      "word": "expression",
-      "definition": "a combination of data and operators that evaluates to a single value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "expression"
-      }
-    },
-    {
-      "key": "formal_parameter",
-      "word": "formal parameter",
-      "definition": "the values to be passed to a constructor or method",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "formal_parameter"
-      }
-    },
-    {
-      "key": "initialization",
-      "word": "initialization",
-      "definition": "giving a starting value to a variable using the assignment operator ( `=` )",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "initialization"
-      }
-    },
-    {
-      "key": "instance_variable",
-      "word": "instance variable",
-      "definition": "a variable defined in a class that represents an attribute of an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "instance_variable"
-      }
-    },
-    {
-      "key": "library",
-      "word": "library",
-      "definition": "a collection of methods or reusable components of code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "library"
-      }
-    },
-    {
-      "key": "literal",
-      "word": "literal",
-      "definition": "a source code representation of a value, such as a number or text",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "literal"
-      }
-    },
-    {
-      "key": "local_variable",
-      "word": "local variable",
-      "definition": "a variable declared and accessible within a specific block of code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "local_variable"
-      }
-    },
-    {
-      "key": "mutator_method",
-      "word": "mutator method",
-      "definition": "changes the value stored in an instance variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "mutator_method"
-      }
-    },
-    {
-      "key": "no_argument_constructor",
-      "word": "no-argument constructor",
-      "definition": "a constructor with no parameters",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "no_argument_constructor"
-      }
-    },
-    {
-      "key": "operand",
-      "word": "operand",
-      "definition": "the data that is operated on",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "operand"
-      }
-    },
-    {
-      "key": "overloading",
-      "word": "overloading",
-      "definition": "defining two or more constructors or methods with the same name but different signatures",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "overloading"
-      }
-    },
-    {
-      "key": "override",
-      "word": "override",
-      "definition": "to define a method in a subclass with the same method signature as a method inherited from a superclass",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "override"
-      }
-    },
-    {
-      "key": "parameterized_constructor",
-      "word": "parameterized constructor",
-      "definition": "a constructor that has a specific number of arguments to be passed to assign values to an object's instance variables",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "parameterized_constructor"
-      }
-    },
-    {
-      "key": "primitive_type",
-      "word": "primitive type",
-      "definition": "a basic data type that Java predefines",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "primitive_type"
-      }
-    },
-    {
-      "key": "refactor",
-      "word": "refactor",
-      "definition": "to improve the readability, reusability, or structure of program code without altering its functionality",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "refactor"
-      }
-    },
-    {
-      "key": "reference_type",
-      "word": "reference type",
-      "definition": "a data type that contains a pointer to the memory location of an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "reference_type"
-      }
-    },
-    {
-      "key": "relational_operator",
-      "word": "relational operator",
-      "definition": "an operator used to compare values or expressions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "relational_operator"
-      }
-    },
-    {
-      "key": "return_by_value",
-      "word": "return by value",
-      "definition": "a copy of the value is given to where the method is called",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "return_by_value"
-      }
-    },
-    {
-      "key": "return_type",
-      "word": "return type",
-      "definition": "the type of the value to be given from the method",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "return_type"
-      }
-    },
-    {
-      "key": "scope",
-      "word": "scope",
-      "definition": "where a variable can be used",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "scope"
-      }
-    },
-    {
-      "key": "sentinel_value",
-      "word": "Sentinel Value",
-      "definition": "a special value used to notify the program to stop accepting input",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sentinel_value"
-      }
-    },
-    {
-      "key": "truncate",
-      "word": "truncate",
-      "definition": "to cut off data from the end",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "truncate"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "variable",
-      "definition": "a container that stores a value in memory",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "vocabulary.key": "_return_keyword"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "vocabulary.key": "accessor_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "vocabulary.key": "return_by_value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "vocabulary.key": "return_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "vocabulary.key": "access_modifier"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "vocabulary.key": "encapsulation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attributes",
-        "vocabulary.key": "instance_variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Class Hierarchies",
-        "vocabulary.key": "dry_principle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Class Hierarchies",
-        "vocabulary.key": "refactor"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "actual_parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "call_by_value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "default_value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "formal_parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "local_variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "no_argument_constructor"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "overloading"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors",
-        "vocabulary.key": "parameterized_constructor"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "vocabulary.key": "mutator_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "vocabulary.key": "relational_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "vocabulary.key": "sentinel_value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "vocabulary.key": "_arithmeticexception_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "vocabulary.key": "compound_assignment_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "vocabulary.key": "compound_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "vocabulary.key": "expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "vocabulary.key": "operand"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "vocabulary.key": "truncate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "vocabulary.key": "escape_sequence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "vocabulary.key": "override"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "vocabulary.key": "_this_keyword"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Scope and this",
-        "vocabulary.key": "scope"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "vocabulary.key": "_null_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "vocabulary.key": "_nullpointerexception_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "vocabulary.key": "application_program_interface_api_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "vocabulary.key": "library"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "assignment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "data_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "declaration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "initialization"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "literal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "primitive_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "reference_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 
