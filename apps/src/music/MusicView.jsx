@@ -272,6 +272,8 @@ class MusicView extends React.Component {
         //Flappy[hook.name] = hook.func;
       });
 
+      songData.events = [];
+      
       this.callUserGeneratedCode(hooks.whenRunButton);
 
       for (const songEvent of songData.events) {
