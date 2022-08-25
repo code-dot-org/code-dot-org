@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import Radium from 'radium';
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import classNames from 'classnames';
+import style from './javalab-settings.module.scss';
 import JavalabButton from './JavalabButton';
 import JavalabDropdown from './components/JavalabDropdown';
 
@@ -14,7 +13,6 @@ import JavalabDropdown from './components/JavalabDropdown';
  */
 export class JavalabSettings extends Component {
   static propTypes = {
-    style: PropTypes.object,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'button') {
@@ -59,18 +57,12 @@ export class JavalabSettings extends Component {
   };
 
   render() {
-    const {style} = this.props;
     const {dropdownOpen} = this.state;
-    const btnStyle = {
-      ...styles.button,
-      ...(dropdownOpen && styles.button.selected),
-      ...style
-    };
 
     return (
-      <div style={styles.main}>
+      <div className={style.main}>
         {dropdownOpen && (
-          <JavalabDropdown style={styles.dropdown}>
+          <JavalabDropdown className={style.dropdown}>
             {React.Children.map(this.props.children, (child, index) => (
               <button
                 {...child.props}
@@ -85,7 +77,10 @@ export class JavalabSettings extends Component {
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
           text={i18n.settings()}
-          style={btnStyle}
+          className={classNames(
+            style.buttonWhite,
+            dropdownOpen && style.selected
+          )}
           onClick={this.toggleDropdown}
           isHorizontal
         />
@@ -94,36 +89,4 @@ export class JavalabSettings extends Component {
   }
 }
 
-export default onClickOutside(Radium(JavalabSettings));
-
-const styles = {
-  main: {
-    display: 'inline-block',
-    float: 'left'
-  },
-  button: {
-    fontSize: 15,
-    width: 140,
-    backgroundColor: color.white,
-    borderColor: color.dark_charcoal,
-    color: color.dark_charcoal,
-    fontFamily: '"Gotham 5r"',
-    padding: '5px 12px',
-    margin: '5px 0 5px 5px',
-    justifyContent: 'center',
-    ':hover': {
-      color: color.dark_charcoal,
-      boxShadow: 'none'
-    },
-
-    selected: {
-      backgroundColor: color.lightest_gray,
-      borderColor: color.lightest_gray,
-      color: color.dark_charcoal
-    }
-  },
-  dropdown: {
-    bottom: 40,
-    marginLeft: 5
-  }
-};
+export default onClickOutside(JavalabSettings);

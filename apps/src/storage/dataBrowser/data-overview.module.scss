@@ -1,0 +1,30 @@
+@import "color.scss";
+
+$table-width: 400px;
+
+.table {
+  width: $table-width;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: $white;
+  display: none;
+  &Display {
+    display: block;
+  }
+}
+
+.dataBrowser {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 270px;
+  right: 0;
+  padding: 10px;
+}

@@ -5,13 +5,13 @@ require 'rails/all'
 require 'cdo/geocoder'
 require 'cdo/properties'
 require 'varnish_environment'
-require 'files_api'
-require 'channels_api'
-require 'tables_api'
+require_relative '../../dashboard_legacy/middleware/files_api'
+require_relative '../../dashboard_legacy/middleware/channels_api'
+require_relative '../../dashboard_legacy/middleware/tables_api'
 require 'shared_resources'
-require 'net_sim_api'
-require 'sound_library_api'
-require 'animation_library_api'
+require_relative '../../dashboard_legacy/middleware/net_sim_api'
+require_relative '../../dashboard_legacy/middleware/sound_library_api'
+require_relative '../../dashboard_legacy/middleware/animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -24,11 +24,19 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    # Eventually, we want to simply call:
-    #config.load_defaults 6.0
-    config.load_defaults 5.1
-    config.action_dispatch.return_only_media_type_on_content_type = false
-    config.autoloader = :zeitwerk
+    config.load_defaults 6.0
+
+    # Temporarily disable some default values that we aren't yet ready for.
+    # Right now, these changes to cookie functionality break projects
+    #
+    # TODO infra: Figure out why, fix, and reenable.
+    #
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/28132)
+    config.action_dispatch.use_authenticated_cookie_encryption = false
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/29263)
+    config.active_support.use_authenticated_message_encryption = false
+    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
+    config.action_dispatch.use_cookies_with_metadata = false
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.

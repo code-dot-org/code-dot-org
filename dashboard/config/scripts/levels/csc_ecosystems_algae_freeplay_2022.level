@@ -21,7 +21,7 @@
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2022",
     "short_instructions": "In a real aquatic ecosystem the algae will keep growing as the fish are eating it. Program the algae to continue to appear.\r\n",
-    "long_instructions": "**Change the values (numbers) in your code to modify your simulation. Here are a few ideas to get started…**\r\n\r\n- What happens if your ecosystem starts with a large number of fish \r\n- What happens if it takes more/less time for the algae to regrow? \r\n- How else can you control how many new algae are growing? \r\n\r\n**Bonus:**\r\nCan you add a second type of fish to your model? \r\n",
+    "long_instructions": "**Change the values (numbers) in your code to modify your simulation. Here are a few ideas to get started…**\r\n\r\n- What happens if your ecosystem starts with a large number of fish? \r\n- What happens if it takes more/less time for the algae to regrow? \r\n- How else can you control how many new algae are growing? \r\n\r\n**Bonus:**\r\n_Can you add a second type of fish to your model?_ \r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -48,7 +48,7 @@
   "created_at": "2022-06-13T21:00:27.000Z",
   "level_num": "custom",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:27.723+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_freeplay\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_freeplay\"},{\"changed_at\":\"2022-07-20 21:57:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:27.723+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_freeplay\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_freeplay\"},{\"changed_at\":\"2022-07-20 21:57:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-07-21 17:31:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-23 19:08:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -494,6 +494,14 @@
           <value name="THIS">
             <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"underseadeco_25"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_everyInterval">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">3</field>
             </block>
           </value>
         </block>

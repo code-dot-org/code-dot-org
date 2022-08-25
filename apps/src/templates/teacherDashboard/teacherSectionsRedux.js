@@ -1158,6 +1158,11 @@ export function assignedUnitTextToSpeechEnabled(state) {
   return assignment ? assignment.text_to_speech_enabled : false;
 }
 
+export function assignedUnitRequiresVerifiedInstructor(state) {
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.requires_verified_instructor : false;
+}
+
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);

@@ -7,7 +7,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';
 import styleConstants from '../../../styleConstants';

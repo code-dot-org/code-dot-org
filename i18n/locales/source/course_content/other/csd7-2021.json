@@ -2,6 +2,176 @@
   "https://studio.code.org/s/csd7-2021/lessons/1/levels/4": {
     "dsls": {
       "title": "AI and Machine Learning Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019_pilot_2021": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "aiml-intro-pulse-survey-q1_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "This is the first I am learning about computer science",
+              "correct": true
+            },
+            {
+              "text": "I have done smaller computer science activities (for example: an hour of code), but this is my first longer class",
+              "correct": true
+            },
+            {
+              "text": "I have already taken classes or done longer online tutorials on computer science",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What prior experiences have you had with computer science?"
+            }
+          ]
+        }
+      },
+      "aiml-intro-pulse-survey-q2_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "This is the first I am learning about AI and Machine Learning",
+              "correct": true
+            },
+            {
+              "text": "I have done smaller AI activities (for example: an hour of code), but this is my first longer class",
+              "correct": true
+            },
+            {
+              "text": "I have already taken classes or done longer online tutorials on AI and Machine Learning",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What prior experiences have you had with AI and Machine Learning?"
+            }
+          ]
+        }
+      },
+      "aiml-intro-pulse-survey-q3_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I understand and can explain AI and Machine Learning concepts"
+            }
+          ]
+        }
+      },
+      "aiml-intro-pulse-survey-q4_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I know how to create apps to solve a problem or for my own interests"
+            }
+          ]
+        }
+      },
+      "aiml-intro-pulse-survey-q5_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/2/levels/1": {
@@ -68,7 +238,14 @@
   },
   "https://studio.code.org/s/csd7-2021/lessons/7/levels/6": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Add a Next Icon\n\nApp Lab has several icons you can use for your apps. Let’s add an arrow icon to our app that we can use to navigate to the next screen\n\n# Do This:\n\n-   **In Design Mode:**\n\n    -   Drag out an Image element\n\n    -   Set the id of this element to ‘nextIcon’\n\n    -   Next to the ‘image’ property, click the blue Choose link\n        -   ::: details [**(Show Me How)**]\n            <img src=\"https://images.code.org/fed1769e317bc1175bfd72a4f45cc873-image-1616987657301.png\" width=\"200px\">\n            :::\n\n    -   In the window that appears, click the Icons tab across the top of the screen\n        -   ::: details [**(Show Me How)**]\n            <img src=\"https://images.code.org/ea16d52b617f5f246428493119c0452e-image-1616987762535.png\" width=\"500px\" style=\"border: solid 1px black\">\n            :::\n\n    -   In the search bar, type \"next\" to load several icons to choose from\n\n    -   In the middle of the screen are several arrows. Choose one of them to represent our “Next” arrow. <br />\n-   **In Code Mode:**\n    -   Drag out an `onEvent` block\n    -   Set the id of the block to \"nextIcon\"\n-   **Inside the onEvent:**\n    -   Drag out a `setScreen` block and select \"screen1\" from the dropdown menu\n        -   ::: details [**(Show Me How)**]\n            <img src=\"https://images.code.org/c47a00a64f68eafcc5bffc282a04bb65-image-1617040550128.png\" width=\"400px\" />\n            :::\n\nRun the program to make sure it works. It should load the welcome screen and, when you click on the arrow, it will load the next screen",
-    "teacher_markdown": "**Rubrics and Feedback:** This level uses a mini-rubric as a way to provide feedback to students. [Click here to read a support article][0] with more information about how to use this tool and provide feedback to students."
+    "teacher_markdown": "**Rubrics and Feedback:** This level uses a mini-rubric as a way to provide feedback to students. [Click here to read a support article][0] with more information about how to use this tool and provide feedback to students.",
+    "mini_rubric": {
+      "rubric_key_concept": "Creating a user-friendly app that uses machine learning",
+      "rubric_performance_level_1": "The model has been imported and the app works correctly. The app has a theme and the prompt for each dropdown has been edited to be a question. The app has a welcome screen and a button that correctly changes screens.",
+      "rubric_performance_level_2": "The model has been imported and the app works correctly. The app has a theme and the prompt for dropdown has been edited to be a question. However, the welcome screen is incomplete or does not work correctly.",
+      "rubric_performance_level_3": "The model has been imported and the app works correctly, but there have been no changes to the design or text on the screen. There is no welcome screen.",
+      "rubric_performance_level_4": "The app has not been started"
+    }
   },
   "https://studio.code.org/s/csd7-2021/lessons/7/levels/7": {
     "dsls": {
@@ -214,7 +391,14 @@
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/10/levels/9": {
-    "long_instructions": "# Update the Zoo App\n\nAnother student has started creating an app based on Zoo data. They've imported their model and added additional screens, but still need to add updates. Can you help them update their app so it's more descriptive, and so the screens change when pressing the predict button?\n\n## Do This:\n\n-   Use the Model Card to update the text on the Predict Screen\n    -   You can access the model card by pressing the gear icon and selecting \"Manage AI Models\". \n    -   Scroll to the bottom of the model card to see the Label and Feature information\n-   Add if-statements inside the [`getPrediction`(#d3e965)][0] block to change the screen based on the predicted animal\n    -   You can use the model card to see all of the possible values for the prediction\n    -   You will need six if-statements - one for each screen that you want to change to"
+    "long_instructions": "# Update the Zoo App\n\nAnother student has started creating an app based on Zoo data. They've imported their model and added additional screens, but still need to add updates. Can you help them update their app so it's more descriptive, and so the screens change when pressing the predict button?\n\n## Do This:\n\n-   Use the Model Card to update the text on the Predict Screen\n    -   You can access the model card by pressing the gear icon and selecting \"Manage AI Models\". \n    -   Scroll to the bottom of the model card to see the Label and Feature information\n-   Add if-statements inside the [`getPrediction`(#d3e965)][0] block to change the screen based on the predicted animal\n    -   You can use the model card to see all of the possible values for the prediction\n    -   You will need six if-statements - one for each screen that you want to change to",
+    "mini_rubric": {
+      "rubric_key_concept": "Use the Model Card to update an app, and using if-statements to change screens on an app",
+      "rubric_performance_level_1": "The predict screen has full sentences for each feature, and if-statements are used to change the screen based on the predicted value.",
+      "rubric_performance_level_2": "The predict screen has some full sentences, and some if statements are used to change the screen based on the predicted value - however, the app is incomplete.",
+      "rubric_performance_level_3": "The predict screen does not have full sentences or there are errors with the if-statements to change the screen.",
+      "rubric_performance_level_4": "The app has not been updated."
+    }
   },
   "https://studio.code.org/s/csd7-2021/lessons/10/levels/10": {
     "dsls": {
@@ -348,6 +532,208 @@
   "https://studio.code.org/s/csd7-2021/lessons/15/levels/3": {
     "dsls": {
       "title": "AI and Machine Learning Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019_pilot_2021": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "aiml-ch1-pulse-survey-q1_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I understand and can explain AI and Machine Learning concepts"
+            }
+          ]
+        }
+      },
+      "aiml-ch1-pulse-survey-q2_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I know how to create apps to solve a problem or for my own interests"
+            }
+          ]
+        }
+      },
+      "aiml-ch1-pulse-survey-q3_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "aiml-ch1-pulse-survey-q4_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "aiml-ch1-pulse-survey-q5_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/17/levels/1": {
@@ -426,7 +812,14 @@
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/20/levels/7": {
-    "long_instructions": "# Review and Submit\n\nReview the rubric and make any final edits. If your app looks good, press the Submit button to submit your work."
+    "long_instructions": "# Review and Submit\n\nReview the rubric and make any final edits. If your app looks good, press the Submit button to submit your work.",
+    "mini_rubric": {
+      "rubric_key_concept": "Creating a user-friendly app that uses machine learning",
+      "rubric_performance_level_1": "The model has been imported and the app works correctly. The app has a theme and the prompt for each dropdown has been edited to be a question. The app has a welcome screen and a button that correctly changes screens.",
+      "rubric_performance_level_2": "The model has been imported and the app works correctly. The app has a theme and the prompt for dropdown has been edited to be a question. However, the welcome screen is incomplete or does not work correctly.",
+      "rubric_performance_level_3": "The model has been imported and the app works correctly, but there have been no changes to the design or text on the screen. There is no welcome screen.",
+      "rubric_performance_level_4": "The app has not been started"
+    }
   },
   "https://studio.code.org/s/csd7-2021/lessons/21/levels/1": {
     "short_instructions": "Follow the instructions on your Activity Guide to complete the steps in this lesson.",
@@ -439,6 +832,208 @@
   "https://studio.code.org/s/csd7-2021/lessons/21/levels/3": {
     "dsls": {
       "title": "Computer Science Rapid Survey!"
+    },
+    "sublevels": {
+      "aiml-pulse-check-survey-preamble_2021": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "aiml-pulse-check-survey-1-q1 Ch2_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "aiml-pulse-check-survey-1-q2 Ch2_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "aiml-pulse-check-survey-1-q3 Ch2_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "aiml-pulse-check-survey-1-q4 Ch2_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "aiml-pulse-check-survey-1-q5 Ch2_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/22/levels/1": {
