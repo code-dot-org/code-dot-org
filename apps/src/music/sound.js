@@ -1,6 +1,14 @@
 import WebAudio from './soundSub';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-var soundList = ['baddie-seen', 'drumloop', 'tune'];
+var soundList = [
+  'stem-hip-lead',
+  'stem-hip-bass',
+  'stem-hip-drum',
+  'stem-dance-lead',
+  'stem-dance-bass',
+  'stem-dance-drum'
+];
 
 var baseSoundUrl;
 
@@ -13,7 +21,7 @@ var audioSystem;
 
 export function InitSound() {
   // regular web version.
-  baseSoundUrl = 'https://www.amithebaddie.com/game/sounds/';
+  baseSoundUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
   audioSystem = new WebAudio();
 
   LoadSounds();
