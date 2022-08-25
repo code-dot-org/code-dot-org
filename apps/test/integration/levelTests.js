@@ -25,6 +25,7 @@ import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import loadSource from './util/loadSource';
+import projectRedux from '@cdo/apps/code-studio/projectRedux';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -125,6 +126,7 @@ describe('Level tests', function() {
       progress,
       currentUser,
       arrowDisplay,
+      project: projectRedux,
       ...jsDebuggerReducers
     });
 

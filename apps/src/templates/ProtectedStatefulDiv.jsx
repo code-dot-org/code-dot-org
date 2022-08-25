@@ -14,11 +14,16 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 class ProtectedStatefulDiv extends React.Component {
   static propTypes = {
     contentFunction: PropTypes.func,
-    children: PropTypes.node
+    children: PropTypes.node,
+    canUpdate: PropTypes.bool
+  };
+
+  static defaultProps = {
+    canUpdate: false
   };
 
   shouldComponentUpdate() {
-    return false;
+    return this.props.canUpdate;
   }
 
   componentDidMount() {
