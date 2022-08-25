@@ -31,6 +31,8 @@ var channels = require('./clientApi').create('/v3/channels');
 var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
+import {getStore} from '../../redux';
+import {displayWorkspaceAlertOn} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -1152,6 +1154,9 @@ var projects = (module.exports = {
         packSources(),
         filename,
         function(err, response) {
+          // uncomment to test if workspace alert is displayed due to 422 status code
+          // err = {};
+          // err.message = 'httpStatusCode: 422';
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
@@ -1177,6 +1182,11 @@ var projects = (module.exports = {
               );
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
+              }
+              if (err.message.includes('httpStatusCode: 422')) {
+                var msg =
+                  'There was an error saving your project, please remove any invalid characters to resolve';
+                getStore().dispatch(displayWorkspaceAlertOn(msg));
               }
             }
             return;
