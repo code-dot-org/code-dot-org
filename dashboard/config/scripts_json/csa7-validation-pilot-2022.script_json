@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:56:25 UTC",
+    "serialized_at": "2022-08-24 08:23:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3643,6 +3643,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with The Theater Example Projects"
       },
       "bonus": false,
@@ -3665,6 +3668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3687,6 +3693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_pilot-2022"
+        ],
         "progression": "Investigate: Object References as Parameters"
       },
       "bonus": false,
@@ -3709,6 +3718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_pilot-2022"
+        ],
         "progression": "Using Object References as Parameters"
       },
       "bonus": false,
@@ -3731,6 +3743,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3v2_pilot-2022"
+        ],
         "progression": "Using Object References as Parameters"
       },
       "bonus": false,
@@ -3753,6 +3768,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3775,6 +3793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Overloaded Methods"
       },
       "bonus": false,
@@ -3797,6 +3818,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L2_pilot-2022"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3819,6 +3843,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L3_pilot-2022"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3841,6 +3868,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3863,6 +3893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_pilot-2022"
+        ],
         "progression": "Investigate: Private Methods"
       },
       "bonus": false,
@@ -3885,6 +3918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_pilot-2022"
+        ],
         "progression": "Writing Private Methods"
       },
       "bonus": false,
@@ -3907,6 +3943,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3929,6 +3968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1_pilot-2022"
+        ],
         "progression": "Investigate: Overriding Methods"
       },
       "bonus": false,
@@ -3951,6 +3993,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2v2_pilot-2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3973,6 +4018,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3_pilot-2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3995,6 +4043,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4v2_pilot-2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -4017,6 +4068,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: Overriding Methods"
       },
       "bonus": false,
@@ -4039,6 +4093,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4061,6 +4118,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4083,6 +4143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4105,6 +4168,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L2v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4127,6 +4193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1_pilot-2022"
+        ],
         "progression": "Investigate: Recursion vs Iteration"
       },
       "bonus": false,
@@ -4149,6 +4218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2v2_pilot-2022"
+        ],
         "progression": "Converting Iterative Algorithms to Recursion"
       },
       "bonus": false,
@@ -4171,6 +4243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L3v2_pilot-2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4193,6 +4268,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L4v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4215,6 +4293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_pilot-2022"
+        ],
         "progression": "Investigate: Recursive Algorithms"
       },
       "bonus": false,
@@ -4237,6 +4318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L2_pilot-2022"
+        ],
         "progression": "Tracing Recursive Methods"
       },
       "bonus": false,
@@ -4259,6 +4343,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L3v2_pilot-2022"
+        ],
         "progression": "Tracing Recursive Methods"
       },
       "bonus": false,
@@ -4281,6 +4368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L4v2_pilot-2022"
+        ],
         "progression": "Code Review: Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4303,6 +4393,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4325,6 +4418,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L1v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4347,6 +4443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L11-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4369,6 +4468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L11-L2_pilot-2022"
+        ],
         "progression": "Code Review: Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4391,6 +4493,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L12-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4413,6 +4518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L12-L2_pilot-2022"
+        ],
         "progression": "Code Review: Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4435,6 +4543,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L13-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4457,6 +4568,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa7_pilot-2022"
+        ],
         "progression": "Unit 7 Survey"
       },
       "bonus": false,
@@ -4479,6 +4593,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 7 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 7 Assessment"
       },
       "bonus": false,
@@ -4501,6 +4618,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4522,6 +4642,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4544,6 +4667,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4566,6 +4692,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5101,1342 +5230,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "[EXEMPLAR] Creative Coding with The Theater Project Planning Guide",
-      "url": "https://docs.google.com/document/d/15-8bqe4r22hJGkvqq0C4d9v8TdeaYI2zM9AKb-pLowI/edit?usp=sharing",
-      "key": "_exemplar_creative_coding_with_the_theater_project_planning_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_creative_coding_with_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "name": "[KEY] Algorithms",
-      "url": "https://docs.google.com/document/d/1fTzkxZxgjV-Kuiku-WD44LXqVhbEFLV2P4IlfJTg6Ew/edit#",
-      "key": "_key_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_algorithms"
-      }
-    },
-    {
-      "name": "[KEY] MusicQueue FRQ",
-      "url": "https://docs.google.com/document/d/11Wqhx5UwCgusOT9OFAGd7a7nDazonerKYiN_2PgRAsQ/edit?usp=sharing",
-      "key": "_key_musicqueue_frq",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_musicqueue_frq"
-      }
-    },
-    {
-      "name": "[KEY] Open Source Bugs (Version A)",
-      "url": "https://docs.google.com/document/d/1M0bu9trjhWE0SwHi7FUJBJeby3NCaC9hRFkZsOaiH3k/edit",
-      "key": "_key_open_source_bugs_version_a_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_open_source_bugs_version_a_"
-      }
-    },
-    {
-      "name": "[KEY] Open Source Bugs (Version B)",
-      "url": "https://docs.google.com/document/d/1An1oPU32pJW29367eu81vrhyvadtIeEInnXG5AIP9BE/edit",
-      "key": "_key_open_source_bugs_version_b_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_open_source_bugs_version_b_"
-      }
-    },
-    {
-      "name": "[KEY] Open Source Bugs (Version C)",
-      "url": "https://docs.google.com/document/d/1fLwp6GtBCfEajY6tZw9yCDJKUinGZdoYOFCTg1PiGHY/edit",
-      "key": "_key_open_source_bugs_version_c_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_open_source_bugs_version_c_"
-      }
-    },
-    {
-      "name": "[KEY] Recursion Unplugged",
-      "url": "https://docs.google.com/document/d/16J-ew3xTCksoYjJdDaWqzVppfvQzrxFXfRQGtvusGg4/edit?usp=sharing",
-      "key": "_key_recursion_unplugged",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_recursion_unplugged"
-      }
-    },
-    {
-      "name": "[KEY] Tracing Recursion",
-      "url": "https://docs.google.com/document/d/1C38Jhy7KAxxzXR16ocPYMIjQoiymdkKfiPFVaQnh1Lk/edit?usp=sharing",
-      "key": "_key_tracing_recursion",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_tracing_recursion"
-      }
-    },
-    {
-      "name": "[KEY] U7L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1TZ2dCcBsnnIirjUxueiosxGMPxn2eYKYxiVJxddD3zg/edit?usp=sharing",
-      "key": "_key_u7l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1uWHqEnxDcZzM8dSIaQPzKQYVo-D-eexAeiK0aaVg1Vc/edit?usp=sharing",
-      "key": "_key_u7l1_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l1_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xKBuCyLF9GaGTKugJRRIT7G4yIgdJsnmGg5UE6XVayo/edit?usp=sharing",
-      "key": "_key_u7l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1EGN_YyFzOaHUE93XezClk_KXmh9234HMPTmtWBbtJ74/edit?usp=sharing",
-      "key": "_key_u7l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1bfGtarpUX1JsLoZu28ozejUmkPY8rS-CsaQKcCEBIR0/edit?usp=sharing",
-      "key": "_key_u7l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xt02W6dUsBpdaLxAaE-_p2uHkOZulg9PHnqw2lP77O4/edit?usp=sharing",
-      "key": "_key_u7l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1cNLgZuUOhyha3ISEOTg0BgryMenZ4whqnONeLso1gz0/edit?usp=sharing",
-      "key": "_key_u7l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1jYlFyala_xpVMMs_Di8NyxYwH6XuDNx8FRLqoKe_hjM/edit?usp=sharing",
-      "key": "_key_u7l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Oj16bWAPIDos4SQNsWBHYsBInKGMHJ7KW270W5iOgnc/edit?usp=sharing",
-      "key": "_key_u7l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U7L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1IxTKtcHqw0YsZw2Btsj-r0E0PiY0D5HU_TGhi1vfxmU/edit?usp=sharing",
-      "key": "_key_u7l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l9_extra_practice"
-      }
-    },
-    {
-      "name": "Algorithms",
-      "url": "https://docs.google.com/document/d/1QB9jmmz9ZHJQOpi8u9FUSSGz-31Um1jt7W6wWwHoJ58/edit#",
-      "key": "algorithms",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "algorithms"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csa7-2022/resources",
-      "key": "all_resources_6",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_6"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csa7-2022/standards",
-      "key": "all_standards_6",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_6"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csa7-2022/vocab",
-      "key": "all_vocabulary_6",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_6"
-      }
-    },
-    {
-      "name": "Coloring Page",
-      "url": "https://docs.google.com/document/d/1uygtoW-ZFxpVALs7Ol0ekBfqX8IjW6t0-ggs9ferAiw/edit?usp=sharing",
-      "key": "coloring_page",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "coloring_page"
-      }
-    },
-    {
-      "name": "Creative Coding with The Theater Project Planning Guide",
-      "url": "https://docs.google.com/document/d/15-8bqe4r22hJGkvqq0C4d9v8TdeaYI2zM9AKb-pLowI/edit?usp=sharing",
-      "key": "creative_coding_with_the_theater_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "creative_coding_with_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/presentation/d/1h_O-N9Ghs2Yna5M4Te6SHd-j_5oF_stsPFHsoDVOOw8/edit?usp=sharing",
-      "key": "cs_bingo_cards_5",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards_5"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1E84CmDdKyfJYa1Dt-QLSEqGlExUD5ruslmINazvtw0w/edit?usp=sharing",
-      "key": "cs_bingo_definitions_7",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions_7"
-      }
-    },
-    {
-      "name": "Java Quick Reference",
-      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
-      "key": "java_quick_reference",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "java_quick_reference"
-      }
-    },
-    {
-      "name": "Method Cards",
-      "url": "https://docs.google.com/document/d/1TomPZboA117Fbdrbi6kM3Bin62TD8HweU0-vh7R2TAk/edit?usp=sharing",
-      "key": "method_cards",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "method_cards"
-      }
-    },
-    {
-      "name": "MusicQueue FRQ",
-      "url": "https://docs.google.com/document/d/1S4Oqff1vc3jpkKT51YepfcxvpPb45jSJGtR5RKO8pPY/edit?usp=sharing",
-      "key": "musicqueue_frq",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "musicqueue_frq"
-      }
-    },
-    {
-      "name": "MusicQueue FRQ Scoring Guidelines",
-      "url": "https://docs.google.com/document/d/1Ri86w-eVqg_9UsKRLhIi2jVte1VQbXZZ3YFBrOg0nm8/edit?usp=sharing",
-      "key": "musicqueue_frq_scoring_guidelines",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "musicqueue_frq_scoring_guidelines"
-      }
-    },
-    {
-      "name": "Open Source Bugs (Version A)",
-      "url": "https://docs.google.com/document/d/1G9cZ1J7EAcCdh6KqMSmsLMUcUHGWnk6WFKrBI34Klv8/edit",
-      "key": "open_source_bugs_version_a_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "open_source_bugs_version_a_"
-      }
-    },
-    {
-      "name": "Open Source Bugs (Version B)",
-      "url": "https://docs.google.com/document/d/1R4XVa2yMznF4ZInlXr0ryTvtd5IJH8qo1zvIHZIV58c/edit",
-      "key": "open_source_bugs_version_b_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "open_source_bugs_version_b_"
-      }
-    },
-    {
-      "name": "Open Source Bugs (Version C)",
-      "url": "https://docs.google.com/document/d/1tNuhTmfaMiKiyAM0SaHCeSPe18v5DY_tbzeQJdS2Ju0/edit",
-      "key": "open_source_bugs_version_c_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "open_source_bugs_version_c_"
-      }
-    },
-    {
-      "name": "Private Methods",
-      "url": "https://youtu.be/o9ucV54SzL8",
-      "key": "private_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "private_methods"
-      }
-    },
-    {
-      "name": "Project Planning Board",
-      "url": "https://docs.google.com/document/d/1Lo6y-JONN3mQebaP30sEAeCuU6xSCo1P6vKG8NJTN3s/edit?usp=sharing",
-      "key": "project_planning_board",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "project_planning_board"
-      }
-    },
-    {
-      "name": "Project Planning Feedback",
-      "url": "https://docs.google.com/document/d/1y4eZ9XDJXNtOj6lK7TcpQLeQPcmgFCWa5dEvkGEk9zk/edit?usp=sharing",
-      "key": "project_planning_feedback",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "project_planning_feedback"
-      }
-    },
-    {
-      "name": "Recursion",
-      "url": "https://youtu.be/W-nqR8NwaMs",
-      "key": "recursion",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "recursion"
-      }
-    },
-    {
-      "name": "Recursion Unplugged",
-      "url": "https://docs.google.com/document/d/1WbX98VhaSS552R3vQzp1vxGaBBCaWna0qRAfEAs_7to/edit?usp=sharing",
-      "key": "recursion_unplugged",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "recursion_unplugged"
-      }
-    },
-    {
-      "name": "Software Engineering: User Stories",
-      "url": "https://youtu.be/jN26YGTFOa4",
-      "key": "software_engineering_user_stories",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "software_engineering_user_stories"
-      }
-    },
-    {
-      "name": "The Rise of Open Source Software",
-      "url": "https://www.google.com/url?q=https://youtu.be/SpeDK1TPbew?t%3D570&sa=D&source=docs&ust=1652106086596672&usg=AOvVaw3915GNx-HeoQJLeFERGO7q",
-      "key": "the_rise_of_open_source_software",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_rise_of_open_source_software"
-      }
-    },
-    {
-      "name": "Tracing Recursion",
-      "url": "https://docs.google.com/document/d/1CERY59fuerRvJkdIVfkQkXJ7UrppA1ZUrGOXijKlPQg/edit?usp=sharing",
-      "key": "tracing_recursion",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "tracing_recursion"
-      }
-    },
-    {
-      "name": "U7L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1-hv4UW386eaS9M_YRRK6Mfe0FsUCt87loWpZDF7hyQk/edit?usp=sharing",
-      "key": "u7l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l10_extra_practice"
-      }
-    },
-    {
-      "name": "U7L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1WSmxluyMpijILO-K7Jr_ooP6gZYq2OWJpbM2eJSO9AA/edit?usp=sharing",
-      "key": "u7l1_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l1_extra_practice"
-      }
-    },
-    {
-      "name": "U7L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1rRPZhjtkqNazAqhNqIzhyPdISARuCXWQzXRFHyeFWDs/edit?usp=sharing",
-      "key": "u7l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l2_extra_practice"
-      }
-    },
-    {
-      "name": "U7L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1T_QfywfEeXb-95QqLdkUVEvyyAuJH0zcJLnUPxLOLCg/edit?usp=sharing",
-      "key": "u7l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l3_extra_practice"
-      }
-    },
-    {
-      "name": "U7L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1LHorFhAC9J9ZWUex85Tul7P0Qn3NUtada-aaM74-19A/edit?usp=sharing",
-      "key": "u7l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l4_extra_practice"
-      }
-    },
-    {
-      "name": "U7L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1OHw0VT34zTlz4ymwCrj6ySGY4YqXB449VYWtEfsuPNc/edit?usp=sharing",
-      "key": "u7l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l5_extra_practice"
-      }
-    },
-    {
-      "name": "U7L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1H-sYSwSNj543_yH-A_7clqTz91puNBXMsUrPkdgQN8A/edit?usp=sharing",
-      "key": "u7l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l6_extra_practice"
-      }
-    },
-    {
-      "name": "U7L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1BenHWRG6dwb-vSmvpNk5e5SoyQ5BBNK7YRwE5wUA5Z0/edit?usp=sharing",
-      "key": "u7l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l7_extra_practice"
-      }
-    },
-    {
-      "name": "U7L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/18cu0HAcsGkysWbDOhLyjeM6mXcAnjwEh-QtFP9hHo4I/edit?usp=sharing",
-      "key": "u7l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l8_extra_practice"
-      }
-    },
-    {
-      "name": "U7L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1qV6GyJQsl8sIklU4aLJ_PuliYIiEBwUXynrZlU24qWA/edit?usp=sharing",
-      "key": "u7l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l9_extra_practice"
-      }
-    },
-    {
-      "name": "Unit 7 Guide",
-      "url": "https://docs.google.com/document/d/1Xp9NYnaS5eoqtCEPpuVy4tkrPvzpp3hgmu5Ah0ImCWU/edit?usp=sharing",
-      "key": "unit_7_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "unit_7_guide"
-      }
-    },
-    {
-      "name": "Unit 7 Overview",
-      "url": "https://docs.google.com/document/d/1KZ23ZONATH81nUkZGvBpO3urH18P6K_icjOqTxcdScY/edit?usp=sharing",
-      "key": "unit_7_overview",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_7_overview"
-      }
-    },
-    {
-      "name": "Unit 7 Presentation",
-      "url": "https://docs.google.com/presentation/d/1SCsMthIGgpMMKcIOWJVB3HcRC7OGU5tIJEVzHj8-grI/edit?usp=sharing",
-      "key": "unit_7_presentation",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "name": "Unit 7 Study Guide",
-      "url": "https://docs.google.com/document/d/1OsPCbhgmPuIPXoK8tIzIyabDrUV8DsnwbBQ_Q6Psx-s/edit?usp=sharing",
-      "key": "unit_7_study_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_7_study_guide"
-      }
-    },
-    {
-      "name": "Unlocking Assessments",
-      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
-      "key": "unlocking_assessments",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater – Day 1",
-        "resource.key": "_exemplar_creative_coding_with_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater – Day 1",
-        "resource.key": "creative_coding_with_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater – Day 1",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater – Day 2",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater – Day 3",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_musicqueue_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "java_quick_reference"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "musicqueue_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "musicqueue_frq_scoring_guidelines"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "_key_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "_key_u7l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "u7l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "_key_open_source_bugs_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "_key_open_source_bugs_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "_key_open_source_bugs_version_c_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "_key_u7l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "open_source_bugs_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "open_source_bugs_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "open_source_bugs_version_c_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "the_rise_of_open_source_software"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "u7l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "resource.key": "unit_7_study_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Method Parameters",
-        "resource.key": "_key_u7l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Method Parameters",
-        "resource.key": "software_engineering_user_stories"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Method Parameters",
-        "resource.key": "u7l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Method Parameters",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overloading Methods",
-        "resource.key": "_key_u7l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overloading Methods",
-        "resource.key": "u7l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overloading Methods",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "_key_u7l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "u7l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private Methods",
-        "resource.key": "_key_u7l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private Methods",
-        "resource.key": "cs_bingo_cards_5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private Methods",
-        "resource.key": "cs_bingo_definitions_7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private Methods",
-        "resource.key": "private_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private Methods",
-        "resource.key": "project_planning_feedback"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private Methods",
-        "resource.key": "u7l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private Methods",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "_key_u7l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "creative_coding_with_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "project_planning_board"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "u7l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "unit_7_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion vs Iteration",
-        "resource.key": "_key_u7l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion vs Iteration",
-        "resource.key": "u7l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion vs Iteration",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "_key_recursion_unplugged"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "_key_u7l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "coloring_page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "method_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "recursion_unplugged"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "u7l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Algorithms",
-        "resource.key": "_key_tracing_recursion"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Algorithms",
-        "resource.key": "_key_u7l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Algorithms",
-        "resource.key": "recursion"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Algorithms",
-        "resource.key": "tracing_recursion"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Algorithms",
-        "resource.key": "u7l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Algorithms",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 7 Assessment",
-        "resource.key": "unit_7_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 7 Assessment",
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_6",
-        "script.name": "csa7-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_6",
-        "script.name": "csa7-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_6",
-        "script.name": "csa7-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_7_guide",
-        "script.name": "csa7-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_7_overview",
-        "script.name": "csa7-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_7_study_guide",
-        "script.name": "csa7-validation-pilot-2022"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "acceptance_criteria",
-      "word": "Acceptance Criteria",
-      "definition": "The conditions that a program must meet to be accepted by a user",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "acceptance_criteria"
-      }
-    },
-    {
-      "key": "acceptance_testing",
-      "word": "Acceptance Testing",
-      "definition": "A test conducted to determine if requirements are met",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "acceptance_testing"
-      }
-    },
-    {
-      "key": "base_case",
-      "word": "Base Case",
-      "definition": "The instance where a recursive method will return a value rather than calling itself",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "base_case"
-      }
-    },
-    {
-      "key": "benchmark",
-      "word": "Benchmark",
-      "definition": "A standard or point of reference to assess progress",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "benchmark"
-      }
-    },
-    {
-      "key": "end_user",
-      "word": "End User",
-      "definition": "The person who will use the program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "end_user"
-      }
-    },
-    {
-      "key": "intellectual_property",
-      "word": "intellectual property",
-      "definition": "a creative work or invention that is protected by copyright laws",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "intellectual_property"
-      }
-    },
-    {
-      "key": "pass_by_value",
-      "word": "Pass by Value",
-      "definition": "The process of making a copy of the actual value of a variable to pass to a constructor or method",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pass_by_value"
-      }
-    },
-    {
-      "key": "project_backlog",
-      "word": "Project Backlog",
-      "definition": "A prioritized list of tasks to complete for a project",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "project_backlog"
-      }
-    },
-    {
-      "key": "recursion",
-      "word": "Recursion",
-      "definition": "When a method calls itself",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "recursion"
-      }
-    },
-    {
-      "key": "recursive_case",
-      "word": "Recursive Case",
-      "definition": "The instance where a recursive method calls itself",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "recursive_case"
-      }
-    },
-    {
-      "key": "system_reliability",
-      "word": "System Reliability",
-      "definition": "A system's ability to function without failure",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "system_reliability"
-      }
-    },
-    {
-      "key": "user_story",
-      "word": "User Story",
-      "definition": "An informal explanation of a program feature written from the perspective of the user",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_story"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater – Day 1",
-        "vocabulary.key": "acceptance_criteria"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater – Day 1",
-        "vocabulary.key": "acceptance_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "vocabulary.key": "intellectual_property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Maximizing System Reliability",
-        "vocabulary.key": "system_reliability"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Method Parameters",
-        "vocabulary.key": "end_user"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Method Parameters",
-        "vocabulary.key": "pass_by_value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Method Parameters",
-        "vocabulary.key": "user_story"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "vocabulary.key": "benchmark"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "vocabulary.key": "project_backlog"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "vocabulary.key": "base_case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "vocabulary.key": "recursion"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "vocabulary.key": "recursive_case"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

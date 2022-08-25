@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:22:48 UTC",
+    "serialized_at": "2022-08-24 08:23:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5695,6 +5695,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5716,6 +5719,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5738,6 +5744,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5760,6 +5769,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L3_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5782,6 +5794,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L4_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5804,6 +5819,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5826,6 +5844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L0_pilot-2022"
+        ],
         "progression": "Investigate: The Painter"
       },
       "bonus": false,
@@ -5848,6 +5869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L1_pilot-2022"
+        ],
         "progression": "Instantiate a Painter Object"
       },
       "bonus": false,
@@ -5870,6 +5894,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5892,6 +5919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_pilot-2022"
+        ],
         "progression": "Predict: Painter Class Methods"
       },
       "bonus": false,
@@ -5914,6 +5944,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5936,6 +5969,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5958,6 +5994,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5980,6 +6019,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -6002,6 +6044,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6024,6 +6069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_pilot-2022"
+        ],
         "progression": "Predict: Conditionals and More Methods"
       },
       "bonus": false,
@@ -6046,6 +6094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_pilot-2022"
+        ],
         "progression": "Conditional Moving and Painting"
       },
       "bonus": false,
@@ -6068,6 +6119,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_pilot-2022"
+        ],
         "progression": "Conditional Moving and Painting"
       },
       "bonus": false,
@@ -6090,6 +6144,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6112,6 +6169,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1_pilot-2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -6134,6 +6194,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2_pilot-2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -6156,6 +6219,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3_pilot-2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -6178,6 +6244,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6200,6 +6269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1_pilot-2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -6222,6 +6294,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2_pilot-2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -6244,6 +6319,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_pilot-2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -6266,6 +6344,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6288,6 +6369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6310,6 +6394,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6332,6 +6419,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6354,6 +6444,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L4_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6376,6 +6469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L5_pilot-2022"
+        ],
         "progression": "Conducting a Code Review"
       },
       "bonus": false,
@@ -6398,6 +6494,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6420,6 +6519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_pilot-2022"
+        ],
         "progression": "Predict: More Boolean Methods"
       },
       "bonus": false,
@@ -6442,6 +6544,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_pilot-2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6464,6 +6569,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3v2_pilot-2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6486,6 +6594,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4v2_pilot-2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6508,6 +6619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6530,6 +6644,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6552,6 +6669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1_pilot-2022"
+        ],
         "progression": "Investigate: Selection and Logic"
       },
       "bonus": false,
@@ -6574,6 +6694,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2_pilot-2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6596,6 +6719,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3v2_pilot-2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6618,6 +6744,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4v2_pilot-2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6640,6 +6769,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6662,6 +6794,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6684,6 +6819,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1_pilot-2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6706,6 +6844,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_pilot-2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6728,6 +6869,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_pilot-2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6750,6 +6894,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6772,6 +6919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_pilot-2022"
+        ],
         "progression": "More PainterPlus Methods"
       },
       "bonus": false,
@@ -6794,6 +6944,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: More PainterPlus Methods"
       },
       "bonus": false,
@@ -6816,6 +6969,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6838,6 +6994,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L1_pilot-2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6860,6 +7019,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L2_pilot-2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6882,6 +7044,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L3_pilot-2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6904,6 +7069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L4_pilot-2022"
+        ],
         "progression": "Code Review: PatternPainter"
       },
       "bonus": false,
@@ -6926,6 +7094,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6948,6 +7119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L1_pilot-2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -6970,6 +7144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L2_pilot-2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -6992,6 +7169,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L3_pilot-2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -7014,6 +7194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L4_pilot-2022"
+        ],
         "progression": "Code Review: BackgroundPainter"
       },
       "bonus": false,
@@ -7036,6 +7219,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7058,6 +7244,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L15-L1_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7080,6 +7269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L16-L1_pilot-2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7102,6 +7294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L17-L1_pilot-2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7124,6 +7319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L17-L2_pilot-2022"
+        ],
         "progression": "Code Review: Asphalt Art Project"
       },
       "bonus": false,
@@ -7146,6 +7344,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L18-L1_pilot-2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7168,6 +7369,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1_pilot-2022"
+        ],
         "progression": "Unit 1 Survey"
       },
       "bonus": false,
@@ -7190,6 +7394,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -7212,6 +7419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7233,6 +7443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -7255,6 +7468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -8139,2467 +8355,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "[EXEMPLAR] Asphalt Art Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1e9XAv0seL-f_PJrVkA98Bf43dU4LQL1uT-zuA7ceQxA/edit?usp=sharing",
-      "key": "_exemplar_asphalt_art_project_planning_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_asphalt_art_project_planning_guide"
-      }
-    },
-    {
-      "name": "[KEY] BackgroundPainter",
-      "url": "https://docs.google.com/presentation/d/1_myHmvKkP4SO9ufRMjVDq54g3wK6GRH440ZdLDquv8A/edit?usp=sharing",
-      "key": "_key_backgroundpainter",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_backgroundpainter"
-      }
-    },
-    {
-      "name": "[KEY] Decomposition",
-      "url": "https://docs.google.com/document/d/12BhjEYhQaja-ZNYsp2NyGxIqFUcRWkVcX43hsML7n6o/edit?usp=sharing",
-      "key": "_key_decomposition",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_decomposition"
-      }
-    },
-    {
-      "name": "[KEY] Exploring Open Source Code",
-      "url": "https://docs.google.com/document/d/14DDwNUvZDypXx1bWLuTocHRN_f-ND9LFdJOrujFzNGA/edit?usp=sharing",
-      "key": "_key_exploring_open_source_code",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_exploring_open_source_code"
-      }
-    },
-    {
-      "name": "[KEY] PatternPainter",
-      "url": "https://docs.google.com/presentation/d/1KbOPmzWb_jdmJsdcg1d6iYm8EnnmKFA-jw8flwJwCiI/edit?usp=sharing",
-      "key": "_key_patternpainter",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_patternpainter"
-      }
-    },
-    {
-      "name": "[KEY] SpiralPainter FRQ",
-      "url": "https://docs.google.com/document/d/1D-jFbbZJrXZpk-fyXfFH-ybPlg-W_dbzchwQqc9qDfg/edit?usp=sharing",
-      "key": "_key_spiralpainter_frq",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_spiralpainter_frq"
-      }
-    },
-    {
-      "name": "[KEY] U1L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1vb8fcJPZtdNGt93TJhkDrutAOU1HXRooXIinJaBh91I/edit?usp=sharing",
-      "key": "_key_u1l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L11 Extra Practice",
-      "url": "https://docs.google.com/document/d/1elO59wpZpxd1IQwnUAmKwYf6hRIWot7O-4QXnf7JLLg/edit?usp=sharing",
-      "key": "_key_u1l11_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l11_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L12 Extra Practice",
-      "url": "https://docs.google.com/document/d/1G5xuV66OHBxGTSE_V7CbzZZ1T6xpOd75W6TIO2zx4YQ/edit?usp=sharing",
-      "key": "_key_u1l12_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l12_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L13 Extra Practice",
-      "url": "https://docs.google.com/document/d/14ce6HV3pfbTXJnAQS51abaVDSSI-7ExoUTpGeaHPnZQ/edit?usp=sharing",
-      "key": "_key_u1l13_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l13_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L14 Extra Practice",
-      "url": "https://docs.google.com/document/d/10TZ998uQyT3bry_M2_BBYJIhQ3RrhME2bJhq8WJE2fE/edit?usp=sharing",
-      "key": "_key_u1l14_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l14_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L15 Extra Practice",
-      "url": "https://docs.google.com/document/d/15E4K3lZo5OJ7DYmH0GKkeYaf8-Uze9HBnWlrMznK_P0/edit?usp=sharing",
-      "key": "_key_u1l15_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l15_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/17cKJRb_9zs7zQdLny6kX9ZXE9wGpGLhSNZ31d_bXu2s/edit?usp=sharing",
-      "key": "_key_u1l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/11QZKOmqpHm68sfiZDhA2LESYXIfFyLE7qWpcW8XWKCo/edit?usp=sharing",
-      "key": "_key_u1l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1wYKLguwmUSoy-yhmDurorjSnHhY7IT6R3DDX8xh8E8Q/edit?usp=sharing",
-      "key": "_key_u1l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/14hDM_fH3WY4-p5YXZlbtGFE2VBjLgvJ49iSWGupCzzg/edit?usp=sharing",
-      "key": "_key_u1l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1C0HdAd_EUkaAUZ5Wt_XWacQ7Eysj5XYagS039mJcCUc/edit?usp=sharing",
-      "key": "_key_u1l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1UIxoNfSScU9c39OeV72b22hFCirZsNo4Ahro5y-kuYk/edit?usp=sharing",
-      "key": "_key_u1l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Qua7LWspXF6DdMYuiht1p7vkwsWgGnxlTL0qkCb7Sek/edit?usp=sharing",
-      "key": "_key_u1l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U1L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1gAYJgL4sUN5G7494N885WAKkb-fCau_wirZfTv1CWJg/edit?usp=sharing",
-      "key": "_key_u1l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Using Two-Way Selection and NOT",
-      "url": "https://docs.google.com/document/d/1hb5iq7dRiEoUWNXKfzQty9iUiVJokVs-KI5PBIHvWPw/edit?usp=sharing",
-      "key": "_key_using_two-way_selection_and_not",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_using_two-way_selection_and_not"
-      }
-    },
-    {
-      "name": "[KEY] Writing Algorithms",
-      "url": "https://docs.google.com/document/d/1Rcm_IZ41-y0Mvlfkn2G54u_WKql7MWw5PuB1il0ATFY/edit?usp=sharing",
-      "key": "_key_writing_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_writing_algorithms"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csa1-2022/resources",
-      "key": "all_resources",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csa1-2022/standards",
-      "key": "all_standards",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csa1-2022/vocab",
-      "key": "all_vocabulary",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary"
-      }
-    },
-    {
-      "name": "Asphalt Art Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1tDaFIfDdZbcICAKP83mUmo4BhMWoYybFWDWsQx5VUr0/edit?usp=sharing",
-      "key": "asphalt_art_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "asphalt_art_project_planning_guide"
-      }
-    },
-    {
-      "name": "BackgroundPainter",
-      "url": "https://docs.google.com/presentation/d/1pXY2fWO02cuZSuP6BKkjmJg5Rj-kksvdeeKSiEuGlpo/edit?usp=sharing",
-      "key": "backgroundpainter",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "backgroundpainter"
-      }
-    },
-    {
-      "name": "Calling Methods",
-      "url": "https://youtu.be/CPE_lYGCw3A",
-      "key": "calling_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "calling_methods"
-      }
-    },
-    {
-      "name": "Change the Face of Computer Science",
-      "url": "https://youtu.be/uhcA6K8rWp0",
-      "key": "change_the_face_of_computer_science",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "change_the_face_of_computer_science"
-      }
-    },
-    {
-      "name": "Code Reviews",
-      "url": "https://docs.google.com/document/d/12NKMurFZbuo_QEhFBm-kjN-whkhGyMO8FVwmlMeDNUQ/edit?usp=sharing",
-      "key": "code_reviews",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "code_reviews"
-      }
-    },
-    {
-      "name": "Code Reviews",
-      "url": "https://docs.google.com/document/d/172jHHGFO0pQf5NhqvbcfBm9jotyVplaAZznPF1F_PXk/edit?usp=sharing",
-      "key": "code_reviews_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "code_reviews_1"
-      }
-    },
-    {
-      "name": "Code Studio Setup",
-      "url": "https://docs.google.com/document/d/1czdgYRG5hk0QtEiv9JanMRaN8bkRvPpGRAY50xSP1P8/edit?usp=sharing",
-      "key": "code_studio_setup",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "code_studio_setup"
-      }
-    },
-    {
-      "name": "Commits and the Backpack",
-      "url": "https://youtu.be/uDyiBgZD0sI",
-      "key": "commits_and_the_backpack",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "commits_and_the_backpack"
-      }
-    },
-    {
-      "name": "Conditional Statements",
-      "url": "https://youtu.be/2rQmLwYVYpw",
-      "key": "conditional_statements",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "name": "Creating Objects",
-      "url": "https://youtu.be/C5Ks_u87Ltg",
-      "key": "creating_objects",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "creating_objects"
-      }
-    },
-    {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/presentation/d/1nHrn6y5zjCc-cBdb17_WFueUBv3gZlkFp92Rw4uN7oo/edit?usp=sharing",
-      "key": "cs_bingo_cards",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1V2tHMC5CLQS-hdHXggdln1jyKu_-HTj5dyAuQ3dGoY4/edit?usp=sharing",
-      "key": "cs_bingo_definitions",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions"
-      }
-    },
-    {
-      "name": "Decomposition",
-      "url": "https://docs.google.com/document/d/1QcGlM8t15byOkUp0__Cg95sBc1QHsrcFuJ_9SFhOR1k/edit?usp=sharing",
-      "key": "decomposition",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "decomposition"
-      }
-    },
-    {
-      "name": "Exploring Open Source Code",
-      "url": "https://docs.google.com/document/d/1alrW_qm2C9h3jSi_wjfgpwsnOzP-lR_AUvrVJvApSCA/edit?usp=sharing",
-      "key": "exploring_open_source_code",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_open_source_code"
-      }
-    },
-    {
-      "name": "Inheritance",
-      "url": "https://youtu.be/H0htNTwNvrY",
-      "key": "inheritance",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "inheritance"
-      }
-    },
-    {
-      "name": "Java Lab Basics",
-      "url": "https://youtu.be/Dk50QTwp6Bw",
-      "key": "java_lab_basics",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "java_lab_basics"
-      }
-    },
-    {
-      "name": "Object-Oriented Programming",
-      "url": "https://youtu.be/Wok4Xw_5cyY",
-      "key": "object-oriented_programming",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "object-oriented_programming"
-      }
-    },
-    {
-      "name": "PatternPainter",
-      "url": "https://docs.google.com/presentation/d/1yCQwrqoQNp28pRMJ-Z-ZKT-S4AWQWRguUaLoXDNHJUU/edit?usp=sharing",
-      "key": "patternpainter",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "patternpainter"
-      }
-    },
-    {
-      "name": "Printing in Java",
-      "url": "https://youtu.be/XjswJsUj2wQ",
-      "key": "printing_in_java",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "printing_in_java"
-      }
-    },
-    {
-      "name": "Setting Up the Debugging Wall",
-      "url": "https://docs.google.com/document/d/1XO3vKHwMEYghD4KQhakHhaKqKszr_A1MlMAxjbrDCK8/edit?usp=sharing",
-      "key": "setting_up_the_debugging_wall",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "setting_up_the_debugging_wall"
-      }
-    },
-    {
-      "name": "Software Engineering Characteristics",
-      "url": "https://docs.google.com/document/d/19nSUUPFVvgZvt_foqEik16AyGN7w6gu3C-h1hGcdFe0/edit?usp=sharing",
-      "key": "software_engineering_characteristics",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "software_engineering_characteristics"
-      }
-    },
-    {
-      "name": "Software Engineering: Code Reviews",
-      "url": "https://youtu.be/dWddHWU3_YM",
-      "key": "software_engineering_code_reviews",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "software_engineering_code_reviews"
-      }
-    },
-    {
-      "name": "Software Engineering: Skills and Characteristics",
-      "url": "https://youtu.be/VJFZejhRKjk",
-      "key": "software_engineering_skills_and_characteristics",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "software_engineering_skills_and_characteristics"
-      }
-    },
-    {
-      "name": "SpiralPainter FRQ",
-      "url": "https://docs.google.com/document/d/1fii6s81BkL_tz2Ji7bVwc-W_1smmFGbiZ0dX6mAaoXw/edit?usp=sharing",
-      "key": "spiralpainter_frq",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "spiralpainter_frq"
-      }
-    },
-    {
-      "name": "SpiralPainter FRQ Stations",
-      "url": "https://docs.google.com/document/d/1fA_n5u2IDRA-R1IGB-Yv3cn3aGO7IWFcU8_AIGeAlXU/edit?usp=sharing",
-      "key": "spiralpainter_frq_stations",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "spiralpainter_frq_stations"
-      }
-    },
-    {
-      "name": "Teacher Toolkit: 10,000 Pyramid (High School)",
-      "url": "https://youtu.be/ZOUS34gDHoM",
-      "key": "teacher_toolkit_10_000_pyramid_high_school_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "teacher_toolkit_10_000_pyramid_high_school_"
-      }
-    },
-    {
-      "name": "Two-Way Selection and NOT",
-      "url": "https://youtu.be/EjypsirssII",
-      "key": "two-way_selection_and_not",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "two-way_selection_and_not"
-      }
-    },
-    {
-      "name": "U1L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/12VbvABWVpOukT1ARRcTmdd2tz-ZfRc9CAeMF9Uy0E6U/edit?usp=sharing",
-      "key": "u1l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l10_extra_practice"
-      }
-    },
-    {
-      "name": "U1L11 Extra Practice",
-      "url": "https://docs.google.com/document/d/1a9SiT2Ri_WVUG9_bD4T4dJfnXG1R57crXfZ3IRGver0/edit?usp=sharing",
-      "key": "u1l11_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l11_extra_practice"
-      }
-    },
-    {
-      "name": "U1L12 Extra Practice",
-      "url": "https://docs.google.com/document/d/1AKIygL1eVqQk1i-nFF90V019bFnMbuqIDJ2u4Ag0rLg/edit?usp=sharing",
-      "key": "u1l12_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l12_extra_practice"
-      }
-    },
-    {
-      "name": "U1L13 Extra Practice",
-      "url": "https://docs.google.com/document/d/1x8WvkmttCNJQ4aOR-6GxFsw2hOzQLOlptz9m-5CdjSY/edit?usp=sharing",
-      "key": "u1l13_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l13_extra_practice"
-      }
-    },
-    {
-      "name": "U1L14 Extra Practice",
-      "url": "https://docs.google.com/document/d/1pr1zyW-uEaozbndMp-YuZCzQG27yjbFfymUeS_v2EHc/edit?usp=sharing",
-      "key": "u1l14_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l14_extra_practice"
-      }
-    },
-    {
-      "name": "U1L15 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Km1AgjUcEHav0eIM8B84T3zixrl7eSp8zSntT2TK3Es/edit?usp=sharing",
-      "key": "u1l15_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l15_extra_practice"
-      }
-    },
-    {
-      "name": "U1L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1kp8khWZfLWvVhBanZnFHa3XstT8XrE8J-ODMvI4QWPA/edit?usp=sharing",
-      "key": "u1l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l2_extra_practice"
-      }
-    },
-    {
-      "name": "U1L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1jHGzcg0R5FbynRs9OEmxngl2SLdrylS0dqMlzAGaB7A/edit?usp=sharing",
-      "key": "u1l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l3_extra_practice"
-      }
-    },
-    {
-      "name": "U1L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1-NJP62l0OtER50YGS4KBsjgSsm1LgVd3ryJBEEeT85A/edit?usp=sharing",
-      "key": "u1l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l4_extra_practice"
-      }
-    },
-    {
-      "name": "U1L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/187Qw-_XB5AnA1G7aXEldB70brQFTLD5blLo9EHsbHIc/edit?usp=sharing",
-      "key": "u1l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l5_extra_practice"
-      }
-    },
-    {
-      "name": "U1L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1KdbJKu-Kqdk3AIM4StW9n98caWo0BDSrczqfebAPsFI/edit?usp=sharing",
-      "key": "u1l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l6_extra_practice"
-      }
-    },
-    {
-      "name": "U1L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1FryxLH2YT2z55Pbon7zL9Vf55eTF7_IGZ_6QqJnqdw0/edit?usp=sharing",
-      "key": "u1l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l7_extra_practice"
-      }
-    },
-    {
-      "name": "U1L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/19eA21QwEWCTwKf2uQ77KyBT75c0x4KL6jn579VHr42g/edit?usp=sharing",
-      "key": "u1l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l8_extra_practice"
-      }
-    },
-    {
-      "name": "U1L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1rigveLGXH-ojMOeKNsczsZYBQ9ZH-MzFrPHHE20jhTc/edit?usp=sharing",
-      "key": "u1l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l9_extra_practice"
-      }
-    },
-    {
-      "name": "Unit 1 Guide",
-      "url": "https://docs.google.com/document/d/1RXR4gnijmgGJVVhbiXjrnbPYSVVqatCiJ9viBbCvO18/edit?usp=sharing",
-      "key": "unit_1_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "unit_1_guide"
-      }
-    },
-    {
-      "name": "Unit 1 Overview",
-      "url": "https://docs.google.com/document/d/1ZsMvmmr2M0SjaFJ66JI6ft2q_beLUs6MO2UX0EcP-ZY/edit?usp=sharing",
-      "key": "unit_1_overview",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_1_overview"
-      }
-    },
-    {
-      "name": "Unit 1 Presentation",
-      "url": "https://docs.google.com/presentation/d/1XiGPrFk4_vxlzjBsYid1Y8OsetM0mVugke0UT_aVElw/edit?usp=sharing",
-      "key": "unit_1_presentation",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "name": "Unit 1 Study Guide",
-      "url": "https://docs.google.com/document/d/1dQPxCgOB8Cz4sJ93vDQiyjVPO3ooVommPLrxRooZlqg/edit?usp=sharing",
-      "key": "unit_1_study_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_1_study_guide"
-      }
-    },
-    {
-      "name": "Unity and Safety Through Street Art in Norfolk, VA",
-      "url": "https://youtu.be/-gnXVMcg0yk",
-      "key": "unity_and_safety_through_street_art_in_norfolk_va",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
-      }
-    },
-    {
-      "name": "Unlocking Assessments",
-      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
-      "key": "unlocking_assessments",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unlocking_assessments"
-      }
-    },
-    {
-      "name": "Using Two-Way Selection and NOT",
-      "url": "https://docs.google.com/document/d/1mPwrA86uAQzuhKJFHGXpRqLF4nhF_Fooq25EabeA7Rk/edit?usp=sharing",
-      "key": "using_two-way_selection_and_not",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "using_two-way_selection_and_not"
-      }
-    },
-    {
-      "name": "Welcome to The Neighborhood",
-      "url": "https://youtu.be/XCa735V08lQ",
-      "key": "welcome_to_the_neighborhood",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "welcome_to_the_neighborhood"
-      }
-    },
-    {
-      "name": "While Loops",
-      "url": "https://youtu.be/qnz0LVpUr88",
-      "key": "while_loops",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "while_loops"
-      }
-    },
-    {
-      "name": "Writing a Method",
-      "url": "https://youtu.be/pdNf1O9BTYM",
-      "key": "writing_a_method",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "writing_a_method"
-      }
-    },
-    {
-      "name": "Writing Algorithms",
-      "url": "https://docs.google.com/document/d/1JmEN9yfj-kr5txjuRCRlIkTmbbAziAHfnvErMSXKH-8/edit?usp=sharing",
-      "key": "writing_algorithms",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "writing_algorithms"
-      }
-    },
-    {
-      "name": "Writing Our First Program",
-      "url": "https://youtu.be/G2kCDIIRFU8",
-      "key": "writing_our_first_program",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "writing_our_first_program"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project – Day 1",
-        "resource.key": "_exemplar_asphalt_art_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project – Day 1",
-        "resource.key": "asphalt_art_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project – Day 1",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project – Day 1",
-        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project – Day 2",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project – Day 3",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "BackgroundPainter",
-        "resource.key": "_key_backgroundpainter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "BackgroundPainter",
-        "resource.key": "_key_u1l14_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "BackgroundPainter",
-        "resource.key": "backgroundpainter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "BackgroundPainter",
-        "resource.key": "u1l14_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "BackgroundPainter",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "_key_u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "code_reviews"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "code_reviews_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "commits_and_the_backpack"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "cs_bingo_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "cs_bingo_definitions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "software_engineering_code_reviews"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "_key_u1l11_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "printing_in_java"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "u1l11_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "resource.key": "_key_decomposition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "resource.key": "_key_u1l12_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "resource.key": "decomposition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "resource.key": "u1l12_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_spiralpainter_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "spiralpainter_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "spiralpainter_frq_stations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "_key_u1l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "code_studio_setup"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "java_lab_basics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "u1l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "unit_1_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "writing_our_first_program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "_key_writing_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "while_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "writing_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "resource.key": "_key_u1l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "resource.key": "calling_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "resource.key": "u1l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "resource.key": "_key_u1l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "resource.key": "setting_up_the_debugging_wall"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "resource.key": "u1l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Open Source Code",
-        "resource.key": "_key_exploring_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Open Source Code",
-        "resource.key": "_key_u1l15_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Open Source Code",
-        "resource.key": "exploring_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Open Source Code",
-        "resource.key": "u1l15_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Open Source Code",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Open Source Code",
-        "resource.key": "unit_1_study_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "resource.key": "_key_u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "resource.key": "inheritance"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "resource.key": "u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PatternPainter",
-        "resource.key": "_key_patternpainter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PatternPainter",
-        "resource.key": "_key_u1l13_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PatternPainter",
-        "resource.key": "patternpainter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PatternPainter",
-        "resource.key": "teacher_toolkit_10_000_pyramid_high_school_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PatternPainter",
-        "resource.key": "u1l13_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PatternPainter",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "resource.key": "_key_u1l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "resource.key": "creating_objects"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "resource.key": "object-oriented_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "resource.key": "u1l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "resource.key": "welcome_to_the_neighborhood"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "_key_u1l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "_key_using_two-way_selection_and_not"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "two-way_selection_and_not"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "u1l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "using_two-way_selection_and_not"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 1 Assessment",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 1 Assessment",
-        "resource.key": "unlocking_assessments"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "resource.key": "change_the_face_of_computer_science"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "resource.key": "software_engineering_characteristics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "resource.key": "software_engineering_skills_and_characteristics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "resource.key": "u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "resource.key": "unit_1_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "resource.key": "writing_a_method"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources",
-        "script.name": "csa1-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards",
-        "script.name": "csa1-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary",
-        "script.name": "csa1-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_guide",
-        "script.name": "csa1-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_overview",
-        "script.name": "csa1-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_study_guide",
-        "script.name": "csa1-validation-pilot-2022"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "_boolean_",
-      "word": "`boolean`",
-      "definition": "a primitive data type that can be either `true` or `false`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_boolean_"
-      }
-    },
-    {
-      "key": "_if_else_statement_two_way_selection_statement_",
-      "word": "`if-else` statement (two-way selection statement)",
-      "definition": "specifies a block of code to execute when the condition is `true` and a block of code to execute when the condition is `false`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_if_else_statement_two_way_selection_statement_"
-      }
-    },
-    {
-      "key": "_if_statement",
-      "word": "`if` statement",
-      "definition": "a conditional statement that only executes when the condition is `true`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_if_statement"
-      }
-    },
-    {
-      "key": "_super_keyword",
-      "word": "`super` keyword",
-      "definition": "a keyword used to refer to the superclass",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_super_keyword"
-      }
-    },
-    {
-      "key": "_void_method",
-      "word": "`void` method",
-      "definition": "a method that performs an action but does not return a value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_void_method"
-      }
-    },
-    {
-      "key": "_while_loop",
-      "word": "`while` loop",
-      "definition": "a control structure which executes a block of code repeatedly as long as a condition is `true`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_while_loop"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "algorithm",
-      "definition": "a set of instructions to solve a problem or accomplish a task",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "argument",
-      "word": "argument",
-      "definition": "a value passed to a method or constructor when the method or constructor is called",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "argument"
-      }
-    },
-    {
-      "key": "attribute",
-      "word": "attribute",
-      "definition": "a characteristic of an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "key": "behavior",
-      "word": "behavior",
-      "definition": "an action that an object can perform",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "bug",
-      "definition": "an error in the code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "class",
-      "word": "class",
-      "definition": "a programmer-defined blueprint from which objects are created",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "class"
-      }
-    },
-    {
-      "key": "class_header",
-      "word": "class header",
-      "definition": "consists of the class keyword and the name of the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "class_header"
-      }
-    },
-    {
-      "key": "code_review",
-      "word": "code review",
-      "definition": "the process of examining code and providing feedback to improve the quality and functionality of the program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "code_review"
-      }
-    },
-    {
-      "key": "comment",
-      "word": "comment",
-      "definition": "a text note that is ignored by the compiler to explain or annotate the code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "comment"
-      }
-    },
-    {
-      "key": "concatenation",
-      "word": "concatenation",
-      "definition": "joining two strings together",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "concatenation"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "condition",
-      "definition": "determines whether or not to execute a block of code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditional_statement",
-      "word": "conditional statement",
-      "definition": "a statement that only executes when a condition is `true`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditional_statement"
-      }
-    },
-    {
-      "key": "constructor",
-      "word": "constructor",
-      "definition": "a block of code that has the same name as the class and tells the computer how to create a new object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "constructor"
-      }
-    },
-    {
-      "key": "constructor_signature",
-      "word": "constructor signature",
-      "definition": "the first line of the constructor which includes the `public` keyword, the constructor name, and the values to specify when an object is created",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "constructor_signature"
-      }
-    },
-    {
-      "key": "control_structure",
-      "word": "control structure",
-      "definition": "a conditional or iteration statement which affects the flow of a program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "control_structure"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "debugging",
-      "definition": "finding and fixing problems in an algorithm or program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "documentation",
-      "word": "documentation",
-      "definition": "written descriptions of the purpose and functionality of code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "documentation"
-      }
-    },
-    {
-      "key": "dot_operator",
-      "word": "dot operator",
-      "definition": "used to call a method in a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_operator"
-      }
-    },
-    {
-      "key": "edge_case",
-      "word": "edge case",
-      "definition": "a bug that occurs at the highest or lowest end of a range of possible values or in extreme situations",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "edge_case"
-      }
-    },
-    {
-      "key": "efficient",
-      "word": "efficient",
-      "definition": "getting the best outcome with the least amount of waste",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "efficient"
-      }
-    },
-    {
-      "key": "infinite_loop",
-      "word": "infinite loop",
-      "definition": "a loop where the `Boolean` expression always evaluates to `true`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "infinite_loop"
-      }
-    },
-    {
-      "key": "inheritance",
-      "word": "inheritance",
-      "definition": "an object-oriented programming principle where a subclass inherits the attributes and behaviors of a superclass",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "inheritance"
-      }
-    },
-    {
-      "key": "inheritance_hierarchy",
-      "word": "inheritance hierarchy",
-      "definition": "where a class serves as a superclass for more than one subclass",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "inheritance_hierarchy"
-      }
-    },
-    {
-      "key": "instantiate",
-      "word": "instantiate",
-      "definition": "to call the constructor to create an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "instantiate"
-      }
-    },
-    {
-      "key": "integrated_development_environment_ide_",
-      "word": "integrated development environment (IDE)",
-      "definition": "a software application for writing, compiling, testing, and debugging program code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "integrated_development_environment_ide_"
-      }
-    },
-    {
-      "key": "iteration_statement_loop_",
-      "word": "iteration statement (loop)",
-      "definition": "a control structure that repeatedly executes a block of code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "iteration_statement_loop_"
-      }
-    },
-    {
-      "key": "logic_error",
-      "word": "logic error",
-      "definition": "an error that occurs when the code runs but does not do what was expected",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "logic_error"
-      }
-    },
-    {
-      "key": "logical_operator",
-      "word": "logical operator",
-      "definition": "an operator that returns a `Boolean` value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "logical_operator"
-      }
-    },
-    {
-      "key": "method",
-      "word": "method",
-      "definition": "a named set of instructions to perform a task",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "method"
-      }
-    },
-    {
-      "key": "method_decomposition",
-      "word": "Method Decomposition",
-      "definition": "the process of breaking a problem down into smaller parts to write methods for each part",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "method_decomposition"
-      }
-    },
-    {
-      "key": "method_signature",
-      "word": "method signature",
-      "definition": "consists of a name and parameter list",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "method_signature"
-      }
-    },
-    {
-      "key": "not_operator",
-      "word": "NOT ( `!` ) operator",
-      "definition": "a logical operator that returns `true` when the operand is `false` and returns `false` when the operand is `true`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "not_operator"
-      }
-    },
-    {
-      "key": "object",
-      "word": "object",
-      "definition": "an instance of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "object"
-      }
-    },
-    {
-      "key": "object_oriented_programming",
-      "word": "object-oriented programming",
-      "definition": "an approach to creating and using models of physical or imagined objects",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "object_oriented_programming"
-      }
-    },
-    {
-      "key": "open_source_code",
-      "word": "open source code",
-      "definition": "code that is freely available for anyone to use, study, change, and distribute",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "open_source_code"
-      }
-    },
-    {
-      "key": "package",
-      "word": "package",
-      "definition": "a collection of similar classes",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "package"
-      }
-    },
-    {
-      "key": "parameter",
-      "word": "parameter",
-      "definition": "a variable in the method or constructor signature that defines the type of value to receive when the method or constructor is called",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "key": "procedural_abstraction",
-      "word": "Procedural Abstraction",
-      "definition": "allows a programmer to use a method by knowing what the method does even if they do not know how the method was written",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "procedural_abstraction"
-      }
-    },
-    {
-      "key": "programming_style",
-      "word": "programming style",
-      "definition": "a set of guidelines for formatting program code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming_style"
-      }
-    },
-    {
-      "key": "pseudocode",
-      "word": "pseudocode",
-      "definition": "a plain language description of the steps in an algorithm",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pseudocode"
-      }
-    },
-    {
-      "key": "redundant_code",
-      "word": "redundant code",
-      "definition": "code that is unnecessary",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "redundant_code"
-      }
-    },
-    {
-      "key": "return",
-      "word": "return",
-      "definition": "to exit a method and go back to the point in the program that called it with the requested value or information",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "return"
-      }
-    },
-    {
-      "key": "software",
-      "word": "software",
-      "definition": "a collection of instructions that is run by a computer",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "software"
-      }
-    },
-    {
-      "key": "software_engineer",
-      "word": "software engineer",
-      "definition": "a person who designs, develops, and tests software for home, school, and business use",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "software_engineer"
-      }
-    },
-    {
-      "key": "source_code",
-      "word": "source code",
-      "definition": "a collection of programming commands",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "source_code"
-      }
-    },
-    {
-      "key": "state",
-      "word": "state",
-      "definition": "the attributes of an object that are represented by its instance variables",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "state"
-      }
-    },
-    {
-      "key": "subclass",
-      "word": "subclass",
-      "definition": "a class that extends a superclass and inherits its attributes and behaviors",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "subclass"
-      }
-    },
-    {
-      "key": "superclass",
-      "word": "superclass",
-      "definition": "a class that can be extended to create subclasses",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "superclass"
-      }
-    },
-    {
-      "key": "syntax",
-      "word": "syntax",
-      "definition": "the rules for how a programmer must write code for a computer to understand",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "syntax"
-      }
-    },
-    {
-      "key": "syntax_error",
-      "word": "syntax error",
-      "definition": "a mistake in the code that does not follow a programming language's syntax",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "syntax_error"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "vocabulary.key": "code_review"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "vocabulary.key": "comment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "vocabulary.key": "documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Reviews",
-        "vocabulary.key": "programming_style"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "vocabulary.key": "concatenation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "vocabulary.key": "edge_case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "vocabulary.key": "method_decomposition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition and Design",
-        "vocabulary.key": "redundant_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "vocabulary.key": "class_header"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "vocabulary.key": "integrated_development_environment_ide_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "vocabulary.key": "software"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "vocabulary.key": "source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "vocabulary.key": "syntax"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "vocabulary.key": "_while_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "vocabulary.key": "control_structure"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "vocabulary.key": "efficient"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "vocabulary.key": "infinite_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "vocabulary.key": "iteration_statement_loop_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "vocabulary.key": "pseudocode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "vocabulary.key": "_void_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "vocabulary.key": "argument"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "vocabulary.key": "dot_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "vocabulary.key": "method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Navigating and Painting",
-        "vocabulary.key": "procedural_abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "vocabulary.key": "_boolean_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "vocabulary.key": "_if_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "vocabulary.key": "conditional_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "vocabulary.key": "logic_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Way Selection Statements",
-        "vocabulary.key": "return"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Open Source Code",
-        "vocabulary.key": "open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "vocabulary.key": "_super_keyword"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "vocabulary.key": "constructor_signature"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "vocabulary.key": "inheritance"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "vocabulary.key": "subclass"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PainterPlus",
-        "vocabulary.key": "superclass"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "PatternPainter",
-        "vocabulary.key": "inheritance_hierarchy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "constructor"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "instantiate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "object"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "object_oriented_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "package"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Neighborhood",
-        "vocabulary.key": "state"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "vocabulary.key": "_if_else_statement_two_way_selection_statement_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "vocabulary.key": "logical_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "vocabulary.key": "not_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "vocabulary.key": "software_engineer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "vocabulary.key": "method_signature"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

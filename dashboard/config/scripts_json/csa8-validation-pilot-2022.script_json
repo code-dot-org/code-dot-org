@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:58:23 UTC",
+    "serialized_at": "2022-08-24 08:23:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3721,6 +3721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L1v2_pilot-2022"
+        ],
         "progression": "Creative Coding with the Console Example Projects"
       },
       "bonus": false,
@@ -3743,6 +3746,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L2v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3765,6 +3771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L1v2_pilot-2022"
+        ],
         "progression": "Investigate: Linear/Sequential Search"
       },
       "bonus": false,
@@ -3787,6 +3796,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3809,6 +3821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L1v2_pilot-2022"
+        ],
         "progression": "Investigate: Binary Search"
       },
       "bonus": false,
@@ -3831,6 +3846,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L2v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3853,6 +3871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L1_pilot-2022"
+        ],
         "progression": "Investigate: Recursive Binary Search"
       },
       "bonus": false,
@@ -3875,6 +3896,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L2_pilot-2022"
+        ],
         "progression": "Implementing the Binary Search"
       },
       "bonus": false,
@@ -3897,6 +3921,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L3_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3919,6 +3946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L1v2_pilot-2022"
+        ],
         "progression": "Investigate: Selection Sort"
       },
       "bonus": false,
@@ -3941,6 +3971,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L2_pilot-2022"
+        ],
         "progression": "Using the Selection Sort"
       },
       "bonus": false,
@@ -3963,6 +3996,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L3_pilot-2022"
+        ],
         "progression": "Using the Selection Sort"
       },
       "bonus": false,
@@ -3985,6 +4021,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4007,6 +4046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L1v2_pilot-2022"
+        ],
         "progression": "Investigate: Insertion Sort vs Selection Sort"
       },
       "bonus": false,
@@ -4029,6 +4071,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4051,6 +4096,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L1_pilot-2022"
+        ],
         "progression": "Predict: Merge Sort"
       },
       "bonus": false,
@@ -4073,6 +4121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L2_pilot-2022"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4095,6 +4146,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L3_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4117,6 +4171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L1v2_pilot-2022"
+        ],
         "progression": "Predict: Traversing Multiple Lists"
       },
       "bonus": false,
@@ -4139,6 +4196,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L2v2_pilot-2022"
+        ],
         "progression": "Traversing Multiple Lists"
       },
       "bonus": false,
@@ -4161,6 +4221,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L3v2_pilot-2022"
+        ],
         "progression": "Traversing Multiple Lists"
       },
       "bonus": false,
@@ -4183,6 +4246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L4v2_pilot-2022"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4205,6 +4271,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4227,6 +4296,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L1v2_pilot-2022"
+        ],
         "progression": "Searching and Sorting Algorithms"
       },
       "bonus": false,
@@ -4249,6 +4321,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L2v2_pilot-2022"
+        ],
         "progression": "Searching and Sorting Algorithms"
       },
       "bonus": false,
@@ -4271,6 +4346,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L3_pilot-2022"
+        ],
         "progression": "Searching and Sorting Algorithms"
       },
       "bonus": false,
@@ -4293,6 +4371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L4v2_pilot-2022"
+        ],
         "progression": "Code Review: Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4315,6 +4396,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4337,6 +4421,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L10-L1v2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4359,6 +4446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L11-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4381,6 +4471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L11-L2 CR_pilot-2022"
+        ],
         "progression": "Code Review: Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4403,6 +4496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L12-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4425,6 +4521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L12-L2 CR_pilot-2022"
+        ],
         "progression": "Code Review: Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4447,6 +4546,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L13-L1_pilot-2022"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4469,6 +4571,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa8_pilot-2022"
+        ],
         "progression": "Unit 8 Survey"
       },
       "bonus": false,
@@ -4491,6 +4596,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 8 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 8 Assessment"
       },
       "bonus": false,
@@ -4513,6 +4621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4534,6 +4645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4556,6 +4670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4578,6 +4695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4599,6 +4719,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_csa_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5110,1252 +5233,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "[EXEMPLAR] Creative Coding with the Console Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1EYrtFiuH7_DYgRaFlXIhnPHOhOI-hGRRa2ZqUwjPizU/edit?usp=sharing",
-      "key": "_exemplar_creative_coding_with_the_console_project_planning_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_creative_coding_with_the_console_project_planning_guide"
-      }
-    },
-    {
-      "name": "[KEY] Binary Search",
-      "url": "https://docs.google.com/document/d/1DYtPALrO6o9YOyR21kKGO9A6j97Ehb2irG1l_pd5af8/edit?usp=sharing",
-      "key": "_key_binary_search",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_binary_search"
-      }
-    },
-    {
-      "name": "[KEY] Counting Executions with Code",
-      "url": "https://docs.google.com/document/d/18FQNdVYkyan7iu28ZDvSosgc4VHAjq6np_kulYr4m1w/edit?usp=sharing",
-      "key": "_key_counting_executions_with_code",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_counting_executions_with_code"
-      }
-    },
-    {
-      "name": "[KEY] Data, Privacy, and Security",
-      "url": "https://docs.google.com/document/d/1wTcxTLLOYnJ7X96VZ2QQP0eKQghXExdrqpQWFGRDV4I/edit#",
-      "key": "_key_data_privacy_and_security",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_data_privacy_and_security"
-      }
-    },
-    {
-      "name": "[KEY] Merge Sort",
-      "url": "https://docs.google.com/document/d/1n0eQcICj0SkmrbfbGv5PJ3DNayKfl1-tawwVtibF74U/edit?usp=sharing",
-      "key": "_key_merge_sort",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_merge_sort"
-      }
-    },
-    {
-      "name": "[KEY] SeatingChart FRQ",
-      "url": "https://docs.google.com/document/d/1Sp_9SdE8qd-F0CH0Hlc7lhn8t16QXlP6SUQKZw8fZuQ/edit?usp=sharing",
-      "key": "_key_seatingchart_frq",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_seatingchart_frq"
-      }
-    },
-    {
-      "name": "[KEY] Selection Sort",
-      "url": "https://docs.google.com/document/d/1jRX1E8OiHffZhHOMgfVUyS5svRqodq4OBEuTh_M-BG0/edit?usp=sharing",
-      "key": "_key_selection_sort",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_selection_sort"
-      }
-    },
-    {
-      "name": "[KEY] Sorting Comparison",
-      "url": "https://docs.google.com/document/d/1LDL4O2iqpJ9nb-kfnhXosbm-OWgeXHd_2SSuD6SQ91o/edit?usp=sharing",
-      "key": "_key_sorting_comparison",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_sorting_comparison"
-      }
-    },
-    {
-      "name": "[KEY] U8L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1nWjzV7ErdoG5WvCOkYBa-DWdfzuT2gVvA1Sia4PxMPc/edit?usp=sharing",
-      "key": "_key_u8l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1kUYncpfTBl93_fSowEIzNTpkSj_g4MmYBVAengCsbTI/edit?usp=sharing",
-      "key": "_key_u8l1_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l1_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1zAWPvNnTRjpDVRYgsLHd6eEaOfcw4S_6t9t9AIZAzuk/edit?usp=sharing",
-      "key": "_key_u8l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1KNrjyMOeoczHl4TwnzycKZhZ2dQjGKAj0Oi6OFy8Y2A/edit?usp=sharing",
-      "key": "_key_u8l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1qAQLFy0s3tSsjS4c_kDalwqd5dIUG7A3xC80p997XK8/edit?usp=sharing",
-      "key": "_key_u8l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/19-lZ3WbXfHDxYcXsDF6TRwAZGU_1pqTcFpdISI8FO4Q/edit?usp=sharing",
-      "key": "_key_u8l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1G2izt2vq511xN9rAAMrLazmqBBqfQrdBa4VhURyiz64/edit?usp=sharing",
-      "key": "_key_u8l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/12KuRRlbPk9vE20pov3SPY5kgSY7W0No7EaZK6qxOgkE/edit?usp=sharing",
-      "key": "_key_u8l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1-0K5OwVyGFx78O5ae-Z03b34izK2layE8AN-Ocs_tQ8/edit?usp=sharing",
-      "key": "_key_u8l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U8L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1DfJBm5VKsIVGzG6OL754VCT92ZuTF7d-BURiGZb1o2I/edit?usp=sharing",
-      "key": "_key_u8l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l9_extra_practice"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csa8-2022/resources",
-      "key": "all_resources_7",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_7"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csa8-2022/standards",
-      "key": "all_standards_7",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_7"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csa8-2022/vocab",
-      "key": "all_vocabulary_7",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_7"
-      }
-    },
-    {
-      "name": "Binary Search",
-      "url": "https://docs.google.com/document/d/1gQEFtKMJbcL2Yq10YeLJVtId8D3enHlA9_CgEFpFeYE/edit?usp=sharing",
-      "key": "binary_search",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "binary_search"
-      }
-    },
-    {
-      "name": "Counting Executions with Code",
-      "url": "https://docs.google.com/document/d/1vELh7chXW2AQ9oj6okmdTRS1Ow08EHt9TO1idqtzKHU/edit?usp=sharing",
-      "key": "counting_executions_with_code",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "counting_executions_with_code"
-      }
-    },
-    {
-      "name": "Creative Coding with the Console Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Jb-srMOkk_EgVWQ02r1lWgWE2ZUFdPVfdVmCy0dTHGs/edit?usp=sharing",
-      "key": "creative_coding_with_the_console_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "creative_coding_with_the_console_project_planning_guide"
-      }
-    },
-    {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/presentation/d/1aCg49-ilRrAK9I8500DV5xrGOPkjKYk1zLgK0XxJlXE/edit?usp=sharing",
-      "key": "cs_bingo_cards_6",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards_6"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1EzxMVHnoUudvlVwYOILDyyVPwE4xEBKM8Qor5vuXEeI/edit?usp=sharing",
-      "key": "cs_bingo_definitions_8",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions_8"
-      }
-    },
-    {
-      "name": "Data, Privacy, and Security",
-      "url": "https://docs.google.com/document/d/1ZOM-Jtd1IVQwx2qgg3O2gNUsNYey6ivB0dDVzekfGsA/edit",
-      "key": "data_privacy_and_security",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "data_privacy_and_security"
-      }
-    },
-    {
-      "name": "Java Quick Reference",
-      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
-      "key": "java_quick_reference",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "java_quick_reference"
-      }
-    },
-    {
-      "name": "Merge Sort",
-      "url": "https://docs.google.com/document/d/1Fpd3FJvp7ojqYDzyzDTxWZy0bRtYBhyifi22IeCjyjI/edit?usp=sharing",
-      "key": "merge_sort",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "merge_sort"
-      }
-    },
-    {
-      "name": "Project Planning Feedback",
-      "url": "https://docs.google.com/document/d/1KNP7G9P_UYUgZBOrQeH0BGYyB8vD0l0Op7P6O7xtTMc/edit?usp=sharing",
-      "key": "project_planning_feedback_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "project_planning_feedback_1"
-      }
-    },
-    {
-      "name": "Searching Algorithms",
-      "url": "https://youtu.be/gRK5BUw7TCk",
-      "key": "searching_algorithms",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "searching_algorithms"
-      }
-    },
-    {
-      "name": "SeatingChart FRQ",
-      "url": "https://docs.google.com/document/d/1oRG8xDEiLJKb9FGYm1pN91o4DqSTYTJ-4LbYJgIhef0/edit?usp=sharing",
-      "key": "seatingchart_frq",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "seatingchart_frq"
-      }
-    },
-    {
-      "name": "SeatingChart FRQ Scoring Guidelines",
-      "url": "https://docs.google.com/document/d/13IEhf4h9QGVZHnuU5-SV5pAwexJ_czxS3IboW8uAr0I/edit?usp=sharing",
-      "key": "seatingchart_frq_scoring_guidelines",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "seatingchart_frq_scoring_guidelines"
-      }
-    },
-    {
-      "name": "Selection Sort",
-      "url": "https://docs.google.com/document/d/1tM4GTBAcFkyTwArCKQND8zw4pUBayqytUN1IHZ6nx5s/edit?usp=sharing",
-      "key": "selection_sort",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "selection_sort"
-      }
-    },
-    {
-      "name": "Selection Sort Activity Setup",
-      "url": "https://docs.google.com/document/d/1TmbhsFQn8hIKYMi6Vk3wIOCzmGTww5-fFm39WULegpo/edit?usp=sharing",
-      "key": "selection_sort_activity_setup",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "selection_sort_activity_setup"
-      }
-    },
-    {
-      "name": "Sorting Algorithms",
-      "url": "https://youtu.be/b7iasi3MfLw",
-      "key": "sorting_algorithms",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "sorting_algorithms"
-      }
-    },
-    {
-      "name": "Sorting Comparison",
-      "url": "https://docs.google.com/document/d/1KEivbmbbclpbPumChYDruBnIp_Mpcjl0VTctoK_zO-c/edit?usp=sharing",
-      "key": "sorting_comparison",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "sorting_comparison"
-      }
-    },
-    {
-      "name": "U8L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1WYUIyST_NoYwpTwUqZ6hZMUWRKkJX0DkyNuYomY4JJM/edit?usp=sharing",
-      "key": "u8l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l10_extra_practice"
-      }
-    },
-    {
-      "name": "U8L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Xb1cG-_ZLOnFF1uu8f169BKwUvLtEdQaaZC9-WY59ys/edit?usp=sharing",
-      "key": "u8l1_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l1_extra_practice"
-      }
-    },
-    {
-      "name": "U8L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1MCfZYUr9e6xVm1OSvRFGsE4jCdjRZL9czELWx4z6lVM/edit?usp=sharing",
-      "key": "u8l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l2_extra_practice"
-      }
-    },
-    {
-      "name": "U8L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1qcw5Oxsz3M0otyCJcM6hPaKpS-ErPHSKi7KFzAoD20w/edit?usp=sharing",
-      "key": "u8l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l3_extra_practice"
-      }
-    },
-    {
-      "name": "U8L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/12Ahql9rLKt9SjeoelpGSpiHryEDF4w15KrcfCKg3RyE/edit?usp=sharing",
-      "key": "u8l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l4_extra_practice"
-      }
-    },
-    {
-      "name": "U8L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/11biv6_8dDBbQHnf3GWkrovhxvK9l1-gvKeHZgwK2wME/edit?usp=sharing",
-      "key": "u8l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l5_extra_practice"
-      }
-    },
-    {
-      "name": "U8L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ujEOAe-6Zmz2D1i4u3V8VvhcxbppWTityyEYCw-BiXk/edit?usp=sharing",
-      "key": "u8l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l6_extra_practice"
-      }
-    },
-    {
-      "name": "U8L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1lrdMd9cye6wI0iC7iaKV_XjKHkiJl2x-oKmrFE6n-i8/edit?usp=sharing",
-      "key": "u8l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l7_extra_practice"
-      }
-    },
-    {
-      "name": "U8L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1DNgwD5sG9p6XvyuvmcUXAQ1xwuv9757tVvroNGD5wJ4/edit?usp=sharing",
-      "key": "u8l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l8_extra_practice"
-      }
-    },
-    {
-      "name": "U8L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1X8M3bnTClViUlyScdINPZjzXR8N-__TOO0e9KJFysyg/edit?usp=sharing",
-      "key": "u8l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l9_extra_practice"
-      }
-    },
-    {
-      "name": "Unit 8 Guide",
-      "url": "https://docs.google.com/document/d/1pXxH28_4arch6BuCIb9Dy6-wkQ_gRSlhXZHoredOK_0/edit?usp=sharing",
-      "key": "unit_8_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "unit_8_guide"
-      }
-    },
-    {
-      "name": "Unit 8 Overview",
-      "url": "https://docs.google.com/document/d/1PEyTbEedsWm4aK0oJ8P3ud6c9ED5cyJ8pjUL2z74lWg/edit?usp=sharing",
-      "key": "unit_8_overview",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_8_overview"
-      }
-    },
-    {
-      "name": "Unit 8 Presentation",
-      "url": "https://docs.google.com/presentation/d/1rp9ZSNCOOctRKgNzQ5xwJa5r5Q_mUL2xOFrgOMgsdUc/edit?usp=sharing",
-      "key": "unit_8_presentation",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "name": "Unit 8 Study Guide",
-      "url": "https://docs.google.com/document/d/1tO-fYz9i-lV0ATyP9CEFD0eBr6q55T0yS5EJToKZtUA/edit?usp=sharing",
-      "key": "unit_8_study_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_8_study_guide"
-      }
-    },
-    {
-      "name": "Unlocking Assessments",
-      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
-      "key": "unlocking_assessments",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "_key_binary_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "_key_u8l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "binary_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "u8l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with the Console – Day 1",
-        "resource.key": "_exemplar_creative_coding_with_the_console_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with the Console – Day 1",
-        "resource.key": "creative_coding_with_the_console_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with the Console – Day 1",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with the Console – Day 2",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creative Coding with the Console – Day 3",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_seatingchart_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "java_quick_reference"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "seatingchart_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "seatingchart_frq_scoring_guidelines"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "_key_sorting_comparison"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "_key_u8l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "sorting_comparison"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "u8l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "_key_merge_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "_key_u8l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "merge_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "u8l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multiple Lists",
-        "resource.key": "_key_u8l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multiple Lists",
-        "resource.key": "u8l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multiple Lists",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "resource.key": "_key_data_privacy_and_security"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "resource.key": "_key_u8l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "resource.key": "data_privacy_and_security"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "resource.key": "u8l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "resource.key": "unit_8_study_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "_key_u8l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "creative_coding_with_the_console_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "u8l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "unit_8_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Binary Search",
-        "resource.key": "_key_u8l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Binary Search",
-        "resource.key": "cs_bingo_cards_6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Binary Search",
-        "resource.key": "cs_bingo_definitions_8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Binary Search",
-        "resource.key": "project_planning_feedback_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Binary Search",
-        "resource.key": "u8l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursive Binary Search",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching and Sorting",
-        "resource.key": "_key_u8l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching and Sorting",
-        "resource.key": "searching_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching and Sorting",
-        "resource.key": "sorting_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching and Sorting",
-        "resource.key": "u8l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching and Sorting",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "_key_counting_executions_with_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "_key_u8l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "counting_executions_with_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "u8l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "_key_selection_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "_key_u8l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "selection_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "selection_sort_activity_setup"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "u8l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 8 Assessment",
-        "resource.key": "unit_8_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 8 Assessment",
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_7",
-        "script.name": "csa8-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_7",
-        "script.name": "csa8-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_7",
-        "script.name": "csa8-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_8_guide",
-        "script.name": "csa8-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_8_overview",
-        "script.name": "csa8-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_8_study_guide",
-        "script.name": "csa8-validation-pilot-2022"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "average_case",
-      "word": "Average Case",
-      "definition": "The average number of executions an algorithm can take to complete its goal",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "average_case"
-      }
-    },
-    {
-      "key": "best_case",
-      "word": "Best Case",
-      "definition": "The least number of executions an algorithm can take to complete its goal",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "best_case"
-      }
-    },
-    {
-      "key": "binary_search",
-      "word": "Binary Search",
-      "definition": "A search algorithm that finds a target element in a sorted list by dividing the list in half in each iteration",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "binary_search"
-      }
-    },
-    {
-      "key": "divide_and_conquer",
-      "word": "Divide-and-Conquer",
-      "definition": "The process of dividing a problem into smaller problems, solving the smaller problems independently, then combining the solutions to solve the original problem",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "divide_and_conquer"
-      }
-    },
-    {
-      "key": "execution_count",
-      "word": "Execution Count",
-      "definition": "The number of times a code segment runs",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "execution_count"
-      }
-    },
-    {
-      "key": "helper_function",
-      "word": "Helper Function",
-      "definition": "A function that performs a component of another function",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "helper_function"
-      }
-    },
-    {
-      "key": "insertion_sort",
-      "word": "Insertion Sort",
-      "definition": "A sorting algorithm that shifts each item in a list one at a time to the correct position in the sorted portion of the list",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "insertion_sort"
-      }
-    },
-    {
-      "key": "linear_sequential_search",
-      "word": "Linear/Sequential Search",
-      "definition": "A search algorithm that checks each item in order until the target is found",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "linear_sequential_search"
-      }
-    },
-    {
-      "key": "merge_sort",
-      "word": "Merge Sort",
-      "definition": "A divide-and-conquer sorting algorithm that repeatedly breaks down a list into sublists until each sublist consists of a single element and merges those sorted sublists until it results into a sorted list",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "merge_sort"
-      }
-    },
-    {
-      "key": "selection_sort",
-      "word": "Selection Sort",
-      "definition": "A sorting algorithm that selects the smallest element from an unsorted array in each iteration and places that element at the beginning of the unsorted array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "selection_sort"
-      }
-    },
-    {
-      "key": "worst_case",
-      "word": "Worst Case",
-      "definition": "The most number of executions an algorithm can take to complete its goal",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "worst_case"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "vocabulary.key": "binary_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "vocabulary.key": "insertion_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "vocabulary.key": "divide_and_conquer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "vocabulary.key": "helper_function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "vocabulary.key": "merge_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "vocabulary.key": "average_case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "vocabulary.key": "best_case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "vocabulary.key": "execution_count"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "vocabulary.key": "linear_sequential_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "vocabulary.key": "worst_case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "vocabulary.key": "selection_sort"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 
