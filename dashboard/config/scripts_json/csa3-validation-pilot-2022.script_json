@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:26:19 UTC",
+    "serialized_at": "2022-08-24 08:23:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3836,6 +3836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L1_pilot-2022"
+        ],
         "progression": "Investigate: 1D Arrays"
       },
       "bonus": false,
@@ -3858,6 +3861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L2_pilot-2022"
+        ],
         "progression": "Using 1D Arrays"
       },
       "bonus": false,
@@ -3880,6 +3886,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L3_pilot-2022"
+        ],
         "progression": "Using 1D Arrays"
       },
       "bonus": false,
@@ -3902,6 +3911,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3924,6 +3936,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L1_pilot-2022"
+        ],
         "progression": "Predict: Modifying Values"
       },
       "bonus": false,
@@ -3946,6 +3961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L2_pilot-2022"
+        ],
         "progression": "Investigate: 1D Array Elements"
       },
       "bonus": false,
@@ -3968,6 +3986,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L3_pilot-2022"
+        ],
         "progression": "Investigate: 1D Array Elements"
       },
       "bonus": false,
@@ -3990,6 +4011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L4_pilot-2022"
+        ],
         "progression": "Modifying Values"
       },
       "bonus": false,
@@ -4012,6 +4036,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L5_pilot-2022"
+        ],
         "progression": "Modifying Values"
       },
       "bonus": false,
@@ -4034,6 +4061,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4056,6 +4086,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L1_pilot-2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -4078,6 +4111,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L2_pilot-2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -4100,6 +4136,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L3_pilot-2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -4122,6 +4161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: Using for Loops"
       },
       "bonus": false,
@@ -4144,6 +4186,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4166,6 +4211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L1_pilot-2022"
+        ],
         "progression": "Predict: Finding Elements"
       },
       "bonus": false,
@@ -4188,6 +4236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L2_pilot-2022"
+        ],
         "progression": "Investigate: Exploring Algorithms"
       },
       "bonus": false,
@@ -4210,6 +4261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L3_pilot-2022"
+        ],
         "progression": "Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -4232,6 +4286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -4254,6 +4311,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4276,6 +4336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L1_pilot-2022"
+        ],
         "progression": "Predict: Enhanced for Loops"
       },
       "bonus": false,
@@ -4298,6 +4361,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L2_pilot-2022"
+        ],
         "progression": "Investigate: Enhanced for Loops"
       },
       "bonus": false,
@@ -4320,6 +4386,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L3_pilot-2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4342,6 +4411,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L4_pilot-2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4364,6 +4436,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L5_pilot-2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4386,6 +4461,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4408,6 +4486,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L1_pilot-2022"
+        ],
         "progression": "Predict: Static Variables"
       },
       "bonus": false,
@@ -4430,6 +4511,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L2_pilot-2022"
+        ],
         "progression": "Investigate: Constants"
       },
       "bonus": false,
@@ -4452,6 +4536,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L3_pilot-2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4474,6 +4561,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L4_pilot-2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4496,6 +4586,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L5_pilot-2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4518,6 +4611,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4540,6 +4636,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L1_pilot-2022"
+        ],
         "progression": "Predict: Arrays of Objects"
       },
       "bonus": false,
@@ -4562,6 +4661,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L2_pilot-2022"
+        ],
         "progression": "Investigate: Polymorphism"
       },
       "bonus": false,
@@ -4584,6 +4686,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L3_pilot-2022"
+        ],
         "progression": "Using Polymorphism"
       },
       "bonus": false,
@@ -4606,6 +4711,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L4_pilot-2022"
+        ],
         "progression": "Using Polymorphism"
       },
       "bonus": false,
@@ -4628,6 +4736,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4650,6 +4761,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L1_pilot-2022"
+        ],
         "progression": "Predict: Reading a File"
       },
       "bonus": false,
@@ -4672,6 +4786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L2_pilot-2022"
+        ],
         "progression": "Investigate: Accessing Pairs"
       },
       "bonus": false,
@@ -4694,6 +4811,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L3_pilot-2022"
+        ],
         "progression": "Finding Minimum and Maximum Values"
       },
       "bonus": false,
@@ -4716,6 +4836,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4738,6 +4861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L1_pilot-2022"
+        ],
         "progression": "Predict: In the Wrong Order"
       },
       "bonus": false,
@@ -4760,6 +4886,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L2_pilot-2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4782,6 +4911,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L3_pilot-2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4804,6 +4936,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L4_pilot-2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4826,6 +4961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: Reversing a 1D Array"
       },
       "bonus": false,
@@ -4848,6 +4986,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4870,6 +5011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L1_pilot-2022"
+        ],
         "progression": "Predict: Nested Loops"
       },
       "bonus": false,
@@ -4892,6 +5036,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L2_pilot-2022"
+        ],
         "progression": "Finding Duplicates"
       },
       "bonus": false,
@@ -4914,6 +5061,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L3_pilot-2022"
+        ],
         "progression": "Finding Duplicates"
       },
       "bonus": false,
@@ -4936,6 +5086,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: Finding Duplicates"
       },
       "bonus": false,
@@ -4958,6 +5111,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4980,6 +5136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L11-L1_pilot-2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -5002,6 +5161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L12-L1_pilot-2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -5024,6 +5186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L12-L2_pilot-2022"
+        ],
         "progression": "Code Review: Data for Social Good Project"
       },
       "bonus": false,
@@ -5046,6 +5211,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L13-L1_pilot-2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -5068,6 +5236,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa3_pilot-2022"
+        ],
         "progression": "Unit 3 Survey"
       },
       "bonus": false,
@@ -5090,6 +5261,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 3 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 3 Assessment"
       },
       "bonus": false,
@@ -5112,6 +5286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5133,6 +5310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5155,6 +5335,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5907,1587 +6090,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "[EXEMPLAR] Data for Social Good Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1ZHlhTkdGRI40DAYMwSG8hsKaCeOOHgIZPQdlYjty5OQ/edit?usp=sharing",
-      "key": "_exemplar_data_for_social_good_project_planning_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_data_for_social_good_project_planning_guide"
-      }
-    },
-    {
-      "name": "[KEY] Exploring 1D Arrays",
-      "url": "https://docs.google.com/document/d/1RwyQkbsiwxnw0OSn4gbxER2crjR_Zu3rXSvFV9_D2iw/edit?usp=sharing",
-      "key": "_key_exploring_1d_arrays",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_exploring_1d_arrays"
-      }
-    },
-    {
-      "name": "[KEY] Exploring Algorithms",
-      "url": "https://docs.google.com/document/d/19EVQpqTVqn8AA-ajt8k5-sZ_buIcxqiLLGp6WM9doxQ/edit?usp=sharing",
-      "key": "_key_exploring_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_exploring_algorithms"
-      }
-    },
-    {
-      "name": "[KEY] Finding Duplicates",
-      "url": "https://docs.google.com/document/d/1uyceEJehSnEfSUAYUM4wSfEUrACqH_3RCBesz3-bA0o/edit?usp=sharing",
-      "key": "_key_finding_duplicates",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_finding_duplicates"
-      }
-    },
-    {
-      "name": "[KEY] Investigating Arrays",
-      "url": "https://docs.google.com/document/d/16Hfw519alvuNV7ETimtxdm3IriSarmpI45lmQCqZ_oE/edit?usp=sharing",
-      "key": "_key_investigating_arrays",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_investigating_arrays"
-      }
-    },
-    {
-      "name": "[KEY] Investigating Polymorphism",
-      "url": "https://docs.google.com/document/d/1nQkl37KY-WwSQy2qgfawzSi5MiUOXluxbVrOMZx_K2w/edit?usp=sharing",
-      "key": "_key_investigating_polymorphism",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_investigating_polymorphism"
-      }
-    },
-    {
-      "name": "[KEY] Reversing an Array",
-      "url": "https://docs.google.com/document/d/1gk0Sar-HX5XCv6UwZOJtVY7eOlRAr_RIgnB1XWKdZQw/edit?usp=sharing",
-      "key": "_key_reversing_an_array",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_reversing_an_array"
-      }
-    },
-    {
-      "name": "[KEY] TicketTracker FRQ",
-      "url": "https://docs.google.com/document/d/1QhQUQ_h0wL9dVY6dmvPtHeaBghOvYwn7sarEPq3U62o/edit?usp=sharing",
-      "key": "_key_tickettracker_frq",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_tickettracker_frq"
-      }
-    },
-    {
-      "name": "[KEY] TicketTracker FRQ Graphic Organizer",
-      "url": "https://docs.google.com/document/d/1AvoQI9H6LRZLLWUFXj9AHtRu8_dcE9sCiH_0gIKT_k0/edit?usp=sharing",
-      "key": "_key_tickettracker_frq_graphic_organizer",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_tickettracker_frq_graphic_organizer"
-      }
-    },
-    {
-      "name": "[KEY] Tracing Loops",
-      "url": "https://docs.google.com/document/d/1swZ6h4rq7VA7BeJyvjAIRx5uYVQZm7KiSgO9ijfV3Aw/edit?usp=sharing",
-      "key": "_key_tracing_loops",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_tracing_loops"
-      }
-    },
-    {
-      "name": "[KEY] Tracing Nested Loops",
-      "url": "https://docs.google.com/document/d/1vcJAIHW7NMwsFHGJW0AvJf5lhnWzHwxaq1mQs1XjvcU/edit?usp=sharing",
-      "key": "_key_tracing_nested_loops",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_tracing_nested_loops"
-      }
-    },
-    {
-      "name": "[KEY] U3L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1dHLy7TF8q9f-GHm-a61SISQDZ8bbMQ1VJx_xD26MKZw/edit?usp=sharing",
-      "key": "_key_u3l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1C7-w1hkFR7v9iurXHz2GMngTkQVQVqMnF3Nrxkyd514/edit?usp=sharing",
-      "key": "_key_u3l1_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l1_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1F0E0kIcJ1ipIpoVut1cj8hzDQ8eqFu6cyAe_FJR7bVw/edit?usp=sharing",
-      "key": "_key_u3l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1uezq0m7n580bi0HPaE1LwQA5pioJIXh8ywj6l1v9ScI/edit?usp=sharing",
-      "key": "_key_u3l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1U6m-nb_WENuijnkCpOjx4TsdGZUQ3rLB8o1Wh1SKfPU/edit?usp=sharing",
-      "key": "_key_u3l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/17KObANaWCqDU3QyeLY0D8z6ZJQm7fFYkZH9HilAqL60/edit?usp=sharing",
-      "key": "_key_u3l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/15QIbXNwncQk17M_bX886iNsfxuT1jDJHakRJs5-3knI/edit?usp=sharing",
-      "key": "_key_u3l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1FQ9Atu3yHSfyN_jVIaT_Co3rOuYOS_paz_umMXIjCo4/edit?usp=sharing",
-      "key": "_key_u3l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Rs6e_hOenEuipjRsjXDPZLiE2RFEsZLgSpmZBit6wD8/edit?usp=sharing",
-      "key": "_key_u3l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U3L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1zGCNK6i9T8nTUXCqFL12lNBqX7Pfuhq3pE2FeCUV3kE/edit?usp=sharing",
-      "key": "_key_u3l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l9_extra_practice"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csa3-2022/resources",
-      "key": "all_resources_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_2"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csa3-2022/standards",
-      "key": "all_standards_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_2"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csa3-2022/vocab",
-      "key": "all_vocabulary_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_2"
-      }
-    },
-    {
-      "name": "Careers in Tech: My Name is Polina",
-      "url": "https://youtu.be/tTSEFaYjV30",
-      "key": "careers_in_tech_my_name_is_polina",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "careers_in_tech_my_name_is_polina"
-      }
-    },
-    {
-      "name": "Constants",
-      "url": "https://youtu.be/1lpARsAtV08",
-      "key": "constants",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "constants"
-      }
-    },
-    {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/presentation/d/1Vt6S729odlZHRhCs0tEIQ1vThjohUTcYzXAieyRT_cE/edit?usp=sharing",
-      "key": "cs_bingo_cards_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards_2"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1YQKAuJNb59ctMtiI7K_vH4kXHk6WogdtCBSlcJpXLaM/edit?usp=sharing",
-      "key": "cs_bingo_definitions_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions_2"
-      }
-    },
-    {
-      "name": "Data for Social Good Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1gtU15HKN-yNdJiqn2-0E_MFn31Ic3_cpwHaUr3wPGfA/edit?usp=sharing",
-      "key": "data_for_social_good_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "data_for_social_good_project_planning_guide"
-      }
-    },
-    {
-      "name": "Enhanced For Loops",
-      "url": "https://youtu.be/b3Uf7anzr-k",
-      "key": "enhanced_for_loops",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "enhanced_for_loops"
-      }
-    },
-    {
-      "name": "Exploring 1D Arrays",
-      "url": "https://docs.google.com/document/d/1pBmknAxqIIgeUwAKnrA0hd_hSAmLtNpok0tw4haJr64/edit?usp=sharing",
-      "key": "exploring_1d_arrays",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_1d_arrays"
-      }
-    },
-    {
-      "name": "Exploring Algorithms",
-      "url": "https://docs.google.com/document/d/1N4WzLSRXwTiNLik8BK-9uUSz1Mz0Y0yEFtlGsrcpkGM/edit?usp=sharing",
-      "key": "exploring_algorithms",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_algorithms"
-      }
-    },
-    {
-      "name": "Finding Duplicates",
-      "url": "https://docs.google.com/document/d/1KgC_Xs4o4-FGqKmZa4YA2Mn9rEDHReZwSv6jqlHkvlc/edit?usp=sharing",
-      "key": "finding_duplicates",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "finding_duplicates"
-      }
-    },
-    {
-      "name": "For Loops",
-      "url": "https://youtu.be/EF3laugNVCI",
-      "key": "for_loops",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "for_loops"
-      }
-    },
-    {
-      "name": "Investigating Arrays",
-      "url": "https://docs.google.com/document/d/1TW9_w91zbkJ_G0W89pIEQI89hK_bQwH8C8sXvFG4mn4/edit?usp=sharing",
-      "key": "investigating_arrays",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "investigating_arrays"
-      }
-    },
-    {
-      "name": "Investigating Polymorphism",
-      "url": "https://docs.google.com/document/d/1HNqXPGFDzDE9jAjRwoT4Fo5fF_hY4bXePoL7Ltl6KsE/edit?usp=sharing",
-      "key": "investigating_polymorphism",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "investigating_polymorphism"
-      }
-    },
-    {
-      "name": "Modifying Values in a 1D Array",
-      "url": "https://youtu.be/bL4BAs9Kfx8",
-      "key": "modifying_values_in_a_1d_array",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "modifying_values_in_a_1d_array"
-      }
-    },
-    {
-      "name": "Nested Loops",
-      "url": "https://youtu.be/xFJoqfqVEbg",
-      "key": "nested_loops",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "nested_loops"
-      }
-    },
-    {
-      "name": "One-Dimensional (1D) Arrays",
-      "url": "https://youtu.be/MgRMA_qZxZ4",
-      "key": "one-dimensional_1d_arrays",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "one-dimensional_1d_arrays"
-      }
-    },
-    {
-      "name": "Polymorphism",
-      "url": "https://youtu.be/Sx8NRbuAJNQ",
-      "key": "polymorphism",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "polymorphism"
-      }
-    },
-    {
-      "name": "Reversing an Array",
-      "url": "https://docs.google.com/document/d/1lCQIZL9RViguXifp2Sxh4wNxOO6hM02sdw8jl8r_vl4/edit?usp=sharing",
-      "key": "reversing_an_array",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "reversing_an_array"
-      }
-    },
-    {
-      "name": "Static Variables",
-      "url": "https://youtu.be/4dffzoEfufA",
-      "key": "static_variables",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "static_variables"
-      }
-    },
-    {
-      "name": "TicketTracker FRQ",
-      "url": "https://docs.google.com/document/d/1YhZSJKkRs-QC7SIh0wIe1eAiIvd18YYtjtq0hCtiDgo/edit?usp=sharing",
-      "key": "tickettracker_frq",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "tickettracker_frq"
-      }
-    },
-    {
-      "name": "TicketTracker FRQ Graphic Organizer",
-      "url": "https://docs.google.com/document/d/1kS4us3hCE7cgj56K5YUqrseBKngvEDR0CcrFvqxBOn0/edit?usp=sharing",
-      "key": "tickettracker_frq_graphic_organizer",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "tickettracker_frq_graphic_organizer"
-      }
-    },
-    {
-      "name": "TicketTracker FRQ Scoring Guidelines",
-      "url": "https://docs.google.com/document/d/17ZH8iyWtjdtfLiJ6Ltpl0eV5AziG7bZ4YT8RdPEd7kU/edit?usp=sharing",
-      "key": "tickettracker_frq_scoring_guidelines",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "tickettracker_frq_scoring_guidelines"
-      }
-    },
-    {
-      "name": "Tracing Loops",
-      "url": "https://docs.google.com/document/d/1Uif9xm7a-8K3bXkm-9BWGV8VPJudM6t2AFknNuyTRag/edit?usp=sharing",
-      "key": "tracing_loops",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "tracing_loops"
-      }
-    },
-    {
-      "name": "Tracing Nested Loops",
-      "url": "https://docs.google.com/document/d/1aPebjY8oce08Ia2QGLngnKPclUSdaoiFNIlAKIuT83g/edit?usp=sharing",
-      "key": "tracing_nested_loops",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "tracing_nested_loops"
-      }
-    },
-    {
-      "name": "U3L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ooARNHl3kXx1z3khow4r9TWSPkkUzSR4jocM_aP5spw/edit?usp=sharing",
-      "key": "u3l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l10_extra_practice"
-      }
-    },
-    {
-      "name": "U3L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/13D567hTdvTwuYHpaYa0X6V12Ex2H-u6NpC3p86soyls/edit?usp=sharing",
-      "key": "u3l1_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l1_extra_practice"
-      }
-    },
-    {
-      "name": "U3L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1XgqIsAvG64Di4mOykohUIYYET7cG9shnMcka-PooCNc/edit?usp=sharing",
-      "key": "u3l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l2_extra_practice"
-      }
-    },
-    {
-      "name": "U3L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1GZFViWormWLn2aE3bFHAx3BG_HtYua_pFsmAxF-ygQg/edit?usp=sharing",
-      "key": "u3l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l3_extra_practice"
-      }
-    },
-    {
-      "name": "U3L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1dUVgnaZp71k-jvIuOUaasl1H7StvkKNpRFr-_L-5-RA/edit?usp=sharing",
-      "key": "u3l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l4_extra_practice"
-      }
-    },
-    {
-      "name": "U3L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/11ACqgWjLrVfDE4p74wqW92PUFIsw9rMYelGUd-xBo18/edit?usp=sharing",
-      "key": "u3l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l5_extra_practice"
-      }
-    },
-    {
-      "name": "U3L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1AtW-ni0lBfkqKTm1e4P5PiptnHAdnFXoZGHM54iCECc/edit?usp=sharing",
-      "key": "u3l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l6_extra_practice"
-      }
-    },
-    {
-      "name": "U3L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1t_XbaONI2Xrjr-7vK4bnz0kfQPgdMZM2HSCfU9ErlZ0/edit?usp=sharing",
-      "key": "u3l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l7_extra_practice"
-      }
-    },
-    {
-      "name": "U3L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1uPbjRxg7wVoSTHCwiOMkZNNyTabZsEWE2pa3q4RXybg/edit?usp=sharing",
-      "key": "u3l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l8_extra_practice"
-      }
-    },
-    {
-      "name": "U3L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1lcrjUnZDHbrU1NxlIxldUeaT2IyeoGOUEar0LROfVik/edit?usp=sharing",
-      "key": "u3l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l9_extra_practice"
-      }
-    },
-    {
-      "name": "Unit 3 Guide",
-      "url": "https://docs.google.com/document/d/13s9OEjzxSB93Mx5GOLxipvYO5f7MbmNHNvimZqWs0GY/edit?usp=sharing",
-      "key": "unit_3_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_guide"
-      }
-    },
-    {
-      "name": "Unit 3 Overview",
-      "url": "https://docs.google.com/document/d/1jRP3L-mDjVe0kenBfJbYvPX_Zwp4Yz1bin3FJXx3lnA/edit?usp=sharing",
-      "key": "unit_3_overview",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_overview"
-      }
-    },
-    {
-      "name": "Unit 3 Presentation",
-      "url": "https://docs.google.com/presentation/d/1PlToq6gE8lu59HOhKPcu6O7fvoR-xJklPxoWVe108tQ/edit?usp=sharing",
-      "key": "unit_3_presentation",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "name": "Unit 3 Study Guide",
-      "url": "https://docs.google.com/document/d/18GNeBwMCD1vkzp3glRuANNJw8FhbX6g5qMR2-USB924/edit?usp=sharing",
-      "key": "unit_3_study_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_study_guide"
-      }
-    },
-    {
-      "name": "Unlocking Assessments",
-      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
-      "key": "unlocking_assessments",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "_key_exploring_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "_key_u3l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "cs_bingo_cards_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "cs_bingo_definitions_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "exploring_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "u3l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Elements",
-        "resource.key": "_key_investigating_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Elements",
-        "resource.key": "_key_u3l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Elements",
-        "resource.key": "investigating_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Elements",
-        "resource.key": "modifying_values_in_a_1d_array"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Elements",
-        "resource.key": "u3l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Elements",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data for Social Good Project – Day 1",
-        "resource.key": "_exemplar_data_for_social_good_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data for Social Good Project – Day 1",
-        "resource.key": "data_for_social_good_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data for Social Good Project – Day 1",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data for Social Good Project – Day 2",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data for Social Good Project – Day 3",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "_key_u3l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "careers_in_tech_my_name_is_polina"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "enhanced_for_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "u3l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_tickettracker_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_tickettracker_frq_graphic_organizer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "tickettracker_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "tickettracker_frq_graphic_organizer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "tickettracker_frq_scoring_guidelines"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "_key_finding_duplicates"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "_key_tracing_nested_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "_key_u3l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "finding_duplicates"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "nested_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "tracing_nested_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "u3l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "unit_3_study_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "_key_tracing_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "_key_u3l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "for_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "tracing_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "u3l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Array Algorithms",
-        "resource.key": "_key_u3l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Array Algorithms",
-        "resource.key": "u3l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Array Algorithms",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "_key_exploring_1d_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "_key_u3l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "exploring_1d_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "one-dimensional_1d_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "u3l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "unit_3_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "_key_investigating_polymorphism"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "_key_u3l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "investigating_polymorphism"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "polymorphism"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "u3l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Reversing Arrays",
-        "resource.key": "_key_reversing_an_array"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Reversing Arrays",
-        "resource.key": "_key_u3l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Reversing Arrays",
-        "resource.key": "reversing_an_array"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Reversing Arrays",
-        "resource.key": "u3l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Reversing Arrays",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Constants",
-        "resource.key": "_key_u3l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Constants",
-        "resource.key": "constants"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Constants",
-        "resource.key": "static_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Constants",
-        "resource.key": "u3l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Constants",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 3 Assessment",
-        "resource.key": "unit_3_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 3 Assessment",
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_2",
-        "script.name": "csa3-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_2",
-        "script.name": "csa3-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_2",
-        "script.name": "csa3-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_3_guide",
-        "script.name": "csa3-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_3_overview",
-        "script.name": "csa3-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_3_study_guide",
-        "script.name": "csa3-validation-pilot-2022"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "_for_loop",
-      "word": "`for` loop",
-      "definition": "a loop used to repeat a block of code a known number of times",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_for_loop"
-      }
-    },
-    {
-      "key": "arrayindexoutofboundsexception",
-      "word": "ArrayIndexOutOfBoundsException",
-      "definition": "an error that occurs when attempting to access an index that is negative, greater than, or equal to the size of the array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "arrayindexoutofboundsexception"
-      }
-    },
-    {
-      "key": "constant",
-      "word": "constant",
-      "definition": "a variable whose value cannot be changed once it has been assigned",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "constant"
-      }
-    },
-    {
-      "key": "data_structure",
-      "word": "data structure",
-      "definition": "a structure for organizing, processing, retrieving, and storing data",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_structure"
-      }
-    },
-    {
-      "key": "decrement",
-      "word": "decrement",
-      "definition": "to decrease a value by one",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "decrement"
-      }
-    },
-    {
-      "key": "element",
-      "word": "element",
-      "definition": "a single value or object in a data structure",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "element"
-      }
-    },
-    {
-      "key": "enhanced_for_loop",
-      "word": "enhanced for loop",
-      "definition": "a loop for traversing an array from the first element to the last",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "enhanced_for_loop"
-      }
-    },
-    {
-      "key": "immutable",
-      "word": "immutable",
-      "definition": "an object whose state cannot be modified after it is created",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "immutable"
-      }
-    },
-    {
-      "key": "increment",
-      "word": "increment",
-      "definition": "to increase a value by one",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "increment"
-      }
-    },
-    {
-      "key": "index",
-      "word": "index",
-      "definition": "an integer value that indicates the position of a value in a data structure",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "index"
-      }
-    },
-    {
-      "key": "initializer_list",
-      "word": "initializer list",
-      "definition": "a comma-separated list of values or objects for an array given inside curly braces ( `{ }` )",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "initializer_list"
-      }
-    },
-    {
-      "key": "loop_control_variable",
-      "word": "loop control variable",
-      "definition": "a variable that is changed by a constant value and determines the end of a loop",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop_control_variable"
-      }
-    },
-    {
-      "key": "nested_loop",
-      "word": "nested loop",
-      "definition": "a loop inside of another loop",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "nested_loop"
-      }
-    },
-    {
-      "key": "off_by_one_error",
-      "word": "off-by-one error",
-      "definition": "an error that occurs when we try to access an index value that is greater than the length of the array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "off_by_one_error"
-      }
-    },
-    {
-      "key": "one_dimensional_d_array",
-      "word": "one-dimensional (1D) array",
-      "definition": "a data structure that holds multiple values of the same data type",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "one_dimensional_d_array"
-      }
-    },
-    {
-      "key": "polymorphism",
-      "word": "polymorphism",
-      "definition": "the ability of an object to perform an action in different ways",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "polymorphism"
-      }
-    },
-    {
-      "key": "postcondition",
-      "word": "Postcondition",
-      "definition": "a condition that must always be true just after the execution of a code segment",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "postcondition"
-      }
-    },
-    {
-      "key": "precondition",
-      "word": "Precondition",
-      "definition": "a condition that must always be true just before the execution of a code segment",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "precondition"
-      }
-    },
-    {
-      "key": "static_variable",
-      "word": "static variable",
-      "definition": "a variable that is shared by all instances of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "static_variable"
-      }
-    },
-    {
-      "key": "text_file",
-      "word": "Text File",
-      "definition": "a file that contains letters, numbers, and/or symbols but has no special formatting",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "text_file"
-      }
-    },
-    {
-      "key": "traverse",
-      "word": "traverse",
-      "definition": "to access elements in a data structure one by one",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "traverse"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "vocabulary.key": "postcondition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "vocabulary.key": "precondition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Elements",
-        "vocabulary.key": "arrayindexoutofboundsexception"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "vocabulary.key": "enhanced_for_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "vocabulary.key": "nested_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "vocabulary.key": "_for_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "vocabulary.key": "decrement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "vocabulary.key": "increment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "vocabulary.key": "loop_control_variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "vocabulary.key": "traverse"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Array Algorithms",
-        "vocabulary.key": "off_by_one_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Array Algorithms",
-        "vocabulary.key": "text_file"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "vocabulary.key": "data_structure"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "vocabulary.key": "element"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "vocabulary.key": "immutable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "vocabulary.key": "index"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "vocabulary.key": "initializer_list"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "vocabulary.key": "one_dimensional_d_array"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "vocabulary.key": "polymorphism"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Constants",
-        "vocabulary.key": "constant"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Constants",
-        "vocabulary.key": "static_variable"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:32:51 UTC",
+    "serialized_at": "2022-08-24 08:23:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3706,6 +3706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L1_pilot-2022"
+        ],
         "progression": "Investigate: The Theater"
       },
       "bonus": false,
@@ -3728,6 +3731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L2_pilot-2022"
+        ],
         "progression": "The Theater Classes and Methods"
       },
       "bonus": false,
@@ -3750,6 +3756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L3_pilot-2022"
+        ],
         "progression": "Exploring The Theater"
       },
       "bonus": false,
@@ -3772,6 +3781,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L4_pilot-2022"
+        ],
         "progression": "Exploring The Theater"
       },
       "bonus": false,
@@ -3794,6 +3806,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L5_pilot-2022"
+        ],
         "progression": "Exploring The Theater"
       },
       "bonus": false,
@@ -3816,6 +3831,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3838,6 +3856,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_pilot-2022"
+        ],
         "progression": "Investigate: Comparing Objects"
       },
       "bonus": false,
@@ -3860,6 +3881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_pilot-2022"
+        ],
         "progression": "Investigate: Object Equality"
       },
       "bonus": false,
@@ -3882,6 +3906,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_pilot-2022"
+        ],
         "progression": "Overriding the equals() Method"
       },
       "bonus": false,
@@ -3904,6 +3931,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_pilot-2022"
+        ],
         "progression": "Overriding the equals() Method"
       },
       "bonus": false,
@@ -3926,6 +3956,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3948,6 +3981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1_pilot-2022"
+        ],
         "progression": "Investigate: Nested if Statements"
       },
       "bonus": false,
@@ -3970,6 +4006,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2_pilot-2022"
+        ],
         "progression": "Using Nested if Statements"
       },
       "bonus": false,
@@ -3992,6 +4031,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3_pilot-2022"
+        ],
         "progression": "Using Nested if Statements"
       },
       "bonus": false,
@@ -4014,6 +4056,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4036,6 +4081,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1_pilot-2022"
+        ],
         "progression": "Investigate: Logical Operators"
       },
       "bonus": false,
@@ -4058,6 +4106,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4080,6 +4131,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L1_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4102,6 +4156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1_pilot-2022"
+        ],
         "progression": "Investigate: Static Methods"
       },
       "bonus": false,
@@ -4124,6 +4181,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2_pilot-2022"
+        ],
         "progression": "Using Static Methods"
       },
       "bonus": false,
@@ -4146,6 +4206,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3_pilot-2022"
+        ],
         "progression": "Using Static Methods"
       },
       "bonus": false,
@@ -4168,6 +4231,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4_pilot-2022"
+        ],
         "progression": "Using Static Methods"
       },
       "bonus": false,
@@ -4190,6 +4256,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: Using Static Methods"
       },
       "bonus": false,
@@ -4212,6 +4281,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4234,6 +4306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1_pilot-2022"
+        ],
         "progression": "Investigate: The Math Class"
       },
       "bonus": false,
@@ -4256,6 +4331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2_pilot-2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4278,6 +4356,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3_pilot-2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4300,6 +4381,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4_pilot-2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4322,6 +4406,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5_pilot-2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4344,6 +4431,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4366,6 +4456,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1_pilot-2022"
+        ],
         "progression": "Investigate: Casting"
       },
       "bonus": false,
@@ -4388,6 +4481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2_pilot-2022"
+        ],
         "progression": "Investigate: Division and Printing"
       },
       "bonus": false,
@@ -4410,6 +4506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3_pilot-2022"
+        ],
         "progression": "Investigate: Rounding"
       },
       "bonus": false,
@@ -4432,6 +4531,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4454,6 +4556,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1_pilot-2022"
+        ],
         "progression": "Predict: Random Numbers"
       },
       "bonus": false,
@@ -4476,6 +4581,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L2_pilot-2022"
+        ],
         "progression": "Investigate: Generating Random Numbers"
       },
       "bonus": false,
@@ -4498,6 +4606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L3_pilot-2022"
+        ],
         "progression": "Using Random Numbers"
       },
       "bonus": false,
@@ -4520,6 +4631,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L4_pilot-2022"
+        ],
         "progression": "Using Random Numbers"
       },
       "bonus": false,
@@ -4542,6 +4656,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: Using Random Numbers"
       },
       "bonus": false,
@@ -4564,6 +4681,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4586,6 +4706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1_pilot-2022"
+        ],
         "progression": "Investigate: Multi-Selection Statements"
       },
       "bonus": false,
@@ -4608,6 +4731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L2_pilot-2022"
+        ],
         "progression": "Using Multi-Selection Statements"
       },
       "bonus": false,
@@ -4630,6 +4756,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L3_pilot-2022"
+        ],
         "progression": "Using Multi-Selection Statements"
       },
       "bonus": false,
@@ -4652,6 +4781,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L4_pilot-2022"
+        ],
         "progression": "Finding Patterns in Data"
       },
       "bonus": false,
@@ -4674,6 +4806,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4696,6 +4831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L11-L1_pilot-2022"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -4718,6 +4856,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L12-L1_pilot-2022"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -4740,6 +4881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L12-L2 CR_pilot-2022"
+        ],
         "progression": "Code Review: Abstract Data Art Project"
       },
       "bonus": false,
@@ -4762,6 +4906,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L13-L1_pilot-2022"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -4784,6 +4931,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa4_pilot-2022"
+        ],
         "progression": "Unit 4 Survey"
       },
       "bonus": false,
@@ -4806,6 +4956,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 4 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 4 Assessment"
       },
       "bonus": false,
@@ -4828,6 +4981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4849,6 +5005,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4871,6 +5030,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4893,6 +5055,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5572,1350 +5737,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "[EXEMPLAR] Abstract Data Art Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1BGMetI3H7lCKdSo4xHNG0-vu1Y12H9Gozagji_r-rBs/edit?usp=sharing",
-      "key": "_exemplar_abstract_data_art_project_planning_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_abstract_data_art_project_planning_guide"
-      }
-    },
-    {
-      "name": "[KEY] BingoCaller FRQ",
-      "url": "https://docs.google.com/document/d/1Kgl41dg0O3PZNM6p1TWZNkqP2PNAyFht4GVAktbpZ3E/edit?usp=sharing",
-      "key": "_key_bingocaller_frq",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_bingocaller_frq"
-      }
-    },
-    {
-      "name": "[KEY] Dataset Summaries",
-      "url": "https://docs.google.com/document/d/1MV-0975HsOCYrtjgp4rxA_mP5dYYS-ObYNggZ--0DZc/edit?usp=sharing",
-      "key": "_key_dataset_summaries",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_dataset_summaries"
-      }
-    },
-    {
-      "name": "[KEY] De Morgan's Laws",
-      "url": "https://docs.google.com/document/d/1s2_kL4P3Jsv2JX3ZDdDF77cNYXPJd8IjpUMtxa5E0Ms/edit?usp=sharing",
-      "key": "_key_de_morgan_s_laws",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_de_morgan_s_laws"
-      }
-    },
-    {
-      "name": "[KEY] Finding Patterns",
-      "url": "https://docs.google.com/document/d/1MecH4tsiFBl-F8mijbmKcPWcBFU8osy5A275xOWrWgE/edit?usp=sharing",
-      "key": "_key_finding_patterns",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_finding_patterns"
-      }
-    },
-    {
-      "name": "[KEY] Investigating Casting",
-      "url": "https://docs.google.com/document/d/1XWXwWvGcqPN3v63PCcXRRy-cdDbKcupIIkNUA2ZjdZk/edit?usp=sharing",
-      "key": "_key_investigating_casting",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_investigating_casting"
-      }
-    },
-    {
-      "name": "[KEY] Investigating The Theater",
-      "url": "https://docs.google.com/document/d/19-S59NDz-QhsKc602oDKCo15C0Hy1F5VeeVGoZW0K0k/edit?usp=sharing",
-      "key": "_key_investigating_the_theater",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_investigating_the_theater"
-      }
-    },
-    {
-      "name": "[KEY] The Math Class",
-      "url": "https://docs.google.com/document/d/1_DKdQ60I5oclJ3X8xl2QmTsyDl2Os0MIEDb9pTrwZvw/edit?usp=sharing",
-      "key": "_key_the_math_class",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_the_math_class"
-      }
-    },
-    {
-      "name": "[KEY] Truth Tables",
-      "url": "https://docs.google.com/document/d/1kzthZ2xtqVJsb2DuiCLE35aAbPujxzvB0_nJI54bIEk/edit?usp=sharing",
-      "key": "_key_truth_tables",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_truth_tables"
-      }
-    },
-    {
-      "name": "[KEY] U4L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Uwq3-pxT4dNip5NIXWbHC1Qm6WrI02bdPiVosmG0CiI/edit?usp=sharing",
-      "key": "_key_u4l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/12umqOFlsNDOKykBKkxwGOoZI0FQhry9v3LYyk3OTbC8/edit?usp=sharing",
-      "key": "_key_u4l1_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l1_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1FK11EcQMEEo0KH801-pyxU0XxnOGYNt8d937u742ttE/edit?usp=sharing",
-      "key": "_key_u4l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1560nWtREamrE-H1iq37bRGC8T4QDs8YjtusmWG6NY_E/edit?usp=sharing",
-      "key": "_key_u4l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1uSDfIxk1jdQS41GX9x7yM-ICWBfaoATuglLLj5VWpcA/edit?usp=sharing",
-      "key": "_key_u4l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/18DGtoi5lERmIASnnILN8xSC3qcgY9QnxsX4-c1fQXyY/edit?usp=sharing",
-      "key": "_key_u4l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1UH53Ki1XXCt5QJXuvdgH_lqGK4cRYMX4s0jdsIeOpmw/edit?usp=sharing",
-      "key": "_key_u4l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1TKCIQmCo9DqPNo7dfUJLYJQ4054osBMfycwez4WC280/edit?usp=sharing",
-      "key": "_key_u4l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1I7RvLd-SdBLEf8gzaMwXxLHVvj-8dNPjbP1LQAuVV4U/edit?usp=sharing",
-      "key": "_key_u4l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1-Q8e6XaOSjNp0vUz7Rl_Wp1wfCiEYqagz48H7SzEfAw/edit?usp=sharing",
-      "key": "_key_u4l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l9_extra_practice"
-      }
-    },
-    {
-      "name": "Abstract Data Art Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1OlPtIi4TU73lBx0VTO3Nk1nq1JLLMWD6VF58e-pM-bw/edit?usp=sharing",
-      "key": "abstract_data_art_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "abstract_data_art_project_planning_guide"
-      }
-    },
-    {
-      "name": "Aliasing",
-      "url": "https://youtu.be/9GLT7oQnW4I",
-      "key": "aliasing",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "aliasing"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csa4-2022/resources",
-      "key": "all_resources_3",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_3"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csa4-2022/standards",
-      "key": "all_standards_3",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_3"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csa4-2022/vocab",
-      "key": "all_vocabulary_3",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_3"
-      }
-    },
-    {
-      "name": "BingoCaller FRQ",
-      "url": "https://docs.google.com/document/d/1HDi45Y3_cc6PbZefYQnmSm6a2V1Hf4g3Kv2aR-K_h3E/edit?usp=sharing",
-      "key": "bingocaller_frq",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "bingocaller_frq"
-      }
-    },
-    {
-      "name": "BingoCaller Scoring Guidelines",
-      "url": "https://docs.google.com/document/d/1u6xoOvMO6Woqoa5J_J8USgYBfKj_q0dpPsSaCQTQQKw/edit?usp=sharing",
-      "key": "bingocaller_scoring_guidelines",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "bingocaller_scoring_guidelines"
-      }
-    },
-    {
-      "name": "Casting",
-      "url": "https://youtu.be/l4BCk46Y9AA",
-      "key": "casting",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "casting"
-      }
-    },
-    {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/presentation/d/1JWNIeSVRbgsusc1bQNbmAyoPecSO3nXUvSHpmc03dBY/edit?usp=sharing",
-      "key": "cs_bingo_cards_3",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards_3"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1fmhxQJWeJQcU-KivDSrWcp4vfi1be43RRmnrDchHnC4/edit?usp=sharing",
-      "key": "cs_bingo_definitions_3",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions_3"
-      }
-    },
-    {
-      "name": "Dataset Summaries",
-      "url": "https://docs.google.com/document/d/1wyGaZP_Lc_aC9gjv_7PrUwH5TFy5O2USU3rqFUuKKpA/edit?usp=sharing",
-      "key": "dataset_summaries",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "dataset_summaries"
-      }
-    },
-    {
-      "name": "De Morgan's Laws",
-      "url": "https://docs.google.com/document/d/1EJGZ_uTZniB9ZEg3-YLygCzGmaHGDJ7bxI2NPJEtSwo/edit?usp=sharing",
-      "key": "de_morgan_s_laws",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "de_morgan_s_laws"
-      }
-    },
-    {
-      "name": "Finding Patterns",
-      "url": "https://docs.google.com/document/d/15DtVA3XuznQm4jBaEa3_O41tS_Ca8iO1BEjGLHaCl0E/edit?usp=sharing",
-      "key": "finding_patterns",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "finding_patterns"
-      }
-    },
-    {
-      "name": "Investigating Casting",
-      "url": "https://docs.google.com/document/d/1FRxjUCZPToNs4wcBvHUsmy162xpcF8vF6wEvWP4jzbs/edit?usp=sharing",
-      "key": "investigating_casting",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "investigating_casting"
-      }
-    },
-    {
-      "name": "Investigating The Theater",
-      "url": "https://docs.google.com/document/d/1W2st0xHRKiE3xL3SF27WBjFimi-bYAKCPGI07pqx4Sg/edit?usp=sharing",
-      "key": "investigating_the_theater",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "investigating_the_theater"
-      }
-    },
-    {
-      "name": "Multi-Selection Statements",
-      "url": "https://youtu.be/sGYm7fojjXA",
-      "key": "multi-selection_statements",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "multi-selection_statements"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://youtu.be/sbH9lixzL34",
-      "key": "random_numbers",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "name": "Static Methods",
-      "url": "https://youtu.be/k3QLkzascYI",
-      "key": "static_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "static_methods"
-      }
-    },
-    {
-      "name": "Station Print-outs",
-      "url": "https://docs.google.com/document/d/1Q7z2dGMiSeSD3coG21qyFqIRXsGsCLRO3DK67-yP88U/edit",
-      "key": "station_print-outs",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "station_print-outs"
-      }
-    },
-    {
-      "name": "The equals() Method",
-      "url": "https://youtu.be/F1WhwH4abX4",
-      "key": "the_equals_method",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_equals_method"
-      }
-    },
-    {
-      "name": "The Math Class",
-      "url": "https://docs.google.com/document/d/1974ITAM6lklyjb0xEY6G1VP-X14WsrOa1G-r66OmB9g/edit?usp=sharing",
-      "key": "the_math_class",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "the_math_class"
-      }
-    },
-    {
-      "name": "Truth Tables",
-      "url": "https://docs.google.com/document/d/1cW8G11ESpqF3t-70K1tWL0zZpuVpz5OvlNFPTBFl4Ic/edit?usp=sharing",
-      "key": "truth_tables",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "truth_tables"
-      }
-    },
-    {
-      "name": "U4L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1cvSwuHGWoV_ydQIW5lkWCcUUbe5KLFGsxbVPcJDmzAk/edit?usp=sharing",
-      "key": "u4l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l10_extra_practice"
-      }
-    },
-    {
-      "name": "U4L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ey7XGremv7MggGWNaA3ICU7zPIz1cVe3vhHg0xNalds/edit?usp=sharing",
-      "key": "u4l1_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l1_extra_practice"
-      }
-    },
-    {
-      "name": "U4L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1BQepLgoFt9cprxxBdRjrxXSOvAI6rr-65Zze0IAxU5c/edit?usp=sharing",
-      "key": "u4l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l2_extra_practice"
-      }
-    },
-    {
-      "name": "U4L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/175vP6Z8OYsS-jyQceKE1Vc8meOxBX463k6pt40O3nYk/edit?usp=sharing",
-      "key": "u4l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l3_extra_practice"
-      }
-    },
-    {
-      "name": "U4L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1bAJMhTtD-eeUQwO8UPBISzTt2DmRW0u-VqAYS3CSxIQ/edit?usp=sharing",
-      "key": "u4l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l4_extra_practice"
-      }
-    },
-    {
-      "name": "U4L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1BnqZdmaa8kigLkGyk-89LcbkX_5RUJIAj4cCV7l5nrI/edit?usp=sharing",
-      "key": "u4l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l5_extra_practice"
-      }
-    },
-    {
-      "name": "U4L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1skrTJiWPrehQsQXzpylgr27oYUdtGFBgji846bwa9Nk/edit?usp=sharing",
-      "key": "u4l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l6_extra_practice"
-      }
-    },
-    {
-      "name": "U4L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/19O41gej7ovc98zfU4vYMlrRwx0vS3J6MxSrv3tD25AM/edit?usp=sharing",
-      "key": "u4l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l7_extra_practice"
-      }
-    },
-    {
-      "name": "U4L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1BbHnPql-CMDpvmn8lKB_Pfk4vTZ47hQv1qkmRZfrGYQ/edit?usp=sharing",
-      "key": "u4l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l8_extra_practice"
-      }
-    },
-    {
-      "name": "U4L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1U9FV-P8XAW8gEYtvYsXzn40NrLiN4FFC7nhY_G40HAE/edit?usp=sharing",
-      "key": "u4l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l9_extra_practice"
-      }
-    },
-    {
-      "name": "Unit 4 Guide",
-      "url": "https://docs.google.com/document/d/1wmJn8rKQe7ajbQC8e_V6yPAs2hGd7zaSJNyWuVNgyWc/edit?usp=sharing",
-      "key": "unit_4_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "unit_4_guide"
-      }
-    },
-    {
-      "name": "Unit 4 Overview",
-      "url": "https://docs.google.com/document/d/1q5lcfSPiZvc7TI2rkdcF5mCK3arJk2yg119LRLsrzLg/edit?usp=sharing",
-      "key": "unit_4_overview",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_4_overview"
-      }
-    },
-    {
-      "name": "Unit 4 Presentation",
-      "url": "https://docs.google.com/presentation/d/1J949cBInGvyenqdi6Vy6dfhIiMmadN-MHrQ0divY1oc/edit?usp=sharing",
-      "key": "unit_4_presentation",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "name": "Unit 4 Study Guide",
-      "url": "https://docs.google.com/document/d/1O4mEEDX1Z1XFpohUwXFtMQDueRBHVvYFOybnroXVWvM/edit?usp=sharing",
-      "key": "unit_4_study_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_4_study_guide"
-      }
-    },
-    {
-      "name": "Unlocking Assessments",
-      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
-      "key": "unlocking_assessments",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Abstract Data Art Project – Day 1",
-        "resource.key": "_exemplar_abstract_data_art_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Abstract Data Art Project – Day 1",
-        "resource.key": "abstract_data_art_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Abstract Data Art Project – Day 1",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Abstract Data Art Project – Day 2",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Abstract Data Art Project – Day 3",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "resource.key": "_key_investigating_casting"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "resource.key": "_key_u4l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "resource.key": "casting"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "resource.key": "investigating_casting"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "resource.key": "u4l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "_key_de_morgan_s_laws"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "_key_u4l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "de_morgan_s_laws"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "station_print-outs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "u4l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "_key_bingocaller_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "bingocaller_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "bingocaller_scoring_guidelines"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "_key_truth_tables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "_key_u4l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "cs_bingo_cards_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "cs_bingo_definitions_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "truth_tables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "u4l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "_key_finding_patterns"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "_key_u4l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "finding_patterns"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "multi-selection_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "u4l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "unit_4_study_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested if Statements",
-        "resource.key": "_key_u4l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested if Statements",
-        "resource.key": "u4l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested if Statements",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "_key_u4l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "aliasing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "the_equals_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "u4l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "_key_u4l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "u4l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "resource.key": "_key_dataset_summaries"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "resource.key": "_key_u4l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "resource.key": "dataset_summaries"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "resource.key": "static_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "resource.key": "u4l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "_key_the_math_class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "_key_u4l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "the_math_class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "u4l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Theater",
-        "resource.key": "_key_investigating_the_theater"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Theater",
-        "resource.key": "_key_u4l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Theater",
-        "resource.key": "investigating_the_theater"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Theater",
-        "resource.key": "u4l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Theater",
-        "resource.key": "unit_4_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Theater",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 4 Assessment",
-        "resource.key": "unit_4_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 4 Assessment",
-        "resource.key": "unlocking_assessments"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_3",
-        "script.name": "csa4-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_3",
-        "script.name": "csa4-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_3",
-        "script.name": "csa4-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_4_guide",
-        "script.name": "csa4-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_4_overview",
-        "script.name": "csa4-validation-pilot-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_4_study_guide",
-        "script.name": "csa4-validation-pilot-2022"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "_final_class",
-      "word": "`final` class",
-      "definition": "a class that cannot be extended",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_final_class"
-      }
-    },
-    {
-      "key": "_math_class",
-      "word": "`Math` class",
-      "definition": "a class that contains methods for performing basic numeric operations",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_math_class"
-      }
-    },
-    {
-      "key": "alias",
-      "word": "alias",
-      "definition": "a reference variable that points to the same object as another reference variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "alias"
-      }
-    },
-    {
-      "key": "cast",
-      "word": "cast",
-      "definition": "to assign a value of one type to another",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "cast"
-      }
-    },
-    {
-      "key": "compound_boolean_expression",
-      "word": "compound Boolean expression",
-      "definition": "an expression using logical operators that evaluates to a Boolean value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "compound_boolean_expression"
-      }
-    },
-    {
-      "key": "de_morgan_s_laws",
-      "word": "De Morgan's Laws",
-      "definition": "a set of rules that describe how to simplify complex Boolean expressions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "de_morgan_s_laws"
-      }
-    },
-    {
-      "key": "instance_method",
-      "word": "instance method",
-      "definition": "a method that requires an object of the class to be created before it can be called",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "instance_method"
-      }
-    },
-    {
-      "key": "multi_selection_statement",
-      "word": "multi-selection statement",
-      "definition": "a statement that selects a single action from three or more conditional statements based on which Boolean expression is `true`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "multi_selection_statement"
-      }
-    },
-    {
-      "key": "nested_if_statement",
-      "word": "nested `if` statement",
-      "definition": "an `if` statement inside another `if` statement",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "nested_if_statement"
-      }
-    },
-    {
-      "key": "short_circuited_evaluation",
-      "word": "short-circuited evaluation",
-      "definition": "a process in which the evaluation of a logical expression exits when the result is clear, even before the complete evaluation of the expression",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "short_circuited_evaluation"
-      }
-    },
-    {
-      "key": "static_method",
-      "word": "static method",
-      "definition": "a method that can be called without creating an object of the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "static_method"
-      }
-    },
-    {
-      "key": "truth_table",
-      "word": "truth table",
-      "definition": "a table used to determine the truth values of a Boolean expression",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "truth_table"
-      }
-    },
-    {
-      "key": "widen",
-      "word": "widen",
-      "definition": "automatically cast from a smaller type to a larger type",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "widen"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "vocabulary.key": "cast"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Casting and Rounding",
-        "vocabulary.key": "widen"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "vocabulary.key": "de_morgan_s_laws"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "vocabulary.key": "compound_boolean_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "vocabulary.key": "short_circuited_evaluation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "vocabulary.key": "truth_table"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "vocabulary.key": "multi_selection_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested if Statements",
-        "vocabulary.key": "nested_if_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "vocabulary.key": "alias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "vocabulary.key": "instance_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Methods",
-        "vocabulary.key": "static_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "vocabulary.key": "_final_class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "vocabulary.key": "_math_class"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 
