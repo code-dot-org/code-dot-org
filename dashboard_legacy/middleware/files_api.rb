@@ -467,7 +467,7 @@ class FilesApi < Sinatra::Base
       # HTML only exists for AppLab projects
       html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true
 
-      return bad_request unless source_is_valid && html_is_valid
+      return status(422) unless source_is_valid && html_is_valid
     end
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
