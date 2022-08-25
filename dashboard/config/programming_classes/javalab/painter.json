@@ -134,7 +134,7 @@
       "position": 10,
       "key": "isonbucket",
       "overload_of": null,
-      "content": "Returns `true` if there is a paint bucket on the space the `Painter` object is currently standing on.",
+      "content": "Returns `true` if there is a paint bucket on the space the `Painter` object is currently standing on and the paint bucket has paint in it.",
       "parameters": "[]",
       "examples": "[{\"name\":\"isOnBucket() Returns true\",\"code\":\"```\\nPainter myPainter = new Painter();\\nmyPainter.move();\\n\\nboolean status = myPainter.isOnBucket();\\n\\nSystem.out.println(\\\"Painter is on a paint bucket: \\\" + status);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/a275d22ba722ccd29816d2d9af6cc95d-isonbucket.png)\\n\\nPainter is on a paint bucket: true\",\"image\":\"\"},{\"name\":\"isOnBucket() Returns false\",\"code\":\"```\\nPainter myPainter = new Painter();\\nmyPainter.move();\\nmyPainter.move();\\n\\nboolean status = myPainter.isOnBucket();\\n\\nSystem.out.println(\\\"Painter is on a paint bucket: \\\" + status);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/923cc3f5982006a61b96f82e8625be9a-isonbucket2.png)\\n\\nPainter is on a paint bucket: false\",\"image\":\"\"}]",
       "syntax": "`public boolean isOnBucket()`",

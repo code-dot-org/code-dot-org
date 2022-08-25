@@ -11,6 +11,15 @@
           "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
           "type": "information",
           "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -27,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-15 15:17:04 UTC",
+    "serialized_at": "2022-08-24 21:53:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -507,6 +516,17 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To conclude this unit, students develop an AI app that addresses the social issue of their interest. Students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app. Students perform a peer review and make any necessary updates to their projects while reflecting on the outcome.\n\n**Question of the Day:** How can I create an AI App the solves a problem in my community?",
         "preparation": "- Print copies of the Project Guide.\n- Print copies of the Rubric.\n- Print copies of the Peer Review Guide.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-design-an-ai-app-ai-and-machine-learning-lesson-21/36220) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -7739,6 +7759,18 @@
       },
       "seeding_key": {
         "activity_section.key": "5d04c580-a932-46bd-86c4-649793eac948",
+        "lesson_activity.key": "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e"
+      }
+    },
+    {
+      "key": "baa6c46e-1c8b-4c42-a82a-147ab9ffce37",
+      "position": 5,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "baa6c46e-1c8b-4c42-a82a-147ab9ffce37",
         "lesson_activity.key": "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e"
       }
     },
