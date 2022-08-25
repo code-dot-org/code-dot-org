@@ -52,7 +52,26 @@ class MusicView extends React.Component {
         id: id,
         when: measure - 1
       });
-    }
+    },
+    play_sound_next_measure: (id) => {
+      console.log('play sound next measure', id);
+
+      // work out the next measure by rounding time up.
+      const nextMeasure = Math.ceil(GetCurrentAudioTime());
+
+      // The user should see measures as 1-based, but
+      // internally, we'll treat them as 0-based.
+      songData.events.push({
+        type: 'play',
+        id: id,
+        when: nextMeasure
+      });
+
+      // ideally our music player will use the above data structure as the source
+      // of truth, but since the current implementation has already told WebAudio
+      // about all known sounds to play, let's tee up this one here.
+      PlaySound(id, '', this.state.startPlayingAudioTime + nextMeasure);
+    },
   };
 
   callUserGeneratedCode = fn => {
@@ -134,6 +153,10 @@ class MusicView extends React.Component {
         {
           kind: 'block',
           type: 'play_sound'
+        },
+        {
+          kind: 'block',
+          type: 'play_sound_next_measure'
         }
       ]
     };
@@ -178,23 +201,74 @@ class MusicView extends React.Component {
       }
     };
 
+    Blockly.Blocks['play_sound_next_measure'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'play_sound_next_measure',
+          message0: '%1 play %2 at next measure',
+          args0: [
+            {
+              type: 'field_image',
+              src: 'https://code.org/shared/images/play-button.png',
+              width: 15,
+              height: 20,
+              alt: '*',
+              flipRtl: false
+            },
+            {
+              type: 'field_dropdown',
+              name: 'sound',
+              options: [
+                ['drum loop', 'baddie-seen'],
+                ['vocals', 'vocals'],
+                ['main tune', 'maintune']
+              ]
+            }
+          ],
+          inputsInline: true,
+          previousStatement: null,
+          nextStatement: null,
+          colour: 230,
+          tooltip: 'play sound at next measure',
+          helpUrl: ''
+        });
+      }
+    };
+
     Blockly.Blocks['when_run'] = {
       init: function() {
         this.jsonInit({
           type: 'when_run',
           message0: 'when run',
           inputsInline: true,
-          //"previousStatement": null,
-          //"nextStatement": true,
           nextStatement: null,
           colour: 230,
-          tooltip: 'play sound',
+          tooltip: 'when run',
+          helpUrl: ''
+        });
+      }
+    };
+
+    Blockly.Blocks['when_trigger'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'when_trigger',
+          message0: 'when trigger',
+          inputsInline: true,
+          nextStatement: null,
+          colour: 230,
+          tooltip: 'when triger',
           helpUrl: ''
         });
       }
     };
 
     Blockly.JavaScript.when_run = function() {
+      // Generate JavaScript for handling click event.
+      return '\n';
+    };
+
+    Blockly.JavaScript.when_trigger = function() {
       // Generate JavaScript for handling click event.
       return '\n';
     };
@@ -209,6 +283,14 @@ class MusicView extends React.Component {
       );
     };
 
+    Blockly.JavaScript.play_sound_next_measure = function(ctx) {
+      return (
+        'Music.play_sound_next_measure("' +
+        ctx.getFieldValue('sound') +
+        '");\n'
+      );
+    };
+
     //Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
     const container = document.getElementById('blocklyDiv');
 
@@ -218,7 +300,7 @@ class MusicView extends React.Component {
     });
 
     const xml = parseXmlElement(
-      '<xml><block type="when_run" deletable="false" x="20" y="20"></block></xml>'
+      '<xml><block type="when_run" deletable="false" x="20" y="20"></block><block type="when_trigger" deletable="false" x="20" y="180"></block></xml>'
     );
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
   };
@@ -245,54 +327,51 @@ class MusicView extends React.Component {
   choosePanel = panel => {
     this.setState({currentPanel: panel});
 
-    const currentAudioTime = GetCurrentAudioTime();
-
     if (panel == 'timeline') {
-      /*
-      const generator = GoogleBlockly.Generator.blockSpaceToCode.bind(
-        GoogleBlockly.Blockly.Generator,
-        'JavaScript'
-      );
-      */
-      //var code = Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
-
-      var generator = Blockly.Generator.blockSpaceToCode.bind(
-        Blockly.Generator,
-        'JavaScript'
-      );
-
-      const events = {
-        whenRunButton: {code: generator('when_run')}
-      };
-
-      CustomMarshalingInterpreter.evalWithEvents(
-        {Music: this.api},
-        events
-      ).hooks.forEach(hook => {
-        console.log('hook', hook);
-        hooks[hook.name] = hook.func;
-        //Flappy[hook.name] = hook.func;
-      });
-
-      songData.events = [];
-
-      this.callUserGeneratedCode(hooks.whenRunButton);
-
-      for (const songEvent of songData.events) {
-        if (songEvent.type == 'play') {
-          PlaySound(songEvent.id, '', currentAudioTime + songEvent.when);
-        }
-      }
-      //PlaySound("baddie-seen", "", currentAudioTime + 0);
-      //PlaySound("baddie-seen", "", currentAudioTime + 1);
-      //PlaySound("baddie-seen", "", currentAudioTime + 2);
-
-      this.setState({isPlaying: true, startPlayingAudioTime: currentAudioTime});
+      this.playSong();
     }
   };
 
   setSamplePanel = panel => {
     this.setState({samplePanel: panel});
+  };
+
+  playTrigger = () => {
+    this.callUserGeneratedCode(hooks.whenTriggerButton);
+  };
+
+  playSong = () => {
+    var generator = Blockly.Generator.blockSpaceToCode.bind(
+      Blockly.Generator,
+      'JavaScript'
+    );
+
+    const events = {
+      whenRunButton: {code: generator('when_run')},
+      whenTriggerButton: {code: generator('when_trigger')}
+    };
+
+    CustomMarshalingInterpreter.evalWithEvents(
+      {Music: this.api},
+      events
+    ).hooks.forEach(hook => {
+      console.log('hook', hook);
+      hooks[hook.name] = hook.func;
+    });
+
+    songData.events = [];
+
+    this.callUserGeneratedCode(hooks.whenRunButton);
+
+    const currentAudioTime = GetCurrentAudioTime();
+
+    for (const songEvent of songData.events) {
+      if (songEvent.type == 'play') {
+        PlaySound(songEvent.id, '', currentAudioTime + songEvent.when);
+      }
+    }
+
+    this.setState({isPlaying: true, startPlayingAudioTime: currentAudioTime});
   };
 
   render() {
@@ -374,10 +453,11 @@ class MusicView extends React.Component {
           backgroundColor: 'black',
           color: 'white',
           width: '100%',
-          height: 'calc(100% - 90px)',
+          height: 'calc(100% - 50px)',
           borderRadius: 4,
           padding: 0,
-          boxSizing: 'border-box'
+          boxSizing: 'border-box',
+          overflow: 'hidden'
         }}
       >
         {showTimeline && (
@@ -389,9 +469,16 @@ class MusicView extends React.Component {
               borderRadius: 4
             }}
           >
-            Timeline
-            <br />
-            <br />
+            <div style={{float: 'left'}}>
+              Timeline
+              <br />
+              <br />
+            </div>
+            {this.state.isPlaying && (
+              <div style={{float: 'right'}}>
+                <button onClick={()=>this.playTrigger()} style={{padding: 2, fontSize: 10, margin: 0}}>trigger</button>
+              </div>
+            )}
             <div
               style={{
                 width: '100%',
@@ -556,11 +643,12 @@ class MusicView extends React.Component {
         />
         <div
           style={{
-            position: 'absolute',
+            position: 'fixed',
             bottom: 0,
             backgroundColor: '#222',
             height: 50,
-            width: '100%',
+            left: 0,
+            right: 0,
             borderRadius: 4,
             marginTop: 10,
             justifyContent: 'space-evenly',
