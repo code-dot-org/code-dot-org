@@ -782,7 +782,7 @@ class SourcesTest < FilesApiTestBase
     file_headers = {'CONTENT_TYPE' => 'application/json'}
 
     @api.put_object(filename, file_data, file_headers)
-    assert bad_request?
+    ssert_equal 422, last_response.status
 
     delete_all_source_versions(filename)
   end
@@ -805,7 +805,7 @@ class SourcesTest < FilesApiTestBase
     file_headers = {'CONTENT_TYPE' => 'application/json'}
 
     @api.put_object(filename, file_data, file_headers)
-    assert bad_request?
+    ssert_equal 422, last_response.status
 
     delete_all_source_versions(filename)
   end
