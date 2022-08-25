@@ -45,10 +45,12 @@ class MusicView extends React.Component {
     play_sound: (id, measure) => {
       console.log('play sound', id, measure);
 
+      // The user should see measures as 1-based, but
+      // internally, we'll treat them as 0-based.
       songData.events.push({
         type: 'play',
         id: id,
-        when: measure
+        when: measure - 1
       });
     }
   };
@@ -273,7 +275,7 @@ class MusicView extends React.Component {
       });
 
       songData.events = [];
-      
+
       this.callUserGeneratedCode(hooks.whenRunButton);
 
       for (const songEvent of songData.events) {
