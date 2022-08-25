@@ -1,0 +1,30 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In TicketGenerator.java:\r\n\r\n1. Write the `randomTicket()`(#e7e8ea) method to return a random ticket number between `100`(#e7e8ea) and `200`(#e7e8ea), inclusive.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `randomTicket()`(#e7e8ea) method and print the result.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #2: Call the randomTicket() method and print the result.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "TicketGenerator.java": {
+        "text": "/*\n * Generates random ticket numbers\n */\npublic final class TicketGenerator {\n\n  /*\n   * Returns a random number between 100 and 200, inclusive\n   */\n  public static int randomTicket() {\n    // TO DO #1: Return a random ticket number between 100 and 200, inclusive.\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M0pKYYd96uULiHl93fh\nyDNCOAYTcr7lslMM+jzN7SohAVVE7uU0USvKfAzOQ5TL7yeV4OdYI6wWuHGV\nEqDZbII66IYQ2U7SQJNOJBfi6il37gf+XSduPi6+P6muAZkVEC2+mx7QiF4u\nx1gi7lGkQIwUeLmYfxWCVB4cr2tnaHGI4hQd1MAAdPfT4IquhQIs5MW7Yomc\nlTETezwV7DCfBDd8Q1babpR+rM08U9TZBTQ3gyhAGViWgVlXt0juccuFq1M0\njAI45lYirvsG59BbYoCD7fB74pSzBDvCSzxjM4242ZLyfzTdGeh6NZ0eI+rt\nRovFME6Nh2wFVvSN85xZWCnI5ATq/di8+4zVMsJ1AwH3LIeptPAx8P/r1GM9\nRRKgZBNKuGwDRKjksCLXd/9IBO1A72usALnB9y8ZVFbyWgKDPmdXqV69v95I\nbhq6IE/6KhAleqaVd5FbWQFge1hQ9QcGp5JUZsJXThzUpLqTkO8wg2AgY5EQ\nHPCwB4kv0609v/EJGU7SB5OzaSfBUIdpBZoAphbDxUd1TMGEphe1v8JJ7uDT\nN8ES/zOVvGUFpGm3o4j6TaJnLUF48KZQx31Wsy/Vw0s4riEo/cYXwXnq0HB+\nBr2eVK6XNPsMFdNFd9m/2f8dYbB8VTdu35QviFLJzVFDPr4BqAZSXtw18LZr\nP1c/zYNTudvClvJOZhbvIg0mVY78RLvv8gk4iXDoxhpCHuz1YbJi4ZDLNeEo\nC+zDVi7TdtuMVq60r5VpD5qf+30f1ZT0yT3Oqk5pVLbSj06E1LIT43CaNQ4K\nmX+TL8dHiuWw/BRH0ZCOmAv8JDmK9eD1sB8=\n",
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:13.721+00:00\",\"changed\":[\"cloned from \\\"CSA U4L9-L3_2022\\\"\"],\"cloned_from\":\"CSA U4L9-L3_2022\"}]"
+}]]></config>
+</Javalab>

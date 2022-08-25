@@ -79,29 +79,26 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/color-lights/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/color-lights",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/physical-input",
+      "/courses/csd-2022/guides/producing-output",
+      "/courses/csd-2022/guides/board-events"
     ],
     "callout_json": "[]",
     "display_name": "Order Form App",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "bubble_choice_description": "Create an app prototype that could be used to order a product from a store, such as ordering groceries online or ordering school supplies from a local business.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a **focused free-play level**: students are free to design an app based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their app, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop an app of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time."
+    "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a **focused free-play level**: students are free to design an app based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their app, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop an app of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-21T21:50:23.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-21T21:50:23.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-21T21:50:23.767+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - ChalG_2222\"},{\"changed_at\":\"2022-04-21 21:53:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

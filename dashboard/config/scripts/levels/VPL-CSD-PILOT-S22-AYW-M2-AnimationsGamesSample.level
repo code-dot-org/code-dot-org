@@ -111,7 +111,10 @@
     "encrypted": "false",
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "display_name": "Animations & Games Sample",
+    "bubble_choice_description": "This program contains a buggy student sample from Interactive Animations & Games Lesson 17: Project - Interactive Card.",
+    "thumbnail_url": "https://images.code.org/4fd26eaf641e30c5a6ab7ccbbfc53b2c-Screen Shot 2022-08-16 at 4.49.28 PM.png"
   },
   "game_id": 50,
   "published": true,
@@ -119,7 +122,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-08-15T18:36:17.659+00:00\",\"changed\":[\"cloned from \\\"CSD games mouse mousey_2022\\\"\"],\"cloned_from\":\"CSD games mouse mousey_2022\"},{\"changed_at\":\"2022-08-15 18:36:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:39:59 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"start_blocks\",\"long_instructions\",\"video_key\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:42:45 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:43:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:45:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-08-15T18:36:17.659+00:00\",\"changed\":[\"cloned from \\\"CSD games mouse mousey_2022\\\"\"],\"cloned_from\":\"CSD games mouse mousey_2022\"},{\"changed_at\":\"2022-08-15 18:36:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:39:59 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"start_blocks\",\"long_instructions\",\"video_key\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:42:45 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:43:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-15 18:45:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-16 23:48:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-08-16 23:50:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
