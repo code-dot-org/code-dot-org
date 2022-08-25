@@ -1,17 +1,8 @@
 /** @file Vertical scrolling list */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-
-const staticStyles = {
-  root: {
-    overflowX: 'hidden',
-    overflowY: 'scroll'
-  },
-  margins: {
-    margin: 4
-  }
-};
+import classNames from 'classnames';
+import style from './scrollable-list.module.scss';
 
 /**
  * Component displaying a vertical list of tiles that scrolls if it grows
@@ -28,14 +19,14 @@ class ScrollableList extends React.Component {
   render() {
     return (
       <div
-        className={this.props.className}
-        style={[staticStyles.root, this.props.style]}
+        className={classNames(this.props.className, style.root)}
+        style={{...this.props.style}}
         onScroll={this.props.onScroll}
       >
-        <div style={staticStyles.margins}>{this.props.children}</div>
+        <div className={style.margins}>{this.props.children}</div>
       </div>
     );
   }
 }
 
-export default Radium(ScrollableList);
+export default ScrollableList;
