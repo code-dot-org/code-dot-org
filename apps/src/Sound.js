@@ -429,6 +429,8 @@ Sound.prototype.preloadAudioElement = function(audioElement) {
     // Unhandled Promise Rejection: NotAllowedError:
     // The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
     // Pre-cache audio
+    // Adding load makes this work on the second click of "run"
+    audioElement.load();
     // audioElement.play();
     // audioElement.pause();
   }
