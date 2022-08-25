@@ -30,11 +30,11 @@ class ItemLoopToggle extends React.Component {
     return (
       <OverlayTrigger overlay={tooltip} placement="bottom" delayShow={500}>
         <div
-          style={{...this.props.style}}
+          style={this.props.style}
           className={style.loopToggle}
           onClick={this.toggleClicked}
         >
-          <img src={iconImageSrc} className={style.loopIconStyle} />
+          <img src={iconImageSrc} />
         </div>
       </OverlayTrigger>
     );
