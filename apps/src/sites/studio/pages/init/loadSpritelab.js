@@ -23,8 +23,8 @@ export default function loadSpritelab(options) {
 
       // Log data that we're using the backup default sprites.
       firehoseClient.putRecord({
-        study: 'spritelab_default_load',
-        study_group: 'default_sprites_not_loaded',
+        study: 'sprite_default_load',
+        study_group: 'spritelab',
         event: 'backup_sprites_used',
         project_id: getCurrentId()
       });
