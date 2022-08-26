@@ -152,7 +152,10 @@ const styles = {
   },
   button: {
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
+    position: 'absolute',
+    bottom: 20,
+    left: 0
   },
   buttonAllowWrap: {
     position: 'absolute',
