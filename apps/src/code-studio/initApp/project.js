@@ -1182,7 +1182,7 @@ var projects = (module.exports = {
               }
               if (err.message.includes('httpStatusCode: 422')) {
                 var msg =
-                  'There was an error saving your project, please remove any invalid characters to resolve';
+                  'There was an error saving your project, please remove any invalid characters to resolve.';
                 getStore().dispatch(displayWorkspaceAlertOn(msg));
               }
             }
