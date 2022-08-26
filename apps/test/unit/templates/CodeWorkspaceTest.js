@@ -17,7 +17,9 @@ describe('CodeWorkspace', () => {
     showProjectTemplateWorkspaceIcon: false,
     isMinecraft: false,
     runModeIndicators: false,
-    showMakerToggle: false
+    showMakerToggle: false,
+    displayWorkspaceAlert: false,
+    errorMsg: ''
   };
 
   let studioApp, workspace;

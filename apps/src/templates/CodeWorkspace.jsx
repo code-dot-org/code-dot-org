@@ -231,7 +231,7 @@ class CodeWorkspace extends React.Component {
             ref={codeTextbox => (this.codeTextbox = codeTextbox)}
             id="codeTextbox"
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
-            canUpdate={true}
+            canupdate={'yes'}
           >
             {this.props.displayWorkspaceAlert && this.renderWorkspaceAlert()}
           </ProtectedStatefulDiv>
