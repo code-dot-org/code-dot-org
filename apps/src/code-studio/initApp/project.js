@@ -1154,9 +1154,6 @@ var projects = (module.exports = {
         packSources(),
         filename,
         function(err, response) {
-          // uncomment to test if workspace alert is displayed due to 422 status code
-          // err = {};
-          // err.message = 'httpStatusCode: 422';
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
