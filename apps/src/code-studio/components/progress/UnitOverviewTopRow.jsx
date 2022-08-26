@@ -45,7 +45,7 @@ class UnitOverviewTopRow extends React.Component {
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
-    professionalLearningCourse: PropTypes.bool,
+    deeperLearningCourse: PropTypes.bool,
     hasPerLevelResults: PropTypes.bool.isRequired,
     unitCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
@@ -103,7 +103,7 @@ class UnitOverviewTopRow extends React.Component {
       sectionsForDropdown,
       selectedSectionId,
       currentCourseId,
-      professionalLearningCourse,
+      deeperLearningCourse,
       scriptId,
       scriptName,
       unitTitle,
@@ -140,7 +140,7 @@ class UnitOverviewTopRow extends React.Component {
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
-        {!professionalLearningCourse && viewAs === ViewType.Participant && (
+        {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
             <Button
               __useDeprecatedTag
@@ -169,7 +169,7 @@ class UnitOverviewTopRow extends React.Component {
         )}
 
         <div style={styles.resourcesRow}>
-          {!professionalLearningCourse &&
+          {!deeperLearningCourse &&
             viewAs === ViewType.Instructor &&
             (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
@@ -212,7 +212,7 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!professionalLearningCourse && viewAs === ViewType.Instructor && (
+        {!deeperLearningCourse && viewAs === ViewType.Instructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}
@@ -293,7 +293,7 @@ export default connect((state, ownProps) => ({
     ownProps.courseVersionId,
     state.progress.scriptId
   ),
-  professionalLearningCourse: state.progress.professionalLearningCourse,
+  deeperLearningCourse: state.progress.deeperLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
   unitCompleted: !!state.progress.unitCompleted,
   scriptId: state.progress.scriptId,

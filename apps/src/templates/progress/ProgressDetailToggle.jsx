@@ -128,7 +128,7 @@ export const UnconnectedProgressDetailToggle = ProgressDetailToggle;
 
 export default connect(
   state => ({
-    isPlc: !!state.progress.professionalLearningCourse,
+    isPlc: !!state.progress.deeperLearningCourse,
     isSummaryView: state.progress.isSummaryView,
     hasGroups: hasGroups(state.progress)
   }),

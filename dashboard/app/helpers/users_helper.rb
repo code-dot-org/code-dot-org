@@ -223,7 +223,7 @@ module UsersHelper
     return user_data unless user
 
     if unit.old_professional_learning_course?
-      user_data[:professionalLearningCourse] = true
+      user_data[:deeperLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: unit.plc_course_unit)
       if unit_assignment
         user_data[:focusAreaLessonIds] = unit_assignment.focus_area_lesson_ids

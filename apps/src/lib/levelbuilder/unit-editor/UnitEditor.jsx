@@ -122,7 +122,7 @@ class UnitEditor extends React.Component {
       loginRequired: this.props.initialLoginRequired,
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
-      professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      deeperLearningCourse: this.props.initialProfessionalLearningCourse,
       onlyInstructorReviewRequired: this.props
         .initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
@@ -233,7 +233,7 @@ class UnitEditor extends React.Component {
       return;
     } else if (
       !this.props.hasCourse &&
-      this.state.professionalLearningCourse === '' &&
+      this.state.deeperLearningCourse === '' &&
       this.state.publishedState !== PublishedState.in_development &&
       (!this.state.isCourse ||
         this.state.versionYear === '' ||
@@ -326,7 +326,7 @@ class UnitEditor extends React.Component {
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
-      professional_learning_course: this.state.professionalLearningCourse,
+      professional_learning_course: this.state.deeperLearningCourse,
       only_instructor_review_required: this.state.onlyInstructorReviewRequired,
       peer_reviews_to_complete: this.state.peerReviewsRequired,
       wrapup_video: this.state.wrapupVideo,
@@ -1034,10 +1034,10 @@ class UnitEditor extends React.Component {
                 </p>
               </HelpTip>
               <input
-                value={this.state.professionalLearningCourse}
+                value={this.state.deeperLearningCourse}
                 style={styles.input}
                 onChange={e =>
-                  this.setState({professionalLearningCourse: e.target.value})
+                  this.setState({deeperLearningCourse: e.target.value})
                 }
               />
             </label>

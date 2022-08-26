@@ -194,7 +194,7 @@ const lockableLessonData = [
 // get this data by running Script::summarize
 const initialUnitOverviewProgress = {
   currentLevelId: undefined,
-  professionalLearningCourse: false,
+  deeperLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   lessonGroups: [],
   lessons: lessonData,
@@ -204,7 +204,7 @@ const initialUnitOverviewProgress = {
 // The initial progress passed to the puzzle page
 const initialPuzzlePageProgress = {
   currentLevelId: '341',
-  professionalLearningCourse: false,
+  deeperLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   lessonGroups: [],
   // We're on a puzzle in lesson 2. That is the only provided lesson
@@ -222,7 +222,7 @@ describe('progressReduxTest', () => {
       const nextState = reducer(undefined, action);
 
       assert.equal(nextState.currentLevelId, undefined);
-      assert.equal(nextState.professionalLearningCourse, false);
+      assert.equal(nextState.deeperLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
 
       assert.deepEqual(
@@ -238,7 +238,7 @@ describe('progressReduxTest', () => {
       const nextState = reducer(undefined, action);
 
       assert.equal(nextState.currentLevelId, '341');
-      assert.equal(nextState.professionalLearningCourse, false);
+      assert.equal(nextState.deeperLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
       assert.deepEqual(
         nextState.lessons,
@@ -451,7 +451,7 @@ describe('progressReduxTest', () => {
 
     const intialOverviewProgressWithPeerReview = {
       currentLevelId: undefined,
-      professionalLearningCourse: true,
+      deeperLearningCourse: true,
       saveAnswersBeforeNavigation: false,
       lessons: lessonData,
       peerReviewLessonInfo: peerReviewLessonInfo,
@@ -463,7 +463,7 @@ describe('progressReduxTest', () => {
       const nextState = reducer(undefined, action);
 
       assert.equal(nextState.currentLevelId, undefined);
-      assert.equal(nextState.professionalLearningCourse, true);
+      assert.equal(nextState.deeperLearningCourse, true);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
 
       assert.deepEqual(
@@ -1346,7 +1346,7 @@ describe('progressReduxTest', () => {
       const responseData = {
         isVerifiedInstructor: true,
         teacherViewingStudent: true,
-        professionalLearningCourse: false,
+        deeperLearningCourse: false,
         focusAreaLessonIds: [1, 2],
         lockableAuthorized: true,
         completed: true,
