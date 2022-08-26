@@ -383,6 +383,7 @@ Dance.prototype.afterInject_ = function() {
         );
         await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
       }
+      await nativeAPI.ensureSpritesAreLoaded();
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
