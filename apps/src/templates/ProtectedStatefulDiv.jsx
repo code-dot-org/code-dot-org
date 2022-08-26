@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 /**
- * A div DOM element that will never update its contents and will throw an
+ * A div DOM element that will never update its contents unless the non-standard
+ * DOM attribute, canupdate, is assigned 'yes' It will throw an
  * exception if it is ever unmounted, enforcing that it must always be rendered
  * because its contents may contain state that the application is depending on.
  *
@@ -15,15 +16,15 @@ class ProtectedStatefulDiv extends React.Component {
   static propTypes = {
     contentFunction: PropTypes.func,
     children: PropTypes.node,
-    canUpdate: PropTypes.bool
+    canupdate: PropTypes.string
   };
 
   static defaultProps = {
-    canUpdate: false
+    canupdate: 'no'
   };
 
   shouldComponentUpdate() {
-    return this.props.canUpdate;
+    return this.props.canupdate ? 'yes' : 'no';
   }
 
   componentDidMount() {
