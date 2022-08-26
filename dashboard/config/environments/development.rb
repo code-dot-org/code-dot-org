@@ -21,6 +21,11 @@ Dashboard::Application.configure do
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
 
+  # Adds the IP address of this environment if it is an EC2 instance, allowing us to test changes on
+  # devices that cannot run dashboard-server, such as cell phones or tablets.
+  ec2_ip_address = `curl -s -m 2 http://169.254.169.254/latest/meta-data/public-ipv4`
+  config.hosts << ec2_ip_address unless ec2_ip_address.empty?
+
   # Do not eager load code on boot.
   config.eager_load = false
 
