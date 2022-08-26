@@ -32,6 +32,8 @@ const songData = {
 
 const barWidth = 60;
 
+const secondsPerMeasure = 4;
+
 var hooks = {};
 
 class MusicView extends React.Component {
@@ -127,7 +129,8 @@ class MusicView extends React.Component {
       samplePanel: 'main',
       isPlaying: false,
       startPlayingAudioTime: null,
-      currentAudioTime: null
+      currentAudioTime: null,
+      updateNumber: 0
     });
 
     const resizeThrottleWaitTime = 100;
@@ -286,7 +289,6 @@ class MusicView extends React.Component {
       );
     };
 
-    //Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
     const container = document.getElementById('blocklyDiv');
 
     this.workspace = Blockly.inject(container, {
@@ -298,6 +300,17 @@ class MusicView extends React.Component {
       '<xml><block type="when_run" deletable="false" x="20" y="20"></block><block type="when_trigger" deletable="false" x="20" y="180"></block></xml>'
     );
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+
+    Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
+
+  };
+
+  onBlockSpaceChange = () => {
+    console.log("onBlockSpaceChange")
+    
+    this.executeSong();
+
+    this.setState({updateNumber: this.state.updateNumber + 1});
   };
 
   onResize = () => {
@@ -335,7 +348,7 @@ class MusicView extends React.Component {
     this.callUserGeneratedCode(hooks.whenTriggerButton);
   };
 
-  playSong = () => {
+  executeSong = () => {
     var generator = Blockly.Generator.blockSpaceToCode.bind(
       Blockly.Generator,
       'JavaScript'
@@ -357,6 +370,11 @@ class MusicView extends React.Component {
     songData.events = [];
 
     this.callUserGeneratedCode(hooks.whenRunButton);
+  };
+  
+  playSong = () => {
+   
+    this.executeSong();
 
     const currentAudioTime = GetCurrentAudioTime();
 
@@ -427,7 +445,9 @@ class MusicView extends React.Component {
       samplepack5: require('@cdo/static/music/samplepack5.png'),
       samplepack6: require('@cdo/static/music/samplepack6.png'),
       samplepack7: require('@cdo/static/music/samplepack7.png'),
-      waveform: require('@cdo/static/music/waveform-temp.png')
+      waveform_lead: require('@cdo/static/music/waveform-lead.png'),
+      waveform_bass: require('@cdo/static/music/waveform-bass.png'),
+      waveform_drum: require('@cdo/static/music/waveform-drum.png'),
     };
 
     const mobileWidth = 500;
@@ -466,7 +486,9 @@ class MusicView extends React.Component {
               backgroundColor: '#222',
               height: 100,
               width: '100%',
-              borderRadius: 4
+              borderRadius: 4,
+              padding: 10,
+              boxSizing: 'border-box'
             }}
           >
             <div style={{float: 'left'}}>
@@ -505,7 +527,7 @@ class MusicView extends React.Component {
                       }}
                     >
                       <img
-                        src={filenameToImgUrl['waveform']}
+                        src={filenameToImgUrl['waveform_' + eventData.id]}
                         style={{width: 90, paddingRight: 20}}
                       />
                     </div>
@@ -629,21 +651,21 @@ class MusicView extends React.Component {
                 </div>
                 <div>
                   <img
-                    src={filenameToImgUrl['waveform']}
+                    src={filenameToImgUrl['waveform_lead']}
                     style={{width: 90, paddingRight: 20}}
                   />
                   Lead
                 </div>
                 <div>
                   <img
-                    src={filenameToImgUrl['waveform']}
+                    src={filenameToImgUrl['waveform_bass']}
                     style={{width: 90, paddingRight: 20}}
                   />
                   Bass
                 </div>
                 <div>
                   <img
-                    src={filenameToImgUrl['waveform']}
+                    src={filenameToImgUrl['waveform_drum']}
                     style={{width: 90, paddingRight: 20}}
                   />
                   Drum
