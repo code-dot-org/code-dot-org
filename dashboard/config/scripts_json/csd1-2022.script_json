@@ -37,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-24 15:44:07 UTC",
+    "serialized_at": "2022-08-25 16:52:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5777,7 +5777,6 @@
       "key": "intro_to_problem_solving",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
