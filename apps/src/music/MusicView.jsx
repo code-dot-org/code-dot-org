@@ -10,7 +10,8 @@ import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarsha
 import {parseElement as parseXmlElement} from '../xml';
 
 const songData = {
-  events: [/*
+  events: [
+    /*
     {
       type: 'play',
       id: 'baddie-seen',
@@ -28,7 +29,6 @@ const songData = {
     }*/
   ]
 };
-
 
 const barWidth = 60;
 
@@ -53,13 +53,15 @@ class MusicView extends React.Component {
         when: measure - 1
       });
     },
-    play_sound_next_measure: (id) => {
+    play_sound_next_measure: id => {
       console.log('play sound next measure', id);
 
       // work out the next measure by rounding time up.
-      const currentPlaytime = GetCurrentAudioTime() - this.state.startPlayingAudioTime;
+      const currentPlaytime =
+        GetCurrentAudioTime() - this.state.startPlayingAudioTime;
       const nextMeasure = Math.ceil(currentPlaytime);
-      const nextMeasureStartTime = this.state.startPlayingAudioTime + nextMeasure;
+      const nextMeasureStartTime =
+        this.state.startPlayingAudioTime + nextMeasure;
 
       // The user should see measures as 1-based, but
       // internally, we'll treat them as 0-based.
@@ -74,7 +76,7 @@ class MusicView extends React.Component {
       // about all known sounds to play, let's tee up this one here.
       const fullSoundId = 'stem-' + this.state.samplePanel + '-' + id;
       PlaySound(fullSoundId, '', nextMeasureStartTime);
-    },
+    }
   };
 
   callUserGeneratedCode = fn => {
@@ -181,11 +183,7 @@ class MusicView extends React.Component {
             {
               type: 'field_dropdown',
               name: 'sound',
-              options: [
-                ['lead', 'lead'],
-                ['bass', 'bass'],
-                ['drum', 'drum']
-              ]
+              options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
             },
             {
               type: 'field_number',
@@ -221,11 +219,7 @@ class MusicView extends React.Component {
             {
               type: 'field_dropdown',
               name: 'sound',
-              options: [
-                ['lead', 'lead'],
-                ['bass', 'bass'],
-                ['drum', 'drum']
-              ]
+              options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
             }
           ],
           inputsInline: true,
@@ -288,9 +282,7 @@ class MusicView extends React.Component {
 
     Blockly.JavaScript.play_sound_next_measure = function(ctx) {
       return (
-        'Music.play_sound_next_measure("' +
-        ctx.getFieldValue('sound') +
-        '");\n'
+        'Music.play_sound_next_measure("' + ctx.getFieldValue('sound') + '");\n'
       );
     };
 
@@ -370,7 +362,11 @@ class MusicView extends React.Component {
 
     for (const songEvent of songData.events) {
       if (songEvent.type == 'play') {
-        PlaySound('stem-' + this.state.samplePanel + '-' + songEvent.id, '', currentAudioTime + songEvent.when);
+        PlaySound(
+          'stem-' + this.state.samplePanel + '-' + songEvent.id,
+          '',
+          currentAudioTime + songEvent.when
+        );
       }
     }
 
@@ -446,7 +442,8 @@ class MusicView extends React.Component {
     const currentPanel = this.state.currentPanel;
 
     const playHeadOffset = this.state.isPlaying
-      ? (this.state.currentAudioTime - this.state.startPlayingAudioTime) * barWidth
+      ? (this.state.currentAudioTime - this.state.startPlayingAudioTime) *
+        barWidth
       : null;
 
     return (
@@ -479,7 +476,12 @@ class MusicView extends React.Component {
             </div>
             {this.state.isPlaying && (
               <div style={{float: 'right'}}>
-                <button onClick={()=>this.playTrigger()} style={{padding: 2, fontSize: 10, margin: 0}}>trigger</button>
+                <button
+                  onClick={() => this.playTrigger()}
+                  style={{padding: 2, fontSize: 10, margin: 0}}
+                >
+                  trigger
+                </button>
               </div>
             )}
             <div
@@ -538,7 +540,9 @@ class MusicView extends React.Component {
               width: isDesktop ? '40%' : '100%',
               height: 'calc(100% - 170px)',
               borderRadius: 4,
-              marginTop: 10
+              marginTop: 10,
+              padding: 10,
+              boxSizing: 'border-box'
             }}
           >
             {this.state.samplePanel == 'main' && (
@@ -546,7 +550,7 @@ class MusicView extends React.Component {
                 <div>Sample packs</div>
                 <br />
                 <div
-                  style={{cursor: 'pointer'}}
+                  style={{cursor: 'pointer', paddingBottom: 10}}
                   onClick={() => this.setSamplePanel('hip')}
                 >
                   <img
@@ -556,7 +560,7 @@ class MusicView extends React.Component {
                   hip hop
                 </div>
                 <div
-                  style={{cursor: 'pointer'}}
+                  style={{cursor: 'pointer', paddingBottom: 10}}
                   onClick={() => this.setSamplePanel('dance')}
                 >
                   <img
@@ -565,35 +569,35 @@ class MusicView extends React.Component {
                   />
                   dance
                 </div>
-                <div>
+                <div style={{paddingBottom: 10}}>
                   <img
                     src={filenameToImgUrl['samplepack3']}
                     style={{width: 60, paddingRight: 20}}
                   />
                   electronic
                 </div>
-                <div>
+                <div style={{paddingBottom: 10}}>
                   <img
                     src={filenameToImgUrl['samplepack4']}
                     style={{width: 60, paddingRight: 20}}
                   />
                   country
                 </div>
-                <div>
+                <div style={{paddingBottom: 10}}>
                   <img
                     src={filenameToImgUrl['samplepack5']}
                     style={{width: 60, paddingRight: 20}}
                   />
                   hip hop
                 </div>
-                <div>
+                <div style={{paddingBottom: 10}}>
                   <img
                     src={filenameToImgUrl['samplepack6']}
                     style={{width: 60, paddingRight: 20}}
                   />
                   r &amp; b
                 </div>
-                <div>
+                <div style={{paddingBottom: 10}}>
                   <img
                     src={filenameToImgUrl['samplepack7']}
                     style={{width: 60, paddingRight: 20}}
@@ -613,6 +617,16 @@ class MusicView extends React.Component {
                 <br />
                 <div>{this.state.samplePanel} sample pack</div>
                 <br />
+                <div>
+                  <img
+                    src={
+                      this.state.samplePanel == 'hip'
+                        ? filenameToImgUrl['samplepack1']
+                        : filenameToImgUrl['samplepack2']
+                    }
+                    style={{width: '70%'}}
+                  />
+                </div>
                 <div>
                   <img
                     src={filenameToImgUrl['waveform']}

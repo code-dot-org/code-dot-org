@@ -1,6 +1,6 @@
 .extra-links
   %h4
-    Extra Links:
+    %span{onclick: 'return extraLinksDismissClick()'} Extra Links:
     %a{id: 'levelbuilder-menu-toggle', href: '#', onclick: 'return extraLinksClick()'} [hide/show]
   .content
     = yield
@@ -15,6 +15,11 @@
       extraLinksBox.hide();
     }
   });
+
+  // Dismiss this whole box.
+  function extraLinksDismissClick() {
+    $('.extra-links').remove();
+  }
 
   // Toggles the visibility of the links, setting a cookie to preserve the
   // preference.
