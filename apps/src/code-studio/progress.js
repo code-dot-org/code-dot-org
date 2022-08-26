@@ -298,7 +298,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     if (
       (data.isInstructor || data.teacherViewingStudent) &&
-      !data.professionalLearningCourse
+      !data.deeperLearningCourse
     ) {
       const pageType = currentLevelId
         ? pageTypes.level
@@ -341,7 +341,7 @@ function initializeStoreWithProgress(
   store.dispatch(
     initProgress({
       currentLevelId: currentLevelId,
-      professionalLearningCourse: scriptData.plc,
+      deeperLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
       lessons: scriptData.lessons,
       lessonGroups: scriptData.lessonGroups,
