@@ -9,7 +9,15 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /.*code.org.*/ do
+  # Includes the IP address of this environment if it is a developer EC2 instance, allowing us to
+  # test changes on devices that cannot run dashboard-server, such as cell phones or tablets.
+  if rack_env?(:development)
+    ec2_ip_address = `curl -s -m 2 http://169.254.169.254/latest/meta-data/public-ipv4`
+    hostname = ec2_ip_address.empty? ? /.*code.org.*/ : /.*code.org.*|#{ec2_ip_address.gsub('.', '\\.')}/
+  else
+    hostname = /.*code.org.*/
+  end
+  constraints host: hostname do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
