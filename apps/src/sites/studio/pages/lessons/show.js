@@ -112,7 +112,9 @@ function displayLessonOverview() {
           announcement.details,
           announcement.link,
           announcement.type,
-          announcement.visibility
+          announcement.visibility,
+          announcement.dismissible,
+          announcement.buttonText
         )
       )
     );
