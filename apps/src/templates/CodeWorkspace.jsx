@@ -89,18 +89,7 @@ class CodeWorkspace extends React.Component {
       utils.fireResizeEvent();
     }
   };
-  renderWorkspaceAlert() {
-    return (
-      <WorkspaceAlert
-        type="error"
-        onClose={this.props.displayWorkspaceAlertOff}
-        isBlockly={false}
-        displayBottom={true}
-      >
-        <div>{this.props.errorMsg}</div>
-      </WorkspaceAlert>
-    );
-  }
+
   renderToolboxHeaders() {
     const {
       editCode,
@@ -158,6 +147,22 @@ class CodeWorkspace extends React.Component {
     this.blockCounterEl.style.display =
       usingBlocks && studioApp().enableShowBlockCount ? 'inline-block' : 'none';
   };
+
+  // The workspace alert will be displayed at the bottom of codeTextbox if editCode is
+  // assigned true (implies Droplet, not Blockly). Otherwise, it is displayed at the bottom
+  // of the CodeWorkspace
+  renderWorkspaceAlert() {
+    return (
+      <WorkspaceAlert
+        type="error"
+        onClose={this.props.displayWorkspaceAlertOff}
+        isBlockly={false}
+        displayBottom={true}
+      >
+        <div>{this.props.errorMsg}</div>
+      </WorkspaceAlert>
+    );
+  }
 
   render() {
     const props = this.props;

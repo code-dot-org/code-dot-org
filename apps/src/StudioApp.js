@@ -3113,7 +3113,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   bottom = false,
   onClose = () => {}
 ) {
-  // close currently any open workspace alert
+  // close currently any open workspace alert from CodeWorkspace.jsx
   getStore().dispatch(displayWorkspaceAlertOff());
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
