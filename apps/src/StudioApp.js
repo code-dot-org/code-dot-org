@@ -86,6 +86,7 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {closeWorkspaceAlert} from './code-studio/projectRedux';
 
 var copyrightStrings;
 
@@ -3112,6 +3113,8 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   bottom = false,
   onClose = () => {}
 ) {
+  // close currently any open workspace alert from CodeWorkspace.jsx
+  getStore().dispatch(closeWorkspaceAlert());
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
