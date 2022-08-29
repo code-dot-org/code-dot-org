@@ -4,6 +4,7 @@
 const SHOW_PROJECT_UPDATED_AT = 'project/SHOW_PROJECT_UPDATED_AT';
 const SET_PROJECT_UPDATED_STATUS = 'project/SET_PROJECT_UPDATED_STATUS';
 const SET_PROJECT_UPDATED_AT = 'project/SET_PROJECT_UPDATED_AT';
+const SHOW_WORKSPACE_ALERT = 'project/SHOW_WORKSPACE_ALERT';
 const REFRESH_PROJECT_NAME = 'project/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'project/SHOW_TRY_AGAIN_DIALOG';
 const SET_NAME_FAILURE = 'project/SET_NAME_FAILURE';
@@ -16,13 +17,20 @@ export const projectUpdatedStatuses = {
   error: 'error'
 };
 
+export const workspaceAlertTypes = {
+  error: 'error',
+  warning: 'warning',
+  notification: 'notification'
+};
+
 const initialState = {
   showProjectUpdatedAt: false,
   projectUpdatedStatus: projectUpdatedStatuses.default,
   projectUpdatedAt: undefined,
   projectName: '',
   projectNameFailure: undefined,
-  showTryAgainDialog: false
+  showTryAgainDialog: false,
+  showWorkspaceAlert: {type: '', message: '', displayBottom: undefined}
 };
 
 export default (state = initialState, action) => {
@@ -47,6 +55,14 @@ export default (state = initialState, action) => {
       projectUpdatedStatus: action.status
     };
   }
+
+  if (action.type === SHOW_WORKSPACE_ALERT) {
+    return {
+      ...state,
+      workspaceAlert: action.workspaceAlert
+    };
+  }
+
   if (action.type === REFRESH_PROJECT_NAME) {
     return {
       ...state,
@@ -85,6 +101,24 @@ export const showProjectUpdatedAt = () => ({
 export const setProjectUpdatedError = () => ({
   type: SET_PROJECT_UPDATED_STATUS,
   status: projectUpdatedStatuses.error
+});
+
+export const displayWorkspaceAlert = (
+  workspaceAlertType,
+  workspaceAlertMessage,
+  workspaceAlertDisplayBottom
+) => ({
+  type: SHOW_WORKSPACE_ALERT,
+  workspaceAlert: {
+    type: workspaceAlertType,
+    message: workspaceAlertMessage,
+    displayBottom: workspaceAlertDisplayBottom
+  }
+});
+
+export const closeWorkspaceAlert = () => ({
+  type: SHOW_WORKSPACE_ALERT,
+  workspaceAlert: null
 });
 
 export const setProjectUpdatedSaving = () => ({
