@@ -67,7 +67,7 @@ export default class WebSerialPortWrapper extends EventEmitter {
     return this.writer
       .write(buffer)
       .then(() => (callback ? callback() : null))
-      .catch(() => throw new Error('Write to port failed'));
+      .catch(error => Promise.reject(error));
   }
 
   async close() {
