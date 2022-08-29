@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:31:00 UTC",
+    "serialized_at": "2022-08-25 13:13:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6441,6 +6441,18 @@
       "seeding_key": {
         "resource.key": "unlocking_assessments"
       }
+    },
+    {
+      "name": "Welcome to The Theater",
+      "url": "https://youtu.be/Qa5NtHzPmos",
+      "key": "welcome_to_the_theater",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_theater"
+      }
     }
   ],
   "lessons_resources": [
@@ -6646,6 +6658,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "unit_4_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "welcome_to_the_theater"
       }
     },
     {

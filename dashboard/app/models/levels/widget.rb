@@ -38,16 +38,20 @@ class Widget < Level
     # Base options are just the level properties
     app_options = properties.camelize_keys
 
-    # Some options should be localized (right now, just long instructions)
+    # Some options should be localized
     if should_localize?
-      localized_long_instructions =
-        I18n.t(
-          name,
-          scope: [:data, :long_instructions],
-          default: nil,
-          smart: true
-        )
-      app_options["longInstructions"] = localized_long_instructions if localized_long_instructions
+      [:long_instructions, :short_instructions].each do |key|
+        localized =
+          I18n.t(
+            name,
+            scope: [:data, key],
+            default: nil,
+            smart: true
+          )
+
+        # Will set longInstructions and shortInstructions, if localized
+        app_options[key.to_s.camelize(:lower)] = localized if localized
+      end
     end
 
     return app_options
