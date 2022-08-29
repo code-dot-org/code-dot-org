@@ -17,7 +17,7 @@ import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
 import {queryParams} from '../code-studio/utils';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {displayWorkspaceAlertOff} from '../code-studio/projectRedux';
+import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
@@ -36,9 +36,11 @@ class CodeWorkspace extends React.Component {
     withSettingsCog: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
     autogenerateML: PropTypes.func,
-    displayWorkspaceAlertOff: PropTypes.func,
-    displayWorkspaceAlert: PropTypes.bool.isRequired,
-    errorMsg: PropTypes.string.isRequired
+    closeWorkspaceAlert: PropTypes.func,
+    showWorkspaceAlert: PropTypes.bool,
+    workspaceAlertType: PropTypes.string,
+    workspaceAlertDisplayBottom: PropTypes.bool,
+    workspaceAlertErrorMsg: PropTypes.string
   };
 
   shouldComponentUpdate(nextProps) {
@@ -49,11 +51,16 @@ class CodeWorkspace extends React.Component {
     Object.keys(nextProps).forEach(
       function(key) {
         // isRunning and style only affect style, and can be updated
+        // showWorkspaceAlert, workspaceAlertErrorMsg, workspaceAlertType, and
+        // workspaceAlertDisplayBottom are involved in displaying or closing workspace alert
+        // therefore these keys can be updated
         if (
           key === 'isRunning' ||
           key === 'style' ||
-          key === 'displayWorkspaceAlert' ||
-          key === 'errorMsg'
+          key === 'showWorkspaceAlert' ||
+          key === 'workspaceAlertErrorMsg' ||
+          key === 'workspaceAlertType' ||
+          key === 'workspaceAlertDisplayBottom'
         ) {
           return;
         }
@@ -151,15 +158,15 @@ class CodeWorkspace extends React.Component {
   // The workspace alert will be displayed at the bottom of codeTextbox if editCode is
   // assigned true (implies Droplet, not Blockly). Otherwise, it is displayed at the bottom
   // of the CodeWorkspace
-  renderWorkspaceAlert() {
+  renderWorkspaceAlert(isBlocklyType) {
     return (
       <WorkspaceAlert
-        type="error"
-        onClose={this.props.displayWorkspaceAlertOff}
-        isBlockly={false}
-        displayBottom={true}
+        type={this.props.workspaceAlertType}
+        onClose={this.props.closeWorkspaceAlert}
+        isBlockly={isBlocklyType}
+        displayBottom={this.props.workspaceAlertDisplayBottom}
       >
-        <div>{this.props.errorMsg}</div>
+        <div>{this.props.workspaceAlertErrorMsg}</div>
       </WorkspaceAlert>
     );
   }
@@ -236,9 +243,9 @@ class CodeWorkspace extends React.Component {
             ref={codeTextbox => (this.codeTextbox = codeTextbox)}
             id="codeTextbox"
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
-            canupdate={'yes'}
+            canUpdate={true}
           >
-            {this.props.displayWorkspaceAlert && this.renderWorkspaceAlert()}
+            {this.props.showWorkspaceAlert && this.renderWorkspaceAlert(false)}
           </ProtectedStatefulDiv>
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
@@ -258,8 +265,8 @@ class CodeWorkspace extends React.Component {
           />
         )}
         {!props.editCode &&
-          this.props.displayWorkspaceAlert &&
-          this.renderWorkspaceAlert()}
+          this.props.showWorkspaceAlert &&
+          this.renderWorkspaceAlert(true)}
       </span>
     );
   }
@@ -316,10 +323,12 @@ export default connect(
     isMinecraft: !!state.pageConstants.isMinecraft,
     runModeIndicators: shouldUseRunModeIndicators(state),
     showMakerToggle: !!state.pageConstants.showMakerToggle,
-    displayWorkspaceAlert: state.project.displayWorkspaceAlert,
-    errorMsg: state.project.errorMsg
+    showWorkspaceAlert: state.project.showWorkspaceAlert,
+    workspaceAlertType: state.project.workspaceAlertType,
+    workspaceAlertDisplayBottom: state.project.workspaceAlertDisplayBottom,
+    workspaceAlertErrorMsg: state.project.workspaceAlertErrorMsg
   }),
   dispatch => ({
-    displayWorkspaceAlertOff: () => dispatch(displayWorkspaceAlertOff())
+    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert())
   })
 )(Radium(CodeWorkspace));

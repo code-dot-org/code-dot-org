@@ -18,8 +18,11 @@ describe('CodeWorkspace', () => {
     isMinecraft: false,
     runModeIndicators: false,
     showMakerToggle: false,
-    displayWorkspaceAlert: false,
-    errorMsg: ''
+    showWorkspaceAlert: true,
+    workspaceAlertErrorMsg: 'This is an error msg',
+    workspaceAlertDisplayBottom: true,
+    workspaceAlertType: 'error',
+    closeWorkspaceAlert: () => {}
   };
 
   let studioApp, workspace;
@@ -66,5 +69,48 @@ describe('CodeWorkspace', () => {
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
     expect(wrapper.find('div#notStartedBanner')).to.have.lengthOf(1);
+  });
+
+  it('displays a workspace alert when showWorkspaceAlert is true', () => {
+    expect(workspace.find('WorkspaceAlert')).to.have.lengthOf(1);
+  });
+
+  it('does not display a workspace alert when showWorkspaceAlert is false ', () => {
+    const props = {
+      ...MINIMUM_PROPS,
+      ...{
+        showWorkspaceAlert: false
+      }
+    };
+    const wrapper = shallow(<CodeWorkspace {...props} />);
+    expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(0);
+  });
+
+  it('displays a workspace alert at bottom of codeTextbox when editCode = true (implies Droplet)', () => {
+    const props = {
+      ...MINIMUM_PROPS,
+      ...{
+        editCode: true
+      }
+    };
+    const wrapper = shallow(<CodeWorkspace {...props} />);
+    expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(1);
+    expect(wrapper.find('ProtectedStatefulDiv#codeTextbox')).to.have.lengthOf(
+      1
+    );
+  });
+
+  it('displays a workspace alert at bottom of CodeWorkspace when editCode = false (implies Blockly)', () => {
+    const props = {
+      ...MINIMUM_PROPS,
+      ...{
+        editCode: false
+      }
+    };
+    const wrapper = shallow(<CodeWorkspace {...props} />);
+    expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(1);
+    expect(wrapper.find('ProtectedStatefulDiv#codeTextbox')).to.have.lengthOf(
+      0
+    );
   });
 });
