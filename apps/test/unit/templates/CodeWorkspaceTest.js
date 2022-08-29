@@ -6,6 +6,7 @@ import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import sinon from 'sinon';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
+
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {
     editCode: true,
@@ -18,10 +19,11 @@ describe('CodeWorkspace', () => {
     isMinecraft: false,
     runModeIndicators: false,
     showMakerToggle: false,
-    showWorkspaceAlert: true,
-    workspaceAlertErrorMsg: 'This is an error msg',
-    workspaceAlertDisplayBottom: true,
-    workspaceAlertType: workspaceAlertTypes.error,
+    workspaceAlert: {
+      type: workspaceAlertTypes.error,
+      message: 'This is an error message',
+      displayBottom: false
+    },
     closeWorkspaceAlert: () => {}
   };
 
@@ -71,15 +73,15 @@ describe('CodeWorkspace', () => {
     expect(wrapper.find('div#notStartedBanner')).to.have.lengthOf(1);
   });
 
-  it('displays a workspace alert when showWorkspaceAlert is true', () => {
+  it('displays a workspace alert when workspaceAlert exists', () => {
     expect(workspace.find('WorkspaceAlert')).to.have.lengthOf(1);
   });
 
-  it('does not display a workspace alert when showWorkspaceAlert is false ', () => {
+  it('does not display a workspace alert when workspaceAlert is assigned null ', () => {
     const props = {
       ...MINIMUM_PROPS,
       ...{
-        showWorkspaceAlert: false
+        workspaceAlert: null
       }
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);

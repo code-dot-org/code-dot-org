@@ -37,10 +37,7 @@ class CodeWorkspace extends React.Component {
     showMakerToggle: PropTypes.bool,
     autogenerateML: PropTypes.func,
     closeWorkspaceAlert: PropTypes.func,
-    showWorkspaceAlert: PropTypes.bool,
-    workspaceAlertType: PropTypes.string,
-    workspaceAlertDisplayBottom: PropTypes.bool,
-    workspaceAlertErrorMsg: PropTypes.string
+    workspaceAlert: PropTypes.object
   };
 
   shouldComponentUpdate(nextProps) {
@@ -51,16 +48,12 @@ class CodeWorkspace extends React.Component {
     Object.keys(nextProps).forEach(
       function(key) {
         // isRunning and style only affect style, and can be updated
-        // showWorkspaceAlert, workspaceAlertErrorMsg, workspaceAlertType, and
-        // workspaceAlertDisplayBottom are involved in displaying or closing workspace alert
-        // therefore these keys can be updated
+        // workspaceAlert is involved in displaying or closing workspace alert
+        // therefore this key can be updated
         if (
           key === 'isRunning' ||
           key === 'style' ||
-          key === 'showWorkspaceAlert' ||
-          key === 'workspaceAlertErrorMsg' ||
-          key === 'workspaceAlertType' ||
-          key === 'workspaceAlertDisplayBottom'
+          key === 'workspaceAlert'
         ) {
           return;
         }
@@ -161,12 +154,12 @@ class CodeWorkspace extends React.Component {
   renderWorkspaceAlert(isBlocklyType) {
     return (
       <WorkspaceAlert
-        type={this.props.workspaceAlertType}
+        type={this.props.workspaceAlert.type}
         onClose={this.props.closeWorkspaceAlert}
         isBlockly={isBlocklyType}
-        displayBottom={this.props.workspaceAlertDisplayBottom}
+        displayBottom={this.props.workspaceAlert.displayBottom}
       >
-        <div>{this.props.workspaceAlertErrorMsg}</div>
+        <div>{this.props.workspaceAlert.message}</div>
       </WorkspaceAlert>
     );
   }
@@ -245,7 +238,7 @@ class CodeWorkspace extends React.Component {
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
             canUpdate={true}
           >
-            {this.props.showWorkspaceAlert && this.renderWorkspaceAlert(false)}
+            {this.props.workspaceAlert && this.renderWorkspaceAlert(false)}
           </ProtectedStatefulDiv>
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
@@ -265,7 +258,7 @@ class CodeWorkspace extends React.Component {
           />
         )}
         {!props.editCode &&
-          this.props.showWorkspaceAlert &&
+          this.props.workspaceAlert &&
           this.renderWorkspaceAlert(true)}
       </span>
     );
@@ -323,10 +316,7 @@ export default connect(
     isMinecraft: !!state.pageConstants.isMinecraft,
     runModeIndicators: shouldUseRunModeIndicators(state),
     showMakerToggle: !!state.pageConstants.showMakerToggle,
-    showWorkspaceAlert: state.project.showWorkspaceAlert,
-    workspaceAlertType: state.project.workspaceAlertType,
-    workspaceAlertDisplayBottom: state.project.workspaceAlertDisplayBottom,
-    workspaceAlertErrorMsg: state.project.workspaceAlertErrorMsg
+    workspaceAlert: state.project.workspaceAlert
   }),
   dispatch => ({
     closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert())
