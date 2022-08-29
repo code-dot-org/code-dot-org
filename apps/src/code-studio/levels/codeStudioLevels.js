@@ -2,6 +2,7 @@
 
 let registeredGetResult = null;
 let answerChangedFn = null;
+let authenticityToken = null;
 
 let levelGroup = {};
 
@@ -145,6 +146,20 @@ export function hasValidContainedLevelResult() {
   return getContainedLevelResult().result.valid;
 }
 
+function getAuthenticityToken() {
+  if (authenticityToken) {
+    return Promise.resolve();
+  } else {
+    return fetch('/user_levels/get_token', {
+      headers: {credentials: 'same-origin'}
+    }).then(response => {
+      if (response.ok) {
+        authenticityToken = response.headers.get('csrf-token');
+      }
+    });
+  }
+}
+
 export function resetContainedLevel() {
   const levelIds = getLevelIds();
   if (levelIds.length !== 1) {
@@ -152,22 +167,24 @@ export function resetContainedLevel() {
       `Expected exactly one contained level. Got ${levelIds.length}`
     );
   }
-  fetch('/delete_predict_level_progress', {
-    method: 'POST',
-    credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: JSON.stringify({
-      script_id: appOptions.scriptId,
-      level_id: levelIds[0]
-    })
-  }).then(response => {
-    if (response.ok) {
-      getLevel(levelIds[0]).resetAnswers();
-    } else {
-      console.log(response);
-    }
+  getAuthenticityToken().then(() => {
+    fetch('/delete_predict_level_progress', {
+      method: 'POST',
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authenticityToken
+      },
+      body: JSON.stringify({
+        script_id: appOptions.scriptId,
+        level_id: levelIds[0]
+      })
+    }).then(response => {
+      if (response.ok) {
+        getLevel(levelIds[0]).resetAnswers();
+      } else {
+        console.log(response);
+      }
+    });
   });
 }
