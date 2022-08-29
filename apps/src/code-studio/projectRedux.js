@@ -4,7 +4,7 @@
 const SHOW_PROJECT_UPDATED_AT = 'project/SHOW_PROJECT_UPDATED_AT';
 const SET_PROJECT_UPDATED_STATUS = 'project/SET_PROJECT_UPDATED_STATUS';
 const SET_PROJECT_UPDATED_AT = 'project/SET_PROJECT_UPDATED_AT';
-const SET_WORKSPACE_ALERT = 'project/SET_WORKSPACE_ALERT';
+const SHOW_WORKSPACE_ALERT = 'project/SHOW_WORKSPACE_ALERT';
 const REFRESH_PROJECT_NAME = 'project/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'project/SHOW_TRY_AGAIN_DIALOG';
 const SET_NAME_FAILURE = 'project/SET_NAME_FAILURE';
@@ -24,8 +24,10 @@ const initialState = {
   projectName: '',
   projectNameFailure: undefined,
   showTryAgainDialog: false,
-  displayWorkspaceAlert: false,
-  errorMsg: ''
+  showWorkspaceAlert: false,
+  workspaceAlertType: undefined, // 'error' or 'warning'
+  workspaceAlertDisplayBottom: undefined,
+  workspaceAlertErrorMsg: ''
 };
 
 export default (state = initialState, action) => {
@@ -51,11 +53,13 @@ export default (state = initialState, action) => {
     };
   }
 
-  if (action.type === SET_WORKSPACE_ALERT) {
+  if (action.type === SHOW_WORKSPACE_ALERT) {
     return {
       ...state,
-      errorMsg: action.errorMsg,
-      displayWorkspaceAlert: action.displayWorkspaceAlert
+      showWorkspaceAlert: action.showWorkspaceAlert,
+      workspaceAlertType: action.workspaceAlertType,
+      workspaceAlertErrorMsg: action.workspaceAlertErrorMsg,
+      workspaceAlertDisplayBottom: action.workspaceAlertDisplayBottom
     };
   }
 
@@ -99,16 +103,24 @@ export const setProjectUpdatedError = () => ({
   status: projectUpdatedStatuses.error
 });
 
-export const displayWorkspaceAlertOn = errorMsg => ({
-  type: SET_WORKSPACE_ALERT,
-  displayWorkspaceAlert: true,
-  errorMsg
+export const displayWorkspaceAlert = (
+  workspaceAlertType,
+  workspaceAlertErrorMsg,
+  workspaceAlertDisplayBottom
+) => ({
+  type: SHOW_WORKSPACE_ALERT,
+  showWorkspaceAlert: true,
+  workspaceAlertType,
+  workspaceAlertErrorMsg,
+  workspaceAlertDisplayBottom
 });
 
-export const displayWorkspaceAlertOff = () => ({
-  type: SET_WORKSPACE_ALERT,
-  displayWorkspaceAlert: false,
-  errorMsg: ''
+export const closeWorkspaceAlert = () => ({
+  type: SHOW_WORKSPACE_ALERT,
+  showWorkspaceAlert: false,
+  workspaceAlertType: undefined,
+  workspaceAlertErrorMsg: '',
+  workspaceAlertDisplayBottom: undefined
 });
 
 export const setProjectUpdatedSaving = () => ({
