@@ -14,6 +14,7 @@ import {connect} from 'react-redux';
 import TableDescription from './TableDescription';
 import classNames from 'classnames';
 import style from './data-table-view.module.scss';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   showDebugView: false
@@ -122,7 +123,7 @@ class DataTableView extends React.Component {
               onClick={() => onViewChange(DataView.OVERVIEW)}
             >
               <FontAwesome icon="arrow-circle-left" />
-              &nbsp;Back to data
+              &nbsp;{msg.backToData()}
             </a>
           </span>
           <span className={style.debugLink}>
@@ -131,7 +132,9 @@ class DataTableView extends React.Component {
               className={dataStyles.link}
               onClick={this.toggleDebugView}
             >
-              {this.state.showDebugView ? 'Table view' : 'Debug view'}
+              {this.state.showDebugView
+                ? msg.dataTableTableView()
+                : msg.dataTableDebugView()}
             </a>
           </span>
         </div>

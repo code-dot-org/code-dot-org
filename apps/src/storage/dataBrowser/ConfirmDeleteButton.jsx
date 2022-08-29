@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Dialog from '../../templates/Dialog';
 import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
+import msg from '@cdo/locale';
 
 class ConfirmDeleteButton extends React.Component {
   static propTypes = {
@@ -28,11 +29,11 @@ class ConfirmDeleteButton extends React.Component {
 
   render() {
     let {confirmText, ...otherProps} = this.props;
-    confirmText = confirmText || 'Delete';
+    confirmText = confirmText || msg.delete();
     return (
       <div style={{...{display: 'inline-block'}, ...this.props.containerStyle}}>
         <Dialog
-          cancelText="Cancel"
+          cancelText={msg.cancel()}
           confirmText={confirmText}
           confirmType="danger"
           isOpen={!!this.state && this.state.open}
