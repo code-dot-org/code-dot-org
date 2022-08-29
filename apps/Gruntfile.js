@@ -521,6 +521,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
     'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
