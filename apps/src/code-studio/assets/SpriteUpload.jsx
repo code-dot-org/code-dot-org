@@ -246,8 +246,8 @@ export default class SpriteUpload extends React.Component {
           <h3>Destination:</h3>
           <p>
             Select whether the animation (sprite costume or background) should
-            available just in certain curriculum levels or whether it should be
-            available in the Costume/Background Library.
+            be available just in certain curriculum levels or whether it should
+            also be available in the Costume/Background Library.
           </p>
           <div>
             <label>
