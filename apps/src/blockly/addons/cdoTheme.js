@@ -9,7 +9,8 @@ export default GoogleBlockly.Theme.defineTheme('modern', {
   },
   categoryStyles: {},
   componentStyles: {
-    toolboxBackgroundColour: '#DDDDDD'
+    toolboxBackgroundColour: '#DDDDDD',
+    workspaceBackgroundColour: '#222222'
   },
   fontStyle: {
     family: '"Gotham 4r", sans-serif'
