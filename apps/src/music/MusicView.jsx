@@ -287,6 +287,12 @@ class MusicView extends React.Component {
       );
     };
 
+    /*var theme = Blockly.Theme.defineTheme('dark', {
+      'base': Blockly.Themes.Classic,
+      'componentStyles': {
+        'workspaceBackgroundColour': '#222'
+      },*/
+
     Blockly.JavaScript.play_sound_next_measure = function(ctx) {
       return (
         'Music.play_sound_next_measure("' + ctx.getFieldValue('sound') + '");\n'
@@ -297,18 +303,19 @@ class MusicView extends React.Component {
 
     this.workspace = Blockly.inject(container, {
       toolbox: toolbox,
-      horizontalLayout: true
+      horizontalLayout: true,
+      grid: {spacing: 20, length: 0, colour: '#444', snap: true},
+      //theme: {componentStyles: {workspaceBackgroundColour: '#222'}}
     });
 
     this.resizeBlockly();
 
     const xml = parseXmlElement(
-      '<xml><block type="when_run" deletable="false" x="20" y="20"></block><block type="when_trigger" deletable="false" x="20" y="180"></block></xml>'
+      '<xml><block type="when_run" deletable="false" x="30" y="30"></block><block type="when_trigger" deletable="false" x="30" y="170"></block></xml>'
     );
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
-    
   };
 
   onBlockSpaceChange = () => {
@@ -480,7 +487,7 @@ class MusicView extends React.Component {
       waveform_drum: require('@cdo/static/music/waveform-drum.png')
     };
 
-    const mobileWidth = 500;
+    const mobileWidth = 601;
     const isDesktop = this.state.windowWidth >= mobileWidth;
 
     const showSamplePacks =
@@ -589,12 +596,13 @@ class MusicView extends React.Component {
             style={{
               backgroundColor: '#222',
               float: 'left',
-              width: isDesktop ? '40%' : '100%',
-              height: 'calc(100% - 170px)',
+              width: isDesktop ? 'calc(40% - 10px)' : '100%',
+              height: 'calc(100% - 110px)',
               borderRadius: 4,
               marginTop: 10,
               padding: 10,
-              boxSizing: 'border-box'
+              boxSizing: 'border-box',
+              marginRight: isDesktop ? 10 : 0
             }}
           >
             {this.state.samplePanel == 'main' && (
@@ -710,7 +718,7 @@ class MusicView extends React.Component {
             float: 'left',
             width: isDesktop ? '60%' : '100%',
             marginTop: 10,
-            height: showCode ? 450 : 0
+            height: showCode ? 'calc(100% - 110px)' : 0
           }}
         >
           <div id="blocklyDiv" style={{position: 'absolute'}} />
@@ -721,8 +729,8 @@ class MusicView extends React.Component {
             bottom: 0,
             backgroundColor: '#222',
             height: 50,
-            left: 0,
-            right: 0,
+            left: 10,
+            right: 10,
             borderRadius: 4,
             marginTop: 10,
             justifyContent: 'space-evenly',
