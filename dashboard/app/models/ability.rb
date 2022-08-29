@@ -261,7 +261,7 @@ class Ability
           # regional partners cannot see or update incomplete teacher applications
           cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
 
-          can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
+          can [:send_principal_approval, :change_principal_approval_requirement], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
 

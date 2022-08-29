@@ -4,6 +4,9 @@ on:
 jobs:
   run-ui-tests:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:5.7    
     env:        
       CI: true
       RAILS_ENV: test
@@ -12,11 +15,14 @@ jobs:
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
       SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
       LD_LIBRARY_PATH: "/usr/local/lib"
-    steps:    
+      LANG: C.UTF-8
+    steps:   
       - name: Get actions code
-        uses: actions/checkout@v3    
+        uses: actions/checkout@v3            
       - name: say-hello
         uses: ./.github/actions/start-server-job-actions  
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3                    
       - name: Install mysql
         uses: ./.github/actions/install-mysql                    
       - name: Install test variables
@@ -28,12 +34,15 @@ jobs:
       - name: Install node
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
-        uses: ./.github/actions/install-rake-dependencies
-      - name: Rake run integration tests
-        run:  |
-          echo "testing failure"  
-          bundle exec rake test:changed --trace
-        continue-on-error: true
+        uses: ./.github/actions/install-rake-dependencies              
       - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3          
- 
+        uses: mxschmitt/action-tmate@v3                    
+      - name: Run tests
+        run:  |
+          brew reinstall imagemagick
+          bundle exec rake test:changed:pegasus --trace
+        continue-on-error: true
+
+        
+  
+     
