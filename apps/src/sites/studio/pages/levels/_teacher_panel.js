@@ -43,9 +43,7 @@ function initPage() {
   // the teacher panel, as it doesn't make sense in that context.
   // We need to check for presence of appOptions since some pages such as /extras
   // (lesson extras page) do not set appOptions.
-  const shouldRenderTeacherPanel = window.appOptions
-    ? !window.appOptions.isCodeReviewing
-    : true;
+  const shouldRenderTeacherPanel = false;
 
   if (shouldRenderTeacherPanel) {
     renderTeacherPanel(
