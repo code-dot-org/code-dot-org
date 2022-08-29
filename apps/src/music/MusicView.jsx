@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import _ from 'lodash';
 //import GoogleBlockly from 'blockly/core';
 import FontAwesome from '../templates/FontAwesome';
-import {InitSound, GetCurrentAudioTime, PlaySound} from './sound';
+import {InitSound, GetCurrentAudioTime, PlaySound, StopSound} from './sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 
@@ -411,6 +411,8 @@ class MusicView extends React.Component {
   };
 
   playSong = () => {
+    StopSound('mainaudio');
+
     this.executeSong();
 
     const currentAudioTime = GetCurrentAudioTime();
@@ -419,7 +421,7 @@ class MusicView extends React.Component {
       if (songEvent.type == 'play') {
         PlaySound(
           'stem-' + this.state.samplePanel + '-' + songEvent.id,
-          '',
+          'mainaudio',
           currentAudioTime + songEvent.when
         );
       }

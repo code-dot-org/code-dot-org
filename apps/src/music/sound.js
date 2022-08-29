@@ -101,7 +101,7 @@ function RemoveStoppedBuffer(groupTag, soundSourceId) {
 }
 
 // Stop all sounds with a given groupTag.
-function StopSound(groupTag) {
+export function StopSound(groupTag) {
   if (!tagGroups[groupTag]) {
     return;
   }
