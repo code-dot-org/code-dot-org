@@ -20,7 +20,7 @@ class ScrollableList extends React.Component {
     return (
       <div
         className={classNames(this.props.className, style.root)}
-        style={{...this.props.style}}
+        style={this.props.style}
         onScroll={this.props.onScroll}
       >
         <div className={style.margins}>{this.props.children}</div>
