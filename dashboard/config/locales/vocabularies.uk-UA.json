@@ -252,6 +252,40 @@
         "machine_learning/oceans/unversioned": {
           "word": "Машинне навчання"
         },
+        "input/csd/2022": {
+          "word": "Ввід"
+        },
+        "processing/csd/2022": {
+          "word": "В обробці"
+        },
+        "debugging/csd/2022": {
+          "word": "Налагодження"
+        },
+        "program/csd/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "variable/csd/2022": {
+          "word": "Змінна"
+        },
+        "conditionals/csd/2022": {
+          "word": "Умови"
+        },
+        "abstraction/csd/2022": {
+          "word": "Абстракції"
+        },
+        "function/csd/2022": {
+          "word": "Функція"
+        },
+        "copyright/csd/2022": {
+          "word": "Авторські права"
+        },
+        "user_interface/csd/2022": {
+          "word": "Інтерфейс користувача"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Машинне навчання"
+        },
         "code/poem-art/unversioned": {
           "word": "Код"
         },

@@ -2473,3 +2473,5 @@ nn:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
             lessonGroup-4:
               display_name: Undersøking
+        soccer:
+          name: fotball

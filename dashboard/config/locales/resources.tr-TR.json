@@ -3,19 +3,27 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Spotify Oynatma Listesi (her yaştan)"
+          "name": "Spotify Oynatma Listesi (her yaştan)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
+          "name": "HoC Şiir Sanatı",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
           "type": "Slaytlar"
         },
         "poem_art_celebration/poem-art/2021": {
+          "name": "Şiir Sanatı 4 - Kutlama",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "Şiir Sanatı 2 - Etkinlikler",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "Şiir Sanatı 3 - İmgeler",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -25,61 +33,1358 @@
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Oyuncu Tanıtımı",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Öğrenci Videosu"
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "Dönüşler & Açılar",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
           "type": "Öğrenci Notu"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Dönüşler & Açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Öğrenci Videosu"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Spotify Oynatma Listesi (her yaştan)"
+          "name": "Spotify Oynatma Listesi (her yaştan)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "name": "Şifreleme ve Ortak Anahtarlar",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "Video"
         },
         "hocencryption/hoc-encryption/unversioned": {
-          "name": "Kod Stüdyosunda Şifreleme Widget'ları"
+          "name": "Kod Stüdyosunda Şifreleme Widget'ları",
+          "url": "https://studio.code.org/s/hoc-encryption"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "Aktivite Kılavuzu - Metin Sıkıştırma"
+          "name": "Aktivite Kılavuzu - Metin Sıkıştırma",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/",
+          "type": "Etkinlik Yönergesi"
         },
         "activity-recap-decode-this-message/text-compression/unversioned": {
           "name": "Aktivite Tekrarı - Bu Mesajı Çözme",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
           "type": "Aktivite Tekrarı"
         },
         "decode-this-message/text-compression/unversioned": {
-          "name": "Bu mesajı çöz"
+          "name": "Bu mesajı çöz",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/",
+          "type": "Etkinlik Yönergesi"
         },
         "textcompressioncodestudio/text-compression/unversioned": {
           "name": "Code Stüdyosunda Metin Sıkıştırma Widget'ı",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
           "type": "Widget"
         },
         "video-text-compression/text-compression/unversioned": {
           "name": "Video: Aloe Blacc ile Metin Sıkıştırma",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
         },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "Sıçrama Olayları - Nasıl Olur?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing",
+          "type": "Sunum Destesi"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "Sıçrama Olayları - Nasıl Olur?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing",
+          "type": "Sunum Destesi"
+        },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Spotify Oynatma Listesi (her yaştan)"
+          "name": "Spotify Oynatma Listesi (her yaştan)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Spotify Oynatma Listesi (her yaştan)"
+          "name": "Spotify Oynatma Listesi (her yaştan)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
           "name": "Yapay Zeka: Makine Öğrenimi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
           "name": "Yapay Zeka: Toplum üzerindeki Etki",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "ai-training/oceans/unversioned": {
           "name": "Yapay Zeka: Eğitim Verileri & Önyargı",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
+        },
+        "meals_data/csd/2022": {
+          "type": "Kaynak"
+        },
+        "representation_matters/csd/2022": {
+          "name": "Konuları ifade etme"
+        },
+        "representation_matters_1/csd/2022": {
+          "name": "Konuları ifade etme"
+        },
+        "representation_matters_2/csd/2022": {
+          "name": "Konuları ifade etme",
+          "type": "Slaytlar"
+        },
+        "representing_information/csd/2022": {
+          "name": "Sunulan Bilgi"
+        },
+        "patterns_and_representation/csd/2022": {
+          "name": "Desen ve gösterimi",
+          "type": "Slaytlar"
+        },
+        "ascii_challenges_1/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "ascii_text/csd/2022": {
+          "type": "Kaynak"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "ASCII ve ikili gösterimi",
+          "type": "Slaytlar"
+        },
+        "representing_images/csd/2022": {
+          "name": "Görüntüleri ifade etme",
+          "type": "Slaytlar"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "representing_numbers/csd/2022": {
+          "name": "Numaraları temsil eden"
+        },
+        "representing_numbers_1/csd/2022": {
+          "name": "Numaraları temsil eden",
+          "type": "Slaytlar"
+        },
+        "combining_representations/csd/2022": {
+          "name": "İfadeleri birleştirme",
+          "type": "Slaytlar"
+        },
+        "medical_records_1/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Verileri Gizli Tutmak",
+          "type": "Slaytlar"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Yansıma"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "create_a_representation_3/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "problem_solving_and_data/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "structuring_data/csd/2022": {
+          "name": "Verilerin Yapılandırılması"
+        },
+        "structuring_data_1/csd/2022": {
+          "name": "Verilerin Yapılandırılması",
+          "type": "Slaytlar"
+        },
+        "interpreting_data/csd/2022": {
+          "name": "Veri Yorumlama"
+        },
+        "interpreting_data_1/csd/2022": {
+          "name": "Veri Yorumlama"
+        },
+        "interpreting_data_2/csd/2022": {
+          "name": "Veri Yorumlama",
+          "type": "Kaynak"
+        },
+        "interpreting_data_3/csd/2022": {
+          "name": "Veri Yorumlama",
+          "type": "Slaytlar"
+        },
+        "making_decisions_with_data_1/csd/2022": {
+          "name": "Veri ile karar verme"
+        },
+        "problem_solving_process_with_data/csd/2022": {
+          "type": "Kaynak"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "Veri ile karar verme",
+          "type": "Slaytlar"
+        },
+        "automating_data_decisions/csd/2022": {
+          "name": "Veri ile kararları otomatikleştirme"
+        },
+        "automating_data_decisions_1/csd/2022": {
+          "name": "Veri ile kararları otomatikleştirme",
+          "type": "Kaynak"
+        },
+        "automating_data_decisions_2/csd/2022": {
+          "name": "Veri ile kararları otomatikleştirme"
+        },
+        "automating_data_decisions_3/csd/2022": {
+          "name": "Veri ile kararları otomatikleştirme",
+          "type": "Slaytlar"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "name": "Gerçek Dünyada Veriler"
+        },
+        "data_in_the_real_world_1/csd/2022": {
+          "name": "Gerçek Dünyada Veriler"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2022": {
+          "name": "Büyük veri ile Problem çözme",
+          "type": "Slaytlar"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "Video: Toplum üzerindeki Etki",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Makine Öğrenimi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "Video: Eğitim Verileri ve Önyargı",
+          "type": "Video"
+        },
+        "data_and_machine_learning/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Eş gözden geçirme"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "project_-_make_a_recommendation/csd/2022": {
+          "name": "Proje - Bir Öneri Yapın",
+          "type": "Slaytlar"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Öğretmen forumu"
+        },
+        "intro_to_problem_solving/csd/2022": {
+          "name": "Problem çözme tanıtımı",
+          "type": "Slaytlar"
+        },
+        "problem_solving_process/csd/2022": {
+          "name": "Problem Çözme Süreci"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "name": "Problem Çözme Süreci",
+          "type": "Video"
+        },
+        "problem_solving_process_2/csd/2022": {
+          "name": "Problem Çözme Süreci"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Problem çözme süreci"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Problem çözme süreci",
+          "type": "Slaytlar"
+        },
+        "solving_problems/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "Problem çözmeyi keşfetme",
+          "type": "Slaytlar"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Bilgisayar nedir?"
+        },
+        "what_is_a_computer_1/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "input_and_output/csd/2022": {
+          "name": "Girdiler ve çıktılar"
+        },
+        "input_and_output_1/csd/2022": {
+          "name": "Girdiler ve çıktılar"
+        },
+        "input_and_output_2/csd/2022": {
+          "name": "Girdiler ve çıktılar",
+          "type": "Slaytlar"
+        },
+        "apps_with_processing_2/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Video"
+        },
+        "apps_with_storage_2/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "apps_and_problem_solving/csd/2022": {
+          "name": "Uygulamalar ve Problem çözme"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2022": {
+          "type": "Kaynak"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "name": "Uygulamalar ve Problem çözme",
+          "type": "Eş gözden geçirme"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "Uygulamalar ve Problem çözme",
+          "type": "Değerlendirme Tablosu"
+        },
+        "project_-_propose_an_app/csd/2022": {
+          "name": "Proje - bir uygulama önermek",
+          "type": "Slaytlar"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "tangrams/csd/2022": {
+          "type": "Kaynak"
+        },
+        "exploring_problem_solving_animals_/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "exploring_problem_solving_games_/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "programming_for_entertainment/csd/2022": {
+          "name": "Eğlence için programlama",
+          "type": "Slaytlar"
+        },
+        "drawing_shapes/csd/2022": {
+          "name": "Şekil Çizmek"
+        },
+        "plotting_shapes/csd/2022": {
+          "name": "Şekiller çizme",
+          "type": "Slaytlar"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2022": {
+          "name": "Şekil Çizmek",
+          "type": "Kaynak"
+        },
+        "drawing_in_game_lab/csd/2022": {
+          "name": "Game Lab' da Çizim",
+          "type": "Slaytlar"
+        },
+        "shapes_and_parameters_1/csd/2022": {
+          "name": "Şekiller ve Parametreler",
+          "type": "Kaynak"
+        },
+        "shapes_and_parameters_2/csd/2022": {
+          "name": "Şekiller ve Parametreler",
+          "type": "Slaytlar"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Video"
+        },
+        "naming_variables/csd/2022": {
+          "name": "Değişkenleri Adlandırma",
+          "type": "Kaynak"
+        },
+        "variables/csd/2022": {
+          "name": "Değişkenler",
+          "type": "Kaynak"
+        },
+        "variables_3/csd/2022": {
+          "name": "Değişkenler",
+          "type": "Slaytlar"
+        },
+        "random_numbers/csd/2022": {
+          "name": "Rastgele Sayılar",
+          "type": "Kaynak"
+        },
+        "random_numbers_2/csd/2022": {
+          "name": "Rastgele Sayılar",
+          "type": "Slaytlar"
+        },
+        "animation_tab/csd/2022": {
+          "type": "Kaynak"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
+        },
+        "sprites/csd/2022": {
+          "name": "Hareketli Nesneler",
+          "type": "Kaynak"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Animasyon sekmesi",
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Hareketli Nesneler",
+          "type": "Slaytlar"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Nesne özellikleri",
+          "type": "Kaynak"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Nesne özellikleri",
+          "type": "Slaytlar"
+        },
+        "text/csd/2022": {
+          "name": "yazı",
+          "type": "Slaytlar"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "mini-project_-_captioned_scenes/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2022": {
+          "name": "Döngü çiz",
+          "type": "Kaynak"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "name": "Döngü çiz",
+          "type": "Slaytlar"
+        },
+        "sprite_movement/csd/2022": {
+          "name": "Hareketli Nesnelerin Hareketi",
+          "type": "Video"
+        },
+        "the_counter_pattern/csd/2022": {
+          "type": "Kaynak"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "Hareketli Nesnelerin Hareketi",
+          "type": "Slaytlar"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "mini-project_-_animation/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Boolean İfadeleri",
+          "type": "Video"
+        },
+        "booleans_and_comparison_operators/csd/2022": {
+          "name": "Boolean ve Karşılaştırma Operatörleri",
+          "type": "Kaynak"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Koşullu İfadeler",
+          "type": "Video"
+        },
+        "if_statements/csd/2022": {
+          "name": "Eğer (If) Durumları",
+          "type": "Kaynak"
+        },
+        "conditionals/csd/2022": {
+          "name": "Koşullar",
+          "type": "Slaytlar"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Klavye girişi",
+          "type": "Slaytlar"
+        },
+        "if-else_statements/csd/2022": {
+          "type": "Kaynak"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "Eğer/Değilse İfadeleri",
+          "type": "Video"
+        },
+        "mouse_input/csd/2022": {
+          "name": "Fare Girdisi",
+          "type": "Slaytlar"
+        },
+        "extra_code_in_challenge_levels_1/csd/2022": {
+          "type": "Kaynak"
+        },
+        "interactive_card/csd/2022": {
+          "name": "İnteraktif Kart"
+        },
+        "interactive_card_1/csd/2022": {
+          "name": "İnteraktif Kart",
+          "type": "Proje Kılavuzu"
+        },
+        "interactive_card_2/csd/2022": {
+          "name": "İnteraktif Kart",
+          "type": "Eş gözden geçirme"
+        },
+        "interactive_card_3/csd/2022": {
+          "name": "İnteraktif Kart",
+          "type": "Değerlendirme Tablosu"
+        },
+        "project_-_interactive_card/csd/2022": {
+          "name": "Proje - interaktif kart",
+          "type": "Slaytlar"
+        },
+        "velocity/csd/2022": {
+          "name": "Hız",
+          "type": "Video"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Hız",
+          "type": "Kaynak"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Hız",
+          "type": "Slaytlar"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Çarpışmanın algılanması"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Çarpışmanın algılanması",
+          "type": "Kaynak"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Çarpışmanın algılanması",
+          "type": "Slaytlar"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Yan Kaydırıcı",
+          "type": "Değerlendirme Tablosu"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Yan Kaydırıcı",
+          "type": "Proje Kılavuzu"
+        },
+        "mini-project_-_side_scroller/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Hız ve Sayaç Modeli",
+          "type": "Kaynak"
+        },
+        "complex_sprite_movement/csd/2022": {
+          "name": "Karmaşık Hareketli Nesne Hareketi",
+          "type": "Slaytlar"
+        },
+        "collisions/csd/2022": {
+          "name": "Çarpışmalar",
+          "type": "Slaytlar"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Flyer Oyunu",
+          "type": "Değerlendirme Tablosu"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Flyer Oyunu",
+          "type": "Proje Kılavuzu"
+        },
+        "mini-project_-_flyer_game/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "functions/csd/2022": {
+          "name": "Fonksiyonlar",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Fonksiyonlar",
+          "type": "Kaynak"
+        },
+        "functions_4/csd/2022": {
+          "name": "Fonksiyonlar",
+          "type": "Slaytlar"
+        },
+        "the_game_design_process/csd/2022": {
+          "name": "Oyun tasarım süreci",
+          "type": "Slaytlar"
+        },
+        "using_the_game_design_process/csd/2022": {
+          "name": "Oyun tasarım süreci kullanarak",
+          "type": "Slaytlar"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Eş gözden geçirme"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "project_-_design_a_game/csd/2022": {
+          "name": "Proje - Bir oyun tasarla",
+          "type": "Slaytlar"
+        },
+        "exploring_web_pages/csd/2022": {
+          "name": "Web Sayfalarını Keşfetme"
+        },
+        "exploring_web_pages_1/csd/2022": {
+          "name": "Web Sayfalarını Keşfetme"
+        },
+        "exploring_web_pages_2/csd/2022": {
+          "name": "Web Sayfalarını Keşfetme",
+          "type": "Slaytlar"
+        },
+        "html_tags/csd/2022": {
+          "name": "HTML Etiketleri",
+          "type": "Kaynak"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_html/csd/2022": {
+          "name": "HTML' ye Giriş",
+          "type": "Slaytlar"
+        },
+        "headings_and_paragraphs/csd/2022": {
+          "name": "Başıklar ve Paragraflar",
+          "type": "Kaynak"
+        },
+        "video_debugging/csd/2022": {
+          "name": "Video: Hata Ayıklama",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "Video: Eşli Programlama",
+          "type": "Video"
+        },
+        "headings/csd/2022": {
+          "name": "Başlıklar",
+          "type": "Slaytlar"
+        },
+        "formatting_html/csd/2022": {
+          "name": "HTML'de Biçimlendirme",
+          "type": "Kaynak"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Eş gözden geçirme"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "lists/csd/2022": {
+          "name": "Listeler",
+          "type": "Kaynak"
+        },
+        "mini-project_html_web_page/csd/2022": {
+          "name": "Mini-Proje: HTML Web Sayfası",
+          "type": "Slaytlar"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "Dijital Ayak İzi",
+          "type": "Slaytlar"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Sosyal Dedektif"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Sosyal Dedektif"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Bilgisayar Bilimi Tanıtım Bölüm 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Bilgisayar Bilimi Tanıtım Bölüm 2",
+          "type": "Video"
+        },
+        "style_sheets/csd/2022": {
+          "type": "Kaynak"
+        },
+        "text_properties/csd/2022": {
+          "type": "Kaynak"
+        },
+        "styling_text_with_css/csd/2022": {
+          "name": "CSS ile Metin Biçimlendirme",
+          "type": "Slaytlar"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Eş gözden geçirme"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "mini-project_your_personal_style/csd/2022": {
+          "name": "Mini-Proje: Kişisel Stiliniz",
+          "type": "Slaytlar"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2022": {
+          "name": "Fikri Mülkiyet",
+          "type": "Slaytlar"
+        },
+        "creative_commons_search/csd/2022": {
+          "name": "Kamu Telif Hakkı Araması",
+          "type": "Kaynak"
+        },
+        "images_in_html/csd/2022": {
+          "name": "HTML'de Görseller",
+          "type": "Kaynak"
+        },
+        "using_images/csd/2022": {
+          "name": "Resimleri Kullanma",
+          "type": "Slaytlar"
+        },
+        "websites_for_expression/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "styling_elements_with_css/csd/2022": {
+          "name": "CSS ile Stil Öğeleri",
+          "type": "Slaytlar"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "your_web_page_prepare/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "extra_code_in_challenge_levels/csd/2022": {
+          "type": "Kaynak"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Eş gözden geçirme"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "personal_web_page_-_student_checklist/csd/2022": {
+          "type": "Kaynak"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Web Sitenizi Yayınlıyoruz",
+          "type": "Video"
+        },
+        "project_-_personal_web_page/csd/2022": {
+          "name": "Proje - Kişisel Web Sayfası",
+          "type": "Slaytlar"
+        },
+        "websites_for_a_purpose/csd/2022": {
+          "name": "Bir Amaca yönelik Web Siteleri"
+        },
+        "websites_for_a_purpose_1/csd/2022": {
+          "name": "Bir Amaca yönelik Web Siteleri"
+        },
+        "websites_for_a_purpose_2/csd/2022": {
+          "name": "Bir Amaca yönelik Web Siteleri",
+          "type": "Slaytlar"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "Video: Anlaşmazlığı Yönetme",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "Video: Takım Çalışması",
+          "type": "Video"
+        },
+        "team_problem_solving/csd/2022": {
+          "name": "Takım Problem Çözme",
+          "type": "Slaytlar"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "Video: Arama Nasıl Çalışır?",
+          "type": "Video"
+        },
+        "sources_and_research/csd/2022": {
+          "name": "Kaynaklar ve Araştırma",
+          "type": "Slaytlar"
+        },
+        "classes/csd/2022": {
+          "name": "Sınıflar",
+          "type": "Kaynak"
+        },
+        "css_classes/csd/2022": {
+          "name": "CSS Sınıfları",
+          "type": "Slaytlar"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "planning_a_multi-page_site/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "hyperlinks/csd/2022": {
+          "name": "Köprü",
+          "type": "Kaynak"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Sayfaları Bağlama",
+          "type": "Slaytlar"
+        },
+        "project_-_website_for_a_purpose/csd/2022": {
+          "name": "Proje - Bir Amaca yönelik Web Sitesi",
+          "type": "Slaytlar"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Proje Kılavuzu"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Eş gözden geçirme"
+        },
+        "peer_review_and_final_touches/csd/2022": {
+          "name": "Akran İncelemesi ve Son Rötuşlar",
+          "type": "Slaytlar"
+        },
+        "designing_with_empathy_2/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "understanding_your_user/csd/2022": {
+          "name": "Kullanıcınızı anlama",
+          "type": "Slaytlar"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "user_interface_screens/csd/2022": {
+          "type": "Kaynak"
+        },
+        "user_interfaces/csd/2022": {
+          "name": "Kullanıcı Arayüzleri",
+          "type": "Slaytlar"
+        },
+        "prototype_feedback/csd/2022": {
+          "type": "Kaynak"
+        },
+        "feedback_and_testing/csd/2022": {
+          "name": "Geri bildirim ve Test",
+          "type": "Slaytlar"
+        },
+        "example_user_interviews/csd/2022": {
+          "type": "Kaynak"
+        },
+        "identifying_user_needs/csd/2022": {
+          "name": "Kullanıcı İhtiyaçlarını Tanımlama",
+          "type": "Slaytlar"
+        },
+        "paper_prototypes/csd/2022": {
+          "name": "Kağıt Prototipler",
+          "type": "Değerlendirme Tablosu"
+        },
+        "project_-_paper_prototype/csd/2022": {
+          "name": "Proje - Kağıt Modeli",
+          "type": "Slaytlar"
+        },
+        "designing_apps_for_good/csd/2022": {
+          "name": "Yararlı uygulamalar tasarlama",
+          "type": "Slaytlar"
+        },
+        "market_research/csd/2022": {
+          "name": "Pazar araştırması"
+        },
+        "market_research_1/csd/2022": {
+          "name": "Pazar araştırması"
+        },
+        "market_research_2/csd/2022": {
+          "name": "Pazar araştırması",
+          "type": "Slaytlar"
+        },
+        "exploring_ui_elements/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "design_mode/csd/2022": {
+          "name": "Tasarım Modu",
+          "type": "Kaynak"
+        },
+        "design_mode_elements/csd/2022": {
+          "type": "Kaynak"
+        },
+        "build_a_paper_prototype/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "prototype_testing/csd/2022": {
+          "name": "Prototip testi",
+          "type": "Slaytlar"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Video"
+        },
+        "model_screen_design/csd/2022": {
+          "type": "Kaynak"
+        },
+        "design_mode_in_app_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "build_a_digital_prototype/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "events_in_app_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "changing_screens/csd/2022": {
+          "type": "Kaynak"
+        },
+        "importing_screens/csd/2022": {
+          "type": "Kaynak"
+        },
+        "multi-screen_apps/csd/2022": {
+          "name": "Çoklu ekranlı Uygulamalar",
+          "type": "Kaynak"
+        },
+        "responding_to_user_input/csd/2022": {
+          "type": "Kaynak"
+        },
+        "linking_prototype_screens/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "testing_the_app/csd/2022": {
+          "name": "Uygulamayı Test Etmek",
+          "type": "Slaytlar"
+        },
+        "bugs_and_features_2/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "updating_your_prototype_1/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "app_presentation/csd/2022": {
+          "name": "Uygulama Sunumu",
+          "type": "Değerlendirme Tablosu"
+        },
+        "app_presentation_1/csd/2022": {
+          "name": "Uygulama Sunumu"
+        },
+        "project_-_app_presentation/csd/2022": {
+          "name": "Proje - Uygulama Sunumu",
+          "type": "Slaytlar"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Bilgisayar Bilimi, Her Şeyi Değiştiriyor.",
+          "type": "Video"
+        },
+        "computing_innovations_1/csd/2022": {
+          "name": "Bilgi İşlem Yenilikleri"
+        },
+        "computing_innovations_research_areas/csd/2022": {
+          "type": "Kaynak"
+        },
+        "innovations_in_computing/csd/2022": {
+          "name": "Bilişimdeki Yenilikler",
+          "type": "Slaytlar"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "circuit_playground/csd/2022": {
+          "type": "Kaynak"
+        },
+        "physical_output/csd/2022": {
+          "type": "Kaynak"
+        },
+        "the_circuit_playground/csd/2022": {
+          "name": "Çember Oyun Alanı",
+          "type": "Slaytlar"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "name": "Kod ile Ekranlar Tasarlama",
+          "type": "Kaynak"
+        },
+        "random_numbers_1/csd/2022": {
+          "name": "Rastgele Sayılar",
+          "type": "Kaynak"
+        },
+        "updating_screen_elements/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "board_events/csd/2022": {
+          "name": "Kurul Etkinlikleri",
+          "type": "Kaynak"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Kurul Etkinlikleri",
+          "type": "Slaytlar"
+        },
+        "physical_input/csd/2022": {
+          "name": "Fiziksel Girdi",
+          "type": "Kaynak"
+        },
+        "if_statements_1/csd/2022": {
+          "name": "Eğer (If) Durumları",
+          "type": "Kaynak"
+        },
+        "if_statements_2/csd/2022": {
+          "name": "Eğer (If) Durumları",
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_2/csd/2022": {
+          "type": "Kaynak"
+        },
+        "variables_1/csd/2022": {
+          "name": "Değişkenler",
+          "type": "Kaynak"
+        },
+        "variables_2/csd/2022": {
+          "name": "Değişkenler",
+          "type": "Video"
+        },
+        "variables_and_if_statements/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "mini-project_on-the-go_app/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "color_leds/csd/2022": {
+          "name": "Renkli LED'ler",
+          "type": "Slaytlar"
+        },
+        "color_lights/csd/2022": {
+          "type": "Kaynak"
+        },
+        "getting_screen_inputs/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "taking_input_with_getproperty/csd/2022": {
+          "type": "Kaynak"
+        },
+        "combining_inputs_and_outputs/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "peer_review_-_human_device_interaction/csd/2022": {
+          "type": "Kaynak"
+        },
+        "project_human_device_interaction/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "analog_sensors/csd/2022": {
+          "name": "Analog Sensörler",
+          "type": "Kaynak"
+        },
+        "board_sensors/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "changing_sensor_scale/csd/2022": {
+          "type": "Kaynak"
+        },
+        "date_and_change_events/csd/2022": {
+          "type": "Kaynak"
+        },
+        "accelerometer/csd/2022": {
+          "name": "İvme Ölçer",
+          "type": "Slaytlar"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "İvmeölçer olayları",
+          "type": "Kaynak"
+        },
+        "the_accelerometer/csd/2022": {
+          "type": "Kaynak"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Dizilere Giriş",
+          "type": "Video"
+        },
+        "making_music/csd/2022": {
+          "name": "Müzik yapma",
+          "type": "Slaytlar"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Notları çalma",
+          "type": "Kaynak"
+        },
+        "producing_output/csd/2022": {
+          "type": "Kaynak"
+        },
+        "arrays/csd/2022": {
+          "name": "Diziler",
+          "type": "Kaynak"
+        },
+        "modifying_arrays/csd/2022": {
+          "type": "Kaynak"
+        },
+        "functions_2/csd/2022": {
+          "name": "Fonksiyonlar",
+          "type": "Slaytlar"
+        },
+        "functions_3/csd/2022": {
+          "name": "Fonksiyonlar",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Fonksiyon parametreleri",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Fonksiyonlar",
+          "type": "Kaynak"
+        },
+        "mini-project_interactive_art/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "student_example_projects/csd/2022": {
+          "type": "Kaynak"
+        },
+        "circuits_and_leds/csd/2022": {
+          "type": "Kaynak"
+        },
+        "physical_outputs_and_leds/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "circuits_and_buttons/csd/2022": {
+          "type": "Kaynak"
+        },
+        "physical_inputs_and_buttons/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "Proje: Bir yenilik prototiple",
+          "type": "Slaytlar"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "introduction_to_machine_learning/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "types_of_machine_learning/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "types_of_machine_learning_2/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "innovations_in_ai/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "Gören Yapay Zeka",
+          "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "patterns_in_data/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "shoe_survey/csd/2022": {
+          "type": "Kaynak"
+        },
+        "_key_classification_models/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "classification_models_1/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "fruit_veggie_cards/csd/2022": {
+          "type": "Kaynak"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "accuracy_in_ai_lab/csd/2022": {
+          "type": "Kaynak"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "selecting_features/csd/2022": {
+          "type": "Kaynak"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "using_data_with_categorical_features/csd/2022": {
+          "type": "Kaynak"
+        },
+        "importing_a_model_in_app_lab/csd/2022": {
+          "type": "Kaynak"
+        },
+        "importing_models_in_app_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "Yapay Zeka: Eğitim Verileri & Önyargı",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "_key_zoo_models/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "saving_models_in_ai_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "selecting_a_label/csd/2022": {
+          "type": "Kaynak"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "model_cards_in_app_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "printable_model_cards/csd/2022": {
+          "type": "Kaynak"
+        },
+        "_key_numerical_accuracy/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "_key_zombie_prediction/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "numerical_models/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2022": {
+          "type": "Cevap Anahtarı"
+        },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2022": {
+          "type": "Kaynak"
+        },
+        "customizing_apps/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "ai_code_of_ethics/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Öğrenci Notu"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "make_a_machine_learning_app/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "issue_statements/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "creating_a_survey/csd/2022": {
+          "type": "Kaynak"
+        },
+        "survey_planning/csd/2022": {
+          "name": "Veri toplama tasarımı",
+          "type": "Slaytlar"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "survey_data_in_ai_lab/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "troubleshooting_models/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "creating_an_app/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "_template_5_why_s/csd/2022": {
+          "type": "Kaynak"
+        },
+        "design_an_ai_app/csd/2022": {
+          "type": "Slaytlar"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Değerlendirme Tablosu"
+        },
+        "model_card_-_digital_template/csd/2022": {
+          "type": "Kaynak"
+        },
+        "model_card_-_printable_template/csd/2022": {
+          "type": "Kaynak"
         },
         "lesson_plans/courseb/2018": {
           "name": "Ders Planları"
@@ -651,14 +1956,17 @@
         },
         "ai-ml/coursef/2021": {
           "name": "Yapay Zeka: Makine Öğrenimi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
           "name": "Yapay Zeka: Eğitim Verileri & Önyargı",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "name": "Yapay Zeka: Toplum üzerindeki Etki",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -1295,10 +2603,12 @@
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "Oyuncu Tanıtımı",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Öğrenci Videosu"
         },
         "csf-turns-angles-video/coursec/2021": {
           "name": "Dönüşler & Açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Öğrenci Videosu"
         },
         "csf-turns-angles-doc/coursec/2021": {
@@ -1552,6 +2862,7 @@
           "type": "Yönergeler"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "Sıçrama Olayları - Nasıl Olur?",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1575,7 +2886,8 @@
           "type": "Çalışma Kağıdı"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Spotify Oynatma Listesi (her yaştan)"
+          "name": "Spotify Oynatma Listesi (her yaştan)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
           "url": "https://curriculum.code.org/hoc/unplugged/4/",
@@ -1702,10 +3014,12 @@
         },
         "artist_introduction/express/2021": {
           "name": "Oyuncu Tanıtımı",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video"
         },
         "turns_angles/express/2021": {
           "name": "Dönüşler & Açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
@@ -1748,7 +3062,8 @@
           "type": "Çalışma Kağıdı"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Spotify Oynatma Listesi (her yaştan)"
+          "name": "Spotify Oynatma Listesi (her yaştan)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Açık uçlu Programlama Düzeyleri",
@@ -1940,6 +3255,7 @@
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Dönüşler & Açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Öğrenci Videosu"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
@@ -2065,6 +3381,7 @@
           "type": "Slaytlar"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "types_of_machine_learning/csd/2021": {
@@ -2130,6 +3447,7 @@
         },
         "ai_training_data_bias/csd/2021": {
           "name": "Yapay Zeka: Eğitim Verileri & Önyargı",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "model_cards/csd/2021": {
@@ -2538,6 +3856,7 @@
         },
         "video_machine_learning/csd/2021": {
           "name": "Video: Makine Öğrenimi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {

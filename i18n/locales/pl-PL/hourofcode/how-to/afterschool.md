@@ -16,7 +16,7 @@ Akcja godzina kodowania to prosty i przyjemny sposób na zapoznanie dzieci z pod
 
 * * *
 
-## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Wybierz samouczek
 

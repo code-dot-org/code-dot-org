@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -22,19 +23,18 @@ export const JavalabEditorDialog = makeEnum(
   'VERSION_HISTORY'
 );
 
-const DEFAULT_FILE_NAME = '.java';
+export const DEFAULT_FILE_NAME = '.java';
 
 /**
  * Handles displaying the various dialogs used in the Javalab editor (New File dialog,
  * Rename File dialog, Delete File dialog, Commit Code dialog, & Version History dialog).
  */
-function JavalabEditorDialogManager({
+export function UnconnectedJavalabEditorDialogManager({
   onDeleteFile,
   filenameToDelete,
   onRenameFile,
   filenameToRename,
   onCreateFile,
-  commitDialogFileNames,
   onCommitCode,
   handleClearPuzzle,
   isProjectTemplateLevel,
@@ -45,6 +45,7 @@ function JavalabEditorDialogManager({
   clearRenameFileError,
   editorOpenDialogName,
   closeEditorDialog,
+  commitDialogFileNames,
   displayTheme
 }) {
   return (
@@ -52,7 +53,7 @@ function JavalabEditorDialogManager({
       <JavalabDialog
         isOpen={editorOpenDialogName === JavalabEditorDialog.DELETE_FILE}
         handleConfirm={onDeleteFile}
-        handleClose={() => closeEditorDialog()}
+        handleClose={closeEditorDialog}
         message={javalabMsg.deleteFileConfirmation({
           filename: filenameToDelete
         })}
@@ -69,8 +70,8 @@ function JavalabEditorDialogManager({
         filename={filenameToRename}
         handleSave={onRenameFile}
         displayTheme={displayTheme}
-        inputLabel="Rename the file"
-        saveButtonText="Rename"
+        inputLabel={javalabMsg.renameFile()}
+        saveButtonText={javalabMsg.rename()}
         errorMessage={renameFileError}
       />
       <NameFileDialog
@@ -81,22 +82,22 @@ function JavalabEditorDialogManager({
         }}
         handleSave={onCreateFile}
         displayTheme={displayTheme}
-        inputLabel="Create new file"
-        saveButtonText="Create"
+        inputLabel={javalabMsg.createNewFile()}
+        saveButtonText={javalabMsg.create()}
         errorMessage={newFileError}
         filename={DEFAULT_FILE_NAME}
       />
       <CommitDialog
         isOpen={editorOpenDialogName === JavalabEditorDialog.COMMIT_FILES}
         files={commitDialogFileNames}
-        handleClose={() => closeEditorDialog()}
+        handleClose={closeEditorDialog}
         handleCommit={onCommitCode}
       />
       {editorOpenDialogName === JavalabEditorDialog.VERSION_HISTORY && (
         <VersionHistoryWithCommitsDialog
           handleClearPuzzle={handleClearPuzzle}
           isProjectTemplateLevel={isProjectTemplateLevel}
-          onClose={() => closeEditorDialog()}
+          onClose={closeEditorDialog}
           isOpen={editorOpenDialogName === JavalabEditorDialog.VERSION_HISTORY}
         />
       )}
@@ -104,7 +105,7 @@ function JavalabEditorDialogManager({
   );
 }
 
-JavalabEditorDialogManager.propTypes = {
+UnconnectedJavalabEditorDialogManager.propTypes = {
   onDeleteFile: PropTypes.func.isRequired,
   filenameToDelete: PropTypes.string,
   onRenameFile: PropTypes.func.isRequired,
@@ -129,11 +130,17 @@ export default connect(
     editorOpenDialogName: state.javalab.editorOpenDialogName,
     displayTheme: state.javalab.displayTheme,
     newFileError: state.javalab.newFileError,
-    renameFileError: state.javalab.renameFileError
+    renameFileError: state.javalab.renameFileError,
+    commitDialogFileNames: _.filter(
+      Object.keys(state.javalab.sources),
+      sourceName =>
+        state.javalab.sources[sourceName].isVisible &&
+        !state.javalab.sources[sourceName].isValidation
+    )
   }),
   dispatch => ({
     closeEditorDialog: () => dispatch(closeEditorDialog()),
     clearNewFileError: () => dispatch(clearNewFileError()),
     clearRenameFileError: () => dispatch(clearRenameFileError())
   })
-)(JavalabEditorDialogManager);
+)(UnconnectedJavalabEditorDialogManager);

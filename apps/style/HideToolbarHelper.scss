@@ -23,7 +23,8 @@
   }
 }
 
-.hide_toolbar_helper:after, .hide_toolbar_helper:before {
+.hide_toolbar_helper:after,
+.hide_toolbar_helper:before {
   bottom: 100%;
   left: 50%;
   border: solid transparent;

@@ -44,7 +44,8 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "function/hero/unversioned": {
-          "word": "Fungsi"
+          "word": "Fungsi",
+          "definition": "Sekeping kod yang boleh anda panggil berulang kali dengan mudah."
         },
         "code/poem-art/2021": {
           "word": "Kod",
@@ -156,12 +157,41 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "condition/aquatic/unversioned": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "Bersyarat"
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
         },
         "loops/aquatic/unversioned": {
           "word": "Gelung",
           "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Sifer Caesar",
+          "definition": "teknik untuk penyulitan yang mengubah abjad dengan beberapa bilangan aksara"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Sifer",
+          "definition": "istilah generik untuk teknik (atau algoritma) yang melakukan penyulitan"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Memecahkan penyulitan ",
+          "definition": "Apabila anda cuba mengenyahkod mesej rahsia tanpa mengetahui semua butiran sifer, anda cuba \"memecahkan\" penyulitan."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Penyahsulitan",
+          "definition": "proses yang membalikkan penyulitan, mengambil mesej rahsia dan menghasilkan semula teks biasa asal"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Penyulitan",
+          "definition": "satu proses pengekodan mesej untuk merahsiakannya, jadi hanya pihak \"yang diberi kuasa\" boleh membacanya."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Sifer Gantian Rawak",
+          "definition": "teknik penyulitan yang memetakan setiap huruf abjad kepada huruf lain abjad yang dipilih secara rawak."
         },
         "code/starwars/unversioned": {
           "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
@@ -207,6 +237,10 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Pemampatan Tanpa Kehilangan",
+          "definition": "algoritma pemampatan data yang membolehkan data asal dibina semula dengan sempurna daripada data dimampatkan. Paling biasa digunakan untuk pemampatan teks (cth. .mampatan zip)"
+        },
         "event/outbreak/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
@@ -220,7 +254,8 @@
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/sports/unversioned": {
           "word": "Penyahpepijatan",
@@ -279,6 +314,54 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "machine_learning/oceans/unversioned": {
+          "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
+        },
+        "input/csd/2022": {
+          "word": "Input"
+        },
+        "bug/csd/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/csd/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "program/csd/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "variable/csd/2022": {
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
+        },
+        "sprite/csd/2022": {
+          "word": "Peperi"
+        },
+        "condition/csd/2022": {
+          "word": "Keadaan"
+        },
+        "conditionals/csd/2022": {
+          "word": "Bersyarat"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2022": {
+          "word": "Fungsi"
+        },
+        "copyright/csd/2022": {
+          "word": "Hak Cipta",
+          "definition": "hak undang-undang eksklusif untuk mencetak, menerbitkan, membuat persembahan, membuat filem, atau merakamkan bahan kesusasteraan, seni, atau muzik dan membenarkan yang lain melakukan perkara yang sama"
+        },
+        "user/csd/2022": {
+          "word": "Pengguna",
+          "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
+        },
+        "user_interface/csd/2022": {
+          "word": "Antaramuka Pengguna"
+        },
+        "machine_learning/csd/2022": {
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
         "code/poem-art/unversioned": {
@@ -595,11 +678,16 @@
           "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
         },
         "conditionals/coursed/2021": {
-          "word": "Bersyarat"
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
         },
         "pseudocode/coursed/2021": {
           "word": "pseudokod",
           "definition": "Huraian bahasa biasa tentang langkah dalam algoritma"
+        },
+        "condition/coursed/2021": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
         },
         "while_loop/coursed/2021": {
           "word": "Gelung Semasa",
@@ -660,8 +748,13 @@
           "word": "Perintah",
           "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
         },
+        "condition/express/2021": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
+        },
         "conditionals/express/2021": {
-          "word": "Bersyarat"
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
         },
         "while_loop/express/2021": {
           "word": "Gelung Semasa",
@@ -672,7 +765,8 @@
           "definition": "Perintah yang memberitahu anda untuk melakukan sesuatu hanya sehingga kepada peringkat sesuatu menjadi benar."
         },
         "function/express/2021": {
-          "word": "Fungsi"
+          "word": "Fungsi",
+          "definition": "Sekeping kod yang boleh anda panggil berulang kali dengan mudah."
         },
         "variable/express/2021": {
           "word": "Pemboleh ubah",
@@ -783,10 +877,16 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "function/coursee/2021": {
-          "word": "Fungsi"
+          "word": "Fungsi",
+          "definition": "Sekeping kod yang boleh anda panggil berulang kali dengan mudah."
+        },
+        "condition/coursee/2021": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
         },
         "conditionals/coursee/2021": {
-          "word": "Bersyarat"
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
         },
         "while_loop/coursee/2021": {
           "word": "Gelung Semasa",
@@ -840,6 +940,9 @@
         },
         "sprite/csd/2021": {
           "word": "Peperi"
+        },
+        "condition/csd/2021": {
+          "word": "Keadaan"
         },
         "conditionals/csd/2021": {
           "word": "Bersyarat"

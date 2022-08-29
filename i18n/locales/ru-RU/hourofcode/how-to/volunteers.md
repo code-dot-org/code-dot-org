@@ -116,7 +116,7 @@ title: 'Час кода: руководство для волонтеров'
 
 Если вы собираетесь проводить Час кода дома или в общественном помещении, мы рекомендуем ознакомиться с нашими подробными практическими руководствами для [родителей](https://hourofcode.com/us/how-to/parents), а также для [организаций и компаний](https://hourofcode.com/us/how-to/companies).
 
-### 1. Посмотрите эту видео-инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Посмотрите эту видео-инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Определите дату, формат и место проведения вашего мероприятия
 

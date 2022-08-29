@@ -1,0 +1,110 @@
+{
+  "ru-RU": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Веб-лаборатория",
+          "categories": {
+            "html_tags": {
+              "name": "HTML тэги"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Лаборатория игр",
+          "categories": {
+            "game_lab": {
+              "name": "Лаборатория игр"
+            },
+            "sprites": {
+              "name": "Спрайты"
+            },
+            "groups": {
+              "name": "Группы"
+            },
+            "drawing": {
+              "name": "Рисование"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Переменные"
+            },
+            "functions": {
+              "name": "функции"
+            }
+          }
+        },
+        "applab": {
+          "name": "Лаборатория приложений",
+          "description": "App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.",
+          "categories": {
+            "data": {
+              "name": "Данные"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Переменные"
+            },
+            "functions": {
+              "name": "функции"
+            },
+            "advanced": {
+              "name": "Расширенный"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Лаборатория Спрайтов",
+          "categories": {
+            "sprites": {
+              "name": "Спрайты"
+            },
+            "world": {
+              "name": "Мир"
+            },
+            "location": {
+              "name": "Места"
+            },
+            "actions": {
+              "name": "Действия"
+            },
+            "events": {
+              "name": "События"
+            },
+            "behaviors": {
+              "name": "Режимы работы"
+            },
+            "loops": {
+              "name": "Циклы"
+            },
+            "variables": {
+              "name": "Переменные"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "functions": {
+              "name": "функции"
+            },
+            "text": {
+              "name": "Текст"
+            },
+            "comments": {
+              "name": "Комментарии"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Lab"
+        }
+      }
+    }
+  }
+}

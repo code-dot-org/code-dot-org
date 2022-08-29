@@ -170,6 +170,75 @@
         "kodea-pd-2021/Next Steps": {
           "name": "Næstu skref"
         },
+        "csd1-2022/Input and Output": {
+          "name": "Inntak og Úttak"
+        },
+        "csd1-2022/Processing": {
+          "name": "Vinnsla"
+        },
+        "csd1-2022/Storage": {
+          "name": "Vistun"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Verkefni - Tillaga að Appi"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Teikning í Leikjasmiðju"
+        },
+        "csd3-2022/Variables": {
+          "name": "Breytur"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Kvikar"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Eiginleikar kvika"
+        },
+        "csd3-2022/Text": {
+          "name": "texti"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "Hreyfing kvika"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Skilyrði"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Hraði"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "Skynjun árekstra"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Samsett kvikahreyfing"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Árekstrar"
+        },
+        "csd3-2022/Functions": {
+          "name": "Föll"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "Ferli leikjahönnunar"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Notkun leikjahönnunarferlisins"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Kynning á HTML"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Greining á þörfum notenda"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Lagasmíð"
+        },
+        "csd6-2022/Functions": {
+          "name": "Föll"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Söfnun gagna hönnuð"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Hreyfa sig, hreyfa sig"
         },

@@ -3,6 +3,7 @@
     "data": {
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
+          "name": "Continuă să Dansezi (2018)",
           "overview": "În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost construit pentru a răspunde muzicii.",
           "preparation": "-   Examinați și finalizați singur tutorialul online: [Dancy Party](https://studio.code.org/s/dance-extras/lessons/1/levels/1)\n\n-   Asigurați-vă că îl testați mai întâi înainte de a le cere elevilor să-l completeze.\n\n-   Faceți o verificare în avans a Resurselor necesare și asigurați-vă că aveți tot ceea ce este necesar ceva înainte de a începe Ora de codare.",
           "purpose": "Această lecție prezintă conceptele de bază de codare și programare de evenimente (folosind blocuri).",
@@ -177,14 +178,18 @@
           "student_overview": "În această lecție, elevii obțin o experiență introductivă în informatică și creează un joc folosind blocuri de cod simple."
         },
         "basketball/Bounce": {
+          "name": "Codifică Propriul Tău Joc de Basketball",
           "overview": "În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.",
           "preparation": "### Cu o săptămână înainte de Ora dvs. de Codare\n\n-   Consultați [Ghidul educatorului Ora de cod](http://hourofcode.com/resources/how-to/) și [Cele mai bune practici de la educatorii de succes](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) pentru a începe să vă planificați evenimentul Ora de codare.\n-   [Înregistrați-vă evenimentul Hour of Code](http://hourofcode.com) dacă doriți să obțineți asistență la clasă, postere cu reduceri sau să participați la concursul de robotică (numai în SUA).\n-   Examinați și finalizați singuri tutorialul online: [Dance Party](https://studio.code.org/s/basketball/lessons/1/levels/1)\n-   Asigurați-vă că îl testați mai întâi înainte de a le cere elevilor să-l completeze. Verificați în avans că aveți tot ce vă trebuie înainte de a începe Ora de codare.\n-   Examinați planul de lecție suplimentar, [„The Big Dance Party”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) pentru a determina dacă doriți sau nu să conduceți această lecție ,înainte de Ora dvs. de Codare.\n\n### Cu o zi înainte Ora dvs. de Codare\n\n-   Fiecare elev care finalizează activitatea trebuie să primească un [certificat](https://code.org/certificates) sau diplomă. Imprimați câte unul pentru fiecare elev în avans, pentru a facilita acest lucru la sfârșitul orei de codare.\n-   (opțional) Încurajați elevii să aducă căști pentru a le folosi în timpul activității.",
           "purpose": "Această lecție prezintă conceptele de bază pentru codare și programare (folosind blocuri), precum și tehnici simple de depanare. Elevii vor afla că evenimentele sunt foarte frecvente în programele de calculator, în special în jocurile video.\n\nElevii își vor dezvolta înțelegerea evenimentelor făcând un joc de baschet. Ei vor învăța să facă o mișcare a mâinii conform tastelor săgeți și să facă zgomote atunci când obiectele se ciocnesc. La sfârșit, vor ajunge să-și personalizeze jocul pentru a-l face cât mai deosebit!",
           "student_overview": "Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!"
         },
         "dance-extras-2019/Dance Party - Go Further": {
+          "name": "Continuă să Dansezi (2019)",
+          "overview": "În această lecții, elevii de toate vârstele își continuă experiența de codare și informatică într-un mediu sigur, încurajator. Această lecție a fost desemnată pentru elevii de toate vârstele, dar nu necesită citirea. Această activitate necesită sonorul, ca instrument conceput să răspundă la muzică.",
           "preparation": "-   Examinați și finalizați singur tutorialul online: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Asigurați-vă că îl testați mai întâi înainte de a le cere elevilor să-l completeze.\n\n-   Faceți o verificare în avans a Resurselor necesare și asigurați-vă că aveți tot ceea ce este necesar ceva înainte de a începe Ora de codare.",
-          "purpose": "Această lecție prezintă conceptele de bază de codare și programare de evenimente (folosind blocuri)."
+          "purpose": "Această lecție prezintă conceptele de bază de codare și programare de evenimente (folosind blocuri).",
+          "student_overview": "Elevii de toate vârstele continuă o experiență introductivă de codare și informatică într-un mediu sigur, încurajator."
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Ora de Programare 2013"
@@ -225,8 +230,17 @@
         "k5-onlinepd-2019/Sprite Lab": {
           "name": "Laborator Sprite"
         },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Studiu de Stare"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programare Acționată de Evenimente"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcționalitatea de Bază a Aplicației"
         },
         "K5-OnlinePD/Computer Science Fundamentals": {
           "name": "Fundamentele informaticii"
@@ -264,6 +278,9 @@
         "netsim/Peer to Peer - Sending Numbers": {
           "name": "Peer to Peer - Transmiterea de numere"
         },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Trimitere Ascii"
+        },
         "netsim/Broadcasting messages": {
           "name": "Difuzarea mesajelor"
         },
@@ -281,6 +298,15 @@
         },
         "netsim/Internet Simulator Freeplay": {
           "name": "Joc liber cu simulator de internet"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Evadare din Cameră"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Ecrane de Început și Sfârșit"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Ecrane de Început și Sfârșit2"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Fundamentele informaticii"
@@ -308,6 +334,48 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Pașii următori"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hour of Code 2017 Colector"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analiza Frecvenței"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Procesul de Rezolvare a Problemei"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Ce Este un Computer?"
+        },
+        "csd3-2022/Variables": {
+          "name": "Variabile"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Spiriduși"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Proprietăți spiriduș"
+        },
+        "csd3-2022/Text": {
+          "name": "Text"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Condiţionale"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Viteza"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "Detectarea coliziunilor"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funcţii"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Amprenta digitală"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funcţii"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Mutaţi-l, mutați-l"
@@ -1575,6 +1643,12 @@
         "csd1-2017/What is a Computer?": {
           "name": "Ce Este un Computer?"
         },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Depanare pentru Pedagogii AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Depanare pentru Pedagogii CDEF"
+        },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial de pixelare în alb și negru"
         },
@@ -1924,8 +1998,20 @@
         "allthethings/Multi": {
           "name": "Multi"
         },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
         "allthethings/Match": {
           "name": "Meci"
+        },
+        "allthethings/TextMatch": {
+          "name": "PotrivireText"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
         },
         "allthethings/Odometer": {
           "name": "Kilometraj"
@@ -1942,8 +2028,17 @@
         "allthethings/Gamelab": {
           "name": "Laborator de joc"
         },
+        "allthethings/Online PD": {
+          "name": "Dezvoltare Profesională Online"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Detalii de Markdown"
+        },
         "allthethings/Studio": {
           "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Evaluarea mai multor pagini"
         },
         "allthethings/Star wars": {
           "name": "Războiul stelelor"
@@ -1951,11 +2046,29 @@
         "allthethings/Minecraft": {
           "name": "Minecraft"
         },
+        "allthethings/Rich long assessment": {
+          "name": "Evaluare amplă, îndelungată"
+        },
         "allthethings/Free Response": {
           "name": "Răspuns gratuit"
         },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Evaluarea Eșantionului PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Niveluri Schimbate"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Sondaj anonim al elevilor"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Criptografia Cheii Publice"
+        },
         "allthethings/Web Lab": {
           "name": "Laboratorul de web"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Evaluarea unei singure pagini"
         },
         "allthethings/Standalone video": {
           "name": "Videoclip independent"
@@ -1965,6 +2078,24 @@
         },
         "allthethings/Sprite Lab": {
           "name": "Laborator Sprite"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Laborator de Dans"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Rubic"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Perifericele Afișate Opțional ca Deconectate"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Alegerea Bulei"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Niveluri Conținute"
+        },
+        "allthethings/ML Fish": {
+          "name": "Pește ML"
         },
         "allthethings/Java Lab": {
           "name": "Laboratorul Java"

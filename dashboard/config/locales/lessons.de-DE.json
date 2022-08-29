@@ -5,18 +5,23 @@
         "dance-extras/Dance Party - Go Further": {
           "name": "Tanzparty - Weitermachen",
           "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.",
-          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
+          "preparation": "– Sehen Sie sich das Online-Tutorial an und schließen Sie es selbst ab: [Tanzparty](https://studio.code.org/s/dance-extras/lessons/1/levels/1) \n– Probieren Sie die Aktivitäten zuerst aus, bevor Sie sie Ihre SchülerInnen bearbeiten lassen. Überprüfen Sie Ihre technischen Voraussetzungen und entscheiden Sie, ob Sie vorher noch Fehlerbehebungen vornehmen müssen",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde."
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Mincecraft-Designer: Stunde des Codes",
           "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.",
+          "preparation": "### Eine Woche vor der Hour of Code\n\n-   Lesen Sie den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466), um mit der Planung der Hour of Code-Veranstaltung zu beginnen. \n-   [Register your Hour of Code event](http://hourofcode.com), wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial an und üben Sie es selbst: [Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1) \n-   Testen Sie erst, bevor Sie Ihre SchülerInnen bitten, daran teilzunehmen. Überprüfen Sie die Technologie und ob Sie vor der Hour of Code Fehler beheben müssen.\n\n### Ein Tag vor der Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n-   Alle SchülerInnen, die diese Aktivität abgeschlossen haben, sollten eine Urkunde erhalten. \\[Drucken Sie  vor der Code of Hour für alle SchülerInnen ein Exit-Ticket[5] aus.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir."
         },
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft: Hero’s Journey",
-          "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir."
+          "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.",
+          "preparation": "### Eine Woche vor der Hour of Code\n\n-   Lesen Sie den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466), um mit der Planung der Hour of Code-Veranstaltung zu beginnen. \n-   [Register your Hour of Code event](http://hourofcode.com), wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial an und üben Sie es selbst: [Minecraft: Designer](studio.code.org/s/hero/lessons/1/levels/1). \n-   Testen Sie erst, bevor Sie Ihre SchülerInnen bitten, daran teilzunehmen. Überprüfen Sie die Technologie und ob Sie vor der Hour of Code Fehler beheben müssen.\n\n### Ein Tag vor der Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n-   Alle SchülerInnen, die diese Aktivität abgeschlossen haben, sollten eine [certificate](https://code.org/certificates?script=mc) erhalten. Drucken Sie  vor der Code of Hour für alle SchülerInnen eine Urkunde aus, damit Sie sie Ende der Hour of Code griffbereit haben.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) sowie einfache Fehlbehebungstechniken vorgestellt und es wird gezeigt, wie nützlich diese Funktionen sind.",
+          "student_overview": "In dieser Stunde machen die SchülerInnen aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Schreiben von Programmen und der Informatik. Diese Stunde kann in zwei Versionen durchgeführt werden. "
         },
         "poem-art-2021/Poem Art": {
           "name": "Dichtkunst",
@@ -33,18 +38,21 @@
         "hourofcode/Maze": {
           "name": "Labyrinth",
           "overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen 4 bis 10), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466), um mit der Planung Ihrer Veranstaltung Hour of Code zu beginnen. \n-   Registrieren Sie Ihre Hour of Code[2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial [Write your first computer program](https://studio.code.org/hoc/1) an und schließen Sie es selbst ab.\n-   Testen Sie es zuerst, bevor Sie Ihre Schüler bitten, es zu abzuschließen. Überprüfen Sie, ob Fehler Ihrer Technik vor der Hour of Code behoben werden müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n-   Jeder Schüler, der die Aktivität abgeschlossen hat, sollte ein [certificate](http://code.org/certificates).erhalten. Drucken Sie vorab für jeden Schüler ein Exit Ticket aus, damit Sie es am Ende der Hour of Code griffbereit haben.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen 4 bis 10), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden."
         },
         "frozen/Artist": {
           "name": "Programmiere mit Anna und Elsa",
           "overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen10 bis 13), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) zur Planung Ihrer Veranstaltung von Hour of Code. \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial [Codieren mit Anna und Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) an und schließen Sie es selbst ab.\n-   Testen Sie erst, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie, ob vor der Hour of Code Fehler Ihrer Technik behoben werden müssen.\n-   Sehen Sie sich die zusätzliche Stunde [\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher) an, die Sie vor dieser Hour of Code durchführen können.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Schreiben Sie die Wörter \"Codieren\", \"Programmieren\" und \"Fehlerbehebung\" an die Tafel oder fügen Sie sie Ihrer Wortwand hinzu, wenn Sie eine haben.\n-   Schreiben Sie die Worte \"Informatik\" in die Mitte Ihrer Tafel oder auf ein Stück Papier in der Mitte einer Pinnwand. Das dient als [\"Mind Map\"](https://en.wikipedia.org/wiki/Mind_map) für die Aktivitäten \"Vorbereitung\" und \"Bewertung\".\n-   Halten Sie Winkelmesser für SchülerInnen bereit, die noch keine Erfahrung mit dem Messen von Winkeln haben.\n-   Alle SchülerInnen, die die Aktivität abschließen, sollten ein [Zertifikat](http://code.org/certificates) erhalten. Drucken Sie vorab alle SchülerInnen eine Urkunde aus, damit Sie sie am Ende der Code of Hour griffbereit haben.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen10 bis 13), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden."
         },
         "iceage/Ice Age Play Lab": {
           "name": "Ice Age Spielelabor",
           "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung Ihrer Veranstaltung den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial: [Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1) an und schließen Sie es selbst ab.\n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie vor der Hour of Code, ob Sie Fehler Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Schreiben Sie die Wörter \"Coding\", \"Programmieren\" und \"Fehlerbehebung\" an die Tafel oder hängen Sie sie ggf. an Ihre Wortwand.\n-   Jeder Schüler, der diese Aktivität abschließt, sollte eine [Zertifikat] erhalten. Drucken Sie im Voraus eine [Zertifikat](http://code.org/certificates) für jeden aus, damit Sie es am Ende Ihrer Hour of Code griffbereit haben.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
@@ -56,18 +64,22 @@
         "artist/Artist": {
           "name": "Künstler",
           "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung auf die Planung Ihrer Veranstaltung den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und die [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).\n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial an und schließen Sie es selbst ab: [Künstler](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre Schüler bitten, es abzuschließen. Überprüfen Sie, ob Sie vor der Code of Hour Fehler an Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Drucken Sie eines oder mehrere der  [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)  am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n\n-   Jeder Schüler, der die Aktivität abgeschlossen hat, sollte ein [certificate](https://code.org/certificates) erhalten. Drucken Sie für alle SchülerInnen im Voraus eines aus, damit Sie es am Ende der Code of Hour zur Hand haben.\n\n-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n\n-   (Optional) Besorgen Sie sich Winkelmesser für Ihre Klasse, um die Winkel zu veranschaulichen, die sie zur Lösung der Rätsel verwenden müssen.\n\n-   Drucken Sie ein **Turns & Angles - Student Handout** für alle SchülerInnen aus.",
+          "purpose": "Diese Lektion baut auf den bisherigen Erfahrungen der SchülerInnen mit der Sequenzierung auf und soll sie zu mehr Kreativität bei der Programmierung anregen. Der Zweck dieser Lektion ist es, das Wissen über Sequenzierung durch die Einführung neuer Blöcke und Ziele zu erweitern. In diesem Fall lernen die SchülerInnen mit den neuen Blöcken mehr über Pixel und Winkel, während sie gleichzeitig ihre Sequenzierungsfähigkeiten üben. Außerdem können die SchülerInnen neue Ziele visualisieren, z. B. die Codierung des Künstlers, um ein Quadrat zu zeichnen.",
           "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
         },
         "gumball/Gumball Play Lab": {
           "name": "Gumball Spielelabor",
           "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung Ihrer Veranstaltung den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial: [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1) an und schließen Sie es selbst ab.\n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie vor der Hour of Code, ob Sie Fehler Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Schreiben Sie die Wörter \"Coding\", \"Programmieren\" und \"Fehlerbehebung\" an die Tafel oder hängen Sie sie ggf. an Ihre Wortwand.\n-   Alle SchülerInnen, die diese Aktivität abschließen, sollten eine [certificate](http://code.org/certificates) erhalten. Drucken Sie die Urkunden vorab aus, damit Sie sie am Ende Ihrer Hour of Code griffbereit haben.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden."
         },
         "dance/Dance Party": {
           "name": "Tanzparty",
           "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.",
-          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung Ihrer Planung der Veranstaltung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466),. \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Unterstützung für Ihr Klassenzimmer, ermäßigte Poster oder die Teilnahme an der Robotik-Verlosung wünschen (nur in den USA).\n-   Sehen Sie sich das Online-Tutorial an und schließen Sie es selbst ab: \\[[Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1). \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie, ob Sie vor der Code of Hour Fehler Ihrer Technik beheben müssen.\n-   Sehen Sie sich den zusätzlichen Lehrplan [\"The Big Dance Party\"](studio.code.org/s/dance-unplugged/lessons/1) an, um zu entscheiden, ob Sie diese Lektion vor Ihrer Hour of Code durchführen möchten.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Alle SchülerInnen, die diese Aktivität abschließen, sollte eine [Zertifikat](http://code.org/certificates) erhalten. Drucken Sie für alle SchülerInnen im Voraus eine Urkunde aus, um sie am Ende Ihrer Hour of Code zur Hand zur haben.\n-   (optional) Bitten Sie die Schüler, Kopfhörer mitzubringen, die sie während der Aktivität benutzen können.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde."
         },
         "hello-world-food-2021/Hello World": {
@@ -77,7 +89,10 @@
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Voyage Aquatic",
-          "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir."
+          "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung auf die Planung der Veranstaltung den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und die [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).\n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial an und schließen Sie es selbst ab: [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es auszuführen. Überprüfen Sie vor der Hour of Code, ob Sie Fehler Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)  am Ende dieser Stunde aus oder erstellen Sie Ihre eigenen. \n-   Jeder Schüler, der die Aktivität abgeschlossen hat, sollte eine Urkunde erhalten. [Print one](https://code.org/certificates?script=mc), um sie am Ende der Hour of Code zur Hand zu haben.",
+          "purpose": "Diese Stunde führt in die zentralen CS-Konzepte der Codierung und Programmierung (unter Verwendung von Blöcken) ein erläutert einfache Fehlerbehebungstechniken und Bedingungen. Diese Aufgaben festigen und erweitern das Wissen über Schleifen und es werden Bedingungen eingeführt. Durch die Verknüpfung dieser beiden Konzepte können die SchülerInnen das Potenzial für lustige und innovative Programme in einer neuen und aufregenden Umgebung entdecken.",
+          "student_overview": "In dieser Stunde machen die SchülerInnen aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Schreiben von Programmen und der Informatik. Diese Stunde kann in zwei Versionen durchgeführt werden. "
         },
         "hoc-encryption/Simple Encryption": {
           "name": "Einfache Verschlüsselung",
@@ -93,23 +108,30 @@
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: Aufbau einer Galaxis mit Code (JavaScript)",
+          "overview": "In dieser Stunde machen SchülerInnen aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit dem Programmieren und der Computerwissenschaft. Diese Stunde hat zwei Versionen. In dieser Version werden sowohl Drag-Drop-Blöcke als auch JavaScript verwendet. Die SchülerInnen müssen in der Lage sein, auf einer Tastatur zu tippen. Älteren Computer-SchülerInnen macht das Erlernen von JavaScript Spaß und es ist eine zusätzliche Herausforderung für sie. Diese Version des Tutorials eignet sich auch hervorragend, wenn SchülerInnen in Ihrer Klasse bereits über einige Grundkenntnisse im Programmieren verfügen. Es wird für die Altersgruppe 11+ empfohlen.\n\nEs gibt auch eine [Blockly-Version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1). Sie empfiehlt sich für SchülerInnen mit mobilen Geräten ohne Tastatur, jüngere und fremdsprachige SchülerInnen.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).\n-   Sehen Sie sich das Online-Tutorial an und führen Sie es selbst durch: [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1) \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre Schüler bitten, es auszufüllen. Überprüfen Sie, ob Sie vor der Hour of Code Fehler der Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Schreiben Sie die Wörter \"Coding\", \"Programmieren\" und \"Debugging\" an die Tafel oder fügen Sie sie ggf. zu Ihrer Wortwand hinzu.\n-   Schreiben Sie das Wort \"Informatik\" in die Mitte Ihrer Tafel oder auf ein Stück Papier in der Mitte einer Pinnwand. Dies dient als [\"Mind Map\"](https://en.wikipedia.org/wiki/Mind_map) für die Aktivitäten \"Getting Ready\" und \"Assessment\".\n-   Jeder Schüler, der die Aktivität abschließt, sollte eine [Zertifikat](http://code.org/certificates) erhalten. Drucken Sie für alle SchülerInnen im Voraus eine Urkunde aus, um sie am Ende Ihrer Hour of Code zur Hand zu haben.",
           "purpose": "Diese Lektion führt in die Kernkonzepte der Informatik ein, für Kodierung, Programmierung und inklusive Sequenzierung und Events. Die JavaScript Version des Tutorials gibt den Studenten außerdem Erfahrung, in der Eingabe von Code mit einer Tastatur.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Diese Lektion hat zwei verschiedene Versionen. "
         },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Hour of Code",
           "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.",
+          "preparation": "### Eine Woche vor der Hour of Code\n\n-   Lesen Sie den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466), um mit der Planung der Hour of Code-Veranstaltung zu beginnen. \n-   [Register your Hour of Code event](http://hourofcode.com), wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial an und üben Sie es selbst: [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1) . \n-   Testen Sie erst, bevor Sie Ihre SchülerInnen bitten, daran teilzunehmen. Überprüfen Sie die Technologie und ob Sie vor der Hour of Code Fehler beheben müssen.\n\n### Ein Tag vor der Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n-   Alle SchülerInnen, die diese Aktivität abgeschlossen haben, sollten eine [certificate](https://code.org/certificates?script=mc) erhalten. Drucken Sie  vor der Code of Hour für alle SchülerInnen eine Urkunde aus, damit Sie sie Ende der Hour of Code griffbereit haben.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir."
         },
         "playlab/Play Lab": {
           "name": "Spielelabor",
           "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung Ihrer Veranstaltung den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial: [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) an und schließen Sie es selbst ab.\n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie vor der Hour of Code, ob Sie Fehler Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Schreiben Sie die Wörter \"Coding\", \"Programmieren\" und \"Fehlerbehebung\" an die Tafel oder hängen Sie sie ggf. an Ihre Wortwand.\n-   Alle SchülerInnen, die diese Aktivität abschließen, sollten eine [certificate](http://code.org/certificates) erhalten. Drucken Sie die Urkunden vorab aus, damit Sie sie am Ende Ihrer Hour of Code griffbereit haben.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
         "applab-intro/Intro to App Lab": {
           "name": "Einführung in AppLab",
+          "overview": "Dieses Tutorial dient der schnellen Einführung in die App Lab Programmierumgebung als leistungsfähiges Werkzeug für die Erstellung und den Austausch von Apps. Im Tutorial lernen die SchülerInnen, Schaltflächen, Text, Bilder, Sounds und Bildschirme in JavaScript zu erstellen und zu steuern, indem sie entweder Blöcke oder Text verwenden. Am Ende des Tutorials haben die SchülerInnen die Möglichkeit, ein begonnenes Projekt zu einer \"Choose Your Own Adventure\"-, \"Greeting Card\"- oder \"Personality Quiz\"-App zu erweitern. Sie können auch damit fortfahren, weitere Projekte zu erstellen, die auf der Seite code.org/applab vorgestellt werden. \n\nViel Spaß bei Ihrer Hour of Code mit App Lab!\n\n**Alter:** Das Tutorial ist für Schüler ab 13 Jahren bestimmt. Die SchülerInnen können eigene Sounds und Bilder hochladen, deshalb sollten sie es nicht ohne Aufsicht benutzen. Zum Schutz der Privatsphäre der SchülerInnen dürfen sie das Tutorial nur verwenden, wenn Sie zuvor Konten für sie in einem von Ihnen verwalteten Bereich eingerichtet haben.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).\n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial an und üben Sie es selbst.\n-   Testen Sie es zunächst, bevor Sie Ihre Schüler bitten, es zu bearbeiten. Überprüfen Sie vor der Hour of Code, ob Fehler der Technik behoben werden müssen.\n\n### Einen Tag vor Ihrer Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n-   Jeder Schüler, der die Aktivität abgeschlossen hat, sollte eine [certificate](http://code.org/certificates). erhalten. Drucken Sie für jeden Schüler eine Urkunde aus, um sie am Ende der Hour of Code zur Hand zu haben.",
+          "purpose": "Diese Stunde ist der erste Schritt Ihrer SchülerInnen mit App Lab. Das Tutorial selbst sollte eine leicht verständliche Einführung in ein leistungsstarkes Tool mit umfangreichen Funktionen sein. Die SchülerInnen sollten während des Tutorials eine positive Erfahrung machen und, was noch wichtiger ist, motiviert sein, weiter mit App Lab zu arbeiten. Sie kratzen hier nur an der Oberfläche der Leistung des Tools. Daher sollten sie anschließend die Seite code.org/applab oder die Projektgalerie nutzen, um sich für komplexere Arten von Projekten inspirieren zu lassen, die sie erstellen möchten.",
           "student_overview": "Am Ende des Tutorials haben die Schülerinnen und Schüler Zeit, ein begonnenes Projekt zu einer „Wähle Dein eigenes Abenteuer“, „Grußkarte“ oder ein „Persönlichkeitsquiz“-App zu erweitern. Sie können auch mit der Erstellung neuer Projekte weitermachen, die auf der Seite code.org/applab vorgestellt werden. \n\nViel Spaß bei deiner Hour of Code mit App Lab! "
         },
         "hello-world-retro-2021/Hello World": {
@@ -119,6 +141,8 @@
         },
         "starwarsblocks/Hour of Code 2015": {
           "name": "Star Wars: Erschaffe eine Galaxie mit Code (Blocky)",
+          "overview": "In dieser Stunde erhalten Lernende aller Altersgruppen in einer sicheren, unterstützenden Umgebung eine Einführung in das Programmieren und die Informatik. Es gibt zwei Versionen dieser Stunde. Diese Version verwendet Drag-Drop-Blöcke und eignet sich am besten für mobile Geräte ohne Tastatur, jüngere Schüler und internationale Schüler. Sie wird für Kinder ab 6 Jahren empfohlen.\n\nEs ist außerdem eine [JavaScript](s/starwars)-Version verfügbar. Älteren Computer-SchülerInnen macht das Erlernen von JavaScript Spaß und es ist eine zusätzliche Herausforderung für sie. Beachten Sie, dass die JavaScript-Syntax nicht übersetzt ist. Für die erste Hour of Code bieten die übersetzten Blöcke, die Sie hier finden, eine bessere Einführung. Diese Version des Tutorials eignet sich auch hervorragend, wenn einige SchülerInnen Ihrer Klasse bereits etwas Programmieren gelernt haben. Sie wird für Kinder ab 11 Jahren empfohlen.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).\n-   Sehen Sie sich das Online-Tutorial an und führen Sie es selbst durch: [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre Schüler bitten, es auszufüllen. Überprüfen Sie, ob Sie vor der Hour of Code Fehler der Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Schreiben Sie die Wörter \"Coding\", \"Programmieren\" und \"Debugging\" an die Tafel oder fügen Sie sie ggf. zu Ihrer Wortwand hinzu.\n-   Schreiben Sie das Wort \"Informatik\" in die Mitte Ihrer Tafel oder auf ein Stück Papier in der Mitte einer Pinnwand. Dies dient als [\"Mind Map\"](https://en.wikipedia.org/wiki/Mind_map) für die Aktivitäten \"Getting Ready\" und \"Assessment\".\n-   Jeder Schüler, der die Aktivität abschließt, sollte eine [Zertifikat](http://code.org/certificates) erhalten. Drucken Sie für alle SchülerInnen im Voraus eine Urkunde aus, um sie am Ende Ihrer Hour of Code zur Hand zu haben.",
           "purpose": "Diese Lektion führt in die Kernkonzepte der Informatik ein, für Kodierung, Programmierung und inklusive Sequenzierung und Events. Die JavaScript Version des Tutorials gibt den Studenten außerdem Erfahrung, in der Eingabe von Code mit einer Tastatur.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Diese Lektion hat zwei verschiedene Versionen. "
         },
@@ -134,22 +158,32 @@
           "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
         },
         "sports/Sports": {
+          "name": "Programmieren Sie Ihr eigenes Sportspiel",
           "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).\n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial [Code Your Own Sports Game](https://studio.code.org/s/sports/lessons/1/levels/1) an und üben Sie es selbst.\n-   Testen Sie es zunächst, bevor Sie Ihre Schüler bitten, es zu bearbeiten. Überprüfen Sie vor der Hour of Code, ob Fehler der Technik behoben werden müssen.\n\n### Einen Tag vor Ihrer Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n-   Jeder Schüler, der die Aktivität abgeschlossen hat, sollte eine [certificate](https://code.org/certificates). erhalten. Drucken Sie für jeden Schüler eine Urkunde aus, um sie am Ende der Hour of Code zur Hand zu haben.",
+          "purpose": "Diese Stunde führt in die zentralen CS-Konzepte der Codierung und Programmierung (unter Verwendung von Blöcken) ein erläutert einfache Fehlerbehebungstechniken und Bedingungen. Die SchülerInnen lernen, dass Ereignisse in Computerprogrammen sehr häufig vorkommen, insbesondere in Videospielen.\n\nEreignisse kommen in Computerprogrammen sehr häufig vor, vor allem in Videospielen.  \n\nIn dieser Stunde werden die vertiefen die Schüler bei der Entwicklung eines Sportspiels ihr Verständnis von Ereignissen. Sie lernen, ein Sportgerät mit Hilfe der Pfeiltasten zu bewegen und Geräusche zu erzeugen, wenn Objekte zusammenstoßen. Ganz am Ende können sie ihr Spiel anpassen, um es noch einzigartiger zu machen!",
           "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Spielelabor",
           "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung Ihrer Veranstaltung den [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial: [Disney Infinity Play Lab](https://studio.code.org/s/playlab/stage/1/puzzle/1) an und schließen Sie es selbst ab.\n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie vor der Hour of Code, ob Sie Fehler Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Schreiben Sie die Wörter \"Coding\", \"Programmieren\" und \"Fehlerbehebung\" an die Tafel oder hängen Sie sie ggf. an Ihre Wortwand.\n-   Alle SchülerInnen, die diese Aktivität abschließen, sollten eine [certificate](http://code.org/certificates) erhalten. Drucken Sie die Urkunden vorab aus, damit Sie sie am Ende Ihrer Hour of Code griffbereit haben.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
         "basketball/Bounce": {
+          "name": "Programmieren Sie Ihr eigenes Basketballspiel",
           "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).\n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial [Code Your Own Basketball Game](https://studio.code.org/s/basketball/lessons/1/levels/1) an und üben Sie es selbst.\n-   Testen Sie es zunächst, bevor Sie Ihre Schüler bitten, es zu bearbeiten. Überprüfen Sie vor der Hour of Code, ob Fehler der Technik behoben werden müssen.\n\n### Einen Tag vor Ihrer Hour of Code\n\n-   Drucken Sie eines oder mehrere der [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) am Ende dieser Lektion aus oder erstellen Sie Ihre eigenen. \n-   Jeder Schüler, der die Aktivität abgeschlossen hat, sollte eine [certificate](https://code.org/certificates). erhalten. Drucken Sie für jeden Schüler eine Urkunde aus, um sie am Ende der Hour of Code zur Hand zu haben.",
+          "purpose": "Diese Stunde führt in die zentralen CS-Konzepte der Codierung und Programmierung (unter Verwendung von Blöcken) ein erläutert einfache Fehlerbehebungstechniken und Bedingungen. Die SchülerInnen lernen, dass Ereignisse in Computerprogrammen sehr häufig vorkommen, insbesondere in Videospielen.\n\nIn dieser Stunde werden die vertiefen die Schüler bei der Entwicklung eines Basketballspiels ihr Verständnis von Ereignissen. Sie lernen, ein Sportgerät mit Hilfe der Pfeiltasten zu bewegen und Geräusche zu erzeugen, wenn Objekte zusammenstoßen. Ganz am Ende können sie ihr Spiel anpassen, um es noch einzigartiger zu machen!",
           "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
         },
         "dance-extras-2019/Dance Party - Go Further": {
           "name": "Tanzparty - Weitermachen",
-          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein."
+          "overview": "In dieser Stunde machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Stunde ist für Teilnehmer aller Altersgruppen bestimmt, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool mit Musik entwickelt wurde.",
+          "preparation": "#### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung Ihrer Planung der Veranstaltung [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) und [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466),. \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Unterstützung für Ihr Klassenzimmer, ermäßigte Poster oder die Teilnahme an der Robotik-Verlosung wünschen (nur in den USA).\n-   Sehen Sie sich das Online-Tutorial an und schließen Sie es selbst ab: [Dance Party](https://studio.code.org/s/dance-2019). \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie, ob Sie vor der Code of Hour Fehler Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Alle SchülerInnen, die diese Aktivität abschließen, erhalten eine [Zertifikat](https://code.org/certificates) erhalten. Drucken Sie für alle SchülerInnen im Voraus eine Urkunde aus, um sie am Ende Ihrer Hour of Code zur Hand zur haben.\n-   (optional) Bitten Sie die Schüler, Kopfhörer mitzubringen, die sie während der Aktivität benutzen können.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
+          "student_overview": "In dieser Stunde setzen die SchülerInnen aller Altersstufen in einer sicheren und unterstützenden Umgebung die Einführung in das Schreiben von Programmen und der Informatik fort. "
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
@@ -157,12 +191,16 @@
         "dance-2019/Dance Party": {
           "name": "Tanzparty (2019)",
           "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.",
-          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung Ihrer Planung der Veranstaltung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) und [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466),. \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Unterstützung für Ihr Klassenzimmer, ermäßigte Poster oder die Teilnahme an der Robotik-Verlosung wünschen (nur in den USA).\n-   Sehen Sie sich das Online-Tutorial an und schließen Sie es selbst ab: \\[[Dance Party](https://studio.code.org/s/dance-2019). \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie, ob Sie vor der Code of Hour Fehler Ihrer Technik beheben müssen.\n-   Sehen Sie sich den zusätzlichen Lehrplan [\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1) an, um zu entscheiden, ob Sie diese Lektion vor Ihrer Hour of Code durchführen möchten.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Alle SchülerInnen, die diese Aktivität abschließen, sollte eine [Zertifikat](http://code.org/certificates) erhalten. Drucken Sie für alle SchülerInnen im Voraus eine Urkunde aus, um sie am Ende Ihrer Hour of Code zur Hand zur haben.\n-   (optional) Bitten Sie die Schüler, Kopfhörer mitzubringen, die sie während der Aktivität benutzen können.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde."
         },
         "oceans/Oceans": {
           "name": "KI für Meere",
-          "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrung mit Programmierung und Informatik. Zunächst klassifizieren die Schüler Objekte als \"Fisch\" oder \"nicht Fisch\", um zu versuchen, Müll aus dem Meer zu entfernen. Anschließend müssen sie ihren Übungsdatensatz erweitern und andere Meeresbewohner einbeziehen, die ins Wasser gehören. Im zweiten Teil der Übung wählen die Schülerinnen und Schüler ihre eigenen Beschriftungen aus, die sie auf Bilder von zufällig generierten Fischen anwenden. Diese Übungsdaten nutzt ein maschinelles Lernmodell, das dann in der Lage sein sollte, neue Bilder selbständig zu beschriften."
+          "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrung mit Programmierung und Informatik. Zunächst klassifizieren die Schüler Objekte als \"Fisch\" oder \"nicht Fisch\", um zu versuchen, Müll aus dem Meer zu entfernen. Anschließend müssen sie ihren Übungsdatensatz erweitern und andere Meeresbewohner einbeziehen, die ins Wasser gehören. Im zweiten Teil der Übung wählen die Schülerinnen und Schüler ihre eigenen Beschriftungen aus, die sie auf Bilder von zufällig generierten Fischen anwenden. Diese Übungsdaten nutzt ein maschinelles Lernmodell, das dann in der Lage sein sollte, neue Bilder selbständig zu beschriften.",
+          "preparation": "### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung der Planung [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][1], wenn Sie Werbegeschenke oder Unterstützung für Ihren Unterricht erhalten möchten.\n-   Sehen Sie sich das Online-Tutorial an und üben Sie es selbst.\n-   Testen Sie es zunächst, bevor Sie Ihre Schüler bitten, es zu bearbeiten. Überprüfen Sie vor der Hour of Code, ob Fehler der Technik behoben werden müssen.\n\n### Einen Tag vor Ihrer Hour of Code\n\n-   Alle SchülerInnen, die diese Aktivität abschließen, sollten eine Urkunde [certificate](https://code.org/certificates?script=oceans) erhalten. Drucken Sie für jeden Schüler eine Urkunde aus, um sie am Ende der Hour of Code zur Hand zu haben.",
+          "purpose": "Dieses Tutorial soll für die SchülerInnenn ein schneller Einstieg in die **künstliche Intelligenz** und das **maschinelle Lernen** sein. Die SchülerInnen lernen wie ein maschinelles Lernmodell anhand der **trainierten Daten** neue Daten klassifiziert. Die SchülerInnen sollen während des Tutoriums eine positive Erfahrung machen und, was noch wichtiger ist, motiviert werden, sich weiter mit Informatik zu befassen.",
+          "student_overview": "Zunächst klassifizieren die SchülerInnen Objekte als \"Fisch\" oder \"nicht Fisch\", um zu versuchen, Müll aus dem Meer zu entfernen. Anschließend müssen sie ihren Übungsdatensatz erweitern und andere Meeresbewohner einbeziehen, die ins Wasser gehören. Im zweiten Teil der Übung wählen die SchülerInnen ihre eigenen Beschriftungen aus, die sie auf Bilder von zufällig generierten Fischen anwenden. Diese Übungsdaten nutzt ein maschinelles Lernmodell, das dann in der Lage sein wird, selbst neue Bilder zu beschriften."
         },
         "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
           "name": "Willkommen bei \"Grundlagen der Informatik unterrichten\""
@@ -331,6 +369,277 @@
         },
         "frequency_analysis/Frequency Analysis": {
           "name": "Häufigkeitsanalyse"
+        },
+        "csd5-2022/Representation Matters": {
+          "name": "Darstellung ist wichtig"
+        },
+        "csd5-2022/Patterns and Representation": {
+          "name": "Muster und Darstellung"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "ASCII- und Binärdarstellung"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Darstellung von Bildern"
+        },
+        "csd5-2022/Representing Numbers": {
+          "name": "Zahlendarstellung"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Kombinierte Darstellungen"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Daten geheim halten"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "Projekt - Erstellen einer Darstellung"
+        },
+        "csd5-2022/Structuring Data": {
+          "name": "Daten strukturieren"
+        },
+        "csd5-2022/Interpreting Data": {
+          "name": "Daten interpretieren"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "Entscheidungen mit Daten"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "Automatisierung von Datenentscheidungen"
+        },
+        "csd5-2022/Problem Solving with Big Data": {
+          "name": "Problemlösung mit Big Data"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Nachbefragung"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Einführung in die Problemlösung"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Der Problemlösungsprozess"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Problemlösung erforschen"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Was ist ein Computer?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Input und Output"
+        },
+        "csd1-2022/Processing": {
+          "name": "Verarbeitung"
+        },
+        "csd1-2022/Storage": {
+          "name": "Speicher"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Projekt - Eine App vorschlagen"
+        },
+        "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Einführung in das Lösen von Problemen - Zeitungstisch (Alternative Lektion 1)"
+        },
+        "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Einführung in das Lösen von Problemen - Spaghetti-Brücke (Alternative Lektion 1)"
+        },
+        "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Einführung in das Lösen von Problemen - Papierturm (Alternative Lektion 1)"
+        },
+        "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Erkunden des Problemlösens - Thema Tiere (Alternative Lektion 3)"
+        },
+        "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Erkunden des Problemlösens - Thema Spiele (Alternative Lektion 3)"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "Programmieren zur Unterhaltung"
+        },
+        "csd3-2022/Plotting Shapes": {
+          "name": "Formen plotten"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Zeichnen im Game Lab"
+        },
+        "csd3-2022/Variables": {
+          "name": "Variablen",
+          "overview": "**Frage des Tages: Wie können wir Variablen verwenden, um Informationen in unseren Programmen zu speichern?**\\\\r\n\\\\r \nIn dieser Lektion lernen die SchülerInnen, wie man Variablen verwendet, um eine Zahl zu kennzeichnen. Die SchülerInnen beginnen die Lektion mit einer sehr einfachen Beschreibung des Zwecks einer Variable im Zusammenhang mit der Speicherkomponente des IOSP-Modells. Danach schließt die Klasse den Übergang auf ein höheres Level ab, bei dem das Modell einer Variablen als eine Möglichkeit zur Kennzeichnung oder Benennung einer Zahl intensiviert wird."
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Zufällige Zahlen"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprite Eigenschaften"
+        },
+        "csd3-2022/Text": {
+          "name": "Text"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "Die Zieh-Schleife"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "Sprite-Bewegung"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Bedingungen"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Tastatur-Eingabe"
+        },
+        "csd3-2022/Mouse Input": {
+          "name": "Input mit der Maus"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "Projekt - Interaktive Karte"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Geschwindigkeit"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "Kollisions-Entdeckung"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Komplexe Sprite-Bewegung"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Kollisionen"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funktionen"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "Der Prozess eines Spielentwurfs"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Verwendung des Prozesses eines Spielentwurfs"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "Projekt Ein Spiel erstellen"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Nachbefragung"
+        },
+        "csd2-2022/Exploring Web Pages": {
+          "name": "Erkundung von Webseiten"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Einführung in HTML"
+        },
+        "csd2-2022/Headings": {
+          "name": "Überschriften"
+        },
+        "csd2-2022/Mini-Project: HTML Web Page": {
+          "name": "Mini-Projekt: HTML-Webseite"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Digitaler Fußabdruck"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Text mit CSS formatieren"
+        },
+        "csd2-2022/Mini-Project: Your Personal Style": {
+          "name": "Mini-Projekt: Ihr persönlicher Stil"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "Geistiges Eigentum"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Stilelemente mit CSS gestalten"
+        },
+        "csd2-2022/Your Web Page - Prepare": {
+          "name": "Ihre Webseite - Vorbereiten"
+        },
+        "csd2-2022/Team Problem Solving": {
+          "name": "Problemlösung im Team"
+        },
+        "csd2-2022/Sources and Research": {
+          "name": "Quellen und Forschung"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "CSS-Klassen"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Verknüpfung von Seiten"
+        },
+        "csd2-2022/Project - Website for a Purpose": {
+          "name": "Projekt - Website für einen Zweck"
+        },
+        "csd2-2022/Peer Review and Final Touches": {
+          "name": "Beurteilung durch SchulkollegInnen und letzter Schliff"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Nachbefragung"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "Den Benutzer verstehen"
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "Benutzeroberflächen"
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "Feedback und Tests"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Identifizieren von Benutzerbedürfnissen"
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "Projekt - Papier-Prototyp"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Apps für gute Zwecke entwickeln"
+        },
+        "csd4-2022/Market Research": {
+          "name": "Marktforschung"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Testen von Prototypen"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "Testen der App"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "Projekt - App-Präsentation"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Nachbefragung"
+        },
+        "csd6-2022/Innovations in Computing": {
+          "name": "Innovationen in der Datenverarbeitung"
+        },
+        "csd6-2022/The Circuit Playground": {
+          "name": "Der Circuit Playground"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Platinen-Ereignisse"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Farbige LEDs"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "Beschleunigungssensor"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Musik machen"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funktionen"
+        },
+        "csd6-2022/Project - Prototype an Innovation": {
+          "overview": "In diesem Abschlussprojekt für den Kurs entwickeln und testen die SchülerInnen gemeinsam einen Prototyp für ein innovatives Computergerät, das auf dem Circuit Playground basiert. Unter Verwendung der auf der Platine verfügbaren In- und Outputs werden sie in Gruppenarbeit Programme erstellen, die interessante und einzigartige Benutzerinteraktionen ermöglichen."
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Nachbefragung"
+        },
+        "csd7-2022/Numerical Models": {
+          "overview": "In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.\n\n**Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Entwurf einer Datenerhebung"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Nachbefragung"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Bewegung, Bewegung"
@@ -3529,7 +3838,7 @@
           "name": "Tanzparty",
           "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat. - Denken Sie daran, dass Sie Kopfhörer benötigen. Bei dieser Aktivität kommt es auf den Ton an.",
-          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
           "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
         },
         "coursed-2021/Loops in Ice Age": {
@@ -3655,7 +3964,7 @@
           "name": "Tanzparty",
           "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat. - Überlegen Sie, ob Sie Kopfhörer benötigen. Bei dieser Aktivität kommt es auf den Ton an.",
-          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
           "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
         },
         "express-2021/Loops with Rey and BB-8": {

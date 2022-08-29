@@ -601,6 +601,7 @@ es-MX:
     try_hour_of_code: '¡Prueba una Hora del Código!'
     store: 'Tienda'
     cookie_notice: 'Aviso de Cookies'
+    view_code: 'Ve el código'
   reference_area:
     title: '¿Necesitas ayuda?'
     subtitle: 'Mira estos videos y sugerencias'

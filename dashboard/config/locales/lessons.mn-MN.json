@@ -243,6 +243,234 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "Давтамжийн шинжилгээ"
         },
+        "csd5-2022/Representation Matters": {
+          "name": "Төлөөллийн асуудал"
+        },
+        "csd5-2022/Patterns and Representation": {
+          "name": "Дүрсүүд ба төлөөлөл"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "ASCII ба хоёртын төлөөлөл"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Зургийг төлөөлөх"
+        },
+        "csd5-2022/Representing Numbers": {
+          "name": "Тоог төлөөлөх"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Төлөөллийг нэгтгэх"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Мэдээллийг нууцлах"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "Төсөл - Төлөөлөл бий болгох"
+        },
+        "csd5-2022/Structuring Data": {
+          "name": "Өгөгдлийг бүтэцчилэх"
+        },
+        "csd5-2022/Interpreting Data": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "Өгөгдлөөр шийдвэр гаргах"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "csd5-2022/Problem Solving with Big Data": {
+          "name": "Том өгөгдлийг ашиглан асуудлыг шийдвэрлэх"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Асуудлыг шийдэхийг судлах"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Компьютер гэж юу вэ?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Оролт ба гаралт"
+        },
+        "csd1-2022/Processing": {
+          "name": "Боловсруулалт"
+        },
+        "csd1-2022/Storage": {
+          "name": "Хадгалалт"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Төсөл - Апп санал болгох"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "Үзвэр үйлчилгээний програмчлал"
+        },
+        "csd3-2022/Plotting Shapes": {
+          "name": "Дүрсийг зураглах"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Тоглоомын лабораторид зураг зурах"
+        },
+        "csd3-2022/Variables": {
+          "name": "Хувьсагчууд"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Шидтэнгүүд"
+        },
+        "csd3-2022/Text": {
+          "name": "Текст"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "Зурах гогцоо"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "Шидтэний хөдөлгөөн"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Нөхцлүүд"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Гараар оруулах"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "Төсөл - Интерактив карт"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Хурд"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "Мөргөлдөөнийг илрүүлэх"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Шидтэний нийлмэл хөдөлгөөн"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Мөргөлдөөн"
+        },
+        "csd3-2022/Functions": {
+          "name": "Функцүүд"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "Тоглоомын дизайн боловсруулах үйл явц"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Тоглоомын дизайн боловсруулах үйл явцыг ашиглах"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "Төсөл - Тоглоом зохиох"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+        },
+        "csd2-2022/Exploring Web Pages": {
+          "name": "Вэб хуудсуудыг судлах"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "HTML-н танилцуулга"
+        },
+        "csd2-2022/Headings": {
+          "name": "Гарчиг"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Дижитал ул мөр"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Текстийг CSS ашиглан загварчлах"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "Оюуны өмч"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Элементийг CSS ашиглан загварчлах"
+        },
+        "csd2-2022/Team Problem Solving": {
+          "name": "Багийн асуудлыг шийдэх"
+        },
+        "csd2-2022/Sources and Research": {
+          "name": "Эх сурвалж, судалгаа"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Хуудас холбох"
+        },
+        "csd2-2022/Project - Website for a Purpose": {
+          "name": "Төсөл - Зорилго бүхий вэбсайт"
+        },
+        "csd2-2022/Peer Review and Final Touches": {
+          "name": "Хамтрагчдын хяналт ба төгсгөлийн зөвлөмжүүд"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "Хэрэглэгчээ ойлгох"
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "Хэрэглэгчийн интерфейс"
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "Санал хүсэлт ба тест"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Хэрэглэгчийн хэрэгцээг тодорхойлох"
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "Төсөл - Цаасны прототип"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Сайн сайхны төлөө апп зохиох"
+        },
+        "csd4-2022/Market Research": {
+          "name": "Зах зээлийн судалгаа"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Жишээ туршилт"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "Апп-ыг туршиж байна"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "Төсөл - Апп танилцуулга"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+        },
+        "csd6-2022/Innovations in Computing": {
+          "name": "Тооцоолол дээрх инноваци"
+        },
+        "csd6-2022/The Circuit Playground": {
+          "name": "Хэлхээний тоглоомын талбай"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Самбарын үйл явдлууд"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "Хурдасгуур хэмжигч"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Хөгжим зохиох"
+        },
+        "csd6-2022/Functions": {
+          "name": "Функцүүд"
+        },
+        "csd6-2022/Project - Prototype an Innovation": {
+          "overview": "Хичээлийн энэхүү эцсийн төсөлд оюутнуудын баг Хэлхээ тоглоомын талбай дээр суурилсан шинэлэг тооцоолох төхөөрөмжийн прототипийг боловсруулж туршихаар болжээ. Самбар дээр байгаа оролт, гаралтыг ашиглан бүлгүүд нь сонирхолтой, өвөрмөц харилцан үйлчлэл хийх боломжийг олгодог программыг бий болгоно. "
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Өгөгдөл цуглуулах ажлыг зохион бүтээх"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
         },

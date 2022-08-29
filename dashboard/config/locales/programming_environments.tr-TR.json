@@ -1,0 +1,110 @@
+{
+  "tr-TR": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Laboratuvarı",
+          "categories": {
+            "html_tags": {
+              "name": "HTML Etiketleri"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Oyun Laboratuvarı",
+          "categories": {
+            "game_lab": {
+              "name": "Oyun Laboratuvarı"
+            },
+            "sprites": {
+              "name": "Hareketli Nesneler"
+            },
+            "groups": {
+              "name": "Gruplar"
+            },
+            "drawing": {
+              "name": "Çizim"
+            },
+            "math": {
+              "name": "Matematik"
+            },
+            "variables": {
+              "name": "Değişkenler"
+            },
+            "functions": {
+              "name": "Fonksiyonlar"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Laboratuvarı",
+          "description": "App Lab basit uygulamalar yapabileceğiniz bir uygulama geliştirme ortamıdır. Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın.",
+          "categories": {
+            "data": {
+              "name": "Veri"
+            },
+            "math": {
+              "name": "Matematik"
+            },
+            "variables": {
+              "name": "Değişkenler"
+            },
+            "functions": {
+              "name": "Fonksiyonlar"
+            },
+            "advanced": {
+              "name": "İleri seviye"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Kukla Laboratuvarı",
+          "categories": {
+            "sprites": {
+              "name": "Hareketli Nesneler"
+            },
+            "world": {
+              "name": "Dünya"
+            },
+            "location": {
+              "name": "Konumlar"
+            },
+            "actions": {
+              "name": "İşlemler"
+            },
+            "events": {
+              "name": "Olaylar"
+            },
+            "behaviors": {
+              "name": "Davranışlar"
+            },
+            "loops": {
+              "name": "Döngüler"
+            },
+            "variables": {
+              "name": "Değişkenler"
+            },
+            "math": {
+              "name": "Matematik"
+            },
+            "logic": {
+              "name": "Mantık"
+            },
+            "functions": {
+              "name": "Fonksiyonlar"
+            },
+            "text": {
+              "name": "yazı"
+            },
+            "comments": {
+              "name": "Yorumlar"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Laboratuvarı"
+        }
+      }
+    }
+  }
+}

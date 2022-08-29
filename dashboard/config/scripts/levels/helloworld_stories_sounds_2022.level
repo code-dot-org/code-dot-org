@@ -31,7 +31,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "start_in_animation_tab": "false",
@@ -66,7 +66,7 @@
     "instructions_icon": "bear",
     "validation_code": "if (World.frameCount == 1) {\r\n\taddCriteria(function() {\r\n    \treturn getSoundLog().length >= 1;\r\n    }, \"noSound\");\r\n}\r\n\r\ncheck();",
     "skip_autosave": true,
-    "encrypted_examples": "Be5GY+LxN9VCpJ9TJjRuSzVp5RfUb7UgLC5LSfUjWEkRRoxrmyG+1cRcFOnE\nxeMHIbGVbJhG/qR9L7/m7qI/27lwmtcLHHj+2ug+kSn90wDJiAmYHfgLyU/C\nsGqLs4iw315tqcduvXGehSuZluxDYQ==\n",
+    "encrypted_examples": "DUjvtdZKA7Z4VJRNncESLc7roPZIBiUZgHOEiow6vG9EHjWFhMPCei7ODMpq\nrsYHLTx0R7K7FV4HmFHBxrml1A==\n",
     "preload_asset_list": null
   },
   "game_id": 64,
@@ -75,7 +75,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-16T22:13:28.574+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds_2022\\\"\"],\"cloned_from\":\"helloworld_food_sounds_2022\"},{\"changed_at\":\"2022-06-16 22:13:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-16 22:14:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-16 22:15:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-07-07 16:53:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-07-07 16:57:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-16T22:13:28.574+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds_2022\\\"\"],\"cloned_from\":\"helloworld_food_sounds_2022\"},{\"changed_at\":\"2022-06-16 22:13:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-16 22:14:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-16 22:15:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-07-07 16:53:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-07-07 16:57:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-23 17:05:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-24 19:17:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-16 23:57:16 UTC",
+    "serialized_at": "2022-08-17 17:34:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -298,8 +298,19 @@
       }
     },
     {
-      "key": "ed51cbfe-8b60-4db1-ac50-aa65b2c22371",
+      "key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0",
       "position": 3,
+      "properties": {
+        "progression_name": "Additional Support "
+      },
+      "seeding_key": {
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0",
+        "lesson_activity.key": "a2120e93-8cdf-4b89-9e07-c74767a34899"
+      }
+    },
+    {
+      "key": "ed51cbfe-8b60-4db1-ac50-aa65b2c22371",
+      "position": 4,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -416,6 +427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPractices1"
+        ],
         "progression": "Debugging Practices"
       },
       "bonus": false,
@@ -438,6 +452,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-DebuggingPracticesReflect"
+        ],
         "progression": "Debugging Practices"
       },
       "bonus": false,
@@ -460,6 +477,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPrompting1"
+        ],
         "progression": "Debugging Practices"
       },
       "bonus": false,
@@ -482,6 +502,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice"
+        ],
         "progression": "Debugging Practices"
       },
       "bonus": false,
@@ -504,6 +527,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingReflect"
+        ],
         "progression": "Debugging Practices"
       },
       "bonus": false,
@@ -526,6 +552,53 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Additional Support "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional Support "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-WrapUp1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -650,6 +723,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd2-ayw-pilot-2022",
         "activity_section.key": "c1f2cb4a-b6b6-49fc-81bb-f26e713d40f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M2-Debugging-forum-task"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd2-ayw-pilot-2022",
+        "activity_section.key": "405f9638-c9cb-44e9-bd2f-faeaa9fc79f0"
       }
     },
     {

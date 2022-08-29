@@ -1417,15 +1417,6 @@ ta:
         text: "{SPRITE}நினைக்கிறார்கள்{SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}நினைக்கிறார்கள்{TEXT1}க்கான{NUM}வினாடிகள்"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE}நினைக்கிறார்கள்{THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': ம்ம்ம்...
-            '"I am hungry, too."': எனக்கும் பசிக்கிறது.
-            '"I only want the biggest goat."': எனக்கு மிகப்பெரிய ஆடு மட்டுமே வேண்டும்.
-            '"I''m a green troll."': நான் ஒரு பச்சை பூதம்.
-            '"No one will cross my bridge."': என் பாலத்தை யாரும் கடக்க மாட்டார்கள்.
       gamelab_spriteThink_fables2:
         text: "{SPRITE}நினைக்கிறார்கள்{THOUGHT}"
         options:
