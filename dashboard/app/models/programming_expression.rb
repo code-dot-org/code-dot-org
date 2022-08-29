@@ -195,17 +195,25 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_show
     {
       id: id,
-      name: name,
+      name: get_localized_property(:name, name, expression_scope),
       blockName: block_name,
-      category: programming_environment_category&.name,
+      category: get_localized_property(
+        :name,
+        programming_environment_category&.name,
+        [:data,
+         :programming_environments,
+         programming_environment&.name,
+         :categories,
+         programming_environment_category&.key]
+      ),
       color: get_color,
       externalDocumentation: external_documentation,
-      content: content,
-      syntax: syntax,
-      returnValue: return_value,
-      tips: tips,
-      parameters: palette_params,
-      examples: examples,
+      content: get_localized_property(:content, content, expression_scope),
+      syntax: get_localized_property(:syntax, syntax, expression_scope),
+      returnValue: get_localized_property(:return_value, return_value, expression_scope),
+      tips: get_localized_property(:tips, tips, expression_scope),
+      parameters: get_localized_params,
+      examples: get_localized_examples,
       video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
       imageUrl: image_url
     }
@@ -243,6 +251,67 @@ class ProgrammingExpression < ApplicationRecord
       categoryName: programming_environment_category&.name,
       editPath: edit_programming_expression_path(self)
     }
+  end
+
+  def expression_scope
+    [:data,
+     :programming_environments,
+     programming_environment&.name,
+     :categories,
+     programming_environment_category&.key,
+     :expressions,
+     key]
+  end
+
+  def get_localized_examples
+    localized_examples = examples
+    i18n_examples = I18n.t(
+      :examples,
+      scope: expression_scope,
+      default: examples,
+      smart: true
+    )
+    if i18n_examples != localized_examples
+      localized_examples&.each do |example|
+        example_key = example['name'].to_sym
+        unless i18n_examples[example_key].nil?
+          example['name'] = i18n_examples[example_key][:name]
+          example['code'] = i18n_examples[example_key][:code]
+          example['description'] = i18n_examples[example_key][:description]
+        end
+      end
+    end
+    localized_examples
+  end
+
+  def get_localized_params
+    localized_params = palette_params
+    i18n_params = I18n.t(
+      :palette_params,
+      scope: expression_scope,
+      default: palette_params,
+      smart: true
+    )
+    if i18n_params != localized_params
+      localized_params&.each do |param|
+        param_key = param['name'].to_sym
+        unless i18n_params[param_key].nil?
+          param['name'] = i18n_params[param_key][:name]
+          param['type'] = i18n_params[param_key][:type]
+          param['description'] = i18n_params[param_key][:description]
+        end
+      end
+    end
+    localized_params
+  end
+
+  def get_localized_property(property_name, default_value, scope)
+    I18n.t(
+      property_name,
+      scope: scope,
+      default: default_value,
+      smart: true
+    )
   end
 
   def get_blocks

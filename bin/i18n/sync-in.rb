@@ -28,6 +28,7 @@ def sync_in
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
+  redact_docs
   redact_block_content
   redact_script_and_course_content
   localize_markdown_content
@@ -42,17 +43,66 @@ def localize_docs
   puts "Preparing docs content"
   docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
   programming_env_docs = {}
-  ProgrammingEnvironment.all.each do |env|
-    name = env.name
-    programming_env_docs[name] = {
+  # For each programming environment, name is used as key, title is used as name,
+  ProgrammingEnvironment.all.sort.each do |env| # env as short for environment
+    env_name = env.name
+    programming_env_docs[env_name] = {
       'name' => env.properties["title"],
       'description' => env.properties["description"],
       'categories' => {},
     }
-    env.categories_for_navigation.each do |category|
-      programming_env_docs[name]["categories"].store(
-        category[:key], {'name' => category[:name]}
+    # Programming environment has a method defined in the programming_environment model that returns the
+    # categories for navigation. The method is used to obtain the current categories existing in the database.
+    env.categories_for_navigation.each do |cat| # cat as short for category
+      cat_key = cat[:key]
+      programming_env_docs[env_name]["categories"].store(
+        cat_key, {
+          'name' => cat[:name],
+          'expressions' => {}
+        }
       )
+      cat[:docs].each do |expression|
+        exp_key = expression[:key] # exp_key as short for expression key
+        # Skip javalab
+        next if env_name == 'javalab'
+        # javalab documentations has a different structure in the database. Each category has programming classes
+        # instead of expressions. Additionally, the categories_for_navigation method doest not return expression keys,
+        # used to query the data base
+
+        exp_docs = ProgrammingExpression.find_by_id(expression[:id])
+        programming_env_docs[env_name]["categories"][cat_key]["expressions"].store(
+          exp_key, {
+            'name' => expression[:name],
+            'content' => exp_docs.properties["content"],
+            'examples' => {},
+            'palette_params' => {},
+            'return_value' => exp_docs.properties["return_value"],
+            'short_description' => exp_docs.properties["short_description"],
+            'syntax' => exp_docs.properties["syntax"],
+            'tips' => exp_docs.properties["tips"]
+          }
+        )
+        # Programming expresions may have 0 or more examples
+        exp_docs.properties['examples']&.each do |ex| # ex as short for example
+          programming_env_docs[env_name]["categories"][cat_key]["expressions"][exp_key]["examples"].store(
+            ex["name"], {
+              'name' => ex["name"],
+              'description' => ex["description"],
+              'code' => ex["code"]
+            }
+          )
+        end
+        # Programming expresions may have 0 or more parameters
+        exp_docs.properties["palette_params"]&.each do |param|
+          programming_env_docs[env_name]["categories"][cat_key]["expressions"][exp_key]["palette_params"].store(
+            param["name"], {
+              'name' => param["name"],
+              'type' => param["type"],
+              'description' => param["description"]
+            }
+          )
+        end
+      end
     end
   end
   FileUtils.mkdir_p(File.dirname(docs_content_file))
@@ -490,6 +540,16 @@ def redact_level_file(source_path)
   File.open(source_path, 'w') do |source_file|
     source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
   end
+end
+
+def redact_docs
+  puts "Redacting docs content"
+
+  source = File.join(I18N_SOURCE_DIR, "docs", "*.json")
+  backup = source.sub("source", "original")
+  FileUtils.mkdir_p(File.dirname(backup))
+  FileUtils.cp(source, backup)
+  RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
 end
 
 def redact_level_content
