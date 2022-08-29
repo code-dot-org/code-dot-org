@@ -17,6 +17,12 @@ export const projectUpdatedStatuses = {
   error: 'error'
 };
 
+export const workspaceAlertTypes = {
+  error: 'error',
+  warning: 'warning',
+  notification: 'notification'
+};
+
 const initialState = {
   showProjectUpdatedAt: false,
   projectUpdatedStatus: projectUpdatedStatuses.default,
@@ -25,7 +31,7 @@ const initialState = {
   projectNameFailure: undefined,
   showTryAgainDialog: false,
   showWorkspaceAlert: false,
-  workspaceAlertType: undefined, // 'error' or 'warning'
+  workspaceAlertType: undefined,
   workspaceAlertDisplayBottom: undefined,
   workspaceAlertErrorMsg: ''
 };

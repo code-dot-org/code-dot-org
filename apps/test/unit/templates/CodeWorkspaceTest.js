@@ -5,7 +5,7 @@ import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import sinon from 'sinon';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
-
+import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {
     editCode: true,
@@ -21,7 +21,7 @@ describe('CodeWorkspace', () => {
     showWorkspaceAlert: true,
     workspaceAlertErrorMsg: 'This is an error msg',
     workspaceAlertDisplayBottom: true,
-    workspaceAlertType: 'error',
+    workspaceAlertType: workspaceAlertTypes.error,
     closeWorkspaceAlert: () => {}
   };
 

@@ -32,7 +32,7 @@ var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 import {getStore} from '../../redux';
-import {displayWorkspaceAlert} from '../projectRedux';
+import {workspaceAlertTypes, displayWorkspaceAlert} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -1181,10 +1181,12 @@ var projects = (module.exports = {
                 header.showTryAgainDialog();
               }
               if (err.message.includes('httpStatusCode: 422')) {
-                const msg =
-                  'There was an error saving your project, please remove any invalid characters to resolve.';
                 getStore().dispatch(
-                  displayWorkspaceAlert('error', msg, true) /* bottom */
+                  displayWorkspaceAlert(
+                    workspaceAlertTypes.error,
+                    msg.invalidCharactersErrorMessage(),
+                    /* bottom */ true
+                  )
                 );
               }
             }
