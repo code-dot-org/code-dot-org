@@ -55,9 +55,7 @@ export default class WebSerialPortWrapper extends EventEmitter {
           }
         }
       })
-      .catch(() => {
-        console.log('Failure to open port');
-      });
+      .catch(error => Promise.reject('Failure to open port: ' + error));
   }
 
   write(buffer, encoding, callback) {
@@ -67,7 +65,7 @@ export default class WebSerialPortWrapper extends EventEmitter {
     return this.writer
       .write(buffer)
       .then(() => (callback ? callback() : null))
-      .catch(error => Promise.reject(error));
+      .catch(error => Promise.reject('Failure to write to port: ' + error));
   }
 
   async close() {
