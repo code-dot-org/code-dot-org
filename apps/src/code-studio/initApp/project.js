@@ -31,6 +31,8 @@ var channels = require('./clientApi').create('/v3/channels');
 var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
+import {getStore} from '../../redux';
+import {workspaceAlertTypes, displayWorkspaceAlert} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -1177,6 +1179,15 @@ var projects = (module.exports = {
               );
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
+              }
+              if (err.message.includes('httpStatusCode: 422')) {
+                getStore().dispatch(
+                  displayWorkspaceAlert(
+                    workspaceAlertTypes.error,
+                    msg.invalidCharactersErrorMessage(),
+                    /* bottom */ true
+                  )
+                );
               }
             }
             return;
