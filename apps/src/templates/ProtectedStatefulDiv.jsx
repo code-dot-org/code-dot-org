@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 /**
- * A div DOM element that will never update its contents unless the non-standard
- * DOM attribute, canupdate, is assigned 'yes' It will throw an
- * exception if it is ever unmounted, enforcing that it must always be rendered
- * because its contents may contain state that the application is depending on.
+ * A div DOM element that will never update its contents unless canUpdate
+ * is assigned true. It will throw an exception if it is ever unmounted,
+ * enforcing that it must always be rendered because its contents may
+ * contain state that the application is depending on.
  *
  * Useful when React is wrapping external libraries or parts of our UI that are
  * not yet driven by React.

@@ -30,10 +30,7 @@ const initialState = {
   projectName: '',
   projectNameFailure: undefined,
   showTryAgainDialog: false,
-  showWorkspaceAlert: false,
-  workspaceAlertType: undefined,
-  workspaceAlertDisplayBottom: undefined,
-  workspaceAlertErrorMsg: ''
+  showWorkspaceAlert: {type: '', message: '', displayBottom: undefined}
 };
 
 export default (state = initialState, action) => {
@@ -62,10 +59,7 @@ export default (state = initialState, action) => {
   if (action.type === SHOW_WORKSPACE_ALERT) {
     return {
       ...state,
-      showWorkspaceAlert: action.showWorkspaceAlert,
-      workspaceAlertType: action.workspaceAlertType,
-      workspaceAlertErrorMsg: action.workspaceAlertErrorMsg,
-      workspaceAlertDisplayBottom: action.workspaceAlertDisplayBottom
+      workspaceAlert: action.workspaceAlert
     };
   }
 
@@ -111,22 +105,20 @@ export const setProjectUpdatedError = () => ({
 
 export const displayWorkspaceAlert = (
   workspaceAlertType,
-  workspaceAlertErrorMsg,
+  workspaceAlertMessage,
   workspaceAlertDisplayBottom
 ) => ({
   type: SHOW_WORKSPACE_ALERT,
-  showWorkspaceAlert: true,
-  workspaceAlertType,
-  workspaceAlertErrorMsg,
-  workspaceAlertDisplayBottom
+  workspaceAlert: {
+    type: workspaceAlertType,
+    message: workspaceAlertMessage,
+    displayBottom: workspaceAlertDisplayBottom
+  }
 });
 
 export const closeWorkspaceAlert = () => ({
   type: SHOW_WORKSPACE_ALERT,
-  showWorkspaceAlert: false,
-  workspaceAlertType: undefined,
-  workspaceAlertErrorMsg: '',
-  workspaceAlertDisplayBottom: undefined
+  workspaceAlert: null
 });
 
 export const setProjectUpdatedSaving = () => ({
