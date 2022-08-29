@@ -37,4 +37,18 @@ class CertificatesController < ApplicationController
 
     render :show
   end
+
+  # GET /certificates/batch
+  def batch
+    begin
+      course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return render status: :bad_request, json: {message: 'invalid base64'}
+    end
+
+    @certificate_data = {
+      courseName: course_name,
+      imageUrl: certificate_image_url(nil, course_name, nil),
+    }
+  end
 end
