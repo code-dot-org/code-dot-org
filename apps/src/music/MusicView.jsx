@@ -148,6 +148,10 @@ class MusicView extends React.Component {
     setInterval(this.updateTimer, 1000 / 30);
   }
 
+  componentDidUpdate() {
+    this.resizeBlockly();
+  }
+
   updateTimer = () => {
     if (this.state.isPlaying) {
       this.setState({currentAudioTime: GetCurrentAudioTime()});
@@ -296,18 +300,20 @@ class MusicView extends React.Component {
       horizontalLayout: true
     });
 
+    this.resizeBlockly();
+
     const xml = parseXmlElement(
       '<xml><block type="when_run" deletable="false" x="20" y="20"></block><block type="when_trigger" deletable="false" x="20" y="180"></block></xml>'
     );
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
-
+    
   };
 
   onBlockSpaceChange = () => {
-    console.log("onBlockSpaceChange")
-    
+    console.log('onBlockSpaceChange');
+
     this.executeSong();
 
     this.setState({updateNumber: this.state.updateNumber + 1});
@@ -330,6 +336,29 @@ class MusicView extends React.Component {
 
       this.setState({windowWidth, windowHeight, appWidth, appHeight});
     }
+
+    //this.resizeBlockly();
+  };
+
+  resizeBlockly = () => {
+    var blocklyArea = document.getElementById('blocklyArea');
+    var blocklyDiv = document.getElementById('blocklyDiv');
+
+    // Compute the absolute coordinates and dimensions of blocklyArea.
+    var element = blocklyArea;
+    var x = 0;
+    var y = 0;
+    do {
+      x += element.offsetLeft;
+      y += element.offsetTop;
+      element = element.offsetParent;
+    } while (element);
+    // Position blocklyDiv over blocklyArea.
+    //blocklyDiv.style.left = x + 'px';
+    //blocklyDiv.style.top = y + 'px';
+    blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+    Blockly.svgResize(this.workspace);
   };
 
   choosePanel = panel => {
@@ -338,6 +367,8 @@ class MusicView extends React.Component {
     if (panel == 'timeline') {
       this.playSong();
     }
+
+    this.resizeBlockly();
   };
 
   setSamplePanel = panel => {
@@ -371,9 +402,8 @@ class MusicView extends React.Component {
 
     this.callUserGeneratedCode(hooks.whenRunButton);
   };
-  
+
   playSong = () => {
-   
     this.executeSong();
 
     const currentAudioTime = GetCurrentAudioTime();
@@ -447,7 +477,7 @@ class MusicView extends React.Component {
       samplepack7: require('@cdo/static/music/samplepack7.png'),
       waveform_lead: require('@cdo/static/music/waveform-lead.png'),
       waveform_bass: require('@cdo/static/music/waveform-bass.png'),
-      waveform_drum: require('@cdo/static/music/waveform-drum.png'),
+      waveform_drum: require('@cdo/static/music/waveform-drum.png')
     };
 
     const mobileWidth = 500;
@@ -675,14 +705,16 @@ class MusicView extends React.Component {
           </div>
         )}
         <div
-          id="blocklyDiv"
+          id="blocklyArea"
           style={{
             float: 'left',
             width: isDesktop ? '60%' : '100%',
             marginTop: 10,
             height: showCode ? 450 : 0
           }}
-        />
+        >
+          <div id="blocklyDiv" style={{position: 'absolute'}} />
+        </div>
         <div
           style={{
             position: 'fixed',
