@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+#
+# CI_BUILD is the core command in our polling-based continuous deployment system. It checks for upstream
+# commits on the current branch.
+#
+# If no changes are detected it exits silently.
+#
+# If changes are detected, CI_BUILD fetches them, gets the commit messages for them (written out as
+# the temp file 'rebuild') and displays them in chat as a purple "build started" message. Then
+# CI_BUILD invokes the 'ci' Rake task to run the build.
+#
+# NOTE: When the build starts a BUILD-STARTED file is created, and this file is deleted when the
+#   build script finishes. This file is NOT deleted if the build system itself is broken and the
+#   presence of this file will cause the system to attempt to pull and rebuild constantly over and
+#   over until it succeeds. This may happen often, but it is probably a safeguard to keep around because
+#   in the rare cases where the build scripts are damaged, this ensures the machines can be restored simply
+#   by checking in a fix (vs. needing to SSH to the machine and fix manually).
+#
+# NOTE: running `touch build-started` (or running the `bin/start-build` script)
+# is an easy way to force a rebuild without needing to make a commit.
+#
+require_relative '../lib/cdo/do/only_one'
+exit(0) unless only_one_running?(__FILE__)
+
+require 'active_support/inflector'
+require_relative '../deployment'
+require 'cdo/aws/s3'
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require 'cdo/github'
+require 'cdo/git_utils'
+require 'cdo/honeybadger'
+require 'cdo/infra_production_topic'
+require 'cdo/rake_utils'
+require 'cdo/test_server_status'
+require 'cdo/metrics_helper'
+require 'dynamic_config/dcdo'
+require 'aws-sdk-cloudwatch'
+
+STARTED = 'build-started'.freeze
+S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
+S3_LOGS_PREFIX = CDO.name.freeze
+
+def main
+  Dir.chdir(deploy_dir) do
+    ci_manager = ContinuousIntegrationManager
+    ci_manager.run
+  end
+
+  # Return the same output and status code that BUILD returned.
+  puts log
+  status
+end
+
+main
