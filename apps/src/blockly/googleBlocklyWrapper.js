@@ -499,6 +499,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
+
+    return workspace;
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
