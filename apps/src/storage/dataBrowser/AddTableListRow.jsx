@@ -56,7 +56,7 @@ class AddTableListRow extends React.Component {
             type="button"
             onClick={this.handleAdd}
           >
-            Add
+            {msg.add()}
           </button>
         </td>
       </tr>

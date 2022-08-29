@@ -5,6 +5,7 @@ import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import dataStyles from './data-styles.module.scss';
+import msg from '@cdo/locale';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
@@ -29,9 +30,9 @@ class EditTableListRow extends React.Component {
         </td>
         <td className={dataStyles.cell}>
           <ConfirmDeleteButton
-            title="Delete table"
-            body="Do you really want to delete this entire table? You cannot undo this action."
-            buttonText="Delete"
+            title={msg.deleteTable()}
+            body={msg.deleteTableConfirm()}
+            buttonText={msg.delete()}
             containerStyle={{whiteSpace: 'normal', width: 103}}
             onConfirmDelete={this.handleDelete}
           />

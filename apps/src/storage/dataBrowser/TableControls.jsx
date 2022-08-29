@@ -57,7 +57,7 @@ class TableControls extends React.Component {
               dataStyles.buttonWhite
             )}
           >
-            Export to csv
+            {msg.exportToCSV()}
           </button>
         </div>
         {/* help make the "text-align: justify;" trick work */}
