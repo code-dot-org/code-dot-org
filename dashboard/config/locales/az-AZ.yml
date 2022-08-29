@@ -501,7 +501,6 @@ az:
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: Sizin nəticələriniz
-      lines: 'Yekun kod sətiri: %{lines}'
       close: BAĞLA
       mastery: Anlayışlar
       puzzle_map: Mərhələlər

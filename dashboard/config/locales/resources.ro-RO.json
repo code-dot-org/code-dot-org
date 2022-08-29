@@ -36,7 +36,8 @@
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "Întoarceri & Unghiuri",
-          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4"
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "Conspect Elev"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Întoarceri & Unghiuri",
@@ -61,7 +62,8 @@
         },
         "activity-recap-decode-this-message/text-compression/unversioned": {
           "name": "Rezumat activitate - Decodați acest mesaj",
-          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/"
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
+          "type": "Recapitulare Activitate"
         },
         "decode-this-message/text-compression/unversioned": {
           "name": "Decriptează acest mesaj",
@@ -69,7 +71,8 @@
         },
         "textcompressioncodestudio/text-compression/unversioned": {
           "name": "Dispozitiv pentru compresia textului în Code Studio",
-          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
+          "type": "Widget"
         },
         "video-text-compression/text-compression/unversioned": {
           "name": "Video: Compresia textului cu Aloe Blacc",
@@ -106,6 +109,375 @@
           "name": "IA: Antrenament Date & Prejudecăți",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Reflecţie"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubrică"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Videoclip: Învățarea Automată",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubrică"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Forum profesori"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Procesul de Rezolvare a Problemei"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Procesul de Rezolvare a Problemei"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Ce Este un Computer?"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "Rubrică"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Video"
+        },
+        "variables/csd/2022": {
+          "name": "Variabile"
+        },
+        "variables_3/csd/2022": {
+          "name": "Variabile"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
+        },
+        "sprites/csd/2022": {
+          "name": "Spiriduși"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Fila de animație",
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Spiriduși"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Proprietăți spiriduș"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Proprietăți spiriduș"
+        },
+        "text/csd/2022": {
+          "name": "Text"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubrică"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "Video"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubrică"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Expresii booleene",
+          "type": "Video"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Declarații condiționale",
+          "type": "Video"
+        },
+        "conditionals/csd/2022": {
+          "name": "Condiţionale"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "Declarațiile Dacă/Altfel (if/else)",
+          "type": "Video"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Rubrică"
+        },
+        "velocity/csd/2022": {
+          "name": "Viteza",
+          "type": "Video"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Viteza"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Viteza"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Detectarea coliziunilor"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Detectarea coliziunilor"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Detectarea coliziunilor"
+        },
+        "side_scroller/csd/2022": {
+          "type": "Rubrică"
+        },
+        "flyer_game/csd/2022": {
+          "type": "Rubrică"
+        },
+        "functions/csd/2022": {
+          "name": "Funcţii",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funcţii"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funcţii"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubrică"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2022": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "Video"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Rubrică"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "lists/csd/2022": {
+          "name": "Liste"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "Amprenta digitală"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Introducere în CSS - partea 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Introducere în CSS - partea 2",
+          "type": "Video"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubrică"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Video"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubrică"
+        },
+        "publishing_your_website/csd/2022": {
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "Video"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2022": {
+          "type": "Video"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubrică"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "Rubrică"
+        },
+        "design_mode/csd/2022": {
+          "name": "Mod proiectare"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "app_presentation/csd/2022": {
+          "type": "Rubrică"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Știința calculatoarelor schimbă totul",
+          "type": "Video"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variabile"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variabile",
+          "type": "Video"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubrică"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubrică"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Introducere în matrice",
+          "type": "Video"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funcţii"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funcţii",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funcții cu Parametrii",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funcţii"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubrică"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubrică"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "IA: Antrenament Date & Prejudecăți",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Conspect Elev"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubrică"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubrică"
         },
         "lesson_plans/courseb/2018": {
           "name": "Planuri de lecție"
@@ -756,11 +1128,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Urme digitale: Pătrate pentru urma digitală",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Conspect Elev"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Urme digitale: Urme de animale",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Conspect Elev"
         },
         "mimi-activity/courseb/2021": {
           "name": "Mutaţi-l, mutați-l",
@@ -946,7 +1320,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Siguranța în cartierul meu online: Pauză de gândire",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Conspect Elev"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programare în perechi",
@@ -1145,7 +1520,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Să spunem STOP comportamentelor răutăcioase online: spune STOP comportamentelor răutăcioase online",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Conspect Elev"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Amicii mei roboți",
@@ -1202,7 +1578,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Întoarceri & Unghiuri",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Conspect Elev"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Fețe expresive - Imagine care ilustrează o emoție",
@@ -1712,7 +2089,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "Informații private și informații personale: biletul de ieșire",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Conspect Elev"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Informații private și informații personale: testul lecției",
@@ -1742,7 +2120,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Întoarceri & Unghiuri",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Conspect Elev"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Întoarceri & Unghiuri",
@@ -1875,6 +2254,9 @@
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Conspect Elev"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"

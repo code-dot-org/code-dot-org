@@ -432,7 +432,6 @@ ta:
     popup:
       progress_for_user: "%{name} இன் முன்னேற்றம்"
       progress: 'உங்கள் முன்னேற்றம்'
-      lines: 'குறியீட்டின் மொத்த வரிகள்: %{lines}'
       close: 'மூடு'
       mastery: 'கருத்துக்கள்'
       puzzle_map: 'கட்டங்கள்'

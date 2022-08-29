@@ -1,6 +1,7 @@
 require 'cdo/aws/s3'
 require 'rack/csrf'
-require_relative '../shared/middleware/helpers/storage_id'
+require_relative '../shared/middleware/helpers/core.rb'
+require_relative '../shared/middleware/helpers/auth_helpers.rb'
 require 'cdo/asset_helper'
 require 'cdo/cookie_helpers'
 require 'cdo/language_dir'

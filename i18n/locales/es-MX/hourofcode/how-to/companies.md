@@ -65,7 +65,7 @@ Si no puedes conectarte con una escuela, [contáctanos](https://support.code.org
 
 Si deseas hacer un esfuerzo adicional, tu empresa también puede organizar un evento de la Hora del Código. ¡No existe una fórmula específica para organizar un evento, por lo que te animamos a ser creativo! Dado que nuestro personal es pequeño (¡pero poderoso!), Code.org no tiene un equipo dedicado a coordinar los eventos de la Hora del Código. Sin embargo, estos son algunos consejos para comenzar.
 
-### 1. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Determina una fecha, formato y ubicación para tu evento.
 

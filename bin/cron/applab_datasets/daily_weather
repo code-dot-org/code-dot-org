@@ -8,7 +8,7 @@ require 'net/http'
 require 'json'
 require 'ostruct'
 require 'date'
-require_relative '../../../shared/middleware/helpers/firebase_helper'
+require_relative '../../../dashboard_legacy/middleware/helpers/firebase_helper'
 require 'honeybadger/ruby'
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip)

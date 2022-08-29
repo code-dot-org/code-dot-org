@@ -73,7 +73,7 @@ def check_changes
   system("git status --untracked-files=all #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
   input = gets.chomp
-  if input == '' || input[0].downcase == 'y'
+  if input == '' || input[0].casecmp?('y')
     puts "Cool!"
     true
   else

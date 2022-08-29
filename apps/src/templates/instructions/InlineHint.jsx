@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
 import firehoseClient from '@cdo/apps/lib/util/firehose';

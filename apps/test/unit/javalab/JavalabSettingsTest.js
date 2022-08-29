@@ -7,7 +7,6 @@ import {JavalabSettings} from '@cdo/apps/javalab/JavalabSettings';
 const clickSpy = sinon.spy();
 
 const defaultProps = {
-  style: {},
   children: [
     <button onClick={clickSpy} type="button">
       onclick

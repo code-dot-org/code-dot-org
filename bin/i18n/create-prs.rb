@@ -95,7 +95,7 @@ class CreateI18nPullRequests
 
     # Break up the dashboard changes, since they frequently end up being large
     # enough to have trouble viewing in github
-    Languages.get_crowdin_name_and_locale.each do |prop|
+    PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
       locale = prop[:locale_s]
       next if locale == 'en-US'
       I18nScriptUtils.git_add_and_commit(

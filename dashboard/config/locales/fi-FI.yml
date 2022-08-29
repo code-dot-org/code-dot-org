@@ -432,7 +432,6 @@ fi:
     popup:
       progress_for_user: Käyttäjän %{name} edistyminen
       progress: Sinun edistymisesi
-      lines: 'Koodirivien yhteismäärä: %{lines}'
       close: SULJE
       mastery: Käsitteitä
       puzzle_map: Tasot

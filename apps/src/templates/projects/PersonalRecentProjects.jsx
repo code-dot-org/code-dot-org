@@ -5,7 +5,7 @@ import {personalProjectDataPropType} from './projectConstants';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 class PersonalRecentProjects extends Component {
   static propTypes = {

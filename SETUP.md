@@ -104,7 +104,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 1. Install **rbenv** via `brew install rbenv`
 
-9. Install **Ruby**
+1. Install **Ruby**
     1. For non-M1 systems, running `rbenv install` from the project root directory should be sufficient
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
@@ -308,7 +308,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
 1. Install Ruby with rbenv
-    1. Run `rbenv install --skip-existing` from the project root directory.
+    1. Execute `rbenv install --skip-existing` from the root directory
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
@@ -447,6 +447,10 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 ### Ruby
 
 We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
+
+### SCSS
+
+We use [Stylelint](https://stylelint.io/) to lint our SCSS in the `apps` directory. There are plugins available for both [VS Code](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) and [JetBrains](https://www.jetbrains.com/help/idea/using-stylelint-code-quality-tool.html#ws_stylelint_configure).
 
 ## More Information
 Please also see our other documentation, including our:

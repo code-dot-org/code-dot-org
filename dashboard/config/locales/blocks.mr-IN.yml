@@ -1404,15 +1404,6 @@ mr:
         text: "{SPRITE} विचार करा {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}विचार करा{TEXT1}काही{NUM}सेकंदांसाठी"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} विचार करा {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': हम्म...
-            '"I am hungry, too."': मला सुद्धा भूक लागली आहे.
-            '"I only want the biggest goat."': मलाच सर्वात मोठी बकरी हवी आहे.
-            '"I''m a green troll."': मी ग्रीन ट्रोल आहे.
-            '"No one will cross my bridge."': कोणीही माझा पूल ओलांडणार नाही.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} विचार करा {THOUGHT}"
         options:

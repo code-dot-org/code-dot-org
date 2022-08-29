@@ -230,7 +230,7 @@ class User < ApplicationRecord
     if teacher?
       EmailPreference.upsert!(
         email: email,
-        opt_in: email_preference_opt_in.downcase == "yes",
+        opt_in: email_preference_opt_in.casecmp?("yes"),
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
@@ -243,7 +243,7 @@ class User < ApplicationRecord
     if student? && parent_email.present?
       EmailPreference.upsert!(
         email: parent_email,
-        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
         ip_address: parent_email_preference_request_ip,
         source: parent_email_preference_source,
         form_kind: nil
@@ -254,7 +254,7 @@ class User < ApplicationRecord
   # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
     user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
       user.save!
     end
@@ -1289,6 +1289,11 @@ class User < ApplicationRecord
     UserLevel.where(conditions).
       order(updated_at: :desc).
       first
+  end
+
+  #sections owned by the user AND not deleted
+  def owned_section_ids
+    sections.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this

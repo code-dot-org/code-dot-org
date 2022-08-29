@@ -5,14 +5,16 @@ import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton,
+  showLevelBuilderSaveButton
+} from './headerRedux';
+import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName,
   setShowTryAgainDialog
-} from './headerRedux';
+} from './projectRedux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -24,6 +26,7 @@ import {
   setInitialData
 } from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import logToCloud from '../logToCloud';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -208,6 +211,8 @@ function setUpGlobalData(store) {
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
         data.is_verified_instructor && store.dispatch(setVerified());
+
+        logToCloud.setCustomAttribute('userId', data.id);
       }
     })
     .catch(err => {

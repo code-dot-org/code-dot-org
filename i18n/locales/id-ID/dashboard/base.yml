@@ -433,7 +433,6 @@ id:
     popup:
       progress_for_user: "kemajuan %{name}"
       progress: 'Kemajuan Anda'
-      lines: 'Jumlah baris kode: %{lines}'
       close: 'TUTUP'
       mastery: 'Konsep'
       puzzle_map: 'Tahap'

@@ -125,6 +125,12 @@ module LevelsHelper
     end
   end
 
+  def level_passing?(level, script, user)
+    return false unless user.present?
+    last_attempt = user.last_attempt(level, script)
+    return last_attempt.present? && last_attempt.passing?
+  end
+
   def select_and_track_autoplay_video
     return if @level.try(:autoplay_blocked_by_level?)
 
@@ -363,6 +369,7 @@ module LevelsHelper
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+        @app_options[:level][:isPassing] = level_passing?(@level, @script, @user || current_user)
       end
     end
 

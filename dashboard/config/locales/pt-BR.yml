@@ -38,6 +38,7 @@ pt:
         personal_email_markdown: E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})
         username: Nome de usuário
         password: Senha
+        verified_teacher: Professor Verificado
         password_confirmation: Confirmação de senha
         current_password: Senha atual
         locale: Idioma
@@ -497,7 +498,6 @@ pt:
     popup:
       progress_for_user: progresso de %{name}'s
       progress: Seu progresso
-      lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
       mastery: Conceitos
       puzzle_map: Fases

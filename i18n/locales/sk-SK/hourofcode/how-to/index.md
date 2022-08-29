@@ -27,7 +27,7 @@ Hodina kódu je jednoduchý a zábavný spôsob, ako žiakov oboznámiť s inf
 
 <a id="how-to-video"></a>
 
-## 1. Pozrite si video o organizovaní Hodiny kódu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Pozrite si video o organizovaní Hodiny kódu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

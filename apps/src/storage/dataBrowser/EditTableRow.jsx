@@ -1,10 +1,10 @@
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
 import {castValue, displayableValue, editableValue} from './dataUtils';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 const INITIAL_STATE = {
@@ -102,12 +102,12 @@ class EditTableRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row} className="uitest-data-table-row">
+      <tr className={classNames(dataStyles.row, 'uitest-data-table-row')}>
         {this.props.columnNames.map(columnName => (
-          <td key={columnName} style={dataStyles.cell}>
+          <td key={columnName} className={dataStyles.cell}>
             {this.state.isEditing && columnName !== 'id' ? (
               <input
-                style={dataStyles.input}
+                className={dataStyles.input}
                 value={this.state.newInput[columnName] || ''}
                 onChange={event => this.handleChange(columnName, event)}
                 onKeyUp={this.handleKeyUp}
@@ -118,23 +118,31 @@ class EditTableRow extends React.Component {
           </td>
         ))}
 
-        {!this.props.readOnly && <td style={dataStyles.cell} />}
+        {!this.props.readOnly && <td className={dataStyles.cell} />}
 
         {!this.props.readOnly && (
-          <td style={dataStyles.editButtonCell}>
+          <td className={classNames(dataStyles.cell, dataStyles.editButton)}>
             {!this.state.isDeleting &&
               (this.state.isEditing ? (
                 <PendingButton
                   isPending={this.state.isSaving}
                   onClick={this.handleSave}
                   pendingText="Saving..."
-                  style={dataStyles.saveButton}
+                  className={classNames(
+                    dataStyles.button,
+                    dataStyles.buttonBlue,
+                    dataStyles.buttonBlueSave
+                  )}
                   text="Save"
                 />
               ) : (
                 <button
                   type="button"
-                  style={dataStyles.editButton}
+                  className={classNames(
+                    dataStyles.button,
+                    dataStyles.buttonWhite,
+                    dataStyles.buttonWhiteEdit
+                  )}
                   onClick={this.handleEdit}
                 >
                   Edit
@@ -147,7 +155,7 @@ class EditTableRow extends React.Component {
                 onClick={this.handleDelete}
                 pendingStyle={{float: 'right'}}
                 pendingText="Deleting..."
-                style={dataStyles.redButton}
+                className={classNames(dataStyles.button, dataStyles.buttonRed)}
                 text="Delete"
               />
             )}
@@ -158,4 +166,4 @@ class EditTableRow extends React.Component {
   }
 }
 
-export default Radium(EditTableRow);
+export default EditTableRow;

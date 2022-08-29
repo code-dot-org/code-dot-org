@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in]
 
   def load_user
     user_id = params[:user_id]
@@ -31,6 +31,22 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       render json: {
         is_signed_in: false
       }
+    end
+  end
+
+  # GET /api/v1/users/netsim_signed_in
+  def netsim_signed_in
+    prevent_caching
+    if current_user
+      render json: {
+        id: current_user.id,
+        name: current_user.short_name,
+        is_admin: current_user.admin,
+        is_signed_in: true,
+        owned_sections: current_user.owned_section_ids,
+      }
+    else
+      raise CanCan::AccessDenied
     end
   end
 

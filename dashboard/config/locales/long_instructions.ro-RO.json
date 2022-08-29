@@ -1749,7 +1749,13 @@
         "courseE_farmer_ramp12g_2020": "Deplasați-vă înainte până ajungeți la salată, apoi faceți o întoarcere la stânga **dacă** există o cărare care duce spre stânga. În caz contrar, faceți o întoarcere la dreapta.",
         "AllTheThings sprite lab with video": "Să creăm un acvariu cu pești!  Transformați sprite-ul ghem de ierburi într-un pește, făcând clic pe <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.Asigurați-vă că ați actualizat costumul acestui sprite în <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
         "Artist Autorun Test": "Acum, pune funcţia în interiorul buclei pentru a desena aceste trei pătrate.",
-        "U1L13 Text Compression": "Caută modele (cuvinte sau fraze repetate) în text. Introdu modelul pe care îl găseşti in dictionarul din dreapta. Pe măsură ce adaugi intrări in dicţionar, simbolul acelei intrări este inserat in text în locul modelului."
+        "U1L13 Text Compression": "Caută modele (cuvinte sau fraze repetate) în text. Introdu modelul pe care îl găseşti in dictionarul din dreapta. Pe măsură ce adaugi intrări in dicţionar, simbolul acelei intrări este inserat in text în locul modelului.",
+        "CSD U5 black white images pixelation 2_2022": "# Aplicație practică\n\nFolosește widget-ul de pixelare pentru a desena o față zâmbitoare\n\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)",
+        "CSD U5 black white images pixelation 3_2022": "# Aplicație practică\n\nCursoarele de lungime și lățime sunt setate incorect, astfel încât imaginea nu e vizibilă. Ajustează-le până găsești imaginea.\n\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)",
+        "CSD U5 black white images pixelation 4_2022": "# Aplicație practică\n\nAdaugă sprâncene acestei fețe zâmbitoare. Nu uita să folosești opțiunea \"Readable Format\" (format lizibil) dacă te-ai blocat. \n\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png>)",
+        "CSD U5 black white images pixelation 5_2022": "# Aplicație practică\n\nAcum e rândul tău. Desenează ce vrei tu in widget-ul de pixelare. Daca vrei, poți schimba lungimea și lățimea imaginii.",
+        "CSD U5 black white images pixelation_2022": "# Aplicație practică\n\nCompletează imaginea în forma literei \"X\" tastând numai caracterele 0 sau 1. Dacă vrei să ștergi caractere nedorite, utilizează opțiunea \"Readable Format\" (\"format lizibil\").",
+        "Intro to Web Lab - Part 1_2022": "## Întrebare de luat în considerare:\n\n-   Care sunt părțile diverse ale Web Lab, și pentru ce sunt folosite?"
       }
     }
   }

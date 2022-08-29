@@ -5,12 +5,6 @@ ur:
       name:
         course1:
           description_audience: عمر 4-6
-        course2:
-          lessons:
-            Conditionals:
-              name: شرائط
-            Flappy:
-              name: فلاپی
         course3:
           description_audience: Ages 8-18
         playlab:
@@ -25,105 +19,25 @@ ur:
             دکھا سکیں گے۔
           description_short: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن
             کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
-          lessons:
-            Artist:
-              name: اینا اور ایلسا کے ساتھ کوڈ
           student_description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ
             میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس
             اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں
             کو بھی دکھا سکیں گے۔
         course4:
           description_audience: Ages 9-18
-        usability:
-          lessons:
-            Variables:
-              name: متغیرات
-        algebra:
-          lessons:
-            'Eval: Conditionals':
-              name: شرائط
         infinity:
           name: انفینیٹی
-        K5PD:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
         20-hour:
           description_audience: Ages 10-18
-          lessons:
-            Conditionals:
-              name: شرائط
-            Introduction to Computer Science:
-              name: کمپیوٹر سائنس کا تعارف
-            The Artist:
-              name: مصور
-            The Farmer:
-              name: کسان
-            The Maze:
-              name: بھول بھلیا
-        edit-code:
-          lessons:
-            The Artist:
-              name: مصور
-            The Maze:
-              name: بھول بھلیا
         events:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
           description_short: ایونٹس/واقعات
-          lessons:
-            Calc:
-              name: Calc
-            Eval:
-              name: Eval
           student_description: ایونٹس/واقعات
         jigsaw:
           name: جگسا
         step:
           title: اسٹیپ
-          lessons:
-            Step:
-              name: اسٹیپ
-        algebraPD:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
-        algebraPD3:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
-        algebraPD-NexTech:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
-        algebraPD-iZone:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
-        allthethings:
-          lessons:
-            Flappy:
-              name: فلاپی
-            Web Lab:
-              name: ویب لیب
-            Java Lab:
-              name: جاوا لیب
-        algebraPD2b:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
-        K5-OnlinePD:
-          lessons:
-            Computer Science Fundamentals:
-              name: کمپیوٹر سائنس کے بنیادی اصول
-        algebraPD2:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
-        equity-pd:
-          lessons:
-            Codeorg Equity PD:
-              name: Code.org Equity PD
         asUnplugged:
           description_audience: Ages 6-13
         afterschool1:
@@ -142,9 +56,6 @@ ur:
             اپنی اسٹار وارز گیم بنائیں۔
           description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
             میں اپنی اسٹار وارز گیم بنائیں۔
-          lessons:
-            Hour of Code 2015:
-              name: آور آف کوڈ 2015
           student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
             میں اپنی اسٹار وارز گیم بنائیں۔
         starwarsblocks:
@@ -153,28 +64,14 @@ ur:
             اپنی اسٹار وارز گیم بنائیں۔
           description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
             میں اپنی اسٹار وارز گیم بنائیں۔
-          lessons:
-            Hour of Code 2015:
-              name: کوڈ کے ساتھ کہکشاں بنانا (بلاکلی)
           student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
             میں اپنی اسٹار وارز گیم بنائیں۔
         mc:
           title: Minecraft کوڈ کی گھڑی
-          lessons:
-            Hour of Code 2015:
-              name: آور آف کوڈ 2015
         oceans:
           name: سمندر
-        algebraPD1:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
         CSF_Secret_Sample:
           description_audience: Ages 8-18
-        algebraFacilitator:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
         CSDU5-Draft:
           description_short: ڈیٹا
         CSF_Secret_Sample_Story:
@@ -185,71 +82,18 @@ ur:
           description_audience: Ages 8-18
         gradeKinder:
           description_audience: Ages 5-18
-          lessons:
-            Events:
-              name: ایونٹس/واقعات
-            Loops:
-              name: لوپس
         grade4:
           description_audience: Ages 9-99
         grade1:
           description_audience: Ages 5-18
-          lessons:
-            Events:
-              name: ایونٹس/واقعات
-            Loops:
-              name: لوپس
         grade5:
           description_audience: Ages 10-110
         grade3:
           description_audience: Ages 5-18
-        csd3-2017:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
         grade2:
           description_audience: Ages 5-18
-          lessons:
-            Flappy:
-              name: فلاپی
-        k5concepts:
-          lessons:
-            Conditionals:
-              name: شرائط
-            Events:
-              name: ایونٹس/واقعات
-            Loops:
-              name: لوپس
-            Variables:
-              name: متغیرات
-        algebrapdnext:
-          lessons:
-            Teacher Dashboard:
-              name: ٹیچر کا ڈیش بورڈ
         basketball:
           name: باسکٹ بال
-        csd2-2017:
-          lessons:
-            Lists:
-              name: فہرستیں
-        coursea-draft:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        courseb-draft:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        coursee-draft:
-          lessons:
-            Conditionals:
-              name: شرائط
-        coursef-draft:
-          lessons:
-            Envelope Variables:
-              name: لفافہ متغیرات
         sports:
           name: کھیل
         csp5-support:
@@ -257,59 +101,18 @@ ur:
             #### **یہ کورس اس کورس کے ورژن سے وابستہ ہے جو اب مزید معاونت یافتہ نہیں ہے۔ ہمارے سب سے موجودہ نصاب دیکھنے کے لیے ہمارا کورسز کا عمومی جائزہ صفحہ (<https://studio.code.org/courses>) ملاحظہ کریں۔**
 
             یہ یونٹ 5 پڑھانے کی تیاری کرنے والے CSP اساتذہ کے لیے پروفیشنل لرننگ کورس میں منظم کردہ آن لائن معاونتوں کا ایک مجموعہ ہے۔
-        csd6-draft:
-          lessons:
-            Lists:
-              name: فہرستیں
-            Map:
-              name: نقشہ
-        coursee-ramp:
-          lessons:
-            Conditionals:
-              name: شرائط
-        csd6-2017:
-          lessons:
-            Lists:
-              name: فہرستیں
-        csd3-draft:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-        csd2-draft:
-          lessons:
-            Lists:
-              name: فہرستیں
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-            'null':
-              name: نَل
         coursea-2017:
           title: کورس A
           assignment_family_title: کورس A
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
         courseb-2017:
           title: کورس B
           assignment_family_title: کورس B
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس A سے مشابہ،
             لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
         coursec-2017:
           title: کورس C
           assignment_family_title: کورس C
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
         coursed-2017:
           title: کورس D
           assignment_family_title: کورس D
@@ -320,150 +123,34 @@ ur:
           assignment_family_title: کورس E
           description_short: کورس C اور D میں تصورات کا تیزی سے احاطہ کریں اور پھر
             فنکشنز کے ساتھ آگے بڑھیں۔
-          lessons:
-            Envelope Variables:
-              name: لفافہ متغیرات
-            Loops in Artist:
-              name: Artist میں لوپس
         coursef-2017:
           title: کورس F
           assignment_family_title: کورس F
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
             اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        express-2017:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-            Envelope Variables:
-              name: لفافہ متغیرات
-        pre-express-2017:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        subgoal-labels-opt-in:
-          lessons:
-            other:
-              name: دیگر
-        e-f-ramp:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-            Conditionals:
-              name: شرائط
-        new-d:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        new-express:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        new-stages-sept-2017:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        new-e:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-            Conditionals:
-              name: شرائط
-        new-f:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-            Envelope Variables:
-              name: لفافہ متغیرات
-        allthesurveys:
-          lessons:
-            CSP pre-survey 21-2:
-              name: CSP پری سروے 21-22
-            CSD pre-survey 21-2:
-              name: CSD پری سروے 21-22
         hero:
           name: ہیرو
-        course-e-2018:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-            Conditionals:
-              name: شرائط
-        course-f-2018:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-            Envelope Variables:
-              name: لفافہ متغیرات
-        csd6-old:
-          lessons:
-            Lists:
-              name: فہرستیں
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-        csd3-2018:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-        csd2-2018:
-          lessons:
-            Lists:
-              name: فہرستیں
         coursea-2018:
           assignment_family_title: کورس A
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-        express-2018:
-          lessons:
-            Envelope Variables:
-              name: لفافہ متغیرات
-            'Unplugged: Binary':
-              name: ثنائی تصاویر
         courseb-2018:
           assignment_family_title: کورس B
         coursed-2018:
           assignment_family_title: کورس D
-          lessons:
-            'Unplugged: Binary':
-              name: ثنائی تصاویر
         coursec-2018:
           assignment_family_title: کورس C
         coursee-2018:
           assignment_family_title: کورس E
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft کوڈ کی گھڑی
         coursef-2018:
           assignment_family_title: کورس F
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
             اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
-          lessons:
-            Envelope Variables:
-              name: لفافہ متغیرات
         dance:
           description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور
             مزید 25 کی خاصیت بنانا!
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
           name: رقص کرنا
         aquatic:
           name: آبی
-        dance--draft:
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
-        dance-draft:
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -478,17 +165,6 @@ ur:
               display_name: متغیرات
             csf_data:
               display_name: ڈیٹا
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-            Envelope Variables:
-              name: لفافہ متغیرات
-            The Artist:
-              name: مصور
-        dance-low:
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -497,15 +173,6 @@ ur:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
-          lessons:
-            'Unplugged: Binary':
-              name: ثنائی تصاویر
-            Dance Party:
-              name: ڈانس پارٹی
-        coursee-2019:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
         express-2019:
           lesson_groups:
             csf_loops:
@@ -514,15 +181,6 @@ ur:
               display_name: شرائط
             csf_variables:
               display_name: متغیرات
-          lessons:
-            Envelope Variables:
-              name: لفافہ متغیرات
-            Dance Party:
-              name: ڈانس پارٹی
-        andrea-test:
-          lessons:
-            'null':
-              name: نَل
         coursec-2019:
           lesson_groups:
             csf_loops:
@@ -531,9 +189,6 @@ ur:
               display_name: ایونٹس/واقعات
             csf_data:
               display_name: ڈیٹا
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
         coursea-2019:
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
@@ -541,9 +196,6 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
         courseb-2019:
           lesson_groups:
             csf_loops:
@@ -556,26 +208,12 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-        csd2-2019:
-          lessons:
-            Lists:
-              name: فہرستیں
-        csd3-2019:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
         csp4-pilot:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
-        time4csdemo:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -630,48 +268,18 @@ ur:
               display_name: فہرستیں
             csp_loops:
               display_name: لوپس
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: فہرستیں
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-        peru-2019:
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        k5-onlinepd-2019:
-          lessons:
-            Computer Science Fundamentals:
-              name: کمپیوٹر سائنس کے بنیادی اصول
-            Loops:
-              name: لوپس
-            Conditionals:
-              name: شرائط
-            Events:
-              name: ایونٹس/واقعات
-            Variables:
-              name: متغیرات
         csp4-preview:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
-        time4cs-original-unit-1:
-          lessons:
-            Conditionals:
-              name: شرائط
         time4cs-control-unit-2:
           lesson_groups:
             csf_conditionals:
@@ -684,9 +292,6 @@ ur:
               display_name: شرائط
             csf_events:
               display_name: ایونٹس/واقعات
-          lessons:
-            Conditionals:
-              name: شرائط
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -695,9 +300,6 @@ ur:
               display_name: شرائط
             csf_events:
               display_name: ایونٹس/واقعات
-          lessons:
-            Conditionals:
-              name: شرائط
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -710,14 +312,6 @@ ur:
               display_name: فہرستیں
             csp_loops:
               display_name: لوپس
-        csd3-2020:
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-            Text:
-              name: متن
         coursea-2020:
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
@@ -747,11 +341,6 @@ ur:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
-          lessons:
-            'Unplugged: Binary':
-              name: ثنائی تصاویر
-            Dance Party:
-              name: ڈانس پارٹی
         coursef-2020:
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
             اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
@@ -760,9 +349,6 @@ ur:
               display_name: متغیرات
             csf_data:
               display_name: ڈیٹا
-          lessons:
-            Envelope Variables:
-              name: لفافہ متغیرات
         express-2020:
           lesson_groups:
             csf_loops:
@@ -771,96 +357,17 @@ ur:
               display_name: شرائط
             csf_variables:
               display_name: متغیرات
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
-            Loops in Artist:
-              name: Artist میں لوپس
         pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-          lessons:
-            Loops in Artist:
-              name: Artist میں لوپس
-        jess-test-script:
-          lessons:
-            Tools:
-              name: اوزار
-            "[TEMPLATE] Content lessons":
-              name: "[TEMPLATE] مواد کے اسباق"
-            "[TEMPLATE] Unit Wrap Up":
-              name: "[TEMPLATE] یونٹ لپیٹنا"
-        csp5-virtual:
-          lessons:
-            Variables:
-              name: متغیرات
-        code-break:
-          lessons:
-            Events:
-              name: ایونٹس/واقعات
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: لوپس
-            Events:
-              name: ایونٹس/واقعات
-            Conditionals:
-              name: شرائط
-            Variables:
-              name: متغیرات
-        csd3-virtual:
-          lessons:
-            Variables:
-              name: متغیرات
-            Text:
-              name: متن
-            Conditionals:
-              name: شرائط
-        ui-test-script-in-course-2017:
-          lessons:
-            Lesson:
-              name: سبق
-        ui-test-script-in-course-2019:
-          lessons:
-            Lesson:
-              name: سبق
-        ui-test-versioned-script-2017:
-          lessons:
-            Lesson:
-              name: سبق
-        ui-test-versioned-script-2019:
-          lessons:
-            Lesson:
-              name: سبق
-        curriculum-sandbox-levels:
-          lessons:
-            Course A:
-              name: کورس A
-            Course B:
-              name: کورس B
-            Course E:
-              name: کورس E
-            Course F:
-              name: کورس F
-            csf:
-              name: CS کے بنیادی اصول
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
             پھیلنے کا سیمیولیشن بنائیں.
-        ml-playground:
-          lessons:
-            CSP Tester:
-              name: CSP ٹسٹر
         outbreak:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ایک سیمولیشن کا کوڈ لکھنا
-            Outbreak:
-              name: ایک سیمولیشن کا کوڈ لکھنا
           lesson_groups:
             outbreak:
               display_name: وباء کی سیمولیشن
@@ -873,22 +380,11 @@ ur:
           student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
             پھیلنے کا سیمیولیشن بنائیں.
         2021drafting:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ایک سیمولیشن کا کوڈ لکھنا
           lesson_groups:
             lessonGroup-3:
               display_name: متغیرات
             outbreak:
               display_name: وباء کا سیمیولیٹر
-        csd3-2021:
-          lessons:
-            Variables:
-              name: متغیرات
-            Text:
-              name: متن
-            Conditionals:
-              name: شرائط
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -924,11 +420,6 @@ ur:
               display_name: ڈیٹا
         coursed-2021:
           title: کورس D (2021)
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
-            'Unplugged: Binary':
-              name: ثنائی تصاویر
           lesson_groups:
             csf_events:
               display_name: ایونٹس/واقعات
@@ -943,22 +434,12 @@ ur:
         coursef-2021:
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
             اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
-          lessons:
-            Envelope Variables:
-              name: لفافہ متغیرات
-            lesson-5:
-              name: وباء کا پھیلنا
           lesson_groups:
             lessonGroup-8:
               display_name: متغیرات
             lessonGroup-9:
               display_name: ہٹانا
         express-2021:
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
-            lesson-1:
-              name: ڈانس پارٹی
           lesson_groups:
             csf_loops:
               display_name: لوپس
@@ -975,9 +456,6 @@ ur:
             csf_events:
               display_name: ایونٹس/واقعات
         csf-2021-pilot:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ایک سیمولیشن کا کوڈ لکھنا
           lesson_groups:
             outbreak:
               display_name: وباء کی سیمولیشن
@@ -985,10 +463,6 @@ ur:
               display_name: متغیرات
             variables:
               display_name: متغیرات
-        testtess:
-          lessons:
-            lesson-2:
-              name: نیا سبق 1
         contagion-pilot:
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
             پھیلنے کا سیمیولیشن بنائیں.
@@ -997,93 +471,37 @@ ur:
           student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
             پھیلنے کا سیمیولیشن بنائیں.
         csa1-pilot:
-          lessons:
-            lesson-24:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa2-pilot:
-          lessons:
-            lesson-1:
-              name: یونٹ 2 پائلٹ سروے
-            lesson-16:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
         csa3-pilot:
-          lessons:
-            lesson-16:
-              name: یونٹ 3 پائلٹ سروے
-            lesson-17:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa4-pilot:
-          lessons:
-            lesson-16:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
         csa5-pilot:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
         csa6-pilot:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
-            lesson-11:
-              name: Neighborhood Lit Fest پروجیکٹ - 1 دن
-            lesson-12:
-              name: Neighborhood Lit Fest پروجیکٹ - 2 دن
-            lesson-13:
-              name: Neighborhood Lit Fest پروجیکٹ - 3 دن
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa7-pilot:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa8-pilot:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
-        k5-onlinepd-2021:
-          lessons:
-            Loops:
-              name: لوپس
-            Events:
-              name: ایونٹس/واقعات
-            Conditionals:
-              name: شرائط
-            Variables:
-              name: متغیرات
-        pl-playground:
-          lessons:
-            lesson-9:
-              name: شروعات کرنا 1
-        kodea-pd-2021:
-          lessons:
-            Computer Science Fundamentals:
-              name: کمپیوٹر سائنس کے بنیادی اصول
-        self-paced-pl-csd2-2021:
-          lessons:
-            lesson-9:
-              name: ٹیچر کمیونٹی
         outbreak-module:
           title: وباء کا پھیلنا
         csa-videos:
@@ -1095,20 +513,12 @@ ur:
             lessonGroup-2:
               description: آزمانا
         csa-u6-dev:
-          lessons:
-            lesson-12:
-              name: اوزار
-            lesson-17:
-              name: کنسول
           lesson_groups:
             lessonGroup-2:
               display_name: اسباق
             lessonGroup-4:
               display_name: ڈیمو اور وسائل
         csa-self-paced-pl:
-          lessons:
-            Navigating the Codeorg learning platform:
-              name: Code.org سیکھنے کے پلیٹ فارم میں نیویگیٹ کرنا
           title: CSA پائلٹ اساتذہ کے لیے Code.org کا استعمال کرنا
           description: |-
             یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جن کا استعمال آپ CSA پڑھانے کے دوران طلبہ کے سیکھنے میں مدد کے لیے کریں گے۔
@@ -1121,90 +531,35 @@ ur:
             **مجوزہ وقت:** 1 گھنٹہ
           name: csa-self-paced-pl
         csa1-pilot-facilitator:
-          lessons:
-            lesson-1:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
           name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
-          lessons:
-            Unit 2 Pilot Survey:
-              name: یونٹ 2 پائلٹ سروے
-            lesson-1:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
           name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
-          lessons:
-            Unit 3 Pilot Survey:
-              name: یونٹ 3 پائلٹ سروے
-            lesson-1:
-              name: جاوا لیب
-            lesson-16:
-              name: یونٹ 3 پائلٹ سروے
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
           name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
-          lessons:
-            lesson-1:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
           name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
           name: csa5-pilot-facilitator
         poetry-hoc:
-          lessons:
-            lesson-1:
-              name: موڈز اور رویئے
           name: poetry-hoc
           title: شاعری HoC
           description_short: آور آف کوڈ کی سرگرمی - V2
         csdu6-playground:
-          lessons:
-            lesson-1:
-              name: ٹمپلیٹ
-            lesson-3:
-              name: بورڈ آؤٹ پُٹ (LED بزر)
-            lesson-4:
-              name: ایپ لیب آؤٹ پٹس (setProperty)
-            lesson-5:
-              name: سنسرز
-            lesson-6:
-              name: بورڈ ان پُٹ (بٹن ٹاگل)
-            lesson-7:
-              name: متغیرات + If-بیانات
-            lesson-8:
-              name: 'چھوٹا پراجیکٹ: آن دی گو ایپس'
-            lesson-10:
-              name: ا‌یپ لیب ان پٹس (getProperty, getText) (ڈراپ ڈاؤن ان پٹس سلائیڈرز؟)
-            lesson-11:
-              name: ان پٹس کو ملانا
-            lesson-12:
-              name: 'پراجیکٹ: میکر'
-            lesson-14:
-              name: موسیقی + صفیں (Arrays)
-            lesson-15:
-              name: 'چھوٹا پراجیکٹ: سنسرز'
-            lesson-17:
-              name: جسمانی آؤٹ پٹ (LEDs)
-            lesson-16:
-              name: جسمانی آؤٹ پٹس
-            lesson-18:
-              name: پروٹوٹائپنگ
           lesson_groups:
             lessonGroup-3:
               display_name: ٹمپلٹس
@@ -1218,111 +573,52 @@ ur:
           student_description: CSD یونٹ 6 کھیل کا میدان۔ سوالات کے لیے ڈین شنائیڈر
             دیکھیں
         hello-world-food:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
           name: hello-world-food
         csa-u7-dev:
-          lessons:
-            lesson-3:
-              name: اوزار
           lesson_groups:
             lessonGroup-2:
               display_name: اسباق
             lessonGroup-4:
               display_name: ڈیمو اور وسائل
-        hello-world-animals:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
-        hello-world-emoji:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
-        hello-world-retro:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
         hello-world-batman:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
           title: ہیلو ورلڈ
         csc-things:
-          lessons:
-            lesson-1:
-              name: شاعری سکریچ کاغذ
           name: csc-things
           title: CSC برین ڈمپ
           description: یہ صرف رو بہ ترقی کام ہیں :)
         poetry-hoc2:
-          lessons:
-            lesson-1:
-              name: Poetry HoC v2
           name: poetry-hoc2
           title: Poetry HoC v2
         poetry-hoc3:
-          lessons:
-            lesson-1:
-              name: موڈ کا مطالعہ
           name: poetry-hoc3
           title: Poetry HoC v3
         spritelab-effects-challenge:
-          lessons:
-            lesson-1:
-              name: سپرائٹ ایفیکٹ چیلنج
           name: spritelab-effects-challenge
           title: سپرائٹ ایفیکٹ چیلنج
           description_audience: سپرائٹ لیب کے وسطی/ترقی یافتہ صارفین
           description_short: سپرائٹ لیب استعمال کرتے ہوئے اپنے سپرائٹ بنانے کا چیلنج
             قبول کریں!
         csa-u8-dev:
-          lessons:
-            lesson-2:
-              name: اوزار
           lesson_groups:
             lessonGroup-2:
               display_name: ڈیمو اور وسائل
           name: csa-u8-dev
           title: CSA یونٹ 8 تشکیل
         poem-art:
-          lessons:
-            lesson-1:
-              name: نظم کا فن
           name: poem-art
           title: نظم کا فن
         poetry:
-          lessons:
-            lesson-1:
-              name: نظم کا فن
-            lesson-2:
-              name: اپنی نظم کو کوڈ کریں۔
-            lesson-4:
-              name: ایک نظم جنریٹر ایپ بنائیں
-            lesson-5:
-              name: الفاظ کا انتخاب احتیاط سے کرنا
           name: شاعری
           title: کمپیوٹر سائنس اور شاعری
         spelling-bee:
           name: spelling-bee
         outbreak-csc:
-          lessons:
-            lesson-1:
-              name: وبا کا دن 1
-            lesson-2:
-              name: وبا کا دن 2
           name: outbreak-csc
           title: وباء کا پھیلنا
         explore-data-1:
-          lessons:
-            lesson-1:
-              name: باکس پلاٹ اور ہسٹوگرامس دیکھیں
           name: explore-data-1
           title: باکس پلاٹ اور ہسٹوگرامس دیکھیں
         counting-csc:
-          lessons:
-            lesson-1:
-              name: لارل کے ساتھ گنتی
           name: counting-csc
           title: لارل کے ساتھ گنتی
         csa5-exemplars:
@@ -1336,9 +632,6 @@ ur:
             میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے
             کا وقت کب ہے۔
         csa-pl-test:
-          lessons:
-            lesson-1:
-              name: ماڈیول 1 - شروعات کرنا
           name: csa-pl-test
         csa-pl-module-1-test:
           name: csa-pl-module-1-test
@@ -1350,90 +643,14 @@ ur:
           name: csa-pl-module-3-test
           title: متن پر مبنی پروگرامنگ کے ساتھ تعاون کرنا
         csa6-pilot-facilitator:
-          lessons:
-            Neighborhood Lit Fest Project - Day 1:
-              name: Neighborhood Lit Fest پروجیکٹ - 1 دن
-            Neighborhood Lit Fest Project - Day 2:
-              name: Neighborhood Lit Fest پروجیکٹ - 2 دن
-            Neighborhood Lit Fest Project - Day 3:
-              name: Neighborhood Lit Fest پروجیکٹ - 3 دن
-            Java Lab:
-              name: جاوا لیب
-            lesson-11:
-              name: Neighborhood Lit Fest پروجیکٹ - 1 دن
-            lesson-12:
-              name: Neighborhood Lit Fest پروجیکٹ - 2 دن
-            lesson-13:
-              name: Neighborhood Lit Fest پروجیکٹ - 3 دن
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         poem-art-2021:
-          lessons:
-            Poem Art:
-              name: نظم کا فن
-            lesson-1:
-              name: نظم کا فن
           title: نظم کا فن
-        poetry-2021:
-          lessons:
-            Poem Art:
-              name: نظم کا فن
-            Code Your Own Poem:
-              name: اپنی نظم کو کوڈ کریں۔
-            Build a Poem Generator:
-              name: ایک نظم جنریٹر ایپ بنائیں
-            Choosing Words Carefully:
-              name: الفاظ کا انتخاب احتیاط سے کرنا
-            lesson-1:
-              name: نظم کا فن
-            lesson-2:
-              name: اپنی نظم کو کوڈ کریں۔
-            lesson-5:
-              name: الفاظ کا انتخاب احتیاط سے کرنا
-        hello-world-food-2021:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
-        hello-world-emoji-2021:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
-        hello-world-animals-2021:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
-        hello-world-retro-2021:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ
-        explore-data-1-2021:
-          lessons:
-            lesson-1:
-              name: باکس پلاٹ اور ہسٹوگرامس دیکھیں
         counting-csc-2021:
-          lessons:
-            Counting with Laurel:
-              name: لارل کے ساتھ گنتی
-            lesson-1:
-              name: لارل کے ساتھ گنتی
           title: لارل کے ساتھ گنتی
-        hello-world-gabrielle-validation:
-          lessons:
-            lesson-1:
-              name: سبق
-        csa6-exemplars:
-          lessons:
-            lesson-11:
-              name: Neighborhood Lit Fest پروجیکٹ - 1 دن
-            lesson-12:
-              name: Neighborhood Lit Fest پروجیکٹ - 2 دن
-            lesson-13:
-              name: Neighborhood Lit Fest پروجیکٹ - 3 دن
         2022drafting:
-          lessons:
-            lesson-4:
-              name: وباء کا سیمیولیٹر
           lesson_groups:
             lessonGroup-8:
               display_name: آور-آف-کوڈ
@@ -1442,25 +659,16 @@ ur:
             lessonGroup-3:
               display_name: متغیرات
         csd6-pilot-2022:
-          lessons:
-            lesson-10:
-              name: ان پٹس کو ملانا
           lesson_groups:
             lessonGroup-2:
               display_name: باب 1
             lessonGroup-3:
               display_name: باب 2
         csa7-pilot-facilitator:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa8-pilot-facilitator:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
@@ -1472,11 +680,6 @@ ur:
               display_name: ایونٹس/واقعات
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
         express-2022:
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
-            lesson-1:
-              name: ڈانس پارٹی
           lesson_groups:
             lessonGroup-9:
               display_name: ایونٹس/واقعات
@@ -1513,9 +716,6 @@ ur:
             csf_data:
               display_name: ڈیٹا
         coursed-2022:
-          lessons:
-            Dance Party:
-              name: ڈانس پارٹی
           lesson_groups:
             csf_events:
               display_name: ایونٹس/واقعات
@@ -1525,29 +725,16 @@ ur:
               display_name: شرائط
           title: کورس D (2021)
         coursee-2022:
-          lessons:
-            'Hello World: Food':
-              name: ہیلو ورلڈ
           lesson_groups:
             csf_nested_loops:
               display_name: شرائط
         coursef-2022:
-          lessons:
-            Outbreak:
-              name: وباء کا پھیلنا
           lesson_groups:
             lessonGroup-8:
               display_name: متغیرات
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
             اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
         csa1-2022:
-          lessons:
-            lesson-2:
-              name: جاوا لیب
-            lesson-9:
-              name: لوپس
-            lesson-21:
-              name: کنسول
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکسز
@@ -1557,179 +744,28 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-        csa2-2022:
-          lessons:
-            lesson-6:
-              name: متغیرات
-            lesson-16:
-              name: کنسول
-        csa3-2022:
-          lessons:
-            lesson-3:
-              name: ایک جہتی (1D) صفیں
-            lesson-4:
-              name: صف کے عناصر
-            lesson-6:
-              name: صف کے الگورتھم
-            lesson-7:
-              name: لوپس کے لیے بہتر کردہ
-            lesson-8:
-              name: جامد متغیرات اور مستقلات
-            lesson-9:
-              name: پولیمورفزم
-            lesson-10:
-              name: صف کے مزید الگورتھم
-            lesson-11:
-              name: صفوں کو ریورس کرنا
-            lesson-13:
-              name: سوشل گڈ پروجیکٹ کے لیے ڈیٹا - دن 1
-            lesson-14:
-              name: سوشل گڈ پروجیکٹ کے لیے ڈیٹا - دن 2
-            lesson-15:
-              name: سوشل گڈ پروجیکٹ کے لیے ڈیٹا - دن 3
-            lesson-16:
-              name: کنسول
-        cs4all-invasive-species:
-          lessons:
-            lesson-12:
-              name: شرائط
-            lesson-17:
-              name: پروجیکٹ انسپائریشن
-        csa4-2022:
-          lessons:
-            Console:
-              name: کنسول
-        csa5-2022:
-          lessons:
-            lesson-7:
-              name: لوپس کے لیے بہتر کردہ
-            Console:
-              name: کنسول
-        csa1-2022-exemplars:
-          lessons:
-            lesson-2:
-              name: جاوا لیب
-            lesson-9:
-              name: لوپس
-        pltess:
-          lessons:
-            lesson-2:
-              name: سبق 3
-        self-paced-pl-csa3-2022:
-          lessons:
-            lesson-3:
-              name: جاوا میں If کے بیانات
-            lesson-4:
-              name: جاوا میں لوپس
-            lesson-5:
-              name: جاوا میں صفیں
         csa7-pilot-extra:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa8-pilot-extra:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         coursef-2022-pilot:
-          lessons:
-            Outbreak:
-              name: وباء کا پھیلنا
           lesson_groups:
             lessonGroup-8:
               display_name: متغیرات
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
             اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
         csa6-2022:
-          lessons:
-            Neighborhood Lit Fest Project - Day 1:
-              name: Neighborhood Lit Fest پروجیکٹ - 1 دن
-            Neighborhood Lit Fest Project - Day 2:
-              name: Neighborhood Lit Fest پروجیکٹ - 2 دن
-            Neighborhood Lit Fest Project - Day 3:
-              name: Neighborhood Lit Fest پروجیکٹ - 3 دن
-            Java Lab:
-              name: جاوا لیب
-            Console:
-              name: کنسول
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa7-2022:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
-            Console:
-              name: کنسول
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
-        csa8-2022:
-          lessons:
-            Java Lab:
-              name: جاوا لیب
-            Console:
-              name: کنسول
-        vpl-csd1-summer-pilot-2022:
-          lessons:
-            lesson-5:
-              name: غیر مطابقت پذیر ڈیبریف
-            lesson-6:
-              name: ماڈل سبق 2 - یونٹ 2 سبق 2
-            lesson-7:
-              name: شناخت
-            lesson-8:
-              name: سبق کی اسائنمنٹ
-            Intro to HTML:
-              name: ماڈل سبق 2 - یونٹ 2 سبق 2
-        vpl-csd2-summer-pilot-2022:
-          lessons:
-            lesson-3:
-              name: اسباق کی منصوبہ بندی
-            lesson-4:
-              name: غیر مطابقت پذیر تیاری
-            lesson-6:
-              name: غیر مطابقت پذیر ڈیبریف
-        vpl-csd3-summer-pilot-2022:
-          lessons:
-            lesson-5:
-              name: غیر مطابقت پذیر ڈیبریف
-        vpl-csd4-summer-pilot-2022:
-          lessons:
-            lesson-2:
-              name: "[TEMPLATE] یونٹ لپیٹنا"
-            lesson-3:
-              name: "[TEMPLATE] مواد کے اسباق"
-            lesson-7:
-              name: غیر مطابقت پذیر تیاری
-            lesson-11:
-              name: غیر مطابقت پذیر ڈیبریف
-        vpl-csd5-summer-pilot-2022:
-          lessons:
-            lesson-4:
-              name: غیر مطابقت پذیر تیاری
-            lesson-6:
-              name: غیر مطابقت پذیر ڈیبریف
-        csa2-2022-exemplars:
-          lessons:
-            lesson-1:
-              name: متغیرات
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
-              name: لوپس
-            Events:
-              name: ایونٹس/واقعات
-            Conditionals:
-              name: شرائط
-            Variables:
-              name: متغیرات
         vpl-csd1-ci-pilot-2022:
           title: 'ماڈیول 1: مسئلہ حل کرنے اور کمپیوٹنگ سکھانے کی تیاری'
           description: |-
@@ -1753,15 +789,6 @@ ur:
 
             **مجوزہ وقت:** 30 منٹ
         vpl-csd2-ci-pilot-2022:
-          lessons:
-            lesson-1:
-              name: ویب ڈویلپمنٹ کا تعارف
-            lesson-2:
-              name: HTML کے ساتھ ویب سائٹ بنائیں
-            lesson-3:
-              name: سی ایس ایس کے ساتھ ویب سائٹ کو اسٹائل دینا
-            lesson-4:
-              name: ڈیجیٹل میڈیا سے متعلق کردار اور ذمہ داریوں پر غور
           lesson_groups:
             lessonGroup-2:
               display_name: ویب ڈویلپمنٹ کی تعلیم
@@ -1789,15 +816,6 @@ ur:
 
             **مجوزہ وقت:** 90 منٹ
         vpl-csd3-ci-pilot-2022:
-          lessons:
-            lesson-1:
-              name: انٹرایکٹو اینیمیشنز اور گیمز کا تعارف
-            lesson-2:
-              name: ایک منظر بنائیں
-            lesson-3:
-              name: سپرائٹس کے ساتھ ایک منظر کو متحرک کریں
-            lesson-4:
-              name: گیم ڈیزائن دریافت کریں
           lesson_groups:
             lessonGroup-2:
               display_name: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری
@@ -1921,66 +939,18 @@ ur:
 
             **مجوزہ وقت:** 120 منٹ
         hello-world-csc:
-          lessons:
-            lesson-1:
-              name: ہیلو ورلڈ CSC
           title: ہیلو ورلڈ
         csd-playground:
-          lessons:
-            lesson-1:
-              name: لیول کے اپڈیٹس
           title: CSD کھیل کا میدان
           description_audience: نصاب کے مصنفین
           description_short: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے
             لیے
           description: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے لیے
-        csc-pilot-2022-ecosystems:
-          lessons:
-            Hello World CSC:
-              name: ہیلو ورلڈ CSC
-        csc-pilot-2022-timecapsule:
-          lessons:
-            Poem Art:
-              name: نظم کا فن
-        csc-pilot-2022-fables:
-          lessons:
-            Hello World CSC:
-              name: ہیلو ورلڈ CSC
-        csd3-2022:
-          lessons:
-            Variables:
-              name: متغیرات
-            Text:
-              name: متن
-            Conditionals:
-              name: شرائط
-        csd6-2022:
-          lessons:
-            Combining Inputs and Outputs:
-              name: ان پٹس کو ملانا
         csd-post-survey-2022:
           description: یہ یونٹ CS ڈسکوریز پوسٹ کورس سروے پر مشتمل ہے۔ یہ یونٹ طلباء
             کے CS ڈسکوریز میں اپنی حتمی یونٹ مکمل کرنے کے بعد تفویض کیا جا سکتا ہے۔
           student_description: اس یونٹ میں ایک سروے ہوتا ہے جب آپ کی کلاس CS ڈسکوریز
             میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے
             کا وقت کب ہے۔
-        csa9-2022:
-          lessons:
-            Console:
-              name: کنسول
-        csc-ecosystems-1:
-          lessons:
-            Hello World CSC:
-              name: ہیلو ورلڈ CSC
-        csc-ecosystems:
-          lessons:
-            Hello World CSC:
-              name: ہیلو ورلڈ CSC
-        csc-ecosystems-2022:
-          lessons:
-            Hello World CSC:
-              name: ہیلو ورلڈ CSC
-        csc-timecapsule-2022:
-          lessons:
-            Poem Art:
-              name: نظم کا فن
+        soccer:
+          name: فٹ بال

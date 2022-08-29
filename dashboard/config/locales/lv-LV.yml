@@ -234,7 +234,6 @@ lv:
     popup:
       progress_for_user: "%{name} panākumi"
       progress: Jūsu progress
-      lines: 'Kopējais koda līniju skaits: %{lines}'
       close: AIZVĒRT
       mastery: Jēdzieni
       puzzle_map: Stadijas

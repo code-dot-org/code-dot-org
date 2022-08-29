@@ -452,7 +452,6 @@ en:
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
-      lines: 'Total lines of code: %{lines}'
       close: 'CLOSE'
       mastery: 'Concepts'
       puzzle_map: 'Stages'
@@ -1217,3 +1216,9 @@ en:
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Teacher Feedback"
+  lesson_lock:
+    error:
+      no_updates: "No updates to perform"
+      missing_params: "Must provide user, level, and unit ids"
+      cannot_view_locked_answers: "Cannot view answers while locked"
+      forbidden: "User cannot update student's lockable state"

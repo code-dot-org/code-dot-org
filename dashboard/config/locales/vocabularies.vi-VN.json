@@ -157,12 +157,41 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "condition/aquatic/unversioned": {
+          "word": "Điều kiện",
+          "definition": "Yếu tố mà chương trình sẽ kiểm tra xem có đúng hay không trước khi cho phép hành động."
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": "Mệnh đề chỉ chạy dưới một số điều kiện nhất định."
         },
         "loops/aquatic/unversioned": {
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Mật mã Caesar ",
+          "definition": "kỹ thuật mã hóa nhằm thay đổi bảng chữ cái theo một số ký tự"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Mật mã",
+          "definition": "thuật ngữ chung cho một kỹ thuật (hoặc thuật toán) tiến hành mã hóa"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Bẻ khóa mã hóa",
+          "definition": "Khi bạn cố gắng bẻ khóa một thông điệp bí mật mà không biết tất cả thông tin cụ thể của mật mã, bạn đang cố gắng “bẻ khóa” phương thức mã hóa đó. "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Giải mã",
+          "definition": "quy trình đảo ngược phương thức mã hóa, dùng một thông điệp bí mật và tái tạo văn bản thuần túy ban đầu"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Mã hóa",
+          "definition": "quy trình mã hóa thông điểm để giữ bí mật, sao cho chỉ những bên được “ủy quyền” mới có thể đọc được."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Mật mã thay thế ngẫu nhiên",
+          "definition": "kỹ thuật mã hóa thay thế từng chữ cái trong bảng chữ cái với một chữ cái khác được chọn ngẫu nhiên trong bảng chữ cái."
         },
         "code/starwars/unversioned": {
           "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
@@ -208,6 +237,10 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Nén dữ liệu không giảm chất lượng",
+          "definition": "thuật toán nén dữ liệu cho phép dữ liệu gốc được tái tạo hoàn hảo từ dữ liệu đã nén. Thường được sử dụng nhiều nhất để nén văn bản (ví dụ: nén .zip)"
+        },
         "event/outbreak/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -221,7 +254,8 @@
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "code/sports/unversioned": {
-          "word": "Mã"
+          "word": "Mã",
+          "definition": "(v) viết mã lệnh hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/sports/unversioned": {
           "word": "Sửa lỗi",
@@ -280,6 +314,58 @@
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Học máy",
+          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
+        },
+        "input/csd/2022": {
+          "word": "Đầu vào"
+        },
+        "bug/csd/2022": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
+        },
+        "debugging/csd/2022": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/csd/2022": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "variable/csd/2022": {
+          "word": "Biến",
+          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
+        },
+        "sprite/csd/2022": {
+          "word": "Nhân vật"
+        },
+        "condition/csd/2022": {
+          "word": "Điều kiện"
+        },
+        "conditionals/csd/2022": {
+          "word": "Điều kiện"
+        },
+        "abstraction/csd/2022": {
+          "word": "Trừu tượng"
+        },
+        "function/csd/2022": {
+          "word": "Hàm"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Dấu vết số"
+        },
+        "copyright/csd/2022": {
+          "word": "Bản quyền",
+          "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
+        },
+        "user/csd/2022": {
+          "word": "Người dùng",
+          "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
+        },
+        "user_interface/csd/2022": {
+          "word": "Giao diện người dùng"
+        },
+        "machine_learning/csd/2022": {
           "word": "Học máy",
           "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
         },
@@ -599,11 +685,16 @@
           "definition": "Chỉ dẫn cho máy tính. Nhiều lệnh kết hợp với nhau tạo nên các thuật toán và chương trình máy tính."
         },
         "conditionals/coursed/2021": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": "Mệnh đề chỉ chạy dưới một số điều kiện nhất định."
         },
         "pseudocode/coursed/2021": {
           "word": "mã giả",
           "definition": "Mô tả bằng ngôn ngữ đơn giản về các bước trong thuật toán"
+        },
+        "condition/coursed/2021": {
+          "word": "Điều kiện",
+          "definition": "Yếu tố mà chương trình sẽ kiểm tra xem có đúng hay không trước khi cho phép hành động."
         },
         "while_loop/coursed/2021": {
           "word": "Vòng lặp while",
@@ -664,8 +755,13 @@
           "word": "Lệnh",
           "definition": "Chỉ dẫn cho máy tính. Nhiều lệnh kết hợp với nhau tạo nên các thuật toán và chương trình máy tính."
         },
+        "condition/express/2021": {
+          "word": "Điều kiện",
+          "definition": "Yếu tố mà chương trình sẽ kiểm tra xem có đúng hay không trước khi cho phép hành động."
+        },
         "conditionals/express/2021": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": "Mệnh đề chỉ chạy dưới một số điều kiện nhất định."
         },
         "while_loop/express/2021": {
           "word": "Vòng lặp while",
@@ -791,8 +887,13 @@
           "word": "Hàm",
           "definition": "Một đoạn mã lệnh mà bạn có thể dễ dàng khai báo nhiều lần."
         },
+        "condition/coursee/2021": {
+          "word": "Điều kiện",
+          "definition": "Yếu tố mà chương trình sẽ kiểm tra xem có đúng hay không trước khi cho phép hành động."
+        },
         "conditionals/coursee/2021": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": "Mệnh đề chỉ chạy dưới một số điều kiện nhất định."
         },
         "while_loop/coursee/2021": {
           "word": "Vòng lặp while",
@@ -847,6 +948,9 @@
         },
         "sprite/csd/2021": {
           "word": "Nhân vật"
+        },
+        "condition/csd/2021": {
+          "word": "Điều kiện"
         },
         "conditionals/csd/2021": {
           "word": "Điều kiện"

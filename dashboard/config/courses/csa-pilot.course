@@ -18,7 +18,7 @@
   "properties": {
     "family_name": "csa",
     "has_numbered_units": true,
-    "pilot_experiment": "csa-pilot",
+    "pilot_experiment": "deprecated",
     "version_year": "2020"
   },
   "resources": [

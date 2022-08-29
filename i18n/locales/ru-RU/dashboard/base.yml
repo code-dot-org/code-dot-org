@@ -430,7 +430,6 @@ ru:
     popup:
       progress_for_user: "Результаты %{name}"
       progress: 'Ваши результаты'
-      lines: 'Всего строк кода: %{lines}'
       close: 'ЗАКРЫТЬ'
       mastery: 'Принципы'
       puzzle_map: 'Этапы'

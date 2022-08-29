@@ -1562,11 +1562,11 @@
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_a": "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n .",
+          "courseA_collector_loops3_a": "Prova ad usare un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n  ciclo!",
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_a": "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n .",
+          "courseA_collector_loops3_a": "Prova ad usare un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n  ciclo!",
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops4": {
@@ -8713,11 +8713,11 @@
           "courseC_artist_loops1b_a": "Questo è il primo blocco di cui avrai bisogno:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuoi scegliere sinistra o destra e ogni numero di gradi."
         },
         "courseD_bee_conditionals5_2019": {
-          "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo nidificato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
+          "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo annidato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
           "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape avrà bisogno di un'istruzione `vai avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
         },
         "courseD_bee_conditionals5_2020": {
-          "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo nidificato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
+          "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo annidato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
           "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape avrà bisogno di un'istruzione `vai avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
         },
         "outbreak1": {
@@ -9007,7 +9007,7 @@
           "courseA_collector_loops2_b": "Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_a": "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n .",
+          "courseA_collector_loops3_a": "Prova ad usare un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n  ciclo!",
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops4_2021": {
@@ -10054,7 +10054,7 @@
           "courseD_bee_conditionals4_hintVid2": "Guarda il video per risolvere questo esercizio."
         },
         "courseD_bee_conditionals5_2021": {
-          "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo nidificato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
+          "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo annidato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
           "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape avrà bisogno di un'istruzione `vai avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
         },
         "courseD_bee_conditionals5_dani": {

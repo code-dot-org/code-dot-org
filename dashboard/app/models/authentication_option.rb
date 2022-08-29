@@ -34,7 +34,7 @@ class AuthenticationOption < ApplicationRecord
 
   validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
 
-  validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at]}
+  validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at], case_sensitive: true}
 
   after_create :set_primary_contact_info
 

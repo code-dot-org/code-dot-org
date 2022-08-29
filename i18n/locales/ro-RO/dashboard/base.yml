@@ -428,7 +428,6 @@ ro:
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'
-      lines: 'Total linii de cod: %{lines}'
       close: 'ÎNCHIDE'
       mastery: 'Concepte'
       puzzle_map: 'Etape'

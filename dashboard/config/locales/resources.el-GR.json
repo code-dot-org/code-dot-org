@@ -41,8 +41,463 @@
         "ai-training/oceans/unversioned": {
           "type": "Βίντεο"
         },
+        "representing_images/csd/2022": {
+          "name": "Αναπαριστώντας Εικόνες"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Συνδυάζοντας Αναπαραστάσεις"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Κρατώντας τα Δεδομένα Μυστικά"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Αντανάκλαση"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "Βίντεο: Αντίκτυπος στην Κοινωνία",
+          "type": "Βίντεο"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Βίντεο: Μηχανική Μάθηση",
+          "type": "Βίντεο"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "Βίντεο: Δεδομένα εκπαίδευσης και Προκαταλήψεις",
+          "type": "Βίντεο"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "naming_variables/csd/2022": {
+          "name": "Ορίζοντας Μεταβλητές"
+        },
+        "variables/csd/2022": {
+          "name": "Μεταβλητές"
+        },
+        "variables_3/csd/2022": {
+          "name": "Μεταβλητές"
+        },
+        "random_numbers/csd/2022": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "random_numbers_2/csd/2022": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "sprites/csd/2022": {
+          "name": "Χαρακτήρας"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Η Καρτέλα Κίνησης",
+          "type": "Βίντεο"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Χαρακτήρας"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "text/csd/2022": {
+          "name": "κείμενο"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Boolean Εκφράσεις",
+          "type": "Βίντεο"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Συνθήκες Ελέγχου",
+          "type": "Βίντεο"
+        },
+        "conditionals/csd/2022": {
+          "name": "Συνθήκες"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Είσοδος Πληκτρολογίου"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "Δηλώσεις Αν/Αλλιώς",
+          "type": "Βίντεο"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "velocity/csd/2022": {
+          "name": "Ταχύτητα",
+          "type": "Βίντεο"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Ταχύτητα"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Ταχύτητα"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Side Scroller",
+          "type": "Κατάλογος"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Side Scroller",
+          "type": "Οδηγός Προγράμματος"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Ταχύτητα και το μοτίβο αντίθετης φοράς"
+        },
+        "collisions/csd/2022": {
+          "name": "Συγκρούσεις"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου",
+          "type": "Κατάλογος"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου",
+          "type": "Οδηγός Προγράμματος"
+        },
+        "functions/csd/2022": {
+          "name": "Συναρτήσεις",
+          "type": "Βίντεο"
+        },
+        "functions_1/csd/2022": {
+          "name": "Συναρτήσεις"
+        },
+        "functions_4/csd/2022": {
+          "name": "Συναρτήσεις"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "headings_and_paragraphs/csd/2022": {
+          "name": "Κεφαλίδες και Παράγραφοι"
+        },
+        "video_debugging/csd/2022": {
+          "name": "Βίντεο: Αποσφαλμάτωση",
+          "type": "Βίντεο"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "Βίντεο: Προγραμματισμός ανά ζεύγη",
+          "type": "Βίντεο"
+        },
+        "headings/csd/2022": {
+          "name": "Επικεφαλίδες"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "lists/csd/2022": {
+          "name": "Λίστες"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Εισαγωγή στην CSS - μέρος 1",
+          "type": "Βίντεο"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Εισαγωγή στην CSS - μέρος 2",
+          "type": "Βίντεο"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "layout_properties/csd/2022": {
+          "name": "Ιδιότητες Διάταξης"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Δημοσιοποιώντας Τον Ιστότοπό Σας",
+          "type": "Βίντεο"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "Βίντεο: Διαχείριση Διαφωνιών",
+          "type": "Βίντεο"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "Βίντεο: Ομαδική εργασία",
+          "type": "Βίντεο"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "Βίντεο: Πώς Λειτουργεί η Αναζήτηση",
+          "type": "Βίντεο"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "hyperlinks/csd/2022": {
+          "name": "Υπερσύνδεσμοι"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Συνδέοντας Σελίδες"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "design_mode/csd/2022": {
+          "name": "Κατάσταση Σχεδίασης"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "app_presentation/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα",
+          "type": "Βίντεο"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "random_numbers_1/csd/2022": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "board_events/csd/2022": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "variables_1/csd/2022": {
+          "name": "Μεταβλητές"
+        },
+        "variables_2/csd/2022": {
+          "name": "Μεταβλητές",
+          "type": "Βίντεο"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "color_leds/csd/2022": {
+          "name": "Χρωματισμός των LED"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "Γεγονότα Επιταχυνσιόμετρου"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Παίζοντας Νότες"
+        },
+        "functions_2/csd/2022": {
+          "name": "Συναρτήσεις"
+        },
+        "functions_3/csd/2022": {
+          "name": "Συναρτήσεις",
+          "type": "Βίντεο"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Συναρτήσεις με παραμέτρους",
+          "type": "Βίντεο"
+        },
+        "functions_5/csd/2022": {
+          "name": "Συναρτήσεις"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "Βλέποντας την τεχνητή νοημοσύνη",
+          "type": "Βίντεο"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Κατάλογος"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Βίντεο"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Κατάλογος"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/courseb/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -53,6 +508,9 @@
         "lesson_plans/coursea/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursea/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursea/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -61,6 +519,9 @@
         },
         "lesson_plans/coursed/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursed/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -71,6 +532,9 @@
         "lesson_plans/coursef/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursef/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursef/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -79,6 +543,9 @@
         },
         "lesson_plans/express/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/express/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -89,6 +556,9 @@
         "lesson_plans/coursee/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursee/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursee/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -97,6 +567,9 @@
         },
         "lesson_plans/coursec/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursec/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -110,6 +583,9 @@
         "lesson_plans_2/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_2/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_2/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -122,6 +598,9 @@
         "lesson_plans_5/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_5/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_5/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -130,6 +609,9 @@
         },
         "lesson_plans_4/csd/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum_4/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -143,6 +625,9 @@
         "lesson_plans_3/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_3/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_3/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -155,6 +640,9 @@
         "lesson_plans_1/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_1/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_1/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -163,6 +651,9 @@
         },
         "lesson_plans/csd/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -176,6 +667,9 @@
         "lesson_plans/coursea/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursea/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursea/2019": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -187,6 +681,9 @@
         },
         "lesson_plans/courseb/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/courseb/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -200,6 +697,9 @@
         "lesson_plans/coursed/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursed/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursed/2019": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -211,6 +711,9 @@
         },
         "lesson_plans/coursef/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursef/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -224,6 +727,9 @@
         "lesson_plans/coursee/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursee/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursee/2019": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -232,6 +738,9 @@
         },
         "lesson_plans/express/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/express/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -244,6 +753,9 @@
         },
         "lesson_plans/coursec/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursec/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -260,6 +772,9 @@
         "lesson_plans_2/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_2/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_2/csd/2019": {
           "name": "Λεξιλόγιο"
         },
@@ -268,6 +783,9 @@
         },
         "lesson_plans_5/csd/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "vocabulary_5/csd/2019": {
           "name": "Λεξιλόγιο"
@@ -278,17 +796,26 @@
         "lesson_plans_3/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_3/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_3/csd/2019": {
           "name": "Λεξιλόγιο"
         },
         "lesson_plans_4/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_4/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_4/csd/2019": {
           "name": "Λεξιλόγιο"
         },
         "lesson_plans/csd/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "vocabulary/csd/2019": {
           "name": "Λεξιλόγιο"
@@ -299,6 +826,9 @@
         "lesson_plans_1/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_1/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_1/csd/2019": {
           "name": "Λεξιλόγιο"
         },
@@ -307,6 +837,9 @@
         },
         "lesson_plans_2/csd/2017": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum_2/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
@@ -320,6 +853,9 @@
         "lesson_plans_5/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_5/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_5/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -332,6 +868,9 @@
         "lesson_plans_1/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_1/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_1/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -341,6 +880,9 @@
         "lesson_plans/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -349,6 +891,9 @@
         },
         "lesson_plans_4/csd/2017": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum_4/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
@@ -362,6 +907,9 @@
         "lesson_plans_3/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_3/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_3/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -370,6 +918,9 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Βίντεο"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Χαρακτήρες σε Δράση"
@@ -426,6 +977,9 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
         },
         "mimi-activity/courseb/2021": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
@@ -675,6 +1229,12 @@
         "turns_angles/express/2021": {
           "type": "Βίντεο"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
         "sprites_in_action/express/2021": {
           "name": "Χαρακτήρες σε Δράση"
         },
@@ -714,6 +1274,9 @@
         "teacher_forum_1/pre-express/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Βίντεο"
         },
@@ -737,6 +1300,9 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Βίντεο"
@@ -839,6 +1405,9 @@
         },
         "introduction_to_arrays/csd/2021": {
           "type": "Βίντεο"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Παίζοντας Νότες"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "Βρόχοι Για",
@@ -981,10 +1550,15 @@
           "name": "Side Scroller",
           "type": "Οδηγός Προγράμματος"
         },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Ταχύτητα και το μοτίβο αντίθετης φοράς"
+        },
         "flyer-game-1/csd/2021": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου",
           "type": "Κατάλογος"
         },
         "flyer-game/csd/2021": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου",
           "type": "Οδηγός Προγράμματος"
         },
         "calling_and_defining_functions/csd/2021": {
@@ -1035,6 +1609,7 @@
           "name": "Κεφαλίδες και Παράγραφοι"
         },
         "video_debugging/csd/2021": {
+          "name": "Βίντεο: Αποσφαλμάτωση",
           "type": "Βίντεο"
         },
         "html-web-page-1/csd/2021": {
@@ -1048,6 +1623,12 @@
         },
         "lists/csd/2021": {
           "name": "Λίστες"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Εισαγωγή στην CSS - μέρος 1",
@@ -1118,6 +1699,9 @@
         "lesson_plans/pre-express/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/pre-express/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/pre-express/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1126,6 +1710,9 @@
         },
         "lesson_plans/express/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/express/2020": {
           "name": "Φόρουμ Καθηγητών"
@@ -1139,6 +1726,9 @@
         "lesson_plans/courseb/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/courseb/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/courseb/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1150,6 +1740,9 @@
         },
         "lesson_plans/coursed/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursed/2020": {
           "name": "Φόρουμ Καθηγητών"
@@ -1163,6 +1756,9 @@
         "lesson_plans/coursec/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursec/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursec/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1174,6 +1770,9 @@
         },
         "lesson_plans/coursee/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursee/2020": {
           "name": "Φόρουμ Καθηγητών"
@@ -1187,6 +1786,9 @@
         "lesson_plans/coursea/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursea/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursea/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1198,6 +1800,9 @@
         },
         "lesson_plans/coursef/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursef/2020": {
           "name": "Φόρουμ Καθηγητών"

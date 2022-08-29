@@ -64,7 +64,7 @@ Si vous n'arrivez pas à vous mettre en relation avec une école, veuillez [nous
 
 Si vous voulez aller encore plus loin, votre entreprise peut également organiser un événement Heure de Code. Il n'y a pas de formule précise pour organiser un événement. Nous vous conseillons donc de faire preuve de créativité ! Étant donné que notre effectif est petit (mais costaud !), Code.org n'a pas d'équipe dédiée à la coordination des événements Heure de Code. Toutefois, voici quelques conseils pour commencer.
 
-### 1. Regarder cette vidéo guide pratique <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Regarder cette vidéo guide pratique <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Choisissez la date, le format et l'emplacement de votre événement
 

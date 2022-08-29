@@ -327,6 +327,252 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "Analyse de fréquence"
         },
+        "csd5-2022/Representation Matters": {
+          "name": "Questions de Représentation"
+        },
+        "csd5-2022/Patterns and Representation": {
+          "name": "Modèles et Représentation"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "La Représentation ASCII et binaire"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Représenter des Images"
+        },
+        "csd5-2022/Representing Numbers": {
+          "name": "Représenter les Nombres"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Combiner des Représentations"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Garder les Données Secrètes"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "Projet - Créer une Représentation"
+        },
+        "csd5-2022/Structuring Data": {
+          "name": "Structurer les Données"
+        },
+        "csd5-2022/Interpreting Data": {
+          "name": "Interpréter les Données"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "Prendre des Décisions avec des Données"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "Automatiser les Décisions Relatives Aux Données"
+        },
+        "csd5-2022/Problem Solving with Big Data": {
+          "name": "Résolution de Problèmes avec les Mégadonnées"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Enquête Post-Cours"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Introduction à la Résolution de Problèmes"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Le Processus de Résolution de Problèmes"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Explorer la Résolution de Problèmes"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Qu'est ce qu'un Ordinateur ?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Entrée et Sortie"
+        },
+        "csd1-2022/Processing": {
+          "name": "Le Traitement"
+        },
+        "csd1-2022/Storage": {
+          "name": "Le Stockage"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Projet - Propose une Application"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "Programmer pour le Divertissement"
+        },
+        "csd3-2022/Plotting Shapes": {
+          "name": "Tracer Des Formes"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Dessiner dans le Labo des Jeux"
+        },
+        "csd3-2022/Shapes and Parameters": {
+          "name": "Formes et paramètres"
+        },
+        "csd3-2022/Variables": {
+          "name": "variables"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Nombres aléatoires"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Les Lutins"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Propriétés du sprite"
+        },
+        "csd3-2022/Text": {
+          "name": "Texte"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "La Boucle Dessiner"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "Le Déplacement du Lutin"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Instructions conditionnelles"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Entrée Au Clavier"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "Projet - Carte Interactive"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Vitesse"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "Détection de collision"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Déplacement Complexe du Lutin"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Collisions"
+        },
+        "csd3-2022/Functions": {
+          "name": "Fonctions"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "Le Processus de Conception d'un Jeu"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Utiliser le Processus de Conception d'un Jeu"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "Projet - Concevoir un Jeu"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Enquête Post-Cours"
+        },
+        "csd2-2022/Exploring Web Pages": {
+          "name": "Explorer des Pages Web"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Initiation au HTML"
+        },
+        "csd2-2022/Headings": {
+          "name": "Rubriques"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "L'Empreinte Numérique"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Styliser le texte avec CSS"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "Propriété intellectuelle"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Styliser des Éléments avec CSS"
+        },
+        "csd2-2022/Team Problem Solving": {
+          "name": "La Résolution De Problèmes en Équipe"
+        },
+        "csd2-2022/Sources and Research": {
+          "name": "Les Sources et la Recherche"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "Les classes CSS"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Relier des Pages"
+        },
+        "csd2-2022/Project - Website for a Purpose": {
+          "name": "Projet - Site Web avec un But"
+        },
+        "csd2-2022/Peer Review and Final Touches": {
+          "name": "L'Examen par les Pairs et la Touche Finale"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Enquête Post-Cours"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "Comprendre Votre Utilisateur"
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "Les Interfaces Utilisateurs"
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "Commentaires et Tests"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Identifier les Besoins des Utilisateurs"
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "Projet - Prototype Papier"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Concevoir des Applications pour de Bon"
+        },
+        "csd4-2022/Market Research": {
+          "name": "Étude de Marché"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Les Essais de Prototype"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "Tester l'Application"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "Projet - Présentation de l'Application"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Enquête Post-Cours"
+        },
+        "csd6-2022/Innovations in Computing": {
+          "name": "Innovations en informatique"
+        },
+        "csd6-2022/The Circuit Playground": {
+          "name": "Le Circuit Playground"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Évènements en provenance du circuit"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Couleurs des LED"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "Accéléromètre"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Créer de la Musique"
+        },
+        "csd6-2022/Functions": {
+          "name": "Fonctions"
+        },
+        "csd6-2022/Project - Prototype an Innovation": {
+          "overview": "Pour le projet final de ce cours, les élèves forment des groupes pour développer et tester un prototype innovant basé sur le Circuit Playground. En utilisant les entrées et les sorties disponibles sur le circuit, les groupes vont créer des programmes qui permettent des interactions intéressantes et uniques avec l'utilisateur. "
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Enquête Post-Cours"
+        },
+        "csd7-2022/Numerical Models": {
+          "overview": "Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.\n\n\\*\\*La question du jour : \\*\\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Concevoir la Collecte de Données"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Enquête Post-Cours"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Bouge, Bouge"
         },
@@ -424,7 +670,7 @@
           "name": "Les Événements dans Bounce"
         },
         "coursed-2018/Loops in Ice Age": {
-          "name": "Boucles dans l'Âge de Glace"
+          "name": "Les boucles dans l'Âge de Glace"
         },
         "coursed-2018/Loops in Artist": {
           "name": "Dessiner des Formes avec des Boucles"
@@ -1252,7 +1498,7 @@
           "name": "Construis un Jeu Star Wars"
         },
         "coursed-2019/Loops in Ice Age": {
-          "name": "Boucles dans l'Âge de Glace"
+          "name": "Les boucles dans l'Âge de Glace"
         },
         "coursed-2019/Loops in Artist": {
           "name": "Dessiner des Formes avec des Boucles"
@@ -3224,7 +3470,7 @@
         },
         "courseb-2021/Programming in Maze": {
           "name": "Programmation avec Angry Birds",
-          "overview": "En utilisant des personnages de L'Âge de Glace, les élèves développeront des algorithmes séquentiels pour déplacer Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "overview": "Dans ce cours de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Recherchez ou réimprimez les fournitures pour **\\*Happy Maps**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Coupez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
           "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces puzzles les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe."
@@ -3279,7 +3525,7 @@
           "student_overview": "Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante."
         },
         "courseb-2021/Events in Play Lab": {
-          "overview": "Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !",
+          "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
@@ -3299,7 +3545,7 @@
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Apprends à Faire Glisser et Déposer",
-          "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
+          "overview": "Cette leçon de **développement des compétences** donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le labo informatique. Elle commence par une brève discussion les initiant aux usages dans un labo informatique, puis ils se mettront à utiliser des ordinateurs pour résoudre des casse-têtes en ligne.",
           "preparation": "-   Regardez la **\\*Comment créer une section de classe** sur Code.org - Vidéo de l'enseignant. Créez votre propre section de classe sur Code.org et assurez-vous que chaque élève ait bien une carte avec son mot de passe dessus.\n-   Assurez-vous que les élèves pourront accéder à la leçon 2 avec leur dispositif. Voyez si vous souhaitez masquer les futures leçons pour empêcher les élèves d'avancer trop rapidement.\n-   Demandez au responsable informatique de l'école d'ajouter un lien rapide pour votre section de classe sur le bureau de l'ordinateur.\n-   Consultez le site Web Common Sense Education pour plus de contenu sur la sécurité en ligne. ",
           "purpose": "L'objectif principal de cette leçon est de développer l'expérience des élèves avec les ordinateurs. En couvrant les fonctions informatiques les plus élémentaires telles que cliquer, faire glisser et déposer, nous créons un terrain de jeu plus égal dans la classe pour les futurs puzzles. Cette leçon offre également une excellente occasion d'introduire la terminologie de base du matériel informatique, y compris potentiellement \"souris\", \"trackpad\" ou \"écran tactile\", selon vos appareils. ",
           "student_overview": "Clique et fais glisser pour terminer les énigmes."
@@ -3320,7 +3566,7 @@
         },
         "coursea-2021/Programming in Ice Age": {
           "name": "Programmer avec Scrat",
-          "overview": "En utilisant des personnages de L'Âge de Glace, les élèves développeront des algorithmes séquentiels pour déplacer Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "overview": "Dans ce cours de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
           "preparation": "-   Jouez avec les énigmes pour trouver d'éventuels problèmes pour votre classe\n-   (Facultatif) Choisissez quelques énigmes sur lesquelles travailler en groupe avec votre classe\n-   Assurez-vous que chaque élève ait bien un journal de réflexion",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
           "student_overview": "Ecris des programmes pour aider Scrat à atteindre le gland."
@@ -3545,7 +3791,7 @@
           "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
         },
         "coursed-2021/Loops in Ice Age": {
-          "name": "Boucles dans l'Âge de Glace",
+          "name": "Les boucles dans l'Âge de Glace",
           "overview": "Servant de mise à jour rapide (ou d'introduction) à l'utilisation des boucles, cette étape permettra aux étudiants d'utiliser le bloc `répéter` pour amener Scrat au gland plus efficacement.",
           "preparation": "-   (Facultatif) Choisissez quelques puzzles à faire en groupe avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de boucles est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les énigmes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
@@ -3793,7 +4039,7 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "Apprends à Faire Glisser et Déposer",
-          "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
+          "overview": "Cette leçon de **développement des compétences** donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le labo informatique. Elle commence par une brève discussion les initiant aux usages dans un labo informatique, puis ils se mettront à utiliser des ordinateurs pour résoudre des casse-têtes en ligne.",
           "purpose": "L'objectif principal de cette leçon est de développer l'expérience des élèves avec les ordinateurs. En couvrant les fonctions informatiques les plus élémentaires telles que cliquer, faire glisser et déposer, nous créons un terrain de jeu plus égal dans la classe pour les futurs puzzles. Cette leçon offre également une excellente occasion d'introduire la terminologie de base du matériel informatique, y compris potentiellement \"souris\", \"trackpad\" ou \"écran tactile\", selon vos appareils. ",
           "student_overview": "Clique et fais glisser pour terminer les énigmes."
         },
@@ -3805,12 +4051,12 @@
         },
         "pre-express-2021/Programming in with Angry Birds": {
           "name": "Programmation avec Angry Birds",
-          "overview": "En utilisant des personnages de L'Âge de Glace, les élèves développeront des algorithmes séquentiels pour déplacer Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "overview": "Dans ce cours de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe."
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Programmer avec Rey et BB-8",
-          "overview": "Dans cette leçon, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus compliquée pour naviguer dans un cours délicat avec BB-8.",
+          "overview": "Dans cette leçon axée sur le **développement des compétences**, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus complexe en naviguant un parcours épineux avec BB-8.",
           "purpose": "En ayant le transfert des connaissances à l'esprit, cette leçon donne aux élèves un nouvel environnement pour exercer les compétences qu'ils développent. Les fans de Star Wars vont sauter de joie quand ils verront ces énigmes. Chaque énigme de cette série a été ajoutée pour fournir une compréhension accrue des concepts de base qu'ils utiliseront tout au long du reste de ce cours."
         },
         "pre-express-2021/Programming in Harvester": {
@@ -3821,12 +4067,13 @@
         },
         "pre-express-2021/Loops with Scrat": {
           "name": "Les Boucles avec Scrat",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves travailleront la notion de boucles avec des casse-têtes de programmation où le but est d'aider l'écureuil à parvenir au gland. ",
           "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de _boucles_ est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les énigmes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
           "student_overview": "Aide Scrat couvrir plus de terrain en utilisant des boucles."
         },
         "pre-express-2021/Loops with Laurel": {
           "name": "Les Boucles avec Laurel",
-          "overview": "Dans cette leçon, les élèves continuent d'apprendre le concept de boucles. Ici, Laurel L'Aventurière utilise des boucles pour collecter des trésors dans les espaces ouverts des grottes. Un nouveau  bloc `collecte le trésor` est introduit pour l'aider dans son voyage.",
+          "overview": "Dans cette leçon, les élèves en apprendront plus sur la notion de boucles. Ici, Laurel l'Aventurière utilise des boucles pour collectionner des trésors dans des grottes ouvertes. On introduit un nouveau  bloc « ramasser le trésor » pour l'aider dans son parcours.",
           "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les encourage à mettre plusieurs blocs à l'intérieur d'une \"répétition\" alors qu'ils essaient de récolter autant de trésors que possible."
         },
         "pre-express-2021/Ocean Scene with Loops": {
@@ -3849,7 +4096,7 @@
         },
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Une Bataille Royale avec des Événements",
-          "overview": "Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !",
+          "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
           "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
@@ -4396,7 +4643,7 @@
           "name": "Soirée Dansante"
         },
         "coursed-2020/Loops in Ice Age": {
-          "name": "Boucles dans l'Âge de Glace"
+          "name": "Les boucles dans l'Âge de Glace"
         },
         "coursed-2020/Loops in Artist": {
           "name": "Dessiner des Formes avec des Boucles"

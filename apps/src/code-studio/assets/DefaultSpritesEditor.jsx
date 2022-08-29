@@ -136,7 +136,7 @@ export default class DefaultSpritesEditor extends React.Component {
           <Button
             onClick={this.updateDefaultSprites}
             color={Button.ButtonColor.blue}
-            text="Update Default Sprites List"
+            text="Update Default List"
           />
           <p>Pending Changes: {this.state.pendingChangesCount}</p>
           {isUpdating && <Spinner />}
@@ -151,15 +151,24 @@ export default class DefaultSpritesEditor extends React.Component {
 
     return (
       <div>
-        <a href="/sprites">Back to Sprite Management</a>
-        <h1>Edit Default Sprites</h1>
-        <h2>
-          Remove or add sprites from the default dropdown list in Sprite Lab.
-        </h2>
+        <a href="/sprites">Back to Asset Management</a>
+        <h1>Edit Default Sprite Costumes and Backgrounds</h1>
         <p>
-          Sprites are shown in the format: "name: category/path". The order of
-          this list is the order that the sprites appear in the dropdown.
-          Changes aren't saved until the "Update Default Sprites List" button is
+          These animations are preloaded in any new project or any level with
+          the option set to "Use default sprites as starting animation JSON"
+        </p>
+        <h2>Add or remove default sprite costumes and backgrounds.</h2>
+        <p>
+          Animations are shown in the format: "name: category/path". The order
+          of this list is the order that the costumes and backgrounds appear in
+          a new project.{' '}
+          <i>
+            Note: In Sprite Lab, Sprite costumes and backgrounds are always
+            listed separately.
+          </i>
+        </p>
+        <p>
+          Changes aren't saved until the "Update Default List" button is
           clicked.
         </p>
         {this.renderUploadButton()}

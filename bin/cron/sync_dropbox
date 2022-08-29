@@ -21,7 +21,6 @@ require "open3"
 FOLDERS = {
   "advocacy.code.org" => "sites.v3/advocacy.code.org",
   "code.org" => "sites.v3/code.org",
-  "csedweek.org" => "sites.v3/csedweek.org",
   "curriculum-6-8" => "sites/virtual/curriculum-6-8",
   "curriculum-algebra" => "sites/virtual/curriculum-algebra",
   "curriculum-course1" => "sites/virtual/curriculum-course1",

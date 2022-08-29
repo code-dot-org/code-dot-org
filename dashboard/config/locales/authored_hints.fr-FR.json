@@ -1000,17 +1000,17 @@
         },
         "Overworld House Frame Chosen": {
           "mc_6_a": "Clique la flèche du bloc ˋplacer\\` pour choisir ce que tu veux placer.",
-          "mc_6_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
+          "mc_6_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
           "mc_6_c": "Tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`."
         },
         "Overworld House Frame Chosen_2019": {
           "mc_6_a": "Clique la flèche du bloc ˋplacer\\` pour choisir ce que tu veux placer.",
-          "mc_6_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
+          "mc_6_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
           "mc_6_c": "Tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`."
         },
         "Overworld House Frame Chosen_2020": {
           "mc_6_a": "Clique la flèche du bloc ˋplacer\\` pour choisir ce que tu veux placer.",
-          "mc_6_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
+          "mc_6_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
           "mc_6_c": "Tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`."
         },
         "Overworld Move to Sheep": {
@@ -1028,17 +1028,17 @@
         "Overworld Place Wall": {
           "mc_5_a": "Utilise le bloc ˋplacer`d’abord, puis le bloc ˋavancer`.",
           "mc_5_b": "Assure-toi que les deux blocs soient à l’intérieur de la boucle ˋrépéter\\` pour exécuter le code plus d’une fois.",
-          "mc_5_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_5_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Overworld Place Wall_2019": {
           "mc_5_a": "Utilise le bloc ˋplacer`d’abord, puis le bloc ˋavancer`.",
           "mc_5_b": "Assure-toi que les deux blocs soient à l’intérieur de la boucle ˋrépéter\\` pour exécuter le code plus d’une fois.",
-          "mc_5_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_5_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Overworld Place Wall_2020": {
           "mc_5_a": "Utilise le bloc ˋplacer`d’abord, puis le bloc ˋavancer`.",
           "mc_5_b": "Assure-toi que les deux blocs soient à l’intérieur de la boucle ˋrépéter\\` pour exécuter le code plus d’une fois.",
-          "mc_5_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_5_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Overworld Plant Crops": {
           "mc_7_a": "Utilise le bloc ˋplanter culture\\` pour planter une culture dans l’espace où tu te tiens.",
@@ -1070,17 +1070,17 @@
         "Overworld Shear Sheep": {
           "mc_3_a": "Le bloc ˋtondre\\` amène le mouton devant toi. Es-tu en face du mouton ?  ",
           "mc_3_b": "Si tu dois changer ton orientation, utilise un bloc ˋtourner\\`.  ",
-          "mc_3_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_3_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Overworld Shear Sheep_2019": {
           "mc_3_a": "Le bloc ˋtondre\\` amène le mouton devant toi. Es-tu en face du mouton ?  ",
           "mc_3_b": "Si tu dois changer ton orientation, utilise un bloc ˋtourner\\`.  ",
-          "mc_3_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_3_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Overworld Shear Sheep_2020": {
           "mc_3_a": "Le bloc ˋtondre\\` amène le mouton devant toi. Es-tu en face du mouton ?  ",
           "mc_3_b": "Si tu dois changer ton orientation, utilise un bloc ˋtourner\\`.  ",
-          "mc_3_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_3_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Underground Avoiding Lava": {
           "mc_11_a": "Tout le code, pour vérifier s’il y a de la lave et y faire face, est en place. Tout ce que tu as à faire est ajouter un bloc pour te déplacer.",
@@ -1112,17 +1112,17 @@
         "Underground Iron": {
           "mc_10_a": "Les blocs de fer sont les endroits tachetés, derrière la torche ! Comment peux-tu les atteindre ?",
           "mc_10_b": "Quand tu te tiens au bord de la lave, utilise ˋplacer pavé devant\\` pour créer un chemin sûr. Puis, tu peux marcher dessus !",
-          "mc_10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Underground Iron_2019": {
           "mc_10_a": "Les blocs de fer sont les endroits tachetés, derrière la torche ! Comment peux-tu les atteindre ?",
           "mc_10_b": "Quand tu te tiens au bord de la lave, utilise ˋplacer pavé devant\\` pour créer un chemin sûr. Puis, tu peux marcher dessus !",
-          "mc_10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Underground Iron_2020": {
           "mc_10_a": "Les blocs de fer sont les endroits tachetés, derrière la torche ! Comment peux-tu les atteindre ?",
           "mc_10_b": "Quand tu te tiens au bord de la lave, utilise ˋplacer pavé devant\\` pour créer un chemin sûr. Puis, tu peux marcher dessus !",
-          "mc_10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Underground Mining Coal": {
           "mc_9_a": "Es-tu dans la bonne direction ? Le bloc ˋdétruire\\` fait exploser le bloc en face de toi.",
@@ -1871,76 +1871,76 @@
           "courseA_harvester_loops9_c": "Suis ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq1": {
-          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "l'Agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice le trouve !\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "L'agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq10": {
-          "courseA_harvester_seq10_a": "Tu es bloqué ? Essaie d’abord d’écrire les étapes sur une feuille de papier.",
-          "courseA_harvester_seq10_b": "Tu devras `avancer vers l’Est` puis ˋavancer vers le Nord\\`. Fais cela deux fois. N’oublie pas aussi de ramasser tout le maïs !",
-          "courseA_harvester_seq10_c": "Essaie de suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq10_a": "Tu es coincé ? Essaie en écrivant d'abord les étapes sur une feuille de papier.",
+          "courseA_harvester_seq10_b": "Il faut que tu te « déplaces vers l’Est » puis te « déplacer vers le Nord ». Fais cela deux fois. N’oublie pas aussi de récolter tout le maïs !",
+          "courseA_harvester_seq10_c": "Essaie d'emprunter ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq10_2019": {
-          "courseA_harvester_seq10_a": "Tu es bloqué ? Essaie d’abord d’écrire les étapes sur une feuille de papier.",
-          "courseA_harvester_seq10_b": "Tu devras `avancer vers l’Est` puis ˋavancer vers le Nord\\`. Fais cela deux fois. N’oublie pas aussi de ramasser tout le maïs !",
-          "courseA_harvester_seq10_c": "Essaie de suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq10_a": "Tu es coincé ? Essaie en écrivant d'abord les étapes sur une feuille de papier.",
+          "courseA_harvester_seq10_b": "Il faut que tu te « déplaces vers l’Est » puis te « déplacer vers le Nord ». Fais cela deux fois. N’oublie pas aussi de récolter tout le maïs !",
+          "courseA_harvester_seq10_c": "Essaie d'emprunter ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq10_2020": {
-          "courseA_harvester_seq10_a": "Tu es bloqué ? Essaie d’abord d’écrire les étapes sur une feuille de papier.",
-          "courseA_harvester_seq10_b": "Tu devras `avancer vers l’Est` puis ˋavancer vers le Nord\\`. Fais cela deux fois. N’oublie pas aussi de ramasser tout le maïs !",
-          "courseA_harvester_seq10_c": "Essaie de suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq10_a": "Tu es coincé ? Essaie en écrivant d'abord les étapes sur une feuille de papier.",
+          "courseA_harvester_seq10_b": "Il faut que tu te « déplaces vers l’Est » puis te « déplacer vers le Nord ». Fais cela deux fois. N’oublie pas aussi de récolter tout le maïs !",
+          "courseA_harvester_seq10_c": "Essaie d'emprunter ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq13": {
-          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur l’atteint.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice y parvient.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq13_2019": {
-          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur l’atteint.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice y parvient.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq13_2020": {
-          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur l’atteint.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice y parvient.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2019": {
-          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "l'Agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice le trouve !\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "L'agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2020": {
-          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "l'Agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice le trouve !\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "L'agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2": {
-          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser <xml><block type=\"harvester_corn\"/></xml> pour ramasser le maïs !",
+          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser le <xml><block type=\"harvester_corn\"/></xml> pour récolter le maïs !",
           "courseA_harvester_seq2_b": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser <xml><block type=\"harvester_corn\"/></xml> pour ramasser le maïs !",
+          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser le <xml><block type=\"harvester_corn\"/></xml> pour récolter le maïs !",
           "courseA_harvester_seq2_b": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser <xml><block type=\"harvester_corn\"/></xml> pour ramasser le maïs !",
+          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser le <xml><block type=\"harvester_corn\"/></xml> pour récolter le maïs !",
           "courseA_harvester_seq2_b": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution!"
         },
         "courseA_harvester_seq3": {
           "courseA_harvester_seq3_a": "As-tu pensé à utiliser ce bloc ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
-          "courseA_harvester_seq3_b": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "courseA_harvester_seq3_b": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_harvester_seq3_2019": {
           "courseA_harvester_seq3_a": "As-tu pensé à utiliser ce bloc ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
-          "courseA_harvester_seq3_b": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "courseA_harvester_seq3_b": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_harvester_seq3_2020": {
           "courseA_harvester_seq3_a": "As-tu pensé à utiliser ce bloc ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
-          "courseA_harvester_seq3_b": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "courseA_harvester_seq3_b": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_harvester_seq4": {
-          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre le moissonneur et le maïs ? Combien de blocs sont déjà dans l’espace de travail ?",
-          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs `Déplacer vers l’Est` et un bloc `Récolter maïs` :\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre l'agricultrice et le maïs ? Combien de blocs sont déjà dans ton espace de travail ?",
+          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs « Se déplacer vers l’Est » et d'un bloc « Récolter le maïs » :\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2019": {
-          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre le moissonneur et le maïs ? Combien de blocs sont déjà dans l’espace de travail ?",
-          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs `Déplacer vers l’Est` et un bloc `Récolter maïs` :\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre l'agricultrice et le maïs ? Combien de blocs sont déjà dans ton espace de travail ?",
+          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs « Se déplacer vers l’Est » et d'un bloc « Récolter le maïs » :\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2020": {
-          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre le moissonneur et le maïs ? Combien de blocs sont déjà dans l’espace de travail ?",
-          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs `Déplacer vers l’Est` et un bloc `Récolter maïs` :\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre l'agricultrice et le maïs ? Combien de blocs sont déjà dans ton espace de travail ?",
+          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs « Se déplacer vers l’Est » et d'un bloc « Récolter le maïs » :\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5": {
           "courseA_harvester_seq5_a": "Quel bloc déplace l'agricultrice dans le mauvais sens ?",
@@ -1958,49 +1958,49 @@
           "courseA_harvester_seq5_c": "Jette ce bloc à la poubelle !\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq6": {
-          "courseA_harvester_seq6_a": "Si tu es bloqué, essaie de dire les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
+          "courseA_harvester_seq6_a": "Si tu es coincé, essaie d'énumérer les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
         },
         "courseA_harvester_seq6_2019": {
-          "courseA_harvester_seq6_a": "Si tu es bloqué, essaie de dire les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
+          "courseA_harvester_seq6_a": "Si tu es coincé, essaie d'énumérer les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
         },
         "courseA_harvester_seq6_2020": {
-          "courseA_harvester_seq6_a": "Si tu es bloqué, essaie de dire les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
+          "courseA_harvester_seq6_a": "Si tu es coincé, essaie d'énumérer les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
         },
         "courseA_harvester_seq7": {
-          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 parties, une avant le coin et l’autre après le coin.",
-          "courseA_harvester_seq7_b": "Des problèmes ? Voici le chemin que le moissonneur devrait emprunter."
+          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 temps : d'abord avant le coin, et ensuite, après le coin.",
+          "courseA_harvester_seq7_b": "Tu as du mal ? Voici le chemin que l'agricultrice devrait emprunter."
         },
         "courseA_harvester_seq7_2019": {
-          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 parties, une avant le coin et l’autre après le coin.",
-          "courseA_harvester_seq7_b": "Des problèmes ? Voici le chemin que le moissonneur devrait emprunter."
+          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 temps : d'abord avant le coin, et ensuite, après le coin.",
+          "courseA_harvester_seq7_b": "Tu as du mal ? Voici le chemin que l'agricultrice devrait emprunter."
         },
         "courseA_harvester_seq7_2020": {
-          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 parties, une avant le coin et l’autre après le coin.",
-          "courseA_harvester_seq7_b": "Des problèmes ? Voici le chemin que le moissonneur devrait emprunter."
+          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 temps : d'abord avant le coin, et ensuite, après le coin.",
+          "courseA_harvester_seq7_b": "Tu as du mal ? Voici le chemin que l'agricultrice devrait emprunter."
         },
         "courseA_harvester_seq8": {
-          "courseA_harvester_seq8_a": "Tu devrais terminer avec **4** blocs de mouvement et **2** blocs de récolte."
+          "courseA_harvester_seq8_a": "Une fois achevé, ton code devrait contenir **4** blocs mouvement et **2** blocs récolte."
         },
         "courseA_harvester_seq8_2019": {
-          "courseA_harvester_seq8_a": "Tu devrais terminer avec **4** blocs de mouvement et **2** blocs de récolte."
+          "courseA_harvester_seq8_a": "Une fois achevé, ton code devrait contenir **4** blocs mouvement et **2** blocs récolte."
         },
         "courseA_harvester_seq8_2020": {
-          "courseA_harvester_seq8_a": "Tu devrais terminer avec **4** blocs de mouvement et **2** blocs de récolte."
+          "courseA_harvester_seq8_a": "Une fois achevé, ton code devrait contenir **4** blocs mouvement et **2** blocs récolte."
         },
         "courseA_harvester_seq9": {
-          "courseA_harvester_seq9_a": "Exécute le code plusieurs fois pour voir ce qui se passe. Où le moissonneur s’arrête-t-il ?",
-          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs ˋrécolte maïs\\`.",
-          "courseA_harvester_seq9_c": "Tu devrais suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq9_a": "Exécute le code une ou deux fois pour voir ce qui se passe. Où l'agricultrice s'arrête-t-elle ?",
+          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs « récolter du maïs ».",
+          "courseA_harvester_seq9_c": "Il faut suivre ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq9_2019": {
-          "courseA_harvester_seq9_a": "Exécute le code plusieurs fois pour voir ce qui se passe. Où le moissonneur s’arrête-t-il ?",
-          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs ˋrécolte maïs\\`.",
-          "courseA_harvester_seq9_c": "Tu devrais suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq9_a": "Exécute le code une ou deux fois pour voir ce qui se passe. Où l'agricultrice s'arrête-t-elle ?",
+          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs « récolter du maïs ».",
+          "courseA_harvester_seq9_c": "Il faut suivre ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq9_2020": {
-          "courseA_harvester_seq9_a": "Exécute le code plusieurs fois pour voir ce qui se passe. Où le moissonneur s’arrête-t-il ?",
-          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs ˋrécolte maïs\\`.",
-          "courseA_harvester_seq9_c": "Tu devrais suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq9_a": "Exécute le code une ou deux fois pour voir ce qui se passe. Où l'agricultrice s'arrête-t-elle ?",
+          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs « récolter du maïs ».",
+          "courseA_harvester_seq9_c": "Il faut suivre ce chemin pour récolter tout le maïs."
         },
         "courseA_maze_ramp2_2018": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2072,24 +2072,24 @@
           "courseA_maze_seq10_b": "Tu devras aller dans 3 directions pour résoudre ce casse-tête."
         },
         "courseA_maze_seq13": {
-          "courseA_maze_seq13_a": "Si le chemin ne te semble pas clair, trace du doigt un chemin de l’oiseau jusqu'au cochon.",
+          "courseA_maze_seq13_a": "Si le chemin qu'il faut emprunter ne te semble pas clair, trace du doigt un parcours de l’oiseau jusqu'au cochon.",
           "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.",
           "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> t’aideront à te rapprocher du cochon."
         },
         "courseA_maze_seq13_2018": {
-          "courseA_maze_seq13_a": "Si le chemin ne te semble pas clair, trace du doigt un chemin de l’oiseau jusqu'au cochon.",
+          "courseA_maze_seq13_a": "Si le chemin qu'il faut emprunter ne te semble pas clair, trace du doigt un parcours de l’oiseau jusqu'au cochon.",
           "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.",
           "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> t’aideront à te rapprocher du cochon."
         },
         "courseA_maze_seq13_2019": {
-          "courseA_maze_seq13_a": "Si le chemin ne te semble pas clair, trace du doigt un chemin de l’oiseau jusqu'au cochon.",
+          "courseA_maze_seq13_a": "Si le chemin qu'il faut emprunter ne te semble pas clair, trace du doigt un parcours de l’oiseau jusqu'au cochon.",
           "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.",
-          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> t’aideront à te rapprocher du cochon."
+          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nt’aideront à te rapprocher du cochon."
         },
         "courseA_maze_seq13_2020": {
-          "courseA_maze_seq13_a": "Si le chemin ne te semble pas clair, trace du doigt un chemin de l’oiseau jusqu'au cochon.",
+          "courseA_maze_seq13_a": "Si le chemin qu'il faut emprunter ne te semble pas clair, trace du doigt un parcours de l’oiseau jusqu'au cochon.",
           "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.",
-          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> t’aideront à te rapprocher du cochon."
+          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nt’aideront à te rapprocher du cochon."
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "Si tu as du mal à faire bouger l’oiseau, assure-toi que les blocs sont connectés sous <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -2137,13 +2137,13 @@
           "courseA_maze_seq5_b": "Tu auras besoin de 2 blocs qui pointent dans 2 directions."
         },
         "courseA_maze_seq5a_2018": {
-          "1": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "1": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_maze_seq5a_2019": {
-          "1": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "1": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_maze_seq5a_2020": {
-          "1": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "1": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_maze_seq6": {
           "courseA_maze_seq6_a": "Ton code final devrait avoir 3 blocs de mouvement.",
@@ -2587,7 +2587,7 @@
           "courseB_artist_loops_challenge2_b": "Tu peux utiliser les blocs ˋsauter\\` pour te déplacer vers d’autres cases sans dessiner."
         },
         "courseB_collector_loops1": {
-          "courseB_collector_loops1_a": "Le bloc <xml><block type=\"collector_collect_simplified\"/></xml> permet de ramasser le trésor quand tu te tiens dessus."
+          "courseB_collector_loops1_a": "Tu peux te servir du bloc <xml><block type=\"collector_collect_simplified\"/></xml> pour ramasser le trésor lorsque tu te tiens par-dessus."
         },
         "courseB_collector_loops10": {
           "courseB_collector_loops10_a": "Si tu n’arrives pas à trouver où mettre les boucles ˋrépéter\\`, écrit le code étape par étape puis regarde ce qui se répète.",
@@ -2606,13 +2606,13 @@
           "courseB_collector_loops10_b": "Essaie d’écrire les déplacements sur un papier et de voir ce qui se répète."
         },
         "courseB_collector_loops1_2018": {
-          "courseB_collector_loops1_a": "Le bloc <xml><block type=\"collector_collect_simplified\"/></xml> permet de ramasser le trésor quand tu te tiens dessus."
+          "courseB_collector_loops1_a": "Tu peux te servir du bloc <xml><block type=\"collector_collect_simplified\"/></xml> pour ramasser le trésor lorsque tu te tiens par-dessus."
         },
         "courseB_collector_loops1_2019": {
-          "courseB_collector_loops1_a": "Le bloc <xml><block type=\"collector_collect_simplified\"/></xml> permet de ramasser le trésor quand tu te tiens dessus."
+          "courseB_collector_loops1_a": "Tu peux te servir du bloc <xml><block type=\"collector_collect_simplified\"/></xml> pour ramasser le trésor lorsque tu te tiens par-dessus."
         },
         "courseB_collector_loops1_2020": {
-          "courseB_collector_loops1_a": "Le bloc <xml><block type=\"collector_collect_simplified\"/></xml> permet de ramasser le trésor quand tu te tiens dessus."
+          "courseB_collector_loops1_a": "Tu peux te servir du bloc <xml><block type=\"collector_collect_simplified\"/></xml> pour ramasser le trésor lorsque tu te tiens par-dessus."
         },
         "courseB_collector_loops2": {
           "courseB_collector_loops2_a": "Tu devras te déplacer avant de pouvoir récupérer un diamant.",
@@ -2798,44 +2798,44 @@
         },
         "courseB_iceage_loops1": {
           "courseB_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
-          "courseB_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops10": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera à l’eau s'il passe dessus !",
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseB_iceage_loops10_2019": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera à l’eau s'il passe dessus !",
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseB_iceage_loops10_2020": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera à l’eau s'il passe dessus !",
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseB_iceage_loops1_2019": {
           "courseB_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
-          "courseB_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops1_2020": {
           "courseB_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
-          "courseB_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops2": {
-          "courseB_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseB_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseB_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseB_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseB_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseB_iceage_loops2_2019": {
-          "courseB_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseB_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseB_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseB_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseB_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseB_iceage_loops2_2020": {
-          "courseB_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseB_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseB_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseB_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseB_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseB_iceage_loops3": {
@@ -2843,84 +2843,84 @@
           "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, puis mets le bloc que tu veux à l’intérieur."
         },
         "courseB_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, puis mets le bloc que tu veux à l’intérieur."
+          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Pour faire répéter le code, fais glisser une boucle « répéter » dans ton espace de travail, puis mets le bloc dont tu veux te servir à l'intérieur."
         },
         "courseB_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, puis mets le bloc que tu veux à l’intérieur."
+          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Pour faire répéter le code, fais glisser une boucle « répéter » dans ton espace de travail, puis mets le bloc dont tu veux te servir à l'intérieur."
         },
         "courseB_iceage_loops4": {
-          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
+          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma ?",
           "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
-          "courseB_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
+          "courseB_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseB_iceage_loops4_2019": {
-          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
+          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma ?",
           "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
-          "courseB_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
+          "courseB_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseB_iceage_loops4_2020": {
-          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
+          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma ?",
           "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
-          "courseB_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
+          "courseB_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseB_iceage_loops6": {
-          "courseB_iceage_loops6_a": "Ton code final devra avoir **trois** blocs de mouvement.",
-          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
-          "courseB_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseB_iceage_loops6_a": "Ton code final contiendra **trois** blocs de mouvement.",
+          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseB_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseB_iceage_loops6_2019": {
-          "courseB_iceage_loops6_a": "Ton code final devra avoir **trois** blocs de mouvement.",
-          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
-          "courseB_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseB_iceage_loops6_a": "Ton code final contiendra **trois** blocs de mouvement.",
+          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseB_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseB_iceage_loops6_2020": {
-          "courseB_iceage_loops6_a": "Ton code final devra avoir **trois** blocs de mouvement.",
-          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
-          "courseB_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseB_iceage_loops6_a": "Ton code final contiendra **trois** blocs de mouvement.",
+          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseB_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseB_iceage_loops7": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un motif ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma ?",
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseB_iceage_loops7_2019": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un motif ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma ?",
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseB_iceage_loops7_2020": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un motif ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma ?",
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseB_iceage_loops8": {
-          "courseB_iceage_loops8_a": "Les blocs de mouvement sont-ils corrects ? Que peux-tu changer d’autre ?",
+          "courseB_iceage_loops8_a": "Est-ce que tout va bien avec les blocs de mouvement ? Que peux-tu changer d’autre ?",
           "courseB_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseB_iceage_loops8_2019": {
-          "courseB_iceage_loops8_a": "Les blocs de mouvement sont-ils corrects ? Que peux-tu changer d’autre ?",
+          "courseB_iceage_loops8_a": "Est-ce que tout va bien avec les blocs de mouvement ? Que peux-tu changer d’autre ?",
           "courseB_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseB_iceage_loops8_2020": {
-          "courseB_iceage_loops8_a": "Les blocs de mouvement sont-ils corrects ? Que peux-tu changer d’autre ?",
+          "courseB_iceage_loops8_a": "Est-ce que tout va bien avec les blocs de mouvement ? Que peux-tu changer d’autre ?",
           "courseB_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseB_iceage_loops9": {
-          "courseB_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseB_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseB_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseB_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
+          "courseB_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseB_iceage_loops9_2019": {
-          "courseB_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseB_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseB_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseB_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
+          "courseB_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseB_iceage_loops9_2020": {
-          "courseB_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseB_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseB_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseB_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
+          "courseB_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseB_maze_seq1": {
           "courseB_maze_seq1_a": "Connecte des blocs au bloc <xml><block type=\"when_run\"/></xml> pour déplacer l’oiseau !",
@@ -3257,159 +3257,159 @@
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
-          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Il te faudra te déplacer vers l’Est pour résoudre ce casse-tête.\nJusqu'où dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2018": {
           "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
-          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Il te faudra te déplacer vers l’Est pour résoudre ce casse-tête.\nJusqu'où dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
-          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Il te faudra te déplacer vers l’Est pour résoudre ce casse-tête.\nJusqu'où dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
-          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Il te faudra te déplacer vers l’Est pour résoudre ce casse-tête.\nJusqu'où dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
-          "courseB_starWars_prog2_a": "Sépare ce problème en deux parties. Ramasse une pile de ferraille, puis trouve comment atteindre la suivante."
+          "courseB_starWars_prog2_a": "Divise ce problème en deux. Ramasse un tas de ferraille, puis fraie-toi un chemin jusqu'à l'autre. "
         },
         "courseB_starWars_prog2_2018": {
           "courseB_starWars_prog2_a": "Sépare ce problème en deux parties. Ramasse une pile de métal, puis trouve comment atteindre la suivante."
         },
         "courseB_starWars_prog2_2019": {
-          "courseB_starWars_prog2_a": "Sépare ce problème en deux parties. Ramasse une pile de ferraille, puis trouve comment atteindre la suivante."
+          "courseB_starWars_prog2_a": "Divise ce problème en deux. Ramasse un tas de ferraille, puis fraie-toi un chemin jusqu'à l'autre. "
         },
         "courseB_starWars_prog2_2020": {
-          "courseB_starWars_prog2_a": "Sépare ce problème en deux parties. Ramasse une pile de ferraille, puis trouve comment atteindre la suivante."
+          "courseB_starWars_prog2_a": "Divise ce problème en deux. Ramasse un tas de ferraille, puis fraie-toi un chemin jusqu'à l'autre. "
         },
         "courseB_starWars_prog3": {
           "courseB_starWars_prog3_a": "Tu devras te déplacer dans 3 directions pour résoudre cette énigme.",
-          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là."
+          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. "
         },
         "courseB_starWars_prog3_2018": {
           "courseB_starWars_prog3_a": "Tu devras te déplacer dans 3 directions pour résoudre cette énigme.",
-          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là."
+          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. "
         },
         "courseB_starWars_prog3_2019": {
           "courseB_starWars_prog3_a": "Tu devras te déplacer dans 3 directions pour résoudre cette énigme.",
-          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là."
+          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. "
         },
         "courseB_starWars_prog3_2020": {
           "courseB_starWars_prog3_a": "Tu devras te déplacer dans 3 directions pour résoudre cette énigme.",
-          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là."
+          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. "
         },
         "courseB_starWars_prog4": {
-          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là.",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. ",
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2018": {
-          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là.",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. ",
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2019": {
-          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là.",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. ",
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
-          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là.",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. ",
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5": {
-          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog5_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog5_c": "Trace du doigt le motif. Compte les morceaux de métal en avançant.",
-          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour l’énigme en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog5_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog5_c": "Trace du doigt ce motif. Compte les morceaux de métal en avançant.",
+          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour le casse-tête en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2018": {
-          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog5_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog5_c": "Trace du doigt le motif. Compte les morceaux de métal en avançant.",
-          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour l’énigme en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog5_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog5_c": "Trace du doigt ce motif. Compte les morceaux de métal en avançant.",
+          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour le casse-tête en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2019": {
-          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog5_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog5_c": "Trace du doigt le motif. Compte les morceaux de métal en avançant.",
-          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour l’énigme en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog5_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog5_c": "Trace du doigt ce motif. Compte les morceaux de métal en avançant.",
+          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour le casse-tête en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2020": {
-          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog5_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog5_c": "Trace du doigt le motif. Compte les morceaux de métal en avançant.",
-          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour l’énigme en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog5_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog5_c": "Trace du doigt ce motif. Compte les morceaux de métal en avançant.",
+          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour le casse-tête en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6": {
-          "courseB_starWars_prog6_a": "Ce motif n’est qu’en marche d’escalier avec deux déplacements par direction !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_a": "Il s'agit tout simplement d'un motif en marche d’escalier avec deux déplacements par sens !",
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2018": {
-          "courseB_starWars_prog6_a": "Ce motif n’est qu’en marche d’escalier avec deux déplacements par direction !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_a": "Il s'agit tout simplement d'un motif en marche d’escalier avec deux déplacements par sens !",
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2019": {
-          "courseB_starWars_prog6_a": "Ce motif n’est qu’en marche d’escalier avec deux déplacements par direction !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_a": "Il s'agit tout simplement d'un motif en marche d’escalier avec deux déplacements par sens !",
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
-          "courseB_starWars_prog6_a": "Ce motif n’est qu’en marche d’escalier avec deux déplacements par direction !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_a": "Il s'agit tout simplement d'un motif en marche d’escalier avec deux déplacements par sens !",
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc « répéter » pour le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7": {
-          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog7_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog7_c": "Essaie de dessiner le grand motif en marches d’escalier par-dessus cette énigme. Est-ce qu’il recouvre toute la ferraille ?"
+          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog7_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog7_c": "Essaie de dessiner le motif en grandes marches d’escalier par-dessus ce casse-tête. Est-ce qu’il recouvre toute la ferraille ?"
         },
         "courseB_starWars_prog7_2018": {
-          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog7_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog7_c": "Essaie de dessiner le grand motif en marches d’escalier par-dessus cette énigme. Est-ce qu’il recouvre toute la ferraille ?"
+          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog7_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog7_c": "Essaie de dessiner le motif en grandes marches d’escalier par-dessus ce casse-tête. Est-ce qu’il recouvre toute la ferraille ?"
         },
         "courseB_starWars_prog7_2019": {
-          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog7_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog7_c": "Essaie de dessiner le grand motif en marches d’escalier par-dessus cette énigme. Est-ce qu’il recouvre toute la ferraille ?"
+          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog7_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog7_c": "Essaie de dessiner le motif en grandes marches d’escalier par-dessus ce casse-tête. Est-ce qu’il recouvre toute la ferraille ?"
         },
         "courseB_starWars_prog7_2020": {
-          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog7_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog7_c": "Essaie de dessiner le grand motif en marches d’escalier par-dessus cette énigme. Est-ce qu’il recouvre toute la ferraille ?"
+          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog7_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog7_c": "Essaie de dessiner le motif en grandes marches d’escalier par-dessus ce casse-tête. Est-ce qu’il recouvre toute la ferraille ?"
         },
         "courseB_starWars_prog8": {
-          "courseB_starWars_prog8_a": "Ce n’est pas grave de retourner sur des cases que tu as déjà traversées.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu mets à l’intérieur.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog8_a": "Ce n’est pas grave si tu dois retourner sur des cases sur lesquelles tu es déjà passé.",
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc « repeat » pour voir ce qui se passe avec le code que tu mets dedans.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2018": {
-          "courseB_starWars_prog8_a": "Ce n’est pas grave de retourner sur des cases que tu as déjà traversées.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu mets à l’intérieur.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog8_a": "Ce n’est pas grave si tu dois retourner sur des cases sur lesquelles tu es déjà passé.",
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc « repeat » pour voir ce qui se passe avec le code que tu mets dedans.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2019": {
-          "courseB_starWars_prog8_a": "Ce n’est pas grave de retourner sur des cases que tu as déjà traversées.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu mets à l’intérieur.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog8_a": "Ce n’est pas grave si tu dois retourner sur des cases sur lesquelles tu es déjà passé.",
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc « repeat » pour voir ce qui se passe avec le code que tu mets dedans.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
-          "courseB_starWars_prog8_a": "Ce n’est pas grave de retourner sur des cases que tu as déjà traversées.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu mets à l’intérieur.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog8_a": "Ce n’est pas grave si tu dois retourner sur des cases sur lesquelles tu es déjà passé.",
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc « repeat » pour voir ce qui se passe avec le code que tu mets dedans.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
-          "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
-          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre cette énigme.",
+          "courseB_starWars_prog9_a": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
+          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre ce casse-tête.",
           "courseB_starWars_prog9_c": "Une boucle ˋrépéter\\` pourrait-elle aider ici ?"
         },
         "courseB_starWars_prog9_2018": {
-          "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
-          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre cette énigme.",
-          "courseB_starWars_prog9_c": "Une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block></xml>loop pourrait-elle aider ici ?"
+          "courseB_starWars_prog9_a": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
+          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre ce casse-tête.",
+          "courseB_starWars_prog9_c": "Est-ce qu'une boucle « repeat » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
         },
         "courseB_starWars_prog9_2019": {
-          "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
-          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre cette énigme.",
-          "courseB_starWars_prog9_c": "Une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block></xml>loop pourrait-elle aider ici ?"
+          "courseB_starWars_prog9_a": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
+          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre ce casse-tête.",
+          "courseB_starWars_prog9_c": "Est-ce qu'une boucle « repeat » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
         },
         "courseB_starWars_prog9_2020": {
-          "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
-          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre cette énigme.",
-          "courseB_starWars_prog9_c": "Une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block></xml>loop pourrait-elle aider ici ?"
+          "courseB_starWars_prog9_a": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
+          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre ce casse-tête.",
+          "courseB_starWars_prog9_c": "Est-ce qu'une boucle « repeat » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
@@ -4782,42 +4782,42 @@
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
-          "courseC_starWars_loops1_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
+          "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
           "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
         },
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "Est-ce que ce motif ne ressemble pas à un ensemble géant de marches d'escalier? Regarde si tu peux utiliser ce que tu as appris des puzzles précédents pour obtenir tous les virages.",
           "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle `Répéter` à l'intérieur d'une autre!\\\nCela s'appelle une **boucle imbriquée**.",
-          "courseC_starWars_loops10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops10_2018": {
           "courseC_starWars_loops10_a": "Est-ce que ce motif ne ressemble pas à un ensemble géant de marches d'escalier? Regarde si tu peux utiliser ce que tu as appris des puzzles précédents pour obtenir tous les virages.",
           "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle `Répéter` à l'intérieur d'une autre!\\\nCela s'appelle une **boucle imbriquée**.",
-          "courseC_starWars_loops10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops10_2019": {
           "courseC_starWars_loops10_a": "Est-ce que ce motif ne ressemble pas à un ensemble géant de marches d'escalier? Regarde si tu peux utiliser ce que tu as appris des puzzles précédents pour obtenir tous les virages.",
           "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle `Répéter` à l'intérieur d'une autre!\\\nCela s'appelle une **boucle imbriquée**.",
-          "courseC_starWars_loops10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops10_2020": {
           "courseC_starWars_loops10_a": "Est-ce que ce motif ne ressemble pas à un ensemble géant de marches d'escalier? Regarde si tu peux utiliser ce que tu as appris des puzzles précédents pour obtenir tous les virages.",
           "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle `Répéter` à l'intérieur d'une autre!\\\nCela s'appelle une **boucle imbriquée**.",
-          "courseC_starWars_loops10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
-          "courseC_starWars_loops1_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
+          "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
           "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
         },
         "courseC_starWars_loops1_2019": {
           "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
-          "courseC_starWars_loops1_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
+          "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
           "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
         },
         "courseC_starWars_loops1_2020": {
           "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
-          "courseC_starWars_loops1_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
+          "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
           "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
         },
         "courseC_starWars_loops2": {
@@ -4900,27 +4900,27 @@
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Ce motif semble plus compliqué qu'il ne l'est réellement! Commence avec une simple marche d'escalier. Est-ce que cela ramasse toute la ferraille?",
           "courseC_starWars_loops7_b": "Si tu as du mal à comprendre ce puzzle, essaie d’écrire les mouvements sur une feuille de papier et de chercher un motif.",
-          "courseC_starWars_loops7_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops7_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops7_2018": {
           "courseC_starWars_loops7_a": "Ce motif semble plus compliqué qu'il ne l'est réellement! Commence avec une simple marche d'escalier. Est-ce que cela ramasse toute la ferraille?",
           "courseC_starWars_loops7_b": "Si tu as du mal à comprendre ce puzzle, essaie d’écrire les mouvements sur une feuille de papier et de chercher un motif.",
-          "courseC_starWars_loops7_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops7_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops7_2019": {
           "courseC_starWars_loops7_a": "Ce motif semble plus compliqué qu'il ne l'est réellement! Commence avec une simple marche d'escalier. Est-ce que cela ramasse toute la ferraille?",
           "courseC_starWars_loops7_b": "Si tu as du mal à comprendre ce puzzle, essaie d’écrire les mouvements sur une feuille de papier et de chercher un motif.",
-          "courseC_starWars_loops7_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops7_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops7_2020": {
           "courseC_starWars_loops7_a": "Ce motif semble plus compliqué qu'il ne l'est réellement! Commence avec une simple marche d'escalier. Est-ce que cela ramasse toute la ferraille?",
           "courseC_starWars_loops7_b": "Si tu as du mal à comprendre ce puzzle, essaie d’écrire les mouvements sur une feuille de papier et de chercher un motif.",
-          "courseC_starWars_loops7_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops7_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops7_copy": {
           "courseC_starWars_loops7_a": "Ce motif semble plus compliqué qu'il ne l'est réellement! Commence avec une simple marche d'escalier. Est-ce que cela ramasse toute la ferraille?",
           "courseC_starWars_loops7_b": "Si tu as du mal à comprendre ce puzzle, essaie d’écrire les mouvements sur une feuille de papier et de chercher un motif.",
-          "courseC_starWars_loops7_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops7_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Essaie de décomposer ce problème en plusieurs petites parties. Prend ton temps. Tu n'as pas besoin de le résoudre du premier coup!",
@@ -6443,44 +6443,44 @@
         },
         "courseD_iceage_loops1": {
           "courseD_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
-          "courseD_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops10": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera à l’eau s'il passe dessus !",
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseD_iceage_loops10_2019": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera à l’eau s'il passe dessus !",
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseD_iceage_loops10_2020": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera à l’eau s'il passe dessus !",
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
-          "courseD_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
-          "courseD_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops2": {
-          "courseD_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseD_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseD_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseD_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseD_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseD_iceage_loops2_2019": {
-          "courseD_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseD_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseD_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseD_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseD_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseD_iceage_loops2_2020": {
-          "courseD_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseD_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseD_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseD_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseD_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseD_iceage_loops3": {
@@ -6498,74 +6498,74 @@
         "courseD_iceage_loops4": {
           "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
           "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
-          "courseD_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
+          "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops4_2019": {
           "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
           "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
-          "courseD_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
+          "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops4_2020": {
           "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
           "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
-          "courseD_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
+          "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops6": {
           "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
-          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
-          "courseD_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseD_iceage_loops6_2019": {
           "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
-          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
-          "courseD_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseD_iceage_loops6_2020": {
           "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
-          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
-          "courseD_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseD_iceage_loops7": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un motif ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma ?",
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseD_iceage_loops7_2019": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un motif ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma ?",
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseD_iceage_loops7_2020": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un motif ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma ?",
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseD_iceage_loops8": {
           "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseD_iceage_loops8_2019": {
           "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseD_iceage_loops8_2020": {
           "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseD_iceage_loops9": {
-          "courseD_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseD_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseD_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseD_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
+          "courseD_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseD_iceage_loops9_2019": {
-          "courseD_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseD_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseD_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseD_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
+          "courseD_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseD_iceage_loops9_2020": {
-          "courseD_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseD_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseD_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseD_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
+          "courseD_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera aller vers le bas.",
@@ -8922,7 +8922,7 @@
         "Underground Iron_2021": {
           "mc_10_a": "Les blocs de fer sont les endroits tachetés, derrière la torche ! Comment peux-tu les atteindre ?",
           "mc_10_b": "Quand tu te tiens au bord de la lave, utilise ˋplacer pavé devant\\` pour créer un chemin sûr. Puis, tu peux marcher dessus !",
-          "mc_10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "mc_10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "Underground Mining Coal_2021": {
           "mc_9_a": "Es-tu dans la bonne direction ? Le bloc ˋdétruire\\` fait exploser le bloc en face de toi.",
@@ -9061,48 +9061,48 @@
           "courseA_harvester_loops9_c": "Suis ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq10_2021": {
-          "courseA_harvester_seq10_a": "Tu es bloqué ? Essaie d’abord d’écrire les étapes sur une feuille de papier.",
-          "courseA_harvester_seq10_b": "Tu devras `avancer vers l’Est` puis ˋavancer vers le Nord\\`. Fais cela deux fois. N’oublie pas aussi de ramasser tout le maïs !",
-          "courseA_harvester_seq10_c": "Essaie de suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq10_a": "Tu es coincé ? Essaie en écrivant d'abord les étapes sur une feuille de papier.",
+          "courseA_harvester_seq10_b": "Il faut que tu te « déplaces vers l’Est » puis te « déplacer vers le Nord ». Fais cela deux fois. N’oublie pas aussi de récolter tout le maïs !",
+          "courseA_harvester_seq10_c": "Essaie d'emprunter ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq13_2021": {
-          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand la moissonneusse l’atteint.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice y parvient.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2021": {
-          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand la moissonneuse le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La moissonneuse devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand l'agricultrice le trouve !\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "L'agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser <xml><block type=\"harvester_corn\"/></xml> pour ramasser le maïs !",
-          "courseA_harvester_seq2_b": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution!"
+          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser le <xml><block type=\"harvester_corn\"/></xml> pour ramasser le maïs !",
+          "courseA_harvester_seq2_b": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution !"
         },
         "courseA_harvester_seq3_2021": {
           "courseA_harvester_seq3_a": "As-tu pensé à utiliser ce bloc ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
-          "courseA_harvester_seq3_b": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "courseA_harvester_seq3_b": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_harvester_seq4_2021": {
-          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre le moissonneur et le maïs ? Combien de blocs sont déjà dans l’espace de travail ?",
-          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs `Déplacer vers l’Est` et un bloc `Récolter maïs` :\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre l'agricultrice et le maïs ? Combien de blocs sont déjà dans ton espace de travail ?",
+          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs « Me déplacer vers l’Est » et d'un bloc « Récolter le maïs » :\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
-          "courseA_harvester_seq5_a": "Quel bloc déplace la moissonneuse dans le mauvais sens ?",
+          "courseA_harvester_seq5_a": "Quel bloc déplace l'agricultrice dans le mauvais sens ?",
           "courseA_harvester_seq5_b": "Tu dois enlever un bloc.",
           "courseA_harvester_seq5_c": "Jette ce bloc à la poubelle !\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq6_2021": {
-          "courseA_harvester_seq6_a": "Si tu es bloqué, essaie de dire les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
+          "courseA_harvester_seq6_a": "Si tu es coincé, essaie d'énumérer les étapes à voix haute. Cela pourrait t’aider à trouver le bon chemin."
         },
         "courseA_harvester_seq7_2021": {
-          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 parties, une avant le coin et l’autre après le coin.",
-          "courseA_harvester_seq7_b": "Des problèmes ? Voici le chemin que la moissonneuse devrait emprunter."
+          "courseA_harvester_seq7_a": "Essaie de résoudre ce casse-tête en 2 temps : d'abord avant le coin, et ensuite, après le coin.",
+          "courseA_harvester_seq7_b": "Tu as du mal ? Voici le chemin que l'agricultrice devrait emprunter."
         },
         "courseA_harvester_seq8_2021": {
-          "courseA_harvester_seq8_a": "Tu devrais terminer avec **4** blocs de mouvement et **2** blocs de récolte."
+          "courseA_harvester_seq8_a": "Une fois achevé, ton code devrait contenir **4** blocs mouvement et **2** blocs récolte."
         },
         "courseA_harvester_seq9_2021": {
-          "courseA_harvester_seq9_a": "Exécute le code plusieurs fois pour voir ce qu'il se passe. Où la moissonneuse s’arrête-t-elle ?",
-          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs ˋrécolte maïs\\`.",
-          "courseA_harvester_seq9_c": "Tu devrais suivre ce chemin pour récolter tout le maïs."
+          "courseA_harvester_seq9_a": "Exécute le code une ou deux fois pour voir ce qui se passe. Où l'agricultrice s’arrête-t-elle ?",
+          "courseA_harvester_seq9_b": "N’oublie pas de récolter tout le maïs ! Tu auras besoin de **3** blocs « récolter du maïs ».",
+          "courseA_harvester_seq9_c": "Il faut suivre ce chemin pour récolter tout le maïs."
         },
         "courseA_maze_ramp2_2021": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -9128,9 +9128,9 @@
           "courseA_maze_seq10_b": "Tu devras aller dans 3 directions pour résoudre ce casse-tête."
         },
         "courseA_maze_seq13_2021": {
-          "courseA_maze_seq13_a": "Si le chemin ne te semble pas clair, trace du doigt un chemin de l’oiseau jusqu'au cochon.",
+          "courseA_maze_seq13_a": "Si le chemin qu'il faut emprunter ne te semble pas clair, trace du doigt un parcours de l’oiseau jusqu'au cochon.",
           "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.",
-          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n t’aideront à te rapprocher du cochon."
+          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nt’aideront à te rapprocher du cochon."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_a": "Si tu as du mal à faire bouger l’oiseau, assure-toi que les blocs sont connectés sous <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -9145,7 +9145,7 @@
           "courseA_maze_seq5_b": "Tu auras besoin de 2 blocs qui pointent dans 2 directions."
         },
         "courseA_maze_seq5a_2021": {
-          "1": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
+          "1": "Dis les étapes à voix haute pour voir si ça t’aide à trouver la réponse."
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "Ton code final devrait avoir 3 blocs de mouvement.",
@@ -9273,7 +9273,7 @@
           "courseB_collector_loops10_b": "Essaie d’écrire les déplacements sur un papier et de voir ce qui se répète."
         },
         "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_a": "Le bloc <xml><block type=\"collector_collect_simplified\"/></xml> permet de ramasser le trésor quand tu te tiens dessus."
+          "courseB_collector_loops1_a": "Tu peux te servir du bloc <xml><block type=\"collector_collect_simplified\"/></xml> pour ramasser le trésor lorsque tu te tiens par-dessus."
         },
         "courseB_collector_loops2_2021": {
           "courseB_collector_loops2_a": "Tu devras te déplacer avant de pouvoir récupérer un diamant.",
@@ -9320,46 +9320,46 @@
           "courseB_collector_loops_challenge2a_c": "Pour ramasser tout les diamants, tu auras soit besoin d’ajouter deux blocs  <xml> <block type=\"collector_collect\"/></xml> à l’intérieur de ta boucle, soit de mettre le bloc à l’intérieur de sa propre boucle ˋrépéter\\`."
         },
         "courseB_iceage_loops10_2021": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat va tomber dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera à l’eau s'il passe dessus !",
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseB_iceage_loops1_2021": {
-          "courseB_iceage_loops1_a": "Attention à la glace brisée ! Scrat va tomber à travers !",
-          "courseB_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
+          "courseB_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops2_2021": {
-          "courseB_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseB_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseB_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseB_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseB_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseB_iceage_loops3_2021": {
           "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, puis mets le bloc que tu veux dedans."
+          "courseB_iceage_loops3_b": "Pour faire répéter le code, fais glisser une boucle « répéter » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> dans ton espace de travail, puis mets le bloc dont tu veux te servir dedans."
         },
         "courseB_iceage_loops4_2021": {
-          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un modèle ?",
-          "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qu'il se passe !",
-          "courseB_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
+          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma ?",
+          "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
+          "courseB_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseB_iceage_loops6_2021": {
-          "courseB_iceage_loops6_a": "Ton code final devra avoir **trois** blocs de mouvement.",
-          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
-          "courseB_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseB_iceage_loops6_a": "Ton code final contiendra **trois** blocs de mouvement.",
+          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseB_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseB_iceage_loops7_2021": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un modèle ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma ?",
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseB_iceage_loops8_2021": {
-          "courseB_iceage_loops8_a": "Les blocs de mouvement sont-ils corrects ? Que peux-tu changer d’autre ?",
+          "courseB_iceage_loops8_a": "Est-ce que tout va bien avec les blocs de mouvement ? Que peux-tu changer d’autre ?",
           "courseB_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseB_iceage_loops9_2021": {
-          "courseB_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseB_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseB_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseB_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
+          "courseB_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Connecte des blocs au bloc <xml><block type=\"when_run\"/></xml> pour que Scrat bouge !",
@@ -9441,43 +9441,43 @@
           "courseB_playlab_events_challenge2_d": "Mélange tout ça ! \n\nFais en sorte que certains animaux donnent plus de points que d’autres.\nUtilise différents sons. \nModifie les humeurs des animaux !"
         },
         "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qu'il se passe.",
-          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
+          "courseB_starWars_prog1_b": "Il te faudra te déplacer vers l’Est pour résoudre ce casse-tête.\nJusqu'où dois-tu aller ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
-          "courseB_starWars_prog2_a": "Sépare ce problème en deux parties. Ramasse une pile de ferraille, puis trouve comment atteindre la suivante."
+          "courseB_starWars_prog2_a": "Divise ce problème en deux. Ramasse un tas de ferraille, puis fraie-toi un chemin jusqu'à l'autre. "
         },
         "courseB_starWars_prog3_2021": {
           "courseB_starWars_prog3_a": "Tu devras te déplacer dans 3 directions pour résoudre cette énigme.",
-          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là."
+          "courseB_starWars_prog3_b": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. "
         },
         "courseB_starWars_prog4_2021": {
-          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là.",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrepeat\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. ",
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc « repeat » pour rendre le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog5_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog5_c": "Trace du doigt le motif. Compte les morceaux de métal en avançant.",
-          "courseB_starWars_prog5_da": "Regarde ce qu'il se passe si tu utilises la même solution que pour l’énigme en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog5_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog5_c": "Trace du doigt ce motif. Compte les morceaux de métal en avançant.",
+          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour le casse-tête en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6_2021": {
-          "courseB_starWars_prog6_a": "Ce motif n’est qu’en marche d’escalier avec deux déplacements par direction !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrepeat\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_a": "Il s'agit tout simplement d'un motif en marche d’escalier avec deux déplacements par sens !",
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc « repeat » pour rendre le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
-          "courseB_starWars_prog7_b": "BB-8 collectera la ferraille en roulant dessus.",
-          "courseB_starWars_prog7_c": "Essaie de dessiner le grand motif en marches d’escalier par-dessus cette énigme. Est-ce qu’il recouvre toute la ferraille ?"
+          "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
+          "courseB_starWars_prog7_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
+          "courseB_starWars_prog7_c": "Essaie de dessiner le motif en grandes marches d’escalier par-dessus ce casse-tête. Est-ce qu’il recouvre toute la ferraille ?"
         },
         "courseB_starWars_prog8_2021": {
-          "courseB_starWars_prog8_a": "Ce n’est pas grave de retourner sur des cases que tu as déjà traversées.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrepeat\\` pour voir ce qu'il arrive au code que tu mets à l’intérieur.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "Ce n’est pas grave si tu dois retourner sur des cases sur lesquelles tu es déjà passé.",
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc « repeat » pour voir ce qui se passe avec le code que tu mets dedans.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qu'il se passe, même si tu n’as pas encore résolu l'énigme.",
-          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre cette énigme.",
-          "courseB_starWars_prog9_c": "Est-ce qu'une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
+          "courseB_starWars_prog9_a": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
+          "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre ce casse-tête.",
+          "courseB_starWars_prog9_c": "Est-ce qu'une boucle « repeat » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
@@ -9869,7 +9869,7 @@
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_a": "Ce motif semble plus compliqué qu'il ne l'est réellement! Commence avec une simple marche d'escalier. Est-ce que cela ramasse toute la ferraille?",
           "courseC_starWars_loops7_b": "Si tu as du mal à comprendre ce puzzle, essaie d’écrire les mouvements sur une feuille de papier et de chercher un motif.",
-          "courseC_starWars_loops7_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme."
+          "courseC_starWars_loops7_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops8_2021": {
           "course_starWars_loops8_a": "Essaie de décomposer ce problème en plusieurs petites parties. Prend ton temps. Tu n'as pas besoin de le résoudre du premier coup!",
@@ -10220,16 +10220,16 @@
         },
         "courseD_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat va tomber dans l’eau !",
-          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
-          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
+          "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
+          "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseD_iceage_loops1_2021": {
           "courseD_iceage_loops1_a": "Attention à la glace brisée ! Scrat va tomber à travers !",
           "courseD_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops2_2021": {
-          "courseD_iceage_loops2_a": "Divise ce problème en deux parties, une avant le coin et une après.",
-          "courseD_iceage_loops2_b": "Si tu es bloqué, essaie de dire les étapes à voix haute.",
+          "courseD_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
+          "courseD_iceage_loops2_b": "Si tu te retrouves coincé, essaie de dire les étapes à voix haute.",
           "courseD_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseD_iceage_loops3_2021": {
@@ -10244,19 +10244,19 @@
         "courseD_iceage_loops6_2021": {
           "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
           "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** seule boucle de plus !",
-          "courseD_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
+          "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseD_iceage_loops7_2021": {
           "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un modèle ?",
-          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
+          "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseD_iceage_loops8_2021": {
           "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
-          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
+          "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseD_iceage_loops9_2021": {
-          "courseD_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseD_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseD_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
           "courseD_iceage_loops9_c": "Scrat devrait suivre ce chemin pour avoir le gland."
         },

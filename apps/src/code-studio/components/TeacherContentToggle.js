@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import {ViewType} from '../viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';

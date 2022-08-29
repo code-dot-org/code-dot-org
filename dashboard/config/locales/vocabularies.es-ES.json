@@ -317,6 +317,198 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "decode/csd/2022": {
+          "word": "Decodificar"
+        },
+        "encode/csd/2022": {
+          "word": "Codificar"
+        },
+        "binary_system/csd/2022": {
+          "word": "Sistema Binario"
+        },
+        "bit/csd/2022": {
+          "word": "Bit"
+        },
+        "decrypt/csd/2022": {
+          "word": "Desencriptar"
+        },
+        "encrypt/csd/2022": {
+          "word": "Encriptar"
+        },
+        "computer/csd/2022": {
+          "word": "Ordenador",
+          "definition": "Una máquina que trabaja con información."
+        },
+        "input/csd/2022": {
+          "word": "Entrada",
+          "definition": "la información que los ordenadores obtienen de los usuarios, dispositivos u otros ordenadores"
+        },
+        "output/csd/2022": {
+          "word": "Salida",
+          "definition": "la información que los ordenadores dan a los usuarios, dispositivos u otros ordenadores"
+        },
+        "processing/csd/2022": {
+          "word": "Procesamiento",
+          "definition": "El trabajo intelectual que realizan los ordenadores para convertir los datos en resultados."
+        },
+        "storage/csd/2022": {
+          "word": "almacenamiento",
+          "definition": "guardar la información para utilizarla en el futuro"
+        },
+        "bug/csd/2022": {
+          "word": "Bug o error",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/csd/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/csd/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "parameter/csd/2022": {
+          "word": "Parámetro",
+          "definition": "Información adicional proporcionada como entrada a un bloque para personalizar su funcionalidad"
+        },
+        "variable/csd/2022": {
+          "word": "Variable",
+          "definition": "un marcador de posición para una información que puede cambiar."
+        },
+        "dot_notation/csd/2022": {
+          "word": "Notación de Punto",
+          "definition": "la forma en que se utilizan las propiedades de los sprites en el Laboratorio de Juegos, conectando el sprite y la propiedad con un punto."
+        },
+        "property/csd/2022": {
+          "word": "Propiedad",
+          "definition": "Una etiqueta para definir las características de un sprite, como su ubicación y apariencia"
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia."
+        },
+        "boolean_expression/csd/2022": {
+          "word": "Expresión Booleana",
+          "definition": "en programación, una expresión que se evalúa como Verdadero o Falso. "
+        },
+        "condition/csd/2022": {
+          "word": "Condición",
+          "definition": "Algo que un programa comprueba para ver si es cierto antes de decidir ejecutar una acción."
+        },
+        "conditionals/csd/2022": {
+          "word": "Condicionales",
+          "definition": "Sentencias que sólo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudar a gestionar la complejidad, centrarse en los conceptos relevantes y razonar sobre los problemas a un nivel superior."
+        },
+        "function/csd/2022": {
+          "word": "Función",
+          "definition": "Un grupo de instrucciones de programación con nombre."
+        },
+        "html/csd/2022": {
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, (HTML) lenguaje utilizado para crear páginas web"
+        },
+        "html_element/csd/2022": {
+          "word": "Elemento HTML",
+          "definition": "Un fragmento de un sitio web, marcado por una etiqueta de inicio y a menudo cerrado con una etiqueta de fin"
+        },
+        "html_tag/csd/2022": {
+          "word": "Etiqueta HTML",
+          "definition": "El conjunto especial de caracteres que indica el inicio y el final de un elemento HTML y el tipo de ese elemento"
+        },
+        "website_content/csd/2022": {
+          "word": "Contenido del Sitio Web",
+          "definition": "el texto y las imágenes de un sitio web"
+        },
+        "website_structure/csd/2022": {
+          "word": "Estructura del Sitio Web",
+          "definition": "cómo se organiza el contenido de un sitio web"
+        },
+        "heading/csd/2022": {
+          "word": "Cabecera",
+          "definition": "Título o resumen de un documento o sección de un documento."
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Huella digital",
+          "definition": "La información recopilada sobre un individuo en varios sitios web de Internet."
+        },
+        "css/csd/2022": {
+          "word": "CSS",
+          "definition": "Hojas de Estilo en Cascada; lenguaje utilizado para describir el estilo de los elementos HTML"
+        },
+        "css_selector/csd/2022": {
+          "word": "Selector CSS",
+          "definition": "la parte de un conjunto de reglas CSS que define a qué elementos HTML debe aplicarse el estilo"
+        },
+        "copyright/csd/2022": {
+          "word": "Derechos de autor",
+          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+        },
+        "relevant/csd/2022": {
+          "word": "Relevante",
+          "definition": "estrechamente relacionado con un tema"
+        },
+        "search_engine/csd/2022": {
+          "word": "Motor de Búsqueda",
+          "definition": "Un programa que busca elementos en la World Wide Web."
+        },
+        "trustworthy/csd/2022": {
+          "word": "De confianza",
+          "definition": "fiable, honesto y veraz "
+        },
+        "css_class/csd/2022": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite dar estilo a varios elementos de un documento HTML de la misma manera"
+        },
+        "empathy/csd/2022": {
+          "word": "Empatía",
+          "definition": "En diseño, prestar atención a los sentimientos y necesidades del usuario al diseñar un producto."
+        },
+        "user/csd/2022": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2022": {
+          "word": "Usabilidad"
+        },
+        "user_interface/csd/2022": {
+          "word": "Pantalla de Usuario"
+        },
+        "innovation/csd/2022": {
+          "word": "Innovación"
+        },
+        "circuit/csd/2022": {
+          "word": "Circuito",
+          "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+        },
+        "machine_learning/csd/2022": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "features/csd/2022": {
+          "word": "Características"
+        },
+        "label/csd/2022": {
+          "word": "Etiquetas"
+        },
+        "model/csd/2022": {
+          "word": "Modelo"
+        },
+        "training/csd/2022": {
+          "word": "Entrenamiento"
+        },
+        "categorical_data/csd/2022": {
+          "word": "Datos Categóricos"
+        },
+        "classification/csd/2022": {
+          "word": "Clasificación"
+        },
+        "ethics/csd/2022": {
+          "word": "Ética"
+        },
         "code/poem-art/unversioned": {
           "word": "Código",
           "definition": "(v) escribir instrucciones para un ordenador."
@@ -867,12 +1059,40 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "features/csd/2021": {
+          "word": "Características"
+        },
+        "label/csd/2021": {
+          "word": "Etiquetas"
+        },
+        "model/csd/2021": {
+          "word": "Modelo"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Aprendizaje Supervisado"
+        },
+        "training/csd/2021": {
+          "word": "Entrenamiento"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Datos Categóricos"
+        },
+        "classification/csd/2021": {
+          "word": "Clasificación"
+        },
         "ethics/csd/2021": {
           "word": "Ética"
+        },
+        "empathy/csd/2021": {
+          "word": "Empatía",
+          "definition": "En diseño, prestar atención a los sentimientos y necesidades del usuario al diseñar un producto."
         },
         "user/csd/2021": {
           "word": "Usuario",
           "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2021": {
+          "word": "Usabilidad"
         },
         "user_interface/csd/2021": {
           "word": "Pantalla de Usuario"
@@ -908,6 +1128,24 @@
         "circuit/csd/2021": {
           "word": "Circuito",
           "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+        },
+        "decode/csd/2021": {
+          "word": "Decodificar"
+        },
+        "encode/csd/2021": {
+          "word": "Codificar"
+        },
+        "binary_system/csd/2021": {
+          "word": "Sistema Binario"
+        },
+        "bit/csd/2021": {
+          "word": "Bit"
+        },
+        "decrypt/csd/2021": {
+          "word": "Desencriptar"
+        },
+        "encrypt/csd/2021": {
+          "word": "Encriptar"
         },
         "debugging/csd/2021": {
           "word": "Depuración",
@@ -950,7 +1188,8 @@
           "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudar a gestionar la complejidad, centrarse en los conceptos relevantes y razonar sobre los problemas a un nivel superior."
         },
         "function/csd/2021": {
-          "word": "Función"
+          "word": "Función",
+          "definition": "Un grupo de instrucciones de programación con nombre."
         },
         "computer/csd/2021": {
           "word": "Ordenador",

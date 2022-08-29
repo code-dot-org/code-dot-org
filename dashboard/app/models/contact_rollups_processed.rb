@@ -240,6 +240,7 @@ class ContactRollupsProcessed < ApplicationRecord
     courses = extract_field contact_data, 'dashboard.sections', 'course_name'
     roles.add 'CSD Teacher' if courses.any? {|course| course&.start_with? 'csd'}
     roles.add 'CSP Teacher' if courses.any? {|course| course&.start_with? 'csp'}
+    roles.add 'CSA Teacher' if courses.any? {|course| course&.start_with? 'csa'}
 
     # @see Script model, csf?, csd? and csp? methods
     curricula = extract_field contact_data, 'dashboard.sections', 'curriculum_umbrella'
@@ -248,6 +249,8 @@ class ContactRollupsProcessed < ApplicationRecord
       curricula.any? {|curriculum| curriculum == 'CSD'}
     roles.add 'CSP Teacher' if !roles.include?('CSP Teacher') &&
       curricula.any? {|curriculum| curriculum == 'CSP'}
+    roles.add 'CSA Teacher' if !roles.include?('CSA Teacher') &&
+      curricula.any? {|curriculum| curriculum == 'CSA'}
 
     roles.add 'Form Submitter' if
       contact_data.key?('pegasus.forms') ||

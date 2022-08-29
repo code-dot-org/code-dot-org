@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-07T23:49:43.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -196,9 +192,9 @@
     "parent_level_id": 20396,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/app-lab/responding-to-user-input/"
+      "/courses/csd-2022/guides/responding-to-user-input"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/circuit-playground/",
+    "map_reference": "/courses/csd-2022/guides/circuit-playground",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -210,6 +206,10 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"classic\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"lowButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 150px; background-color: rgb(26, 188, 156); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 0px; border-width: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 30px; position: absolute; left: 85px; top: 80px;\">Low</button><button id=\"midButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 150px; background-color: rgb(26, 188, 156); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 0px; border-width: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 30px; position: absolute; left: 85px; top: 185px;\">Mid</button><button id=\"highButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 150px; background-color: rgb(26, 188, 156); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 0px; border-width: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 30px; position: absolute; left: 85px; top: 290px;\">High</button></div></div>",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-07T23:49:43.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-07T23:49:43.958+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - P2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - P2_2022\"}]"

@@ -187,7 +187,7 @@ class Census::CensusSummary < ApplicationRecord
       # without a row is counted as a NO
       if high_school &&
          state_offerings.empty? &&
-         Census::StateCsOffering.infer_no(school.state) &&
+         Census::StateCsOffering.infer_no(school.state, school_year) &&
          Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
          state_years_with_data[school.state].include?(school_year)
         audit[:state_cs_offerings].push(nil)

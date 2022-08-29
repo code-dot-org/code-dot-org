@@ -64,12 +64,34 @@ export function apiValidateType(
           typeof varValue === 'boolean';
         break;
       case 'pinid':
+        var validPins = [
+          'A0',
+          'A1',
+          'A2',
+          'A3',
+          'A4',
+          'A5',
+          'A6',
+          'A7',
+          0,
+          1,
+          2,
+          3,
+          6,
+          9,
+          10,
+          12
+        ];
         var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
         properType =
-          (typeof varValue === 'string' || typeof varValue === 'number') &&
-          !reservedPins.includes(varValue);
-        if (reservedPins.includes(varValue)) {
-          customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}`;
+          validPins.includes(varValue) && !reservedPins.includes(varValue);
+        if (!validPins.includes(varValue)) {
+          outputError(
+            `${funcName}() ${varName} parameter value (${varValue}) is not a valid ${expectedType}. Please use a different ${expectedType}.`
+          );
+          return false;
+        } else if (reservedPins.includes(varValue)) {
+          customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}.`;
         }
         break;
       case 'number':

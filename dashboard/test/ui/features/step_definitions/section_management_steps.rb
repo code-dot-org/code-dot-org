@@ -238,6 +238,13 @@ Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for th
   }
 end
 
+Then /^I navigate to the script "([^"]*)" lesson (\d+) level (\d+) for the section I saved$/ do |script_name, lesson_num, level_num|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/levels/#{level_num}?section_id=#{@section_id}&noautoplay=true"
+  }
+end
+
 Then /^I hide unit "([^"]+)"$/ do |unit_name|
   selector = ".uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash"
   @browser.execute_script("$(#{selector.inspect}).click();")

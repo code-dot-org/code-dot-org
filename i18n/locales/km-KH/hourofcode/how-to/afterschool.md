@@ -16,7 +16,7 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 
 * * *
 
-## 1. មើលវីឌីអូរបៀបរៀបចំនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. មើលវីឌីអូរបៀបរៀបចំនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. ជ្រើសរើសការបង្រៀនមួយ 
 

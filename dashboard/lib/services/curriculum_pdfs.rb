@@ -127,7 +127,7 @@ module Services
     # Do no generate the resources pdf is there are no lesson plans since
     # resources are attached to lesson plans
     def self.should_generate_resource_pdf?(unit)
-      !unit.unit_without_lesson_plans?
+      !unit.unit_without_lesson_plans? && unit.lessons.map(&:resources).flatten.any?
     end
 
     # Actually generate PDFs for the given script, and upload the results to S3.

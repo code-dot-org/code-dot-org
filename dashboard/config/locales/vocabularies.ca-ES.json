@@ -68,6 +68,24 @@
         "debugging/basketball/unversioned": {
           "word": "Depuració"
         },
+        "debugging/csd/2022": {
+          "word": "Depuració"
+        },
+        "variable/csd/2022": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2022": {
+          "word": "Condicionals"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstracció"
+        },
+        "function/csd/2022": {
+          "word": "Funció"
+        },
+        "copyright/csd/2022": {
+          "word": "Copyright"
+        },
         "code/poem-art/unversioned": {
           "word": "ModeCodi"
         },

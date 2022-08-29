@@ -413,7 +413,6 @@ is:
     popup:
       progress_for_user: "Framvinda %{name}"
       progress: 'Framvinda þín'
-      lines: 'Samtals línur af kóða: %{lines}'
       close: 'LOKA'
       mastery: 'Hugtök'
       puzzle_map: 'Áfangar'

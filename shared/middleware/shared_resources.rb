@@ -82,7 +82,7 @@ class SharedResources < Sinatra::Base
     if File.file?(erb_path)
       content_type extname[1..-1].to_sym
       cache :static
-      return ERB.new(IO.read(erb_path)).result
+      return ERB.new(File.read(erb_path)).result
     end
 
     pass

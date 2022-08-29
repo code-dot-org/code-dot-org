@@ -4,7 +4,6 @@
   position: fixed;
   top: 22px;
   left: 6%;
-  background-color: $white;
   color: $black;
   z-index: 1040;
   padding: 20px 40px 20px 20px;
@@ -20,11 +19,12 @@
 
   p {
     font-size: 16px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
-.hide_toolbar_helper:after, .hide_toolbar_helper:before {
+.hide_toolbar_helper:after,
+.hide_toolbar_helper:before {
   bottom: 100%;
   left: 50%;
   border: solid transparent;
@@ -36,14 +36,14 @@
 }
 
 .hide_toolbar_helper:after {
-  border-color: rgba(255, 255, 255, 0);
+  border-color: rgb(255 255 255 / 0);
   border-bottom-color: #fff;
   border-width: 20px;
   margin-left: -20px;
 }
 
 .hide_toolbar_helper:before {
-  border-color: rgba(0, 0, 0, 0);
+  border-color: rgb(0 0 0 / 0);
   border-bottom-color: #000;
   border-width: 21px;
   margin-left: -21px;

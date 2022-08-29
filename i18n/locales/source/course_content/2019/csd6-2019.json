@@ -49,7 +49,14 @@
     "long_instructions": "# Changing the Text\n\nThe `setProperty` block can be used to change lots of things about your design elements, including the text they contain.\n\n# Do This\n\n-   Drag out a `setProperty` block\n-   For the first parameter, select \"name\" (the element's id)\n-   For the second parameter, select \"text\" (the property you want to set)\n-   For the third parameter, write your name in quotes (the value to set)\n\n_Note: We've removed the Design Mode tab for now so you can practice working with `setProperty`, but it'll come back later once you're building apps of your own._"
   },
   "https://studio.code.org/s/csd6-2019/lessons/2/levels/4": {
-    "long_instructions": "# Changing Position\n\nEvery design element (except for the screen) has an \"x\" and a \"y\" property that controls its position.\n\n# Do This\n\n<div markdown=\"1\" style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nUsing the `setProperty` block, move \"red\\_button\" so that it matches the image to the right. (Click on the image to see the full size.)\n\n_Note: We've removed the Design Mode tab for now so you can practice working with setProperty, but it'll come back later once you're building apps of your own._"
+    "long_instructions": "# Changing Position\n\nEvery design element (except for the screen) has an \"x\" and a \"y\" property that controls its position.\n\n# Do This\n\n<div markdown=\"1\" style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nUsing the `setProperty` block, move \"red\\_button\" so that it matches the image to the right. (Click on the image to see the full size.)\n\n_Note: We've removed the Design Mode tab for now so you can practice working with setProperty, but it'll come back later once you're building apps of your own._",
+    "mini_rubric": {
+      "rubric_key_concept": "Use setters to access and manipulate the properties of elements in a system.",
+      "rubric_performance_level_1": "The red rectangle is in the correct position, and no other rectangles have been moved.   The program only uses two blocks.",
+      "rubric_performance_level_2": "The red rectangle has been moved, but it may not be in the correct position, or there may be extra blocks of code.  The other rectangles are in their original positions.",
+      "rubric_performance_level_3": "Some rectangles have been moved, but the picture does not look similar to the example.",
+      "rubric_performance_level_4": "The rectangles have not been moved."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/2/levels/5": {
     "display_name": "Designing Screens with Code"
@@ -64,7 +71,14 @@
     "long_instructions": "# Hidden\n\nDesign elements have a property called \"hidden\" that controls whether the element should show on screen or not. We are going to use this property to create an alarm app. Notice that when the program starts one button is hidden, and one is not.\n\nWe have already set up an event handler for the \"triggerAlarmButton\" which will do two things when clicked:\n\n-   Change the \"text\" property of \"statusLabel\" to \"on\"\n-   Set the \"hidden\" property of \"stopAlarmButton\" to `false` (meaning it should _not_ be hidden)\n\n# Do This\n\n-   Run the program and click \"Trigger Alarm\" to see how it works\n-   Add code to the provided event handler that hides the \"triggerAlarmButton\"\n\n_Note: the button \"stopAlarmButton\" is already on the screen, but because its \"hidden\" property is marked true, it isn't shown when the program starts._"
   },
   "https://studio.code.org/s/csd6-2019/lessons/2/levels/9": {
-    "long_instructions": "# Showing/Hiding\n\nThis alarm app isn't super useful if you can't turn the alarm off once it's been triggered. Let's fix that.\n\n# Do This\n\nCreate a second event to watch for the \"stopAlarmButton\" to be clicked. When that event is triggered:\n\n-   Change the status text to \"OFF\"\n-   Hide the \"stopAlarmButton\"\n\n_Hint: \"hidden\" is a boolean property. If we used `false` to make the button show up, what should you use to make it hidden again?_"
+    "long_instructions": "# Showing/Hiding\n\nThis alarm app isn't super useful if you can't turn the alarm off once it's been triggered. Let's fix that.\n\n# Do This\n\nCreate a second event to watch for the \"stopAlarmButton\" to be clicked. When that event is triggered:\n\n-   Change the status text to \"OFF\"\n-   Hide the \"stopAlarmButton\"\n\n_Hint: \"hidden\" is a boolean property. If we used `false` to make the button show up, what should you use to make it hidden again?_",
+    "mini_rubric": {
+      "rubric_key_concept": "Use events handlers to respond to user interaction",
+      "rubric_performance_level_1": "When the \"stopAlarmButton\" is pressed, the status text changes to \"OFF\" and the button disappears.  There is no extra code in the program.",
+      "rubric_performance_level_2": "When the \"stopAlarmButton\" is pressed, the program responds in some way, but not necessarily as described in the instructions, or there may be unnecessary code triggered by the event.",
+      "rubric_performance_level_3": "A second event has been created, but it may not be triggered at appropriate times, or the program may have created unnecessary events.",
+      "rubric_performance_level_4": "No new events were created."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/2/levels/10": {
     "display_name": "Emotion Machine Example",
@@ -80,7 +94,14 @@
     "long_instructions": "# Setting Text\n\nYour happy and sad buttons should be almost completely functional now. The only thing they still need to do is change the text at the bottom of the screen.\n\n# Do This\n\nMake each of the event handlers change the text of \"feeling\" to the appropriate emotion (either \"happy\" or \"sad\")"
   },
   "https://studio.code.org/s/csd6-2019/lessons/2/levels/14": {
-    "long_instructions": "# Add Another Emotion\n\nIn the example app you saw earlier, you could set the emotion to happy, sad, or meh. Your app only has happy and sad, can you add a third emotion?\n\n# Do This\n\nUsing all of the same techniques you used for the happy and sad buttons, create a third emotion button. You could stick with meh, or you could pick an emotion of your own.\n\nWhen you're all done, feel free to add more emotions or features before submitting your final version."
+    "long_instructions": "# Add Another Emotion\n\nIn the example app you saw earlier, you could set the emotion to happy, sad, or meh. Your app only has happy and sad, can you add a third emotion?\n\n# Do This\n\nUsing all of the same techniques you used for the happy and sad buttons, create a third emotion button. You could stick with meh, or you could pick an emotion of your own.\n\nWhen you're all done, feel free to add more emotions or features before submitting your final version.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use event handlers to respond to user interaction, and use settings to manipulate the properties of elements in a system.",
+      "rubric_performance_level_1": "The program has three buttons with correct labels, and when a button is clicked, the correct icon and description of emotion appear. ",
+      "rubric_performance_level_2": "The program has three buttons, and the program responds in some way to each button click, but the response may not be exactly as described in the instructions.",
+      "rubric_performance_level_3": "At least one button other than the \"Happy\" button responds to being clicked in some way.",
+      "rubric_performance_level_4": "No buttons other than the \"Happy\" button respond to being clicked."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/3/levels/1": {
     "display_name": "Lesson Overview"
@@ -114,7 +135,14 @@
     "long_instructions": "# Light Switch\n\nThere are three more LED blocks that you haven't used yet. One of them can make the button work like a light switch, turning the LED on when it's off, but off when it's on.\n\n# Do This\n\n-   Try the `blink`, `toggle` and `pulse` blocks to see what they do.\n-   Use one of the blocks to make the button work like a light switch.\n    -   If the LED is off, the button should turn it on.\n    -   If the LED is on, the button should turn it off."
   },
   "https://studio.code.org/s/csd6-2019/lessons/3/levels/9": {
-    "long_instructions": "# Multi-function Light\n\nThis app should let you choose between three types of lights: on, blink, and pulse.  It should also have a button that turns the light completely off.  Right now only the \"on\" button works, and the \"off\" button is completely missing.\n\n# Do This\n\n-   Add code to make the \"blink\" and \"pulse\" buttons work.\n-   In design mode, add a new \"off\" button.\n-   Add code to make the \"off\" button work."
+    "long_instructions": "# Multi-function Light\n\nThis app should let you choose between three types of lights: on, blink, and pulse.  It should also have a button that turns the light completely off.  Right now only the \"on\" button works, and the \"off\" button is completely missing.\n\n# Do This\n\n-   Add code to make the \"blink\" and \"pulse\" buttons work.\n-   In design mode, add a new \"off\" button.\n-   Add code to make the \"off\" button work.",
+    "mini_rubric": {
+      "rubric_key_concept": "Develop software to control a variety of physical devices.",
+      "rubric_performance_level_1": "The program works as described in the instructions, with the buttons triggering the LED to either turn on, blink, pulse, or turn off.  There is no unnecessary code.",
+      "rubric_performance_level_2": "The on and off buttons of the program both work, but there may be unnecessary code that does not affect the functionality of those two buttons.",
+      "rubric_performance_level_3": "At least one of the buttons other than the \"on\" button works, or the correct blocks to control the LED are included in the program, but are not correctly triggered by an event.",
+      "rubric_performance_level_4": "No buttons other than the \"on\" button works, and there is no code that could be used to control the LED."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/3/levels/10": {
     "dsls": {
@@ -144,7 +172,14 @@
     "long_instructions": "# Make Your App - The Screen\n\nNow, you and your partner can make your own app using the LED.  Discuss with your partner what kind of app you want to make.\n\n# Do This\n\n-   Discuss with your partner what screen elements you will need in your app.  Do you want...\n    -   Buttons?\n    -   Images?\n    -   Text?\n-   In Design Mode, add the elements, making sure you give each a meaningful ID."
   },
   "https://studio.code.org/s/csd6-2019/lessons/3/levels/14": {
-    "long_instructions": "# Make Your App - The Code\n\nNext, you'll need to add the code that makes your app work.\n\n# Do This\n\n-   Discuss with your partner what code you will need in your app.  Do you need...\n    -   Events?\n    -   Variables?\n    -   Setters?\n    -   Random Numbers?\n-   In Code Mode, add in the code that will make your app work."
+    "long_instructions": "# Make Your App - The Code\n\nNext, you'll need to add the code that makes your app work.\n\n# Do This\n\n-   Discuss with your partner what code you will need in your app.  Do you need...\n    -   Events?\n    -   Variables?\n    -   Setters?\n    -   Random Numbers?\n-   In Code Mode, add in the code that will make your app work.",
+    "mini_rubric": {
+      "rubric_key_concept": "Develop software to control a variety of physical devices.",
+      "rubric_performance_level_1": "The program allows the user to control the LED in multiple ways, and all interactive elements appear to work as intended.",
+      "rubric_performance_level_2": "The program allows the user to control the LED, but there may be minor errors in the interactive elements of the app.",
+      "rubric_performance_level_3": "The program has code that is related to the LED, but there are significant errors that keep the user from controlling the LED as intended.",
+      "rubric_performance_level_4": "There is no code related to controlling the LED in the app."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/4/levels/1": {
     "display_name": "Lesson Overview"
@@ -170,7 +205,14 @@
     "long_instructions": "# Using Board Events\n\nRight now the LED turns on when the left button (`buttonL`) is pressed down. It should turn off when the right button (buttonR) is pressed down.\n\n<div style=\"float:right;\" markdown=1> \n\n[expandable][0] \n\n</div>\n\n# Do this\n\n-   Add another `onBoardEvent()` block to turn the LED off when the right button is pressed down."
   },
   "https://studio.code.org/s/csd6-2019/lessons/5/levels/4": {
-    "long_instructions": "# Other Board Events with the Buttons\n\nInstead of using the right button, you can make the LED turn off when the left button comes back up.\n\n# Do this\n\n-   Create an 'up' event for the left button.\n-   Add code to turn the LED off when the button pops back up."
+    "long_instructions": "# Other Board Events with the Buttons\n\nInstead of using the right button, you can make the LED turn off when the left button comes back up.\n\n# Do this\n\n-   Create an 'up' event for the left button.\n-   Add code to turn the LED off when the button pops back up.",
+    "mini_rubric": {
+      "rubric_key_concept": "Develop a program that responds to a variety of hardware input.",
+      "rubric_performance_level_1": "The program works as described, with the LED turning on when the user pressed the button down and turning back off when the user releases the button.  There is no unnecessary code.",
+      "rubric_performance_level_2": "The program uses an event handler to detect the button release, but it may not respond as described, or there may be unnecessary code included in the program.",
+      "rubric_performance_level_3": "The program uses a board event handler, but there are errors significant enough that the program cannot detect the button release.",
+      "rubric_performance_level_4": "The program does not use a board event handler."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/5/levels/5": {
     "display_name": "Responding to Board Events"
@@ -232,7 +274,14 @@
     ]
   },
   "https://studio.code.org/s/csd6-2019/lessons/6/levels/6": {
-    "long_instructions": "# Using the Circuit Playground\n\nHere's the same code you saw in the last level, but this time there's another dropdown menu to control the buzzer.  You'll have to add the code to make it work.\n\n# Do This\n\n-   Using the LED code as a model, add new code inside the buttonL event that will play a long or short buzz according to the chosen value property of the *buzzer\\_input* dropdown menu.\n-   Add new code that will turn the buzzer off when the right button is pressed.\n    -   (Hint: the event is already in the code.)"
+    "long_instructions": "# Using the Circuit Playground\n\nHere's the same code you saw in the last level, but this time there's another dropdown menu to control the buzzer.  You'll have to add the code to make it work.\n\n# Do This\n\n-   Using the LED code as a model, add new code inside the buttonL event that will play a long or short buzz according to the chosen value property of the *buzzer\\_input* dropdown menu.\n-   Add new code that will turn the buzzer off when the right button is pressed.\n    -   (Hint: the event is already in the code.)",
+    "mini_rubric": {
+      "rubric_key_concept": "Use getters to access the properties of elements in a system.",
+      "rubric_performance_level_1": "The program works as described, using the value of the drop down menu to change the length of the buzzer.",
+      "rubric_performance_level_2": "The program uses the value of the drop down menu, but there may be minor errors that prevent the program from running exactly as described.",
+      "rubric_performance_level_3": "The program includes code for getting the value of the drop down menu, but major errors in the code prevent it from working properly.",
+      "rubric_performance_level_4": "The program does not access the value of the drop down menu."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/6/levels/7": {
     "display_name": "getProperty"
@@ -321,7 +370,14 @@
     "long_instructions": "# Putting Color on the Screen\n\nNow that your sensor data is in a scale that works for RGB, you can go about setting the screen color.\n\n# Do This\n\n-   Add a `setProperty()` block and set it to change the screen's background color.\n-   Add an `rgb()` block to the last parameter of `setProperty()`.\n-   Use the three color variables you created as inputs to the `rgb()` block."
   },
   "https://studio.code.org/s/csd6-2019/lessons/7/levels/15": {
-    "long_instructions": "# Continuous Updates\n\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\n\nMove your `setProperty()` block into a an event handler for one of the sensors to make the app update continually."
+    "long_instructions": "# Continuous Updates\n\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\n\nMove your `setProperty()` block into a an event handler for one of the sensors to make the app update continually.",
+    "mini_rubric": {
+      "rubric_key_concept": "Develop a program that responds to a variety of hardware input, including those the user does and doesn’t actively control.  Recognize the need for various types of input, both analog and digital, and represent the values of those inputs in various ways.",
+      "rubric_performance_level_1": "The program displays a wide range of colors in response to changes in light, temperature, and sound.  There is no unnecessary code in the program.",
+      "rubric_performance_level_2": "The program detects changes in light, temperature and sounds, and visibly changes color in response to at least one of these sensors.",
+      "rubric_performance_level_3": "The program changes color and uses at least of the three analog sensors to detect changes in the environment.",
+      "rubric_performance_level_4": "The program does use the analog sensors or does not change colors at all."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/7/extras?level_name=CSD+U6+analog+challenge_2019": {
     "display_name": "Challenge: Making Sense of Sensors",
@@ -377,7 +433,14 @@
     "long_instructions": "# Display the Winner\n\nThe winning screen doesn't actually know _who_ won the game. Let's fix that now.\n\n# Do This\n\nBefore the call to `setScreen`, add a `setProperty` block to change the \"text\" property of \"winner\" to display the actual winner."
   },
   "https://studio.code.org/s/csd6-2019/lessons/8/levels/13": {
-    "long_instructions": "# Winning Buzzer\n\nThat last thing that that is missing from your project guide's description of this project is the buzzer. It should buzz a high tone if player 1 wins and a low tone if player 2 wins. \n\n# Do This\n\nSo far we've been able to just use the `player` parameter directly to report which player won, but that won't work for buzzing different sounds. Inside the conditional that checks if a player won, you'll need to add _another_ conditional that checks which player it was. If `player == \"red\"` the buzzer should play a high note, otherwise (else) it should play a low note."
+    "long_instructions": "# Winning Buzzer\n\nThat last thing that that is missing from your project guide's description of this project is the buzzer. It should buzz a high tone if player 1 wins and a low tone if player 2 wins. \n\n# Do This\n\nSo far we've been able to just use the `player` parameter directly to report which player won, but that won't work for buzzing different sounds. Inside the conditional that checks if a player won, you'll need to add _another_ conditional that checks which player it was. If `player == \"red\"` the buzzer should play a high note, otherwise (else) it should play a low note.",
+    "mini_rubric": {
+      "rubric_key_concept": "Develop a program that responds to a variety of hardware input, create and use a function that uses parameters to generalize behavior. ",
+      "rubric_performance_level_1": "The program responds to the left and right buttons and uses multiple functions with parameters as described in the project guide.",
+      "rubric_performance_level_2": "The program responds to at least one hardware input and uses at least one function with parameter as describe in the project guide.",
+      "rubric_performance_level_3": "The program responds to hardware input and uses a function with a parameter, but there may be errors that prevent them from working as described.",
+      "rubric_performance_level_4": "The program does not use hardware input or does not include a function with parameters."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/8/levels/14": {
     "display_name": "Make it Your Own",
@@ -417,6 +480,208 @@
   "https://studio.code.org/s/csd6-2019/lessons/9/levels/10": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2018_2019": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U6Ch1_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U6Ch1_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U6Ch1_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U6Ch1_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U6Ch1_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd6-2019/lessons/10/levels/1": {
@@ -447,7 +712,14 @@
   },
   "https://studio.code.org/s/csd6-2019/lessons/10/levels/7": {
     "short_instructions": "Write a program that displays a randomly chosen color from the array. (Click to see full instructions)",
-    "long_instructions": "# Using Variables\n\nThis program is like the last one, but the icons should always match the colors (red heart, yellow star, green leaf, and blue water).  You can do this using the variable \"myIndex\", which will store the value of a random number so that it can be used to get the icon and the color from the same place on each list.\n\n# Do This\n\n-   Change the code so that both the icon and its color are chosen using the \"myIndex\" variable."
+    "long_instructions": "# Using Variables\n\nThis program is like the last one, but the icons should always match the colors (red heart, yellow star, green leaf, and blue water).  You can do this using the variable \"myIndex\", which will store the value of a random number so that it can be used to get the icon and the color from the same place on each list.\n\n# Do This\n\n-   Change the code so that both the icon and its color are chosen using the \"myIndex\" variable.",
+    "mini_rubric": {
+      "rubric_key_concept": "Access an element in an array.",
+      "rubric_performance_level_1": "The program randomly displays a matching color and icon combination as described in the instructions.  The elements in the array are accessed using the \"myIndex\" variable, and there is no unnecessary code in the program.",
+      "rubric_performance_level_2": "The program randomly displays a color and icon combination.  The elements in the array are accessed using the \"myIndex\" variable, though there may be minor errors that prevent the program from running exactly as described.",
+      "rubric_performance_level_3": "Index notation is used to access an element from an array, although there may be major errors in the program that prevent it from running properly.",
+      "rubric_performance_level_4": "Index notation is not used."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/10/levels/8": {
     "display_name": "Arrays"
@@ -510,7 +782,14 @@
     "long_instructions": "# Light Patterns\n\nThis app already has one light pattern program, which can be activated by clicking a button. Notice that we put this pattern into a function to make the code cleaner and clearer.\n\n# Do This\n\nCreate a light pattern function of your own - maybe the colors of your favorite holiday, college, sports team, or try to create an image with the lights.\n\nAfter you've created your new function, add a button and event handler so that you can switch between the two light patterns."
   },
   "https://studio.code.org/s/csd6-2019/lessons/10/levels/17": {
-    "long_instructions": "# Turning It Off\n\nWhen you start this app your lights are off, but as soon as you choose a pattern, there's no way to turn the lights back off!\n\n# Do This\n\nCreate a function that turns all of the LEDs off, and then add a \"Off\" button to your app and make it turn off all of the color LEDs."
+    "long_instructions": "# Turning It Off\n\nWhen you start this app your lights are off, but as soon as you choose a pattern, there's no way to turn the lights back off!\n\n# Do This\n\nCreate a function that turns all of the LEDs off, and then add a \"Off\" button to your app and make it turn off all of the color LEDs.",
+    "mini_rubric": {
+      "rubric_key_concept": "Access elements in arrays, and develop software to control a variety of physical devices. ",
+      "rubric_performance_level_1": "The program works as described, has three buttons, two of which turn the color LEDs on in a distinctive pattern, and one of which turns the color LEDs off.  There is no unnecessary code in the program.",
+      "rubric_performance_level_2": "The program generally works as described, has three buttons, two of which turn the lights on in a distinctive pattern, and a function that turns the color LEDs off.  There may be minor errors in the program.",
+      "rubric_performance_level_3": "There is code in the program that turns the LEDs on and off, but there may be major errors that prevent the program from working properly.",
+      "rubric_performance_level_4": "There is no new code that turns the LEDs on and off."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/10/extras?level_name=CSD+U6+light+pattern+challenge_2019": {
     "display_name": "Improved Light Show",
@@ -542,7 +821,14 @@
     "long_instructions": "# Random Song Generator\n\nYou're going to make a random song generator. When you press a button, a random note should play. Press it enough times, and you have yourself a beautiful arrangement of bleeps and bloops. \n\nYou used `randomNumber()` to select an element from an array in the previous lesson, so this should be familiar.\n\n# Do This\n\n-   Add code to randomly select a note from the `notes` array and play it.\n-   Run the program and press the left button to hear your buzzer sing its beautiful tune."
   },
   "https://studio.code.org/s/csd6-2019/lessons/11/levels/9": {
-    "long_instructions": "# Making New Arrays\n\nNow that you can change arrays, it's time for you to make your own.\n\n# Do this\n\n-   Make a new array with whatever notes you want. They can be in different octaves, arranged in a certain key, etc. Anything you want!\n-   Have the buzzer play a random note from your array when the **right** button is pressed."
+    "long_instructions": "# Making New Arrays\n\nNow that you can change arrays, it's time for you to make your own.\n\n# Do this\n\n-   Make a new array with whatever notes you want. They can be in different octaves, arranged in a certain key, etc. Anything you want!\n-   Have the buzzer play a random note from your array when the **right** button is pressed.",
+    "mini_rubric": {
+      "rubric_key_concept": "Create and modify arrays.",
+      "rubric_performance_level_1": "A new array is created and stored in a variable, and the elements of the array are randomly accessed to play when the right button is pressed.",
+      "rubric_performance_level_2": "A new array is created and stored into a variable, but there may be unrelated errors that prevent a note from being played when the right button is pressed.",
+      "rubric_performance_level_3": "A new array is created, but it is either not stored in an element, or it is empty, so the program cannot work as described.",
+      "rubric_performance_level_4": "There are no arrays in the program."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/11/levels/10": {
     "display_name": "Modifying Arrays",
@@ -563,7 +849,14 @@
     "long_instructions": "# Null Notes\n\nYou may have noticed that if you put the same note side-by-side in the array, the buzzer just plays that note as one long sound instead of as individual notes. In music we often want a break (or _rest_) between notes. You can get your buzzer to play a rest by sending it the value `null`.\n\n`null` is a special value that represents emptiness in computer science. `playNotes` plays each note for the same duration, so a `null` element in the array is just telling `playNotes` to play nothing for the same duration as everything else.\n\n# Do this\n\n-   Run the code to hear what it sounds like first.\n-   Examine the array inside `buzzer.playNotes()`.\n-   Put a pause between notes that are the same and side-by-side, and any other place you deem appropriate.\n\n_Tip: `null` references a value, just like a variable name. Make sure you don't put it in quotation marks!_"
   },
   "https://studio.code.org/s/csd6-2019/lessons/11/levels/14": {
-    "long_instructions": "# Sound Board 2.0\n\nYou can now play sounds, notes, and songs! With this new knowledge, you can even turn your board into a sound board.\n\nIn the toolbox you have all of the buzzer and led-related blocks at your disposal. See what cool stuff you can come up with!\n\n# Do This\n\n-   Use all of the button related board events (up, down), to play a unique sound or song at each event.\n-   Are there any other events you could use to play even more sounds/songs?"
+    "long_instructions": "# Sound Board 2.0\n\nYou can now play sounds, notes, and songs! With this new knowledge, you can even turn your board into a sound board.\n\nIn the toolbox you have all of the buzzer and led-related blocks at your disposal. See what cool stuff you can come up with!\n\n# Do This\n\n-   Use all of the button related board events (up, down), to play a unique sound or song at each event.\n-   Are there any other events you could use to play even more sounds/songs?",
+    "mini_rubric": {
+      "rubric_key_concept": "Create and modify arrays, develop software to control a variety of physical devices.",
+      "rubric_performance_level_1": "The program works as described, with at least four board events each triggering a different series of notes. ",
+      "rubric_performance_level_2": "The program plays a series of notes when triggered by a particular board event, but there may be errors in the code that prevent it from working exactly as described.",
+      "rubric_performance_level_3": "There is code in the program that could product a series of notes on the buzzer, but the code cannot be triggered by a board event, or significant errors in the code prevent the notes from playing.",
+      "rubric_performance_level_4": "There are no sequences of notes in the program, or there is no code to produce buzzer output."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/11/extras?level_name=CSDU6+buzzer+2d+arrays_2019": {
     "display_name": "2D Arrays",
@@ -617,10 +910,20 @@
     "long_instructions": "# Turning all the Color LEDs Off\n\nNow that you've got one button to turn the color LEDs on, you can make another turn them off.\n\n# Do This\n\nAdd an event handler to \"button\\_off\" with a for loop that turns each color LED off."
   },
   "https://studio.code.org/s/csd6-2019/lessons/12/levels/12": {
-    "long_instructions": "# Add Some Color\n\nNow that you can turn the LEDs on and off, it's time to add some color.\n\n# Do This\n\nAdd event handlers to \"button\\_red\" and \"button\\_green\" that turns all the LEDs those colors."
+    "long_instructions": "# Add Some Color\n\nNow that you can turn the LEDs on and off, it's time to add some color.\n\n# Do This\n\nAdd event handlers to \"button\\_red\" and \"button\\_green\" that turns all the LEDs those colors.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use a for loop to iterate over an array"
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/12/levels/13": {
-    "long_instructions": "# Make it Your Own\n\nThink of a new button that you would like in this project.  Don't forget about the other LED options, such as pulse and blink.\n\n# Do This\n\nAdd a new button to the project, and program it with a behavior of your choice."
+    "long_instructions": "# Make it Your Own\n\nThink of a new button that you would like in this project.  Don't forget about the other LED options, such as pulse and blink.\n\n# Do This\n\nAdd a new button to the project, and program it with a behavior of your choice.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use a for loop to iterate over an array",
+      "rubric_performance_level_1": "All five buttons work as described using for loops, and the loops use the length of the array as an exit condition, with no errors or unnecessary code.",
+      "rubric_performance_level_2": "The on and off buttons work as described using for loops, and there are no errors in the code.",
+      "rubric_performance_level_3": "For loops are used to turn the LEDs on and off, but there may be errors that keep the buttons from working as described.",
+      "rubric_performance_level_4": "There are no for loops in the code."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/13/levels/1": {
     "display_name": "Lesson Overview"
@@ -660,7 +963,14 @@
     "long_instructions": "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n\\-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n\\-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
   },
   "https://studio.code.org/s/csd6-2019/lessons/13/levels/11": {
-    "long_instructions": "# Updating Values with Data\n\nIn this program the goalie is trying to block the soccer ball, but right now the ball isn't moving.\n\n# Do This\n\n-   Use the counter pattern to update the ball's `x` value so that it moves across the screen."
+    "long_instructions": "# Updating Values with Data\n\nIn this program the goalie is trying to block the soccer ball, but right now the ball isn't moving.\n\n# Do This\n\n-   Use the counter pattern to update the ball's `x` value so that it moves across the screen.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use getters and setters to manipulate properties.",
+      "rubric_performance_level_1": "When the program is run, the ball moves smoothly to the left of the screen at a reasonable speed.",
+      "rubric_performance_level_2": "When the program is run, the ball moves across the screen.",
+      "rubric_performance_level_3": "The program accessed the ball's current position and used it to update the ball's \"x\" property, but errors in the program prevent the ball from moving across the screen.",
+      "rubric_performance_level_4": "The ball's current position is not used to update its \"x\" property."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/13/levels/12": {
     "long_instructions": "# Steering Wheel\n\nThis game is similar to the goalie game that you just played, except a little different. Use your board as a steering wheel for the car (moving side to side). You have to get to the checkered flag at while avoiding the red flags along the way!\n\n# Do This\n\n-   Make the car move down the screen while the program runs.\n-   Give the car the ability to steer side to side.\n\nThink back to the programs you've made up until this point, how can you update these values?"
@@ -722,7 +1032,13 @@
     "long_instructions": "# Star Chaser\n\nNow make it work for all the stars\n\n# Do This\n\n-   Create a `checkStars()` functions that uses a `for` loop to check every star in the star array.\n-   Test your code by calling the `checkStars()` function inside the event block."
   },
   "https://studio.code.org/s/csd6-2019/lessons/14/levels/15": {
-    "long_instructions": "# Star Chaser\n\nNow you can add extra stars, and your functions will work with them, too.\n\n# Do This\n\n-   In design mode, copy one of the stars, and change its name and color to \"yellow\".\n-   Add a new element, \"yellow\", to your star array.\n-   Test the game with your new star."
+    "long_instructions": "# Star Chaser\n\nNow you can add extra stars, and your functions will work with them, too.\n\n# Do This\n\n-   In design mode, copy one of the stars, and change its name and color to \"yellow\".\n-   Add a new element, \"yellow\", to your star array.\n-   Test the game with your new star.",
+    "mini_rubric": {
+      "rubric_performance_level_1": "The program works as described and includes all functions with parameters as described in the instructions.  (moveStar, loopStar, and checkStar)",
+      "rubric_performance_level_2": "The program includes multiple functions with parameters and generally works as described, but may include minor errors that affect gameplay.",
+      "rubric_performance_level_3": "The program includes at least one function with parameters, but there may be major errors in the code that prevent the game from working.",
+      "rubric_performance_level_4": "The program does not include any functions with parameters."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/14/extras?level_name=CSD+U6+params+starchaser+challenge+1_2019": {
     "display_name": "Starchaser - Add Lives",
@@ -763,7 +1079,14 @@
     "long_instructions": "# Smart Bike - Blinkers\n\nUsing your planning guide, wire up the two LEDs that will serve as the blinkers. In order to make sure that the blinkers can be mounted at the end of the handlebars, make sure you wire them so that they can stretch out in opposite directions.\n\n# Do This\n\nUsing alligator clips, wire, or other conductive material, connect two LEDs to your board, one for each turn signal blinker.\n\n-   Hook up each LED to a different numbered pin on the board.\n-   Use the `createLed()` block to create an LED object for each blinker.\n\n_Tip: Make your wiring easier by considering how your blinkers will be mounted when selecting a pin to use._ "
   },
   "https://studio.code.org/s/csd6-2019/lessons/15/levels/9": {
-    "long_instructions": "# Smart Bike - Blinker Controls\n\nWith your turn signal LEDs hooked up, you just need to program some buttons to control them. You may want to place buttons elsewhere on the bike to make controlling your turn signals easier, but for now we'll just use the built in left and right buttons.\n\n# Do This\n\n-   Add event handlers to blink the left turn signal when the left button is pressed.\n-   Add event handlers to blink the right turn signal when the right button is pressed.\n-   Test your code!\n\n_Hint: You'll need to be in text mode to make the blinkers work, since there are no built-in blocks for the elements that you add on to the board._"
+    "long_instructions": "# Smart Bike - Blinker Controls\n\nWith your turn signal LEDs hooked up, you just need to program some buttons to control them. You may want to place buttons elsewhere on the bike to make controlling your turn signals easier, but for now we'll just use the built in left and right buttons.\n\n# Do This\n\n-   Add event handlers to blink the left turn signal when the left button is pressed.\n-   Add event handlers to blink the right turn signal when the right button is pressed.\n-   Test your code!\n\n_Hint: You'll need to be in text mode to make the blinkers work, since there are no built-in blocks for the elements that you add on to the board._",
+    "mini_rubric": {
+      "rubric_key_concept": "Connect, troubleshoot, and debug external devices and integrated computing systems.",
+      "rubric_performance_level_1": "The program works as described, with the left external LED blinking when the left button is pressed and the right external LED blinking when the right button is pressed.",
+      "rubric_performance_level_2": "An external LED responds when a button is pressed on the circuit playground, but may not work exactly as described.",
+      "rubric_performance_level_3": "The external LED is physically connected to the circuit playground, and there is code to control the LED from the program, but errors prevent it from responding properly to the board.",
+      "rubric_performance_level_4": "There is no external LED connected to the board or there is no code that would allow the program to control the LED."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/15/levels/10": {
     "dsls": {
@@ -783,7 +1106,14 @@
     "long_instructions": "# Smart Bike - Headlight\n\nThe last part of the smart bike plan that we need to figure out is the automatic headlight.\n\n# Do This\n\nFirst you'll need to decide what to use for your headlight. You could add another LED circuit, or perhaps you can find a way to mount the board that allows for using the color LEDs as a headlight. Once you've figured out the physical layout of your lights, add code to your program that turns on and off the headlight based on how light or dark it is.\n\n_Hint: If you're using the built-in color LEDs, you might need to protect the light sensor to make sure that it's responding to the ambient light level and not the light from the LEDs._"
   },
   "https://studio.code.org/s/csd6-2019/lessons/15/levels/15": {
-    "long_instructions": "# Smart Bike - Final Touches\n\nAt this point your smart bike should have all of its basic functionality in place. Now is your chance to add any finishing touches.\n\n# Do This\n\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback."
+    "long_instructions": "# Smart Bike - Final Touches\n\nAt this point your smart bike should have all of its basic functionality in place. Now is your chance to add any finishing touches.\n\n# Do This\n\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback.",
+    "mini_rubric": {
+      "rubric_key_concept": "Develop an interactive physical prototype that integrates hardware and software, including simple circuits.  ",
+      "rubric_performance_level_1": "The program works as described, with an external button that controls the buzzer and two external LEDs controlled by the left and right buttons.  The color LEDs turn on in the dark.",
+      "rubric_performance_level_2": "The program works generally as described, with an external button triggering response from the board, and external LEDs controlled by board interaction.",
+      "rubric_performance_level_3": "The program incorporates some elements of the design, including at least one external element that is connected to the board with a circuit and either responds to or triggers a response from the board.",
+      "rubric_performance_level_4": "The program does not incorporate external elements or the external elements cannot interact with the board."
+    }
   },
   "https://studio.code.org/s/csd6-2019/lessons/16/levels/1": {
     "display_name": "Lesson Overview",
@@ -816,11 +1146,379 @@
   "https://studio.code.org/s/csd6-2019/lessons/16/levels/9": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2018_2019": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U6Ch2_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U6Ch2_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U6Ch2_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U6Ch2_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U6Ch2_2018_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd6-2019/lockable/1/levels/1": {
     "dsls": {
       "title": "Physical Computing Post-Project Test"
+    },
+    "sublevels": {
+      "CSD U6 test hardware multi2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Hardware must be physically controlled by a person, and software can be controlled with code.",
+              "correct": false
+            },
+            {
+              "text": "Hardware allows software to interact with the physical world in many different ways.",
+              "correct": true
+            },
+            {
+              "text": "Hardware is the type of software used in physical prototypes.",
+              "correct": false
+            },
+            {
+              "text": "Hardware and software work together to make computing devices useful.",
+              "correct": true
+            },
+            {
+              "text": "In computing devices, hardware controls output and software controls input.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "What TWO ANSWERS best describe the relationship between hardware (physical devices) and software (programs)?"
+            }
+          ]
+        }
+      },
+      "CSD U6 test parameters multi": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "They can be used with physical devices or hardware.",
+              "correct": false
+            },
+            {
+              "text": "They can be used inside a for loop.",
+              "correct": false
+            },
+            {
+              "text": "They can be used as a general solution for problems with different specific details.",
+              "correct": true
+            },
+            {
+              "text": "They can be used to run the same code in many different places in the program.",
+              "correct": false
+            },
+            {
+              "text": "They can be used to detect when the user has provided input.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "What makes functions with parameters more useful than functions without parameters?"
+            }
+          ]
+        }
+      },
+      "CSD U6 test debugging multi": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The right button is broken on the board.",
+              "correct": true
+            },
+            {
+              "text": "The speakers on the computer are not working.",
+              "correct": false
+            },
+            {
+              "text": "The file name for the sad song is incorrect.",
+              "correct": false
+            },
+            {
+              "text": "The board is not connected to the computer.",
+              "correct": false
+            },
+            {
+              "text": "The event handler does not have the correct parameters.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A team is creating a prototype that plays a happy sound on the computer when the left board button is pressed and a sad song on the computer when the right board button is pressed. The happy song is working, but the sad song is not. Choose a HARDWARE problem that could be causing this bug."
+            }
+          ]
+        }
+      },
+      "CSD U6 test algorithms multi2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "event handlers",
+              "correct": false
+            },
+            {
+              "text": "for loops and arrays",
+              "correct": true
+            },
+            {
+              "text": "functions with parameters",
+              "correct": false
+            },
+            {
+              "text": "getters/getProperty",
+              "correct": true
+            },
+            {
+              "text": "analog to digital conversion",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A class wants to create a program that will display good morning to everyone.  For example, the program will display “Good morning, Dwayne!”, “Good morning, Mari!” for each student.  What TWO programming tools will be the most useful when writing this program?"
+            }
+          ]
+        }
+      },
+      "CSD U6 test events multi": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "I only",
+              "correct": false
+            },
+            {
+              "text": "II only",
+              "correct": false
+            },
+            {
+              "text": "I and II",
+              "correct": false
+            },
+            {
+              "text": "I and III",
+              "correct": true
+            },
+            {
+              "text": "I, II, and III",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "What does a programmer need to know when creating an event listener?  \n&nbsp;&nbsp;&nbsp;I. The event that will trigger the change  \n&nbsp;&nbsp;&nbsp;II. When in the program the event will be triggered  \n&nbsp;&nbsp;&nbsp;II. What the program should do when the event is triggered"
+            }
+          ]
+        }
+      },
+      "CSD U6 test feedback FR": {
+        "long_instructions": "What was one piece of feedback that you chose not to use in your final prototype?  Why did you choose not to use it?\r\n"
+      },
+      "CSD U6 test design FR": {
+        "long_instructions": "A friend is having a problem with keeping a fish tank at the right temperature so the fish stay healthy.  Describe how you could use at least one type of input and one type of output to create a physical computing device to help this friend."
+      },
+      "CSD U6 test challenge FR": {
+        "long_instructions": "What is one challenge with using hardware that you did not have using software?  How did you address this challenge?"
+      }
     }
   },
   "https://studio.code.org/s/csd6-2019/lockable/2/levels/1": {
@@ -831,6 +1529,1376 @@
   "https://studio.code.org/s/csd6-2019/lockable/2/levels/2": {
     "dsls": {
       "title": "CS Discoveries End of Semester Student Survey"
+    },
+    "sublevels": {
+      "csp-post-survey-2017 preamble 1_2019": {
+        "dsls": {
+          "markdown": "### **This survey is anonymous** \n\n*Code.org takes your privacy very seriously.* Your responses here will be kept **anonymous**. No one, not even your teacher, can link your responses back to you as an individual.\n\nWe do this because we want you to **be as open and honest as possible**. We care about your experience in the course, and we make improvements based on what you say.\n\n* The survey should take **10 minutes or less** to complete.\n\n***\n\n## School in general\n\n#### *First, we want to ask you about your thoughts and feelings about school, in general.*\n",
+          "teacher_markdown": "## How to see your students' responses to this survey\n\n* You will be able to see the anonymized results of the survey for your students once at least 5 of them have completed it.\n\n* To view the results of this survey please follow the intstructions in the associated lesson plan. \n\n\n"
+        }
+      },
+      "csp-pre-survey-2017-q3_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think my schoolwork is interesting."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q4_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important for me to be good at my schoolwork."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q9_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can really be myself at school."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 2 cs in general_2019": {
+        "dsls": {
+          "markdown": "### Part 2: Computer Science in general\n\n#### *Next, we'd like to ask for your thoughts and feelings about Computer Science, generally.*\n\n***\n"
+        }
+      },
+      "csp-pre-survey-2017-q10_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q11_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think computer science is interesting. "
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q16_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important to me to be good at computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q12_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science. "
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q13_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am better at computer science than other kids at my school."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q17_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "People like me do computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q18_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I could become a computer scientist one day."
+            }
+          ]
+        }
+      },
+      "naturally-better-at-cs": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I believe some people are just naturally better at learning and doing computer science than others."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q33_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Every person has the same ability to learn computer science, no matter what their gender, skin color, or background."
+            }
+          ]
+        }
+      },
+      "same-ability": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Each person has the same ability to learn and do computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 3 this class_2019": {
+        "dsls": {
+          "markdown": "### Part 3: You and computer science\n\n#### *Next we ask for your thoughts about this computer science class and your future.* \n\n***\n"
+        }
+      },
+      "i-like-cs-class": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "comfortable-in-cs-class": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q22_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Sometimes I feel unsure whether I belong in this class."
+            }
+          ]
+        }
+      },
+      "be-myself-in-cs": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can really be myself in this computer science class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-worry-seem-less-capable": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I sometimes worry that I am seen by others as less capable in computer science."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-reasons-not-take-csd": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Wanted to, just couldn't due to scheduling conflicts or other constraints (few elective slots, class full, etc.)",
+              "correct": true
+            },
+            {
+              "text": "Thought it would be too hard or they'd get a bad grade",
+              "correct": true
+            },
+            {
+              "text": "Thought it would be boring, wouldn't learn anything useful",
+              "correct": true
+            },
+            {
+              "text": "Had a bad experience in another computer science class",
+              "correct": true
+            },
+            {
+              "text": "Worried they would feel like an outsider, few friends in the class",
+              "correct": true
+            },
+            {
+              "text": "No parent or relative encouraged them",
+              "correct": true
+            },
+            {
+              "text": "No one at the school (teacher, counselor, coach, etc.) encouraged them",
+              "correct": true
+            },
+            {
+              "text": "Someone actively encouraged them NOT to take the class",
+              "correct": true
+            },
+            {
+              "text": "Other reasons not listed here.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Think of a friend of yours at school who didn't take this class, but you think might have enjoyed it. What do you think are the strongest reasons why they didn't take this class? (choose up to two)."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-2017-implementation-teacher_2019": {
+        "dsls": {
+          "markdown": "## Your Classroom Experience\n\n***\n\n<h3>Take a moment to think back over the experiences you had in this class. <br/><em>Thinking back over your time in this class, how often did your <strong>teacher</strong> do the following?</em></h3>\n"
+        }
+      },
+      "csd-post-survey-q26_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school)."
+            }
+          ]
+        }
+      },
+      "interest-connected-to-life": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life)."
+            }
+          ]
+        }
+      },
+      "asked-to-problem-solve": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to problem solve when something didn't work the way I wanted it to work."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q29_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to explain the logic and reasoning supporting my solutions to problems."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q30_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Worked collaboratively with other students in a small group."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q31_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Shared responsibility for activity and project work with group members."
+            }
+          ]
+        }
+      },
+      "made-choices-about-assignments": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Made my own choices about assignments in computer science class."
+            }
+          ]
+        }
+      },
+      "curriculum-how-did-you-like-lessons": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Not at all",
+              "correct": true
+            },
+            {
+              "text": "A little bit",
+              "correct": true
+            },
+            {
+              "text": "Somewhat",
+              "correct": true
+            },
+            {
+              "text": "A lot",
+              "correct": true
+            },
+            {
+              "text": "I loved everything!",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "How did you like the lessons and topics covered in this course?"
+            }
+          ]
+        }
+      },
+      "curriculum-how-challenging": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "way too easy.",
+              "correct": true
+            },
+            {
+              "text": "a little too easy.",
+              "correct": true
+            },
+            {
+              "text": "just about right.",
+              "correct": true
+            },
+            {
+              "text": "a little too difficult.",
+              "correct": true
+            },
+            {
+              "text": "way too difficult.",
+              "correct": true
+            }
+          ],
+          "markdown": "<!--\nright 'nothing'  \nright 'too little'\nright 'about the right amount'\nright 'too much'\nright 'way too much'-->\n\n",
+          "questions": [
+            {
+              "text": "How challenging were the lessons and topics in this course for you? I think this course was..."
+            }
+          ]
+        }
+      },
+      "post-assessment survey q31-a-2017b": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I would recommend this computer science class to another student."
+            }
+          ]
+        }
+      },
+      "how-often-pair-programming-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to write code with another student (Pair Programming)"
+            }
+          ]
+        }
+      },
+      "how-often-peer-feedback-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked my peers to give me feedback on my work."
+            }
+          ]
+        }
+      },
+      "how-often-share-ideas-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to share my ideas with classmates in small-group or large-group discussion."
+            }
+          ]
+        }
+      },
+      "how-often-failure-prob-solve-prcess-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Reminded me that failure is natural and expected part of a problem solving process."
+            }
+          ]
+        }
+      },
+      "how-often-journal-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Gave me the opportunity to write my thoughts down in a journal, or on paper."
+            }
+          ]
+        }
+      },
+      "how-often-tried-new-unsure-how-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tried new things in class even when I was not sure how to do them."
+            }
+          ]
+        }
+      },
+      "how-often-tried-knowing-would-fail-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tried something I thought I might fail."
+            }
+          ]
+        }
+      },
+      "how-often-consider-alternative-approaches-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Stopped to consider alternative approaches to what I was working on."
+            }
+          ]
+        }
+      },
+      "how-often-explain-why-disagree-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Explain why I agreed or disagreed with the work of other students."
+            }
+          ]
+        }
+      }
     }
   }
 }

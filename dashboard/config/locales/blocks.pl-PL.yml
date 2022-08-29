@@ -1522,15 +1522,6 @@ pl:
         text: "{SPRITE} myśl {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}myśl{TEXT1}przez{NUM}sekundy"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} myśl {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Jestem również głodny.
-            '"I only want the biggest goat."': Chcę tylko największej kozy.
-            '"I''m a green troll."': Jestem zielonym trollem.
-            '"No one will cross my bridge."': Nikt nie przekroczy mojego mostu.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} myśl {THOUGHT}"
         options:

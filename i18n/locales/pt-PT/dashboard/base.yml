@@ -424,7 +424,6 @@ pt:
     popup:
       progress_for_user: "Progresso de %{name}"
       progress: 'O teu progresso'
-      lines: 'Total de linhas de código: %{lines}'
       close: 'FECHAR'
       mastery: 'Conceitos'
       puzzle_map: 'Etapas'

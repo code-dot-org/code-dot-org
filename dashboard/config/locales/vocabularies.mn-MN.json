@@ -77,6 +77,36 @@
         "machine_learning/oceans/unversioned": {
           "word": "Машины сургалт"
         },
+        "input/csd/2022": {
+          "word": "Оролт"
+        },
+        "processing/csd/2022": {
+          "word": "Боловсруулалт"
+        },
+        "debugging/csd/2022": {
+          "word": "Алдааг засах"
+        },
+        "variable/csd/2022": {
+          "word": "Хувьсагч"
+        },
+        "conditionals/csd/2022": {
+          "word": "Нөхцлүүд"
+        },
+        "abstraction/csd/2022": {
+          "word": "Хийсвэрлэл"
+        },
+        "function/csd/2022": {
+          "word": "Функц"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Дижитал ул мөр"
+        },
+        "copyright/csd/2022": {
+          "word": "Зохиогчийн эрх"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Машины сургалт"
+        },
         "code/poem-art/unversioned": {
           "word": "Код"
         },

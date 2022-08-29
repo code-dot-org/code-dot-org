@@ -16,11 +16,12 @@
       ],
       "project_widget_visible": true,
       "tts": true,
-      "version_year": "2022"
+      "version_year": "2022",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2022-06-29 14:54:09 UTC",
+    "serialized_at": "2022-07-18 16:06:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

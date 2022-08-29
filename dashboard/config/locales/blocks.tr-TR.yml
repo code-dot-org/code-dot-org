@@ -27,8 +27,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -80,8 +80,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -139,8 +139,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -162,8 +162,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -316,8 +316,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -343,8 +343,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -469,8 +469,8 @@ tr:
           COSTUME:
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -592,8 +592,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -659,8 +659,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -694,8 +694,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -720,8 +720,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -736,8 +736,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -760,8 +760,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -794,8 +794,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -838,8 +838,8 @@ tr:
             sprites: tüm
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
-            '"CAT"': tüm kediler
-            '"DOG"': tüm köpekler
+            '"CAT"': kediler
+            '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
             '"MOOSE"': tüm geyikler
@@ -1410,15 +1410,6 @@ tr:
         text: "{SPRITE} şunu düşünür: {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}{NUM}saniye{TEXT1}düşünür"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} şunu düşünür: {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmmm...
-            '"I am hungry, too."': Ben de açım.
-            '"I only want the biggest goat."': Sadece en büyük keçiyi istiyorum.
-            '"I''m a green troll."': Ben bir yeşil trolüm.
-            '"No one will cross my bridge."': Kimse köprümden geçmeyecek.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} şunu düşünür: {THOUGHT}"
         options:

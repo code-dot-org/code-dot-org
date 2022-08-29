@@ -56,7 +56,7 @@ class TestMilestoneParser < Minitest::Test
         ]}
       ]
     )
-    @cache = JSON.parse(IO.read(CACHE_FILE))
+    @cache = JSON.parse(File.read(CACHE_FILE))
   end
 
   def test_parse_create_cache

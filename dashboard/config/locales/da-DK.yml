@@ -445,7 +445,6 @@ da:
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
-      lines: 'Total linjer kode: %{lines}'
       close: LUK
       mastery: Begreber
       puzzle_map: Etaper

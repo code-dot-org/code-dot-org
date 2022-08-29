@@ -418,7 +418,6 @@
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift
-      lines: 'Totalt antall linjer kode: %{lines}'
       close: LUKK
       mastery: Konsepter
       puzzle_map: Stadier

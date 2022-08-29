@@ -182,7 +182,7 @@ class Pd::InternationalOptIn < ApplicationRecord
   end
 
   def email_opt_in?
-    sanitize_form_data_hash[:email_opt_in].downcase == "yes"
+    sanitize_form_data_hash[:email_opt_in].casecmp?("yes")
   end
 
   def email

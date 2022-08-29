@@ -1664,7 +1664,13 @@
         "NetSim Standalone SendAB": "Te és a partnered egyetlen vezetéken osztoztok, amely vagy csak A vagy csak B állapotban lehet. A vezetéket bármikor bármelyik állapotba állíthatod, és bármikor leolvashatod a vezeték állapotát. Ki tudod találni, hogyan tudsz hatékonyan kommunikálni csak ezzel a rendszerrel?",
         "NetSim Standalone Sending Numbers": "Te és a társad most már megbízhatóan tudtok üzeneteket küldeni oda-vissza különösebb koordináció nélkül! Miközben mindig biteket küldözgettek oda-vissza, ezeket a biteket tizedes számokként is ábrázolhatjátok. Milyen információkat tudtok ábrázolni ezzel a rendszerrel? ",
         "NetSim Standalone Sending Numbers Ascii": "Most, hogy már tizedes számokként ábrázolt információkat is továbbítottál, ezeket a számokat szöveges karakterekre is leképezheted, hogy szöveges információkat küldhess oda-vissza. Egy szövegalapú protokollal sokféle információt ábrázolhatsz és közölhetsz minden nehézség nélkül.",
-        "U2L10 NetSim Automatic DNS": "Az internet-szimulátor ezen verziójában egy tartománynévrendszer (DNS) áll rendelkezésetekre, amely ismeri az összes csatlakoztatott számítógép IP-címét. Egy diák címének lekérdezéséhez küldj üzenetet GET [hostname] formában a DNS-szolgáltatásnak a(z) <yourRouterNumber>.15 címre."
+        "U2L10 NetSim Automatic DNS": "Az internet-szimulátor ezen verziójában egy tartománynévrendszer (DNS) áll rendelkezésetekre, amely ismeri az összes csatlakoztatott számítógép IP-címét. Egy diák címének lekérdezéséhez küldj üzenetet GET [hostname] formában a DNS-szolgáltatásnak a(z) <yourRouterNumber>.15 címre.",
+        "CSD U3 Sprites intro sprites_2022": "Csináld ezt",
+        "CSD U5 black white images pixelation 2_2022": "Rajzolj egy mosolygós arcot (kattints ide a kép megtekintéséhez)",
+        "CSD U5 black white images pixelation 3_2022": "Módosítsd a szélesség és magasság csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)",
+        "CSD U5 black white images pixelation 4_2022": "Adj szemöldököt a mosolygós archoz (kattints ide a kép megtekintéséhez)",
+        "CSD U5 black white images pixelation 5_2022": "Rajzold bármit, amit szeretnél",
+        "CSD U5 black white images pixelation_2022": "Egészítsd ki az X alakot nullák és egyesek begépelésével"
       }
     }
   }
