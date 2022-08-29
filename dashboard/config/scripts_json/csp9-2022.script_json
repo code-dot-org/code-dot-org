@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=9",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -19,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 22:15:20 UTC",
+    "serialized_at": "2022-08-23 00:29:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3462,7 +3473,7 @@
     },
     {
       "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1UkJX1PrpTjqWdiySNp1k3z2qIIws5jdEokwKp2r2bIU/view",
+      "url": "https://docs.google.com/presentation/d/1UkJX1PrpTjqWdiySNp1k3z2qIIws5jdEokwKp2r2bIU/copy",
       "key": "csp_unit_9_-_data",
       "properties": {
         "audience": "Teacher",

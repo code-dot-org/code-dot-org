@@ -2,6 +2,48 @@
   "ku-IQ": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "گۆڕاوەکان"
+        },
+        "variables_3/csd/2022": {
+          "name": "گۆڕاوەکان"
+        },
+        "text/csd/2022": {
+          "name": "دەق"
+        },
+        "conditionals/csd/2022": {
+          "name": "مەرجیەکان"
+        },
+        "functions/csd/2022": {
+          "name": "فرمانەکان"
+        },
+        "functions_1/csd/2022": {
+          "name": "فرمانەکان"
+        },
+        "functions_4/csd/2022": {
+          "name": "فرمانەکان"
+        },
+        "lists/csd/2022": {
+          "name": "لیستەکان"
+        },
+        "variables_1/csd/2022": {
+          "name": "گۆڕاوەکان"
+        },
+        "variables_2/csd/2022": {
+          "name": "گۆڕاوەکان"
+        },
+        "functions_2/csd/2022": {
+          "name": "فرمانەکان"
+        },
+        "functions_3/csd/2022": {
+          "name": "فرمانەکان"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "فەرمانی بە پێوەر"
+        },
+        "functions_5/csd/2022": {
+          "name": "فرمانەکان"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "ئینتەرنێت"
         },

@@ -1,0 +1,64 @@
+{
+  "kk-KZ": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Айнымалылар"
+            },
+            "functions": {
+              "name": "Функциялар"
+            }
+          }
+        },
+        "applab": {
+          "name": "Қосымшалар Лабораториясы",
+          "description": "App Lab онай қосымшалар жасау үшін бағдарламалау ортасы. Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес.",
+          "categories": {
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Айнымалылар"
+            },
+            "functions": {
+              "name": "Функциялар"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Іс-әрекеттер"
+            },
+            "events": {
+              "name": "Шаралар"
+            },
+            "loops": {
+              "name": "Ілмек"
+            },
+            "variables": {
+              "name": "Айнымалылар"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "functions": {
+              "name": "Функциялар"
+            },
+            "text": {
+              "name": "Мәтін"
+            }
+          }
+        }
+      }
+    }
+  }
+}

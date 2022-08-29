@@ -712,10 +712,6 @@ class ScriptLevel < ApplicationRecord
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Studio) # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Javalab)
-          # TO DO: remove this statement after switching over to use new Javalab exemplars
-          # https://codedotorg.atlassian.net/browse/JAVA-525
-          example
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         end

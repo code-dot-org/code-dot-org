@@ -71,6 +71,39 @@
         "machine_learning/oceans/unversioned": {
           "word": "Vélarnám"
         },
+        "input/csd/2022": {
+          "word": "Inntak"
+        },
+        "processing/csd/2022": {
+          "word": "Vinnsla"
+        },
+        "debugging/csd/2022": {
+          "word": "Villuleit"
+        },
+        "variable/csd/2022": {
+          "word": "Breyta"
+        },
+        "sprite/csd/2022": {
+          "word": "Kviki"
+        },
+        "conditionals/csd/2022": {
+          "word": "Skilyrði"
+        },
+        "abstraction/csd/2022": {
+          "word": "Útdráttur"
+        },
+        "function/csd/2022": {
+          "word": "Aðgerð"
+        },
+        "copyright/csd/2022": {
+          "word": "Höfundarréttur"
+        },
+        "user/csd/2022": {
+          "word": "Notandi"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Vélarnám"
+        },
         "code/poem-art/unversioned": {
           "word": "Kóði"
         },

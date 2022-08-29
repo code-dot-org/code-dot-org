@@ -257,6 +257,40 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
+        "input/csd/2022": {
+          "word": "Bemenet"
+        },
+        "processing/csd/2022": {
+          "word": "Feldolgozás"
+        },
+        "debugging/csd/2022": {
+          "word": "Hibakeresés"
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "variable/csd/2022": {
+          "word": "Változó"
+        },
+        "conditionals/csd/2022": {
+          "word": "Feltételek"
+        },
+        "abstraction/csd/2022": {
+          "word": "Absztrakció"
+        },
+        "function/csd/2022": {
+          "word": "Függvény"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Digitális Lábnyom"
+        },
+        "copyright/csd/2022": {
+          "word": "Szerzői jog"
+        },
+        "user_interface/csd/2022": {
+          "word": "Felhasználói felület"
+        },
         "code/poem-art/unversioned": {
           "word": "Kód",
           "definition": "(v) instrukciók írása számítógéphez."
@@ -464,6 +498,12 @@
         },
         "input/csd/2021": {
           "word": "Bemenet"
+        },
+        "processing/csd/2021": {
+          "word": "Feldolgozás"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digitális Lábnyom"
         },
         "copyright/csd/2021": {
           "word": "Szerzői jog"

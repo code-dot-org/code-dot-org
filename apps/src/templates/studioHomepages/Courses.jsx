@@ -19,7 +19,6 @@ class Courses extends Component {
     isEnglish: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     isSignedOut: PropTypes.bool.isRequired,
-    linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
     specialAnnouncement: shapes.specialAnnouncement,

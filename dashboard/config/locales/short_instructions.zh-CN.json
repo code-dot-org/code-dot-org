@@ -3836,7 +3836,24 @@
         "U1L13 Text Compression": "在文本中找到规律（如重复的单词或词组）。在右侧的词典中输入你所发现的规律。当你将其输入到字典中时，以文本形式表现的规律就会用符号替代。",
         "U2L10 NetSim Automatic DNS": "此版本的互联网模拟器中，提供了域名服务器（DNS），并知道所有连接上的计算机。以 GET [hostname] 的格式来以 <yourRouterNumber>.15 作为地址，给域名服务器发送消息来获得学生的地址。",
         "allthethings-anigif-instructions": "把我移到东边的猪那里！",
-        "OPD-K5 whats your plan": "现在，花一些时间来思考你应当在什么时候以怎样的方式完成这些在线课程，确保能从这段经历里得到最大的收获。如果你已经设计好一个完美计划了，那么请继续深入到计算机科学的海洋中。"
+        "OPD-K5 whats your plan": "现在，花一些时间来思考你应当在什么时候以怎样的方式完成这些在线课程，确保能从这段经历里得到最大的收获。如果你已经设计好一个完美计划了，那么请继续深入到计算机科学的海洋中。",
+        "CSD U3 Boolean Modify_2022": "修改代码，以便使所有的console.log命令打印“真”。",
+        "CSD U3 Boolean Predict_2022": "你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。",
+        "CSD U3 Keypress Boolean_2022": "修改代码，以便使所有的console.log命令打印“真”。",
+        "CSD U3 L5 Freeplay_2022": "试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？",
+        "CSD U3 Mouse Input Bee 2_2022": "这样做",
+        "CSD U3 Sprites intro sprites_2022": "做这个",
+        "CSD U3 Variables change circle size_2022": "试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？",
+        "CSD U3 Variables naming rules v2_2022": "试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？",
+        "CSD U3 Variables random with assignment_2022": "试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？",
+        "CSD U5 black white images pixelation 2_2022": "绘制一个笑脸(点击此处看图)",
+        "CSD U5 black white images pixelation 3_2022": "调整宽度和高度滑杆找到图案(点击此处查看更多)",
+        "CSD U5 black white images pixelation 4_2022": "给笑脸添加眉毛(点击此处查看图像)",
+        "CSD U5 black white images pixelation 5_2022": "绘制任何你喜欢的图案",
+        "CSD U5 black white images pixelation_2022": "通过键入0和1来完成图形X",
+        "CSD games conditionals bowl_2022": "修改代码，以便使所有的console.log命令打印“真”。",
+        "CSD games conditionals practice spaceship_2022": "修改代码，以便使所有的console.log命令打印“真”。",
+        "U4 Model Design 1_2022": "使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）"
       }
     }
   }

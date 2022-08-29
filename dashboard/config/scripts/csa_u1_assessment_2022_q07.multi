@@ -2,7 +2,7 @@ name 'CSA U1 Assessment 2022 q07'
 
 right '`Painter daVinci = new Painter();`'
 wrong '`daVinci Painter = new Painter();`'
-wrong '`new Painter() = Painter daVinci;`'
+wrong '`Painter daVinci = Painter();`'
 wrong '`Painter() daVinci = new Painter;`'
 wrong '`Painter daVinci = Painter;`'
 

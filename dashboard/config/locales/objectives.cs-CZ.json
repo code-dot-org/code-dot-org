@@ -2,6 +2,15 @@
   "cs-CZ": {
     "data": {
       "objectives": {
+        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
+          "description": "Definice „kódování“ a „počítačové vědy“"
+        },
+        "bdb824f7-9d5c-4465-b019-0294329fd999": {
+          "description": "Identifikace klíčových pojmů informatiky."
+        },
+        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
+          "description": "Identifikace zdrojů pro další studium počítačových věd a kódování."
+        },
         "008a40f4-a5ee-42aa-862e-670f19129694": {
           "description": "Vymezit „programování“ a „počítačovou vědu“"
         },
@@ -80,6 +89,12 @@
         "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
           "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
         },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "Vytvořit program na dokončení obrazu pomocí postupných kroků."
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "Rozdělit složité tvary na jednoduché části."
+        },
         "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
           "description": "Vymezit „programování“ a „počítačovou vědu“"
         },
@@ -115,6 +130,18 @@
         },
         "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
           "description": "Identifikovat místa, kam lze jít pokračovat ve studiu počítačových věd a programování"
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Vysvětlete, proč je šifrování důležitou součástí každodenního používání internetu."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Prolomení zprávy zašifrované Caesarovou šifrou pomocí widgetu Caesarovy šifry"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Prolomení zprávy zašifrované náhodným nahrazením pomocí frekvenční analýzy"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Vysvětlete slabiny a bezpečnostní nedostatky substitučních šifer"
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
@@ -179,6 +206,36 @@
         "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
           "description": "Identifikovat místa, kam lze jít pokračovat ve studiu počítačových věd a programování"
         },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "Zkuste ve dvojici najít řešení problému komprimace textu. Použijte Widget na komprimaci textu (schéma bezeztrátové komprese)."
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "Vysvětlete, proč je nemožné nebo přinejmenším obtížné identifikovat optimální míru komprese."
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "Uveďte několik faktorů, které kompresi znesnadňují."
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "Popište účel a důvody bezeztrátové komprese."
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Vytvořte interaktivní hru pomocí sekvence a obslužných rutin události."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
+        },
+        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
+          "description": "Definice pojmů „kódování“ a „informatika“."
+        },
+        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
+          "description": "Identifikace klíčových pojmů informatiky."
+        },
+        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
+          "description": "Identifikace zdrojů pro další studium počítačových věd a kódování."
+        },
         "63be9575-1232-47a5-991c-8bd03ac7c949": {
           "description": "Vymezit „programování“ a „počítačovou vědu“"
         },
@@ -190,6 +247,33 @@
         },
         "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
           "description": "Identifikovat místa, kam lze jít pokračovat ve studiu počítačových věd a programování"
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Vytvořte interaktivní hru pomocí sekvence a obslužných rutin události."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
+        },
+        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
+          "description": "Definice pojmů „kódování“ a „informatika“."
+        },
+        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
+          "description": "Identifikace klíčových pojmů informatiky."
+        },
+        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
+          "description": "Identifikace zdrojů pro další studium počítačových věd a kódování."
+        },
+        "83f493e8-9941-4154-b2f4-f34836741746": {
+          "description": "Definice „kódování“ a „počítačové vědy“"
+        },
+        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
+          "description": "Identifikace klíčových pojmů informatiky."
+        },
+        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
+          "description": "Identifikace zdrojů pro další studium počítačových věd a kódování."
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "Vyvíjet programy, které reagují na časované události"
@@ -214,6 +298,12 @@
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
+        },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
+          "description": "Vyučte a otestujte nějaký model strojového učení."
+        },
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
+          "description": "Rozumově uvažujte o tom, jakou roli sehrává lidská podjatost ve strojovém učení."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Vyvíjejte programy, které reagují na časované události."
@@ -461,8 +551,14 @@
         "86c93634-0b7d-46de-82dd-50b86576bd56": {
           "description": "Procvičte si rozlišování předem definovaných akcí a akcí řízených událostmi."
         },
+        "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
+        },
         "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvencí a rutin obsluhující události."
+        },
+        "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
         },
         "8023306a-d106-4097-8205-5bc1e92ffade": {
           "description": "Použijte koncepty informatiky v otevřeném projektu."
@@ -551,8 +647,14 @@
         "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
           "description": "Procvičte si rozlišování předem definovaných akcí a akcí řízených událostmi."
         },
+        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
+        },
         "b366b41e-9396-4c1b-9d35-164052448c1c": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvence a rutin obsluhující události."
+        },
+        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
         },
         "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
           "description": "Použijte koncepty informatiky v otevřeném projektu."
@@ -595,6 +697,12 @@
         },
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
           "description": "Rozvíjejte dovednosti v oblasti řešení problémů a kritického myšlení prostřednictvím přehledu postupů ladění."
+        },
+        "6503170b-db97-4737-ae5d-5108591497a0": {
+          "description": "Vytvořit program na dokončení obrazu pomocí postupných kroků."
+        },
+        "d47b51d2-9114-4dfd-ad21-810573d85543": {
+          "description": "Rozdělit složité tvary na jednoduché části."
         },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
           "description": "Určete opakující se vzorce v kódu, které by mohly být nahrazeny cyklem."
@@ -641,8 +749,14 @@
         "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
           "description": "Vytvořit hru pomocí ovládačů událostí."
         },
+        "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
+        },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
           "description": "Vytvořte animovanou, interaktivní hru pomocí sekvence a rutin obsluhující události."
+        },
+        "c0757733-5e14-4797-9615-11b61d8d490f": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
         },
         "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
           "description": "Shromažďujte a zaznamenávejte údaje o množství skutečných objektů nebo znaků na obrazovce."
@@ -707,8 +821,20 @@
         "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
           "description": "Popište a implementujte plán ladění programu."
         },
+        "3b4a2468-e182-4060-861f-2a922730445b": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
+        },
+        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
+          "description": "Vytvořte interaktivní hru pomocí sekvence a obslužných rutin události."
+        },
+        "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
+        },
         "bafea2a8-7a23-4046-9360-77d760c54c2b": {
           "description": "Vytvořte animovaný, interaktivní hru pomocí sekvencí a událostí."
+        },
+        "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
         },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
           "description": "Vyvíjet programy, které reagují na časované události"
@@ -799,6 +925,12 @@
         },
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
           "description": "Rozvíjejte dovednosti v oblasti řešení problémů a kritického myšlení prostřednictvím přehledu postupů ladění."
+        },
+        "500825a3-b44f-4b99-ab77-2271fdcbb867": {
+          "description": "Vytvořit program na dokončení obrazu pomocí postupných kroků."
+        },
+        "36081e5f-1a5d-4102-a1de-27865168ee09": {
+          "description": "Rozdělit složité tvary na jednoduché části."
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "Definujte „sprite“ jako postavu nebo objekt na obrazovce, který lze přesouvat a měnit."
@@ -1022,11 +1154,23 @@
         "dc83123d-d493-40aa-a543-9daa1421c2c8": {
           "description": "Vytvořte program kreslící složité tvary opakováním jednoduchých sekvencí."
         },
+        "15115c43-46c8-4ab4-93e4-947e2fd42703": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
+        },
         "2fa04500-f1d4-4924-aa39-70292711d432": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvence a rutin obsluhující události."
         },
+        "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
+        },
+        "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
+        },
         "70e87cab-0d62-4974-9061-425a179bcb2d": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvencí a rutin obsluhující události."
+        },
+        "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
+          "description": "Sdílejte kreativní artefakt s ostatními studenty."
         },
         "a937dee9-2cd3-4978-8f88-09f8af577395": {
           "description": "začít vytvářet souvislosti o novém způsobu psaní programů"
@@ -1036,6 +1180,9 @@
         },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Vytvářejte nové postavy a přiřazujte jim kostýmy a chování."
+        },
+        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
+          "description": "Určení akcí souvisejících se vstupními událostmi."
         },
         "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
           "description": "Vytvořte interaktivní animaci pomocí spritů, chování a událostí."

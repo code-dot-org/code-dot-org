@@ -116,6 +116,18 @@
       }
     },
     {
+      "name": "Java Lab Documentation",
+      "url": "https://studio.code.org/docs/ide/javalab/",
+      "key": "java_lab_documentation",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_lab_documentation"
+      }
+    },
+    {
       "name": "Objects-First Approach to CSA",
       "url": "https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing",
       "key": "objects-first_approach_to_csa",
