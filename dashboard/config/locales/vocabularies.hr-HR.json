@@ -77,6 +77,30 @@
         "machine_learning/oceans/unversioned": {
           "word": "Strojno učenje"
         },
+        "input/csd/2022": {
+          "word": "Ulaz"
+        },
+        "debugging/csd/2022": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "variable/csd/2022": {
+          "word": "Varijabla"
+        },
+        "conditionals/csd/2022": {
+          "word": "Uvjeti"
+        },
+        "abstraction/csd/2022": {
+          "word": "Apstrakcija"
+        },
+        "function/csd/2022": {
+          "word": "Funkcija"
+        },
+        "copyright/csd/2022": {
+          "word": "Autorska prava"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Strojno učenje"
+        },
         "code/poem-art/unversioned": {
           "word": "Kôd"
         },

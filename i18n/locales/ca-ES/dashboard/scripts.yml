@@ -1074,3 +1074,5 @@ ca:
               display_name: Variables
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+        soccer:
+          name: futbol

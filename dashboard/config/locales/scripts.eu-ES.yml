@@ -1070,3 +1070,5 @@ eu:
               display_name: Pertsonaiak
             lessonGroup-8:
               display_name: Aldagaiak
+        soccer:
+          name: futbola

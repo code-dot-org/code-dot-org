@@ -1,0 +1,30 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In ArrayManager.java:\r\n\r\n1. Write the `createNumbers()`(#e7e8ea) method to declare, initialize, and return an `int`(#e7e8ea) array.\r\n\r\n2. Write the `getNumbersLength()`(#e7e8ea) method to return the length of the `int`(#e7e8ea) array `numbers`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n3. Call the `getNumbersLength()`(#e7e8ea) method and print the result.\r\n\r\n::: details [**Show Me How**]\r\nA 1D array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = new dataType[length];\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. The `length`(#e7e8ea) is the number of elements the array will store.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    ArrayManager myArrayManager = new ArrayManager();\n\n    // TO DO #3: Call the getNumbersLength() method and print the result.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "ArrayManager.java": {
+        "text": "/*\n * Manages an array of int values\n */\npublic class ArrayManager {\n\n  private int[] numbers;\n\n  /*\n   * Creates an ArrayManager by initializing the numbers array\n   */\n  public ArrayManager() {\n    this.numbers = createNumbers();\n  }\n\n  /*\n   * Creates and returns an int array\n   */\n  public int[] createNumbers() {\n    // TO DO #1: Declare, initialize, and return an int array.\n\n    \n  }\n\n  /*\n   * Returns the length of the numbers array\n   */\n  public int getNumbersLength() {\n    // TO DO #2: Return the length of the numbers array.\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M14Oa6aPCjjlZJ2gsXx\nptKC4h1XmIEdCW4VJJUQ9OzQH1f7FVAmiw6Y3u6w7L2c4HKHjGo1NqEefQfP\ntvK6hrFxeMsr33BM54f/avBhqwAOZRiu+eDJkLidDrDTvB1vCN62+BmXzCo0\n12+yGAlRWEp/+RlKz6+1/IhwbMDbN0IgN+y52co8GrsDXJsjV+s/5wgLrRCf\nVNfFlPXt8nwUTzT0M1mD3al/T3ly99hfD/k7JzWxZsuNrfV2Zu+lJRwdPTgm\nVrx5z3bzeyTEm1doiAbitH3w6zFuYpPdquy11RQuKFLYXCBFhjQZDLe6gkcP\ni2MVKvEMFh+ZZJuHbMm1Ue9oFVuZT9zahxc/dopxhXyzhYiXZOdsarQBGmor\nkL2O48+gO0kOG++/qU+ysVsXP+OA39i4dNZ8b1xH3wW1QBzYCLIRkSyUU8kU\nF3LHMgtbtTq9PPGk9GHRchWt3clB5BVNaZzWvxl0VeBrUgUJdHGRfzpgHI67\nGLTXBQi5T8CgTTg2BGXypAQG7AAzXU9ohm4LvDkZxJfy/pYmMnOJjoCgMDHd\nP8so++dFkK5Bk0VLnhz1Jpv32vMdoq4JypKw8lvBWvOVrIkgUiGZhqLtOd8H\nI2K5bYnfFNNQLUZFGgjbmV5XMpNyq6aXodq86kaT4EC7NxwsxCnjJCB+gPmV\nEAIOFqFpt6igcKGTrZC3QcvbsR0VKVP2SCfHQDv/2eVdrO55yOaRaAnQh96H\nJH73KXJhi8VLCwNhvbLWwTAjAEz5HKzzIKJ2H6whqj+gZJw1Rc/aZq4VV/hN\ne7l/HEqofqiOTef7PXbUv1zyy+3TKOWx0foHfTxTve7gTBobvle8LYIJr/Bs\ncUrVnkH4KRu5E+H0Zk4Y5qdxuKwyIJf7fRtH17kK7RVtMAa6VYpSOo09xCFJ\nE6udFAdr9D6u91MrDLf0rs4kcih6bVCGZSRcbiHemdyvVYTpkoxete9wN/Nf\nxvMqMwzQnGquuKOA7sxP51GOFv2CVipAAuSrQbMXH0X5JS0xK9mRP8k0ydbf\n0jeuI1Y2xZI6BKp9vs/rgdqxqxJQzulsJNU2pS7VNz1KJOzGlyxni4Zh8R0K\niWlQ8eHGiOHGhPk+X0Opgyu7V6hE2fmUivXePf6uuzh/WsetP6uUvgF4bWiE\nmF+AbJK+wmq0QZGBaYu2VGUzM3SBPkwIU4kE16aon81Nse8jfdvDWmcPiiln\nMs6bhDLU5DbsNwHxODkmbYR7s6LqevVPWvehcIiOb/Z4tuvH/kg2WdQBvfMk\nR2pMZcl95FtiPptdsIb8sjNe\n",
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:00.070+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L2_2022\\\"\"],\"cloned_from\":\"CSA U3L1-L2_2022\"}]"
+}]]></config>
+</Javalab>

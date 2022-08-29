@@ -300,7 +300,7 @@ fr:
       Sample Program: Programme d’exemple
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
-      Skill Building: Renforcement Des Compétences
+      Skill Building: Développement des Compétences
       Speed it Up, Slow it Down: Accélère et ralentis
       Sprite Interactions: Interactions de sprite
       Sprite Interactions Review: Révision des interactions de sprite
@@ -353,8 +353,7 @@ fr:
       'Video: De-bugging with the Step Button': 'Vidéo : Débogage avec le bouton Step
         (étape)'
       'Video: Debugging with Scrat ': " Déboguer avec Scrat "
-      'Video: Debugging with the Step Button': 'Vidéo : Débogage avec le bouton Step
-        (étape)'
+      'Video: Debugging with the Step Button': 'Vidéo : Débogage avec le bouton Étape'
       'Video: Drawing in Game Lab - Part 1': 'Vidéo : Dessiner dans le labo des jeux
         - Partie 1'
       'Video: Drawing in Game Lab - Part 2': 'Vidéo : Dessiner dans le labo des jeux
@@ -370,7 +369,7 @@ fr:
       'Video: How to Create a Simple Function': 'Vidéo : Comment créer une fonction
         simple'
       'Video: How to Make a Sprite': 'Vidéo : Comment créer un sprite'
-      'Video: Ice Age Loops': 'Video : Boucles l''Âge de glace'
+      'Video: Ice Age Loops': 'Vidéo : Boucles l''Âge de glace'
       'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
       'Video: Impacts on Society': 'Vidéo : Impacts sur la Société'
       'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie
@@ -378,10 +377,10 @@ fr:
       'Video: Intro to Web Lab - Part 2': 'Vidéo : Introduction au labo du web - Partie
         2'
       'Video: Introducing Sprite Lab': " Introduction au Labo des Lutins"
-      'Video: Introduction to Play Lab': " Introduction au Labo de jeux"
+      'Video: Introduction to Play Lab': 'Vidéo : Introduction au Labo Jeux'
       'Video: Introduction to Sprites': 'Vidéo : Introduction aux sprites'
       'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle dessine'
-      'Video: Loops in Artist': " Les Boucles dans Artiste"
+      'Video: Loops in Artist': 'Vidéo : Les boucles dans Artiste'
       'Video: Loops with the Artist': 'Vidéo : Les Boucles avec l''Artiste'
       'Video: Maze Intro - Programming with Blocks': 'Vidéo - Intro Maze : Programmation
         avec des blocs '
@@ -407,8 +406,8 @@ fr:
       'Video: Pair Programming': " Programmation en Binôme"
       'Video: Pair Programming ': " Programmation en Binôme "
       'Video: Problem Solving Process': Processus de Résolution De Problème
-      'Video: Programming with Blocks': 'Vidéo : Programmation avec des blocs'
-      'Video: Programming with Rey and BB-8': " Programmer avec Rey et BB-8"
+      'Video: Programming with Blocks': 'Vidéo : Programmer avec les blocs'
+      'Video: Programming with Rey and BB-8': " Vidéo : Programmer avec Rey et BB-8"
       'Video: Properties': " Propriétés"
       'Video: Repeat Blocks': 'Video: Les blocs `Répéter`'
       'Video: Repeat Blocks with BB-8': 'Vidéo : Blocks "Répéter" avec BB-8'
@@ -420,15 +419,15 @@ fr:
       'Video: Star Wars Project': " Projet Star Wars"
       'Video: Text and Prompts': 'Vidéo : Texte et invites '
       'Video: The Animation Tab': 'Vidéo : L’onglet Animation'
-      'Video: The Artist in Code Studio': 'Vidéo : L''artiste dans Code Studio '
+      'Video: The Artist in Code Studio': 'Vidéo : L''Artiste dans Code Studio '
       'Video: The Big Event - Unplugged Activity': 'Vidéo : Le grand événement – Activité
         hors ligne'
-      'Video: The Collector': 'Vidéo : Le collectionneur '
-      'Video: The Harvester': 'Video: l''Agricultrice'
+      'Video: The Collector': 'Vidéo : La collectionneuse'
+      'Video: The Harvester': 'Vidéo : L''Agricultrice'
       'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
       'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans
         les enveloppes '
-      'Video: Using the Repeat Block': " Utiliser le Bloc Répéter"
+      'Video: Using the Repeat Block': 'Vidéo : Utiliser le Bloc Répéter'
       'Video: Variables in Artist': " Les Variables dans Artiste"
       'Video: Velocity': 'Vidéo : la vitesse'
       'Video: Warm Up': 'Vidéo : échauffement'

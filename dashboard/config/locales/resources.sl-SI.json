@@ -2,6 +2,48 @@
   "sl-SI": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "Spremenljivke"
+        },
+        "variables_3/csd/2022": {
+          "name": "Spremenljivke"
+        },
+        "text/csd/2022": {
+          "name": "Besedilo"
+        },
+        "conditionals/csd/2022": {
+          "name": "Pogoji"
+        },
+        "functions/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funkcije"
+        },
+        "lists/csd/2022": {
+          "name": "Seznami"
+        },
+        "variables_1/csd/2022": {
+          "name": "Spremenljivke"
+        },
+        "variables_2/csd/2022": {
+          "name": "Spremenljivke"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funkcije s parametri"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funkcije"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Učni načrti"
         },

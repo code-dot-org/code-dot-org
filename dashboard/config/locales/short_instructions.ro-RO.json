@@ -2328,7 +2328,12 @@
         "Test embedded K1 Blockly in instructions": "Folosiți trei blocuri `move west` și un bloc `pick corn` pentru a rezolva acest puzzle.",
         "U1L13 Text Compression": "Caută modele (cuvinte sau fraze repetate) în text. Introdu modelul pe care îl găseşti in dictionarul din dreapta. Pe măsură ce adaugi intrări in dicţionar, simbolul acelei intrări este inserat in text în locul modelului.",
         "U2L10 NetSim Automatic DNS": "În această versiune a Simulatorului de Internet, un Sistem al Numelui de Domeniu (DNS) ți se funizează și cunoaște adresele IP ale tuturor computerelor conectate. Trimite un mesaj în forma GET [hostname] către serviciul DNS la adresa <yourRouterNumber>.15 pentru a obține adresa unui elev.",
-        "allthethings-anigif-instructions": "Mută-mă la Est ca să ajung la porc!"
+        "allthethings-anigif-instructions": "Mută-mă la Est ca să ajung la porc!",
+        "CSD U5 black white images pixelation 2_2022": "Desenează o față zâmbitoare (apasă aici pentru a vedea imaginea)",
+        "CSD U5 black white images pixelation 3_2022": "Ajustează cursoarele de lungime și lățime pentru a găsi imaginea (apasă aici pentru a vedea mai multe detalii)",
+        "CSD U5 black white images pixelation 4_2022": "Adaugă sprâncene feței zâmbitoare (apasă aici pentru a vedea imaginea)",
+        "CSD U5 black white images pixelation 5_2022": "Acum, desenează ce vrei tu",
+        "CSD U5 black white images pixelation_2022": "Completează imaginea în forma literei X tastând numai caracterele 0 sau 1"
       }
     }
   }

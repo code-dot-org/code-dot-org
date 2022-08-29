@@ -68,6 +68,24 @@
         "debugging/basketball/unversioned": {
           "word": "Rregullimi"
         },
+        "debugging/csd/2022": {
+          "word": "Rregullimi"
+        },
+        "variable/csd/2022": {
+          "word": "Variabël"
+        },
+        "conditionals/csd/2022": {
+          "word": "Kushtet"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraksioni"
+        },
+        "function/csd/2022": {
+          "word": "Funksion"
+        },
+        "copyright/csd/2022": {
+          "word": "E drejta e autorit"
+        },
         "code/poem-art/unversioned": {
           "word": "Kod"
         },

@@ -173,7 +173,7 @@ it:
           di codice che si possono usare ripetutamente) per creare degli acchiappa-sole
           usando fili e perline.
       SongwritingParameters:
-        title: Composizione di canzoni
+        title: Scrittura musicale di un programma
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
@@ -217,11 +217,11 @@ it:
           di storia così ottenuti diventano dei modelli per divertirsi ad inventare
           nuove storie.
       ForLoopFun:
-        title: Divertiti usando i cicli con contatore
+        title: Divertirsi con i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       SongwritingWithParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Scrittura musicale di un programma - Parametri
         desc: Una delle strutture più belle nell'informatica è la funzione.  Le funzioni
           (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare
           più e più volte all'interno di un programma più grande. Questa lezione aiuta
@@ -404,7 +404,7 @@ it:
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
       courseE_unplugged_songwriting:
-        title: Composizione di canzoni
+        title: Scrittura musicale di un programma
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
@@ -421,11 +421,11 @@ it:
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la
           lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
-        title: Divertiti usando i cicli con contatore
+        title: Divertirsi con i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       courseF_unplugged_songwritingParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Scrittura musicale di un programma - Parametri
         desc: Una delle strutture più belle nell'informatica è la funzione.  Le funzioni
           (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare
           più e più volte all'interno di un programma più grande. Questa lezione aiuta

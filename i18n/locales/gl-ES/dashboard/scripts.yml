@@ -950,3 +950,5 @@ gl:
               display_name: Cidadanía dixital
             lessonGroup-8:
               display_name: Variables
+        soccer:
+          name: fútbol

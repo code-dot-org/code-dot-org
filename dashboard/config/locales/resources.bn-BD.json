@@ -2,6 +2,51 @@
   "bn-BD": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "চলকগুলো"
+        },
+        "variables_3/csd/2022": {
+          "name": "চলকগুলো"
+        },
+        "text/csd/2022": {
+          "name": "পাঠ"
+        },
+        "conditionals/csd/2022": {
+          "name": "শর্তযুক্ত"
+        },
+        "functions/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "functions_1/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "functions_4/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "lists/csd/2022": {
+          "name": "তালিকা"
+        },
+        "design_mode/csd/2022": {
+          "name": "Design Mode"
+        },
+        "variables_1/csd/2022": {
+          "name": "চলকগুলো"
+        },
+        "variables_2/csd/2022": {
+          "name": "চলকগুলো"
+        },
+        "functions_2/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "functions_3/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
+        },
+        "functions_5/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
         "lesson_plans/courseb/2018": {
           "name": "পাঠ পরিকল্পনা"
         },

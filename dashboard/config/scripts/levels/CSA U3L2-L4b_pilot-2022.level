@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:04.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The following values represent the amount a customer spent on their last five online shopping purchases:\r\n\r\n```\r\n14.75, 12.98, 45.67, 32.50, 15.75\r\n```\r\n\r\n##In OnlinePurchases.java:\r\n\r\n1. Write the method `getPurchase()`(#e7e8ea) to return the value in `purchases`(#e7e8ea) at the parameter `index`(#e7e8ea).\r\n\r\n2. Write the method `setPurchase()`(#e7e8ea) to change the value in `purchases`(#e7e8ea) at the parameter `index`(#e7e8ea) to the new value passed to the parameter `newValue`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n3. Declare and initialize a 1D array containing the purchase values.\r\n\r\n4. Instantiate an `OnlinePurchase`(#e7e8ea) object with the array of purchase values.\r\n\r\n5. The customer wants to know how much their first purchase was. Call the `getPurchase()`(#e7e8ea) method to get the first purchase and print the result.\r\n\r\n6. The customer returned an item on their third purchase and received a refund. Call the `setPurchase()`(#e7e8ea) method to change the value for their third purchase by subtracting `23.75`(#e7e8ea) from the current value.\r\n\r\n::: details [**Show Me How**]\r\nA 1D array can be declared and initialized with an initializer list using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = {value1, value2, . . . };\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. Inside the curly braces ( `{ }`(#e7e8ea) ), list the values the array will store.\r\n\r\nYou can obtain a value from an array using the following syntax:\r\n\r\n  ```\r\n  variableName[index]\r\n  ```\r\n\r\n`variableName`(#e7e8ea) refers to the name of the array, and `index`(#e7e8ea) refers to the location in the array.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Online Shopping",
+    "bubble_choice_description": "Create and modify a 1D array containing the last five purchases a customer made while shopping online.",
+    "thumbnail_url": "https://images.code.org/f41727c6d3b4f016ddd05b5b30b9c6e7-image-1648510049972.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #3: Declare and initialize a 1D array.\n    \n\n    // TO DO #4: Instantiate an OnlinePurchases object with the array.\n    \n\n    // TO DO #5: Call the getPurchase() to get the first purchase and print the result.\n    \n\n    // TO DO #6: Call the setPurchase() to change the third purchase.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "OnlinePurchases.java": {
+        "text": "/*\n * Manages purchases made on an online store\n */\npublic class OnlinePurchases {\n\n  private double[] purchases;\n\n  /*\n   * Creates an OnlinePurchases with an array of purchases\n   */\n  public OnlinePurchases(double[] purchases) {\n    this.purchases = purchases;\n  }\n\n  /*\n   * Returns the array of purchases\n   */\n  public double[] getPurchases() {\n    return purchases;\n  }\n\n  /*\n   * Returns the value in purchases at the specified index\n   */\n  public double getPurchase(int index) {\n    // TO DO #1: Return the value in purchases at the specified index.\n\n    \n  }\n\n  /*\n   * Changes the value in purchases at the specified index to the new value\n   */\n  public void setPurchase(int index, double newValue) {\n    // TO DO #2: Change the value in purchases at the specified index to newValue;\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:04.414+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L4b_2022\\\"\"],\"cloned_from\":\"CSA U3L2-L4b_2022\"}]"
+}]]></config>
+</Javalab>

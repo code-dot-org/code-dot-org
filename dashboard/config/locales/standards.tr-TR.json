@@ -2,6 +2,18 @@
   "tr-TR": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Bir metinde kullanıldığı şekliyle sözcüklerin ve deyimlerin anlamlarını, gerçek ve mecazi olacak şekilde ayırt edin."
+        },
+        "ccela/4.RL.7": {
+          "description": "Bir hikaye veya drama metni ile metnin görsel veya sözlü sunumu arasında bağlantı kurun, her versiyonun metindeki belirli açıklamaları ve yönergeleri nerede yansıttığını belirleyin."
+        },
+        "ccela/5.RL.4": {
+          "description": "Metaforlar ve benzetmeler gibi mecazi bir dil de dahil olmak üzere, bir metinde kullanıldıkları şekliyle kelimelerin ve ifadelerin anlamlarını belirleyin."
+        },
+        "ccela/5.RL.7": {
+          "description": "Görsel ve çoklu ortam öğelerinin bir metnin anlamına, tonuna veya güzelliğine nasıl katkıda bulunduğunu analiz edin (örneğin, grafik roman, multimedya kurgu sunumu, halk masalı, mit, şiir)."
+        },
         "csta/1B-AP-10": {
           "description": "Sıra, olay, döngü ve koşulları içeren programlar oluşturun."
         },
@@ -185,11 +197,41 @@
         "csta/1A-AP-11": {
           "description": "Bir problemi çözmek için gerekli adımları, tam bir talimat sırası halinde ayrıştırın (ayırın)."
         },
+        "csta/1A-IC-17": {
+          "description": "Başkaları ile çevrimiçi ortamda saygılı ve sorumlu bir şekilde çalışın."
+        },
         "csta/1A-AP-09": {
           "description": "Bilgiyi temsil etmek için sayıları veya başka sembolleri kullanarak programların veriyi depolama ve kullanma biçimini modelleyin."
         },
         "csta/1A-AP-14": {
           "description": "Sıraları ve basit döngüleri içeren bir algoritmadaki veya programdaki yanlışlıkların hatasını ayıklayın (tanımlayın ve düzeltin)."
+        },
+        "csp2021/IOC-2.B.5": {
+          "description": "Şifreleme, yetkisiz erişimi önlemek için verileri kodlama işlemidir. Şifre çözme, verilerin şifresinin çözülme işlemidir. İki yaygın şifreleme yaklaşımı şunlardır: ●       Simetrik anahtar şifrelemesi, hem şifreleme hem de şifre çözme için bir anahtarı içerir.●       Genel anahtar şifrelemesi, şifreleme için bir genel anahtarı ve şifre çözme için bir özel anahtarı eşleştirir. Göndericinin bir mesajı şifrelemek için alıcının özel anahtarına ihtiyacı yoktur, ancak mesajın şifresini çözmek için alıcının özel anahtarına ihtiyaç duyulur. İSTİSNA BEYANI(EKIOC-2.B.5): Şifreleme ve şifre çözme için özel matematiksel prosedürler bu kursun ve AP Sınavının kapsamı dışındadır."
+        },
+        "csta/3A-NI-06": {
+          "description": "Verimlilik, uygulanabilirlik ve etik etkiler gibi etkenlere dayalı çeşitli senaryoları çözmek için güvenlik önlemleri önerin."
+        },
+        "csta/3A-NI-07": {
+          "description": "Bir bilgisayar sisteminin kullanılabilirliği ve güvenliği arasındaki dengeleri göz önünde bulundurarak çeşitli güvenlik önlemlerini karşılaştırın."
+        },
+        "csta/3B-NI-04": {
+          "description": "Yazılım geliştiricilerin aygıtları ve bilgileri yetkisiz erişime karşı nasıl koruduklarını karşılaştırın."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "Veri sıkıştırma, iletilen veya depolanan verilerin boyutunu (bit sayısını) azaltabilir."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Daha az bit, mutlaka daha az bilgi anlamına gelmez."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "Sıkıştırmadan kaynaklanan boyut küçültme miktarı, hem orijinal veri gösterimindeki artıklık miktarına hem de uygulanan sıkıştırma algoritmasına bağlıdır."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Kayıpsız veri sıkıştırma algoritmaları, orijinal verilerin tamamen yeniden oluşturulmasını garanti ederken, genellikle depolanan veya iletilen bitlerin sayısını azaltabilir."
+        },
+        "csta/3A-DA-10": {
+          "description": "Veri öğelerinin nasıl düzenlendiği ve verilerin nerede depolandığı konusundaki ödünleşimleri değerlendirin."
         },
         "csta/1B-CS-01": {
           "description": "Bir sistem oluşturmak için bilgi işlem cihazlarının dahili ve harici parçalarının nasıl çalıştığını açıklayın."
@@ -197,29 +239,32 @@
         "csta/1B-CS-02": {
           "description": "Bilgisayar donanımı ve yazılımının görevleri gerçekleştirmek için bir sistem olarak birlikte nasıl çalıştığını modelleyin."
         },
-        "csta/1A-CS-03": {
-          "description": "Temel donanım ve yazılım sorunlarını doğru terimler ile açıklayın."
-        },
-        "csta/1A-AP-10": {
-          "description": "Fikirleri ifade etmek veya bir problemi yönlendirmek için sıraların ve basit döngülerin olduğu programlar geliştirin."
-        },
-        "csta/1B-IC-18": {
-          "description": "Dünyayı değiştiren bilgisayar teknolojileri hakkında tartışın ve bu teknolojilerin kültürler pratikleri nasıl etkilediğini ve bunlar tarafından nasıl etkilendiğini açıklayın."
-        },
         "csta/1B-AP-11": {
           "description": "Program geliştirme sürecini basitleştirmek için problemleri daha küçük, yönetilebilir alt problemler halinde ayrıştırın (ayırın)."
         },
         "csta/1B-NI-05": {
           "description": "Gerçek dünyadaki siber güvenlik sorunları ve kişisel bilgilerin nasıl korunabileceği hakkında tartışın."
         },
-        "csta/1B-AP-09": {
-          "description": "Veri depolamak ve modifiye etmek için değişkenleri kullanan programlar oluşturun."
-        },
         "csta/1B-IC-21": {
           "description": "Herkese açık veya kamu telif hakkı olan ortamları kullanın ve başkalarının ürettiği materyalleri izin almadan kopyalamaktan ve kullanmaktan kaçının."
         },
+        "csta/1B-IC-18": {
+          "description": "Dünyayı değiştiren bilgisayar teknolojileri hakkında tartışın ve bu teknolojilerin kültürler pratikleri nasıl etkilediğini ve bunlar tarafından nasıl etkilendiğini açıklayın."
+        },
         "csta/1B-AP-14": {
           "description": "Programları oluştururken veya yeniden karıştırırken fikri mülkiyet haklarını gözetin ve uygun atıflarda bulunun."
+        },
+        "csta/1A-CS-03": {
+          "description": "Temel donanım ve yazılım sorunlarını doğru terimler ile açıklayın."
+        },
+        "csta/1A-AP-10": {
+          "description": "Fikirleri ifade etmek veya bir problemi yönlendirmek için sıraların ve basit döngülerin olduğu programlar geliştirin."
+        },
+        "csta/1B-AP-09": {
+          "description": "Veri depolamak ve modifiye etmek için değişkenleri kullanan programlar oluşturun."
+        },
+        "csta/1B-DA-07": {
+          "description": "Sebep-sonuç ilişkilerini vurgulamak veya önermek, sonuçları tahmin etmek veya bir fikri iletmek için verileri kullanın."
         },
         "csta/1B-AP-17": {
           "description": "Kod yorumları, sunumlar ve gösterimleri kullanarak program geliştirme sırasında yapılan seçimleri açıklayın."

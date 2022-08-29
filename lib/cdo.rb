@@ -141,9 +141,8 @@ module Cdo
         # 'wss://<your-javabuilder-domain>.dev-code.org'
         'ws://localhost:8080/javabuilder'
       else
-        # TODO: Update to use this URL once we have Route53 set up for API Gateway
-        # site_url('javabuilder.code.org', '', 'wss')
-        'wss://javabuilderbeta.code.org'
+        # TODO: change the default to javabuilder once we have switched over
+        DCDO.get("javabuilder_websocket_url", 'wss://javabuilderbeta.code.org')
       end
     end
 
@@ -153,7 +152,9 @@ module Cdo
         # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
         'http://localhost:8080/javabuilderfiles/seedsources'
       else
-        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
+        # TODO: change the default to javabuilder once we have switched over
+        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilderbeta-http.code.org')
+        http_url + "/seedsources/sources.json"
       end
     end
 

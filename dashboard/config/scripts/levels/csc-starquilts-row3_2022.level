@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2022-06-13T21:01:10.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "properties": {
     "skin": "artist",
     "is_k1": "false",
@@ -49,11 +45,16 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0733e6619ed1cce35523eb25b9f503cf=levelbuilder/193377.png",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code should look like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\" id=\\\"when_run\\\"><next><block type=\\\"variables_set\\\"><field name=\\\"VAR\\\">length</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 1</field><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 2</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"diagonalRight\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpLeft\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 3</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"diagonalLeft\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusGreen45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpRight\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusCyan45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpRight\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusLightBlue45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/847332db1023482a1bb9b6c20b54d7f9/csc-starquilts-row3.mp3\"}]",
     "name_suffix": "_2022",
+    "encrypted_examples": "cUH+6c79dZXfzZ+xLPExRH+rO8IduzZOidNyCJVYEheKxrBu8cqT+KlgY2Zu\nazTokqZyeOakbhkoegX8OQcZ/g==\n",
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2022-06-13T21:01:10.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:10.199+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row3\\\"\"],\"cloned_from\":\"csc-starquilts-row3\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:10.199+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row3\\\"\"],\"cloned_from\":\"csc-starquilts-row3\"},{\"changed_at\":\"2022-08-24 14:35:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

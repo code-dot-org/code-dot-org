@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=8",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -19,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-20 18:56:09 UTC",
+    "serialized_at": "2022-08-23 00:28:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1478,7 +1489,7 @@
     },
     {
       "name": "CSP Unit 8 - Create PT Prep",
-      "url": "https://docs.google.com/presentation/d/11_P6UAyHrb9THCGmwzIpdvKfmmGa8WryKJfaXrjIOag/view",
+      "url": "https://docs.google.com/presentation/d/11_P6UAyHrb9THCGmwzIpdvKfmmGa8WryKJfaXrjIOag/copy",
       "key": "csp_unit_8_-_create_pt_prep",
       "properties": {
         "audience": "Teacher",
