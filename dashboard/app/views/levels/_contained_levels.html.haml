@@ -17,5 +17,6 @@
         = render partial: 'levels/free_response', locals: {in_level_group: true, last_attempt: sublevel_last_attempt, level: contained_level, left_align: true, is_contained_level: true }
       - if current_user && @script && @script.can_be_instructor?(current_user)
         %button{id: 'reset-predict-progress-button', disabled: !sublevel_last_attempt}
-          Clear Answer
+          %i.fa.fa-trash
+            Delete Answer
 %div{style: 'clear: both;'}
