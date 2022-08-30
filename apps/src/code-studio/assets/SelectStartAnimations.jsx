@@ -90,7 +90,8 @@ export default class SelectStartAnimations extends React.Component {
     const {orderedKeys, propsByKey} = this.state;
     return (
       <React.Fragment>
-        <h2>Select Starting Animations</h2>
+        <a href="/sprites">Back to Asset Management</a>
+        <h2>Generate Animation JSON for a level</h2>
         <div style={styles.pageBreak}>
           <h3>Selected Animations:</h3>
           {this.displaySelectedSprites()}
@@ -140,6 +141,7 @@ export default class SelectStartAnimations extends React.Component {
             selectedAnimations={[]}
           />
         </div>
+        <h2>Generated Animation JSON:</h2>
         <p>{JSON.stringify({orderedKeys, propsByKey})}</p>
       </React.Fragment>
     );
