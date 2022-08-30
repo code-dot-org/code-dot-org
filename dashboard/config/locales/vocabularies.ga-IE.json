@@ -74,6 +74,30 @@
         "machine_learning/oceans/unversioned": {
           "word": "Meaisínfhoghlaim"
         },
+        "input/csd/2022": {
+          "word": "Ionchur"
+        },
+        "debugging/csd/2022": {
+          "word": "Dífhabhtú"
+        },
+        "variable/csd/2022": {
+          "word": "Athróg"
+        },
+        "conditionals/csd/2022": {
+          "word": "Coinníollacha"
+        },
+        "abstraction/csd/2022": {
+          "word": "Teibíocht"
+        },
+        "function/csd/2022": {
+          "word": "Feidhm"
+        },
+        "copyright/csd/2022": {
+          "word": "Cóipcheart"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Meaisínfhoghlaim"
+        },
         "code/poem-art/unversioned": {
           "word": "Cód"
         },

@@ -257,6 +257,241 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "Frequency Analysis"
         },
+        "csd5-2022/Representation Matters": {
+          "name": "Representation Matters"
+        },
+        "csd5-2022/Patterns and Representation": {
+          "name": "Patterns and Representation"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "ASCII and Binary Representation"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Representing Images"
+        },
+        "csd5-2022/Representing Numbers": {
+          "name": "Representing Numbers"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Combining Representations"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Keeping Data Secret"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "Project - Create a Representation"
+        },
+        "csd5-2022/Structuring Data": {
+          "name": "Structuring Data"
+        },
+        "csd5-2022/Interpreting Data": {
+          "name": "Interpreting Data"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "Making Decisions with Data"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "Automating Data Decisions"
+        },
+        "csd5-2022/Problem Solving with Big Data": {
+          "name": "Problem Solving with Big Data"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Post-Course Survey"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Intro to Problem Solving"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Exploring Problem Solving"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Kompyuter nima?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Input and Output"
+        },
+        "csd1-2022/Processing": {
+          "name": "Processing"
+        },
+        "csd1-2022/Storage": {
+          "name": "Storage",
+          "overview": "**Question of the Day: Why is storage an important part of the computing process?**\\\\r\n\\\\r\nUshbu dars bo‘limdagi hisoblash modelining yakuniy komponenti saqlash bilan tanishtiradi. \"Outfit picker\" dasturini sinab ko‘rganingizdan so‘ng, o‘quvchilar ilova har safar ishga tushirilgandan keyin qanday ma'lumotlarni saqlash kerakligini muhokama qilishadi. Keyin ular bir qator dasturlarni ko‘rib chiqadilar va qanday ma'lumotlarni saqlash kerakligi to‘g‘risida ko‘rsatmalar yaratish uchun qanday saqlanishi to‘g‘risidagi qarorlaridan foydalanadilar. Keyin ular ushbu bobndagi hisoblash modelining to‘rt komponentini ko‘rib chiqadilar: kiritish, chiqarish, saqlash va qayta ishlash. Bundan so‘ng ular qaysi qismlarni \"kompyuter\" deb tasniflash kerakligi haqidagi qarorlarini qabul qilishdan oldin bobni boshidan boshlab qayta ko‘rib chiqish uchun so‘nggi imkoniyatga ega bo‘ladirlar. Dars o‘quvchilar o‘zlarining ilova g‘oyalari va qanday qilib xotiradan foydalanish mumkinligini aks ettirish bilan yakunlanadi."
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Project - Propose an App"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "Programming for Entertainment"
+        },
+        "csd3-2022/Plotting Shapes": {
+          "name": "Plotting Shapes"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Drawing in Game Lab"
+        },
+        "csd3-2022/Variables": {
+          "name": "O‘zgaruvchilar",
+          "overview": "**Question of the Day:  How can we use variables to store information in our programs?**\n\nUshbu darsda o‘quvchilar sonni belgilash uchun o‘zgaruvchidan qanday foydalanishni o‘rganadilar. O‘quvchilar darsni kiritish-chiqarish-saqlash-qayta ishlash modelining saqlash komponenti tarkibidagi o‘zgaruvchining maqsadini juda oddiy tavsiflash bilan boshlashadi. So‘ngra o‘quvchilar o‘zgaruvchining modelini raqamni nomlash usuli sifatida mustahkamlaydigan progressiya darajasini yakunlaydilar."
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Tasodifiy sonlar"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Spraytlar"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprait hususiyatlari"
+        },
+        "csd3-2022/Text": {
+          "name": "Matn"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "Sprite Movement"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Shartli bayonotlar"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Keyboard Input"
+        },
+        "csd3-2022/Mouse Input": {
+          "name": "Sichqon orqali kiritish"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "Project - Interactive Card"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Tezlik"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Complex Sprite Movement"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Collisions"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "The Game Design Process"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Using the Game Design Process"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "Project - Design a Game"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Post-Course Survey"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Intro to HTML"
+        },
+        "csd2-2022/Headings": {
+          "name": "Headings"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Digital Footprint"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Styling Text with CSS"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "Intellectual Property"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Styling Elements with CSS"
+        },
+        "csd2-2022/Your Web Page - Prepare": {
+          "name": "Veb-sahifangiz - Tayyorlanish"
+        },
+        "csd2-2022/Project - Personal Web Page": {
+          "name": "Loyiha - Shaxsiy veb-sahifa"
+        },
+        "csd2-2022/Team Problem Solving": {
+          "name": "Jamoada muammoni hal qilish"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "CSS sinflari"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Post-Course Survey"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "Understanding Your User"
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "User Interfaces"
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "Feedback and Testing"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Identifying User Needs"
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "Project - Paper Prototype"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Designing Apps for Good"
+        },
+        "csd4-2022/Market Research": {
+          "name": "Market Research"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Prototype Testing"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "Testing the App"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "Project - App Presentation"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Post-Course Survey"
+        },
+        "csd6-2022/Innovations in Computing": {
+          "name": "Innovations in Computing"
+        },
+        "csd6-2022/The Circuit Playground": {
+          "name": "The Circuit Playground"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Board Events"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "LED ranglar"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd6-2022/Project - Prototype an Innovation": {
+          "overview": "Kursning ushbu yakuniy loyihasida o‘quvchilar jamoasi sxema maydonchasi asosida innovatsion hisoblash moslamasining prototipini ishlab chiqish va sinovdan o‘tkazadilar. Doskada mavjud bo‘lgan kirish va chiqishlardan foydalangan holda, guruhlar foydalanuvchilarning qiziqarli va o‘ziga xos o‘zaro ta'sirini ta'minlaydigan dasturlarni yaratadilar."
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Post-Course Survey"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "6-dars"
+        },
+        "csd7-2022/AI Code of Ethics": {
+          "overview": "Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun \"Bizning sun'iy intellekt kodeksimiz\" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.",
+          "student_overview": "Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun \"Bizning sun'iy intellekt kodeksimiz\" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi."
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Designing Data Collection",
+          "overview": "Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.\n\n\\*\\* Kun savoli: \\*\\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Discoveries Post-Course Survey"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Move It, Move It (Harakatlan)"
         },

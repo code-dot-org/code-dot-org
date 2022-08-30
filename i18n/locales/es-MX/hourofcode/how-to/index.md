@@ -27,7 +27,7 @@ Probar una Hora del Código es una forma sencilla y divertida de presentarles a 
 
 <a id="how-to-video"></a>
 
-## 1. Mira el video instructivo de la Hora del Código <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Mira el video instructivo de la Hora del Código <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

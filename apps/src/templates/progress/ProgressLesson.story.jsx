@@ -44,7 +44,7 @@ const initialState = {
     ],
     focusAreaLessonIds: [],
     isSummaryView: false,
-    professionalLearningCourse: false,
+    deeperLearningCourse: false,
     scriptName: 'script-name',
     scriptId: 17
   },

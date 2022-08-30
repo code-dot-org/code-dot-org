@@ -23,7 +23,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "hide_animation_mode": "true",
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-07-25T00:30:48.748+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_location_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_location_ecosystems\"},{\"changed_at\":\"2022-07-25 00:31:21 +0000\",\"changed\":[\"start_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-07-25T00:30:48.748+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_location_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_location_ecosystems\"},{\"changed_at\":\"2022-07-25 00:31:21 +0000\",\"changed\":[\"start_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-23 16:54:18 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -235,7 +235,7 @@ class I18nScriptUtils
   end
 
   def self.write_markdown_with_header(markdown, header, path)
-    open(path, 'w') do |f|
+    File.open(path, 'w') do |f|
       unless header.empty?
         f.write(I18nScriptUtils.to_crowdin_yaml(header))
         f.write("---\n\n")

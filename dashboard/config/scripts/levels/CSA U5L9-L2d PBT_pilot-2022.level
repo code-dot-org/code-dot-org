@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:24.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[][] customers = {{\"Eloise\", \"Felix\", \"Amelia\"},\n                            {\"Charlotte\", \"Asher\", \"Felix\"},\n                            {\"Clara\", \"Charlotte\", \"Hugo\"}};\n\n    GameStore myStore = new GameStore(customers);\n    myStore.printCustomers();\n\n    // TO DO #3: Call the replaceDuplicates() method and print the updated array.\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "GameStore.java": {
+        "text": "/*\n * Represents a video game store\n */\npublic class GameStore {\n\n  private String[][] customers;   // The 2D array of customer orders\n\n  /*\n   * Constructor to create a GameStore with\n   * the specified 2D array of customer orders\n   */\n  public GameStore(String[][] customers) {\n    this.customers = customers;\n  }\n\n  /*\n   * Prints the customer orders\n   */\n  public void printCustomers() {\n    for (int row = 0; row < customers.length; row++) {\n      for (int col = 0; col < customers[0].length; col++) {\n        System.out.print(customers[row][col] + \" \");\n      }\n\n      System.out.println();\n    }\n  }\n\n  /*\n   * Replaces any duplicate values in customers\n   */\n  public void replaceCustomers(String currentValue, int currentRow, int currentCol) {\n    // TO DO #1: Find and replace any duplicate values in customers.\n\n\n    \n  }\n\n  /*\n   * Replaces any duplicate customers with \"Available\"\n   */\n  public void replaceDuplicates() {\n    // TO DO #2: Find and replace any duplicate customers in the array.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:24.436+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L2d PBT_2022\\\"\"],\"cloned_from\":\"CSA U5L9-L2d PBT_2022\"}]"
+}]]></config>
+</Javalab>

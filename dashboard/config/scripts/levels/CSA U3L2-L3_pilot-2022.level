@@ -1,0 +1,25 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\nThis program contains a `String` array that stores a list of countries and a `double` array that stores the percentage of each country's population that uses the Internet (in order).\r\n\r\nExplore this program using the guiding questions on the [**Investigating Arrays**](https://docs.google.com/document/d/1TW9_w91zbkJ_G0W89pIEQI89hK_bQwH8C8sXvFG4mn4/edit?usp=sharing) activity guide.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://data.worldbank.org/)!*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] countries = {\"Australia\", \"Canada\", \"China\", \"France\", \"Haiti\", \"India\",\n                         \"Jamaica\", \"Mexico\", \"United Kingdom\", \"United States\"};\n    \n    double[] internetUsage = {86.55, 91, 54.3, 82.04, 32.47, 34.45, 55.07, 65.77, 94.9, 87.27};\n\n    System.out.println(\"Countries: \" + countries);\n    System.out.println(\"Percent Using the Internet: \" + internetUsage);\n\n    int index = 0;\n\n    while (index <= countries.length) {\n      System.out.println(countries[index] + \": \" + internetUsage[index] + \"% using the Internet\");\n      index += 1;\n    }\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:03.679+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L3_2022\\\"\"],\"cloned_from\":\"CSA U3L2-L3_2022\"}]"
+}]]></config>
+</Javalab>

@@ -1,0 +1,66 @@
+{
+  "bs-BA": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "name": "Crtanje"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Varijable"
+            },
+            "functions": {
+              "name": "Funkcije"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratorij za Aplikacije",
+          "categories": {
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "Varijable"
+            },
+            "functions": {
+              "name": "Funkcije"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Akcije"
+            },
+            "events": {
+              "name": "Događaji"
+            },
+            "loops": {
+              "name": "Petlje"
+            },
+            "variables": {
+              "name": "Varijable"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "text": {
+              "name": "Tekst"
+            }
+          }
+        }
+      }
+    }
+  }
+}

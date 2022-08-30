@@ -1193,7 +1193,7 @@ it:
           description_audience: Da 9 a 18 anni
           lesson_groups:
             csf_warmup:
-              display_name: Introduzione
+              display_name: Preparazione
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
@@ -1680,7 +1680,7 @@ it:
           description_short: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           lesson_groups:
             k5_getting_started:
-              display_name: Per cominciare
+              display_name: Introduzione
             k5_basic_concepts:
               display_name: Concetti base di informatica e relative tecniche di insegnamento
             k5_diving_deeper:
@@ -1965,7 +1965,7 @@ it:
           description_audience: Da 9 a 18 anni
           lesson_groups:
             csf_warmup:
-              display_name: Introduzione
+              display_name: Preparazione
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
@@ -2057,7 +2057,7 @@ it:
           description_short: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           lesson_groups:
             k5_getting_started_1:
-              display_name: Per cominciare
+              display_name: Introduzione
             k5_basic_concepts_1:
               display_name: Concetti base di informatica e relative tecniche di insegnamento
             k5_diving_deeper_1:
@@ -2364,7 +2364,7 @@ it:
           description_audience: Da 9 a 18 anni
           lesson_groups:
             csf_warmup:
-              display_name: Introduzione
+              display_name: Preparazione
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
@@ -3145,3 +3145,5 @@ it:
         csd-post-survey-2022:
           description: Questa unità contiene il sondaggio post-corso CS Discoveries. Questa unità può essere assegnata dopo che gli studenti hanno completato la loro unità finale in CS Discoveries.
           student_description: Questa unità contiene un sondaggio per quando la tua classe ha finito le unità di CS Discoveries. Il tuo insegnante ti dirà quando è il momento di fare questo sondaggio.
+        soccer:
+          name: calcio

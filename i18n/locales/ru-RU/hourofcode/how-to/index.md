@@ -27,7 +27,7 @@ title: Руководство по проведению Часа кода
 
 <a id="how-to-video"></a>
 
-## 1. Просмотрите видеоруководство по Часу кода <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Просмотрите видеоруководство по Часу кода <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
