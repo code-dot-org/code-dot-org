@@ -86,11 +86,6 @@ Sound.prototype.play = function(options) {
     return;
   }
 
-  // If I do comment out preloading, I get the same error here when I drag the "make a new cat"
-  // block into the workspace.
-  // Oh, maybe its trying to play the click into place sound
-  // Unhandled Promise Rejection: NotAllowedError:
-  // The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
   var volume =
     typeof options.volume === 'undefined'
       ? 1
