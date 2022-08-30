@@ -10,9 +10,9 @@ class Api::V1::Pd::Foorm::LibraryQuestionsController < ApplicationController
     library_question.validate_question
 
     if library_question.errors.empty?
-      return render status: 200, json: {}
+      return render status: :ok, json: {}
     else
-      return render status: 500, json: {error: library_question.errors[:question].join(', ')}
+      return render status: :internal_server_error, json: {error: library_question.errors[:question].join(', ')}
     end
   end
 end

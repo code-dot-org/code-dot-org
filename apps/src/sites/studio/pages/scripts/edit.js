@@ -54,7 +54,7 @@ export default function initPage(unitEditorData) {
           scriptData.student_detail_progress_view
         }
         initialProfessionalLearningCourse={
-          scriptData.professionalLearningCourse || ''
+          scriptData.deeperLearningCourse || ''
         }
         initialOnlyInstructorReviewRequired={
           scriptData.only_instructor_review_required

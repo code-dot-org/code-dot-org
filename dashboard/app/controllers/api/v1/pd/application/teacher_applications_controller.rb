@@ -42,8 +42,8 @@ module Api::V1::Pd::Application
       render json: {principal_approval: @application.principal_approval_state}
     end
 
-    def principal_approval_not_required
-      @application.update!(principal_approval_not_required: true)
+    def change_principal_approval_requirement
+      @application.update!(principal_approval_not_required: params[:principal_approval_not_required].to_bool)
       render json: {principal_approval: @application.principal_approval_state}
     end
 

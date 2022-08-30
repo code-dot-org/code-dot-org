@@ -181,6 +181,8 @@ en:
       Editing Images: Editing Images
       Emotion Machine Example: Emotion Machine Example
       End of Course Projects: End of Course Projects
+      End-Of-Unit Survey: End-Of-Unit Survey
+      End-of-Unit Survey: End-of-Unit Survey
       Escape Room Example: Escape Room Example
       Event Types: Event Types
       Events: Events
@@ -210,6 +212,7 @@ en:
       Extra: Extra
       Extra Challenge: Extra Challenge
       'Extra Challenge: Sound Board': 'Extra Challenge: Sound Board'
+      Field Collector App: Field Collector App
       Final Personal Website: Final Personal Website
       Final Room Escape App: Final Room Escape App
       Find the Wizard: Find the Wizard
@@ -248,6 +251,7 @@ en:
       Hello World: Hello World
       How to Create a Simple Function: How to Create a Simple Function
       How to Make a Sprite: How to Make a Sprite
+      Human Device Interaction: Human Device Interaction
       Hyperlinks: Hyperlinks
       Ice Age Loops: Ice Age Loops
       If Statements: If Statements
@@ -266,6 +270,7 @@ en:
       Input with If-Else: Input with If-Else
       Inspiration!: Inspiration!
       InspirationalArtwork: InspirationalArtwork
+      Interactive Art: Interactive Art
       Interactive Card: Interactive Card
       Intro to Design Mode: Intro to Design Mode
       Intro to Flyer Game: Intro to Flyer Game
@@ -278,6 +283,7 @@ en:
       Introduction to Game Lab: Introduction to Game Lab
       Introduction to Variables: Introduction to Variables
       Introduction to Variables - Part 1: Introduction to Variables - Part 1
+      Investigate: Investigate
       Isaac's Survey Data: Isaac's Survey Data
       Iteration and Parameters: Iteration and Parameters
       Keep On Dancing!: Keep On Dancing!
@@ -396,6 +402,7 @@ en:
       Project Guide: Project Guide
       Project Work: Project Work
       Properties: Properties
+      Prototype an Innovation: Prototype an Innovation
       Publishing Your Website: Publishing Your Website
       Quarter Notes: Quarter Notes
       Quick Check: Quick Check
@@ -452,6 +459,7 @@ en:
       Sensors to Colors: Sensors to Colors
       Set Up Sprites: Set Up Sprites
       Setting Properties: Setting Properties
+      Setup: Setup
       Shapes and Parameters: Shapes and Parameters
       Shapes and the Draw Loop: Shapes and the Draw Loop
       Share Your App: Share Your App
@@ -526,7 +534,13 @@ en:
       Velocity and the Counter Pattern Review: Velocity and the Counter Pattern Review
       Video: Video
       Video - Encryption and Public Keys: Video - Encryption and Public Keys
+      Video - Functions: Video - Functions
+      Video - If Statements: Video - If Statements
+      Video - Introduction to Arrays: Video - Introduction to Arrays
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programming with Blocks'
+      Video - Parameters: Video - Parameters
+      Video - The Counter Pattern: Video - The Counter Pattern
+      Video - Variables: Video - Variables
       'Video:  Debugging with the Step Button': 'Video:  Debugging with the Step Button'
       'Video:  Minecraft - The Agent': 'Video:  Minecraft - The Agent'
       'Video:  Text  and Prompts': 'Video:  Text  and Prompts'
@@ -556,6 +570,7 @@ en:
       'Video: Drawing in Game Lab - Part 1': 'Video: Drawing in Game Lab - Part 1'
       'Video: Drawing in Game Lab - Part 2': 'Video: Drawing in Game Lab - Part 2'
       'Video: Events': 'Video: Events'
+      'Video: Events in App Lab': 'Video: Events in App Lab'
       'Video: Follow The Digital Trail': 'Video: Follow The Digital Trail'
       'Video: For Loops': 'Video: For Loops'
       'Video: Functions': 'Video: Functions'

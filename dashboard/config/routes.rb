@@ -20,6 +20,8 @@ Dashboard::Application.routes.draw do
     resource :pairing, only: [:show, :update]
 
     resources :user_levels, only: [:update, :destroy]
+    post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
+    get '/user_levels/get_token', to: 'user_levels#get_token'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -650,7 +652,7 @@ Dashboard::Application.routes.draw do
           resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
             member do
               post :send_principal_approval
-              post :principal_approval_not_required
+              post :change_principal_approval_requirement
             end
           end
           post :principal_approval, to: 'principal_approval_applications#create'

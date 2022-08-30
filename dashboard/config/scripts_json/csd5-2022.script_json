@@ -11,6 +11,15 @@
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
           "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -28,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 23:40:37 UTC",
+    "serialized_at": "2022-08-24 16:28:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -402,6 +411,17 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I use data to make my own recommendations?**\n\nTo conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm. Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.",
@@ -4799,6 +4819,18 @@
       },
       "seeding_key": {
         "activity_section.key": "1892c7ae-6927-42df-a1ee-d590267476da",
+        "lesson_activity.key": "f8be9839-437c-4dc5-8668-54b3f62acfc3"
+      }
+    },
+    {
+      "key": "cdd87e55-fc40-4723-90cb-84768b5522af",
+      "position": 2,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdd87e55-fc40-4723-90cb-84768b5522af",
         "lesson_activity.key": "f8be9839-437c-4dc5-8668-54b3f62acfc3"
       }
     },
