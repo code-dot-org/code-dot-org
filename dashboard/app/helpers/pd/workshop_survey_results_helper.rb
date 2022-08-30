@@ -60,8 +60,7 @@ module Pd::WorkshopSurveyResultsHelper
     surveys = workshops.flat_map(&:survey_responses)
 
     raise 'Currently just summarizes Local Summer and Teachercon surveys' unless
-      surveys.all? {|survey| survey.is_a? Pd::TeacherconSurvey} ||
-        surveys.all? {|survey| survey.is_a? Pd::LocalSummerWorkshopSurvey}
+      surveys.all?(Pd::TeacherconSurvey) || surveys.all?(Pd::LocalSummerWorkshopSurvey)
 
     return Hash.new if surveys.empty?
 

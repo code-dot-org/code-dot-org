@@ -104,10 +104,6 @@ Lint/EmptyFile:
 Lint/ErbNewArguments:
   Enabled: false
 
-# Offense count: 2
-Lint/FloatComparison:
-  Enabled: false
-
 # Offense count: 7
 Lint/MissingSuper:
   Enabled: false
@@ -227,11 +223,6 @@ Performance/InefficientHashSearch:
 Performance/MethodObjectAsBlock:
   Enabled: false
 
-# Offense count: 10
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/RedundantEqualityComparisonBlock:
-  Enabled: false
-
 # Offense count: 56
 # This cop supports safe auto-correction (--auto-correct).
 Performance/RegexpMatch:
@@ -299,13 +290,6 @@ Rails/DynamicFindBy:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: slashes, arguments
 Rails/FilePath:
-  Enabled: false
-
-# Offense count: 31
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: numeric, symbolic
-Rails/HttpStatus:
   Enabled: false
 
 # Offense count: 90

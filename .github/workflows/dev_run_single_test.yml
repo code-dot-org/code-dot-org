@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   run-ui-tests:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     services:
       mysql:
         image: mysql:5.7    
@@ -27,8 +27,8 @@ jobs:
         uses: ./.github/actions/install-test-variables            
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
-      - name: Install apt packages
-        uses: ./.github/actions/install-apt-packages
+
+        
       - name: Install node
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
