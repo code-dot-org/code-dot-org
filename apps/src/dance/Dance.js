@@ -394,7 +394,6 @@ Dance.prototype.afterInject_ = function() {
         );
         await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
       }
-      // await nativeAPI.ensureSpritesAreLoaded();
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
@@ -590,13 +589,6 @@ Dance.prototype.execute = async function() {
 
   const charactersReferenced = this.initInterpreter();
 
-  // continue do ensure sprites are loaded on each run,
-  // even if we're loading them on blockly events?
-  // p5.dance.js complains if we call play before ensireSpritesAreLoaded has run
-  // but I think its mostly not doing anything if we've already loaded the images.
-  // Does provide some level of guarantee of assets being available,
-  // if eg, a student very quickly moved a block into the workspace and clicked run.
-  // might result in audio not working on iOS on this initial run, but seems better than nothing
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
