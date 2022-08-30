@@ -30,8 +30,6 @@ function isIE9() {
  */
 export default function Sound(config, audioContext) {
   this.config = config;
-  this.config.forceHTML5 = true;
-  this.config.allowHTML5Mobile = true;
   this.audioContext = audioContext;
   this.audioElement = null; // if HTML5 Audio
   this.reusableBuffer = null; // if Web Audio

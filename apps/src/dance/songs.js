@@ -83,7 +83,9 @@ export function loadSong(songId, songData, onPreloadError) {
   const options = {
     id: url,
     mp3: url,
-    onPreloadError
+    onPreloadError,
+    forceHTML5: true,
+    allowHTML5Mobile: true
   };
   Sounds.getSingleton().register(options);
 }
