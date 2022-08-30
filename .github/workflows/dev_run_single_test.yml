@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   run-ui-tests:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     services:
       mysql:
         image: mysql:5.7    
@@ -27,15 +27,7 @@ jobs:
         uses: ./.github/actions/install-test-variables            
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
-      - name: Install packages
-        run: |
-          sudo apt-get update
-          sudo apt-get -y install libmagickwand-dev imagemagick
-          curl -sSL -o /tmp/pdftk-java_3.0.9-1_all.deb https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb \
-          && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/pdftk-java_3.0.9-1_all.deb || apt-get -fy install \
-          && rm -rf /tmp/pdftk-java_3.0.9-1_all.deb
-          apt-get update
-          apt-get install -y libicu-dev enscript moreutils libmysqlclient-dev libsqlite3-dev
+
         
       - name: Install node
         uses: ./.github/actions/install-node        
