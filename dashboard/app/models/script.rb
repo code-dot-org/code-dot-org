@@ -1412,11 +1412,17 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
+      metadata_i18n[:announcements] = metadata_i18n[:announcements].map do |announcement|
+        [announcement[:key], {'notice' => announcement[:notice], 'details' => announcement[:details]}]
+      end.to_h
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
     end
 
     lessons_i18n = {'en' => {'data' => {'script' => {'name' => lessons_i18n}}}}
-    existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
+    new_i18n = existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
+    # Chaining to_json to convert back to default hash. This is so param keys
+    # aren't marked when converting a HashWithIndifferentAccess to yaml
+    JSON.parse(new_i18n.to_json)
   end
 
   def hoc_finish_url
@@ -1523,7 +1529,7 @@ class Script < ApplicationRecord
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
-      announcements: announcements,
+      announcements: localized_announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
@@ -1646,6 +1652,12 @@ class Script < ApplicationRecord
     data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
+    # announcements.each do |announcement|
+    #   data['announcements'][announcement[:key]] = {
+    #     'notice': I18n.t("data.script.name.#{name}.announcements.#{announcement[:key]}", default: announcement[:notice],
+    #     # TODO: details
+    #   }
+    # end
     Services::MarkdownPreprocessor.sub_resource_links!(data['description'], resource_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description'], vocab_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_resource_links!(data['student_description'], resource_markdown_replacement_proc) if data['student_description']
@@ -1672,6 +1684,7 @@ class Script < ApplicationRecord
   def summarize_i18n_for_display
     data = summarize_i18n_for_edit
     data[:title] = title_for_display
+    data[:announcements] = localized_announcements
     data
   end
 
@@ -1728,6 +1741,24 @@ class Script < ApplicationRecord
 
   def localized_student_description
     I18n.t "data.script.name.#{name}.student_description"
+  end
+
+  def localized_announcements
+    return announcements if announcements.nil?
+    announcements.deep_dup.each do |announcement|
+      announcement['notice'] = I18n.t(
+        "notice",
+        default: announcement['notice'],
+        scope: [:data, :script, :name, name, :announcements, announcement['key']],
+        smart: true
+      )
+      announcement['details'] = I18n.t(
+        "details",
+        default: announcement['details'],
+        scope: [:data, :script, :name, name, :announcements, announcement['key']],
+        smart: true
+      )
+    end
   end
 
   def disable_post_milestone?
