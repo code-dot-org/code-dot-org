@@ -11,7 +11,7 @@ var __karmaWebpackManifest__ = [];
 
 function inManifest(path) {
   return (
-    __karmaWebpackManifest__.indexOf(path) >= 0 && !path.includes('/p5lab/')
+    __karmaWebpackManifest__.indexOf(path) >= 0 && path.includes('/p5lab/')
   );
 }
 
@@ -21,7 +21,7 @@ var runnable = testsContext.keys().filter(inManifest);
 
 // Run all tests if we didn't find any changes
 if (!runnable.length) {
-  runnable = testsContext.keys().filter(path => !path.includes('/p5lab/'));
+  runnable = testsContext.keys().filter(path => path.includes('/p5lab/'));
 }
 
 describe('unit tests', function() {

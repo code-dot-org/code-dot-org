@@ -485,6 +485,15 @@ describe('entry tests', () => {
       }),
       files: [{src: ['test/unit-tests.js'], watched: false}]
     },
+    p5Unit: {
+      coverageIstanbulReporter: {
+        dir: 'coverage/p5Unit'
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'p5Unit.xml'
+      }),
+      files: [{src: ['test/p5-unit-tests.js'], watched: false}]
+    },
     integration: {
       coverageIstanbulReporter: {
         dir: 'coverage/integration'
@@ -1335,6 +1344,8 @@ describe('entry tests', () => {
     'exec:generateSharedConstants',
     'karma:unit'
   ]);
+
+  grunt.registerTask('p5UnitTest', ['karma:p5Unit']);
 
   grunt.registerTask('storybookTest', ['karma:storybook']);
 
