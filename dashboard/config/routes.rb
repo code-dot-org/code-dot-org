@@ -468,7 +468,7 @@ Dashboard::Application.routes.draw do
 
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
 
-    get '/certificates/blank', to: 'certificates#blank'
+    get '/certificates/blank'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
