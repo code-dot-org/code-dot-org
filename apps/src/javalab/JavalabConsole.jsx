@@ -151,7 +151,11 @@ class JavalabConsole extends React.Component {
       return (
         <PhotoSelectionView
           promptText={photoPrompterPromptText}
-          style={styles.photoPrompter}
+          style={
+            displayTheme === DisplayTheme.DARK
+              ? styles.darkModePhotoPrompter
+              : styles.lightModePhotoPrompter
+          }
           onPhotoSelected={file => {
             onPhotoPrompterFileSelected(file);
             closePhotoPrompter();
@@ -327,7 +331,14 @@ const styles = {
     padding: 0,
     margin: 0
   },
-  photoPrompter: {
-    flexGrow: 1
+  darkModePhotoPrompter: {
+    flexGrow: 1,
+    backgroundColor: color.black,
+    color: color.white
+  },
+  lightModePhotoPrompter: {
+    flexGrow: 1,
+    backgroundColor: color.white,
+    color: color.black
   }
 };
