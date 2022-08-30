@@ -221,6 +221,7 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     this.previous.eventLogLength = this.eventLog.length;
     this.previous.printLogLength = this.printLog.length || 0;
+    this.previous.soundLogLength = this.soundLog.length || 0;
     this.previous.sprites = [];
     for (let i = 0; i < spriteIds.length; i++) {
       let spriteId = spriteIds[i];
