@@ -148,16 +148,13 @@ Dance.prototype.init = function(config) {
 
   this.initSongsPromise = this.initSongs(config);
 
-  // Every time a change happens in the workspace,
-  // try to preload needed characters so we don't have to do it async
-  // when a student hits the run button.
-  // to do: optimize to only do for iOS?
-  // to do: move somewhere else?
+  // As students add new characters to their programs,
+  // load sprites asynchronously. Previously, we waited to load
+  // sprites once students hit the run button.
+  // This is in place to support iOS, which will not play audio
+  // if started asynchronously after fetching sprites.
   const computeCharactersReferenced = () =>
     this.computeCharactersReferenced(this.studioApp_.getCode());
-  // nativeAPI assigned elsewhere, so not guaranteed to exist?
-  // seems some event triggers this change handler even before any dragging into workspace
-  // (maybe init of workspace is an event?)
   this.studioApp_.addChangeHandler(() =>
     this.nativeAPI?.ensureSpritesAreLoaded(computeCharactersReferenced())
   );
