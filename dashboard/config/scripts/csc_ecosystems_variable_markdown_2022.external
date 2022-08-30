@@ -4,6 +4,9 @@ title 'Making Counters'
 
 markdown <<MARKDOWN
 #Variables as counters
+
+As we code different solutions to overfishing we will need to keep track of how many fish have already been caught. We can do this by using a variable to store the number of fish caught.
+
 ##What is a variable?
 
 <div style="text-align: center;">
