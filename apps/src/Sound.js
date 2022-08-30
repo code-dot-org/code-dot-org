@@ -2,17 +2,6 @@ function isMobile() {
   return 'ontouchstart' in document.documentElement;
 }
 
-function isIE9() {
-  /** @type {number} */
-  var version = -1;
-
-  if (/MSIE\s([\d.]+)/.test(navigator.userAgent)) {
-    version = parseInt(RegExp.$1);
-  }
-
-  return version === 9;
-}
-
 /**
  * Initialize an individual sound
  * @param {Object} config available sound files for this audio
@@ -320,33 +309,21 @@ Sound.prototype.fadeToGainHtml5Audio_ = function(gain, durationSeconds) {
 };
 
 Sound.prototype.getPlayableFile = function() {
-  // IE9 Running on Windows Server SKU can throw an exception on window.Audio
-  try {
-    if (!window.Audio) {
-      return false;
-    }
+  if (!window.Audio) {
+    return false;
+  }
 
-    var audioTest = new window.Audio();
+  var audioTest = new window.Audio();
 
-    if (
-      this.config.hasOwnProperty('mp3') &&
-      audioTest.canPlayType('audio/mp3')
-    ) {
-      return this.config.mp3;
-    }
-    if (
-      this.config.hasOwnProperty('ogg') &&
-      audioTest.canPlayType('audio/ogg')
-    ) {
-      return this.config.ogg;
-    }
-    if (
-      this.config.hasOwnProperty('wav') &&
-      audioTest.canPlayType('audio/wav')
-    ) {
-      return this.config.wav;
-    }
-  } catch (e) {}
+  if (this.config.hasOwnProperty('mp3') && audioTest.canPlayType('audio/mp3')) {
+    return this.config.mp3;
+  }
+  if (this.config.hasOwnProperty('ogg') && audioTest.canPlayType('audio/ogg')) {
+    return this.config.ogg;
+  }
+  if (this.config.hasOwnProperty('wav') && audioTest.canPlayType('audio/wav')) {
+    return this.config.wav;
+  }
 
   return false;
 };
@@ -422,16 +399,9 @@ Sound.prototype.preloadAudioElement = function(audioElement) {
     return;
   }
 
-  if (!isIE9()) {
-    // If you don't comment this out, loading in safari on iphone fails here.
-    // Unhandled Promise Rejection: NotAllowedError:
-    // The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
-    // Pre-cache audio
-    // Adding load makes this work on the second click of "run"
-    audioElement.load();
-    // audioElement.play();
-    // audioElement.pause();
-  }
+  // iOS Safari does not automatically attempt to load the audio source,
+  // so we need to manually load.
+  audioElement.load();
   this.audioElement = audioElement;
 
   // Fire onLoad as soon as enough of the sound is loaded to play it
