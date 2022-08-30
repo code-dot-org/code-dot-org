@@ -430,6 +430,16 @@ class MusicView extends React.Component {
     this.setState({isPlaying: true, startPlayingAudioTime: currentAudioTime});
   };
 
+  previewSound = (id) => {
+    StopSound('mainaudio');
+
+    PlaySound(
+      'stem-' + this.state.samplePanel + '-' + id,
+      'mainaudio',
+      0
+    );
+  };
+
   render() {
     // The tutorial has a width:height ratio of 16:9.
     const aspectRatio = 16 / 9;
@@ -692,21 +702,24 @@ class MusicView extends React.Component {
                 <div>
                   <img
                     src={filenameToImgUrl['waveform_lead']}
-                    style={{width: 90, paddingRight: 20}}
+                    style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
+                    onClick={() => this.previewSound('lead')}
                   />
                   Lead
                 </div>
                 <div>
                   <img
                     src={filenameToImgUrl['waveform_bass']}
-                    style={{width: 90, paddingRight: 20}}
+                    style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
+                    onClick={() => this.previewSound('bass')}
                   />
                   Bass
                 </div>
                 <div>
                   <img
                     src={filenameToImgUrl['waveform_drum']}
-                    style={{width: 90, paddingRight: 20}}
+                    style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
+                    onClick={() => this.previewSound('drum')}
                   />
                   Drum
                 </div>
@@ -744,7 +757,7 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: currentPanel == 'samplepacks' ? 'white' : '#777'
+              color: isDesktop || currentPanel == 'samplepacks' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('samplepacks')}
           >
@@ -755,7 +768,7 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: currentPanel == 'code' ? 'white' : '#777'
+              color: isDesktop || currentPanel == 'code' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('code')}
           >
@@ -766,7 +779,7 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: currentPanel == 'timeline' ? 'white' : '#777'
+              color: isDesktop || currentPanel == 'timeline' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('timeline')}
           >
@@ -777,7 +790,7 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: currentPanel == 'liveplay' ? 'white' : '#777'
+              color: isDesktop || currentPanel == 'liveplay' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('liveplay')}
           >
