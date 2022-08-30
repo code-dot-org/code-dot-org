@@ -104,10 +104,6 @@ Lint/EmptyFile:
 Lint/ErbNewArguments:
   Enabled: false
 
-# Offense count: 2
-Lint/FloatComparison:
-  Enabled: false
-
 # Offense count: 7
 Lint/MissingSuper:
   Enabled: false
