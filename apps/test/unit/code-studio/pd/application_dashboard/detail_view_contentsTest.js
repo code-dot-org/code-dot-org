@@ -389,7 +389,7 @@ describe('DetailViewContents', () => {
     });
   });
 
-  xdescribe('Scholarship Teacher? row', () => {
+  describe('Scholarship Teacher? row', () => {
     it('on teacher applications', () => {
       const detailView = mountDetailView('Teacher', {
         isWorkshopAdmin: true,
