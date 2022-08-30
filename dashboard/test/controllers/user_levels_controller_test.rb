@@ -92,4 +92,71 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     refute_nil UserLevel.find_by(id: user_level.id)
   end
+
+  [Multi, FreeResponse].each do |level_type|
+    test "teacher can delete own progress on #{level_type} level" do
+      user = create :teacher
+      sign_in user
+      script = create :script
+      level = create :level, type: level_type
+      create :user_level, user: user, script: script, level: level
+
+      assert_destroys(UserLevel) do
+        post :delete_predict_level_progress, params: {
+          script_id: script.id,
+          level_id: level.id
+        }
+        assert_response :success
+      end
+    end
+
+    test "teacher only deletes their progress on #{level_type} level" do
+      user = create :teacher
+      other_user = create :teacher
+      sign_in user
+      script = create :script
+      level = create :level, type: level_type
+      create :user_level, user: other_user, script: script, level: level
+
+      assert_does_not_destroy(UserLevel) do
+        post :delete_predict_level_progress, params: {
+          script_id: script.id,
+          level_id: level.id
+        }
+        assert_response :success
+      end
+    end
+
+    test "student cannot delete their own progress on #{level_type} level" do
+      user = create :student
+      sign_in user
+      script = create :script
+      level = create :level, type: level_type
+      create :user_level, user: user, script: script, level: level
+
+      assert_does_not_destroy(UserLevel) do
+        post :delete_predict_level_progress, params: {
+          script_id: script.id,
+          level_id: level.id
+        }
+        assert_response :forbidden
+      end
+    end
+  end
+
+  test "teacher cannot delete own progress on an unsupported level" do
+    user = create :teacher
+    sign_in user
+    script = create :script
+    level = create :level, type: 'Blockly'
+    create :user_level, user: user, script: script, level: level
+
+    assert_does_not_destroy(UserLevel) do
+      post :delete_predict_level_progress, params: {
+        script_id: script.id,
+        level_id: level.id
+      }
+      assert_response :bad_request
+    end
+  end
 end
