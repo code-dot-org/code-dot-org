@@ -227,11 +227,6 @@ Performance/InefficientHashSearch:
 Performance/MethodObjectAsBlock:
   Enabled: false
 
-# Offense count: 10
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/RedundantEqualityComparisonBlock:
-  Enabled: false
-
 # Offense count: 56
 # This cop supports safe auto-correction (--auto-correct).
 Performance/RegexpMatch:
