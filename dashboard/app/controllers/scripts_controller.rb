@@ -337,14 +337,18 @@ class ScriptsController < ApplicationController
   end
 
   def i18n_params
-    params.permit(
+    h = params.permit(
       :name,
       :title,
       :description_audience,
       :description_short,
       :description,
       :student_description,
+      :announcements
     ).to_h
+    h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
+
+    h
   end
 
   def set_redirect_override

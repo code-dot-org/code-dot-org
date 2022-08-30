@@ -8770,3 +8770,19 @@ en:
           student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description_audience: ''
+        express-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: express-2023
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+          announcements:
+            4974e99c-3b56-4d6e-a3d2-8c527997ce24:
+              notice: testNotic
+              details: details det
+            ba0a8165-87f5-4905-a8ed-cd722116096e:
+              notice: testnot
+              details: det
