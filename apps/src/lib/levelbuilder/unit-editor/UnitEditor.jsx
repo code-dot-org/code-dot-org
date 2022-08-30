@@ -1024,7 +1024,7 @@ class UnitEditor extends React.Component {
               </i>
             </b>
             <label>
-              Professional Learning Course
+              Deeper Learning Course Name
               <HelpTip>
                 <p>
                   When filled out, the course unit associated with this unit
