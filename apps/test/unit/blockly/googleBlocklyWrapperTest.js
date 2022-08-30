@@ -76,6 +76,7 @@ describe('Google Blockly Wrapper', () => {
       'js',
       'modalBlockSpace',
       'Msg',
+      'music_locale',
       'Names',
       'netsim_locale',
       'Procedures',
