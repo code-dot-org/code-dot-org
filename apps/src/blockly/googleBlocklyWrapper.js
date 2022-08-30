@@ -118,6 +118,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
+  blocklyWrapper.wrapReadOnlyProperty('zelos');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
@@ -420,7 +421,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: 'geras-renderer modern-theme readOnlyBlockSpace'
+          class: 'zelos-renderer modern-theme readOnlyBlockSpace'
         },
         null
       );
