@@ -148,6 +148,20 @@ Dance.prototype.init = function(config) {
 
   this.initSongsPromise = this.initSongs(config);
 
+  // Every time a change happens in the workspace,
+  // try to preload needed characters so we don't have to do it async
+  // when a student hits the run button.
+  // to do: optimize to only do for iOS?
+  // to do: move somewhere else?
+  const computeCharactersReferenced = () =>
+    this.computeCharactersReferenced(this.studioApp_.getCode());
+  // nativeAPI assigned elsewhere, so not guaranteed to exist?
+  // seems some event triggers this change handler even before any dragging into workspace
+  // (maybe init of workspace is an event?)
+  this.studioApp_.addChangeHandler(() =>
+    this.nativeAPI?.ensureSpritesAreLoaded(computeCharactersReferenced())
+  );
+
   this.awaitTimingMetrics();
 
   ReactDOM.render(
@@ -383,7 +397,7 @@ Dance.prototype.afterInject_ = function() {
         );
         await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
       }
-      await nativeAPI.ensureSpritesAreLoaded();
+      // await nativeAPI.ensureSpritesAreLoaded();
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
@@ -579,6 +593,13 @@ Dance.prototype.execute = async function() {
 
   const charactersReferenced = this.initInterpreter();
 
+  // continue do ensure sprites are loaded on each run,
+  // even if we're loading them on blockly events?
+  // p5.dance.js complains if we call play before ensireSpritesAreLoaded has run
+  // but I think its mostly not doing anything if we've already loaded the images.
+  // Does provide some level of guarantee of assets being available,
+  // if eg, a student very quickly moved a block into the workspace and clicked run.
+  // might result in audio not working on iOS on this initial run, but seems better than nothing
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
