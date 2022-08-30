@@ -1,8 +1,14 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
+import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
 import {MAX_NUM_SPRITES} from './constants';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert
+} from '../../code-studio/projectRedux';
+import msg from '@cdo/locale';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -356,6 +362,15 @@ export default class CoreLibrary {
       0,
       MAX_NUM_SPRITES - numSpritesSoFar
     );
+    if (numRequested > numNewSpritesPossible) {
+      getStore().dispatch(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          msg.spriteLimitExceeded(),
+          /* bottom */ true
+        )
+      );
+    }
     return Math.min(numRequested, numNewSpritesPossible);
   }
 
@@ -373,7 +388,17 @@ export default class CoreLibrary {
    */
   addSprite(opts) {
     opts = opts || {};
-    if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
+    const numSprites = this.getNumberOfSprites();
+    if (numSprites === MAX_NUM_SPRITES) {
+      getStore().dispatch(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          msg.spriteLimitExceeded(),
+          /* bottom */ true
+        )
+      );
+    }
+    if (numSprites >= MAX_NUM_SPRITES + 1) {
       return;
     }
     let name = opts.name;
