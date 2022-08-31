@@ -12,7 +12,7 @@ const initialState = {
     ],
     focusAreaLessonIds: [],
     isSummaryView: false,
-    professionalLearningCourse: false
+    deeperLearningCourse: false
   }
 };
 
