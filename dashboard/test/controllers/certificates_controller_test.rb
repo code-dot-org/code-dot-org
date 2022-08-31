@@ -52,4 +52,11 @@ class CertificatesControllerTest < ActionController::TestCase
     assert_response :bad_request
     assert_includes response.body, 'invalid base64'
   end
+
+  test 'shows static image for blank certificate' do
+    get :blank
+    assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
+  end
 end
