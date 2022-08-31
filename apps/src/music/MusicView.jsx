@@ -59,11 +59,12 @@ class MusicView extends React.Component {
       console.log('play sound next measure', id);
 
       // work out the next measure by rounding time up.
-      const currentPlaytime =
-        GetCurrentAudioTime() - this.state.startPlayingAudioTime;
-      const nextMeasure = Math.ceil(currentPlaytime);
+      const currentMeasure =
+      this.convertSecondsToMeasure(
+        GetCurrentAudioTime() - this.state.startPlayingAudioTime);
+      const nextMeasure = currentMeasure + 1;
       const nextMeasureStartTime =
-        this.state.startPlayingAudioTime + nextMeasure;
+        this.state.startPlayingAudioTime + this.convertMeasureToSeconds(nextMeasure);
 
       // The user should see measures as 1-based, but
       // internally, we'll treat them as 0-based.
@@ -368,6 +369,14 @@ class MusicView extends React.Component {
     Blockly.svgResize(this.workspace);
   };
 
+  convertMeasureToSeconds = measure => {
+    return measure * secondsPerMeasure;
+  };
+
+  convertSecondsToMeasure = seconds => {
+    return Math.floor(seconds / secondsPerMeasure);
+  };
+
   choosePanel = panel => {
     this.setState({currentPanel: panel});
 
@@ -422,7 +431,7 @@ class MusicView extends React.Component {
         PlaySound(
           'stem-' + this.state.samplePanel + '-' + songEvent.id,
           'mainaudio',
-          currentAudioTime + songEvent.when
+          currentAudioTime + this.convertMeasureToSeconds(songEvent.when)
         );
       }
     }
@@ -512,7 +521,7 @@ class MusicView extends React.Component {
 
     const playHeadOffset = this.state.isPlaying
       ? (this.state.currentAudioTime - this.state.startPlayingAudioTime) *
-        barWidth
+        barWidth / this.convertMeasureToSeconds(1)
       : null;
 
     return (
