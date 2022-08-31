@@ -59,12 +59,13 @@ class MusicView extends React.Component {
       console.log('play sound next measure', id);
 
       // work out the next measure by rounding time up.
-      const currentMeasure =
-      this.convertSecondsToMeasure(
-        GetCurrentAudioTime() - this.state.startPlayingAudioTime);
+      const currentMeasure = this.convertSecondsToMeasure(
+        GetCurrentAudioTime() - this.state.startPlayingAudioTime
+      );
       const nextMeasure = currentMeasure + 1;
       const nextMeasureStartTime =
-        this.state.startPlayingAudioTime + this.convertMeasureToSeconds(nextMeasure);
+        this.state.startPlayingAudioTime +
+        this.convertMeasureToSeconds(nextMeasure);
 
       // The user should see measures as 1-based, but
       // internally, we'll treat them as 0-based.
@@ -305,7 +306,7 @@ class MusicView extends React.Component {
     this.workspace = Blockly.inject(container, {
       toolbox: toolbox,
       horizontalLayout: true,
-      grid: {spacing: 20, length: 0, colour: '#444', snap: true},
+      grid: {spacing: 20, length: 0, colour: '#444', snap: true}
       //theme: {componentStyles: {workspaceBackgroundColour: '#222'}}
     });
 
@@ -353,6 +354,7 @@ class MusicView extends React.Component {
     var blocklyDiv = document.getElementById('blocklyDiv');
 
     // Compute the absolute coordinates and dimensions of blocklyArea.
+    /*
     var element = blocklyArea;
     var x = 0;
     var y = 0;
@@ -362,8 +364,9 @@ class MusicView extends React.Component {
       element = element.offsetParent;
     } while (element);
     // Position blocklyDiv over blocklyArea.
-    //blocklyDiv.style.left = x + 'px';
-    //blocklyDiv.style.top = y + 'px';
+    blocklyDiv.style.left = x + 'px';
+    blocklyDiv.style.top = y + 'px';
+    */
     blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
     blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
     Blockly.svgResize(this.workspace);
@@ -380,7 +383,7 @@ class MusicView extends React.Component {
   choosePanel = panel => {
     this.setState({currentPanel: panel});
 
-    if (panel == 'timeline') {
+    if (panel === 'timeline') {
       this.playSong();
     }
 
@@ -427,7 +430,7 @@ class MusicView extends React.Component {
     const currentAudioTime = GetCurrentAudioTime();
 
     for (const songEvent of songData.events) {
-      if (songEvent.type == 'play') {
+      if (songEvent.type === 'play') {
         PlaySound(
           'stem-' + this.state.samplePanel + '-' + songEvent.id,
           'mainaudio',
@@ -439,14 +442,10 @@ class MusicView extends React.Component {
     this.setState({isPlaying: true, startPlayingAudioTime: currentAudioTime});
   };
 
-  previewSound = (id) => {
+  previewSound = id => {
     StopSound('mainaudio');
 
-    PlaySound(
-      'stem-' + this.state.samplePanel + '-' + id,
-      'mainaudio',
-      0
-    );
+    PlaySound('stem-' + this.state.samplePanel + '-' + id, 'mainaudio', 0);
   };
 
   render() {
@@ -462,11 +461,7 @@ class MusicView extends React.Component {
     // Leave space above the small footer.
     const reduceAppHeight = 36;
 
-    // Specify a baseline font at a baseline width.
-    const baselineFontSize = 18;
-    const baselineAppWidth = 930;
-
-    let containerWidth, containerHeight;
+    let containerWidth;
 
     // Constrain tutorial to maximum width.
     const maxContainerWidth = Math.min(this.state.appWidth, maxAppWidth);
@@ -489,12 +484,6 @@ class MusicView extends React.Component {
       containerWidth = minAppWidth;
     }
 
-    // Calculate the height.
-    containerHeight = containerWidth / aspectRatio;
-
-    // The tutorial shows 18px fonts when 930px wide.
-    const baseFontSize = (baselineFontSize * containerWidth) / baselineAppWidth;
-
     const filenameToImgUrl = {
       samplepack1: require('@cdo/static/music/samplepack1.png'),
       samplepack2: require('@cdo/static/music/samplepack2.png'),
@@ -515,13 +504,13 @@ class MusicView extends React.Component {
       isDesktop || this.state.currentPanel === 'samplepacks';
     const showCode = isDesktop || this.state.currentPanel === 'code';
     const showTimeline = isDesktop || this.state.currentPanel === 'timeline';
-    const showLiveplay = isDesktop || this.state.currentPanel === 'liveplay';
 
     const currentPanel = this.state.currentPanel;
 
     const playHeadOffset = this.state.isPlaying
-      ? (this.state.currentAudioTime - this.state.startPlayingAudioTime) *
-        barWidth / this.convertMeasureToSeconds(1)
+      ? ((this.state.currentAudioTime - this.state.startPlayingAudioTime) *
+          barWidth) /
+        this.convertMeasureToSeconds(1)
       : null;
 
     return (
@@ -557,6 +546,7 @@ class MusicView extends React.Component {
             {this.state.isPlaying && (
               <div style={{float: 'right'}}>
                 <button
+                  type="button"
                   onClick={() => this.playTrigger()}
                   style={{padding: 2, fontSize: 10, margin: 0}}
                 >
@@ -626,7 +616,7 @@ class MusicView extends React.Component {
               marginRight: isDesktop ? 10 : 0
             }}
           >
-            {this.state.samplePanel == 'main' && (
+            {this.state.samplePanel === 'main' && (
               <div>
                 <div>Sample packs</div>
                 <br />
@@ -704,7 +694,7 @@ class MusicView extends React.Component {
                 <div>
                   <img
                     src={
-                      this.state.samplePanel == 'hip'
+                      this.state.samplePanel === 'hip'
                         ? filenameToImgUrl['samplepack1']
                         : filenameToImgUrl['samplepack2']
                     }
@@ -769,7 +759,8 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: isDesktop || currentPanel == 'samplepacks' ? 'white' : '#777'
+              color:
+                isDesktop || currentPanel === 'samplepacks' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('samplepacks')}
           >
@@ -780,7 +771,7 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: isDesktop || currentPanel == 'code' ? 'white' : '#777'
+              color: isDesktop || currentPanel === 'code' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('code')}
           >
@@ -791,7 +782,7 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: isDesktop || currentPanel == 'timeline' ? 'white' : '#777'
+              color: isDesktop || currentPanel === 'timeline' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('timeline')}
           >
@@ -802,7 +793,7 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color: isDesktop || currentPanel == 'liveplay' ? 'white' : '#777'
+              color: isDesktop || currentPanel === 'liveplay' ? 'white' : '#777'
             }}
             onClick={() => this.choosePanel('liveplay')}
           >
@@ -814,35 +805,6 @@ class MusicView extends React.Component {
     );
   }
 }
-
-const styles = {
-  container: {
-    position: 'relative',
-    margin: '0 auto',
-    userSelect: 'none'
-  },
-  containerReact: {
-    position: 'absolute',
-    width: '100%',
-    margin: '0 auto',
-    userSelect: 'none',
-    fontFamily: '"Gotham 4r", arial, sans-serif',
-    color: 'rgb(30,30,30)',
-    lineHeight: 1.3
-  },
-  backgroundCanvas: {
-    position: 'absolute',
-    left: 0,
-    width: '100%',
-    zIndex: -1,
-    borderRadius: '10px'
-  },
-  activityCanvas: {
-    width: '100%',
-    borderRadius: '10px',
-    border: 'none'
-  }
-};
 
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
