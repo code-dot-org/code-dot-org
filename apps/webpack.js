@@ -306,7 +306,7 @@ function storybookConfig(sbConfig) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
       }),
-      new webpack.IgnorePlugin(/^serialport$/)
+      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
     ]
   };
 }
