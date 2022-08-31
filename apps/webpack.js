@@ -252,9 +252,6 @@ if (envConstants.COVERAGE) {
   });
 }
 
-// UPDATE BEFORE MERGING
-// Temporary hack to access sourcemaps
-// Also max_old_space_size in webpack (was updated temporarily to fix sourcemaps)
 function devtool(options) {
   if (process.env.CI) {
     return 'eval';
