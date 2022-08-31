@@ -56,18 +56,10 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       {class: 'blocklyTrash'},
       this.container
     );
-    // const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
-    // parent svg is still being rendered on the left, so not being rendered properly
-    // also doesn't seem to handle resize well
-    // but, trash can does seem like its in the middle of the flyout (not vislble though), which is good
-    // found it by searching "trash" in DOM
-    // const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
-    const offset =
-      Blockly.cdoUtils.getWidth() -
-      (Blockly.cdoUtils.getToolboxWidth() / 2 + WIDTH / 2);
+    const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
     this.svgGroup_.setAttribute(
       'transform',
-      `translate(${offset}, ${MARGIN_TOP})`
+      `translate(${left}, ${MARGIN_TOP})`
     );
 
     // trashcan body
@@ -215,7 +207,12 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   position(metrics) {
     this.container.style.height = `${metrics.viewMetrics.height}px`;
     this.container.style.width = `${Blockly.cdoUtils.getToolboxWidth()}px`;
-    this.container.style.left = '0px';
+    // maybe move into cdoUtils
+    // what is difference between workspace.getMetricsManager() and
+    // workspace.getMetrics() (used in cdoUtils)?
+    this.container.style.left = this.workspace.RTL
+      ? `${this.workspace.getMetricsManager().getViewMetrics().width}px`
+      : '0px';
     this.container.style.top = '0px';
     this.container.style.position = 'absolute';
     this.container.style.zIndex = '75';
