@@ -10,14 +10,16 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "9a35dfce-00ef-4b6d-a4b1-04fd143a15b1"
         },
         {
           "notice": "Virtual Modifications",
           "details": "If you are teaching in a virtual, hybrid, or socially distanced setting, then you can view recommended modifications to our curricula that can be used in these settings.",
           "link": "https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "ecf70a2d-50b2-414a-97c7-66d3d7cc1aa8"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -34,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-28 19:15:05 UTC",
+    "serialized_at": "2022-08-31 17:46:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -6,7 +6,6 @@
 # Script's array of announcements.
 
 require_relative '../../../dashboard/config/environment'
-require 'pry'
 
 def backfill_script_announcement_keys
   Script.all.each do |script|
@@ -16,7 +15,13 @@ def backfill_script_announcement_keys
     script.announcements.each do |announcement|
       announcement[:key] = SecureRandom.uuid unless announcement[:key]
     end
-    script.save!
+    begin
+      script.save!
+    rescue Exception => err
+      puts "Skipping #{script.id} - #{script.name} because of error:"
+      puts err.message
+      next
+    end
 
     # Update the scripts.en.yml translation file with new announcement keys
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")

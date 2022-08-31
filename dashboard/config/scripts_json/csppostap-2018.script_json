@@ -9,35 +9,40 @@
           "notice": "No Lesson Plans for Chapter 2",
           "details": "Chapter 2 of this unit does not currently have lesson plans available. \"Lesson Plan\" links for that chapter will not work as expected.",
           "link": "",
-          "type": "information"
+          "type": "information",
+          "key": "eb8ebd3b-550e-46e4-8ca7-498f3d54eb7d"
         },
         {
           "notice": "What's Next After High School?",
           "details": "Continue your journey with CS! Explore career and academic pathways, job and mentorship opportunities, and online courses available through our partners.",
           "link": "https://code.org/student/hsgrads",
           "type": "success",
-          "visibility": "Student-only"
+          "visibility": "Student-only",
+          "key": "0d9c9f39-5d17-4bda-874b-51a5ff1b463b"
         },
         {
           "notice": "Computer Science Beyond High School",
           "details": "It's the perfect time to help your students explore their next CS opportunities. These resources can help them explore pathways, internships, and online courses.",
           "link": "https://code.org/student/hsgrads",
           "type": "success",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "43d46a9d-ae27-493a-b4ac-147fa6636136"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
           "link": "https://studio.code.org/s/csp-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Student-only"
+          "visibility": "Student-only",
+          "key": "8073ac2a-63a7-45ec-b0c7-6f85569f8da1"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csp-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "c9cfa961-496c-4fae-ab44-f7e41131baf5"
         }
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}",
@@ -52,7 +57,7 @@
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2022-03-11 12:07:39 UTC",
+    "serialized_at": "2022-08-31 17:47:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

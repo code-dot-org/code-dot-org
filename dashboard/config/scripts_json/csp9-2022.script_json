@@ -12,7 +12,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "2f64c4b7-eaa4-43d2-a262-b35df8e12d22"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -30,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 00:29:03 UTC",
+    "serialized_at": "2022-08-31 17:47:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
