@@ -41,6 +41,25 @@ export function getToolboxWidth() {
   }
 }
 
+// this probably isn't quite right
+export function getWidth() {
+  return Blockly.getMainWorkspace().getMetrics().svgWidth;
+}
+
+export function getToolboxPosition() {
+  const workspace = Blockly.getMainWorkspace();
+  const metrics = workspace.getMetrics();
+  switch (getToolboxType()) {
+    case ToolboxType.CATEGORIZED:
+      return metrics.toolboxWidth;
+    case ToolboxType.UNCATEGORIZED:
+      return metrics.flyoutWidth;
+    case ToolboxType.NONE:
+      return 0;
+  }
+}
+// what version of blockly docs?
+// what is global Blockly object? -> console says BlocklyWrapper, version: Google
 export function workspaceSvgResize(workspace) {
   return Blockly.svgResize(workspace);
 }
