@@ -50,11 +50,38 @@
         "k5-onlinepd-2019/For Loops": {
           "name": "For begiztak"
         },
+        "csd3-2022/Variables": {
+          "name": "Aldagaiak"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Pertsonaiak"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprite-n Propietateak"
+        },
+        "csd3-2022/Text": {
+          "name": "Testua"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Baldintzak"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Abiadura"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funtzioak"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funtzioak"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Mugi ezazu, mugi ezazu!"
         },
         "courseb-2018/Your Digital Footprint": {
           "name": "Zure aztarna digitala"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Harrapatu gabeko akatsak"
         },
         "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
           "name": "Stevie eta Big Proiektua"
@@ -160,6 +187,9 @@
         },
         "coursec-2018/Binary Bracelets": {
           "name": "Eskumuturreko bitarrak"
+        },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Harrapatu gabeko akatsak"
         },
         "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
           "name": "Stevie eta Big Proiektua"
@@ -272,14 +302,23 @@
         "coursef-2017/Building a Foundation": {
           "name": "Oinarri bat Eraikitzen"
         },
+        "coursef-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
         "coursef-2017/Algorithms: Tangrams": {
           "name": "Algoritmoak: Tangramak"
         },
         "coursea-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
         },
+        "coursea-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        },
+        "pre-express-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
         },
         "pre-express-2017/Spelling Bee": {
           "name": "Letraz-letra"
@@ -287,14 +326,23 @@
         "coursee-2017/Building a Foundation": {
           "name": "Oinarri bat Eraikitzen"
         },
+        "coursee-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
         "coursee-2017/Nested Loops": {
           "name": "Kabiatutako begiztak"
         },
         "coursec-2017/Real-life Algorithms: Paper Planes": {
           "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
         },
+        "coursec-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
         "courseb-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        },
+        "courseb-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
         },
         "coursed-2017/Nested Loops": {
           "name": "Kabiatutako begiztak"
@@ -304,6 +352,9 @@
         },
         "express-2017/Building a Foundation": {
           "name": "Oinarri bat Eraikitzen"
+        },
+        "express-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
         },
         "express-2017/Nested Loops": {
           "name": "Kabiatutako begiztak"

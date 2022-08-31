@@ -24,6 +24,69 @@
         "ai-ml/oceans/unversioned": {
           "name": "AI: Strojno učenje"
         },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Strojno učenje"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Što je računalo?"
+        },
+        "variables/csd/2022": {
+          "name": "Varijable"
+        },
+        "variables_3/csd/2022": {
+          "name": "Varijable"
+        },
+        "sprites/csd/2022": {
+          "name": "Likovi"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Likovi"
+        },
+        "text/csd/2022": {
+          "name": "tekst"
+        },
+        "conditionals/csd/2022": {
+          "name": "Uvjeti"
+        },
+        "functions/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funkcije"
+        },
+        "lists/csd/2022": {
+          "name": "Liste"
+        },
+        "design_mode/csd/2022": {
+          "name": "Dizajnerski način"
+        },
+        "variables_1/csd/2022": {
+          "name": "Varijable"
+        },
+        "variables_2/csd/2022": {
+          "name": "Varijable"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funkcije s parametrima"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funkcije"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Uvod u AI laboratorij"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Uvod u AI laboratorij"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Nastavni plan"
         },

@@ -94,7 +94,7 @@ class ProgrammingClassesController < ApplicationController
     return render :not_found unless @programming_class
     begin
       @programming_class.destroy
-      render(status: 200, plain: "Destroyed #{@programming_class.name}")
+      render(status: :ok, plain: "Destroyed #{@programming_class.name}")
     rescue
       render(status: :not_acceptable, plain: @programming_class.errors.full_messages.join('. '))
     end

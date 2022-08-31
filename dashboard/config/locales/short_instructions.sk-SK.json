@@ -274,8 +274,8 @@
         "CourseE_HOC 2018 Level_7a_2020": "Prehľadaj podmorské ruiny a nájdi truhlicu.",
         "CourseE_HOC 2018 Level_9b": "Použi koraly ako míľniky na ceste k pokladu.",
         "CourseE_HOC 2018 Level_9b_2020": "Použi koraly ako míľniky na ceste k pokladu.",
-        "Crack Random Substitution": "Inštrukcie",
-        "Crack a Caesar Cipher": "Inštrukcie",
+        "Crack Random Substitution": "Pokyny",
+        "Crack a Caesar Cipher": "Pokyny",
         "Dance Party 1-validated": "Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  ",
         "Dance Party 2": "Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan začal točiť dokola.",
         "Dance Party 2_2019": "Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan začal točiť dokola.",
@@ -3149,7 +3149,13 @@
         "Overworld Chop Tree - allthethings": "Drevo je veľmi dôležitý materiál, pretože sa z neho vyrába veľa vecí. Prejdi k stromu a zotni ho pomocou príkazu „znič blok“.",
         "Test embedded K1 Blockly in instructions": "Na vyriešenie úlohy použi 3 bloky `pohni sa na západ` a jeden blok `zober kukuricu`.",
         "U1L13 Text Compression": "Vyhľadajte vzory (opakované slová alebo frázy) v texte. Nájdené vzory pridajte do slovníka vpravo. Pri zadávaní položiek do slovníka sa symbol pre položku vloží do textu namiesto vzoru.",
-        "U2L10 NetSim Automatic DNS": "V tejto verzii internetového simulátora, máte k dispozícii systém doménových mien (DNS), ktorý pozná IP adresy všetkých pripojených zariadení. Pošlite správu vo formáte GET [hostname] do DNS servisu na adresu  <yourRouterNumber>.15 aby ste dostali adresu študenta alebo študentky."
+        "U2L10 NetSim Automatic DNS": "V tejto verzii internetového simulátora, máte k dispozícii systém doménových mien (DNS), ktorý pozná IP adresy všetkých pripojených zariadení. Pošlite správu vo formáte GET [hostname] do DNS servisu na adresu  <yourRouterNumber>.15 aby ste dostali adresu študenta alebo študentky.",
+        "CSD U3 Mouse Input Bee 2_2022": "Urob toto",
+        "CSD U5 black white images pixelation 2_2022": "Nakreslite smajlíka (kliknite sem pre zobrazenie obrázku)",
+        "CSD U5 black white images pixelation 3_2022": "Zmeňte posuvníky šírky a výšky pre nájdenie obrázku (kliknite sem pre ďaľšie zobrazenie)",
+        "CSD U5 black white images pixelation 4_2022": "Pridajte smajlíkovi obočie (kliknite sem pre zobrazenie obrázka)",
+        "CSD U5 black white images pixelation 5_2022": "Nakreslite čo len chcete",
+        "CSD U5 black white images pixelation_2022": "Dokončite tvar X písaním núl a jednotiek"
       }
     }
   }

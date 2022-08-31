@@ -68,6 +68,24 @@
         "debugging/basketball/unversioned": {
           "word": "Debugimine"
         },
+        "debugging/csd/2022": {
+          "word": "Debugimine"
+        },
+        "variable/csd/2022": {
+          "word": "Muutuja"
+        },
+        "conditionals/csd/2022": {
+          "word": "Tingimuslaused"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraktsus"
+        },
+        "function/csd/2022": {
+          "word": "Funktsioon"
+        },
+        "copyright/csd/2022": {
+          "word": "Autoriõigus"
+        },
         "code/poem-art/unversioned": {
           "word": "Kood"
         },

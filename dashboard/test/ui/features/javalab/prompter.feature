@@ -1,4 +1,5 @@
 @eyes
+@skip
 Feature: Prompter
 
   @no_ie @no_circle

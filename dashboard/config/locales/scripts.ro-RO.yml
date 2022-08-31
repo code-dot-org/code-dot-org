@@ -3325,3 +3325,5 @@ ro:
           student_description: Această unitate conține un sondaj care va fi distribuit
             când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți
             va spune când trebuie să răspunzi la acest sondaj.
+        soccer:
+          name: fotbal

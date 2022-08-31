@@ -2796,3 +2796,5 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: 1 -ci hissənin tədrisinə hazırlıq
+        soccer:
+          name: futbol

@@ -1480,15 +1480,6 @@ cs:
         text: "{SPRITE} si myslí {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE} si myslí {TEXT1} po dobu {NUM} sekund"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} si myslí {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Taky mám hlad.
-            '"I only want the biggest goat."': Chci jen tu největší kozu.
-            '"I''m a green troll."': Jsem zelený trol.
-            '"No one will cross my bridge."': Přes můj most nikdo nepřejde.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} si myslí {THOUGHT}"
         options:

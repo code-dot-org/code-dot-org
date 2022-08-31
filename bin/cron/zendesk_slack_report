@@ -37,6 +37,7 @@ MONITORING_GROUPS = {
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
   'disco-party' => ['CSD'],
+  'ed-programs-tools' => ['Ed Programs Tools'],
   'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Jess', 'EdPop Kristyn', 'EdPop Rosie', 'EdPop Tawny'],
   'facilitator-things' => ['PnP Andrea'],
   'foundations' => ['Accounts'],

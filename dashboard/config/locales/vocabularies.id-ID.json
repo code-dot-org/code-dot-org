@@ -3,7 +3,8 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "event/dance-extras/unversioned": {
           "word": "Event",
@@ -11,10 +12,11 @@
         },
         "program/dance-extras/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/minecraft/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/minecraft/unversioned": {
           "word": "Debugging",
@@ -22,7 +24,7 @@
         },
         "program/minecraft/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "event/minecraft/unversioned": {
           "word": "Event",
@@ -33,7 +35,8 @@
           "definition": "Tindakan melakukan sesuatu berulang kali."
         },
         "code/hero/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/hero/unversioned": {
           "word": "Debugging",
@@ -41,7 +44,7 @@
         },
         "program/hero/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "function/hero/unversioned": {
           "word": "Fungsi",
@@ -69,7 +72,7 @@
         },
         "code/flappy/unversioned": {
           "word": "kode",
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/flappy/unversioned": {
           "word": "Debugging",
@@ -77,10 +80,11 @@
         },
         "program/flappy/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/hourofcode/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Debugging",
@@ -88,10 +92,11 @@
         },
         "program/hourofcode/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/frozen/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/frozen/unversioned": {
           "word": "Debugging",
@@ -99,10 +104,10 @@
         },
         "program/frozen/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/iceage/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/iceage/unversioned": {
           "word": "Debugging",
@@ -110,11 +115,11 @@
         },
         "program/iceage/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/artist/unversioned": {
           "word": "kode",
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/artist/unversioned": {
           "word": "Debugging",
@@ -122,10 +127,10 @@
         },
         "program/artist/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/gumball/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/gumball/unversioned": {
           "word": "Debugging",
@@ -133,7 +138,7 @@
         },
         "program/gumball/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "event/dance/unversioned": {
           "word": "Event",
@@ -141,13 +146,13 @@
         },
         "program/dance/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/dance/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "code/aquatic/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/aquatic/unversioned": {
           "word": "Debugging",
@@ -155,7 +160,7 @@
         },
         "program/aquatic/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "condition/aquatic/unversioned": {
           "word": "Kondisi",
@@ -194,7 +199,8 @@
           "definition": "teknik enkripsi yang memetakan setiap huruf alfabet ke huruf alfabet lain yang dipilih secara acak."
         },
         "code/starwars/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/starwars/unversioned": {
           "word": "Debugging",
@@ -202,10 +208,10 @@
         },
         "program/starwars/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/mc/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/mc/unversioned": {
           "word": "Debugging",
@@ -213,10 +219,10 @@
         },
         "program/mc/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/playlab/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/playlab/unversioned": {
           "word": "Debugging",
@@ -224,10 +230,10 @@
         },
         "program/playlab/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/starwarsblocks/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugging",
@@ -235,7 +241,7 @@
         },
         "program/starwarsblocks/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compression",
@@ -254,7 +260,8 @@
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
         "code/sports/unversioned": {
-          "word": "kode"
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/sports/unversioned": {
           "word": "Debugging",
@@ -262,10 +269,10 @@
         },
         "program/sports/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/infinity/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/infinity/unversioned": {
           "word": "Debugging",
@@ -273,14 +280,14 @@
         },
         "program/infinity/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "event/basketball/unversioned": {
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
         "code/basketball/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/basketball/unversioned": {
           "word": "Debugging",
@@ -288,10 +295,10 @@
         },
         "program/basketball/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/dance-extras-2019/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "event/dance-extras-2019/unversioned": {
           "word": "Event",
@@ -299,10 +306,10 @@
         },
         "program/dance-extras-2019/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/dance-2019/unversioned": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "event/dance-2019/unversioned": {
           "word": "Event",
@@ -310,9 +317,64 @@
         },
         "program/dance-2019/unversioned": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Pembelajaran Mesin",
+          "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
+        },
+        "input/csd/2022": {
+          "word": "Input"
+        },
+        "processing/csd/2022": {
+          "word": "Sedang memproses"
+        },
+        "bug/csd/2022": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "debugging/csd/2022": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "variable/csd/2022": {
+          "word": "Variabel",
+          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite"
+        },
+        "condition/csd/2022": {
+          "word": "Kondisi"
+        },
+        "conditionals/csd/2022": {
+          "word": "Kondisi"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2022": {
+          "word": "Fungsi"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Jejak Digital"
+        },
+        "copyright/csd/2022": {
+          "word": "Hak cipta",
+          "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
+        },
+        "user/csd/2022": {
+          "word": "Pengguna",
+          "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
+        },
+        "user_interface/csd/2022": {
+          "word": "Antarmuka Pengguna"
+        },
+        "machine_learning/csd/2022": {
           "word": "Pembelajaran Mesin",
           "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
         },
@@ -350,7 +412,7 @@
         },
         "program/coursef/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "algorithm/coursef/2021": {
           "word": "Algoritma",
@@ -474,7 +536,7 @@
         },
         "program/courseb/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "programming/courseb/2021": {
           "word": "Pemrograman",
@@ -506,7 +568,7 @@
         },
         "program/coursea/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "click/coursea/2021": {
           "word": "Klik",
@@ -558,7 +620,7 @@
         },
         "program/coursec/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "sequencing/coursec/2021": {
           "word": "Urutan",
@@ -590,7 +652,7 @@
         },
         "program/coursed/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "bug/coursed/2021": {
           "word": "Bug",
@@ -621,7 +683,7 @@
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
         "code/coursed/2021": {
-          "definition": "(v) menulis kode, atau menulis instruksi untuk komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "repeat/coursed/2021": {
           "word": "Ulangi",
@@ -669,7 +731,7 @@
         },
         "program/express/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "programming/express/2021": {
           "word": "Pemrograman",
@@ -780,7 +842,7 @@
         },
         "program/pre-express/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "programming/pre-express/2021": {
           "word": "Pemrograman",
@@ -887,7 +949,7 @@
         },
         "program/csd/2021": {
           "word": "Program",
-          "definition": "Sebuah algorithm yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "variable/csd/2021": {
           "word": "Variabel",

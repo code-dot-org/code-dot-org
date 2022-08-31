@@ -74,6 +74,30 @@
         "machine_learning/oceans/unversioned": {
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
+        "debugging/csd/2022": {
+          "word": "מציאת טעויות"
+        },
+        "variable/csd/2022": {
+          "word": "משתנה"
+        },
+        "sprite/csd/2022": {
+          "word": "ספרייט"
+        },
+        "conditionals/csd/2022": {
+          "word": "תנאים"
+        },
+        "abstraction/csd/2022": {
+          "word": "הפשטה"
+        },
+        "function/csd/2022": {
+          "word": "פונקציה"
+        },
+        "copyright/csd/2022": {
+          "word": "זכויות יוצרים"
+        },
+        "machine_learning/csd/2022": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
+        },
         "code/poem-art/unversioned": {
           "word": "קוד"
         },

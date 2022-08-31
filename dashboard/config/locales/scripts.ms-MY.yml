@@ -2245,3 +2245,5 @@ ms:
         aiml-2022:
           name: aiml-2022
           description_short: Ketahui tentang Kepintaran Buatan dan Pembelajaran Mesin
+        soccer:
+          name: bola sepak

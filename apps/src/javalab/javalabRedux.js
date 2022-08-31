@@ -1,5 +1,6 @@
 import UserPreferences from '../lib/util/UserPreferences';
 import {DisplayTheme} from './DisplayTheme';
+import {JavalabEditorDialog} from './JavalabEditorDialogManager';
 import {fileMetadataForEditor} from './JavalabFileHelper';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
@@ -41,6 +42,12 @@ const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
 const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
 const SET_ALL_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
+const OPEN_EDITOR_DIALOG = 'javalab/OPEN_EDITOR_DIALOG';
+const CLOSE_EDITOR_DIALOG = 'javalab/CLOSE_EDITOR_DIALOG';
+const SET_NEW_FILE_ERROR = 'javalab/SET_NEW_FILE_ERROR';
+const CLEAR_NEW_FILE_ERROR = 'javalab/CLEAR_NEW_FILE_ERROR';
+const SET_RENAME_FILE_ERROR = 'javalab/SET_RENAME_FILE_ERROR';
+const CLEAR_RENAME_FILE_ERROR = 'javalab/CLEAR_RENAME_FILE_ERROR';
 
 const initialSources = {
   'MyClass.java': {text: '', isVisible: true, isValidation: false}
@@ -75,6 +82,9 @@ export const initialState = {
   hasCommitSaveError: false,
   validationPassed: false,
   hasRunOrTestedCode: false,
+  editorOpenDialogName: null,
+  newFileError: null,
+  renameFileError: null,
   isJavabuilderConnecting: false
 };
 
@@ -218,6 +228,15 @@ export const closePhotoPrompter = () => ({
   type: CLOSE_PHOTO_PROMPTER
 });
 
+export const openEditorDialog = dialogName => ({
+  type: OPEN_EDITOR_DIALOG,
+  dialogName
+});
+
+export const closeEditorDialog = () => ({
+  type: CLOSE_EDITOR_DIALOG
+});
+
 export const setIsJavabuilderConnecting = isJavabuilderConnecting => ({
   type: SET_IS_JAVABUILDER_CONNECTING,
   isJavabuilderConnecting
@@ -343,6 +362,24 @@ export const setAllEditorMetadata = (
     lastTabKeyIndex
   };
 };
+
+export const setNewFileError = error => ({
+  type: SET_NEW_FILE_ERROR,
+  error: error
+});
+
+export const clearNewFileError = () => ({
+  type: CLEAR_NEW_FILE_ERROR
+});
+
+export const setRenameFileError = error => ({
+  type: SET_RENAME_FILE_ERROR,
+  error: error
+});
+
+export const clearRenameFileError = () => ({
+  type: CLEAR_RENAME_FILE_ERROR
+});
 
 export const setValidationPassed = validationPassed => ({
   type: SET_VALIDATION_PASSED,
@@ -594,6 +631,48 @@ export default function reducer(state = initialState, action) {
       orderedTabKeys: action.orderedTabKeys,
       activeTabKey: action.activeTabKey,
       lastTabKeyIndex: action.lastTabKeyIndex || state.lastTabKeyIndex
+    };
+  }
+  if (action.type === OPEN_EDITOR_DIALOG) {
+    if (JavalabEditorDialog[action.dialogName] !== undefined) {
+      return {
+        ...state,
+        editorOpenDialogName: action.dialogName
+      };
+    }
+  }
+  if (action.type === CLOSE_EDITOR_DIALOG) {
+    return {
+      ...state,
+      editorOpenDialogName: null
+    };
+  }
+
+  if (action.type === SET_NEW_FILE_ERROR) {
+    return {
+      ...state,
+      newFileError: action.error
+    };
+  }
+
+  if (action.type === CLEAR_NEW_FILE_ERROR) {
+    return {
+      ...state,
+      newFileError: null
+    };
+  }
+
+  if (action.type === SET_RENAME_FILE_ERROR) {
+    return {
+      ...state,
+      renameFileError: action.error
+    };
+  }
+
+  if (action.type === CLEAR_RENAME_FILE_ERROR) {
+    return {
+      ...state,
+      renameFileError: null
     };
   }
   if (action.type === SET_VALIDATION_PASSED) {

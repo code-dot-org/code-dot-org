@@ -2,6 +2,24 @@
   "en-GB": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_3/csd/2022": {
+          "name": "Variables"
+        },
+        "text/csd/2022": {
+          "name": "Text"
+        },
+        "lists/csd/2022": {
+          "name": "Lists"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variables"
+        },
         "variables_video/express/2021": {
           "name": "Variables"
         },

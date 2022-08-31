@@ -2269,3 +2269,5 @@ bg:
           lesson_groups:
             lessonGroup-4:
               display_name: Проучване
+        soccer:
+          name: футбол
