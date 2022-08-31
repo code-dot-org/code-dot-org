@@ -7,7 +7,10 @@ var soundList = [
   'stem-hip-drum',
   'stem-dance-lead',
   'stem-dance-bass',
-  'stem-dance-drum'
+  'stem-dance-drum',
+  'stem-country-lead',
+  'stem-country-bass',
+  'stem-country-drum',
 ];
 
 var baseSoundUrl;
