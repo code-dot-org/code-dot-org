@@ -87,6 +87,10 @@ en:
           student_description: Learn Functional Programming through Algebra.
           lessons: {}
           name: algebra
+          announcements:
+            471707cb-3577-4dc5-a2b2-89049eb13611:
+              notice: CS in Algebra is being deprecated
+              details: We are in the process of fully removing the CS in Algebra content and course from Code.org in 2022 (within the next 3-5 months), as we no longer actively support this older offering originally released in 2014 and unchanged since then. Any existing bugs or seemingly-missing content within CS in Algebra content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings. As an alternative, we recommend the Bootstrap:Algebra course instead.
         infinity:
           title: Disney Infinity Play Lab
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
@@ -1147,6 +1151,10 @@ en:
             csd1_2:
               display_name: 'Chapter 2: Computers and Problem Solving'
           student_description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
+          announcements:
+            77267681-a90e-4091-b6a0-90b21fac0685:
+              notice: Are you signed up for the AP exam?
+              details: Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -1421,6 +1429,10 @@ en:
               display_name: Teaching Practices
           student_description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
           name: csp5-support
+          announcements:
+            eff13b07-56b8-4597-a839-9e42d03fe6cc:
+              notice: This professional learning course is associated with a version of the CS Principles course that is no longer supported.  Please visit our Courses Overview page (https://studio.code.org/courses) to see our most current curricula.
+              details: ''
         csp6-support:
           stage: {}
           title: AP Preparation and Resources for Teachers
@@ -1729,6 +1741,10 @@ en:
             csp_ap_2:
               display_name: 'Chapter 2: AP Explore Performance Task'
           student_description: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
+          announcements:
+            8e007054-2b1d-4c8d-9720-fec0295662ed:
+              notice: This unit is being replaced....
+              details: As part of improving Performance Task prep, this unit has been split into separate units "Explore PT Prep" and "Create PT Prep" which can now be found in the pull down menu where you assign units to one of your sections.  Please go there and assign your section to the appropriate unit to see improved activities and resources.  The lesson plan for the Explore PT prep will link to the new lessons. Click the Learn More button to read about the changes and updates.
         cspnovice:
           title: CS Principles TeacherCon Novice Facilitator Reflection
           description_audience: CSP Novice Facilitators
@@ -1918,6 +1934,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          announcements:
+            cc0cc02a-c969-4412-907a-32bae53b77f5:
+              notice: Check out the CSP mid-course survey
+              details: We recently added a mid-course survey to the end of Unit 3.  Please allow your students some time to complete it.
         csd4-draft:
           title: CSD Unit 4 Revisions Draft
           description_audience: ''
@@ -2268,6 +2288,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          announcements:
+            956d4b3f-7e82-4073-8778-6d5ae13faf9e:
+              notice: CS Discoveries Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csd2-2018:
           title: CSD Unit 2 - Web Development ('18-'19)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
@@ -2281,6 +2305,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
+          announcements:
+            5b18be69-3f3d-43c3-a9c7-14ea06d1b9e9:
+              notice: Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         coursea-2018:
           title: Course A (2018)
           assignment_family_title: Course A
@@ -2297,6 +2325,10 @@ en:
           description_audience: 'Ages: 9-18'
           lesson_groups: {}
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          announcements:
+            6cac20ed-f166-422f-bac0-1fdc757887e8:
+              notice: 'New: Choose Which Lessons to Show or Hide for Your Section'
+              details: Click "Learn More" to read the help article on showing and hiding lessons.
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
@@ -2355,6 +2387,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          announcements:
+            2795e778-2ab8-4d9b-a8f3-b1c1bd978b98:
+              notice: CS Discoveries Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         coursee-2018:
           title: Course E (2018)
           assignment_family_title: Course E
@@ -2398,6 +2434,10 @@ en:
             csp1_2:
               display_name: 'Chapter 2: Inventing the Internet'
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          announcements:
+            46a19a1b-0e10-49f3-ac4c-2fb239894879:
+              notice: Are you signed up for the AP exam?
+              details: Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.
         csd1-2018:
           title: CSD Unit 1 - Problem Solving ('18-'19)
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -2424,6 +2464,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+          announcements:
+            ebd04dae-7aa9-461f-ab95-a791883cf1bf:
+              notice: CS Discoveries Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csd5-2018:
           title: CSD Unit 5 - Data and Society ('18-'19)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -2437,6 +2481,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+          announcements:
+            b9eb882e-efba-416b-beb2-6b3e61b0b89c:
+              notice: CS Discoveries Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csp2-2018:
           title: CSP Unit 2 - Digital Information ('18-'19)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2448,6 +2496,10 @@ en:
             cspAssessment:
               display_name: Chapter Assessment
           student_description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          announcements:
+            4d4141f9-c574-41b6-a41a-bf79679e3452:
+              notice: Are you signed up for the AP exam?
+              details: Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming ('18-'19)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2462,6 +2514,13 @@ en:
               display_name: Survey
           student_description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           name: csp3-2018
+          announcements:
+            06c1572e-6d51-4e8e-8cc8-3a6516c4d284:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
+            e54e756a-730d-4532-b88a-667365e7c4dd:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csp-explore-2018:
           title: Explore - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -2473,6 +2532,13 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          announcements:
+            0fe3fb06-fcf2-4e49-9ea5-023d83931ff9:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
+            932010e3-1446-494c-b014-a264ca0099f1:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csp-create-2018:
           title: Create - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -2484,6 +2550,13 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          announcements:
+            1a467328-6145-4ea3-8032-1fa920d30500:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
+            29fc247f-ee80-4984-af1b-7db276b4aee4:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy ('18-'19)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -2497,6 +2570,13 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          announcements:
+            db255033-1cfd-4241-b4b4-3cd15ab6d274:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
+            4ebd2e91-577b-466e-bcda-47b35d2d1970:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csp5-2018:
           title: CSP Unit 5 - Building Apps ('18-'19)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2510,6 +2590,13 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          announcements:
+            64d6cb4b-fd3b-4d16-8b7c-a7ba68b25622:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
+            7f1bc631-5832-4329-8dfc-0ca927b138af:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         csppostap-2018:
           title: Post AP - Data Tools ('18-'19)
           description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
@@ -2523,6 +2610,22 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
+          announcements:
+            eb8ebd3b-550e-46e4-8ca7-498f3d54eb7d:
+              notice: No Lesson Plans for Chapter 2
+              details: Chapter 2 of this unit does not currently have lesson plans available. "Lesson Plan" links for that chapter will not work as expected.
+            0d9c9f39-5d17-4bda-874b-51a5ff1b463b:
+              notice: What's Next After High School?
+              details: Continue your journey with CS! Explore career and academic pathways, job and mentorship opportunities, and online courses available through our partners.
+            43d46a9d-ae27-493a-b4ac-147fa6636136:
+              notice: Computer Science Beyond High School
+              details: It's the perfect time to help your students explore their next CS opportunities. These resources can help them explore pathways, internships, and online courses.
+            8073ac2a-63a7-45ec-b0c7-6f85569f8da1:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
+            c9cfa961-496c-4fae-ab44-f7e41131baf5:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
         spritelab:
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
@@ -2530,6 +2633,10 @@ en:
           description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
           lesson_groups: {}
           student_description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
+          announcements:
+            5354dc0b-233e-42ee-8a05-9718afaed7e9:
+              notice: This Progression is No Longer Supported
+              details: The standalone Sprite Lab progression is no longer supported by Code.org. We recommend you click "Learn More" to try the Express course.
         csd1-dlp-18:
           title: CS Discoveries Unit 1 Deeper Learning 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
@@ -2743,6 +2850,10 @@ en:
           description_audience: 'Ages: 4-8'
           lesson_groups: {}
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          announcements:
+            197fac1d-23da-4020-9931-31a72ca525c6:
+              notice: 'New: Choose Which Lessons to Show or Hide for Your Section'
+              details: Click "Learn More" to read the help article on showing and hiding lessons.
         spritelab-validated:
           title: ''
           description_audience: ''
@@ -2996,6 +3107,10 @@ en:
               display_name: Content
           name: andrea-test
           student_description: longer description on my attempt to create a course....   stilling wondering where overview, content came from....
+          announcements:
+            2f459f3d-f13b-4531-ba99-31701666eefd:
+              notice: Announcing
+              details: the announcement
         dance-extras-gallery:
           title: Keep On Dancing
           description_audience: ''
@@ -3125,6 +3240,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          announcements:
+            5c5be11c-6887-460f-8dff-ee0985129e2c:
+              notice: Check out the new CS Discoveries resources for 2019-2020!
+              details: Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!
         csd4-2019:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -3287,6 +3406,10 @@ en:
             cspSurvey:
               display_name: Survey
           student_description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
+          announcements:
+            7560972a-0b39-4d1d-8272-53e6b8f7736a:
+              notice: No Lesson Plans in Chapter 2
+              details: Please note there are no lesson plans for Chapter 2 of this unit.
         csp1-pilot:
           title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
@@ -3996,6 +4119,19 @@ en:
               display_name: Post-Course Survey
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           name: csp4-2020
+          announcements:
+            1b403e5e-5ce5-4861-aad7-5d0264683023:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            2996540d-1204-4593-b8d7-5dd4233893db:
+              notice: EIPM Lessons
+              details: 'In this unit, we begin following our new programming model called EIPM. Check out this helpful video series to learn all about it! '
+            e1d16dda-996f-4e40-ac2a-4df7c6a3d346:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            e069ef6d-5f64-4ad4-8168-bb93eed235cf:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp5-2020:
           title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
           description_audience: ''
@@ -4014,6 +4150,16 @@ en:
               display_name: Post-Course Survey
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           name: csp5-2020
+          announcements:
+            f7ab6def-6ec3-4c66-9548-9b28599c321a:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            bea3640d-5663-4bc3-878b-9a6028d0894c:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            e9750f21-72ed-48be-830d-69714794f25f:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp7-2020:
           title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
           description_audience: ''
@@ -4028,6 +4174,16 @@ en:
               display_name: Post-Course Survey
           name: csp7-2020
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          announcements:
+            5e59d897-1e5d-48f4-ad3e-1bf6d5ffa942:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            8913ee49-f6d4-458c-9e4c-dbceb4d1cce7:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            909ac36c-4f0d-4a19-9138-58838df833db:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csd2-projects-temp:
           title: CSD Web Projects - TEMP
           description_audience: ''
@@ -4302,6 +4458,16 @@ en:
               display_name: Post-Course Survey
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           name: csp1-2020
+          announcements:
+            d24e7c5c-2aa2-44e7-984a-7aef1e71e924:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            37773487-906c-42cf-b766-dea410e8eb9c:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            35787fb7-b3cf-4845-ba44-638416b2ed8d:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp2-2020:
           title: CSP Unit 2 - The Internet ('20-'21)
           description_audience: ''
@@ -4314,6 +4480,16 @@ en:
               display_name: Post-Course Survey
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           name: csp2-2020
+          announcements:
+            ca63139f-7341-4a55-b172-06e7692b28ae:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            d8d45ffb-b3c1-43a6-ba0c-6eadef15224f:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            d948a5bc-582e-4cb5-854b-af9526f6e7ae:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp3-2020:
           title: CSP Unit 3 - Intro to App Design ('20-'21)
           description_audience: ''
@@ -4326,6 +4502,19 @@ en:
               display_name: Post-Course Survey
           name: csp3-2020
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
+          announcements:
+            4743b255-417c-449a-816d-78b6520dca75:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            b3a48504-b031-4032-8e6c-c1b74fd576a0:
+              notice: Looking for the Lesson Activities?
+              details: 'Teachers, some lessons in this unit contain activities that are not located on Code Studio. Make sure to read the Lesson Plans and check out the unit slides. '
+            e155b43c-5bb7-4cc4-81f5-247fe52cb97d:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            04b05761-62a9-4ddb-ae69-c6486c7977d5:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp6-2020:
           title: CSP Unit 6 - Algorithms ('20-'21)
           description_audience: ''
@@ -4338,6 +4527,16 @@ en:
               display_name: Post-Course Survey
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           name: csp6-2020
+          announcements:
+            568e2d4d-071e-461a-93d3-cf322382d654:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            e945610b-665a-4a17-9504-f4368ab04786:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            c6547089-ceec-4894-8df3-f456d2b2dcba:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp8-2020:
           title: CSP Unit 8 - Create PT Prep ('20-'21)
           description_audience: ''
@@ -4346,6 +4545,10 @@ en:
           lesson_groups: {}
           student_description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           name: csp8-2020
+          announcements:
+            642ccb6d-f3d6-412d-82dc-4195d7b61f92:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
         csp9-2020:
           title: CSP Unit 9 - Data ('20-'21)
           description_audience: ''
@@ -4358,6 +4561,19 @@ en:
               display_name: Post-Course Survey
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
           name: csp9-2020
+          announcements:
+            e5515042-caea-4217-8e8e-fe1cb4a6da8e:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            d7d1f958-2151-480c-9e7f-2b2c36047188:
+              notice: ''
+              details: Are your students planning to take the AP Exam? This unit covers content that will be assessed on the exam. Check out the standards covered in this unit.
+            556f738d-83f9-485d-9c75-49decc17dcf4:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            b9e4a6cc-0904-4de4-a172-ef13cc0532d5:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp10-2020:
           title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
           description_audience: ''
@@ -4370,6 +4586,19 @@ en:
               display_name: Post-Course Survey
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
           name: csp10-2020
+          announcements:
+            a6a84c29-34c5-47f0-b823-5d1025d89f70:
+              notice: ''
+              details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. '
+            603cb4f7-c587-4553-91da-854aa7a28faf:
+              notice: ''
+              details: Are your students planning to take the AP Exam? This unit covers content that will be assessed on the exam. Check out the standards covered in this unit.
+            1c16294d-3371-424b-a87e-d64c0332726c:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: 'Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the "View Lesson Plan" button next to the survey for instructions. Thanks!'
+            d85a7ecb-6c44-4297-b116-b018c2750c8f:
+              notice: CS Principles Post-Course Survey for Students Now Open!
+              details: Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.
         csp-march-virtual:
           title: CS Principles 20-21 Curriculum Training for Facilitators
           description_audience: CS Principles Facilitators
@@ -4672,6 +4901,13 @@ en:
               description: 'This chapter provides alternate lessons for this unit.  '
           name: csd1-2021
           student_description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
+          announcements:
+            f6fedebe-28bd-4521-9a66-095c7f77dc7c:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            969f84ef-4cf3-4d3f-a624-211a6c08af70:
+              notice: Virtual Modifications
+              details: If you are teaching in a virtual, hybrid, or socially distanced setting, then you can view recommended modifications to our curricula that can be used in these settings.
         csd2-2021:
           title: Web Development ('21-'22)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   \n\n**Implementation Guidance for Unit 2**\n- Complete Unit 1 Chapter 1 before starting this unit\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit"
@@ -4697,6 +4933,13 @@ en:
               display_name: Survey
           name: csd2-2021
           student_description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          announcements:
+            dc9c467a-5395-47ca-9426-e41f25f8e1aa:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            3ce4c181-9d83-4198-89e6-49e1b3ebd4c3:
+              notice: Virtual Modifications
+              details: If you are teaching in a virtual, hybrid, or socially distanced setting, then you can view recommended modifications to our curricula that can be used in these settings.
         csd3-2021:
           title: Interactive Animations and Games ('21-'22)
           description: |2-
@@ -4729,6 +4972,13 @@ en:
               display_name: Survey
           name: csd3-2021
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          announcements:
+            9a35dfce-00ef-4b6d-a4b1-04fd143a15b1:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            ecf70a2d-50b2-414a-97c7-66d3d7cc1aa8:
+              notice: Virtual Modifications
+              details: If you are teaching in a virtual, hybrid, or socially distanced setting, then you can view recommended modifications to our curricula that can be used in these settings.
         csd4-2021:
           title: The Design Process ('21-'22)
           description: |-
@@ -4761,6 +5011,10 @@ en:
               display_name: Survey
           name: csd4-2021
           student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+          announcements:
+            357b2461-c185-476c-ac64-c58d34c15d6b:
+              notice: Supports for Teaching CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
         csd5-2021:
           title: Data and Society ('21-'22)
           description: |-
@@ -4793,6 +5047,10 @@ en:
               display_name: Survey
           name: csd5-2021
           student_description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+          announcements:
+            35eeed28-327b-45d9-b163-0e10bc78fc8e:
+              notice: Supports for Teaching CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
         csd6-2021:
           title: Physical Computing ('21-'22)
           description: |-
@@ -4826,6 +5084,10 @@ en:
               display_name: Survey
           name: csd6-2021
           student_description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          announcements:
+            d7d9cab6-c0a6-4f9d-bbee-7b66bb91e7c0:
+              notice: Supports for Teaching CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
         csp1-2021:
           title: Digital Information ('21-'22)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
@@ -4863,6 +5125,10 @@ en:
                 * 5.5 Legal and Ethical Concerns.
           name: csp1-2021
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
+          announcements:
+            9cbf4004-357c-4a43-b999-c0fc556aa746:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp2-2021:
           title: The Internet ('21-'22)
           description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
@@ -4878,6 +5144,10 @@ en:
               description: helllo
           name: csp2-2021
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
+          announcements:
+            a7aa5da6-07b0-4172-a31c-a395afa279c4:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp3-2021:
           title: Intro to App Design ('21-'22)
           description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
@@ -4889,6 +5159,10 @@ en:
               description: "### Unit Philosophy and Pedagogy\n\n\n* **New Topics, Same Classroom Culture:** This unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n* **Emphasizing Skills:** Since this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n* **Empowering \"Creators\":** This unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n### Major Assessment and Projects\n\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
           name: csp3-2021
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
+          announcements:
+            3485dfdc-373d-41d2-8e29-ea5f231986aa:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp4-2021:
           title: Variables, Conditionals, and Functions ('21-'22)
           description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
@@ -4942,6 +5216,10 @@ en:
               display_name: Project
           name: csp4-2021
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
+          announcements:
+            c76d5503-1624-40a6-ab53-7a158e5f7a52:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp5-2021:
           title: Lists, Loops, and Traversals ('21-'22)
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
@@ -4999,6 +5277,10 @@ en:
               display_name: Post-Course Survey
           name: csp5-2021
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
+          announcements:
+            890d1c3b-3dcd-4c79-a21a-37e6a02bd267:
+              notice: " Bring AP® Computer Science A to your students next year!"
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp6-2021:
           title: Algorithms ('21-'22)
           description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
@@ -5039,6 +5321,10 @@ en:
               display_name: Post-Course Survey
           name: csp6-2021
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
+          announcements:
+            79845ebe-c8d2-488d-8296-31c3c0765106:
+              notice: " Bring AP® Computer Science A to your students next year!"
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp7-2021:
           title: Parameters, Return, and Libraries ('21-'22)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
@@ -5054,6 +5340,10 @@ en:
               display_name: Survey
           name: csp7-2021
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          announcements:
+            0e6a826d-be28-4e0e-bd11-b257b14c85c6:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp8-2021:
           title: Create PT Prep ('21-'22)
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
@@ -5068,6 +5358,10 @@ en:
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
 
 '
+          announcements:
+            0626b975-df74-45fa-832a-fe8ba73d55a0:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp9-2021:
           title: Data ('21-'22)
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
@@ -5081,6 +5375,10 @@ en:
               display_name: Survey
           name: csp9-2021
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
+          announcements:
+            0c477586-d6ef-48c7-9479-bb8110fab2a4:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         csp10-2021:
           title: Cybersecurity and Global Impacts ('21-'22)
           description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\n\n"
@@ -5096,6 +5394,10 @@ en:
           student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
 
 '
+          announcements:
+            6ac730a6-d187-4105-baf1-f574790d0e75:
+              notice: Bring AP® Computer Science A to your students next year!
+              details: Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.
         coursea-2021:
           title: Course A (2021)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
@@ -5304,6 +5606,10 @@ en:
           description_short: Learn about events, variables, and conditionals, and create your own animations, games, and simulations.
           description: "Learn to use events by programming in Sprite Lab. Investigate different design techniques and discuss societal impacts of computing. \n\n**Pilot 2021**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2021 only."
           student_description: "Learn to use events by programming in Sprite Lab. Investigate different design techniques and discuss societal impacts of computing. \n\n**Pilot 2021**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2021 only."
+          announcements:
+            1168f004-d1ce-4b39-87a4-42e409964927:
+              notice: Attention pilot teachers!
+              details: Lesson plans for this course are currently available in Google Doc format only. Click the button to access the lesson plans.
         csd4-preview-2021:
           title: CSD Unit 4 - The Design Process ('21-'22 Beta Preview)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -5473,6 +5779,10 @@ en:
           description_short: ''
           description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
+          announcements:
+            a892ab63-0f06-4e6f-b36e-2286c2b2dbaa:
+              notice: 'CSA Pilot: The Playground'
+              details: Please note that for the AP CSA Pilot, The Playground is offered only in Units 4 and 8 and in a sandbox level found at the end of each unit. The Playground is not available as a standalone project outside of the course. Projects created in The Playground may not function after the end of the school year as potential updates are implemented. If this happens, we will provide instructions for students who wish to keep their projects working as expected.
         csa5-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -5739,6 +6049,10 @@ en:
 
             **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/s/self-paced-pl-csd5-2021). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+          announcements:
+            11f8049b-88ce-4661-a91b-29d4ad30bb80:
+              notice: Supports for Teaching CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
         kodea-pd-2021:
           title: CSF Online PD - Kodea
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -5797,6 +6111,10 @@ en:
           description_short: ''
           description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
           student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          announcements:
+            1fc08cc8-b65b-4e65-87af-d9a0d3194321:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csd2-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5811,6 +6129,10 @@ en:
           description_short: ''
           description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n\n\n\n\n"
           student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          announcements:
+            16441708-e824-4151-afbb-d86b868bf82c:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csd3-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5821,6 +6143,10 @@ en:
           description_short: ''
           description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
           student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          announcements:
+            fbfde4b7-defd-40db-9b7e-8a398f997c2d:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csd4-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5831,6 +6157,10 @@ en:
           description_short: ''
           description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
           student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          announcements:
+            b126a30e-21aa-4a05-a47f-ea50579f9e6f:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csd5-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5862,6 +6192,10 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes\n"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
+          announcements:
+            62807a5d-5aac-4e33-822f-d59f4355f489:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csd6-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5884,6 +6218,10 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare for teaching Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
+          announcements:
+            8023d2fa-a293-4167-9e20-065c059cffdc:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csd7-2021:
           lesson_groups: {}
           name: self-paced-pl-csd7-2021
@@ -5892,6 +6230,10 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          announcements:
+            d4717dd9-1907-4577-90f6-a5263b3f36b9:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csd8-2021:
           lesson_groups: {}
           name: self-paced-pl-csd8-2021
@@ -5900,6 +6242,10 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          announcements:
+            1663567f-68cc-4cad-93a5-e7d2d72d4973:
+              notice: Teacher Account Required to Use Course Beginning in February 2022
+              details: If you are not already a verified teacher, click here to complete the form to become a verified teacher.
         self-paced-pl-csp1-2021:
           lesson_groups: {}
           name: self-paced-pl-csp1-2021
@@ -6402,6 +6748,10 @@ en:
           description_short: ''
           description_audience: ''
           name: csa4-pilot-facilitator
+          announcements:
+            5f8a93ac-a3f6-45e4-974b-f56e7db4498a:
+              notice: 'CSA Pilot: The Playground'
+              details: Please note that for the AP CSA Pilot, The Playground is offered only in Units 4 and 8 and in a sandbox level found at the end of each unit. The Playground is not available as a standalone project outside of the course. Projects created in The Playground may not function after the end of the school year as potential updates are implemented. If this happens, we will provide instructions for students who wish to keep their projects working as expected.
         csa5-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -6871,6 +7221,10 @@ en:
           description_short: 'Learn about sprites and variables by programming in Sprite Lab. '
           description: "Learn about sprites and variables by programming in Sprite Lab.  \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only. Note that the final version of Course F (2022) will include additional lessons and may have other differences. CS Fundamentals (2022) will launch this summer.\n\nWe need your feedback, especially on the lessons marked **[New]**. If you are eager to start the new lessons, you can give students a basic introduction to Sprite Lab using our  [Hello World](https://code.org/helloworld) Hour of Code tutorial."
           student_description: "Learn about sprites and variables by programming in Sprite Lab. \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only."
+          announcements:
+            2e860850-45de-4c6f-868f-ef5494ca3a22:
+              notice: Attention pilot teachers!
+              details: Lesson plans for the new lessons in this course are currently available in Google Doc format only. Click the button to access the lesson plans.
         csd6-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7016,6 +7370,10 @@ en:
           description_audience: ''
           name: csp1-2022
           lessons: {}
+          announcements:
+            cf90d3bd-783e-4763-a153-8d1cf48c346b:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         csp2-2022:
           lesson_groups:
             csp_unit2_2020:
@@ -7027,6 +7385,10 @@ en:
           description_audience: ''
           name: csp2-2022
           lessons: {}
+          announcements:
+            1269756a-e35f-4980-a2ae-613806fc017f:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         csp3-2022:
           lesson_groups:
             csp_unit3_2020:
@@ -7038,6 +7400,10 @@ en:
           description_audience: ''
           name: csp3-2022
           lessons: {}
+          announcements:
+            406f0b4b-129b-4ce0-abae-a82262fdf686:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -7055,6 +7421,10 @@ en:
           description_audience: ''
           name: csp4-2022
           lessons: {}
+          announcements:
+            34ac2130-a71e-4256-b674-6cb907eba79a:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         csp5-2022:
           lesson_groups:
             csp_lists:
@@ -7074,6 +7444,10 @@ en:
           description_audience: ''
           name: csp5-2022
           lessons: {}
+          announcements:
+            cb01aa35-13e5-4e1a-b45d-dcd930400613:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         courseb-2022:
           lesson_groups:
             csf_digcit:
@@ -7127,6 +7501,10 @@ en:
           description_audience: ''
           name: csp6-2022
           lessons: {}
+          announcements:
+            710c7129-fa41-41ef-a147-4b96a1a5f300:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -7142,6 +7520,10 @@ en:
           description_audience: ''
           name: csp7-2022
           lessons: {}
+          announcements:
+            8d7c3887-5511-41f3-a0a4-c263c5b4f4cc:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         csp8-2022:
           title: Create PT Prep ('22-'23)
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
@@ -7157,6 +7539,10 @@ en:
               display_name: Post-Course Survey
           name: csp8-2022
           lessons: {}
+          announcements:
+            d141d323-b2a9-4a6a-b01e-b76eba396b52:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -7170,6 +7556,10 @@ en:
           description_audience: ''
           name: csp9-2022
           lessons: {}
+          announcements:
+            2f64c4b7-eaa4-43d2-a262-b35df8e12d22:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went.
         csp10-2022:
           lesson_groups:
             csp_unit10_2020:
@@ -7185,6 +7575,10 @@ en:
           description_audience: ''
           name: csp10-2022
           lessons: {}
+          announcements:
+            ee375774-987b-4fc6-bc54-e6bd302db676:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went.
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
@@ -7281,6 +7675,10 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) to let the Code.org curriculum team know how the unit went.
           student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
           lessons: {}
+          announcements:
+            9407f91b-9c06-4d97-98fc-389956513c89:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         pre-express-2022:
           lesson_groups:
             csf_sequencing:
@@ -7324,6 +7722,10 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went.
           student_description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
           lessons: {}
+          announcements:
+            8089ffa4-a382-4e8a-930f-bd32632acc0a:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csa3-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7352,6 +7754,10 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went.
           student_description: This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to represent lists of data while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, you identify the preconditions and postconditions that an algorithm must satisfy. Additionally, you learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
           lessons: {}
+          announcements:
+            553c1b1f-7cca-4011-bff0-d525aba67b35:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         tessplayground:
           lesson_groups: {}
           name: tessplayground
@@ -7393,6 +7799,10 @@ en:
           description: "This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.\n\n### AP Classroom Personal Progress Checks\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org\t/s/csa4-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n* Personal Progress Check 3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4) to let the Code.org curriculum team know how the unit went."
           student_description: This unit revisits the use of packages to access existing functionalities in your programs, such as The Neighborhood, to expand your knowledge of APIs and libraries and explore The Theater. With The Theater, you learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, you expand your knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, you use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.
           lessons: {}
+          announcements:
+            63491b6c-ed25-425d-8436-ae81484a6d8e:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csa5-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7421,6 +7831,13 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5) to let the Code.org curriculum team know how the unit went.
           student_description: This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As you analyze problems involving 2D arrays, you revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. You apply these concepts to manipulate pixels using The Theater to create image filters in addition to working with primitive values and various object references. Additionally, you use the programming knowledge and skills you have acquired to consider the impacts of programs on society, economies, and culture.
           lessons: {}
+          announcements:
+            ce42ba3a-853e-4974-a564-9787d0b9a4cd:
+              notice: Curriculum Videos
+              details: Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.
+            194069c7-3da7-4290-ba26-8bb46fdac3f9:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         tess-test-csa:
           lesson_groups: {}
           name: tess-test-csa
@@ -7611,6 +8028,10 @@ en:
 
             We have also added a full slide deck covering all lessons in Course F. We welcome your [feedback](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) on the lesson slides as well!
           student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          announcements:
+            6d6f6b0a-5d93-4e50-b37a-58e7e825ab60:
+              notice: Attention teachers!
+              details: We need your feedback! Please look for the survey links on this course page and let us know what you think.
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7641,6 +8062,10 @@ en:
           description_audience: ''
           name: csa6-2022
           lessons: {}
+          announcements:
+            fa9d4758-ee1f-422d-93c9-e43b2f678c88:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csa7-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7665,6 +8090,13 @@ en:
           description_audience: ''
           name: csa7-2022
           lessons: {}
+          announcements:
+            b7c86d52-d6d8-438c-a8c3-a42a7ec8f76b:
+              notice: Curriculum Videos
+              details: Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.
+            912496ad-6f26-48d6-ab4b-f0a36ecd5bea:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csa8-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7694,6 +8126,10 @@ en:
           description_audience: ''
           name: csa8-2022
           lessons: {}
+          announcements:
+            50d7ad1d-8e42-4d1d-93f7-8b80964ec4e3:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         ui-test-csa-family-script:
           lesson_groups: {}
           name: ui-test-csa-family-script
@@ -7947,6 +8383,13 @@ en:
           description_audience: ''
           name: csd1-2022
           lessons: {}
+          announcements:
+            7ee21dab-2862-419c-9e5b-97a7a78beb5f:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            5aeb9536-4f93-487c-bff6-6e99cd3a44b4:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csd2-2022:
           lesson_groups:
             csd2_1v2:
@@ -7972,6 +8415,13 @@ en:
           description_audience: ''
           name: csd2-2022
           lessons: {}
+          announcements:
+            e7e9890a-66f0-4e39-826c-45abb9fcbdbb:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            12b06c73-a07c-4688-9fde-6d9b681b59ab:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csd3-2022:
           lesson_groups:
             csd3_1:
@@ -7996,6 +8446,13 @@ en:
           description_audience: ''
           name: csd3-2022
           lessons: {}
+          announcements:
+            93207254-bfea-44df-976c-101a8d964197:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            b4a3285d-3cb6-40de-bcac-c2520a20d310:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csd4-2022:
           lesson_groups:
             csd4_1:
@@ -8019,6 +8476,13 @@ en:
           description_audience: ''
           name: csd4-2022
           lessons: {}
+          announcements:
+            94c5cde2-481e-4438-a4f9-8c0cf6568996:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            ca128b67-d1c2-4a55-8abf-1f67c788bd29:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csd5-2022:
           lesson_groups:
             csd5_1:
@@ -8042,6 +8506,13 @@ en:
           description_audience: ''
           name: csd5-2022
           lessons: {}
+          announcements:
+            a9438424-19f7-4956-a0ef-e58323b5f459:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            9412325d-9cbc-420a-b1b2-2b0843387db4:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csd7-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8070,6 +8541,13 @@ en:
           description_audience: ''
           name: csd7-2022
           lessons: {}
+          announcements:
+            3bc4e14c-c7ab-48d1-9b2d-5506acfc865a:
+              notice: Supports to Teach AI and Machine Learning
+              details: If you are interested in teaching this course, we recommend completing the free AI and Machine Learning Self Paced Professional Learning module. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
+            2dc212d4-633f-40aa-bcc6-128e05fe08bc:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csd6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8096,6 +8574,13 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went.
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           lessons: {}
+          announcements:
+            90969f1a-a656-43b8-b2b1-e91072c9e413:
+              notice: Supports to Teach CS Discoveries
+              details: In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.
+            b5e327e1-5d0f-47a1-adbb-98de82792792:
+              notice: More Opportunities for Feedback
+              details: Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.
         csd-post-survey-2022:
           lesson_groups: {}
           name: csd-post-survey-2022
@@ -8770,3 +9255,8 @@ en:
           student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description_audience: ''
+        express-2023:
+          announcements:
+            6795da5e-d6d9-4236-88e1-b4b65ea7c81a:
+              notice: test
+              details: test2

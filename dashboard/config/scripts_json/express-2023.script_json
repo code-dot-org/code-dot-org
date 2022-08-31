@@ -1,35 +1,34 @@
 {
   "script": {
-    "name": "csf-2022-pilot",
+    "name": "express-2023",
     "wrapup_video_id": null,
-    "login_required": true,
+    "login_required": false,
     "properties": {
       "announcements": [
         {
-          "notice": "Attention pilot teachers!",
-          "details": "Lesson plans for the new lessons in this course are currently available in Google Doc format only. Click the button to access the lesson plans.",
+          "key": "6795da5e-d6d9-4236-88e1-b4b65ea7c81a",
+          "notice": "test",
+          "details": "test2",
           "link": "",
-          "type": "information",
-          "visibility": "Teacher-only",
-          "key": "2e860850-45de-4c6f-868f-ef5494ca3a22"
+          "type": "feedback",
+          "visibility": "Teacher and student",
+          "dismissible": true,
+          "buttonText": "test"
         }
       ],
-      "curriculum_umbrella": "CSF",
-      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csf-2022-pilot",
-      "version_year": "2022"
+      "version_year": "2023"
     },
     "new_name": null,
-    "family_name": "csf-pilot",
-    "serialized_at": "2022-08-31 17:46:37 UTC",
-    "published_state": "pilot",
+    "family_name": "express",
+    "serialized_at": "2022-08-31 17:47:18 UTC",
+    "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
-      "script.name": "csf-2022-pilot"
+      "script.name": "express-2023"
     }
   },
   "lesson_groups": [
@@ -41,7 +40,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "csf-2022-pilot"
+        "script.name": "express-2023"
       }
     }
   ],

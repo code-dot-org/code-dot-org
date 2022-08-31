@@ -10,7 +10,8 @@
           "details": "If you are interested in teaching this course, we recommend completing the free AI and Machine Learning Self Paced Professional Learning module. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.",
           "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "3bc4e14c-c7ab-48d1-9b2d-5506acfc865a"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -19,7 +20,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Teacher Survey"
+          "buttonText": "Teacher Survey",
+          "key": "2dc212d4-633f-40aa-bcc6-128e05fe08bc"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -36,7 +38,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-24 21:53:46 UTC",
+    "serialized_at": "2022-08-31 17:47:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
