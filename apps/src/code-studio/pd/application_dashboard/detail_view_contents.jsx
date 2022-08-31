@@ -1119,7 +1119,7 @@ export class DetailViewContents extends React.Component {
         <div>
           <h3>Principal Approval</h3>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
-          <p>
+          <p id="principal-approval-link">
             Link to principal approval form:{' '}
             <a
               href={principalApprovalUrl}
