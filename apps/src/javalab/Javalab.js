@@ -388,13 +388,7 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
   );
 
   let connectToJavabuilder;
-  // If in exemplar or preview mode, use the sources currently on the page
-  // (as opposed to the sources saved on the backend).
-  if (
-    this.isEditingExemplar ||
-    this.isViewingExemplar ||
-    getStore().getState().pageConstants.isReadOnlyWorkspace
-  ) {
+  if (this.isEditingExemplar || this.isViewingExemplar) {
     const overrideSources = getSources(getStore().getState());
     connectToJavabuilder = () =>
       this.javabuilderConnection.connectJavabuilderWithOverrideSources(
