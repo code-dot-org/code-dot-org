@@ -648,7 +648,10 @@ class MusicView extends React.Component {
                   />
                   electronic
                 </div>
-                <div style={{paddingBottom: 10}}>
+                <div
+                  style={{cursor: 'pointer', paddingBottom: 10}}
+                  onClick={() => this.setSamplePanel('country')}
+                >
                   <img
                     src={filenameToImgUrl['samplepack4']}
                     style={{width: 60, paddingRight: 20}}
