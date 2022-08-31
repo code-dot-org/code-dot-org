@@ -18,6 +18,6 @@
       - if current_user && @script && @script.can_be_instructor?(current_user) && DCDO.get('reset-predict-level-feature', false)
         %button{id: 'reset-predict-progress-button', disabled: !sublevel_last_attempt}
           %i.fa.fa-trash
-            Delete Answer
+            =I18n.t('reset_predict_progress_button')
 
 %div{style: 'clear: both;'}
