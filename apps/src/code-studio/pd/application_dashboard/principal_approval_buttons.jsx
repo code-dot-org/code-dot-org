@@ -144,6 +144,7 @@ export default class PrincipalApprovalButtons extends React.Component {
 
     return (
       <Button
+        id="change-principal-approval-requirement"
         bsSize="xsmall"
         target="_blank"
         onClick={this.handleChangeRequiredStatus}
