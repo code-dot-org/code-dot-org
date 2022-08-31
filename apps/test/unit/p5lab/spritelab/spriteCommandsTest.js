@@ -141,6 +141,8 @@ describe('Sprite Commands', () => {
       ).to.equal(10);
     });
 
+    // The user will receive a workspace alert at MAX_NUM_SPRITES. But the actual cap
+    // is at (MAX_NUM_SPRITES + 1)
     it('caps at (MAX_NUM_SPRITES + 1) or 1001 sprites', () => {
       commands.makeNumSprites.apply(coreLibrary, [100000000, 'costume_label']);
       expect(

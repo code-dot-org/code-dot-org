@@ -102,5 +102,5 @@ export const exampleSprites = {
 // this results in hanging the tab and students unable to edit their blocks. We
 // guard against this by capping number of sprites.
 // The user will receive a workspace alert at MAX_NUM_SPRITES. But the actual cap
-// (is at MAX_NUM_SPRITES + 1)
+// is at (MAX_NUM_SPRITES + 1)
 export const MAX_NUM_SPRITES = 1000;

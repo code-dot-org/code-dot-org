@@ -4,6 +4,7 @@ import {stub} from 'sinon';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
+import {MAX_NUM_SPRITES} from '../../../../src/p5lab/spritelab/constants';
 
 describe('SpriteLab Core Library', () => {
   let coreLibrary;
@@ -166,6 +167,16 @@ describe('SpriteLab Core Library', () => {
       expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
         coreLibrary.nativeSpriteMap[id3]
       ]);
+    });
+  });
+
+  describe('Sprite limit', () => {
+    // The number of sprites created is limited by (MAX_NUM_SPRITES + 1)
+    it('caps at (MAX_NUM_SPRITES + 1) or 1001 sprites', () => {
+      for (var i = 0; i < 50000; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES + 1);
     });
   });
 
