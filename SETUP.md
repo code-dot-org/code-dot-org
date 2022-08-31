@@ -12,7 +12,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 2.5.0
+     ruby --version  # --> ruby 2.6.6
      node --version  # --> v14.17.1
      yarn --version  # --> 1.22.5
      ```
@@ -104,7 +104,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 1. Install **rbenv** via `brew install rbenv`
 
-1. Install **Ruby 2.5.0**
+1. Install **Ruby**
     1. For non-M1 systems, running `rbenv install` from the project root directory should be sufficient
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
@@ -447,6 +447,10 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 ### Ruby
 
 We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
+
+### SCSS
+
+We use [Stylelint](https://stylelint.io/) to lint our SCSS in the `apps` directory. There are plugins available for both [VS Code](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) and [JetBrains](https://www.jetbrains.com/help/idea/using-stylelint-code-quality-tool.html#ws_stylelint_configure).
 
 ## More Information
 Please also see our other documentation, including our:

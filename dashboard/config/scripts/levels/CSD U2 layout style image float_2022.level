@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:46.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -12,17 +8,17 @@
     "submittable": "false",
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**What does the float property do?**]\r\n\r\nThe `float` property makes an element \"float\", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_class_float.asp\" target=\"_new\">W3Schools - CSS float Property</a>\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Change the Position\r\nMove the images using the `float` property so that they are to the side of the text rather than below it.\r\n",
     "reference_links": [
-      "/docs/concepts/css/body-styling/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/css/layout-properties/",
+    "map_reference": "/courses/csd-2022/guides/layout-properties",
     "encrypted": "false",
     "mini_rubric": "false",
     "display_name": "Fix Image Position",
@@ -31,6 +27,10 @@
     "thumbnail_url": "https://images.code.org/696274704d2760a354ab7b41a5dad962-image-1566508917753.PNG",
     "encrypted_examples": "Mb+T7emxQ0VBzXHdetcIsOD3SMF5i0o9gGf2B8rzCX9ECjMIbeBUEb92GLLV\nRJVsTBMHn4csgyNP7ttd6rAd8Q==\n"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:46.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:46.188+00:00\",\"changed\":[\"cloned from \\\"CSD U2 layout style image float_2021\\\"\"],\"cloned_from\":\"CSD U2 layout style image float_2021\"}]"

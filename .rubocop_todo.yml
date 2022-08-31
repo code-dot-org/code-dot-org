@@ -76,10 +76,6 @@ Lint/ConstantDefinitionInBlock:
 Lint/DuplicateBranch:
   Enabled: false
 
-# Offense count: 2
-Lint/DuplicateElsifCondition:
-  Enabled: false
-
 # Offense count: 5
 Lint/DuplicateMethods:
   Enabled: false
@@ -99,8 +95,9 @@ Lint/EmptyClass:
 Lint/EmptyFile:
   Enabled: false
 
-# Offense count: 2
-Lint/FloatComparison:
+# Offense count: 4
+# This cop supports safe auto-correction (--auto-correct).
+Lint/ErbNewArguments:
   Enabled: false
 
 # Offense count: 7
@@ -222,11 +219,6 @@ Performance/InefficientHashSearch:
 Performance/MethodObjectAsBlock:
   Enabled: false
 
-# Offense count: 10
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/RedundantEqualityComparisonBlock:
-  Enabled: false
-
 # Offense count: 56
 # This cop supports safe auto-correction (--auto-correct).
 Performance/RegexpMatch:
@@ -294,13 +286,6 @@ Rails/DynamicFindBy:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: slashes, arguments
 Rails/FilePath:
-  Enabled: false
-
-# Offense count: 31
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: numeric, symbolic
-Rails/HttpStatus:
   Enabled: false
 
 # Offense count: 90
@@ -391,10 +376,6 @@ Rails/WhereExists:
 
 # Offense count: 2
 Security/MarshalLoad:
-  Enabled: false
-
-# Offense count: 21
-Security/Open:
   Enabled: false
 
 # Offense count: 52
@@ -584,6 +565,11 @@ Style/KeywordParametersOrder:
 Style/Lambda:
   Enabled: false
 
+# Offense count: 49
+# This cop supports unsafe auto-correction (--auto-correct-all).
+Style/MapToHash:
+  Enabled: false
+
 # Offense count: 7
 Style/MissingRespondToMissing:
   Enabled: false
@@ -710,6 +696,11 @@ Style/RescueStandardError:
 # Offense count: 17
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/SingleArgumentDig:
+  Enabled: false
+
+# Offense count: 38
+# This cop supports unsafe auto-correction (--auto-correct-all).
+Style/SlicingWithRange:
   Enabled: false
 
 # Offense count: 38

@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "CS in Algebra is being deprecated",
+          "details": "We are in the process of fully removing the CS in Algebra content and course from Code.org in 2022 (within the next 3-5 months), as we no longer actively support this older offering originally released in 2014 and unchanged since then. Any existing bugs or seemingly-missing content within CS in Algebra content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings. As an alternative, we recommend the Bootstrap:Algebra course instead.",
+          "link": "https://www.bootstrapworld.org/materials/algebra/",
+          "type": "warning",
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "Check out Bootstrap"
+        }
+      ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseA/{LESSON}",
       "hideable_lessons": true,
       "is_course": true,
@@ -13,7 +24,7 @@
     },
     "new_name": null,
     "family_name": "algebraa",
-    "serialized_at": "2022-03-11 12:07:16 UTC",
+    "serialized_at": "2022-08-29 18:13:29 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

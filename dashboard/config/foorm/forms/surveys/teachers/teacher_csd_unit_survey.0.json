@@ -14,7 +14,7 @@
               "name": "unit_name",
               "startWithNewLine": false,
               "defaultValueExpression": "{unit_number}",
-              "readOnly": false,
+              "readOnly": true,
               "choices": [
                 {
                   "value": 1,
@@ -51,7 +51,7 @@
           "startWithNewLine": false,
           "innerIndent": 3,
           "indent": 3,
-          "visible": "true"
+          "visible": "false"
         },
         {
           "type": "html",
@@ -756,7 +756,7 @@
             {
               "type": "rating",
               "name": "create_model_in_app_lab",
-              "title": "Create a machine learning model in AP Lab to solve a problem",
+              "title": "Create a machine learning model in App Lab to solve a problem",
               "rateValues": [
                 {
                   "value": 4,

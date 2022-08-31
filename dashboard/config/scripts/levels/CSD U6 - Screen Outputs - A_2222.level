@@ -54,7 +54,7 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/designing-screens-with-code/"
+      "/courses/csd-2022/guides/designing-screens-with-code"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"homeScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img src=\"/blockly/media/1x1.gif\" data-canonical-image-url=\"\" data-image-type=\"default\" data-object-fit=\"contain\" id=\"portraitImage\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: -2.77556e-17px; top: 2.22045e-16px; margin: 0px;\"><img data-canonical-image-url=\"icon://fa-bluetooth\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"bluetoothImage\" style=\"height: 50px; width: 50px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 150px; margin: 0px;\" data-icon-color=\"black\"><img data-canonical-image-url=\"icon://fa-wifi\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"wifiImage\" style=\"height: 50px; width: 50px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 2.22045e-16px; top: 210px; margin: 0px;\" data-icon-color=\"black\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 320px; height: 45px; position: absolute; left: 2.22045e-16px; top: 105px;\" id=\"descriptionLabel\">Hedy Lamarr was an inventor in the 1950s&nbsp;whose ideas laid the groundwork for WiFi, GPS, and Bluetooth used today</label></div></div>",
     "rubric_key_concept": "Update properties and text of design elements using code",
@@ -64,16 +64,16 @@
     "rubric_performance_level_4": "The app has not been updated to match the picture",
     "encrypted_examples": "+xxrPjDQHvOdSfpT6w80Prkrwrq0kh/UjC8Ll3N+z6ke7uvcvm3/6oZg8s3N\nNZ12jDz/7NhtkKr6uSL1a3+EGA==\n",
     "start_blocks": "//Add code to setProperty() blocks to recreate the app on the right\r\n//the screen background, the description label, image of Hedy Lamarr, bluetooth image, wifi image",
-    "preload_asset_list": null,
     "display_name": "Recreate an App",
     "bubble_choice_description": "Without using Design Mode, recreate the design of an app using setProperty and setText blocks",
-    "thumbnail_url": "https://images.code.org/a07b3130a5effc22efdd36a3400c8b7b-image-1634321815292.PNG"
+    "thumbnail_url": "https://images.code.org/a07b3130a5effc22efdd36a3400c8b7b-image-1634321815292.PNG",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T16:52:41.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T16:52:41.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T16:52:41.027+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - A_2022\"},{\"changed_at\":\"2022-04-08 18:28:29 +0000\",\"changed\":[\"code_functions\",\"mini_rubric\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

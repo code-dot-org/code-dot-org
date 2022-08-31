@@ -40,7 +40,7 @@ class HocSyncUtils
 
   def self.rename_yml_to_locale
     puts "Updating crowdin codes to our locale codes..."
-    Languages.get_hoc_languages.each do |prop|
+    PegasusLanguages.get_hoc_languages.each do |prop|
       # move downloaded folders to root source directory and rename from
       # language to locale
       dest_dir = "i18n/locales/#{prop[:locale_s]}"
@@ -63,7 +63,7 @@ class HocSyncUtils
 
   def self.copy_from_i18n_source_to_hoc
     puts "Copying files from cdo/i18n to hoc.com/i18n..."
-    Languages.get_hoc_languages.each do |prop|
+    PegasusLanguages.get_hoc_languages.each do |prop|
       next if prop[:locale_s] == "en-US"
       i18n_path = "i18n/locales/#{prop[:locale_s]}/hourofcode"
       hoc_path = "pegasus/sites.v3/hourofcode.com/i18n"

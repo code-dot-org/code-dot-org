@@ -29,7 +29,7 @@
               "visibleIf": "{workshop_course}='CS Discoveries'",
               "type": "rating",
               "name": "teacher_role_understand_differences",
-              "title": "As a result of this workshop it is clear to me how the role of the teacher changes during the the debugging process, formative assessments, and summative assessments.",
+              "title": "As a result of this workshop it is clear to me how the role of the teacher changes during the debugging process, formative assessments, and summative assessments.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"

@@ -44,7 +44,7 @@ begin
     AWS::S3.upload_to_bucket(
       bucket_name,
       backup_object_key,
-      open(filename),
+      File.open(filename),
       no_random: true
     )
   end
@@ -57,6 +57,6 @@ CDO.log.info "Uploading '#{options[:filename]}' to '#{bucket_name}' bucket in S3
 AWS::S3.upload_to_bucket(
   bucket_name,
   object_key,
-  open(options[:filename]),
+  File.open(options[:filename]),
   no_random: true
 )
