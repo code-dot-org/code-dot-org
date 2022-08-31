@@ -56,10 +56,18 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       {class: 'blocklyTrash'},
       this.container
     );
-    const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
+    // const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
+    // parent svg is still being rendered on the left, so not being rendered properly
+    // also doesn't seem to handle resize well
+    // but, trash can does seem like its in the middle of the flyout (not vislble though), which is good
+    // found it by searching "trash" in DOM
+    // const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
+    const offset =
+      Blockly.cdoUtils.getWidth() -
+      (Blockly.cdoUtils.getToolboxWidth() / 2 + WIDTH / 2);
     this.svgGroup_.setAttribute(
       'transform',
-      `translate(${left}, ${MARGIN_TOP})`
+      `translate(${offset}, ${MARGIN_TOP})`
     );
 
     // trashcan body
