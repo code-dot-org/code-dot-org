@@ -1412,9 +1412,7 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      metadata_i18n[:announcements] = metadata_i18n[:announcements].map do |announcement|
-        [announcement[:key], {'notice' => announcement[:notice], 'details' => announcement[:details]}]
-      end.to_h
+      format_announcements_i18n!(metadata_i18n) if metadata_i18n[:announcements]
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
     end
 
@@ -1423,6 +1421,12 @@ class Script < ApplicationRecord
     # Chaining to_json to convert back to default hash. This is so param keys
     # aren't marked when converting a HashWithIndifferentAccess to yaml
     JSON.parse(new_i18n.to_json)
+  end
+
+  def self.format_announcements_i18n!(metadata_i18n)
+    metadata_i18n[:announcements] = metadata_i18n[:announcements].map do |announcement|
+      [announcement[:key], {'notice' => announcement[:notice], 'details' => announcement[:details]}]
+    end.to_h
   end
 
   def hoc_finish_url
