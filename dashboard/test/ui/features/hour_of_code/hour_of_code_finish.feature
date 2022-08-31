@@ -76,6 +76,12 @@ Scenario: Course A 2017 uncustomized dashboard certificate pages
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
 
+Scenario: blank certificate
+  When I am on "http://code.org/certificates/blank?enableExperiments=studioCertificate"
+  And I wait until current URL contains "http://studio.code.org/certificates/blank"
+
+  Then I wait to see an image "/images/hour_of_code_certificate.jpg"
+
 @eyes
 Scenario: congrats certificate pages
   Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
