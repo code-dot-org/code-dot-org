@@ -576,7 +576,7 @@ def how_many_reruns?(test_run_string)
     if !flakiness
       $lock.synchronize {puts "No flakiness data for #{test_run_string}".green}
       return 1
-    elsif flakiness == 0.0
+    elsif flakiness.abs < Float::EPSILON
       $lock.synchronize {puts "#{test_run_string} is not flaky".green}
       return 1
     else
