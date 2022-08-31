@@ -27,7 +27,8 @@ import {
   SectionHeaders as TeacherSectionHeaders,
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
-  ValidScores as TeacherValidScores
+  ValidScores as TeacherValidScores,
+  PrincipalApprovalState
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   InterviewQuestions,
@@ -985,7 +986,7 @@ export class DetailViewContents extends React.Component {
 
   showPrincipalApprovalTable = () => {
     return this.props.applicationData.principal_approval_state?.startsWith(
-      'Complete'
+      PrincipalApprovalState.complete
     );
   };
 
@@ -1108,7 +1109,7 @@ export class DetailViewContents extends React.Component {
     const principalApprovalStartsWith = state =>
       this.props.applicationData.principal_approval_state?.startsWith(state);
 
-    if (principalApprovalStartsWith('Incomplete')) {
+    if (principalApprovalStartsWith(PrincipalApprovalState.inProgress)) {
       const principalApprovalUrl = `${
         window.location.origin
       }/pd/application/principal_approval/${
