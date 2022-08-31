@@ -9,6 +9,7 @@ import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import {StatusColors, getApplicationStatuses} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
 export class QuickViewTable extends React.Component {
@@ -168,8 +169,12 @@ export class QuickViewTable extends React.Component {
               // Only show 'Incomplete' or 'Complete' states. Otherwise, the principal_approval_not_required
               // field shows required states.
               principal_approval_state =>
-                principal_approval_state?.startsWith('Incomplete') ||
-                principal_approval_state?.startsWith('Complete')
+                principal_approval_state?.startsWith(
+                  PrincipalApprovalState.inProgress
+                ) ||
+                principal_approval_state?.startsWith(
+                  PrincipalApprovalState.complete
+                )
                   ? principal_approval_state
                   : ''
             ]
