@@ -5,6 +5,12 @@ import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {MAX_NUM_SPRITES} from '../../../../src/p5lab/spritelab/constants';
+import msg from '@cdo/locale';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert
+} from '@cdo/apps/code-studio/projectRedux';
+import * as redux from '@cdo/apps/redux';
 
 describe('SpriteLab Core Library', () => {
   let coreLibrary;
@@ -177,6 +183,26 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.addSprite();
       }
       expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES + 1);
+    });
+
+    // After number of sprites is equal to MAX_NUM_SPRITES,
+    // an additional call to addSprite will result in displayWorkspaceAlert being dispatched
+    it('After MAX_NUM_SPRITES sprites is reached, workspace alert is dispatched', () => {
+      const stubbedDispatch = stub();
+      stub(redux, 'getStore').returns({
+        dispatch: stubbedDispatch
+      });
+      for (var i = 0; i < 1001; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(stubbedDispatch).to.have.been.calledWith(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          msg.spriteLimitExceeded(),
+          /* bottom */ true
+        )
+      );
+      redux.getStore.restore();
     });
   });
 
