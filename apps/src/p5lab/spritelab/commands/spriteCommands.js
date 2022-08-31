@@ -65,11 +65,12 @@ export const commands = {
   },
 
   makeNumSprites(num, animation) {
-    // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
-    const cappedNumSprites = this.getCappedNumSprites(num);
-    if (cappedNumSprites === 0) {
+    // this function returns early when sprite max has been reached
+    if (this.checkReachSpriteLimit()) {
       return;
     }
+    // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
+    const cappedNumSprites = this.getCappedNumSprites(num);
     for (let i = 0; i < cappedNumSprites; i++) {
       this.addSprite({
         animation,
@@ -79,11 +80,12 @@ export const commands = {
   },
 
   makeBurst(num, animation, effectName) {
-    // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
-    const cappedNumSprites = this.getCappedNumSprites(num);
-    if (cappedNumSprites === 0) {
+    // this function returns early when sprite max has been reached
+    if (this.checkReachSpriteLimit()) {
       return;
     }
+    // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
+    const cappedNumSprites = this.getCappedNumSprites(num);
     const behaviorFuncs = {
       burst: behaviorCommands.burstFunc,
       pop: behaviorCommands.popFunc,

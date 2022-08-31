@@ -358,19 +358,12 @@ export default class CoreLibrary {
 
   getCappedNumSprites(numRequested) {
     const numSpritesSoFar = this.getNumberOfSprites();
+    // (MAX_NUM_SPRITES + 1) is the actual maximum number of sprites possible
+    // At MAX_NUM_SPRITES, the workspace alert warning is displayed
     const numNewSpritesPossible = Math.max(
       0,
-      MAX_NUM_SPRITES - numSpritesSoFar
+      MAX_NUM_SPRITES + 1 - numSpritesSoFar
     );
-    if (numRequested > numNewSpritesPossible) {
-      getStore().dispatch(
-        displayWorkspaceAlert(
-          workspaceAlertTypes.warning,
-          msg.spriteLimitExceeded(),
-          /* bottom */ true
-        )
-      );
-    }
     return Math.min(numRequested, numNewSpritesPossible);
   }
 
@@ -381,14 +374,15 @@ export default class CoreLibrary {
     return speechBubbles[speechBubbles.length - 1];
   }
 
-  /**
-   * Adds the specified sprite to the native sprite map
-   * @param {Sprite} sprite
-   * @returns {Number} A unique id to reference the sprite.
-   */
-  addSprite(opts) {
-    opts = opts || {};
+  // When the total number of sprites reaches MAX_NUM_SPRITES,
+  // a workspace alert warning is displayed.
+  // (MAX_NUM_SPRITES + 1) is the actual maximum number of sprites possible
+  // and once this number is reached, this function returns true
+  checkReachSpriteLimit() {
     const numSprites = this.getNumberOfSprites();
+    if (numSprites >= MAX_NUM_SPRITES + 1) {
+      return true;
+    }
     if (numSprites === MAX_NUM_SPRITES) {
       getStore().dispatch(
         displayWorkspaceAlert(
@@ -398,9 +392,20 @@ export default class CoreLibrary {
         )
       );
     }
-    if (numSprites >= MAX_NUM_SPRITES + 1) {
+    return false;
+  }
+
+  /**
+   * Adds the specified sprite to the native sprite map
+   * @param {Sprite} sprite
+   * @returns {Number} A unique id to reference the sprite.
+   */
+  addSprite(opts) {
+    // this function returns early when sprite max has been reached
+    if (this.checkReachSpriteLimit()) {
       return;
     }
+    opts = opts || {};
     let name = opts.name;
     let location = opts.location || {x: 200, y: 200};
     if (typeof location === 'function') {
