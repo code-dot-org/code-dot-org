@@ -360,10 +360,7 @@ export default class CoreLibrary {
     const numSpritesSoFar = this.getNumberOfSprites();
     // (MAX_NUM_SPRITES + 1) is the actual maximum number of sprites possible
     // At MAX_NUM_SPRITES, the workspace alert warning is displayed
-    const numNewSpritesPossible = Math.max(
-      0,
-      MAX_NUM_SPRITES + 1 - numSpritesSoFar
-    );
+    const numNewSpritesPossible = MAX_NUM_SPRITES + 1 - numSpritesSoFar;
     return Math.min(numRequested, numNewSpritesPossible);
   }
 
