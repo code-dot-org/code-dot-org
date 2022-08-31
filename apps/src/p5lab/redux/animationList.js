@@ -286,7 +286,8 @@ export function setInitialAnimationList(
   }
 
   // TODO (from 2020): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
-  if (spritesForV3Migration) {
+  // Migrate to v1 animation api for default sprites in SpriteLab
+  if (isSpriteLab && spritesForV3Migration) {
     serializedAnimationList.orderedKeys.forEach(loadedKey => {
       let animation = serializedAnimationList.propsByKey[loadedKey];
       if (
