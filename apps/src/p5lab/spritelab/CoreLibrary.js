@@ -2,6 +2,7 @@ import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
+import {MAX_NUM_SPRITES} from './constants';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -345,6 +346,19 @@ export default class CoreLibrary {
     return spriteIds;
   }
 
+  getNumberOfSprites() {
+    return Object.keys(this.nativeSpriteMap).length;
+  }
+
+  getMaxAllowedNewSprites(numRequested) {
+    const numSpritesSoFar = this.getNumberOfSprites();
+    const numNewSpritesPossible = Math.max(
+      0,
+      MAX_NUM_SPRITES - numSpritesSoFar
+    );
+    return Math.min(numRequested, numNewSpritesPossible);
+  }
+
   getLastSpeechBubbleForSpriteId(spriteId) {
     const speechBubbles = this.speechBubbles.filter(
       ({sprite}) => sprite.id === parseInt(spriteId)
@@ -359,6 +373,9 @@ export default class CoreLibrary {
    */
   addSprite(opts) {
     opts = opts || {};
+    if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
+      return;
+    }
     let name = opts.name;
     let location = opts.location || {x: 200, y: 200};
     if (typeof location === 'function') {
