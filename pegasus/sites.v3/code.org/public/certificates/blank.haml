@@ -24,6 +24,9 @@ social:
   @header["social"]["og:image"] = "http://#{request.host_with_port}/images/hour_of_code_certificate-640.jpg"
   @header["social"]["og:url"] = "http://#{request.host_with_port}/certificates/blank"
 
+- studio_redirect_url = CDO.studio_url("/certificates/blank")
+%script{type: 'text/javascript', src: webpack_asset_path('js/code.org/public/certificates/blank.js'), 'data': {studio_redirect_url: studio_redirect_url}}
+
 #hoc-certificate
   %a{:href=>"/printcertificate"}
     %img{:src=>"/images/hour_of_code_certificate.jpg", :alt=>"Certificate for Completion of One Hour of Code"}
