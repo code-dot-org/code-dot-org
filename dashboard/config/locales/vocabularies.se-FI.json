@@ -2,6 +2,18 @@
   "se-FI": {
     "data": {
       "vocabularies": {
+        "input/csd/2022": {
+          "word": "Inputa"
+        },
+        "processing/csd/2022": {
+          "word": "Gieđahallan"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Digitála Luodda"
+        },
+        "copyright/csd/2022": {
+          "word": "Dahkkivuoigatvuohta"
+        },
         "input/coursef/2021": {
           "word": "Inputa"
         },

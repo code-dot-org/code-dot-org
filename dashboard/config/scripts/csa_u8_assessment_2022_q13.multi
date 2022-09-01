@@ -25,7 +25,7 @@ Which of the following can be used to replace `/* missing code */` so that `isIn
 I.
 ```
 for (int k = 0; k < nums.length - 1; k++) {
-  if (nums[k] >= nums[k + 1]) {
+  if (nums[k] > nums[k + 1]) {
     return false;
   }
 }

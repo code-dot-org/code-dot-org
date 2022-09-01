@@ -11,6 +11,15 @@
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
           "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -28,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 23:40:10 UTC",
+    "serialized_at": "2022-08-24 16:17:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -508,6 +517,17 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.  You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I present the steps in our design process to people outside of our team?**\n \nAt this point, teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.\n",
@@ -5908,6 +5928,18 @@
       },
       "seeding_key": {
         "activity_section.key": "858b3bd9-54b5-4cd8-a40c-7c8c88f114c9",
+        "lesson_activity.key": "36b07898-2f7d-4b48-a979-d2f46cef659b"
+      }
+    },
+    {
+      "key": "a7ae6aaf-372c-40ab-911c-2400279d873c",
+      "position": 3,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7ae6aaf-372c-40ab-911c-2400279d873c",
         "lesson_activity.key": "36b07898-2f7d-4b48-a979-d2f46cef659b"
       }
     },

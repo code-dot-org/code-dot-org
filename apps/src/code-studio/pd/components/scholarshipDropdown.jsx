@@ -4,7 +4,7 @@ import {FormGroup} from 'react-bootstrap';
 import Select from 'react-select';
 
 // update this to lock scholarships so that scholarship status can't be updated via the UI.
-const locked = false;
+const locked = true;
 
 export class ScholarshipDropdown extends React.Component {
   static propTypes = {

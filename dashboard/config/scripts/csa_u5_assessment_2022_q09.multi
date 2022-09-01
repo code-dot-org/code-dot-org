@@ -13,8 +13,6 @@ Consider the following code segment:
 String[][] letters = {{"A", "B", "C"},
                       {"D", "E", "F”},
                       {"G", "H", "I"}};
-
-System.out.println(letters[1]);
 ```
 
 Which statement is the correct syntax to access element `"F"` from the `letters` array?

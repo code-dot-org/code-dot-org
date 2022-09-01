@@ -74,6 +74,39 @@
         "debugging/basketball/unversioned": {
           "word": "გამართვა"
         },
+        "input/csd/2022": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "processing/csd/2022": {
+          "word": "დამუშავება"
+        },
+        "debugging/csd/2022": {
+          "word": "გამართვა"
+        },
+        "variable/csd/2022": {
+          "word": "ცვლადი"
+        },
+        "sprite/csd/2022": {
+          "word": "სპრაიტი"
+        },
+        "condition/csd/2022": {
+          "word": "პირობა"
+        },
+        "conditionals/csd/2022": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "abstraction/csd/2022": {
+          "word": "აბსტრაქცია"
+        },
+        "function/csd/2022": {
+          "word": "ფუნქცია"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "ციფრული ნაკვალევი"
+        },
+        "copyright/csd/2022": {
+          "word": "საავტორო უფლება"
+        },
         "code/poem-art/unversioned": {
           "word": "კოდი"
         },

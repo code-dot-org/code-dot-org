@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "event/dance-extras/unversioned": {
@@ -14,6 +15,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/minecraft/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/minecraft/unversioned": {
@@ -33,6 +35,7 @@
           "definition": "Bir şeyi tekrar tekrar yapma hareketi."
         },
         "code/hero/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/hero/unversioned": {
@@ -80,6 +83,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/hourofcode/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/hourofcode/unversioned": {
@@ -91,6 +95,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/frozen/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/frozen/unversioned": {
@@ -102,6 +107,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/iceage/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/iceage/unversioned": {
@@ -125,6 +131,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/gumball/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/gumball/unversioned": {
@@ -144,9 +151,11 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/dance/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "code/aquatic/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/aquatic/unversioned": {
@@ -194,6 +203,7 @@
           "definition": "Alfabenin her harfini, alfabenin rastgele seçilen diğer harfleri ile eşleştiren bir şifreleme tekniği."
         },
         "code/starwars/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/starwars/unversioned": {
@@ -205,6 +215,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/mc/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/mc/unversioned": {
@@ -216,6 +227,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/playlab/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/playlab/unversioned": {
@@ -227,6 +239,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/starwarsblocks/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -254,7 +267,8 @@
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(fiil) kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir."
         },
         "debugging/sports/unversioned": {
           "word": "Hata Ayıklama (Debugging)",
@@ -265,6 +279,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/infinity/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/infinity/unversioned": {
@@ -280,6 +295,7 @@
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "code/basketball/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/basketball/unversioned": {
@@ -291,6 +307,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "event/dance-extras-2019/unversioned": {
@@ -302,6 +319,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/dance-2019/unversioned": {
+          "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "event/dance-2019/unversioned": {
@@ -313,6 +331,61 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Makine Öğrenimi",
+          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
+        },
+        "input/csd/2022": {
+          "word": "Giriş"
+        },
+        "processing/csd/2022": {
+          "word": "İşleme"
+        },
+        "bug/csd/2022": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
+        },
+        "debugging/csd/2022": {
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "variable/csd/2022": {
+          "word": "Değişken",
+          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "sprite/csd/2022": {
+          "word": "Hareketli nesne"
+        },
+        "condition/csd/2022": {
+          "word": "Koşul"
+        },
+        "conditionals/csd/2022": {
+          "word": "Koşullar"
+        },
+        "abstraction/csd/2022": {
+          "word": "Soyutlama"
+        },
+        "function/csd/2022": {
+          "word": "Fonksiyon"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Dijital Ayak İzi"
+        },
+        "copyright/csd/2022": {
+          "word": "Telif Hakkı",
+          "definition": "edebi, sanatsal veya müzikal materyali basmak, yayınlamak, icra etmek, filme almak veya kaydetmek ve başkalarına da aynısını yapma yetkisi vermek için münhasır yasal hak"
+        },
+        "user/csd/2022": {
+          "word": "Kullanıcı",
+          "definition": "Yazılım ve donanım da dahil olmak üzere bir nesne kullanan biri."
+        },
+        "user_interface/csd/2022": {
+          "word": "Kullanıcı Arayüzü"
+        },
+        "machine_learning/csd/2022": {
           "word": "Makine Öğrenimi",
           "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
         },

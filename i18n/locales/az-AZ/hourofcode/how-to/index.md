@@ -27,7 +27,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Kod Saatı üçün təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Kod Saatı üçün təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

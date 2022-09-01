@@ -2625,6 +2625,323 @@
         },
         "Luigi's Pizza 1": {
           "luigi's pizza 1": "crwdns2928474:0crwdne2928474:0"
+        },
+        "CSD U3 - conditionals - transition_2022": {
+          "CSD_U3_L8_S6_C1": "crwdns2954768:0crwdne2954768:0"
+        },
+        "CSD U3 Boolean Predict_2022": {
+          "": "crwdns2954678:0crwdne2954678:0"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "": "crwdns2954392:0crwdne2954392:0"
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "crwdns2953782:0crwdne2953782:0"
+        },
+        "CSD U3 Sprites anitab 1_2022": {
+          "anicallout": "crwdns2953826:0crwdne2953826:0"
+        },
+        "CSD U3 Sprites intro sprites_2022": {
+          "": "crwdns2953820:0crwdne2953820:0"
+        },
+        "CSD U3 Sprites text_2022": {
+          "": "crwdns2954182:0crwdne2954182:0"
+        },
+        "CSD U3 UP_ARROW_2022": {
+          "": "crwdns2954860:0crwdne2954860:0"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "crwdns2953644:0crwdne2953644:0"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "crwdns2953634:0crwdne2953634:0"
+        },
+        "CSD U3 abstraction accelerateX_2022": {
+          "CSD_U3_L11_S6_C1": "crwdns2955398:0crwdne2955398:0"
+        },
+        "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "crwdns2955402:0crwdne2955402:0"
+        },
+        "CSD U3 abstraction jump_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955376:0crwdne2955376:0",
+          "CSD_U3_L11_S17_C2": "crwdns2955378:0crwdne2955378:0"
+        },
+        "CSD U3 abstraction jumping_2022": {
+          "CSD_U3_L13_S8_C1": "crwdns2955550:0crwdne2955550:0"
+        },
+        "CSD U3 abstraction looping_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955382:0crwdne2955382:0"
+        },
+        "CSD U3 abstraction rotation control_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955234:0crwdne2955234:0"
+        },
+        "CSD U3 abstraction rotation_2022": {
+          "CSD_U3_L11_S4_C1": "crwdns2955228:0crwdne2955228:0"
+        },
+        "CSD U3 abstraction tumbleweed_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955372:0crwdne2955372:0"
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955266:0crwdne2955266:0"
+        },
+        "CSD U3 abstraction velocityX if-statements_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955238:0crwdne2955238:0"
+        },
+        "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "crwdns2955214:0crwdne2955214:0"
+        },
+        "CSD U3 abstraction velocityY control_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955254:0crwdne2955254:0"
+        },
+        "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955224:0crwdne2955224:0"
+        },
+        "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "crwdns2955306:0crwdne2955306:0"
+        },
+        "CSD U3 collisions try blocks_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955466:0crwdne2955466:0"
+        },
+        "CSD U3 collisions types2_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955486:0crwdne2955486:0"
+        },
+        "CSD U3 collisions types3_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955494:0crwdne2955494:0"
+        },
+        "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955502:0crwdne2955502:0"
+        },
+        "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955478:0crwdne2955478:0"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "crwdns2953454:0crwdne2953454:0",
+          "CSD_U3_rect_c2": "crwdns2953456:0crwdne2953456:0"
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "crwdns2953480:0crwdne2953480:0",
+          "CSD_U3_rect_c2": "crwdns2953482:0crwdne2953482:0"
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "crwdns2953492:0crwdne2953492:0",
+          "CSD_U3_rect_c2": "crwdns2953494:0crwdne2953494:0"
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "crwdns2953422:0crwdne2953422:0",
+          "CSD_U3_rect_c2": "crwdns2953424:0crwdne2953424:0"
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "crwdns2953434:0crwdne2953434:0",
+          "CSD_U3_rect_c2": "crwdns2953436:0crwdne2953436:0"
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "crwdns2953446:0crwdne2953446:0",
+          "CSD_U3_rect_c2": "crwdns2953448:0crwdne2953448:0"
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "crwdns2953406:0crwdne2953406:0",
+          "CSD_U3_rect_c2": "crwdns2953408:0crwdne2953408:0"
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "crwdns2953394:0crwdne2953394:0",
+          "CSD_U3_rect_c2": "crwdns2953396:0crwdne2953396:0"
+        },
+        "CSD U3 game backgrounds_2022": {
+          "CSD_U3_S18_L4_C1": "crwdns2955866:0crwdne2955866:0",
+          "CSD_U3_L18_S4_C2": "crwdns2955868:0crwdne2955868:0"
+        },
+        "CSD U3 game variables_2022": {
+          "CSD_U3_S18_L3_C1": "crwdns2955860:0crwdne2955860:0",
+          "CSD_U3_L18_S3_C2": "crwdns2955862:0crwdne2955862:0"
+        },
+        "CSD U3 keydown conditional_2022": {
+          "": "crwdns2954856:0crwdne2954856:0"
+        },
+        "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C1": "crwdns2955738:0crwdne2955738:0",
+          "CSD_U3_L16_S3_C2": "crwdns2955740:0crwdne2955740:0",
+          "CSD_U3_L16_S3_C3": "crwdns2955742:0crwdne2955742:0"
+        },
+        "CSD U3 platform platform1_2022": {
+          "CSD_U3_S17_L8_C1": "crwdns2955756:0crwdne2955756:0"
+        },
+        "CSD U3 platform scoreboard_2022": {
+          "CSD_U3_L17_S7_C1": "crwdns2955752:0crwdne2955752:0"
+        },
+        "CSD U3 platform variable1_2022": {
+          "callout": "crwdns2955746:0crwdne2955746:0"
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "crwdns2954160:0crwdne2954160:0",
+          "CSD_U3_rect_c2": "crwdns2954164:0crwdne2954164:0"
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "crwdns2954142:0crwdne2954142:0",
+          "CSD_U3_rect_c2": "crwdns2954146:0crwdne2954146:0"
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "crwdns2953374:0crwdne2953374:0"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "crwdns2953400:0crwdne2953400:0",
+          "CSD_U3_rect_c2": "crwdns2953402:0crwdne2953402:0"
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "crwdns2953620:0crwdne2953620:0",
+          "CSD_U3_rect_c2": "crwdns2953622:0crwdne2953622:0"
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "crwdns2953544:0crwdne2953544:0",
+          "CSD_U3_rect_c2": "crwdns2953546:0crwdne2953546:0"
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "crwdns2953610:0crwdne2953610:0",
+          "CSD_U3_rect_c2": "crwdns2953612:0crwdne2953612:0"
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "crwdns2953554:0crwdne2953554:0",
+          "CSD_U3_rect_c2": "crwdns2953556:0crwdne2953556:0"
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "crwdns2953590:0crwdne2953590:0",
+          "CSD_U3_rect_c2": "crwdns2953592:0crwdne2953592:0"
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "crwdns2953564:0crwdne2953564:0",
+          "CSD_U3_rect_c2": "crwdns2953566:0crwdne2953566:0"
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "crwdns2953600:0crwdne2953600:0",
+          "CSD_U3_rect_c2": "crwdns2953602:0crwdne2953602:0"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "CSD U6L12.5 - shake_event": "crwdns2951636:0crwdne2951636:0",
+          "CSD U6L12.5 - increase_steps": "crwdns2951638:0crwdne2951638:0"
+        },
+        "CSD U6 - Accelerometer - PC_2222": {
+          "CSD U6L12.PB - playery": "crwdns2951628:0crwdne2951628:0",
+          "CSD U6L12.PB - pitch": "crwdns2951630:0crwdne2951630:0",
+          "CSD U6L12.PB - adding": "crwdns2951632:0crwdne2951632:0"
+        },
+        "CSD U6 - Accelerometer - SB2_2222": {
+          "CSD U6L12.3 - turn_off": "crwdns2951620:0crwdne2951620:0",
+          "CSD U6L12.3 - turn_on": "crwdns2951622:0crwdne2951622:0"
+        },
+        "CSD U6 - Color LEDs - CA_2222": {
+          "CSD U6L7.8b - toggle": "crwdns2951126:0crwdne2951126:0",
+          "CSD U6L7.8b - counter": "crwdns2951128:0crwdne2951128:0"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "crwdns2951072:0crwdne2951072:0"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "CSD U6L10.7 - colorVar": "crwdns2951304:0crwdne2951304:0",
+          "CSD U6L10.7 - brightnessVar": "crwdns2951306:0crwdne2951306:0",
+          "CSD U6L10.7 - leftIf": "crwdns2951308:0crwdne2951308:0",
+          "CSD U6L10.7 - rightIf": "crwdns2951310:0crwdne2951310:0"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - variable": "crwdns2951290:0crwdne2951290:0",
+          "CSD U6L9.7 - if-statement": "crwdns2951292:0crwdne2951292:0"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "CSD U6L10.2 - add_code": "crwdns2951256:0crwdne2951256:0"
+        },
+        "CSD U6 - Functions - P2A_2222": {
+          "CSD U6L14.PA - define": "crwdns2951834:0crwdne2951834:0"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "CSD U6L14.PB - todo1": "crwdns2951842:0crwdne2951842:0",
+          "CSD U6L14.PB - todo2": "crwdns2951844:0crwdne2951844:0"
+        },
+        "CSD U6 - Functions - SB1_2222": {
+          "CSD U6L14.3 - functions": "crwdns2951786:0crwdne2951786:0",
+          "CSD U6L14.3 - examples": "crwdns2951788:0crwdne2951788:0"
+        },
+        "CSD U6 - Functions - SB2_2222": {
+          "CSD U6L14.4 - define": "crwdns2951792:0crwdne2951792:0",
+          "CSD U6L14.4 - call": "crwdns2951794:0crwdne2951794:0"
+        },
+        "CSD U6 - Functions - SB3_2222": {
+          "CSD U6L5.14B - define": "crwdns2951798:0crwdne2951798:0"
+        },
+        "CSD U6 - Functions - SB4_2222": {
+          "CSD U6L5.14B - define": "crwdns2951802:0crwdne2951802:0"
+        },
+        "CSD U6 - Functions - SB6_2222": {
+          "CSD U6L14.6 - define": "crwdns2951818:0crwdne2951818:0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "CSD U6L14.9 - define": "crwdns2951822:0crwdne2951822:0",
+          "CSD U6L14.9 - events": "crwdns2951824:0crwdne2951824:0"
+        },
+        "CSD U6 - Functions - SB_2222": {
+          "CSD U6L14.PD - todo1": "crwdns2951852:0crwdne2951852:0",
+          "CSD U6L14.PD - todo2": "crwdns2951854:0crwdne2951854:0",
+          "CSD U6L14.PD - todo3": "crwdns2951856:0crwdne2951856:0"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - Variable": "crwdns2951002:0crwdne2951002:0",
+          "U6L6.4 - Counter": "crwdns2951004:0crwdne2951004:0",
+          "U6L6.4 - If": "crwdns2951006:0crwdne2951006:0"
+        },
+        "CSD U6 - Music - A_2222": {
+          "CSD U6L14.8 - happySong": "crwdns2951746:0crwdne2951746:0",
+          "CSD U6L14.8 - sadSong": "crwdns2951748:0crwdne2951748:0"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "CSD U6L13.6 - sharp_notes": "crwdns2951738:0crwdne2951738:0"
+        },
+        "CSD U6 - Sensors - PB_2222": {
+          "CSD U6L11.PB - boardevent": "crwdns2951544:0crwdne2951544:0"
+        },
+        "CSD games sidescroll background_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955368:0crwdne2955368:0"
+        },
+        "CSD games velocity bee_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955262:0crwdne2955262:0"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "crwdns2954176:0crwdne2954176:0"
+        },
+        "CSD web text size_2022": {
+          "": "crwdns2954186:0crwdne2954186:0"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "crwdns2967238:0crwdne2967238:0"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "crwdns2967252:0crwdne2967252:0"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "crwdns2967032:0crwdne2967032:0"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "crwdns2967046:0crwdne2967046:0"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "crwdns2967098:0crwdne2967098:0"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "crwdns2967102:0crwdne2967102:0"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "crwdns2967170:0crwdne2967170:0"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "crwdns2967184:0crwdne2967184:0"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "crwdns2967210:0crwdne2967210:0"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "crwdns2967214:0crwdne2967214:0"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "crwdns2967202:0crwdne2967202:0"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "crwdns2967206:0crwdne2967206:0"
         }
       }
     }

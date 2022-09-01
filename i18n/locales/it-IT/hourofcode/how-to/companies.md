@@ -64,7 +64,7 @@ Se non ti è possibile con una scuola, [contattaci](https://support.code.org/hc/
 
 Se vuoi fare uno sforzo in più, la tua azienda può anche ospitare un evento dell'Ora del Codice. Non esiste una formula specifica per ospitare un evento, quindi ti invitiamo a usare la creatività! Dato che la dimensione del nostro staff è piccola (ma potente!), Code.org non ha un team dedicato al coordinamento degli eventi dell'Ora del Codice. Tuttavia, ecco alcuni suggerimenti per iniziare.
 
-### 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Stabilisci una data, una forma e un luogo per il tuo evento
 

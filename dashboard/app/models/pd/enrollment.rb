@@ -157,7 +157,7 @@ class Pd::Enrollment < ApplicationRecord
   # @return [Enumerable<Pd::Enrollment>]
   def self.filter_for_survey_completion(enrollments, select_completed = true)
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
-        enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
+        enrollments.is_a?(Enumerable) && enrollments.all?(Pd::Enrollment)
 
     # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
     # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm

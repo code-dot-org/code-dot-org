@@ -298,6 +298,154 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "Tezlik Analizi"
         },
+        "csd5-2022/Representing Images": {
+          "name": "Şəkilləri təmsil edir"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Nümayəndəlikləri birləşdirən"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Məlumatlar Gizli Saxlanır"
+        },
+        "csd5-2022/Making Decisions with Data": {
+          "name": "Data ilə bağlı qərar vermək"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Problem Həllinə giriş",
+          "overview": "**Günün Sualı: Bizə birlikdə işləmək və komanda şəklində problemləri həll etmək üçün nə kömək edə bilər?**\n\nBu dərsdə tələbələr mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyirlər. Qrupların qayıqlarında işləmək üçün iki dövrə var, məqsədi 1-ci dövrədə olduğundan daha çox qəpik tutmağa çalışmaqdır. Fəaliyyətin strukturu tələbələrin növbəti dərsdə daha ətraflı tanış olacaqları problemin həlli prosesinin müxtəlif mərhələlərindən xəbər verir. Dərsin sonunda tələbələr fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problemin həlli növləri ilə əlaqələndirirlər.\n**Bu dərsin alternativ versiyaları da mövcuddur.**\n\n-   [Qəzet Cədvəli](/s/csd1-2022/lessons/9/)\n-   [Spagetti Körpüsü](/s/csd1-2022/lessons/10/)\n-   [Kağız Qüllə](/s/csd1-2022/lessons/11/)"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Məsələnin həlli prosesi"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Problemin həllini araşdırmaq"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Kompüter nədir?"
+        },
+        "csd1-2022/Storage": {
+          "name": "Yaddaş"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Oyun laboratoriyasında rəsm"
+        },
+        "csd3-2022/Shapes and Parameters": {
+          "name": "Forma və parametrlər"
+        },
+        "csd3-2022/Variables": {
+          "name": "dəyişənlər"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Təsadufi rəqəmlər"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Spraytlar"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprite Xüsusiyyətləri"
+        },
+        "csd3-2022/Text": {
+          "name": "mətn"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "Bərabərlik Döngüsü"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Şərti ifadələr"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Klaviatura Girişi"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Sürət"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Kompleks Sprite Hərəkatı"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Toqquşmalar"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "Oyun Dizayn Prosesi"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Oyun Dizayn Prosesindən istifadə"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "Layihə - Oyun dizayn edin"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "HTML-ə giriş"
+        },
+        "csd2-2022/Headings": {
+          "name": "Başlıqlar"
+        },
+        "csd2-2022/Websites for a Purpose": {
+          "name": "Məqsəd üçün veb saytlar"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "CSS dərsləri"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "İstifadəçinizi Anlamaq"
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "İstifadəçi Araüzü"
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "Əks-əlaqə və Sınaq"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Əmtəə üçün proqramların dizaynı"
+        },
+        "csd4-2022/Market Research": {
+          "name": "Bazar Araşdırması"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "İlk Nümunə Testi"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "Tətbiqi yoxlamaq"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "Layihə - Proqram Təqdimatı"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
+        },
+        "csd6-2022/Board Events": {
+          "name": "İdarə Heyətinin Tədbirləri"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Rəngli LEDlər"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Musiqi bəstələmək"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Süni intellekt laboratoriyasına giriş"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Hərəkət et"
         },

@@ -1,5 +1,4 @@
 @use "sass:math";
-
 @import "color.scss";
 @import "mixins";
 @import "style-constants";
@@ -8,7 +7,7 @@
 @import "skins/base.scss";
 @import "skins/modern.scss";
 
-$root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/applab/"; //TODO: Parameterize for asset pipeline
 $default-width: 320px;
 $default-footerless-height: 450px;
 $widget-width: 600px; // Note: This constant is also maintained in applab/constants.js.
@@ -66,14 +65,14 @@ div#visualizationResizeBar {
   div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.editor-column {
+  html[dir="rtl"] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
   }
-  html[dir='rtl'] div#visualizationResizeBar {
+  html[dir="rtl"] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
@@ -104,14 +103,14 @@ div#visualizationResizeBar {
   div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.editor-column {
+  html[dir="rtl"] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
   }
-  html[dir='rtl'] div#visualizationResizeBar {
+  html[dir="rtl"] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
@@ -142,14 +141,14 @@ div#visualizationResizeBar {
   div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.editor-column {
+  html[dir="rtl"] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
   }
-  html[dir='rtl'] div#visualizationResizeBar {
+  html[dir="rtl"] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
@@ -180,14 +179,14 @@ div#visualizationResizeBar {
   div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.editor-column {
+  html[dir="rtl"] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
   }
-  html[dir='rtl'] div#visualizationResizeBar {
+  html[dir="rtl"] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
@@ -218,14 +217,14 @@ div#visualizationResizeBar {
   div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.editor-column {
+  html[dir="rtl"] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
   }
-  html[dir='rtl'] div#visualizationResizeBar {
+  html[dir="rtl"] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
@@ -246,7 +245,8 @@ div#visualizationResizeBar {
 
   background-size: initial;
 
-  #playSpaceHeader, #gameButtons {
+  #playSpaceHeader,
+  #gameButtons {
     display: none;
   }
 
@@ -263,12 +263,14 @@ div#visualizationResizeBar {
 }
 
 #visualizationColumn.chromelessShare {
-  #playSpaceHeader, #gameButtons {
+  #playSpaceHeader,
+  #gameButtons {
     display: none;
   }
 }
 
-#visualizationColumn, #visualization {
+#visualizationColumn,
+#visualization {
   &.widgetWidth {
     width: $widget-width;
     max-width: $widget-width;
@@ -280,9 +282,11 @@ div#visualizationResizeBar {
   }
 }
 
-#divApplab, #designModeViz {
+#divApplab,
+#designModeViz {
   outline: none;
   -webkit-touch-callout: none;
+
   @include user-selects(none);
 }
 
@@ -293,14 +297,21 @@ div#visualizationResizeBar {
 
   // While theses styles are already set by application.css (dashboard), it is
   // important to set them explicitly for the export scenario.
-  label, input, button, select, textarea {
+  label,
+  input,
+  button,
+  select,
+  textarea {
     font-size: 14px;
   }
   select {
     height: 30px;
     width: 220px;
   }
-  button, input, select, textarea {
+  button,
+  input,
+  select,
+  textarea {
     vertical-align: middle;
   }
 }
@@ -319,7 +330,14 @@ div#visualizationResizeBar {
 
   /* In design mode, show grab/grabbing cursor for all UI elements
  * so that they look draggable. */
-  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+  button,
+  label,
+  select,
+  input,
+  img,
+  div.chart,
+  canvas,
+  div[contenteditable="true"] {
     cursor: move; /* fallback if grab cursor is unsupported */
     cursor: grab;
     cursor: -moz-grab;
@@ -346,7 +364,8 @@ div#visualizationResizeBar {
   z-index: 3;
 }
 
-#divApplab canvas, #designModeViz canvas {
+#divApplab canvas,
+#designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -363,14 +382,28 @@ div#visualizationResizeBar {
 /* When not running, show default arrow cursor for all UI elements
    so that they do not look active. */
 #divApplab.notRunning {
-  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+  button,
+  label,
+  select,
+  input,
+  img,
+  div.chart,
+  canvas,
+  div[contenteditable="true"] {
     cursor: default;
   }
 }
 
 #divApplab.notRunning.withCrosshair {
   cursor: crosshair;
-  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+  button,
+  label,
+  select,
+  input,
+  img,
+  div.chart,
+  canvas,
+  div[contenteditable="true"] {
     cursor: crosshair;
   }
 }
@@ -380,7 +413,8 @@ div#visualizationResizeBar {
   width: $resize-bar-width;
 }
 
-#runButton, #resetButton {
+#runButton,
+#resetButton {
   margin-right: 0;
   outline-style: none;
 }
@@ -464,7 +498,7 @@ div#visualizationResizeBar {
   text-align: justify;
   line-height: 0;
   &:after {
-    content: '';
+    content: "";
     width: 100%;
     display: inline-block;
   }
@@ -474,12 +508,11 @@ div#visualizationResizeBar {
   text-align: right;
   line-height: 0;
   &:after {
-    content: '';
+    content: "";
     width: 100%;
     display: inline-block;
   }
 }
-
 
 .hover-pointer:hover {
   cursor: pointer;
@@ -490,8 +523,8 @@ div#visualizationResizeBar {
   text-decoration: underline;
 }
 
-// We don't want -webkit-user-select: none for our contenteditable div, otherwise
-// we're unable to add text to the div in Safari.
+// We don"t want -webkit-user-select: none for our contenteditable div, otherwise
+// we"re unable to add text to the div in Safari.
 *[contenteditable] {
   -webkit-user-select: auto !important;
 }
@@ -559,10 +592,13 @@ div#visualizationResizeBar {
       }
     }
   }
+
   .Select-value-label .checkbox {
     visibility: hidden;
   }
-  .Select-menu, .Select-menu-outer {
+
+  .Select-menu,
+  .Select-menu-outer {
     height: 70vh;
     max-height: 70vh;
     border-bottom: 1px solid #ccc;
@@ -573,6 +609,7 @@ div#visualizationResizeBar {
   .Select-control {
     height: 44px;
   }
+
   .form-control .Select-arrow-zone {
     display: table-cell !important;
   }

@@ -2,6 +2,54 @@
   "ca-ES": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_3/csd/2022": {
+          "name": "Variables"
+        },
+        "text/csd/2022": {
+          "name": "text"
+        },
+        "conditionals/csd/2022": {
+          "name": "Condicionals"
+        },
+        "functions/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funcions"
+        },
+        "lists/csd/2022": {
+          "name": "Llistes"
+        },
+        "design_mode/csd/2022": {
+          "name": "Mode de disseny"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "La informàtica ho està canviant tot"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variables"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funcions amb Paràmetres"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funcions"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Plans d'estudi"
         },

@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U3L4-L3d PBT_pilot-2022",
+    "long_instructions": "The `ArtStats`(#e7e8ea) class has instance variables for a 1D array of artwork titles and a 1D array for the years the artworks were created.\r\n\r\n##In ArtStats.java:\r\n\r\nThe method `hasYear()`(#e7e8ea) should return `true`(#e7e8ea) if at least one value in the `years`(#e7e8ea) array is equal to its parameter `yearToFind`(#e7e8ea). In the method `hasYear()`(#e7e8ea),\r\n\r\n1. Traverse the `years`(#e7e8ea) array and check if the current value is equal to `yearToFind`(#e7e8ea).\r\n\r\n   * Return `true`(#e7e8ea) if the current value is equal to `yearToFind`(#e7e8ea).\r\n\r\n2. If no values in `years`(#e7e8ea) is equal to `yearToFind`(#e7e8ea), return `false`(#e7e8ea).\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.tate.org.uk/art)!*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Art",
+    "bubble_choice_description": "Determine if a 1D array of the years specific artworks were created contains at least one value that is equal to a specific value.",
+    "thumbnail_url": "https://images.code.org/602fa61a6f098118e60339cfd2f87b70-image-1648589167613.png",
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M0R3xlsAfP4IqeoBgxX\nbVtKiJ49o+8k92mdaOGBsM+GOoFSx6thbA4RCinv1gGUMIPzR7Uy55Buuc2V\nF5LYBM+vTyVsWofz+N9GUcB+4hIAj2xGMyF9wmgAg75KsbxqXweg/iB9oNrJ\nQJHRbZYqye4wGXW+avKCCXooFPO17tiiLGSuKdvHTJSiaNRVnfJhP9q9Xnm8\nyLh8g7EycictjxUOTy4WR5goRZyTAfmG1IXIqy+SyV2AR6dP5cVufs0L4BcI\n/7DAClkKy15nW2usv4nZUSCPTiE8HpWIR4t88TCmkUQ0o/y6vqF64SHg1euH\nqaFppaVT7tnd32lzdNB1l8Lk08FnDIaNN9mUtGdgjM8VW5KFGlXBBBkQY6eg\nPHKn2I2+JYRW9GLqqr/unx5xUtSbbsZfYT4/RTbc6kQB3ytTiLi5LvG0yTDU\n31ZlqjA0hrNLjxUTBCjh9cxOFMrUBJN/Z3unDGB6r4pppV0/00XLuJjBm04A\ngdQsuQUupHQec3deH9LrwRWliWo3Tuq7GQhSnZajiCPOH/6DFCmj/RGRjPIW\naItAk3nkEjkSUWaLHe9/lJAlZyowyuuzoA1RU5XkJIjhdtB4CA9rwP6mxTvx\nSy1+X86d+B0+VPiGXOWlva/THZf/QH5y+RFb7sfCmdnIzXgqCnhc83SYd2qC\nnayC8v7ldi+YFN07yv1FGbzJUSWaFzvgH6tSVj2pi7l1V9Z5ZrLraFQb/Ul+\nFyqeFH4icCP9ybf/LS4Nusp5W5E9UlMoZw60tbcZD3ALhMeQanM0xWNjYVn3\nDaZ+q35s8+8UtsinxLCB17ecbl/bzuVdte5fz+hlR1wA5Ruiqm/Nkj9mBDJN\nIevRdn9xzU0co5/uwokqyrF0TxtQgqx8JNnJZ782wBB/pzeRiVrW08pRdmzD\n3wgH2O1rw1zUqB76aJRFvdPAkhvDy/rmSGnPuhyUDHC1n8tHo2i8uGFyPqih\nYI37+1Y+LBNkZ4svbMdvvZNe678FdxNVQZhZLRKpUUPUSpnFGiL73JOqs35y\nZsAOdFnpiQWnMjxZ9QxDlhXJIUDLERQ4nyvmLSEdyYuOeFTOj4o6O1ESX2oo\nZfbCxqkz4qCuEhAtgu/UheCxAL3Ix/m7bpN3LLzZC8PoBv3aSu0iMhVsJwRi\ncLbLlETIlJzbEkl8LjdOQHZ2GyvUva1y0V9nmqYZrAhaI+JQoeYnKCgpKGbf\nngVzlVuW29rk+0Tn+B9kzwR1ic21VppwPKcxN5cckh5vcO+kkF2pHVDty6O5\niQdkkkHCe5rjug9ur/tzi/lE+rGcCp20ysCO/H4YSp0ziCjqLSl67AOOTPfe\niIOptCVvoJWUHcIc1oKopAgU4duagwaub7Him+0GrZCWwE6r3ogx0GNuMEUq\ngi7zml7YD32q34SGggsArL5Hi+vPtkNjd1PuOoJrBOpY4xvePb5ShhPA3TSB\nw5jLKJWrCxfpEM63BqfxpV/G2XJdrNKKrTd0BM0c/Yi7/BM1LAw+Tt+lytBM\n1M5dylCmRXCnga7K0vG/b4xrUZw9M30VDHp+VBT4Adi8o+0WHt9B7mIxPhk3\n9xiQnHDLSb/XXErrssBGNA5sh+WcwQopF03N8UbC8mJibh7fs5UXj4dtN/7A\nBYWB1R+XaVkdjBhneDIAKFxzQxDwfopP7sLJkOyur2E05wK23rZItRJs3e81\nnY8nbr1LCNWgyrqeRwNwQtktB57Jpv9jzX7hYrBvFXaRO2DTglcQPvv6lISh\nPzteucUYC+bOY+3M4PCXLuloi8r9hmVeDuY=\n",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] artworkList = {\"Once Upon a Time\", \"Photo Booth\", \"Red Barn Door\", \"Our House\", \"The World\"};\n    \n    int[] yearsList = {2008, 2008, 2008, 2007, 2006};\n\n    ArtStats myArt = new ArtStats(artworkList, yearsList);\n\n    System.out.println(\"Artwork has at least one created in 2007: \" + myArt.hasYear(2007));\n    \n  }\n}",
+        "isVisible": true
+      },
+      "ArtStats.java": {
+        "text": "/*\n * Stores and analyzes the list of artwork\n * and the years they were created\n */\npublic class ArtStats {\n\n  private String[] artworks;     // The list of artwork\n  private int[] years;           // The list of years the artworks were created\n\n  /*\n   * Constructor to create a ArtStats object with\n   * specified artworks and years they were created\n   */\n  public ArtStats(String[] artworks, int[] years) {\n    this.artworks = artworks;\n    this.years = years;\n  }\n\n  /*\n   * Checks if years array contains at\n   * least one value that is equal to yearToFind\n   */\n  public boolean hasYear(int yearToFind) {\n    // TO DO #1: Check if years array contains at least\n    // one value that is equal to yearToFind.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:15.069+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3d_2022\\\"\"],\"cloned_from\":\"CSA U3L4-L3d_2022\"}]"
+}]]></config>
+</Javalab>

@@ -3152,7 +3152,11 @@ ro:
         csc-starquilts-2022: {}
         csc-fables-2022: {}
         csc-timecapsule-2022: {}
+        vpl-csd1-ayw-pilot-2022: {}
         alltheblocklythings: {}
         self-paced-pl-csd5-2022: {}
         vpl-csa-2022: {}
         csa-labs-2022: {}
+        vpl-csd2-ayw-pilot-2022: {}
+        soccer:
+          name: fotbal
