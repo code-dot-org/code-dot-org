@@ -166,7 +166,6 @@ end
 
 def campaign_date(format)
   @country ||= hoc_detect_country
-  type = HOC_COUNTRIES[@country]['type'] || 'default'
   language = @language || HOC_COUNTRIES[@country]['default_language']
   id = 'campaign_date_full'
 
@@ -187,7 +186,7 @@ def campaign_date(format)
 
   # For hoc2022, we just want campaign dates for the US
   # and non-US.
-  if type != "us"
+  if @country != "us"
     id = "nonus_#{id}"
   end
 
