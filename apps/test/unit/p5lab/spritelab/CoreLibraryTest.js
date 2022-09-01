@@ -178,8 +178,8 @@ describe('SpriteLab Core Library', () => {
 
   describe('Sprite limit', () => {
     // The number of sprites created is limited by (MAX_NUM_SPRITES + 1)
-    it('caps at (MAX_NUM_SPRITES + 1) or 1001 sprites', () => {
-      for (var i = 0; i < 50000; i++) {
+    it(`caps at ${MAX_NUM_SPRITES + 1} sprites`, () => {
+      for (let i = 0; i < 50000; i++) {
         coreLibrary.addSprite();
       }
       expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES + 1);
@@ -187,18 +187,18 @@ describe('SpriteLab Core Library', () => {
 
     // After number of sprites is equal to MAX_NUM_SPRITES,
     // an additional call to addSprite will result in displayWorkspaceAlert being dispatched
-    it('After MAX_NUM_SPRITES sprites is reached, workspace alert is dispatched', () => {
+    it(`After ${MAX_NUM_SPRITES} sprites is reached, workspace alert is dispatched`, () => {
       const stubbedDispatch = stub();
       stub(redux, 'getStore').returns({
         dispatch: stubbedDispatch
       });
-      for (var i = 0; i < 1001; i++) {
+      for (let i = 0; i < MAX_NUM_SPRITES + 1; i++) {
         coreLibrary.addSprite();
       }
       expect(stubbedDispatch).to.have.been.calledWith(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          msg.spriteLimitExceeded(),
+          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITES}),
           /* bottom */ true
         )
       );
