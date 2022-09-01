@@ -348,7 +348,7 @@ export default class CoreLibrary {
     return Object.keys(this.nativeSpriteMap).length;
   }
 
-  getCappedNumSprites(numRequested) {
+  getMaxAllowedNewSprites(numRequested) {
     const numSpritesSoFar = this.getNumberOfSprites();
     const numNewSpritesPossible = Math.max(
       0,
