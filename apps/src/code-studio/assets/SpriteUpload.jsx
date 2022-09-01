@@ -13,6 +13,8 @@ const UploadStatus = makeEnum(
   'fail',
   'success',
   'filenameOverride',
+  'badExtension',
+  'badSize',
   'badFilename',
   'none'
 );
@@ -81,7 +83,7 @@ export default class SpriteUpload extends React.Component {
         this.setState({
           uploadStatus: {
             status: UploadStatus.success,
-            message: 'Successfully Uploaded Sprite and Metadata'
+            message: 'Successfully Uploaded Image and Metadata'
           }
         });
       })
@@ -92,83 +94,178 @@ export default class SpriteUpload extends React.Component {
         this.setState({
           uploadStatus: {
             status: UploadStatus.failure,
-            message: `${error.toString()}: Error Uploading Sprite or Metadata. Please try again. If this occurs again, please reach out to an engineer.`
+            message: `${error.toString()}: Error Uploading Image or Metadata. Please try again. If this occurs again, please reach out to an engineer.`
           }
         });
       });
   };
 
   handleImageChange = event => {
-    let {spriteAvailability, category} = this.state;
     let file = event.target.files[0];
 
-    this.setState({
-      fileData: file,
-      filename: file.name,
-      filePreviewURL: URL.createObjectURL(file)
-    });
-
-    // Filename cannot contain spaces or capital letters
-    let filenameIsInvalid = file.name.includes(' ') || /[A-Z]/.test(file.name);
-
-    if (filenameIsInvalid) {
-      this.setState({
+    this.setState(
+      {
+        fileData: file,
+        filename: file.name,
+        filePreviewURL: URL.createObjectURL(file),
         uploadStatus: {
-          status: UploadStatus.badFilename,
-          message:
-            'Filenames cannot contain capital letters or spaces. Please rename the sprite and reupload.'
+          status: 'none',
+          message: ''
         }
-      });
-    } else {
-      this.determineIfSpriteAlreadyExists(
-        spriteAvailability,
-        file.name.split('.')[0],
-        category
-      );
-    }
+      },
+      () => {
+        const me = this;
+        let {spriteAvailability, category} = this.state;
+        var reader = new FileReader();
+
+        //Read the contents of Image File.
+        reader.readAsDataURL(file);
+        reader.onload = function(e) {
+          //Initiate the JavaScript Image object.
+          var image = new Image();
+
+          //Set the Base64 string return from FileReader as source.
+          image.src = e.target.result;
+
+          //Validate the File Height and Width.
+          image.onload = function() {
+            const sizeIsTooLarge = this.width > 400 || this.height > 400;
+            const sizeIsSmall = this.width < 400 && this.height < 400;
+            if (sizeIsTooLarge) {
+              console.log('size invalid');
+              me.setState({
+                uploadStatus: {
+                  status: UploadStatus.badSize,
+                  message: `Image dimensions (${this.width}x${
+                    this.height
+                  }) are too ${
+                    this.width > 400 || this.height > 400 ? 'large' : 'small'
+                  }. Maximum size is 400x400. Please resize the image.`
+                }
+              });
+            } else if (sizeIsSmall) {
+              console.warn(
+                `small image detected: (${this.width}x${this.height})`
+              );
+            }
+          };
+        };
+
+        // File should be .png
+        const extensionIsInvalid = !file.name.toLowerCase().endsWith('.png');
+
+        // Filename cannot contain spaces or capital letters.
+        const filenameIsInvalid =
+          file.name.includes(' ') || /[A-Z]/.test(file.name);
+        const image = {
+          height: 50,
+          width: 50
+        };
+        // Image must be 400 pixels in one or both dimensions.
+        const sizeIsInvalid = image.width !== 400 && image.height !== 400;
+        if (sizeIsInvalid) {
+          this.setState({
+            uploadStatus: {
+              status: UploadStatus.badSize,
+              message: `Image dimensions (${image.width}x${
+                image.height
+              }) are too small. Height or width should be 400px. Please use a different image.`
+            }
+          });
+        }
+        if (extensionIsInvalid) {
+          console.log('extension invalid');
+          this.setState({
+            uploadStatus: {
+              status: UploadStatus.badExtension,
+              message:
+                'Image must be .png. Please convert the image and reupload.'
+            }
+          });
+        } else if (filenameIsInvalid) {
+          this.setState({
+            uploadStatus: {
+              status: UploadStatus.badFilename,
+              message:
+                'Filenames cannot contain capital letters or spaces. Please rename the image and reupload.'
+            }
+          });
+        } else {
+          this.setState(
+            {
+              uploadStatus: {
+                status: UploadStatus.none,
+                message: ''
+              }
+            },
+            () => {
+              this.determineIfSpriteAlreadyExists(
+                spriteAvailability,
+                file.name.split('.')[0],
+                category
+              );
+            }
+          );
+        }
+      }
+    );
   };
 
   handleCategoryChange = event => {
     let {filename, spriteAvailability, fileData} = this.state;
 
-    this.setState({
-      category: event.target.value
-    });
-
-    if (fileData) {
-      this.determineIfSpriteAlreadyExists(
-        spriteAvailability,
-        filename.split('.')[0],
-        event.target.value
-      );
-    }
+    this.setState(
+      {
+        category: event.target.value
+      },
+      () => {
+        if (fileData) {
+          this.determineIfSpriteAlreadyExists(
+            spriteAvailability,
+            filename.split('.')[0],
+            event.target.value
+          );
+        }
+      }
+    );
   };
 
   handleAvailabilityChange = event => {
     let {filename, category, fileData} = this.state;
 
-    this.setState({
-      spriteAvailability: event.target.value,
-      category: ''
-    });
+    this.setState(
+      {
+        spriteAvailability: event.target.value,
+        category: ''
+      },
+      () => {
+        if (fileData) {
+          this.determineIfSpriteAlreadyExists(
+            event.target.value,
+            filename.split('.')[0],
+            category
+          );
+        }
+      }
+    );
 
-    if (fileData) {
-      this.determineIfSpriteAlreadyExists(
-        event.target.value,
-        filename.split('.')[0],
-        category
-      );
-    }
+    console.log(this.state.uploadStatus);
   };
 
   handleAliasChange = event => {
     const aliases = event.target.value?.split(',') || [];
     let processedAliases = aliases.map(alias => alias.trim());
     this.setState({aliases: processedAliases});
+    console.log(this.state.uploadStatus);
   };
 
   // Set the upload status to indicate whether this file would override another
   determineIfSpriteAlreadyExists = (spriteAvailability, filename, category) => {
+    if (this.state.uploadStatus.status !== 'none') {
+      console.log('skipping check...');
+      console.log(this.state.uploadStatus.status);
+      return;
+    }
     let {currentLibrarySprites, currentLevelSprites} = this.state;
     let willOverride;
     switch (spriteAvailability) {
@@ -183,22 +280,27 @@ export default class SpriteUpload extends React.Component {
         );
         break;
     }
-
     const uploadStatus = willOverride
       ? UploadStatus.filenameOverride
       : UploadStatus.none;
     const uploadStatusMessage = willOverride
-      ? 'A sprite already exists with this name. Please rename the sprite and re-upload.'
+      ? 'An animation already exists with this name. Please rename the image and re-upload.'
       : '';
-    this.setState({
-      uploadStatus: {status: uploadStatus, message: uploadStatusMessage}
-    });
+    this.setState(
+      {
+        uploadStatus: {status: uploadStatus, message: uploadStatusMessage}
+      },
+      () => {
+        console.log('determineIfSpriteAlreadyExists');
+        console.log(this.state.uploadStatus);
+      }
+    );
   };
 
   generateMetadata = () => {
     const {filename, aliases, category} = this.state;
-    let image = this.refs.spritePreview;
-    let metadata = {
+    const image = this.refs.spritePreview;
+    const metadata = {
       name: filename.split('.')[0],
       aliases: aliases,
       frameCount: 1,
@@ -208,6 +310,7 @@ export default class SpriteUpload extends React.Component {
       categories: [category]
     };
     this.setState({metadata: JSON.stringify(metadata)});
+    console.log(this.state.uploadStatus);
   };
 
   render() {
@@ -223,6 +326,8 @@ export default class SpriteUpload extends React.Component {
 
     const badImageFile =
       uploadStatus.status === UploadStatus.filenameOverride ||
+      uploadStatus.status === UploadStatus.badExtension ||
+      uploadStatus.status === UploadStatus.badSize ||
       uploadStatus.status === UploadStatus.badFilename;
 
     // Only display the upload button when the user has uploaded an image and generated metadata
@@ -304,7 +409,7 @@ export default class SpriteUpload extends React.Component {
               type="file"
               accept="image/png"
               ref="uploader"
-              onChange={this.handleImageChange}
+              onChange={this.handleImageChange.bind(this)}
             />
           </label>
           <br />
