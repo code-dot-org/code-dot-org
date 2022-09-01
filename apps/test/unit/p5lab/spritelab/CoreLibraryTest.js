@@ -4,7 +4,10 @@ import {stub} from 'sinon';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
-import {MAX_NUM_SPRITES} from '../../../../src/p5lab/spritelab/constants';
+import {
+  MAX_NUM_SPRITES,
+  MAX_NUM_SPRITE_WARNING
+} from '@cdo/apps/p5lab/spritelab/constants';
 import msg from '@cdo/locale';
 import {
   workspaceAlertTypes,
@@ -177,28 +180,30 @@ describe('SpriteLab Core Library', () => {
   });
 
   describe('Sprite limit', () => {
-    // The number of sprites created is limited by (MAX_NUM_SPRITES + 1)
-    it(`caps at ${MAX_NUM_SPRITES + 1} sprites`, () => {
+    // The number of sprites created is limited by MAX_NUM_SPRITES
+    it(`caps at ${MAX_NUM_SPRITES} sprites`, () => {
       for (let i = 0; i < 50000; i++) {
         coreLibrary.addSprite();
       }
-      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES + 1);
+      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
     });
 
-    // After number of sprites is equal to MAX_NUM_SPRITES,
-    // an additional call to addSprite will result in displayWorkspaceAlert being dispatched
-    it(`After ${MAX_NUM_SPRITES} sprites is reached, workspace alert is dispatched`, () => {
+    // When number of sprites is reaches MAX_NUM_SPRITE_WARNING,
+    // an additional addSprite call will result in displayWorkspaceAlert being dispatched
+    // Note that MAX_NUM_SPRITES = MAX_NUM_SPRITE_WARNING + 1
+    it(`When ${MAX_NUM_SPRITE_WARNING} sprites is reached, workspace alert is dispatched`, () => {
       const stubbedDispatch = stub();
       stub(redux, 'getStore').returns({
         dispatch: stubbedDispatch
       });
-      for (let i = 0; i < MAX_NUM_SPRITES + 1; i++) {
+      for (let i = 0; i < MAX_NUM_SPRITES; i++) {
         coreLibrary.addSprite();
       }
       expect(stubbedDispatch).to.have.been.calledWith(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITES}),
+          /* display warning when user exceeds MAX_NUM_SPRITE_WARNING */
+          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITE_WARNING}),
           /* bottom */ true
         )
       );
