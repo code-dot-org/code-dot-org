@@ -1123,6 +1123,7 @@ export class DetailViewContents extends React.Component {
           <p id="principal-approval-link">
             Link to principal approval form:{' '}
             <a
+              id="principal-approval-url"
               href={principalApprovalUrl}
               target="_blank"
               rel="noopener noreferrer"
