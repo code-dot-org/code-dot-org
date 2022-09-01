@@ -157,4 +157,22 @@ describe('Sprite Commands', () => {
       ).to.equal(MAX_NUM_SPRITES);
     });
   });
+
+  describe('makeBurst', () => {
+    it(`caps at ${MAX_NUM_SPRITES} sprites - makeBurst called once`, () => {
+      commands.makeBurst.apply(coreLibrary, [
+        100000000,
+        'costume_label',
+        'burst'
+      ]);
+      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
+    });
+
+    it(`caps at ${MAX_NUM_SPRITES} sprites - makeBurst called multiple times`, () => {
+      for (let i = 0; i < 5; i++) {
+        commands.makeBurst.apply(coreLibrary, [500, 'costume_label', 'burst']);
+      }
+      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
+    });
+  });
 });
