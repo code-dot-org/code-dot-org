@@ -308,7 +308,7 @@ Sound.prototype.getPlayableFile = function() {
     return false;
   }
 
-  var audioTest = new window.Audio();
+  const audioTest = new window.Audio();
 
   if (this.config.hasOwnProperty('mp3') && audioTest.canPlayType('audio/mp3')) {
     return this.config.mp3;
@@ -332,7 +332,7 @@ Sound.prototype.getPlayableBytes = function() {
       return false;
     }
 
-    let audioTest = new window.Audio();
+    const audioTest = new window.Audio();
     if (
       this.config.hasOwnProperty('bytes') &&
       audioTest.canPlayType('audio/mp3')
