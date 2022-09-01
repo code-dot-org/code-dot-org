@@ -7,17 +7,22 @@ import {
   uploadSpriteToAnimationLibrary,
   uploadMetadataToAnimationLibrary
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+import classNames from 'classnames';
 
 const SpriteLocation = makeEnum('library', 'level');
 const UploadStatus = makeEnum(
   'fail',
   'success',
   'filenameOverride',
-  'badExtension',
-  'badSize',
-  'badFilename',
+  'badFile',
   'none'
 );
+const Feedback = {
+  extensionError: 'Image must use .png extension.',
+  largeImageError: 'Image must not exceed 400x400',
+  smallImageWarning: 'Image below 400x400 are not recommended.',
+  filenameError: 'Filename cannot include spaces or capital letters.'
+};
 
 // Levelbuilder tool for adding sprites to the Spritelab animation library.
 export default class SpriteUpload extends React.Component {
@@ -35,7 +40,11 @@ export default class SpriteUpload extends React.Component {
     uploadStatus: {
       status: UploadStatus.none,
       message: ''
-    }
+    },
+    extensionError: false,
+    largeImageError: false,
+    smallImageWarning: false,
+    filenameError: false
   };
 
   componentDidMount() {
@@ -111,7 +120,11 @@ export default class SpriteUpload extends React.Component {
         uploadStatus: {
           status: 'none',
           message: ''
-        }
+        },
+        extensionError: false,
+        largeImageError: false,
+        smallImageWarning: false,
+        filenameError: false
       },
       () => {
         const me = this;
@@ -132,65 +145,73 @@ export default class SpriteUpload extends React.Component {
             const sizeIsTooLarge = this.width > 400 || this.height > 400;
             const sizeIsSmall = this.width < 400 && this.height < 400;
             if (sizeIsTooLarge) {
-              console.log('size invalid');
-              me.setState({
-                uploadStatus: {
-                  status: UploadStatus.badSize,
-                  message: `Image dimensions (${this.width}x${
-                    this.height
-                  }) are too ${
-                    this.width > 400 || this.height > 400 ? 'large' : 'small'
-                  }. Maximum size is 400x400. Please resize the image.`
+              me.setState(
+                {
+                  uploadStatus: {
+                    status: UploadStatus.badFile,
+                    message: `${
+                      me.state.uploadStatus.message
+                    } \nImage dimensions (${this.width}x${
+                      this.height
+                    }) are too ${
+                      this.width > 400 || this.height > 400 ? 'large' : 'small'
+                    }. Maximum size is 400x400. Please resize the image.`
+                  },
+                  largeImageError: true
+                },
+                () => {
+                  console.log(me.state);
                 }
-              });
+              );
             } else if (sizeIsSmall) {
               console.warn(
                 `small image detected: (${this.width}x${this.height})`
               );
+              me.setState({
+                smallImageWarning: true
+              });
             }
           };
         };
-
         // File should be .png
         const extensionIsInvalid = !file.name.toLowerCase().endsWith('.png');
-
         // Filename cannot contain spaces or capital letters.
         const filenameIsInvalid =
           file.name.includes(' ') || /[A-Z]/.test(file.name);
-        const image = {
-          height: 50,
-          width: 50
-        };
-        // Image must be 400 pixels in one or both dimensions.
-        const sizeIsInvalid = image.width !== 400 && image.height !== 400;
-        if (sizeIsInvalid) {
-          this.setState({
-            uploadStatus: {
-              status: UploadStatus.badSize,
-              message: `Image dimensions (${image.width}x${
-                image.height
-              }) are too small. Height or width should be 400px. Please use a different image.`
-            }
-          });
-        }
+
         if (extensionIsInvalid) {
           console.log('extension invalid');
-          this.setState({
-            uploadStatus: {
-              status: UploadStatus.badExtension,
-              message:
-                'Image must be .png. Please convert the image and reupload.'
+          this.setState(
+            {
+              uploadStatus: {
+                status: UploadStatus.badFile,
+                message:
+                  'Image must be .png. Please convert the image and reupload.'
+              },
+              extensionError: true
+            },
+            () => {
+              console.log(this.state);
             }
-          });
-        } else if (filenameIsInvalid) {
-          this.setState({
-            uploadStatus: {
-              status: UploadStatus.badFilename,
-              message:
-                'Filenames cannot contain capital letters or spaces. Please rename the image and reupload.'
+          );
+        }
+        if (filenameIsInvalid) {
+          this.setState(
+            {
+              uploadStatus: {
+                status: UploadStatus.badFile,
+                message:
+                  'Filenames cannot contain capital letters or spaces. Please rename the image and reupload.'
+              },
+              filenameError: true
+            },
+            () => {
+              console.log(this.state);
             }
-          });
-        } else {
+          );
+        }
+        if (!extensionIsInvalid && !filenameIsInvalid) {
+          console.log('image looks good: ' + this.state.uploadStatus.status);
           this.setState(
             {
               uploadStatus: {
@@ -199,6 +220,7 @@ export default class SpriteUpload extends React.Component {
               }
             },
             () => {
+              console.log(this.state.uploadStatus);
               this.determineIfSpriteAlreadyExists(
                 spriteAvailability,
                 file.name.split('.')[0],
@@ -212,8 +234,9 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleCategoryChange = event => {
+    event.persist();
     let {filename, spriteAvailability, fileData} = this.state;
-
+    console.log(event);
     this.setState(
       {
         category: event.target.value
@@ -231,6 +254,7 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleAvailabilityChange = event => {
+    event.persist();
     let {filename, category, fileData} = this.state;
 
     this.setState(
@@ -326,9 +350,7 @@ export default class SpriteUpload extends React.Component {
 
     const badImageFile =
       uploadStatus.status === UploadStatus.filenameOverride ||
-      uploadStatus.status === UploadStatus.badExtension ||
-      uploadStatus.status === UploadStatus.badSize ||
-      uploadStatus.status === UploadStatus.badFilename;
+      uploadStatus.status === UploadStatus.badFile;
 
     // Only display the upload button when the user has uploaded an image and generated metadata
     const uploadButtonDisabled =
@@ -400,34 +422,57 @@ export default class SpriteUpload extends React.Component {
           )}
 
           <h2 style={styles.spriteUploadStep}>
-            Step 2: Select an animation image to upload
+            Step 2: Select an image to upload
           </h2>
-          <label>
-            <h3>Choose a file from your computer:</h3>
-            <p>Filename cannot contain spaces or capital letters.</p>
-            <input
-              type="file"
-              accept="image/png"
-              ref="uploader"
-              onChange={this.handleImageChange.bind(this)}
-            />
-          </label>
+          <div style={styles.inlineBlock}>
+            <label>
+              <h3>Choose a file from your computer:</h3>
+              <p>
+                Images must be PNG, max 400x400. <br />
+                Filename cannot contain spaces or capital letters.
+              </p>
+              <input
+                type="file"
+                accept="image/png"
+                ref="uploader"
+                onChange={this.handleImageChange.bind(this)}
+              />
+            </label>
+          </div>
+          <div style={{...styles.inlineBlock, ...styles.testFeedback}}>
+            <p>File Checks:</p>
+            {Object.entries(Feedback).map(test => {
+              console.log(this.state[test[0]]);
+              return (
+                <>
+                  <p
+                    style={{
+                      ...(this.state[test[0]]
+                        ? test[0].endsWith('Warning')
+                          ? styles.testWarn
+                          : styles.testFail
+                        : styles.testPass)
+                    }}
+                  >
+                    {this.state[test[0]] && (
+                      <i
+                        className={classNames('fa', 'fa-exclamation-triangle')}
+                      />
+                    )}
+                    {!this.state[test[0]] && (
+                      <i className={classNames('fa', 'fa-check')} />
+                    )}
+                    {test[1]}
+                  </p>
+                </>
+              );
+            })}
+          </div>
           <br />
           <label>
             <h3>Animation Preview:</h3>
             <img ref="spritePreview" src={filePreviewURL} />
           </label>
-          {badImageFile && (
-            <p
-              style={{
-                ...styles.uploadStatusMessage,
-                ...styles.uploadFailure
-              }}
-            >
-              {uploadStatus.message}
-            </p>
-          )}
-          <br />
 
           <h2 style={styles.spriteUploadStep}>Step 3: Generate metadata</h2>
           <label>
@@ -475,8 +520,24 @@ export default class SpriteUpload extends React.Component {
 }
 
 const styles = {
+  inlineBlock: {
+    display: 'inline-block'
+  },
+  testFeedback: {
+    backgroundColor: color.gray,
+    padding: 25
+  },
+  testPass: {
+    color: color.green
+  },
+  testFail: {
+    color: color.red
+  },
+  testWarn: {
+    color: color.yellow
+  },
   uploadStatusMessage: {
-    fontSize: 20
+    float: 'left'
   },
   uploadFailure: {
     color: color.red
