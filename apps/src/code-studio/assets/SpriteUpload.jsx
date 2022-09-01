@@ -17,11 +17,18 @@ const UploadStatus = makeEnum(
   'badFile',
   'none'
 );
-const Feedback = {
+const TestStatus = makeEnum('pending', 'pass', 'fail', 'warn');
+const StatusIconClasses = {
+  pending: 'fa-square-o',
+  pass: 'fa-check-square-o',
+  fail: 'fa-exclamation-triangle',
+  warn: 'fa-exclamation-triangle'
+};
+const TestFeedback = {
   extensionError: 'Image must use .png extension.',
-  largeImageError: 'Image must not exceed 400x400',
-  smallImageWarning: 'Image below 400x400 are not recommended.',
-  filenameError: 'Filename cannot include spaces or capital letters.'
+  filenameError: 'Filename cannot include spaces or capital letters.',
+  largeImageError: 'Image must not exceed 400x400 pixels.',
+  smallImageWarning: 'Images less than 400x400 pixels are not recommended.'
 };
 
 // Levelbuilder tool for adding sprites to the Spritelab animation library.
@@ -41,10 +48,10 @@ export default class SpriteUpload extends React.Component {
       status: UploadStatus.none,
       message: ''
     },
-    extensionError: false,
-    largeImageError: false,
-    smallImageWarning: false,
-    filenameError: false
+    extensionError: TestStatus.pending,
+    largeImageError: TestStatus.pending,
+    smallImageWarning: TestStatus.pending,
+    filenameError: TestStatus.pending
   };
 
   componentDidMount() {
@@ -118,13 +125,12 @@ export default class SpriteUpload extends React.Component {
         filename: file.name,
         filePreviewURL: URL.createObjectURL(file),
         uploadStatus: {
-          status: 'none',
-          message: ''
+          status: 'none'
         },
-        extensionError: false,
-        largeImageError: false,
-        smallImageWarning: false,
-        filenameError: false
+        extensionError: TestStatus.pending,
+        largeImageError: TestStatus.pending,
+        smallImageWarning: TestStatus.pending,
+        filenameError: TestStatus.pending
       },
       () => {
         const me = this;
@@ -145,30 +151,25 @@ export default class SpriteUpload extends React.Component {
             const sizeIsTooLarge = this.width > 400 || this.height > 400;
             const sizeIsSmall = this.width < 400 && this.height < 400;
             if (sizeIsTooLarge) {
-              me.setState(
-                {
-                  uploadStatus: {
-                    status: UploadStatus.badFile,
-                    message: `${
-                      me.state.uploadStatus.message
-                    } \nImage dimensions (${this.width}x${
-                      this.height
-                    }) are too ${
-                      this.width > 400 || this.height > 400 ? 'large' : 'small'
-                    }. Maximum size is 400x400. Please resize the image.`
-                  },
-                  largeImageError: true
+              me.setState({
+                uploadStatus: {
+                  status: UploadStatus.badFile
                 },
-                () => {
-                  console.log(me.state);
-                }
-              );
+                largeImageError: TestStatus.fail,
+                smallImageWarning: TestStatus.pass
+              });
             } else if (sizeIsSmall) {
               console.warn(
                 `small image detected: (${this.width}x${this.height})`
               );
               me.setState({
-                smallImageWarning: true
+                largeImageError: TestStatus.pass,
+                smallImageWarning: TestStatus.warn
+              });
+            } else {
+              me.setState({
+                largeImageError: TestStatus.pass,
+                smallImageWarning: TestStatus.pass
               });
             }
           };
@@ -180,47 +181,37 @@ export default class SpriteUpload extends React.Component {
           file.name.includes(' ') || /[A-Z]/.test(file.name);
 
         if (extensionIsInvalid) {
-          console.log('extension invalid');
-          this.setState(
-            {
-              uploadStatus: {
-                status: UploadStatus.badFile,
-                message:
-                  'Image must be .png. Please convert the image and reupload.'
-              },
-              extensionError: true
+          this.setState({
+            uploadStatus: {
+              status: UploadStatus.badFile
             },
-            () => {
-              console.log(this.state);
-            }
-          );
+            extensionError: TestStatus.fail
+          });
+        } else {
+          this.setState({
+            extensionError: TestStatus.pass
+          });
         }
         if (filenameIsInvalid) {
-          this.setState(
-            {
-              uploadStatus: {
-                status: UploadStatus.badFile,
-                message:
-                  'Filenames cannot contain capital letters or spaces. Please rename the image and reupload.'
-              },
-              filenameError: true
+          this.setState({
+            uploadStatus: {
+              status: UploadStatus.badFile
             },
-            () => {
-              console.log(this.state);
-            }
-          );
+            filenameError: TestStatus.fail
+          });
+        } else {
+          this.setState({
+            filenameError: TestStatus.pass
+          });
         }
         if (!extensionIsInvalid && !filenameIsInvalid) {
-          console.log('image looks good: ' + this.state.uploadStatus.status);
           this.setState(
             {
               uploadStatus: {
-                status: UploadStatus.none,
-                message: ''
+                status: UploadStatus.none
               }
             },
             () => {
-              console.log(this.state.uploadStatus);
               this.determineIfSpriteAlreadyExists(
                 spriteAvailability,
                 file.name.split('.')[0],
@@ -236,7 +227,6 @@ export default class SpriteUpload extends React.Component {
   handleCategoryChange = event => {
     event.persist();
     let {filename, spriteAvailability, fileData} = this.state;
-    console.log(event);
     this.setState(
       {
         category: event.target.value
@@ -272,22 +262,17 @@ export default class SpriteUpload extends React.Component {
         }
       }
     );
-
-    console.log(this.state.uploadStatus);
   };
 
   handleAliasChange = event => {
     const aliases = event.target.value?.split(',') || [];
     let processedAliases = aliases.map(alias => alias.trim());
     this.setState({aliases: processedAliases});
-    console.log(this.state.uploadStatus);
   };
 
   // Set the upload status to indicate whether this file would override another
   determineIfSpriteAlreadyExists = (spriteAvailability, filename, category) => {
     if (this.state.uploadStatus.status !== 'none') {
-      console.log('skipping check...');
-      console.log(this.state.uploadStatus.status);
       return;
     }
     let {currentLibrarySprites, currentLevelSprites} = this.state;
@@ -310,15 +295,9 @@ export default class SpriteUpload extends React.Component {
     const uploadStatusMessage = willOverride
       ? 'An animation already exists with this name. Please rename the image and re-upload.'
       : '';
-    this.setState(
-      {
-        uploadStatus: {status: uploadStatus, message: uploadStatusMessage}
-      },
-      () => {
-        console.log('determineIfSpriteAlreadyExists');
-        console.log(this.state.uploadStatus);
-      }
-    );
+    this.setState({
+      uploadStatus: {status: uploadStatus, message: uploadStatusMessage}
+    });
   };
 
   generateMetadata = () => {
@@ -334,7 +313,6 @@ export default class SpriteUpload extends React.Component {
       categories: [category]
     };
     this.setState({metadata: JSON.stringify(metadata)});
-    console.log(this.state.uploadStatus);
   };
 
   render() {
@@ -440,29 +418,26 @@ export default class SpriteUpload extends React.Component {
             </label>
           </div>
           <div style={{...styles.inlineBlock, ...styles.testFeedback}}>
-            <p>File Checks:</p>
-            {Object.entries(Feedback).map(test => {
-              console.log(this.state[test[0]]);
+            <p>Tests performed on your file:</p>
+            {//TODO: Fix - Each child in a list should have a unique "key" prop.
+            Object.entries(TestFeedback).map(test => {
+              const testStyle = {
+                ...(this.state[test[0]] === TestStatus.pass && styles.testPass),
+                ...(this.state[test[0]] === TestStatus.fail && styles.testFail),
+                ...(this.state[test[0]] === TestStatus.warn && styles.testWarn),
+                ...(this.state[test[0]] === TestStatus.pending &&
+                  styles.testPending)
+              };
               return (
                 <>
-                  <p
-                    style={{
-                      ...(this.state[test[0]]
-                        ? test[0].endsWith('Warning')
-                          ? styles.testWarn
-                          : styles.testFail
-                        : styles.testPass)
-                    }}
-                  >
-                    {this.state[test[0]] && (
-                      <i
-                        className={classNames('fa', 'fa-exclamation-triangle')}
-                      />
-                    )}
-                    {!this.state[test[0]] && (
-                      <i className={classNames('fa', 'fa-check')} />
-                    )}
-                    {test[1]}
+                  <p key={test[0]} style={testStyle}>
+                    <i
+                      className={classNames(
+                        'fa',
+                        StatusIconClasses[this.state[test[0]]]
+                      )}
+                    />
+                    {` ${test[1]}`}
                   </p>
                 </>
               );
@@ -512,6 +487,28 @@ export default class SpriteUpload extends React.Component {
             }}
           >
             {uploadStatus.message}
+            {Object.entries(TestFeedback).map(test => {
+              const testStyle = {
+                ...(this.state[test[0]] === TestStatus.fail && styles.testFail),
+                ...(this.state[test[0]] === TestStatus.warn && styles.testWarn)
+              };
+              return (
+                <>
+                  {(this.state[test[0]] === TestStatus.fail ||
+                    this.state[test[0]] === TestStatus.warn) && (
+                    <p key={test[0]} style={testStyle}>
+                      <i
+                        className={classNames(
+                          'fa',
+                          StatusIconClasses[this.state[test[0]]]
+                        )}
+                      />
+                      {` ${test[1]}`}
+                    </p>
+                  )}
+                </>
+              );
+            })}
           </p>
         </form>
       </div>
@@ -524,7 +521,7 @@ const styles = {
     display: 'inline-block'
   },
   testFeedback: {
-    backgroundColor: color.gray,
+    backgroundColor: color.lighter_gray,
     padding: 25
   },
   testPass: {
@@ -535,6 +532,9 @@ const styles = {
   },
   testWarn: {
     color: color.yellow
+  },
+  testPending: {
+    color: color.blue
   },
   uploadStatusMessage: {
     float: 'left'
