@@ -5,7 +5,7 @@ Feature: Code review V2
   # Note: this test does not cover adding comments to the review because the slate text editor
   # does not work with automated testing.
   Scenario: Code review V2
-   When I open my eyes to test "Javalab Code Review V2"
+    When I open my eyes to test "Javalab Code Review V2"
     Given I set up code review for teacher "Code Review Teacher" with 2 students in a group
     And I sign out using jquery
 
