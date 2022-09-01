@@ -15,7 +15,8 @@ module Curriculum::CourseTypes
     validates :participant_audience, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
     validate :cannot_have_same_audiences
-    validate :must_have_same_course_type_as_family
+    # (Dani) Turning off this validation while I move over K5 self paced pl to the right audience
+    # validate :must_have_same_course_type_as_family
   end
 
   # All courses in the same family name must have the save instruction_type, instructor_audience, and participant audience
