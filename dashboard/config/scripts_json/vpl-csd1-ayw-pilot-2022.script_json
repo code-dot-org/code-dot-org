@@ -7,12 +7,13 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csd-pl-ayw-pilot22",
       "student_detail_progress_view": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-15 20:05:33 UTC",
+    "serialized_at": "2022-08-31 20:15:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -707,7 +708,7 @@
   "resources": [
     {
       "name": "CSD 2022 M1 Pilot Slides",
-      "url": "https://docs.google.com/presentation/d/1QwcoiPKLy4iu8E72WLUz6nxwQR8TAi4FSNnTPrY-m1U/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Kay5wic9O257DeoCsTWgLA2RP8SCEe6wWmqwJ2OlyJ4/edit?usp=sharing",
       "key": "csd_2022_m1_pilot_slides",
       "properties": {
       },
