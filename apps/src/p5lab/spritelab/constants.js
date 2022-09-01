@@ -104,3 +104,4 @@ export const exampleSprites = {
 // The user will receive a workspace alert at MAX_NUM_SPRITES. But the actual cap
 // is at (MAX_NUM_SPRITES + 1)
 export const MAX_NUM_SPRITES = 1000;
+export const MAX_NUM_TEXTS = 1000;
