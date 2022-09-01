@@ -521,7 +521,7 @@ const styles = {
     display: 'inline-block'
   },
   testFeedback: {
-    backgroundColor: color.lighter_gray,
+    backgroundColor: color.almost_white_cyan,
     padding: 25
   },
   testPass: {
