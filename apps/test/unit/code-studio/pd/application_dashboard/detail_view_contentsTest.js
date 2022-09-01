@@ -4,6 +4,7 @@ import {
   ApplicationFinalStatuses,
   ScholarshipStatusRequiredStatuses
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
@@ -394,14 +395,11 @@ describe('DetailViewContents', () => {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           application_guid: guid,
-          principal_approval_state: 'Incomplete'
+          principal_approval_state: PrincipalApprovalState.inProgress
         }
       });
       expect(
-        detailView
-          .find('a')
-          .last()
-          .props().href
+        detailView.find('#principal-approval-url').props().href
       ).to.contain(`principal_approval/${guid}`);
     });
     it(`Shows button to make principal approval required if not`, () => {
