@@ -1,0 +1,33 @@
+@import "color.scss";
+
+.allAnimations {
+  color: $purple;
+  font-family: "Gotham 7r", sans-serif;
+  cursor: pointer;
+}
+
+.breadCrumbs {
+  margin: 8px 0;
+  font-size: 14;
+  display: inline-block;
+}
+
+.pagination {
+  float: right;
+  display: inline;
+  margin-top: 10px;
+}
+
+.emptyResults {
+  padding-bottom: 10px;
+}
+
+.navigation {
+  min-height: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}

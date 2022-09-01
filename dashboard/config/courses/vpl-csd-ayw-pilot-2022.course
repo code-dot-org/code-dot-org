@@ -4,12 +4,13 @@
     "vpl-csd1-ayw-pilot-2022",
     "vpl-csd2-ayw-pilot-2022"
   ],
-  "published_state": "in_development",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "vpl-csd-ayw-pilot",
+    "pilot_experiment": "csd-pl-ayw-pilot22",
     "version_year": "2022"
   },
   "resources": [
