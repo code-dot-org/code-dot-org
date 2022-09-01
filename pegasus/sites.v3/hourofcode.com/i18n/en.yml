@@ -12,6 +12,13 @@
   campaign_date_year: "2022"
   campaign_date_full_year: "December 5-11, 2022"
 
+  nonus_campaign_date_start_short: "Oct. 1"
+  nonus_campaign_date_start_long: "October 1"
+  nonus_campaign_date_short: "Oct. 1 - Dec. 18"
+  nonus_campaign_date_full: "October 1 - December 18"
+  nonus_campaign_date_year: "2022"
+  nonus_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
+
   latam_campaign_date_start_short: "Oct. 1"
   latam_campaign_date_start_long: "October 1"
   latam_campaign_date_short: "Oct. 1 - Dec. 18"
