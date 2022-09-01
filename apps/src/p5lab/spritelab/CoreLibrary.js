@@ -356,7 +356,7 @@ export default class CoreLibrary {
     return Object.keys(this.nativeSpriteMap).length;
   }
 
-  getCappedNumSprites(numRequested) {
+  getMaxAllowedNewSprites(numRequested) {
     const numSpritesSoFar = this.getNumberOfSprites();
     // (MAX_NUM_SPRITES + 1) is the actual maximum number of sprites possible
     // At MAX_NUM_SPRITES, the workspace alert warning is displayed

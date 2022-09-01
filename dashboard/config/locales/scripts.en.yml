@@ -8521,8 +8521,16 @@ en:
             lesson-16:
               name: Open-Ended Activity
         csa-draft-pl:
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: 'Module 3 post-work: The Theater and datasets in Unit 4'
           lesson_groups: {}
+          name: csa-draft-pl
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-1:
