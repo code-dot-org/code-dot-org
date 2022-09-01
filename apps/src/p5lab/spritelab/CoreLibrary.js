@@ -375,7 +375,7 @@ export default class CoreLibrary {
   // a workspace alert warning is displayed.
   // (MAX_NUM_SPRITES + 1) is the actual maximum number of sprites possible
   // and once this number is reached, this function returns true
-  checkReachSpriteLimit() {
+  reachedSpriteLimit() {
     const numSprites = this.getNumberOfSprites();
     if (numSprites >= MAX_NUM_SPRITES + 1) {
       return true;
@@ -384,7 +384,7 @@ export default class CoreLibrary {
       getStore().dispatch(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          msg.spriteLimitExceeded(),
+          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITES}),
           /* bottom */ true
         )
       );
@@ -399,7 +399,7 @@ export default class CoreLibrary {
    */
   addSprite(opts) {
     // this function returns early when sprite max has been reached
-    if (this.checkReachSpriteLimit()) {
+    if (this.reachedSpriteLimit()) {
       return;
     }
     opts = opts || {};

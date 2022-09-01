@@ -66,7 +66,7 @@ export const commands = {
 
   makeNumSprites(num, animation) {
     // this function returns early when sprite max has been reached
-    if (this.checkReachSpriteLimit()) {
+    if (this.reachedSpriteLimit()) {
       return;
     }
     // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
@@ -81,7 +81,7 @@ export const commands = {
 
   makeBurst(num, animation, effectName) {
     // this function returns early when sprite max has been reached
-    if (this.checkReachSpriteLimit()) {
+    if (this.reachedSpriteLimit()) {
       return;
     }
     // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
