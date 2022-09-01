@@ -64,13 +64,13 @@ export const commands = {
     return this.addSprite({animation, location});
   },
 
-  makeNumSprites(num, animation) {
-    // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
-    const cappedNumSprites = this.getCappedNumSprites(num);
-    if (cappedNumSprites === 0) {
+  makeNumSprites(numSprites, animation) {
+    // maxAllowedNewSprites is based on number of sprites already created and MAX_NUM_SPRITES
+    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
+    if (maxAllowedNewSprites === 0) {
       return;
     }
-    for (let i = 0; i < cappedNumSprites; i++) {
+    for (let i = 0; i < maxAllowedNewSprites; i++) {
       this.addSprite({
         animation,
         location: locationCommands.randomLocation()
@@ -78,10 +78,10 @@ export const commands = {
     }
   },
 
-  makeBurst(num, animation, effectName) {
-    // getCappedNumSprites caps num based on number of sprites already created and MAX_NUM_SPRITES
-    const cappedNumSprites = this.getCappedNumSprites(num);
-    if (cappedNumSprites === 0) {
+  makeBurst(numSprites, animation, effectName) {
+    // maxAllowedNewSprites is based on number of sprites already created and MAX_NUM_SPRITES
+    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
+    if (maxAllowedNewSprites === 0) {
       return;
     }
     const behaviorFuncs = {
@@ -92,7 +92,7 @@ export const commands = {
     };
     //Makes sure that same-frame multiple spiral effects start at a different angles
     const spiralRandomizer = utils.randomInt(0, 359);
-    for (let i = 0; i < cappedNumSprites; i++) {
+    for (let i = 0; i < maxAllowedNewSprites; i++) {
       let spriteOptions = {};
       switch (effectName) {
         case 'burst': {
@@ -140,8 +140,8 @@ export const commands = {
             animation,
             scale: 1,
             initialAngle:
-              (i * 360) / num - 180 * ((i + 1) % 2) + spiralRandomizer,
-            delay: (i * 30) / num,
+              (i * 360) / numSprites - 180 * ((i + 1) % 2) + spiralRandomizer,
+            delay: (i * 30) / numSprites,
             lifetime: 90
           };
           break;
