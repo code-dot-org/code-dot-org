@@ -657,6 +657,9 @@ describe('Applab Exporter,', function() {
     });
   });
 
+  // TODO: Address infinite loop caused by runExportedApp helper used in 'Regression tests' block.
+  // See ticket for more details: https://codedotorg.atlassian.net/browse/STAR-2399
+
   //   function runExportedApp(code, html, done, globalPromiseName) {
   //     server.respondImmediately = true;
   //     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
