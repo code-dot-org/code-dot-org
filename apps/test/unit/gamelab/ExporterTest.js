@@ -410,6 +410,9 @@ describe('The Gamelab Exporter,', function() {
     });
   });
 
+  // TODO: Address infinite loop caused by runExportedApp helper used in 'Regression tests' block.
+  // See ticket for more details: https://codedotorg.atlassian.net/browse/STAR-2399
+
   //   function runExportedApp(code, animationOpts, done, globalPromiseName) {
   //     const originalP5 = window.p5;
   //     const originalPreload = window.preload;
