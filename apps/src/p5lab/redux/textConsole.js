@@ -1,5 +1,5 @@
 import {CLEAR_CONSOLE, ADD_MESSAGE} from '../actions';
-import {MAX_NUM_SPRITES} from '../spritelab/constants';
+import {MAX_NUM_TEXTS} from '../spritelab/constants';
 
 export default function textConsole(state, action) {
   state = state || [];
@@ -9,7 +9,7 @@ export default function textConsole(state, action) {
     case ADD_MESSAGE:
       return [
         // the last MAX_NUM_TEXTS text console statements will be displayed
-        ...state.slice(-(MAX_NUM_SPRITES - 1)),
+        ...state.slice(-(MAX_NUM_TEXTS - 1)),
         {
           name: action.name,
           text: action.text

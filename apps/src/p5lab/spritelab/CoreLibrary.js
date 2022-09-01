@@ -3,7 +3,7 @@ import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES} from './constants';
+import {MAX_NUM_SPRITES, MAX_NUM_SPRITE_WARNING} from './constants';
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert
@@ -358,9 +358,7 @@ export default class CoreLibrary {
 
   getMaxAllowedNewSprites(numRequested) {
     const numSpritesSoFar = this.getNumberOfSprites();
-    // (MAX_NUM_SPRITES + 1) is the actual maximum number of sprites possible
-    // At MAX_NUM_SPRITES, the workspace alert warning is displayed
-    const numNewSpritesPossible = MAX_NUM_SPRITES + 1 - numSpritesSoFar;
+    const numNewSpritesPossible = MAX_NUM_SPRITES - numSpritesSoFar;
     return Math.min(numRequested, numNewSpritesPossible);
   }
 
@@ -371,20 +369,20 @@ export default class CoreLibrary {
     return speechBubbles[speechBubbles.length - 1];
   }
 
-  // When the total number of sprites reaches MAX_NUM_SPRITES,
+  // When the total number of sprites reaches MAX_NUM_SPRITE_WARNING,
   // a workspace alert warning is displayed.
-  // (MAX_NUM_SPRITES + 1) is the actual maximum number of sprites possible
-  // and once this number is reached, this function returns true
+  // MAX_NUM_SPRITE_WARNING = MAX_NUM_SPRITES - 1
   reachedSpriteLimit() {
     const numSprites = this.getNumberOfSprites();
-    if (numSprites >= MAX_NUM_SPRITES + 1) {
+    if (numSprites > MAX_NUM_SPRITE_WARNING) {
       return true;
     }
-    if (numSprites === MAX_NUM_SPRITES) {
+    if (numSprites === MAX_NUM_SPRITE_WARNING) {
       getStore().dispatch(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITES}),
+          /* display warning when user exceeds MAX_NUM_SPRITE_WARNING */
+          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITE_WARNING}),
           /* bottom */ true
         )
       );
