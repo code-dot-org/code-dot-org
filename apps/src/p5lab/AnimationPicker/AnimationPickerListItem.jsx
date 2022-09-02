@@ -44,6 +44,8 @@ export default class AnimationPickerListItem extends React.Component {
       selected ? 'fa-check' : 'fa-plus'
     } fa-2x`;
 
+    const previewSize = parseInt(style.previewSize);
+
     return (
       <div
         className={classNames(style.root, !label && style.noLabel)}
@@ -70,8 +72,8 @@ export default class AnimationPickerListItem extends React.Component {
               <AnimationPreview
                 animationProps={animationProps}
                 sourceUrl={animationProps.sourceUrl}
-                width={style.previewSize}
-                height={style.previewSize}
+                width={previewSize}
+                height={previewSize}
                 playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
                 onPreviewLoad={() => this.setState({loaded: true})}
               />

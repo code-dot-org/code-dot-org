@@ -190,7 +190,7 @@ check();
   setFailTime(150); // Frames to wait before failing student
   setDelayTime(90); // Frames to wait after success before stopping program
   setSuccessMessage("genericExplore"); // Translated string to show upon success.
-  setSuccessMessage("genericBonusSuccess"); // Translated string to show upon success with bonus.
+  setBonusSuccessMessage("genericBonusSuccess"); // Translated string to show upon success with bonus.
 
   addCriteria(function() {
     return minimumSprites(1); // Check whether or not the student created a sprite.

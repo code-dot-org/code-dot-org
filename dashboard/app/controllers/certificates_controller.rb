@@ -25,4 +25,16 @@ class CertificatesController < ApplicationController
       announcement: announcement
     }
   end
+
+  def blank
+    announcement = Announcements.get_announcement_for_page('/certificates')
+
+    @certificate_data = {
+      imageUrl: certificate_image_url(nil, 'hourofcode', nil),
+      printUrl: certificate_print_url(nil, 'hourofcode', nil),
+      announcement: announcement
+    }
+
+    render :show
+  end
 end

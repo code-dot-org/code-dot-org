@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-22 14:35:11 UTC",
+    "serialized_at": "2022-08-26 15:32:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -466,7 +466,7 @@
     },
     {
       "key": "lesson-21",
-      "name": "Console",
+      "name": "Sandbox: Console",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
@@ -481,7 +481,7 @@
     },
     {
       "key": "lesson-22",
-      "name": "The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
@@ -9193,6 +9193,18 @@
       }
     },
     {
+      "name": "Unit 1 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1gf2muAXEuh0w5GriT13r1PZFHqux-2TNZbtNkTErLGc/edit?usp=sharing",
+      "key": "unit_1_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_guide_1"
+      }
+    },
+    {
       "name": "Unit 1 Overview",
       "url": "https://docs.google.com/document/d/1ZsMvmmr2M0SjaFJ66JI6ft2q_beLUs6MO2UX0EcP-ZY/edit?usp=sharing",
       "key": "unit_1_overview",
@@ -9638,6 +9650,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "unit_1_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "unit_1_presentation"
       }
     },
@@ -9910,6 +9928,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_1_guide",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_guide_1",
         "script.name": "csa1-2022"
       }
     },

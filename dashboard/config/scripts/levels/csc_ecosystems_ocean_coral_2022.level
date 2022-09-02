@@ -39,14 +39,15 @@
     "instructions_icon": "crab",
     "name_suffix": "_2022",
     "validation_code": "if (World.frameCount == 1) {\r\n  \t// Check that the coral starts in the right costume\r\n\taddCriteria(function() {\r\n      return countByAnimation({\"costume\": \"underseadeco_24\"}) >= 1 &&\r\n        \t countByAnimation({\"costume\": \"underseadeco_25\"}) >= 1;\r\n    }, \"changeOrSetCostumeEvent\");\r\n\r\n \t// Check that there is more than 8 algae and the coral costume changes appropriately\r\n  \taddCriteria(function() {\r\n    \treturn (\r\n          countByAnimation({\"costume\": \"green-sea-plant-2\"}) >= 8 &&\r\n          countByAnimation({\"costume\": \"red-coral-dead\"}) >= 1 &&\r\n          countByAnimation({\"costume\": \"purple-coral-dead\"}) >= 1\r\n        );\r\n    }, \"changeOrSetCostumeEvent\");\r\n}\r\n\r\ncheck();",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "gV2OfUCY+45bsynGf07uQTIpEMh39JWJeJDbC6Ggnb52skJEIyBmkMR/oPKb\nH6ty5D0353tjKrnHzQub1YRe2g==\n"
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-06-13T21:00:22.000Z",
-  "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:22.631+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral\"},{\"changed_at\":\"2022-07-20 03:57:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-11 18:23:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-11 18:37:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-11 18:40:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-22 21:15:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "created_at": "2022-06-13T21:00:22.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:22.631+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral\"},{\"changed_at\":\"2022-07-20 03:57:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-11 18:23:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-11 18:37:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-11 18:40:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-22 21:15:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-30 18:11:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 18:13:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 18:16:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 18:17:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 18:19:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -492,6 +493,14 @@
           <value name="THIS">
             <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"underseadeco_25"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setAnimation">
+          <field name="ANIMATION">"purple-coral-dead"</field>
+          <value name="THIS">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"underseadeco_24"</field>
             </block>
           </value>
         </block>

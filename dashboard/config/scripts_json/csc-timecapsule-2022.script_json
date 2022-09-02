@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-08-22 21:16:58 UTC",
+    "serialized_at": "2022-08-23 13:54:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "Poem Art",
-      "name": "Animate a Time Capsule Story",
+      "name": "Time Capsule Introduction",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -55,7 +55,7 @@
     },
     {
       "key": "The Time We Live In",
-      "name": "The Time We Live In",
+      "name": "My Time Capsule Story",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -73,7 +73,7 @@
     },
     {
       "key": "Coding My Time Capsule",
-      "name": "Coding My Time Capsule Story",
+      "name": "Coding My Time Capsule",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -91,7 +91,7 @@
     },
     {
       "key": "Gallery Walk",
-      "name": "Gallery Walk",
+      "name": "Sharing My Time Capsule",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -959,6 +959,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_poemartevents_2022"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -1031,6 +1034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-poem-art-outro-video-level_2022"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -1053,6 +1059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
