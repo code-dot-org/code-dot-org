@@ -333,7 +333,7 @@ namespace :test do
     desc 'Runs dashboard_legacy tests if dashboard/legacy might have changed from staging.'
     task :dashboard_legacy do
       run_tests_if_changed(
-        'dashboard',
+        'dashboard legacy',
         [
           'Gemfile',
           'Gemfile.lock',
