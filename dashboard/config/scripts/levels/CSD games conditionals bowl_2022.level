@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:11.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -90,7 +86,7 @@
     "expand_debugger": "true",
     "parent_level_id": 23112,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/javascript/if-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-statements",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
@@ -104,18 +100,22 @@
     "start_blocks": "var soup =  createSprite(200,200);\r\nsoup.setAnimation(\"stew\");\r\n\r\nfunction draw() {\r\n  background(\"lightgreen\");\r\n  soup.rotation = soup.rotation + 3;\r\n  drawSprites();\r\n}",
     "encrypted_examples": "r8oEsGpMqW/nPxmLuCsbzRp2WYgjk82EiFaPBD9ogU1wKIw8OK/eOrchLMry\n6tHDCiUhiKTsIg7+yzPgvvdqmQ==\n",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables"
     ],
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:11.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:11.458+00:00\",\"changed\":[\"cloned from \\\"CSD games conditionals bowl_2021\\\"\"],\"cloned_from\":\"CSD games conditionals bowl_2021\"}]"

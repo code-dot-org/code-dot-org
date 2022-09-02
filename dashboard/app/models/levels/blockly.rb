@@ -319,6 +319,7 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_placeholder_text_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_loop_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -680,6 +681,27 @@ class Blockly < Level
         smart: true
       )
       parameter_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing variable names in "controls_for" block types
+  def localized_loop_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
+    block_xml.xpath("//block[@type=\"controls_for\"]").each do |controls_for_block|
+      controls_for_name = controls_for_block.at_xpath("./#{tag}[@name=\"VAR\"]")
+      next unless controls_for_name
+      localized_name = I18n.t(
+        controls_for_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      controls_for_name.content = localized_name if localized_name
     end
 
     return block_xml.serialize(save_with: XML_OPTIONS).strip

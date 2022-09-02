@@ -2,7 +2,7 @@ name 'CSA U2 Assessment 2022 q14'
 
 wrong '`sum` is visible outside of the class, `inputs` is visible only within the class.'
 right '`sum` is visible only within the class, `inputs` is visible outside of the class.'
-wrong 'Both `sum` and `input`s are visible only within the class.'
+wrong 'Both `sum` and `inputs` are visible only within the class.'
 wrong 'Both `sum` and `inputs` are visible outside of the class.'
 wrong 'There is not enough information in the class definition provided to know the visibility of the instance variables.'
 

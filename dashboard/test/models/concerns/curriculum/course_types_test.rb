@@ -239,32 +239,33 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert_equal unit_without_family_name.get_family_courses, nil
   end
 
-  test 'should raise error if instruction type does not match rest of course family' do
-    error = assert_raises do
-      @unit_group_2.instruction_type = Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
-      @unit_group_2.save!
-    end
-
-    assert_includes error.message, 'Instruction type must be the same for all courses in a family.'
-  end
-
-  test 'should raise error if instructor audience does not match rest of course family' do
-    error = assert_raises do
-      @unit_group_2.instructor_audience = Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
-      @unit_group_2.save!
-    end
-
-    assert_includes error.message, 'Instructor audience must be the same for all courses in a family.'
-  end
-
-  test 'should raise error if participant audience does not match rest of course family' do
-    error = assert_raises do
-      @unit_group_2.participant_audience = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
-      @unit_group_2.save!
-    end
-
-    assert_includes error.message, 'Participant audience must be the same for all courses in a family.'
-  end
+  # (Dani) Commenting out while we turn the validation off to update the audience on some courses
+  # test 'should raise error if instruction type does not match rest of course family' do
+  #   error = assert_raises do
+  #     @unit_group_2.instruction_type = Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+  #     @unit_group_2.save!
+  #   end
+  #
+  #   assert_includes error.message, 'Instruction type must be the same for all courses in a family.'
+  # end
+  #
+  # test 'should raise error if instructor audience does not match rest of course family' do
+  #   error = assert_raises do
+  #     @unit_group_2.instructor_audience = Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
+  #     @unit_group_2.save!
+  #   end
+  #
+  #   assert_includes error.message, 'Instructor audience must be the same for all courses in a family.'
+  # end
+  #
+  # test 'should raise error if participant audience does not match rest of course family' do
+  #   error = assert_raises do
+  #     @unit_group_2.participant_audience = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+  #     @unit_group_2.save!
+  #   end
+  #
+  #   assert_includes error.message, 'Participant audience must be the same for all courses in a family.'
+  # end
 
   test 'should not raise error when changing course type values for a course that is the only one in its family' do
     solo_unit_in_family_name = create :script, name: 'solo-family-name', family_name: 'solo-family-name'

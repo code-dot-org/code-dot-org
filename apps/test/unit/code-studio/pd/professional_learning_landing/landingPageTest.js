@@ -17,7 +17,7 @@ describe('Tests for Professional Learning Landing Page', () => {
       const landingPage = generateLandingPage({
         lastWorkshopSurveyUrl: 'url',
         lastWorkshopSurveyCourse: 'CS Fundamentals',
-        professionalLearningCourseData: [{data: 'oh yeah'}]
+        deeperLearningCourseData: [{data: 'oh yeah'}]
       });
 
       expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
@@ -33,7 +33,7 @@ describe('Tests for Professional Learning Landing Page', () => {
       const landingPage = generateLandingPage({
         lastWorkshopSurveyUrl: 'url',
         lastWorkshopSurveyCourse: 'CS Discoveries',
-        professionalLearningCourseData: [{data: 'oh yeah'}]
+        deeperLearningCourseData: [{data: 'oh yeah'}]
       });
 
       expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
@@ -51,7 +51,7 @@ describe('Tests for Professional Learning Landing Page', () => {
 
     it('page is as expected for a teacher with no pending survey but upcoming workshops and plc enrollments', () => {
       const landingPage = generateLandingPage({
-        professionalLearningCourseData: [{data: 'oh yeah'}]
+        deeperLearningCourseData: [{data: 'oh yeah'}]
       });
 
       expect(landingPage.childAt(2).is('EnrolledWorkshops')).to.be.true;
