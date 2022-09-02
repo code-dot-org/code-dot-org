@@ -170,7 +170,7 @@ export function resetContainedLevel() {
   getAuthenticityToken().then(() => {
     fetch('/delete_predict_level_progress', {
       method: 'POST',
-      credentials: 'same-origin', // include, *same-origin, omit
+      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
         'X-CSRF-Token': authenticityToken
