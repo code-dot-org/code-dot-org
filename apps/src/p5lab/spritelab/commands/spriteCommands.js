@@ -65,9 +65,15 @@ export const commands = {
   },
 
   makeNumSprites(numSprites, animation) {
-    if (this.reachedSpriteLimit()) {
+    // this function returns early if total number of sprites equals MAX_NUM_SPRITES
+    if (this.reachedSpriteMax()) {
       return;
     }
+
+    // this function dispatches a workspace alert if the total number of sprites
+    // equals SPRITE_LIMIT_WARNING
+    this.warnIfAtSpriteLimit();
+
     // maxAllowedNewSprites is based on number of sprites already created and MAX_NUM_SPRITES
     const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
     for (let i = 0; i < maxAllowedNewSprites; i++) {
@@ -79,9 +85,15 @@ export const commands = {
   },
 
   makeBurst(numSprites, animation, effectName) {
-    if (this.reachedSpriteLimit()) {
+    // this function returns early if total number of sprites equals MAX_NUM_SPRITES
+    if (this.reachedSpriteMax()) {
       return;
     }
+
+    // this function dispatches a workspace alert if the total number of sprites
+    // equals SPRITE_LIMIT_WARNING
+    this.warnIfAtSpriteLimit();
+
     // maxAllowedNewSprites is based on number of sprites already created and MAX_NUM_SPRITES
     const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
     const behaviorFuncs = {
