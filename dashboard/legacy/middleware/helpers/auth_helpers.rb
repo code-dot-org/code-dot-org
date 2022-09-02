@@ -41,6 +41,11 @@ def get_sharing_disabled_from_properties(properties)
   !!parsed_properties["sharing_disabled"]
 end
 
+# @returns [Boolean] true if the current user is an admin.
+def admin?
+  current_user && !!current_user[:admin]
+end
+
 # @param [String] permission - Name of the permission we're interested in
 # @returns [Boolean] true if the current user has the specified dashboard permission
 def has_permission?(permission)

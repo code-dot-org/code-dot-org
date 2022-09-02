@@ -20,8 +20,3 @@ def current_user
   return nil if (id = current_user_id).nil?
   @dashboard_user ||= DASHBOARD_DB[:users][id: id]
 end
-
-# @returns [Boolean] true if the current user is an admin.
-def admin?
-  current_user && !!current_user[:admin]
-end
