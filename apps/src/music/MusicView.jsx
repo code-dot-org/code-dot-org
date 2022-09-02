@@ -59,9 +59,7 @@ class MusicView extends React.Component {
       console.log('play sound next measure', id);
 
       // work out the next measure by rounding time up.
-      const currentMeasure = this.convertSecondsToMeasure(
-        GetCurrentAudioTime() - this.state.startPlayingAudioTime
-      );
+      const currentMeasure = this.getCurrentMeasure();
       const nextMeasure = currentMeasure + 1;
       const nextMeasureStartTime =
         this.state.startPlayingAudioTime +
@@ -458,6 +456,18 @@ class MusicView extends React.Component {
     }
   };
 
+  getCurrentMeasure = () => {
+    const currentAudioTime = GetCurrentAudioTime();
+    if (currentAudioTime === null) {
+      // In case we are rendering before we've initialized audio system.
+      return -1;
+    }
+
+    return this.convertSecondsToMeasure(
+      GetCurrentAudioTime() - this.state.startPlayingAudioTime
+    );
+  };
+
   render() {
     // The tutorial has a width:height ratio of 16:9.
     const aspectRatio = 16 / 9;
@@ -612,7 +622,7 @@ class MusicView extends React.Component {
               </div>
 
               <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
-                {[...Array(50).keys()].map(measure => {
+                {[...Array(30).keys()].map(measure => {
                   return (
                     <div
                       style={{
@@ -621,8 +631,14 @@ class MusicView extends React.Component {
                         left: measure * barWidth,
                         width: 1,
                         height: 40,
-                        borderLeft: '1px #444 solid',
-                        color: '#666',
+                        borderLeft:
+                          measure === this.getCurrentMeasure()
+                            ? '1px #888 solid'
+                            : '1px #444 solid',
+                        color:
+                          measure === this.getCurrentMeasure()
+                            ? '#bbb'
+                            : '#666',
                         paddingLeft: 5
                       }}
                     >
