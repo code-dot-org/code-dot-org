@@ -371,7 +371,7 @@ export default class CoreLibrary {
 
   reachedSpriteMax() {
     const numSprites = this.getNumberOfSprites();
-    return numSprites === MAX_NUM_SPRITES;
+    return numSprites >= MAX_NUM_SPRITES;
   }
 
   // When the total number of sprites is equal to SPRITE_LIMIT_WARNING,
