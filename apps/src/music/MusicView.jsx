@@ -448,6 +448,16 @@ class MusicView extends React.Component {
     PlaySound('stem-' + this.state.samplePanel + '-' + id, 'mainaudio', 0);
   };
 
+  getVerticalOffsetForEventId = id => {
+    if (id.indexOf('lead') !== -1) {
+      return 0;
+    } else if (id.indexOf('bass') !== -1) {
+      return 6;
+    } else if (id.indexOf('drum') !== -1) {
+      return 12;
+    }
+  };
+
   render() {
     // The tutorial has a width:height ratio of 16:9.
     const aspectRatio = 16 / 9;
@@ -569,9 +579,10 @@ class MusicView extends React.Component {
                       key={index}
                       style={{
                         width: barWidth,
-                        borderLeft: '1px white solid',
+                        _borderLeft: '1px white solid',
                         position: 'absolute',
-                        left: barWidth * eventData.when
+                        left: barWidth * eventData.when,
+                        top: 12 + this.getVerticalOffsetForEventId(eventData.id)
                       }}
                     >
                       <img
@@ -598,6 +609,27 @@ class MusicView extends React.Component {
                     &nbsp;
                   </div>
                 )}
+              </div>
+
+              <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
+                {[...Array(50).keys()].map(measure => {
+                  return (
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: measure * barWidth,
+                        width: 1,
+                        height: 40,
+                        borderLeft: '1px #444 solid',
+                        color: '#666',
+                        paddingLeft: 5
+                      }}
+                    >
+                      {measure + 1}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
