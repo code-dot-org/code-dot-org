@@ -300,3 +300,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        csa-validation-pilot-2022:
+          title: Computer Science A Validation Pilot ('22-'23)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'22-'23"

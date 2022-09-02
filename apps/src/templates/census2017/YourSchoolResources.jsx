@@ -13,6 +13,7 @@ class YourSchoolResources extends Component {
             description={i18n.yourSchoolAdminDesc()}
             buttonText={i18n.yourSchoolAdminButton()}
             link={pegasus('/educate/district')}
+            allowWrap
           />
         </div>
         <div style={styles.card}>
@@ -21,6 +22,7 @@ class YourSchoolResources extends Component {
             description={i18n.yourSchoolTeacherDesc()}
             buttonText={i18n.yourSchoolTeacherButton()}
             link={pegasus('/educate')}
+            allowWrap
           />
         </div>
         <div style={styles.card}>
@@ -29,7 +31,7 @@ class YourSchoolResources extends Component {
             description={i18n.yourSchoolParentDesc()}
             buttonText={i18n.yourSchoolParentButton()}
             link={pegasus('/help')}
-            allowWrap={true}
+            allowWrap
           />
         </div>
       </div>

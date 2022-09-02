@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `Employee`(#e7e8ea) class represents an employee at a business and has instance variables for the employee's name and base salary. The `Manager`(#e7e8ea) class represents a manager at the business and has an additional instance variable for their bonus.\r\n\r\nThe `Manager`(#e7e8ea) class overrides the `getName()`(#e7e8ea) method to add a `\"*\"`(#e7e8ea) before the manager's name. It also overrides the `getSalary()`(#e7e8ea) method to add the manager's bonus to their base salary.\r\n\r\n##In Business.java:\r\n\r\n1. Write the `printEmployees()`(#e7e8ea) method to traverse the `Employee`(#e7e8ea) array and print each employee's name and salary.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Create an `Employee`(#e7e8ea) array containing the `Employee`(#e7e8ea) objects.\r\n\r\n3. Instantiate a `Business`(#e7e8ea) object with the `Employee`(#e7e8ea) array and call the `printEmployees()`(#e7e8ea) method.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Employee first = new Employee(\"Ellis\", 40000);\n    Manager second = new Manager(\"Kristina\", 45000, 2000);\n    Employee third = new Employee(\"Daphne\", 50000);\n    Manager fourth = new Manager(\"David\", 50000, 5000);\n\n    // TO DO #2: Create an Employee array containing the Employee objects.\n\n    \n    // TO DO #3: Instantiate a Business object with the Employee array\n    // and call the printEmployees() method.\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Employee.java": {
+        "text": "/*\n * Represents an employee\n */\npublic class Employee {\n\n  private String name;         // The name of the employee\n  private double baseSalary;   // The employee's base salary\n\n  /*\n   * Constructor to create an Employee object\n   * with a specified name and base salary\n   */\n  public Employee(String name, double baseSalary) {\n    this.name = name;\n    this.baseSalary = baseSalary;\n  }\n\n  /*\n   * Gets the name of the employee\n   */\n  public String getName() {\n    return name;\n  }\n\n  /*\n   * Gets the employee's base salary\n   */\n  public double getSalary() {\n    return baseSalary;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "Manager.java": {
+        "text": "/*\n * Represents a manager\n */\npublic class Manager extends Employee {\n\n  private double bonus;  // The bonus the Manager receives\n\n  /*\n   * Constructor to create a Manager object\n   * with a specified name, base salary, and bonus\n   */\n  public Manager(String name, double salary, double bonus) {\n    super(name, salary);   // Calls the Employee constructor\n    this.bonus = bonus;\n  }\n\n  /*\n   * Gets the name of the manager\n   */\n  public String getName() {\n    return \"*\" + super.getName();\n  }\n\n  /*\n   * Gets the manager's salary with bonus\n   */\n  public double getSalary() {\n    return super.getSalary() + bonus;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "Business.java": {
+        "text": "/*\n * Represents a business\n */\npublic class Business {\n\n  private Employee[] employees;\n\n  /*\n   * Creates a Business object with an array of employees\n   */\n  public Business(Employee[] employees) {\n    this.employees = employees;\n  }\n\n  /*\n   * Returns the array of employees\n   */\n  public Employee[] getEmployees() {\n    return employees;\n  }\n\n  /*\n   * Prints the information about each employee\n   */\n  public void printEmployees() {\n    // TO DO #1: Traverse the Employee array and print the employee's name and salary.\n\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "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\nFgQMTQ==\n",
+    "display_name": "Employee",
+    "bubble_choice_description": "Create an Employee array and get the name and salary for each employee.",
+    "thumbnail_url": "https://images.code.org/b7709bf8f6544b63379433caa08e560d-image-1648730474243.png",
+    "name_suffix": "_pilot-2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:29.381+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4a_2022\\\"\"],\"cloned_from\":\"CSA U3L7-L4a_2022\"}]"
+}]]></config>
+</Javalab>

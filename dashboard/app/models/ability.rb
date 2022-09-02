@@ -439,14 +439,13 @@ class Ability
       # These checks control access to Javabuilder.
       # All verified instructors and can generate a Javabuilder session token to run Java code.
       # Students who are also assigned to a CSA section with a verified instructor can run Java code.
-      # Verified instructors can access and run Java Lab exemplars.
-      # Levelbuilders can access and update Java Lab validation code.
-      can :get_access_token, :javabuilder_session do
+      # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
+      # is used when viewing another version of a student's project (in preview or Code Review mode).
+      # It is also used for running exemplars, but only teachers can access exemplars.
+      # Levelbuilders can access and update Java Lab validation code (using the
+      # access_token_with_override_validation endpoint).
+      can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
-      end
-
-      can :access_token_with_override_sources, :javabuilder_session do
-        user.verified_instructor?
       end
 
       can :access_token_with_override_validation, :javabuilder_session do

@@ -20,6 +20,8 @@ Dashboard::Application.routes.draw do
     resource :pairing, only: [:show, :update]
 
     resources :user_levels, only: [:update, :destroy]
+    post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
+    get '/user_levels/get_token', to: 'user_levels#get_token'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -468,6 +470,7 @@ Dashboard::Application.routes.draw do
 
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
 
+    get '/certificates/blank'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
