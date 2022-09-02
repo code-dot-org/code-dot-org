@@ -34,6 +34,54 @@ const barWidth = 60;
 
 const secondsPerMeasure = 4;
 
+const samplePacks = [
+  {
+    id: 'hip',
+    name: 'Hip Hop',
+    imageSrc: require('@cdo/static/music/samplepack1.png'),
+    highlightImageSrc: require('@cdo/static/music/highlight1.png'),
+    samples: []
+  },
+  {
+    id: 'dance',
+    name: 'Dance',
+    imageSrc: require('@cdo/static/music/samplepack2.png'),
+    highlightImageSrc: require('@cdo/static/music/highlight2.png'),
+    samples: []
+  },
+  {
+    id: 'country',
+    name: 'Country',
+    imageSrc: require('@cdo/static/music/samplepack3.png'),
+    highlightImageSrc: require('@cdo/static/music/highlight3.png'),
+    samples: []
+  },
+  {
+    id: 'rock',
+    name: 'Rock',
+    imageSrc: require('@cdo/static/music/samplepack4.png'),
+    samples: []
+  },
+  {
+    id: 'classical',
+    name: 'Classical',
+    imageSrc: require('@cdo/static/music/samplepack5.png'),
+    samples: []
+  },
+  {
+    id: 'rnb',
+    name: 'R&B',
+    imageSrc: require('@cdo/static/music/samplepack6.png'),
+    samples: []
+  },
+  {
+    id: 'folk',
+    name: 'Folk',
+    imageSrc: require('@cdo/static/music/samplepack7.png'),
+    samples: []
+  }
+];
+
 var hooks = {};
 
 class MusicView extends React.Component {
@@ -505,13 +553,6 @@ class MusicView extends React.Component {
     }
 
     const filenameToImgUrl = {
-      samplepack1: require('@cdo/static/music/samplepack1.png'),
-      samplepack2: require('@cdo/static/music/samplepack2.png'),
-      samplepack3: require('@cdo/static/music/samplepack3.png'),
-      samplepack4: require('@cdo/static/music/samplepack4.png'),
-      samplepack5: require('@cdo/static/music/samplepack5.png'),
-      samplepack6: require('@cdo/static/music/samplepack6.png'),
-      samplepack7: require('@cdo/static/music/samplepack7.png'),
       waveform_lead: require('@cdo/static/music/waveform-lead.png'),
       waveform_bass: require('@cdo/static/music/waveform-bass.png'),
       waveform_drum: require('@cdo/static/music/waveform-drum.png')
@@ -532,6 +573,10 @@ class MusicView extends React.Component {
           barWidth) /
         this.convertMeasureToSeconds(1)
       : null;
+
+    const currentSamplePack =
+      this.state.samplePanel !== 'main' &&
+      samplePacks.find(entry => entry.id === this.state.samplePanel);
 
     return (
       <div
@@ -555,7 +600,11 @@ class MusicView extends React.Component {
               width: '100%',
               borderRadius: 4,
               padding: 10,
-              boxSizing: 'border-box'
+              boxSizing: 'border-box',
+              backgroundImage:
+                currentSamplePack &&
+                `url("${currentSamplePack.highlightImageSrc}")`,
+              backgroundSize: '100% 200%'
             }}
           >
             <div style={{float: 'left'}}>
@@ -622,9 +671,10 @@ class MusicView extends React.Component {
               </div>
 
               <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
-                {[...Array(30).keys()].map(measure => {
+                {[...Array(30).keys()].map((measure, index) => {
                   return (
                     <div
+                      key={index}
                       style={{
                         position: 'absolute',
                         top: 0,
@@ -633,12 +683,12 @@ class MusicView extends React.Component {
                         height: 40,
                         borderLeft:
                           measure === this.getCurrentMeasure()
-                            ? '1px #888 solid'
-                            : '1px #444 solid',
+                            ? '2px #888 solid'
+                            : '2px #444 solid',
                         color:
                           measure === this.getCurrentMeasure()
-                            ? '#bbb'
-                            : '#666',
+                            ? '#ddd'
+                            : '#888',
                         paddingLeft: 5
                       }}
                     >
@@ -659,77 +709,45 @@ class MusicView extends React.Component {
               height: 'calc(100% - 110px)',
               borderRadius: 4,
               marginTop: 10,
-              padding: 10,
               boxSizing: 'border-box',
               marginRight: isDesktop ? 10 : 0
             }}
           >
-            {this.state.samplePanel === 'main' && (
-              <div>
+            {!currentSamplePack && (
+              <div style={{padding: 10}}>
                 <div>Sample packs</div>
                 <br />
-                <div
-                  style={{cursor: 'pointer', paddingBottom: 10}}
-                  onClick={() => this.setSamplePanel('hip')}
-                >
-                  <img
-                    src={filenameToImgUrl['samplepack1']}
-                    style={{width: 60, paddingRight: 20}}
-                  />
-                  hip hop
-                </div>
-                <div
-                  style={{cursor: 'pointer', paddingBottom: 10}}
-                  onClick={() => this.setSamplePanel('dance')}
-                >
-                  <img
-                    src={filenameToImgUrl['samplepack2']}
-                    style={{width: 60, paddingRight: 20}}
-                  />
-                  dance
-                </div>
-                <div style={{paddingBottom: 10}}>
-                  <img
-                    src={filenameToImgUrl['samplepack3']}
-                    style={{width: 60, paddingRight: 20}}
-                  />
-                  electronic
-                </div>
-                <div
-                  style={{cursor: 'pointer', paddingBottom: 10}}
-                  onClick={() => this.setSamplePanel('country')}
-                >
-                  <img
-                    src={filenameToImgUrl['samplepack4']}
-                    style={{width: 60, paddingRight: 20}}
-                  />
-                  country
-                </div>
-                <div style={{paddingBottom: 10}}>
-                  <img
-                    src={filenameToImgUrl['samplepack5']}
-                    style={{width: 60, paddingRight: 20}}
-                  />
-                  hip hop
-                </div>
-                <div style={{paddingBottom: 10}}>
-                  <img
-                    src={filenameToImgUrl['samplepack6']}
-                    style={{width: 60, paddingRight: 20}}
-                  />
-                  r &amp; b
-                </div>
-                <div style={{paddingBottom: 10}}>
-                  <img
-                    src={filenameToImgUrl['samplepack7']}
-                    style={{width: 60, paddingRight: 20}}
-                  />
-                  rock
-                </div>
+
+                {samplePacks.map((samplePack, index) => {
+                  return (
+                    <div
+                      key={index}
+                      style={{cursor: 'pointer', paddingBottom: 10}}
+                      onClick={() => this.setSamplePanel(samplePack.id)}
+                    >
+                      <img
+                        src={samplePack.imageSrc}
+                        style={{width: 60, paddingRight: 20}}
+                      />
+                      {samplePack.name}
+                    </div>
+                  );
+                })}
               </div>
             )}
-            {this.state.samplePanel !== 'main' && (
-              <div>
+            {currentSamplePack && (
+              <div
+                style={{
+                  padding: 10,
+                  backgroundImage: `url("${
+                    currentSamplePack.highlightImageSrc
+                  }")`,
+                  backgroundSize: '100% 110%',
+                  backgroundPositionY: '100%',
+                  height: '100%',
+                  boxSizing: 'border-box'
+                }}
+              >
                 <div
                   style={{cursor: 'pointer'}}
                   onClick={() => this.setSamplePanel('main')}
@@ -737,15 +755,11 @@ class MusicView extends React.Component {
                   &lt; Back
                 </div>
                 <br />
-                <div>{this.state.samplePanel} sample pack</div>
+                <div>"{currentSamplePack.name}" sample pack</div>
                 <br />
                 <div>
                   <img
-                    src={
-                      this.state.samplePanel === 'hip'
-                        ? filenameToImgUrl['samplepack1']
-                        : filenameToImgUrl['samplepack2']
-                    }
+                    src={currentSamplePack.imageSrc}
                     style={{width: '70%'}}
                   />
                 </div>
