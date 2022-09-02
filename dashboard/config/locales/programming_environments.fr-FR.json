@@ -1,0 +1,110 @@
+{
+  "fr-FR": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Lab du Web",
+          "categories": {
+            "html_tags": {
+              "name": "Balises HTML"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Labo Jeux",
+          "categories": {
+            "game_lab": {
+              "name": "Labo Jeux"
+            },
+            "sprites": {
+              "name": "Les Lutins"
+            },
+            "groups": {
+              "name": "Groupes"
+            },
+            "drawing": {
+              "name": "Dessiner"
+            },
+            "math": {
+              "name": "Math"
+            },
+            "variables": {
+              "name": "variables"
+            },
+            "functions": {
+              "name": "Fonctions"
+            }
+          }
+        },
+        "applab": {
+          "name": "Labo des applis",
+          "description": "App Lab est un environnement de programmation où vous pouvez créer des applications simples. Concevez une application, codez-la avec des blocs ou avec JavaScript, puis partagez-la en quelques secondes.",
+          "categories": {
+            "data": {
+              "name": "Données"
+            },
+            "math": {
+              "name": "Math"
+            },
+            "variables": {
+              "name": "variables"
+            },
+            "functions": {
+              "name": "Fonctions"
+            },
+            "advanced": {
+              "name": "Avancé"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Le Labo des Lutins",
+          "categories": {
+            "sprites": {
+              "name": "Les Lutins"
+            },
+            "world": {
+              "name": "Monde"
+            },
+            "location": {
+              "name": "Emplacements"
+            },
+            "actions": {
+              "name": "Actions"
+            },
+            "events": {
+              "name": "Événements"
+            },
+            "behaviors": {
+              "name": "Comportements"
+            },
+            "loops": {
+              "name": "Boucles"
+            },
+            "variables": {
+              "name": "variables"
+            },
+            "math": {
+              "name": "Math"
+            },
+            "logic": {
+              "name": "Logique"
+            },
+            "functions": {
+              "name": "Fonctions"
+            },
+            "text": {
+              "name": "Texte"
+            },
+            "comments": {
+              "name": "Commentaires"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Lab"
+        }
+      }
+    }
+  }
+}

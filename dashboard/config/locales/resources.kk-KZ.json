@@ -2,6 +2,48 @@
   "kk-KZ": {
     "data": {
       "resources": {
+        "variables/csd/2022": {
+          "name": "Айнымалылар"
+        },
+        "variables_3/csd/2022": {
+          "name": "Айнымалылар"
+        },
+        "text/csd/2022": {
+          "name": "Мәтін"
+        },
+        "conditionals/csd/2022": {
+          "name": "Шарттар"
+        },
+        "functions/csd/2022": {
+          "name": "Функциялар"
+        },
+        "functions_1/csd/2022": {
+          "name": "Функциялар"
+        },
+        "functions_4/csd/2022": {
+          "name": "Функциялар"
+        },
+        "lists/csd/2022": {
+          "name": "Тізімдер"
+        },
+        "variables_1/csd/2022": {
+          "name": "Айнымалылар"
+        },
+        "variables_2/csd/2022": {
+          "name": "Айнымалылар"
+        },
+        "functions_2/csd/2022": {
+          "name": "Функциялар"
+        },
+        "functions_3/csd/2022": {
+          "name": "Функциялар"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Параметрлі Функциялар"
+        },
+        "functions_5/csd/2022": {
+          "name": "Функциялар"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Сабақтар жоспары"
         },

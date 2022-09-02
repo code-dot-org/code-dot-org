@@ -29,7 +29,8 @@
           "definition": "Akce, která způsobí, že se něco stane."
         },
         "loop/minecraft/unversioned": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "code/hero/unversioned": {
           "definition": " psát kód, neboli instrukce pro počítač."
@@ -43,7 +44,8 @@
           "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "function/hero/unversioned": {
-          "word": "Funkce"
+          "word": "Funkce",
+          "definition": "Kus kódu, který můžete kdykoli snadno zavolat a používat opakovaně."
         },
         "code/poem-art/2021": {
           "word": "Kód",
@@ -156,13 +158,40 @@
           "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "condition/aquatic/unversioned": {
-          "word": "Podmínka"
+          "word": "Podmínka",
+          "definition": "Nějaká podmínka, jejíž pravdivost program kontroluje, než povolí určitou akci."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Podmínky"
+          "word": "Podmínky",
+          "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
         },
         "loops/aquatic/unversioned": {
-          "word": "Cykly"
+          "word": "Cykly",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Caesarova šifra ",
+          "definition": "technika šifrování, která spočívá v posunu o určitý počet znaků abecedy"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Šifra",
+          "definition": "obecný pojem pro techniku (nebo algoritmus) šifrování"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Prolomení šifry",
+          "definition": "Když se pokoušíte rozkódovat tajnou zprávu bez znalosti všech specifik šifry, znamená to, že se ji snažíte „prolomit“. "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Dešifrování",
+          "definition": "opak šifrování; tajná zpráva se dešifruje na původní prostý text"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Šifrování",
+          "definition": "proces šifrování zpráv za účelem jejich utajení; šifrování má zajistit, aby zprávy mohly číst pouze „oprávněné“ strany"
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Náhodná substituční šifra",
+          "definition": "šifrovací technika, která mapuje každé písmeno abecedy na náhodně vybrané jiné písmeno abecedy"
         },
         "code/starwars/unversioned": {
           "definition": " psát kód, neboli instrukce pro počítač."
@@ -208,6 +237,10 @@
           "word": "Program ",
           "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Bezeztrátová komprese",
+          "definition": "algoritmus komprese dat, který umožňuje úplné obnovení původních dat z jejich komprimované podoby. Nejčastěji se používá ke kompresi textu (například komprese ve formátu .zip)"
+        },
         "event/outbreak/unversioned": {
           "word": "Událost",
           "definition": "Akce, která způsobí, že se něco stane."
@@ -221,7 +254,8 @@
           "definition": "Akce, která způsobí, že se něco stane."
         },
         "code/sports/unversioned": {
-          "word": "Kód"
+          "word": "Kód",
+          "definition": "(v) psát kód nebo pokyny pro počítač."
         },
         "debugging/sports/unversioned": {
           "word": "Ladění",
@@ -283,6 +317,55 @@
           "word": "Strojové učení",
           "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
         },
+        "input/csd/2022": {
+          "word": "Vstup"
+        },
+        "bug/csd/2022": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "debugging/csd/2022": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "program/csd/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "variable/csd/2022": {
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite"
+        },
+        "condition/csd/2022": {
+          "word": "Podmínka"
+        },
+        "conditionals/csd/2022": {
+          "word": "Podmínky"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakce"
+        },
+        "function/csd/2022": {
+          "word": "Funkce"
+        },
+        "copyright/csd/2022": {
+          "word": "Autorská práva",
+          "definition": "výhradní zákonné právo tisknout, publikovat, předvádět, filmovat nebo nahrávat literární, umělecký nebo hudební materiál a zmocňovat k témuž ostatní"
+        },
+        "user/csd/2022": {
+          "word": "Uživatel",
+          "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
+        },
+        "user_interface/csd/2022": {
+          "word": "Uživatelské rozhraní"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Strojové učení",
+          "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
+        },
         "code/poem-art/unversioned": {
           "word": "Kód",
           "definition": "(v) zápis instrukcí pro počítač."
@@ -340,7 +423,8 @@
           "definition": "Informace, které počítače získávají od uživatelů."
         },
         "loop/coursef/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "repeat/coursef/2021": {
           "word": "Opakovat",
@@ -451,7 +535,8 @@
           "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "loop/courseb/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "repeat/courseb/2021": {
           "word": "Opakovat",
@@ -498,7 +583,8 @@
           "definition": "Umění vytvoření programu"
         },
         "loop/coursea/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "repeat/coursea/2021": {
           "word": "Opakovat",
@@ -533,7 +619,8 @@
           "definition": "Umění vytvoření programu"
         },
         "loop/coursec/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "repeat/coursec/2021": {
           "word": "Opakovat",
@@ -564,7 +651,8 @@
           "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "loop/coursed/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "programming/coursed/2021": {
           "word": "Programování",
@@ -594,14 +682,16 @@
           "definition": "Instrukce pro počítač. Mnoho příkazů dohromady tvoří algoritmy a počítačové programy."
         },
         "conditionals/coursed/2021": {
-          "word": "Podmínky"
+          "word": "Podmínky",
+          "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
         },
         "pseudocode/coursed/2021": {
           "word": "pseudokód",
           "definition": "Srozumitelný popis kroků algoritmu"
         },
         "condition/coursed/2021": {
-          "word": "Podmínka"
+          "word": "Podmínka",
+          "definition": "Nějaká podmínka, jejíž pravdivost program kontroluje, než povolí určitou akci."
         },
         "while_loop/coursed/2021": {
           "word": "Cyklus Zatím",
@@ -651,7 +741,8 @@
           "definition": " psát kód nebo psát pokyny pro počítač."
         },
         "loop/express/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "repeat/express/2021": {
           "word": "Opakovat",
@@ -662,10 +753,12 @@
           "definition": "Instrukce pro počítač. Mnoho příkazů dohromady tvoří algoritmy a počítačové programy."
         },
         "condition/express/2021": {
-          "word": "Podmínka"
+          "word": "Podmínka",
+          "definition": "Nějaká podmínka, jejíž pravdivost program kontroluje, než povolí určitou akci."
         },
         "conditionals/express/2021": {
-          "word": "Podmínky"
+          "word": "Podmínky",
+          "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
         },
         "while_loop/express/2021": {
           "word": "Cyklus Zatím",
@@ -676,7 +769,8 @@
           "definition": "Příkaz, který vám říká, abyste něco udělali, jen do okamžiku, kdy se něco stane pravdou."
         },
         "function/express/2021": {
-          "word": "Funkce"
+          "word": "Funkce",
+          "definition": "Kus kódu, který můžete kdykoli snadno zavolat a používat opakovaně."
         },
         "variable/express/2021": {
           "word": "Proměnná",
@@ -747,7 +841,8 @@
           "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "loop/pre-express/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "repeat/pre-express/2021": {
           "word": "Opakovat",
@@ -778,20 +873,24 @@
           "definition": "výhradní zákonné právo tisknout, publikovat, předvádět, filmovat nebo nahrávat literární, umělecký nebo hudební materiál a zmocňovat k témuž ostatní"
         },
         "loop/coursee/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
         },
         "repeat/coursee/2021": {
           "word": "Opakovat",
           "definition": "Znovu něco udělat."
         },
         "function/coursee/2021": {
-          "word": "Funkce"
+          "word": "Funkce",
+          "definition": "Kus kódu, který můžete kdykoli snadno zavolat a používat opakovaně."
         },
         "condition/coursee/2021": {
-          "word": "Podmínka"
+          "word": "Podmínka",
+          "definition": "Nějaká podmínka, jejíž pravdivost program kontroluje, než povolí určitou akci."
         },
         "conditionals/coursee/2021": {
-          "word": "Podmínky"
+          "word": "Podmínky",
+          "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
         },
         "while_loop/coursee/2021": {
           "word": "Cyklus Zatím",

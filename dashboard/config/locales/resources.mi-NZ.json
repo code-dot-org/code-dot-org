@@ -2,6 +2,72 @@
   "mi-NZ": {
     "data": {
       "resources": {
+        "make_a_recommendation/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "variables/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "variables_3/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "text/csd/2022": {
+          "name": "Kuputuhi"
+        },
+        "conditionals/csd/2022": {
+          "name": "Ngā Here"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "functions/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_1/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_4/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "lists/csd/2022": {
+          "name": "Ngā Rārangi"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "variables_1/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "variables_2/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "functions_2/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_3/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Ngā Taumahi Whai Tawhā"
+        },
+        "functions_5/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Kia Ngahau te Mahi Koromeke"
         },

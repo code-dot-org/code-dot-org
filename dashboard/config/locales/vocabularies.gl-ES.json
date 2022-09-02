@@ -20,6 +20,21 @@
         "code/sports/unversioned": {
           "word": "Código"
         },
+        "variable/csd/2022": {
+          "word": "Variábel"
+        },
+        "conditionals/csd/2022": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstracción"
+        },
+        "function/csd/2022": {
+          "word": "Función"
+        },
+        "copyright/csd/2022": {
+          "word": "Dereitos de Autor"
+        },
         "code/poem-art/unversioned": {
           "word": "Código"
         },

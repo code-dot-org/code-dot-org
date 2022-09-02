@@ -2,6 +2,18 @@
   "pt-BR": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Determine o significado das palavras e frases conforme utilizadas no texto, fazendo a distinção entre linguagem literal e não literal."
+        },
+        "ccela/4.RL.7": {
+          "description": "Faça as conexões entre o texto de uma estória ou de uma peça de teatro, bem como uma apresentação visual ou oral do texto, identificando onde cada versão reflete descrições e instruções específicas do texto."
+        },
+        "ccela/5.RL.4": {
+          "description": "Determine o significado das palavras e frases conforme utilizadas no texto, incluindo linguagem figurativa, como metáforas e símiles."
+        },
+        "ccela/5.RL.7": {
+          "description": "Analise como os elementos visuais e de multimídia contribuem para o significado, o tom ou a beleza de um texto (p. ex., romance em quadrinhos, apresentação de ficção em multimídia, lendas do folclore, mitos, poemas)."
+        },
         "ccela/6.SL.1": {
           "description": "Participar com eficácia de uma série de discussões colaborativas (individuais, em grupos e conduzidas por professores) com diversos parceiros sobre temas, textos e problemas do 6.º ano, dando continuidade às ideias dos outros e expressando suas próprias ideias com clareza."
         },
@@ -173,8 +185,38 @@
         "iste/4.d": {
           "description": "Usar vários processos e diversas perspectivas para investigar soluções alternativas."
         },
+        "csp2021/IOC-2.B.5": {
+          "description": "A criptografia é o processo de codificação de dados para evitar acessos não autorizados. A descriptografia é o processo de decodificação dos dados. Duas abordagens comuns à criptografia são:\n ●      A criptografia com chaves simétricas envolve uma mesma chave para a criptografia e a descriptografia? \n●       A criptografia com de chaves públicas pareia uma chave pública para criptografia e uma chave privada para descriptografia. O remetente não precisa da chave privada do destinatário para criptografar uma mensagem, mas a chave privada do destinatário é necessária para descriptografar a mensagem. DECLARAÇÃO DE EXCLUSÃO (EKIOC-2.B.5): Procedimentos matemáticos específicos de criptografia e descriptografia vão além do escopo deste curso e do Exame AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Recomende medidas de segurança para lidar com diversos cenários, com base em fatores como eficiência, viabilidade e impactos éticos."
+        },
+        "csta/3A-NI-07": {
+          "description": "Compare várias medidas de segurança, considerando o custo de oportunidade entre a usabilidade e a segurança de um sistema computadorizado."
+        },
+        "csta/3B-NI-04": {
+          "description": "Compare os métodos que os desenvolvedores de software utilizam para proteger dispositivos e informações contra acessos não autorizados."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "A compactação de dados pode reduzir o tamanho (número de bits) de dados transmitidos ou armazenados."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Menos bits não significam necessariamente menos informação."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "O valor da redução no tamanho por compactação depende tanto do volume de redundâncias na representação dos dados originais quanto do algoritmo de compactação utilizado."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Os algoritmos de compactação de dados sem perdas geralmente podem reduzir o número de bits armazenados ou transmitidos, ao mesmo tempo assegurando a reconstrução integral dos dados originais."
+        },
+        "csta/3A-DA-10": {
+          "description": "Avalie as alternativas conscientes em relação à organização dos elementos e o local de armazenamento dos dados."
+        },
         "csta/1B-IC-18": {
           "description": "Conversar sobre tecnologias computacionais que mudaram o mundo e expressar como essas tecnologias influenciam e são influenciadas por práticas culturais."
+        },
+        "csta/1B-DA-07": {
+          "description": "Use os dados para realçar ou propor relações de  causa  e efeito, prever resultados ou comunicar uma ideia."
         }
       }
     }

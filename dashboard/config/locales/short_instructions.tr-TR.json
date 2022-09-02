@@ -3757,7 +3757,19 @@
         "Pixelation 4x4 Empty": "Genişlik ve yükseklik artık piksel verilerinde kodlanmış haldedir. Boyutları nasıl ayarlayacağınızı bulabilir misiniz?",
         "Pixelation Bee": "Bir arının bu daha büyük görüntüsü, rengi piksel başına 12 bit ile kodlanır ancak onaltılık olarak görüntülemek, her pikselin rengini görmeyi kolaylaştırır. İkili moda geçerseniz -sıkı tutunun- çok fazla bit olur. İşte akıllara durgunluk veren, denenecek başka bir şey daha: piksel başına bitleri piksel başına 24 bit olacak şekilde kaydırın. Ne oluyor? Bu davranışı açıklayabilir misiniz?",
         "Pixelation Flappy": "İşte piksel başına 9 bitlik daha büyük bir resim. Piksel başına 9 bit ile 512 farklı rengi ifade edebilirsiniz. Daha karmaşık olsa da anlaşılması daha kolay olan sonraki resmi görmek için tıklayın.",
-        "U2L10 NetSim Automatic DNS": "İnternet Simülatörünün bu versiyonunda, sizin için bir Etki Alanı Adı Sistemi (DNS) sağlanmıştır ve DNS bağlı tüm bilgisayarların IP adreslerini bilir. Bir öğrencinin adresini almak için <yourRouterNumber>.15 adresindeki DNS hizmetine GET [hostname] biçiminde bir ileti gönderin."
+        "U2L10 NetSim Automatic DNS": "İnternet Simülatörünün bu versiyonunda, sizin için bir Etki Alanı Adı Sistemi (DNS) sağlanmıştır ve DNS bağlı tüm bilgisayarların IP adreslerini bilir. Bir öğrencinin adresini almak için <yourRouterNumber>.15 adresindeki DNS hizmetine GET [hostname] biçiminde bir ileti gönderin.",
+        "CSD U3 L5 Freeplay_2022": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U3 Mouse Input Bee 2_2022": "Bunu yap",
+        "CSD U3 Sprites intro sprites_2022": "Bunu yap",
+        "CSD U3 Variables change circle size_2022": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U3 Variables naming rules v2_2022": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U3 Variables random with assignment_2022": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U5 black white images pixelation 2_2022": "Bir gülen yüz (resmi görmek için buraya tıklayın) çiz",
+        "CSD U5 black white images pixelation 3_2022": "Görüntüyü (daha fazla görmek için buraya tıklayın) Görmek için Genişlik ve yükseklik kaydırıcıyılarını değiştir",
+        "CSD U5 black white images pixelation 4_2022": "Gülen yüze (görüntüyü görmek için buraya tıklayın) kaşları Ekle",
+        "CSD U5 black white images pixelation 5_2022": "İstediğini çiz",
+        "CSD U5 black white images pixelation_2022": "0 ve 1 yazarak X şeklini tamamla",
+        "U4 Model Design 1_2022": "Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)"
       }
     }
   }

@@ -1504,7 +1504,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -1522,15 +1522,6 @@ pl:
         text: "{SPRITE} myśl {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}myśl{TEXT1}przez{NUM}sekundy"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} myśl {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Jestem również głodny.
-            '"I only want the biggest goat."': Chcę tylko największej kozy.
-            '"I''m a green troll."': Jestem zielonym trollem.
-            '"No one will cross my bridge."': Nikt nie przekroczy mojego mostu.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} myśl {THOUGHT}"
         options:
@@ -1932,7 +1923,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:

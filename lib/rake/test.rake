@@ -110,12 +110,21 @@ namespace :test do
         # Parallel tests don't seem to run more quickly over 16 processes.
         ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
 
-        # Hash of all seed-data content: All fixture files plus schema.rb.
+        # Hash of all seed-data and -config content
+        #
+        # Data:
+        # - All fixture files
+        # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
+        #
+        # Config:
+        # - schema.rb
+        # - seed.rake
         fixture_path = "#{dashboard_dir}/test/fixtures/"
         fixture_hash = Digest::MD5.hexdigest(
           Dir["#{fixture_path}/{**,*}/*.yml"].
             push(dashboard_dir('db/schema.rb')).
             push(dashboard_dir('config/videos.csv')).
+            push(dashboard_dir('lib/tasks/seed.rake')).
             select(&File.method(:file?)).
             sort.
             map(&Digest::MD5.method(:file)).
@@ -196,6 +205,15 @@ namespace :test do
     end
   end
 
+  task :dashboard_legacy_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_legacy_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
   task :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
@@ -236,6 +254,7 @@ namespace :test do
     :shared_ci,
     :pegasus_ci,
     :dashboard_ci,
+    :dashboard_legacy_ci,
     :lib_ci,
     :bin_i18n_ci,
     :ui_live
@@ -244,6 +263,11 @@ namespace :test do
   desc 'Runs dashboard tests.'
   task :dashboard do
     TestRunUtils.run_dashboard_tests
+  end
+
+  desc 'Runs dashboard legacy tests.'
+  task :dashboard_legacy do
+    TestRunUtils.run_dashboard_legacy_tests
   end
 
   desc 'Runs pegasus tests.'
@@ -297,12 +321,31 @@ namespace :test do
           'Gemfile.lock',
           'deployment.rb',
           'dashboard/**/*',
+          'dashboard_legacy/**/*',
           'lib/**/*',
           'shared/**/*'
         ],
         ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
         TestRunUtils.run_dashboard_tests
+      end
+    end
+
+    desc 'Runs dashboard_legacy tests if dashboard_legacy might have changed from staging.'
+    task :dashboard_legacy do
+      run_tests_if_changed(
+        'dashboard',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard_legacy/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_legacy_tests
       end
     end
 
@@ -349,6 +392,7 @@ namespace :test do
                  # currently disabled because these tests take too long to run on circle
                  # :interpreter,
                  :dashboard,
+                 :dashboard_legacy,
                  :pegasus,
                  :shared,
                  :lib,
@@ -361,7 +405,7 @@ namespace :test do
 
   task changed: ['changed:all']
 
-  task all: [:apps, :dashboard, :pegasus, :shared, :lib, :bin_i18n]
+  task all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin_i18n]
 end
 task test: ['test:changed']
 

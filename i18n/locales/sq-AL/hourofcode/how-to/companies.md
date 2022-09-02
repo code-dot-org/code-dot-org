@@ -64,7 +64,7 @@ Vullnetari i Orës së Kodit
 
 Nëse doni të bëni një milje shtesë, kompania juaj mund të organizojë gjithashtu një ngjarje Hour of Code. Nuk ka ndonjë formulë specifike për të pritur një ngjarje, kështu që ju inkurajojmë që të jeni krijues! Duke qenë se numri i stafit tonë është i vogël (por i fuqishëm!), Code.org nuk ka një ekip të përkushtuar për të koordinuar ngjarjet e Orës së Kodit. Sidoqoftë, këtu janë disa këshilla për të filluar.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Përcaktoni një datë, format dhe vendndodhje për ngjarjen tuaj
 

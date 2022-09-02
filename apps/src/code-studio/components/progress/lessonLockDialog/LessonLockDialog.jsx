@@ -89,8 +89,18 @@ function LessonLockDialog({
       await refetchSectionLockStatus(selectedSectionId, unitId);
       handleClose();
     } else {
-      setSaving(false);
-      setError(commonMsg.errorSavingLockStatus());
+      saveLockStateResponse.json().then(json => {
+        setSaving(false);
+        if (json.error) {
+          setError(
+            commonMsg.errorSavingLockStatusWithMessage({
+              errorMessage: json.error
+            })
+          );
+        } else {
+          setError(commonMsg.errorSavingLockStatus());
+        }
+      });
     }
   };
 

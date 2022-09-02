@@ -1679,3 +1679,5 @@ et:
           lesson_groups:
             lessonGroup-4:
               display_name: Uuring
+        soccer:
+          name: jalgpall

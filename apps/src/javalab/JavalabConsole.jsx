@@ -151,7 +151,12 @@ class JavalabConsole extends React.Component {
       return (
         <PhotoSelectionView
           promptText={photoPrompterPromptText}
-          style={styles.photoPrompter}
+          style={{
+            ...styles.photoPrompter,
+            ...(displayTheme === DisplayTheme.DARK
+              ? styles.darkMode
+              : styles.lightMode)
+          }}
           onPhotoSelected={file => {
             onPhotoPrompterFileSelected(file);
             closePhotoPrompter();

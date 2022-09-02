@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:33:30.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "long_instructions": "# Images as Links\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**What are hyperlinks?**]\r\n\r\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\r\n\r\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\r\n\r\n```\r\n\r\n<a href=\"houses.html\"> Unique Houses </a>\r\n\r\n```\r\n:::\r\n\r\n\r\n::: details [**How do I add a hyperlink?**]\r\n\r\nYou can <strong>add hyperlinks to your web page using the `<a>` element</strong>.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\r\n\r\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br /><br />\r\n\r\n```\r\n\r\n<a href=\"houses.html\"> Unique Houses </a>\r\n\r\n```\r\n:::\r\n\r\n::: details [**How do I find the URL for a website?**]\r\n\r\nGo to whatever website you want to link to and copy the text in the address bar (e.g. \"https://www.google.com\" for Google). Then you can use that address for your own links.\r\n\r\n:::\r\n\r\n::: details [**How do I make external links?**]\r\n\r\nPut the entire url (including \"http://\")  into the the href attribute of the `<a>` tag, like this:\r\n\r\n```\r\n<a href=\"https://www.google.com\">Click me to go to Google</a>\r\n```\r\n:::\r\n</div>\r\n\r\nYou have learned that the text you type between the `<a>` and `</a>` tags is what the visitors to your page will see and click on when using links. You can actually add other tags and content, such as images, to this space in your code as well.\r\n\r\n# Do this:\r\n* Look at the code that makes the first two images on the `index.html` page into links.\r\n* Use that same code pattern to turn the second two images into links, too.\r\n\r\n",
     "instructions_important": "false",
@@ -13,19 +9,19 @@
     "parent_level_id": 23236,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/css/classes/",
-      "/docs/concepts/css/layout-properties/",
-      "/docs/concepts/css/body-styling/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/",
+    "map_reference": "/courses/csd-2022/guides/hyperlinks",
     "encrypted": "false",
     "mini_rubric": "false",
     "display_name": "Images as Links",
@@ -33,6 +29,10 @@
     "thumbnail_url": "https://images.code.org/fcc5f5dfd9ccefb83cd36a645126d255-image-1587970473527.54.18 PM.png",
     "encrypted_examples": "jhJ2RvtXMg6HaSXBIB9jc1REqLmWRa+nemJCkx8RPBDfVyD7qTYVindeZJVE\n2gM4TtPqZi9jIfox47n6wwYvYw==\n"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:33:30.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:33:30.448+00:00\",\"changed\":[\"cloned from \\\"CSD U2 image links_2021\\\"\"],\"cloned_from\":\"CSD U2 image links_2021\"}]"

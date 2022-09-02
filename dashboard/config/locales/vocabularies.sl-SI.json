@@ -68,6 +68,24 @@
         "debugging/basketball/unversioned": {
           "word": "Odpravljanje napak"
         },
+        "debugging/csd/2022": {
+          "word": "Odpravljanje napak"
+        },
+        "variable/csd/2022": {
+          "word": "Spremenljivka"
+        },
+        "conditionals/csd/2022": {
+          "word": "Pogoji"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2022": {
+          "word": "Funkcija"
+        },
+        "copyright/csd/2022": {
+          "word": "Avtorska pravice"
+        },
         "code/poem-art/unversioned": {
           "word": "Koda"
         },

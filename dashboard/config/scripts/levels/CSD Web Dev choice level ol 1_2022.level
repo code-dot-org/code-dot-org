@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:10.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
@@ -14,16 +10,20 @@
     "name_suffix": "_2022",
     "long_instructions": "# Ordered Lists\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**What are the two types of lists?**]\r\n There are two types of lists in HTML, ordered and unordered lists.\r\n:::\r\n\r\n::: details [**What is an ordered list?**]\r\n\r\nAn ordered list is a set of bulleted items which are numbered.\r\n<br /><br />\r\nAn ordered list element has the tag `<ol>` . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist. Each item in the list is marked by a list item element `<li>`;. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the ordered list (`<ol>`).\r\n:::\r\n\r\n\r\n::: details [**How do I make an ordered list?**]\r\n\r\nMaking an ordered list has two steps: making the list and adding the list items.  To make the ordered list, write the ordered list tags `<ol></ol>`.  Next, add your list items **inside** the ordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\r\n\r\nIt can be helpful to indent your `<li>` tags so it's clear they are contained in the `<ol>` tag.\r\n:::\r\n\r\n\r\n\r\n</div>\r\n\r\nAn ordered list is like an unordered (bulleted) list, but it has numbers. Just use the `<ol>` tag instead of `<ul>`.\r\n\r\n# Do This\r\n\r\n* Use the `<ol>` and `<li>` tags to structure this content into an ordered list.\r\n\r\n::: details [**Show me an example of working code.**]\r\n\r\n<table border=\"1\">\r\n<tr>\r\n<td>Example</td>\r\n<td>Result</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n\r\n```\r\n<ol>\r\n  <li>Step 1 </li>\r\n  <li>Step 2 </li>\r\n  <li>Step 3 </li>\r\n</ol>\r\n```\r\n</td>\r\n<td><img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:200px\"></td>\r\n</tr>\r\n</table>\r\n\r\n\r\n:::",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/"
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/headings-and-paragraphs"
     ],
-    "map_reference": "/docs/concepts/html/lists/",
+    "map_reference": "/courses/csd-2022/guides/lists",
     "encrypted": "false",
     "mini_rubric": "false",
     "display_name": "Create ordered list",
     "bubble_choice_description": "Use the <ol> tag to create a numbered list",
     "thumbnail_url": "https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:10.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:10.769+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level ol 1_2021\\\"\"],\"cloned_from\":\"CSD Web Dev choice level ol 1_2021\"}]"

@@ -55,24 +55,21 @@
     "ai_model_id": "z5SZPaoHHIvF",
     "ai_model_name": "Club Recommender",
     "reference_links": [
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/",
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/responding-to-user-input/"
+      "/courses/csd-2022/guides/design-mode",
+      "/courses/csd-2022/guides/multi-screen-apps",
+      "/courses/csd-2022/guides/design-mode-elements",
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/responding-to-user-input"
     ],
     "name_suffix": "_2022",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\r\n- Adding multiple screens for each feature: [Lesson 13 - Customizing Apps](../../../../13/levels/2)"
+    "teacher_markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\r\n- Adding multiple screens for each feature: [Lesson 13 - Customizing Apps](../../../../13/levels/2)",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-03-30T23:50:15.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:50:15.000Z",
   "user_id": 106,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:50:15.067+00:00\",\"changed\":[\"cloned from \\\"ml-club app-choice features\\\"\"],\"cloned_from\":\"ml-club app-choice features\"},{\"changed_at\":\"2022-04-12 21:45:33 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

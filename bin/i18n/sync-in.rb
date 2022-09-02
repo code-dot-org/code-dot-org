@@ -24,6 +24,7 @@ def sync_in
   localize_animation_library
   localize_shared_functions
   localize_course_offerings
+  localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -34,6 +35,30 @@ def sync_in
 rescue => e
   puts "Sync in failed from the error: #{e}"
   raise e
+end
+
+# This function localizes all content in studio.code.org/docs
+def localize_docs
+  puts "Preparing docs content"
+  docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
+  programming_env_docs = {}
+  ProgrammingEnvironment.all.each do |env|
+    name = env.name
+    programming_env_docs[name] = {
+      'name' => env.properties["title"],
+      'description' => env.properties["description"],
+      'categories' => {},
+    }
+    env.categories_for_navigation.each do |category|
+      programming_env_docs[name]["categories"].store(
+        category[:key], {'name' => category[:name]}
+      )
+    end
+  end
+  FileUtils.mkdir_p(File.dirname(docs_content_file))
+  File.open(docs_content_file, "w") do |file|
+    file.write(JSON.pretty_generate(programming_env_docs))
+  end
 end
 
 def localize_level_and_project_content

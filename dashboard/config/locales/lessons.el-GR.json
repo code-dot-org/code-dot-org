@@ -102,6 +102,78 @@
         "kodea-pd-2021/Planning": {
           "name": "Σχεδιασμός"
         },
+        "csd5-2022/Representing Images": {
+          "name": "Αναπαριστώντας Εικόνες"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Συνδυάζοντας Αναπαραστάσεις"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Κρατώντας τα Δεδομένα Μυστικά"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής"
+        },
+        "csd3-2022/Variables": {
+          "name": "Μεταβλητές"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Χαρακτήρας"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "csd3-2022/Text": {
+          "name": "κείμενο"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Συνθήκες"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Είσοδος Πληκτρολογίου"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Ταχύτητα"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Συγκρούσεις"
+        },
+        "csd3-2022/Functions": {
+          "name": "Συναρτήσεις"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής"
+        },
+        "csd2-2022/Headings": {
+          "name": "Επικεφαλίδες"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Συνδέοντας Σελίδες"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Χρωματισμός των LED"
+        },
+        "csd6-2022/Functions": {
+          "name": "Συναρτήσεις"
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
         },

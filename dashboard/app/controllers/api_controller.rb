@@ -174,6 +174,7 @@ class ApiController < ApplicationController
   end
 
   def update_lockable_state
+    return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.no_updates")} if params[:updates].blank?
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
@@ -182,17 +183,17 @@ class ApiController < ApplicationController
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.missing_params")}
       end
 
       if item[:locked] && item[:readonly_answers]
         # Can not view answers while locked
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.cannot_view_locked_answers")}
       end
 
       unless User.find(user_level_data[:user_id]).teachers.include? current_user
         # Can only update lockable state for user's students
-        return head :forbidden
+        return render status: :forbidden, json: {error: I18n.t("lesson_lock.error.forbidden")}
       end
       UserLevel.update_lockable_state(
         user_level_data[:user_id],

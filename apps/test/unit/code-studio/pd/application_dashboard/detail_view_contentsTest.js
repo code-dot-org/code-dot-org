@@ -414,13 +414,13 @@ describe('DetailViewContents', () => {
         .last()
         .simulate('click');
 
-      // Dropdown is enabled
+      // Dropdown is still disabled
       // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
       expect(
         getLastRow()
           .find('Select')
           .prop('disabled')
-      ).to.equal(false);
+      ).to.equal(true);
 
       // Click "Save"
       detailView

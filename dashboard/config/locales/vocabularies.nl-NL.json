@@ -83,6 +83,30 @@
         "debugging/basketball/unversioned": {
           "word": "Foutopsporing"
         },
+        "input/csd/2022": {
+          "word": "Invoer"
+        },
+        "debugging/csd/2022": {
+          "word": "Foutopsporing"
+        },
+        "variable/csd/2022": {
+          "word": "Variabele"
+        },
+        "conditionals/csd/2022": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstractie"
+        },
+        "function/csd/2022": {
+          "word": "Functie"
+        },
+        "copyright/csd/2022": {
+          "word": "Copyright"
+        },
+        "user_interface/csd/2022": {
+          "word": "Gebruikersinterface"
+        },
         "code/poem-art/unversioned": {
           "word": "Code",
           "definition": "(v) instructies voor een computer schrijven."

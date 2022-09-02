@@ -1487,15 +1487,6 @@ in:
         text: crwdns2917550:0[SPRITE]crwdnd2917550:0[0]crwdnd2917550:0[SPEECH]crwdnd2917550:0[1]crwdne2917550:0
       gamelab_spriteThinkTime:
         text: crwdns2917552:0[SPRITE]crwdnd2917552:0[0]crwdnd2917552:0[TEXT1]crwdnd2917552:0[1]crwdnd2917552:0[NUM]crwdnd2917552:0[2]crwdne2917552:0
-      gamelab_spriteThink_fables1:
-        text: crwdns2917554:0[SPRITE]crwdnd2917554:0[0]crwdnd2917554:0[THOUGHT]crwdnd2917554:0[1]crwdne2917554:0
-        options:
-          THOUGHT:
-            '"Hmm..."': crwdns2917556:0crwdne2917556:0
-            '"I am hungry, too."': crwdns2917558:0crwdne2917558:0
-            '"I only want the biggest goat."': crwdns2917560:0crwdne2917560:0
-            '"I''m a green troll."': crwdns2917562:0crwdne2917562:0
-            '"No one will cross my bridge."': crwdns2917564:0crwdne2917564:0
       gamelab_spriteThink_fables2:
         text: crwdns2917566:0[SPRITE]crwdnd2917566:0[0]crwdnd2917566:0[THOUGHT]crwdnd2917566:0[1]crwdne2917566:0
         options:
