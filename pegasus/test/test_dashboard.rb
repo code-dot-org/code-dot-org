@@ -21,18 +21,6 @@ class DashboardTest < Minitest::Test
       end
     end
 
-    describe 'select' do
-      it 'returns only requested keys when arguments are given' do
-        assert_equal(
-          {
-            name: FakeDashboard::STUDENT[:name],
-            admin: FakeDashboard::STUDENT[:admin]
-          },
-          @student.select(:name, :admin)
-        )
-      end
-    end
-
     describe 'get' do
       it 'does return students' do
         assert @student
