@@ -53,7 +53,7 @@ class NetSimApi < Sinatra::Base
       null_pub_sub_api.rb
       pusher_api.rb
     }.each do |file|
-      load(CDO.dir('dashboard_legacy', 'middleware', 'helpers', file))
+      load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', file))
     end
   end
 

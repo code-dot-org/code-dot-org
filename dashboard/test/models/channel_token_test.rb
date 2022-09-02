@@ -1,6 +1,6 @@
 require 'test_helper'
 
-require_relative '../../../dashboard_legacy/middleware/helpers/projects'
+require_relative '../../../dashboard/legagy/middleware/helpers/projects'
 
 class ChannelTokenTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true

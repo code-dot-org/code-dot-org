@@ -1,6 +1,6 @@
 require 'rake/testtask'
 
-desc 'Run tests for dashboard_legacy directory'
+desc 'Run tests for dashboard/legagy directory'
 task :test do
   Rake::TestTask.new do |t|
     t.warning = false
