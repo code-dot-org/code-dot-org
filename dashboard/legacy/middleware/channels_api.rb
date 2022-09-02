@@ -13,7 +13,6 @@ class ChannelsApi < Sinatra::Base
     %w(
       core.rb
       storage_id.rb
-      auth_helpers.rb
     ).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
@@ -21,6 +20,7 @@ class ChannelsApi < Sinatra::Base
 
   helpers do
     %w(
+      auth_helpers.rb
       projects.rb
       profanity_privacy_helper.rb
     ).each do |file|
