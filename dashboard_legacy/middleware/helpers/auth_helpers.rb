@@ -1,6 +1,6 @@
 require 'cdo/user_helpers'
 require 'json'
-require_relative '../../../shared/middleware/helpers/auth_helpers'
+require_relative '../../../shared/middleware/helpers/shared_auth_helpers'
 
 #
 # Utility methods that help middleware access dashboard authentication and
