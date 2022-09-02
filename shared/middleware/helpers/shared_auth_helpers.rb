@@ -5,8 +5,8 @@ require 'json'
 # Utility methods that help middleware access dashboard authentication and
 # permissions information.
 #
-# Note: This file should be loaded in the context of a Sinatra application;
-#       see net_sim_api.rb for an example of this.
+# The use of these methods within shared and pegasus is deprecated.
+# These methods should be eliminated or moved to dashboard.
 #
 
 # @returns [Integer] the user_id associated with the current request
