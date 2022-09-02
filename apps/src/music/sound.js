@@ -1,5 +1,4 @@
 import WebAudio from './soundSub';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 var soundList = [
   'stem-hip-lead',
@@ -10,17 +9,17 @@ var soundList = [
   'stem-dance-drum',
   'stem-country-lead',
   'stem-country-bass',
-  'stem-country-drum',
+  'stem-country-drum'
 ];
 
 var baseSoundUrl;
 
-var audioSoundBuffers = new Array();
+var audioSoundBuffers = [];
 var tagGroups = {};
 
 var audioIdUpto = 0;
 
-var audioSystem;
+var audioSystem = null;
 
 export function InitSound() {
   // regular web version.
@@ -31,7 +30,7 @@ export function InitSound() {
 }
 
 export function GetCurrentAudioTime() {
-  return audioSystem.getCurrentTime();
+  return audioSystem?.getCurrentTime();
 }
 
 function LoadSounds() {
@@ -52,7 +51,7 @@ function LoadSounds() {
 // an optional groupTag puts the sound in a group with a limited set of instances.
 export function PlaySound(name, groupTag, when = 0, loop = false) {
   for (var i = 0; i < soundList.length; i++) {
-    if (soundList[i] == name) {
+    if (soundList[i] === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
       PlaySoundByIndex(i, groupTag || name, when, loop);
       break;
@@ -61,7 +60,9 @@ export function PlaySound(name, groupTag, when = 0, loop = false) {
 }
 
 function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop) {
-  if (!audioSoundBuffers[audioBufferIndex]) return;
+  if (!audioSoundBuffers[audioBufferIndex]) {
+    return;
+  }
 
   // Set up a tag group if we don't have one already.
   if (!tagGroups[groupTag]) {
@@ -97,7 +98,7 @@ function RemoveStoppedBuffer(groupTag, soundSourceId) {
   for (var s = sources.length - 1; s >= 0; s--) {
     var source = sources[s];
 
-    if (source.id == soundSourceId) {
+    if (source.id === soundSourceId) {
       sources.splice(s, 1);
     }
   }
