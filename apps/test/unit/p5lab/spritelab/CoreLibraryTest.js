@@ -6,7 +6,7 @@ import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {
   MAX_NUM_SPRITES,
-  MAX_NUM_SPRITE_WARNING
+  SPRITE_LIMIT_WARNING
 } from '@cdo/apps/p5lab/spritelab/constants';
 import msg from '@cdo/locale';
 import {
@@ -179,35 +179,77 @@ describe('SpriteLab Core Library', () => {
     });
   });
 
-  describe('Sprite limit', () => {
-    // The number of sprites created is limited by MAX_NUM_SPRITES
+  describe('The number of sprites created is capped by MAX_NUM_SPRITES', () => {
     it(`caps at ${MAX_NUM_SPRITES} sprites`, () => {
       for (let i = 0; i < 50000; i++) {
         coreLibrary.addSprite();
       }
       expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
     });
+  });
 
-    // When number of sprites is reaches MAX_NUM_SPRITE_WARNING,
-    // an additional addSprite call will result in displayWorkspaceAlert being dispatched
-    // Note that MAX_NUM_SPRITES = MAX_NUM_SPRITE_WARNING + 1
-    it(`When ${MAX_NUM_SPRITE_WARNING} sprites is reached, workspace alert is dispatched`, () => {
-      const stubbedDispatch = stub();
+  describe('Workspace alert dispatch', () => {
+    let stubbedDispatch;
+    beforeEach(function() {
+      stubbedDispatch = stub();
       stub(redux, 'getStore').returns({
         dispatch: stubbedDispatch
       });
-      for (let i = 0; i < MAX_NUM_SPRITES; i++) {
+    });
+
+    afterEach(function() {
+      redux.getStore.restore();
+    });
+
+    // if the total number of sprites created is equal to or less than SPRITE_LIMIT_WARNING
+    // then a display workspace alert should not have been called
+    it(`If ${SPRITE_LIMIT_WARNING} sprites or less are created, a workspace alert is NOT dispatched`, () => {
+      for (let i = 0; i < SPRITE_LIMIT_WARNING; i++) {
         coreLibrary.addSprite();
       }
-      expect(stubbedDispatch).to.have.been.calledWith(
+      expect(stubbedDispatch).to.not.have.been.calledWith(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          /* display warning when user exceeds MAX_NUM_SPRITE_WARNING */
-          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITE_WARNING}),
+          /* display warning when total number of sprites is equal to SPRITE_LIMIT_WARNING */
+          msg.spriteLimitReached({limit: SPRITE_LIMIT_WARNING}),
           /* bottom */ true
         )
       );
-      redux.getStore.restore();
+    });
+    // Once the total number of sprite is equal to SPRITE_LIMIT_WARNING, if
+    // an additional addSprite call will result in displayWorkspaceAlert being dispatched
+    // Note that SPRITE_LIMIT_WARNING = MAX_NUM_SPRITES - 1
+    it(`When ${SPRITE_LIMIT_WARNING} sprites is reached, an additional addSprite call will dispatch a workspace alert`, () => {
+      for (let i = 0; i < SPRITE_LIMIT_WARNING + 1; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(stubbedDispatch).to.have.been.calledOnceWith(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          /* display warning when total number of sprites is equal to SPRITE_LIMIT_WARNING */
+          msg.spriteLimitReached({limit: SPRITE_LIMIT_WARNING}),
+          /* bottom */ true
+        )
+      );
+    });
+
+    // When total number of sprite is equal to SPRITE_LIMIT_WARNING, if multiple
+    // addSprite calls are made, the dispatch of displayWorkspaceAlert will occur
+    // only once due to the early return from the reachedSpriteMax function
+    // when total number of sprites is >= MAX_NUM_SPRITES.
+    // Note that SPRITE_LIMIT_WARNING = MAX_NUM_SPRITES - 1
+    it(`When ${SPRITE_LIMIT_WARNING} sprites is reached, workspace alert is dispatched`, () => {
+      for (let i = 0; i < SPRITE_LIMIT_WARNING + 100; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(stubbedDispatch).to.have.been.calledOnceWith(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          /* display warning when total number of sprites is equal to SPRITE_LIMIT_WARNING */
+          msg.spriteLimitReached({limit: SPRITE_LIMIT_WARNING}),
+          /* bottom */ true
+        )
+      );
     });
   });
 

@@ -3,7 +3,7 @@ import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES, MAX_NUM_SPRITE_WARNING} from './constants';
+import {MAX_NUM_SPRITES, SPRITE_LIMIT_WARNING} from './constants';
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert
@@ -369,25 +369,26 @@ export default class CoreLibrary {
     return speechBubbles[speechBubbles.length - 1];
   }
 
-  // When the total number of sprites reaches MAX_NUM_SPRITE_WARNING,
-  // a workspace alert warning is displayed.
-  // MAX_NUM_SPRITE_WARNING = MAX_NUM_SPRITES - 1
-  reachedSpriteLimit() {
+  reachedSpriteMax() {
     const numSprites = this.getNumberOfSprites();
-    if (numSprites > MAX_NUM_SPRITE_WARNING) {
-      return true;
-    }
-    if (numSprites === MAX_NUM_SPRITE_WARNING) {
+    return numSprites === MAX_NUM_SPRITES;
+  }
+
+  // When the total number of sprites is equal to SPRITE_LIMIT_WARNING,
+  // a workspace alert warning is displayed
+  // Note that SPRITE_LIMIT_WARNING = MAX_NUM_SPRITES - 1
+  warnIfAtSpriteLimit() {
+    const numSprites = this.getNumberOfSprites();
+    if (numSprites === SPRITE_LIMIT_WARNING) {
       getStore().dispatch(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          /* display warning when user exceeds MAX_NUM_SPRITE_WARNING */
-          msg.spriteLimitExceeded({limit: MAX_NUM_SPRITE_WARNING}),
+          /* display warning when user exceeds SPRITE_LIMIT_WARNING */
+          msg.spriteLimitReached({limit: SPRITE_LIMIT_WARNING}),
           /* bottom */ true
         )
       );
     }
-    return false;
   }
 
   /**
@@ -396,10 +397,13 @@ export default class CoreLibrary {
    * @returns {Number} A unique id to reference the sprite.
    */
   addSprite(opts) {
-    // this function returns early when sprite max has been reached
-    if (this.reachedSpriteLimit()) {
+    // this function returns early if total number of sprites equals MAX_NUM_SPRITES
+    if (this.reachedSpriteMax()) {
       return;
     }
+    // this function dispatches a workspace alert if the total number of sprites
+    // equals SPRITE_LIMIT_WARNING
+    this.warnIfAtSpriteLimit();
     opts = opts || {};
     let name = opts.name;
     let location = opts.location || {x: 200, y: 200};
