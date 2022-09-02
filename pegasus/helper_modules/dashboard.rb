@@ -48,20 +48,5 @@ module Dashboard
     def to_hash
       @row.to_hash
     end
-
-    # @returns [Hash] containing all the requested keys
-    def select(*keys)
-      {}.tap do |result|
-        keys.each do |key|
-          result[key] = if @row.key? key
-                          @row[key]
-                        elsif respond_to? key
-                          send(key)
-                        else
-                          nil
-                        end
-        end
-      end
-    end
   end
 end
