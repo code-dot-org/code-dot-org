@@ -1,6 +1,5 @@
 require 'cdo/user_helpers'
 require 'json'
-require 'helpers/shared_auth_helpers'
 
 #
 # Utility methods that help middleware access dashboard authentication and
@@ -9,6 +8,18 @@ require 'helpers/shared_auth_helpers'
 # Note: This file should be loaded in the context of a Sinatra application;
 #       see net_sim_api.rb for an example of this.
 #
+
+# @returns [Integer] the user_id associated with the current request
+def current_user_id
+  # @request is a Sinatra::Request < Rack::Request provided by Sinatra::Base
+  @request.nil? ? nil : @request.user_id
+end
+
+# @returns [Hash] the dashboard user row associated with the current request.
+def current_user
+  return nil if (id = current_user_id).nil?
+  @dashboard_user ||= DASHBOARD_DB[:users][id: id]
+end
 
 # Consider the age of the specified user if user_id is provided, or of the
 # current user otherwise.
