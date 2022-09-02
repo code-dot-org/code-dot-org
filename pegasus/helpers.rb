@@ -60,11 +60,6 @@ def form_error!(e)
   halt(400, {'Content-Type' => 'text/json'}, e.errors.to_json)
 end
 
-def have_permission?(permission)
-  return false unless dashboard_user_helper
-  dashboard_user_helper.has_permission?(permission)
-end
-
 def no_content!
   halt(204, "No content\n")
 end
