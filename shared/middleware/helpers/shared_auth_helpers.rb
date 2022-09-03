@@ -1,4 +1,3 @@
-require 'cdo/user_helpers'
 require 'json'
 
 #
