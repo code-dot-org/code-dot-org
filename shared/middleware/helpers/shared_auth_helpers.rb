@@ -1,5 +1,3 @@
-require 'json'
-
 #
 # Utility methods that help middleware access dashboard authentication and
 # permissions information.
