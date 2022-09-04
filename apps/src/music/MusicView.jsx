@@ -93,7 +93,7 @@ class MusicView extends React.Component {
 
   api = {
     play_sound: (id, measure) => {
-      console.log('play sound', id, measure);
+      //console.log('play sound', id, measure);
 
       // The user should see measures as 1-based, but
       // internally, we'll treat them as 0-based.
@@ -104,7 +104,7 @@ class MusicView extends React.Component {
       });
     },
     play_sound_next_measure: id => {
-      console.log('play sound next measure', id);
+      //console.log('play sound next measure', id);
 
       // work out the next measure by rounding time up.
       const currentMeasure = this.getCurrentMeasure();
@@ -217,6 +217,14 @@ class MusicView extends React.Component {
         {
           kind: 'block',
           type: 'play_sound_next_measure'
+        },
+        {
+          kind: 'block',
+          type: 'loop_from_to'
+        },
+        {
+          kind: 'block',
+          type: 'variable_get'
         }
       ]
     };
@@ -241,10 +249,9 @@ class MusicView extends React.Component {
               options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
             },
             {
-              type: 'field_number',
+              type: 'field_variable',
               name: 'measure',
-              value: 1,
-              min: 1
+              variable: 'measure'
             }
           ],
           inputsInline: true,
@@ -315,6 +322,61 @@ class MusicView extends React.Component {
       }
     };
 
+    Blockly.Blocks['loop_from_to'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'loop_from_to',
+          message0: 'loop %1 from %2 to %3 %4',
+          args0: [
+            {
+              type: 'field_variable',
+              name: 'measure',
+              variable: 'measure'
+            },
+            {
+              type: 'field_number',
+              name: 'from',
+              value: 1,
+              min: 1
+            },
+            {
+              type: 'field_number',
+              name: 'to',
+              value: 5,
+              min: 1
+            },
+            {
+              type: 'input_statement',
+              name: 'code'
+            }
+          ],
+          inputsInline: true,
+          previousStatement: null,
+          nextStatement: null,
+          colour: 230,
+          tooltip: 'loop from a number to another number',
+          helpUrl: ''
+        });
+      }
+    };
+
+    Blockly.Blocks['variable_get'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'variable_get',
+          message0: '%1',
+          args0: [
+            {
+              type: 'field_variable',
+              name: 'var',
+              variable: 'measure'
+            }
+          ],
+          output: null
+        });
+      }
+    };
+
     Blockly.JavaScript.when_run = function() {
       // Generate JavaScript for handling click event.
       return '\n';
@@ -330,9 +392,15 @@ class MusicView extends React.Component {
         'Music.play_sound("' +
         ctx.getFieldValue('sound') +
         '", ' +
-        ctx.getFieldValue('measure') +
+        'measure' +
+        //ctx.getFieldValue('measure') +
         ');\n'
       );
+    };
+
+    Blockly.JavaScript.variable_get = function(ctx) {
+      return Blockly.JavaScript.valueToCode(ctx, 'measure');
+      //return ctx.getFieldValue('var');
     };
 
     /*var theme = Blockly.Theme.defineTheme('dark', {
@@ -344,6 +412,19 @@ class MusicView extends React.Component {
     Blockly.JavaScript.play_sound_next_measure = function(ctx) {
       return (
         'Music.play_sound_next_measure("' + ctx.getFieldValue('sound') + '");\n'
+      );
+    };
+
+    Blockly.JavaScript.loop_from_to = function(ctx) {
+      return (
+        'for (var measure = ' +
+        ctx.getFieldValue('from') +
+        '; measure <= ' +
+        ctx.getFieldValue('to') +
+        '; measure++) {\n' +
+        //ctx.getFieldValue('code') +
+        Blockly.JavaScript.statementToCode(ctx, 'code') +
+        '\n}\n'
       );
     };
 
@@ -367,7 +448,7 @@ class MusicView extends React.Component {
   };
 
   onBlockSpaceChange = () => {
-    console.log('onBlockSpaceChange');
+    //console.log('onBlockSpaceChange');
 
     this.executeSong();
 
@@ -459,7 +540,7 @@ class MusicView extends React.Component {
       {Music: this.api},
       events
     ).hooks.forEach(hook => {
-      console.log('hook', hook);
+      //console.log('hook', hook);
       hooks[hook.name] = hook.func;
     });
 
@@ -486,6 +567,8 @@ class MusicView extends React.Component {
     }
 
     this.setState({isPlaying: true, startPlayingAudioTime: currentAudioTime});
+
+    console.log(Blockly.getWorkspaceCode());
   };
 
   previewSound = id => {
