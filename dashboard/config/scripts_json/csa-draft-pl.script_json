@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-draft-pl",
-    "serialized_at": "2022-08-31 19:26:24 UTC",
+    "serialized_at": "2022-09-01 22:30:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -498,6 +498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-overview-2022"
+        ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -520,6 +523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-multi-select"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -542,6 +548,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-CSA U4L10-L1_2022-COPY"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -564,6 +573,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -583,10 +595,10 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Reflection (~5 minutes)"
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
       "seeding_key": {
@@ -596,7 +608,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csa-draft-pl",
-        "activity_section.key": "862fb4a6-2f63-4ecf-a6bc-ec29ad01ec87"
+        "activity_section.key": "12e71d07-9872-4c4d-aaa0-c7f9d8419085"
       },
       "level_keys": [
         "vpl-csa-2022-module-3-reflection"
@@ -608,6 +620,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Reflection (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection-project"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "862fb4a6-2f63-4ecf-a6bc-ec29ad01ec87"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-3-reflection-project"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-wrap-up-2022"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,
@@ -823,6 +860,18 @@
         "level.key": "vpl-csa-2022-module-3-reflection",
         "script_level.level_keys": [
           "vpl-csa-2022-module-3-reflection"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "12e71d07-9872-4c4d-aaa0-c7f9d8419085"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-3-reflection-project",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection-project"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
