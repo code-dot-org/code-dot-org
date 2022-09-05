@@ -20,7 +20,7 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-08-31T20:15:50.207+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-2022-module-3-reflection\\\"\"],\"cloned_from\":\"vpl-csa-2022-module-3-reflection\"},{\"changed_at\":\"2022-08-31 20:21:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-08-31T20:15:50.207+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-2022-module-3-reflection\\\"\"],\"cloned_from\":\"vpl-csa-2022-module-3-reflection\"},{\"changed_at\":\"2022-08-31 20:21:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-09-01 22:31:10 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
