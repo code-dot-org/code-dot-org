@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-25 13:13:11 UTC",
+    "serialized_at": "2022-09-02 13:09:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6063,7 +6063,7 @@
     },
     {
       "name": "Casting",
-      "url": "https://youtu.be/l4BCk46Y9AA",
+      "url": "https://youtu.be/Xy1lVNguW3s",
       "key": "casting",
       "properties": {
         "audience": "Student",
