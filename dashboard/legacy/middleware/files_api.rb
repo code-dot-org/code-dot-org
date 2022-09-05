@@ -121,7 +121,7 @@ class FilesApi < Sinatra::Base
 
   helpers do
     %w(bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb profanity_privacy_helper.rb library_bucket.rb).each do |file|
-      load(CDO.dir('dashboard_legacy', 'middleware', 'helpers', file))
+      load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', file))
     end
   end
 
