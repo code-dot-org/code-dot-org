@@ -13,7 +13,7 @@ class TablesApi < Sinatra::Base
       'table.rb',
       'firebase_helper.rb',
     ].each do |file|
-      load(CDO.dir('dashboard_legacy', 'middleware', 'helpers', file))
+      load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', file))
     end
   end
 
