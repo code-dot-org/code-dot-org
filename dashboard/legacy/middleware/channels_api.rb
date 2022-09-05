@@ -24,7 +24,7 @@ class ChannelsApi < Sinatra::Base
       projects.rb
       profanity_privacy_helper.rb
     ).each do |file|
-      load(CDO.dir('dashboard_legacy', 'middleware', 'helpers', file))
+      load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', file))
     end
   end
 
