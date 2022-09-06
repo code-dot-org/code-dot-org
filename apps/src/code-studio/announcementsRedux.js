@@ -29,6 +29,7 @@ export const VisibilityType = {
 };
 
 export const announcementShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
   notice: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
