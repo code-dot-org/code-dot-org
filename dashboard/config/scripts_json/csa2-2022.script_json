@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:18:10 UTC",
+    "serialized_at": "2022-09-02 13:06:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6418,7 +6418,7 @@
     },
     {
       "name": "The toString() Method",
-      "url": "https://youtu.be/dPH01DBWlZ8",
+      "url": "https://youtu.be/WF7prjPzl98",
       "key": "the_tostring_method",
       "properties": {
         "audience": "Student",

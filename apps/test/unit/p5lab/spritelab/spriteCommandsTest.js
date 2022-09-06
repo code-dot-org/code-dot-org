@@ -4,7 +4,6 @@ import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {commands as actionCommands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import {MAX_NUM_SPRITES} from '@cdo/apps/p5lab/spritelab/constants';
 
 describe('Sprite Commands', () => {
   let coreLibrary;
@@ -141,38 +140,11 @@ describe('Sprite Commands', () => {
       ).to.equal(10);
     });
 
-    it(`caps at ${MAX_NUM_SPRITES} sprites - makeNumSprites called once`, () => {
+    it('caps at 500 sprites', () => {
       commands.makeNumSprites.apply(coreLibrary, [100000000, 'costume_label']);
       expect(
         coreLibrary.getSpriteArray({costume: 'costume_label'}).length
-      ).to.equal(MAX_NUM_SPRITES);
-    });
-
-    it(`caps at ${MAX_NUM_SPRITES} sprites - makeNumSprites called multiple times`, () => {
-      for (let i = 0; i < 5; i++) {
-        commands.makeNumSprites.apply(coreLibrary, [500, 'costume_label']);
-      }
-      expect(
-        coreLibrary.getSpriteArray({costume: 'costume_label'}).length
-      ).to.equal(MAX_NUM_SPRITES);
-    });
-  });
-
-  describe('makeBurst', () => {
-    it(`caps at ${MAX_NUM_SPRITES} sprites - makeBurst called once`, () => {
-      commands.makeBurst.apply(coreLibrary, [
-        100000000,
-        'costume_label',
-        'burst'
-      ]);
-      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
-    });
-
-    it(`caps at ${MAX_NUM_SPRITES} sprites - makeBurst called multiple times`, () => {
-      for (let i = 0; i < 5; i++) {
-        commands.makeBurst.apply(coreLibrary, [500, 'costume_label', 'burst']);
-      }
-      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
+      ).to.equal(500);
     });
   });
 });

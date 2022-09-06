@@ -20,6 +20,8 @@ Rails:
   Enabled: true
   Include:
     - dashboard/**/* # only run Rails cops on Rails-specific code
+  Exclude:
+    - dashboard/legacy/**/*
 
 # BEGIN CODE.ORG OVERRIDES
 
