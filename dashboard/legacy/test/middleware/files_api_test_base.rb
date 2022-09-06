@@ -96,6 +96,7 @@ class FilesApiTestBase < Minitest::Test
     assert_equal expected, actual
   end
 
+  # rubocop:disable Rails/Delegate
   def successful?
     last_response.successful?
   end
@@ -107,6 +108,7 @@ class FilesApiTestBase < Minitest::Test
   def not_found?
     last_response.not_found?
   end
+  # rubocop:enable Rails/Delegate
 
   def conflict?
     last_response.status == 409
