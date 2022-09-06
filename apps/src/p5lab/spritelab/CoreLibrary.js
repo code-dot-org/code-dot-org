@@ -370,21 +370,20 @@ export default class CoreLibrary {
   }
 
   reachedSpriteMax() {
-    const numSprites = this.getNumberOfSprites();
-    return numSprites >= MAX_NUM_SPRITES;
+    return this.getNumberOfSprites() >= MAX_NUM_SPRITES;
   }
 
-  // When the total number of sprites is equal to SPRITE_LIMIT_WARNING,
-  // a workspace alert warning is displayed
+  // This function is called within the addSprite function BEFORE a new sprite is created
+  // If the total number of sprites is equal to SPRITE_LIMIT_WARNING, a workspace
+  // alert warning is displayed to let user know they have reached the sprite limit
   // Note that SPRITE_LIMIT_WARNING = MAX_NUM_SPRITES - 1
   warnIfAtSpriteLimit() {
-    const numSprites = this.getNumberOfSprites();
-    if (numSprites === SPRITE_LIMIT_WARNING) {
+    if (this.getNumberOfSprites() === SPRITE_LIMIT_WARNING) {
       getStore().dispatch(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
           /* display warning when user exceeds SPRITE_LIMIT_WARNING */
-          msg.spriteLimitReached({limit: SPRITE_LIMIT_WARNING}),
+          msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
           /* bottom */ true
         )
       );
@@ -397,12 +396,9 @@ export default class CoreLibrary {
    * @returns {Number} A unique id to reference the sprite.
    */
   addSprite(opts) {
-    // this function returns early if total number of sprites equals MAX_NUM_SPRITES
     if (this.reachedSpriteMax()) {
       return;
     }
-    // this function dispatches a workspace alert if the total number of sprites
-    // equals SPRITE_LIMIT_WARNING
     this.warnIfAtSpriteLimit();
     opts = opts || {};
     if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
