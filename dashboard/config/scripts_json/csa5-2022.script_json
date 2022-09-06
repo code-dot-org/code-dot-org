@@ -11,8 +11,7 @@
           "link": "",
           "type": "information",
           "visibility": "Teacher-only",
-          "dismissible": true,
-          "key": "ce42ba3a-853e-4974-a564-9787d0b9a4cd"
+          "dismissible": true
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -21,8 +20,7 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey",
-          "key": "194069c7-3da7-4290-ba26-8bb46fdac3f9"
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -37,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 17:46:21 UTC",
+    "serialized_at": "2022-08-11 16:19:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

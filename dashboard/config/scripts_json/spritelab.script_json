@@ -10,8 +10,7 @@
           "details": "The standalone Sprite Lab progression is no longer supported by Code.org. We recommend you click \"Learn More\" to try the Express course.",
           "link": "https://studio.code.org/s/express",
           "type": "failure",
-          "visibility": "Teacher and student",
-          "key": "5354dc0b-233e-42ee-8a05-9718afaed7e9"
+          "visibility": "Teacher and student"
         }
       ],
       "is_course": true,
@@ -20,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "spritelab",
-    "serialized_at": "2022-08-31 17:47:08 UTC",
+    "serialized_at": "2022-04-08 15:40:56 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
