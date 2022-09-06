@@ -10,8 +10,7 @@
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csd-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Teacher-only",
-          "key": "956d4b3f-7e82-4073-8778-6d5ae13faf9e"
+          "visibility": "Teacher-only"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -32,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-08-31 17:46:26 UTC",
+    "serialized_at": "2022-03-22 21:16:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

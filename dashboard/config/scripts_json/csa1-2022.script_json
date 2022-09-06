@@ -12,8 +12,7 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey",
-          "key": "9407f91b-9c06-4d97-98fc-389956513c89"
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -28,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 17:46:16 UTC",
+    "serialized_at": "2022-08-26 15:32:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

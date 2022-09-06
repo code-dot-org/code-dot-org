@@ -11,8 +11,7 @@
           "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=6",
           "type": "feedback",
           "visibility": "Teacher-only",
-          "buttonText": "Learn More",
-          "key": "710c7129-fa41-41ef-a147-4b96a1a5f300"
+          "buttonText": "Learn More"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -30,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 17:46:56 UTC",
+    "serialized_at": "2022-08-23 00:26:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
