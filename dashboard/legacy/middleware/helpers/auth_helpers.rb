@@ -1,4 +1,4 @@
-require 'cdo/user_helpers'
+require_relative 'user_helpers'
 require 'json'
 require 'helpers/shared_auth_helpers'
 
