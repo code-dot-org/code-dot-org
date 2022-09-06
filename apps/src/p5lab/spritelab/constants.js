@@ -106,3 +106,4 @@ export const exampleSprites = {
 export const MAX_NUM_SPRITES = 1001;
 export const SPRITE_LIMIT_WARNING = MAX_NUM_SPRITES - 1;
 export const MAX_NUM_TEXTS = 1000;
+
