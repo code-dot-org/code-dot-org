@@ -1,4 +1,4 @@
-require 'cdo/user_helpers'
+require_relative '../legacy/middleware/helpers/user_helpers'
 
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
