@@ -10,8 +10,7 @@
           "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.",
           "link": "https://code.org/educate/csp/ap-students",
           "type": "bullhorn",
-          "visibility": "Student-only",
-          "key": "4d4141f9-c574-41b6-a41a-bf79679e3452"
+          "visibility": "Student-only"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -25,7 +24,7 @@
     },
     "new_name": null,
     "family_name": "csp2",
-    "serialized_at": "2022-08-31 17:46:43 UTC",
+    "serialized_at": "2022-03-22 21:16:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

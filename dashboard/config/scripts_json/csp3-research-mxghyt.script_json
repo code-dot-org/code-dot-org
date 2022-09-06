@@ -9,8 +9,7 @@
           "notice": "Check out the CSP mid-course survey",
           "details": "We recently added a mid-course survey to the end of Unit 3.  Please allow your students some time to complete it.",
           "link": "",
-          "type": "success",
-          "key": "cc0cc02a-c969-4412-907a-32bae53b77f5"
+          "type": "success"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -21,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 17:46:48 UTC",
+    "serialized_at": "2022-03-22 21:16:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

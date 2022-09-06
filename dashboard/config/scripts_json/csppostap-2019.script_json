@@ -10,8 +10,7 @@
           "details": "Please note there are no lesson plans for Chapter 2 of this unit.",
           "link": "",
           "type": "information",
-          "visibility": "Teacher-only",
-          "key": "7560972a-0b39-4d1d-8272-53e6b8f7736a"
+          "visibility": "Teacher-only"
         }
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}",
@@ -26,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2022-08-31 17:47:02 UTC",
+    "serialized_at": "2022-03-11 12:07:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
