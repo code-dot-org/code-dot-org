@@ -216,6 +216,10 @@ class MusicView extends React.Component {
         },
         {
           kind: 'block',
+          type: 'play_sound_with_variable'
+        },
+        {
+          kind: 'block',
           type: 'play_sound_next_measure'
         },
         {
@@ -234,6 +238,42 @@ class MusicView extends React.Component {
     };
 
     Blockly.Blocks['play_sound'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'play_sound',
+          message0: '%1 play %2 at measure %3',
+          args0: [
+            {
+              type: 'field_image',
+              src: 'https://code.org/shared/images/play-button.png',
+              width: 15,
+              height: 20,
+              alt: '*',
+              flipRtl: false
+            },
+            {
+              type: 'field_dropdown',
+              name: 'sound',
+              options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
+            },
+            {
+              type: 'field_number',
+              name: 'measure',
+              value: 1,
+              min: 1
+            }
+          ],
+          inputsInline: true,
+          previousStatement: null,
+          nextStatement: null,
+          colour: 230,
+          tooltip: 'play sound',
+          helpUrl: ''
+        });
+      }
+    };
+
+    Blockly.Blocks['play_sound_with_variable'] = {
       init: function() {
         this.jsonInit({
           type: 'play_sound',
@@ -418,6 +458,16 @@ class MusicView extends React.Component {
     };
 
     Blockly.JavaScript.play_sound = function(ctx) {
+      return (
+        'Music.play_sound("' +
+        ctx.getFieldValue('sound') +
+        '", ' +
+        ctx.getFieldValue('measure') +
+        ');\n'
+      );
+    };
+
+    Blockly.JavaScript.play_sound_with_variable = function(ctx) {
       return (
         'Music.play_sound("' +
         ctx.getFieldValue('sound') +
