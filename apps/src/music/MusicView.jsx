@@ -370,7 +370,7 @@ class MusicView extends React.Component {
       init: function() {
         this.jsonInit({
           type: 'loop_from_to',
-          message0: 'loop %1 from %2 to %3 %4',
+          message0: 'loop %1 from %2 to %3',
           args0: [
             {
               type: 'field_variable',
@@ -388,7 +388,10 @@ class MusicView extends React.Component {
               name: 'to',
               value: 5,
               min: 1
-            },
+            }
+          ],
+          message1: 'do %1',
+          args1: [
             {
               type: 'input_statement',
               name: 'code'
