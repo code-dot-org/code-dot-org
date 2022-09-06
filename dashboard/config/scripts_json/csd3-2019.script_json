@@ -10,8 +10,7 @@
           "details": "Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!",
           "link": "https://forum.code.org/t/new-resources-for-2019-2020/30676",
           "type": "bullhorn",
-          "visibility": "Teacher-only",
-          "key": "5c5be11c-6887-460f-8dff-ee0985129e2c"
+          "visibility": "Teacher-only"
         }
       ],
       "curriculum_path": "https://curriculum.code.org/csd-19/unit3/{LESSON}",
@@ -33,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-08-31 17:46:28 UTC",
+    "serialized_at": "2022-03-22 21:16:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
