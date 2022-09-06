@@ -1746,13 +1746,13 @@ class Script < ApplicationRecord
       announcement['notice'] = I18n.t(
         "notice",
         default: announcement['notice'],
-        scope: [:data, :script, :name, name, :announcements, announcement['key']],
+        scope: [:data, :script_announcements, announcement['key']],
         smart: true
       )
       announcement['details'] = I18n.t(
         "details",
         default: announcement['details'],
-        scope: [:data, :script, :name, name, :announcements, announcement['key']],
+        scope: [:data, :script_announcements, announcement['key']],
         smart: true
       )
     end
