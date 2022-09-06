@@ -231,7 +231,7 @@ GEM
     activerecord (6.0.4.1)
       activemodel (= 6.0.4.1)
       activesupport (= 6.0.4.1)
-    activerecord-import (0.22.0)
+    activerecord-import (1.0.8)
       activerecord (>= 3.2)
     activestorage (6.0.4.1)
       actionpack (= 6.0.4.1)
@@ -446,7 +446,7 @@ GEM
     geocoder (1.6.4)
     get_process_mem (0.2.3)
     gherkin (5.1.0)
-    globalid (0.5.2)
+    globalid (1.0.0)
       activesupport (>= 5.0)
     google-api-client (0.52.0)
       addressable (~> 2.5, >= 2.5.1)
@@ -904,7 +904,7 @@ GEM
     xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
-    zeitwerk (2.4.2)
+    zeitwerk (2.6.0)
 
 PLATFORMS
   ruby
@@ -914,7 +914,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.13)
   active_record_query_trace
   active_record_union
-  activerecord-import
+  activerecord-import (~> 1.0.3)
   acts_as_list
   addressable
   annotate (~> 3.1.1)

@@ -76,10 +76,6 @@ Lint/ConstantDefinitionInBlock:
 Lint/DuplicateBranch:
   Enabled: false
 
-# Offense count: 2
-Lint/DuplicateElsifCondition:
-  Enabled: false
-
 # Offense count: 5
 Lint/DuplicateMethods:
   Enabled: false

@@ -1184,12 +1184,39 @@
           ]
         },
         {
-          "type": "rating",
+          "type": "radiogroup",
           "name": "previous_content_effective",
           "title": "Was the content covered in the previous workshop effective in preparing you to teach the content you covered in your {workshop_course} class prior to this PD workshop?",
-          "rateMax": 7,
-          "minRateDescription": "Strongly Disagree",
-          "maxRateDescription": "Strongly Agree"
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very effective"
+            },
+            {
+              "value": "2",
+              "text": "Effective"
+            },
+            {
+              "value": "3",
+              "text": "Somewhat effective"
+            },
+            {
+              "value": "4",
+              "text": "Neutral, neither effective or ineffective"
+            },
+            {
+              "value": "5",
+              "text": "Somewhat ineffective"
+            },
+            {
+              "value": "6",
+              "text": "Ineffective"
+            },
+            {
+              "value": "7",
+              "text": "Very ineffective"
+            }
+          ]
         },
         {
           "type": "matrix",
