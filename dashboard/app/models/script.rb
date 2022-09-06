@@ -1656,12 +1656,6 @@ class Script < ApplicationRecord
     data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
-    # announcements.each do |announcement|
-    #   data['announcements'][announcement[:key]] = {
-    #     'notice': I18n.t("data.script.name.#{name}.announcements.#{announcement[:key]}", default: announcement[:notice],
-    #     # TODO: details
-    #   }
-    # end
     Services::MarkdownPreprocessor.sub_resource_links!(data['description'], resource_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description'], vocab_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_resource_links!(data['student_description'], resource_markdown_replacement_proc) if data['student_description']
@@ -1688,7 +1682,6 @@ class Script < ApplicationRecord
   def summarize_i18n_for_display
     data = summarize_i18n_for_edit
     data[:title] = title_for_display
-    data[:announcements] = localized_announcements
     data
   end
 
