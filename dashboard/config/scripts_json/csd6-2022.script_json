@@ -10,7 +10,8 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "90969f1a-a656-43b8-b2b1-e91072c9e413"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -19,7 +20,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Teacher Survey"
+          "buttonText": "Teacher Survey",
+          "key": "b5e327e1-5d0f-47a1-adbb-98de82792792"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -36,7 +38,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 19:50:57 UTC",
+    "serialized_at": "2022-08-31 17:47:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10297,6 +10299,7 @@
       "key": "board_events_1",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1mECbLnlrQ5NyijMctYkOW5yHTM7-iGnGZJv2SBdHcN4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10748,6 +10751,7 @@
       "key": "innovations_in_computing",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11188,6 +11192,7 @@
       "key": "the_circuit_playground",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1TMmT760SXp6675QNVWISCfiyLC9eyAe4Qw14ww23DKE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11236,6 +11241,7 @@
       "key": "updating_screen_elements",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Q1TDByGJq8wIrILuE0E0nWExpE4GAjYdALiA974moAQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11272,6 +11278,7 @@
       "key": "variables_and_if_statements",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1ZbvwtMitIOktO6DyXWBnzwPzmdX2j0uuiwXs7KogmF4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

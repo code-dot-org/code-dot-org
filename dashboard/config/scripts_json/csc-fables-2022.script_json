@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-08-30 15:27:12 UTC",
+    "serialized_at": "2022-08-11 14:37:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -932,7 +932,7 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Sample Program” slide\n",
         "duration": "35",
-        "name": "Code Your Short Story"
+        "name": "Code Your Fable"
       },
       "seeding_key": {
         "activity_section.key": "e5cd2cb7-0b2b-41b6-8f33-263e71b524a6",
