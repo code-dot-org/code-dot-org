@@ -17,21 +17,21 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
-  # Services::I18n::CurriculumSyncUtils.sync_in
-  # HocSyncUtils.sync_in
-  # localize_level_and_project_content
-  # localize_block_content
-  # localize_animation_library
-  # localize_shared_functions
-  # localize_course_offerings
+  Services::I18n::CurriculumSyncUtils.sync_in
+  HocSyncUtils.sync_in
+  localize_level_and_project_content
+  localize_block_content
+  localize_animation_library
+  localize_shared_functions
+  localize_course_offerings
   localize_docs
-  # puts "Copying source files"
-  # I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-  # redact_level_content
+  puts "Copying source files"
+  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  redact_level_content
   redact_docs
-  # redact_block_content
-  # redact_script_and_course_content
-  # localize_markdown_content
+  redact_block_content
+  redact_script_and_course_content
+  localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
   puts "Sync in failed from the error: #{e}"
@@ -40,7 +40,7 @@ end
 
 # This function localizes all content in studio.code.org/docs
 def localize_docs
-  puts "Preparing docs content"
+  puts "Preparing /docs content"
   docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
   programming_env_docs = {}
   # For each programming environment, name is used as key, title is used as name,
@@ -53,48 +53,48 @@ def localize_docs
     }
     # Programming environment has a method defined in the programming_environment model that returns the
     # categories for navigation. The method is used to obtain the current categories existing in the database.
-    env.categories_for_navigation.each do |cat| # cat as short for category
-      cat_key = cat[:key]
+    env.categories_for_navigation.each do |category_for_navigation|
+      category_key = category_for_navigation[:key]
       programming_env_docs[env_name]["categories"].store(
-        cat_key, {
-          'name' => cat[:name],
+        category_key, {
+          'name' => category_for_navigation[:name],
           'expressions' => {}
         }
       )
-      cat[:docs].each do |expression|
-        exp_key = expression[:key] # exp_key as short for expression key
+      category_for_navigation[:docs].each do |expression|
+        expression_key = expression[:key]
         # Skip javalab
-        next if env_name == 'javalab'
         # javalab documentations has a different structure in the database. Each category has programming classes
         # instead of expressions. Additionally, the categories_for_navigation method doest not return expression keys,
-        # used to query the data base
+        #  used to query the data base
+        next if env_name == 'javalab'
 
-        exp_docs = ProgrammingExpression.find_by_id(expression[:id])
-        programming_env_docs[env_name]["categories"][cat_key]["expressions"].store(
-          exp_key, {
+        expresion_docs = ProgrammingExpression.find_by_id(expression[:id])
+        programming_env_docs[env_name]["categories"][category_key]["expressions"].store(
+          expression_key, {
             'name' => expression[:name],
-            'content' => exp_docs.properties["content"],
+            'content' => expresion_docs.properties["content"],
             'examples' => {},
             'palette_params' => {},
-            'return_value' => exp_docs.properties["return_value"],
-            'short_description' => exp_docs.properties["short_description"],
-            'syntax' => exp_docs.properties["syntax"],
-            'tips' => exp_docs.properties["tips"]
+            'return_value' => expresion_docs.properties["return_value"],
+            'short_description' => expresion_docs.properties["short_description"],
+            'syntax' => expresion_docs.properties["syntax"],
+            'tips' => expresion_docs.properties["tips"]
           }
         )
         # Programming expresions may have 0 or more examples
-        exp_docs.properties['examples']&.each do |ex| # ex as short for example
-          programming_env_docs[env_name]["categories"][cat_key]["expressions"][exp_key]["examples"].store(
-            ex["name"], {
-              'name' => ex["name"],
-              'description' => ex["description"],
-              'code' => ex["code"]
+        expresion_docs.properties['examples']&.each do |example|
+          programming_env_docs[env_name]["categories"][category_key]["expressions"][expression_key]["examples"].store(
+            example["name"], {
+              'name' => example["name"],
+              'description' => example["description"],
+              'code' => example["code"]
             }
           )
         end
         # Programming expresions may have 0 or more parameters
-        exp_docs.properties["palette_params"]&.each do |param|
-          programming_env_docs[env_name]["categories"][cat_key]["expressions"][exp_key]["palette_params"].store(
+        expresion_docs.properties["palette_params"]&.each do |param|
+          programming_env_docs[env_name]["categories"][category_key]["expressions"][expression_key]["palette_params"].store(
             param["name"], {
               'name' => param["name"],
               'type' => param["type"],
