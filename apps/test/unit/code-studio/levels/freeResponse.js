@@ -62,4 +62,20 @@ describe('Free Response', () => {
       );
     });
   });
+
+  it('can reset answer', () => {
+    window.appOptions.scriptName = scriptName;
+    writeSourceForLevel(
+      scriptName,
+      levelId,
+      +new Date(2017, 1, 19),
+      lastAttemptString
+    );
+
+    const freeResponse = new FreeResponse(levelId);
+    expect(freeResponse.getResult().response).to.equal(lastAttemptString);
+
+    freeResponse.resetAnswers();
+    expect(freeResponse.getResult().response).to.be.empty;
+  });
 });
