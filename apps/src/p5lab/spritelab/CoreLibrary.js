@@ -10,7 +10,6 @@ import {
 } from '../../code-studio/projectRedux';
 import msg from '@cdo/locale';
 
-
 export default class CoreLibrary {
   constructor(p5) {
     this.p5 = p5;
@@ -406,6 +405,9 @@ export default class CoreLibrary {
     // equals SPRITE_LIMIT_WARNING
     this.warnIfAtSpriteLimit();
     opts = opts || {};
+    if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
+      return;
+    }
     let name = opts.name;
     let location = opts.location || {x: 200, y: 200};
     if (typeof location === 'function') {

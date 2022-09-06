@@ -1,7 +1,6 @@
 import {CLEAR_CONSOLE, ADD_MESSAGE} from '../actions';
 import {MAX_NUM_TEXTS} from '../spritelab/constants';
 
-
 export default function textConsole(state, action) {
   state = state || [];
   switch (action.type) {
