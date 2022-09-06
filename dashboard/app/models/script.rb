@@ -1412,21 +1412,11 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      format_announcements_i18n!(metadata_i18n) if metadata_i18n[:announcements]
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
     end
 
     lessons_i18n = {'en' => {'data' => {'script' => {'name' => lessons_i18n}}}}
-    new_i18n = existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
-    # Chaining to_json to convert back to default hash. This is so param keys
-    # aren't marked when converting a HashWithIndifferentAccess to yaml
-    JSON.parse(new_i18n.to_json)
-  end
-
-  def self.format_announcements_i18n!(metadata_i18n)
-    metadata_i18n[:announcements] = metadata_i18n[:announcements].map do |announcement|
-      [announcement[:key], {'notice' => announcement[:notice], 'details' => announcement[:details]}]
-    end.to_h
+    existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
   end
 
   def hoc_finish_url
