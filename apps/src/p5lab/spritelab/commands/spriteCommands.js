@@ -67,8 +67,9 @@ export const commands = {
   makeNumSprites(numSprites, animation) {
     if (this.reachedSpriteMax()) {
       return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
     }
-    this.warnIfAtSpriteLimit();
     const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
     for (let i = 0; i < maxAllowedNewSprites; i++) {
       this.addSprite({
@@ -81,8 +82,9 @@ export const commands = {
   makeBurst(numSprites, animation, effectName) {
     if (this.reachedSpriteMax()) {
       return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
     }
-    this.warnIfAtSpriteLimit();
     const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
     const behaviorFuncs = {
       burst: behaviorCommands.burstFunc,
