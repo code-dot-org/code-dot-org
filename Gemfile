@@ -197,7 +197,6 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
