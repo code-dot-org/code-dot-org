@@ -10,8 +10,7 @@
           "details": "If you are not already a verified teacher, click here to complete the form to become a verified teacher.",
           "link": "https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform",
           "type": "information",
-          "visibility": "Teacher-only",
-          "key": "8023d2fa-a293-4167-9e20-065c059cffdc"
+          "visibility": "Teacher-only"
         }
       ],
       "has_verified_resources": true,
@@ -23,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csd6-2021",
-    "serialized_at": "2022-08-31 17:47:07 UTC",
+    "serialized_at": "2022-04-08 15:41:08 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",

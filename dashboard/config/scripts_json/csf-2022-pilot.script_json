@@ -10,8 +10,7 @@
           "details": "Lesson plans for the new lessons in this course are currently available in Google Doc format only. Click the button to access the lesson plans.",
           "link": "",
           "type": "information",
-          "visibility": "Teacher-only",
-          "key": "2e860850-45de-4c6f-868f-ef5494ca3a22"
+          "visibility": "Teacher-only"
         }
       ],
       "curriculum_umbrella": "CSF",
@@ -23,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-08-31 17:46:37 UTC",
+    "serialized_at": "2022-02-14 17:22:33 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
