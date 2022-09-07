@@ -20,4 +20,15 @@ class PrintCertificatesController < ApplicationController
     @student_name = data['name']
     @certificate_image_url = certificate_image_url(data['name'], data['course'], data['donor'])
   end
+
+  # POST /print_certificates/batch
+  def batch
+    student_names = params[:studentNames]&.split("\n")&.map(&:strip)
+
+    @certificate_data = {
+      courseName: params[:courseName],
+      imageUrl: params[:imageUrl],
+      studentNames: student_names
+    }
+  end
 end

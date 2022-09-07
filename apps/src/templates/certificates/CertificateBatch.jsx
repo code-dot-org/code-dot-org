@@ -4,6 +4,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import color from '@cdo/apps/util/color';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 export default function CertificateBatch({courseName, imageUrl}) {
   return (
@@ -16,11 +17,16 @@ export default function CertificateBatch({courseName, imageUrl}) {
         <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
       </span>
       <br />
-      <textarea cols="40" id="uitest-cert-names" name="names" rows="10" />
-      <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
-      <button type="button" style={styles.submit}>
-        {i18n.submit()}
-      </button>
+      <form action="/print_certificates/batch" method="post">
+        <RailsAuthenticityToken />
+        <input name="courseName" value={courseName} type="hidden" />
+        <input name="imageUrl" value={imageUrl} type="hidden" />
+        <textarea cols="40" name="studentNames" rows="10" />
+        <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
+        <button type="submit" style={styles.submit}>
+          {i18n.submit()}
+        </button>
+      </form>
     </div>
   );
 }
