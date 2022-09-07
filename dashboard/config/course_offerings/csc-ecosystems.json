@@ -1,7 +1,7 @@
 {
   "key": "csc-ecosystems",
-  "display_name": "csc-ecosystems",
-  "category": "other",
+  "display_name": "CSC Ecosystems",
+  "category": "csc",
   "is_featured": false,
   "assignable": true
 }
