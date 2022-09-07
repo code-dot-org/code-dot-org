@@ -1,11 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
+import color from '@cdo/apps/util/color';
 
 export default function CertificateBatch({courseName, imageUrl}) {
   return (
     <div style={styles.wrapper}>
       <h1>Print a batch of certificates</h1>
+      <img src={imageUrl} width={240} height={170} />
+      <span style={styles.instructions}>
+        <SafeMarkdown markdown={i18n.enterCertificateNames({courseName})} />
+        {i18n.wantBlankCertificateTemplate()}{' '}
+        <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
+      </span>
+      <br />
+      <textarea cols="40" id="uitest-cert-names" name="names" rows="10" />
+      <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
+      <button type="button" style={styles.submit}>
+        {i18n.submit()}
+      </button>
     </div>
   );
 }
@@ -15,7 +30,20 @@ const styles = {
     with: '100%',
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    fontSize: 14
+  },
+  certificate: {
+    float: 'left'
+  },
+  instructions: {
+    display: 'inline-block',
+    width: 360,
+    fontSize: 14
+  },
+  submit: {
+    background: color.orange,
+    color: color.white
   }
 };
 
