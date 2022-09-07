@@ -23,6 +23,8 @@ class PrintCertificatesController < ApplicationController
 
   # POST /print_certificates/batch
   def batch
+    view_options(no_header: true, no_footer: true, white_background: true, full_width: true)
+
     student_names = params[:studentNames]&.split("\n")&.map(&:strip)
     image_urls = student_names.map do |student_name|
       certificate_image_url(student_name, params[:courseName], nil)
