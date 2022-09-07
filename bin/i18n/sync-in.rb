@@ -457,6 +457,7 @@ def localize_scripts
     # Announcements
     scripts_hash['script_announcements'] = Hash.new if scripts_hash['script_announcements'].nil?
     script.announcements&.each do |announcement|
+      # An announcement is not translatable if it doesn't have a key
       next unless announcement['key']
 
       translations = Hash.new

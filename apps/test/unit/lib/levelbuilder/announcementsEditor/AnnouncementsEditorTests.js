@@ -1,10 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import * as utils from '@cdo/apps/utils';
 import {expect, assert} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 const sampleAnnouncement = {
+  key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
   notice: 'This course has recently been updated!',
   details: 'See what changed and how it may affect your classroom.',
   link: 'https://support.code.org/hc/en-us/articles/115001931251',
@@ -49,10 +51,14 @@ describe('AnnouncementsEditor', () => {
   });
 
   it('adds an empty Announce when we click add', () => {
+    const stub = sinon
+      .stub(utils, 'createUuid')
+      .returns('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: '',
         link: '',
         notice: '',
@@ -62,6 +68,7 @@ describe('AnnouncementsEditor', () => {
         buttonText: ''
       }
     ]);
+    stub.restore();
   });
 
   it('removes announcements when we click remove', () => {
