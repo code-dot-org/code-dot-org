@@ -231,7 +231,7 @@ GEM
     activerecord (6.0.4.1)
       activemodel (= 6.0.4.1)
       activesupport (= 6.0.4.1)
-    activerecord-import (0.22.0)
+    activerecord-import (1.0.8)
       activerecord (>= 3.2)
     activestorage (6.0.4.1)
       actionpack (= 6.0.4.1)
@@ -911,7 +911,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.13)
   active_record_query_trace
   active_record_union
-  activerecord-import
+  activerecord-import (~> 1.0.3)
   acts_as_list
   addressable
   annotate (~> 3.1.1)
