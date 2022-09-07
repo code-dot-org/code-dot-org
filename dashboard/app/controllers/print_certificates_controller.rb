@@ -24,11 +24,12 @@ class PrintCertificatesController < ApplicationController
   # POST /print_certificates/batch
   def batch
     student_names = params[:studentNames]&.split("\n")&.map(&:strip)
+    image_urls = student_names.map do |student_name|
+      certificate_image_url(student_name, params[:courseName], nil)
+    end
 
     @certificate_data = {
-      courseName: params[:courseName],
-      imageUrl: params[:imageUrl],
-      studentNames: student_names
+      imageUrls: image_urls,
     }
   end
 end

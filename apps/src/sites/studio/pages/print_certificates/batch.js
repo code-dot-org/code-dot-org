@@ -5,13 +5,9 @@ import PrintCertificateBatch from '@cdo/apps/templates/certificates/PrintCertifi
 
 $(document).ready(function() {
   const certificateData = getScriptData('certificate');
-  const {courseName, imageUrl, studentNames} = certificateData;
+  const {imageUrls} = certificateData;
   ReactDOM.render(
-    <PrintCertificateBatch
-      courseName={courseName}
-      imageUrl={imageUrl}
-      studentNames={studentNames}
-    />,
+    <PrintCertificateBatch imageUrls={imageUrls} />,
     document.getElementById('print-certificate-batch')
   );
 });
