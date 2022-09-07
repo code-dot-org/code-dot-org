@@ -211,7 +211,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   position(metrics) {
     this.container.style.height = `${metrics.viewMetrics.height}px`;
     this.container.style.width = `${Blockly.cdoUtils.getToolboxWidth()}px`;
-    this.container.style.left = '0px';
+    this.container.style.left = this.workspace.RTL
+      ? `${metrics.viewMetrics.width}px`
+      : '0px';
     this.container.style.top = '0px';
     this.container.style.position = 'absolute';
     this.container.style.zIndex = '75';
