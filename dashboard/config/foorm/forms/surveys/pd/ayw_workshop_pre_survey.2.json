@@ -29,6 +29,12 @@
           ]
         },
         {
+          "type": "library_item",
+          "library_name": "surveys/pd/ayw_csa",
+          "library_version": 0,
+          "name": "csa_most_recent_unit_panel"
+        },
+        {
           "type": "panel",
           "name": "csp_most_recent_unit_panel",
           "elements": [
