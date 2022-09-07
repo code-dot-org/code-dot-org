@@ -992,11 +992,6 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_notes, only: [:create, :update, :destroy]
 
-    resources :code_review_comments, only: [:create, :destroy] do
-      patch :toggle_resolved, on: :member
-      get :project_comments, on: :collection
-    end
-
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
