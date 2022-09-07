@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-24 21:53:46 UTC",
+    "serialized_at": "2022-08-31 19:52:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10805,7 +10805,6 @@
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11113,7 +11112,6 @@
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11186,7 +11184,6 @@
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11398,7 +11395,6 @@
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11597,7 +11593,6 @@
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
