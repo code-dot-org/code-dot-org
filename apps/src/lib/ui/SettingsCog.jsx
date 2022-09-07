@@ -192,10 +192,8 @@ export function ManageLibraries(props) {
 
 export function ToggleMaker(props) {
   const reduxState = getStore().getState();
-  if (
-    !makerToolkitRedux.isAvailable(reduxState) ||
-    appOptions.level.projectTemplateLevelName
-  ) {
+  const isProjectLevel = !!appOptions.level.projectTemplateLevelName;
+  if (!makerToolkitRedux.isAvailable(reduxState) || isProjectLevel) {
     return null;
   }
   return (
