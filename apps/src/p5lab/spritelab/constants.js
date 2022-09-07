@@ -101,8 +101,8 @@ export const exampleSprites = {
 // Big numbers in some blocks can cause performance issues. Combined with live-preview,
 // this results in hanging the tab and students unable to edit their blocks. We
 // guard against this by capping number of sprites.
-// The user will receive a workspace alert at SPRITE_LIMIT_WARNING. But the actual cap
-// is MAX_NUM_SPRITES
+// The user will receive a workspace alert at SPRITE_WARNING_THRESHOLD number of sprites.
+// The actual cap is MAX_NUM_SPRITES
 export const MAX_NUM_SPRITES = 1000;
-export const SPRITE_LIMIT_WARNING = MAX_NUM_SPRITES - 1;
+export const SPRITE_WARNING_THRESHOLD = MAX_NUM_SPRITES - 1;
 export const MAX_NUM_TEXTS = 1000;

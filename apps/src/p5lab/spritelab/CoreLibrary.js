@@ -3,7 +3,7 @@ import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES, SPRITE_LIMIT_WARNING} from './constants';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_THRESHOLD} from './constants';
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert
@@ -373,21 +373,23 @@ export default class CoreLibrary {
     return this.getNumberOfSprites() >= MAX_NUM_SPRITES;
   }
 
+  reachedSpriteWarningThreshold() {
+    return this.getNumberOfSprites() === SPRITE_WARNING_THRESHOLD;
+  }
+
   // This function is called within the addSprite function BEFORE a new sprite is created
-  // If the total number of sprites is equal to SPRITE_LIMIT_WARNING, a workspace
+  // If the total number of sprites is equal to SPRITE_WARNING_THRESHOLD, a workspace
   // alert warning is displayed to let user know they have reached the sprite limit
-  // Note that SPRITE_LIMIT_WARNING = MAX_NUM_SPRITES - 1
-  warnIfAtSpriteLimit() {
-    if (this.getNumberOfSprites() === SPRITE_LIMIT_WARNING) {
-      getStore().dispatch(
-        displayWorkspaceAlert(
-          workspaceAlertTypes.warning,
-          /* display warning when user exceeds SPRITE_LIMIT_WARNING */
-          msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
-          /* bottom */ true
-        )
-      );
-    }
+  // Note that SPRITE_WARNING_THRESHOLD = MAX_NUM_SPRITES - 1
+  dispatchSpriteLimitWarning() {
+    getStore().dispatch(
+      displayWorkspaceAlert(
+        workspaceAlertTypes.warning,
+        /* display warning when user exceeds SPRITE_WARNING_THRESHOLD */
+        msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
+        /* bottom */ true
+      )
+    );
   }
 
   /**
@@ -398,8 +400,9 @@ export default class CoreLibrary {
   addSprite(opts) {
     if (this.reachedSpriteMax()) {
       return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
     }
-    this.warnIfAtSpriteLimit();
     opts = opts || {};
     if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
       return;
