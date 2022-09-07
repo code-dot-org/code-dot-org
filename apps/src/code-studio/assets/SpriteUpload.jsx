@@ -24,19 +24,25 @@ const StatusIconClasses = {
   fail: 'fa-exclamation-triangle',
   warn: 'fa-exclamation-triangle'
 };
+
+// Metadata is generated based on image preview. The image width is restricted by the container <div/>
+
+const maxWidth = 970;
+const minRecommendedSize = 400;
 const TestFeedback = {
   extensionError: 'Image must use .png extension.',
   filenameError: 'Filename cannot include spaces or capital letters.',
-  largeImageError: 'Image must not exceed 400x400 pixels.',
-  smallImageWarning: 'Images less than 400x400 pixels are not recommended.'
+  largeImageError: `Image width must be less than ${maxWidth} pixels.`,
+  smallImageWarning: `Images less than ${minRecommendedSize}x${minRecommendedSize} pixels are not recommended.`
 };
-
 // Levelbuilder tool for adding sprites to the Spritelab animation library.
 export default class SpriteUpload extends React.Component {
   state = {
     fileData: null,
     filePreviewURL: '',
     filename: '',
+    imageDimensions: '',
+    imageExtension: '',
     spriteAvailability: '',
     category: '',
     currentCategories: [],
@@ -130,7 +136,9 @@ export default class SpriteUpload extends React.Component {
         extensionError: TestStatus.pending,
         largeImageError: TestStatus.pending,
         smallImageWarning: TestStatus.pending,
-        filenameError: TestStatus.pending
+        filenameError: TestStatus.pending,
+        metadata: '',
+        imageDimensions: ''
       },
       () => {
         const me = this;
@@ -148,8 +156,13 @@ export default class SpriteUpload extends React.Component {
 
           //Validate the File Height and Width.
           image.onload = function() {
-            const sizeIsTooLarge = this.width > 400 || this.height > 400;
-            const sizeIsSmall = this.width < 400 && this.height < 400;
+            me.setState({
+              imageDimensions: `${this.width}x${this.height}`
+            });
+            const sizeIsTooLarge = this.width >= maxWidth;
+            const sizeIsSmall =
+              this.width < minRecommendedSize &&
+              this.height < minRecommendedSize;
             if (sizeIsTooLarge) {
               me.setState({
                 uploadStatus: {
@@ -159,9 +172,6 @@ export default class SpriteUpload extends React.Component {
                 smallImageWarning: TestStatus.pass
               });
             } else if (sizeIsSmall) {
-              console.warn(
-                `small image detected: (${this.width}x${this.height})`
-              );
               me.setState({
                 largeImageError: TestStatus.pass,
                 smallImageWarning: TestStatus.warn
@@ -229,7 +239,8 @@ export default class SpriteUpload extends React.Component {
     let {filename, spriteAvailability, fileData} = this.state;
     this.setState(
       {
-        category: event.target.value
+        category: event.target.value,
+        metadata: ''
       },
       () => {
         if (fileData) {
@@ -250,7 +261,8 @@ export default class SpriteUpload extends React.Component {
     this.setState(
       {
         spriteAvailability: event.target.value,
-        category: ''
+        category: '',
+        metadata: ''
       },
       () => {
         if (fileData) {
@@ -405,10 +417,6 @@ export default class SpriteUpload extends React.Component {
           <div style={styles.inlineBlock}>
             <label>
               <h3>Choose a file from your computer:</h3>
-              <p>
-                Images must be PNG, max 400x400. <br />
-                Filename cannot contain spaces or capital letters.
-              </p>
               <input
                 type="file"
                 accept="image/png"
@@ -416,30 +424,51 @@ export default class SpriteUpload extends React.Component {
                 onChange={this.handleImageChange.bind(this)}
               />
             </label>
+            <p>
+              File extension:{' '}
+              <span
+                style={{
+                  ...(this.state.extensionError === TestStatus.fail &&
+                    styles.testFail)
+                }}
+              >
+                {this.state.filename.split('.')[1]}
+              </span>
+              <br />
+              Image dimensions:{' '}
+              <span
+                style={{
+                  ...(this.state.largeImageError === TestStatus.fail &&
+                    styles.testFail),
+                  ...(this.state.smallImageWarning === TestStatus.warn &&
+                    styles.testWarn)
+                }}
+              >
+                {this.state.imageDimensions}
+              </span>
+            </p>
           </div>
           <div style={{...styles.inlineBlock, ...styles.testFeedback}}>
             <p>Tests performed on your file:</p>
             {//TODO: Fix - Each child in a list should have a unique "key" prop.
-            Object.entries(TestFeedback).map(test => {
+            Object.keys(TestFeedback).map(test => {
               const testStyle = {
-                ...(this.state[test[0]] === TestStatus.pass && styles.testPass),
-                ...(this.state[test[0]] === TestStatus.fail && styles.testFail),
-                ...(this.state[test[0]] === TestStatus.warn && styles.testWarn),
-                ...(this.state[test[0]] === TestStatus.pending &&
+                ...(this.state[test] === TestStatus.pass && styles.testPass),
+                ...(this.state[test] === TestStatus.fail && styles.testFail),
+                ...(this.state[test] === TestStatus.warn && styles.testWarn),
+                ...(this.state[test] === TestStatus.pending &&
                   styles.testPending)
               };
               return (
-                <>
-                  <p key={test[0]} style={testStyle}>
-                    <i
-                      className={classNames(
-                        'fa',
-                        StatusIconClasses[this.state[test[0]]]
-                      )}
-                    />
-                    {` ${test[1]}`}
-                  </p>
-                </>
+                <p key={test} style={testStyle}>
+                  <i
+                    className={classNames(
+                      'fa',
+                      StatusIconClasses[this.state[test]]
+                    )}
+                  />
+                  {` ${TestFeedback[test]}`}
+                </p>
               );
             })}
           </div>
@@ -487,26 +516,24 @@ export default class SpriteUpload extends React.Component {
             }}
           >
             {uploadStatus.message}
-            {Object.entries(TestFeedback).map(test => {
+            {Object.keys(TestFeedback).map(test => {
               const testStyle = {
-                ...(this.state[test[0]] === TestStatus.fail && styles.testFail),
-                ...(this.state[test[0]] === TestStatus.warn && styles.testWarn)
+                ...(this.state[test] === TestStatus.fail && styles.testFail),
+                ...(this.state[test] === TestStatus.warn && styles.testWarn)
               };
               return (
-                <>
-                  {(this.state[test[0]] === TestStatus.fail ||
-                    this.state[test[0]] === TestStatus.warn) && (
-                    <p key={test[0]} style={testStyle}>
-                      <i
-                        className={classNames(
-                          'fa',
-                          StatusIconClasses[this.state[test[0]]]
-                        )}
-                      />
-                      {` ${test[1]}`}
-                    </p>
-                  )}
-                </>
+                (this.state[test] === TestStatus.fail ||
+                  this.state[test] === TestStatus.warn) && (
+                  <p key={test} style={testStyle}>
+                    <i
+                      className={classNames(
+                        'fa',
+                        StatusIconClasses[this.state[test]]
+                      )}
+                    />
+                    {` ${TestFeedback[test]}`}
+                  </p>
+                )
               );
             })}
           </p>
