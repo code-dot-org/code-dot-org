@@ -188,8 +188,12 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
       this.container.style.visibility = trashcanVisibility;
 
-      const isDeletable = blocklyEvent.blocks.every(block =>
-        block.isDeletable()
+      // Shadow blocks can/should be successfully deleted
+      // when dragged in conjunction with another deletable block;
+      // however, isDeletable() returns false for shadow blocks,
+      // so we manually override here.
+      const isDeletable = blocklyEvent.blocks.every(
+        block => block.isDeletable() || block.isShadow()
       );
       if (trashcanVisibility === 'visible' && !isDeletable) {
         this.notAllowed_.style.visibility = 'visible';
