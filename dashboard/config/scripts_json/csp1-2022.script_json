@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 00:24:45 UTC",
+    "serialized_at": "2022-09-02 17:35:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2029,7 +2029,7 @@
       "key": "8dadd407-4848-4ddc-9877-b0f44833eee7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and playwith the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and play with the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
         "progression_name": "Widget: Binary Odometer"
       },
       "seeding_key": {
