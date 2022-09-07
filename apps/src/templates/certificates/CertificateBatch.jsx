@@ -20,7 +20,6 @@ export default function CertificateBatch({courseName, imageUrl}) {
       <form action="/print_certificates/batch" method="post">
         <RailsAuthenticityToken />
         <input name="courseName" value={courseName} type="hidden" />
-        <input name="imageUrl" value={imageUrl} type="hidden" />
         <textarea cols="40" name="studentNames" rows="10" />
         <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
         <button type="submit" style={styles.submit}>
