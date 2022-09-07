@@ -1,4 +1,5 @@
 /** @file Settings menu cog icon */
+/* global appOptions */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
@@ -191,7 +192,10 @@ export function ManageLibraries(props) {
 
 export function ToggleMaker(props) {
   const reduxState = getStore().getState();
-  if (!makerToolkitRedux.isAvailable(reduxState)) {
+  if (
+    !makerToolkitRedux.isAvailable(reduxState) ||
+    appOptions.level.projectTemplateLevelName
+  ) {
     return null;
   }
   return (
