@@ -10,17 +10,24 @@ export default function CertificateBatch({courseName, imageUrl}) {
   return (
     <div style={styles.wrapper}>
       <h1>Print a batch of certificates</h1>
-      <img src={imageUrl} width={240} height={170} />
-      <span style={styles.instructions}>
-        <SafeMarkdown markdown={i18n.enterCertificateNames({courseName})} />
-        {i18n.wantBlankCertificateTemplate()}{' '}
-        <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
-      </span>
+      <div style={styles.imageWrapper}>
+        <img src={imageUrl} width={240} height={170} />
+        <span style={styles.instructions}>
+          <SafeMarkdown markdown={i18n.enterCertificateNames({courseName})} />
+          {i18n.wantBlankCertificateTemplate()}{' '}
+          <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
+        </span>
+      </div>
       <br />
       <form action="/print_certificates/batch" method="post">
         <RailsAuthenticityToken />
         <input name="courseName" value={courseName} type="hidden" />
-        <textarea cols="40" name="studentNames" rows="10" />
+        <textarea
+          cols="40"
+          name="studentNames"
+          rows="10"
+          style={styles.textarea}
+        />
         <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
         <button type="submit" style={styles.submit}>
           {i18n.submit()}
@@ -38,13 +45,21 @@ const styles = {
     marginRight: 'auto',
     fontSize: 14
   },
+  imageWrapper: {
+    display: 'flex',
+    alignItems: 'center'
+  },
   certificate: {
     float: 'left'
   },
   instructions: {
     display: 'inline-block',
     width: 360,
-    fontSize: 14
+    fontSize: 14,
+    marginLeft: 20
+  },
+  textarea: {
+    width: 340
   },
   submit: {
     background: color.orange,
