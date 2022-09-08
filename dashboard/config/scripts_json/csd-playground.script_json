@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-09-06 23:35:07 UTC",
+    "serialized_at": "2022-09-07 21:31:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -121,6 +121,27 @@
       },
       "seeding_key": {
         "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Collisions",
+      "name": "Collisions",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "assessment_opportunities": "1. **Model different types of interactions between sprites.**\n\n\tSee Level 7 in Code Studio.\n\n2. **Describe how abstractions can be built upon to develop even further abstractions**\n\n\tIn the wrap up, make sure students understand that blocks such as [`isTouching`(#f78183)](/docs/gamelab/isTouching/) hide the complexity or details of the code inside, allowing them to tackle more complex problems.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lessson, students program their sprites to interact in new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)).",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. While students could theoretically have written their own displace, collide, or bounce commands, the ability to ignore the details of this code allows them to focus their attention on the high level structure of the games they want to build.\r\n\r\nThis lesson is also intended to give students more practice using the new commands they have learned in the second chapter. This the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.",
+        "student_overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\n\nIn this lesson, you will learn how to use the new collision blocks (collide, displace, bounce, and bounceOff) to make your sprite interact in new ways. "
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -405,6 +426,48 @@
       "seeding_key": {
         "lesson_activity.key": "1265dc0c-7580-4e68-804f-1554f716dec9",
         "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40",
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d",
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "8ca70278-ea6d-4115-afb6-541727ff6ff6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ca70278-ea6d-4115-afb6-541727ff6ff6",
+        "lesson.key": "Collisions",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1105,6 +1168,181 @@
         "activity_section.key": "7f3df5bf-9d8d-4e64-8787-f0729dfc478f",
         "lesson_activity.key": "1265dc0c-7580-4e68-804f-1554f716dec9"
       }
+    },
+    {
+      "key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924",
+      "position": 1,
+      "properties": {
+        "description": "**Display**: Display the animated image. It is also available as a level in code studio.\n\n![A giraffe emoji moves across the screen towards a stationary monkey emoji. As it touches the monkey emoji, both the monkey and giraffe continue moving across the screen](https://curriculum.code.org/media/uploads/collision.gif)\n\n\n**Prompt:** Using the blocks we already know how to use, how could we create the sprite interaction we can see in this program?",
+        "progression_name": "Code Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "9a7837ba-d043-4d1a-852d-a9b19365aaf5",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Allow students to share out their ideas.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus, because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a7837ba-d043-4d1a-852d-a9b19365aaf5",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "9bfc2999-cb97-4a33-a12c-c48dcd4f8941",
+      "position": 3,
+      "properties": {
+        "description": "The first part of the problem is figuring out when the two sprites are touching, but we already figured out how to do that and can now use the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block. That means we don’t need to think about those details anymore.  Using abstraction to hide the complicated details in that part of the problem means we can focus on the new part.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9bfc2999-cb97-4a33-a12c-c48dcd4f8941",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "131a7983-017d-45dd-a6c6-eb9f230d482f",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students have seen this vocabulary before, but given its importance to the chapter, it is introduced again here.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "131a7983-017d-45dd-a6c6-eb9f230d482f",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "5fe35c10-ce26-4af0-9195-83eb9240d7da",
+      "position": 5,
+      "properties": {
+        "description": "**Vocabulary Review:**\r\n\r\n* **abstraction** - a simplified representation of something more complex\r\n    \r\n**Question of the Day: How can programmers build on abstractions to create further abstractions?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe35c10-ce26-4af0-9195-83eb9240d7da",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "083b2605-192f-4d94-a40a-50e83f1af48f",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt**: This was a challenging problem, but we were able to solve it.  What helped us to solve this problem?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Make sure students talk about the importance of higher-level blocks, such as isTouching, and that while these blocks don't provide new functionality, hiding the complexity of the code inside of a single block allows them to tackle more complex problems.  \r\n\r\nThis is also a good time to call out how far the students have progressed in their skills since the beginning of the unit.  This problem would have seemed almost impossible at the beginning of the year. Some things that made the problem easier to solve were:\r\n\r\n* Preparation: The students brainstormed and thought about solutions before trying out their code.\r\n* Cooperation: Students worked as a group to come up with a solution\r\n* Abstraction: Students were able to use the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) and [`velocityY`(#f78183)](/docs/gamelab/velocityY/) blocks to hide part of the solution's complexity.\r\n\r\n  \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "083b2605-192f-4d94-a40a-50e83f1af48f",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "856a8344-342a-44fa-8d2f-3b6a4ff2fbe2",
+      "position": 2,
+      "properties": {
+        "description": "All of these things are very important, and they come up in Computer Science a lot. One thing that was particularly helpful was the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, which hid the complicated code that tells us whether the two sprites are touching. There's also a [`displace`(#f78183)](/docs/gamelab/displace/) block that hides the code we just wrote, and some other blocks that hide the code for some other types of sprite interactions.  You'll have a chance to try out these blocks in the next few levels.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "856a8344-342a-44fa-8d2f-3b6a4ff2fbe2",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "4b6ed677-14a2-4835-9900-a1ccf348cf00",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b6ed677-14a2-4835-9900-a1ccf348cf00",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "802beb6e-3902-472a-b37b-87d97d6e8f73",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\n\r\n**Vocabulary Review:**\r\n\r\n* **abstraction** - a simplified representation of something more complex"
+      },
+      "seeding_key": {
+        "activity_section.key": "802beb6e-3902-472a-b37b-87d97d6e8f73",
+        "lesson_activity.key": "8ca70278-ea6d-4115-afb6-541727ff6ff6"
+      }
+    },
+    {
+      "key": "4d319a00-8d18-4e8f-a8e7-ee66e1283403",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** How did having the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block and the [`velocityX`(#f78183)](/docs/gamelab/velocityX/) block make it easier to solve the problem of one sprite pushing another?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students should understand that these two blocks represent partial solutions to the problem of one sprite pushing the other, and that by hiding the details of those partial solutions, they can more easily focus on how to fit those partial solutions together to solve larger and more complex problems. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d319a00-8d18-4e8f-a8e7-ee66e1283403",
+        "lesson_activity.key": "8ca70278-ea6d-4115-afb6-541727ff6ff6"
+      }
     }
   ],
   "script_levels": [
@@ -1664,6 +1902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab validation test"
+        ],
         "progression": "Game Lab Validation Test"
       },
       "bonus": false,
@@ -1686,6 +1927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1_validation-test"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1708,6 +1952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_validation-test"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1730,6 +1977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_validation-test"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1752,6 +2002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien_validation-test"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1774,6 +2027,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_validation-test"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1796,6 +2052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop practice choice_validation-test"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1818,6 +2077,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_validation-test"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1840,6 +2102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop challenge choice_validation-test"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1862,6 +2127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - P_validation-testing"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1884,6 +2152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1_validation-testing"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1906,6 +2177,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_validation-testing"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1928,6 +2202,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB2_validation-testing"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1950,6 +2227,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB3_validation-testing"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1972,6 +2252,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB4_validation-testing"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1994,6 +2277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Prac_validation-testing"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2016,6 +2302,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_validation-testing"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2038,6 +2327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Chal_validation-testing"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2052,6 +2344,182 @@
       },
       "level_keys": [
         "CSD U6 - Screen Outputs - Chal_validation-testing"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions predict set velocity code_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924"
+      },
+      "level_keys": [
+        "CSD U3 collisions predict set velocity code_validation-test"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions displace x_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions displace x_validation-test"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions displace y_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions displace y_validation-test"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions displace intro_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions displace intro_validation-test"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions try blocks_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions try blocks_validation-test"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games collisions practice choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888"
+      },
+      "level_keys": [
+        "CSD games collisions practice choice_validation-test"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games collisions assessment_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b"
+      },
+      "level_keys": [
+        "CSD games collisions assessment_validation-test"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games collisions challenge choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4b6ed677-14a2-4835-9900-a1ccf348cf00"
+      },
+      "level_keys": [
+        "CSD games collisions challenge choice_validation-test"
       ]
     }
   ],
@@ -2535,9 +3003,118 @@
         "script.name": "csd-playground",
         "activity_section.key": "dec38cb1-e001-4d25-83fe-baaa9380c979"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions predict set velocity code_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions predict set velocity code_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions displace x_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions displace x_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions displace y_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions displace y_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions displace intro_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions displace intro_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions try blocks_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions try blocks_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games collisions practice choice_validation-test",
+        "script_level.level_keys": [
+          "CSD games collisions practice choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games collisions assessment_validation-test",
+        "script_level.level_keys": [
+          "CSD games collisions assessment_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games collisions challenge choice_validation-test",
+        "script_level.level_keys": [
+          "CSD games collisions challenge choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4b6ed677-14a2-4835-9900-a1ccf348cf00"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "Collisions",
+      "url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/template/preview",
+      "key": "collisions",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "collisions"
+      }
+    },
     {
       "name": "Computer Science is Changing Everything",
       "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
@@ -2726,6 +3303,12 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "Collisions",
+        "resource.key": "collisions"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "resource.key": "computer_science_is_changing_everything"
       }
@@ -2823,6 +3406,16 @@
   ],
   "vocabularies": [
     {
+      "key": "abstraction",
+      "word": "Abstraction",
+      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
       "key": "innovation",
       "word": "Innovation",
       "definition": "A new or improved idea, device, product, etc. or the development thereof",
@@ -2836,12 +3429,60 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
+        "lesson.key": "Collisions",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "vocabulary.key": "innovation"
       }
     }
   ],
   "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounce"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounceOff"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounciness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "collide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "displace"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "setCollider"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "The Draw Loop",
@@ -2943,6 +3584,26 @@
       }
     },
     {
+      "key": "d753de45-8123-4388-984b-9bf644cfe9dd",
+      "properties": {
+        "description": "Describe how abstractions can be built upon to develop even further abstractions"
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "objective.key": "d753de45-8123-4388-984b-9bf644cfe9dd"
+      }
+    },
+    {
+      "key": "e48669bf-657e-41a0-bf3e-89636a430db6",
+      "properties": {
+        "description": "Model different types of interactions between sprites."
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "objective.key": "e48669bf-657e-41a0-bf3e-89636a430db6"
+      }
+    },
+    {
       "key": "e8cd3eb9-d457-457b-94cf-91a5d4bdbdf4",
       "properties": {
         "description": "Set the properties of UI elements using code"
@@ -2954,6 +3615,48 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Innovations in Computing",

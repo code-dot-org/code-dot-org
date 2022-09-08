@@ -271,19 +271,6 @@ class DeleteAccountsHelper
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
   end
 
-  def purge_code_review_comments(user_id)
-    @log.puts "Removing CodeReviewComment"
-
-    comments = CodeReviewComment.with_deleted.where(commenter_id: user_id)
-    comments_count = comments.count
-    comments.each do |comment|
-      comment.comment = nil
-      comment.destroy
-      comment.save(validate: false)
-    end
-    @log.puts "Cleared #{comments_count} CodeReviewComment" if comments_count > 0
-  end
-
   def clean_and_destroy_code_reviews(user_id)
     # anonymize notes the user wrote
     comments_written = CodeReviewNote.where(commenter_id: user_id)
@@ -390,7 +377,6 @@ class DeleteAccountsHelper
     user.destroy
 
     purge_teacher_feedbacks(user.id)
-    purge_code_review_comments(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
