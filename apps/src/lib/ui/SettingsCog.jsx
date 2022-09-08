@@ -1,8 +1,7 @@
 /** @file Settings menu cog icon */
-/* global appOptions */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
+import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';
@@ -22,7 +21,8 @@ class SettingsCog extends Component {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
+    projectProgress: PropTypes.object
   };
 
   state = {
@@ -146,9 +146,10 @@ class SettingsCog extends Component {
           {this.areAIToolsEnabled() && (
             <ManageModels onClick={this.manageModels} />
           )}
-          {this.props.showMakerToggle && (
-            <ToggleMaker onClick={this.toggleMakerToolkit} />
-          )}
+          {this.props.showMakerToggle &&
+            !this.props.projectProgress.currentLevelId && (
+              <ToggleMaker onClick={this.toggleMakerToolkit} />
+            )}
         </PopUpMenu>
         {this.areAIToolsEnabled() && (
           <ModelManagerDialog
@@ -171,7 +172,10 @@ class SettingsCog extends Component {
     );
   }
 }
-export default Radium(SettingsCog);
+export const UnconnectedSettingsCog = Radium(SettingsCog);
+export default connect(state => ({
+  projectProgress: state.progress
+}))(Radium(SettingsCog));
 
 export function ManageAssets(props) {
   return <PopUpMenu.Item {...props}>{msg.manageAssets()}</PopUpMenu.Item>;
@@ -192,8 +196,7 @@ export function ManageLibraries(props) {
 
 export function ToggleMaker(props) {
   const reduxState = getStore().getState();
-  const isProjectLevel = !!appOptions.level.projectTemplateLevelName;
-  if (!makerToolkitRedux.isAvailable(reduxState) || isProjectLevel) {
+  if (!makerToolkitRedux.isAvailable(reduxState)) {
     return null;
   }
   return (
