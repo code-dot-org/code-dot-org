@@ -998,10 +998,6 @@ Dashboard::Application.routes.draw do
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
 
-    resources :reviewable_projects, only: [:create, :destroy]
-    get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
-    get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
-
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').
     # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
