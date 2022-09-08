@@ -65,17 +65,7 @@ function initPage() {
   if (scriptData.announcements) {
     registerReducers({announcements: announcementsReducer});
     scriptData.announcements.forEach(announcement =>
-      store.dispatch(
-        addAnnouncement(
-          announcement.notice,
-          announcement.details,
-          announcement.link,
-          announcement.type,
-          announcement.visibility,
-          announcement.dismissible,
-          announcement.buttonText
-        )
-      )
+      store.dispatch(addAnnouncement(announcement))
     );
   }
 

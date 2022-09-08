@@ -106,17 +106,7 @@ function displayLessonOverview() {
   if (lessonData.announcements) {
     registerReducers({announcements: announcementsReducer});
     lessonData.announcements.forEach(announcement =>
-      store.dispatch(
-        addAnnouncement(
-          announcement.notice,
-          announcement.details,
-          announcement.link,
-          announcement.type,
-          announcement.visibility,
-          announcement.dismissible,
-          announcement.buttonText
-        )
-      )
+      store.dispatch(addAnnouncement(announcement))
     );
   }
 
