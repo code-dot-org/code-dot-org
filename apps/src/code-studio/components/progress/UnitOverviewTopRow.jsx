@@ -20,11 +20,13 @@ import FontAwesome from '../../../templates/FontAwesome';
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
 export const COMPLETED = 'COMPLETED';
+export const PL_COMPLETED = 'PL_COMPLETED';
 
 const NEXT_BUTTON_TEXT = {
   [NOT_STARTED]: i18n.tryNow(),
   [IN_PROGRESS]: i18n.continue(),
-  [COMPLETED]: i18n.printCertificate()
+  [COMPLETED]: i18n.printCertificate(),
+  [PL_COMPLETED]: i18n.returnToCourse()
 };
 
 class UnitOverviewTopRow extends React.Component {
@@ -41,6 +43,8 @@ class UnitOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
+    isProfessionalLearningCourse: PropTypes.bool,
+    courseLink: PropTypes.string,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -120,7 +124,8 @@ class UnitOverviewTopRow extends React.Component {
       unitCompleted,
       hasPerLevelResults,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -133,7 +138,11 @@ class UnitOverviewTopRow extends React.Component {
 
     let unitProgress = NOT_STARTED;
     if (unitCompleted) {
-      unitProgress = COMPLETED;
+      if (isProfessionalLearningCourse) {
+        unitProgress = PL_COMPLETED;
+      } else {
+        unitProgress = COMPLETED;
+      }
     } else if (hasPerLevelResults) {
       unitProgress = IN_PROGRESS;
     }
@@ -144,7 +153,11 @@ class UnitOverviewTopRow extends React.Component {
           <div style={styles.buttonsInRow}>
             <Button
               __useDeprecatedTag
-              href={`/s/${scriptName}/next`}
+              href={
+                unitProgress === PL_COMPLETED
+                  ? this.props.courseLink
+                  : `/s/${scriptName}/next`
+              }
               text={NEXT_BUTTON_TEXT[unitProgress]}
               size={Button.ButtonSize.large}
               style={{marginRight: 10}}
