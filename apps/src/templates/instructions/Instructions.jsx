@@ -22,6 +22,7 @@ export default class Instructions extends React.Component {
     inTopPane: PropTypes.bool,
     onResize: PropTypes.func,
     isBlockly: PropTypes.bool,
+    isRtl: PropTypes.bool,
     noInstructionsWhenCollapsed: PropTypes.bool
   };
 
@@ -51,6 +52,7 @@ export default class Instructions extends React.Component {
               inTopPane={inTopPane}
               isBlockly={isBlockly}
               noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
+              isRtl={this.props.isRtl}
             />
           </>
         )}

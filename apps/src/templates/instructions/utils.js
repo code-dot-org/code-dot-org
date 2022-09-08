@@ -112,9 +112,8 @@ function removeCommentNodes(root) {
  * readonly BlockSpaces
  * @param {Element} xmlContainer The element in which to search for XML
  */
-export function convertXmlToBlockly(xmlContainer) {
+export function convertXmlToBlockly(xmlContainer, isRtl) {
   const xmls = xmlContainer.getElementsByTagName('xml');
-
   Array.prototype.forEach.call(xmls, function(xml) {
     // Skip conversion if XML already has a blockspace
     if (xml.getElementsByTagName('svg').length) {
@@ -150,7 +149,8 @@ export function convertXmlToBlockly(xmlContainer) {
       xml,
       {
         noScrolling: true,
-        inline: inline
+        inline: inline,
+        rtl: isRtl
       }
     );
 

@@ -131,7 +131,6 @@ class InstructionsCsfMiddleCol extends React.Component {
         ? styles.instructionsWithTipsRtl
         : styles.instructionsWithTips
       : {};
-
     return (
       <div
         ref={c => {
@@ -159,6 +158,7 @@ class InstructionsCsfMiddleCol extends React.Component {
             inTopPane
             isBlockly={this.props.isBlockly}
             noInstructionsWhenCollapsed={false}
+            isRtl={this.props.isRtl}
           />
           {this.props.shortInstructions2 && (
             <div className="secondary-instructions">
@@ -185,6 +185,7 @@ class InstructionsCsfMiddleCol extends React.Component {
               ttsMessage={hint.ttsMessage}
               block={hint.block}
               video={hint.hintVideo}
+              isRtl={this.props.isRtl}
             />
           ))}
         {/*

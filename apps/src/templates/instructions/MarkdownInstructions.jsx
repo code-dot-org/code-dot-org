@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {convertXmlToBlockly} from './utils';
-
 import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
 
 class MarkdownInstructions extends React.Component {
@@ -14,7 +13,8 @@ class MarkdownInstructions extends React.Component {
     onResize: PropTypes.func,
     inTopPane: PropTypes.bool,
     isBlockly: PropTypes.bool,
-    showImageDialog: PropTypes.func
+    showImageDialog: PropTypes.func,
+    isRtl: PropTypes.bool
   };
 
   static defaultProps = {
@@ -65,7 +65,7 @@ class MarkdownInstructions extends React.Component {
       // block space has been created, lest we violate some assumptions
       // blockly has.
       Blockly.BlockSpace.onMainBlockSpaceCreated(() => {
-        convertXmlToBlockly(ReactDOM.findDOMNode(this));
+        convertXmlToBlockly(ReactDOM.findDOMNode(this), this.props.isRtl);
         this.props.onResize();
       });
     }
