@@ -33,7 +33,6 @@ const NewDataDocForm = () => {
         label="Content"
         handleMarkdownChange={e => setDataDocContent(e.target.value)}
         markdown={dataDocContent || ''}
-        features={{imageUpload: false, programmingExpression: false}}
       />
       <br />
       <button className="btn btn-primary" type="submit">
