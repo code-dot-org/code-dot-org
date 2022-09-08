@@ -19,6 +19,7 @@ bn:
       score: স্কোর
       size: আকার
       speed: গতি
+      type: প্রকার
       variable: চলক
       width: চওড়া
       x: এক্স
