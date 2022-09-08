@@ -22,6 +22,8 @@ jobs:
         run: |
           echo "
           bundler_use_sudo: false
+          aws_access_key_id: $${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: $${{ secrets.CI_AWS_SECRET_ACCESS_KEY }} 
           cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
           cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
           ignore_eyes_mismatches: true
