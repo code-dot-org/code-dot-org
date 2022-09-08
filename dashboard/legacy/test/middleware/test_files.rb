@@ -151,9 +151,6 @@ class FilesTest < FilesApiTestBase
     assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
     assert_equal dog_image_body, last_response.body
 
-    @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
-    assert_equal dog_image_body, last_response.body
-
     @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert_equal dog_image_body, last_response.body
 
@@ -248,15 +245,7 @@ class FilesTest < FilesApiTestBase
     # Verify that we download the files without Content-Disposition when hitting
     # the codeprojects.org root URL.
 
-    @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
-    assert successful?
-    assert_nil last_response['Content-Disposition']
-
     @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
-    assert successful?
-    assert_nil last_response['Content-Disposition']
-
-    @api.get_root_object(html_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert successful?
     assert_nil last_response['Content-Disposition']
 
@@ -280,11 +269,11 @@ class FilesTest < FilesApiTestBase
 
   def test_codeprojects_get_deleted_project
     post_file_data(@api, 'index.html', '<div></div>', 'text/html')
-    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert successful?
 
     @api.delete_object('index.html')
-    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert not_found?
 
     delete_all_manifest_versions

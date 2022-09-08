@@ -18,6 +18,7 @@
   "additionalInformationHeader": "Additional Information",
   "additionalInformationText": "For more information, see {externalDocumentationUrl}.",
   "addNewSection": "Add New Section",
+  "addNewAnimation": "Add a new animation on the left to begin",
   "addParentEmailModal_confirmedParentEmail_label": "Confirm parent/guardian email address",
   "addParentEmailModal_confirmedParentEmail_mustMatch": "Email addresses must match.",
   "addParentEmailModal_parentEmail_invalid": "The email address you provided is not valid.",
