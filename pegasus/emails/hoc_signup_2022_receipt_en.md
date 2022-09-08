@@ -1,5 +1,5 @@
 ---
-from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
+from: "Hadi Partovi (Code.org) <noreply@code.org>"
 reply-to: noreply@code.org
 subject: "You’re signed up for the Hour of Code!"
 ---
