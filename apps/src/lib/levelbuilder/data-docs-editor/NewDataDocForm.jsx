@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const NewDataDocForm = () => {
+  const [dataDocContent, setDataDocContent] = useState('');
+
   return (
     <form action="/data_docs" method="post">
       <RailsAuthenticityToken />
@@ -26,10 +29,12 @@ const NewDataDocForm = () => {
         Name
         <input className="input" name="name" />
       </label>
-      <label>
-        Content
-        <input className="input" name="content" />
-      </label>
+      <TextareaWithMarkdownPreview
+        label="Content"
+        handleMarkdownChange={e => setDataDocContent(e.target.value)}
+        markdown={dataDocContent || ''}
+        features={{imageUpload: false, programmingExpression: false}}
+      />
       <br />
       <button className="btn btn-primary" type="submit">
         Save Changes
