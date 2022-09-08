@@ -197,7 +197,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt' # single signon for zendesk
 
@@ -325,7 +325,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'activerecord-import', '~> 1.0.3'
+gem 'activerecord-import'
 gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
