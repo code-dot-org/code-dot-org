@@ -8,6 +8,8 @@
 require_relative '../../../dashboard/config/environment'
 
 def backfill_script_announcement_keys
+  raise unless Rails.application.config.levelbuilder_mode
+
   Script.all.each do |script|
     next unless script.announcements
 
@@ -16,7 +18,7 @@ def backfill_script_announcement_keys
       announcement[:key] = SecureRandom.uuid unless announcement[:key]
     end
     begin
-      script.save
+      script.save!
     rescue Exception => err
       puts "Skipping #{script.id} - #{script.name} because of error:"
       puts err.message
