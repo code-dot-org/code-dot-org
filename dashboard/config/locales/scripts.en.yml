@@ -85,6 +85,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Learn Functional Programming through Algebra.
+          lessons: {}
+          name: algebra
         infinity:
           title: Disney Infinity Play Lab
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
@@ -709,6 +711,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Learn Functional Programming through Algebra
+          lessons: {}
+          name: AlgebraA
         AlgebraB:
           title: 'Computer Science in Algebra: Course B'
           description: Learn Functional Programming through Algebra
@@ -716,6 +720,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Learn Functional Programming through Algebra
+          lessons: {}
+          name: AlgebraB
         gamelab-hackathon:
           title: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -8515,8 +8521,16 @@ en:
             lesson-16:
               name: Open-Ended Activity
         csa-draft-pl:
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: 'Module 3 post-work: The Theater and datasets in Unit 4'
           lesson_groups: {}
+          name: csa-draft-pl
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-1:

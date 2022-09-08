@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-25 13:12:07 UTC",
+    "serialized_at": "2022-09-02 13:07:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6356,7 +6356,7 @@
     },
     {
       "name": "Modifying Values in a 1D Array",
-      "url": "https://youtu.be/bL4BAs9Kfx8",
+      "url": "https://youtu.be/AGp_5hB6dBE",
       "key": "adding_values_to_a_1d_array",
       "properties": {
         "audience": "Student",
