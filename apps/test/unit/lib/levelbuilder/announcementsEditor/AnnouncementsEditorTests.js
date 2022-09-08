@@ -15,14 +15,21 @@ const sampleAnnouncement = {
 };
 
 describe('AnnouncementsEditor', () => {
-  let defaultProps, updateAnnouncements;
+  let defaultProps, updateAnnouncements, createUuid;
   beforeEach(() => {
     updateAnnouncements = sinon.spy();
+    createUuid = sinon
+      .stub(utils, 'createUuid')
+      .returns('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
     defaultProps = {
       announcements: [],
       inputStyle: {},
       updateAnnouncements
     };
+  });
+
+  afterEach(() => {
+    createUuid.restore();
   });
 
   it('renders an Announce when we have an announcement', () => {
@@ -51,9 +58,6 @@ describe('AnnouncementsEditor', () => {
   });
 
   it('adds an empty Announce when we click add', () => {
-    const stub = sinon
-      .stub(utils, 'createUuid')
-      .returns('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
     expect(updateAnnouncements).to.have.been.calledWith([
@@ -68,7 +72,6 @@ describe('AnnouncementsEditor', () => {
         buttonText: ''
       }
     ]);
-    stub.restore();
   });
 
   it('removes announcements when we click remove', () => {
@@ -112,6 +115,7 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'notice'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'See what changed and how it may affect your classroom.',
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice: 'notice',
@@ -137,6 +141,7 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'details'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice: 'notice',
@@ -162,6 +167,7 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'link'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'link',
         notice: 'notice',
@@ -186,6 +192,7 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'bullhorn'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'link',
         notice: 'notice',
@@ -210,6 +217,7 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'Student-only'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'link',
         notice: 'notice',
@@ -241,6 +249,7 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'Student-only'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: "So I don't have a visibility",
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice:
