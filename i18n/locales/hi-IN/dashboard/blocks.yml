@@ -2,6 +2,8 @@
 hi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: उपयोगकर्ता को {QUESTION} वेरिएबल {VAR} के लिए विकल्पों {A}{B}{C} के साथ सुझाव दें
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       BadGuys_setSizeAll_dropdown:
