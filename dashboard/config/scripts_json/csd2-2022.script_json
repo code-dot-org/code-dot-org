@@ -37,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-24 16:06:29 UTC",
+    "serialized_at": "2022-08-31 19:44:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9491,7 +9491,6 @@
       "key": "digital_footprint",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9541,7 +9540,6 @@
       "key": "exploring_web_pages_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9578,7 +9576,6 @@
       "key": "headings",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9730,7 +9727,6 @@
       "key": "intro_to_html",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/11PRWsqomAx0svoQg7nZIFNHrw0X9LqPS7kACX6kTMZY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9843,7 +9839,6 @@
       "key": "mini-project_html_web_page",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

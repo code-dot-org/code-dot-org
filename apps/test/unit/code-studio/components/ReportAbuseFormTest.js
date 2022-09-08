@@ -11,6 +11,16 @@ describe('ReportAbuseForm', () => {
       getChannelIdFromUrl('http://localhost.codeprojects.org:3000/abc123/'),
       'abc123'
     );
+    assert.equal(
+      getChannelIdFromUrl('https://codeprojects.org/projects/weblab/123abc/'),
+      '123abc'
+    );
+    assert.equal(
+      getChannelIdFromUrl(
+        'http://localhost.codeprojects.org:3000/projects/weblab/abc123/'
+      ),
+      'abc123'
+    );
   });
 
   it('getChannelIdFromUrl returns the channel id for studio projects', () => {
