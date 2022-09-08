@@ -1,4 +1,3 @@
-/* global appOptions */
 import React from 'react';
 import {Portal} from 'react-portal';
 import {mount} from 'enzyme';
@@ -36,14 +35,36 @@ describe('SettingsCog', () => {
 
   it('does not show maker toggle when "showMakerToggle" is false', () => {
     const wrapper = mount(<SettingsCog showMakerToggle={false} />);
+    wrapper.instance().open();
+    wrapper.update();
     expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
+  });
+
+  it('does not show maker toggle when "showMakerToggle" is true but project is a level', () => {
+    const wrapper = mount(
+      <SettingsCog showMakerToggle={false} isProjectTemplateLevel={true} />
+    );
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
+  });
+
+  it('does show maker toggle when "showMakerToggle" is true but project is not a level', () => {
+    const wrapper = mount(
+      <SettingsCog showMakerToggle={true} isProjectTemplateLevel={false} />
+    );
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(ToggleMaker)).to.have.lengthOf(1);
   });
 
   describe('menu items', () => {
     let wrapper;
 
     beforeEach(() => {
-      wrapper = mount(<SettingsCog showMakerToggle={true} />);
+      wrapper = mount(
+        <SettingsCog showMakerToggle={true} isProjectTemplateLevel={false} />
+      );
       wrapper.instance().open();
       wrapper.update();
     });
@@ -98,14 +119,6 @@ describe('SettingsCog', () => {
 
       it('hides maker toggle if maker is not available', () => {
         makerRedux.isAvailable.returns(false);
-        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
-        expect(wrapper).to.be.blank;
-      });
-
-      it('hides maker toggle if maker is available but is project is a level', () => {
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(true);
-        appOptions.level.projectTemplateLevelName = 'level title';
         const wrapper = mount(<ToggleMaker onClick={() => {}} />);
         expect(wrapper).to.be.blank;
       });
