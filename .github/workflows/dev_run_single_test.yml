@@ -4,6 +4,9 @@ on:
 jobs:
   run-ui-tests:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:5.7    
     env:        
       CI: true
       RAILS_ENV: test
@@ -15,11 +18,7 @@ jobs:
       LANG: C.UTF-8
     steps:   
       - name: Get actions code
-        uses: actions/checkout@v3    
-        
-      - name: Rake run integration tests
-        run:  |
-          locale-gen
+        uses: actions/checkout@v3            
       - name: say-hello
         uses: ./.github/actions/start-server-job-actions  
       - name: Install mysql
@@ -28,23 +27,22 @@ jobs:
         uses: ./.github/actions/install-test-variables            
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
-      - name: Install apt packages
-        uses: ./.github/actions/install-apt-packages
+
+        
       - name: Install node
         uses: ./.github/actions/install-node        
       - name: Install rake dependencies 
-        uses: ./.github/actions/install-rake-dependencies
-      - name: Install imagemagic
-        run:  |  
-          brew install imagemagick@6
-          brew unlink imagemagick
-          brew link imagemagick@6 --force
-      - name: Rake run integration tests
-        run:  |
-          echo "testing failure"  
-          brew install imagemagick@6
-        continue-on-error: true               
+        uses: ./.github/actions/install-rake-dependencies              
       - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3                
+        uses: mxschmitt/action-tmate@v3                    
+      - name: Run tests
+        run:  |
+          brew reinstall imagemagick
+          bundle exec rake test:changed:pegasus --trace          
+        continue-on-error: true
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3                            
+
+        
   
      

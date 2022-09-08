@@ -40,6 +40,7 @@
       - GamelabJr::SAMPLE_VALIDATION_FUNCTIONS.each do |name, value|
         %li
           %a{style:"cursor: pointer", id:"generateValidation#{name}"}= name
+  - if @level.is_a?(Gamelab)
     = f.text_area :validation_code
 
   = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)

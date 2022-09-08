@@ -1,4 +1,4 @@
-@import 'color.scss';
+@import "color.scss";
 
 .editor {
   width: 100%;
@@ -39,10 +39,10 @@
 }
 
 .openCodeReviewWarningBanner {
-   z-index: 99;
-   background-color: $light_yellow;
-   height: 20px;
-   padding: 5px;
-   width: 100%;
-   color: $black;
+  z-index: 99;
+  background-color: $light_yellow;
+  height: 20px;
+  padding: 5px;
+  width: 100%;
+  color: $black;
 }

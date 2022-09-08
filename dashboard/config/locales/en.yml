@@ -1222,3 +1222,4 @@ en:
       missing_params: "Must provide user, level, and unit ids"
       cannot_view_locked_answers: "Cannot view answers while locked"
       forbidden: "User cannot update student's lockable state"
+  reset_predict_progress_button: "Delete Answer"
