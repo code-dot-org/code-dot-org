@@ -1745,6 +1745,12 @@ class Script < ApplicationRecord
         scope: [:data, :script_announcements, announcement['key']],
         smart: true
       )
+      announcement['buttonText'] = I18n.t(
+        "buttonText",
+        default: announcement['buttonText'],
+        scope: [:data, :script_announcements, announcement['key']],
+        smart: true
+      )
     end
   end
 
