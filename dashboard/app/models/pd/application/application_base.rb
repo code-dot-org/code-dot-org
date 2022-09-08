@@ -326,7 +326,7 @@ module Pd::Application
       numeric_scores = response_scores_hash.values.select do |score|
         score.is_a?(Numeric) || score =~ /^\d+$/
       end
-      numeric_scores.map(&:to_i).reduce(:+)
+      numeric_scores.sum(&:to_i)
     end
 
     def course_name
