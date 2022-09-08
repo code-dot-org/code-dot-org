@@ -4425,3 +4425,11 @@ mn:
           title: КШУ-ны нээлтийг гүн гүнзгий сурах модуль 1
         soccer:
           name: хөлбөмбөг
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
