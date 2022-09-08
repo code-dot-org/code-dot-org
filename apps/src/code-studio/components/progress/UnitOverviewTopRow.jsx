@@ -20,13 +20,11 @@ import FontAwesome from '../../../templates/FontAwesome';
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
 export const COMPLETED = 'COMPLETED';
-export const RETURN_TO_COURSE = 'RETURN_TO_COURSE';
 
 const NEXT_BUTTON_TEXT = {
   [NOT_STARTED]: i18n.tryNow(),
   [IN_PROGRESS]: i18n.continue(),
-  [COMPLETED]: i18n.printCertificate(),
-  [RETURN_TO_COURSE]: i18n.returnToCourse()
+  [COMPLETED]: i18n.printCertificate()
 };
 
 class UnitOverviewTopRow extends React.Component {
@@ -102,14 +100,6 @@ class UnitOverviewTopRow extends React.Component {
     return options;
   };
 
-  determineButtonLink = unitProgress => {
-    if (unitProgress === RETURN_TO_COURSE) {
-      return this.props.courseLink;
-    } else {
-      return `/s/${this.props.scriptName}/next`;
-    }
-  };
-
   render() {
     const {
       sectionsForDropdown,
@@ -132,7 +122,8 @@ class UnitOverviewTopRow extends React.Component {
       hasPerLevelResults,
       courseOfferingId,
       courseVersionId,
-      isProfessionalLearningCourse
+      isProfessionalLearningCourse,
+      scriptName
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -145,26 +136,28 @@ class UnitOverviewTopRow extends React.Component {
 
     let unitProgress = NOT_STARTED;
     if (unitCompleted) {
-      if (isProfessionalLearningCourse && this.props.courseLink) {
-        unitProgress = RETURN_TO_COURSE;
-      } else {
-        unitProgress = COMPLETED;
-      }
+      unitProgress = COMPLETED;
     } else if (hasPerLevelResults) {
       unitProgress = IN_PROGRESS;
     }
+
+    let completedProfessionalLearningCourse =
+      isProfessionalLearningCourse && unitProgress === COMPLETED;
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
         {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            <Button
-              __useDeprecatedTag
-              href={this.determineButtonLink(unitProgress)}
-              text={NEXT_BUTTON_TEXT[unitProgress]}
-              size={Button.ButtonSize.large}
-              style={{marginRight: 10}}
-            />
+            {!completedProfessionalLearningCourse && (
+              <Button
+                __useDeprecatedTag
+                href={`/s/${scriptName}/next`}
+                text={NEXT_BUTTON_TEXT[unitProgress]}
+                size={Button.ButtonSize.large}
+                style={{marginRight: 10}}
+              />
+            )}
+
             {studentResources.length > 0 && (
               <ResourcesDropdown
                 resources={studentResources}
