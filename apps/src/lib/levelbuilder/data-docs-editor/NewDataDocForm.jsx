@@ -7,6 +7,10 @@ const NewDataDocForm = () => {
     <form action="/data_docs" method="post">
       <RailsAuthenticityToken />
       <h1>New Data Doc</h1>
+      <h2>
+        This feature is in progress. It is not ready for use on Levelbuilder
+        yet.
+      </h2>
       <label>
         Slug
         <HelpTip>
