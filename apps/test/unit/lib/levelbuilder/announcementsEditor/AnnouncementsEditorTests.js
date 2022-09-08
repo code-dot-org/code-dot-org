@@ -229,6 +229,7 @@ describe('AnnouncementsEditor', () => {
 
   it('updates visibility when no visibility in existing announcement', () => {
     const oldSampleAnnouncement = {
+      key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
       notice:
         'This announcement was made before students could see announcements',
       details: "So I don't have a visibility",
