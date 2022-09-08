@@ -80,9 +80,6 @@ function listSerialDevices() {
     SerialPortType = SerialPort;
     return SerialPortType.list();
   } else {
-    if (experiments.isEnabled('webserial')) {
-      return Promise.resolve();
-    }
     SerialPortType = ChromeSerialPort;
     return new Promise((resolve, reject) => {
       SerialPortType.list((error, list) =>
