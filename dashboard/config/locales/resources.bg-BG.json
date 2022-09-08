@@ -44,6 +44,348 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Програмиране на милиметрова хартия",
+          "type": "Оценка"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Програмиране по двойки"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Повтори програмирането"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Повтори програмирането"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Повтори програмирането"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Повтори програмирането"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Повтори програмирането"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Повтори програмирането"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Видео"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Условия с карти"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Условия с карти"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Условия с карти",
+          "type": "Оценка"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Условия с карти"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Условия с карти"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "Проектен Пътеводител"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Учителски форум"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Видео"
+        },
+        "exploring_apps/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Въведение в Sprite Lab",
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Видео"
+        },
+        "making_sprites/coursef/2022": {
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Видео"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Видео"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Видео"
+        },
+        "internet/coursef/2022": {
+          "name": "Интернет",
+          "type": "Оценка"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Интернет"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Интернет"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Рубрика"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Учителски форум"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Видео"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Оценка"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Видео"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Рубрика"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Учителски форум"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Преместете го, преместете го"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Преместете го, преместете го"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Преместете го, преместете го"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Преместете го, Преместете го"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Програмиране по двойки"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Видео"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Стив и Големият проект"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Незабележивите бъгове",
+          "type": "Видео"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Да повтаряме"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Да повтаряме"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Да повтаряме",
+          "type": "Оценка"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Да повтаряме"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Видео"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Голямото събитие"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Голямото събитие",
+          "type": "Оценка"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Голямото събитие"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Учителски форум"
+        },
+        "pair_programming/express/2022": {
+          "name": "Програмиране по двойки",
+          "type": "Видео"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Видео"
+        },
+        "turns_angles/express/2022": {
+          "type": "Видео"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Спрайтове в Действие"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Видео"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Видео"
+        },
+        "variables/express/2022": {
+          "name": "Променливи"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Рубрика"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "Проектен Пътеводител"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Учителски форум"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Видео"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Програмиране по двойки"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Видео"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Учителски форум"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Видео"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Програмиране по двойки"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "name": "Wiggles-Go Noodle ( Шаващи Макарони) ",
+          "type": "Видео"
+        },
+        "happy_map_cards/coursea/2022": {
+          "name": "Честитни Картички с Навигационни Карти"
+        },
+        "happy_map_cards_1/coursea/2022": {
+          "name": "Честитни Картички с Навигационни Карти"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Щастливи карти"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Видео"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Видео"
+        },
+        "happy_map_cards_xl/coursea/2022": {
+          "name": "Честитни Картички Размер XL с Навигационни Карти"
+        },
+        "pair-programming/coursea/2022": {
+          "name": "Програмиране по Двойки",
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Видео"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Голямото събитие"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Голямото събитие",
+          "type": "Оценка"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Голямото събитие"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Учителски форум"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Моите приятели роботи"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Моите приятели роботи"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Моите приятели роботи"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Моите приятели роботи"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Моите приятели роботи"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Програмиране по двойки",
+          "type": "Видео"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Голямото събитие"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Голямото събитие",
+          "type": "Оценка"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Голямото събитие"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Видео"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Двоични гривни"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Двоични гривни"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Двоични гривни"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Двоични гривни",
+          "type": "Оценка"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Двоични гривни"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Учителски форум"
+        },
         "representing_images/csd/2022": {
           "name": "Представяне на Изображения"
         },
