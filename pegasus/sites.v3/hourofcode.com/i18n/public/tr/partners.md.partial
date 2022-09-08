@@ -2,13 +2,11 @@
 title: Ortaklar
 ---
 
-Kod Saati, Kod Saatleri ve Bilgisayar Bilimleri Eğitim Haftası Danışma ve Değerlendirme Komiteleri tarafından yönetilmektedir.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-[Danışma Komitesi]({{ urls/advisory_committee }}); K-12, akademi, kâr amacı gütmeyen ve güden kuruluşlar ve uluslararası kuruluşların temsilcilerden oluşmaktadır. Bu komite, Kodlama Saati kampanyası için stratejiyi yönlendirir.
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-[Değerlendirme Komitesi]({{ urls/review_committee }}) Danışma Komitesi'nin değerlendirme tablosunu kullanarak aktiviteleri değerlendiren ve uygun bulduklarını tavsiye eden K-12 sınıflarından 15 eğitimciden oluşur. Bu eğitimciler, yüzlerce etkinlik ortağı tarafından sunulan öğrenci yönlendirmeli ve öğretmen yönlendirmeli ders planlarını gözden geçirirken etkinliklerin eğitimsel değerini, öğrencilerin ilgisini çekip çekmeyeceğini ve farklı öğrenci gruplarına hitap edip etmeyeceğini değerlendirir.
-
-Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her öğrenci için bilgisayar bilimlerine bir giriş sunma vizyonuna katkıda bulunmuştur.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Ana Ortaklar ve Kurumsal Destekçiler
 
