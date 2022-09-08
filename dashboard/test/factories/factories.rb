@@ -1605,13 +1605,6 @@ FactoryGirl.define do
     association :code_review_group
   end
 
-  factory :reviewable_project do
-    sequence(:project_id)
-    association :user, factory: :student
-    association :level
-    association :script
-  end
-
   factory :project_commit do
     sequence(:project_id)
     sequence(:object_version_id)
