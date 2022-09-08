@@ -90,7 +90,7 @@ describe('Applab Exporter,', function() {
       'https://code.jquery.com/jquery-1.12.1.min.js',
       JQUERY_JS_CONTENT
     );
-    server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
+    server.respondWith(/\/_karma_webpack_\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
       /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
       FONTAWESOME_CONTENT
@@ -701,20 +701,18 @@ describe('Applab Exporter,', function() {
     });
   }
 
-  // TODO: Address infinite loop caused by runExportedApp helper used in 'Regression tests' block.
-  // See ticket for more details: https://codedotorg.atlassian.net/browse/STAR-2399
-  describe.skip('Regression tests', () => {
+  describe('Regression tests', () => {
     testUtils.sandboxDocumentBody();
 
     it('should allow screens to be switched programmatically', done => {
       runExportedApp(
         `console.log("before switch"); setScreen("screen2"); console.log("after switch");`,
         `<div>
-            <div class="screen" tabindex="1" id="screen1">
-            </div>
-            <div class="screen" tabindex="1" id="screen2">
-            </div>
-          </div>`,
+          <div class="screen" tabindex="1" id="screen1">
+          </div>
+          <div class="screen" tabindex="1" id="screen2">
+          </div>
+        </div>`,
         done
       );
     });
@@ -738,14 +736,14 @@ describe('Applab Exporter,', function() {
     it('should allow you to use startWebRequest without the XHR proxy', done => {
       runExportedApp(
         `var webRequestPromise = new Promise(function (resolve, reject) {
-            startWebRequest("https://studio.code.org/fakeRequest", function (status, type, content) {
-              if (status === 200) {
-                resolve(status);
-              } else {
-                reject(new Error('network error'));
-              }
-            });
-          });`,
+          startWebRequest("https://studio.code.org/fakeRequest", function (status, type, content) {
+            if (status === 200) {
+              resolve(status);
+            } else {
+              reject(new Error('network error'));
+            }
+          });
+        });`,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         done,
         'webRequestPromise'
@@ -756,10 +754,10 @@ describe('Applab Exporter,', function() {
       sinon.spy(window, 'write');
       runExportedApp(
         `
-          var a = 'abcdef'.split('');
-          insertItem(a, 3, 'hi');
-          write(a);
-          `,
+        var a = 'abcdef'.split('');
+        insertItem(a, 3, 'hi');
+        write(a);
+        `,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         () => {
           expect(window.write).to.have.been.calledWith([
