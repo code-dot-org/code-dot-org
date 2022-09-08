@@ -14,20 +14,20 @@ const NewDataDocForm = () => {
         This feature is in progress. It is not ready for use on Levelbuilder
         yet.
       </h2>
-      <label>
+      <label style={styles.label}>
         Slug
-        <HelpTip>
+        <input className="input" name="key" required style={styles.input} />
+        <HelpTip style={styles.helptip}>
           <p>
             The data doc slug is used in URLs and cannot be updated once set. A
             slug can only contain lowercase letters, numbers, and dashes, and
             'new' and 'edit' are reserved.
           </p>
         </HelpTip>
-        <input className="input" name="key" required />
       </label>
-      <label>
+      <label style={styles.label}>
         Name
-        <input className="input" name="name" />
+        <input className="input" name="name" style={styles.input} />
       </label>
       <TextareaWithMarkdownPreview
         label="Content"
@@ -40,6 +40,18 @@ const NewDataDocForm = () => {
       </button>
     </form>
   );
+};
+
+const styles = {
+  label: {
+    marginBottom: 20
+  },
+  input: {
+    marginLeft: 10
+  },
+  helptip: {
+    marginLeft: 10
+  }
 };
 
 export default NewDataDocForm;
