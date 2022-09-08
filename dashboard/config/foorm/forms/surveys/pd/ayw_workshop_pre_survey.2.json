@@ -10,6 +10,11 @@
           "html": "<h2>{workshop_course} Workshop Pre-Survey</h2>\n<p><strong>Welcome back!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about 5 minutes to complete. </p>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
         },
         {
+          "type": "html",
+          "name": "comment",
+          "Natalia_comment": "******NOTE: This is RED's current version - Sept 7, 2022 ******"
+        },
+        {
           "type": "radiogroup",
           "name": "planning_to_attend",
           "title": " Are you planning to attend this upcoming workshop?",
@@ -27,6 +32,12 @@
               "text": "Unsure / Don't Know Yet"
             }
           ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/ayw_csa",
+          "library_version": 0,
+          "name": "csa_most_recent_unit_panel"
         },
         {
           "type": "panel",
@@ -1186,7 +1197,7 @@
         {
           "type": "radiogroup",
           "name": "previous_content_effective",
-          "title": "Was the content covered in the previous workshop effective in preparing you to teach the content you covered in your {workshop_course} class prior to this PD workshop?",
+          "title": "Was the content covered in the previous workshop effective in preparing you to teach your {workshop_course} class prior to this PD workshop?",
           "choices": [
             {
               "value": "1",
@@ -1217,6 +1228,12 @@
               "text": "Very ineffective"
             }
           ]
+        },
+        {
+          "type": "comment",
+          "name": "ineffective_prep_comment",
+          "visibleIf": "{previous_content_effective} > 4",
+          "title": "What units and/or content did you need more preparation with in order to teach your {workshop_course} class more effectively?"
         },
         {
           "type": "matrix",
@@ -1371,6 +1388,21 @@
           "visibleIf": "{workshop_course} = 'CS Discoveries'",
           "title": "Your plans for teaching CS Discoveries",
           "description": "We recognize that plans change all the time. We're interested in knowing, at this point in time, what your plans are for teaching CS Discoveries.  "
+        },
+        {
+          "type": "radiogroup",
+          "name": "can_contact",
+          "title": "Would you be open to code.org reaching out to you to gather additional feedback about our professional learning programs?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
         },
         {
           "type": "html",
