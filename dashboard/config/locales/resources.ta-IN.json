@@ -7,15 +7,22 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
+          "name": "HoC கவிதை கலை",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
+          "name": "கவிதை கலை 4 - கொண்டாட்டம்",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "காணொளி"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "கவிதை கலை 2 - நிகழ்வுகள்",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "காணொளி"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "கவிதை கலை 3 - படங்கள்",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "காணொளி"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -28,7 +35,9 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "திருப்பங்கள் மற்றும் கோணங்கள்"
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "மாணவர் கையேடு"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
@@ -39,16 +48,44 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "குறியாக்கம் மற்றும் பொது விசைகள்",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "காணொளி"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "குறியீடு ஸ்டுடியோவில் என்க்ரிப்ஷன் விட்ஜெட்டுகள்",
+          "url": "https://studio.code.org/s/hoc-encryption"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "செயல்பாட்டு வழிகாட்டி - உரை சுருக்கம்",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "செயல்பாட்டு மறுபரிசீலனை - இந்த செய்தியை டிகோட் செய்யவும்",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
+          "type": "செயல்பாடு மறுபரிசீலனை"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "இந்த செய்தியை டிகோட் செய்யவும்",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "குறியீடு ஸ்டுடியோவில் உரை சுருக்க விட்ஜெட்",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
+          "type": "விட்ஜெட்"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "வீடியோ: அலோ பிளாக்குடன் உரை சுருக்கம்",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "காணொளி"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "பவுன்ஸ் நிகழ்வுகள் - அவை எப்படி நிகழ்கின்றன?"
+          "name": "பவுன்ஸ் நிகழ்வுகள் - அவை எப்படி நிகழ்கின்றன?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "பவுன்ஸ் நிகழ்வுகள் - அவை எப்படி நிகழ்கின்றன?"
+          "name": "பவுன்ஸ் நிகழ்வுகள் - அவை எப்படி நிகழ்கின்றன?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Spotify பிளேலிஸ்ட் (எல்லா வயதினரும்)",
@@ -72,6 +109,424 @@
           "name": "AI: பயிற்சி தரவு & சார்பு",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "காணொளி"
+        },
+        "representing_images/csd/2022": {
+          "name": "படங்களைக் குறிக்கும்"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "காணொளி"
+        },
+        "combining_representations/csd/2022": {
+          "name": "பிரதிநிதித்துவங்களை இணைத்தல்"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "தரவை ரகசியமாக வைத்திருத்தல்"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "பிரதிபலிப்பு"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "காணொளி"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "காணொளி"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "காணொளி"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "வீடியோ: சமூகத்தின் மீதான தாக்கம்",
+          "type": "காணொளி"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "வீடியோ: இயந்திரவழிக் கற்றல்",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "காணொளி"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "வீடியோ: பயிற்சி தரவு மற்றும் சார்பு",
+          "type": "காணொளி"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "ஆசிரியர் மன்றம்"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "காணொளி"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "காணொளி"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "காணொளி"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "காணொளி"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "காணொளி"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "காணொளி"
+        },
+        "variables/csd/2022": {
+          "name": "மாறிலிகள்"
+        },
+        "variables_3/csd/2022": {
+          "name": "மாறிலிகள்"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "காணொளி"
+        },
+        "the_animation_tab/csd/2022": {
+          "type": "காணொளி"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "ஸ்பிரைட் பண்புகள் "
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "ஸ்பிரைட் பண்புகள் "
+        },
+        "text/csd/2022": {
+          "name": "உரை"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "காணொளி"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "காணொளி"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "காணொளி"
+        },
+        "animated_scene/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "boolean_expressions/csd/2022": {
+          "type": "காணொளி"
+        },
+        "conditional_statements/csd/2022": {
+          "type": "காணொளி"
+        },
+        "conditionals/csd/2022": {
+          "name": "நிபந்தனைகள்"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "விசைப்பலகை உள்ளீடு"
+        },
+        "if_else_statements/csd/2022": {
+          "type": "காணொளி"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "velocity/csd/2022": {
+          "type": "காணொளி"
+        },
+        "side_scroller/csd/2022": {
+          "name": "பக்க ஸ்க்ரோலர்",
+          "type": "ருபிரிக்"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "பக்க ஸ்க்ரோலர்",
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "வேகம் மற்றும் எதிர் முறை"
+        },
+        "collisions/csd/2022": {
+          "name": "மோதல்கள்"
+        },
+        "flyer_game/csd/2022": {
+          "name": "ஃப்ளையர் கேம்",
+          "type": "ருபிரிக்"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "ஃப்ளையர் கேம்",
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "functions/csd/2022": {
+          "name": "செயல்பாடுகள்",
+          "type": "காணொளி"
+        },
+        "functions_1/csd/2022": {
+          "name": "செயல்பாடுகள்"
+        },
+        "functions_4/csd/2022": {
+          "name": "செயல்பாடுகள்"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "காணொளி"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "காணொளி"
+        },
+        "video_debugging/csd/2022": {
+          "name": "வீடியோ: பிழைத்திருத்தம்",
+          "type": "காணொளி"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "வீடியோ: ஜோடி நிரலாக்கம்",
+          "type": "காணொளி"
+        },
+        "headings/csd/2022": {
+          "name": "தலைப்புகள்"
+        },
+        "html_web_page/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "lists/csd/2022": {
+          "name": "பட்டியல்கள்"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "சமூக துரோகம்"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "சமூக துரோகம்"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "காணொளி"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "காணொளி"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "காணொளி"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "உங்கள் இணையதளத்தை வெளியிடுகிறது",
+          "type": "காணொளி"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "வீடியோ: கருத்து வேறுபாடுகளை நிர்வகித்தல்",
+          "type": "காணொளி"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "வீடியோ: குழுப்பணி",
+          "type": "காணொளி"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "வீடியோ: தேடல் எவ்வாறு செயல்படுகிறது",
+          "type": "காணொளி"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "linking_pages/csd/2022": {
+          "name": "பக்கங்களை இணைக்கிறது"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "திட்ட வழிகாட்டி"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "சக மதிப்பாய்வு"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "காணொளி"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "design_mode/csd/2022": {
+          "name": "வடிவமைப்பு முறை"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "காணொளி"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "காணொளி"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "காணொளி"
+        },
+        "app_presentation/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "கணினி அறிவியல் எல்லாவற்றையும் மாற்றுகிறது",
+          "type": "காணொளி"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "காணொளி"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "காணொளி"
+        },
+        "board_events/csd/2022": {
+          "name": "குழு நிகழ்வுகள்"
+        },
+        "board_events_1/csd/2022": {
+          "name": "குழு நிகழ்வுகள்"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "காணொளி"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "காணொளி"
+        },
+        "variables_1/csd/2022": {
+          "name": "மாறிலிகள்"
+        },
+        "variables_2/csd/2022": {
+          "name": "மாறிலிகள்",
+          "type": "காணொளி"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "color_leds/csd/2022": {
+          "name": "வண்ண LEDக்கல் "
+        },
+        "input_output_devices/csd/2022": {
+          "type": "காணொளி"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "முடுக்கமானி நிகழ்வுகள்"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "type": "காணொளி"
+        },
+        "playing_notes/csd/2022": {
+          "name": "விளையாடும் குறிப்புகள்"
+        },
+        "functions_2/csd/2022": {
+          "name": "செயல்பாடுகள்"
+        },
+        "functions_3/csd/2022": {
+          "name": "செயல்பாடுகள்",
+          "type": "காணொளி"
+        },
+        "functions_with_parameters/csd/2022": {
+          "type": "காணொளி"
+        },
+        "functions_5/csd/2022": {
+          "name": "செயல்பாடுகள்"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "காணொளி"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "AI ஐப் பார்ப்பது",
+          "type": "காணொளி"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "காணொளி"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "காணொளி"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "காணொளி"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "AI: பயிற்சி தரவு & சார்பு",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "காணொளி"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "காணொளி"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "காணொளி"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "காணொளி"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "மாணவர் கையேடு"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "காணொளி"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "ருபிரிக்"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "காணொளி"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "காணொளி"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "காணொளி"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "ருபிரிக்"
         },
         "lesson_plans/courseb/2018": {
           "name": "பாடத்திற்கான திட்டங்கள்"
@@ -724,11 +1179,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "டிஜிட்டல் பாதைகள்: டிஜிட்டல் பாதை சதுரங்கள்",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "மாணவர் கையேடு"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "டிஜிட்டல் தடங்கள்: விலங்கு தடங்கள்",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "மாணவர் கையேடு"
         },
         "mimi-activity/courseb/2021": {
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
@@ -908,7 +1365,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "எனது ஆன்லைன் சுற்றுப்புறத்தில் பாதுகாப்பு: இடைநிறுத்தம் மற்றும் சிந்தனை தருணம்",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "மாணவர் கையேடு"
         },
         "pair-programming-vid/coursea/2021": {
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
@@ -1106,7 +1564,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "ஆன்லைன் அர்த்தத்தை நிறுத்துங்கள்: ஆன்லைன் அர்த்தத்தை நிறுத்துங்கள்",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "மாணவர் கையேடு"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "என் ரோபோடிக் நண்பர்கள்",
@@ -1162,7 +1621,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "மாணவர் கையேடு"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "முகங்களை உணர்கிறது உணர்ச்சி படம்",
@@ -1666,7 +2126,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "தனிப்பட்ட மற்றும் தனிப்பட்ட தகவல்: டிக்கெட்டிலிருந்து வெளியேறு",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "மாணவர் கையேடு"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "தனிப்பட்ட மற்றும் தனிப்பட்ட தகவல்: பாட வினாடி வினா",
@@ -1696,7 +2157,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "மாணவர் கையேடு"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
@@ -1830,6 +2292,9 @@
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "காணொளி"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "மாணவர் கையேடு"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "காணொளி"

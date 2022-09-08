@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Rossz internet vagy nincs internet",
   "filterPlatformNoComputers": "Nincsenek számítógépek és egyéb eszközök",
+  "filterPlatformScreenReader": "Képernyőolvasó",
   "filterTopics": "Témák",
   "filterTopicsScience": "Tudományok",
   "filterTopicsMath": "Matematika",

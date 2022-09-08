@@ -54,7 +54,7 @@ zh-CN:
   previous_page: 上一页
   next_page: 下一页
   next_resource: 下一个资源
-  done_with_module: 已完成本学习模块
+  done_with_module: 完成本学习模块
   cancel: 取消
   okay: 好吧
   or: 或
@@ -113,7 +113,7 @@ zh-CN:
     not_linked: 对不起，你的编程一小时账户没有连接到 %{provider}。需要通过输入密码来登录。
     use_clever: 对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过 Clever 登录。
     invalid_provider: 对不起，%{provider} 的账号无法关联到 Code.org 账号。
-    migration_required: 对不起，我们不能链接或断接还在使用旧版账号体验的账号。请升级到新版账号体验的账号。
+    migration_required: 对不起，我们不能链接或取消链接还在使用旧版账号体验的账号。请升级到新版账号体验的账号。
     unable_to_connect_provider: 无法将您的 Code.org 帐户连接到 %{provider}。请重试。
     disconnect_successful: 已成功将第三方账号从你的Code.org 账号中移除。
     already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
@@ -121,12 +121,12 @@ zh-CN:
     existing_account:
       account_exists: 恭喜！已经有了 Code.org 的账户 %{email}。
       sign_in: 请登录你的账号，你就可以在账号设置页面关联你 %{provider} 的个人资料。
-      sign_up: 不是你的邮箱？ 想用其他邮箱创建新帐户？ 如果选择创建新帐户，你依然可以在你的账户设置页面关联你 %{provider} 的个人资料。
+      sign_up: 不是你的邮箱？想用其他邮箱创建新帐户？ 如果选择创建新帐户，你依然可以在你的账户设置页面关联你 %{provider} 的个人资料。
   signup_form:
     email_signup: 用电子邮件地址登录
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
-    overview: 注册一个帐户来跟踪你的进度或管理您的教室。 无需账户<a href="/">您就可以浏览多种多样的课程和级别</a>，但你需要登录账户来保存进度和项目。
+    overview: 注册一个帐户来跟踪你的进度或管理您的教室。无需账户<a href="/">您就可以浏览多种多样的课程和级别</a>，但你需要登录账户来保存进度和项目。
     overview_markdown: 注册一个帐户来跟踪您的进度或您孩子的进度或管理您的教室。 [您可以浏览多种多样的课程和级别](/)而不需要一个帐户，但你需要注册以保存进度和项目。
     hoc_already_signed_up_heading: 使用访客身份开始
     hoc_already_signed_up_content: 你已经注册教授《编程一小时》！你和你的学生不需要登录到代码工作室来参加该活动。想要开始，为你的班级
@@ -582,17 +582,16 @@ zh-CN:
       &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。<br />冰雪奇缘&#8482; &copy; %{current_year}
       迪斯尼，保留所有权利。<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。<br />愤怒的小鸟&#8482;
       &copy; 2009-%{current_year} 维奥公司，保留所有权利。<br />植物大战僵尸&#8482; &copy; %{current_year}
-      电子艺界，保留所有权利。<br />阿甘妙世界是TM，&copy; %{current_year} 卡通网络。
-    art_from_html_old: "《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482;
-      &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year}
-      迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482;
-      &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year}
-      电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络."
+      电子艺界，保留所有权利。<br />阿甘妙世界&copy; %{current_year} 梦工厂动画公司，保留所有权利。
+    art_from_html_old: 我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。<br />星球大战&#8482;
+      &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。<br />冰雪奇缘&#8482; &copy; %{current_year}
+      迪斯尼，保留所有权利。<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。<br />愤怒的小鸟&#8482;
+      &copy; 2009-%{current_year} 维奥公司，保留所有权利。<br />植物大战僵尸&#8482; &copy; %{current_year}
+      电子艺界，保留所有权利。<br />阿甘妙世界&copy; %{current_year} 梦工厂动画公司，保留所有权利。
     code_from_html: Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a> 之许可。
-    powered_by_aws: 由亚马逊网络服务
-    built_on_github: 在微软的GitHub上构建
-    google_copyright: "© Google Inc，在有许可下使用。谷歌课堂是Google Inc的一个商标。"
+    built_on_github: 在微软的 GitHub 上构建
+    google_copyright: "© Google Inc，授权使用。谷歌课堂是 Google Inc 的一个商标。"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour
       of Code&reg; 是 Code.org 的注册商标。"
     copyright: 版权
@@ -1016,10 +1015,10 @@ zh-CN:
   no_script_access_student: 无权访问此单元。请询问教师，应该访问什么单元。
   no_script_access_teacher: 你不能进入这个单元。如果你认为可以访问这个单元，请写信给 support@code.org，以便我们可以解决这种情况。
   no_level_access_student: 无权访问此等级。请询问教师，应该访问什么等级。
-  no_level_access_teacher: 你不能进入这个等级。如果你认为可以访问这个等级，请写信给 support@code.org，以便我们可以解决这种情况。
+  no_level_access_teacher: "你不能进入这个等级。如果你认为可以访问这个等级，请写信给 \n support@code.org，以便我们可以解决这种情况。"
   no_exemplar: 这个级别没有范例。
   no_exemplar_access_student: 学生无法访问示例代码。请询教师，应该访问什么等级。
-  no_exemplar_access_teacher: 只有经过认证的教师才能访问示例代码。如果你想成为一名认证教师，请写信给support@code.org。
+  no_exemplar_access_teacher: 只有经过认证的教师才能访问示例代码。如果你想成为一名认证教师，请写信给 support@code.org。
   return_unit_overview: 转到单元概述
   return_course_overview: 转到课程概述
   view_all_units: 查看所有单元
@@ -1152,8 +1151,8 @@ zh-CN:
   confirm: 确认
   maker:
     google_oauth:
-      login_with_google: 登录到Google的制作者应用
-      enter_code: 当你使用默认浏览器并使用Google账号登入时，请输入提示的代码
+      login_with_google: 登录到 Google 的 Maker 应用
+      enter_code: 当你使用默认浏览器并使用 Google 账号登入时，请输入提示的代码
       copy_code: 复制这段代码并粘贴到 Maker App 来登录到 Code.org
       error_token_expired: 验证已过期，请重新登录获取一个新的验证码。
       error_wrong_provider: 错误的提供方，请确认你使用的是Google登录
@@ -1167,5 +1166,5 @@ zh-CN:
   behaviors:
     this_sprite: 这个精灵
   unit_prefix: 单位%{n}
-  code_org_logo_alt: Code.org首页
+  code_org_logo_alt: Code.org 首页
   teacher_feedback: 老师反馈

@@ -1,0 +1,97 @@
+{
+  "th-TH": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "เว็บแลป"
+        },
+        "gamelab": {
+          "name": "เกมแล๊บ (Game Lab)",
+          "categories": {
+            "game_lab": {
+              "name": "เกมแล๊บ (Game Lab)"
+            },
+            "groups": {
+              "name": "กลุ่ม"
+            },
+            "drawing": {
+              "name": "การวาด"
+            },
+            "math": {
+              "name": "คณิตศาสตร์"
+            },
+            "variables": {
+              "name": "ตัวแปร"
+            },
+            "functions": {
+              "name": "ฟังก์ชัน"
+            }
+          }
+        },
+        "applab": {
+          "name": "แอ๊ปแล็บ",
+          "categories": {
+            "data": {
+              "name": "ข้อมูล"
+            },
+            "math": {
+              "name": "คณิตศาสตร์"
+            },
+            "variables": {
+              "name": "ตัวแปร"
+            },
+            "functions": {
+              "name": "ฟังก์ชัน"
+            },
+            "advanced": {
+              "name": "ก้าวหน้า"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "โลก"
+            },
+            "location": {
+              "name": "สถานที่ตั้ง"
+            },
+            "actions": {
+              "name": "การดำเนินการ"
+            },
+            "events": {
+              "name": "เหตุการณ์"
+            },
+            "behaviors": {
+              "name": "พฤติกรรม"
+            },
+            "loops": {
+              "name": "ลูป"
+            },
+            "variables": {
+              "name": "ตัวแปร"
+            },
+            "math": {
+              "name": "คณิตศาสตร์"
+            },
+            "logic": {
+              "name": "ตรรกะ"
+            },
+            "functions": {
+              "name": "ฟังก์ชัน"
+            },
+            "text": {
+              "name": "ข้อความ"
+            },
+            "comments": {
+              "name": "หมายเหตุ (Comment)"
+            }
+          }
+        },
+        "javalab": {
+          "name": "จาวาแลป"
+        }
+      }
+    }
+  }
+}

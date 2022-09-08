@@ -20,6 +20,21 @@
         "code/sports/unversioned": {
           "word": "Kodavimas"
         },
+        "variable/csd/2022": {
+          "word": "Kintamasis"
+        },
+        "conditionals/csd/2022": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "abstraction/csd/2022": {
+          "word": "Komandos su parametrais"
+        },
+        "function/csd/2022": {
+          "word": "Komanda"
+        },
+        "copyright/csd/2022": {
+          "word": "Autorinės teisės"
+        },
         "code/poem-art/unversioned": {
           "word": "Kodavimas"
         },

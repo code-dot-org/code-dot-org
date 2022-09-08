@@ -50,7 +50,7 @@ Setelah mempertimbangkan beberapa tutorialnya, ada baiknya untuk mencoba kegiata
 
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pair programming mendorong anak untuk belajar bersama. Saat berpasangan, mereka saling membantu untuk menyelesaikan masalah. Mereka juga akan melihat ilmu komputer bersifat sosial dan kolaboratif.
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pemrograman berpasangan mendorong anak untuk belajar bersama. Saat berpasangan, mereka saling membantu untuk menyelesaikan masalah. Mereka juga akan melihat ilmu komputer bersifat sosial dan kolaboratif.
 
 <h3>Buat anak-anak bersemangat! </h3>
 

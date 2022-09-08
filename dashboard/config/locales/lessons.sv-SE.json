@@ -88,6 +88,48 @@
         "kodea-pd-2021/Next Steps": {
           "name": "Nästa steg"
         },
+        "csd5-2022/Representing Images": {
+          "name": "Representerar bilder"
+        },
+        "csd5-2022/Automating Data Decisions": {
+          "name": "Automatisera databeslut"
+        },
+        "csd1-2022/Processing": {
+          "name": "Bearbetar"
+        },
+        "csd1-2022/Storage": {
+          "name": "Lagring"
+        },
+        "csd3-2022/Variables": {
+          "name": "variabler"
+        },
+        "csd3-2022/Text": {
+          "name": "text"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Villkor"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Kollisioner"
+        },
+        "csd3-2022/Functions": {
+          "name": "funktioner"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Introduktion till HTML"
+        },
+        "csd2-2022/Using Images": {
+          "name": "Använda bilder"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "CSS-klasser"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6-2022/Functions": {
+          "name": "funktioner"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Flytta det, flytta den"
         },

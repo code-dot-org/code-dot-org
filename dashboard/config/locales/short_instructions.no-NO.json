@@ -686,7 +686,12 @@
         "MC Agent Freeplay": "**Fritt spill:** Utforsk på egenhånd!",
         "Overworld Chop Tree - allthethings": "Tre er en veldig viktig ressurs. Det er mange ting som lages av det. Gå til treet og bruk kommandoen \"ødelegg blokk\" for å hugge det ned.",
         "U1L13 Text Compression": "Se etter mønster (repeterende ord eller fraser) i teksten. Legg inn mønstrene du finner i ordlisten til høyre. Når du legger inn et mønster i ordlisten, vil symbolet for mønsteret legges inn i teksten istedenfor mønsteret.",
-        "allthethings-anigif-instructions": "Flytt meg østover for å få meg til grisen!"
+        "allthethings-anigif-instructions": "Flytt meg østover for å få meg til grisen!",
+        "CSD U5 black white images pixelation 2_2022": "Tegn et smilefjes (trykk her for å se bilde)",
+        "CSD U5 black white images pixelation 3_2022": "Juster bredde- og høydebryterne for å finne bildet (klikk her for å se mer)",
+        "CSD U5 black white images pixelation 4_2022": "Tegn øyenbryn på smilefjeset (klikk her for å se bilde)",
+        "CSD U5 black white images pixelation 5_2022": "Tegn hva du vil",
+        "CSD U5 black white images pixelation_2022": "Fullfør X-formen ved å bruke 0 og 1-tall"
       }
     }
   }

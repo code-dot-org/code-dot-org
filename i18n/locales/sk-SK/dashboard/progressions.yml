@@ -6,10 +6,15 @@ sk:
       'AI: Impact on Society - Video': 'Umelá inteligencia: Vplyv na spoločnosť – video'
       'AI: Training Data & Bias - Video': 'Umelá inteligencia: Trénovacie dáta a skreslenie – Video'
       Accelerometer Events: Udalosti s akcelerometrom
+      Add Content and HTML: Pridaj obsah a HTML
+      Add Content and Structure to Your Page: Pridaj na svoju stránku obsah a štruktúru
       Add Movement: Pridaj pohyby
       Add Sprites: Pridaj sprajty
+      Add Style: Pridaj štýl
+      Add Style to Your Page: Pridaj na svoju stránku štýl
       Add Text: Pridaj text
       Adding Images: Pridanie obrázkov
+      Adding Pages: Pridávanie stránok
       Adding Screens: Pridanie obrazoviek
       Animate Your Scene: Animuj svoju scénu
       App Lab Intro - Video: Úvod do App Labu – video
@@ -17,6 +22,7 @@ sk:
       'App: Friend Finder': 'Aplikácia: Nájdi svojich priateľov'
       'App: Guess the Number': 'Aplikácia: Uhádni číslo'
       'App: How Many Countries': 'Aplikácia: Koľko krajín'
+      'App: Improved Pet App': 'Aplikácia: Zlepšená aplikácia na výber zvieratka'
       'App: Is It Your Birthday?': 'Aplikácia: Máš dnes narodeniny?'
       'App: My Famous Birthday': 'Aplikácia: Moje slávne narodeniny'
       'App: National Parks': 'Aplikácia: Národné parky'
@@ -51,13 +57,17 @@ sk:
       Cake Defender: Obranca koláča
       Challenge: Výzva
       Challenge Levels: Úrovne výzvy
+      'Challenge: Lists': 'Výzva: Zoznamy'
+      'Challenge: RGB Colors': 'Výzva: Farby RGB'
       Challenges: Náročnejšie úlohy
       Change: Zmeň
+      Check Your Work: Skontroluj svoju prácu
       Checking for a Winner: Určuje sa víťaz
       Choose Your Own Adventure: Interaktívny príbeh
       'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
       Code Prediction: Predpoveď kódu
       Code Your Own Flappy Game: Vytvor si hru v štýle Flappy Bird
+      Code Your Page: Naprogramuj svoju stránku
       Collector Game: Hra Zberateľ
       Collision Detection: Detekcia kolízie
       Collision Detection Review: Detekcie kolízie - prehľad
@@ -148,6 +158,7 @@ sk:
       Ice Age Loops: Cykly Doby Ľadovej
       If-Else Statements: Výroky "If-Else"
       Images and Sounds: Obrázky a zvuky
+      Incorporate Feedback: Zapracuj spätnú väzbu
       Input Examples: Príklady vstupu
       Input with If-Else: Vstup s "if/else" (ak/potom)
       Inspiration!: Inšpirácia!
@@ -248,7 +259,7 @@ sk:
       Project Guide: Sprievodca projektom
       Project Work: Projektová práca
       Properties: Vlastnosti
-      Publishing Your Website: Publikovanie tvojej webstránky
+      Publishing Your Website: Publikovanie tvojho webu
       Quarter Notes: Štvrťové noty
       Quick Check: Rýchla kontrola
       RGB Exploration: Objavovanie RGB
@@ -264,7 +275,10 @@ sk:
       Review: Opakovanie
       Review Your Animated Scene: Skontroluj svoju animovanú scénu
       Review Your Game: Skontroluj svoju hru
+      Review Your Page: Skontrolu svoju stránku
       Review Your Scene: Skontroluj si scénu
+      'Review: CSS': 'Opakovanie: CSS'
+      'Review: HTML': 'Opakovanie: HTML'
       Revise Artist Project: Zreviduj projekt Umelec
       Revise Sprite Lab Project: Reviduj Sprite Lab projekt
       Robot Doodle: Robotova čmáranica
@@ -272,8 +286,12 @@ sk:
       Same Game: Ukážková hra
       Sample Game: Ukážková hra
       Sample Games: Ukážkové hry
+      Sample Personal Web Pages: Ukážkové osobné webové stránky
+      Sample Personal Websites: Ukážkové osobné weby
       Sample Platform Jumper Game: Príklad plošinovej skákacej hry
       Sample Programs: Ukážkové programy
+      Sample Web Page: Ukážková webová stránka
+      Sample Website: Ukážkový web
       Scoring & Scoreboard: Body a ich zobrazenie
       Screen Design: Dizajn obrazovky
       Sensor Events: Udalosti obrazovky
@@ -283,12 +301,15 @@ sk:
       Shapes and Parameters: Tvary a parametre
       Shapes and the Draw Loop: Tvary  a vykresľovací cyklus
       Share Your App: Zdieľaj svoju appku
+      Share Your Pages: Zdieľaj svoje stránky
+      Share Your Stylesheets: Zdieľaj svoje súbory štýlov
       Side Scroller: Posúvačka (side-scroller)
       Simple Circuits: Jednoduché el. obvody
       Skill Building: Budovanie zručností
       Skill-Building: Budovanie zručností
       Sliders: Posuvníky
       Smart Bike - Blinkers: Inteligentný bicykel - Smerovky
+      Social Sleuth: Sociálny detektív
       Songwriting - Functions Unplugged Activity: 'Písanie pesničiek: funkcie – aktivita bez počítača'
       Speed it Up, Slow it Down: Zrýchli, spomaľ
       Sprite Interactions: Interakcie sprajtov
@@ -315,9 +336,11 @@ sk:
       The Internet - Unplugged Activity: Internet – aktivita bez počítača
       The Power of Words - Unplugged Activity: Objav silu slov – aktivita bez počítača
       The Right App - Unplugged Activity: Vhodná aplikácia – aktivita bez počítača
+      Top Websites: Najlepšie weby
       Tour of Design Mode: Predstavenie dizajnového módu
       Train an AI to Clean the Ocean: Vycvičte umelú inteligenciu na čistenie oceánov
       UI Element Properties: Vlastnosti častí užívateľského rozhrania
+      Upload Your Images: Nahraj svoje obrázky
       User Interface: Užívateľské prostredie
       Using Getters and Setters: Používanie GET/SET príkazov (vráť/nastav hodnotu)
       Using HTML Tags: Použivanie HTML tagov
@@ -353,6 +376,7 @@ sk:
       'Video: Dance Party Properties': 'Video: Tanečná párty – Vlastnosti'
       'Video: Dance Party Warm Up': 'Video: Tanečná párty – Zahrej sa'
       'Video: De-bugging with the Step Button': 'Video: Ladenie pomocou tlačidla Krok'
+      'Video: Debugging': 'Video: Ladenie'
       'Video: Debugging with Scrat ': 'Video: Ladenie so Scratom'
       'Video: Debugging with the Step Button': 'Video: Ladenie pomocou tlačidla Krok'
       'Video: Drawing in Game Lab - Part 1': 'Video: Kreslenie v Game Labe - 1. časť'
@@ -364,6 +388,7 @@ sk:
       'Video: Getting Loopy': 'Video: Cykly sa zacyklujú'
       'Video: Happy Maps - Unplugged Activity': 'Video: Veselé mapy – aktivita bez počítača'
       'Video: Harvesting with Conditionals': 'Video: Zber úrody s podmienkami'
+      'Video: How Search Works': 'Video: Ako funguje vyhľadávanie'
       'Video: How to Create a Simple Function': 'Video: Ako vytvoriť jednoduchú funkciu'
       'Video: How to Make a Sprite': 'Video: Ako vytvoriť sprajt'
       'Video: IOSP Model': 'Video: Model VVPS'
@@ -371,6 +396,8 @@ sk:
       'Video: If/Else Statements': 'Video: Podmienkové výroky'
       'Video: Impacts on Society': 'Video: Vplyv na spoločnosť'
       'Video: Intro to CSS': 'Video: Úvod do CSS'
+      'Video: Intro to CSS - Part 1': 'Video: Úvod do CSS – 1. časť'
+      'Video: Intro to CSS - Part 2': 'Video: Úvod do CSS – 2. časť'
       'Video: Intro to CSS Part 2': 'Video: Úvod do CSS – 2. časť'
       'Video: Intro to Web Lab - Part 1': 'Video: Úvod do Web Labu – 1. časť'
       'Video: Intro to Web Lab - Part 2': 'Video: Úvod do Web Labu – 2. časť'
@@ -382,6 +409,7 @@ sk:
       'Video: Introduction to the Draw Loop': 'Video: Predstavujeme cyklus draw()'
       'Video: Loops in Artist': 'Video: Cykly v Umelcovi'
       'Video: Loops with the Artist': 'Video: Cykly s Umelcom'
+      'Video: Managing Disagreement': 'Video: Riešenie nezhôd'
       'Video: Maze Intro - Programming with Blocks': 'Video: Úvod k bludiskám – Programovanie pomocou blokov'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Úvod k bludiskám – Programovanie pomocou blokov '
       'Video: Maze Intro: Programming with Blocks': 'Video: Úvod k bludiskám – Programovanie pomocou blokov'
@@ -403,6 +431,7 @@ sk:
       'Video: Programming with Blocks': 'Video: Programovanie pomocou blokov'
       'Video: Programming with Rey and BB-8': 'Video: Programovanie s Rey a BB-8'
       'Video: Properties': 'Video: Vlastnosti'
+      'Video: Publishing Your Website': 'Video: Publikovanie tvojho webu'
       'Video: Repeat Blocks': 'Video: Bloky „opakuj“'
       'Video: Repeat Blocks with BB-8': 'Video: Bloky „opakuj“ s BB-8'
       'Video: Repeat Blocks with the Artist': 'Video: Bloky „opakuj“ s Umelcom'
@@ -411,6 +440,7 @@ sk:
       'Video: Sprite Movement': 'Video: Pohyb sprajtov'
       'Video: Sprites in Action': 'Video: Sprajty v akcii'
       'Video: Star Wars Project': 'Video: Projekt z Hviezdnych vojen'
+      'Video: Teamwork': 'Video: Tímová práca'
       'Video: Text and Prompts': 'Video: Text a výzvy'
       'Video: The Animation Tab': 'Video: Záložka s animáciami'
       'Video: The Artist in Code Studio': 'Video: Umelec v Code Studiu'
@@ -433,4 +463,5 @@ sk:
       While Loops with the Farmer: Cykly "pokiaľ" s Farmárkou
       Wrap-up: Zhrnutie
       Your Personal Website: Tvoja vlastná webstránka
+      Your Team Project: Tvoj tímový projekt
       isTouching: '"isTouching" (dotyk)'

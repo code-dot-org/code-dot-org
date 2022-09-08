@@ -27,7 +27,7 @@ Evenimentul Hour of Code este o modalitate simplă și distractivă de a le prez
 
 <a id="how-to-video"></a>
 
-## 1. Urmărește videoclipul instructiv pentru Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Urmărește videoclipul instructiv pentru Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

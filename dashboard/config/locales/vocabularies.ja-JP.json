@@ -254,7 +254,8 @@
           "definition": "何かを引き起こすアクション。"
         },
         "code/sports/unversioned": {
-          "word": "コード"
+          "word": "コード",
+          "definition": "(v) は、コードやコンピュータの命令を記述します。"
         },
         "debugging/sports/unversioned": {
           "word": "デバッギング",
@@ -313,6 +314,61 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "machine_learning/oceans/unversioned": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "input/csd/2022": {
+          "word": "入力"
+        },
+        "processing/csd/2022": {
+          "word": "処理"
+        },
+        "bug/csd/2022": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "debugging/csd/2022": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/csd/2022": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "variable/csd/2022": {
+          "word": "変数",
+          "definition": "プログラムで使用される情報の一部のラベル。"
+        },
+        "sprite/csd/2022": {
+          "word": "スプライト"
+        },
+        "condition/csd/2022": {
+          "word": "条件"
+        },
+        "conditionals/csd/2022": {
+          "word": "条件"
+        },
+        "abstraction/csd/2022": {
+          "word": "抽象化"
+        },
+        "function/csd/2022": {
+          "word": "関数（かんすう）"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "デジタルフットプリント"
+        },
+        "copyright/csd/2022": {
+          "word": "著作権",
+          "definition": "文学的、芸術的、または音楽的な素材を印刷、出版、上演、映画化、または録音する独占的な法的権利、および他の人に同じことをすることを許可する権利。"
+        },
+        "user/csd/2022": {
+          "word": "ユーザー",
+          "definition": "ソフトウェアやハードウェアなどのオブジェクトを使う人。"
+        },
+        "user_interface/csd/2022": {
+          "word": "ユーザーインタフェース"
+        },
+        "machine_learning/csd/2022": {
           "word": "機械学習",
           "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
         },

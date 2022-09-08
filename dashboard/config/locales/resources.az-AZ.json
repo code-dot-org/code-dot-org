@@ -95,6 +95,627 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "representing_information/csd/2022": {
+          "name": "Məlumatı təmsil edən"
+        },
+        "representing_images/csd/2022": {
+          "name": "Şəkilləri təmsil edir"
+        },
+        "binary_and_data/csd/2022": {
+          "name": "İkili və məlumat",
+          "type": "Video"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Nümayəndəlikləri birləşdirən"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Məlumatlar Gizli Saxlanır"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Əksetmə"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "making_decisions_with_data_1/csd/2022": {
+          "name": "Data ilə bağlı qərar vermək"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "Data ilə bağlı qərar vermək"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "name": "Data əsl dünyada"
+        },
+        "data_in_the_real_world_1/csd/2022": {
+          "name": "Data əsl dünyada"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Maşın öyrənməsi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Həmyaşıd rəyi"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Müəllim Forumu"
+        },
+        "aluminum_boats/csd/2022": {
+          "name": "Alüminium qayıqlar"
+        },
+        "aluminum_boats_1/csd/2022": {
+          "name": "Alüminium qayıqlar"
+        },
+        "code_org_how-to_videos/csd/2022": {
+          "name": "Code.org  \"Necə etməli\" videoları"
+        },
+        "intro_to_problem_solving/csd/2022": {
+          "name": "Problem Həllinə giriş"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Məsələnin həlli prosesi"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Məsələnin həlli prosesi"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "Problemin həllini araşdırmaq"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Kompüter nədir?"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2022": {
+          "name": "Tətbiqlər və Problemlərin Həlli"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "name": "Tətbiqlər və Problemlərin Həlli",
+          "type": "Həmyaşıd rəyi"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "Tətbiqlər və Problemlərin Həlli",
+          "type": "sərlövhə"
+        },
+        "drawing_shapes/csd/2022": {
+          "name": "Rəsm Şekilləri"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2022": {
+          "name": "Rəsm Şekilləri"
+        },
+        "drawing_in_game_lab/csd/2022": {
+          "name": "Oyun laboratoriyasında rəsm"
+        },
+        "shapes_and_parameters_1/csd/2022": {
+          "name": "Forma və parametrlər"
+        },
+        "shapes_and_parameters_2/csd/2022": {
+          "name": "Forma və parametrlər"
+        },
+        "introduction_to_variables/csd/2022": {
+          "name": "Dəyişənlərə giriş",
+          "type": "Video"
+        },
+        "naming_variables/csd/2022": {
+          "name": "Dəyişənlərin adlanması"
+        },
+        "variables/csd/2022": {
+          "name": "dəyişənlər"
+        },
+        "variables_3/csd/2022": {
+          "name": "dəyişənlər"
+        },
+        "random_numbers/csd/2022": {
+          "name": "Təsadufi rəqəmlər"
+        },
+        "random_numbers_2/csd/2022": {
+          "name": "Təsadufi rəqəmlər"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
+        },
+        "sprites/csd/2022": {
+          "name": "Spraytlar"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Animasiya Nişanı",
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Spraytlar"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "Sprite Xüsusiyyətləri"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "Sprite Xüsusiyyətləri"
+        },
+        "text/csd/2022": {
+          "name": "mətn"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2022": {
+          "name": "Bərabərlik Döngüsü"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "name": "Bərabərlik Döngüsü"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "Video"
+        },
+        "animated_scene/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Məntiqi İfadələr",
+          "type": "Video"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Şərti Operatorlar",
+          "type": "Video"
+        },
+        "conditionals/csd/2022": {
+          "name": "Şərti ifadələr"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Klaviatura Girişi"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "əgər/yoxsa ifadələri",
+          "type": "Video"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Həmyaşıd rəyi"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "velocity/csd/2022": {
+          "name": "Sürət",
+          "type": "Video"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Sürət"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Sürət"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Yan Scroller",
+          "type": "sərlövhə"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Yan Scroller",
+          "type": "Layihə Bələdçisi"
+        },
+        "complex_sprite_movement/csd/2022": {
+          "name": "Kompleks Sprite Hərəkatı"
+        },
+        "collisions/csd/2022": {
+          "name": "Toqquşmalar"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Flyer Oyunu",
+          "type": "sərlövhə"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Flyer Oyunu",
+          "type": "Layihə Bələdçisi"
+        },
+        "functions/csd/2022": {
+          "name": "Funksiyalar",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funksiyalar"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funksiyalar"
+        },
+        "the_game_design_process/csd/2022": {
+          "name": "Oyun Dizayn Prosesi"
+        },
+        "using_the_game_design_process/csd/2022": {
+          "name": "Oyun Dizayn Prosesindən istifadə"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Həmyaşıd rəyi"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "project_-_design_a_game/csd/2022": {
+          "name": "Layihə - Oyun dizayn edin"
+        },
+        "html_tags/csd/2022": {
+          "name": "HTML teqlər"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_html/csd/2022": {
+          "name": "HTML-ə giriş"
+        },
+        "headings_and_paragraphs/csd/2022": {
+          "name": "Başlıqlar və Paraqraflar"
+        },
+        "video_debugging/csd/2022": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "Video"
+        },
+        "headings/csd/2022": {
+          "name": "Başlıqlar"
+        },
+        "formatting_html/csd/2022": {
+          "name": "HTML formatı"
+        },
+        "html_web_page/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Həmyaşıd rəyi"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "lists/csd/2022": {
+          "name": "Siyahılar"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Sosial Sleuth"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Sosial Sleuth"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "CSS-ə giriş-Hissə 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "CSS - yə giriş: 2 ci hissə",
+          "type": "Video"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Həmyaşıd rəyi"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Video"
+        },
+        "creative_commons_search/csd/2022": {
+          "name": "Yaradıcı ümumi araşdırma"
+        },
+        "images_in_html/csd/2022": {
+          "name": "HTML-dəki şəkillər"
+        },
+        "layout_properties/csd/2022": {
+          "name": "Düzən Xüsusiyyətləri"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Həmyaşıd rəyi"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Veb saytınızın nəşri",
+          "type": "Video"
+        },
+        "websites_for_a_purpose/csd/2022": {
+          "name": "Məqsəd üçün veb saytlar"
+        },
+        "websites_for_a_purpose_1/csd/2022": {
+          "name": "Məqsəd üçün veb saytlar"
+        },
+        "websites_for_a_purpose_2/csd/2022": {
+          "name": "Məqsəd üçün veb saytlar"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "Video"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2022": {
+          "type": "Video"
+        },
+        "classes/csd/2022": {
+          "name": "Dərslər"
+        },
+        "css_classes/csd/2022": {
+          "name": "CSS dərsləri"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "hyperlinks/csd/2022": {
+          "name": "Köprülər"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Həmyaşıd rəyi"
+        },
+        "understanding_your_user/csd/2022": {
+          "name": "İstifadəçinizi Anlamaq"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "user_interfaces/csd/2022": {
+          "name": "İstifadəçi Araüzü"
+        },
+        "feedback_and_testing/csd/2022": {
+          "name": "Əks-əlaqə və Sınaq"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "designing_apps_for_good/csd/2022": {
+          "name": "Əmtəə üçün proqramların dizaynı"
+        },
+        "market_research/csd/2022": {
+          "name": "Bazar Araşdırması"
+        },
+        "market_research_1/csd/2022": {
+          "name": "Bazar Araşdırması"
+        },
+        "market_research_2/csd/2022": {
+          "name": "Bazar Araşdırması"
+        },
+        "design_mode/csd/2022": {
+          "name": "Dizayn Rejimi"
+        },
+        "design_mode_elements/csd/2022": {
+          "name": "Dizayn rejimi elementləri"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "prototype_testing/csd/2022": {
+          "name": "İlk Nümunə Testi"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "name": "Dizayn rejiminə giriş",
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "changing_screens/csd/2022": {
+          "name": "Ekranların dəyişdirilməsi"
+        },
+        "importing_screens/csd/2022": {
+          "name": "Ekranlar idxal olunur"
+        },
+        "multi-screen_apps/csd/2022": {
+          "name": "Çox-ekranlı Tətbiqlər"
+        },
+        "responding_to_user_input/csd/2022": {
+          "name": "İstifadəçi input-una cavab"
+        },
+        "testing_the_app/csd/2022": {
+          "name": "Tətbiqi yoxlamaq"
+        },
+        "app_presentation/csd/2022": {
+          "name": "Proqram təqdimatı",
+          "type": "sərlövhə"
+        },
+        "app_presentation_1/csd/2022": {
+          "name": "Proqram təqdimatı"
+        },
+        "project_-_app_presentation/csd/2022": {
+          "name": "Layihə - Proqram Təqdimatı"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Kompüterlər hər şeyi dəyişir",
+          "type": "Video"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "name": "Kod ilə ekran dizaynı "
+        },
+        "random_numbers_1/csd/2022": {
+          "name": "Təsadufi rəqəmlər"
+        },
+        "board_events/csd/2022": {
+          "name": "İdarə Heyətinin Tədbirləri"
+        },
+        "board_events_1/csd/2022": {
+          "name": "İdarə Heyətinin Tədbirləri"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "dəyişənlər"
+        },
+        "variables_2/csd/2022": {
+          "name": "dəyişənlər",
+          "type": "Video"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "color_leds/csd/2022": {
+          "name": "Rəngli LEDlər"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "analog_sensors/csd/2022": {
+          "name": "Analoq sensorlar"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "Akselerometr hadisələri"
+        },
+        "the_accelerometer/csd/2022": {
+          "name": "Akselerometr"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Massivlərə Giriş",
+          "type": "Video"
+        },
+        "making_music/csd/2022": {
+          "name": "Musiqi bəstələmək"
+        },
+        "arrays/csd/2022": {
+          "name": "Massivlər"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funksiyalar"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funksiyalar",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Parametrli funksiyalar",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funksiyalar"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "AI görmək",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Süni intellekt laboratoriyasına giriş"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Süni intellekt laboratoriyasına giriş",
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Süni intellekt laboratoriyasında təlim və sınaq",
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "AI: Təlim məlumatları və qərəzlilik",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI Laboratoriyasında Model Kartlar",
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "sərlövhə"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "sərlövhə"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Dərs Planları"
         },

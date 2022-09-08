@@ -1,0 +1,54 @@
+{
+  "mk-MK": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "name": "Работилница за апликации",
+          "categories": {
+            "game_lab": {
+              "name": "Работилница за апликации"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променливи"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променливи"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Акции"
+            },
+            "loops": {
+              "name": "Лупови"
+            },
+            "variables": {
+              "name": "Променливи"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "text": {
+              "name": "Текст"
+            }
+          }
+        }
+      }
+    }
+  }
+}

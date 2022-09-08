@@ -122,6 +122,12 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Créez une animation interactive en utilisant des sprites et des événements."
         },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
+          "description": "Se former et tester un modèle d'apprentissage automatique."
+        },
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
+          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Développer des programmes qui répondent aux événements chronométrés."
         },

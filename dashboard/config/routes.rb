@@ -20,6 +20,8 @@ Dashboard::Application.routes.draw do
     resource :pairing, only: [:show, :update]
 
     resources :user_levels, only: [:update, :destroy]
+    post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
+    get '/user_levels/get_token', to: 'user_levels#get_token'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -468,6 +470,7 @@ Dashboard::Application.routes.draw do
 
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
 
+    get '/certificates/blank'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
@@ -989,20 +992,11 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_notes, only: [:create, :update, :destroy]
 
-    resources :code_review_comments, only: [:create, :destroy] do
-      patch :toggle_resolved, on: :member
-      get :project_comments, on: :collection
-    end
-
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
-
-    resources :reviewable_projects, only: [:create, :destroy]
-    get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
-    get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
 
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').

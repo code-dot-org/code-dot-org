@@ -312,6 +312,54 @@
           "word": "Avtomatlaşdırılmış Öyrənmə",
           "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
         },
+        "input/csd/2022": {
+          "word": "Giriş"
+        },
+        "bug/csd/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/csd/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "program/csd/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "variable/csd/2022": {
+          "word": "Dəyişən",
+          "definition": "Proqramda istifadə olunan məlumat üçün etiket."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprayt"
+        },
+        "condition/csd/2022": {
+          "word": "şərt"
+        },
+        "conditionals/csd/2022": {
+          "word": "Şərti ifadələr"
+        },
+        "abstraction/csd/2022": {
+          "word": "Mücərrədlik"
+        },
+        "function/csd/2022": {
+          "word": "Funksiya"
+        },
+        "copyright/csd/2022": {
+          "word": "Müəllif Haqqı"
+        },
+        "user/csd/2022": {
+          "word": "İstifadəçi",
+          "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
+        },
+        "machine_learning/csd/2022": {
+          "word": "Avtomatlaşdırılmış Öyrənmə",
+          "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
+        },
+        "ethics/csd/2022": {
+          "word": "Etika"
+        },
         "code/poem-art/unversioned": {
           "word": "Kod",
           "definition": "(v) kompüter üçün təlimatlar yazmaq."

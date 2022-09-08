@@ -29,6 +29,277 @@
         "ai-training/oceans/unversioned": {
           "type": "វីដេអូ"
         },
+        "binary_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន",
+          "type": "វីដេអូ"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "drawing_shapes/csd/2022": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "drawing_shapes_1/csd/2022": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "shapes_and_parameters_1/csd/2022": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "shapes_and_parameters_2/csd/2022": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "naming_variables/csd/2022": {
+          "name": "ការដាក់ឈ្មោះអថេរ"
+        },
+        "variables/csd/2022": {
+          "name": "អ​ថេរ"
+        },
+        "variables_3/csd/2022": {
+          "name": "អ​ថេរ"
+        },
+        "random_numbers/csd/2022": {
+          "name": "លេខចៃដន្យ"
+        },
+        "random_numbers_2/csd/2022": {
+          "name": "លេខចៃដន្យ"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_animation_tab/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "text/csd/2022": {
+          "name": "អត្ថ​​បទ"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_draw_loop/csd/2022": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "boolean_expressions/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "conditional_statements/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "conditionals/csd/2022": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "if_else_statements/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "velocity/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "collision_detection/csd/2022": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "ល្បឿននិងលំនាំរាប់"
+        },
+        "functions/csd/2022": {
+          "name": "អនុ​គមន៍",
+          "type": "វីដេអូ"
+        },
+        "functions_1/csd/2022": {
+          "name": "អនុ​គមន៍"
+        },
+        "functions_4/csd/2022": {
+          "name": "អនុ​គមន៍"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_debugging/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "lists/csd/2022": {
+          "name": "បញ្ជី"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "publishing_your_website/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_how_search_works/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
+        },
+        "random_numbers_1/csd/2022": {
+          "name": "លេខចៃដន្យ"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "variables_1/csd/2022": {
+          "name": "អ​ថេរ"
+        },
+        "variables_2/csd/2022": {
+          "name": "អ​ថេរ",
+          "type": "វីដេអូ"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "functions_2/csd/2022": {
+          "name": "អនុ​គមន៍"
+        },
+        "functions_3/csd/2022": {
+          "name": "អនុ​គមន៍",
+          "type": "វីដេអូ"
+        },
+        "functions_with_parameters/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "functions_5/csd/2022": {
+          "name": "អនុ​គមន៍"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "seeing_ai/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
         "lesson_plans/courseb/2018": {
           "name": "ផែនការ​មេរៀន"
         },

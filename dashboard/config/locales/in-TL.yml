@@ -1178,3 +1178,9 @@ in:
   unit_prefix: crwdns2465940:0%{n}crwdne2465940:0
   code_org_logo_alt: crwdns2481346:0crwdne2481346:0
   teacher_feedback: crwdns2859059:0crwdne2859059:0
+  lesson_lock:
+    error:
+      no_updates: crwdns3054910:0crwdne3054910:0
+      missing_params: crwdns3054912:0crwdne3054912:0
+      cannot_view_locked_answers: crwdns3054914:0crwdne3054914:0
+      forbidden: crwdns3054916:0crwdne3054916:0

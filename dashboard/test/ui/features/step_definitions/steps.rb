@@ -664,6 +664,10 @@ Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |s
   element_has_i18n_text(selector, language, loc_key)
 end
 
+Then /^element "([^"]*)" has "([^"]*)" markdown from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_markdown(selector, language, loc_key)
+end
+
 Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   element_contains_text(selector, expected_text)
 end

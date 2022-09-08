@@ -68,6 +68,24 @@
         "debugging/basketball/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         },
+        "debugging/csd/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "variable/csd/2022": {
+          "word": "Айнымалы"
+        },
+        "conditionals/csd/2022": {
+          "word": "Шарттар"
+        },
+        "abstraction/csd/2022": {
+          "word": "Абстракция"
+        },
+        "function/csd/2022": {
+          "word": "Функция"
+        },
+        "copyright/csd/2022": {
+          "word": "Авторлық құқық"
+        },
         "code/poem-art/unversioned": {
           "word": "Код"
         },

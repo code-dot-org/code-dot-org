@@ -1,4 +1,4 @@
-@import 'color.scss';
+@import "color.scss";
 
 .dropdown {
   padding: 5px 0;
@@ -21,7 +21,7 @@
   background-color: $white;
   text-decoration: none;
   line-height: 20px;
-  transition: background-color .2s ease-out;
+  transition: background-color 0.2s ease-out;
   border: 0;
   border-radius: 0;
   margin: 0;

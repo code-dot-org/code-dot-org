@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "event/dance-extras/unversioned": {
@@ -14,6 +15,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/minecraft/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/minecraft/unversioned": {
@@ -33,6 +35,7 @@
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
         },
         "code/hero/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/hero/unversioned": {
@@ -80,6 +83,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/hourofcode/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/hourofcode/unversioned": {
@@ -91,6 +95,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/frozen/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/frozen/unversioned": {
@@ -102,6 +107,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/iceage/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/iceage/unversioned": {
@@ -125,6 +131,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/gumball/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/gumball/unversioned": {
@@ -144,9 +151,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/dance/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "code/aquatic/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/aquatic/unversioned": {
@@ -162,7 +171,8 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "loops/aquatic/unversioned": {
           "word": "الحلقات",
@@ -193,6 +203,7 @@
           "definition": "تقنية تشفير تقوم بربط كل حرف من الأبجدية بأحرف أخرى تم اختيارها عشوائيًا من الأبجدية."
         },
         "code/starwars/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/starwars/unversioned": {
@@ -204,6 +215,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/mc/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/mc/unversioned": {
@@ -215,6 +227,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/playlab/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/playlab/unversioned": {
@@ -226,6 +239,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/starwarsblocks/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/starwarsblocks/unversioned": {
@@ -249,7 +263,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/sports/unversioned": {
-          "word": "البرمجة"
+          "word": "البرمجة",
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
         },
         "debugging/sports/unversioned": {
           "word": "تصحيح الأخطاء",
@@ -260,6 +275,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/infinity/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/infinity/unversioned": {
@@ -275,6 +291,7 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/basketball/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/basketball/unversioned": {
@@ -286,6 +303,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "event/dance-extras-2019/unversioned": {
@@ -297,6 +315,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/dance-2019/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "event/dance-2019/unversioned": {
@@ -308,6 +327,58 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "machine_learning/oceans/unversioned": {
+          "word": "التعلم الآلي",
+          "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
+        },
+        "input/csd/2022": {
+          "word": "الإدخال"
+        },
+        "processing/csd/2022": {
+          "word": "المعالجة"
+        },
+        "bug/csd/2022": {
+          "word": "خلل",
+          "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
+        },
+        "debugging/csd/2022": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/csd/2022": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "variable/csd/2022": {
+          "word": "متغير",
+          "definition": "اسم لجزء من المعلومات المستخدمة في البرنامج."
+        },
+        "sprite/csd/2022": {
+          "word": "كائن"
+        },
+        "condition/csd/2022": {
+          "word": "الشرط"
+        },
+        "conditionals/csd/2022": {
+          "word": "الجمل الشرطية"
+        },
+        "abstraction/csd/2022": {
+          "word": "خلاصة"
+        },
+        "function/csd/2022": {
+          "word": "وظيفة "
+        },
+        "digital_footprint/csd/2022": {
+          "word": "البصمة الرقمية"
+        },
+        "copyright/csd/2022": {
+          "word": "حقوق النسخ",
+          "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
+        },
+        "user/csd/2022": {
+          "word": "مستخدم",
+          "definition": "شخص يستخدم شيئاً، بما في ذلك البرامج والأجهزة."
+        },
+        "machine_learning/csd/2022": {
           "word": "التعلم الآلي",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
@@ -623,7 +694,8 @@
           "definition": "تعليمات للكمبيوتر. توضع العديد من الأوامر معًا لتشكيل خوارزميات وبرامج كمبيوتر."
         },
         "conditionals/coursed/2021": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "pseudocode/coursed/2021": {
           "word": "الكود الخوارزمي",
@@ -697,7 +769,8 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/express/2021": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/express/2021": {
           "word": "حلقات بينما",
@@ -828,7 +901,8 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/coursee/2021": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/coursee/2021": {
           "word": "حلقات بينما",
