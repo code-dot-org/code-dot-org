@@ -1219,7 +1219,8 @@ StudioApp.prototype.initReadonly = function(options) {
  */
 StudioApp.prototype.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  var isRtl = getStore().getState().isRtl;
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml, {rtl: isRtl});
 };
 
 /**

@@ -536,6 +536,7 @@ class TopInstructions extends Component {
             inTopPane
             isBlockly={isBlockly}
             noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
+            isRtl={this.props.isRtl}
           />
         );
       }

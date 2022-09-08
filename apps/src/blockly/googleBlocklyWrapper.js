@@ -426,7 +426,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
-      Blockly.Xml.domToBlockSpace(workspace, xml);
+      Blockly.Xml.domToBlockSpace(workspace, xml, options);
 
       // Loop through all the child blocks and remove transform
       const blocksInWorkspace = workspace.getAllBlocks();

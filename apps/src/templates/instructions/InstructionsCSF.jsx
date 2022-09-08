@@ -333,6 +333,7 @@ class InstructionsCSF extends React.Component {
             promptForHint={this.state.promptForHint}
             getMinInstructionsHeight={this.getMinInstructionsHeight}
             hasShortAndLongInstructions={hasShortAndLongInstructions}
+            isRtl={this.props.isRtl}
           />
           <InstructionsCsfRightCol
             promptForHint={this.state.promptForHint}
