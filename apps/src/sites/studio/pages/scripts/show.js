@@ -126,6 +126,7 @@ function initPage() {
         versions={scriptData.course_versions}
         courseName={scriptData.course_name}
         showAssignButton={scriptData.show_assign_button}
+        isProfessionalLearningCourse={scriptData.isPlCourse}
         userId={scriptData.user_id}
         assignedSectionId={scriptData.assigned_section_id}
         showCalendar={scriptData.showCalendar}
