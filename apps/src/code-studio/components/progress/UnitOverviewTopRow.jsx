@@ -20,13 +20,13 @@ import FontAwesome from '../../../templates/FontAwesome';
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
 export const COMPLETED = 'COMPLETED';
-export const PL_COMPLETED = 'PL_COMPLETED';
+export const RETURN_TO_COURSE = 'RETURN_TO_COURSE';
 
 const NEXT_BUTTON_TEXT = {
   [NOT_STARTED]: i18n.tryNow(),
   [IN_PROGRESS]: i18n.continue(),
   [COMPLETED]: i18n.printCertificate(),
-  [PL_COMPLETED]: i18n.returnToCourse()
+  [RETURN_TO_COURSE]: i18n.returnToCourse()
 };
 
 class UnitOverviewTopRow extends React.Component {
@@ -102,6 +102,14 @@ class UnitOverviewTopRow extends React.Component {
     return options;
   };
 
+  determineButtonLink = unitProgress => {
+    if (unitProgress === RETURN_TO_COURSE) {
+      return this.props.courseLink;
+    } else {
+      return `/s/${this.props.scriptName}/next`;
+    }
+  };
+
   render() {
     const {
       sectionsForDropdown,
@@ -109,7 +117,6 @@ class UnitOverviewTopRow extends React.Component {
       currentCourseId,
       deeperLearningCourse,
       scriptId,
-      scriptName,
       unitTitle,
       viewAs,
       isRtl,
@@ -138,8 +145,8 @@ class UnitOverviewTopRow extends React.Component {
 
     let unitProgress = NOT_STARTED;
     if (unitCompleted) {
-      if (isProfessionalLearningCourse) {
-        unitProgress = PL_COMPLETED;
+      if (isProfessionalLearningCourse && this.props.courseLink) {
+        unitProgress = RETURN_TO_COURSE;
       } else {
         unitProgress = COMPLETED;
       }
@@ -153,11 +160,7 @@ class UnitOverviewTopRow extends React.Component {
           <div style={styles.buttonsInRow}>
             <Button
               __useDeprecatedTag
-              href={
-                unitProgress === PL_COMPLETED
-                  ? this.props.courseLink
-                  : `/s/${scriptName}/next`
-              }
+              href={this.determineButtonLink(unitProgress)}
               text={NEXT_BUTTON_TEXT[unitProgress]}
               size={Button.ButtonSize.large}
               style={{marginRight: 10}}
