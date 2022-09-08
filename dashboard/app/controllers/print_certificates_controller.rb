@@ -25,7 +25,7 @@ class PrintCertificatesController < ApplicationController
   def batch
     view_options(no_header: true, no_footer: true, white_background: true, full_width: true)
 
-    student_names = params[:studentNames]&.split("\n")&.map(&:strip)
+    student_names = params[:studentNames]&.split("\n")&.map(&:strip)&.shift(30)
     image_urls = student_names.map do |student_name|
       donor_name = CdoDonor.get_random_donor_name
       certificate_image_url(student_name, params[:courseName], donor_name)
