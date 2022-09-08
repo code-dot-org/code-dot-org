@@ -27,7 +27,8 @@ class PrintCertificatesController < ApplicationController
 
     student_names = params[:studentNames]&.split("\n")&.map(&:strip)
     image_urls = student_names.map do |student_name|
-      certificate_image_url(student_name, params[:courseName], nil)
+      donor_name = CdoDonor.get_random_donor_name
+      certificate_image_url(student_name, params[:courseName], donor_name)
     end
 
     @certificate_data = {
