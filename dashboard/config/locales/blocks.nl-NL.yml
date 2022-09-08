@@ -2,6 +2,8 @@
 nl:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: vraag gebruiker {QUESTION} om variabele {VAR} met de opties {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       BadGuys_setSizeAll_dropdown:
