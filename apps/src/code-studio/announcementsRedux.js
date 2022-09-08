@@ -3,7 +3,7 @@ import {NotificationType} from '@cdo/apps/templates/Notification';
 
 const ADD_ANNOUNCEMENT = 'announcements/ADD_ANNOUNCEMENT';
 
-export const addAnnouncement = (
+export const addAnnouncement = ({
   notice,
   details,
   link,
@@ -11,7 +11,7 @@ export const addAnnouncement = (
   visibility,
   dismissible,
   buttonText
-) => ({
+}) => ({
   type: ADD_ANNOUNCEMENT,
   notice,
   details,
