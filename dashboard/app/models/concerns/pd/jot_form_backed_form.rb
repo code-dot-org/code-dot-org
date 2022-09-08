@@ -273,7 +273,7 @@ module Pd
         raise KeyError, "Missing jotform form category #{category}" unless CDO.jotform_forms&.key? category
         forms = CDO.jotform_forms[category]
 
-        raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms[name].present?
+        raise KeyError, "Mising jotform form: #{category}.#{name}" if forms[name].blank?
         forms[name]&.to_i
       end
 
@@ -383,7 +383,7 @@ module Pd
     # Update answers for this submission from the JotForm API
     # Useful for filling in placeholder response entries (submission id but no answers)
     def sync_from_jotform
-      raise 'Missing submission id' unless submission_id.present?
+      raise 'Missing submission id' if submission_id.blank?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
       questions_details = self.class.use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
