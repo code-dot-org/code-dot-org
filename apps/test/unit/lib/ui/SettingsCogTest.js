@@ -1,3 +1,4 @@
+/* global appOptions */
 import React from 'react';
 import {Portal} from 'react-portal';
 import {mount} from 'enzyme';
@@ -97,6 +98,14 @@ describe('SettingsCog', () => {
 
       it('hides maker toggle if maker is not available', () => {
         makerRedux.isAvailable.returns(false);
+        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
+        expect(wrapper).to.be.blank;
+      });
+
+      it('hides maker toggle if maker is available but is project is a level', () => {
+        makerRedux.isAvailable.returns(true);
+        makerRedux.isEnabled.returns(true);
+        appOptions.level.projectTemplateLevelName = 'level title';
         const wrapper = mount(<ToggleMaker onClick={() => {}} />);
         expect(wrapper).to.be.blank;
       });
