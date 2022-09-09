@@ -2,6 +2,8 @@
 sv:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: snabb användare {QUESTION} för variabel {VAR} med val {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       BadGuys_setSizeAll_dropdown:

@@ -66,7 +66,7 @@ describe('The Gamelab Exporter,', function() {
       'https://code.jquery.com/jquery-1.12.1.min.js',
       JQUERY_JS_CONTENT
     );
-    server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
+    server.respondWith(/\/_karma_webpack_\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
       '/api/v1/sound-library/default.mp3',
       'default.mp3 content'
@@ -474,9 +474,7 @@ describe('The Gamelab Exporter,', function() {
       });
   }
 
-  // TODO: Address infinite loop caused by runExportedApp helper used in 'Regression tests' block.
-  // See ticket for more details: https://codedotorg.atlassian.net/browse/STAR-2399
-  describe.skip('Regression tests', () => {
+  describe('Regression tests', () => {
     testUtils.sandboxDocumentBody();
 
     it('should allow you to play a sound', done => {
@@ -485,9 +483,9 @@ describe('The Gamelab Exporter,', function() {
       );
       runExportedApp(
         `
-          playSound("https://studio.code.org/blockly/media/example.mp3", false);
-          window.resolveTestPromise();
-          `,
+        playSound("https://studio.code.org/blockly/media/example.mp3", false);
+        window.resolveTestPromise();
+        `,
         emptyAnimationOpts,
         done,
         'testPromise'

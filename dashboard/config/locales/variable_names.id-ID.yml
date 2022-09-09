@@ -53,6 +53,7 @@ id:
       name: nama
       nectar: madu
       nectars: Madu
+      object: objek
       planet: planet
       player_score: Nilai_pemain
       points: poin
@@ -70,6 +71,7 @@ id:
       speed: kecepatan
       startX: startX
       startY: startY
+      type: tipe
       variable: variabel
       width: lebar
       wizard: penyihir

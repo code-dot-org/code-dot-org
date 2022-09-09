@@ -11,6 +11,12 @@ in:
   campaign_date_full: crwdns104653:0crwdne104653:0
   campaign_date_year: crwdns104654:0crwdne104654:0
   campaign_date_full_year: crwdns104655:0crwdne104655:0
+  nonus_campaign_date_start_short: crwdns3153928:0crwdne3153928:0
+  nonus_campaign_date_start_long: crwdns3153930:0crwdne3153930:0
+  nonus_campaign_date_short: crwdns3153932:0crwdne3153932:0
+  nonus_campaign_date_full: crwdns3153934:0crwdne3153934:0
+  nonus_campaign_date_year: crwdns3153936:0crwdne3153936:0
+  nonus_campaign_date_full_year: crwdns3153938:0crwdne3153938:0
   latam_campaign_date_start_short: crwdns2461846:0crwdne2461846:0
   latam_campaign_date_start_long: crwdns2461848:0crwdne2461848:0
   latam_campaign_date_short: crwdns2461850:0crwdne2461850:0
@@ -396,7 +402,6 @@ in:
   signup_email_preference_no: crwdns169287:0crwdne169287:0
   signup_email_preference_error: crwdns169288:0crwdne169288:0
   signup_multiple_event_warning: crwdns104883:0crwdne104883:0
-  signup_registration_deadline: crwdns104884:0crwdne104884:0
   signup_name_placeholder: crwdns104885:0crwdne104885:0
   signup_email_placeholder: crwdns104886:0crwdne104886:0
   signup_organization_name_placeholder: crwdns104887:0crwdne104887:0
