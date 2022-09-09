@@ -13,19 +13,19 @@ export default function loadSpritelab(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   return getDefaultListMetadata()
-    .then(defaultSpritesList => {
-      let spritelab = new SpriteLab(defaultSpritesList);
+    .then(defaultAnimationsList => {
+      let spritelab = new SpriteLab(defaultAnimationsList);
       return initializeOptionsAndSpritelab(spritelab, options);
     })
     .catch(() => {
-      // If the S3 request for defaultSpriteList fails, use a backup list of just two sprites.
+      // If the S3 request for defaultAnimationList fails, use a backup mini list of animations.
       let spritelab = new SpriteLab(defaultSprites);
 
-      // Log data that we're using the backup default sprites.
+      // Log data that we're using the backup default animations.
       firehoseClient.putRecord({
         study: 'sprite_default_load',
         study_group: 'spritelab',
-        event: 'backup_sprites_used',
+        event: 'backup_animations_used',
         project_id: getCurrentId()
       });
 
