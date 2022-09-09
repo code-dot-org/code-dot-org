@@ -28,7 +28,7 @@ module Services
     # https://api.rubyonrails.org/classes/ActiveSupport/Cache/Store.html#method-i-fetch
     # for relevant documentation
     def self.process!(content, cache_options: nil)
-      return content unless content.present?
+      return content if content.blank?
       cache_key = "MarkdownPreprocessor/process/#{Digest::MD5.hexdigest(content)}"
       Rails.cache.fetch(cache_key, cache_options) do
         sub_resource_links! content
