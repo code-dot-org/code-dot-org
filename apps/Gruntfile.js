@@ -1088,11 +1088,7 @@ describe('entry tests', () => {
             {
               context: 'build/minifiable-lib/',
               from: minify ? `**/*.min.js` : '**/*.js',
-              to({context, absoluteFilename}) {
-                return minify
-                  ? '[path]/[name]wp[contenthash].js'
-                  : '[path]/[name].js';
-              },
+              to: minify ? '[path][name]wp[contenthash].js' : '[path][name].js',
               toType: 'template',
               globOptions: {
                 ignore: minify ? [] : ['*.min.js']
