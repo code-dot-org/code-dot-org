@@ -42,7 +42,6 @@ class UnitOverviewTopRow extends React.Component {
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     isProfessionalLearningCourse: PropTypes.bool,
-    courseLink: PropTypes.string,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -107,6 +106,7 @@ class UnitOverviewTopRow extends React.Component {
       currentCourseId,
       deeperLearningCourse,
       scriptId,
+      scriptName,
       unitTitle,
       viewAs,
       isRtl,
@@ -122,8 +122,7 @@ class UnitOverviewTopRow extends React.Component {
       hasPerLevelResults,
       courseOfferingId,
       courseVersionId,
-      isProfessionalLearningCourse,
-      scriptName
+      isProfessionalLearningCourse
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -141,6 +140,10 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress = IN_PROGRESS;
     }
 
+    /*
+     * We are turning off Printing Certificates for Professional Learning Courses
+     * until we can create a specialized certificate for PL courses.
+     * */
     let completedProfessionalLearningCourse =
       isProfessionalLearningCourse && unitProgress === COMPLETED;
 
