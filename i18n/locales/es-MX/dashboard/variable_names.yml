@@ -65,6 +65,7 @@ es-MX:
       name: nombre
       nectar: néctar
       nectars: néctares
+      object: objeto
       padYOffset: desplazamientoYpad
       planet: planeta
       player_score: puntuación_jugador
@@ -90,6 +91,7 @@ es-MX:
       speed: velocidad
       startX: inicioX
       startY: inicioY
+      type: Tipo
       variable: variable
       width: ancho
       wizard: mago

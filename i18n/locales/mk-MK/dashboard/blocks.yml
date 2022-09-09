@@ -2,32 +2,90 @@
 mk:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случајно
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"ALIEN"': вонземјани
           LOCATION:
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": случајно
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"ALIEN"': вонземјани
           FORMAT:
             '"random"': случајно
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"BEAR"': мечка
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случајно
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"BEAR"': мечка
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случајно
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          COSTUME:
+            '"ALIEN"': вонземјани
           LAYOUT:
             '"random"': случајно
       Dancelab_randomColor:
         text: случајна боја
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': вонземјани
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"ALIEN"': вонземјани
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            '"ALIEN"': вонземјани
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': вонземјани
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -38,12 +96,17 @@ mk:
           CONDITION:
             '"when"': Кога
             '"while"': Додека
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': пукна
       gamelab_playSoundOptions:
         options:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": копче
             "'sound://category_collect/clicky_crunch.mp3'": криза
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": балонче
+            "'sound://category_animals/bear.mp3'": мечка
             "'sound://category_animals/goat.mp3'": коза
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_digital/jump_7.mp3'": Рипај
@@ -77,6 +140,10 @@ mk:
           BRUSH:
             '"brick"': цигла
             '"fire"': оган
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': пукна
       Poetry_playSound:
         options:
           SOUND:

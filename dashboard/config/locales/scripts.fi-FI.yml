@@ -1684,3 +1684,11 @@ fi:
               display_name: Kysely
         soccer:
           name: Jalkapallo
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
