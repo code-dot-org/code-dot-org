@@ -1,6 +1,10 @@
 class DataDocsController < ApplicationController
   load_and_authorize_resource
 
+  # GET /data_docs/new
+  def new
+  end
+
   # POST /data_docs
   def create
     @data_doc = DataDoc.new(key: params[:key], name: params[:name], content: params[:content])
