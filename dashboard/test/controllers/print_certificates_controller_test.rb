@@ -28,4 +28,12 @@ class PrintCertificatesControllerTest < ActionController::TestCase
     assert_response :bad_request
     assert_includes response.body, 'invalid base64'
   end
+
+  test 'batch shows multiple certificate images' do
+    student_names = ['Alice', 'Bob', 'Charlie'].join("\n")
+    post :batch, params: {studentNames: student_names}
+    assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_equal 3, response_data['imageUrls'].length
+  end
 end
