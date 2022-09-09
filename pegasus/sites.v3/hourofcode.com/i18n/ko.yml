@@ -5,29 +5,35 @@ ko:
   language: 영어
   front_title: 역사상 가장 큰 학습 이벤트에 참여하세요. %{campaign_date}
   coming_soon: 곧 시작됩니다.
-  campaign_date_start_short: 12월 6일
-  campaign_date_start_long: 12월 6일
-  campaign_date_short: 12월 7일-13일
-  campaign_date_full: 12월 6일-12일
-  campaign_date_year: 2021년
-  campaign_date_full_year: 2021년 12월 6일부터 12일
+  campaign_date_start_short: 12월 5일
+  campaign_date_start_long: 12월 7일
+  campaign_date_short: 12월 5일-11일
+  campaign_date_full: 12월 5일-11일
+  campaign_date_year: 2022년
+  campaign_date_full_year: 2022년 12월 5일부터 11일
+  nonus_campaign_date_start_short: 10월 1일
+  nonus_campaign_date_start_long: 10월 1일
+  nonus_campaign_date_short: 10월 1일 ~12월 18일
+  nonus_campaign_date_full: 10월 1일 ~12월 18일
+  nonus_campaign_date_year: 2022년
+  nonus_campaign_date_full_year: 2022년 10월 1일 ~2022년 12월 18일
   latam_campaign_date_start_short: 10월 1일
   latam_campaign_date_start_long: 10월 1일
   latam_campaign_date_short: 10월 1일 ~12월 18일
   latam_campaign_date_full: 10월 1일 ~12월 18일
-  latam_campaign_date_year: 2021년
-  latam_campaign_date_full_year: 2020년 10월 1일 ~2020년 12월 18일
+  latam_campaign_date_year: 2022년
+  latam_campaign_date_full_year: 2022년 10월 1일 ~2022년 12월 18일
   europe_campaign_date_start_short: 10월 10일
   europe_campaign_date_start_long: 10월 10일
   europe_campaign_date_short: 10월 10일~25일
   europe_campaign_date_full: 10월 10일~25일
-  europe_campaign_date_year: 2021년
+  europe_campaign_date_year: 2022년
   europe_campaign_date_full_year: 2020년 10월 10일~25일
-  africa_campaign_date_start_short: 12월 6일
-  africa_campaign_date_start_long: 12월 6일
+  africa_campaign_date_start_short: 10월 1일
+  africa_campaign_date_start_long: 10월 1일
   africa_campaign_date_short: 10월 1일~31일
   africa_campaign_date_full: 10월 1일~31일
-  africa_campaign_date_year: 2021년
+  africa_campaign_date_year: 2022년
   africa_campaign_date_full_year: 2020년 10월 1일~31일
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -474,7 +480,6 @@ ko:
   signup_email_preference_error: 이메일 선호는 필수입력사항입니다.
   signup_multiple_event_warning: 등록을 하면 학교 이름과 도시가 맵에 나옵니다. 복수의 이벤트를 개최하려 하면, 이벤트
     별 고유 이름 또는 이메일을 제출해 주십시오. 이름과 이메일 조합 당 한 개의 이벤트만 카운팅합니다.
-  signup_registration_deadline: 아워오브코드 등록은 12월 13일에 종료됩니다.
   signup_name_placeholder: 이름
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 예를 들어, 링컨 고등학교

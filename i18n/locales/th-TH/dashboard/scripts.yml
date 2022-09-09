@@ -2152,3 +2152,11 @@ th:
           student_description: หน่วยการเรียนนี้ประกอบด้วยแบบสำรวจเมื่อชั้นเรียนของคุณเรียน CS Discoveries เสร็จแล้ว ผู้สอนจะบอกกับคุณว่าควรทำแบบสำรวจนี้เมื่อไหร่
         soccer:
           name: สนามฟุตบอล
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ

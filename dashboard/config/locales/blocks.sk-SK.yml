@@ -2,6 +2,8 @@
 sk:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       BadGuys_setSizeAll_dropdown:

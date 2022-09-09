@@ -7,29 +7,35 @@ sv:
     2016
   coming_soon: Kommer snart
   campaign_date_start_short: 5:e December
-  campaign_date_start_long: 6 december
+  campaign_date_start_long: 5 december
   campaign_date_short: 5-11 December
-  campaign_date_full: 6-12 december
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 december 2021
+  campaign_date_full: 5-11 december
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 december 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1 oktober - 18 december
+  nonus_campaign_date_full: 1 oktober - 18 december
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 5:e December
-  europe_campaign_date_start_long: 6 december
-  europe_campaign_date_short: 5-11 December
-  europe_campaign_date_full: 6-12 december
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 december 2021
-  africa_campaign_date_start_short: 5:e December
-  africa_campaign_date_start_long: 6 december
-  africa_campaign_date_short: 5-11 December
-  africa_campaign_date_full: 6-12 december
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 december 2021
+  latam_campaign_date_short: 1 oktober - 18 december
+  latam_campaign_date_full: 1 oktober - 18 december
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1 oktober - 18 december
+  europe_campaign_date_full: 1 oktober - 18 december
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1 oktober - 18 december
+  africa_campaign_date_full: 1 oktober - 18 december
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Det du lär dig idag bygger en ljusare framtid.  "
@@ -521,8 +527,6 @@ sv:
   signup_multiple_event_warning: Om du är värd för flera evenemang, skicka in ett
     unikt namn eller e-post för var och en. Vi räknar endast ett event per namn och
     mailadress -kombination.
-  signup_registration_deadline: Senaste möjlighet att registrera sig för Hour of Code
-    är den 12:e December.
   signup_name_placeholder: Ditt namn
   signup_email_placeholder: du@exempel.se
   signup_organization_name_placeholder: Till exempel Storskolan
