@@ -2,6 +2,8 @@
 in:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: crwdns3120262:0[QUESTION]crwdnd3120262:0[0]crwdnd3120262:0[VAR]crwdnd3120262:0[1]crwdnd3120262:0[A]crwdnd3120262:0[2]crwdnd3120262:0[B]crwdnd3120262:0[3]crwdnd3120262:0[C]crwdnd3120262:0[4]crwdne3120262:0
       BadGuys_makeNewBadGuysSprite:
         text: crwdns2887212:0[ANIMATION_NAME]crwdnd2887212:0[0]crwdnd2887212:0[LOCATION]crwdnd2887212:0[1]crwdne2887212:0
       BadGuys_setSizeAll_dropdown:

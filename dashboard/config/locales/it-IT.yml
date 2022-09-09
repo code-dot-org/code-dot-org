@@ -40,6 +40,7 @@ it:
           e-mail)](%{url})
         username: Nome utente
         password: Password
+        verified_teacher: Insegnante Verificato
         password_confirmation: Conferma della password
         current_password: Password attuale
         locale: Linguaggio
@@ -432,6 +433,7 @@ it:
       educate_beyond: Dopo Code.org
       educate_inspire: Ispira uno studente
       educate_community: Comunità Online
+      educate_requirements: Requisiti Tecnici
       educate_tools: Strumenti e video
       about_us: Chi siamo
       about_leadership: Leadership

@@ -2,6 +2,9 @@
   "mk-MK": {
     "data": {
       "resources": {
+        "variables/express/2022": {
+          "name": "Променливи"
+        },
         "variables/csd/2022": {
           "name": "Променливи"
         },

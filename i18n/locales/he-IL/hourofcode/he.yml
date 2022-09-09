@@ -9,26 +9,32 @@ he:
   campaign_date_start_long: רביעי בדצמבר
   campaign_date_short: בין הרביעי ל עשירי בדצמבר
   campaign_date_full: בין הרביעי לעשירי בדצמבר
-  campaign_date_year: '2021'
+  campaign_date_year: '2022'
   campaign_date_full_year: 6-12 בדצמבר, 2021
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: רביעי בדצמבר
-  europe_campaign_date_start_long: רביעי בדצמבר
-  europe_campaign_date_short: בין הרביעי ל עשירי בדצמבר
-  europe_campaign_date_full: בין הרביעי לעשירי בדצמבר
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 בדצמבר, 2021
-  africa_campaign_date_start_short: רביעי בדצמבר
-  africa_campaign_date_start_long: רביעי בדצמבר
-  africa_campaign_date_short: בין הרביעי ל עשירי בדצמבר
-  africa_campaign_date_full: בין הרביעי לעשירי בדצמבר
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 בדצמבר, 2021
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: למדו היום, צרו מחר מזהיר.
@@ -513,7 +519,6 @@ he:
   signup_multiple_event_warning: אם אתם מארחים יותר מאירוע אחד, אנא הגישו אותם עם
     שם או אימייל ייחודי לכל אחד מהם. שילוב של אותו שם וכתובת אימייל נחשב אצלנו כאירוע
     אחד.
-  signup_registration_deadline: ההרשמה ל"שעה של קוד" נסגרת ב11 לדצמבר.
   signup_name_placeholder: שמך
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: לדוגמה, בית הספר תיכון לינקולן
