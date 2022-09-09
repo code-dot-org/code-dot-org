@@ -59,4 +59,21 @@ class CertificatesControllerTest < ActionController::TestCase
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
   end
+
+  test 'batch page loads hoc image by default' do
+    get :batch
+    assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_nil response_data['courseName']
+    assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
+  end
+
+  test 'batch page loads custom image for oceans course' do
+    encoded_course_name = Base64.urlsafe_encode64('oceans')
+    get :batch, params: {s: encoded_course_name}
+    assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_equal 'oceans', response_data['courseName']
+    assert_equal '//test.code.org/images/oceans_hoc_certificate.png', response_data['imageUrl']
+  end
 end
