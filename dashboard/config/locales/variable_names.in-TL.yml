@@ -9,6 +9,7 @@ in:
       Green: crwdns2483762:0crwdne2483762:0
       Red: crwdns2483764:0crwdne2483764:0
       actor: crwdns2483766:0crwdne2483766:0
+      adjective: crwdns3120078:0crwdne3120078:0
       age: crwdns2483768:0crwdne2483768:0
       animal1score: crwdns2483770:0crwdne2483770:0
       animal1speed: crwdns2483772:0crwdne2483772:0
@@ -21,6 +22,7 @@ in:
       bit: crwdns2483786:0crwdne2483786:0
       blue1: crwdns2483788:0crwdne2483788:0
       blue2: crwdns2483790:0crwdne2483790:0
+      body-part: crwdns3120080:0crwdne3120080:0
       bodylength: crwdns2483792:0crwdne2483792:0
       buttonHeight: crwdns2483794:0crwdne2483794:0
       buttonMargin: crwdns2483796:0crwdne2483796:0
@@ -66,7 +68,10 @@ in:
       name: crwdns2483872:0crwdne2483872:0
       nectar: crwdns2483874:0crwdne2483874:0
       nectars: crwdns2483876:0crwdne2483876:0
+      number: crwdns3120082:0crwdne3120082:0
+      object: crwdns3120084:0crwdne3120084:0
       padYOffset: crwdns2483878:0crwdne2483878:0
+      parts: crwdns3120086:0crwdne3120086:0
       planet: crwdns2572156:0crwdne2572156:0
       player_score: crwdns2483880:0crwdne2483880:0
       points: crwdns2483882:0crwdne2483882:0
@@ -92,6 +97,8 @@ in:
       startX: crwdns2483914:0crwdne2483914:0
       startY: crwdns2483916:0crwdne2483916:0
       stopped-left: crwdns2927760:0crwdne2927760:0
+      time: crwdns3120088:0crwdne3120088:0
+      type: crwdns3120090:0crwdne3120090:0
       variable: crwdns2483918:0crwdne2483918:0
       width: crwdns2483920:0crwdne2483920:0
       wizard: crwdns2483922:0crwdne2483922:0

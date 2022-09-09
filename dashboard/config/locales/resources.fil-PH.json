@@ -43,6 +43,377 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Graph Paper Programming",
+          "type": "Pagtatasa"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Pair programming"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card",
+          "type": "Pagtatasa"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "Pagtuklas ng mga Apps"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Pagtuklas ng mga Apps"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet",
+          "type": "Pagtatasa"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "The Internet"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Rubric"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursef/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Pagtatasa"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Rubric"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursee/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Iusog mo, Iusog mo"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Pair programming"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie at ang Big Project"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Hindi Namalayang mga Bugs",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Pagiging Loopy"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Pagiging Loopy"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Pagiging Loopy",
+          "type": "Pagtatasa"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Pagiging Loopy"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "The Big Event",
+          "type": "Pagtatasa"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "The Big Event"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "pair_programming/express/2022": {
+          "name": "Pair programming",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Mga variable"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Rubric"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Pair programming"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Pair programming"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Happy Maps"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "The Big Event",
+          "type": "Pagtatasa"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "The Big Event"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Pair programming",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "The Big Event",
+          "type": "Pagtatasa"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "The Big Event"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binary na mga Pulseras",
+          "type": "Pagtatasa"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursec/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
         "representation_matters/csd/2022": {
           "name": "Ang Representasyon ay Mahalaga"
         },

@@ -48,6 +48,307 @@
         "ai-training/oceans/unversioned": {
           "type": "Відео"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Програмування по клітинках"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Програмування по клітинках"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Програмування по клітинках"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Програмування по клітинках"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Програмування по клітинках",
+          "type": "Оцінка"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Програмування по клітинках"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Парне програмування"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Естафетне програмування"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Естафетне програмування"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Естафетне програмування"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Естафетне програмування"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Естафетне програмування"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Естафетне програмування"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Відео"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Плейлист Spotify (для всіх вікових категорій)"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Листівки та умови"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Листівки та умови"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Листівки та умови",
+          "type": "Оцінка"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Листівки та умови"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Листівки та умови"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Практика впровадження"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Відео"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Представляємо Лабораторію спрайтів",
+          "type": "Відео"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Відео"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Відео"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Відео"
+        },
+        "internet/coursef/2022": {
+          "name": "Інтернет",
+          "type": "Оцінка"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Інтернет"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Інтернет"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Практика впровадження"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Відео"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Оцінка"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Відео"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Практика впровадження"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Рухайся, рухайся"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Рухайся, рухайся"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Рухайся, рухайся"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Рухайся, рухайся"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Парне програмування"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Відео"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Стів і Великий проект"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Баги",
+          "type": "Відео"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Економія на повторах"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Економія на повторах"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Економія на повторах",
+          "type": "Оцінка"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Економія на повторах"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Відео"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Велика подія"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Велика подія",
+          "type": "Оцінка"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Велика подія"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Практика впровадження"
+        },
+        "pair_programming/express/2022": {
+          "name": "Парне програмування",
+          "type": "Відео"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Відео"
+        },
+        "turns_angles/express/2022": {
+          "type": "Відео"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Спрайт в Дії"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Відео"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Плейлист Spotify (для всіх вікових категорій)"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Відео"
+        },
+        "variables/express/2022": {
+          "name": "Змінні"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Відео"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Парне програмування"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Відео"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Відео"
+        },
+        "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Моє Інтернет-сусідство",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Хвилинка на зупинку",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
+        "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Безпека рулить!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Відео"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Парне програмування"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Відео"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Щасливі карти"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Відео"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Відео"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Відео"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Відео"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Велика подія"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Велика подія",
+          "type": "Оцінка"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Велика подія"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Практика впровадження"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Мої друзі-роботи"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Мої друзі-роботи"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Мої друзі-роботи"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Мої друзі-роботи"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Мої друзі-роботи"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Парне програмування",
+          "type": "Відео"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Велика подія"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Велика подія",
+          "type": "Оцінка"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Велика подія"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Відео"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Двійкові браслети"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Двійкові браслети"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Двійкові браслети"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Двійкові браслети",
+          "type": "Оцінка"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Двійкові браслети"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Практика впровадження"
+        },
         "binary_and_data/csd/2022": {
           "type": "Відео"
         },

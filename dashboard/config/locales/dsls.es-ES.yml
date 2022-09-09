@@ -14826,7 +14826,8 @@ es-ES:
       Student End of Unit Survey - Q2_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14837,7 +14838,8 @@ es-ES:
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14848,7 +14850,8 @@ es-ES:
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14859,7 +14862,8 @@ es-ES:
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14870,7 +14874,8 @@ es-ES:
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14881,7 +14886,8 @@ es-ES:
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14892,7 +14898,8 @@ es-ES:
       aiml-ch1-pulse-survey-q3_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14903,7 +14910,8 @@ es-ES:
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14914,7 +14922,8 @@ es-ES:
       aiml-ch1-pulse-survey-q4_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14925,7 +14934,8 @@ es-ES:
       aiml-ch1-pulse-survey-q5_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14936,7 +14946,8 @@ es-ES:
       aiml-ch1-pulse-survey-q5_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14977,7 +14988,8 @@ es-ES:
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14988,7 +15000,8 @@ es-ES:
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -14999,7 +15012,8 @@ es-ES:
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15010,7 +15024,8 @@ es-ES:
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15021,7 +15036,8 @@ es-ES:
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15032,7 +15048,8 @@ es-ES:
       aiml-intro-pulse-survey-q5_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15045,7 +15062,8 @@ es-ES:
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15056,7 +15074,8 @@ es-ES:
       aiml-pulse-check-survey-1-q2 Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15067,7 +15086,8 @@ es-ES:
       aiml-pulse-check-survey-1-q3 Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15078,7 +15098,8 @@ es-ES:
       aiml-pulse-check-survey-1-q4 Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15089,7 +15110,8 @@ es-ES:
       aiml-pulse-check-survey-1-q5 Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15109,7 +15131,8 @@ es-ES:
       be-myself-in-cs:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15120,7 +15143,8 @@ es-ES:
       comfortable-in-cs-class:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15131,7 +15155,8 @@ es-ES:
       confident-ability-to-learn:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15142,7 +15167,8 @@ es-ES:
       confident-ability-to-learn_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15169,7 +15195,8 @@ es-ES:
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15180,7 +15207,8 @@ es-ES:
       csd-post-survey-2017-q13_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15191,7 +15219,8 @@ es-ES:
       csd-post-survey-2017-q14_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15202,7 +15231,8 @@ es-ES:
       csd-post-survey-2017-q16_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15213,7 +15243,8 @@ es-ES:
       csd-post-survey-2017-q17_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15224,7 +15255,8 @@ es-ES:
       csd-post-survey-2017-q18_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15235,7 +15267,8 @@ es-ES:
       csd-post-survey-2017-q1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15246,7 +15279,8 @@ es-ES:
       csd-post-survey-2017-q22_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15257,7 +15291,8 @@ es-ES:
       csd-post-survey-2017-q23_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15268,7 +15303,8 @@ es-ES:
       csd-post-survey-2017-q24_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15279,7 +15315,8 @@ es-ES:
       csd-post-survey-2017-q26_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15290,7 +15327,8 @@ es-ES:
       csd-post-survey-2017-q28_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15301,7 +15339,8 @@ es-ES:
       csd-post-survey-2017-q29_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15312,7 +15351,8 @@ es-ES:
       csd-post-survey-2017-q2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15323,7 +15363,8 @@ es-ES:
       csd-post-survey-2017-q30_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15334,7 +15375,8 @@ es-ES:
       csd-post-survey-2017-q3_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15345,7 +15387,8 @@ es-ES:
       csd-post-survey-2017-q4_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15356,7 +15399,8 @@ es-ES:
       csd-post-survey-2017-q6_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15367,7 +15411,8 @@ es-ES:
       csd-post-survey-2017-q8_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15378,7 +15423,8 @@ es-ES:
       csd-post-survey-2017-q9_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15620,7 +15666,8 @@ es-ES:
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15631,7 +15678,8 @@ es-ES:
       csd-post-survey-2019-I like cs class:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15642,7 +15690,8 @@ es-ES:
       csd-post-survey-2019-I want more cs:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15653,7 +15702,8 @@ es-ES:
       csd-post-survey-2019-able to learn cs:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15664,7 +15714,8 @@ es-ES:
       csd-post-survey-2019-comfort in cs class:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15850,7 +15901,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15861,7 +15913,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U1Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15872,7 +15925,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U1Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15882,8 +15936,10 @@ es-ES:
         - {}
       csd-pulse-check-survey-1-q1 U1Ch2_2021:
         answers:
-        - correct: true
-        - correct: true
+        - text: Totalmente de acuerdo
+          correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15894,7 +15950,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U2Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15905,7 +15962,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U2Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15916,7 +15974,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15927,7 +15986,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15938,7 +15998,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15949,7 +16010,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U2Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15960,7 +16022,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U2Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15971,7 +16034,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U3Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15982,7 +16046,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U3Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -15993,7 +16058,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16004,7 +16070,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16015,7 +16082,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U3Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16026,7 +16094,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U3Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16037,7 +16106,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U3Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16048,7 +16118,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16059,7 +16130,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16070,7 +16142,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16081,7 +16154,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16092,7 +16166,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16103,7 +16178,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16114,7 +16190,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16125,7 +16202,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16136,7 +16214,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U4Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16147,7 +16226,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16158,7 +16238,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16169,7 +16250,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16180,7 +16262,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16191,7 +16274,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16202,7 +16286,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16213,7 +16298,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16224,7 +16310,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16235,7 +16322,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U5Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16246,7 +16334,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16257,7 +16346,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16268,7 +16358,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16279,7 +16370,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16290,7 +16382,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16301,7 +16394,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16312,7 +16406,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16323,7 +16418,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16334,7 +16430,8 @@ es-ES:
       csd-pulse-check-survey-1-q1 U6Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16345,7 +16442,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U1Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16356,7 +16454,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U1Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16367,7 +16466,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U1Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16378,7 +16478,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U1Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16389,7 +16490,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U2Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16400,7 +16502,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U2Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16411,7 +16514,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16422,7 +16526,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16433,7 +16538,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16444,7 +16550,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U2Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16455,7 +16562,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U2Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16466,7 +16574,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U3Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16477,7 +16586,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U3Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16488,7 +16598,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16499,7 +16610,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16510,7 +16622,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U3Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16521,7 +16634,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U3Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16532,7 +16646,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U3Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16543,7 +16658,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16554,7 +16670,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16565,7 +16682,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16576,7 +16694,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16587,7 +16706,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16598,7 +16718,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16609,7 +16730,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16620,7 +16742,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16631,7 +16754,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U4Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16642,7 +16766,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16653,7 +16778,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16664,7 +16790,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16675,7 +16802,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16686,7 +16814,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16697,7 +16826,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16708,7 +16838,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16719,7 +16850,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16730,7 +16862,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U5Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16741,7 +16874,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16752,7 +16886,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16763,7 +16898,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16774,7 +16910,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16785,7 +16922,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16796,7 +16934,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16807,7 +16946,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16818,7 +16958,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16829,7 +16970,8 @@ es-ES:
       csd-pulse-check-survey-1-q2 U6Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16840,7 +16982,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U1Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16851,7 +16994,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U1Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16862,7 +17006,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U1Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16873,7 +17018,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U1Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16884,7 +17030,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U2Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16895,7 +17042,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U2Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16906,7 +17054,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16917,7 +17066,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16928,7 +17078,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16939,7 +17090,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U2Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16950,7 +17102,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U2Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16961,7 +17114,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U3Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16972,7 +17126,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U3Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16983,7 +17138,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -16994,7 +17150,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17005,7 +17162,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U3Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17016,7 +17174,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U3Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17027,7 +17186,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U3Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17038,7 +17198,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17049,7 +17210,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17060,7 +17222,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17071,7 +17234,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17082,7 +17246,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17093,7 +17258,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17104,7 +17270,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17115,7 +17282,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17126,7 +17294,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U4Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17137,7 +17306,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17148,7 +17318,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17159,7 +17330,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17170,7 +17342,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17181,7 +17354,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17192,7 +17366,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17203,7 +17378,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17214,7 +17390,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17225,7 +17402,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U5Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17236,7 +17414,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17247,7 +17426,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17258,7 +17438,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17269,7 +17450,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17280,7 +17462,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17291,7 +17474,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17302,7 +17486,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17313,7 +17498,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17324,7 +17510,8 @@ es-ES:
       csd-pulse-check-survey-1-q3 U6Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17335,7 +17522,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U1Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17346,7 +17534,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U1Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17357,7 +17546,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U1Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17368,7 +17558,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U1Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17379,7 +17570,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U2Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17390,7 +17582,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U2Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17401,7 +17594,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17412,7 +17606,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17423,7 +17618,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17434,7 +17630,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U2Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17445,7 +17642,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U2Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17456,7 +17654,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U3Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17467,7 +17666,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U3Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17478,7 +17678,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17489,7 +17690,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17500,7 +17702,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U3Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17511,7 +17714,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U3Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17522,7 +17726,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U3Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17533,7 +17738,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17544,7 +17750,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17555,7 +17762,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17566,7 +17774,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17577,7 +17786,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17588,7 +17798,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17599,7 +17810,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17610,7 +17822,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17621,7 +17834,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U4Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17632,7 +17846,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17643,7 +17858,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17654,7 +17870,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17665,7 +17882,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17676,7 +17894,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17687,7 +17906,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17698,7 +17918,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17709,7 +17930,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17720,7 +17942,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U5Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17731,7 +17954,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17742,7 +17966,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17753,7 +17978,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17764,7 +17990,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17775,7 +18002,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17786,7 +18014,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17797,7 +18026,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17808,7 +18038,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17819,7 +18050,8 @@ es-ES:
       csd-pulse-check-survey-1-q4 U6Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17830,7 +18062,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U1Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17841,7 +18074,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U1Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17852,7 +18086,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U1Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17863,7 +18098,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U1Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17874,7 +18110,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U2Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17885,7 +18122,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U2Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17896,7 +18134,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17907,7 +18146,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17918,7 +18158,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17929,7 +18170,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U2Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17940,7 +18182,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U2Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17951,7 +18194,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U3Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17962,7 +18206,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U3Ch1_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17973,7 +18218,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17984,7 +18230,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -17995,7 +18242,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U3Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18006,7 +18254,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U3Ch2_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18017,7 +18266,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U3Ch2_2019_pilot_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18028,7 +18278,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18039,7 +18290,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18050,7 +18302,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18061,7 +18314,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18072,7 +18326,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18083,7 +18338,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18094,7 +18350,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18105,7 +18362,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18116,7 +18374,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U4Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18127,7 +18386,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18138,7 +18398,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18149,7 +18410,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18160,7 +18422,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18171,7 +18434,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch1_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18182,7 +18446,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18193,7 +18458,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18204,7 +18470,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18215,7 +18482,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U5Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18226,7 +18494,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18237,7 +18506,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18248,7 +18518,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch1_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18259,7 +18530,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch1_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18270,7 +18542,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18281,7 +18554,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18292,7 +18566,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18303,7 +18578,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch2_2018_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18314,7 +18590,8 @@ es-ES:
       csd-pulse-check-survey-1-q5 U6Ch2_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18325,7 +18602,8 @@ es-ES:
       csp-post-survey-2017-q1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18336,7 +18614,8 @@ es-ES:
       csp-post-survey-2017-q10_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18347,7 +18626,8 @@ es-ES:
       csp-post-survey-2017-q11:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18358,7 +18638,8 @@ es-ES:
       csp-post-survey-2017-q12_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18369,7 +18650,8 @@ es-ES:
       csp-post-survey-2017-q13:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18380,7 +18662,8 @@ es-ES:
       csp-post-survey-2017-q13_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18391,7 +18674,8 @@ es-ES:
       csp-post-survey-2017-q14:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18402,7 +18686,8 @@ es-ES:
       csp-post-survey-2017-q14_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18413,7 +18698,8 @@ es-ES:
       csp-post-survey-2017-q16:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18424,7 +18710,8 @@ es-ES:
       csp-post-survey-2017-q17:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18435,7 +18722,8 @@ es-ES:
       csp-post-survey-2017-q17_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18446,7 +18734,8 @@ es-ES:
       csp-post-survey-2017-q18:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18457,7 +18746,8 @@ es-ES:
       csp-post-survey-2017-q18_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18468,7 +18758,8 @@ es-ES:
       csp-post-survey-2017-q19_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18479,7 +18770,8 @@ es-ES:
       csp-post-survey-2017-q1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18490,7 +18782,8 @@ es-ES:
       csp-post-survey-2017-q2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18501,7 +18794,8 @@ es-ES:
       csp-post-survey-2017-q20_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18512,7 +18806,8 @@ es-ES:
       csp-post-survey-2017-q22:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18523,7 +18818,8 @@ es-ES:
       csp-post-survey-2017-q22_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18534,7 +18830,8 @@ es-ES:
       csp-post-survey-2017-q22_2019:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18545,7 +18842,8 @@ es-ES:
       csp-post-survey-2017-q23:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18556,7 +18854,8 @@ es-ES:
       csp-post-survey-2017-q23_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18567,7 +18866,8 @@ es-ES:
       csp-post-survey-2017-q24:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18578,7 +18878,8 @@ es-ES:
       csp-post-survey-2017-q24_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18589,7 +18890,8 @@ es-ES:
       csp-post-survey-2017-q26:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18600,7 +18902,8 @@ es-ES:
       csp-post-survey-2017-q28:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18611,7 +18914,8 @@ es-ES:
       csp-post-survey-2017-q28_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18622,7 +18926,8 @@ es-ES:
       csp-post-survey-2017-q29:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18633,7 +18938,8 @@ es-ES:
       csp-post-survey-2017-q29_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18644,7 +18950,8 @@ es-ES:
       csp-post-survey-2017-q3:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18655,7 +18962,8 @@ es-ES:
       csp-post-survey-2017-q30:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18666,7 +18974,8 @@ es-ES:
       csp-post-survey-2017-q33_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18684,7 +18993,8 @@ es-ES:
       csp-post-survey-2017-q4:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18695,7 +19005,8 @@ es-ES:
       csp-post-survey-2017-q4_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18706,7 +19017,8 @@ es-ES:
       csp-post-survey-2017-q6:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18717,7 +19029,8 @@ es-ES:
       csp-post-survey-2017-q8:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18728,7 +19041,8 @@ es-ES:
       csp-post-survey-2017-q9:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18756,7 +19070,8 @@ es-ES:
       csp-post-survey-worry-seem-less-capable:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18767,7 +19082,8 @@ es-ES:
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18778,7 +19094,8 @@ es-ES:
       csp-pre-survey-2017-q10:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18789,7 +19106,8 @@ es-ES:
       csp-pre-survey-2017-q10_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18800,7 +19118,8 @@ es-ES:
       csp-pre-survey-2017-q10_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18811,7 +19130,8 @@ es-ES:
       csp-pre-survey-2017-q10_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18822,7 +19142,8 @@ es-ES:
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18833,7 +19154,8 @@ es-ES:
       csp-pre-survey-2017-q11_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18844,7 +19166,8 @@ es-ES:
       csp-pre-survey-2017-q12:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18855,7 +19178,8 @@ es-ES:
       csp-pre-survey-2017-q12_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18866,7 +19190,8 @@ es-ES:
       csp-pre-survey-2017-q13:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18877,7 +19202,8 @@ es-ES:
       csp-pre-survey-2017-q13_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18888,7 +19214,8 @@ es-ES:
       csp-pre-survey-2017-q13_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18899,7 +19226,8 @@ es-ES:
       csp-pre-survey-2017-q13_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18910,7 +19238,8 @@ es-ES:
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18921,7 +19250,8 @@ es-ES:
       csp-pre-survey-2017-q14_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18932,7 +19262,8 @@ es-ES:
       csp-pre-survey-2017-q16:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18943,7 +19274,8 @@ es-ES:
       csp-pre-survey-2017-q16_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18954,7 +19286,8 @@ es-ES:
       csp-pre-survey-2017-q16_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18965,7 +19298,8 @@ es-ES:
       csp-pre-survey-2017-q16_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18976,7 +19310,8 @@ es-ES:
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18987,7 +19322,8 @@ es-ES:
       csp-pre-survey-2017-q17_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18998,7 +19334,8 @@ es-ES:
       csp-pre-survey-2017-q17_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19009,7 +19346,8 @@ es-ES:
       csp-pre-survey-2017-q17_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19020,7 +19358,8 @@ es-ES:
       csp-pre-survey-2017-q18:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19031,7 +19370,8 @@ es-ES:
       csp-pre-survey-2017-q18_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19042,7 +19382,8 @@ es-ES:
       csp-pre-survey-2017-q19:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19053,7 +19394,8 @@ es-ES:
       csp-pre-survey-2017-q19_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19064,7 +19406,8 @@ es-ES:
       csp-pre-survey-2017-q19_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19075,7 +19418,8 @@ es-ES:
       csp-pre-survey-2017-q19_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19086,7 +19430,8 @@ es-ES:
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19097,7 +19442,8 @@ es-ES:
       csp-pre-survey-2017-q2:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19108,7 +19454,8 @@ es-ES:
       csp-pre-survey-2017-q20:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19119,7 +19466,8 @@ es-ES:
       csp-pre-survey-2017-q20_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19130,7 +19478,8 @@ es-ES:
       csp-pre-survey-2017-q20_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19141,7 +19490,8 @@ es-ES:
       csp-pre-survey-2017-q20_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19152,7 +19502,8 @@ es-ES:
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19163,7 +19514,8 @@ es-ES:
       csp-pre-survey-2017-q21_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19174,7 +19526,8 @@ es-ES:
       csp-pre-survey-2017-q22:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19185,7 +19538,8 @@ es-ES:
       csp-pre-survey-2017-q22_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19196,7 +19550,8 @@ es-ES:
       csp-pre-survey-2017-q22_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19207,7 +19562,8 @@ es-ES:
       csp-pre-survey-2017-q22_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19218,7 +19574,8 @@ es-ES:
       csp-pre-survey-2017-q23:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19229,7 +19586,8 @@ es-ES:
       csp-pre-survey-2017-q23_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19240,7 +19598,8 @@ es-ES:
       csp-pre-survey-2017-q24:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19251,7 +19610,8 @@ es-ES:
       csp-pre-survey-2017-q24_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19262,7 +19622,8 @@ es-ES:
       csp-pre-survey-2017-q25:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19273,7 +19634,8 @@ es-ES:
       csp-pre-survey-2017-q25_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19284,7 +19646,8 @@ es-ES:
       csp-pre-survey-2017-q26:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19295,7 +19658,8 @@ es-ES:
       csp-pre-survey-2017-q26_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19306,7 +19670,8 @@ es-ES:
       csp-pre-survey-2017-q27:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19317,7 +19682,8 @@ es-ES:
       csp-pre-survey-2017-q27_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19328,7 +19694,8 @@ es-ES:
       csp-pre-survey-2017-q28:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19339,7 +19706,8 @@ es-ES:
       csp-pre-survey-2017-q28_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19350,7 +19718,8 @@ es-ES:
       csp-pre-survey-2017-q29:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19361,7 +19730,8 @@ es-ES:
       csp-pre-survey-2017-q29_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19372,7 +19742,8 @@ es-ES:
       csp-pre-survey-2017-q2_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19383,7 +19754,8 @@ es-ES:
       csp-pre-survey-2017-q3:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19394,7 +19766,8 @@ es-ES:
       csp-pre-survey-2017-q30:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19405,7 +19778,8 @@ es-ES:
       csp-pre-survey-2017-q30_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19416,7 +19790,8 @@ es-ES:
       csp-pre-survey-2017-q30_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19427,7 +19802,8 @@ es-ES:
       csp-pre-survey-2017-q30_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19438,7 +19814,8 @@ es-ES:
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19449,7 +19826,8 @@ es-ES:
       csp-pre-survey-2017-q31_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19460,7 +19838,8 @@ es-ES:
       csp-pre-survey-2017-q31_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19471,7 +19850,8 @@ es-ES:
       csp-pre-survey-2017-q31_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19482,7 +19862,8 @@ es-ES:
       csp-pre-survey-2017-q35:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19493,7 +19874,8 @@ es-ES:
       csp-pre-survey-2017-q35_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19550,7 +19932,8 @@ es-ES:
       csp-pre-survey-2017-q3_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19561,7 +19944,8 @@ es-ES:
       csp-pre-survey-2017-q3_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19572,7 +19956,8 @@ es-ES:
       csp-pre-survey-2017-q3_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19583,7 +19968,8 @@ es-ES:
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19616,7 +20002,8 @@ es-ES:
       csp-pre-survey-2017-q4_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19627,7 +20014,8 @@ es-ES:
       csp-pre-survey-2017-q4_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19638,7 +20026,8 @@ es-ES:
       csp-pre-survey-2017-q4_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19649,7 +20038,8 @@ es-ES:
       csp-pre-survey-2017-q5:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19660,7 +20050,8 @@ es-ES:
       csp-pre-survey-2017-q5_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19671,7 +20062,8 @@ es-ES:
       csp-pre-survey-2017-q6:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19682,7 +20074,8 @@ es-ES:
       csp-pre-survey-2017-q6_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19693,7 +20086,8 @@ es-ES:
       csp-pre-survey-2017-q7:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19704,7 +20098,8 @@ es-ES:
       csp-pre-survey-2017-q7_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19715,7 +20110,8 @@ es-ES:
       csp-pre-survey-2017-q8:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19726,7 +20122,8 @@ es-ES:
       csp-pre-survey-2017-q8_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19737,7 +20134,8 @@ es-ES:
       csp-pre-survey-2017-q9:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19748,7 +20146,8 @@ es-ES:
       csp-pre-survey-2017-q9_2018:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19759,7 +20158,8 @@ es-ES:
       csp-pre-survey-2017-q9_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19770,7 +20170,8 @@ es-ES:
       csp-pre-survey-2017-q9_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19930,7 +20331,8 @@ es-ES:
       i-like-cs-class:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19950,7 +20352,8 @@ es-ES:
       interested-in-learning-cs:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -19961,7 +20364,8 @@ es-ES:
       interested-in-learning-cs_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20061,7 +20465,8 @@ es-ES:
       naturally-better-at-cs:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20072,7 +20477,8 @@ es-ES:
       naturally-better-at-cs_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20083,7 +20489,8 @@ es-ES:
       naturally-better-at-cs_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20102,7 +20509,8 @@ es-ES:
       post-assessment survey q31-a-2017b:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20116,7 +20524,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20126,7 +20535,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20136,7 +20546,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20146,7 +20557,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20156,7 +20568,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20166,7 +20579,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20176,7 +20590,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20186,7 +20601,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20196,7 +20612,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20206,7 +20623,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20216,7 +20634,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20226,7 +20645,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20236,7 +20656,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20246,7 +20667,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20256,7 +20678,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20266,7 +20689,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20332,7 +20756,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20360,7 +20785,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20370,7 +20796,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20380,7 +20807,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20390,7 +20818,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20400,7 +20829,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20410,7 +20840,8 @@ es-ES:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         questions:
         - {}
@@ -20456,7 +20887,8 @@ es-ES:
       same-ability:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20527,7 +20959,8 @@ es-ES:
       test anonymous student survey fun:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20536,7 +20969,8 @@ es-ES:
       will-be-myself-in-cs:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20547,7 +20981,8 @@ es-ES:
       will-be-myself-in-cs_2021:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20558,7 +20993,8 @@ es-ES:
       will-be-myself-in-cs_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20569,7 +21005,8 @@ es-ES:
       worried-less-capable:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20580,7 +21017,8 @@ es-ES:
       worried-seen-incapable:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20591,7 +21029,8 @@ es-ES:
       worried-seen-incapable_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: De acuerdo
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -20599,3 +21038,863 @@ es-ES:
         - correct: true
         questions:
         - {}
+      BigEvent-Unplugged2022:
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
+          acciones que un computador monitorea. En esta lección usted reaccionará
+          de manera diferente dependiendo cuál botón esta presionado.\n"
+      BinaryBracelets-Unplugged2022:
+        markdown: |-
+          # Pulseras binarias
+
+          ¡Crea una pulsera que represente tu nombre en un sistema que los ordenadores entiendan!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged2022:
+        markdown: |-
+          # Condicionales con cartas
+
+          Juega a un juego de cartas y crea reglas como "Si saco una carta roja, me llevo un punto" y "Si saco una carta negra, te llevas un punto".
+      CourseE_Artist_Practice_2022:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los bucles y el Artista!"
+        display_name: Práctica con Artista
+      CourseE_Lesson_11_Artist_Practice_2022:
+        display_name: Práctica con Artista
+      CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Práctica con Artista
+      CourseF_outbreak_story2022_2022_pilot_-2022-2:
+        content1: descripción aquí
+        markdown: "# El Brote: Codifica tu propia simulación\n\n## ¡Bienvenido a Monster
+          Town!\nMonster Town solía ser un lugar feliz y saludable. A los monstruos
+          de Monster Town les encantaba pasearse para visitar a sus amigos. \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUn día, uno de los monstruos empezó a sentirse mal.
+          ¡El monstruo había cogido un **virus**! Un virus es un pequeño germen que
+          te puede enfermar. Los otros monstruos no se preocuparon demasiado. Siguieron
+          visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nPoco después, otros dos monstruos enfermaron. ¡Era
+          el mismo virus! Parece que se contagiaron de su amigo.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nEl virus se extendió lentamente a otros monstruos
+          que estaban cerca. Los monstruos sanos empezaron a preocuparse de que todos
+          fueran a enfermar. Los monstruos enfermos empezaron a preocuparse de que
+          iban a contagiar el virus a todos los demás.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Detener la propagación\nAfortunadamente,
+          tras estudiar el virus, los vecinos de Monster Town hicieron un importante
+          descubrimiento. Se dieron cuenta de que era menos probable que contagiaran
+          el virus si llevaban mascarillas en la boca. Con las mascarillas puestas,
+          era menos probable que los monstruos enfermos contagiaran el virus a los
+          sanos.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          ¿Qué ocurrirá a continuación?\n\nHoy vas a escribir código para crear y
+          ejecutar tu propia **simulación** del brote de virus en Monster Town.  Una
+          simulación es un modelo informático de un proceso o sistema. Aprende a codificar
+          y a hacer predicciones sobre lo que les ocurrirá a los vecinos de Monster
+          Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* ¿Con qué rapidez se propagará el
+          virus?\n\n* ¿Se enfermará todo el mundo?\n\n* ¿Cómo ayudarán las mascarillas?\n\n\nCuando
+          hayas terminado, comparte tu simulación con los demás. Comparte tu mensaje
+          sobre lo que crees que podemos hacer para ayudar a mantener a los demás
+          sanos cuando un virus llega a la ciudad. \n"
+      CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: descripción aquí
+        markdown: "# El Brote: Pensar como un científico\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nLas simulaciones son una excelente
+          manera de aprender cosas que pueden ser difíciles de observar en el mundo
+          real. Ayudan a los científicos a resolver problemas y a probar nuevas ideas
+          de forma segura y eficaz. Tu simulación es una forma de mostrar cómo podría
+          ser un brote de virus en Monster Town.\n\n#¡Reiniciar y Repetir!\nIncluso
+          cuando escribes el código tú mismo, es imposible saber exactamente lo que
+          ocurrirá cuando pulses ejecutar. Los monstruos deambulan aleatoriamente,
+          por lo que no sabes si el virus se propagará rápida o lentamente. Siempre
+          que cambies el código, asegúrate de ejecutar la simulación más de una vez.
+          ¡Las cosas no sucederán de la misma manera dos veces!\n\n## Recogida de
+          datos\nIntenta anotar tus observaciones mientras ejecutas tu simulación.
+          Puedes contar el número de monstruos que enferman o utilizar un temporizador
+          para ver lo rápido que suceden las cosas. Por ejemplo, ¿cuánto tiempo suelen
+          tardar en enfermar todos los monstruos si ninguno tiene mascarilla? \n\n##
+          Hacer predicciones\nSi entiendes tu modelo, puedes usarlo para hacer predicciones.
+          Incluso puedes cambiar la forma en que se ejecuta tu simulación y adivinar
+          qué ocurrirá de forma diferente. Por ejemplo:\n* ¿Qué pasaría si hubiera
+          el doble de monstruos?\n* ¿Qué pasaría si los monstruos se movieran a la
+          mitad de velocidad?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## ¿Es Monster Town como el mundo real?\nHay un
+          límite a lo realista que puede ser cualquier modelo. \n#¿Qué tiene en común
+          tu simulación de brote con los brotes de virus del mundo real?\n* ¿Cuáles
+          son las diferencias?\nCuando termines esta actividad, comenta estas preguntas
+          con los profesores o con tu familia.\n\n#¿Qué más podemos modelar?\nYa has
+          creado un modelo funcional del brote en Monster Town. ¿Qué cosas no puede
+          hacer o mostrar tu simulación que te gustaría que pudiera hacer? Sigue adelante
+          y aprende a modelar aún más:\n* Aumentar el número de monstruos en la simulación\n*
+          Ayudar a los monstruos a recuperarse del virus\n* ¡Probabilidad, inmunidad,
+          vacunas y mucho más!\n\nTambién puedes compartir tu modelo de simulación
+          con otros, o compartir un mensaje sobre lo que crees que podemos hacer para
+          ayudar a mantener la salud de los demás cuando un virus llega a la ciudad.
+          \n"
+      DesigningForAccessibilityMarkdownLevel2022:
+        markdown: |-
+          # Diseñando para ser accesible
+
+          * En el mundo de la informática, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
+          * Las discapacidades incluyen las físicas, auditivas, visuales y muchas otras.
+          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan la tecnología, como las **aplicaciones para teléfonos inteligentes**.
+          * El diseño de aplicaciones accesibles para las personas con discapacidad hace que esas aplicaciones sean mejores para todos los demás.
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged2022:
+        markdown: |-
+          # Intercambio digital
+
+          En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # Historias de Espacios en Blanco
+
+          En esta lección, aprenderás a usar y escribir historias de espacios en blanco. Mira este vídeo para aprender cómo se conecta con la informática.
+      GettingLoopy-Unplugged2022:
+        markdown: |-
+          # Haciendo un Loopy
+
+          Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
+      GraphPaperProgramming-Unplugged2022:
+        markdown: |
+          #Programación de papel cuadriculado
+
+          Escribe algoritmos que tus compañeros puedan usar para dibujar imágenes.
+      HappyMaps-Unplugged2022:
+        markdown: |
+          # Mapas felices
+
+          Crea un algoritmo para mover al personaje a través de un laberinto.
+      Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # El Internet
+
+          Construye tu propio Internet en la clase sólo usando pedazos de papel.
+      MoveItMoveIt-Unplugged2022:
+        markdown: |-
+          # Muévete, muévete
+
+          Utiliza un mapa y da órdenes para llegar a la meta.
+      MyLoopyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Mis amigos robóticos de Loopy
+
+          ¡Haz tus programas más cortos usando bucles!
+      MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Mis Amigos Robóticos
+
+          ¡Aprende a programar escribiendo código para tus amigos!
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # El Poder de las Palabras
+
+          #¿Qué debes hacer cuando alguien utiliza un lenguaje mezquino o hiriente en Internet?
+      PrivatePersonalInformation-Unplugged2022:
+        markdown: |
+          # Información privada y personal
+
+          ## ¿Qué información sobre tí es adecuada para compartir en línea?
+      RelayProgramming-Unplugged2022:
+        markdown: |-
+          # Programación por relevos
+
+          Divídanse en equipos y trabajen juntos para escribir programas que hagan dibujos.
+      Songwriting-Unplugged2022:
+        markdown: |-
+          # Composición de canciones
+
+          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
+      TheRightAppMarkdownLevel2022:
+        markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
+          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
+          escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
+          que los programadores entiendan las necesidades de los demás y diseñen las
+          aplicaciones pensando en ellas!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      courseAB_EOC2022:
+        description: "¡Has llegado a la última lección! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseB_EOC2022:
+        description: "¡Has llegado a la última lección! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseC_multi_artist_prog6_predict12022:
+        answers:
+        - text: El artista dibujará un triángulo con tres lados iguales.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        - text: El artista dibujará una sola línea.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        - text: El artista dibujará un cuadrado.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El artista dibujará un pentágono
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+          feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
+            3 loops. 4 veces 3 es 12!
+        - text: '12'
+          correct: true
+          feedback: "¡Correcto!"
+        - text: '15'
+          feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
+            3 loops. 4 veces 3 es 12!
+        - text: '20'
+          feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
+            3 loops. 4 veces 3 es 12!
+        questions:
+        - text: Mira el siguiente código con atención. ¿Cuántas calabazas recogerá
+            la granjera luego de que hagas clic en "Ejecutar"?
+      courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: Scrat llegará a la bellota. No hay errores en el código.
+          feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota.
+        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
+        - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
+            "avance".
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
+        - text: Scrat no se moverá del primer bloque.
+          feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
+            la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
+            suficientes veces para llegar a la bellota.
+        questions:
+        - text: Busca errores en este código. ¿Llegará Scrat a la bellota o hay algún
+            problema?
+      courseC_multi_maze_programming8_predict12022:
+        answers:
+        - text: El pájaro se quedará a un paso del cerdo.
+          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
+            el cerdo.
+        - text: El pájaro logrará llegar hasta el cerdo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El pájaro chocará con el TNT.
+          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
+            el cerdo.
+        - text: El pájaro se estrellará contra la pared.
+          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
+            el cerdo.
+        questions:
+        - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
+            en "Ejecutar"?
+      courseC_multi_starWars_predict12022:
+        answers:
+        - text: BB-8 no se moverá.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
+        - text: BB-8 se moverá solo un espacio
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
+        - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
+          correct: true
+          feedback: "¡Correcto!"
+        - text: BB-8 se moverá sólo 3 espacios.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
+        questions:
+        - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
+      courseC_multi_starWars_predict22022:
+        answers:
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
+          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
+            cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
+            recoger toda la chatarra.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: BB-8 recogerá toda la chatarra sin problemas.
+          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
+            cuando necesita avanzar 3 espacios.
+        - text: BB-8 girará en la dirección equivocada después del primer bucle.
+          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
+            cuando necesita avanzar 3 espacios.
+        questions:
+        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseD_EOC2022:
+        description: "¡Has llegado a la última lección del Curso D! Elige un proyecto
+          para crear."
+        display_name: Proyecto de fin de curso
+      courseD_EOC_examples2022:
+        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+          dedica un tiempo a mirar los proyectos de ejemplo.
+        display_name: Ejemplos de Proyecto
+      courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - text: A
+          correct: true
+          feedback: "¡Correcto!"
+        - text: B
+          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
+            repite un círculo 4 veces.
+        - text: C
+          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
+            repite un círculo 4 veces.
+        - text: Ninguna de las anteriores
+          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
+            repite un círculo 4 veces.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Observa bien el siguiente código. ¿Qué dibujo hará el programa si
+            haces clic en "Ejecutar"?
+      courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
+            lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
+            flor debajo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: 'La abeja no llegará a la nube. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        questions:
+        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
+            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+      courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja intentará obtener miel y néctar tanto de las flores como
+            del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
+            haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
+            detrás de cada nube.
+      courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
+            el néctar, lo que permite resolver el puzle.
+        - text: La abeja recogerá solo 2 unidades de néctar.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
+            el néctar, lo que permite resolver el puzle.
+        - text: La abeja recogerá todo el néctar.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La abeja girará en la dirección equivocada.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
+            el néctar, lo que permite resolver el puzle.
+        questions:
+        - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
+            ocurrirá si haces clic en "Ejecutar"?
+      courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
+            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
+            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+        - text: '8'
+          correct: true
+          feedback: "¡Correcto!"
+        - text: '10'
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
+            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
+            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+        - text: '12'
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
+            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
+            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+        questions:
+        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
+            clic en "Ejecutar"?
+      courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - text: La granjera recogerá todos los cultivos.
+          feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
+        - text: La granjera no recogerá ninguna de las cosechas con el camino que
+            está tomando.
+          feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
+            varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+            No recogerá la calabaza.
+        - text: La cosechadora recogerá todos los cultivos, excepto la calabaza.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La Granjera sólo recogerá la calabaza.
+          feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
+            varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+            No recogerá la calabaza.
+        markdown: |
+          Los brotes en este desafió serán de maíz o lechuga.
+          <br/>
+        questions:
+        - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
+            en "Ejecutar"?
+      courseD_multi_farmer_while10_predict22022:
+        answers:
+        - text: Nada. Este código solo nivelará el suelo.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
+        - text: Este código dejará la pila completamente intacta.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
+            de bucle, pero no existe un código para eliminar la tierra de la pila.
+        - text: Este código dejará el último agujero sin tocar.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
+        questions:
+        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
+            este puzle?
+      courseD_multi_farmer_while4_predict12022:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
+            pila, y luego se detendrá cuando la pila desaparezca
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
+            pila, y luego se detendrá cuando la pila desaparezca
+        - text: La granjera quitará la tierra mientras exista una pila, y luego se
+            detendrá cuando la pila desaparezca.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La granjera removerá la tierra sólo una vez.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
+            pila, y luego se detendrá cuando la pila desaparezca
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseD_multi_maze_until10_predict22022:
+        answers:
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El zombie llegará al girasol.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
+        - text: El zombie girará a la derecha en el primer camino y dará vueltas en
+            círculos sin parar.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
+        - text: El zombi se quedará atascado al final del camino de frente.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
+        questions:
+        - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
+            clic en "Ejecutar"?
+      courseD_multi_maze_until2_predict12022:
+        answers:
+        - text: El pájaro no se moverá en lo absoluto.
+          feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
+            camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
+            al cerdo!
+        - text: El pájaro logrará llegar hasta el cerdo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El pájaro avanzará y chocará con el TNT.
+          feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
+            camino seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta
+            llegar al cerdo!
+        - text: El pájaro gira en sentido contrario.
+          feedback: En este código, el pájaro avanza mientras haya un camino, y luego
+            gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué crees que sucederá cuando
+            hagas clic en "Ejecutar"?
+      courseE_EOC2022:
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseE_EOC_examples2022:
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+            da la vuelta y retrocede hasta que recoge la lechuga.
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+            da la vuelta y retrocede hasta que recoge la lechuga.
+        - text: La granjera recogerá la lechuga.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La granjera recogerá el maíz.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+            da la vuelta y retrocede hasta que recoge la lechuga.
+        questions:
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
+      courseE_prediction_artistFunction12022:
+        answers:
+        - text: Nada. El programa no activa la función.
+          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: El artista dibujará un solo cuadrado.
+          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: El artista dibujará dos cuadrados que se superponen.
+          feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
+            pixeles, pero el artista salta a 175 pixeles entre funciones.
+        - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
+          correct: true
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
+            un salto en el medio de ambas."
+        questions:
+        - text: ¿Qué sucederá cuando presiones "Ejecutar"?
+      courseE_swim_fish_behavior_predict12022:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora comenzará a caer
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: Proyecto de fin de curso
+      courseF_EOC_samples2022:
+        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+          dedica un tiempo a mirar los proyectos de ejemplo.
+        display_name: Proyecto de fin de curso
+      courseF_collector_samples_2022_pilot_-2022-2:
+        display_name: Exploración - Ejemplos de Programas
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Ahora puedes utilizar lo que has aprendido para mejorar tu proyecto.
+          ¡Sigue añadiendo a tu programa o empieza algo nuevo!
+        display_name: Eventos - Juego Libre
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los eventos!"
+        display_name: 'Práctica de Eventos '
+      courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: El sprite sólo girará a la derecha.
+          feedback: No es correcto. El sprite también se moverá hacia el este.
+        - text: El sprite sólo se moverá hacia el este.
+          feedback: No es correcto. El sprite no ha dejado de girar, por lo que hará
+            ambas cosas simultáneamente.
+        - text: El sprite girará y se moverá al mismo tiempo.
+          correct: true
+          feedback: "¡Correcto! Ambos comportamientos se producirán simultáneamente."
+        - text: El sprite girará primero y se moverá después.
+          feedback: No es correcto. En Laboratorio de Sprite, los bloques conectados
+            se suceden inmediatamente uno detrás de otro, por lo que ambos comportamientos
+            se producirán simultáneamente.
+        questions:
+        - text: Lee el código y haz una predicción.
+      courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Aplicaciones de Laboratorio Sprite
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: '"¡Una pizza marchando!"'
+          feedback: No es correcto. Las etiquetas de las variables no coinciden.
+        - text: '"¡Una comida marchando!"'
+          feedback: No es correcto. La etiqueta de una variable nunca se imprime.
+        - text: '"¡Una comida marchando!"'
+          feedback: No es correcto. La etiqueta de una variable nunca se imprime.
+        - text: '"¡Una que viene enseguida!"'
+          correct: true
+          feedback: "¡Correcto! Las etiquetas de las variables no coinciden."
+        - text: No se imprimirá nada.
+          feedback: No se imprimirá nada, pero es incorrecto. El evento y el bloque
+            de impresión seguirán funcionando.
+        questions:
+        - text: Este código puede parecerte familiar, pero léelo con atención. ¿Qué
+            se imprimirá si el usuario escribe "pizza"?
+      courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - text: El artista dibujará un triángulo con lados de 50 pixeles.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El artista dibujará un polígono de 50 caras con lados de 3 píxeles.
+          feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
+            que estar en el bucle `repetir`.
+        - text: El artista dibujará tres lados abiertos con giros de 50 grados.
+          feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
+            que ser usada en el bloque `girar`.
+        - text: El ordenador pedirá al usuario un número.
+          feedback: La variable `longitud` se establece en 50 y se usa en el bloque
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
+        questions:
+        - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
+            hagas clic en "Ejecutar"?
+      courseF_multi_bee_for3_predict12022:
+        answers:
+        - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
+          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
+            correcta de néctar, pero solo llegará a 4 flores.
+        - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
+            de una.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
+          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
+            correcta de néctar, pero solo llegará a 4 flores.
+        - text: 'La abeja avanzará y recogerá un néctar de las flores número 1 y 4. '
+          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
+            correcta de néctar, pero solo llegará a 4 flores.
+        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        questions:
+        - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: "¡Es tu turno de crear lo que quieras! ¿Qué tipo de proyecto
+          vas a hacer?"
+        display_name: Sprites - Juego Libre
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los sprites y los comportamientos!"
+        display_name: Práctica de Sprites
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: Ambos aviones se moverán un espacio a lo largo de la cuadrícula y
+            luego se detendrán.
+          feedback: No es así. Estos sprites tienen "comportamientos" que siguen funcionando
+            hasta que se les dice que se detengan.
+        - text: Ambos aviones comenzarán a moverse y no se detendrán.
+          correct: true
+          feedback: "¡Correcto! Estos comportamientos le dicen a los aviones que empiecen
+            a moverse y sigan adelante."
+        - text: Un avión se moverá primero y el otro después.
+          feedback: No es correcto. Cada bloque de código en el Laboratorio de Sprite
+            se ejecuta instantáneamente después del siguiente.
+        - text: Los aviones se estrellarán.
+          feedback: Incorrecto. Los aviones no están colocados de forma que se toquen.
+        questions:
+        - text: Lee el código y haz una predicción.
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. Sigue practicando con el texto y las indicaciones."
+        display_name: Práctica de Texto y Avisos
+      courseF_variables2_predict2_multi2022_-2022-2:
+        answers:
+        - text: El conejo dirá "5".
+          correct: true
+          feedback: "¡Correcto! El número 5 se almacena en la variable y luego se
+            utiliza de nuevo cuando habla el sprite."
+        - text: El sprite del conejito dirá el número que se escriba.
+          feedback: No es correcto. No hay ningún indicador en este programa. El número
+            se establece directamente en el código.
+        - text: El conejo dirá "count".
+          feedback: No es correcto. `count` es una variable. Cuando este bloque se
+            ejecuta, obtiene cualquier número almacenado. El conejo dirá "5".
+        - text: No ocurrirá nada porque `count` no es un número.
+          feedback: No es correcto. El número 5 se almacena en la variable y se utiliza
+            cuando el sprite habla.
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: El programa imprimirá el número que se escriba.
+          feedback: No es correcto. El número se almacena en la variable y se utiliza
+            para crear sprites de zanahoria.
+        - text: El sprite del conejito dirá el número que se escriba.
+          feedback: No es correcto. El número se almacena en la variable y se utiliza
+            para crear sprites de zanahoria.
+        - text: El programa hará esa cantidad de nuevos sprites de zanahoria.
+          correct: true
+          feedback: "¡Es correcto! El número de sprites realizados es el número almacenado
+            en la variable."
+        - text: No ocurrirá nada porque `count` no es un número.
+          feedback: No es correcto. Se almacena un número en la variable y se utiliza
+            para crear sprites de zanahoria.
+        questions:
+        - text: 'Haz una predicción: ¿Qué ocurrirá después de teclear un número en
+            la pregunta?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: El programa imprimirá "¡Hola nombre!"
+          feedback: No es correcto. El bloque del nombre será reemplazado por lo que
+            usted escriba.
+        - text: El programa le dará la bienvenida con el nombre que introduzca.
+          correct: true
+          feedback: "¡Correcto! Lo que escribas se utilizará en lugar del bloque de
+            nombres."
+        - text: El sprite cambiará de tamaño.
+          feedback: Es incorrecto. El texto se imprime en la pantalla.
+        - text: El ordenador hará otra pregunta.
+          feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
+            programa.
+        questions:
+        - text: 'Este programa le permite responder a una pregunta escribiendo con
+            el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
+            una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Crearás una tarjeta de felicitación, un chatbot o una historia
+          de espacio en blanco. Si ya has terminado la "Parte 1" de tu proyecto, pasa
+          a la "Parte 2".
+        display_name: Elige un Proyecto
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Crearás una tarjeta de felicitación, un chatbot o una historia
+          en blanco. Antes de empezar, explora los proyectos de ejemplo que aparecen
+          a continuación para ver qué te interesa crear. Pulsa "Terminar" cuando estés
+          listo para empezar a planificar tu propio programa.
+        display_name: Exploración - Ejemplos de Programas
+      courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: descripción aquí
+        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo para seguir adelante?
+          \n\n\nEn el siguiente nivel, comenzarás a escribir el código de tu proyecto.
+          Esto funciona mejor si ya tienes un plan.\n\nTu plan completo debe incluir:\n\n<img
+          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* El tipo de proyecto
+          que estás construyendo. Por ejemplo, una tarjeta de felicitación, un chatbot
+          o una historia en blanco.\n* Una lista de preguntas que le harás al usuario.\n*
+          El otro texto que mostrarás en la pantalla.\n* Una descripción o dibujo
+          de los sprites que necesitarás (y sus comportamientos).\n\nSi no estás seguro
+          de estar preparado para seguir adelante, ¡consulta con tu profesor!\n"
+      coursee_prediction_artistfunction22022:
+        answers:
+        - text: El artista resolverá el puzle correctamente.
+          feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
+            línea de polígonos".
+        - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El artista dibujará solo una línea de cuadrados.
+          feedback: Incorrecto. El programa no llama a la función "dibujar línea de
+            polígonos".
+        - text: El artista dibujará cuatro cuadrados, uno encima de otro.
+          feedback: Incorrecto. El bucle gira 90 grados entre las activaciones de
+            la función "dibujar polígono".
+        questions:
+        - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
+      csf_be_a_super_digital_citizen2022:
+        content1: descripción aquí
+        markdown: |-
+          # Super Ciudadano Digital
+
+          ## ¿Cómo podemos ser "defensores" cuando vemos el ciberacoso?
+      csf_digital_trails2022:
+        markdown: |-
+          # Sigue el Rastro Digital
+
+          ## ¿Qué información es buena para obtener en tu huellas digitales?
+      csf_password_power-up2022:
+        content1: descripción aquí
+        markdown: |-
+          # Potencia tu contraseña
+
+          ## Consejos para recordar la contraseña
+
+          * Empieza con una **frase** que se pueda recordar.
+          * Sólo tus **padres** deben conocer tu contraseña.
+          * Nunca utilices **información de carácter privado** en tu contraseña.
+          * Crea contraseñas con al menos **ocho** caracteres.
+          * Utiliza letras, números y **símbolos** en tu contraseña.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness2022:
+        content1: descripción aquí
+        markdown: |-
+          # STOP a la maldad
+
+          ## ¿Qué debes hacer si alguien no se porta bien contigo en Internet?
+
+          * Aléjate.
+          * Habla con un adulto de confianza.
+          * Sitios seguros primero.
+          * Haz una pausa y piensa en Internet.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Mi Barrio en Línea
+
+          ## ¿Cómo navegas en la Red sin riesgo?
+      express_EOC2022:
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      express_EOC_examples2022:
+        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+          dedica un tiempo a mirar los proyectos de ejemplo.
+        display_name: Ejemplos de Proyecto
+      grade2_multi_collector_A_predict12022:
+        answers:
+        - text: Laurel recogerá 4 piezas del tesoro con este programa.
+          feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
+            y esto provoca un error.
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+            error.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: Laurel recogerá todo el tesoro.
+          feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
+            y esto provoca un error.
+        - text: Laurel conseguirá 1 pieza del tesoro usando este código.
+          feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
+            y esto provoca un error.
+        questions:
+        - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
+            ejecutes el programa?

@@ -110,6 +110,566 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "影片"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "方格紙編程"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "方格紙編程"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "方格紙編程"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "方格紙編程"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "方格紙編程",
+          "type": "測驗"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "方格紙編程"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "結對編程"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "接力編程"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "接力編程"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "接力編程"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "接力編程"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "接力編程"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "接力編程"
+        },
+        "unplugged_blocks_courses_c-f_/coursed/2022": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Spotify 播放清單（所有年齡段）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "feeling_faces/coursed/2022": {
+          "name": "各種感受的面孔"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "用撲克牌學習條件判斷（Conditionals）",
+          "type": "測驗"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "conditionals_with_cards_sample_program/coursed/2022": {
+          "name": "用撲克牌學習條件式（Conditional）計畫範本"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "項目指南"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "課程指引"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "實施指南"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "教師論壇"
+        },
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "虛擬課程修改"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "影片"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "探索應用程式"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "探索應用程式"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Sprite Lab 簡介",
+          "type": "影片"
+        },
+        "making_sprites/coursef/2022": {
+          "name": "製作精靈圖"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "blank_space_stories/coursef/2022": {
+          "name": "空白區故事"
+        },
+        "blank_space_stories_1/coursef/2022": {
+          "name": "空白區故事"
+        },
+        "running_simulations/coursef/2022": {
+          "name": "執行模擬"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "name": "AI（人工智慧）：社會影響",
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "影片"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "name": "AI（人工智慧）：機器學習",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "影片"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "name": "AI（人工智慧）：訓練資料與偏見",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "影片"
+        },
+        "internet/coursef/2022": {
+          "name": "網際網路 Internet",
+          "type": "測驗"
+        },
+        "internet_1/coursef/2022": {
+          "name": "網際網路 Internet"
+        },
+        "ip_address_cards_and_delivery_type_cards/coursef/2022": {
+          "name": "IP 位址卡與傳遞類型卡"
+        },
+        "the_internet/coursef/2022": {
+          "name": "網際網路"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "name": "電腦科學基礎期末專案",
+          "type": "標題 "
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "課程指引"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "實施指南"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "教師論壇"
+        },
+        "virtual_lesson_modifications/coursef/2022": {
+          "name": "虛擬課程修改"
+        },
+        "private_and_personal_information_exit_ticket/coursee/2022": {
+          "type": "學生講義"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "turns_angles/coursee/2022": {
+          "name": "轉向與角度",
+          "type": "學生講義"
+        },
+        "turns_angles_1/coursee/2022": {
+          "name": "轉向與角度",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "functions_unplugged_songwriting/coursee/2022": {
+          "name": "函式（不插電活動）：作曲"
+        },
+        "functions_unplugged_songwriting_1/coursee/2022": {
+          "name": "函式（不插電活動）：作曲"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "name": "函式（不插電活動）：作曲",
+          "type": "測驗"
+        },
+        "functions_unplugged_songwriting_3/coursee/2022": {
+          "name": "函式（不插電活動）：作曲"
+        },
+        "songwriting_with_functions/coursee/2022": {
+          "name": "以函式作曲"
+        },
+        "unplugged_blocks_courses_c-f_/coursee/2022": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "影片"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "name": "電腦科學基礎期末專案",
+          "type": "標題 "
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "課程指引"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "實施指南"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "教師論壇"
+        },
+        "virtual_lesson_modifications/coursee/2022": {
+          "name": "虛擬課程修改"
+        },
+        "digital_trails_animal_tracks/courseb/2022": {
+          "type": "學生講義"
+        },
+        "digital_trails_digital_trail_squares/courseb/2022": {
+          "type": "學生講義"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "移動它，移動它"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "移動它，移動它"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "移動它，移動它"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "移動它，移動它"
+        },
+        "feeling_faces/courseb/2022": {
+          "name": "各種感受的面孔"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "結對編程"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
+          "name": "不插電活動 Blockly 積木（K-1 年級）"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "影片"
+        },
+        "compass_rose/courseb/2022": {
+          "name": "羅盤玫瑰"
+        },
+        "happy_map_game_pieces/courseb/2022": {
+          "name": "「快樂地圖」遊戲物件"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie 和 Big Project"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "沒被發現的程式的錯誤（Bug）",
+          "type": "影片"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "學習迴圈"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "學習迴圈"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "學習迴圈",
+          "type": "測驗"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "學習迴圈"
+        },
+        "cs_fundamentals_main_activity_tips/courseb/2022": {
+          "name": "電腦科學基礎主要活動秘訣"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "大事件"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "大事件",
+          "type": "測驗"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "大事件"
+        },
+        "the_big_event_courses_a_b_/courseb/2022": {
+          "name": "大事件（課程 A、B）"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "課程指引"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "實施指南"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "教師論壇"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "name": "虛擬課程修改"
+        },
+        "unplugged_maze_blocks/express/2022": {
+          "name": "不插電活動的迷宮積木"
+        },
+        "pair_programming/express/2022": {
+          "name": "結對編程",
+          "type": "影片"
+        },
+        "artist_introduction/express/2022": {
+          "name": "藝術家簡介",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "影片"
+        },
+        "turns_angles/express/2022": {
+          "name": "轉向與角度",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "影片"
+        },
+        "turns_angles_1/express/2022": {
+          "name": "轉向與角度"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "making_sprites/express/2022": {
+          "name": "製作精靈圖"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "運行中的角色"
+        },
+        "pause_and_think_online/express/2022": {
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Spotify 播放清單（所有年齡段）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "影片"
+        },
+        "unplugged_blocks_courses_c-f__1/express/2022": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "text_and_prompts/express/2022": {
+          "name": "文字與提示"
+        },
+        "variables/express/2022": {
+          "name": "變數"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "name": "電腦科學基礎期末專案",
+          "type": "標題 "
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "項目指南"
+        },
+        "teacher_forum/express/2022": {
+          "name": "教師論壇"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "影片"
+        },
+        "feeling_faces/pre-express/2022": {
+          "name": "各種感受的面孔"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "結對編程"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "影片"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "教師論壇"
+        },
+        "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
+          "name": "我的網路環境安全:學習頁面"
+        },
+        "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
+          "name": "我的網路環境安全:我的網路環境"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
+          "name": "我的網路環境安全:暫停&想一想",
+          "type": "學生講義"
+        },
+        "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
+          "name": "我的網路環境安全:安全:它的規則!"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "影片"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "結對編程"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "影片"
+        },
+        "happy_map_cards/coursea/2022": {
+          "name": "「快樂地圖」卡片"
+        },
+        "happy_map_cards_1/coursea/2022": {
+          "name": "「快樂地圖」卡片"
+        },
+        "happy_map_game_pieces/coursea/2022": {
+          "name": "「快樂地圖」遊戲物件"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "快樂地圖"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
+          "name": "不插電活動 Blockly 積木（K-1 年級）"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "影片"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "影片"
+        },
+        "happy_map_cards_xl/coursea/2022": {
+          "name": "加大版「快樂地圖」卡片"
+        },
+        "happy_map_game_pieces_bonus_pack/coursea/2022": {
+          "name": "「快樂地圖」遊戲物件獎勵包"
+        },
+        "feeling_faces/coursea/2022": {
+          "name": "各種感受的面孔"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "影片"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "大事件"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "大事件",
+          "type": "測驗"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "大事件"
+        },
+        "the_big_event_courses_a_b_/coursea/2022": {
+          "name": "大事件（課程 A、B）"
+        },
+        "cs_fundamentals_main_activity_tips/coursea/2022": {
+          "name": "電腦科學基礎主要活動秘訣"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "課程指引"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "實施指南"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "教師論壇"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "name": "虛擬課程修改"
+        },
+        "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
+          "type": "學生講義"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "我的機器人朋友"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "我的機器人朋友"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "我的機器人朋友"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "我的機器人朋友"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "我的機器人朋友"
+        },
+        "unplugged_maze_blocks/coursec/2022": {
+          "name": "不插電活動的迷宮積木"
+        },
+        "cs_fundamentals_main_activity_tips/coursec/2022": {
+          "name": "電腦科學基礎主要活動秘訣"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "結對編程",
+          "type": "影片"
+        },
+        "unplugged_blocks_courses_c-f_/coursec/2022": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "artist_introduction/coursec/2022": {
+          "name": "藝術家簡介",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/coursec/2022": {
+          "name": "轉向與角度",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "turns_angles_1/coursec/2022": {
+          "name": "轉向與角度",
+          "type": "學生講義"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "大事件"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "大事件",
+          "type": "測驗"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "大事件"
+        },
+        "the_big_event_course_c_/coursec/2022": {
+          "name": "大事件（課程 C）"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "二進制手環"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "二進制手環"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "二進制手環"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "二進制手環",
+          "type": "測驗"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "二進制手環"
+        },
+        "bits_versus_bytes/coursec/2022": {
+          "name": "位元與位元組"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "課程指引"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "實施指南"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "教師論壇"
+        },
+        "virtual_lesson_modifications/coursec/2022": {
+          "name": "虛擬課程修改"
+        },
         "representation_matters/csd/2022": {
           "name": "表示事項"
         },

@@ -856,29 +856,30 @@ fr:
           tourner à gauche, ce qu’il fera cinq fois. Amuse-toi bien!
     C2_artist_intro:
       1:
-        text: Tu ne serais même pas qualifié pour la course si tu n'avais pas les
-          gens compétents en informatique - à cause de la quantité de données recueillies
-          par les voitures et de la nécessité d'avoir des gens capable d'écrire des
-          programmes afin de savoir comment continuer à être performant.
+        text: On ne serait même pas qualifié pour la course si on n'avait pas des
+          gens compétents en informatique, à cause de la quantité de données recueillies
+          par les voitures et du besoin d'avoir des gens capables d'écrire des programmes
+          qui nous permettent de voir comment être de plus en plus performant.
       2:
-        text: Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner
-          différentes formes. Partout où va ton artiste, il dessinera une ligne derrière
-          lui.
+        text: Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour
+          dessiner différentes formes. Partout où va ton artiste, il dessinera une
+          ligne derrière lui.
       3:
-        text: Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici,
-          le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur
-          « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant
-          de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de
-          tous petits carrés sur ton écran.
+        text: Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici,
+          le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter
+          », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit
+          d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés
+          sur ton écran.
       4:
-        text: L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de
-          90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un
-          certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner
-          l’artiste comme tu veux. C’est un virage à 90 degrés.
+        text: L'autre bloc que nous avons dans ce casse-tête fait tourner à droite
+          de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre
+          artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour
+          voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de
+          90 degrés.
       5:
-        text: Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
-          en cliquant sur les flèches qui se trouvent à côté des chiffres pour les
-          pixels et les degrés. Amuse-toi à dessiner avec ton artiste !
+        text: Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
+          en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et
+          de degrés. Amuse-toi bien en dessinant avec ton artiste !
     C2_bee_conditionals:
       1:
         text: Il s'agit d’un bloc conditionnel. Il dit que SI il y a du nectar ou
@@ -1208,29 +1209,30 @@ fr:
           Nous avons ajouté cette notion dans notre langage de programmation.
     C3_artist_intro:
       1:
-        text: Tu ne serais même pas qualifié pour la course si tu n'avais pas les
-          gens compétents en informatique - à cause de la quantité de données recueillies
-          par les voitures et de la nécessité d'avoir des gens capable d'écrire des
-          programmes afin de savoir comment continuer à être performant.
+        text: On ne serait même pas qualifié pour la course si on n'avait pas des
+          gens compétents en informatique, à cause de la quantité de données recueillies
+          par les voitures et du besoin d'avoir des gens capables d'écrire des programmes
+          qui nous permettent de voir comment être de plus en plus performant.
       2:
-        text: Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner
-          différentes formes. Partout où va ton artiste, il dessinera une ligne derrière
-          lui.
+        text: Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour
+          dessiner différentes formes. Partout où va ton artiste, il dessinera une
+          ligne derrière lui.
       3:
-        text: Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici,
-          le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur
-          « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant
-          de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de
-          tous petits carrés sur ton écran.
+        text: Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici,
+          le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter
+          », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit
+          d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés
+          sur ton écran.
       4:
-        text: L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de
-          90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un
-          certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner
-          l’artiste comme tu veux. C’est un virage à 90 degrés.
+        text: L'autre bloc que nous avons dans ce casse-tête fait tourner à droite
+          de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre
+          artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour
+          voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de
+          90 degrés.
       5:
-        text: Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
-          en cliquant sur les flèches qui se trouvent à côté des chiffres pour les
-          pixels et les degrés. Amuse-toi à dessiner avec ton artiste !
+        text: Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
+          en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et
+          de degrés. Amuse-toi bien en dessinant avec ton artiste !
     C3_artist_nested_loops:
       1:
         text: Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle

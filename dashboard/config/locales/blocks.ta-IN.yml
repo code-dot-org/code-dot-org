@@ -2,6 +2,8 @@
 ta:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} விருப்பங்களுடன் {VAR} மாறிக்கான பயனர் {QUESTION} ஐத் தூண்டவும்"
       BadGuys_makeNewBadGuysSprite:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       BadGuys_setSizeAll_dropdown:

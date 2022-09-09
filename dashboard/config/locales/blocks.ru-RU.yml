@@ -2,6 +2,9 @@
 ru:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора
+          {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       BadGuys_setSizeAll_dropdown:

@@ -2,6 +2,8 @@
 is:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: biðja notanda {QUESTION} um breytu {VAR} með valkosti {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       BadGuys_setSizeAll_dropdown:

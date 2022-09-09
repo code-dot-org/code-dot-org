@@ -2,6 +2,8 @@
 tr:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{VAR} değişkeni için {A}{B}{C} seçenekleriyle {QUESTION} sorusunu kullanıcıya sor"
       BadGuys_makeNewBadGuysSprite:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       BadGuys_setSizeAll_dropdown:
