@@ -35,5 +35,6 @@ class PrintCertificatesControllerTest < ActionController::TestCase
     assert_response :success
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 3, response_data['imageUrls'].length
+    assert_includes response_data['imageUrls'].first, '/certificate_images/', 'certificate images must be customized'
   end
 end
