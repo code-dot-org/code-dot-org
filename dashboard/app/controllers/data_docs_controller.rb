@@ -1,4 +1,5 @@
 class DataDocsController < ApplicationController
+  before_action :require_levelbuilder_mode_or_test_env
   load_and_authorize_resource
 
   # GET /data_docs/new
