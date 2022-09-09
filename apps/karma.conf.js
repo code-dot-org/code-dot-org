@@ -24,14 +24,20 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'webpack'],
+    frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
     // handled in grunt-karma config
     files: [],
 
-    // proxied paths are handled in grunt-karma config
-    proxies: {},
+    proxies: {
+      '/blockly/media/': 'http://localhost:' + PORT + '/base/static/',
+      '/lib/blockly/media/': 'http://localhost:' + PORT + '/base/static/',
+      '/base/static/1x1.gif':
+        'http://localhost:' + PORT + '/base/lib/blockly/media/1x1.gif',
+      '/v3/assets/fake_id':
+        'http://localhost:' + PORT + '/base/test/integration/assets/fake_id'
+    },
 
     // list of files to exclude
     exclude: [],
@@ -47,7 +53,12 @@ module.exports = function(config) {
     },
 
     webpack: {...webpackConfig, optimization: undefined, mode: 'development'},
-
+    webpackMiddleware: {
+      noInfo: true,
+      stats: {
+        chunks: false
+      }
+    },
     client: {
       // log console output in our test console
       captureConsole: true,
