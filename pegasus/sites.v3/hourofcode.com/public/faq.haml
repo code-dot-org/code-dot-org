@@ -1,0 +1,11 @@
+---
+layout: wide
+---
+
+:ruby
+  @header["title"] = hoc_s(:hoc_faq_title)
+
+%a#faqs{name:'faq'}
+.row
+  .col-xs-12
+    =view :faq
