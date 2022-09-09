@@ -2,6 +2,8 @@
 zh-CN:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: 提示用户{QUESTION}变量{VAR}有选择{A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: 创建一个新的 {ANIMATION_NAME} 精灵图，它的位置在 {LOCATION}
       BadGuys_setSizeAll_dropdown:

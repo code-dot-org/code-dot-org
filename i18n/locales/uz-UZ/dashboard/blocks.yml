@@ -2,6 +2,8 @@
 uz:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} tanlovli {VAR} o'zgaruvchisi uchun foydalanuvchidan {QUESTION} so'rovi"
       BadGuys_makeNewBadGuysSprite:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       BadGuys_setSizeAll_dropdown:

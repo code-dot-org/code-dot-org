@@ -81,6 +81,7 @@ bg:
       speed: скорост
       startX: стартX
       startY: стартY
+      type: тип
       variable: променлива
       width: широчина
       wizard: магьосник

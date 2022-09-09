@@ -236,11 +236,23 @@
         "csta/1B-CS-02": {
           "description": "Modellieren, wie Computerhardware und -software als System zusammenarbeiten, um Aufgaben zu bewältigen."
         },
+        "csta/1B-NI-05": {
+          "description": "Erörtern Sie reale Probleme der Cybersicherheit und wie persönliche Daten geschützt werden können."
+        },
         "csta/1B-AP-11": {
           "description": "Dekomposition (Zerlegung) von Problemen in kleinere, überschaubare Teilprobleme, um den Programmentwicklungsprozess zu erleichtern."
         },
-        "csta/1B-NI-05": {
-          "description": "Erörtern Sie reale Probleme der Cybersicherheit und wie persönliche Daten geschützt werden können."
+        "csta/1B-AP-09": {
+          "description": "Programme erstellen, die Variablen zum Speichern und Ändern von Daten verwenden."
+        },
+        "csta/1A-AP-10": {
+          "description": "Programme mit Sequenzen und einfachen Schleifen entwickeln, um Ideen auszudrücken oder ein Problem zu lösen."
+        },
+        "csta/1B-AP-14": {
+          "description": "Beachten Sie die Rechte an geistigem Eigentum und geben Sie bei der Erstellung oder beim Remixen von Programmen die entsprechenden Urheberrechte an."
+        },
+        "csta/1B-AP-17": {
+          "description": "Beschreiben Sie die während der Programmentwicklung getroffenen Entscheidungen anhand von Codekommentaren, Präsentationen und Demonstrationen."
         },
         "csta/1B-IC-21": {
           "description": "Verwenden Sie gemeinfreie oder Creative-Commons-Medien und unterlassen Sie das Kopieren oder Verwenden von Material, das von anderen ohne Genehmigung erstellt wurde."
@@ -248,23 +260,11 @@
         "csta/1B-IC-18": {
           "description": "Bespreche die Computertechnologien welche die Welt verändert haben, und mache deutlich wie diese Technologien die Kultur beeinflussen und, umgekehrt, wie kulturelle Praktiken die Technologie beeinflusst haben."
         },
-        "csta/1B-AP-14": {
-          "description": "Beachten Sie die Rechte an geistigem Eigentum und geben Sie bei der Erstellung oder beim Remixen von Programmen die entsprechenden Urheberrechte an."
-        },
-        "csta/1A-CS-03": {
-          "description": "Beschreibung grundlegender Hardware- und Softwareprobleme unter Verwendung präziser Terminologie."
-        },
-        "csta/1A-AP-10": {
-          "description": "Programme mit Sequenzen und einfachen Schleifen entwickeln, um Ideen auszudrücken oder ein Problem zu lösen."
-        },
-        "csta/1B-AP-09": {
-          "description": "Programme erstellen, die Variablen zum Speichern und Ändern von Daten verwenden."
-        },
         "csta/1B-DA-07": {
           "description": "Zeigen Sie anhand der Daten Ursache-Wirkungs-Beziehungen oder sagen Sie Ergebnisse vorher oder kommunizieren Sie eine Idee."
         },
-        "csta/1B-AP-17": {
-          "description": "Beschreiben Sie die während der Programmentwicklung getroffenen Entscheidungen anhand von Codekommentaren, Präsentationen und Demonstrationen."
+        "csta/1A-CS-03": {
+          "description": "Beschreibung grundlegender Hardware- und Softwareprobleme unter Verwendung präziser Terminologie."
         }
       }
     }

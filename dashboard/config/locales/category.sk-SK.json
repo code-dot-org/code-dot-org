@@ -62,6 +62,9 @@
         "csta/IC": {
           "description": "Vplyv Informatiky"
         },
+        "csta/NI": {
+          "description": "Siete a internet"
+        },
         "csp2021/DAT-1.D": {
           "description": "Porovnanie algoritmov kompresie údajov s cieľom určiť, ktorý je najlepší v konkrétnom kontexte."
         },

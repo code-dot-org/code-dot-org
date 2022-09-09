@@ -2,6 +2,24 @@
   "se-FI": {
     "data": {
       "vocabularies": {
+        "input/coursef/2022": {
+          "word": "Inputa"
+        },
+        "internet/coursef/2022": {
+          "word": "Interneahtta"
+        },
+        "copyright/coursee/2022": {
+          "word": "Dahkkivuoigatvuohta"
+        },
+        "drop/courseb/2022": {
+          "word": "Gahčá"
+        },
+        "drop/pre-express/2022": {
+          "word": "Gahčá"
+        },
+        "drop/coursea/2022": {
+          "word": "Gahčá"
+        },
         "input/csd/2022": {
           "word": "Inputa"
         },

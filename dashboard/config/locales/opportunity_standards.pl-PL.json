@@ -2,6 +2,9 @@
   "pl-PL": {
     "data": {
       "opportunity_standards": {
+        "ccmath/4.MD.5.b": {
+          "description": "Kąt, który obraca się n razy o kąt jednostopniowy, ma n stopni."
+        },
         "ngss/K-2-ETS1-1": {
           "description": "Zadawaj pytania, dokonuj obserwacji oraz zbieraj informacje na temat sytuacji, którą ludzie chcą zmienić, aby zdefiniować prosty problem, który można rozwiązać przez opracowanie nowego albo udoskonalonego obiektu lub narzędzia."
         },
@@ -10,9 +13,6 @@
         },
         "ccmath/2.MD.10": {
           "description": "Narysuj wykres graficzny i wykres słupkowy (z pojedynczą skalą), aby przedstawić zestaw danych z maksymalnie czterema kategoriami. Rozwiązuj proste składanie, rozkładanie i porównywanie problemów, korzystając z informacji przedstawionych na wykresie słupkowym."
-        },
-        "ccmath/4.MD.5.b": {
-          "description": "Kąt, który obraca się n razy o kąt jednostopniowy, ma n stopni."
         }
       }
     }

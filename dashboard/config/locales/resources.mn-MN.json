@@ -29,6 +29,345 @@
         "ai-training/oceans/unversioned": {
           "type": "Видео"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "График цаасны программчлал",
+          "type": "Үнэлгээ"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Хос програмчлал"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Видео"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд",
+          "type": "Үнэлгээ"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Багш нарын форум"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Видео"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "Апп судлах"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Апп судлах"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Шидтэний лабораторийг танилцуулах",
+          "type": "Видео"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "running_simulations/coursef/2022": {
+          "name": "Симуляцийг ажиллуулах"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Видео"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Видео"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Видео"
+        },
+        "internet/coursef/2022": {
+          "name": "Интернэт",
+          "type": "Үнэлгээ"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Интернэт"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Интернэт"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Багш нарын форум"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Видео"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Үнэлгээ"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Видео"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Багш нарын форум"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Видео"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Стиви ба том төсөл"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Үл анзаарагдсан алдаанууд",
+          "type": "Видео"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Гогцоорох"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Гогцоорох"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Гогцоорох",
+          "type": "Үнэлгээ"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Гогцоорох"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Видео"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Том үйл явдал"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Багш нарын форум"
+        },
+        "pair_programming/express/2022": {
+          "name": "Хос програмчлал",
+          "type": "Видео"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Видео"
+        },
+        "turns_angles/express/2022": {
+          "type": "Видео"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Шидтэн ажиллаж байна"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Видео"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Видео"
+        },
+        "variables/express/2022": {
+          "name": "Хувьсагчууд"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Багш нарын форум"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Видео"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Видео"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Багш нарын форум"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Видео"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Видео"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Аз жаргалтай газрын зургууд"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Видео"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Видео"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Видео"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Том үйл явдал"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Багш нарын форум"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Хос програмчлал",
+          "type": "Видео"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Том үйл явдал"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Видео"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Хоёртын бугуйвч",
+          "type": "Үнэлгээ"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Багш нарын форум"
+        },
         "representation_matters/csd/2022": {
           "name": "Төлөөллийн асуудал"
         },

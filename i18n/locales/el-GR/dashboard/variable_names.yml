@@ -19,6 +19,7 @@ el:
       length: μήκος
       name: όνομα
       nectar: νέκταρ
+      object: αντικείμενο
       points: πόντοι
       random: τυχαίο
       repeat: επανάλαβε
@@ -27,6 +28,7 @@ el:
       sides: πλευρές
       size: μέγεθος
       speed: ταχύτητα
+      type: τύπος
       variable: μεταβλητή
       width: πλάτος
       wizard: μάγος

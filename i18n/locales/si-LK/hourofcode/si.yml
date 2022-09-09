@@ -11,6 +11,12 @@ si:
   campaign_date_full: දෙසැම්බර් 5-11
   campaign_date_year: '2016'
   campaign_date_full_year: දෙසැම්බර් 6-12, 2021
+  nonus_campaign_date_start_short: ඔක්තෝම්බර් 1
+  nonus_campaign_date_start_long: ඔක්තෝම්බර් 1
+  nonus_campaign_date_short: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
+  nonus_campaign_date_full: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
+  nonus_campaign_date_year: '2016'
+  nonus_campaign_date_full_year: 2021 ඔක්තෝම්බර් 1 - 2021 දෙසැම්බර් 12
   latam_campaign_date_start_short: ඔක්තෝම්බර් 1
   latam_campaign_date_start_long: ඔක්තෝම්බර් 1
   latam_campaign_date_short: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
@@ -23,8 +29,8 @@ si:
   europe_campaign_date_full: ඔක්තෝම්බර් 9 - 24
   europe_campaign_date_year: '2016'
   europe_campaign_date_full_year: 2021 ඔක්තෝම්බර් 9 - 24
-  africa_campaign_date_start_short: දෙසැ. 5
-  africa_campaign_date_start_long: දෙසැම්බර් 5
+  africa_campaign_date_start_short: ඔක්තෝම්බර් 1
+  africa_campaign_date_start_long: ඔක්තෝම්බර් 1
   africa_campaign_date_short: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_full: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_year: '2016'
@@ -529,8 +535,6 @@ si:
   signup_multiple_event_warning: ඔබ විසින් වැඩසටහන් කීපයක් සංවිධානය කරන්නේ නම් සෑම
     වැඩසටහණක් සඳහාම වෙනස් නාමයක් භාවිත කරන්න. අප විසින් සලකා බලන්නේ සෑම වැඩසටහණකටම
     අදාල නාමය හා එහි ඊ-මේල් ලිපිනය කන යුගලයයි.
-  signup_registration_deadline: Hour of Code ලියාපදිංචිය දෙසැම්බර් දොලොස් වන දායින්
-    අවසන් වේ.
   signup_name_placeholder: ඔබේ නම
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: උදාහරණයක් ලෙස, මධ්‍ය මහා විද්‍යාලය පොළොන්නරුව
