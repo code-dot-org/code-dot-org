@@ -2281,6 +2281,22 @@ he:
         self-paced-pl-csd5-2022: {}
         vpl-csa-2022: {}
         csa-labs-2022: {}
+        csa-draft-pl: {}
         vpl-csd2-ayw-pilot-2022: {}
         soccer:
           name: כדורגל
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa2-validation-pilot-2022: {}
+        csa3-validation-pilot-2022: {}
+        csa4-validation-pilot-2022: {}
+        csa5-validation-pilot-2022: {}
+        csa6-validation-pilot-2022: {}
+        csa7-validation-pilot-2022: {}
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa9-validation-pilot-2022: {}

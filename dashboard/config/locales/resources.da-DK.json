@@ -29,6 +29,290 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Par programmering"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Teacher forum"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internettet"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Teacher forum"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Teacher forum"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Flyt det, flyt det"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Flyt det, flyt det"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Flyt det, flyt det"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Flyt det, Flyt det"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Par programmering"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Den store begivenhed"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Teacher forum"
+        },
+        "pair_programming/express/2022": {
+          "name": "Par programmering",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Variabler"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Teacher forum"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Par programmering"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Teacher forum"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Par programmering"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Glade Kort"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Den store begivenhed"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Teacher forum"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Par programmering",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Den store begivenhed"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Teacher forum"
+        },
         "binary_and_data/csd/2022": {
           "type": "Video"
         },

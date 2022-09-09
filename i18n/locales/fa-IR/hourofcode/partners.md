@@ -2,13 +2,11 @@
 title: شرکا
 ---
 
-ساعت برنامه نویسی توسط مجموعه ساعت برنامه نویسی، مشاوران هفته آموزشی علوم رایانه و کمیته های بررسی راهبری می شود.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. این کمیته استراتژی های کمپین ساعت برنامه نویسی را تبیین می کند.
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. این مربیان فعالیت های دانش آموز محور و برنامه های آموزشی معلم محور را که توسط صدها نفر از شرکای همکار ارائه شده اند بررسی می کنند و ارزش علمی فعالیت ها، توانایی تعامل با دانش آموزان و درخواست های تجدید نظر گروه های مختلف دانش آموزان را ارزیابی می کنند.
-
-کار و تعهد هر دو کمیته به موفقیت ساعت برنامه نویسی و چشم انداز آن در ارائه مقدمه ای بر دانش رایانه برای هر دانش آموز کمک کرده است.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Major Partners and Corporate Supporters
 

@@ -2,6 +2,8 @@
 zh-TW:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: 提示用戶{QUESTION}變量{VAR}，選項{A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       BadGuys_setSizeAll_dropdown:

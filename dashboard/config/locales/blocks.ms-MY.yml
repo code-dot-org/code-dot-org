@@ -2,6 +2,8 @@
 ms:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: pengguna prom {QUESTION} untuk pembolehubah {VAR} dengan pilihan {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       BadGuys_setSizeAll_dropdown:

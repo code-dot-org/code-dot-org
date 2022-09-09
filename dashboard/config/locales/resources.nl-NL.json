@@ -34,6 +34,350 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier",
+          "type": "Beoordeling"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Statements met Kaarten",
+          "type": "Beoordeling"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Implementatiehandleiding"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "Wijzigingen virtuele les"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet",
+          "type": "Beoordeling"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Het Internet"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Implementatiehandleiding"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursef/2022": {
+          "name": "Wijzigingen virtuele les"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Beoordeling"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Implementatiehandleiding"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursee/2022": {
+          "name": "Wijzigingen virtuele les"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "verplaats het, verplaats het"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "verplaats het, verplaats het"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "verplaats het, verplaats het"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Beweeg, Beweeg"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie en het Grote Project"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Onbekende bugs",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Rondjes lopen"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Rondjes lopen"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Rondjes lopen",
+          "type": "Beoordeling"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Rondjes lopen"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "De grote gebeurtenis",
+          "type": "Beoordeling"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Implementatiehandleiding"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "name": "Wijzigingen virtuele les"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programmeren in Tweetallen",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Variabelen"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Lerarenforum"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Lerarenforum"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Vrolijke Routes"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "De grote gebeurtenis",
+          "type": "Beoordeling"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Implementatiehandleiding"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "name": "Wijzigingen virtuele les"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programmeren in Tweetallen",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "De grote gebeurtenis",
+          "type": "Beoordeling"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binaire armbanden",
+          "type": "Beoordeling"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Implementatiehandleiding"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursec/2022": {
+          "name": "Wijzigingen virtuele les"
+        },
         "representing_information/csd/2022": {
           "name": "Het voorstellen van informatie"
         },
