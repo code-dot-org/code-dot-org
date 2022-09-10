@@ -1,0 +1,76 @@
+{
+  "groups": [
+    {
+      "id": "country",
+      "name": "Country",
+      "imageSrc": "samplepack1.png",
+      "themeImageSrc": "highlight1.png",
+      "path": "country",
+      "sounds": [
+        {
+          "id": "bass",
+          "src": "bass",
+          "length": 2
+        },
+        {
+          "id": "drum",
+          "src": "drum",
+          "length": 2
+        },
+        {
+          "id": "lead",
+          "src": "lead",
+          "length": 2
+        }
+      ]
+    },
+    {
+      "id": "dance",
+      "name": "Dance",
+      "imageSrc": "samplepack2.png",
+      "themeImageSrc": "highlight2.png",
+      "path": "dance",
+      "sounds": [
+        {
+          "id": "bass",
+          "src": "bass",
+          "length": 2
+        },
+        {
+          "id": "drum",
+          "src": "drum",
+          "length": 2
+        },
+        {
+          "id": "lead",
+          "src": "lead",
+          "length": 2
+        }
+      ]
+    },
+    {
+      "id": "hip",
+      "name": "Hip Hop",
+      "imageSrc": "samplepack3.png",
+      "themeImageSrc": "highlight3.png",
+      "path": "hip",
+      "sounds": [
+        {
+          "id": "bass",
+          "src": "bass",
+          "length": 2
+        },
+        {
+          "id": "drum",
+          "src": "drum",
+          "length": 2
+        },
+        {
+          "id": "lead",
+          "src": "lead",
+          "length": 2
+        }
+      ]
+    }
+  ]
+}

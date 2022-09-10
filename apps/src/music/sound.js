@@ -21,23 +21,26 @@ var audioIdUpto = 0;
 
 var audioSystem = null;
 
-export function InitSound() {
+export function InitSound(desiredSounds) {
   // regular web version.
   baseSoundUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
   audioSystem = new WebAudio();
 
-  LoadSounds();
+  LoadSounds(desiredSounds);
 }
 
 export function GetCurrentAudioTime() {
   return audioSystem?.getCurrentTime();
 }
 
-function LoadSounds() {
+function LoadSounds(desiredSounds) {
   //console.log("Loading sounds from " + baseSoundUrl);
+
+  soundList = desiredSounds;
 
   for (var i = 0; i < soundList.length; i++) {
     audioSystem.LoadSound(
+      //soundList[i],
       baseSoundUrl + soundList[i] + '.mp3',
       function(id, buffer) {
         audioSoundBuffers[id] = buffer;
