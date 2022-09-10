@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-//import GoogleBlockly from 'blockly/core';
 import FontAwesome from '../templates/FontAwesome';
 import {InitSound, GetCurrentAudioTime, PlaySound, StopSound} from './sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
+import queryString from 'query-string';
+
+const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
 const songData = {
   events: [
@@ -33,54 +35,6 @@ const songData = {
 const barWidth = 60;
 
 const secondsPerMeasure = 4;
-
-const samplePacks = [
-  {
-    id: 'hip',
-    name: 'Hip Hop',
-    imageSrc: require('@cdo/static/music/samplepack1.png'),
-    highlightImageSrc: require('@cdo/static/music/highlight1.png'),
-    samples: []
-  },
-  {
-    id: 'dance',
-    name: 'Dance',
-    imageSrc: require('@cdo/static/music/samplepack2.png'),
-    highlightImageSrc: require('@cdo/static/music/highlight2.png'),
-    samples: []
-  },
-  {
-    id: 'country',
-    name: 'Country',
-    imageSrc: require('@cdo/static/music/samplepack3.png'),
-    highlightImageSrc: require('@cdo/static/music/highlight3.png'),
-    samples: []
-  },
-  {
-    id: 'rock',
-    name: 'Rock',
-    imageSrc: require('@cdo/static/music/samplepack4.png'),
-    samples: []
-  },
-  {
-    id: 'classical',
-    name: 'Classical',
-    imageSrc: require('@cdo/static/music/samplepack5.png'),
-    samples: []
-  },
-  {
-    id: 'rnb',
-    name: 'R&B',
-    imageSrc: require('@cdo/static/music/samplepack6.png'),
-    samples: []
-  },
-  {
-    id: 'folk',
-    name: 'Folk',
-    imageSrc: require('@cdo/static/music/samplepack7.png'),
-    samples: []
-  }
-];
 
 var hooks = {};
 
@@ -124,7 +78,7 @@ class MusicView extends React.Component {
       // ideally our music player will use the above data structure as the source
       // of truth, but since the current implementation has already told WebAudio
       // about all known sounds to play, let's tee up this one here.
-      const fullSoundId = 'stem-' + this.state.samplePanel + '-' + id;
+      const fullSoundId = this.getCurrentSamplePack().path + '/' + id;
       PlaySound(fullSoundId, '', nextMeasureStartTime);
     }
   };
@@ -158,7 +112,8 @@ class MusicView extends React.Component {
       windowWidth,
       windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
-      appHeight: this.codeAppRef.offsetHeight
+      appHeight: this.codeAppRef.offsetHeight,
+      library: null
     };
   }
 
@@ -191,9 +146,19 @@ class MusicView extends React.Component {
 
     this.initBlockly();
 
-    InitSound();
-
     setInterval(this.updateTimer, 1000 / 30);
+
+    this.loadLibrary().then(library => {
+      this.setState({library});
+      const soundList = library.groups
+        .map(group =>
+          group.sounds.map(sound => {
+            return group.path + '/' + sound.src;
+          })
+        )
+        .flat();
+      InitSound(soundList);
+    });
   }
 
   componentDidUpdate() {
@@ -206,7 +171,19 @@ class MusicView extends React.Component {
     }
   };
 
+  loadLibrary = async () => {
+    let parameters = queryString.parse(location.search);
+    const libraryFilename = parameters['library']
+      ? `music-library-${parameters['library']}.json`
+      : 'music-library.json';
+    const response = await fetch(baseUrl + libraryFilename);
+    const library = await response.json();
+    return library;
+  };
+
   initBlockly = () => {
+    var self = this;
+
     var toolbox = {
       kind: 'flyoutToolbox',
       contents: [
@@ -251,10 +228,15 @@ class MusicView extends React.Component {
               alt: '*',
               flipRtl: false
             },
+            /*
             {
               type: 'field_dropdown',
               name: 'sound',
               options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
+            },*/
+            {
+              type: 'input_dummy',
+              name: 'sound'
             },
             {
               type: 'field_number',
@@ -268,10 +250,28 @@ class MusicView extends React.Component {
           nextStatement: null,
           colour: 230,
           tooltip: 'play sound',
-          helpUrl: ''
+          helpUrl: '',
+          extensions: ['dynamic_menu_extension']
         });
       }
     };
+
+    Blockly.blockly_.Extensions.register('dynamic_menu_extension', function() {
+      this.getInput('sound').appendField(
+        new Blockly.FieldDropdown(function() {
+          var options = [['anything', 'anything']];
+          if (self.state.samplePanel && self.state.samplePanel !== 'main') {
+            const sounds = self.getCurrentSamplePackSounds();
+            options = sounds.map(sound => {
+              return [sound.id, sound.id];
+            });
+          }
+
+          return options;
+        }),
+        'sound'
+      );
+    });
 
     Blockly.Blocks['play_sound_with_variable'] = {
       init: function() {
@@ -652,7 +652,7 @@ class MusicView extends React.Component {
     for (const songEvent of songData.events) {
       if (songEvent.type === 'play') {
         PlaySound(
-          'stem-' + this.state.samplePanel + '-' + songEvent.id,
+          this.getCurrentSamplePack().path + '/' + songEvent.id,
           'mainaudio',
           currentAudioTime + this.convertMeasureToSeconds(songEvent.when)
         );
@@ -667,7 +667,7 @@ class MusicView extends React.Component {
   previewSound = id => {
     StopSound('mainaudio');
 
-    PlaySound('stem-' + this.state.samplePanel + '-' + id, 'mainaudio', 0);
+    PlaySound(this.getCurrentSamplePack().path + '/' + id, 'mainaudio', 0);
   };
 
   getVerticalOffsetForEventId = id => {
@@ -689,6 +689,33 @@ class MusicView extends React.Component {
 
     return this.convertSecondsToMeasure(
       GetCurrentAudioTime() - this.state.startPlayingAudioTime
+    );
+  };
+
+  getCurrentSamplePack = () => {
+    const currentSamplePack =
+      this.state.samplePanel !== 'main' &&
+      this.state.library &&
+      this.state.library.groups.find(
+        group => group.id === this.state.samplePanel
+      );
+
+    return currentSamplePack;
+  };
+
+  getCurrentSamplePackSounds = () => {
+    return this.getCurrentSamplePack()?.sounds;
+  };
+
+  getWaveformImage = id => {
+    const filenameToImgUrl = {
+      waveform_lead: require('@cdo/static/music/waveform-lead.png'),
+      waveform_bass: require('@cdo/static/music/waveform-bass.png'),
+      waveform_drum: require('@cdo/static/music/waveform-drum.png')
+    };
+
+    return (
+      filenameToImgUrl['waveform_' + id] || filenameToImgUrl['waveform_lead']
     );
   };
 
@@ -728,12 +755,6 @@ class MusicView extends React.Component {
       containerWidth = minAppWidth;
     }
 
-    const filenameToImgUrl = {
-      waveform_lead: require('@cdo/static/music/waveform-lead.png'),
-      waveform_bass: require('@cdo/static/music/waveform-bass.png'),
-      waveform_drum: require('@cdo/static/music/waveform-drum.png')
-    };
-
     const mobileWidth = 601;
     const isDesktop = this.state.windowWidth >= mobileWidth;
 
@@ -750,9 +771,8 @@ class MusicView extends React.Component {
         this.convertMeasureToSeconds(1)
       : null;
 
-    const currentSamplePack =
-      this.state.samplePanel !== 'main' &&
-      samplePacks.find(entry => entry.id === this.state.samplePanel);
+    const currentSamplePack = this.getCurrentSamplePack();
+    const currentSamplePackSounds = this.getCurrentSamplePackSounds();
 
     return (
       <div
@@ -779,7 +799,10 @@ class MusicView extends React.Component {
               boxSizing: 'border-box',
               backgroundImage:
                 currentSamplePack &&
-                `url("${currentSamplePack.highlightImageSrc}")`,
+                `url("${baseUrl +
+                  currentSamplePack.path +
+                  '/' +
+                  currentSamplePack.themeImageSrc}")`,
               backgroundSize: '100% 200%'
             }}
           >
@@ -821,7 +844,7 @@ class MusicView extends React.Component {
                       }}
                     >
                       <img
-                        src={filenameToImgUrl['waveform_' + eventData.id]}
+                        src={this.getWaveformImage(eventData.id)}
                         style={{width: 90, paddingRight: 20}}
                       />
                     </div>
@@ -894,30 +917,32 @@ class MusicView extends React.Component {
                 <div>Sample packs</div>
                 <br />
 
-                {samplePacks.map((samplePack, index) => {
-                  return (
-                    <div
-                      key={index}
-                      style={{cursor: 'pointer', paddingBottom: 10}}
-                      onClick={() => this.setSamplePanel(samplePack.id)}
-                    >
-                      <img
-                        src={samplePack.imageSrc}
-                        style={{width: 60, paddingRight: 20}}
-                      />
-                      {samplePack.name}
-                    </div>
-                  );
-                })}
+                {this.state.library &&
+                  this.state.library.groups.map((group, index) => {
+                    return (
+                      <div
+                        key={index}
+                        style={{cursor: 'pointer', paddingBottom: 10}}
+                        onClick={() => this.setSamplePanel(group.id)}
+                      >
+                        <img
+                          src={baseUrl + group.path + '/' + group.imageSrc}
+                          style={{width: 60, paddingRight: 20}}
+                        />
+                        {group.name}
+                      </div>
+                    );
+                  })}
               </div>
             )}
             {currentSamplePack && (
               <div
                 style={{
                   padding: 10,
-                  backgroundImage: `url("${
-                    currentSamplePack.highlightImageSrc
-                  }")`,
+                  backgroundImage: `url("${baseUrl +
+                    currentSamplePack.path +
+                    '/' +
+                    currentSamplePack.themeImageSrc}")`,
                   backgroundSize: '100% 110%',
                   backgroundPositionY: '100%',
                   height: '100%',
@@ -935,34 +960,28 @@ class MusicView extends React.Component {
                 <br />
                 <div>
                   <img
-                    src={currentSamplePack.imageSrc}
+                    src={
+                      baseUrl +
+                      currentSamplePack.path +
+                      '/' +
+                      currentSamplePack.imageSrc
+                    }
                     style={{width: '70%'}}
                   />
                 </div>
-                <div>
-                  <img
-                    src={filenameToImgUrl['waveform_lead']}
-                    style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
-                    onClick={() => this.previewSound('lead')}
-                  />
-                  Lead
-                </div>
-                <div>
-                  <img
-                    src={filenameToImgUrl['waveform_bass']}
-                    style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
-                    onClick={() => this.previewSound('bass')}
-                  />
-                  Bass
-                </div>
-                <div>
-                  <img
-                    src={filenameToImgUrl['waveform_drum']}
-                    style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
-                    onClick={() => this.previewSound('drum')}
-                  />
-                  Drum
-                </div>
+
+                {currentSamplePackSounds.map((sound, index) => {
+                  return (
+                    <div key={index}>
+                      <img
+                        src={this.getWaveformImage(sound.id)}
+                        style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
+                        onClick={() => this.previewSound(sound.id)}
+                      />
+                      {sound.id}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
