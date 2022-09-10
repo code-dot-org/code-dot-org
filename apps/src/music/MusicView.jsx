@@ -604,7 +604,11 @@ class MusicView extends React.Component {
     this.setState({currentPanel: panel});
 
     if (panel === 'timeline') {
-      this.playSong();
+      if (this.state.isPlaying) {
+        this.stopSong();
+      } else {
+        this.playSong();
+      }
     }
 
     this.resizeBlockly();
@@ -662,6 +666,12 @@ class MusicView extends React.Component {
     this.setState({isPlaying: true, startPlayingAudioTime: currentAudioTime});
 
     console.log(Blockly.getWorkspaceCode());
+  };
+
+  stopSong = () => {
+    StopSound('mainaudio');
+
+    this.setState({isPlaying: false});
   };
 
   previewSound = id => {
@@ -825,7 +835,7 @@ class MusicView extends React.Component {
             <div
               style={{
                 width: '100%',
-                overflow: 'scroll',
+                overflow: 'hidden',
                 height: 50,
                 position: 'relative'
               }}
@@ -1043,8 +1053,13 @@ class MusicView extends React.Component {
             }}
             onClick={() => this.choosePanel('timeline')}
           >
-            <FontAwesome icon="play" style={{fontSize: 25}} />
-            <div style={{fontSize: 8}}>Play song</div>
+            <FontAwesome
+              icon={this.state.isPlaying ? 'stop' : 'play'}
+              style={{fontSize: 25}}
+            />
+            <div style={{fontSize: 8}}>
+              {this.state.isPlaying ? 'Stop song' : 'Play song'}
+            </div>
           </div>
           <div
             style={{
