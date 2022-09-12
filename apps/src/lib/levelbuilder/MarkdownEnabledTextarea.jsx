@@ -9,6 +9,7 @@ import FindProgrammingExpressionDialog from './lesson-editor/FindProgrammingExpr
 
 export const markdownFeaturesShape = PropTypes.shape({
   imageUpload: PropTypes.bool,
+  programmingExpression: PropTypes.bool,
   resourceLink: PropTypes.bool
 });
 
@@ -82,7 +83,6 @@ export default class MarkdownEnabledTextarea extends React.Component {
   };
 
   render() {
-    console.log(this.props.features);
     return (
       <div>
         <div style={{margin: 5}}>
