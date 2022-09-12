@@ -319,6 +319,7 @@ namespace :test do
         [
           'Gemfile',
           'Gemfile.lock',
+          'cookbooks/cdo-varnish/libraries/http_cache.rb',
           'deployment.rb',
           'dashboard/**/*',
           'lib/**/*',

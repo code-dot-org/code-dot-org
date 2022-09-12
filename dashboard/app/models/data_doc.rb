@@ -15,4 +15,8 @@
 #  index_data_docs_on_name  (name)
 #
 class DataDoc < ApplicationRecord
+  include CurriculumHelper
+
+  validates_uniqueness_of :key, case_sensitive: false
+  validate :validate_key_format
 end
