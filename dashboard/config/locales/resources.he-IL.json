@@ -29,6 +29,319 @@
         "ai-training/oceans/unversioned": {
           "type": "סרטון"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "תכנות לנייר משבצות",
+          "type": "הערכה"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "סרטון"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "התניות עם כרטיסים",
+          "type": "הערכה"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "פורום מורים"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "סרטון"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "סרטון"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "סרטון"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "סרטון"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "סרטון"
+        },
+        "internet/coursef/2022": {
+          "name": "אינטרנט",
+          "type": "הערכה"
+        },
+        "internet_1/coursef/2022": {
+          "name": "אינטרנט"
+        },
+        "the_internet/coursef/2022": {
+          "name": "האינטרנט"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "פורום מורים"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "סרטון"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "הערכה"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "סרטון"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "פורום מורים"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "זוזו, זוזו"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "זוזו, זוזו"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "זוזו, זוזו"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "זוזו, זוזו"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "סרטון"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "סרטון"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "עוברים ללולאות"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "עוברים ללולאות"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "עוברים ללולאות",
+          "type": "הערכה"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "עוברים ללולאות"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "סרטון"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "האירוע הגדול"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "האירוע הגדול",
+          "type": "הערכה"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "האירוע הגדול"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "פורום מורים"
+        },
+        "pair_programming/express/2022": {
+          "name": "תכנות בזוגות",
+          "type": "סרטון"
+        },
+        "artist_introduction/express/2022": {
+          "type": "סרטון"
+        },
+        "turns_angles/express/2022": {
+          "type": "סרטון"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "סרטון"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "סרטון"
+        },
+        "variables/express/2022": {
+          "name": "משתנים"
+        },
+        "teacher_forum/express/2022": {
+          "name": "פורום מורים"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "סרטון"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "סרטון"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "סרטון"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "פורום מורים"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "סרטון"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "סרטון"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "מפות שמחות"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "סרטון"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "סרטון"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "סרטון"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "סרטון"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "האירוע הגדול"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "האירוע הגדול",
+          "type": "הערכה"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "האירוע הגדול"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "פורום מורים"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "תכנות בזוגות",
+          "type": "סרטון"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "האירוע הגדול"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "האירוע הגדול",
+          "type": "הערכה"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "האירוע הגדול"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "סרטון"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "צמידים בינארים",
+          "type": "הערכה"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "פורום מורים"
+        },
         "ascii_and_binary_representation/csd/2022": {
           "name": "ייצוג ASCII וייצוג בינארי"
         },

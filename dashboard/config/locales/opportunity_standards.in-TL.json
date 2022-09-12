@@ -2,6 +2,12 @@
   "in-TL": {
     "data": {
       "opportunity_standards": {
+        "ngss/3-5-ETS1-1": {
+          "description": "crwdns2887728:0crwdne2887728:0"
+        },
+        "ccmath/4.MD.5.b": {
+          "description": "crwdns2893538:0crwdne2893538:0"
+        },
         "ngss/K-2-ETS1-1": {
           "description": "crwdns2903112:0crwdne2903112:0"
         },
@@ -10,12 +16,6 @@
         },
         "ccmath/2.MD.10": {
           "description": "crwdns2901540:0crwdne2901540:0"
-        },
-        "ngss/3-5-ETS1-1": {
-          "description": "crwdns2887728:0crwdne2887728:0"
-        },
-        "ccmath/4.MD.5.b": {
-          "description": "crwdns2893538:0crwdne2893538:0"
         }
       }
     }

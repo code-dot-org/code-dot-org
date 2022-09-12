@@ -239,6 +239,69 @@
         "csta/1B-CS-02": {
           "description": "Modeluj, jak sprzęt komputerowy i oprogramowanie współpracują ze sobą jako system, aby wykonywać zadania."
         },
+        "csta/1B-NI-05": {
+          "description": "Omów problemy cyberbezpieczeństwa w świecie oraz, jak mogą być chronione informacje osobiste."
+        },
+        "csta/1B-AP-11": {
+          "description": "Rozkładaj (podziel) zadania na mniejsze, możliwe do opanowania podzadania, aby ułatwić proces tworzenia programu."
+        },
+        "csta/1B-AP-09": {
+          "description": "Twórz programy, w których wykorzystuje się zmienne do przechowywania i modyfikacji danych"
+        },
+        "csta/1A-AP-10": {
+          "description": "Opracowuj programy zawierające sekwencje i proste pętle, aby wyrażać pomysły i rozwiązać problem."
+        },
+        "csta/1B-AP-14": {
+          "description": "Przestrzegaj praw własności intelektualnej i podawaj odpowiednie atrybucje podczas tworzenia lub remiksowania programów."
+        },
+        "csta/1B-AP-17": {
+          "description": "Opisz wybory dokonywane podczas opracowywania programu, stosując komentarze do kodu, prezentacji i pokazów. "
+        },
+        "csta/1B-IC-18": {
+          "description": "Omów technologie informatyczne, które zmieniły świat i przedstaw, w jaki sposób te technologie wpływają i jaki wpływ mają na nie praktyki kulturowe. "
+        },
+        "csta/1B-DA-07": {
+          "description": "Użyj danych, aby pokazać lub zaproponować związek przyczynowo-skutkowy, przewidzieć wynik lub przekazać pomysł. "
+        },
+        "csta/1A-IC-16": {
+          "description": "Porównaj, jak żyją i pracują ludzie przed i po wdrożeniu lub zaadoptowaniu nowej technologii obliczeniowej."
+        },
+        "csta/1A-IC-18": {
+          "description": "Zachowaj informacje o loginach w tajemnicy i odpowiednio wyloguj się z urządzeń."
+        },
+        "csta/1A-NI-04": {
+          "description": "Wyjaśnij, czym są hasła i dlaczego ich używamy, oraz zastosuj silne hasła, aby chronić urządzenia i informacje przed nieautoryzowanym dostępem."
+        },
+        "csta/1A-AP-08": {
+          "description": "Modeluj codzienne procesy poprzez tworzenie i przestrzeganie algorytmów (zestawów instrukcji krok po kroku) w celu wykonania zadań."
+        },
+        "csta/1A-AP-12": {
+          "description": "Opracuj plany, które opisują sekwencję wydarzeń, cele i oczekiwane rezultaty programu."
+        },
+        "csta/1A-CS-01": {
+          "description": "Wybierz i użyj odpowiedniego oprogramowania do wykonania różnych zadań i dostrzeż, że użytkownicy mają różne potrzeby i preferencje dotyczące technologii, z której korzystają."
+        },
+        "csta/1A-CS-02": {
+          "description": "Use appropriate terminology in identifying and describing the function of common physical components of computing systems (hardware)."
+        },
+        "csta/1A-CS-03": {
+          "description": "Opisz podstawowe problemy ze sprzętem i oprogramowaniem, używając dokładnej terminologii."
+        },
+        "csta/1A-DA-05": {
+          "description": "Przechowuj, kopiuj, wyszukuj, odzyskuj, modyfikuj i usuwaj informacje za pomocą komputera oraz definiuj przechowywane informacje jako dane."
+        },
+        "csta/1A-DA-06": {
+          "description": "Zbieraj i prezentuj te same dane w różnych formatach wizualnych."
+        },
+        "csta/1A-DA-07": {
+          "description": "Zidentyfikuj i opisz wzorce w wizualizacjach danych, takich jak wykresy lub grafy, aby dokonać prognozy."
+        },
+        "csta/1A-AP-13": {
+          "description": "Podaj źródło, gdy korzystasz z pomysłów i kreacji innych osób podczas tworzenia programów."
+        },
+        "csta/1A-AP-15": {
+          "description": "Używając poprawnej terminologii, opisz kroki podjęte i wybory dokonane podczas procesu iteracyjnego rozwoju programu."
+        },
         "csta/2-DA-07": {
           "description": "Reprezentuj dane przy użyciu wielu schematów kodowania."
         },
@@ -257,80 +320,17 @@
         "csta/2-IC-23": {
           "description": "Opisz kompromisy między udostępnieniem informacji a zachowaniem ich prywatności i bezpieczeństwa."
         },
-        "csta/1B-AP-11": {
-          "description": "Rozkładaj (podziel) zadania na mniejsze, możliwe do opanowania podzadania, aby ułatwić proces tworzenia programu."
-        },
         "csta/2-AP-17": {
           "description": "Systematycznie testuj i udoskonalaj programy, korzystając z wielu testów."
         },
         "csta/2-AP-19": {
           "description": "Dokumentuj programy, aby ułatwić ich śledzenie, testowanie i debugowanie."
         },
-        "csta/1B-NI-05": {
-          "description": "Omów problemy cyberbezpieczeństwa w świecie oraz, jak mogą być chronione informacje osobiste."
-        },
         "csta/3A-AP-20": {
           "description": "Oceń licencje, które ograniczają użycie artefaktów obliczeniowych podczas korzystania z zasobów, takich jak biblioteki."
         },
-        "csta/1B-IC-18": {
-          "description": "Omów technologie informatyczne, które zmieniły świat i przedstaw, w jaki sposób te technologie wpływają i jaki wpływ mają na nie praktyki kulturowe. "
-        },
-        "csta/1B-AP-14": {
-          "description": "Przestrzegaj praw własności intelektualnej i podawaj odpowiednie atrybucje podczas tworzenia lub remiksowania programów."
-        },
         "ai4k12-2021/3-C-iii.3-5": {
           "description": "Zbadaj cechy i etykiety danych treningowych, aby wykryć potencjalne źródła błędów."
-        },
-        "csta/1A-IC-18": {
-          "description": "Zachowaj informacje o loginach w tajemnicy i odpowiednio wyloguj się z urządzeń."
-        },
-        "csta/1A-CS-02": {
-          "description": "Use appropriate terminology in identifying and describing the function of common physical components of computing systems (hardware)."
-        },
-        "csta/1A-CS-03": {
-          "description": "Opisz podstawowe problemy ze sprzętem i oprogramowaniem, używając dokładnej terminologii."
-        },
-        "csta/1A-AP-08": {
-          "description": "Modeluj codzienne procesy poprzez tworzenie i przestrzeganie algorytmów (zestawów instrukcji krok po kroku) w celu wykonania zadań."
-        },
-        "csta/1A-AP-12": {
-          "description": "Opracuj plany, które opisują sekwencję wydarzeń, cele i oczekiwane rezultaty programu."
-        },
-        "csta/1A-AP-10": {
-          "description": "Opracowuj programy zawierające sekwencje i proste pętle, aby wyrażać pomysły i rozwiązać problem."
-        },
-        "csta/1A-NI-04": {
-          "description": "Wyjaśnij, czym są hasła i dlaczego ich używamy, oraz zastosuj silne hasła, aby chronić urządzenia i informacje przed nieautoryzowanym dostępem."
-        },
-        "csta/1A-CS-01": {
-          "description": "Wybierz i użyj odpowiedniego oprogramowania do wykonania różnych zadań i dostrzeż, że użytkownicy mają różne potrzeby i preferencje dotyczące technologii, z której korzystają."
-        },
-        "csta/1A-IC-16": {
-          "description": "Porównaj, jak żyją i pracują ludzie przed i po wdrożeniu lub zaadoptowaniu nowej technologii obliczeniowej."
-        },
-        "csta/1B-AP-09": {
-          "description": "Twórz programy, w których wykorzystuje się zmienne do przechowywania i modyfikacji danych"
-        },
-        "csta/1B-DA-07": {
-          "description": "Użyj danych, aby pokazać lub zaproponować związek przyczynowo-skutkowy, przewidzieć wynik lub przekazać pomysł. "
-        },
-        "csta/1B-AP-17": {
-          "description": "Opisz wybory dokonywane podczas opracowywania programu, stosując komentarze do kodu, prezentacji i pokazów. "
-        },
-        "csta/1A-DA-05": {
-          "description": "Przechowuj, kopiuj, wyszukuj, odzyskuj, modyfikuj i usuwaj informacje za pomocą komputera oraz definiuj przechowywane informacje jako dane."
-        },
-        "csta/1A-DA-06": {
-          "description": "Zbieraj i prezentuj te same dane w różnych formatach wizualnych."
-        },
-        "csta/1A-DA-07": {
-          "description": "Zidentyfikuj i opisz wzorce w wizualizacjach danych, takich jak wykresy lub grafy, aby dokonać prognozy."
-        },
-        "csta/1A-AP-13": {
-          "description": "Podaj źródło, gdy korzystasz z pomysłów i kreacji innych osób podczas tworzenia programów."
-        },
-        "csta/1A-AP-15": {
-          "description": "Używając poprawnej terminologii, opisz kroki podjęte i wybory dokonane podczas procesu iteracyjnego rozwoju programu."
         }
       }
     }
