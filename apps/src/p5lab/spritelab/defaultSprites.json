@@ -1,7 +1,8 @@
 {
   "orderedKeys": [
     "2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2",
-    "d15af884-fb27-455f-b73a-899d07ce8975"
+    "d15af884-fb27-455f-b73a-899d07ce8975",
+    "4b4e5d34-d8d3-4c1a-9d41-e94193afb092"
   ],
   "propsByKey": {
     "2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2": {
@@ -29,6 +30,19 @@
       "frameDelay": 2,
       "version": "kBiszeGACcLTGTrqmS4laPVQKPGQnDln",
       "categories": ["animals", "characters"]
+    },
+    "4b4e5d34-d8d3-4c1a-9d41-e94193afb092": {
+      "name": "grid",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/nG_cj1NXQ56VOdqMbGXqKxKupa4bCoNQ/category_backgrounds/background_grid.png",
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "nG_cj1NXQ56VOdqMbGXqKxKupa4bCoNQ",
+      "categories": ["backgrounds"]
     }
   }
 }
