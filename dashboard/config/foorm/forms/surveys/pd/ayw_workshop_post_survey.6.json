@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "comment",
-          "Natalia_comment": "******NOTE: This is RED's current version - Dec 3, through AYW 4 ******"
+          "Natalia_comment": "******NOTE: This is RED's current version - Sept 8, through AYW 4 ******"
         },
         {
           "type": "library_item",
@@ -88,6 +88,12 @@
           "library_version": 1,
           "name": "ayw4_panel",
           "natalia_comment": "NATALIA NOTE: AYW4 includes modules 7 and 8, question sets are different for each module for CSP, so there are three combinations: ayw_module_7 is for mod 7 on its own, ayw_module_8 is for Mod 8 on its own, ayw_inperson_4 is for sessions where both modules are covered."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/ayw_workshop",
+          "library_version": 0,
+          "name": "teaching_ap_panel"
         }
       ]
     },
