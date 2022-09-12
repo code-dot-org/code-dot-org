@@ -42,6 +42,7 @@ import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArti
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import queryString from 'query-string';
+import DCDO from '@cdo/apps/dcdo';
 
 const ButtonState = {
   UP: 0,
@@ -153,11 +154,13 @@ Dance.prototype.init = function(config) {
   // sprites once students hit the run button.
   // This is in place to support iOS, which will not play audio
   // if started asynchronously after fetching sprites.
-  const computeCharactersReferenced = () =>
-    this.computeCharactersReferenced(this.studioApp_.getCode());
-  this.studioApp_.addChangeHandler(() =>
-    this.nativeAPI?.ensureSpritesAreLoaded(computeCharactersReferenced())
-  );
+  if (!!DCDO.get('use-html5-audio-dance-party', true)) {
+    const computeCharactersReferenced = () =>
+      this.computeCharactersReferenced(this.studioApp_.getCode());
+    this.studioApp_.addChangeHandler(() =>
+      this.nativeAPI?.ensureSpritesAreLoaded(computeCharactersReferenced())
+    );
+  }
 
   this.awaitTimingMetrics();
 

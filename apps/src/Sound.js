@@ -1,3 +1,5 @@
+import DCDO from '@cdo/apps/dcdo';
+
 function isMobile() {
   return 'ontouchstart' in document.documentElement;
 }
@@ -394,9 +396,15 @@ Sound.prototype.preloadAudioElement = function(audioElement) {
     return;
   }
 
-  // iOS Safari does not automatically attempt to load the audio source,
-  // so we need to manually load.
-  audioElement.load();
+  if (!!DCDO.get('use-html5-audio-dance-party', true)) {
+    // iOS Safari does not automatically attempt to load the audio source,
+    // so we need to manually load.
+    audioElement.load();
+  } else {
+    // Pre-cache audio
+    audioElement.play();
+    audioElement.pause();
+  }
   this.audioElement = audioElement;
 
   // Fire onLoad as soon as enough of the sound is loaded to play it
