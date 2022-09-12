@@ -26,9 +26,9 @@ const backgroundSprite = {
   orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
   propsByKey: {
     '44c5937d-c5c0-4676-bd0c-f7a86e99dd98': {
-      name: 'bee',
+      name: 'grid',
       sourceUrl:
-        'https://studio.code.org/api/v1/animation-library/spritelab/b2QZ1J9ww5XYdjExrVb7lWgP2q6Gfx1C/category_animals/bee.png',
+        'https://studio.code.org/api/v1/animation-library/spritelab/nG_cj1NXQ56VOdqMbGXqKxKupa4bCoNQ/category_backgrounds/background_grid.png',
       categories: ['backgrounds']
     }
   }
@@ -150,7 +150,7 @@ describe('SpriteLab', () => {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
             '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
-              name: 'bee'
+              name: 'grid'
             }
           }
         };
