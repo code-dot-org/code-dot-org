@@ -479,7 +479,7 @@ class UnitGroup < ApplicationRecord
   # @param family_name [String] The family name for a course family.
   # @return [UnitGroup] Returns the latest stable version in a course family.
   def self.latest_stable_version(family_name)
-    return nil unless family_name.present?
+    return nil if family_name.blank?
 
     all_courses.select do |course|
       course.family_name == family_name &&

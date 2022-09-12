@@ -7,17 +7,21 @@
           "categories": {
             "html_tags": {
               "name": "Balises HTML"
+            },
+            "css_properties": {
+              "name": "Propriétés CSS"
             }
           }
         },
         "gamelab": {
           "name": "Labo Jeux",
+          "description": "Game Lab est un environnement de programmation où vous pouvez créer des jeux et des animations passionnants. Dessinez vos personnages, codez avec des blocs ou du JavaScript pour les faire fonctionner, puis partagez votre jeu en quelques secondes.",
           "categories": {
             "game_lab": {
               "name": "Labo Jeux"
             },
             "sprites": {
-              "name": "Les Lutins"
+              "name": "Sprites"
             },
             "groups": {
               "name": "Groupes"
@@ -29,7 +33,7 @@
               "name": "Math"
             },
             "variables": {
-              "name": "variables"
+              "name": "Variables"
             },
             "functions": {
               "name": "Fonctions"
@@ -40,28 +44,38 @@
           "name": "Labo des applis",
           "description": "App Lab est un environnement de programmation où vous pouvez créer des applications simples. Concevez une application, codez-la avec des blocs ou avec JavaScript, puis partagez-la en quelques secondes.",
           "categories": {
+            "canvas": {
+              "name": "Canvas"
+            },
             "data": {
               "name": "Données"
+            },
+            "turtle": {
+              "name": "Tortue"
             },
             "math": {
               "name": "Math"
             },
             "variables": {
-              "name": "variables"
+              "name": "Variables"
             },
             "functions": {
               "name": "Fonctions"
             },
             "advanced": {
               "name": "Avancé"
+            },
+            "maker": {
+              "name": "Maker"
             }
           }
         },
         "spritelab": {
           "name": "Le Labo des Lutins",
+          "description": "Sprite Lab est un environnement de programmation Blockly où vous pouvez créer des projets interactifs.",
           "categories": {
             "sprites": {
-              "name": "Les Lutins"
+              "name": "Sprites"
             },
             "world": {
               "name": "Monde"
@@ -82,7 +96,7 @@
               "name": "Boucles"
             },
             "variables": {
-              "name": "variables"
+              "name": "Variables"
             },
             "math": {
               "name": "Math"
@@ -102,7 +116,39 @@
           }
         },
         "javalab": {
-          "name": "Java Lab"
+          "name": "Java Lab",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Raccourcis du Labo Java"
+            },
+            "general": {
+              "name": "Les bases de Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Structures de contrôle"
+            },
+            "data_structures": {
+              "name": "Structure de données"
+            }
+          }
         }
       }
     }

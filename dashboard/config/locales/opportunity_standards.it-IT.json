@@ -2,6 +2,12 @@
   "it-IT": {
     "data": {
       "opportunity_standards": {
+        "ngss/3-5-ETS1-1": {
+          "description": "Definire un semplice problema di progettazione che rifletta un'esigenza o un desiderio che includa criteri specifici per il successo e vincoli su materiali, tempi o costi."
+        },
+        "ccmath/4.MD.5.b": {
+          "description": "Si dice che un angolo che gira per n angoli di un grado abbia una misura angolare di n gradi."
+        },
         "ngss/K-2-ETS1-1": {
           "description": "porre domande, fare osservazioni e raccogliere informazioni su una situazione che le persone vogliono cambiare per definire un semplice problema che può essere risolto attraverso lo sviluppo di un oggetto o strumento nuovo o migliorato."
         },
@@ -10,12 +16,6 @@
         },
         "ccmath/2.MD.10": {
           "description": "Disegna grafico a immagini e un grafico a barre (con scala a unità singola) per rappresentare un set di dati con un massimo di quattro categorie. Risolvi semplici problemi, assemblati, smontati e confrontati utilizzando le informazioni presentate in un grafico a barre."
-        },
-        "ngss/3-5-ETS1-1": {
-          "description": "Definire un semplice problema di progettazione che rifletta un'esigenza o un desiderio che includa criteri specifici per il successo e vincoli su materiali, tempi o costi."
-        },
-        "ccmath/4.MD.5.b": {
-          "description": "Si dice che un angolo che gira per n angoli di un grado abbia una misura angolare di n gradi."
         }
       }
     }

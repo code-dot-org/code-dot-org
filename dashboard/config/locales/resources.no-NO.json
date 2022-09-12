@@ -29,6 +29,321 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Parprogrammering"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Lærer-Forum"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internett"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internett"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internett"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Lærer-Forum"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Lærer-Forum"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Parprogrammering"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie og det Store Prosjektet"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Uoppdagede feil",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Den store begivenheten"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Lærer-Forum"
+        },
+        "pair_programming/express/2022": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Variabler"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Lærer-Forum"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Parprogrammering"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Lærer-Forum"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Parprogrammering"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Glade Kart"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Den store begivenheten"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Lærer-Forum"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Den store begivenheten"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Lærer-Forum"
+        },
         "binary_and_data/csd/2022": {
           "type": "Video"
         },

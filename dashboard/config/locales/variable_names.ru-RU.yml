@@ -32,6 +32,7 @@ ru:
       name: наименование
       nectar: нектар
       nectars: нектары
+      object: Объекта
       planet: планета
       points: очки
       random: случайный
@@ -43,6 +44,7 @@ ru:
       sides: стороны
       size: размер
       speed: скорость
+      type: тип
       variable: переменная
       width: ширина
       wizard: волшебник
