@@ -210,7 +210,7 @@ class RegistrationsController < Devise::RegistrationsController
   # from cached pages which will not populate the CSRF token
   def set_age
     return head(:forbidden) unless current_user
-    current_user.update(age: params[:user][:age]) unless current_user.age.present?
+    current_user.update(age: params[:user][:age]) if current_user.age.blank?
   end
 
   def upgrade
