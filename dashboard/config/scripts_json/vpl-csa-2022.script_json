@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csa",
-    "serialized_at": "2022-08-03 19:25:57 UTC",
+    "serialized_at": "2022-09-09 14:44:10 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -65,6 +65,21 @@
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022"
       }
+    },
+    {
+      "key": "Module 3 post-work: The Theater and datasets in Unit 4",
+      "name": "Module 3 post-work: The Theater and datasets in Unit 4",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
     }
   ],
   "lesson_activities": [
@@ -88,6 +103,18 @@
       "seeding_key": {
         "lesson_activity.key": "ace86fc2-f3da-4d78-bbb4-d02f74993aa2",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "6f4270ff-a3eb-401d-966d-8c10bca32a3b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f4270ff-a3eb-401d-966d-8c10bca32a3b",
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022"
       }
@@ -214,6 +241,50 @@
       "seeding_key": {
         "activity_section.key": "03ae6fcb-69a8-41ff-835f-2a2dbd5b937d",
         "lesson_activity.key": "ace86fc2-f3da-4d78-bbb4-d02f74993aa2"
+      }
+    },
+    {
+      "key": "d72c8d8c-4bd2-46c4-8fb3-5f1c3c8f2cee",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 3 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d72c8d8c-4bd2-46c4-8fb3-5f1c3c8f2cee",
+        "lesson_activity.key": "6f4270ff-a3eb-401d-966d-8c10bca32a3b"
+      }
+    },
+    {
+      "key": "666b4107-d2cf-44e4-af64-6fe7de958877",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877",
+        "lesson_activity.key": "6f4270ff-a3eb-401d-966d-8c10bca32a3b"
+      }
+    },
+    {
+      "key": "d8037925-9310-4519-a1ea-ace4f540518a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Reflection (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8037925-9310-4519-a1ea-ace4f540518a",
+        "lesson_activity.key": "6f4270ff-a3eb-401d-966d-8c10bca32a3b"
+      }
+    },
+    {
+      "key": "4309c1ec-4619-4a34-89ab-4ae6f2c63711",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 3 Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "4309c1ec-4619-4a34-89ab-4ae6f2c63711",
+        "lesson_activity.key": "6f4270ff-a3eb-401d-966d-8c10bca32a3b"
       }
     }
   ],
@@ -792,6 +863,160 @@
       "level_keys": [
         "vpl-csa-module-2-wrap-up_-m2"
       ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 3 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-overview-2022"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "d72c8d8c-4bd2-46c4-8fb3-5f1c3c8f2cee"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-overview-2022"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-multi-select"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-multi-select"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-CSA U4L10-L1_2022-COPY"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-CSA U4L10-L1_2022-COPY"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-3-reflection"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection-project"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "d8037925-9310-4519-a1ea-ace4f540518a"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-3-reflection-project"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 3 Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-wrap-up-2022"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "4309c1ec-4619-4a34-89ab-4ae6f2c63711"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-wrap-up-2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1069,6 +1294,90 @@
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022",
         "activity_section.key": "03ae6fcb-69a8-41ff-835f-2a2dbd5b937d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-overview-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-overview-2022"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "d72c8d8c-4bd2-46c4-8fb3-5f1c3c8f2cee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-multi-select",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-multi-select"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-CSA U4L10-L1_2022-COPY",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-CSA U4L10-L1_2022-COPY"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-3-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "666b4107-d2cf-44e4-af64-6fe7de958877"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-3-reflection-project",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection-project"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "d8037925-9310-4519-a1ea-ace4f540518a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-wrap-up-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-wrap-up-2022"
+        ],
+        "lesson.key": "Module 3 post-work: The Theater and datasets in Unit 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "4309c1ec-4619-4a34-89ab-4ae6f2c63711"
       }
     }
   ],
