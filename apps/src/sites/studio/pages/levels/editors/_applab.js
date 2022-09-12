@@ -4,6 +4,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import color from '@cdo/apps/util/color';
+import {configMicrobit} from '@cdo/apps/lib/kits/maker/dropletConfig';
+
+const microbitBlocks = {};
+configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
 
 $(document).ready(function() {
   const makerBlocks = {
@@ -48,19 +52,21 @@ $(document).ready(function() {
     'toggleSwitch.isOpen': null,
     onBoardEvent: null
   };
+
   $('#level_makerlab_enabled').change(function() {
-    if ($(this).is(':checked')) {
-      const editor = $('#level_code_functions')
-        .siblings()
-        .filter('.CodeMirror')[0].CodeMirror;
-      const currentFunctions = JSON.parse(editor.getValue());
-      const functionsWithMaker = Object.assign(
-        {},
-        currentFunctions,
-        makerBlocks
-      );
-      editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
+    const editor = $('#level_code_functions')
+      .siblings()
+      .filter('.CodeMirror')[0].CodeMirror;
+    const currentFunctions = JSON.parse(editor.getValue());
+    let functionsWithMaker;
+    if ($(this).val() === 'circuitPlayground') {
+      // Load the circuitPlayground and maker blocks.
+      functionsWithMaker = Object.assign({}, currentFunctions, makerBlocks);
+    } else if ($(this).val() === 'microbit') {
+      // Load the microbit and maker blocks
+      functionsWithMaker = Object.assign({}, currentFunctions, microbitBlocks);
     }
+    editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
   });
 
   const styles = {
