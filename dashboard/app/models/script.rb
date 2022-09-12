@@ -678,7 +678,7 @@ class Script < ApplicationRecord
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
     # No redirect if unit or its course are not versioned.
     current_version_year = version_year || unit_group&.version_year
-    return nil unless current_version_year.present?
+    return nil if current_version_year.blank?
 
     # Redirect user to the latest assigned unit in this family,
     # if one exists and it is newer than the current unit.
@@ -725,7 +725,7 @@ class Script < ApplicationRecord
   # @param locale [String] User or request locale. Optional.
   # @return [Script|nil] Returns the latest version in a unit family.
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
-    return nil unless family_name.present?
+    return nil if family_name.blank?
 
     unit_versions = Script.get_family_from_cache(family_name).
       sort_by(&:version_year).reverse
