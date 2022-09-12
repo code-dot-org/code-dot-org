@@ -2,6 +2,9 @@
 hu:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: felhasználó megadja {QUESTION} kérdésre a {VAR} változót a {A}{B}{C}
+          lehetőségek közül
       BadGuys_makeNewBadGuysSprite:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       BadGuys_setSizeAll_dropdown:

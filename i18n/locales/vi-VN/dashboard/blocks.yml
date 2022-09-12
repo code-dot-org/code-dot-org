@@ -2,6 +2,8 @@
 vi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       BadGuys_setSizeAll_dropdown:

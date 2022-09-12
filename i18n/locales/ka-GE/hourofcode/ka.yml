@@ -9,25 +9,31 @@ ka:
   campaign_date_start_long: 6 დეკემბერი
   campaign_date_short: დეკ. 7-13
   campaign_date_full: 6-12 დეკემბერი
-  campaign_date_year: '2021'
+  campaign_date_year: '2022'
   campaign_date_full_year: 6-12 დეკემბერი, 2021
+  nonus_campaign_date_start_short: 1 ოქტ.
+  nonus_campaign_date_start_long: 1 ოქტომბერი
+  nonus_campaign_date_short: 1 ოქტ. - 12 დეკ.
+  nonus_campaign_date_full: 1 ოქტომბერი - 12 დეკემბერი
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 ოქტომბერი, 2021 - 12 დეკემბერი, 2021
   latam_campaign_date_start_short: 1 ოქტ.
   latam_campaign_date_start_long: 1 ოქტომბერი
   latam_campaign_date_short: 1 ოქტ. - 12 დეკ.
   latam_campaign_date_full: 1 ოქტომბერი - 12 დეკემბერი
-  latam_campaign_date_year: '2021'
+  latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1 ოქტომბერი, 2021 - 12 დეკემბერი, 2021
   europe_campaign_date_start_short: 9 ოქტ.
   europe_campaign_date_start_long: 9 ოქტომბერი
   europe_campaign_date_short: 9-24 ოქტ.
   europe_campaign_date_full: 9-24 ოქტომბერი
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 9-24 ოქტომბერი, 2021
-  africa_campaign_date_start_short: 6 დეკ.
-  africa_campaign_date_start_long: 6 დეკემბერი
+  africa_campaign_date_start_short: 1 ოქტ.
+  africa_campaign_date_start_long: 1 ოქტომბერი
   africa_campaign_date_short: 1-31 ოქტ.
   africa_campaign_date_full: 1-31 ოქტომბერი
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1-31 ოქტომბერი, 2021
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -533,7 +539,6 @@ ka:
   signup_multiple_event_warning: თუ რამდნიმე ღონისძიებას ატარებთ, ყოველისთვის უნიკალური
     სახელი ან ელფოსტა შეარჩიეთ. ჩვენ ვითვლით ღონისძიებებს სახელისა და ელფოსტის უნიკალური
     კომბინაციებით.
-  signup_registration_deadline: კოდის ერთ საათზე რეგისტრაცია სრულდება 11 დეკემბერს.
   signup_name_placeholder: თქვენი სახელი
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: მაგალითად, ლინკოლნის სახელობის სკოლა

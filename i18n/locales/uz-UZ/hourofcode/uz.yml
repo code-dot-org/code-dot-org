@@ -5,29 +5,35 @@ uz:
   language: Ingliz
   front_title: Tarixdagi eng katta tadbirga asoslanish:% {campaign_date}
   coming_soon: Tez kunda
-  campaign_date_start_short: 6-dekabr
+  campaign_date_start_short: 5-dekabr
   campaign_date_start_long: 6-dekabr
-  campaign_date_short: 6-12-dekabr
-  campaign_date_full: 6-12-dekabr
-  campaign_date_year: 2021-yil
-  campaign_date_full_year: 2021 yil 6-12-dekabr
+  campaign_date_short: 5-11-dekabr
+  campaign_date_full: 5-11-dekabr
+  campaign_date_year: 2022-yil
+  campaign_date_full_year: 2022 yil 5-11-dekabr
+  nonus_campaign_date_start_short: '"1-oktabr".'
+  nonus_campaign_date_start_long: 1 oktyabr
+  nonus_campaign_date_short: '"1-oktyabr - 18-dekabr".'
+  nonus_campaign_date_full: 1-oktyabr - 18-dekabr
+  nonus_campaign_date_year: 2022-yil
+  nonus_campaign_date_full_year: 2022-yil 1-oktyabr - 2022-yil 18-dekabr
   latam_campaign_date_start_short: '"1-oktabr".'
   latam_campaign_date_start_long: 1 oktyabr
   latam_campaign_date_short: '"1-oktyabr - 18-dekabr".'
   latam_campaign_date_full: 1-oktyabr - 18-dekabr
-  latam_campaign_date_year: 2021-yil
-  latam_campaign_date_full_year: 2020-yil 1-oktyabr - 2020-yil 18-dekabr
+  latam_campaign_date_year: 2022-yil
+  latam_campaign_date_full_year: 2022-yil 1-oktyabr - 2022-yil 18-dekabr
   europe_campaign_date_start_short: '"10-oktabr".'
   europe_campaign_date_start_long: 10 oktyabr
   europe_campaign_date_short: 10-25 oktyabr
   europe_campaign_date_full: 10-25 oktyabr
-  europe_campaign_date_year: 2021-yil
+  europe_campaign_date_year: 2022-yil
   europe_campaign_date_full_year: 2021 yil 6-12 oktyabr
-  africa_campaign_date_start_short: 6-dekabr
-  africa_campaign_date_start_long: 6-dekabr
+  africa_campaign_date_start_short: '"1-oktabr".'
+  africa_campaign_date_start_long: 1 oktyabr
   africa_campaign_date_short: 1-31-oktyabr
   africa_campaign_date_full: 1-31-oktyabr
-  africa_campaign_date_year: 2021-yil
+  africa_campaign_date_year: 2022-yil
   africa_campaign_date_full_year: 2020-yil 11-31-oktyabr
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -556,8 +562,6 @@ uz:
     shahringizni xaritaga kiritamiz. Agar siz bir nechta tadbirlarni o‘tkazayotgan
     bo‘lsangiz, iltimos, har biri uchun noyob ism yoki elektron pochta xabarini yuboring.
     Biz har bir ism va elektron pochta birikmasi uchun bitta tadbirni hisoblaymiz.
-    "
-  signup_registration_deadline: Dasturlash soatiga ro‘yxatdan o‘tish 13 dekabrda yopiladi.
     "
   signup_name_placeholder: Ismingiz
   signup_email_placeholder: you@example.com

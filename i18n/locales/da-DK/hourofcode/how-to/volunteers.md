@@ -10,7 +10,7 @@ title: Hour of Code How-To Guide for Volunteers
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+Datalogisk tankegang styrker evnen til problemløsning samt de logiske og kreative evner. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
