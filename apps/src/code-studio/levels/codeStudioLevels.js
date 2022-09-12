@@ -167,7 +167,7 @@ export function resetContainedLevel() {
       `Expected exactly one contained level. Got ${levelIds.length}`
     );
   }
-  getAuthenticityToken().then(() => {
+  return getAuthenticityToken().then(() => {
     fetch('/delete_predict_level_progress', {
       method: 'POST',
       credentials: 'same-origin',
@@ -182,6 +182,8 @@ export function resetContainedLevel() {
     }).then(response => {
       if (response.ok) {
         getLevel(levelIds[0]).resetAnswers();
+        const runButton = $('#runButton');
+        runButton.prop('disabled', true);
       } else {
         console.log(response);
       }
