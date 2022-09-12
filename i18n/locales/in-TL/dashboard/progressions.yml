@@ -90,6 +90,7 @@ in:
       Cake Survey: crwdns2690435:0crwdne2690435:0
       Challenge: crwdns2464014:0crwdne2464014:0
       Challenge Levels: crwdns2464016:0crwdne2464016:0
+      Challenge/Practice: crwdns3120256:0crwdne3120256:0
       'Challenge: Add More Inputs': 'crwdns2690437:0crwdne2690437:0'
       'Challenge: Checking for Multiple Conditions': 'crwdns2690439:0crwdne2690439:0'
       'Challenge: Draw an Image': 'crwdns2690441:0crwdne2690441:0'
@@ -200,6 +201,7 @@ in:
       Experiment with Web Lab: crwdns2464076:0crwdne2464076:0
       Exploration: crwdns2572188:0crwdne2572188:0
       'Exploration: Adding Style': 'crwdns2690531:0crwdne2690531:0'
+      'Exploration: Clicker Game': 'crwdns3120258:0crwdne3120258:0'
       'Exploration: For Loops': 'crwdns2572190:0crwdne2572190:0'
       'Exploration: Rikki''s Poster': 'crwdns2659096:0crwdne2659096:0'
       'Exploration: Sample Apps': 'crwdns2572194:0crwdne2572194:0'
@@ -294,6 +296,7 @@ in:
       Layout Properties: crwdns2690593:0crwdne2690593:0
       Layout with CSS: crwdns2464140:0crwdne2464140:0
       Learning from Simulations: crwdns2472002:0crwdne2472002:0
+      Lesson Extra: crwdns3120260:0crwdne3120260:0
       Lesson Extras: crwdns2464142:0crwdne2464142:0
       Lesson Overview: crwdns2690595:0crwdne2690595:0
       Level Overview: crwdns2690597:0crwdne2690597:0
@@ -324,11 +327,14 @@ in:
       'Mini-Project: About Me': 'crwdns2572210:0crwdne2572210:0'
       'Mini-Project: Alien Dance Moves': 'crwdns2464168:0crwdne2464168:0'
       'Mini-Project: Alien Dance Party': 'crwdns2464170:0crwdne2464170:0'
+      'Mini-Project: Clicker Game': 'crwdns3120264:0crwdne3120264:0'
+      'Mini-Project: Collector Game': 'crwdns3120266:0crwdne3120266:0'
       'Mini-Project: Create a Virtual Pet': 'crwdns2572212:0crwdne2572212:0'
       'Mini-Project: Outbreak Simulator': 'crwdns2572214:0crwdne2572214:0'
       'Mini-Project: Royal Battle': 'crwdns2464172:0crwdne2464172:0'
       "Mini-Project: Snowflake #1": "crwdns2464174:0crwdne2464174:0"
       "Mini-Project: Snowflake #2": "crwdns2464176:0crwdne2464176:0"
+      'Mini-Project: Sticker Art': 'crwdns3120268:0crwdne3120268:0'
       'Mini-Project: Swimming Fish': 'crwdns2464178:0crwdne2464178:0'
       'Mini-Project: Swimming Fish (continued)': 'crwdns2464180:0crwdne2464180:0'
       'Mini-Project: User Input Programs': 'crwdns2572216:0crwdne2572216:0'
@@ -576,6 +582,9 @@ in:
       'Video: Getting Loopy': 'crwdns2572300:0crwdne2572300:0'
       'Video: Happy Maps - Unplugged Activity': 'crwdns2572302:0crwdne2572302:0'
       'Video: Harvesting with Conditionals': 'crwdns2572304:0crwdne2572304:0'
+      'Video: Hello World: Do What You Want': 'crwdns3120270:0crwdne3120270:0'
+      'Video: Hello World: Programming with Events': 'crwdns3120272:0crwdne3120272:0'
+      'Video: Hello World: Welcome to Sprite Lab': 'crwdns3120274:0crwdne3120274:0'
       'Video: How Search Works': 'crwdns2867370:0crwdne2867370:0'
       'Video: How to Create a Simple Function': 'crwdns2572306:0crwdne2572306:0'
       'Video: How to Make a Sprite': 'crwdns2572308:0crwdne2572308:0'
@@ -599,6 +608,7 @@ in:
       'Video: Introduction to the Draw Loop': 'crwdns2690759:0crwdne2690759:0'
       'Video: Loops in Artist': 'crwdns2572318:0crwdne2572318:0'
       'Video: Loops with the Artist': 'crwdns2572320:0crwdne2572320:0'
+      'Video: Lots of Sprites': 'crwdns3120276:0crwdne3120276:0'
       'Video: Managing Disagreement': 'crwdns2867384:0crwdne2867384:0'
       'Video: Maze Intro - Programming with Blocks': 'crwdns2572324:0crwdne2572324:0'
       'Video: Maze Intro - Programming with Blocks ': 'crwdns2572326:0crwdne2572326:0'
@@ -615,7 +625,10 @@ in:
       'Video: Nested Loops': 'crwdns2572348:0crwdne2572348:0'
       'Video: Nested Loops with the Bee': 'crwdns2572350:0crwdne2572350:0'
       'Video: Netflix and Data': 'crwdns2867386:0crwdne2867386:0'
+      'Video: Outbreak Simulator: Events': 'crwdns3120278:0crwdne3120278:0'
+      'Video: Outbreak Simulator: Free Play': 'crwdns3120280:0crwdne3120280:0'
       'Video: Outbreak Simulator: Introduction': 'crwdns2715451:0crwdne2715451:0'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'crwdns3120282:0crwdne3120282:0'
       'Video: Pair Programming': 'crwdns2572352:0crwdne2572352:0'
       'Video: Pair Programming ': 'crwdns2572354:0crwdne2572354:0'
       'Video: Problem Solving Process': 'crwdns2690761:0crwdne2690761:0'

@@ -2,6 +2,8 @@
 th:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: ผู้ใช้พรอมต์ {QUESTION} สำหรับตัวแปร {VAR} พร้อมตัวเลือก {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       BadGuys_setSizeAll_dropdown:

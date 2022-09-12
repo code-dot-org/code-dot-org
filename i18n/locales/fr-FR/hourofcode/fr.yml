@@ -6,30 +6,36 @@ fr:
   front_title: Rejoignez le plus grand cours en ligne de l'Histoire, du 7 au 13 décembre
     2015
   coming_soon: Prochainement
-  campaign_date_start_short: 6 déc.
+  campaign_date_start_short: 5 déc.
   campaign_date_start_long: Le 6 décembre
-  campaign_date_short: 7–13 déc.
-  campaign_date_full: Du 7 au 13 décembre
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 décembre, 2021
+  campaign_date_short: 5–11 déc.
+  campaign_date_full: Du 5 au 11 décembre
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 décembre, 2022
+  nonus_campaign_date_start_short: 1 Oct.
+  nonus_campaign_date_start_long: Octobre 1
+  nonus_campaign_date_short: Du 1er octobre au 18 décembre
+  nonus_campaign_date_full: Du 1er octobre au 18 décembre
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
   latam_campaign_date_start_short: 1 Oct.
   latam_campaign_date_start_long: Octobre 1
-  latam_campaign_date_short: Du 1er octobre au 12 décembre
-  latam_campaign_date_full: Du 1er octobre au 12 décembre
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: Du 1er octobre  2021 au 12 décembre 2021
-  europe_campaign_date_start_short: 6 déc.
-  europe_campaign_date_start_long: Le 6 décembre
-  europe_campaign_date_short: 7–13 déc.
-  europe_campaign_date_full: Du 7 au 13 décembre
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 décembre, 2021
-  africa_campaign_date_start_short: 6 déc.
-  africa_campaign_date_start_long: Le 6 décembre
-  africa_campaign_date_short: 7–13 déc.
-  africa_campaign_date_full: Du 7 au 13 décembre
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 décembre, 2021
+  latam_campaign_date_short: Du 1er octobre au 18 décembre
+  latam_campaign_date_full: Du 1er octobre au 18 décembre
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
+  europe_campaign_date_start_short: 1 Oct.
+  europe_campaign_date_start_long: Octobre 1
+  europe_campaign_date_short: Du 1er octobre au 18 décembre
+  europe_campaign_date_full: Du 1er octobre au 18 décembre
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
+  africa_campaign_date_start_short: 1 Oct.
+  africa_campaign_date_start_long: Octobre 1
+  africa_campaign_date_short: Du 1er octobre au 18 décembre
+  africa_campaign_date_full: Du 1er octobre au 18 décembre
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
   social_hoc2021_cse: 'Au cours de #HourOfCode, nous célébrons #CSEverywhere. Découvrez
     les connexions !'
   hoc2020_header: Apprenez aujourd'hui, construisez un avenir meilleur.
@@ -570,8 +576,6 @@ fr:
   signup_multiple_event_warning: Si vous hébergez plusieurs événements, veuillez soumettre
     un nom unique ou un courriel pour chacun d'eux. Nous comptons seulement un événement
     par la combinaison de nom et email.
-  signup_registration_deadline: L'inscription pour l'Heure du Code se termine le 12
-    Décembre.
   signup_name_placeholder: Votre Nom
   signup_email_placeholder: vous@exemple.fr
   signup_organization_name_placeholder: 'Exemple : Lycée Condorcet'

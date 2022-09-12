@@ -2,6 +2,9 @@
 pt:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: pedir ao usuário {QUESTION} que informe a variável {VAR} com opções
+          {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       BadGuys_setSizeAll_dropdown:

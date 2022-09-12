@@ -2,6 +2,12 @@
   "fa-IR": {
     "data": {
       "opportunity_standards": {
+        "ngss/3-5-ETS1-1": {
+          "description": ""
+        },
+        "ccmath/4.MD.5.b": {
+          "description": ""
+        },
         "ngss/K-2-ETS1-1": {
           "description": ""
         },
@@ -9,12 +15,6 @@
           "description": ""
         },
         "ccmath/2.MD.10": {
-          "description": ""
-        },
-        "ngss/3-5-ETS1-1": {
-          "description": ""
-        },
-        "ccmath/4.MD.5.b": {
           "description": ""
         }
       }

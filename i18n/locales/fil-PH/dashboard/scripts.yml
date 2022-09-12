@@ -2609,3 +2609,11 @@ fil:
               display_name: Maligayang Pagdating
         soccer:
           name: soccer
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Pagsisiyasat
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Pagsisiyasat

@@ -2,6 +2,9 @@
 mr:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} पर्यायांसह व्हेरिएबल {VAR} साठी वापरकर्ता {QUESTION} प्रॉम्प्ट
+          करा"
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       BadGuys_setSizeAll_dropdown:

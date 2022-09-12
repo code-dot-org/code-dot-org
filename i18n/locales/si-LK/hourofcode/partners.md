@@ -2,40 +2,38 @@
 title: හවුල්කරුවන්
 ---
 
-කේත වේලාව මෙහෙයවනු ලබන්නේ පැය ගණන සහ පරිගණක විද්‍යා අධ්‍යාපන සතියේ උපදේශන හා සමාලෝචන කමිටු විසිනි.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-උපදේශක කමිටුව සමන්විත වන්නේ කේ -12, ශාස්ත්‍රීය, ලාභ නොලබන, ලාභ සඳහා සහ ජාත්‍යන්තර සංවිධානවල නියෝජිතයින්ගෙනි. මෙම කමිටුව පැය සංග්‍රහය සඳහා වන උපාය මාර්ගයට මග පෙන්වයි.
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-සමාලෝචන කමිටුව K-12 ශ්‍රේණියේ සංගීත කණ්ඩායම්වල උගතුන් 15 දෙනෙකුගෙන් සමන්විත වන අතර එය උපදේශක කමිටුවේ වචන භාවිතා කරමින් ක්‍රියාකාරකම් තක්සේරු කර නිර්දේශ කරයි. මෙම අධ්‍යාපන ලබන සිය ගණනක් ක්‍රියාකාරකම් හවුල්කරුවන් විසින් ඉදිරිපත් කරන ලද ශිෂ්‍ය නායකත්ව ක්‍රියාකාරකම් සහ ගුරුවරුන් විසින් මෙහෙයවනු ලබන පාඩම් සැලසුම් සමාලෝචනය කිරීම, ක්‍රියාකාරකම්වල අධ්‍යාපනික වටිනාකම ඇගයීම, ඉගෙනුම් කරුවන් සම්බන්ධ කර ගැනීමේ හැකියාව සහ විවිධ ශිෂ්‍ය ශිෂ්‍යාවන් සඳහා ඇති ආයාචනය.
-
-කාරක සභා දෙකේම කාර්යයන් හා කැපවීම පැය කේතයේ සාර්ථකත්වයට සහ සෑම සිසුවෙකුටම පරිගණක විද්‍යාව පිළිබඳ හැඳින්වීමක් ඉදිරිපත් කිරීමේ දැක්ම සඳහා දායක වී තිබේ.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # ප්‍රධාන හවුල්කරුවන් සහ ආයතනික ආධාරකරුවන්
 
-{{හවුල්කරුවන් / ප්‍රධාන__පාර්ශවකරුවන්/ආයතනික_ආධාරකරුවන්}}
+{{ partners/major_partners_corporate_supporters }}
 
 * * *
 
 # ජාත්‍යන්තර හවුල්කරුවන්
 
-{{හවුල්කරුවන් / ජාත්‍යන්තර_ පාර්ශවකරුවන්}}
+{{ partners/international_partners }}
 
 * * *
 
 # විෂයමාලා සහ නිබන්ධන හවුල්කරුවන්
 
-{{හවුල්කරුවන් / විෂයමාලා_ නිබන්ධන_ පාර්ශවකරුවන්}}
+{{ partners/curriculum_tutorial_partners }}
 
 * * *
 
 # යටිතල පහසුකම් හවුල්කරුවන් සහ මෙවලම්
 
-{{හවුල්කරුවන් / යටිතල පහසුකම්_ පාර්ශවකරුවන්_උපකරණ }}
+{{ partners/infrastructure_partners_tools }}
 
 * * *
 
 # අතිරේක හවුල්කරුවන්
 
-{{හවුල්කරුවන් / අතිරේක_ පාර්ශවකරුවන්}}
+{{ partners/additional_partners }}
 
 {{ signup_button }}

@@ -2,6 +2,9 @@
 uk:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами
+          {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       BadGuys_setSizeAll_dropdown:

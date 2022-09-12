@@ -7,28 +7,34 @@ zh:
   coming_soon: 即將推出
   campaign_date_start_short: 12 月 5 日
   campaign_date_start_long: 12 月 6 日
-  campaign_date_short: 12月7日13日
-  campaign_date_full: 12 月 6 日 - 12 日
-  campaign_date_year: '2021'
-  campaign_date_full_year: 2021 年 12 月的 6-12 日
+  campaign_date_short: 12月5日11日
+  campaign_date_full: 12 月 5 日 - 11 日
+  campaign_date_year: '2022'
+  campaign_date_full_year: 2022 年 12 月的 5-11 日
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 10 月 1 日 - 12 月 18 日
+  nonus_campaign_date_full: 10 月 1 日 - 12 月 18 日
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 12 月 5 日
-  europe_campaign_date_start_long: 12 月 6 日
-  europe_campaign_date_short: 12月7日13日
-  europe_campaign_date_full: 12 月 6 日 - 12 日
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 2021 年 12 月的 6-12 日
-  africa_campaign_date_start_short: 12 月 5 日
-  africa_campaign_date_start_long: 12 月 6 日
-  africa_campaign_date_short: 12月7日13日
-  africa_campaign_date_full: 12 月 6 日 - 12 日
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 2021 年 12 月的 6-12 日
+  latam_campaign_date_short: 10 月 1 日 - 12 月 18 日
+  latam_campaign_date_full: 10 月 1 日 - 12 月 18 日
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 10 月 1 日 - 12 月 18 日
+  europe_campaign_date_full: 10 月 1 日 - 12 月 18 日
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 10 月 1 日 - 12 月 18 日
+  africa_campaign_date_full: 10 月 1 日 - 12 月 18 日
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  馬上開始學習，打造更美好的明天。  "
@@ -469,7 +475,6 @@ zh:
   signup_email_preference_no: 否
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: 如果你同時舉辦多場活動，請每場活動提供一個不重複的姓名或電子郵件信箱。我們一個活動只會算入一個姓名和電子郵件信箱。
-  signup_registration_deadline: 一小時玩程式註冊截止日期為12月11日。
   signup_name_placeholder: 您的姓名
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 例如：交通大學

@@ -5,30 +5,36 @@ ro:
   language: Română
   front_title: Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}
   coming_soon: În curând
-  campaign_date_start_short: 6 decembrie
+  campaign_date_start_short: 5 decembrie
   campaign_date_start_long: 6 decembrie
   campaign_date_short: 5-11 decembrie
-  campaign_date_full: 6-12 decembrie
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 decembrie, 2021
+  campaign_date_full: 5-11 decembrie
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 decembrie, 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: Octombrie
+  nonus_campaign_date_short: 1 octombrie - 18 decembrie
+  nonus_campaign_date_full: 1 octombrie - 18 decembrie
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: Octombrie
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6 decembrie
-  europe_campaign_date_start_long: 6 decembrie
-  europe_campaign_date_short: 5-11 decembrie
-  europe_campaign_date_full: 6-12 decembrie
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 decembrie, 2021
-  africa_campaign_date_start_short: 6 decembrie
-  africa_campaign_date_start_long: 6 decembrie
-  africa_campaign_date_short: 5-11 decembrie
-  africa_campaign_date_full: 6-12 decembrie
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 decembrie, 2021
+  latam_campaign_date_short: 1 octombrie - 18 decembrie
+  latam_campaign_date_full: 1 octombrie - 18 decembrie
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: Octombrie
+  europe_campaign_date_short: 1 octombrie - 18 decembrie
+  europe_campaign_date_full: 1 octombrie - 18 decembrie
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: Octombrie
+  africa_campaign_date_short: 1 octombrie - 18 decembrie
+  africa_campaign_date_full: 1 octombrie - 18 decembrie
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Învață astăzi, construiește un viitor mai bun.
@@ -551,8 +557,6 @@ ro:
   signup_multiple_event_warning: Dacă organizați mai multe evenimente, vă rugăm să
     trimiteți un nume unic sau câte un e-mail pentru fiecare. Noi luăm în considerare
     doar un eveniment pe un nume și combinație de e-mail.
-  signup_registration_deadline: Inregistrarile pentru Hour of Code se vor inchide
-    pe 12 decembrie.
   signup_name_placeholder: Numele tău
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: De exemplu, Colegiul Național "Sfântul Sava"

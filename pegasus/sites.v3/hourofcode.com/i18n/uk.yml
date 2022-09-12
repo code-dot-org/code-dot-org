@@ -5,30 +5,36 @@ uk:
   language: Англійською
   front_title: Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}
   coming_soon: Незабаром
-  campaign_date_start_short: 4 грудня
+  campaign_date_start_short: 5 грудня
   campaign_date_start_long: 4 грудня
-  campaign_date_short: 4-10 грудня
-  campaign_date_full: 4-10 грудня
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 грудня 2021 року
+  campaign_date_short: 5-11 грудня
+  campaign_date_full: 5-11 грудня
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 грудня 2022 року
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1 жовтня – 18 грудня
+  nonus_campaign_date_full: 1 жовтня - 18 грудня
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 4 грудня
-  europe_campaign_date_start_long: 4 грудня
-  europe_campaign_date_short: 4-10 грудня
+  latam_campaign_date_short: 1 жовтня – 18 грудня
+  latam_campaign_date_full: 1 жовтня - 18 грудня
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1 жовтня – 18 грудня
   europe_campaign_date_full: 10-25 жовтня
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10-25 жовтня 2020
-  africa_campaign_date_start_short: 4 грудня
-  africa_campaign_date_start_long: 4 грудня
-  africa_campaign_date_short: 4-10 грудня
-  africa_campaign_date_full: 4-10 грудня
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 грудня 2021 року
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1 жовтня – 18 грудня
+  africa_campaign_date_full: 1 жовтня - 18 грудня
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Вчіться сьогодні, будуйте світле майбутнє.
@@ -535,7 +541,6 @@ uk:
   signup_multiple_event_warning: Якщо Ви проводите кілька заходів, заповніть унікальну
     назву та електронну скриньку для кожного із них. Ми рахуємо події за комбінацією
     назви та електронної скриньки.
-  signup_registration_deadline: Реєстрація на Годину коду завершується 11 грудня.
   signup_name_placeholder: Ваше ім'я
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Наприклад, СЗШ № 89
