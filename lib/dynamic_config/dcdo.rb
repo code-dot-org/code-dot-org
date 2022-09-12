@@ -48,6 +48,7 @@ class DCDOBase < DynamicConfigBase
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
       'ceos-for-cs-banner': DCDO.get('ceos-for-cs-banner', false),
       'ceos-for-cs-banner-govs': DCDO.get('ceos-for-cs-banner-govs', false),
+      'use-html5-audio-dance-party': DCDO.get('use-html5-audio-dance-party', true)
     }
   end
 end
