@@ -15,6 +15,7 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       CourseOffering,
+      DataDoc,
       UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
@@ -387,6 +388,7 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        DataDoc,
         CourseOffering,
         UnitGroup,
         Resource,
