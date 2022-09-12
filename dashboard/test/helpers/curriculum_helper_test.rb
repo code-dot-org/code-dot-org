@@ -9,8 +9,8 @@ class CurriculumHelperTest < ActiveSupport::TestCase
     @object_to_validate.stubs(:errors).returns(@errors)
   end
 
-  def refute_valid_key(expected)
-    @object_to_validate.stubs(:key).returns(expected)
+  def refute_valid_key(key_value)
+    @object_to_validate.stubs(:key).returns(key_value)
     refute @object_to_validate.validate_key_format
   end
 
