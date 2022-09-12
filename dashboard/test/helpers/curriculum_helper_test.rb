@@ -9,34 +9,33 @@ class CurriculumHelperTest < ActiveSupport::TestCase
     @object_to_validate.stubs(:errors).returns(@errors)
   end
 
-  test "key cannot be blank" do
-    @object_to_validate.stubs(:key).returns("")
+  def refute_valid_key(expected)
+    @object_to_validate.stubs(:key).returns(expected)
     refute @object_to_validate.validate_key_format
+  end
+
+  test "key cannot be blank" do
+    refute_valid_key("")
   end
 
   test "data doc key cannot have invalid characters" do
-    @object_to_validate.stubs(:key).returns("space character")
-    refute @object_to_validate.validate_key_format
+    refute_valid_key("space character")
   end
 
   test "data doc key cannot start with a period" do
-    @object_to_validate.stubs(:key).returns(".period")
-    refute @object_to_validate.validate_key_format
+    refute_valid_key(".period")
   end
 
   test "data doc key cannot end with a period" do
-    @object_to_validate.stubs(:key).returns("period.")
-    refute @object_to_validate.validate_key_format
+    refute_valid_key("period.")
   end
 
   test "data doc key cannot be `new`" do
-    @object_to_validate.stubs(:key).returns("new")
-    refute @object_to_validate.validate_key_format
+    refute_valid_key("new")
   end
 
   test "data doc key cannot be `edit`" do
-    @object_to_validate.stubs(:key).returns("edit")
-    refute @object_to_validate.validate_key_format
+    refute_valid_key("edit")
   end
 
   test "data doc is valid if requirements are met" do
