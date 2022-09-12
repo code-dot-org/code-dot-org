@@ -515,13 +515,13 @@ class Section < ApplicationRecord
   # We can remove this once our database has utf8mb4 support everywhere.
   def strip_emoji_from_name
     # We don't want to fill in a default name if the caller intentionally tried to clear it.
-    return unless name.present?
+    return if name.blank?
 
     # Drop emoji and other unsupported characters
     self.name = name&.strip_utf8mb4&.strip
 
     # If dropping emoji resulted in a blank name, use a default
-    self.name = I18n.t('sections.default_name', default: 'Untitled Section') unless name.present?
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
 end
