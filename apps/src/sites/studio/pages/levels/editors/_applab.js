@@ -4,54 +4,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import color from '@cdo/apps/util/color';
-import {configMicrobit} from '@cdo/apps/lib/kits/maker/dropletConfig';
-
-const microbitBlocks = {};
-configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
+import {
+  configMicrobit,
+  configCircuitPlayground,
+  getMakerBlocks
+} from '@cdo/apps/lib/kits/maker/dropletConfig';
 
 $(document).ready(function() {
-  const makerBlocks = {
-    pinMode: null,
-    digitalWrite: null,
-    digitalRead: null,
-    analogWrite: null,
-    analogRead: null,
-    on: null,
-    off: null,
-    toggle: null,
-    blink: null,
-    pulse: null,
-    stop: null,
-    color: null,
-    intensity: null,
-    'led.on': null,
-    'led.off': null,
-    'led.blink': null,
-    'led.toggle': null,
-    'led.pulse': null,
-    'buzzer.frequency': null,
-    'buzzer.note': null,
-    'buzzer.off': null,
-    'buzzer.stop': null,
-    'buzzer.playNotes': null,
-    'buzzer.playSong': null,
-    'accelerometer.getOrientation': null,
-    'accelerometer.getAcceleration': null,
-    isPressed: null,
-    holdtime: null,
-    'soundSensor.value': null,
-    'soundSensor.getAveragedValue': null,
-    'soundSensor.setScale': null,
-    'soundSensor.threshold': null,
-    'lightSensor.value': null,
-    'lightSensor.getAveragedValue': null,
-    'lightSensor.setScale': null,
-    'lightSensor.threshold': null,
-    'tempSensor.F': null,
-    'tempSensor.C': null,
-    'toggleSwitch.isOpen': null,
-    onBoardEvent: null
-  };
+  // Get the set of blocks for the Maker Category, the Circuit Category, and the Micro:bit category
+
+  // The maker type given here sets the defaultPin in the example block. Since we are just using the function name,
+  // which doesn't include a pin parameter, we could any block type.
+  let makerBlocks = getMakerBlocks(null);
+  // Setting block values to null to match the expected behavior in code_functions.
+  makerBlocks = makerBlocks.blocks.forEach(
+    block => (makerBlocks[block.func] = null)
+  );
+  const microbitBlocks = {};
+  configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
+  const circuitBlocks = {};
+  configCircuitPlayground.blocks.forEach(
+    block => (circuitBlocks[block.func] = null)
+  );
 
   $('#level_makerlab_enabled').change(function() {
     const editor = $('#level_code_functions')
@@ -61,10 +35,20 @@ $(document).ready(function() {
     let functionsWithMaker;
     if ($(this).val() === 'circuitPlayground') {
       // Load the circuitPlayground and maker blocks.
-      functionsWithMaker = Object.assign({}, currentFunctions, makerBlocks);
+      functionsWithMaker = Object.assign(
+        {},
+        currentFunctions,
+        makerBlocks,
+        circuitBlocks
+      );
     } else if ($(this).val() === 'microbit') {
       // Load the microbit and maker blocks
-      functionsWithMaker = Object.assign({}, currentFunctions, microbitBlocks);
+      functionsWithMaker = Object.assign(
+        {},
+        currentFunctions,
+        makerBlocks,
+        microbitBlocks
+      );
     }
     editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
   });

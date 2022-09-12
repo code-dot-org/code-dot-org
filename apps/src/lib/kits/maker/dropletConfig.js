@@ -21,7 +21,7 @@ export default config;
 
 const MAKER_CATEGORY = 'Maker';
 config.MAKER_CATEGORY = MAKER_CATEGORY;
-const CIRCUIT_CATEGORY = 'Circuit';
+export const CIRCUIT_CATEGORY = 'Circuit';
 const MICROBIT_CATEGORY = 'micro:bit';
 
 const emptySocketPrefix = '__.';
@@ -128,7 +128,7 @@ function sharedLedBlocks({category, blockPrefix, objectDropdown}) {
 /**
  * Generic Johnny-Five / Firmata blocks
  */
-function getMakerBlocks(boardType) {
+export function getMakerBlocks(boardType) {
   let defaultPin = '"A6"';
   if (boardType === MICROBIT_CATEGORY) {
     defaultPin = '0';
