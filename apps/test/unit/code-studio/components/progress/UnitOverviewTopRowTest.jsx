@@ -116,7 +116,7 @@ describe('UnitOverviewTopRow', () => {
         {...defaultProps}
         viewAs={ViewType.Participant}
         unitCompleted={true}
-        isProfessionalLearningCourse={false}
+        isProfessionalLearningCourse={true}
       />
     );
 
