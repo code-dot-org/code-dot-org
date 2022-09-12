@@ -8962,3 +8962,37 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csa-magpie-lab:
+          lessons:
+            lesson-1:
+              name: Experiment with Existing Chatbots
+            lesson-2:
+              name: Work with Magpie Code
+            lesson-3:
+              name: Work with API for Magpie and String
+            lesson-4:
+              name: Modify Responses
+            lesson-5:
+              name: Use Arrays to Get Random Responses
+          lesson_groups: {}
+          name: csa-magpie-lab
+          title: AP CSA Magpie Lab
+          description_audience: ''
+          description_short: ''
+          description: |-
+            From Eliza in the 1960s to Siri and Watson today, the idea of talking to computers in natural language has fascinated people. (And yes, there have been more than one conversation between Eliza and Siri – search for "chatbot Eliza Siri.") While natural language processing (NLP) is a complicated field, it is fairly easy to create a simple program to respond to English sentences.
+
+            **Prerequisites**
+
+            Before doing this lab, students should be able to:
+
+            * locate websites using a web browser
+            * run and edit Java programs that use classes
+            * trace code
+            * read APIs for both the standard Java libraries and local code
+          student_description: |-
+            From Eliza in the 1960s to Siri and Watson today, the idea of talking to computers in natural language has fascinated people. More and more, computer programs allow people to interact with them by typing English sentences. The field of computer science that addresses how computers can understand human language is called natural language processing (NLP).
+
+            NLP is a field that attempts to have computers understand natural (i.e., human) language. There are many exciting breakthroughs in the field.
+
+            For this lab, you will explore some of the basics of NLP. As you explore this, you will work with a variety of methods of the `String` class and practice using the `if` statement. You will trace a method to find words in user input.
