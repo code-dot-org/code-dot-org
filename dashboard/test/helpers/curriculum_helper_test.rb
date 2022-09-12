@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CurriculumHelperTest < ActiveSupport::TestCase
-  setup_all do
+  setup do
     @errors = Object.new
     @errors.stubs(:add)
     @object_to_validate = Object.new
