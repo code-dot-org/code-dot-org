@@ -124,6 +124,13 @@ export function getExceptionMessage(exceptionDetails, type) {
       error = msg.errorTheaterVideoTooLarge();
       break;
 
+    // Fatal errors
+    case JavabuilderExceptionType.CONNECTION_POOL_SHUT_DOWN:
+    case JavabuilderExceptionType.LOW_DISK_SPACE:
+    case JavabuilderExceptionType.TEMP_DIRECTORY_CLEANUP_ERROR:
+      error = msg.internalException();
+      break;
+
     default:
       error = fallbackMessage || msg.unknownError({type, connectionId});
       break;
