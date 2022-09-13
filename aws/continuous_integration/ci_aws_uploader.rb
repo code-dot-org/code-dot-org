@@ -4,13 +4,6 @@ class CIAWSUploader
 
   def self.upload_log_and_get_link_for_build(log, status, projects, start_time, duration, commit_hash)
     key, body, metadata = get_aws_metrics_info(log, status, projects, start_time, duration, commit_hash)
-    puts "-----"
-    puts key
-    puts "-----"
-    puts body
-    puts "-----"
-    puts metadata
-    puts "-----"
     upload_and_get_link(key, body, metadata)
   end
 
@@ -46,8 +39,6 @@ class CIAWSUploader
       )
     return " <a href='#{log_url}'>☁ Log on S3</a>"
   rescue Exception => msg
-    puts "wtf"
-    puts msg
     ChatClient.log "Uploading log to S3 failed: #{msg}"
     return ''
   end
