@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:02:31.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -23,7 +19,7 @@
     "submittable": "false",
     "start_blocks": "// Show the controls when the user clicks the up button\r\nonEvent(\"upButton\", \"click\", function( ) {\r\n  console.log(\"Showing controls\");\r\n  setProperty(\"downButton\", \"hidden\", false);\r\n  setProperty(\"playButton\", \"hidden\", false);\r\n  setProperty(\"stopButton\", \"hidden\", false);\r\n  \r\n  // Hide the controls\r\n  onEvent(\"downButton\", \"click\", function( ) {\r\n    setProperty(\"downButton\", \"hidden\", true);\r\n    setProperty(\"playButton\", \"hidden\", true);\r\n    setProperty(\"stopButton\", \"hidden\", true);\r\n    console.log(\"Hiding controls\");  \r\n  });\r\n  \r\n  // Play the music\r\n  onEvent(\"playButton\", \"click\", function( ) {\r\n    playSound(\"sound://category_loops/vibrant_game_musical_harping_movement_loop_1_accents.mp3\");\r\n    console.log(\"Playing song\");\r\n  });\r\n  \r\n  // Stop the music\r\n  onEvent(\"stopButton\", \"click\", function( ) {\r\n    stopSound();\r\n    console.log(\"Stopping song\");\r\n  });\r\n});",
     "never_autoplay_video": "true",
-    "slider_speed": "0.8",
+    "slider_speed": "0.7",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -54,9 +50,13 @@
     "video_key": "csd_debugging",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:02:31.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:31.950+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 6_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 6_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:31.950+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 6_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 6_2021\"},{\"changed_at\":\"2022-09-12 21:19:23 +0000\",\"changed\":[\"code_functions\",\"slider_speed\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
