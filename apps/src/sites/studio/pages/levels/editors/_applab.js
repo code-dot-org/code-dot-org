@@ -17,9 +17,7 @@ $(document).ready(function() {
   // which doesn't include a pin parameter, we could any block type.
   let makerBlocks = getMakerBlocks(null);
   // Setting block values to null to match the expected behavior in code_functions.
-  makerBlocks = makerBlocks.blocks.forEach(
-    block => (makerBlocks[block.func] = null)
-  );
+  makerBlocks = makerBlocks.forEach(block => (makerBlocks[block.func] = null));
   const microbitBlocks = {};
   configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
   const circuitBlocks = {};
