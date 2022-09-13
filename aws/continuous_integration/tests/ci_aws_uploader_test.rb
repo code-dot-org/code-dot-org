@@ -24,7 +24,6 @@ websites built in 60:00 minutes
     commit_hash = 'abc'
     AWS::S3::LogUploader.any_instance.stubs(:upload_log).raises("failed to upload")
     link = CIAWSUploader.upload_log_and_get_link_for_build("test", 0, "websites", start_time, duration, commit_hash)
-    puts link
     assert link.empty?
   end
 end
