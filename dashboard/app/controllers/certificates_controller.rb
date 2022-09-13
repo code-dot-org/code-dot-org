@@ -41,6 +41,7 @@ class CertificatesController < ApplicationController
   end
 
   # GET /certificates/batch
+  # POST /certificates/batch
   def batch
     unless current_user.teacher?
       return redirect_to root_path, alert: 'You must be signed in as a teacher to bulk print certificates.'
@@ -52,8 +53,11 @@ class CertificatesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
+    student_names = request.method == 'POST' ? params[:names] : []
+
     @certificate_data = {
       courseName: course_name,
+      studentNames: student_names,
       imageUrl: certificate_image_url(nil, course_name, nil),
     }
   end

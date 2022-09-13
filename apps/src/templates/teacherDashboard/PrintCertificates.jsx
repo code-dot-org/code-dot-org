@@ -5,6 +5,8 @@ import $ from 'jquery';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import style from './print-certificates.module.scss';
+import experiments from '@cdo/apps/util/experiments';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 class PrintCertificates extends Component {
   static propTypes = {
@@ -30,7 +32,11 @@ class PrintCertificates extends Component {
   };
 
   certificateUrl = () => {
-    pegasus('/certificates');
+    if (experiments.isEnabled(experiments.STUDIO_CERTIFICATE)) {
+      return '/certificates/batch';
+    } else {
+      return pegasus('/certificates');
+    }
   };
 
   render() {
@@ -41,6 +47,7 @@ class PrintCertificates extends Component {
         action={this.certificateUrl()}
         method="POST"
       >
+        <RailsAuthenticityToken />
         <input
           type="hidden"
           name="script"
