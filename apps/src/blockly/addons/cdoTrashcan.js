@@ -27,13 +27,21 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   init() {
     this.workspace.addChangeListener(this.workspaceChangeHandler.bind(this));
 
-    const svg = this.workspace.getParentSvg();
+    const svg = this.workspace
+      .getFlyout()
+      .getWorkspace()
+      .getParentSvg();
     this.container = Blockly.utils.dom.createSvgElement(Blockly.utils.Svg.SVG);
     this.container.style.visibility = 'hidden';
+    // remove argument?
+    // position operates on this.svgGroup_, which is assigned in createTrashcanSvg()
+    // so not sure this does anything?
+    // used to operate on the container, which is assigned above
+    // so maybe move below createTrashcanSvg()
     this.position(this.workspace.getMetricsManager().getUiMetrics());
     this.createTrashcanSvg();
 
-    svg.parentNode.insertBefore(this.container, svg);
+    svg.appendChild(this.container);
 
     this.workspace.getComponentManager().addComponent({
       component: this,
@@ -57,6 +65,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       this.container
     );
     const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
+    // here?
     this.svgGroup_.setAttribute(
       'transform',
       `translate(${left}, ${MARGIN_TOP})`
@@ -208,15 +217,13 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * Positions the element. Called when the window is resized.
    * @param {!Blockly.MetricsManager.UiMetrics} metrics The workspace metrics.
    */
+  // add back in zindex?
   position(metrics) {
-    this.container.style.height = `${metrics.viewMetrics.height}px`;
-    this.container.style.width = `${Blockly.cdoUtils.getToolboxWidth()}px`;
-    this.container.style.left = this.workspace.RTL
-      ? `${metrics.viewMetrics.width}px`
-      : '0px';
-    this.container.style.top = '0px';
-    this.container.style.position = 'absolute';
-    this.container.style.zIndex = '75';
+    const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
+    this.svgGroup_.setAttribute(
+      'transform',
+      `translate(${left}, ${MARGIN_TOP})`
+    );
   }
 
   /**
