@@ -1521,6 +1521,7 @@
   "predictionInstructions": "Make a prediction before you run the program.",
   "preview": "Preview",
   "print": "Print",
+  "printBatchCertificates": "Print a batch of certificates",
   "printCertificate": "Print Certificate",
   "printCertificates": "Print Certificates",
   "printHandouts": "Print Handouts",
