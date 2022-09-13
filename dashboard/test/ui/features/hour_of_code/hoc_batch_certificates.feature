@@ -1,3 +1,4 @@
+@as_teacher
 Feature: Print batch certificates
 
 Scenario: Printing a batch of certificates
