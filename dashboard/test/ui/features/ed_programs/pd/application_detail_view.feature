@@ -1,3 +1,4 @@
+@skip
 @dashboard_db_access
 @no_mobile
 Feature: Teacher Application Detail View
