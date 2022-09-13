@@ -37,4 +37,12 @@ class PrintCertificatesControllerTest < ActionController::TestCase
     assert_equal 3, response_data['imageUrls'].length
     assert_includes response_data['imageUrls'].first, '/certificate_images/', 'certificate images must be customized'
   end
+
+  test 'batch shows at most 30 certificate images' do
+    student_names = "Student\n" * 50
+    post :batch, params: {studentNames: student_names}
+    assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_equal 30, response_data['imageUrls'].length
+  end
 end
