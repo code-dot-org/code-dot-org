@@ -3,6 +3,8 @@ require 'base64'
 class CertificatesController < ApplicationController
   include CertificatesHelper
 
+  before_action :authenticate_user!, only: [:batch]
+
   # GET /certificates/:encoded_params
   # encoded_params includes:
   #   name - student name (optional)
@@ -40,6 +42,10 @@ class CertificatesController < ApplicationController
 
   # GET /certificates/batch
   def batch
+    unless current_user.teacher?
+      return redirect_to root_path, alert: 'You must be signed in as a teacher to bulk print certificates.'
+    end
+
     begin
       course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
     rescue ArgumentError, OpenSSL::Cipher::CipherError
