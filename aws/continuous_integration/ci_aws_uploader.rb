@@ -4,6 +4,13 @@ class CIAWSUploader
 
   def self.upload_log_and_get_link_for_build(log, status, projects, start_time, duration, commit_hash)
     key, body, metadata = get_aws_metrics_info(log, status, projects, start_time, duration, commit_hash)
+    puts "-----"
+    puts key
+    puts "-----"
+    puts body
+    puts "-----"
+    puts metadata
+    puts "-----"
     upload_and_get_link(key, body, metadata)
   end
 
