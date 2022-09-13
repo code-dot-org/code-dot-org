@@ -1,0 +1,37 @@
+#wrapper, #app_body {
+  color: #292F36;
+}
+
+#wrapper, #main {
+  padding: 0 !important;
+}
+
+#embedded_job_board_wrapper {
+  padding: 0 !important;
+  columns: 2;
+  column-width: auto;
+
+  #logo, #board_title, h1, .filter-container {
+    display: none;
+  }
+
+  section {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.accessible .level-0 h3 {
+  font-size: 18px;
+  margin: 32px 0 10px;
+}
+
+.opening {
+  margin-bottom: 18px;
+
+  a {
+    color: #7665a0;
+    font-size: 14px;
+  }
+}
