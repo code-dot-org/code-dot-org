@@ -9,7 +9,7 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 export default function CertificateBatch({courseName, imageUrl}) {
   return (
     <div style={styles.wrapper}>
-      <h1>Print a batch of certificates</h1>
+      <h1>{i18n.printBatchCertificates()}</h1>
       <div style={styles.imageWrapper}>
         <img src={imageUrl} width={240} height={170} />
         <span style={styles.instructions}>
