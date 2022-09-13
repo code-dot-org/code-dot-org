@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default function PrintCertificateBatch({imageUrls}) {
   const onPrint = () => {
@@ -15,9 +16,7 @@ export default function PrintCertificateBatch({imageUrls}) {
         <p style={styles.paragraph}>{i18n.readyToPrint()}</p>
         <p style={styles.paragraph}>{i18n.verifyCertificates()}</p>
         <p style={styles.paragraph}>
-          <span style={styles.bold}>IMPORTANT:</span> Make sure you print in
-          Landscape orientation (sideways, not regular), so the certificates
-          fill a full page.
+          <SafeMarkdown markdown={i18n.printLandscape()} />
         </p>
         <p style={styles.paragraph}>{i18n.whenYouAreReady()}</p>
         <button type="button" onClick={onPrint}>
