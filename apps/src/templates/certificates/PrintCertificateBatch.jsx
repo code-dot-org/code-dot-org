@@ -11,14 +11,12 @@ export default function PrintCertificateBatch({imageUrls}) {
 
   return (
     <div>
-      <div className="hide-print">
+      <div className="hide-print" style={styles.wrapper}>
         <h1>{i18n.hourOfCodeCertificatesHeading()}</h1>
-        <p style={styles.paragraph}>{i18n.readyToPrint()}</p>
-        <p style={styles.paragraph}>{i18n.verifyCertificates()}</p>
-        <p style={styles.paragraph}>
-          <SafeMarkdown markdown={i18n.printLandscape()} />
-        </p>
-        <p style={styles.paragraph}>{i18n.whenYouAreReady()}</p>
+        <p>{i18n.readyToPrint()}</p>
+        <p>{i18n.verifyCertificates()}</p>
+        <SafeMarkdown markdown={i18n.printLandscape()} />
+        <p>{i18n.whenYouAreReady()}</p>
         <button type="button" onClick={onPrint}>
           {i18n.print()}
         </button>
@@ -38,7 +36,7 @@ PrintCertificateBatch.propTypes = {
 };
 
 const styles = {
-  paragraph: {
+  wrapper: {
     fontSize: 15
   },
   bold: {
