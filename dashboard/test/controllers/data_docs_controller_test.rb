@@ -4,6 +4,8 @@ class DataDocsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup_all do
+    @levelbuilder = create :levelbuilder
+
     @data_doc_key = 'new_doc'.freeze
     @test_params = {
       key: @data_doc_key,
@@ -32,4 +34,10 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :levelbuilder, response: :success
+
+  test 'show page renders 404 when data doc is not found' do
+    sign_in @levelbuilder
+    get :show, params: {key: 'unknown_key'}
+    assert_response :not_found
+  end
 end
