@@ -34,7 +34,7 @@ export default function CertificateBatch({courseName, imageUrl}) {
         />
         <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
         <button type="submit" style={styles.submit} id="submit-button">
-          Print certificates
+          {i18n.printCertificates()}
         </button>
       </form>
     </div>
