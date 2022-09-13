@@ -60,6 +60,7 @@
               "type": "dropdown",
               "name": "csa_lesson",
               "title": "Which lesson from {csa_unit} did you most recently complete. (If not sure, make a best guess)?",
+              "visibleIf": "{csa_unit} notempty",
               "choices": [
                 {
                   "value": "lesson_1",
