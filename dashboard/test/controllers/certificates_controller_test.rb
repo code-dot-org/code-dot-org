@@ -74,7 +74,7 @@ class CertificatesControllerTest < ActionController::TestCase
     get :batch
     assert_response :success
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_nil response_data['courseName']
+    assert_equal 'hourofcode', response_data['courseName']
     assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
   end
 
