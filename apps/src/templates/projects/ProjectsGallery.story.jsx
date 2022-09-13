@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectsGallery from './ProjectsGallery';
 import {Galleries} from './projectConstants';
-import projects, {selectGallery} from './projectsRedux';
+import projects /*, {selectGallery} */ from './projectsRedux';
 import currentUser from '../currentUserRedux';
 import publishDialog from './publishDialog/publishDialogRedux';
 import deleteDialog from './deleteDialog/deleteProjectDialogRedux';
@@ -14,40 +14,18 @@ const createProjectsStore = function() {
   );
 };
 
-const DEFAULT_PROPS = {
-  canShare: true
-};
-
-export default {
-  title: 'ProjectsGallery',
-  component: ProjectsGallery
-};
-
-const Template = args => <ProjectsGallery description="" {...args} />;
+const Template = args => (
+  <Provider store={createProjectsStore()}>
+    <ProjectsGallery {...args} canShare={true} />;
+  </Provider>
+);
 
 export const MyProjectsSelectedInitially = Template.bind({});
 MyProjectsSelectedInitially.args = {
-  story: () => {
-    const store = createProjectsStore();
-    console.log(store.getState());
-    store.dispatch(selectGallery(Galleries.PRIVATE));
-    return (
-      <Provider store={store}>
-        <ProjectsGallery {...DEFAULT_PROPS} />
-      </Provider>
-    );
-  }
+  selectedGallery: Galleries.PRIVATE
 };
 
 export const PublicGallerySelectedInitially = Template.bind({});
 PublicGallerySelectedInitially.args = {
-  story: () => {
-    const store = createProjectsStore();
-    store.dispatch(selectGallery(Galleries.PUBlIC));
-    return (
-      <Provider store={store}>
-        <ProjectsGallery {...DEFAULT_PROPS} />
-      </Provider>
-    );
-  }
+  selectedGallery: Galleries.PUBLIC
 };
