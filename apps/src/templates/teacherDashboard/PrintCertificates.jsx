@@ -29,12 +29,16 @@ class PrintCertificates extends Component {
     this.certForm.submit();
   };
 
+  certificateUrl = () => {
+    pegasus('/certificates');
+  };
+
   render() {
     return (
       <form
         className={style.main}
         ref={element => (this.certForm = element)}
-        action={pegasus('/certificates')}
+        action={this.certificateUrl()}
         method="POST"
       >
         <input
