@@ -16,16 +16,18 @@ const createProjectsStore = function() {
 
 const Template = args => (
   <Provider store={createProjectsStore()}>
-    <ProjectsGallery {...args} canShare={true} />;
+    <ProjectsGallery canShare limitedGallery {...args} />;
   </Provider>
 );
 
-export const MyProjectsSelectedInitially = Template.bind({});
-MyProjectsSelectedInitially.args = {
+export const MyProjectsSelected = Template.bind({});
+MyProjectsSelected.args = {
+  selectGallery: () => {},
   selectedGallery: Galleries.PRIVATE
 };
 
-export const PublicGallerySelectedInitially = Template.bind({});
-PublicGallerySelectedInitially.args = {
+export const PublicGallerySelected = Template.bind({});
+PublicGallerySelected.args = {
+  selectGallery: () => {},
   selectedGallery: Galleries.PUBLIC
 };
