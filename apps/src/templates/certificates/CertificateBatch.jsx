@@ -34,7 +34,7 @@ export default function CertificateBatch({courseName, imageUrl}) {
         />
         <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
         <button type="submit" style={styles.submit} id="submit-button">
-          {i18n.submit()}
+          Print certificates
         </button>
       </form>
     </div>
@@ -47,7 +47,9 @@ const styles = {
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto',
-    fontSize: 14
+    fontSize: 14,
+    lineHeight: '22px',
+    color: 'dimgray'
   },
   imageWrapper: {
     display: 'flex',
@@ -59,7 +61,6 @@ const styles = {
   instructions: {
     display: 'inline-block',
     width: 360,
-    fontSize: 14,
     marginLeft: 20
   },
   textarea: {
