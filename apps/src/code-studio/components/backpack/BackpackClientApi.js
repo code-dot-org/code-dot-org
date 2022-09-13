@@ -9,6 +9,8 @@ export default class BackpackClientApi {
     this.uploadingFiles = false;
     this.filesToUpload = [];
     this.fileUploadsFailed = [];
+    this.filesToDelete = [];
+    this.fileDeletesFailed = [];
   }
 
   hasBackpack() {
@@ -89,6 +91,36 @@ export default class BackpackClientApi {
     }
   }
 
+  /**
+   * Delete files from the backpack
+   * @param {Array} filenames Array of filenames to delete from the backpack.
+   * @param {Function} onError Function to call if any file fails to delete
+   * @param {Function} onSuccess Function to call if all files are deleted.
+   */
+
+  deleteFiles(filenames, onError, onSuccess) {
+    if (this.filesToDelete.length > 0) {
+      // delete is currently in progress (a previous deleteFilesHelper has not gone through its
+      // entire list of files to upload), return an error. Frontend should prevent multiple
+      // button clicks in a row.
+      onError();
+      return;
+    }
+    if (filenames.length === 0) {
+      // nothing to delete
+      onSuccess();
+      return;
+    }
+    // only fetch channel id if we don't yet have it
+    if (!this.channelId) {
+      this.fetchChannelId(() =>
+        this.deleteFilesHelper(filenames, onError, onSuccess)
+      );
+    } else {
+      this.deleteFilesHelper(filenames, onError, onSuccess);
+    }
+  }
+
   saveFilesHelper(filesJson, filenames, onError, onSuccess) {
     this.filesToUpload = [...filenames];
     this.fileUploadsFailed = [];
@@ -130,6 +162,21 @@ export default class BackpackClientApi {
       } else {
         this.onUploadComplete(filename, onError, onSuccess);
       }
+    });
+  }
+
+  deleteFilesHelper(filenames, onError, onSuccess) {
+    this.deleteSingleFileFromBackpack(
+      filenames[0],
+      onError,
+      onSuccess,
+      SAVE_RETRY_COUNT
+    );
+  }
+
+  deleteSingleFileFromBackpack(filename, onError, onSuccess, retryCount) {
+    this.backpackApi.deleteObject(filename, (error, _) => {
+      console.log('deleted object?? error was ' + error);
     });
   }
 
