@@ -6,7 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from '../progressStyles';
 import {refetchSectionLockStatus} from '../../../lessonLockRedux';
 import color from '@cdo/apps/util/color';
-import commonMsg from '@cdo/locale';
+import {commonMsg, i18n} from '@cdo/locale';
 import SectionSelector from '../SectionSelector';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -23,7 +23,8 @@ function LessonLockDialog({
   lessonId,
   handleClose,
   selectedSectionId,
-  refetchSectionLockStatus
+  refetchSectionLockStatus,
+  isHidden
 }) {
   const {loading, serverLockState} = useGetLockState(
     unitId,
@@ -229,40 +230,47 @@ function LessonLockDialog({
   };
 
   return (
-    <BaseDialog isOpen handleClose={handleClose}>
-      <div style={{...styles.main, ...responsiveHeight}}>
-        <div>
-          <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-          <SectionSelector
-            style={{marginLeft: 10}}
-            requireSelection={hasSelectedSection}
-          />
+    <div>
+      {this.props.isHidden && (
+        <div id="hiddenAssessmentWarning" style={styles.error}>
+          {i18n.hiddenAssessmentWarning()}
         </div>
-        {renderInstructionsAndButtons()}
-        {renderStudentTable()}
-      </div>
-      <div style={styles.buttonContainer}>
-        {error && <span style={styles.error}>{error}</span>}
-        <button
-          type="button"
-          style={progressStyles.baseButton}
-          onClick={handleClose}
-        >
-          {commonMsg.dialogCancel()}
-        </button>
-        <button
-          type="button"
-          style={{
-            ...progressStyles.blueButton,
-            ...hiddenUnlessSelectedSection
-          }}
-          onClick={handleSave}
-          disabled={saving}
-        >
-          {saving ? commonMsg.saving() : commonMsg.save()}
-        </button>
-      </div>
-    </BaseDialog>
+      )}
+      <BaseDialog isOpen handleClose={handleClose}>
+        <div style={{...styles.main, ...responsiveHeight}}>
+          <div>
+            <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
+            <SectionSelector
+              style={{marginLeft: 10}}
+              requireSelection={hasSelectedSection}
+            />
+          </div>
+          {renderInstructionsAndButtons()}
+          {renderStudentTable()}
+        </div>
+        <div style={styles.buttonContainer}>
+          {error && <span style={styles.error}>{error}</span>}
+          <button
+            type="button"
+            style={progressStyles.baseButton}
+            onClick={handleClose}
+          >
+            {commonMsg.dialogCancel()}
+          </button>
+          <button
+            type="button"
+            style={{
+              ...progressStyles.blueButton,
+              ...hiddenUnlessSelectedSection
+            }}
+            onClick={handleSave}
+            disabled={saving}
+          >
+            {saving ? commonMsg.saving() : commonMsg.save()}
+          </button>
+        </div>
+      </BaseDialog>
+    </div>
   );
 }
 
@@ -270,6 +278,7 @@ LessonLockDialog.propTypes = {
   unitId: PropTypes.number.isRequired,
   lessonId: PropTypes.number.isRequired,
   handleClose: PropTypes.func.isRequired,
+  isHidden: PropTypes.bool,
 
   // Provided by redux
   selectedSectionId: PropTypes.number,
