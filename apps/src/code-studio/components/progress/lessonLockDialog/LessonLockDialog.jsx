@@ -6,7 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from '../progressStyles';
 import {refetchSectionLockStatus} from '../../../lessonLockRedux';
 import color from '@cdo/apps/util/color';
-import {commonMsg, i18n} from '@cdo/locale';
+import {i18n, commonMsg} from '@cdo/locale';
 import SectionSelector from '../SectionSelector';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -110,6 +110,14 @@ function LessonLockDialog({
   //
   const hasSelectedSection = selectedSectionId !== NO_SECTION;
   const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
+
+  const renderHiddenWarning = () => (
+    <>
+      {isHidden && (
+        <div style={styles.error}>{i18n.hiddenAssessmentWarning}</div>
+      )}
+    </>
+  );
 
   const renderInstructionsAndButtons = () => (
     <>
@@ -230,47 +238,41 @@ function LessonLockDialog({
   };
 
   return (
-    <div>
-      {this.props.isHidden && (
-        <div id="hiddenAssessmentWarning" style={styles.error}>
-          {i18n.hiddenAssessmentWarning()}
+    <BaseDialog isOpen handleClose={handleClose}>
+      <div style={{...styles.main, ...responsiveHeight}}>
+        <div>
+          <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
+          <SectionSelector
+            style={{marginLeft: 10}}
+            requireSelection={hasSelectedSection}
+          />
         </div>
-      )}
-      <BaseDialog isOpen handleClose={handleClose}>
-        <div style={{...styles.main, ...responsiveHeight}}>
-          <div>
-            <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-            <SectionSelector
-              style={{marginLeft: 10}}
-              requireSelection={hasSelectedSection}
-            />
-          </div>
-          {renderInstructionsAndButtons()}
-          {renderStudentTable()}
-        </div>
-        <div style={styles.buttonContainer}>
-          {error && <span style={styles.error}>{error}</span>}
-          <button
-            type="button"
-            style={progressStyles.baseButton}
-            onClick={handleClose}
-          >
-            {commonMsg.dialogCancel()}
-          </button>
-          <button
-            type="button"
-            style={{
-              ...progressStyles.blueButton,
-              ...hiddenUnlessSelectedSection
-            }}
-            onClick={handleSave}
-            disabled={saving}
-          >
-            {saving ? commonMsg.saving() : commonMsg.save()}
-          </button>
-        </div>
-      </BaseDialog>
-    </div>
+        {renderHiddenWarning()}
+        {renderInstructionsAndButtons()}
+        {renderStudentTable()}
+      </div>
+      <div style={styles.buttonContainer}>
+        {error && <span style={styles.error}>{error}</span>}
+        <button
+          type="button"
+          style={progressStyles.baseButton}
+          onClick={handleClose}
+        >
+          {commonMsg.dialogCancel()}
+        </button>
+        <button
+          type="button"
+          style={{
+            ...progressStyles.blueButton,
+            ...hiddenUnlessSelectedSection
+          }}
+          onClick={handleSave}
+          disabled={saving}
+        >
+          {saving ? commonMsg.saving() : commonMsg.save()}
+        </button>
+      </div>
+    </BaseDialog>
   );
 }
 
