@@ -710,6 +710,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
     'code.org/public/certificates/blank':
       './src/sites/code.org/pages/public/certificates/blank.js',
+    'code.org/public/certificates':
+      './src/sites/code.org/pages/public/certificates.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
