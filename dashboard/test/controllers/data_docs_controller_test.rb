@@ -4,11 +4,14 @@ class DataDocsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup_all do
+    @data_doc_key = 'new_doc'.freeze
     @test_params = {
-      key: 'new_doc',
+      key: @data_doc_key,
       name: 'New Doc',
       content: 'This doc contains things.'
-    }
+    }.freeze
+
+    @data_doc = create :data_doc, key: @data_doc_key
   end
 
   # new page is levelbuilder only
@@ -22,4 +25,11 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :create, params: -> {@test_params}, user: :student, response: :forbidden
   test_user_gets_response_for :create, params: -> {@test_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :create, params: -> {@test_params}, user: :levelbuilder, response: :success
+
+  # TODO [meg] : all should be able to see `show` page, once launched
+  # for now, only levelbuilder can see it
+  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: nil, response: :redirect
+  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :student, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :levelbuilder, response: :success
 end
