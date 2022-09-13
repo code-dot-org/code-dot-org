@@ -1,3 +1,5 @@
+@import 'imports/_breakpoints.scss';
+
 #wrapper, #app_body {
   color: #292F36;
   font-family: 'Gotham 4r', sans-serif !important;
@@ -11,6 +13,10 @@
   padding: 0 !important;
   columns: 2;
   column-width: auto;
+
+  @media screen and (max-width: $width-sm) {
+    columns: 1;
+  }
 
   #logo, #board_title, h1, .filter-container {
     display: none;
