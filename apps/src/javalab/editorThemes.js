@@ -1,5 +1,4 @@
 import {EditorView} from '@codemirror/view';
-import color from '@cdo/apps/util/color';
 import {
   syntaxHighlighting,
   defaultHighlightStyle,
@@ -7,20 +6,18 @@ import {
 } from '@codemirror/language';
 import {tags} from '@lezer/highlight';
 
-// modified from @codemirror/theme-one-dark
-const chalky = '#e5c07b',
-  coral = '#e06c75',
-  cyan = '#56b6c2',
-  invalid = '#ffffff',
-  stone = '#7d8799',
-  malibu = '#61afef',
-  sage = '#98c379',
-  whiskey = '#d19a66',
-  violet = '#c678dd',
-  darkBackground = '#21252b',
-  highlightBackground = '#2c313a',
-  selection = '#3E4451',
-  cursor = '#528bff';
+const 
+  charcoal = '#292f36',
+  teal_light = '#5ecfe6',
+  teal_lightest = '#7ee8f9',
+  purple_light = '#ccb1df',
+  strawberry = '#ed6060',
+  off_white = '#f7f8fa',
+  charcoal_8 = '#eeeeef',
+  charcoal_16 = '#ddddedf',
+  charcoal_32 = '#b9babc',
+  charcoal_50 = '#94979b',
+  blue = '#007acc';
 
 /**
 The editor theme styles for dark mode.
@@ -28,18 +25,18 @@ The editor theme styles for dark mode.
 export const darkTheme = EditorView.theme(
   {
     '&': {
-      color: color.lighter_gray,
-      backgroundColor: color.darkest_slate_gray
+      color: off_white,
+      backgroundColor: charcoal
     },
     '.cm-content': {
-      caretColor: cursor
+      caretColor: blue
     },
-    '&.cm-focused .cm-cursor': {borderLeftColor: cursor},
+    '&.cm-focused .cm-cursor': {borderLeftColor: blue},
     '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection': {
-      backgroundColor: selection
+      backgroundColor: charcoal_50
     },
-    '.cm-panels': {backgroundColor: darkBackground, color: color.lighter_gray},
-    '.cm-panels button': {color: color.lightest_gray},
+    '.cm-panels': {backgroundColor: charcoal, color: charcoal_16},
+    '.cm-panels button': {color: charcoal_8},
     '.cm-panels.cm-panels-top': {borderBottom: '2px solid black'},
     '.cm-panels.cm-panels-bottom': {borderTop: '2px solid black'},
     '.cm-searchMatch': {
@@ -49,19 +46,19 @@ export const darkTheme = EditorView.theme(
     '.cm-searchMatch.cm-searchMatch-selected': {
       backgroundColor: '#6199ff2f'
     },
-    '.cm-activeLine': {backgroundColor: color.dark_gray},
+    '.cm-activeLine': {backgroundColor: charcoal_50},
     '.cm-selectionMatch': {backgroundColor: '#aafe661a'},
     '.cm-matchingBracket, .cm-nonmatchingBracket': {
       backgroundColor: '#bad0f847',
       outline: '1px solid #515a6b'
     },
     '.cm-gutters': {
-      backgroundColor: color.darkest_slate_gray,
-      color: stone,
+      backgroundColor: charcoal,
+      color: charcoal_32,
       border: 'none'
     },
     '.cm-activeLineGutter': {
-      backgroundColor: highlightBackground
+      backgroundColor: charcoal_50
     },
     '.cm-foldPlaceholder': {
       backgroundColor: 'transparent',
@@ -70,15 +67,15 @@ export const darkTheme = EditorView.theme(
     },
     '.cm-tooltip': {
       border: '1px solid #181a1f',
-      backgroundColor: darkBackground
+      backgroundColor: charcoal
     },
     '.cm-tooltip-autocomplete': {
       '& > ul > li[aria-selected]': {
-        backgroundColor: highlightBackground,
-        color: color.lighter_gray
+        backgroundColor: charcoal_50,
+        color: charcoal_16
       }
     },
-    '.cm-textfield': {color: color.lightest_gray}
+    '.cm-textfield': {color: charcoal_8}
   },
   {dark: true}
 );
@@ -87,7 +84,7 @@ export const darkTheme = EditorView.theme(
 The highlighting style for code in the dark theme.
 */
 export const darkHighlightStyle = HighlightStyle.define([
-  {tag: tags.keyword, color: violet},
+  {tag: tags.keyword, color: teal_light},
   {
     tag: [
       tags.name,
@@ -97,19 +94,19 @@ export const darkHighlightStyle = HighlightStyle.define([
       tags.macroName,
       tags.definition(tags.name)
     ],
-    color: coral
+    color: teal_light
   },
   {
     tag: [tags.function(tags.variableName), tags.labelName],
-    color: malibu
+    color: teal_lightest
   },
   {
     tag: [tags.color, tags.constant(tags.name), tags.standard(tags.name)],
-    color: whiskey
+    color: strawberry
   },
   {
     tag: [tags.separator],
-    color: color.lighter_gray
+    color: off_white
   },
   {
     tag: [
@@ -122,7 +119,7 @@ export const darkHighlightStyle = HighlightStyle.define([
       tags.self,
       tags.namespace
     ],
-    color: chalky
+    color: teal_light
   },
   {
     tag: [
@@ -134,20 +131,20 @@ export const darkHighlightStyle = HighlightStyle.define([
       tags.link,
       tags.special(tags.string)
     ],
-    color: cyan
+    color: off_white
   },
-  {tag: [tags.meta, tags.comment], color: stone},
+  {tag: [tags.meta, tags.comment], color: charcoal_32},
   {tag: tags.strong, fontWeight: 'bold'},
   {tag: tags.emphasis, fontStyle: 'italic'},
   {tag: tags.strikethrough, textDecoration: 'line-through'},
   {tag: tags.link, color: stone, textDecoration: 'underline'},
-  {tag: tags.heading, fontWeight: 'bold', color: coral},
+  {tag: tags.heading, fontWeight: 'bold', color: strawberry},
   {
     tag: [tags.atom, tags.bool, tags.special(tags.variableName)],
-    color: whiskey
+    color: teal_light
   },
-  {tag: [tags.processingInstruction, tags.string, tags.inserted], color: sage},
-  {tag: tags.invalid, color: invalid}
+  {tag: [tags.processingInstruction, tags.string, tags.inserted], color: off_white},
+  {tag: tags.invalid, color: charcoal_32}
 ]);
 
 /**
