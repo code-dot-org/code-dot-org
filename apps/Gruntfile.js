@@ -620,6 +620,7 @@ describe('entry tests', () => {
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     'courses/new': './src/sites/studio/pages/courses/new.js',
     'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
+    'data_docs/show': './src/sites/studio/pages/data_docs/show.js', // TODO [meg]: move to codeStudioEntries once launched
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
