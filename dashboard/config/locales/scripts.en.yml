@@ -8996,3 +8996,14 @@ en:
             NLP is a field that attempts to have computers understand natural (i.e., human) language. There are many exciting breakthroughs in the field.
 
             For this lab, you will explore some of the basics of NLP. As you explore this, you will work with a variety of methods of the `String` class and practice using the `if` statement. You will trace a method to find words in user input.
+        emma:
+          lessons:
+            lesson-1:
+              name: practice
+          lesson_groups: {}
+          name: emma
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

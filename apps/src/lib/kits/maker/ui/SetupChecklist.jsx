@@ -89,7 +89,9 @@ export default class SetupChecklist extends Component {
       // Is Chrome App Installed?
       .then(
         () =>
+          // Only necessary for ChromeOS when the webserial flag is not-enabled
           (isChromeOS() || isChrome()) &&
+          !experiments.isEnabled('webserial') &&
           this.detectStep(STATUS_APP_INSTALLED, () =>
             setupChecker.detectChromeAppInstalled()
           )
@@ -207,27 +209,37 @@ export default class SetupChecklist extends Component {
         />
       );
     } else if (isChromeOS() || isChrome()) {
-      // Chromebooks - Chrome App
-      return (
-        <ValidationStep
-          stepName={
-            applabI18n.makerSetupAppInstalled() +
-            (isChromeOS() ? '' : applabI18n.legacy())
-          }
-          stepStatus={this.state[STATUS_APP_INSTALLED]}
-        >
-          <SafeMarkdown
-            markdown={applabI18n.makerSetupInstallSerialConnector({
-              webstoreURL: CHROME_APP_WEBSTORE_URL
-            })}
+      if (experiments.isEnabled('webserial')) {
+        // Chromebooks use WebSerial for connection
+        return (
+          <ValidationStep
+            stepName={applabI18n.makerSetupBrowserSupported()}
+            stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
           />
-          <br />
-          {applabI18n.makerSetupRedetect()}
-          <br />
-          {applabI18n.makerSetupAcceptPrompt()}
-          {this.contactSupport()}
-        </ValidationStep>
-      );
+        );
+      } else {
+        // Chromebooks - Chrome App
+        return (
+          <ValidationStep
+            stepName={
+              applabI18n.makerSetupAppInstalled() +
+              (isChromeOS() ? '' : applabI18n.legacy())
+            }
+            stepStatus={this.state[STATUS_APP_INSTALLED]}
+          >
+            <SafeMarkdown
+              markdown={applabI18n.makerSetupInstallSerialConnector({
+                webstoreURL: CHROME_APP_WEBSTORE_URL
+              })}
+            />
+            <br />
+            {applabI18n.makerSetupRedetect()}
+            <br />
+            {applabI18n.makerSetupAcceptPrompt()}
+            {this.contactSupport()}
+          </ValidationStep>
+        );
+      }
     } else {
       // Unsupported Browser
       return (
