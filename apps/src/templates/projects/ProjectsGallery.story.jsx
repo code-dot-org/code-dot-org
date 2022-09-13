@@ -18,34 +18,36 @@ const DEFAULT_PROPS = {
   canShare: true
 };
 
-export default storybook => {
-  return storybook.storiesOf('Projects/ProjectsGallery', module).addStoryTable([
-    {
-      name: 'Projects Gallery with My Projects selected initially',
-      description: '',
-      story: () => {
-        const store = createProjectsStore();
-        console.log(store.getState());
-        store.dispatch(selectGallery(Galleries.PRIVATE));
-        return (
-          <Provider store={store}>
-            <ProjectsGallery {...DEFAULT_PROPS} />
-          </Provider>
-        );
-      }
-    },
-    {
-      name: 'Projects Gallery with Public Gallery selected initially',
-      description: '',
-      story: () => {
-        const store = createProjectsStore();
-        store.dispatch(selectGallery(Galleries.PUBlIC));
-        return (
-          <Provider store={store}>
-            <ProjectsGallery {...DEFAULT_PROPS} />
-          </Provider>
-        );
-      }
-    }
-  ]);
+export default {
+  title: 'ProjectsGallery',
+  component: ProjectsGallery
+};
+
+const Template = args => <ProjectsGallery description="" {...args} />;
+
+export const MyProjectsSelectedInitially = Template.bind({});
+MyProjectsSelectedInitially.args = {
+  story: () => {
+    const store = createProjectsStore();
+    console.log(store.getState());
+    store.dispatch(selectGallery(Galleries.PRIVATE));
+    return (
+      <Provider store={store}>
+        <ProjectsGallery {...DEFAULT_PROPS} />
+      </Provider>
+    );
+  }
+};
+
+export const PublicGallerySelectedInitially = Template.bind({});
+PublicGallerySelectedInitially.args = {
+  story: () => {
+    const store = createProjectsStore();
+    store.dispatch(selectGallery(Galleries.PUBlIC));
+    return (
+      <Provider store={store}>
+        <ProjectsGallery {...DEFAULT_PROPS} />
+      </Provider>
+    );
+  }
 };
