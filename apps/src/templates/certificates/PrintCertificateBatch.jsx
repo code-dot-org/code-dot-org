@@ -38,8 +38,5 @@ PrintCertificateBatch.propTypes = {
 const styles = {
   wrapper: {
     fontSize: 15
-  },
-  bold: {
-    fontFamily: "'Gotham 7r', sans-serif"
   }
 };
