@@ -164,5 +164,3 @@ export default connect(
     decreaseEditorFontSize: () => dispatch(decreaseEditorFontSize())
   })
 )(onClickOutside(UnconnectedJavalabSettings));
-
-//export default onClickOutside(JavalabSettings);
