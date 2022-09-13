@@ -228,7 +228,10 @@ And(/^I create some fake applications of each type and status$/) do
       teacher = User.find_or_create_teacher(
         {name: "#{course} #{status}", email: teacher_email}, nil, nil
       )
-      next if Pd::Application::TeacherApplication.find_by(user_id: teacher.id)
+      next if Pd::Application::TeacherApplication.find_by(
+        application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR,
+        user_id: teacher.id
+      )
       form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: course, last_name: status)
       if status == 'incomplete'
         FactoryGirl.create(
