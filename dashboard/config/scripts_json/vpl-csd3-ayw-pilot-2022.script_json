@@ -7,7 +7,6 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "pilot_experiment": "csd-pl-ayw-pilot22",
       "student_detail_progress_view": true,
       "tts": true
     },
