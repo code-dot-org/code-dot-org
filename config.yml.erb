@@ -417,7 +417,7 @@ levelbuilder_mode:
 # make it easier to tell the difference
 use_local_header_color:
 
-default_hoc_mode: post-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode: pre-hoc   # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
@@ -556,3 +556,10 @@ spotify_api_client_secret: !Secret
 
 # Credentials for the Open Weather API, used to provide weather data in App Labs
 open_weather_api_key: !Secret
+
+# Local Javabuilder configuration. Set 'use_localhost_javabuilder: true' to point to
+# your Javabuilder WebSocket server running on localhost.
+# Set 'local_javabuilder_stack_name: "your stack name"' to point to a deployed development
+# instance of Javabuilder. This will likely be 'javabuilder-adhoc-your_branch_name'
+use_localhost_javabuilder:
+local_javabuilder_stack_name:

@@ -3,6 +3,8 @@ require 'base64'
 class CertificatesController < ApplicationController
   include CertificatesHelper
 
+  before_action :authenticate_user!, only: [:batch]
+
   # GET /certificates/:encoded_params
   # encoded_params includes:
   #   name - student name (optional)
@@ -23,6 +25,36 @@ class CertificatesController < ApplicationController
       imageUrl: certificate_image_url(data['name'], data['course'], data['donor']),
       printUrl: certificate_print_url(data['name'], data['course'], data['donor']),
       announcement: announcement
+    }
+  end
+
+  def blank
+    announcement = Announcements.get_announcement_for_page('/certificates')
+
+    @certificate_data = {
+      imageUrl: certificate_image_url(nil, 'hourofcode', nil),
+      printUrl: certificate_print_url(nil, 'hourofcode', nil),
+      announcement: announcement
+    }
+
+    render :show
+  end
+
+  # GET /certificates/batch
+  def batch
+    unless current_user.teacher?
+      return redirect_to root_path, alert: 'You must be signed in as a teacher to bulk print certificates.'
+    end
+
+    begin
+      course_name = params[:s] ? Base64.urlsafe_decode64(params[:s]) : 'hourofcode'
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return render status: :bad_request, json: {message: 'invalid base64'}
+    end
+
+    @certificate_data = {
+      courseName: course_name,
+      imageUrl: certificate_image_url(nil, course_name, nil),
     }
   end
 end

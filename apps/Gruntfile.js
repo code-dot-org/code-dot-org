@@ -342,6 +342,10 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          [
+            'build/package/css/certificates.css',
+            'style/curriculum/certificates.scss'
+          ],
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
@@ -521,6 +525,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
     'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
@@ -533,6 +538,8 @@ describe('entry tests', () => {
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'print_certificates/batch':
+      './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
       './src/sites/studio/pages/programming_classes/show.js',
     'programming_environments/index':
@@ -586,7 +593,6 @@ describe('entry tests', () => {
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
-    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -620,6 +626,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     'courses/new': './src/sites/studio/pages/courses/new.js',
+    'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -701,6 +708,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/public/educate/regional-partner/playbook':
       './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
+    'code.org/public/certificates/blank':
+      './src/sites/code.org/pages/public/certificates/blank.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':

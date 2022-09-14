@@ -166,7 +166,6 @@ end
 
 def campaign_date(format)
   @country ||= hoc_detect_country
-  type = HOC_COUNTRIES[@country]['type'] || 'default'
   language = @language || HOC_COUNTRIES[@country]['default_language']
   id = 'campaign_date_full'
 
@@ -185,8 +184,10 @@ def campaign_date(format)
     id = 'campaign_date_full_year'
   end
 
-  if %w(latam europe africa).include? type
-    id = "#{type}_#{id}"
+  # For hoc2022, we just want campaign dates for the US
+  # and non-US.
+  if @country != "us"
+    id = "nonus_#{id}"
   end
 
   return I18n.t(id, locale: language)

@@ -4,6 +4,7 @@ import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
 import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -59,7 +60,7 @@ export function findPortWithViableDevice() {
  * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
-  if (!isChromeOS()) {
+  if (!isChromeOS() || experiments.isEnabled('webserial')) {
     return Promise.resolve();
   }
 
