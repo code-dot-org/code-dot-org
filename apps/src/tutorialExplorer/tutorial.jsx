@@ -58,7 +58,7 @@ export default class Tutorial extends React.Component {
 const styles = {
   tutorialOuter: {
     float: 'left',
-    padding: '5px 7px',
+    padding: '7px 7px',
     cursor: 'pointer'
   },
   tutorialImageContainer: {
