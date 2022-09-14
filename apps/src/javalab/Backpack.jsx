@@ -358,6 +358,8 @@ class Backpack extends Component {
                           displayTheme === DisplayTheme.DARK &&
                             moduleStyles.fileListItemDark
                         )}
+                        /* key must be based on filename so that in case of partial delete failure
+                        we can find any successfully deleted files and remove them from the dropdown */
                         key={`backpack-file-${filename}`}
                       >
                         <input
