@@ -72,6 +72,16 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
     setDisplayAddCommentFailure(true);
   };
 
+  const isTextEmpty = text => {
+    // Extract code block and paragraph portions
+    const matches = text.match(/```([^]+)```([^]+)/);
+    if (matches && matches.length === 3) {
+      return matches[1].trim().length === 0 && matches[2].trim().length === 0;
+    }
+
+    return text.trim().length === 0;
+  };
+
   return (
     <>
       <div style={styles.textareaWrapper}>
@@ -107,7 +117,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
         )}
         <Button
           className="code-review-comment-submit"
-          disabled={commentText.length === 0}
+          disabled={isTextEmpty(commentText)}
           onClick={handleSubmit}
           text={javalabMsg.submit()}
           color={Button.ButtonColor.orange}
