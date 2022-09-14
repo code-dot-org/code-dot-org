@@ -128,7 +128,7 @@ export function getExceptionMessage(exceptionDetails, type) {
     case JavabuilderExceptionType.CONNECTION_POOL_SHUT_DOWN:
     case JavabuilderExceptionType.LOW_DISK_SPACE:
     case JavabuilderExceptionType.TEMP_DIRECTORY_CLEANUP_ERROR:
-      error = msg.internalException();
+      error = msg.internalException({connectionId: connectionId});
       break;
 
     default:
