@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
+import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -144,7 +144,7 @@ export class UnconnectedJavalabSettings extends Component {
         {dropdownOpen && this.renderDropdown()}
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
-          text={i18n.settings()}
+          text={msg.settings()}
           className={classNames(
             style.buttonWhite,
             dropdownOpen && style.selected

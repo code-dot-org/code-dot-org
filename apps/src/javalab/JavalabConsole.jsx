@@ -125,6 +125,10 @@ class JavalabConsole extends React.Component {
                 ...(displayTheme === DisplayTheme.DARK
                   ? styles.darkModeInput
                   : styles.lightModeInput),
+                // TODO: When converting this component's styles to SCSS,
+                // font size may need to remain an inline style as it is
+                // programmatically assigned, or editor font size logic
+                // should be moved into SCSS.
                 fontSize: this.props.editorFontSize
               }}
               onKeyDown={this.onInputKeyDown}
@@ -244,6 +248,10 @@ class JavalabConsole extends React.Component {
               ...(displayTheme === DisplayTheme.DARK
                 ? styles.darkMode
                 : styles.lightMode),
+              // TODO: When converting this component's styles to SCSS,
+              // font size may need to remain an inline style as it is
+              // programmatically assigned, or editor font size logic
+              // should be moved into SCSS.
               fontSize: editorFontSize
             }}
             ref={el => (this._consoleLogs = el)}
