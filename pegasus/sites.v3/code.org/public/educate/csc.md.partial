@@ -39,17 +39,17 @@ They're perfect for teachers who'd like to incorporate computer science into the
 
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
-{{ csc_module, title: "Marine Life Ecosystems", image: "/images/csc/landing/module_marine_life.png", grades: "3-5", subject: "Science", duration: "4 hours", description: "Restore balance to a marine life ecosystem on the verge of overfishing.", button_text: "Learn more", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
-{{ csc_module, title: "Star Quilts", image: "/images/csc/landing/module_star_quilts.png", grades: "3-5", subject: "Math", duration: "4 hours", description: "Design a Native American star quilt using rhombus patterns in The Artist.", button_text: "Learn more", url: "https://studio.code.org/s/csc-starquilts-2022" }}
-{{ csc_module, title: "Storytelling", image: "/images/csc/landing/module_storytelling.png", grades: "3-5", subject: "ELA", duration: "4 hours", description: "Compare and contrast stories from around the world and create your own short story animation.", button_text: "Learn more", url: "https://studio.code.org/s/csc-fables-2022" }}
-{{ csc_module, title: "Time Capsule", image: "/images/csc/landing/module_time_capsule.png", grades: "3-5", subject: "Social Studies", duration: "4 hours", description: "Create an immersive time capsule experience and share your story of now.", button_text: "Learn more", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
-{{ clearfix }}
-
 <aside>
   <h3><strong>Feedback</strong></h3>
   <p>This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any feedback you'd like to share?</p>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Give feedback</button></a>
 </aside>
+
+{{ csc_module, title: "Marine Life Ecosystems (beta)", image: "/images/csc/landing/module_marine_life.png", grades: "3-5", subject: "Science", duration: "4 hours", description: "Restore balance to a marine life ecosystem on the verge of overfishing.", button_text: "Learn more", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
+{{ csc_module, title: "Star Quilts (beta)", image: "/images/csc/landing/module_star_quilts.png", grades: "3-5", subject: "Math", duration: "4 hours", description: "Design a Native American star quilt using rhombus patterns in The Artist.", button_text: "Learn more", url: "https://studio.code.org/s/csc-starquilts-2022" }}
+{{ csc_module, title: "Storytelling (beta)", image: "/images/csc/landing/module_storytelling.png", grades: "3-5", subject: "ELA", duration: "4 hours", description: "Compare and contrast stories from around the world and create your own short story animation.", button_text: "Learn more", url: "https://studio.code.org/s/csc-fables-2022" }}
+{{ csc_module, title: "Time Capsule (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "3-5", subject: "Social Studies", duration: "4 hours", description: "Create an immersive time capsule experience and share your story of now.", button_text: "Learn more", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
+{{ clearfix }}
 
 ## Sample Projects
 
