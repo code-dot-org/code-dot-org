@@ -1,7 +1,7 @@
 require_relative '../../../shared/test/test_helper'
 require 'cdo/rake_utils'
 require_relative '../ci_aws_uploader'
-class CIAWSUploaderTest < ActiveSupport::TestCase
+class CiAWSUploaderTest < ActiveSupport::TestCase
   def test_successful_upload
     start_time = Time.now - 3600
     duration = 3600
