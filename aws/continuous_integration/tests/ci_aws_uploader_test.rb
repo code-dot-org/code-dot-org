@@ -14,7 +14,7 @@ websites built in 60:00 minutes
 "
     expected_metadata_param = {metadata: {commit: "abc", duration: "3600", success: "true"}}
     AWS::S3::LogUploader.any_instance.stubs(:upload_log).returns(expected_url).with(expected_key_param, expected_body_param, expected_metadata_param)
-    link = CIAWSUploader.upload_log_and_get_link_for_build("test", 0, "websites", start_time, duration, commit_hash)
+    link = CiAWSUploader.upload_log_and_get_link_for_build("test", 0, "websites", start_time, duration, commit_hash)
     assert link == " <a href='#{expected_url}'>☁ Log on S3</a>"
   end
 
@@ -23,7 +23,7 @@ websites built in 60:00 minutes
     duration = 3600
     commit_hash = 'abc'
     AWS::S3::LogUploader.any_instance.stubs(:upload_log).raises("failed to upload")
-    link = CIAWSUploader.upload_log_and_get_link_for_build("test", 0, "websites", start_time, duration, commit_hash)
+    link = CiAWSUploader.upload_log_and_get_link_for_build("test", 0, "websites", start_time, duration, commit_hash)
     assert link.empty?
   end
 end
