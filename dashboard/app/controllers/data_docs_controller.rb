@@ -27,7 +27,9 @@ class DataDocsController < ApplicationController
     @data_doc = DataDoc.find_by(key: params[:key])
     return render :not_found unless @data_doc
 
-    @data_doc_name = @data_doc.name
-    @data_doc_content = @data_doc.content
+    @data_doc_data = {
+      dataDocName: @data_doc.name,
+      dataDocContent: @data_doc.content,
+    }
   end
 end
