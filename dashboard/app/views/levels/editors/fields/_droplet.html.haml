@@ -11,7 +11,7 @@
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
     .field
       = f.label :makerlab_enabled, 'Select Maker API:'
-      = f.select :makerlab_enabled, options_for_select(@level.class.maker_apis), {include_blank: true}
+      = f.select :makerlab_enabled, options_for_select(@level.class.maker_apis, @level.makerlab_enabled), {include_blank: true}
 
   .field
     = f.label :palette_category_at_start
