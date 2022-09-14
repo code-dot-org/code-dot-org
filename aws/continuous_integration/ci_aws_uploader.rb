@@ -1,4 +1,4 @@
-class CIAWSUploader
+class CiAWSUploader
   S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
   S3_LOGS_PREFIX = CDO.name.freeze
 
