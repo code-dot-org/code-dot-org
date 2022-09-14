@@ -706,8 +706,6 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/regional-partner/playbook':
-      './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
     'code.org/public/certificates/blank':
       './src/sites/code.org/pages/public/certificates/blank.js',
     'code.org/public/student/middle-high':
