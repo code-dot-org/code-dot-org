@@ -35,7 +35,7 @@ const ContainedLevelResetButton = ({
 };
 
 ContainedLevelResetButton.propTypes = {
-  userId: PropTypes.integer,
+  userId: PropTypes.number,
   queryUserProgress: PropTypes.func.isRequired,
   hasLevelResults: PropTypes.bool,
   userRoleInCourse: PropTypes.string
@@ -43,7 +43,9 @@ ContainedLevelResetButton.propTypes = {
 
 export default connect(
   state => ({
-    hasLevelResults: Object.keys(state.progress.levelResults).length > 0,
+    hasLevelResults: !!state.progress.levelResults[
+      parseInt(state.progress.currentLevelId)
+    ],
     userId: state.pageConstants.userId,
     userRoleInCourse: state.currentUser.userRoleInCourse
   }),
