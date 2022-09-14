@@ -18,7 +18,7 @@ import {
 /**
  * Displays the settings options for JavaLab.
  */
-class UnconnectedJavalabSettings extends Component {
+export class UnconnectedJavalabSettings extends Component {
   static propTypes = {
     // populated by Redux
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
@@ -82,6 +82,7 @@ class UnconnectedJavalabSettings extends Component {
         key="theme-setting"
         type="button"
         className={style.item}
+        id="javalab-settings-switch-theme"
       >
         {javalabMsg.switchToDisplayTheme({displayTheme: displayThemeString})}
       </button>
@@ -98,13 +99,17 @@ class UnconnectedJavalabSettings extends Component {
     } = this.props;
 
     return (
-      <div className={classNames(style.item, style.fontSizeSelector)}>
+      <div
+        className={classNames(style.item, style.fontSizeSelector)}
+        id="javalab-settings-font-size-selector"
+      >
         <span className={style.textSizeLabel}>{javalabMsg.textSize()}</span>
         <button
           onClick={decreaseEditorFontSize}
           disabled={!canDecreaseFontSize}
           className={style.fontSizeButton}
           type="button"
+          id="javalab-settings-decrease-font"
         >
           <FontAwesome icon="minus" className={style.icon} />
         </button>
@@ -114,6 +119,7 @@ class UnconnectedJavalabSettings extends Component {
           disabled={!canIncreaseFontSize}
           className={style.fontSizeButton}
           type="button"
+          id="javalab-settings-increase-font"
         >
           <FontAwesome icon="plus" className={style.icon} />
         </button>
