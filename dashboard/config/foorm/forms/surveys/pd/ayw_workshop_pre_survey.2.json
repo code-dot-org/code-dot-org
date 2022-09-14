@@ -126,6 +126,10 @@
                   "text": "Unit 6 - Physical Computing"
                 },
                 {
+                  "value": "unit_7",
+                  "text": "Unit 7 - AI and Machine Learning"
+                },
+                {
                   "value": "havent_started",
                   "text": "I haven't started teaching the course yet."
                 }
@@ -1191,6 +1195,98 @@
                   "text": "18. CS Discoveries Post Course survey"
                 }
               ]
+            },
+            {
+              "type": "dropdown",
+              "name": "csd_unit_7_lessons",
+              "visibleIf": "{csd_unit} = 'unit_7'",
+              "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+              "choices": [
+                {
+                  "value": "1_Introduction_Machine_Lerning",
+                  "text": "1. Introduction to Machine Learning"
+                },
+                {
+                  "value": "2_Types_Machine_Learning",
+                  "text": "2. Types of Machine Learning"
+                },
+                {
+                  "value": "3_Innovations_AI",
+                  "text": "3. Innovations in AI"
+                },
+                {
+                  "value": "4_Patterns_in_Data",
+                  "text": "4. Patterns in Data"
+                },
+                {
+                  "value": "5_Board_Events",
+                  "text": "5. Board Events"
+                },
+                {
+                  "value": "6_Introduction_AI_Lab",
+                  "text": "6. Introduction to AI Lab"
+                },
+                {
+                  "value": "7_Importing_Models_App_Lab",
+                  "text": "7. Importing Models in App Lab"
+                },
+                {
+                  "value": "8_Model_Cards",
+                  "text": "8. Model Cards"
+                },
+                {
+                  "value": "9_Saving_Models_AI_Lab",
+                  "text": "9. Saving Models in AI Lab"
+                },
+                {
+                  "value": "10_Model_Cards_App_Lab",
+                  "text": "10. Model Cards in App Lab"
+                },
+                {
+                  "value": "11_Numerical_Models",
+                  "text": "11. Numerical Models"
+                },
+                {
+                  "value": "12_Numerical_Data_AI_Lab",
+                  "text": "12. Numerical Data in AI Lab"
+                },
+                {
+                  "value": "13_Customizing_Apps",
+                  "text": "13. Customizing Apps"
+                },
+                {
+                  "value": "14_AI_Code_of_Ethics",
+                  "text": "14. AI Code of Ethics"
+                },
+                {
+                  "value": "15_Project_Make_a_Machine_Learning_App",
+                  "text": "15. Project: Make a Machine Learning App"
+                },
+                {
+                  "value": "16_Issue_Statements",
+                  "text": "16. Issue Statements"
+                },
+                {
+                  "value": "17_Survey_Planning",
+                  "text": "17. Survey Planning"
+                },
+                {
+                  "value": "18_Survey_Data_in_AI_Lab",
+                  "text": "18. Survey Data in AI Lab"
+                },
+                {
+                  "value": "19_Project_Make_a_Machine_Learning_App",
+                  "text": "19. Project: Make a Machine Learning App"
+                },
+                {
+                  "value": "20_Troubleshooting_Models",
+                  "text": "20. Troubleshooting Models"
+                },
+                {
+                  "value": "21_Creating_an_App",
+                  "text": "21.  Creating an App"
+                }
+              ]
             }
           ]
         },
@@ -1373,6 +1469,10 @@
                 {
                   "value": "unit_6",
                   "text": "Unit 6 - Physical Computing"
+                },
+                {
+                  "value": "unit_7",
+                  "text": "Unit 7 - AI and Machine Learning"
                 },
                 {
                   "value": "not_sure",
