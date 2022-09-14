@@ -5,29 +5,33 @@ import projects, {selectGallery} from './projectsRedux';
 import currentUser from '../currentUserRedux';
 import publishDialog from './publishDialog/publishDialogRedux';
 import deleteDialog from './deleteDialog/deleteProjectDialogRedux';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
-const createProjectsStore = (reducers = {}, state = {}) => {
-  return createStore(
-    combineReducers({projects, currentUser, publishDialog, deleteDialog}, state)
-  );
+export default {
+  title: 'ProjectsGallery',
+  component: ProjectsGallery
 };
 
 const Template = args => (
-  <Provider store={createProjectsStore()}>
-    <ProjectsGallery canShare limitedGallery {...args} />;
+  <Provider
+    store={reduxStore({projects, currentUser, publishDialog, deleteDialog})}
+  >
+    <ProjectsGallery
+      canShare
+      selectGallery={selectGallery}
+      limitedGallery
+      {...args}
+    />
   </Provider>
 );
 
 export const MyProjectsSelected = Template.bind({});
 MyProjectsSelected.args = {
-  selectedGallery: Galleries.PRIVATE,
-  selectGallery
+  selectedGallery: Galleries.PRIVATE
 };
 
 export const PublicGallerySelected = Template.bind({});
 PublicGallerySelected.args = {
-  selectedGallery: Galleries.PUBLIC,
-  selectGallery
+  selectedGallery: Galleries.PUBLIC
 };
