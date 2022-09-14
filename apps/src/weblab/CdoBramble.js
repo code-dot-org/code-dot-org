@@ -3,7 +3,6 @@ import '../assetManagement/download';
 import {makeEnum} from '../utils';
 import {FatalErrorType} from './constants';
 import logToCloud from '../logToCloud';
-import {Buffer} from 'buffer';
 
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
