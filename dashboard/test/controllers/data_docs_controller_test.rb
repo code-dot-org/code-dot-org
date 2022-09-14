@@ -35,8 +35,15 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :levelbuilder, response: :success
 
-  test 'show page renders 404 when data doc is not found' do
+  test 'creating a new data doc redirects to show page with key in URL' do
     sign_in @levelbuilder
+    new_key = "doc_key"
+    get :create, params: {key: new_key}
+    assert_match %r{/data_docs/#{new_key}$}, @response.headers['Location']
+  end
+
+  test 'show page renders 404 when data doc is not found' do
+    sign_in @levelbuilder # TODO [meg] : should not need to sign in once launched
     get :show, params: {key: 'unknown_key'}
     assert_response :not_found
   end
