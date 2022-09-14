@@ -54,6 +54,7 @@ class UnitOverview extends React.Component {
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
+    isProfessionalLearningCourse: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -109,7 +110,8 @@ class UnitOverview extends React.Component {
       isCsdOrCsp,
       completedLessonNumber,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse
     } = this.props;
 
     const displayRedirectDialog =
@@ -179,6 +181,8 @@ class UnitOverview extends React.Component {
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
+            isProfessionalLearningCourse={isProfessionalLearningCourse}
+            courseLink={this.props.courseLink}
           />
         </div>
         <ProgressTable minimal={false} />
