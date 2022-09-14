@@ -5,29 +5,35 @@ sk:
   language: Angličtina
   front_title: Pripojte sa k najväčšiemu vzdelávaciemu podujatiu v dejinách, už %{campaign_date}
   coming_soon: Už čoskoro
-  campaign_date_start_short: 6. 12.
-  campaign_date_start_long: 6. decembra
-  campaign_date_short: 6. – 11. 12.
-  campaign_date_full: 6. až 12. decembra
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6. – 12. decembra 2021
+  campaign_date_start_short: 5. december
+  campaign_date_start_long: 5. december
+  campaign_date_short: 5.-11. dec
+  campaign_date_full: 5. až 11. december
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5.-11. December 2022
+  nonus_campaign_date_start_short: 1. október
+  nonus_campaign_date_start_long: 1. október
+  nonus_campaign_date_short: 1. október - 18. december
+  nonus_campaign_date_full: 1. októbra – 18. decembra
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   latam_campaign_date_start_short: 1. október
   latam_campaign_date_start_long: 1. október
   latam_campaign_date_short: 1. október - 18. december
   latam_campaign_date_full: 1. októbra – 18. decembra
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1. októbra 2020  – 18. decembra 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   europe_campaign_date_start_short: 10. október
   europe_campaign_date_start_long: 10. október
   europe_campaign_date_short: 10. - 25. október
   europe_campaign_date_full: 10. - 25. október
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10. - 25. október 2020
-  africa_campaign_date_start_short: 6. 12.
-  africa_campaign_date_start_long: 6. decembra
+  africa_campaign_date_start_short: 1. október
+  africa_campaign_date_start_long: 1. október
   africa_campaign_date_short: 1. - 31. október
   africa_campaign_date_full: 1. - 31. október
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. - 31. október 2020
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -530,7 +536,6 @@ sk:
   signup_multiple_event_warning: Meno školy a mesto zverejníme na mape po registrácií.
     Ak organizujete viacero udalostí, prosím, uveďte iné meno nebo e-mail pre každú
     udalosť. Počítame iba jednu udalosť na jedno meno alebo e-mail.
-  signup_registration_deadline: Registrácia na Hodinu kódu sa uzavrie 11. decembra.
   signup_name_placeholder: Vaše meno
   signup_email_placeholder: meno@priklad.sk
   signup_organization_name_placeholder: Napr. Základná škola Selec

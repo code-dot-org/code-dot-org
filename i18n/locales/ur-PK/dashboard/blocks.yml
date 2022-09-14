@@ -2,6 +2,8 @@
 ur:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{QUESTION} کے ذریعے صارف سے متغیر {VAR} مانگیں جو انتخابات {A}{B}{C} رکھتا ہو"
       BadGuys_makeNewBadGuysSprite:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       BadGuys_setSizeAll_dropdown:

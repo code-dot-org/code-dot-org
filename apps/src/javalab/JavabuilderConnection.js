@@ -377,6 +377,7 @@ export default class JavabuilderConnection {
       this.onOutputMessage(
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
       );
+      this.onNewlineMessage();
     }
   }
 

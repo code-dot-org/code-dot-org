@@ -28,17 +28,6 @@ Given /^I load the review tab$/ do
   STEPS
 end
 
-Given /^I write a code review v2 comment with text "([^"]*)"$/ do |text|
-  steps <<-STEPS
-     And I press ".editable-text-area" using jQuery
-     And I wait for 2 seconds
-     And I press keys "#{text}" for element ".editable-text-area"
-     And element ".editable-text-area" contains text "#{text}"
-     And I press ".code-review-comment-submit" using jQuery
-     And I wait until element ".code-review-comment-body" is visible
-  STEPS
-end
-
 Given /^I load the code review for peer number (.*) in the list$/ do |number|
   steps <<-STEPS
    And I load the review tab

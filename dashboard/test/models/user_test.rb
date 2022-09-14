@@ -724,8 +724,8 @@ class UserTest < ActiveSupport::TestCase
     student.admin = true
     refute student.valid?
 
-    assert_raises(ActiveRecord::RecordInvalid) do
-      assert_does_not_create(User) do
+    assert_does_not_create(User) do
+      assert_raises(ActiveRecord::RecordInvalid) do
         create :student, admin: true
       end
     end
