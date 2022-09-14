@@ -1,5 +1,5 @@
 class DataDocsController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env # TODO [meg]: add except: [:show] to launch
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   load_and_authorize_resource
 
   # GET /data_docs/new

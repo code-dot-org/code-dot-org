@@ -28,22 +28,19 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :create, params: -> {@test_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :create, params: -> {@test_params}, user: :levelbuilder, response: :success
 
-  # TODO [meg] : all should be able to see `show` page, once launched
-  # for now, only levelbuilder can see it
-  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: nil, response: :redirect
-  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :student, response: :forbidden
-  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: nil, response: :success
+  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :student, response: :success
+  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :levelbuilder, response: :success
 
   test 'creating a new data doc redirects to show page with key in URL' do
     sign_in @levelbuilder
-    new_key = "doc_key"
+    new_key = 'doc_key'
     get :create, params: {key: new_key}
-    assert_match %r{/data_docs/#{new_key}$}, @response.headers['Location']
+    assert_redirected_to action: 'show', key: new_key
   end
 
   test 'show page renders 404 when data doc is not found' do
-    sign_in @levelbuilder # TODO [meg] : should not need to sign in once launched
     get :show, params: {key: 'unknown_key'}
     assert_response :not_found
   end
