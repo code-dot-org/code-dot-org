@@ -1,6 +1,6 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
 
-const SAVE_RETRY_COUNT = 1;
+const REQUEST_RETRY_COUNT = 1;
 
 export default class BackpackClientApi {
   constructor(channelId) {
@@ -126,13 +126,13 @@ export default class BackpackClientApi {
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
       const fileContents = filesJson[filename].text;
-      // write file with SAVE_RETRY_COUNT failure retries
+      // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,
         fileContents,
         onError,
         onSuccess,
-        SAVE_RETRY_COUNT
+        REQUEST_RETRY_COUNT
       );
     });
   }
@@ -166,35 +166,84 @@ export default class BackpackClientApi {
   }
 
   deleteFilesHelper(filenames, onError, onSuccess) {
-    this.deleteSingleFileFromBackpack(
-      filenames[0],
-      onError,
-      onSuccess,
-      SAVE_RETRY_COUNT
-    );
+    this.filesToDelete = [...filenames];
+    this.fileDeletesFailed = [];
+    filenames.forEach(filename => {
+      // delete file with REQUEST_RETRY_COUNT failure retries
+      this.deleteSingleFileFromBackpack(
+        filename,
+        onError,
+        onSuccess,
+        REQUEST_RETRY_COUNT
+      );
+    });
   }
 
   deleteSingleFileFromBackpack(filename, onError, onSuccess, retryCount) {
-    this.backpackApi.deleteObject(filename, (error, _) => {
-      console.log('deleted object?? error was ' + error);
-    });
+    this.backpackApi.deleteObject(
+      this.channelId + '/' + filename,
+      (error, _) => {
+        if (error) {
+          if (retryCount > 0) {
+            this.deleteSingleFileFromBackpack(
+              filename,
+              onError,
+              onSuccess,
+              retryCount - 1
+            );
+          } else {
+            // record failure and check if all files are done attempting upload/uploading
+            this.fileDeletesFailed.push(filename);
+            this.onDeleteComplete(filename, onError, onSuccess, error);
+          }
+        } else {
+          this.onDeleteComplete(filename, onError, onSuccess);
+        }
+      }
+    );
   }
 
   // Mark the given file as done uploading/attempting to upload.
   // Check if all files are done uploading. If they are, call either onSuccess
   // or onError depending on if we saw any errors.
   onUploadComplete(filename, onError, onSuccess, error) {
-    const filenameIndex = this.filesToUpload.indexOf(filename);
+    this.onRequestComplete(
+      filename,
+      this.filesToUpload,
+      this.fileUploadsFailed,
+      onError,
+      onSuccess,
+      error
+    );
+  }
+
+  onDeleteComplete(filename, onError, onSuccess, error) {
+    this.onRequestComplete(
+      filename,
+      this.filesToDelete,
+      this.fileDeletesFailed,
+      onError,
+      onSuccess,
+      error
+    );
+  }
+
+  onRequestComplete(
+    filename,
+    filesInRequest,
+    failedFileList,
+    onError,
+    onSuccess,
+    error
+  ) {
+    const filenameIndex = filesInRequest.indexOf(filename);
     if (filenameIndex >= 0) {
-      this.filesToUpload.splice(filenameIndex, 1);
+      filesInRequest.splice(filenameIndex, 1);
     }
-    if (
-      this.filesToUpload.length === 0 &&
-      this.fileUploadsFailed.length === 0
-    ) {
+    if (filesInRequest.length === 0 && failedFileList.length === 0) {
       onSuccess();
-    } else if (this.filesToUpload.length === 0) {
-      onError(error);
+    } else if (filesInRequest.length === 0) {
+      onError(error, failedFileList);
     }
   }
 }

@@ -13,7 +13,12 @@ import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 
-const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
+const Dialog = makeEnum(
+  'IMPORT_WARNING',
+  'IMPORT_ERROR',
+  'DELETE_CONFIRM',
+  'DELETE_ERROR'
+);
 
 /**
  * A button that drops down to a set of importable files, and closes itself if
@@ -38,7 +43,8 @@ class Backpack extends Component {
     backpackLoadError: false,
     selectedFiles: [],
     openDialog: null,
-    fileImportMessage: ''
+    fileImportMessage: '',
+    fileDeleteMessage: ''
   };
 
   expandDropdown = () => {
@@ -68,6 +74,56 @@ class Backpack extends Component {
     }
   };
 
+  confirmAndDeleteFiles = () => {
+    const {selectedFiles} = this.state;
+    if (selectedFiles.length === 0) {
+      this.collapseDropdown();
+    }
+    this.setState({
+      openDialog: Dialog.DELETE_CONFIRM,
+      fileDeleteMessage: this.getFileListMessage(
+        javalabMsg.fileDeleteConfirm(),
+        selectedFiles
+      )
+    });
+  };
+
+  handleDelete = () => {
+    const {selectedFiles} = this.state;
+    this.props.backpackApi.deleteFiles(
+      selectedFiles,
+      (_, failedFileList) => this.onDeleteFailed(failedFileList),
+      this.collapseDropdown
+    );
+  };
+
+  onDeleteFailed = (failedFileList, expectedFilesDeleted) => {
+    this.setState({
+      openDialog: Dialog.DELETE_ERROR,
+      fileDeleteMessage: this.getFileListMessage(
+        javalabMsg.fileDeleteError(),
+        failedFileList
+      )
+    });
+    const {backpackFilenames, selectedFiles} = this.state;
+    // remove correctly deleted files from backpackFilenames and selectedFiles
+    const filesDeleted = expectedFilesDeleted.filter(
+      filename => !failedFileList.includes(filename)
+    );
+    if (filesDeleted.length > 0) {
+      const newBackpackFilenames = backpackFilenames.filter(
+        filename => !filesDeleted.includes(filename)
+      );
+      const newSelectedFiles = selectedFiles.filter(
+        filename => !filesDeleted.includes(filename)
+      );
+      this.setState({
+        backpackFilenames: newBackpackFilenames,
+        selectedFiles: newSelectedFiles
+      });
+    }
+  };
+
   importFiles = selectedFiles => {
     let failedServerImportFiles = [];
     selectedFiles.forEach(filename => {
@@ -89,10 +145,10 @@ class Backpack extends Component {
   showImportWarning = files => {
     this.setState({
       openDialog: Dialog.IMPORT_WARNING,
-      fileImportMessage: this.getFileImportMessage(
-        true,
+      fileImportMessage: this.getFileListMessage(
+        javalabMsg.fileImportWarning(),
         files,
-        javalabMsg.fileImportWarning()
+        javalabMsg.fileImportWarningConfirm()
       )
     });
   };
@@ -101,12 +157,11 @@ class Backpack extends Component {
     this.setState({
       openDialog: Dialog.IMPORT_ERROR,
       dropdownOpen: false,
-      fileImportMessage: this.getFileImportMessage(
-        false,
-        files,
+      fileImportMessage: this.getFileListMessage(
         isValidationError
           ? javalabMsg.fileImportError()
-          : javalabMsg.fileImportServerError()
+          : javalabMsg.fileImportServerError(),
+        files
       )
     });
   };
@@ -194,18 +249,36 @@ class Backpack extends Component {
     }
   };
 
-  getFileImportMessage = (isWarning, overwriteFileList, message) => {
+  // getFileImportMessage = (isWarning, overwriteFileList, message) => {
+  //   return (
+  //     <div>
+  //       <p>{message}</p>
+  //       <ul className={moduleStyles.importMessageList}>
+  //         {overwriteFileList.map(filename => {
+  //           return <li key={filename}>{filename}</li>;
+  //         })}
+  //       </ul>
+  //       {isWarning && (
+  //         <p className={moduleStyles.importWarningConfirm}>
+  //           {javalabMsg.fileImportWarningConfirm()}
+  //         </p>
+  //       )}
+  //     </div>
+  //   );
+  // };
+
+  getFileListMessage = (message, fileList, confirmationMessage) => {
     return (
       <div>
         <p>{message}</p>
-        <ul className={moduleStyles.importMessageList}>
-          {overwriteFileList.map(filename => {
+        <ul className={moduleStyles.fileList}>
+          {fileList.map(filename => {
             return <li key={filename}>{filename}</li>;
           })}
         </ul>
-        {isWarning && (
-          <p className={moduleStyles.importWarningConfirm}>
-            {javalabMsg.fileImportWarningConfirm()}
+        {confirmationMessage && (
+          <p className={moduleStyles.confirmationMessage}>
+            {confirmationMessage}
           </p>
         )}
       </div>
@@ -225,7 +298,8 @@ class Backpack extends Component {
       backpackLoadError,
       selectedFiles,
       openDialog,
-      fileImportMessage
+      fileImportMessage,
+      fileDeleteMessage
     } = this.state;
 
     const showFiles =
@@ -308,12 +382,20 @@ class Backpack extends Component {
                     ))}
                   </div>
                 </div>
-                <JavalabButton
-                  text={javalabMsg.import()}
-                  style={styles.importButton}
-                  onClick={this.handleImport}
-                  isDisabled={selectedFiles.length === 0}
-                />
+                <div className={moduleStyles.buttonRow}>
+                  <JavalabButton
+                    text={javalabMsg.import()}
+                    className={moduleStyles.buttonOrange}
+                    onClick={this.handleImport}
+                    isDisabled={selectedFiles.length === 0}
+                  />
+                  <JavalabButton
+                    text={javalabMsg.delete()}
+                    className={moduleStyles.buttonRed}
+                    onClick={this.confirmAndDeleteFiles}
+                    isDisabled={selectedFiles.length === 0}
+                  />
+                </div>
               </>
             )}
             {backpackFilesLoading && (
@@ -358,6 +440,24 @@ class Backpack extends Component {
           displayTheme={displayTheme}
           confirmButtonText={msg.dialogOK()}
         />
+        <JavalabDialog
+          className="ignore-react-onclickoutside"
+          isOpen={openDialog === Dialog.DELETE_CONFIRM}
+          handleConfirm={() => this.handleDelete()}
+          handleClose={() => this.setState({openDialog: null})}
+          message={fileDeleteMessage}
+          displayTheme={displayTheme}
+          confirmButtonText={javalabMsg.delete()}
+          closeButtonText={javalabMsg.cancel()}
+        />
+        <JavalabDialog
+          className="ignore-react-onclickoutside"
+          isOpen={openDialog === Dialog.DELETE_ERROR}
+          handleConfirm={() => this.setState({openDialog: null})}
+          message={fileDeleteMessage}
+          displayTheme={displayTheme}
+          confirmButtonText={msg.dialogOK()}
+        />
       </>
     );
   }
@@ -366,14 +466,6 @@ class Backpack extends Component {
 const styles = {
   dropdownOpenButton: {
     backgroundColor: color.cyan
-  },
-  importButton: {
-    backgroundColor: color.orange,
-    color: color.white,
-    fontSize: 13,
-    padding: '5px 16px',
-    width: 'fit-content',
-    borderColor: color.orange
   }
 };
 
