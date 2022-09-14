@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-09-08 19:36:45 UTC",
+    "serialized_at": "2022-09-13 14:48:32 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -38,7 +38,7 @@
   "lessons": [
     {
       "key": "Poem Art",
-      "name": "Time Capsule Introduction",
+      "name": "Time Capsule Introduction (beta)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -57,7 +57,7 @@
     },
     {
       "key": "The Time We Live In",
-      "name": "My Time Capsule Story",
+      "name": "My Time Capsule Story (beta)",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -75,7 +75,7 @@
     },
     {
       "key": "Coding My Time Capsule",
-      "name": "Coding My Time Capsule",
+      "name": "Coding My Time Capsule (beta)",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -93,7 +93,7 @@
     },
     {
       "key": "Gallery Walk",
-      "name": "Sharing My Time Capsule",
+      "name": "Sharing My Time Capsule (beta)",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
