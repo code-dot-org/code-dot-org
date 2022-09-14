@@ -6,7 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from '../progressStyles';
 import {refetchSectionLockStatus} from '../../../lessonLockRedux';
 import color from '@cdo/apps/util/color';
-import {i18n, commonMsg} from '@cdo/locale';
+import i18n from '@cdo/locale';
 import SectionSelector from '../SectionSelector';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -94,12 +94,12 @@ function LessonLockDialog({
         setSaving(false);
         if (json.error) {
           setError(
-            commonMsg.errorSavingLockStatusWithMessage({
+            i18n.errorSavingLockStatusWithMessage({
               errorMessage: json.error
             })
           );
         } else {
-          setError(commonMsg.errorSavingLockStatus());
+          setError(i18n.errorSavingLockStatus());
         }
       });
     }
@@ -112,11 +112,7 @@ function LessonLockDialog({
   const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
 
   const renderHiddenWarning = () => (
-    <>
-      {isHidden && (
-        <div style={styles.error}>{i18n.hiddenAssessmentWarning}</div>
-      )}
-    </>
+    <div style={styles.error}>{isHidden && i18n.hiddenAssessmentWarning()}</div>
   );
 
   const renderInstructionsAndButtons = () => (
@@ -124,69 +120,69 @@ function LessonLockDialog({
       <table style={hiddenUnlessSelectedSection}>
         <tbody>
           <tr>
-            <td>1. {commonMsg.allowEditingInstructions()}</td>
+            <td>1. {i18n.allowEditingInstructions()}</td>
             <td>
               <button
                 type="button"
                 style={progressStyles.orangeButton}
                 onClick={allowEditing}
               >
-                {commonMsg.allowEditing()}
+                {i18n.allowEditing()}
               </button>
             </td>
           </tr>
           <tr>
-            <td>2. {commonMsg.lockStageInstructions()}</td>
+            <td>2. {i18n.lockStageInstructions()}</td>
             <td>
               <button
                 type="button"
                 style={progressStyles.orangeButton}
                 onClick={lockLesson}
               >
-                {commonMsg.lockStage()}
+                {i18n.lockStage()}
               </button>
             </td>
           </tr>
           <tr>
-            <td>3. {commonMsg.showAnswersInstructions()}</td>
+            <td>3. {i18n.showAnswersInstructions()}</td>
             <td>
               <button
                 type="button"
                 style={progressStyles.orangeButton}
                 onClick={showAnswers}
               >
-                {commonMsg.showAnswers()}
+                {i18n.showAnswers()}
               </button>
             </td>
           </tr>
           <tr>
-            <td>4. {commonMsg.relockStageInstructions()}</td>
+            <td>4. {i18n.relockStageInstructions()}</td>
             <td>
               <button
                 type="button"
                 style={progressStyles.orangeButton}
                 onClick={lockLesson}
               >
-                {commonMsg.relockStage()}
+                {i18n.relockStage()}
               </button>
             </td>
           </tr>
           <tr>
-            <td>5. {commonMsg.reviewResponses()}</td>
+            <td>5. {i18n.reviewResponses()}</td>
             <td>
               <button
                 type="button"
                 style={progressStyles.whiteButton}
                 onClick={viewSection}
               >
-                {commonMsg.viewSection()}
+                {i18n.viewSection()}
               </button>
             </td>
           </tr>
         </tbody>
       </table>
       <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
-        {commonMsg.autolock()}
+        {i18n.autolock()}
       </div>
     </>
   );
@@ -194,10 +190,10 @@ function LessonLockDialog({
   const renderStudentTable = () => (
     <>
       <div style={{...styles.title, ...hiddenUnlessSelectedSection}}>
-        {commonMsg.studentControl()}
+        {i18n.studentControl()}
       </div>
       <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
-        {commonMsg.studentLockStateInstructions()}
+        {i18n.studentLockStateInstructions()}
       </div>
       <table
         id="ui-test-student-table"
@@ -205,10 +201,10 @@ function LessonLockDialog({
       >
         <thead>
           <tr>
-            <th style={styles.headerRow}>{commonMsg.student()}</th>
-            <th style={styles.headerRow}>{commonMsg.locked()}</th>
-            <th style={styles.headerRow}>{commonMsg.editable()}</th>
-            <th style={styles.headerRow}>{commonMsg.answersVisible()}</th>
+            <th style={styles.headerRow}>{i18n.student()}</th>
+            <th style={styles.headerRow}>{i18n.locked()}</th>
+            <th style={styles.headerRow}>{i18n.editable()}</th>
+            <th style={styles.headerRow}>{i18n.answersVisible()}</th>
           </tr>
         </thead>
         <tbody>
@@ -241,7 +237,7 @@ function LessonLockDialog({
     <BaseDialog isOpen handleClose={handleClose}>
       <div style={{...styles.main, ...responsiveHeight}}>
         <div>
-          <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
+          <span style={styles.title}>{i18n.assessmentSteps()}</span>
           <SectionSelector
             style={{marginLeft: 10}}
             requireSelection={hasSelectedSection}
@@ -258,7 +254,7 @@ function LessonLockDialog({
           style={progressStyles.baseButton}
           onClick={handleClose}
         >
-          {commonMsg.dialogCancel()}
+          {i18n.dialogCancel()}
         </button>
         <button
           type="button"
@@ -269,7 +265,7 @@ function LessonLockDialog({
           onClick={handleSave}
           disabled={saving}
         >
-          {saving ? commonMsg.saving() : commonMsg.save()}
+          {saving ? i18n.saving() : i18n.save()}
         </button>
       </div>
     </BaseDialog>
@@ -332,7 +328,8 @@ const styles = {
   },
   error: {
     color: color.red,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    marginBottom: 10
   }
 };
 
