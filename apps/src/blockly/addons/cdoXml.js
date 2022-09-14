@@ -34,40 +34,8 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return block;
   };
 
-  blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
-    const metrics = blockSpace.getMetrics();
-    const width = metrics ? metrics.viewWidth : 0;
-    const padding = 16;
-    const verticalSpaceBetweenBlocks = 10;
-
-    // Block positioning rules:
-    // If the block XML has X/Y coordinates, use them to set the block
-    // position. Note that RTL languages position from the left.
-    // Otherwise, position the block in line with other blocks,
-    // flowing from top to bottom. Blocks with absolute Y positions
-    // do not influence the placement of other blocks.
-    let cursor = {
-      x: blockSpace.RTL ? width - padding : padding,
-      y: padding
-    };
-
-    const positionBlock = function(block) {
-      const heightWidth = block.blockly_block.getHeightWidth();
-
-      if (isNaN(block.x)) {
-        block.x = cursor.x;
-      } else {
-        block.x = blockSpace.RTL ? width - block.x : block.x;
-      }
-
-      if (isNaN(block.y)) {
-        block.y = cursor.y;
-        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
-      }
-      block.blockly_block.moveTo(
-        new Blockly.utils.Coordinate(block.x, block.y)
-      );
-    };
+  blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml, options) {
+    blockSpace.RTL = options.rtl;
 
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
@@ -97,6 +65,50 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       });
     });
 
+    //const metrics = blockSpace.getMetrics();
+    //const width = metrics ? metrics.viewWidth : 0;
+    const width = blocks[0]
+      ? blocks[0].blockly_block.getHeightWidth().width
+      : 0;
+    console.log({width: width});
+    const padding = 16;
+    const verticalSpaceBetweenBlocks = 10;
+
+    // Block positioning rules:
+    // If the block XML has X/Y coordinates, use them to set the block
+    // position. Note that RTL languages position from the left.
+    // Otherwise, position the block in line with other blocks,
+    // flowing from top to bottom. Blocks with absolute Y positions
+    // do not influence the placement of other blocks.
+    let cursor = {
+      x: blockSpace.RTL ? width - padding : padding,
+      y: padding
+    };
+
+    console.log({cursor: cursor});
+    const positionBlock = function(block) {
+      console.log({block: block});
+      console.log(block);
+      const heightWidth = block.blockly_block.getHeightWidth();
+
+      console.log(block.x);
+      if (isNaN(block.x)) {
+        block.x = cursor.x;
+      } else {
+        block.x = blockSpace.RTL ? width - block.x : block.x;
+      }
+      console.log(block.x);
+
+      if (isNaN(block.y)) {
+        block.y = cursor.y;
+        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
+      }
+      console.log({coordinates: [block.x, block.y]});
+      block.blockly_block.moveTo(
+        new Blockly.utils.Coordinate(block.x, block.y)
+      );
+    };
+
     blocks
       .filter(function(block) {
         return block.blockly_block.isVisible();
@@ -109,6 +121,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       })
       .forEach(positionBlock);
 
+    console.log(blocks);
     blockSpace.render();
     return blocks;
   };

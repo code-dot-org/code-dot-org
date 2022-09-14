@@ -430,16 +430,29 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
       // Loop through all the child blocks and remove transform
       const blocksInWorkspace = workspace.getAllBlocks();
+      const maxBlockWidth = Math.max(
+        ...blocksInWorkspace.map(block => block.width)
+      );
+      blocksInWorkspace.forEach(block => {
+        console.log(block.svgGroup_);
+      });
+
       blocksInWorkspace
         .filter(block => block.getParent() === null)
         .forEach(block => {
-          block.svgGroup_.removeAttribute('transform');
+          console.log(block);
+          block.svgGroup_.setAttribute(
+            'transform',
+            `translate(${block.RTL ? maxBlockWidth : 16},0)`
+          );
+          console.log({transform: block.svgGroup_.getAttribute('transform')});
         });
 
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
       svg.setAttribute('height', bbox.height + bbox.y);
-      svg.setAttribute('width', bbox.width + bbox.x);
+      svg.setAttribute('width', bbox.width + Math.abs(bbox.x));
+
       // Add a transform to center read-only blocks on their line
       const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
 
