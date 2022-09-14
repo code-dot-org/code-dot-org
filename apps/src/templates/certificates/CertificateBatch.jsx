@@ -11,7 +11,7 @@ export default function CertificateBatch({
   initialStudentNames,
   imageUrl
 }) {
-  const [studentNames, setStudentNames] = useState(initialStudentNames);
+  const [studentNames, setStudentNames] = useState(initialStudentNames || []);
 
   const onChange = e => {
     setStudentNames(e.target.value && e.target.value.split('\n'));
