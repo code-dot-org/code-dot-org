@@ -110,15 +110,18 @@ class Backpack extends Component {
     });
     const {backpackFilenames, selectedFiles} = this.state;
     // remove correctly deleted files from backpackFilenames and selectedFiles
-    const filesDeleted = expectedFilesDeleted.filter(
-      filename => !failedFileList.includes(filename)
+    const filesDeleted = this.removeFromFileList(
+      expectedFilesDeleted,
+      failedFileList
     );
     if (filesDeleted.length > 0) {
-      const newBackpackFilenames = backpackFilenames.filter(
-        filename => !filesDeleted.includes(filename)
+      const newBackpackFilenames = this.removeFromFileList(
+        backpackFilenames,
+        filesDeleted
       );
-      const newSelectedFiles = selectedFiles.filter(
-        filename => !filesDeleted.includes(filename)
+      const newSelectedFiles = this.removeFromFileList(
+        selectedFiles,
+        filesDeleted
       );
       this.setState({
         backpackFilenames: newBackpackFilenames,
@@ -269,6 +272,10 @@ class Backpack extends Component {
         )}
       </div>
     );
+  };
+
+  removeFromFileList = (fileList, filesToRemove) => {
+    return fileList.filter(filename => !filesToRemove.includes(filename));
   };
 
   render() {

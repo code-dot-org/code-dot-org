@@ -69,26 +69,13 @@ export default class BackpackClientApi {
    * @param {Function} onSuccess Function to call if all files save.
    */
   saveFiles(filesJson, filenames, onError, onSuccess) {
-    if (this.filesToUpload.length > 0) {
-      // save is currently in progress (a previous saveFilesHelper has not gone through its
-      // entire list of files to upload), return an error. Frontend should prevent multiple
-      // button clicks in a row.
-      onError();
-      return;
-    }
-    if (filenames.length === 0) {
-      // nothing to save
-      onSuccess();
-      return;
-    }
-    // only fetch channel id if we don't yet have it
-    if (!this.channelId) {
-      this.fetchChannelId(() =>
-        this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
-      );
-    } else {
-      this.saveFilesHelper(filesJson, filenames, onError, onSuccess);
-    }
+    this.updateFilesHelper(
+      this.filesToUpload,
+      filenames,
+      onError,
+      onSuccess,
+      () => this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
+    );
   }
 
   /**
@@ -99,9 +86,19 @@ export default class BackpackClientApi {
    */
 
   deleteFiles(filenames, onError, onSuccess) {
-    if (this.filesToDelete.length > 0) {
-      // delete is currently in progress (a previous deleteFilesHelper has not gone through its
-      // entire list of files to upload), return an error. Frontend should prevent multiple
+    this.updateFilesHelper(
+      this.filesToDelete,
+      filenames,
+      onError,
+      onSuccess,
+      () => this.deleteFilesHelper(filenames, onError, onSuccess)
+    );
+  }
+
+  updateFilesHelper(filesInProgress, filenames, onError, onSuccess, callback) {
+    if (filesInProgress.length > 0) {
+      // If an update is currently in progress (a previous update has not gone through its
+      // entire list of files to resolve), return an error. Frontend should prevent multiple
       // button clicks in a row.
       onError();
       return;
@@ -113,11 +110,9 @@ export default class BackpackClientApi {
     }
     // only fetch channel id if we don't yet have it
     if (!this.channelId) {
-      this.fetchChannelId(() =>
-        this.deleteFilesHelper(filenames, onError, onSuccess)
-      );
+      this.fetchChannelId(() => callback());
     } else {
-      this.deleteFilesHelper(filenames, onError, onSuccess);
+      callback();
     }
   }
 
@@ -192,7 +187,7 @@ export default class BackpackClientApi {
               retryCount - 1
             );
           } else {
-            // record failure and check if all files are done attempting upload/uploading
+            // record failure and check if all files are done attempting delete
             this.fileDeletesFailed.push(filename);
             this.onDeleteComplete(filename, onError, onSuccess, error);
           }
