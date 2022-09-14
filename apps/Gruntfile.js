@@ -342,6 +342,10 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          [
+            'build/package/css/certificates.css',
+            'style/curriculum/certificates.scss'
+          ],
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
@@ -521,6 +525,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
     'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
@@ -533,6 +538,8 @@ describe('entry tests', () => {
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'print_certificates/batch':
+      './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
       './src/sites/studio/pages/programming_classes/show.js',
     'programming_environments/index':

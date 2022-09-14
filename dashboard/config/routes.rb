@@ -470,9 +470,11 @@ Dashboard::Application.routes.draw do
 
     get '/certificate_images/:filename', to: 'certificate_images#show'
 
+    post '/print_certificates/batch'
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
 
     get '/certificates/blank'
+    get '/certificates/batch'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
