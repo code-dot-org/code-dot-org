@@ -12,7 +12,7 @@ class DataDocsController < ApplicationController
 
     if @data_doc.save
       # TODO [meg] : Write serialization
-      render :ok, json: {} # TODO [meg] : Redirect to new data doc, e.g. redirect_to @data_doc
+      redirect_to action: :show, key: params[:key]
     else
       render :not_acceptable, json: @data_doc.errors
     end
