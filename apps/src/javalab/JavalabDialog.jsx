@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {DisplayTheme} from './DisplayTheme';
+import classNames from 'classnames';
 
 export default class JavalabDialog extends Component {
   static propTypes = {
@@ -14,7 +15,9 @@ export default class JavalabDialog extends Component {
     // message could be a string or html
     message: PropTypes.any,
     confirmButtonText: PropTypes.string,
-    closeButtonText: PropTypes.string
+    closeButtonText: PropTypes.string,
+    showSpinner: PropTypes.bool,
+    disableButtons: PropTypes.bool
   };
 
   render() {
@@ -26,7 +29,9 @@ export default class JavalabDialog extends Component {
       displayTheme,
       message,
       confirmButtonText,
-      closeButtonText
+      closeButtonText,
+      showSpinner,
+      disableButtons
     } = this.props;
     return (
       <BaseDialog
@@ -45,6 +50,12 @@ export default class JavalabDialog extends Component {
         >
           <div style={styles.message}>{message}</div>
           <div style={styles.buttons}>
+            {showSpinner && (
+              <i
+                className={classNames('fa', 'fa-spin', 'fa-spinner')}
+                style={styles.spinner}
+              />
+            )}
             {closeButtonText && (
               <button
                 type="button"
@@ -52,9 +63,11 @@ export default class JavalabDialog extends Component {
                   ...styles.button,
                   ...(displayTheme === DisplayTheme.DARK
                     ? styles.darkButton
-                    : styles.lightCancel)
+                    : styles.lightCancel),
+                  ...(disableButtons ? styles.disabledButton : {})
                 }}
                 onClick={handleClose}
+                disabled={disableButtons}
               >
                 {closeButtonText}
               </button>
@@ -66,9 +79,11 @@ export default class JavalabDialog extends Component {
                   ...styles.button,
                   ...(displayTheme === DisplayTheme.DARK
                     ? styles.darkButton
-                    : styles.lightConfirm)
+                    : styles.lightConfirm),
+                  ...(disableButtons ? styles.disabledButton : {})
                 }}
                 onClick={handleConfirm}
+                disabled={disableButtons}
               >
                 {confirmButtonText}
               </button>
@@ -93,7 +108,8 @@ const styles = {
   },
   buttons: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    paddingBottom: '10px'
   },
   button: {
     textAlign: 'center',
@@ -116,5 +132,10 @@ const styles = {
     whiteSpace: 'normal',
     lineHeight: '18px',
     padding: 12
+  },
+  spinner: {
+    textAlign: 'center',
+    fontSize: 16,
+    padding: '10px'
   }
 };
