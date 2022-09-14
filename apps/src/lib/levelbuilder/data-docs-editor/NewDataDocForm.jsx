@@ -30,6 +30,7 @@ const NewDataDocForm = () => {
         <input className="input" name="name" style={styles.input} />
       </label>
       <TextareaWithMarkdownPreview
+        name="content"
         label="Content"
         handleMarkdownChange={e => setDataDocContent(e.target.value)}
         markdown={dataDocContent || ''}
