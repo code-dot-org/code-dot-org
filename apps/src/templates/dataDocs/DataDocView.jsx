@@ -10,13 +10,13 @@ const DataDocView = props => {
   return (
     <>
       <h1 style={{marginBottom: 30}}>{dataDocName}</h1>
-      <div className="page-content">
+      <div id="data-doc-content">
         <EnhancedSafeMarkdown markdown={dataDocContent} />
-        <div id="bug-report-and-licensing" style={{marginTop: 50}}>
-          <hr />
-          <EnhancedSafeMarkdown markdown={i18n.documentationBug()} />
-          <CopyrightInfo />
-        </div>
+      </div>
+      <div id="bug-report-and-licensing" style={{marginTop: 50}}>
+        <hr />
+        <EnhancedSafeMarkdown markdown={i18n.documentationBug()} />
+        <CopyrightInfo />
       </div>
     </>
   );
