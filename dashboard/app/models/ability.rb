@@ -68,6 +68,8 @@ class Ability
     ]
     cannot :index, Level
 
+    can :show, DataDoc
+
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
       can? :read, level
