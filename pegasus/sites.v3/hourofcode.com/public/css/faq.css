@@ -8,6 +8,7 @@ summary {
   font-family: 'Gotham 5r', sans-serif;
   margin-bottom: 0.5em;
   display: list-item;
+  user-select: none;
   transition: all .2s ease-in-out;
 }
   summary:hover {
