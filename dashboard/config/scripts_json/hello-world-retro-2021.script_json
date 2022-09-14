@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-retro",
-    "serialized_at": "2022-03-11 12:08:39 UTC",
+    "serialized_at": "2022-09-13 19:04:52 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,7 @@
       "key": "ad24912f-a30c-4821-83a5-77e20997a044",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -73,6 +74,7 @@
       "key": "5c3a2275-a7f9-4e50-a0b4-8f198452a102",
       "position": 2,
       "properties": {
+        "duration": 40,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -86,6 +88,7 @@
       "key": "20701fc4-d308-49af-8988-34896fd12713",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {

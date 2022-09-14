@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2022-09-08 18:58:48 UTC",
+    "serialized_at": "2022-09-13 14:48:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -39,7 +39,7 @@
   "lessons": [
     {
       "key": "Nat American Star Quilts",
-      "name": "Native American Star Quilts",
+      "name": "Native American Star Quilts (beta)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -58,7 +58,7 @@
     },
     {
       "key": "Getting Started with The Artist",
-      "name": "Getting Started with The Artist",
+      "name": "Getting Started with The Artist (beta)",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -76,7 +76,7 @@
     },
     {
       "key": "Code Your Star Quilt",
-      "name": "Code Your Star Quilt",
+      "name": "Code Your Star Quilt (beta)",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
