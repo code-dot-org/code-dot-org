@@ -104,7 +104,7 @@ export default class BackpackClientApi {
       return;
     }
     if (filenames.length === 0) {
-      // nothing to delete
+      // nothing to update
       onSuccess();
       return;
     }
