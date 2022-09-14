@@ -93,7 +93,7 @@ const styles = {
     overflow: 'hidden'
   },
   tutorialSub: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
     lineHeight: '16px',
     height: 40
