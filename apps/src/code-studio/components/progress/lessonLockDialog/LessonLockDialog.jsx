@@ -24,7 +24,7 @@ function LessonLockDialog({
   handleClose,
   selectedSectionId,
   refetchSectionLockStatus,
-  isHidden
+  lessonIsHidden
 }) {
   const {loading, serverLockState} = useGetLockState(
     unitId,
@@ -112,7 +112,9 @@ function LessonLockDialog({
   const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
 
   const renderHiddenWarning = () => (
-    <div style={styles.error}>{isHidden && i18n.hiddenAssessmentWarning()}</div>
+    <div style={styles.error}>
+      {lessonIsHidden && i18n.hiddenAssessmentWarning()}
+    </div>
   );
 
   const renderInstructionsAndButtons = () => (
@@ -276,7 +278,7 @@ LessonLockDialog.propTypes = {
   unitId: PropTypes.number.isRequired,
   lessonId: PropTypes.number.isRequired,
   handleClose: PropTypes.func.isRequired,
-  isHidden: PropTypes.bool,
+  lessonIsHidden: PropTypes.bool,
 
   // Provided by redux
   selectedSectionId: PropTypes.number,
