@@ -411,7 +411,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
         theme: CdoTheme,
-        plugins: {}
+        plugins: {},
+        RTL: options.rtl
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
