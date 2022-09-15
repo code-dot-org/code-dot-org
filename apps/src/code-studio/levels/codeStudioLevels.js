@@ -185,7 +185,7 @@ export function resetContainedLevel() {
         const runButton = $('#runButton');
         runButton.prop('disabled', true);
       } else {
-        console.log(response);
+        throw 'Error resetting answer';
       }
     });
   });

@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
 
-const ContainedLevelResetButton = ({
+export const UnconnectedContainedLevelResetButton = ({
   userId,
   queryUserProgress,
   hasLevelResults,
@@ -34,7 +34,7 @@ const ContainedLevelResetButton = ({
   );
 };
 
-ContainedLevelResetButton.propTypes = {
+UnconnectedContainedLevelResetButton.propTypes = {
   userId: PropTypes.number,
   queryUserProgress: PropTypes.func.isRequired,
   hasLevelResults: PropTypes.bool,
@@ -54,4 +54,4 @@ export default connect(
       dispatch(queryUserProgress(userId));
     }
   })
-)(ContainedLevelResetButton);
+)(UnconnectedContainedLevelResetButton);
