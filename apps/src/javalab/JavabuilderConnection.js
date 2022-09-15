@@ -351,7 +351,9 @@ export default class JavabuilderConnection {
   onUnsupportedNeighborhoodMessage() {
     if (!this.seenUnsupportedNeighborhoodMessage) {
       this.onOutputMessage(
-        '[EXCEPTION] ' + getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
+        javalabMsg.exceptionMessage({
+          message: getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
+        })
       );
       this.onNewlineMessage();
       this.seenUnsupportedNeighborhoodMessage = true;
@@ -361,7 +363,9 @@ export default class JavabuilderConnection {
   onUnsupportedTheaterMessage() {
     if (!this.seenUnsupportedTheaterMessage) {
       this.onOutputMessage(
-        '[EXCEPTION] ' + getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
+        javalabMsg.exceptionMessage({
+          message: getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
+        })
       );
       this.onNewlineMessage();
       this.seenUnsupportedTheaterMessage = true;

@@ -5,17 +5,18 @@ import {
   SoundExceptionType,
   MediaExceptionType,
   TheaterExceptionType,
-  EXCEPTION_PREFIX,
   CsaViewMode
 } from './constants';
 import {getUnsupportedMiniAppMessage} from './utils';
 
 export function handleException(exceptionDetails, callback, miniAppType) {
-  const error = `${EXCEPTION_PREFIX} ${getExceptionMessage(
-    exceptionDetails,
-    exceptionDetails.value,
-    miniAppType
-  )}`;
+  const error = msg.exceptionMessage({
+    message: getExceptionMessage(
+      exceptionDetails,
+      exceptionDetails.value,
+      miniAppType
+    )
+  });
   callback(error);
 }
 
