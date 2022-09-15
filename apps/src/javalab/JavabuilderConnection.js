@@ -4,8 +4,7 @@ import {
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
   AuthorizerSignalType,
-  CsaViewMode,
-  getUnsupportedMiniAppMessage
+  CsaViewMode
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -13,6 +12,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '@cdo/apps/logToCloud';
+import {getUnsupportedMiniAppMessage} from './utils';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -351,7 +351,7 @@ export default class JavabuilderConnection {
   onUnsupportedNeighborhoodMessage() {
     if (!this.seenUnsupportedNeighborhoodMessage) {
       this.onOutputMessage(
-        '[WARNING] ' + getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
+        '[EXCEPTION] ' + getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
       );
       this.onNewlineMessage();
       this.seenUnsupportedNeighborhoodMessage = true;
@@ -361,7 +361,7 @@ export default class JavabuilderConnection {
   onUnsupportedTheaterMessage() {
     if (!this.seenUnsupportedTheaterMessage) {
       this.onOutputMessage(
-        '[WARNING] ' + getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
+        '[EXCEPTION] ' + getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
       );
       this.onNewlineMessage();
       this.seenUnsupportedTheaterMessage = true;
