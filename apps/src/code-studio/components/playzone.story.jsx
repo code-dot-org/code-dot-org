@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayZone from './playzone';
+import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'PlayZone',
@@ -13,5 +14,5 @@ const Template = args => <PlayZone {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   lessonName: 'Test Lesson',
-  onContinue: () => {}
+  onContinue: action('Selected Continue')
 };
