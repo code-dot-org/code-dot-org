@@ -15,6 +15,7 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       CourseOffering,
+      DataDoc,
       UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
@@ -66,6 +67,8 @@ class Ability
       CodeReview
     ]
     cannot :index, Level
+
+    can :show, DataDoc
 
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
@@ -387,6 +390,7 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        DataDoc,
         CourseOffering,
         UnitGroup,
         Resource,

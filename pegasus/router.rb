@@ -112,10 +112,12 @@ class Documents < Sinatra::Base
       ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.add_template_location(
-      sites_v3_dir('code.org', 'public', 'css'),
-      sites_v3_dir('code.org', 'public', 'css', 'generated')
-    )
+    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+      Sass::Plugin.add_template_location(
+        sites_v3_dir(site, 'public', 'css'),
+        sites_v3_dir(site, 'public', 'css', 'generated')
+      )
+    end
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
     # Haml/Temple engine doesn't recognize the `path` option
