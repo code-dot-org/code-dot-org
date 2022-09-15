@@ -67,7 +67,7 @@ layout: none
   function statePicker() {
     $(".small-state-dropdown").on('change', function() {
       var value = $(this).val();
-      location.href = "/state_handouts/" + documents[value] +".pdf";
+      location.href = "https://cdo-advocacy.s3.amazonaws.com/stateofcs/2022/" + documents[value] +".pdf";
     });
   }
 
