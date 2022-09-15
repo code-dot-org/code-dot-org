@@ -6,29 +6,35 @@ de:
   front_title: Mach mit beim grössten Lern-Event aller Zeiten am 7. - 13. Dezember,
     2015
   coming_soon: Demnächst
-  campaign_date_start_short: 6. Dez.
+  campaign_date_start_short: 5. Dez.
   campaign_date_start_long: 6. Dezember
-  campaign_date_short: 7.-13. Dez.
-  campaign_date_full: 6.-12. Dezember
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6. - 12. Dezember 2021
+  campaign_date_short: 5.-11. Dez.
+  campaign_date_full: 5.-11. Dezember
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5. - 11. Dezember 2022
+  nonus_campaign_date_start_short: 1 Okt
+  nonus_campaign_date_start_long: 1. Oktober
+  nonus_campaign_date_short: 1. Okt - 18. Dec
+  nonus_campaign_date_full: '1. Oktober - 18. Dezember '
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1. Oktober 2022 - 18. Dezember 2022
   latam_campaign_date_start_short: 1 Okt
   latam_campaign_date_start_long: 1. Oktober
   latam_campaign_date_short: 1. Okt - 18. Dec
   latam_campaign_date_full: '1. Oktober - 18. Dezember '
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1. Oktober 2020 - 18. Dezember 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1. Oktober 2022 - 18. Dezember 2022
   europe_campaign_date_start_short: 10. Okt
   europe_campaign_date_start_long: 10. Oktober
   europe_campaign_date_short: 10. - 25. Okt
   europe_campaign_date_full: 10. - 25. Oktober
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10. - 25. Oktober 2020
-  africa_campaign_date_start_short: 6. Dez.
-  africa_campaign_date_start_long: 6. Dezember
+  africa_campaign_date_start_short: 1 Okt
+  africa_campaign_date_start_long: 1. Oktober
   africa_campaign_date_short: 1. - 31. Okt
   africa_campaign_date_full: 1. - 31. Oktober
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. - 31. Oktober 2020
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -548,8 +554,6 @@ de:
   signup_multiple_event_warning: Sollten Sie mehrere Veranstaltungen anbieten, dann
     geben Sie bitte jeder einen eigenen Namen oder eine eigene E-Mail-Adresse. Wir
     können nur eine Veranstaltung pro Name und E-Mail zählen.
-  signup_registration_deadline: Die Anmeldung für die Hour of Code schliesst am 12.
-    Dezember.
   signup_name_placeholder: Dein Name
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Z. B. Mittelschule Lohsa

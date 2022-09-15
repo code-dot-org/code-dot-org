@@ -60,7 +60,7 @@ module Services
           return "Hour of Code" if Script.unit_in_category?('hoc', script.name)
 
           # catchall for scripts without courses
-          return 'other' unless script.get_course_version.present?
+          return 'other' if script.get_course_version.blank?
 
           # special-case CSF; we want to group all CSF courses together, even though
           # they all have different course offerings.

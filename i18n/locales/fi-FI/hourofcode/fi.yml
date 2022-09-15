@@ -11,6 +11,12 @@ fi:
   campaign_date_full: Joulukuu 4-10
   campaign_date_year: '2021'
   campaign_date_full_year: Joulukuu 6-12, 2021
+  nonus_campaign_date_start_short: Lok. 1
+  nonus_campaign_date_start_long: 1. Lokakuuta
+  nonus_campaign_date_short: Lok. 1 - Jou. 18
+  nonus_campaign_date_full: 1. Lokakuuta - 18. Joulukuuta
+  nonus_campaign_date_year: '2021'
+  nonus_campaign_date_full_year: 1. Lokakuuta 2020 - 18. Joulukuuta 2020
   latam_campaign_date_start_short: Lok. 1
   latam_campaign_date_start_long: 1. Lokakuuta
   latam_campaign_date_short: Lok. 1 - Jou. 18
@@ -23,8 +29,8 @@ fi:
   europe_campaign_date_full: 10.-25. Lokakuuta
   europe_campaign_date_year: '2021'
   europe_campaign_date_full_year: 10.-25. Lokakuuta 2020
-  africa_campaign_date_start_short: 4. joulukuuta
-  africa_campaign_date_start_long: Joulukuu 4
+  africa_campaign_date_start_short: Lok. 1
+  africa_campaign_date_start_long: 1. Lokakuuta
   africa_campaign_date_short: Lok. 1-31
   africa_campaign_date_full: 1.-31. Lokakuuta
   africa_campaign_date_year: '2021'
@@ -552,7 +558,6 @@ fi:
     rekisteröidyt. Jos isännöit useita tapahtumia, lähetä jokaiselle oma nimi tai
     sähköpostiosoite. Laskemme vain yhden tapahtuman nimeä ja sähköpostiosoitetta
     kohti.
-  signup_registration_deadline: Rekisteröinti tuntiin koodia sulkeutuu 11. joulukuuta.
   signup_name_placeholder: Nimesi
   signup_email_placeholder: nimesi@esimerkki.com
   signup_organization_name_placeholder: Esimerkiksi, Espoonlahden koulu

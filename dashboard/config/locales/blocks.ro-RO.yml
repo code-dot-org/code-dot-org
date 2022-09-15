@@ -2,6 +2,9 @@
 ro:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: solicită utilizatorului {QUESTION} pentru variabila [VAR][VAR] cu variantele
+          {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       BadGuys_setSizeAll_dropdown:

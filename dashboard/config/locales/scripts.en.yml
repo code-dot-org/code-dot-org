@@ -8390,7 +8390,7 @@ en:
           name: dlp-csp-overview-2022
         csc-ecosystems-2022:
           title: Ecosystems
-          description: ''
+          description: This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any [feedback](https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform) you'd like to share?
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -8399,7 +8399,7 @@ en:
           lessons: {}
         csc-starquilts-2022:
           title: Star Quilts Module
-          description: ''
+          description: This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any [feedback](https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform) you'd like to share?
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -8408,7 +8408,7 @@ en:
           lessons: {}
         csc-fables-2022:
           title: Fables
-          description: ''
+          description: This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any [feedback](https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform) you'd like to share?
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -8417,7 +8417,7 @@ en:
           lessons: {}
         csc-timecapsule-2022:
           title: Time Capsule
-          description: ''
+          description: This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any [feedback](https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform) you'd like to share?
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -8500,6 +8500,8 @@ en:
               display_name: Celebrity Lab
             lessonGroup-4:
               display_name: Consumer Review Lab
+            lessonGroup-5:
+              display_name: Data Lab
           name: csa-labs-2022
           title: AP CSA College Board Labs
           description_audience: ''
@@ -8526,6 +8528,14 @@ en:
             lesson-15:
               name: Create a Positive or Negative Review
             lesson-16:
+              name: Open-Ended Activity
+            lesson-17:
+              name: Data, Data, Data!
+            lesson-18:
+              name: Designing and Implementing a Custom Class
+            lesson-19:
+              name: Putting It All Together
+            lesson-20:
               name: Open-Ended Activity
         csa-draft-pl:
           lessons:
@@ -8936,3 +8946,102 @@ en:
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) to let the Code.org curriculum team know how the unit went.
           student_description: In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.
+        vpl-csd3-ayw-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd3-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd4-ayw-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd4-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-magpie-lab:
+          lessons:
+            lesson-1:
+              name: Experiment with Existing Chatbots
+            lesson-2:
+              name: Work with Magpie Code
+            lesson-3:
+              name: Work with API for Magpie and String
+            lesson-4:
+              name: Modify Responses
+            lesson-5:
+              name: Use Arrays to Get Random Responses
+          lesson_groups: {}
+          name: csa-magpie-lab
+          title: AP CSA Magpie Lab
+          description_audience: ''
+          description_short: ''
+          description: |-
+            From Eliza in the 1960s to Siri and Watson today, the idea of talking to computers in natural language has fascinated people. (And yes, there have been more than one conversation between Eliza and Siri – search for "chatbot Eliza Siri.") While natural language processing (NLP) is a complicated field, it is fairly easy to create a simple program to respond to English sentences.
+
+            **Prerequisites**
+
+            Before doing this lab, students should be able to:
+
+            * locate websites using a web browser
+            * run and edit Java programs that use classes
+            * trace code
+            * read APIs for both the standard Java libraries and local code
+          student_description: |-
+            From Eliza in the 1960s to Siri and Watson today, the idea of talking to computers in natural language has fascinated people. More and more, computer programs allow people to interact with them by typing English sentences. The field of computer science that addresses how computers can understand human language is called natural language processing (NLP).
+
+            NLP is a field that attempts to have computers understand natural (i.e., human) language. There are many exciting breakthroughs in the field.
+
+            For this lab, you will explore some of the basics of NLP. As you explore this, you will work with a variety of methods of the `String` class and practice using the `if` statement. You will trace a method to find words in user input.
+        emma:
+          lessons:
+            lesson-1:
+              name: practice
+          lesson_groups: {}
+          name: emma
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-consumer-review-lab:
+          lessons:
+            lesson-1:
+              name: Reviews and Sentiment Value
+            lesson-2:
+              name: Sentiment Value and Star Ratings
+            lesson-3:
+              name: Autogenerated Review
+            lesson-4:
+              name: Create a Positive or Negative Review
+            lesson-5:
+              name: Open-Ended Activity
+          lesson_groups: {}
+          name: csa-consumer-review-lab
+          title: AP CSA Consumer Review Lab
+          description_audience: ''
+          description_short: ''
+          description: |-
+            The Consumer Review Lab provides students with the opportunity to work on a larger assignment involving multiple classes early in the course, before they necessarily know how to write their own classes. By focusing on calling methods and using the control structures of selection and iteration, students will have practice that directly relates to the **Methods and Control Structures** free-response question type that they will see on the end-of-year exam. Because students often struggle with methods in the `String` class, this lab specifically focuses on calling these methods and building strings in an interesting and engaging way.
+
+            ###Real-World Connection
+
+            We all use reviews on a regular basis, to help us determine which movie to see, which video game to play, or even which pair of headphones to buy. But how easy is it to fake a review? The truth is that it's incredibly simple, and fake reviews can have significant impacts on the products that are purchased or consumed, including movies that people watch and restaurants where they choose to eat. If consumers knew that the review they were reading and using to base a decision on came from a computer program and not a human, they might be less likely to believe it.
+
+            What motivation do people have for creating these fake reviews or comments, and what should be done to prevent it, if anything? If technology can be used to create and post positive reviews for the company's own products or negative reviews of the competition, what are the ethical implications of this?
+
+            Creating fake reviews has ethical implications, and it is important to emphasize that although students are going through the process to see one way in which they can be generated, this is in no way advocating this type of behavior. This is similar to "white hat" hackers needing to understand the same tools and processes of criminal hackers in order to do their job. Discuss with students the ethical concerns and how understanding this process is important to preventing unwanted behaviors online.
+          student_description: ''
