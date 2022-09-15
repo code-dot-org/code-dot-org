@@ -111,11 +111,11 @@ task :ci do
   # to run the build with no other actions.
   desired_task =
     if ENV['CI_ONLY_BUILD']
-      'ci:test'
+      'ci:test --trace'
     elsif rack_env?(:test)
-      'ci:test'
+      'ci:test --trace'
     else
-      'ci:test'
+      'ci:test --trace'
     end
 
   ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
