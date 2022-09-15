@@ -51,7 +51,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
   it('displays hidden warning if lesson is hidden', () => {
     const wrapper = mount(
-      <LessonLockDialog {...MINIMUM_PROPS} isHidden={true} />
+      <LessonLockDialog {...MINIMUM_PROPS} lessonIsHidden={true} />
     );
     expect(wrapper.text().includes(i18n.hiddenAssessmentWarning()));
   });

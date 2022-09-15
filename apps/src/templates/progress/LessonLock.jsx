@@ -27,7 +27,7 @@ const LessonLock = ({unitId, lessonId, isHidden}) => {
         <LessonLockDialog
           unitId={unitId}
           lessonId={lessonId}
-          isHidden={isHidden}
+          lessonIsHidden={isHidden}
           handleClose={() => setDialogOpen(false)}
         />
       )}
