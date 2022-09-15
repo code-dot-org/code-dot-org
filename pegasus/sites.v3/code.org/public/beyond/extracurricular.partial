@@ -29,11 +29,11 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Hackathons and competitions</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank">
+<a class="linktag" id="bcg-hackathons" href="https://wearebgc.org/events/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
+  <a class="linktag" id="bcg-hackathons" href="https://wearebgc.org/events/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
   <p>Community oriented "girls only" hackathons for girls between the ages of 12 and 17. Students participate in creating solutions to social issues within their communities while they build their skills, confidence, experience and have lots of fun!</p>
   <p><i>Check event calendar for dates.</i></p>
 </div>
