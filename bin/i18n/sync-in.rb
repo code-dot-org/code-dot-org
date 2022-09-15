@@ -46,6 +46,9 @@ def localize_docs
   # For each programming environment, name is used as key, title is used as name,
   ProgrammingEnvironment.all.sort.each do |env| # env as short for environment
     env_name = env.name
+    # Skip javalab
+    # javalab documentations exists in a different table because it has a different structure, more align with java.
+    next if env_name == 'javalab'
     programming_env_docs[env_name] = {
       'name' => env.properties["title"],
       'description' => env.properties["description"],
@@ -53,38 +56,35 @@ def localize_docs
     }
     # Programming environment has a method defined in the programming_environment model that returns the
     # categories for navigation. The method is used to obtain the current categories existing in the database.
+    categories_data = programming_env_docs[env_name]["categories"]
     env.categories_for_navigation.each do |category_for_navigation|
       category_key = category_for_navigation[:key]
-      programming_env_docs[env_name]["categories"].store(
+      categories_data.store(
         category_key, {
           'name' => category_for_navigation[:name],
           'expressions' => {}
         }
       )
+      expressions_data = categories_data[category_key]["expressions"]
       category_for_navigation[:docs].each do |expression|
         expression_key = expression[:key]
-        # Skip javalab
-        # javalab documentations has a different structure in the database. Each category has programming classes
-        # instead of expressions. Additionally, the categories_for_navigation method doest not return expression keys,
-        #  used to query the data base
-        next if env_name == 'javalab'
-
-        expresion_docs = ProgrammingExpression.find_by_id(expression[:id])
-        programming_env_docs[env_name]["categories"][category_key]["expressions"].store(
+        expression_docs = ProgrammingExpression.find_by_id(expression[:id])
+        expressions_data.store(
           expression_key, {
             'name' => expression[:name],
-            'content' => expresion_docs.properties["content"],
+            'content' => expression_docs.properties["content"],
             'examples' => {},
             'palette_params' => {},
-            'return_value' => expresion_docs.properties["return_value"],
-            'short_description' => expresion_docs.properties["short_description"],
-            'syntax' => expresion_docs.properties["syntax"],
-            'tips' => expresion_docs.properties["tips"]
+            'return_value' => expression_docs.properties["return_value"],
+            'short_description' => expression_docs.properties["short_description"],
+            'syntax' => expression_docs.properties["syntax"],
+            'tips' => expression_docs.properties["tips"]
           }
         )
         # Programming expresions may have 0 or more examples
-        expresion_docs.properties['examples']&.each do |example|
-          programming_env_docs[env_name]["categories"][category_key]["expressions"][expression_key]["examples"].store(
+        example_docs = expressions_data[expression_key]["examples"]
+        expression_docs.properties['examples']&.each do |example|
+          example_docs.store(
             example["name"], {
               'name' => example["name"],
               'description' => example["description"],
@@ -93,8 +93,9 @@ def localize_docs
           )
         end
         # Programming expresions may have 0 or more parameters
-        expresion_docs.properties["palette_params"]&.each do |param|
-          programming_env_docs[env_name]["categories"][category_key]["expressions"][expression_key]["palette_params"].store(
+        param_docs = expressions_data[expression_key]["palette_params"]
+        expression_docs.properties["palette_params"]&.each do |param|
+          param_docs.store(
             param["name"], {
               'name' => param["name"],
               'type' => param["type"],
