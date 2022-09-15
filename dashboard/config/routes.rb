@@ -347,7 +347,7 @@ Dashboard::Application.routes.draw do
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-    resources :data_docs, only: [:new, :create], param: 'name'
+    resources :data_docs, only: [:new, :create, :show], param: :key
 
     resources :lessons, only: [:edit, :update] do
       member do
@@ -470,9 +470,11 @@ Dashboard::Application.routes.draw do
 
     get '/certificate_images/:filename', to: 'certificate_images#show'
 
+    post '/print_certificates/batch'
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
 
     get '/certificates/blank'
+    get '/certificates/batch'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
