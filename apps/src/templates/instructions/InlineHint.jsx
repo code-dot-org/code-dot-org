@@ -23,12 +23,14 @@ class InlineHint extends React.Component {
     textToSpeechEnabled: PropTypes.bool,
     isBlockly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool,
     skinId: PropTypes.string
   };
 
   componentDidMount() {
     if (this.props.isBlockly) {
-      convertXmlToBlockly(ReactDOM.findDOMNode(this));
+      console.log('inlineHint');
+      convertXmlToBlockly(ReactDOM.findDOMNode(this), this.props.isRtl);
     }
   }
 

@@ -112,7 +112,7 @@ function removeCommentNodes(root) {
  * readonly BlockSpaces
  * @param {Element} xmlContainer The element in which to search for XML
  */
-export function convertXmlToBlockly(xmlContainer) {
+export function convertXmlToBlockly(xmlContainer, isRtl) {
   const xmls = xmlContainer.getElementsByTagName('xml');
 
   Array.prototype.forEach.call(xmls, function(xml) {
@@ -144,13 +144,14 @@ export function convertXmlToBlockly(xmlContainer) {
 
     // Don't render the raw XML
     xml.style.display = 'none';
-
+    console.log('utils');
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockSpaceContainer,
       xml,
       {
         noScrolling: true,
-        inline: inline
+        inline: inline,
+        rtl: isRtl
       }
     );
 
