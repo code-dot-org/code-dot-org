@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
@@ -6,7 +6,17 @@ import styleConstants from '../../styleConstants';
 import color from '@cdo/apps/util/color';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
-export default function CertificateBatch({courseName, imageUrl}) {
+export default function CertificateBatch({
+  courseName,
+  initialStudentNames,
+  imageUrl
+}) {
+  const [studentNames, setStudentNames] = useState(initialStudentNames || []);
+
+  const onChange = e => {
+    setStudentNames(e.target.value && e.target.value.split('\n'));
+  };
+
   return (
     <div style={styles.wrapper}>
       <h1>{i18n.printBatchCertificates()}</h1>
@@ -31,6 +41,8 @@ export default function CertificateBatch({courseName, imageUrl}) {
           name="studentNames"
           rows="10"
           style={styles.textarea}
+          value={studentNames.join('\n')}
+          onChange={onChange}
         />
         <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
         <button type="submit" style={styles.submit} id="submit-button">
@@ -74,5 +86,6 @@ const styles = {
 
 CertificateBatch.propTypes = {
   courseName: PropTypes.string,
+  initialStudentNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   imageUrl: PropTypes.string.isRequired
 };
