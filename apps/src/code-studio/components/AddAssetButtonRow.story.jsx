@@ -1,5 +1,6 @@
 import React from 'react';
 import AddAssetButtonRow from './AddAssetButtonRow';
+import {action} from '@storybook/addon-actions';
 
 const mockApi = {
   getUploadUrl: () => {
@@ -24,10 +25,10 @@ const Template = args => (
     uploadsEnabled={true}
     allowedExtensions=""
     api={mockApi}
-    onUploadStart={() => console.log('onUploadStart')}
-    onUploadDone={() => console.log('onUploadDone')}
-    onUploadError={() => console.log('onUploadError')}
-    onSelectRecord={() => console.log('onSelectRecord')}
+    onUploadStart={action('onUploadStart')}
+    onUploadDone={action('onUploadDone')}
+    onUploadError={action('onUploadError')}
+    onSelectRecord={action('onSelectRecord')}
     {...args}
   />
 );
