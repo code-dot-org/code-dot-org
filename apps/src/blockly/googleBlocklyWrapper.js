@@ -28,7 +28,7 @@ import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
 
-const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
+//const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -411,7 +411,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
         theme: CdoTheme,
-        plugins: {}
+        plugins: {},
+        rtl: options.rtl,
+        RTL: options.rtl
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -428,31 +430,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml, options);
 
-      // Loop through all the child blocks and remove transform
-      const blocksInWorkspace = workspace.getAllBlocks();
-      const maxBlockWidth = Math.max(
-        ...blocksInWorkspace.map(block => block.width)
-      );
-      blocksInWorkspace.forEach(block => {
-        console.log(block.svgGroup_);
-      });
-
-      blocksInWorkspace
-        .filter(block => block.getParent() === null)
-        .forEach(block => {
-          console.log(block);
-          block.svgGroup_.setAttribute(
-            'transform',
-            `translate(${block.RTL ? maxBlockWidth : 16},0)`
-          );
-          console.log({transform: block.svgGroup_.getAttribute('transform')});
-        });
-
+      /*
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
       svg.setAttribute('height', bbox.height + bbox.y);
-      svg.setAttribute('width', bbox.width + Math.abs(bbox.x));
-
+      svg.setAttribute('width', bbox.width + bbox.x);
+      /*
       // Add a transform to center read-only blocks on their line
       const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
 
@@ -460,6 +443,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         'style',
         `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
       );
+      */
       return workspace;
     }
   };
