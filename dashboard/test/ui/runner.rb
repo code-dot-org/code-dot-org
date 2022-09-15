@@ -257,6 +257,7 @@ end
 
 def select_browser_configs(options)
   if options.local
+    ChatClient.log "local browsers", message_format: 'text', color: 'purple'
     return [{
       'browser' => options.browser || 'chrome',
       'name' => 'LocalBrowser',
@@ -266,6 +267,7 @@ def select_browser_configs(options)
   end
 
   browsers = JSON.parse(File.read('browsers.json'))
+  ChatClient.log "browsers being executed", message_format: 'text', color: 'purple'
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
