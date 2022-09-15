@@ -1,5 +1,6 @@
 import React from 'react';
 import IconLibrary from './IconLibrary';
+import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'IconLibrary',
@@ -16,5 +17,5 @@ const Template = args => (
 // Stories
 export const Default = Template.bind({});
 Default.args = {
-  assetChosen: () => {}
+  assetChosen: action('Selected Icon')
 };
