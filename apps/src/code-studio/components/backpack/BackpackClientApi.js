@@ -234,31 +234,9 @@ export default class BackpackClientApi {
     );
   }
 
-  // Mark the given file as done uploading/attempting to upload.
-  // Check if all files are done uploading. If they are, call either onSuccess
+  // Mark the given file as done updating/attempting to update.
+  // Check if all files are done updating. If they are, call either onSuccess
   // or onError depending on if we saw any errors.
-  onUploadComplete(filename, onError, onSuccess, error) {
-    this.onRequestComplete(
-      filename,
-      this.fileUploadsInProgress,
-      this.fileUploadsFailed,
-      onError,
-      onSuccess,
-      error
-    );
-  }
-
-  onDeleteComplete(filename, onError, onSuccess, error) {
-    this.onRequestComplete(
-      filename,
-      this.fileDeletesInProgress,
-      this.fileDeletesFailed,
-      onError,
-      onSuccess,
-      error
-    );
-  }
-
   onRequestComplete(
     filename,
     filesInRequest,
