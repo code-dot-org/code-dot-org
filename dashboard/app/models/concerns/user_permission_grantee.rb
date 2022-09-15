@@ -26,6 +26,7 @@ module UserPermissionGrantee
   end
 
   def permission=(permission)
+    throw 'User must be a teacher' unless user_type == 'teacher'
     @permissions = nil
     permissions << permissions.find_or_create_by(user_id: id, permission: permission)
   end
