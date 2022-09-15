@@ -48,9 +48,13 @@ class CertificatesController < ApplicationController
     end
 
     begin
-      course_name = params[:s] ? Base64.urlsafe_decode64(params[:s]) : 'hourofcode'
+      course_name = params[:course] ? Base64.urlsafe_decode64(params[:course]) : 'hourofcode'
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
+    end
+
+    unless CurriculumHelper.find_matching_course_version(course_name)
+      return render status: :bad_request, json: {message: 'invalid course name'}
     end
 
     student_names = request.method == 'POST' ? params[:names] : []
