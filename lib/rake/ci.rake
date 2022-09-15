@@ -119,6 +119,7 @@ task :ci do
     end
 
   ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
+  ChatClient.log "[DONE]running ci test"
 end
 
 # Returns true if upgrade succeeded, false if failed.
