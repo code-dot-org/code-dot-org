@@ -91,7 +91,8 @@ class JavalabEditor extends React.Component {
     setNewFileError: PropTypes.func.isRequired,
     clearNewFileError: PropTypes.func.isRequired,
     setRenameFileError: PropTypes.func.isRequired,
-    clearRenameFileError: PropTypes.func.isRequired
+    clearRenameFileError: PropTypes.func.isRequired,
+    editorFontSize: PropTypes.number.isRequired
   };
 
   constructor(props) {
@@ -122,6 +123,8 @@ class JavalabEditor extends React.Component {
     this.editorReadOnlyCompartment = new Compartment();
 
     this.languageCompartment = new Compartment();
+
+    this.fontSizeCompartment = new Compartment();
 
     this.state = {
       showMenu: false,
@@ -166,6 +169,16 @@ class JavalabEditor extends React.Component {
       });
     }
 
+    if (prevProps.editorFontSize !== this.props.editorFontSize) {
+      Object.keys(this.editors).forEach(editorKey => {
+        this.editors[editorKey].dispatch({
+          effects: this.fontSizeCompartment.reconfigure(
+            this.getFontSizeTheme(this.props.editorFontSize)
+          )
+        });
+      });
+    }
+
     const {fileMetadata} = this.props;
 
     if (
@@ -183,7 +196,12 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {displayTheme, isReadOnlyWorkspace, fileMetadata} = this.props;
+    const {
+      displayTheme,
+      isReadOnlyWorkspace,
+      fileMetadata,
+      editorFontSize
+    } = this.props;
     const extensions = [...editorSetup];
 
     extensions.push(
@@ -209,6 +227,10 @@ class JavalabEditor extends React.Component {
       extensions.push(this.languageCompartment.of([]));
     }
 
+    extensions.push(
+      this.fontSizeCompartment.of(this.getFontSizeTheme(editorFontSize))
+    );
+
     this.editors[key] = new EditorView({
       state: EditorState.create({
         doc: doc,
@@ -216,6 +238,14 @@ class JavalabEditor extends React.Component {
       }),
       parent: this._codeMirrors[key],
       dispatch: this.dispatchEditorChange(key)
+    });
+  }
+
+  getFontSizeTheme(fontSize) {
+    return EditorView.theme({
+      '&': {
+        fontSize: `${fontSize}px`
+      }
     });
   }
 
@@ -743,7 +773,8 @@ export default connect(
     orderedTabKeys: state.javalab.orderedTabKeys,
     activeTabKey: state.javalab.activeTabKey,
     lastTabKeyIndex: state.javalab.lastTabKeyIndex,
-    editTabKey: state.javalab.editTabKey
+    editTabKey: state.javalab.editTabKey,
+    editorFontSize: state.javalab.editorFontSize
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
