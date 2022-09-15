@@ -10,10 +10,11 @@ import {
   getUnsupportedMiniAppMessage
 } from './constants';
 
-export function handleException(exceptionDetails, callback) {
+export function handleException(exceptionDetails, callback, miniAppType) {
   const error = `${EXCEPTION_PREFIX} ${getExceptionMessage(
     exceptionDetails,
-    exceptionDetails.value
+    exceptionDetails.value,
+    miniAppType
   )}`;
   callback(error);
 }

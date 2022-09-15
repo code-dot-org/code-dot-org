@@ -264,7 +264,7 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.TEST_RESULT:
-        testResult = onTestResult(data, this.onOutputMessage);
+        testResult = onTestResult(data, this.onOutputMessage, this.miniAppType);
         if (testResult.isValidation) {
           this.sawValidationTests = true;
           if (!testResult.success) {
@@ -289,7 +289,7 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.EXCEPTION:
         this.onNewlineMessage();
-        handleException(data, this.onOutputMessage);
+        handleException(data, this.onOutputMessage, this.miniAppType);
         this.onNewlineMessage();
         break;
       case WebSocketMessageType.DEBUG:
