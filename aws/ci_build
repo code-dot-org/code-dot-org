@@ -61,6 +61,7 @@ rescue Exception => msg
 end
 
 def build
+  ChatClient.log "testing pablo", message_format: 'text', color: 'purple'
   Dir.chdir(deploy_dir) do
     return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
     FileUtils.touch STARTED
