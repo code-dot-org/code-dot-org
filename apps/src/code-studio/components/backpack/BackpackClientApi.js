@@ -7,9 +7,9 @@ export default class BackpackClientApi {
     this.backpackApi = clientApi.create('/v3/libraries');
     this.channelId = channelId;
     this.uploadingFiles = false;
-    this.filesToUpload = [];
+    this.fileUploadsInProgress = [];
     this.fileUploadsFailed = [];
-    this.filesToDelete = [];
+    this.fileDeletesInProgress = [];
     this.fileDeletesFailed = [];
   }
 
@@ -70,7 +70,7 @@ export default class BackpackClientApi {
    */
   saveFiles(filesJson, filenames, onError, onSuccess) {
     this.updateFilesHelper(
-      this.filesToUpload,
+      this.fileUploadsInProgress,
       filenames,
       onError,
       onSuccess,
@@ -87,7 +87,7 @@ export default class BackpackClientApi {
 
   deleteFiles(filenames, onError, onSuccess) {
     this.updateFilesHelper(
-      this.filesToDelete,
+      this.fileDeletesInProgress,
       filenames,
       onError,
       onSuccess,
@@ -95,6 +95,16 @@ export default class BackpackClientApi {
     );
   }
 
+  /**
+   * Check that there are no file updates in progress and that the list of files to update
+   * is not empty. Then, if we do not already have the channel id for this backpack fetch it.
+   * Finally, call the given callback.
+   * @param {Array} filesInProgress list of file updates in progress, or an empty list
+   * @param {Array} filenames List of files to update.
+   * @param {Function} onError error callback
+   * @param {Function} onSuccess success callback, only called if there is nothing to update
+   * @param {Function} callback callback function to continue updating files
+   */
   updateFilesHelper(filesInProgress, filenames, onError, onSuccess, callback) {
     if (filesInProgress.length > 0) {
       // If an update is currently in progress (a previous update has not gone through its
@@ -117,7 +127,7 @@ export default class BackpackClientApi {
   }
 
   saveFilesHelper(filesJson, filenames, onError, onSuccess) {
-    this.filesToUpload = [...filenames];
+    this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
       const fileContents = filesJson[filename].text;
@@ -152,16 +162,29 @@ export default class BackpackClientApi {
         } else {
           // record failure and check if all files are done attempting upload/uploading
           this.fileUploadsFailed.push(filename);
-          this.onUploadComplete(filename, onError, onSuccess, error);
+          this.onRequestComplete(
+            filename,
+            this.fileUploadsInProgress,
+            this.fileUploadsFailed,
+            onError,
+            onSuccess,
+            error
+          );
         }
       } else {
-        this.onUploadComplete(filename, onError, onSuccess);
+        this.onRequestComplete(
+          filename,
+          this.fileUploadsInProgress,
+          this.fileUploadsFailed,
+          onError,
+          onSuccess
+        );
       }
     });
   }
 
   deleteFilesHelper(filenames, onError, onSuccess) {
-    this.filesToDelete = [...filenames];
+    this.fileDeletesInProgress = [...filenames];
     this.fileDeletesFailed = [];
     filenames.forEach(filename => {
       // delete file with REQUEST_RETRY_COUNT failure retries
@@ -189,10 +212,23 @@ export default class BackpackClientApi {
           } else {
             // record failure and check if all files are done attempting delete
             this.fileDeletesFailed.push(filename);
-            this.onDeleteComplete(filename, onError, onSuccess, error);
+            this.onRequestComplete(
+              filename,
+              this.fileDeletesInProgress,
+              this.fileDeletesFailed,
+              onError,
+              onSuccess,
+              error
+            );
           }
         } else {
-          this.onDeleteComplete(filename, onError, onSuccess);
+          this.onRequestComplete(
+            filename,
+            this.fileDeletesInProgress,
+            this.fileDeletesFailed,
+            onError,
+            onSuccess
+          );
         }
       }
     );
@@ -204,7 +240,7 @@ export default class BackpackClientApi {
   onUploadComplete(filename, onError, onSuccess, error) {
     this.onRequestComplete(
       filename,
-      this.filesToUpload,
+      this.fileUploadsInProgress,
       this.fileUploadsFailed,
       onError,
       onSuccess,
@@ -215,7 +251,7 @@ export default class BackpackClientApi {
   onDeleteComplete(filename, onError, onSuccess, error) {
     this.onRequestComplete(
       filename,
-      this.filesToDelete,
+      this.fileDeletesInProgress,
       this.fileDeletesFailed,
       onError,
       onSuccess,

@@ -63,8 +63,7 @@ export default class JavalabDialog extends Component {
                   ...styles.button,
                   ...(displayTheme === DisplayTheme.DARK
                     ? styles.darkButton
-                    : styles.lightCancel),
-                  ...(disableButtons ? styles.disabledButton : {})
+                    : styles.lightCancel)
                 }}
                 onClick={handleClose}
                 disabled={disableButtons}
@@ -79,8 +78,7 @@ export default class JavalabDialog extends Component {
                   ...styles.button,
                   ...(displayTheme === DisplayTheme.DARK
                     ? styles.darkButton
-                    : styles.lightConfirm),
-                  ...(disableButtons ? styles.disabledButton : {})
+                    : styles.lightConfirm)
                 }}
                 onClick={handleConfirm}
                 disabled={disableButtons}
