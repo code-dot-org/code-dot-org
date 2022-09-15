@@ -100,10 +100,13 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
     lineHeight: '16px',
-    height: 55,
+    height: 28,
     border: '1px solid rgb(162, 162, 162)',
     borderTop: 0,
     padding: '0px 10px 8px',
-    borderRadius: '0 0 8px 8px'
+    borderRadius: '0 0 8px 8px',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis'
   }
 };
