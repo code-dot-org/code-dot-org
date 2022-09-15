@@ -41,6 +41,7 @@ class UnitOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
+    isProfessionalLearningCourse: PropTypes.bool,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -120,7 +121,8 @@ class UnitOverviewTopRow extends React.Component {
       unitCompleted,
       hasPerLevelResults,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -138,17 +140,27 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress = IN_PROGRESS;
     }
 
+    /*
+     * We are turning off Printing Certificates for Professional Learning Courses
+     * until we can create a specialized certificate for PL courses.
+     * */
+    let completedProfessionalLearningCourse =
+      isProfessionalLearningCourse && unitProgress === COMPLETED;
+
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
         {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            <Button
-              __useDeprecatedTag
-              href={`/s/${scriptName}/next`}
-              text={NEXT_BUTTON_TEXT[unitProgress]}
-              size={Button.ButtonSize.large}
-              style={{marginRight: 10}}
-            />
+            {!completedProfessionalLearningCourse && (
+              <Button
+                __useDeprecatedTag
+                href={`/s/${scriptName}/next`}
+                text={NEXT_BUTTON_TEXT[unitProgress]}
+                size={Button.ButtonSize.large}
+                style={{marginRight: 10}}
+              />
+            )}
+
             {studentResources.length > 0 && (
               <ResourcesDropdown
                 resources={studentResources}

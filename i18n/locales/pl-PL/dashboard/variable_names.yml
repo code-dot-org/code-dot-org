@@ -8,6 +8,7 @@ pl:
       Green: Zielona/Zielone
       Red: Czerwona/Czerwone
       actor: postać
+      adjective: przymiotnik
       age: wiek
       animal1score: wynik zwierzaka 1
       animal1speed: prędkość zwierzaka 1
@@ -20,6 +21,7 @@ pl:
       bit: bit
       blue1: niebieski1
       blue2: niebieski2
+      body-part: część ciała
       bodylength: bodylength
       buttonHeight: wysokość przycisku
       buttonMargin: margines przycisku
@@ -65,7 +67,10 @@ pl:
       name: nazwa
       nectar: nektar
       nectars: nektary
+      number: liczba
+      object: obiekt
       padYOffset: padYOffset
+      parts: części
       planet: planeta
       player_score: wynik gracza
       points: punkty
@@ -91,6 +96,8 @@ pl:
       startX: początek X
       startY: początek Y
       stopped-left: stopped-left
+      time: czas
+      type: typ
       variable: zmienna
       width: szerokość
       wizard: kreator

@@ -2,6 +2,8 @@
 fil:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: prompt user {QUESTION} sa variable {VAR} na may pagpipiliang {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       BadGuys_setSizeAll_dropdown:

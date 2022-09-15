@@ -6,29 +6,35 @@ hr:
   front_title: Pridružite se najvećem edukativnom događaju u povijesti, od 8. do 14.
     prosinca 2015
   coming_soon: Uskoro
-  campaign_date_start_short: 7. prosinca
+  campaign_date_start_short: 5. prosinca
   campaign_date_start_long: 7. prosinca
-  campaign_date_short: 7. - 13. prosinca
+  campaign_date_short: 5. - 11. prosinca
   campaign_date_full: 7. - 13. prosinca
-  campaign_date_year: '2021'
+  campaign_date_year: '2022'
   campaign_date_full_year: 6.-12. prosinca, 2021.
+  nonus_campaign_date_start_short: Lis. 1
+  nonus_campaign_date_start_long: Listopad 1
+  nonus_campaign_date_short: Lis. 1 - Pro. 18
+  nonus_campaign_date_full: Listopad 1 - Prosinac 12
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: Listopad 1, 2021 - Prosinac 12, 2021
   latam_campaign_date_start_short: Lis. 1
   latam_campaign_date_start_long: Listopad 1
-  latam_campaign_date_short: Lis. 1 - Pro. 12
+  latam_campaign_date_short: Lis. 1 - Pro. 18
   latam_campaign_date_full: Listopad 1 - Prosinac 12
-  latam_campaign_date_year: '2021'
+  latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: Listopad 1, 2021 - Prosinac 12, 2021
   europe_campaign_date_start_short: Pro. 6
   europe_campaign_date_start_long: Prosinac 6
   europe_campaign_date_short: Pro. 6-12
   europe_campaign_date_full: Prosinac 6-12
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: Prosinac 6-12, 2021
-  africa_campaign_date_start_short: 7. prosinca
-  africa_campaign_date_start_long: 7. prosinca
+  africa_campaign_date_start_short: Lis. 1
+  africa_campaign_date_start_long: Listopad 1
   africa_campaign_date_short: Pro. 6-12
   africa_campaign_date_full: Prosinac 6-12
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Prosinac 6-12, 2021
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -529,7 +535,6 @@ hr:
   signup_multiple_event_warning: Ako ste domaćih više događanja, molimo vas da pošaljete
     jedinstveni naziv ili adresu e-pošte za svaki od njih. Računamo samo jedan događaj
     prema kombinaciji imena i adrese e-pošte.
-  signup_registration_deadline: Prijava za sat koda se zatvara 12. prosinca.
   signup_name_placeholder: Vaše ime
   signup_email_placeholder: VašeIme@primjer.com
   signup_organization_name_placeholder: Primjerice, srednja škola

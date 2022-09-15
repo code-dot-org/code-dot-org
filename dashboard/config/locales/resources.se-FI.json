@@ -2,6 +2,78 @@
   "se-FI": {
     "data": {
       "resources": {
+        "exploring_apps/coursef/2022": {
+          "name": "Suokkardala App:aid"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Suokkardala App:aid"
+        },
+        "internet/coursef/2022": {
+          "name": "Interneahtta"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Interneahtta"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Sirdde, Sirdde"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Movttegis Kárttat"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
         "computer_science_practices/csd/2022": {
           "type": "Reflekšuvdna"
         },

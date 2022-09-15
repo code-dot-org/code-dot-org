@@ -2,13 +2,11 @@
 title: Partenaires
 ---
 
-Hour of Code est piloté par les comités consultatifs et de révision de Hour of Code et de Computer Science Education Week.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-Le [comité consultatif]({{ urls/advisory_committee }}) est composé de représentants des écoles de la maternelle à la terminale, du monde universitaire, d'organisations à but non lucratif, d'organisations à but lucratif et d'organisations internationales. Cette commission oriente la stratégie de la campagne de Hour of Code .
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-Le [comité de révision]({{ urls/review_committee }}) est composé de 15 éducateurs de la maternelle à la terminale qui évaluent et recommandent des activités sur la base des critères du comité consultatif. Ces éducateurs examinent les activités dirigées par les élèves et les programmes de cours dirigés par les enseignants, proposés par des centaines de partenaires d'activités. Ils évaluent la valeur éducative des activités, leur capacité à susciter l'engagement des apprenants et leur capacité à intéresser divers groupes d'élèves.
-
-Le travail et le dévouement des deux comités ont contribué au succès de Hour of Code et à sa vision d'offrir à chaque élève une initiation à l'informatique.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Principaux partenaires et soutiens
 
