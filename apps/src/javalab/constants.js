@@ -3,12 +3,20 @@
  * Check their use in the Javabuilder repo before editing.
  */
 import {makeEnum} from '@cdo/apps/utils';
+import msg from '@cdo/javalab/locale';
 
 export const CsaViewMode = {
   NEIGHBORHOOD: 'neighborhood',
   CONSOLE: 'console',
   THEATER: 'theater'
 };
+
+export function getUnsupportedMiniAppMessage(miniAppType) {
+  return msg.unsupportedMiniAppMessage({
+    // Capitalize first letter of mini-app name (e.g. neighborhood -> Neighborhood)
+    miniAppType: miniAppType.charAt(0).toUpperCase() + miniAppType.slice(1)
+  });
+}
 
 export const WebSocketMessageType = {
   NEIGHBORHOOD: 'NEIGHBORHOOD',

@@ -4,7 +4,8 @@ import {
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
   AuthorizerSignalType,
-  CsaViewMode
+  CsaViewMode,
+  getUnsupportedMiniAppMessage
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -349,7 +350,9 @@ export default class JavabuilderConnection {
 
   onUnsupportedNeighborhoodMessage() {
     if (!this.seenUnsupportedNeighborhoodMessage) {
-      this.onOutputMessage(javalabMsg.unsupportedNeighborhoodMessage());
+      this.onOutputMessage(
+        '[WARNING] ' + getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
+      );
       this.onNewlineMessage();
       this.seenUnsupportedNeighborhoodMessage = true;
     }
@@ -357,7 +360,9 @@ export default class JavabuilderConnection {
 
   onUnsupportedTheaterMessage() {
     if (!this.seenUnsupportedTheaterMessage) {
-      this.onOutputMessage(javalabMsg.unsupportedTheaterMessage());
+      this.onOutputMessage(
+        '[WARNING] ' + getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
+      );
       this.onNewlineMessage();
       this.seenUnsupportedTheaterMessage = true;
     }
