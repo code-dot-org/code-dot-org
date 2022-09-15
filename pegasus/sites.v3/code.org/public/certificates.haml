@@ -10,6 +10,9 @@ theme: responsive
 -script_name = script == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
 -small_certificate_image_url = "/images/fit-240/#{CertificateImage.certificate_template_for(script)}"
 
+- studio_redirect_url = CDO.studio_url("/certificates/batch")
+%script{src: webpack_asset_path('js/code.org/public/certificates.js'), 'data': {studio_redirect_url: studio_redirect_url}}
+
 %h1=I18n.t :print_batch_certificates
 %div.clear
   %div{:style=>"float: left; margin: 0 40px 0 0;"}<
