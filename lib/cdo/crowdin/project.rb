@@ -29,6 +29,16 @@ module Crowdin
       )
     end
 
+    # @param file_id [String] name of file (within crowdin) to be downloaded
+    # @param language [String] crowdin language code
+    # @param etag [String, nil] the last file version tag returned by crowdin
+    #  for this file. If no changes have occurred since the provided etag was
+    #  generated, crowdin will return a 304 (Not Modified) status instead of
+    #  downloading the file. See the Build Project File Translation Crowdin
+    #  documentation for details
+    # @param attempts [Number, nil] how many times we should retry the download
+    #  if it fails
+    # @see https://developer.crowdin.com/api/v2/#operation/api.projects.translations.builds.files.post
     def export_file(file_id, language, etag: nil, attempts: 3)
       options = {
         body: {
