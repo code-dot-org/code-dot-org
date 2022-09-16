@@ -144,7 +144,6 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
 
     // Don't render the raw XML
     xml.style.display = 'none';
-    console.log('utils');
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockSpaceContainer,
       xml,
