@@ -29,7 +29,6 @@ class InlineHint extends React.Component {
 
   componentDidMount() {
     if (this.props.isBlockly) {
-      console.log('inlineHint');
       convertXmlToBlockly(ReactDOM.findDOMNode(this), this.props.isRtl);
     }
   }
@@ -56,7 +55,12 @@ class InlineHint extends React.Component {
         skinId={this.props.skinId}
       >
         <SafeMarkdown markdown={this.props.markdown} />
-        {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
+        {this.props.block && (
+          <ReadOnlyBlockSpace
+            block={this.props.block}
+            isRtl={this.props.isRtl}
+          />
+        )}
         {this.props.video && (
           <VideoThumbnail
             onClick={this.onVideoClick}
