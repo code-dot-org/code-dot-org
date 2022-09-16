@@ -54,6 +54,15 @@ Feature: Using the SectionActionDropdown
     And I wait until element ".hide-print" is visible
     Then evaluate JavaScript expression "$('img').length === 1"
 
+  Scenario: Printing Certificates from SectionActionDropdown with experiment shows course name
+    Given I create a teacher named "Teacher" and go home
+    And I create a new student section named "Oceans Section" assigned to "AI for Oceans"
+    And I am on "http://studio.code.org/home?enableExperiments=studioCertificate"
+    And I open the section action dropdown
+    And I press the first ".uitest-certs-link" element to load a new page
+    And I wait until current URL contains "/certificates/batch"
+    Then element "#certificate-batch" contains text "personalized AI for Oceans certificates"
+
   # * Checks that section can be hidden and shown
   #   * The menu of a new section should have a 'Hide Section' option -> select it to hide the section
   #   * Button to show hidden sections appears -> select it to show the now-hidden section
