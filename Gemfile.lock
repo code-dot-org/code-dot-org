@@ -711,7 +711,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
-    raindrops (0.19.0)
+    raindrops (0.20.0)
     rake (11.3.0)
     rambling-trie (2.2.1)
     rb-fsevent (0.10.2)
