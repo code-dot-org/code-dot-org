@@ -4,11 +4,13 @@ import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedContainedLevelResetButton as ContainedLevelResetButton} from '@cdo/apps/templates/instructions/ContainedLevelResetButton';
 import * as CodeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('ContainedLevelResetButton', () => {
   let queryUserProgressSpy;
   beforeEach(() => {
     queryUserProgressSpy = sinon.spy();
+    experiments.setEnabled('instructorPredictLevelReset', true);
   });
 
   it('displays nothing if user is not an instructor', () => {

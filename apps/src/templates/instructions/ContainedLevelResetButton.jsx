@@ -7,6 +7,7 @@ import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels
 import {connect} from 'react-redux';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 export const UnconnectedContainedLevelResetButton = ({
   userId,
@@ -14,7 +15,8 @@ export const UnconnectedContainedLevelResetButton = ({
   hasLevelResults,
   userRoleInCourse
 }) => {
-  if (userRoleInCourse !== CourseRoles.Instructor) {
+  const isEnabled = experiments.isEnabled('instructorPredictLevelReset');
+  if (userRoleInCourse !== CourseRoles.Instructor || !isEnabled) {
     return null;
   }
   return (
