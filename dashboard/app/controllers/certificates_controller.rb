@@ -54,7 +54,7 @@ class CertificatesController < ApplicationController
     end
 
     course_version = CurriculumHelper.find_matching_course_version(course_name)
-    return render status: :bad_request, json: {message: 'invalid course name'} unless course_version
+    return render status: :bad_request, json: {message: "invalid course name: #{course_name.inspect}"} unless course_version
 
     course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
 
