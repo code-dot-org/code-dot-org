@@ -215,7 +215,6 @@ gem 'sequel'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
-gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', '~> 0.10.13'
