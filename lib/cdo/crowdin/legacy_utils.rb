@@ -48,7 +48,7 @@ module Crowdin
       languages = @project.languages
       num_languages = languages.length
       languages.each_with_index do |language, i|
-        language_code = language["code"]
+        language_code = language["id"]
         @logger.debug("#{language['name']} (#{language_code}): #{i}/#{num_languages}")
         @logger.info("~#{(i * 100 / num_languages).round(-1)}% complete (#{i}/#{num_languages})") if i > 0 && i % (num_languages / 5) == 0
 
@@ -56,11 +56,19 @@ module Crowdin
         files = @project.list_files
 
         changed_files = Parallel.map(files, in_threads: MAX_THREADS) do |file|
-          etag = etags[language_code].fetch(file, nil)
-          response = @project.export_file(file, language_code, etag: etag, only_head: true)
+          file_id = file['id']
+          filepath = file['path']
+          etag = etags[language_code].fetch(filepath, nil)
+          response = @project.export_file(file_id, language_code, etag: etag)
           case response.code
           when 200
-            [file, response.headers["etag"]]
+            [
+              filepath,
+              {
+                etag: response["data"]["etag"],
+                download_url: response["data"]["url"]
+              }
+            ]
           when 304
             nil
           else
@@ -91,7 +99,7 @@ module Crowdin
       files_to_sync_out = JSON.parse(File.read(@files_to_sync_out_json))
 
       @project.languages.each do |language|
-        code = language["code"]
+        code = language["id"]
         name = language["name"]
         files = files_to_download.fetch(code, nil)
         next unless files.present?
@@ -102,7 +110,7 @@ module Crowdin
 
         @logger.debug("#{name} (#{code}): #{filenames.length} files have changes")
         downloaded_files = Parallel.map(filenames, in_threads: MAX_THREADS) do |file|
-          response = @project.export_file(file, code)
+          response = HTTParty.get(files[file]["download_url"])
           dest = File.join(locale_dir, file)
           FileUtils.mkdir_p(File.dirname(dest))
           # Make sure to specify the encoding; we expect to get quite a lot
@@ -110,7 +118,8 @@ module Crowdin
           File.open(dest, "w:#{response.body.encoding}") do |destfile|
             destfile.write(response.body)
           end
-          [file, response.headers["etag"]]
+
+          [file, {etag: files[file]["etag"]}]
         end.to_h
 
         # Save incremental progress so we don't have to re-download everything
@@ -127,7 +136,7 @@ module Crowdin
         File.write @files_to_download_json, JSON.pretty_generate(files_to_download)
 
         etags[code] ||= {}
-        etags[code].merge! downloaded_files
+        etags[code].merge! downloaded_files.each {|file, data| downloaded_files[file] = data[:etag]}
         File.write @etags_json, JSON.pretty_generate(etags)
       end
     end
