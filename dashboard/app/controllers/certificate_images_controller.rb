@@ -23,8 +23,8 @@ class CertificateImagesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid donor name'}
     end
 
-    if data['course'] && !CurriculumHelper.find_matching_course_version(data['course'])
-      return render status: :bad_request, json: {message: 'invalid course name'}
+    unless valid_course_name?(data['course'])
+      return render status: :bad_request, json: {message: "invalid course name: #{data['course']}"}
     end
 
     begin
@@ -35,5 +35,11 @@ class CertificateImagesController < ApplicationController
     ensure
       image&.destroy!
     end
+  end
+
+  private
+
+  def valid_course_name?(name)
+    name.nil? || name == ScriptConstants::ACCELERATED_NAME || CurriculumHelper.find_matching_course_version(name)
   end
 end
