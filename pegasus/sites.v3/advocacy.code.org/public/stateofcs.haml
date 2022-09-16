@@ -73,7 +73,7 @@ layout: none
 
 .container_responsive{style: "background-color: #FFF; text-align: center"}
   .col-33
-    %a{href: "https://advocacy.code.org"}
+    %a{href: "/"}
       %img{src: "/images/fit-400/CodeLogo.png", style: "width: 200px; padding: 10px", alt: "Code.org Advocacy Coalition Logo"}
   .col-33
     %a{href: "https://www.csteachers.org"}
@@ -98,7 +98,7 @@ layout: none
       %button{style: "background-color: #ffa400; color: white; border-color: #ffa400; margin-top: 20px; margin-bottom: 20px"} Download Report
 
     %br
-    %select{style: "padding: 6px 12px; border-radius: 4px;"}
+    %select.small-state-dropdown{style: "padding: 6px 12px; border-radius: 4px;"}
       %option Pick a State Handout
       -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
         %option{value: abbr}= state
@@ -115,7 +115,7 @@ layout: none
     Key Highlights
 
   .col-50{style: "padding: 20px; text-align: right"}
-    %img{style: "width: 80%", src: "/images/percentage-heatmap.png", alt: "Heat map percentage of high schools offering at least one foundational computer science course in each US state. Raw data available for download at advocacy.code.org/StateOfCS"}
+    %img{style: "width: 80%", src: "/images/access-map-2022.png", alt: "Heat map percentage of high schools offering at least one foundational computer science course in each US state. Raw data available for download at advocacy.code.org/StateOfCS"}
 
   .col-50{style: "padding: 20px"}
     .subtext{style: "padding-top: 10%; color: white"}
@@ -126,6 +126,8 @@ layout: none
 
   .clear
 
+  %br
+
   .col-50{style: "padding: 20px; color: white; text-align: right"}
     %b 37 states have adopted 5 or more policies to make computer science part of the education system.
     %br
@@ -133,7 +135,7 @@ layout: none
     %em See the full report for maps displaying which states have adopted each policy.
 
   .col-50{style: "padding: 20px"}
-    %img{style: "width: 80%", src:"/images/policy-count-map.png", alt: "Heat map number of CS education policies in each US state. Raw data available for download at advocacy.code.org/StateOfCS."}
+    %img{style: "width: 80%", src:"/images/policy-map-2022.png", alt: "Heat map number of CS education policies in each US state. Raw data available for download at advocacy.code.org/StateOfCS."}
 
   .clear
 
