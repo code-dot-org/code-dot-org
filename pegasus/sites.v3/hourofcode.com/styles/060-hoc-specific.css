@@ -123,7 +123,7 @@ label.has-error {
   color: #b94a48;
 }
 
-/** Keeps content within the viewport size (especially on smaller screesn) */
+/** Keeps content within the viewport size (especially on smaller screens) */
 iframe {
   max-width: 100%;
 }
