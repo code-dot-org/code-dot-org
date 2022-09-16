@@ -435,6 +435,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
 
+      // Loop through all the parent blocks and remove vertical translation value
+      // This makes the output more condensed and readable, while preserving
+      // horizontal translation values for RTL rendering.
+      const blocksInWorkspace = workspace.getAllBlocks();
+      blocksInWorkspace
+        .filter(block => block.getParent() === null)
+        .forEach(block => {
+          const svgTransformList = block.svgGroup_.transform.baseVal;
+          const svgTransform = svgTransformList.getItem(0);
+          const svgTranslationX = svgTransform.matrix.e;
+          svgTransform.setTranslate(svgTranslationX, 0);
+        });
+
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
       svg.setAttribute('height', bbox.height + bbox.y);
