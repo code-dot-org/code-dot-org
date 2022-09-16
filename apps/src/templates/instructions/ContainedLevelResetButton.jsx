@@ -13,7 +13,8 @@ export const UnconnectedContainedLevelResetButton = ({
   userId,
   queryUserProgress,
   hasLevelResults,
-  userRoleInCourse
+  userRoleInCourse,
+  codeIsRunning
 }) => {
   const isEnabled = experiments.isEnabled('instructorPredictLevelReset');
   if (userRoleInCourse !== CourseRoles.Instructor || !isEnabled) {
@@ -29,7 +30,7 @@ export const UnconnectedContainedLevelResetButton = ({
           });
         }}
         color={Button.ButtonColor.red}
-        disabled={!hasLevelResults}
+        disabled={!hasLevelResults || codeIsRunning}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
     </div>
@@ -40,7 +41,8 @@ UnconnectedContainedLevelResetButton.propTypes = {
   userId: PropTypes.number,
   queryUserProgress: PropTypes.func.isRequired,
   hasLevelResults: PropTypes.bool,
-  userRoleInCourse: PropTypes.string
+  userRoleInCourse: PropTypes.string,
+  codeIsRunning: PropTypes.bool
 };
 
 export default connect(
@@ -49,7 +51,8 @@ export default connect(
       parseInt(state.progress.currentLevelId)
     ],
     userId: state.pageConstants.userId,
-    userRoleInCourse: state.currentUser.userRoleInCourse
+    userRoleInCourse: state.currentUser.userRoleInCourse,
+    codeIsRunning: state.runState.isRunning
   }),
   dispatch => ({
     queryUserProgress(userId) {
