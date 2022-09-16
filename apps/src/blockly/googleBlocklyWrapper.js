@@ -425,17 +425,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
         },
         null
       );
-      container.appendChild(svg);
+
+      // Core Blockly requires a container div to be LTR, regardless of page direction.
+      const div = document.createElement('div');
+      div.setAttribute('dir', 'LTR');
+      div.style.display = 'inline-block';
+      div.appendChild(svg);
+      container.appendChild(div);
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
-
-      // Loop through all the child blocks and remove transform
-      const blocksInWorkspace = workspace.getAllBlocks();
-      blocksInWorkspace
-        .filter(block => block.getParent() === null)
-        .forEach(block => {
-          block.svgGroup_.removeAttribute('transform');
-        });
 
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
@@ -443,7 +441,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.setAttribute('width', bbox.width + bbox.x);
       // Add a transform to center read-only blocks on their line
       const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
-
       svg.setAttribute(
         'style',
         `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
