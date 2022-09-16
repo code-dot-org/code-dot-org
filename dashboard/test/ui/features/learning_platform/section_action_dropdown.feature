@@ -48,6 +48,7 @@ Feature: Using the SectionActionDropdown
     And I press the first ".uitest-certs-link" element to load a new page
     And I wait until current URL contains "/certificates/batch"
     Then element ".batch-certificate-form textarea" has value "Sally"
+    And element "#certificate-batch" contains text "personalized Hour of Code certificates"
 
     When I press "submit-button" to load a new page
     And I wait until I am on "http://studio.code.org/print_certificates/batch"
