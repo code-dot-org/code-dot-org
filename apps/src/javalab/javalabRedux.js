@@ -272,6 +272,8 @@ export const getSources = state => {
       };
     }
   }
+  console.log('sources in getSources');
+  console.log(sources);
   return sources;
 };
 
@@ -340,6 +342,7 @@ export const setCommitSaveStatus = (
 });
 
 export const setEditTabKey = editTabKey => {
+  console.log('setEditTabKey');
   return {
     type: SET_EDIT_TAB_KEY,
     editTabKey
@@ -347,6 +350,7 @@ export const setEditTabKey = editTabKey => {
 };
 
 export const setActiveTabKey = activeTabKey => {
+  console.log('setActiveTabKey');
   return {
     type: SET_ACTIVE_TAB_KEY,
     activeTabKey
@@ -354,6 +358,7 @@ export const setActiveTabKey = activeTabKey => {
 };
 
 export const setFileMetadata = fileMetadata => {
+  console.log('setFileMetadata');
   return {
     type: SET_FILE_METADATA,
     fileMetadata
@@ -361,6 +366,7 @@ export const setFileMetadata = fileMetadata => {
 };
 
 export const setOrderedTabKeys = orderedTabKeys => {
+  console.log('setOrderedTabKeys');
   return {
     type: SET_ORDERED_TAB_KEYS,
     orderedTabKeys
@@ -373,6 +379,7 @@ export const setAllEditorMetadata = (
   activeTabKey,
   lastTabKeyIndex
 ) => {
+  console.log('setAllEditorMetadata');
   return {
     type: SET_ALL_EDITOR_METADATA,
     fileMetadata,
@@ -412,6 +419,9 @@ export const setHasRunOrTestedCode = hasRunOrTestedCode => ({
 
 // Reducer
 export default function reducer(state = initialState, action) {
+  console.log('inside reducer');
+  console.log(action);
+  console.log(state);
   if (action.type === APPEND_CONSOLE_LOG) {
     return {
       ...state,
@@ -431,6 +441,8 @@ export default function reducer(state = initialState, action) {
       isVisible: action.isVisible,
       isValidation: action.isValidation
     };
+    console.log('sources: newSources in SET_SOURCE');
+    console.log(newSources);
     return {
       ...state,
       sources: newSources
@@ -484,6 +496,8 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
+    console.log('SET_ALL_SOURCES_AND_FILE_METADATA');
+    console.log(state);
     return {
       ...state,
       ...fileMetadataForEditor(action.sources, action.isEditingStartSources),
@@ -632,6 +646,9 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === SET_ORDERED_TAB_KEYS) {
+    console.log('in SET_ORDERED_TAB_KEYS');
+    console.log('orderedTabKeys: action.orderedTabKeys');
+    console.log(action.orderedTabKeys);
     return {
       ...state,
       orderedTabKeys: action.orderedTabKeys

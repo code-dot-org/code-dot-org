@@ -101,6 +101,8 @@ class JavalabEditor extends React.Component {
     this.onChangeTabs = this.onChangeTabs.bind(this);
     this.toggleTabMenu = this.toggleTabMenu.bind(this);
     this.renameFromTabMenu = this.renameFromTabMenu.bind(this);
+    this.moveTabLeft = this.moveTabLeft.bind(this);
+    this.moveTabRight = this.moveTabRight.bind(this);
     this.deleteFromTabMenu = this.deleteFromTabMenu.bind(this);
     this.cancelTabMenu = this.cancelTabMenu.bind(this);
 
@@ -354,6 +356,46 @@ class JavalabEditor extends React.Component {
 
   // This closes the dropdown menu on the active tab
   cancelTabMenu() {
+    this.setState({
+      showMenu: false,
+      contextTarget: null
+    });
+  }
+
+  // This moves the active tab to the left in the tab menu
+  moveTabLeft() {
+    const {activeTabKey} = this.props;
+    const {orderedTabKeys, setOrderedTabKeys} = this.props;
+    let newTabs = [...orderedTabKeys];
+    let index = newTabs.indexOf(activeTabKey);
+    if (index > 0) {
+      let fileToMoveLeft = newTabs[index];
+      newTabs[index] = newTabs[index - 1];
+      newTabs[index - 1] = fileToMoveLeft;
+      setOrderedTabKeys(newTabs);
+    }
+
+    // closes the tab menu if it is open
+    this.setState({
+      showMenu: false,
+      contextTarget: null
+    });
+  }
+
+  // This moves the active tab to the right in the tab menu
+  moveTabRight() {
+    const {activeTabKey} = this.props;
+    const {orderedTabKeys, setOrderedTabKeys} = this.props;
+    let newTabs = [...orderedTabKeys];
+    let index = newTabs.indexOf(activeTabKey);
+    if (index < newTabs.length - 1) {
+      const fileToMoveRight = newTabs[index];
+      newTabs[index] = newTabs[index + 1];
+      newTabs[index + 1] = fileToMoveRight;
+      setOrderedTabKeys(newTabs);
+    }
+
+    // closes the tab menu if it is open
     this.setState({
       showMenu: false,
       contextTarget: null
@@ -695,7 +737,11 @@ class JavalabEditor extends React.Component {
             </Nav>
             <div style={menuStyle}>
               <JavalabEditorTabMenu
+                activeTabKey={activeTabKey}
+                orderedTabKeys={orderedTabKeys}
                 cancelTabMenu={this.cancelTabMenu}
+                moveTabLeft={this.moveTabLeft}
+                moveTabRight={this.moveTabRight}
                 renameFromTabMenu={this.renameFromTabMenu}
                 deleteFromTabMenu={this.deleteFromTabMenu}
                 changeFileTypeFromTabMenu={(isVisible, isValidation) =>
