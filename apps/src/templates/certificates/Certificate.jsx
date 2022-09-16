@@ -137,6 +137,10 @@ function Certificate(props) {
 
   const print = getPrintPath(certificate);
 
+  const wrapperClassName = props.showStudioCertificate
+    ? 'show-studio-certificate'
+    : undefined;
+
   return (
     <div style={styles.container}>
       <h1 style={headingStyle}>{i18n.congratsCertificateHeading()}</h1>
@@ -146,7 +150,11 @@ function Certificate(props) {
           linkText={i18n.backToActivity()}
         />
       )}
-      <div id="uitest-certificate" style={certificateStyle}>
+      <div
+        id="uitest-certificate"
+        className={wrapperClassName}
+        style={certificateStyle}
+      >
         <BackToFrontConfetti active={personalized} style={styles.confetti} />
         <a href={certificateShareLink}>
           <img src={imgSrc} />
