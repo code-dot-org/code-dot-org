@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-09-14 21:10:49 UTC",
+    "serialized_at": "2022-09-15 14:05:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -367,6 +367,8 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "overview": "Being able to access and process data is an important part of many industries. Whether\nit is determining the best allocation of resources or deciding what new product to\ncreate, analyzing data is a necessary component of those conversations. Luckily there\nare tools available to help read and process data, and this lab will introduce one such\ntool to students and ask them to utilize existing real-world data to answer a question\nof their own interest.",
+        "student_overview": "Being able to access and process data is an important part of many industries. Whether\nit is determining the best allocation of resources or deciding what new product to\ncreate, analyzing data is a necessary component of those conversations. Luckily there\nare tools available to help read and process data, and this lab will introduce one such\ntool to you, asking you to utilize existing real-world data to answer a question\nrelated to your own interest."
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -1086,6 +1088,18 @@
         "lesson_activity.key": "aa1c8c55-861a-4e2c-9621-77f6638de127",
         "lesson.key": "lesson-16",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "898c5ab2-6112-4835-9ee0-7f32122cefd7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "898c5ab2-6112-4835-9ee0-7f32122cefd7",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-labs-2022"
       }
     }
@@ -3183,6 +3197,16 @@
         "activity_section.key": "263504f9-8325-4ae5-8065-56b65496960f",
         "lesson_activity.key": "aa1c8c55-861a-4e2c-9621-77f6638de127"
       }
+    },
+    {
+      "key": "3b423eeb-e1d1-4774-bb25-453f0178815d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3b423eeb-e1d1-4774-bb25-453f0178815d",
+        "lesson_activity.key": "898c5ab2-6112-4835-9ee0-7f32122cefd7"
+      }
     }
   ],
   "script_levels": [
@@ -4241,6 +4265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L3-L1_2022"
+        ],
         "progression": "The Good and the Bad"
       },
       "bonus": false,
