@@ -7,7 +7,7 @@
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
-"api_token" : ""
+"api_key" : ""
 
 #
 # Files configuration
