@@ -11,7 +11,10 @@ export default {
 // STORIES
 //
 
-export const BasicExample = args => {
+// This component is an integrated example for the <PopUpMenu>.
+// It needs to be its own component so that it adheres to React hooks
+// linting (i.e., this can't be a template or the exported story itself).
+const BasicExampleComponent = props => {
   const [isOpen, setIsOpen] = useState(true);
   const targetPoint = React.createRef();
   const [targetPointRect, setTargetPointRect] = useState(null);
@@ -60,3 +63,5 @@ export const BasicExample = args => {
     </div>
   );
 };
+
+export const BasicExample = args => <BasicExampleComponent {...args} />;
