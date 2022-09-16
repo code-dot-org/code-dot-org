@@ -34,7 +34,7 @@ Feature: Using the SectionActionDropdown
   Scenario: Printing Certificates from SectionActionDropdown without experiment
     Given I create a teacher-associated student named "Sally"
     And I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home"
+    And I am on "http://studio.code.org/home?disableExperiments=studioCertificate"
     And I open the section action dropdown
     And I press the first ".uitest-certs-link" element to load a new page
     And I wait until I am on "http://code.org/certificates"
