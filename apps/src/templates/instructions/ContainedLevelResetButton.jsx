@@ -30,7 +30,7 @@ export const UnconnectedContainedLevelResetButton = ({
           });
         }}
         color={Button.ButtonColor.red}
-        disabled={!hasLevelResults || codeIsRunning}
+        disabled={!hasLevelResults || !!codeIsRunning}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
     </div>

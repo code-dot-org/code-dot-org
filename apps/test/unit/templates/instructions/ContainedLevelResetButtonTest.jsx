@@ -20,6 +20,7 @@ describe('ContainedLevelResetButton', () => {
         queryUserProgress={queryUserProgressSpy}
         hasLevelResults
         userRoleInCourse="Participant"
+        codeIsRunning={false}
       />
     );
     expect(wrapper.isEmptyRender()).to.be.true;
@@ -32,6 +33,7 @@ describe('ContainedLevelResetButton', () => {
         queryUserProgress={queryUserProgressSpy}
         hasLevelResults={false}
         userRoleInCourse="Instructor"
+        codeIsRunning={false}
       />
     );
     const button = wrapper.find('Button');
@@ -45,6 +47,7 @@ describe('ContainedLevelResetButton', () => {
         queryUserProgress={queryUserProgressSpy}
         hasLevelResults
         userRoleInCourse="Instructor"
+        codeIsRunning={false}
       />
     );
     const button = wrapper.find('Button');
@@ -62,6 +65,7 @@ describe('ContainedLevelResetButton', () => {
         queryUserProgress={queryUserProgressSpy}
         hasLevelResults
         userRoleInCourse="Instructor"
+        codeIsRunning={false}
       />
     );
     const button = wrapper.find('Button');
