@@ -86,6 +86,7 @@ namespace :test do
   # Run the eyes tests and ui test suites in parallel. If one of these suites
   # raises, allow the other suite to complete, then make sure this task raises.
   task :ui_all do
+    ChatClient.log "Calling UI all"
     Parallel.each([:eyes_ui, :regular_ui], in_threads: 3) do |target|
       Rake::Task["test:#{target}"].invoke
     end
@@ -251,12 +252,12 @@ namespace :test do
   end
 
   task ci: [
-    :shared_ci,
-    :pegasus_ci,
-    :dashboard_ci,
-    :dashboard_legacy_ci,
-    :lib_ci,
-    :bin_i18n_ci,
+    #    :shared_ci,
+    #:pegasus_ci,
+    #:dashboard_ci,
+    #:dashboard_legacy_ci,
+    #:lib_ci,
+    #:bin_i18n_ci,
     :ui_live
   ]
 
