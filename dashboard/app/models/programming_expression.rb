@@ -276,7 +276,8 @@ class ProgrammingExpression < ApplicationRecord
         example_key = example['name'].to_sym
         unless i18n_examples[example_key].nil?
           example['name'] = i18n_examples[example_key][:name] unless i18n_examples[example_key][:name].nil?
-          example['code'] = i18n_examples[example_key][:code] unless i18n_examples[example_key][:code].nil?
+          # code sections are not translated until expression names are marked "do not translate" in crowdin.
+          # example['code'] = i18n_examples[example_key][:code] unless i18n_examples[example_key][:code].nil?
           example['description'] = i18n_examples[example_key][:description] unless i18n_examples[example_key][:description].nil?
         end
       end
@@ -296,7 +297,8 @@ class ProgrammingExpression < ApplicationRecord
       localized_params&.each do |param|
         param_key = param['name'].to_sym
         unless i18n_params[param_key].nil?
-          param['name'] = i18n_params[param_key][:name] unless i18n_params[param_key][:name].nil?
+          # parameter names are not translated since they are part of the code
+          # param['name'] = i18n_params[param_key][:name] unless i18n_params[param_key][:name].nil?
           param['type'] = i18n_params[param_key][:type] unless i18n_params[param_key][:type].nil?
           param['description'] = i18n_params[param_key][:description] unless i18n_params[param_key][:description].nil?
         end

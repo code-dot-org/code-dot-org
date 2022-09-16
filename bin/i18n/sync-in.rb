@@ -87,8 +87,10 @@ def localize_docs
             example["name"], {
               'name' => example["name"],
               'description' => example["description"],
-              # 'code' => example["code"] # we don't want code translated until expression names are marked 'do not
-              # translate' in crowdin in the same way variables are. We only want to translate comments, labels, text...
+              # 'code' => example["code"] # we don't want code
+              # translated until expression names are marked 'do not
+              # translate' in crowdin in the same way variables are.
+              # We only want to translate comments, labels, text, etc.
             }
           )
         end
@@ -97,7 +99,7 @@ def localize_docs
         expression_docs.properties["palette_params"]&.each do |param|
           param_docs.store(
             param["name"], {
-              'name' => param["name"],
+              # 'name' => param["name"], # expression names and parameters are not translated yet
               'type' => param["type"],
               'description' => param["description"]
             }
