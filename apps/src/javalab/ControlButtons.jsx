@@ -14,7 +14,6 @@ export default function ControlButtons({
   isEditingStartSources,
   disableFinishButton,
   onContinue,
-  renderSettings,
   disableRunButton,
   disableTestButton,
   showTestButton,
@@ -66,7 +65,7 @@ export default function ControlButtons({
         )}
       </div>
       <div className={style.rightButtons}>
-        <JavalabSettings>{renderSettings()}</JavalabSettings>
+        <JavalabSettings />
         {!isEditingStartSources && (
           <JavalabButton
             text={finishButtonText}
@@ -90,7 +89,6 @@ ControlButtons.propTypes = {
   isEditingStartSources: PropTypes.bool,
   disableFinishButton: PropTypes.bool,
   onContinue: PropTypes.func.isRequired,
-  renderSettings: PropTypes.func.isRequired,
   disableRunButton: PropTypes.bool,
   disableTestButton: PropTypes.bool,
   showTestButton: PropTypes.bool,
