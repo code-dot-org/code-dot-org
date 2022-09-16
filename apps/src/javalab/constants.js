@@ -132,7 +132,6 @@ export const TheaterExceptionType = makeEnum(
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
-export const EXCEPTION_PREFIX = '[EXCEPTION]';
 
 export const ExecutionType = {
   // Compile and run the main method
