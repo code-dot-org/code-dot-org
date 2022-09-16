@@ -214,6 +214,9 @@ Javalab.prototype.init = function(config) {
   }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
+  console.log('config.level and startSources');
+  console.log(config.level);
+  console.log(startSources);
   const validation = config.level.validation || {};
   if (config.level.exemplarSources) {
     // If we have exemplar sources (either for editing or viewing), set initial sources
