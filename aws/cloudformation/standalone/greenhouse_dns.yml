@@ -1,6 +1,10 @@
 # Greenhouse DNS Configuration
 # See: https://support.greenhouse.io/hc/en-us/articles/201111684-Email-domain-verification
 
+# TODO:
+# - Fix HostedZoneId or switch to HostedZoneName
+# - cfn-lint and validate, or otherwise test
+
 Resources:
 
   GreenhouseHostedZone:
@@ -11,7 +15,7 @@ Resources:
   NameServerRecord:
     Type: AWS::Route53::RecordSet
     Properties:
-      HostedZoneId : Z8VLZEXAMPLE
+      HostedZoneId : TODO
       Name: gh-mail.code.org
       ResourceRecords: !GetAtt GreenhouseHostedZone.NameServers
       TTL: 3600
@@ -21,7 +25,7 @@ Resources:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       Comment: Creating records for mail server
-      HostedZoneId: Z1PA6795UKMFR9
+      HostedZoneId: TODO
       RecordSets:
       - Name: email.gh-mail.code.org.
         ResourceRecords: 
