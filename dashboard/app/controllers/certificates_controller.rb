@@ -56,11 +56,13 @@ class CertificatesController < ApplicationController
     course_version = CurriculumHelper.find_matching_course_version(course_name)
     return render status: :bad_request, json: {message: 'invalid course name'} unless course_version
 
+    course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
+
     student_names = request.method == 'POST' ? params[:names] : []
 
     @certificate_data = {
       courseName: course_name,
-      courseTitle: course_version.localized_title,
+      courseTitle: course_title,
       studentNames: student_names,
       imageUrl: certificate_image_url(nil, course_name, nil),
     }
