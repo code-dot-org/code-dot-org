@@ -53,14 +53,14 @@ class CertificatesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    unless CurriculumHelper.find_matching_course_version(course_name)
-      return render status: :bad_request, json: {message: 'invalid course name'}
-    end
+    course_version = CurriculumHelper.find_matching_course_version(course_name)
+    return render status: :bad_request, json: {message: 'invalid course name'} unless course_version
 
     student_names = request.method == 'POST' ? params[:names] : []
 
     @certificate_data = {
       courseName: course_name,
+      courseTitle: course_version.localized_title,
       studentNames: student_names,
       imageUrl: certificate_image_url(nil, course_name, nil),
     }

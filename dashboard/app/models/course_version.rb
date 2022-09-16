@@ -59,6 +59,7 @@ class CourseVersion < ApplicationRecord
   # into the course version itself.
 
   delegate :name, to: :content_root, allow_nil: true
+  delegate :localized_title, to: :content_root, allow_nil: true
   delegate :pl_course?, to: :content_root, allow_nil: true
   delegate :stable?, to: :content_root, allow_nil: true
   delegate :launched?, to: :content_root, allow_nil: true
