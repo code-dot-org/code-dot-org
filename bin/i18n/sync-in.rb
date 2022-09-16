@@ -71,7 +71,6 @@ def localize_docs
         expression_docs = ProgrammingExpression.find_by_id(expression[:id])
         expressions_data.store(
           expression_key, {
-            'name' => expression[:name],
             'content' => expression_docs.properties["content"],
             'examples' => {},
             'palette_params' => {},
@@ -88,7 +87,8 @@ def localize_docs
             example["name"], {
               'name' => example["name"],
               'description' => example["description"],
-              'code' => example["code"]
+              # 'code' => example["code"] # we don't want code translated until expression names are marked 'do not
+              # translate' in crowdin in the same way variables are. We only want to translate comments, labels, text...
             }
           )
         end

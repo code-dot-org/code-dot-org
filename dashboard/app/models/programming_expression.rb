@@ -264,7 +264,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_localized_examples
-    localized_examples = examples
+    localized_examples = examples.deep_dup
     i18n_examples = I18n.t(
       :examples,
       scope: expression_scope,
@@ -275,9 +275,9 @@ class ProgrammingExpression < ApplicationRecord
       localized_examples&.each do |example|
         example_key = example['name'].to_sym
         unless i18n_examples[example_key].nil?
-          example['name'] = i18n_examples[example_key][:name]
-          example['code'] = i18n_examples[example_key][:code]
-          example['description'] = i18n_examples[example_key][:description]
+          example['name'] = i18n_examples[example_key][:name] unless i18n_examples[example_key][:name].nil?
+          example['code'] = i18n_examples[example_key][:code] unless i18n_examples[example_key][:code].nil?
+          example['description'] = i18n_examples[example_key][:description] unless i18n_examples[example_key][:description].nil?
         end
       end
     end
@@ -285,7 +285,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_localized_params
-    localized_params = palette_params
+    localized_params = palette_params.deep_dup
     i18n_params = I18n.t(
       :palette_params,
       scope: expression_scope,
@@ -296,9 +296,9 @@ class ProgrammingExpression < ApplicationRecord
       localized_params&.each do |param|
         param_key = param['name'].to_sym
         unless i18n_params[param_key].nil?
-          param['name'] = i18n_params[param_key][:name]
-          param['type'] = i18n_params[param_key][:type]
-          param['description'] = i18n_params[param_key][:description]
+          param['name'] = i18n_params[param_key][:name] unless i18n_params[param_key][:name].nil?
+          param['type'] = i18n_params[param_key][:type] unless i18n_params[param_key][:type].nil?
+          param['description'] = i18n_params[param_key][:description] unless i18n_params[param_key][:description].nil?
         end
       end
     end
