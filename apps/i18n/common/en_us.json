@@ -848,7 +848,7 @@
   "enterCountry": "Enter country if outside the United States",
   "enterGroupName": "Enter a group name (optional)",
   "enterSectionCode": "Enter section code",
-  "enterCertificateNames": "Enter up to 30 names, **one per line**. A printable page with personalized {courseName} certificates will be generated.",
+  "enterCertificateNames": "Enter up to 30 names, **one per line**. A printable page with personalized {courseTitle} certificates will be generated.",
   "enrollmentDescription": "Join your teacher's classroom by entering their section code below. Teachers will be able to see your course progress, projects, and reset your password in case you forget it.",
   "equalTo": "Equal to",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
