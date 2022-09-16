@@ -6,6 +6,10 @@ export default {
   component: HelpTip
 };
 
+//
+// STORIES
+//
+
 export const BasicExample = args => (
   <div style={{margin: '2em', maxWidth: 500}}>
     <p>
