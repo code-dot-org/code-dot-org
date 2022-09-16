@@ -65,7 +65,7 @@ def pegasus_dir(*paths)
 end
 
 def shared_dir(*dirs)
-  deploy_dir('adhoc/shared', *dirs)
+  deploy_dir('shared', *dirs)
 end
 
 def shared_js_dir(*dirs)
