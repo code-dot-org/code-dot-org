@@ -46,6 +46,7 @@ LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 # @return [int] a status code
 #
 def main(options)
+  ChatClient.log 'runner running'
   $options = options
   $browsers = select_browser_configs(options)
   $lock = Mutex.new
@@ -61,7 +62,7 @@ def main(options)
   configure_for_eyes if eyes?
   report_tests_starting
   generate_status_page(start_time) if options.with_status_page
-
+  ChatClient.log 'runner running 2'
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
   rescue => e
@@ -256,6 +257,7 @@ def parse_options
 end
 
 def select_browser_configs(options)
+  ChatClient.log 'selecting browsers'
   if options.local
     ChatClient.log "local browsers", message_format: 'text', color: 'purple'
     return [{
