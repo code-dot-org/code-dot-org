@@ -71,7 +71,6 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     const padding = 16;
     const verticalSpaceBetweenBlocks = 10;
 
-    console.log({viewWidth: viewWidth, width: width});
     // Block positioning rules:
     // If the block XML has X/Y coordinates, use them to set the block
     // position. Note that RTL languages position from the left.
