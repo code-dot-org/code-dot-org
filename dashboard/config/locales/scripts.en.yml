@@ -9045,3 +9045,27 @@ en:
 
             Creating fake reviews has ethical implications, and it is important to emphasize that although students are going through the process to see one way in which they can be generated, this is in no way advocating this type of behavior. This is similar to "white hat" hackers needing to understand the same tools and processes of criminal hackers in order to do their job. Discuss with students the ethical concerns and how understanding this process is important to preventing unwanted behaviors online.
           student_description: ''
+        csa-data-lab:
+          lessons:
+            lesson-1:
+              name: Data, Data, Data!
+            lesson-2:
+              name: Designing and Implementing a Custom Class
+            lesson-3:
+              name: Putting It All Together
+            lesson-4:
+              name: Open-Ended Activity
+          lesson_groups: {}
+          name: csa-data-lab
+          title: AP CSA Data Lab
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Students are motivated if they feel connected to the material they are studying. One way to make computer science content relevant, meaningful, relatable, and exciting is to incorporate real-world data sets into hands-on programming assignments.
+
+            Data are values. Values by themselves are not knowledge, knowledge is what you gain from studying data. This lab is designed to encourage students to derive knowledge about a topic of interest to them by examining a set of freely available data from the web. In order to gain knowledge from data in this lab, students will pose a question, search for a data set on that topic, and then process that data to determine the answer to their question.
+
+            ###Real-World Connection
+
+            Being able to access and process data is an important part of many industries. Whether it is determining the best allocation of resources or deciding what new product to create, analyzing data is a necessary component of those conversations. Luckily there are tools available to help read and process data, and this lab will introduce one such tool to students and ask them to utilize existing real-world data to answer a question of their own interest.
+          student_description: Data are values. Values by themselves are not knowledge, knowledge is what you gain from studying data. This lab is designed to encourage you to derive knowledge about a topic of interest to you by examining a set of freely available data from the web. In order to gain knowledge from data in this lab, you will pose a question, search for a data set on that topic, and then process that data to determine the answer to your question.
