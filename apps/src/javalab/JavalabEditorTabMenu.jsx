@@ -40,9 +40,7 @@ export class JavalabEditorTabMenu extends Component {
       activeTabKey,
       orderedTabKeys
     } = this.props;
-    console.log('inside dropdownElements - activeTabKey ' + activeTabKey);
-    console.log('orderedTabKeys');
-    console.log(orderedTabKeys);
+
     let elements = [
       <button onClick={renameFromTabMenu} key="rename" type="button">
         {javalabMsg.rename()}
@@ -50,7 +48,6 @@ export class JavalabEditorTabMenu extends Component {
     ];
     const tabsLength = orderedTabKeys.length;
     const index = orderedTabKeys.indexOf(activeTabKey);
-    console.log(tabsLength + ' ' + index);
     if (index > 0) {
       elements.push(
         <button onClick={moveTabLeft} key="moveLeft" type="button">

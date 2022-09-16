@@ -239,7 +239,6 @@ Javalab.prototype.init = function(config) {
         validation[key].isValidation = true;
         validation[key].isVisible = false;
       });
-      console.log(getStore());
       getStore().dispatch(
         setAllSourcesAndFileMetadata(
           {
