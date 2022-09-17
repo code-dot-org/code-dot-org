@@ -12,7 +12,7 @@ module UsersHelper
   # Returns a boolean - true if all steps were successful, false otherwise.
   def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
     # No-op if source_user is nil
-    return true unless source_user.present?
+    return true if source_user.blank?
 
     firehose_params = {
       source_user: source_user,

@@ -59,7 +59,6 @@ describe('Validation Commands', () => {
       }
       // expectedArray contains numbers from 111 to 1100 (last MAX_NUM_TEXTS numbers)
     }
-    // console.log(expectedArray);
     expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal(
       expectedArray
     );

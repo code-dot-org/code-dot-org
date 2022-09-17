@@ -65,11 +65,12 @@ export const commands = {
   },
 
   makeNumSprites(numSprites, animation) {
-    // maxAllowedNewSprites is based on number of sprites already created and MAX_NUM_SPRITES
-    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
-    if (maxAllowedNewSprites === 0) {
+    if (this.reachedSpriteMax()) {
       return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
     }
+    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
     for (let i = 0; i < maxAllowedNewSprites; i++) {
       this.addSprite({
         animation,
@@ -79,11 +80,12 @@ export const commands = {
   },
 
   makeBurst(numSprites, animation, effectName) {
-    // maxAllowedNewSprites is based on number of sprites already created and MAX_NUM_SPRITES
-    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
-    if (maxAllowedNewSprites === 0) {
+    if (this.reachedSpriteMax()) {
       return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
     }
+    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
     const behaviorFuncs = {
       burst: behaviorCommands.burstFunc,
       pop: behaviorCommands.popFunc,

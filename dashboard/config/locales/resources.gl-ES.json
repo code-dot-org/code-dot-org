@@ -29,6 +29,266 @@
         "ai-training/oceans/unversioned": {
           "type": "Vídeo"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programación por parellas"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Programación por relevos"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Vídeo"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Condicionais con cartas"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Guía de implementación"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Vídeo"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Vídeo"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Vídeo"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Vídeo"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Vídeo"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "A Internet"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Guía de implementación"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Vídeo"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Vídeo"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Guía de implementación"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Creando camiños"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Creando camiños"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Creando camiños"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Móveo, móveo"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programación por parellas"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Vídeo"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "Vídeo"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Bucleándose"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Bucleándose"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Bucleándose"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Bucleándose"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Vídeo"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "O Gran Evento"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Guía de implementación"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programación por parellas",
+          "type": "Vídeo"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Vídeo"
+        },
+        "turns_angles/express/2022": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Vídeo"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Vídeo"
+        },
+        "variables/express/2022": {
+          "name": "Variables"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Vídeo"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programación por parellas"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Vídeo"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Vídeo"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programación por parellas"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Vídeo"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Mapas Felices"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Vídeo"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Vídeo"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Vídeo"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "O Gran Evento"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Guía de implementación"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Os meus amigos robóticos"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programación por parellas",
+          "type": "Vídeo"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "O Gran Evento"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Vídeo"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Pulseiras Binarias"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Guía de implementación"
+        },
         "binary_and_data/csd/2022": {
           "type": "Vídeo"
         },

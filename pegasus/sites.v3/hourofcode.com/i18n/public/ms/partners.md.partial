@@ -2,13 +2,11 @@
 title: Rakan kongsi
 ---
 
-Acara Jam Kod didorong oleh Jam Kod dan Jawatankuasa Penasihat dan Penilaian Minggu Pendidikan Sains Komputer.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-[Jawatankuasa Penasihat]({{ urls/advisory_committee }}) terdiri daripada wakil K-12 iaitu ahli akademik, organisasi bukan untung, organisasi berorientasikan keuntungan dan pertubuhan antarabangsa. Jawatankuasa ini membimbing strategi untuk kempen Jam Kod.
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The [Jawatankuasa Penilaian]({{ urls/review_committee }}) terdiri daripada 15 pendidik seluruh kumpulan gred K-12 yang menilai dan menyarankan aktiviti dengan menggunakan rubrik pemarkahan Jawatankuasa Penasihat. Para pendidik ini menilai aktiviti dipimpin pelajar dan rancangan pelajaran dipimpin guru yang dihantar oleh ratusan rakan kongsi aktiviti, menaksir nilai pendidikan aktiviti, kemampuan menarik minat pelajar dan daya tarikan yang berpotensi kepada kumpulan pelajar yang pelbagai.
-
-Usaha dan dedikasi kedua-dua jawatankuasa telah menyumbang kepada kejayaan Jam Kod dan visinya dalam menawarkan pengenalan kepada sains komputer untuk setiap pelajar.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Rakan Kongsi dan Penyokong Korporat Utama
 

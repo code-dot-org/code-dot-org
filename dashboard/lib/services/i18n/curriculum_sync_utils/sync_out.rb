@@ -85,7 +85,7 @@ module Services
           # these URLs
           if result.key?(:resources)
             result[:resources].each do |_key, resource|
-              next unless resource[:url].present?
+              next if resource[:url].blank?
               resource[:url].strip!
               resource[:url].delete_prefix!('<')
               resource[:url].delete_suffix!('>')

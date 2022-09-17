@@ -2,6 +2,8 @@
 ja:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: ユーザーに変数 {VAR} について選択肢 {A}{B}{C} を使って {QUESTION} をプロンプト表示する
       BadGuys_makeNewBadGuysSprite:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       BadGuys_setSizeAll_dropdown:
