@@ -2,6 +2,8 @@
 en:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
       BadGuys_makeNewBadGuysSprite:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       BadGuys_setSizeAll_dropdown:

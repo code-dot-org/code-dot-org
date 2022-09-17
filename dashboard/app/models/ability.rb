@@ -15,6 +15,7 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       CourseOffering,
+      DataDoc,
       UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
@@ -63,10 +64,11 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
-      CodeReview,
-      CodeReviewComment,
+      CodeReview
     ]
     cannot :index, Level
+
+    can :show, DataDoc
 
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
@@ -103,14 +105,6 @@ class Ability
       end
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
-      can :destroy, CodeReviewComment do |code_review_comment|
-        # Teachers can delete comments on their student's projects,
-        # their own comments anywhere, and comments on their projects.
-        code_review_comment.project_owner&.student_of?(user) ||
-          (user.teacher? && user == code_review_comment.commenter) ||
-          (user.teacher? && user == code_review_comment.project_owner)
-      end
       can :view_project_commits, User do |project_owner|
         project_owner.id === user.id || can?(:code_review, project_owner)
       end
@@ -396,6 +390,7 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        DataDoc,
         CourseOffering,
         UnitGroup,
         Resource,

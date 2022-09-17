@@ -1,18 +1,16 @@
 name 'vpl-csa-module-3-wrap-up-2022'
 editor_experiment ''
-display_name 'CSA Module 1 Overview'
+display_name 'CSA Module 3 Wrap-up'
 
 title 'Module 1: CSA Virtual Professional Learning'
 markdown <<MARKDOWN
 # Wrap up
 
-You just finished the first module of the asynchronous post-work!  We hope to see you at the next synchronous call with your cohort.  During this call you will:
+This marks the end of Module 3!  As you consider how you are planning to support students to and through the Unit 4 project, consider sharing your strategies, concerns, and successes in <a href="https://forum.code.org/t/csa-unit-4-lesson-2-object-aliases-and-equality/36370" target="blank">Code.org Forum</a>.
 
-* Check in with other members of your cohort and collaboratively address challenges in your classrooms
-* Use The Theater, a package used in Java Lab to create animations and sounds
-* Read documentation from The Theater to create your own animation
-* Learn about the Unit 4 project where students create their own animation to illustrate data
+In your next Code.org workshop, we will cover key content from Unit 5 which covers 2D arrays.   In Unit 5, students will use The Theater to manipulate pixels in images in Unit 5 as well. 
 
-See you there!
+
+**See you soon!**
 
 MARKDOWN
