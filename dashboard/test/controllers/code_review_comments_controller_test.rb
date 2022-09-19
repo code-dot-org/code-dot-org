@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CodeReviewNotesControllerTest < ActionController::TestCase
+class CodeReviewCommentsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = false
 
   setup_all do
@@ -44,7 +44,7 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
     assert_not_nil response_json['createdAt']
   end
 
-  test 'cannot create a code review note for a closed code review' do
+  test 'cannot create a code review comment for a closed code review' do
     student_2_closed_code_review = create :code_review, user_id: @student_2.id, project_id: @student_2_project.id, closed_at: DateTime.now
 
     sign_in @student_1
@@ -57,7 +57,7 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'cannot create a code review note for someone outside the code review group' do
+  test 'cannot create a code review comment for someone outside the code review group' do
     code_review_outside_group = create :code_review, user_id: @student_3.id, project_id: @student_3_project.id
 
     sign_in @student_2
@@ -71,12 +71,12 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
   end
 
   test 'update resolved for code review comment' do
-    review_note = create :code_review_note, code_review: @code_review, commenter: @student_2
+    review_comment = create :code_review_comment, code_review: @code_review, commenter: @student_2
 
     sign_in @student_1
 
     patch :update, params: {
-      id: review_note.id,
+      id: review_comment.id,
       isResolved: true
     }
 
@@ -87,24 +87,24 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
   end
 
   test 'delete code review comment' do
-    review_note = create :code_review_note, code_review: @code_review, commenter: @student_2
+    review_comment = create :code_review_comment, code_review: @code_review, commenter: @student_2
 
     sign_in @teacher
 
     delete :destroy, params: {
-      id: review_note.id
+      id: review_comment.id
     }
 
     assert_response :success
   end
 
   test 'students cannot delete code review comment' do
-    review_note = create :code_review_note, code_review: @code_review, commenter: @student_2
+    review_comment = create :code_review_comment, code_review: @code_review, commenter: @student_2
 
     sign_in @student_1
 
     delete :destroy, params: {
-      id: review_note.id
+      id: review_comment.id
     }
 
     assert_response :forbidden
