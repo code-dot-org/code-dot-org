@@ -38,6 +38,23 @@ class CertificateImagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'can show csp course name' do
+    csp = create :unit_group, name: "csp-1999"
+    create :course_version, content_root: csp
+
+    data = {name: 'student', course: 'csp-1999'}
+    filename = Base64.urlsafe_encode64(data.to_json)
+    get :show, format: 'jpg', params: {filename: filename}
+    assert_response :success
+  end
+
+  test 'can show accelerated course' do
+    data = {name: 'student', course: 'accelerated'}
+    filename = Base64.urlsafe_encode64(data.to_json)
+    get :show, format: 'jpg', params: {filename: filename}
+    assert_response :success
+  end
+
   test 'bad request given bogus course name' do
     data = {name: 'student', course: 'bogus'}
     filename = Base64.urlsafe_encode64(data.to_json)
