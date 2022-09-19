@@ -171,6 +171,19 @@ class FilesApi < Sinatra::Base
   end
 
   #
+  # GET /<channel-id>/<filename>?version=<version-id>
+  #
+  # Read a file. Optionally get a specific version instead of the most recent.
+  # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
+  #
+  get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, filename, true)
+  end
+
+  #
   # GET /projects/<project-type>/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
@@ -181,6 +194,19 @@ class FilesApi < Sinatra::Base
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     get_file('files', encrypted_channel_id, filename, true)
+  end
+
+  #
+  # GET /<channel-id>
+  #
+  # Redirect to /<channel-id>/
+  # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
+  #
+  get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    redirect "#{request.path_info}/"
   end
 
   #
@@ -195,17 +221,18 @@ class FilesApi < Sinatra::Base
 
     redirect "#{request.path_info}/"
   end
+
   #
   # GET /<channel-id>/
   #
-  # Redirect to /projects/weblab/<channel-id>/
+  # Serve index.html for this project.
   # Only from codeprojects.org domain
   # Deprecated in favor of the URL below
   #
-  get %r{/([^/]+)/?$}, {code_projects_domain: true} do |encrypted_channel_id|
+  get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_channel_id|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
-    redirect "/projects/weblab#{request.path_info}"
+    get_file('files', encrypted_channel_id, 'index.html', true)
   end
 
   #
