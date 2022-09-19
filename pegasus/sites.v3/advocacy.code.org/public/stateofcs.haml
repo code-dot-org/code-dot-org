@@ -45,7 +45,7 @@ layout: none
 
     %br
     %select.small-state-dropdown{style: "padding: 6px 12px; border-radius: 4px;"}
-      %option Pick a State Handout
+      %option{selected: true, disabled: true} Pick a State Handout
       -STATE_ABBR_WITH_DC_HASH.each do |_, state|
         %option{value: state.delete(' ')}= state
       :javascript
