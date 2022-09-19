@@ -47,7 +47,10 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
       }
     }
   }
-
+  // assign orderedTabKeys the ordering of files
+  // if any of the orders from sources were invalid,
+  // (undefined, duplicates, missing orders, out of bounds), assign order based on
+  // file metadata
   for (let i = 0; i < numVisibleFiles; i++) {
     if (isValid) {
       let index = orderOfFiles.indexOf(i);
