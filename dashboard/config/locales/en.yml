@@ -1109,6 +1109,8 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
