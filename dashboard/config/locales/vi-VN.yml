@@ -1489,3 +1489,10 @@ vi:
   unit_prefix: Học phần %{n}
   code_org_logo_alt: Trang chủ Code.org
   teacher_feedback: Phản hồi của giáo viên
+  lesson_lock:
+    error:
+      no_updates: Không có bản cập nhật để tiến hành
+      missing_params: Cần cung cấp người dùng, cấp độ và ID bài học
+      cannot_view_locked_answers: Không thể xem câu trả lời ở trạng thái khóa
+      forbidden: Người dùng không thể cập nhật trạng thái khóa của học sinh
+  reset_predict_progress_button: Xóa câu trả lời
