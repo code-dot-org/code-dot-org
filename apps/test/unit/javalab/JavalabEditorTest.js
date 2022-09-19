@@ -14,6 +14,7 @@ import {EditorView} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
 import javalab, {
   setDisplayTheme,
+  sourceFileOrderUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   setBackpackApi,
@@ -491,6 +492,47 @@ describe('Java Lab Editor Test', () => {
         ]);
         expect(javalabEditor.state.showMenu).to.be.false;
         expect(javalabEditor.state.contextTarget).to.be.null;
+      });
+      it('moves the selected tab to the front and source is updated so order of tabs persist', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        javalabEditor.setState({
+          showMenu: true,
+          contextTarget: 'file-0'
+        });
+        store.dispatch(
+          setAllSourcesAndFileMetadata({
+            'ClassName1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'ClassName2.java': {
+              text: '',
+              order: 1,
+              isVisible: true,
+              isValidation: false
+            },
+            'ClassName3.java': {
+              text: '',
+              order: 2,
+              isVisible: true,
+              isValidation: false
+            }
+          })
+        );
+        store.dispatch(setOrderedTabKeys(['file-2', 'file-0', 'file-1']));
+        store.dispatch(sourceFileOrderUpdated());
+        const sources = store.getState().javalab.sources;
+        console.log('sources in failed test');
+        console.log(sources);
+        const file0 = sources['ClassName1.java'];
+        const file1 = sources['ClassName2.java'];
+        const file2 = sources['ClassName3.java'];
+        expect(file0.order).to.equal(1);
+        expect(file1.order).to.equal(2);
+        expect(file2.order).to.equal(0);
       });
     });
 
