@@ -60,31 +60,12 @@ And(/^I am a program manager with the temporary regional partner$/) do
 end
 
 Given(/^there is a CSP application affiliated with temporary regional partner$/) do
-  require_rails_env
-
-  @rp_name = "regional-partner-#{Time.now.to_i}-#{rand(1_000_000)}"
-  regional_partner = RegionalPartner.create!(name: @rp_name)
-
-  teacher_name = "teacher#{Time.now.to_i}#{rand(1_000_000)}"
-  teacher_email = "teacher-#{Time.now.to_i}-#{rand(1_000_000)}"
-  password = teacher_name + "password"
-  attributes = {
-    name: teacher_name,
-    email: teacher_email,
-    password: password,
-    user_type: "teacher",
-    age: "21+"
-  }
-  teacher = User.create!(attributes)
-
-  form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, 'csp'.to_sym, first_name: teacher_name, last_name: 'teacher')
-  FactoryGirl.create(
-    :pd_teacher_application,
-    form_data_hash: form_data_hash,
-    user: teacher,
-    status: 'unreviewed',
-    regional_partner_id: regional_partner.id
+  response = browser_request(
+    url: '/api/test/create_temp_csp_application',
+    method: 'POST'
   )
+  data = JSON.parse(response)
+  @rp_name = data['rp_name']
 end
 
 And(/^I delete the temp regional partner, program manager, and csp teacher$/) do

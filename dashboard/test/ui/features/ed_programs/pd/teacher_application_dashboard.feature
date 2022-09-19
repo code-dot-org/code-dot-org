@@ -4,8 +4,10 @@
 Feature: Teacher Application Dashboard
 
   Scenario: View summary of all apps, apps in a course, detail view of one app, and cohort view of accepted apps
-    Given I am a workshop administrator with some applications of each type and status
+    Given I am a program manager for a temporary regional partner
+    And there are some applications of each type and status
     And I am on "http://studio.code.org/pd/application_dashboard/summary"
+    Then I wait until the temporary regional partner name is visible
     Then I wait until element "table#summary-csa-teachers" is visible
     And I open my eyes to test "Teacher Application Dashboard"
     And I see no difference for "Admin Summary View"

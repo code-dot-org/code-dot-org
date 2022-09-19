@@ -175,4 +175,78 @@ class TestController < ApplicationController
     level.destroy
     head :ok
   end
+
+  def create_temp_program_manager
+    # rp_name = "regional-partner-#{Time.now.to_i}-#{rand(1_000_000)}"
+    # regional_partner = RegionalPartner.create!(name: rp_name)
+    #
+    # program_manager = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+    #   unique_string = "#{Time.now.to_i}-#{rand(1_000_000)}"
+    #   name = "user-#{unique_string}"
+    #   email = "user#{unique_string}@test.xx"
+    #   password = name + "password"
+    #   attributes = {
+    #     name: name,
+    #     email: email,
+    #     password: password,
+    #     user_type: "teacher",
+    #     age: "21+"
+    #   }
+    #   User.create!(attributes)
+    # end
+    # program_manager = User.create!(name: 'meg', email: 'meg+test@code.org', password: 'megpassword', user_type: 'teacher', age: '21+')
+    # program_manager.permission = UserPermission::WORKSHOP_ADMIN
+    # program_manager.save!
+
+    # RegionalPartnerProgramManager.create!(regional_partner_id: regional_partner.id, program_manager_id: program_manager.id)
+    #
+    head :ok
+    # render json: {rp_name: 'an rp name'}
+    # render json: {rp_name: regional_partner.name, pm_name: program_manager.name, pm_email: program_manager.email}
+    # render json: {pm_name: program_manager.name}
+  end
+
+  def create_temp_csp_application
+    rp_name = "regional-partner-#{Time.now.to_i}-#{rand(1_000_000)}"
+    regional_partner = RegionalPartner.create!(name: rp_name)
+
+    teacher_name = "teacher#{Time.now.to_i}#{rand(1_000_000)}"
+    teacher_email = "teacher-#{Time.now.to_i}-#{rand(1_000_000)}"
+    password = teacher_name + "password"
+    attributes = {
+      name: teacher_name,
+      email: teacher_email,
+      password: password,
+      user_type: "teacher",
+      age: "21+"
+    }
+    teacher = User.create!(attributes)
+
+    form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, 'csp'.to_sym, first_name: teacher_name, last_name: 'teacher')
+    FactoryGirl.create(
+      :pd_teacher_application,
+      form_data_hash: form_data_hash,
+      user: teacher,
+      status: 'unreviewed',
+      regional_partner_id: regional_partner.id
+    )
+
+    render json: {rp_name: regional_partner.name}
+  end
+
+  def delete_rp_pm_teacher
+    application = Pd::Application::TeacherApplication.find_by(email: params[:teacher_email])
+    application.destroy
+
+    csp_teacher = User.find_by(email: params[:teacher_email])
+    csp_teacher.destroy
+
+    regional_partner = RegionalPartner.find_by(name: params[:rp_name])
+    regional_partner.destroy
+
+    program_manager = User.find_by(email: params[:pm_email])
+    program_manager.destroy
+
+    head :ok
+  end
 end
