@@ -127,8 +127,6 @@ social:
       %div{style: "clear: both;"}
 
 
-%br/
-%br/
 
 .container
   -# HoC Live Spanish banner
@@ -148,8 +146,7 @@ social:
             %button.ctabutton-white
               = hoc_s(:hoc_live_learn_more)
 
-    %br/
-    %br/
+
 
   -# Description
 
@@ -161,9 +158,6 @@ social:
       = hoc_s(:front_intro_default_2)
       %br
       = view :hoc_events_counter
-
-  %br/
-  %br/
 
   -# Map
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
@@ -187,37 +181,41 @@ social:
     = view :home_highlights
     = view :home_signup, hoc_mode: hoc_mode
 
+
+
   -# Stats
-
-  .row
-    .col-xs-12
-      %div{style: 'text-align: center; margin: 3em 0;'}
-        %h2=hoc_s(:stats_hoc_2013_heading)
-
-  .row#infotop{style: "font-weight: 500; font-size: 16px; color: rgb(26, 172, 186);"}
-    .col-xs-6.col-sm-4{style: "text-align:center;"}
+  %section.stats
+    %figure
+      %img{src: "/images/stats-languages.png"}
       %p=hoc_s(:stats_i18n)
-      %img{src: "/images/fit-300/stats-languages.jpg", style: "width: 100%;"}
 
-    .col-xs-6.col-sm-4{style: "text-align:center"}
-      %p=hoc_s(:stats_global)
+    %figure
       -if @language == "en"
-        %img{src: "/images/fit-300/stats-1b.png", style: "width: 100%;"}
+        %img{src: "/images/stats-1b.png"}
       -else
-        %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
+        %img{src: "/images/stats-map.png"}
+      %p=hoc_s(:stats_global)
 
-    .hidden-xs.col-sm-4{style: "text-align:center"}
+    %figure
       -if @language == "en"
-        %p=hoc_s(:stats_females)
-        %img{src: "/images/fit-300/stats-females.jpg", style: "width: 100%;"}
+        %img{src: "/images/stats-females.png"}
         %p!=hoc_s(:stats_females_more_markdown, markdown: :inline)
       -else
+        %img{src: "/images/stats-info3.png"}
         %p=hoc_s(:stats_girls_more)
-        %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
 
-  =view :signup_button
 
-  = view 'popup_window.js'
+
+  -# Host an hour
+  %section.host-an-hour
+    =view :signup_button
+
+
+
+
+= view 'popup_window.js'
+
+
 
 :javascript
 

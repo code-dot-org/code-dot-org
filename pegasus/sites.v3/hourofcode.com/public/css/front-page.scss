@@ -1,4 +1,56 @@
-@import 'imports/color.scss';
+@import 'imports/_breakpoints.scss', 'imports/_color.scss', 'imports/_fonts.scss';
+
+section {
+  padding: 7em 1em;
+}
+
+// Stats
+section.stats {
+  margin-top: 7em;
+  padding-top: 5em;
+  border-top: 1px solid rgba($color-main, .3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  figure {
+    width: 26%;
+    text-align: center;
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+
+      &:not(:last-child){
+        margin-bottom: 4em;
+      }
+    }
+
+    img {
+      width: 240px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 1em;
+    }
+  }
+}
+
+// Host an Hour
+section.host-an-hour {
+  text-align: center;
+  padding: 0 1em 3em;
+
+  button {
+    float: none !important; // remove inline styles on views/signup_button.haml
+    margin: 0 !important; // remove inline styles on views/signup_button.haml
+  }
+}
+
+
+
 
 .ctabutton {
   font-size: 18px;
@@ -62,14 +114,14 @@
 }
 
 .category-header {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-semibold;
 }
 
 .category-button {
   background-color: #5b6770;
   border-radius: 5px;
   color: white;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-normal;
   margin: 5px 0px;
   padding: 8px;
 }
@@ -141,7 +193,7 @@ a.category-link {
 }
 
 .banner-title {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-bold;
   color: white;
   line-height: 1.2;
 }
@@ -273,7 +325,7 @@ a.category-link {
 }
 
 .front-header-banner .front-header-title p {
-  font-family: 'Gotham 5r', sans-serif !important;
+  font-family: $gotham-semibold !important;
   margin-bottom: 0px;
 }
 
@@ -331,7 +383,7 @@ a.category-link {
 
 #volunteer-signup a {
   color: white;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-normal;
   text-decoration: none;
 }
 
