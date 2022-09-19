@@ -417,6 +417,7 @@ ro:
       educate_beyond: Dincolo de Code.org
       educate_inspire: Inspirați un Student
       educate_community: Comunitate online
+      educate_requirements: Cerințe tehnice
       educate_tools: Instrumente şi clipuri video
       about_us: Despre noi
       about_leadership: Conducere
@@ -1432,3 +1433,11 @@ ro:
     this_sprite: acest spirit
   unit_prefix: Unitate %{n}
   teacher_feedback: Punctele de vedere ale profesorului
+  lesson_lock:
+    error:
+      no_updates: Nu există actualizări de efectuat.
+      missing_params: Trebuie furnizate id-urile de utilizator, nivel și unitate
+      cannot_view_locked_answers: Nu se pot vizualiza răspunsurile în timp ce sunt
+        blocate
+      forbidden: Utilizatorul nu poate actualiza starea de blocare a elevului.
+  reset_predict_progress_button: Șterge Răspunsul
