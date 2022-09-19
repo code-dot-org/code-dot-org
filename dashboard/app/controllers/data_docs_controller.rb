@@ -32,4 +32,33 @@ class DataDocsController < ApplicationController
       dataDocContent: @data_doc.content,
     }
   end
+
+  # GET /data_docs/:key/edit
+  def edit
+    @data_doc = DataDoc.find_by(key: params[:key])
+    return render :not_found unless @data_doc
+
+    @data_doc_data = {
+      dataDocName: @data_doc.name,
+      dataDocContent: @data_doc.content,
+    }
+  end
+
+  # PATCH /data_docs/:key
+  def update
+    # ensure data_doc key is immutable
+    new_attributes = data_doc_params.except(:key)
+
+    @data_doc.update!(new_attributes)
+    @data_doc.write_serialization
+    render json: @data_doc.summarize_for_edit.to_json
+  end
+
+  def data_doc_params
+    params.permit(
+      :key,
+      :name,
+      :content
+    )
+  end
 end
