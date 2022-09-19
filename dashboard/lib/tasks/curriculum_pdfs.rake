@@ -27,35 +27,7 @@ namespace :curriculum_pdfs do
   # on the staging machine, this is taken care of in cookbooks/cdo-apps/recipes/generate_pdf.rb
   desc 'Generate any PDFs that we would expect to have been generated automatically but for whatever reason haven\'t been.'
   task generate_missing_pdfs: :environment do
-    Services::CurriculumPdfs.get_pdf_enabled_scripts.each do |script|
-      Dir.mktmpdir("pdf_generation") do |dir|
-        any_pdf_generated = false
-
-        Services::CurriculumPdfs.get_pdfless_lessons(script).each do |lesson|
-          puts "Generating missing PDFs for #{lesson.key} (from #{script.name})"
-          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir)
-          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir, true)
-          any_pdf_generated = true
-        end
-
-        if !Services::CurriculumPdfs.script_overview_pdf_exists_for?(script) && Services::CurriculumPdfs.should_generate_overview_pdf?(script)
-          puts "Generating missing Script Overview PDF for #{script.name}"
-          Services::CurriculumPdfs.generate_script_overview_pdf(script, dir)
-          any_pdf_generated = true
-        end
-
-        if !Services::CurriculumPdfs.script_resources_pdf_exists_for?(script) && Services::CurriculumPdfs.should_generate_resource_pdf?(script)
-          puts "Generating missing Script Resources PDF for #{script.name}"
-          Services::CurriculumPdfs.generate_script_resources_pdf(script, dir)
-          any_pdf_generated = true
-        end
-
-        if any_pdf_generated
-          puts "Generated all missing PDFs for #{script.name}; uploading results to S3"
-          Services::CurriculumPdfs.upload_generated_pdfs_to_s3(dir)
-        end
-      end
-    end
+    Services::CurriculumPdfs.generate_missing_pdfs
 
     puts "Finished generating missing PDFs"
   end
