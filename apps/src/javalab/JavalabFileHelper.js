@@ -18,31 +18,17 @@ export function getDefaultFileContents(filename, viewMode) {
 export const getTabKey = index => `file-${index}`;
 
 export const fileMetadataForEditor = (sources, isEditingStartSources) => {
-  console.log('sources inside fileMetadataForEditor');
-  console.log(sources);
-
   let fileMetadata = {};
   let orderedTabKeys = [];
   let unorderedTabKeys = [];
   let orderOfFiles = [];
   let fileIndex = 0; // may different from index below due to hidden files
-  console.log('Object.keys(sources))');
-  console.log(Object.keys(sources));
   Object.keys(sources).forEach((file, index) => {
-    console.log('file');
-    console.log(file);
-    console.log('Object.keys(sources[file])');
-    console.log(Object.keys(sources[file]));
-    console.log('sources[file].order');
-    console.log(sources[file].order);
     if (sources[file].isVisible || isEditingStartSources) {
       let tabKey = getTabKey(fileIndex);
       fileMetadata[tabKey] = file;
       unorderedTabKeys.push(tabKey);
-      console.log('sources[file]');
-      console.log(sources[file]);
       let order = sources[file].order;
-      // fix
       if (Number.isInteger(order)) {
         orderOfFiles.push(sources[file].order);
       } else {
@@ -51,17 +37,10 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
       fileIndex++;
     }
   });
-  console.log('orderofFiles');
-  console.log(orderOfFiles);
   for (let i = 0; i < orderOfFiles.length; i++) {
     let index = orderOfFiles.indexOf(i);
     orderedTabKeys.push(unorderedTabKeys[index]);
   }
-  console.log('orderedTabKeys');
-  console.log(orderedTabKeys);
-
-  console.log('fileMetadata');
-  console.log(fileMetadata);
   const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
 
   return {
