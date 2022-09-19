@@ -70,6 +70,7 @@
   "errorTheaterInvalidShape": "A shape needs to contain an even number of values to represent (x,y) coordinates, and must include at least 4 values.",
   "errorTheaterVideoTooLarge": "Your video is too large. Please decrease the number of frames in your video and try again.",
   "errorTheaterVideoTooLong": "Your video exceeded the maximum playback time. Please decrease the length of your video and try again.",
+  "exceptionMessage": "[EXCEPTION] {message}",
   "exceptionThrown": "[EXCEPTION] {exceptionName} was thrown",
   "failedTestResult": "{className} > {methodName} FAILED",
   "feedbackBeginning": "This is the beginning of feedback for your project.",
@@ -147,8 +148,7 @@
   "unauthorizedJavabuilderConnectionTeacher": "To run your code in Java Lab, you need to become \"verified\" or join a CSA section owned by a verified teacher. Please see [this article](https://support.code.org/hc/en-us/articles/115001550131) for details on how to become verified.",
   "unauthorizedJavabuilderConnectionStudent": "To run your code in Java Lab, you need to be assigned to a CSA section and your teacher needs to be \"verified.\" Ask your teacher for help and try again. Your teacher can find more details in [this article.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
-  "unsupportedNeighborhoodMessage": "[WARNING] Level type mismatch: Neighborhood projects are not supported on a non-Neighborhood level.",
-  "unsupportedTheaterMessage": "[WARNING] Level type mismatch: Theater projects are not supported on a non-Theater level.",
+  "unsupportedMiniAppMessage": "Level type mismatch: {miniAppType} projects are not supported on a non-{miniAppType} level.",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"
