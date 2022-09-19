@@ -44,29 +44,14 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   }
 end
 
-And(/^I am a program manager with the temporary regional partner$/) do
-  require_rails_env
-
-  regional_partner = RegionalPartner.find_by(name: @rp_name)
-
-  pm_name = "pm#{Time.now.to_i}#{rand(1_000_000)}"
-  email, password = generate_user(pm_name)
-
-  FactoryGirl.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
-
-  steps %Q{
-    And I sign in as "#{pm_name}"
-  }
-end
-
-Given(/^there is a CSP application affiliated with temporary regional partner$/) do
+Given(/^I am a program manager with a regional partner and teacher application$/) do
   require_rails_env
 
   @rp_name = "regional-partner-#{Time.now.to_i}-#{rand(1_000_000)}"
   regional_partner = RegionalPartner.create!(name: @rp_name)
 
   teacher_name = "teacher#{Time.now.to_i}#{rand(1_000_000)}"
-  teacher_email = "teacher-#{Time.now.to_i}-#{rand(1_000_000)}"
+  teacher_email = "teacher-#{Time.now.to_i}-#{rand(1_000_000)}@test.xx"
   password = teacher_name + "password"
   attributes = {
     name: teacher_name,
@@ -85,9 +70,15 @@ Given(/^there is a CSP application affiliated with temporary regional partner$/)
     status: 'unreviewed',
     regional_partner_id: regional_partner.id
   )
-end
 
-And(/^I delete the temp regional partner, program manager, and csp teacher$/) do
+  pm_name = "pm#{Time.now.to_i}#{rand(1_000_000)}"
+  email, password = generate_user(pm_name)
+
+  FactoryGirl.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
+
+  steps %Q{
+    And I sign in as "#{pm_name}"
+  }
 end
 
 Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
