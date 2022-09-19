@@ -79,7 +79,7 @@ body {
 
 #pagefooter {
   width: 100%;
-  padding: 12px 20px;
+  padding: 2em 2.5em 2.5em;
   background-color: #5c3f7f;
   box-sizing: border-box;
   overflow: auto;
@@ -121,7 +121,7 @@ body {
   color: white;
   font-weight: normal;
   font-family: 'Gotham 4r', sans-serif;
-  opacity: 0.5;
+  opacity: 0.8;
   text-decoration: none;
 }
 
@@ -141,7 +141,7 @@ body {
   float: left;
   color: white;
   font-size: 12px;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 #powered-by-aws {
