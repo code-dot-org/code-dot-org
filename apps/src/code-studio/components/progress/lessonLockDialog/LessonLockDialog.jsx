@@ -76,7 +76,19 @@ function LessonLockDialog({
     );
   };
 
+  /*
+  Checks that the user is trying to save new information, otherwise closes
+  the dialog without sending to api post method.
+  */
   const handleSave = async () => {
+    if (serverLockState === clientLockState) {
+      handleClose();
+    } else {
+      sendSave();
+    }
+  };
+
+  const sendSave = async () => {
     setSaving(true);
     setError(null);
     const csrfToken = $('meta[name="csrf-token"]').attr('content');
