@@ -1,6 +1,7 @@
+@import 'imports/color.scss';
+
 .ctabutton {
   font-size: 18px;
-  font-weight: 500;
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -9,31 +10,28 @@
 
 .ctabutton-white {
   font-size: 18px;
-  font-weight: 500;
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
   margin: 5px 0px;
   background-color: white;
-  border-color: white;
-  color: black;
+  border-color: $color-main;
+  color: $color-main;
 }
 
 .ctabutton-white-border {
   font-size: 18px;
-  font-weight: 500;
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
   margin: 5px 0px;
   background-color: white;
-  border-color: black;
-  color: black;
+  border-color: $color-main;
+  color: $color-main;
 }
 
 .ctabutton-white-inverse {
   font-size: 18px;
-  font-weight: 500;
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -54,7 +52,7 @@
 .ctatext {
   display: inline-block;
   font-size: 18px;
-  font-weight: 500;
+
   padding: 0px 4px;
 }
 

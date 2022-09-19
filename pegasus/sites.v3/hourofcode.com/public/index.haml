@@ -9,6 +9,7 @@ social:
 
   hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
+%link{rel: "stylesheet", type: "text/css", href: "/css/generated/front-page.css"}
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -# These are needed for the signup form, even if the map isn't currently showing.
@@ -32,7 +33,7 @@ social:
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
 
-%link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
+
 
 :css
   html, body {
