@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {getStore} from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import DataDocView from '@cdo/apps/templates/dataDocs/DataDocView';
+import DataDocFormEditor from '../../../../lib/levelbuilder/data-docs-editor/DataDocFormEditor';
 
-$(() => {
-  const {dataDocName, dataDocContent} = getScriptData('dataDoc');
+$(document).ready(() => {
+  const store = getStore();
+  const {dataDocKey, dataDocName, dataDocContent} = getScriptData('dataDoc');
   ReactDOM.render(
-    <DataDocView dataDocName={dataDocName} dataDocContent={dataDocContent} />,
+    <Provider store={store}>
+      <DataDocFormEditor
+        dataDocKey={dataDocKey}
+        originalDataDocName={dataDocName}
+        originalDataDocContent={dataDocContent}
+      />
+    </Provider>,
     document.getElementById('view-data-doc')
   );
 });

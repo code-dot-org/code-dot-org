@@ -39,6 +39,7 @@ class DataDocsController < ApplicationController
     return render :not_found unless @data_doc
 
     @data_doc_data = {
+      dataDocKey: @data_doc.key,
       dataDocName: @data_doc.name,
       dataDocContent: @data_doc.content,
     }
