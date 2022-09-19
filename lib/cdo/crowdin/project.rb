@@ -43,8 +43,7 @@ module Crowdin
       options = {
         body: {
           targetLanguageId: language
-        }.to_json,
-        follow_redirects: true
+        }.to_json
       }
 
       unless etag.nil?
