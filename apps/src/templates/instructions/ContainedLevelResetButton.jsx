@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -16,7 +16,10 @@ export const UnconnectedContainedLevelResetButton = ({
   userRoleInCourse,
   codeIsRunning
 }) => {
-  const isEnabled = experiments.isEnabled('instructorPredictLevelReset');
+  const isEnabled = useMemo(
+    () => experiments.isEnabled('instructorPredictLevelReset'),
+    []
+  );
   if (userRoleInCourse !== CourseRoles.Instructor || !isEnabled) {
     return null;
   }
