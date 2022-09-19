@@ -11,6 +11,7 @@ module Crowdin
 
     # @param project_identifier [String]
     # @param api_key [String]
+    # @param api_token [String]
     # @see https://crowdin.com/project/codeorg/integrations/api for an example of
     #  how to retrieve these values for the "code.org" project
     def initialize(project_identifier, api_key, api_token)
@@ -19,7 +20,7 @@ module Crowdin
         config.api_token = api_token
         config.project_id = Crowdin::Client::CDO_PROJECT_IDS[@id]
       end
-      # For more specific requests outside of the crowdin gem
+      # For more specific requests outside of the crowdin-api gem
       self.class.base_uri("https://api.crowdin.com/api/v2")
       self.class.headers(
         {
@@ -66,22 +67,28 @@ module Crowdin
     end
 
     # Retrieve all languages currently enabled in the crowdin project. Each
-    # language is a hash containing the language name and code, as well as
+    # language is a hash containing the language name and id, as well as
     # other internal crowdin values.
-    # @example [{"name"=>"Norwegian", "code"=>"no", ...]
+    # @example [{"name"=>"Norwegian", "id"=>"no", ...]
     # @return [Array<Hash>]
     def languages
       # cache the result; we end up calling this method quite a lot since it's
       # the source of both our lists of files and of languages, and it also
       # shouldn't ever change mid-sync.
+
+      @languages ||= list_languages
+    end
+
+    def list_languages
       query = {
         limit: Crowdin::Client::MAX_ITEMS_COUNT,
         offset: 0
       }
 
-      @languages ||= @crowdin_client.request_loop(query) do
+      result = @crowdin_client.request_loop(query) do
         @crowdin_client.list_languages(query)
       end
+      result.map {|lang| lang["data"]}
     end
 
     # Retrieve all files currently uploaded to the crowdin project.
