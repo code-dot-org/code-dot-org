@@ -2,10 +2,6 @@ var _ = require('lodash');
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 
-// get rid of allowExportExpo as well as
-// 'expoGenerateApk',
-//   'expoCheckApkBuild',
-//   'expoCancelApkBuild',
 var ALLOWED_KEYS = new Set([
   'skinId',
   'showNextHint',
