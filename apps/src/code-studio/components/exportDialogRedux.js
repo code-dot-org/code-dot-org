@@ -1,3 +1,4 @@
+// delete this file
 // Action types
 
 const SHOW_EXPORT_DIALOG = 'exportDialog/SHOW_EXPORT_DIALOG';
