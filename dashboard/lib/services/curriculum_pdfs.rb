@@ -76,6 +76,7 @@ module Services
     include Resources
     include ScriptOverview
     include Utils
+    include Curriculum::SharedCourseConstants
 
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
@@ -102,6 +103,21 @@ module Services
         data = File.read(filepath)
         filename = filepath.delete_prefix(directory).delete_prefix('/')
         AWS::S3.upload_to_bucket(S3_BUCKET, filename, data, no_random: true)
+      end
+    end
+
+    def self.get_pdf_enabled_scripts
+      Script.all.select do |script|
+        next false if [PUBLISHED_STATE.pilot, PUBLISHED_STATE.in_development].include?(script.get_published_state)
+        next false if script.use_legacy_lesson_plans
+        script.is_migrated && script.seeded_from.present?
+      end
+    end
+
+    def self.get_pdfless_lessons(script)
+      script.lessons.select(&:has_lesson_plan).select do |lesson|
+        !lesson_plan_pdf_exists_for?(lesson) ||
+          (script.include_student_lesson_plans && !lesson_plan_pdf_exists_for?(lesson, true))
       end
     end
   end
