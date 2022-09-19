@@ -7,7 +7,10 @@ import {
   MIN_FONT_SIZE_PX
 } from './editorThemes';
 import {JavalabEditorDialog} from './JavalabEditorDialogManager';
-import {fileMetadataForEditor} from './JavalabFileHelper';
+import {
+  fileMetadataForEditor,
+  updateAllSourceFileOrders
+} from './JavalabFileHelper';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
@@ -279,9 +282,6 @@ export const getSources = state => {
         order: state.javalab.sources[key].order
       };
     }
-    console.log('inside getSources line 272 in javalabRedux');
-    console.log(sources[key]);
-    console.log(sources[key].order);
   }
   return sources;
 };
@@ -423,10 +423,6 @@ export const setHasRunOrTestedCode = hasRunOrTestedCode => ({
 
 // Reducer
 export default function reducer(state = initialState, action) {
-  // console.log('reducer action');
-  // console.log(action);
-  // console.log('state');
-  // console.log(state);
   if (action.type === APPEND_CONSOLE_LOG) {
     return {
       ...state,
@@ -476,39 +472,6 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
-
-  if (action.type === SOURCE_FILE_ORDER_UPDATED) {
-    console.log('inside SOURCE_FILE_ORDER_UPDATED');
-    let newSources = {...state.sources};
-    let orderedTabKeys = state.orderedTabKeys;
-    let fileMetadata = state.fileMetadata;
-    console.log(state.orderedTabKeys);
-    console.log(state.fileMetadata);
-    for (let i = 0; i < orderedTabKeys.length; i++) {
-      let file = orderedTabKeys[i];
-      let fileName = fileMetadata[file];
-      newSources[fileName].order = i;
-    }
-    console.log(newSources);
-    // orderedTabKeys and fileMetadata
-    const newState = {...state, sources: newSources};
-    console.log(newState);
-    return newState;
-
-    // return {
-    //   ...state,
-    //   sources: newSources
-    // };
-  }
-  /*
-  for each file in sources, update order
-    let newSources = action.sources;
-    for (let i = 0; i < orderedTabKeys.length; i++) {
-      let file = orderedTabKeys[i];
-      let fileName = fileMetadata[file];
-      newSources[fileName].order = i;
-    }
-  */
   if (action.type === RENAME_FILE) {
     const source = state.sources[action.oldFilename];
     if (source !== undefined) {
@@ -532,6 +495,20 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
+  if (action.type === SOURCE_FILE_ORDER_UPDATED) {
+    let sources = state.sources;
+    let orderedTabKeys = state.orderedTabKeys;
+    let fileMetadata = state.fileMetadata;
+    const updatedSources = updateAllSourceFileOrders(
+      sources,
+      fileMetadata,
+      orderedTabKeys
+    );
+    return {
+      ...state,
+      sources: updatedSources
+    };
+  }
   if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
     const {
       fileMetadata,
@@ -539,17 +516,15 @@ export default function reducer(state = initialState, action) {
       activeTabKey,
       lastTabKeyIndex
     } = fileMetadataForEditor(action.sources, action.isEditingStartSources);
-    // for each file in sources, update order
-    let newSources = action.sources;
-    for (let i = 0; i < orderedTabKeys.length; i++) {
-      let file = orderedTabKeys[i];
-      let fileName = fileMetadata[file];
-      newSources[fileName].order = i;
-    }
+    const updatedSources = updateAllSourceFileOrders(
+      action.sources,
+      fileMetadata,
+      orderedTabKeys
+    );
 
     return {
       ...state,
-      sources: newSources,
+      sources: updatedSources,
       fileMetadata,
       orderedTabKeys,
       activeTabKey,
