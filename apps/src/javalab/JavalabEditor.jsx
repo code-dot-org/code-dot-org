@@ -5,6 +5,7 @@ import {
   sourceTextUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
+  sourceFileOrderUpdated,
   renameFile,
   removeFile,
   setRenderedHeight,
@@ -62,6 +63,7 @@ class JavalabEditor extends React.Component {
 
     // populated by redux
     setSource: PropTypes.func,
+    sourceFileOrderUpdated: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
     sourceTextUpdated: PropTypes.func,
@@ -113,6 +115,7 @@ class JavalabEditor extends React.Component {
     this.updateVisibility = this.updateVisibility.bind(this);
     this.updateValidation = this.updateValidation.bind(this);
     this.updateFileType = this.updateFileType.bind(this);
+    this.updateFileOrder = this.updateFileOrder.bind(this);
     this.onImportFile = this.onImportFile.bind(this);
     this._codeMirrors = {};
 
@@ -268,6 +271,15 @@ class JavalabEditor extends React.Component {
     };
   };
 
+  updateFileOrder() {
+    this.props.sourceFileOrderUpdated();
+    projectChanged();
+    this.setState({
+      showMenu: false,
+      contextTarget: null
+    });
+  }
+
   updateVisibility(key, isVisible) {
     this.props.sourceVisibilityUpdated(this.props.fileMetadata[key], isVisible);
     this.setState({
@@ -389,16 +401,19 @@ class JavalabEditor extends React.Component {
     newTabs[index1] = newTabs[index2];
     newTabs[index2] = file1;
     setOrderedTabKeys(newTabs);
+    this.updateFileOrder();
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
       contextTarget: null
     });
+    this.props.closeEditorDialog();
   }
 
   // This is called from the dropdown menu on the active tab
   // when the delete option is clicked
   deleteFromTabMenu() {
+    console.log('inside deleteFromTabMenu');
     this.props.openEditorDialog(JavalabEditorDialog.DELETE_FILE);
     this.setState({
       showMenu: false,
@@ -502,7 +517,6 @@ class JavalabEditor extends React.Component {
 
     const newTabIndex = lastTabKeyIndex + 1;
     const newTabKey = getTabKey(newTabIndex);
-
     fileContents =
       fileContents || getDefaultFileContents(filename, this.props.viewMode);
 
@@ -515,7 +529,9 @@ class JavalabEditor extends React.Component {
     newTabs.push(newTabKey);
 
     // add new file to sources
-    setSource(filename, fileContents);
+    setSource(filename, fileContents, newTabIndex);
+    console.log('inside onCreateFile');
+    console.log(this.props.sources);
     projectChanged();
     setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
@@ -535,7 +551,7 @@ class JavalabEditor extends React.Component {
     } = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
-
+    console.log('inside onDeleteFile');
     if (indexToRemove >= 0) {
       // delete from tabs
       let newTabs = [...orderedTabKeys];
@@ -554,10 +570,9 @@ class JavalabEditor extends React.Component {
       delete this.editors[fileToDelete];
 
       setAllEditorMetadata(newFileMetadata, newTabs, newActiveTabKey);
-
       // delete from sources
       removeFile(fileMetadata[fileToDelete]);
-      projectChanged();
+      this.updateFileOrder();
     }
 
     this.props.closeEditorDialog();
@@ -568,8 +583,9 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  onImportFile(filename, fileContents) {
-    const {fileMetadata} = this.props;
+  onImportFile(filename, fileContents, order) {
+    console.log('inside onImportFile in JavaLabEditor');
+    const {fileMetadata, orderedTabKeys} = this.props;
     // If filename already exists in sources, replace file contents.
     // Otherwise, create a new file.
     if (Object.keys(this.props.sources).includes(filename)) {
@@ -584,7 +600,8 @@ class JavalabEditor extends React.Component {
       editor.dispatch({
         changes: {from: 0, to: editor.state.doc.length, insert: fileContents}
       });
-      this.props.setSource(filename, fileContents);
+      const order = orderedTabKeys.indexOf(editorKey);
+      this.props.setSource(filename, fileContents, order);
     } else {
       // create new file
       this.onCreateFile(filename, fileContents);
@@ -624,7 +641,8 @@ class JavalabEditor extends React.Component {
 
     setActiveTabKey(key);
     setOrderedTabKeys(newTabs);
-
+    this.updateFileOrder();
+    projectChanged();
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
@@ -817,7 +835,9 @@ export default connect(
     editorFontSize: state.javalab.editorFontSize
   }),
   dispatch => ({
-    setSource: (filename, source) => dispatch(setSource(filename, source)),
+    setSource: (filename, source, order) =>
+      dispatch(setSource(filename, source, order)),
+    sourceFileOrderUpdated: () => dispatch(sourceFileOrderUpdated()),
     sourceVisibilityUpdated: (filename, isVisible) =>
       dispatch(sourceVisibilityUpdated(filename, isVisible)),
     sourceValidationUpdated: (filename, isValidation) =>

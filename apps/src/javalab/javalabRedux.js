@@ -15,6 +15,7 @@ const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
+const SOURCE_FILE_ORDER_UPDATED = 'javalab/SOURCE_FILE_ORDER_UPDATED';
 const SOURCE_TEXT_UPDATED = 'javalab/SOURCE_TEXT_UPDATED';
 const SET_ALL_SOURCES_AND_FILE_METADATA =
   'javalab/SET_ALL_SOURCES_AND_FILE_METADATA';
@@ -58,7 +59,7 @@ const INCREASE_EDITOR_FONT_SIZE = 'javalab/INCREASE_EDITOR_FONT_SIZE';
 const DECREASE_EDITOR_FONT_SIZE = 'javalab/DECREASE_EDITOR_FONT_SIZE';
 
 const initialSources = {
-  'MyClass.java': {text: '', isVisible: true, isValidation: false}
+  'MyClass.java': {text: '', order: 0, isVisible: true, isValidation: false}
 };
 
 // Exported for test
@@ -147,12 +148,14 @@ export const renameFile = (oldFilename, newFilename) => ({
 export const setSource = (
   filename,
   source,
+  order,
   isVisible = true,
   isValidation = false
 ) => ({
   type: SET_SOURCE,
   filename,
   source,
+  order,
   isVisible,
   isValidation
 });
@@ -174,6 +177,10 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
   type: SOURCE_VALIDATION_UPDATED,
   filename,
   isValidation
+});
+
+export const sourceFileOrderUpdated = () => ({
+  type: SOURCE_FILE_ORDER_UPDATED
 });
 
 // Updates the user preferences to reflect change
@@ -268,9 +275,13 @@ export const getSources = state => {
     if (!state.javalab.sources[key].isValidation) {
       sources[key] = {
         text: state.javalab.sources[key].text,
-        isVisible: state.javalab.sources[key].isVisible
+        isVisible: state.javalab.sources[key].isVisible,
+        order: state.javalab.sources[key].order
       };
     }
+    console.log('inside getSources line 272 in javalabRedux');
+    console.log(sources[key]);
+    console.log(sources[key].order);
   }
   return sources;
 };
@@ -412,6 +423,10 @@ export const setHasRunOrTestedCode = hasRunOrTestedCode => ({
 
 // Reducer
 export default function reducer(state = initialState, action) {
+  // console.log('reducer action');
+  // console.log(action);
+  // console.log('state');
+  // console.log(state);
   if (action.type === APPEND_CONSOLE_LOG) {
     return {
       ...state,
@@ -428,6 +443,7 @@ export default function reducer(state = initialState, action) {
     let newSources = {...state.sources};
     newSources[action.filename] = {
       text: action.source,
+      order: action.order,
       isVisible: action.isVisible,
       isValidation: action.isValidation
     };
@@ -460,6 +476,39 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
+
+  if (action.type === SOURCE_FILE_ORDER_UPDATED) {
+    console.log('inside SOURCE_FILE_ORDER_UPDATED');
+    let newSources = {...state.sources};
+    let orderedTabKeys = state.orderedTabKeys;
+    let fileMetadata = state.fileMetadata;
+    console.log(state.orderedTabKeys);
+    console.log(state.fileMetadata);
+    for (let i = 0; i < orderedTabKeys.length; i++) {
+      let file = orderedTabKeys[i];
+      let fileName = fileMetadata[file];
+      newSources[fileName].order = i;
+    }
+    console.log(newSources);
+    // orderedTabKeys and fileMetadata
+    const newState = {...state, sources: newSources};
+    console.log(newState);
+    return newState;
+
+    // return {
+    //   ...state,
+    //   sources: newSources
+    // };
+  }
+  /*
+  for each file in sources, update order
+    let newSources = action.sources;
+    for (let i = 0; i < orderedTabKeys.length; i++) {
+      let file = orderedTabKeys[i];
+      let fileName = fileMetadata[file];
+      newSources[fileName].order = i;
+    }
+  */
   if (action.type === RENAME_FILE) {
     const source = state.sources[action.oldFilename];
     if (source !== undefined) {
@@ -484,10 +533,27 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
+    const {
+      fileMetadata,
+      orderedTabKeys,
+      activeTabKey,
+      lastTabKeyIndex
+    } = fileMetadataForEditor(action.sources, action.isEditingStartSources);
+    // for each file in sources, update order
+    let newSources = action.sources;
+    for (let i = 0; i < orderedTabKeys.length; i++) {
+      let file = orderedTabKeys[i];
+      let fileName = fileMetadata[file];
+      newSources[fileName].order = i;
+    }
+
     return {
       ...state,
-      ...fileMetadataForEditor(action.sources, action.isEditingStartSources),
-      sources: action.sources
+      sources: newSources,
+      fileMetadata,
+      orderedTabKeys,
+      activeTabKey,
+      lastTabKeyIndex
     };
   }
   if (action.type === SET_ALL_VALIDATION) {
