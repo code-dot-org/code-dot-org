@@ -1698,7 +1698,7 @@
           ]
         },
         "db17d2d5-30dc-4b19-a5e6-543602d3d52e": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "tips": [
             "Les élève feront de nombreux essais et erreurs lors du codage. Leurs projets sont susceptibles de devenir des versions tronquées de leur portée d'origine. Rappelez-leur que ce type de compromis est courant dans la conception de logiciels. Ce n'est pas grave s'ils n'intègrent pas toutes les fonctionnalités qu'ils ont prévues ! "
           ]
@@ -1852,7 +1852,7 @@
           "name": "Introduction"
         },
         "89eea455-9916-4a03-b782-7c22b535cb4a": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins",
+          "name": "Animal domestique virtuel avec le Labo des Sprites",
           "description": "**Objectif :** Aujourd'hui, les élèves vont créer leur propre animal de compagnie virtuel ! Ils commenceront par dessiner ou sélectionner un nouveau déguisement de sprite. Ensuite, ils créeront des événements qui provoquent des actions et des comportements lors de l'interaction. "
         },
         "f64df1a5-3d41-4029-9a8c-1439d98d7386": {
@@ -3388,7 +3388,7 @@
           "name": "Introduction"
         },
         "c1903a35-66ca-4702-8dea-17cea274e921": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins",
+          "name": "Animal domestique virtuel avec le Labo des Sprites",
           "description": "**Objectif :** Aujourd'hui, les élèves vont créer leur propre animal de compagnie virtuel ! Ils commenceront par dessiner ou sélectionner un nouveau déguisement de sprite. Ensuite, ils créeront des événements qui provoquent des actions et des comportements lors de l'interaction. "
         },
         "e6d62a4b-b381-4ce6-9301-da64d2be269a": {
@@ -3423,25 +3423,25 @@
         },
         "9a3fff4a-420a-45fd-9409-ec6cecaf15b9": {
           "name": "Assistance niveau après niveau",
-          "progression_name": "Vidéo : Échauffement de soirée dansante"
+          "progression_name": "Vidéo : Échauffement – Soirée Dansante"
         },
         "5398d472-ce7e-4f6b-9a6c-ccfa31ebde30": {
           "progression_name": "S'entraîner"
         },
         "0bb34d8e-12a2-4cb4-935d-0c7b247777ff": {
-          "progression_name": "Vidéo : Événements de soirée dansante"
+          "progression_name": "Vidéo : Événements – Soirée Dansante"
         },
         "537232f4-4f8e-4dd4-9b51-122c0d012e9a": {
           "progression_name": "Événements"
         },
         "6672d026-0039-4df8-b54f-f0fc92790588": {
-          "progression_name": "Video: Dance Party Measures"
+          "progression_name": "Vidéo : Mesures – Soirée Dansante"
         },
         "06cef1c1-0946-4a77-acac-e9dec70a1573": {
           "progression_name": "Mesures"
         },
         "cdbe0374-d0ce-426f-b3b3-def9a99df94a": {
-          "progression_name": "Vidéo : Propriétés de la soirée dansante"
+          "progression_name": "Vidéo : Soirée Dansante – Propriétés"
         },
         "22d25455-4f87-44cb-aa36-b5adc00e1ba1": {
           "tips": [
@@ -3450,7 +3450,7 @@
           "progression_name": "Propriétés"
         },
         "0b074fdf-834b-4d06-a5da-6c7e0c670b05": {
-          "progression_name": "Vidéo : Dance Party Party On !"
+          "progression_name": "Vidéo : Soirée Dansante Allez On Danse !"
         },
         "24c3bf60-f0f7-4395-ae4c-12b4b0746c9f": {
           "progression_name": "Jeu libre"
@@ -13799,7 +13799,7 @@
           "description": "Revoyez les _événements_ et les _comportements_ en programmation. De plus, présentez l'outil Sprite Lab \"Costumes\" qui permet aux élèves de dessiner leurs propres déguisements.\n\n**Révision :** Posez des questions aux élèves sur les événements et les comportements.\n\n-   Vous souvenez-vous de ce qu'est un événement ?\n\n-   Vous souvenez-vous de ce qu'est un comportement ?\n\n-   Vous souvenez-vous de certains des comportements que vous avez utilisés ? Que font-ils?\n    -   \"patrouiller\"\n    -   \" trépider \"\n    -   \"tourner à droite/à gauche\"\n\n**Affichage :** Commencez par montrer le niveau 1 de la leçon d'aujourd'hui à vos élèves.\n\n**Réfléchissez/Appariez :** Demandez aux élèves de prédire ce qu'il se passera lorsque le code sera exécuté et d'en discuter avec leurs voisins. Exécutez le code et discutez du résultat.\n\n**Affichage :** Afficher le niveau 2. Montrez brièvement comment effectuer les opérations suivantes :\n\n-   Naviguez entre les onglets _Code_ et _Déguisements_.\n-   Dessinez un déguisement.\n-   Choisissez un déguisement dans la bibliothèque de déguisements.\n-   Changez le déguisement du sprite de l'animal virtuel en un déguisement personnalisé. "
         },
         "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins",
+          "name": "Animal domestique virtuel avec le Labo des Sprites",
           "description": "**Objectif :** Aujourd'hui, les élèves vont créer leur propre animal de compagnie virtuel ! Ils commenceront par dessiner ou sélectionner un nouveau déguisement de sprite. Ensuite, ils créeront des événements qui provoquent des actions et des comportements lors de l'interaction. "
         },
         "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
@@ -16621,7 +16621,7 @@
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "description": "Munis de leurs guides de planification complétés, les élèves sont maintenant prêts à donner vie à leurs projets. Ces niveaux correspondent à la structure du guide de planification et les aident à naviguer dans le processus de transformation de leurs idées en code. ",
           "tips": [
             "Les élève feront de nombreux essais et erreurs lors du codage. Leurs projets sont susceptibles de devenir des versions tronquées de leur portée d'origine. Rappelez-leur que ce type de compromis est courant dans la conception de logiciels. Ce n'est pas grave s'ils n'intègrent pas toutes les fonctionnalités qu'ils ont prévues ! "
@@ -16913,7 +16913,7 @@
           "name": "Introduction"
         },
         "660e66d6-d582-4568-9274-8971b0f5b344": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins",
+          "name": "Animal domestique virtuel avec le Labo des Sprites",
           "description": "**Objectif :** Aujourd'hui, les élèves vont créer leur propre animal de compagnie virtuel ! Ils commenceront par dessiner ou sélectionner un nouveau déguisement de sprite. Ensuite, ils créeront des événements qui provoquent des actions et des comportements lors de l'interaction. "
         },
         "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
@@ -16948,25 +16948,25 @@
         },
         "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
           "name": "Assistance niveau après niveau",
-          "progression_name": "Vidéo : Échauffement de soirée dansante"
+          "progression_name": "Vidéo : Échauffement – Soirée Dansante"
         },
         "5283ba21-7c54-44c0-a4c2-00c1f5d240e6": {
           "progression_name": "S'entraîner"
         },
         "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
-          "progression_name": "Vidéo : Événements de soirée dansante"
+          "progression_name": "Vidéo : Événements – Soirée Dansante"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "Événements"
         },
         "ec1bf1ca-d9d0-41e3-8234-638ae029834d": {
-          "progression_name": "Video: Dance Party Measures"
+          "progression_name": "Vidéo : Mesures – Soirée Dansante"
         },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
           "progression_name": "Mesures"
         },
         "5d59e7e4-25f4-4278-b777-878c7df2681b": {
-          "progression_name": "Vidéo : Propriétés de la soirée dansante"
+          "progression_name": "Vidéo : Soirée Dansante – Propriétés"
         },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [
@@ -16975,7 +16975,7 @@
           "progression_name": "Propriétés"
         },
         "97583afa-79d7-487a-a962-9366e1d17bba": {
-          "progression_name": "Vidéo : Dance Party Party On !"
+          "progression_name": "Vidéo : Soirée Dansante Allez On Danse !"
         },
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "progression_name": "Jeu libre"
