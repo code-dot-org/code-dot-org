@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import ProjectShare from './ProjectShare';
 import ProjectRemix from './ProjectRemix';
@@ -8,10 +7,6 @@ import ProjectRemix from './ProjectRemix';
 // and should be used with the version of ScriptName that
 // places a last_modified time below the lesson name
 export default class ProjectBackedHeader extends React.Component {
-  static propTypes = {
-    includeExportInProjectHeader: PropTypes.bool.isRequired
-  };
-
   render() {
     return (
       <div style={styles.projectButtons}>
