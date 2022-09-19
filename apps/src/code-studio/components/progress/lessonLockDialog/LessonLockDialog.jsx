@@ -112,9 +112,7 @@ function LessonLockDialog({
   const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
 
   const renderHiddenWarning = () => (
-    <div style={styles.error}>
-      {lessonIsHidden && i18n.hiddenAssessmentWarning()}
-    </div>
+    <div style={styles.hiddenError}>{i18n.hiddenAssessmentWarning()}</div>
   );
 
   const renderInstructionsAndButtons = () => (
@@ -245,12 +243,12 @@ function LessonLockDialog({
             requireSelection={hasSelectedSection}
           />
         </div>
-        {renderHiddenWarning()}
+        {lessonIsHidden && renderHiddenWarning()}
         {renderInstructionsAndButtons()}
         {renderStudentTable()}
       </div>
       <div style={styles.buttonContainer}>
-        {error && <span style={styles.error}>{error}</span>}
+        {error && <span style={styles.saveError}>{error}</span>}
         <button
           type="button"
           style={progressStyles.baseButton}
@@ -328,7 +326,12 @@ const styles = {
   hidden: {
     display: 'none'
   },
-  error: {
+  saveError: {
+    color: color.red,
+    fontStyle: 'italic',
+    marginRight: 10
+  },
+  hiddenError: {
     color: color.red,
     fontStyle: 'italic',
     marginBottom: 10
