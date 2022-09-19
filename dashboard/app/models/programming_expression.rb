@@ -195,7 +195,7 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_show
     {
       id: id,
-      name: get_localized_property(:name, name, expression_scope),
+      name: name,
       blockName: block_name,
       category: get_localized_property(
         :name,
