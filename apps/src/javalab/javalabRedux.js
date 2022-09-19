@@ -496,7 +496,7 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === SOURCE_FILE_ORDER_UPDATED) {
-    let sources = state.sources;
+    let sources = {...state.sources};
     let orderedTabKeys = state.orderedTabKeys;
     let fileMetadata = state.fileMetadata;
     const updatedSources = updateAllSourceFileOrders(
