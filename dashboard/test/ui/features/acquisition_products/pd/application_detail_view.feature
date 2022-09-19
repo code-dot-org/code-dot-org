@@ -4,8 +4,7 @@
 Feature: Teacher Application Detail View
 
   Scenario: Regional Partner can set Principal Approval as Not Required and Required
-    Given there is a CSP application affiliated with a temporary regional partner
-    And I am a program manager with the temporary regional partner
+    Given I am a program manager with a regional partner and teacher application
     And I am on "http://studio.code.org/pd/application_dashboard/summary"
     Then I wait until element "table#summary-csp-teachers" is visible
 
@@ -22,5 +21,3 @@ Feature: Teacher Application Detail View
     Then I scroll the "#change-principal-approval-requirement" element into view
     Then I click selector "button:contains('Make required')"
     And I wait until element "button:contains('Make not required')" is visible
-
-    And I delete the temp regional partner, program manager, and csp teacher
