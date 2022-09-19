@@ -279,7 +279,7 @@ var projects = (module.exports = {
       const port = 'localhost' === environmentKey ? `:${location.port}` : '';
       return `${
         location.protocol
-      }//${subdomain}codeprojects.org${port}/projects/weblab/${this.getCurrentId()}`;
+      }//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
     } else {
       return location.origin + this.getPathName();
     }
