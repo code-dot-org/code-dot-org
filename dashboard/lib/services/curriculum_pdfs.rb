@@ -120,5 +120,37 @@ module Services
           (script.include_student_lesson_plans && !lesson_plan_pdf_exists_for?(lesson, true))
       end
     end
+
+    def self.generate_missing_pdfs
+      get_pdf_enabled_scripts.each do |script|
+        Dir.mktmpdir("pdf_generation") do |dir|
+          any_pdf_generated = false
+
+          get_pdfless_lessons(script).each do |lesson|
+            puts "Generating missing PDFs for #{lesson.key} (from #{script.name})"
+            generate_lesson_pdf(lesson, dir)
+            generate_lesson_pdf(lesson, dir, true)
+            any_pdf_generated = true
+          end
+
+          if !script_overview_pdf_exists_for?(script) && should_generate_overview_pdf?(script)
+            puts "Generating missing Script Overview PDF for #{script.name}"
+            generate_script_overview_pdf(script, dir)
+            any_pdf_generated = true
+          end
+
+          if !script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
+            puts "Generating missing Script Resources PDF for #{script.name}"
+            generate_script_resources_pdf(script, dir)
+            any_pdf_generated = true
+          end
+
+          if any_pdf_generated
+            puts "Generated all missing PDFs for #{script.name}; uploading results to S3"
+            upload_generated_pdfs_to_s3(dir)
+          end
+        end
+      end
+    end
   end
 end
