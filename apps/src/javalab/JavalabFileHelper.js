@@ -22,8 +22,9 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   let orderedTabKeys = [];
   let unorderedTabKeys = [];
   let orderOfFiles = [];
-  let fileIndex = 0; // may different from index below due to hidden files
-  Object.keys(sources).forEach((file, index) => {
+  let fileIndex = 0; // may be different from index below due to hidden files
+  let isValid = true;
+  Object.keys(sources).forEach(file => {
     if (sources[file].isVisible || isEditingStartSources) {
       let tabKey = getTabKey(fileIndex);
       fileMetadata[tabKey] = file;
@@ -32,15 +33,30 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
       if (Number.isInteger(order)) {
         orderOfFiles.push(sources[file].order);
       } else {
-        orderOfFiles.push(fileIndex);
+        isValid = false;
       }
       fileIndex++;
     }
   });
-  for (let i = 0; i < orderOfFiles.length; i++) {
-    let index = orderOfFiles.indexOf(i);
-    orderedTabKeys.push(unorderedTabKeys[index]);
+  const numVisibleFiles = fileIndex;
+  // check orderOfFiles for duplicates, out of bounds, or missing orders
+  if (isValid) {
+    for (let i = 0; i < numVisibleFiles; i++) {
+      if (!orderOfFiles.includes(i)) {
+        isValid = false;
+      }
+    }
   }
+
+  for (let i = 0; i < numVisibleFiles; i++) {
+    if (isValid) {
+      let index = orderOfFiles.indexOf(i);
+      orderedTabKeys.push(unorderedTabKeys[index]);
+    } else {
+      orderedTabKeys.push(getTabKey(i));
+    }
+  }
+
   const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
 
   return {
