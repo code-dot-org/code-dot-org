@@ -680,11 +680,11 @@ bg:
     <a href='%{codeorg_url}/about/partners'>Безпрецедентен брой партньори</a> са се
     обединили в подкрепа на Часът на кодирането &mdash; включително Microsoft, Apple,
     Amazon, момчета и момичета от Клуб Америка и College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Аз не умея да програмирам. Може ли все пак да регистрирам събитие?
   hoc_faq_host_a: Разбира се. Дейностите в Hour of Code са самонасочващи. Всичко,
     което трябва да направите е, <a href='%{codeorg_url}/learn'> да пробвате нашите

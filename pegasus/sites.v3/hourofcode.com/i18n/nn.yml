@@ -663,11 +663,11 @@ nn:
     samt ei stor gruppe bedrifter som har gått saman for å støtte Kodetimen &mdash;
     inkludert Microsoft, Apple, Amazon, Boys and Girls Clubs of America og College
     Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Eg veit ingenting om koding. Kan eg framleis vere vert for ein Kodetime?
   hoc_faq_host_a: Sjølvsagt! Kodetimeaktivitetar er brukarstyrte. Alt du treng er
     å <a href='%{codeorg_url}/learn'>sjå på våre oppdaterte rettleiingar</a>, plukke
