@@ -221,8 +221,18 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
           setAllSourcesAndFileMetadata({
-            'Class1.java': {text: '', isVisible: true, isValidation: false},
-            'Class2.java': {text: '', isVisible: true, isValidation: false}
+            'Class1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {
+              text: '',
+              order: 1,
+              isVisible: true,
+              isValidation: false
+            }
           })
         );
 
@@ -254,13 +264,23 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
           setAllSourcesAndFileMetadata({
-            'Class1.java': {text: '', isVisible: true, isValidation: false}
+            'Class1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            }
           })
         );
 
         store.dispatch(
           setAllValidation({
-            'Validation.java': {text: '', isVisible: false, isValidation: true}
+            'Validation.java': {
+              text: '',
+              order: 1,
+              isVisible: false,
+              isValidation: true
+            }
           })
         );
 
@@ -288,7 +308,12 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
           setAllSourcesAndFileMetadata({
-            'Class1.java': {text: '', isVisible: true, isValidation: false}
+            'Class1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            }
           })
         );
 
@@ -323,7 +348,12 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
           setAllSourcesAndFileMetadata({
-            'Class1.java': {text: '', isVisible: true, isValidation: false}
+            'Class1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            }
           })
         );
 
@@ -435,15 +465,23 @@ describe('Java Lab Editor Test', () => {
           showMenu: true,
           contextTarget: 'file-0'
         });
-        store.dispatch(setActiveTabKey('file-0'));
-        store.dispatch(setOrderedTabKeys(['file-0', 'file-1']));
         store.dispatch(
-          setFileMetadata({
-            'file-0': 'file1.java',
-            'file-1': 'file2.java'
+          setAllSourcesAndFileMetadata({
+            'Class1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {
+              text: '',
+              order: 1,
+              isVisible: true,
+              isValidation: false
+            }
           })
         );
-
+        store.dispatch(setActiveTabKey('file-0'));
         javalabEditor.onOpenFile('file-1');
 
         expect(javalabEditor.props.activeTabKey).to.equal('file-1');
@@ -640,23 +678,23 @@ describe('Java Lab Editor Test', () => {
           fileToDelete: 'file-0'
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.DELETE_FILE));
-
-        const fileMetadata = {
-          'file-0': 'Class1.java',
-          'file-1': 'Class2.java'
-        };
-        const orderedTabKeys = ['file-0', 'file-1'];
-        const activeTabKey = 'file-0';
-        const lastTabKeyIndex = 1;
         store.dispatch(
-          setAllEditorMetadata(
-            fileMetadata,
-            orderedTabKeys,
-            activeTabKey,
-            lastTabKeyIndex
-          )
+          setAllSourcesAndFileMetadata({
+            'Class1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {
+              text: '',
+              order: 1,
+              isVisible: true,
+              isValidation: false
+            }
+          })
         );
-
+        store.dispatch(setActiveTabKey('file-0'));
         javalabEditor.onDeleteFile();
         expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
         expect(store.getState().javalab.editorOpenDialogName).to.be.null;
