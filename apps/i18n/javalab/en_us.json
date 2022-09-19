@@ -76,6 +76,8 @@
   "feedbackBeginning": "This is the beginning of feedback for your project.",
   "feedbackBeginningPeer": "This is the beginning of feedback for {peerName}'s project.",
   "illegalMethodAccess": "You tried to access a method that is blocked by our security policy.\n{cause}",
+  "fileDeleteConfirm": "Are you sure you want to delete the following files from your backpack? This action can't be undone.",
+  "fileDeleteError": "We encountered an error deleting one or more of your files. Please try again. Files unable to be deleted:",
   "fileImportError": "One or more file names are reserved by Java Lab and cannot be imported into this project. Files unable to be imported:",
   "fileImportServerError": "We encountered an error importing one or more of your files. Please try again. Files unable to be imported:",
   "fileImportWarning": "You have one or more duplicate file names between this project and your selected backpack files. Duplicate file names are:",
