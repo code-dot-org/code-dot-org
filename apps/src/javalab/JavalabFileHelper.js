@@ -72,6 +72,19 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   };
 };
 
+export const updateAllSourceFileOrders = (
+  sources,
+  fileMetadata,
+  orderedTabKeys
+) => {
+  for (let i = 0; i < orderedTabKeys.length; i++) {
+    let file = orderedTabKeys[i];
+    let fileName = fileMetadata[file];
+    sources[fileName].order = i;
+  }
+  return sources;
+};
+
 export const isJavaFile = filename => {
   return filename.endsWith('.java');
 };
