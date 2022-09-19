@@ -94,9 +94,7 @@ namespace :build do
 
         if rack_env?(:staging)
           # This step will only complete successfully if we succeed in
-          # generating all curriculum PDFs. We also attempt to generate PDFs
-          # during the seeding process, but that step is unreliable and will be
-          # removed soon. https://codedotorg.atlassian.net/browse/PLAT-1921
+          # generating all curriculum PDFs.
           ChatClient.log "Generating missing pdfs..."
           RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
         end
