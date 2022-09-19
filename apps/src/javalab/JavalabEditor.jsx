@@ -413,7 +413,6 @@ class JavalabEditor extends React.Component {
   // This is called from the dropdown menu on the active tab
   // when the delete option is clicked
   deleteFromTabMenu() {
-    console.log('inside deleteFromTabMenu');
     this.props.openEditorDialog(JavalabEditorDialog.DELETE_FILE);
     this.setState({
       showMenu: false,
@@ -530,8 +529,6 @@ class JavalabEditor extends React.Component {
 
     // add new file to sources
     setSource(filename, fileContents, newTabIndex);
-    console.log('inside onCreateFile');
-    console.log(this.props.sources);
     projectChanged();
     setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
@@ -551,7 +548,6 @@ class JavalabEditor extends React.Component {
     } = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
-    console.log('inside onDeleteFile');
     if (indexToRemove >= 0) {
       // delete from tabs
       let newTabs = [...orderedTabKeys];
@@ -584,7 +580,6 @@ class JavalabEditor extends React.Component {
   }
 
   onImportFile(filename, fileContents, order) {
-    console.log('inside onImportFile in JavaLabEditor');
     const {fileMetadata, orderedTabKeys} = this.props;
     // If filename already exists in sources, replace file contents.
     // Otherwise, create a new file.
