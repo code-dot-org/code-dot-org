@@ -672,11 +672,11 @@ sr:
     href='http://code.org/about/partners'>Јединствени скуп партнера</a> се окупио
     у подршци Hour of Code-а &mdash; укључијући Microsoft, Apple, Amazon, Boys and
     Girls Clubs of America и College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Не знам ништа о програмиранју. Да ли ипак могу бити домаћин догађаја?
   hoc_faq_host_a: Наравно, активности Часа кодирања су самосталне. Све што морате
     урадити је да <a href='%{codeorg_url}/learn'> пробате наш актуелни водич</a>,

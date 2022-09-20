@@ -2011,7 +2011,7 @@
           "answered_block": "Poszukaj tutaj nowego bloku!"
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+          "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Zresetuj\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Skończyłeś? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
@@ -2025,7 +2025,7 @@
         },
         "courseF_text_print": {
           "print_block": "Znajdź blok drukowania tutaj!",
-          "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+          "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Zresetuj\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "courseF_text_prompts": {
           "prompt_block": "Znajdź tutaj blok podpowiedzi!"
@@ -2638,7 +2638,7 @@
           "answered_block": "Poszukaj tutaj nowego bloku!"
         },
         "courseF_text_choice_color_-2022-2": {
-          "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+          "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Zresetuj\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "courseF_text_choice_conversation_-2022-2": {
           "text_generic_finish": "Skończyłeś? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
@@ -2655,7 +2655,7 @@
         },
         "courseF_text_print_-2022-2": {
           "print_block": "Znajdź blok drukowania tutaj!",
-          "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+          "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Zresetuj\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "Znajdź tutaj blok podpowiedzi!"

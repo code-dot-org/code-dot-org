@@ -7,32 +7,32 @@ th:
     ณ วันที่ %{campaign_date}
   coming_soon: เร็วๆ นี้
   campaign_date_start_short: 5 ธ.ค.
-  campaign_date_start_long: 6 ธันวาคม
+  campaign_date_start_long: 5 ธันวาคม
   campaign_date_short: 5 - 11 ธ.ค.
   campaign_date_full: 5 - 11 ธันวาคม
   campaign_date_year: '2565'
-  campaign_date_full_year: 5 - 11 ธันวาคม 2564
+  campaign_date_full_year: 5 - 11 ธันวาคม 2565
   nonus_campaign_date_start_short: Oct. 1
   nonus_campaign_date_start_long: October 1
-  nonus_campaign_date_short: 1 ตุลาคม - 18 ธันวาคม
+  nonus_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   nonus_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
   nonus_campaign_date_year: '2565'
   nonus_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: 1 ตุลาคม - 18 ธันวาคม
+  latam_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   latam_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
   latam_campaign_date_year: '2565'
   latam_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
   europe_campaign_date_start_short: Oct. 1
   europe_campaign_date_start_long: October 1
-  europe_campaign_date_short: 1 ตุลาคม - 18 ธันวาคม
+  europe_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   europe_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
   europe_campaign_date_year: '2565'
   europe_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: 1 ตุลาคม - 18 ธันวาคม
+  africa_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   africa_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
   africa_campaign_date_year: '2565'
   africa_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
@@ -914,9 +914,10 @@ th:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code® and Hora del Código® are trademarks of Code.org.
+  footer_trademark_message: Hour of Code® และ Hora del Código® เป็นเครื่องหมายการค้าของ
+    Code.org
   footer_built_on_github: สร้างบน GitHub จาก Microsoft
-  footer_menu_partners: Partners and Advisors
+  footer_menu_partners: Partners
   footer_menu_contact: Contact us
   footer_menu_support: Support
   footer_menu_terms: เงื่อนไข

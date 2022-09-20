@@ -683,11 +683,11 @@ po:
     Paralelamente, foi também formada uma <a href='http://code.org/about/partners'>coligação
     de parceiros sem precedentes</a> afim de promover a Hora de Código &mdash; na
     qual se incluem a Microsoft, Apple, Amazon, entre outras.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Não sei nada acerca de programação. Posso apresentar um evento à
     mesma?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have

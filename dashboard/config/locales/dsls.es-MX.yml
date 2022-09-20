@@ -12391,7 +12391,7 @@ es-MX:
           correct: true
         - text: dos sprites de abejas, uno en el centro y otro en la esquina inferior
             derecha
-        - text: tres sprites de abejas, todos en diferentes lugares
+        - text: tres sprites de abejas, todos en distintos lugares
         - text: nada, se producirá un error
         questions:
         - text: "¿Qué mostrará el programa?"
@@ -12402,7 +12402,7 @@ es-MX:
         display_name: Propiedades de Sprite
         description: Prueba las propiedades de los sprites que has aprendido aquí
       CSD Games variables practice_2021:
-        display_name: Variables Practicar
+        display_name: Práctica de Variables
         description: Elige una de las siguientes actividades para practicar el uso
           de variables.
       CSD Header Size MC_2018_2019_pilot_2021:
@@ -12438,7 +12438,7 @@ es-MX:
       CSD U1 Test_2021:
         title: 'Prueba Fin de Proyecto: Ordenadores y Resolución de Problemas '
       CSD U2 CSS practice_pilot_2021:
-        display_name: Estilos de texto con CSS
+        display_name: Estilo de Texto con CSS
         description: "¡Prueba tus nuevas habilidades con estos desafíos!"
       CSD U2 Image challenge_pilot_2021:
         display_name: Añadiendo los Imágenes
@@ -12491,7 +12491,7 @@ es-MX:
           Estas son las cosas que has aprendido...
 
           * Cómo usar HTML para estructurar el contenido de tu página
-          * Cómo usar CSS para dar estilo al texto, los colores y el diseño de tu página
+          * Cómo usar CSS para dar estilo al texto, los colores, y el diseño de tu página
           * Cómo dar formato a tu código para que sea más fácil de leer
           * Cómo depurar el código HTML y CSS
           * Cómo utilizar las imágenes de forma responsable
@@ -12750,21 +12750,21 @@ es-MX:
           Haz el Tuyo Propio
           Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué funciones o desafíos adicionales quieres crear?
       CSD games functions practice choice_2021:
-        display_name: Funciones Practicar
+        display_name: Práctica de Funciones
         description: Practica el uso de las funciones y aprende más sobre lo que las
           hace tan útiles.
       CSD games platform challenge choice_2021:
         display_name: Desafíos
         description: "¡Mejora tu juego con estos desafíos!"
       CSD web conditionals practice choice_2021:
-        display_name: Condicionales Practicar
+        display_name: Práctica de Condicionales
         description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
         display_name: Práctica
-        description: Prueba a utilizar el bucle de dibujo con estas actividades.
+        description: Prueba a utilizar el ciclo de dibujo con estas actividades.
       CSD web movement practice choice_2021:
         display_name: Práctica
-        description: Prueba a utilizar el bucle de dibujo con estas actividades.
+        description: Prueba a utilizar el ciclo de dibujo con estas actividades.
       CSD web text practice choice_2021:
         display_name: Práctica
         description: Pon a prueba tus conocimientos de texto en estas actividades.
@@ -13098,23 +13098,23 @@ es-MX:
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 layout style challenge_pilot_2021:
-        description: Prueba desafíos adicionales o aprende código nuevo.
+        description: Prueba desafíos adicionales o aprende un código nuevo.
         display_name: Elementos de Estilo
       CSD U2 layout style practice_pilot_2021:
         description: Practica tus nuevas habilidades aquí.
         display_name: Elementos de Estilo
       CSD U2 links challenge_2021:
-        description: Prueba desafíos adicionales o aprende código nuevo.
+        description: Prueba desafíos adicionales o aprende un código nuevo.
         display_name: Creando Vínculos
       CSD web classes challenge_2021:
-        description: Prueba desafíos adicionales o aprende código nuevo.
-        display_name: Usando las Clases
+        description: Prueba desafíos adicionales o aprende un código nuevo.
+        display_name: Usando Clases
       CSD web classes practice_2021:
         description: Practica tus nuevas habilidades aquí.
-        display_name: Usando las Clases
+        display_name: Usando Clases
       CSD Games Parameters challenge_2021:
         description: Echa un vistazo a uno o varios de estos bloques adicionales que
-          puedes utilizar para hacer tus imágenes más interesantes.
+          puedes utilizar para hacer que tus imágenes se vean más interesantes.
         display_name: Desafíos de Figuras y Parámetros
       CSD Games Properties challenge_2021:
         description: Prueba estos nuevos desafíos con las propiedades de los sprites
@@ -13130,7 +13130,7 @@ es-MX:
       CSD Games parameters practice_2021:
         display_name: Práctica con Parámetros
       CSD Games variables challenge_2021:
-        description: Amplía tus conocimientos sobre las variables con estos desafíos.
+        description: Amplía tus habilidades con las variables completando estos desafíos.
         display_name: 'Desafíos de Variables '
       CSD U3 drawing challenges_2021:
         description: "¡Prueba algunos desafíos!"
@@ -13142,8 +13142,8 @@ es-MX:
         description: Prueba tus nuevos conocimientos en estos niveles.
         display_name: Práctica con Números Aleatorios
       CSD web draw loop challenge choice_2021:
-        description: Prueba estos desafíos de bucles de dibujo.
-        display_name: Desafíos del Bucle de Dibujo
+        description: Prueba estos desafíos de ciclos de dibujo.
+        display_name: Desafíos del Ciclo de Dibujo
       CSD web movement challenge choice_2021:
         description: Añade más a tu escena de peces o crea algo nuevo.
         display_name: Desafíos de Movimiento de Sprite
@@ -13417,7 +13417,7 @@ es-MX:
         display_name: Repaso de CSS
       CSD Games Parameters challenge_2022:
         description: Echa un vistazo a uno o varios de estos bloques adicionales que
-          puedes utilizar para hacer tus imágenes más interesantes.
+          puedes utilizar para hacer que tus imágenes se vean más interesantes.
         display_name: Desafíos de Figuras y Parámetros
       CSD Games Properties challenge_2022:
         description: Prueba estos nuevos desafíos con las propiedades de los sprites
@@ -13429,7 +13429,7 @@ es-MX:
           correct: true
         - text: dos sprites de abejas, uno en el centro y otro en la esquina inferior
             derecha
-        - text: tres sprites de abejas, todos en diferentes lugares
+        - text: tres sprites de abejas, todos en distintos lugares
         - text: nada, se producirá un error
         content1: Mira el código de abajo y adivina dónde aparecerá el sprite de la
           abeja.
@@ -13450,12 +13450,12 @@ es-MX:
       CSD Games parameters practice_2022:
         display_name: Práctica con Parámetros
       CSD Games variables challenge_2022:
-        description: Amplía tus conocimientos sobre las variables con estos desafíos.
+        description: Amplía tus habilidades con las variables completando estos desafíos.
         display_name: 'Desafíos de Variables '
       CSD Games variables practice_2022:
         description: Elige una de las siguientes actividades para practicar el uso
           de variables.
-        display_name: Variables Practicar
+        display_name: Práctica de Variables
       CSD HTML project Lists_2022:
         description: Echa un vistazo a estas nuevas etiquetas que te permitirán añadir
           listas a tu página web.
@@ -13508,6 +13508,7 @@ es-MX:
         - text: Salida
         - text: Almacenamiento
         - text: Procesamiento
+        title: Pregunta 2
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -13519,6 +13520,7 @@ es-MX:
         - text: Salida
         - text: Almacenamiento
         - text: Procesamiento
+        title: Pregunta 2
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -13530,6 +13532,7 @@ es-MX:
         - text: Salida
         - text: Almacenamiento
         - text: Procesamiento
+        title: Pregunta 2
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -13541,6 +13544,7 @@ es-MX:
         - text: Reflexionar
         - text: Intentar
         - text: Definir
+        title: Pregunta 2
       CSD U1 Test PSP match_2021:
         answers:
         - {}
@@ -13552,6 +13556,7 @@ es-MX:
         - text: Reflexionar
         - text: Intentar
         - text: Definir
+        title: Pregunta 2
       CSD U1 Test PSP match_2022:
         answers:
         - {}
@@ -13563,6 +13568,7 @@ es-MX:
         - text: Reflexionar
         - text: Intentar
         - text: Definir
+        title: Pregunta 2
       CSD U1 Test define a computer:
         answers:
         - correct: true
@@ -13572,6 +13578,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 1
       CSD U1 Test define a computer_2021:
         answers:
         - correct: true
@@ -13581,6 +13588,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 1
       CSD U1 Test define a computer_2022:
         answers:
         - correct: true
@@ -13590,6 +13598,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 1
       CSD U1 Test define problem:
         answers:
         - correct: true
@@ -13598,6 +13607,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 4
       CSD U1 Test define problem_2021:
         answers:
         - correct: true
@@ -13606,6 +13616,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 4
       CSD U1 Test define problem_2022:
         answers:
         - correct: true
@@ -13614,6 +13625,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 4
       CSD U1 Test_2022:
         title: 'Prueba Fin de Proyecto: Ordenadores y Resolución de Problemas '
       CSD U2 CSS challenge_pilot_2022:
@@ -13623,7 +13635,7 @@ es-MX:
         display_name: Desafíos y Código Adicional
       CSD U2 CSS practice_pilot_2022:
         description: "¡Prueba tus nuevas habilidades con estos desafíos!"
-        display_name: Estilos de texto con CSS
+        display_name: Estilo de Texto con CSS
       CSD U2 Expression Exemplars_2018_2019_pilot_2022:
         markdown: |
           # Ejemplos de Sitios Web Personales
@@ -13672,6 +13684,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 3
       CSD U2 Test Classes_pilot_2021:
         answers:
         - {}
@@ -13681,6 +13694,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 3
       CSD U2 Test Classes_pilot_2022:
         answers:
         - {}
@@ -13690,6 +13704,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 3
       CSD U2 Test ContentStructureStyle:
         answers:
         - {}
@@ -13699,6 +13714,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 2
       CSD U2 Test ContentStructureStyle_pilot_2021:
         answers:
         - {}
@@ -13708,6 +13724,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 2
       CSD U2 Test ContentStructureStyle_pilot_2022:
         answers:
         - {}
@@ -13717,6 +13734,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 2
       CSD U2 Test Copyright:
         answers:
         - {}
@@ -13747,24 +13765,39 @@ es-MX:
       CSD U2 Test Debug:
         answers:
         - correct: true
+        - text: 3 sólo
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2, y 3
+        title: Pregunta 4
       CSD U2 Test Debug_pilot_2021:
         answers:
         - correct: true
+        - text: 3 sólo
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2, y 3
+        markdown: |
+          Un estudiante está utilizando una hoja de estilos para que todos los párrafos del sitio web sean de color verde, pero no funciona en index.html, aunque sí en las demás páginas web.  ¿Qué podría estar causando el problema?
+
+          1. El alumno olvidó vincular la hoja de estilos a la página index.html.
+          1. El alumno no subió las imágenes utilizadas en la página index.html.
+          1. El alumno escribió mal accidentalmente "verde" en la hoja de estilos.
+        title: Pregunta 4
       CSD U2 Test Debug_pilot_2022:
         answers:
         - correct: true
+        - text: 3 sólo
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2, y 3
+        markdown: |
+          Un estudiante está utilizando una hoja de estilos para que todos los párrafos del sitio web sean de color verde, pero no funciona en index.html, aunque sí en las demás páginas web.  ¿Qué podría estar causando el problema?
+
+          1. El alumno olvidó vincular la hoja de estilos a la página index.html.
+          1. El alumno no subió las imágenes utilizadas en la página index.html.
+          1. El alumno escribió mal accidentalmente "verde" en la hoja de estilos.
+        title: Pregunta 4
       CSD U2 Test HTML Usage:
         answers:
         - {}
@@ -13774,6 +13807,7 @@ es-MX:
         - correct: true
         questions:
         - {}
+        title: Pregunta 1
       CSD U2 Test HTML Usage_pilot_2021:
         answers:
         - {}
@@ -13783,6 +13817,7 @@ es-MX:
         - correct: true
         questions:
         - {}
+        title: Pregunta 1
       CSD U2 Test HTML Usage_pilot_2022:
         answers:
         - {}
@@ -13792,6 +13827,7 @@ es-MX:
         - correct: true
         questions:
         - {}
+        title: Pregunta 1
       CSD U2 Test code styles:
         answers:
         - {}
@@ -13801,6 +13837,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 6
       CSD U2 Test code styles_pilot_2021:
         answers:
         - {}
@@ -13810,6 +13847,7 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 6
       CSD U2 Test code styles_pilot_2022:
         answers:
         - {}
@@ -13819,27 +13857,80 @@ es-MX:
         - {}
         questions:
         - {}
+        title: Pregunta 6
       CSD U2 Test code stylesheet:
         answers:
+        - text: 1 y 3
+        - {}
+        - text: 2 y 3
+          correct: true
         - {}
         - {}
-        - correct: true
-        - {}
-        - {}
+        title: Pregunta 5
       CSD U2 Test code stylesheet_pilot_2021:
         answers:
+        - text: 1 y 3
+        - {}
+        - text: 2 y 3
+          correct: true
         - {}
         - {}
-        - correct: true
-        - {}
-        - {}
+        markdown: |
+          Las preguntas 5 y 6 se refieren a la siguiente página web:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+
+          <div>
+          ¿Qué código de la hoja de estilo podría haber hecho que el texto fuera verde?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+          </div>
+        title: Pregunta 5
       CSD U2 Test code stylesheet_pilot_2022:
         answers:
+        - text: 1 y 3
+        - {}
+        - text: 2 y 3
+          correct: true
         - {}
         - {}
-        - correct: true
-        - {}
-        - {}
+        markdown: |
+          Las preguntas 5 y 6 se refieren a la siguiente página web:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+
+          <div>
+          ¿Qué código de la hoja de estilo podría haber hecho que el texto fuera verde?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+          </div>
+        title: Pregunta 5
       CSD U2 Top Websites_2018_2019_pilot_2022:
         markdown: |
           # Sitios Web para la Resolución de Problemas
@@ -13855,16 +13946,16 @@ es-MX:
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 image debug match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/9e5367ff3c78372af28a4518cfb3aaa8-image-1648053867494.png
+        - text: https://images.code.org/993c973fa31b14cb6827eb7cb6d53c40-image-1648053902975.png
+        - text: https://images.code.org/41b12f31a9084638e4625fecaff916d5-image-1648054026831.png
+        - text: https://images.code.org/030d30152c42faf0891259af025b9884-image-1648054068540.png
+        - text: https://images.code.org/eb2e2f9a15688cc4b2d80f4c401223b1-image-1648054098000.png
         questions:
         - text: El atributo `src` está mal escrito.
         - text: Los atributos `src` y `alt` están cambiados
         - text: La dirección de la imagen no incluye la extensión de archivo (.jpg)
-        - {}
+        - text: La etiqueta de la imagen es incorrecta y falta el atributo `src`.
         - text: Hay un espacio en el nombre del archivo
         teacher_markdown: 'Aunque este nivel puede utilizarse para evaluar la comprensión
           por parte de los alumnos de la sintaxis de la etiqueta `<img>`, su objetivo
@@ -13872,14 +13963,28 @@ es-MX:
           pueden encontrar al añadir imágenes a las páginas web.
 
 '
+        markdown: |
+          # Emparejando
+
+          **Cada uno de los elementos siguientes tiene un error. Haz coincidir la descripción con el fallo correcto.**
+
+          ## A: ![](https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47%20PM.png)
+
+          ## B: ![](https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40%20PM.png)
+
+          ## C: ![](https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01%20PM.png)
+
+          ## D: ![](https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24%20PM.png)
+
+          ## E: ![](https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png)
       CSD U2 layout style challenge_pilot_2022:
-        description: Prueba desafíos adicionales o aprende código nuevo.
+        description: Prueba desafíos adicionales o aprende un código nuevo.
         display_name: Elementos de Estilo
       CSD U2 layout style practice_pilot_2022:
         description: Practica tus nuevas habilidades aquí.
         display_name: Elementos de Estilo
       CSD U2 links challenge_2022:
-        description: Prueba desafíos adicionales o aprende código nuevo.
+        description: Prueba desafíos adicionales o aprende un código nuevo.
         display_name: Creando Vínculos
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: descripción aquí
@@ -13897,7 +14002,7 @@ es-MX:
           Estas son las cosas que has aprendido...
 
           * Cómo usar HTML para estructurar el contenido de tu página
-          * Cómo usar CSS para dar estilo al texto, los colores y el diseño de tu página
+          * Cómo usar CSS para dar estilo al texto, los colores, y el diseño de tu página
           * Cómo dar formato a tu código para que sea más fácil de leer
           * Cómo depurar el código HTML y CSS
           * Cómo utilizar las imágenes de forma responsable
@@ -13998,172 +14103,295 @@ es-MX:
             producirá.
       CSD U3 Test clean code:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: Utiliza el patrón del contador para aumentar la puntuación
+        - text: Incluir comentarios descriptivos en el programa
+          correct: true
+        - text: 'Utilizar observadores para controlar los valores de las variables
+            y las propiedades de los sprites
+
+'
+        - text: Dar a las variables y funciones nombres que tengan sentido
+          correct: true
+        - text: Declarar variables fuera del bucle de dibujo, pero actualizarlas dentro
+            del bucle de dibujo
         questions:
-        - {}
+        - text: Un equipo de amigos está creando un juego juntos.  Quieren asegurarse
+            de que todos puedan entender el código que escriben los demás.  ¿Cuál
+            de las siguientes opciones les facilitará la lectura del código de los
+            demás? (Elige DOS)
+        title: Pregunta 1
       CSD U3 Test clean code_pilot_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: Utiliza el patrón del contador para aumentar la puntuación
+        - text: Incluir comentarios descriptivos en el programa
+          correct: true
+        - text: 'Utilizar observadores para controlar los valores de las variables
+            y las propiedades de los sprites
+
+'
+        - text: Dar a las variables y funciones nombres que tengan sentido
+          correct: true
+        - text: Declarar variables fuera del bucle de dibujo, pero actualizarlas dentro
+            del bucle de dibujo
         questions:
-        - {}
+        - text: Un equipo de amigos está creando un juego juntos.  Quieren asegurarse
+            de que todos puedan entender el código que escriben los demás.  ¿Cuál
+            de las siguientes opciones les facilitará la lectura del código de los
+            demás? (Elige DOS)
+        title: Pregunta 1
       CSD U3 Test clean code_pilot_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: Utiliza el patrón del contador para aumentar la puntuación
+        - text: Incluir comentarios descriptivos en el programa
+          correct: true
+        - text: 'Utilizar observadores para controlar los valores de las variables
+            y las propiedades de los sprites
+
+'
+        - text: Dar a las variables y funciones nombres que tengan sentido
+          correct: true
+        - text: Declarar variables fuera del bucle de dibujo, pero actualizarlas dentro
+            del bucle de dibujo
         questions:
-        - {}
+        - text: Un equipo de amigos está creando un juego juntos.  Quieren asegurarse
+            de que todos puedan entender el código que escriben los demás.  ¿Cuál
+            de las siguientes opciones les facilitará la lectura del código de los
+            demás? (Elige DOS)
+        title: Pregunta 1
       CSD U3 Test comment:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dar un contorno a la burbuja
+        - text: 'Salta '
+        - text: Cae
+        - text: 'Flota '
+        - text: Se agita de un lado a otro
         questions:
         - text: Línea 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Línea 11
+        - text: Línea 14
+        - text: Línea 17
+        - text: Línea 19
+        markdown: |
+          Mira el siguiente código, y haz coincidir los comentarios con el lugar donde deben ir en el programa.
+
+          <img src="https://images.code.org/df3e8343eae473fd5af62370579f66e9-image-1552419576823.52.17 PM.png" style="width:400px;">
+        title: Pregunta 6
       CSD U3 Test comment_pilot_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dar un contorno a la burbuja
+        - text: 'Salta '
+        - text: Cae
+        - text: 'Flota '
+        - text: Se agita de un lado a otro
         questions:
         - text: Línea 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Línea 11
+        - text: Línea 14
+        - text: Línea 17
+        - text: Línea 19
+        markdown: |
+          Mira el siguiente código, y haz coincidir los comentarios con el lugar donde deben ir en el programa.
+
+          <img src="https://images.code.org/df3e8343eae473fd5af62370579f66e9-image-1552419576823.52.17 PM.png" style="width:400px;">
+        title: Pregunta 6
       CSD U3 Test comment_pilot_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dar un contorno a la burbuja
+        - text: 'Salta '
+        - text: Cae
+        - text: 'Flota '
+        - text: Se agita de un lado a otro
         questions:
         - text: Línea 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Línea 11
+        - text: Línea 14
+        - text: Línea 17
+        - text: Línea 19
+        markdown: |
+          Mira el siguiente código, y haz coincidir los comentarios con el lugar donde deben ir en el programa.
+
+          <img src="https://images.code.org/df3e8343eae473fd5af62370579f66e9-image-1552419576823.52.17 PM.png" style="width:400px;">
+        title: Pregunta 6
       CSD U3 Test debugging:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 3 sólo
+        - text: 1 y 2
+        - text: 1 y 3
+        - text: 2 y 3
+          correct: true
+        - text: 1, 2, y 3
+        markdown: |
+          Un equipo está haciendo un juego de saltos de plataforma.  El fondo y las plataformas funcionan, pero el personaje principal no aparece.  ¿Cuál puede ser el problema?
+
+          1. Se olvidaron de llamar a `drawSprites` en el bucle de dibujo.
+          1. El sprite del personaje se dibuja detrás del sprite del fondo.
+          1. El sprite del personaje se dibuja fuera de la pantalla.
+        title: Pregunta 5
       CSD U3 Test debugging_pilot_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 3 sólo
+        - text: 1 y 2
+        - text: 1 y 3
+        - text: 2 y 3
+          correct: true
+        - text: 1, 2, y 3
+        markdown: |
+          Un equipo está haciendo un juego de saltos de plataforma.  El fondo y las plataformas funcionan, pero el personaje principal no aparece.  ¿Cuál puede ser el problema?
+
+          1. Se olvidaron de llamar a `drawSprites` en el bucle de dibujo.
+          1. El sprite del personaje se dibuja detrás del sprite del fondo.
+          1. El sprite del personaje se dibuja fuera de la pantalla.
+        title: Pregunta 5
       CSD U3 Test debugging_pilot_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 3 sólo
+        - text: 1 y 2
+        - text: 1 y 3
+        - text: 2 y 3
+          correct: true
+        - text: 1, 2, y 3
+        markdown: |
+          Un equipo está haciendo un juego de saltos de plataforma.  El fondo y las plataformas funcionan, pero el personaje principal no aparece.  ¿Cuál puede ser el problema?
+
+          1. Se olvidaron de llamar a `drawSprites` en el bucle de dibujo.
+          1. El sprite del personaje se dibuja detrás del sprite del fondo.
+          1. El sprite del personaje se dibuja fuera de la pantalla.
+        title: Pregunta 5
       CSD U3 Test functions:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Mantienen el código organizado y fácil de entender.
+          correct: true
+        - text: Son una buena forma de almacenar las entradas del usuario para utilizarlas
+            más tarde en el programa.
+        - text: Hacen que el programa funcione más rápido.
+        - text: Son necesarios para que cualquier programa funcione.
+        - text: Permiten utilizar el mismo código en diferentes lugares del programa
+            sin tener que reescribirlo.
+          correct: true
         questions:
-        - {}
+        - text: "¿Por qué a los programadores les gusta utilizar funciones? ( Elige
+            DOS)"
+        title: Pregunta 2
       CSD U3 Test functions_pilot_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Mantienen el código organizado y fácil de entender.
+          correct: true
+        - text: Son una buena forma de almacenar las entradas del usuario para utilizarlas
+            más tarde en el programa.
+        - text: Hacen que el programa funcione más rápido.
+        - text: Son necesarios para que cualquier programa funcione.
+        - text: Permiten utilizar el mismo código en diferentes lugares del programa
+            sin tener que reescribirlo.
+          correct: true
         questions:
-        - {}
+        - text: "¿Por qué a los programadores les gusta utilizar funciones? ( Elige
+            DOS)"
+        title: Pregunta 2
       CSD U3 Test functions_pilot_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Mantienen el código organizado y fácil de entender.
+          correct: true
+        - text: Son una buena forma de almacenar las entradas del usuario para utilizarlas
+            más tarde en el programa.
+        - text: Hacen que el programa funcione más rápido.
+        - text: Son necesarios para que cualquier programa funcione.
+        - text: Permiten utilizar el mismo código en diferentes lugares del programa
+            sin tener que reescribirlo.
+          correct: true
         questions:
-        - {}
+        - text: "¿Por qué a los programadores les gusta utilizar funciones? ( Elige
+            DOS)"
+        title: Pregunta 2
       CSD U3 Test planning:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: El propósito general y el diseño del programa.
+        - text: Qué tipo de variables y funciones necesitarás para que funcione.
+        - text: Cómo va a interactuar el usuario con el programa.
+        - text: Cuántas líneas de código quieres escribir.
+          correct: true
+        - text: "¿Qué tipos de medios, como imágenes o sonidos, necesitarás?"
         questions:
-        - {}
+        - text: "¿Cuál de los siguientes puntos NO es mejor decidir antes de empezar
+            a escribir el código de un programa?"
+        title: Pregunta 4
       CSD U3 Test planning_pilot_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: El propósito general y el diseño del programa.
+        - text: Qué tipo de variables y funciones necesitarás para que funcione.
+        - text: Cómo va a interactuar el usuario con el programa.
+        - text: Cuántas líneas de código quieres escribir.
+          correct: true
+        - text: "¿Qué tipos de medios, como imágenes o sonidos, necesitarás?"
         questions:
-        - {}
+        - text: "¿Cuál de los siguientes puntos NO es mejor decidir antes de empezar
+            a escribir el código de un programa?"
+        title: Pregunta 4
       CSD U3 Test planning_pilot_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: El propósito general y el diseño del programa.
+        - text: Qué tipo de variables y funciones necesitarás para que funcione.
+        - text: Cómo va a interactuar el usuario con el programa.
+        - text: Cuántas líneas de código quieres escribir.
+          correct: true
+        - text: "¿Qué tipos de medios, como imágenes o sonidos, necesitarás?"
         questions:
-        - {}
+        - text: "¿Cuál de los siguientes puntos NO es mejor decidir antes de empezar
+            a escribir el código de un programa?"
+        title: Pregunta 4
       CSD U3 Test variables:
         answers:
         - text: '20'
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: '90'
+          correct: true
+        - text: '110'
+        - text: Habrá dos manzanas en dos posiciones diferentes.
+        - text: Ninguno, porque el programa tendrá un error.
         questions:
-        - {}
+        - text: "¿Cuál es la posición x de la manzana al final de este programa?"
+        markdown: |
+          Imagínate el siguiente programa (bloques y texto)
+
+          <img style="display:inline-block;width:300px" src="https://images.code.org/39742e261b25c859daa8a62ddf9749a9-image-1552415157293.24.38 AM.png"><pre style="display:inline-block;">manzana.x = 20;
+          plátano.x = 60;
+          manzana.x = plátano.x + 30;
+          plátano.x = 80;</pre>
+        title: Pregunta 3
       CSD U3 Test variables_pilot_2021:
         answers:
         - text: '20'
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: '90'
+          correct: true
+        - text: '110'
+        - text: Habrá dos manzanas en dos posiciones diferentes.
+        - text: Ninguno, porque el programa tendrá un error.
         questions:
-        - {}
+        - text: "¿Cuál es la posición x de la manzana al final de este programa?"
+        markdown: |
+          Imagínate el siguiente programa (bloques y texto)
+
+          <img style="display:inline-block;width:300px" src="https://images.code.org/39742e261b25c859daa8a62ddf9749a9-image-1552415157293.24.38 AM.png"><pre style="display:inline-block;">manzana.x = 20;
+          plátano.x = 60;
+          manzana.x = plátano.x + 30;
+          plátano.x = 80;</pre>
+        title: Pregunta 3
       CSD U3 Test variables_pilot_2022:
         answers:
         - text: '20'
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: '90'
+          correct: true
+        - text: '110'
+        - text: Habrá dos manzanas en dos posiciones diferentes.
+        - text: Ninguno, porque el programa tendrá un error.
         questions:
-        - {}
+        - text: "¿Cuál es la posición x de la manzana al final de este programa?"
+        markdown: |
+          Imagínate el siguiente programa (bloques y texto)
+
+          <img style="display:inline-block;width:300px" src="https://images.code.org/39742e261b25c859daa8a62ddf9749a9-image-1552415157293.24.38 AM.png"><pre style="display:inline-block;">manzana.x = 20;
+          plátano.x = 60;
+          manzana.x = plátano.x + 30;
+          plátano.x = 80;</pre>
+        title: Pregunta 3
       CSD U3 drawSprites placement match_2022:
         answers:
         - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
@@ -14184,6 +14412,7 @@ es-MX:
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png">
         title: dibujarSprites
+        content1: Haz coincidir la imagen con el código que producirá.
       CSD U3 drawing challenges_2022:
         description: "¡Prueba algunos desafíos!"
         display_name: Desafíos de Dibujo
@@ -14214,73 +14443,99 @@ es-MX:
           Después de terminar tu proyecto, querrás reflexionar sobre si tu juego ha resultado como habías planeado, y sobre las formas en que podrías mejorar tu proceso para la próxima vez.
       CSD U4 test feature match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '"Siempre me olvido de mis anteojos."'
+        - text: '"No me gusta cuando las aplicaciones son demasiado aburridas."'
+        - text: '"A menudo me olvido de revisar mi teléfono, asi que pierdo mis notificaciones"'
+        - text: '"Mis amigos creen que es divertido cambiar mi configuración, ¡pero
+            es molesto!"'
+        - text: '"Soy daltónico, por lo que muchos colores me parecen iguales."'
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Texto grande
+        - text: Muchos colores
+        - text: Alertas de sonido
+        - text: Bloqueo por contraseña
+        - text: Opciones en blanco y negro
       CSD U4 test feature match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '"Siempre me olvido de mis anteojos."'
+        - text: '"No me gusta cuando las aplicaciones son demasiado aburridas."'
+        - text: '"A menudo me olvido de revisar mi teléfono, asi que pierdo mis notificaciones"'
+        - text: '"Mis amigos creen que es divertido cambiar mi configuración, ¡pero
+            es molesto!"'
+        - text: '"Soy daltónico, por lo que muchos colores me parecen iguales."'
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Texto grande
+        - text: Muchos colores
+        - text: Alertas de sonido
+        - text: Bloqueo por contraseña
+        - text: Opciones en blanco y negro
       CSD U4 test feature match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '"Siempre me olvido de mis anteojos."'
+        - text: '"No me gusta cuando las aplicaciones son demasiado aburridas."'
+        - text: '"A menudo me olvido de revisar mi teléfono, asi que pierdo mis notificaciones"'
+        - text: '"Mis amigos creen que es divertido cambiar mi configuración, ¡pero
+            es molesto!"'
+        - text: '"Soy daltónico, por lo que muchos colores me parecen iguales."'
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Texto grande
+        - text: Muchos colores
+        - text: Alertas de sonido
+        - text: Bloqueo por contraseña
+        - text: Opciones en blanco y negro
       CSD U4 test needs multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Entrevistar a los usuarios y hacerles preguntas directas sobre sus
+            necesidades
+        - text: Uso de eventos para cambiar una pantalla cuando el usuario pulsa un
+            determinado botón
+          correct: true
+        - text: Observar al usuario interactuar con una aplicación y registrar dónde
+            tiene problemas
+        - text: Creación de prototipos en papel y digitales para realizar pruebas
+            de usuario
+        - text: Investigar las aplicaciones actuales y ver cómo responden a las necesidades
+            de los usuarios
         questions:
-        - {}
+        - text: De las siguientes, ¿qué estrategia NO ayudará a un diseñador a comprender
+            mejor las necesidades del usuario?
       CSD U4 test needs multi_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Entrevistar a los usuarios y hacerles preguntas directas sobre sus
+            necesidades
+        - text: Uso de eventos para cambiar una pantalla cuando el usuario pulsa un
+            determinado botón
+          correct: true
+        - text: Observar al usuario interactuar con una aplicación y registrar dónde
+            tiene problemas
+        - text: Creación de prototipos en papel y digitales para realizar pruebas
+            de usuario
+        - text: Investigar las aplicaciones actuales y ver cómo responden a las necesidades
+            de los usuarios
         questions:
-        - {}
+        - text: De las siguientes, ¿qué estrategia NO ayudará a un diseñador a comprender
+            mejor las necesidades del usuario?
       CSD U4 test needs multi_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Entrevistar a los usuarios y hacerles preguntas directas sobre sus
+            necesidades
+        - text: Uso de eventos para cambiar una pantalla cuando el usuario pulsa un
+            determinado botón
+          correct: true
+        - text: Observar al usuario interactuar con una aplicación y registrar dónde
+            tiene problemas
+        - text: Creación de prototipos en papel y digitales para realizar pruebas
+            de usuario
+        - text: Investigar las aplicaciones actuales y ver cómo responden a las necesidades
+            de los usuarios
         questions:
-        - {}
+        - text: De las siguientes, ¿qué estrategia NO ayudará a un diseñador a comprender
+            mejor las necesidades del usuario?
       CSD U4 test prioritize multi:
         answers:
-        - correct: true
+        - text: Fácil, porque podrás completar más de ellos en la misma cantidad de
+            tiempo.
+          correct: true
         - {}
         - {}
         - {}
@@ -14289,7 +14544,9 @@ es-MX:
         - {}
       CSD U4 test prioritize multi_2021:
         answers:
-        - correct: true
+        - text: Fácil, porque podrás completar más de ellos en la misma cantidad de
+            tiempo.
+          correct: true
         - {}
         - {}
         - {}
@@ -14298,7 +14555,9 @@ es-MX:
         - {}
       CSD U4 test prioritize multi_2022:
         answers:
-        - correct: true
+        - text: Fácil, porque podrás completar más de ellos en la misma cantidad de
+            tiempo.
+          correct: true
         - {}
         - {}
         - {}
@@ -14307,31 +14566,58 @@ es-MX:
         - {}
       CSD U4 test testing multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Dar más pistas en la prueba de usuario para ayudar a los usuarios
+            a entender mejor los botones
+        - text: Encontrar usuarios que sepan manejar la tecnología y utilizarlos para
+            las pruebas en su lugar
+        - text: Utilizar al equipo de diseño como usuarios en las pruebas, porque
+            ellos entienden mejor la aplicación
+        - text: Rediseñar las pruebas para que los usuarios no tengan que descubrir
+            esa parte de la aplicación
+        - text: Rediseñar la aplicación para facilitar el uso de los botones, luego
+            realiza más pruebas con los usuarios
+          correct: true
         questions:
-        - {}
+        - text: Durante las pruebas de usuario de una nueva aplicación, los usuarios
+            no pudieron entender qué botones debían pulsar, a pesar de que el equipo
+            de diseño pensaba que era obvio.  ¿Cuál es la MEJOR manera en la que el
+            equipo de diseño podría resolver este problema?
       CSD U4 test testing multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Dar más pistas en la prueba de usuario para ayudar a los usuarios
+            a entender mejor los botones
+        - text: Encontrar usuarios que sepan manejar la tecnología y utilizarlos para
+            las pruebas en su lugar
+        - text: Utilizar al equipo de diseño como usuarios en las pruebas, porque
+            ellos entienden mejor la aplicación
+        - text: Rediseñar las pruebas para que los usuarios no tengan que descubrir
+            esa parte de la aplicación
+        - text: Rediseñar la aplicación para facilitar el uso de los botones, luego
+            realiza más pruebas con los usuarios
+          correct: true
         questions:
-        - {}
+        - text: Durante las pruebas de usuario de una nueva aplicación, los usuarios
+            no pudieron entender qué botones debían pulsar, a pesar de que el equipo
+            de diseño pensaba que era obvio.  ¿Cuál es la MEJOR manera en la que el
+            equipo de diseño podría resolver este problema?
       CSD U4 test testing multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Dar más pistas en la prueba de usuario para ayudar a los usuarios
+            a entender mejor los botones
+        - text: Encontrar usuarios que sepan manejar la tecnología y utilizarlos para
+            las pruebas en su lugar
+        - text: Utilizar al equipo de diseño como usuarios en las pruebas, porque
+            ellos entienden mejor la aplicación
+        - text: Rediseñar las pruebas para que los usuarios no tengan que descubrir
+            esa parte de la aplicación
+        - text: Rediseñar la aplicación para facilitar el uso de los botones, luego
+            realiza más pruebas con los usuarios
+          correct: true
         questions:
-        - {}
+        - text: Durante las pruebas de usuario de una nueva aplicación, los usuarios
+            no pudieron entender qué botones debían pulsar, a pesar de que el equipo
+            de diseño pensaba que era obvio.  ¿Cuál es la MEJOR manera en la que el
+            equipo de diseño podría resolver este problema?
       CSD U4 wireframe test multi:
         answers:
         - {}
@@ -14385,7 +14671,10 @@ es-MX:
         - {}
         - {}
         questions:
-        - {}
+        - text: En un aula se ha realizado una encuesta para decidir a dónde ir en
+            un viaje de la clase y se quiere hacer un gráfico para ver la popularidad
+            de cada opción. ¿Tendrán que hacer algún cambio en los datos antes de
+            crear el gráfico?
       CSD U5 test crosstab multi:
         answers:
         - text: perro
@@ -14542,22 +14831,32 @@ es-MX:
         title: Haz una predicción
       CSD U6 test algorithms multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: manejadores de eventos
+        - text: bucles "for" y arrays
+          correct: true
+        - text: funciones con parámetros
+        - text: getters/getProperty
+          correct: true
+        - text: conversión analógica a digital
         questions:
-        - {}
+        - text: Una clase quiere crear un programa que muestre los buenos días a todos.  Por
+            ejemplo, el programa mostrará "¡Buenos días, Pablo!", "¡Buenos días, Marta!"
+            para cada estudiante.  ¿Qué DOS herramientas de programación serán las
+            más útiles al escribir este programa?
       CSD U6 test algorithms multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: manejadores de eventos
+        - text: bucles "for" y arrays
+          correct: true
+        - text: funciones con parámetros
+        - text: getters/getProperty
+          correct: true
+        - text: conversión analógica a digital
         questions:
-        - {}
+        - text: Una clase quiere crear un programa que muestre los buenos días a todos.  Por
+            ejemplo, el programa mostrará "¡Buenos días, Pablo!", "¡Buenos días, Marta!"
+            para cada estudiante.  ¿Qué DOS herramientas de programación serán las
+            más útiles al escribir este programa?
       CSD U6 test debugging multi:
         answers:
         - correct: true
@@ -14710,7 +15009,7 @@ es-MX:
       CSD games functions practice choice_2022:
         description: Practica el uso de las funciones y aprende más sobre lo que las
           hace tan útiles.
-        display_name: Funciones Practicar
+        display_name: Práctica de Funciones
       CSD games istouching challenge choice_2022:
         description: Prueba estos nuevos bloques y desafíos con colisiones.
         display_name: Desafíos de Colisión
@@ -14740,22 +15039,22 @@ es-MX:
         description: Practica el uso de los bloques de velocidad con estas actividades.
         display_name: Práctica de Velocidad
       CSD web classes challenge_2022:
-        description: Prueba desafíos adicionales o aprende código nuevo.
-        display_name: Usando las Clases
+        description: Prueba desafíos adicionales o aprende un código nuevo.
+        display_name: Usando Clases
       CSD web classes practice_2022:
         description: Practica tus nuevas habilidades aquí.
-        display_name: Usando las Clases
+        display_name: Usando Clases
       CSD web conditionals challenge choice_2022:
         description: Prueba estos desafíos con condicionales.
         display_name: Desafíos de Condicionales
       CSD web conditionals practice choice_2022:
         description: Practica el uso de booleanos y condicionales con estas actividades.
-        display_name: Condicionales Practicar
+        display_name: Práctica de Condicionales
       CSD web draw loop challenge choice_2022:
-        description: Prueba estos desafíos de bucles de dibujo.
-        display_name: Desafíos del Bucle de Dibujo
+        description: Prueba estos desafíos de ciclos de dibujo.
+        display_name: Desafíos del Ciclo de Dibujo
       CSD web draw loop practice choice_2022:
-        description: Prueba a utilizar el bucle de dibujo con estas actividades.
+        description: Prueba a utilizar el ciclo de dibujo con estas actividades.
         display_name: Práctica
       CSD web keyboard challenge choice_2022:
         description: Prueba estos nuevos bloques y desafíos con la entrada del teclado.
@@ -14774,7 +15073,7 @@ es-MX:
         description: Añade más a tu escena de peces o crea algo nuevo.
         display_name: Desafíos de Movimiento de Sprite
       CSD web movement practice choice_2022:
-        description: Prueba a utilizar el bucle de dibujo con estas actividades.
+        description: Prueba a utilizar el ciclo de dibujo con estas actividades.
         display_name: Práctica
       CSD web text challenge choice_2022:
         description: Prueba estos nuevos bloques y desafíos.
@@ -14917,7 +15216,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Comprendo y puedo explicar conceptos de Inteligencia Artificial y
+            Aprendizaje Automático
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -14929,7 +15229,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Comprendo y puedo explicar conceptos de Inteligencia Artificial y
+            Aprendizaje Automático
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -14941,7 +15242,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Sé cómo crear aplicaciones para resolver un problema o para mi propio
+            interés
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - correct: true
@@ -14953,7 +15255,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Sé cómo crear aplicaciones para resolver un problema o para mi propio
+            interés
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -15030,32 +15333,56 @@ es-MX:
         title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
       aiml-intro-pulse-survey-q1_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Esta es la primera vez que aprendo informática
+          correct: true
+        - text: 'He realizado actividades informáticas más pequeñas (por ejemplo:
+            una hora de código), pero esta es mi primera clase más larga'
+          correct: true
+        - text: Ya he recibido clases o he hecho tutoriales en línea más largos sobre
+            informática
+          correct: true
         questions:
-        - {}
+        - text: "¿Qué experiencias previas has tenido con la informática?"
       aiml-intro-pulse-survey-q1_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Esta es la primera vez que aprendo informática
+          correct: true
+        - text: 'He realizado actividades informáticas más pequeñas (por ejemplo:
+            una hora de código), pero esta es mi primera clase más larga'
+          correct: true
+        - text: Ya he recibido clases o he hecho tutoriales en línea más largos sobre
+            informática
+          correct: true
         questions:
-        - {}
+        - text: "¿Qué experiencias previas has tenido con la informática?"
       aiml-intro-pulse-survey-q2_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Esta es la primera vez que aprendo algo sobre Inteligencia Artificial
+            y Aprendizaje Automático
+          correct: true
+        - text: 'He realizado actividades de Inteligencia Artificial más pequeñas
+            (por ejemplo: una hora de código), pero esta es mi primera clase más larga'
+          correct: true
+        - text: Ya he recibido clases o he realizado tutoriales online más largos
+            sobre Inteligencia Artificial y Aprendizaje Automático
+          correct: true
         questions:
-        - {}
+        - text: "¿Qué experiencias previas has tenido con la Inteligencia Artificial
+            y el Aprendizaje Automático?"
       aiml-intro-pulse-survey-q2_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Esta es la primera vez que aprendo algo sobre Inteligencia Artificial
+            y Aprendizaje Automático
+          correct: true
+        - text: 'He realizado actividades de Inteligencia Artificial más pequeñas
+            (por ejemplo: una hora de código), pero esta es mi primera clase más larga'
+          correct: true
+        - text: Ya he recibido clases o he realizado tutoriales online más largos
+            sobre Inteligencia Artificial y Aprendizaje Automático
+          correct: true
         questions:
-        - {}
+        - text: "¿Qué experiencias previas has tenido con la Inteligencia Artificial
+            y el Aprendizaje Automático?"
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -15067,7 +15394,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Comprendo y puedo explicar conceptos de Inteligencia Artificial y
+            Aprendizaje Automático
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
@@ -15079,7 +15407,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Comprendo y puedo explicar conceptos de Inteligencia Artificial y
+            Aprendizaje Automático
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -15091,7 +15420,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Sé cómo crear aplicaciones para resolver un problema o para mi propio
+            interés
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - correct: true
@@ -15103,7 +15433,8 @@ es-MX:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Sé cómo crear aplicaciones para resolver un problema o para mi propio
+            interés
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -20490,6 +20821,10 @@ es-MX:
         - {}
       ml-club app-choice parent_2022:
         display_name: Personaliza tu Aplicación
+        teacher_markdown: |
+          **Apoyo a los alumnos:** Estos niveles son similares a las personalizaciones que los alumnos realizaron en lecciones anteriores. Si los estudiantes se atascan, considera remitirlos a estas lecciones anteriores:
+          - Añadir múltiples pantallas para cada característica: [Lección 13 - Personalización de Aplicaciones](../../13/niveles/2)
+          - Añadir múltiples pantallas para la predicción resultante: [Lección 10 - Tarjetas modelo en App Lab](../../10/niveles/5)
       ml-customize apps-practice choice_2022:
         display_name: Practica Personalizando tus Aplicaciones
       ml-good data-isaac data_2022:
@@ -21168,8 +21503,12 @@ es-MX:
         display_name: Práctica con el Artista
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Práctica con el Artista
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con las funciones y el Artista!"
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: Práctica con el Artista
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los bucles anidados y el Artista!"
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: descripción aquí
         markdown: "# El Brote: Codifica tu propia simulación\n\n## ¡Bienvenido a Monster
@@ -21726,12 +22065,16 @@ es-MX:
             clic en "Ejecutar"?
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado al final del Curso F! Elige un proyecto para analizar."
       courseF_EOC_samples2022:
         description: Estás a punto de empezar tu proyecto final. Antes de empezar,
           dedica un tiempo a mirar los proyectos de ejemplo.
         display_name: Proyecto de fin de curso
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Exploración - Ejemplos de Programas
+        description: Vas a crear un juego de coleccionista. Antes de empezar, explora
+          los proyectos de ejemplo que aparecen a continuación. Pulsa "Terminar" cuando
+          estés listo para empezar a planificar tu propio programa.
       courseF_events_freeplay2022_2022_pilot_-2022-2:
         description: Ahora puedes utilizar lo que has aprendido para mejorar tu proyecto.
           ¡Sigue añadiendo a tu programa o empieza algo nuevo!
@@ -21758,14 +22101,23 @@ es-MX:
         - text: Lee el código y haz una predicción.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: El sprite en el que pulses se hará más grande.
+          correct: true
+          feedback: "¡Correcto! El sprite en el que pulses se hará más grande."
+        - text: El sprite en el que pulses se hará más pequeño.
+          feedback: No es correcto. El sprite en el que pulses se hará más grande.
+        - text: Todos los sprites se harán más grandes.
+          feedback: No es correcto. El sprite en el que pulses se hará más grande.
+        - text: Todos los sprites se harán más pequeños.
+          feedback: No es correcto. El sprite en el que pulses se hará más grande.
         questions:
-        - {}
+        - text: 'Haz una predicción: Después de pulsar Ejecutar, ¿qué ocurrirá cuando
+            pulses en uno de los sprites?'
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Aplicaciones del Laboratorio de Sprite
+        description: Todos estos proyectos fueron creados con el Laboratorio de Sprite.
+          Pruébalos ahora para que veas lo que es posible. Al final de este curso,
+          serás capaz de hacer tus propios proyectos como estos... ¡y más!
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: '"¡Una pizza viene enseguida!"'
@@ -21862,7 +22214,7 @@ es-MX:
           feedback: No es correcto. El número 5 se almacena en la variable y se utiliza
             cuando el sprite habla.
         questions:
-        - {}
+        - text: 'Haz una predicción: ¿Qué dirá el conejo?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: El programa imprimirá el número que se escriba.
@@ -22090,3 +22442,60 @@ es-MX:
         questions:
         - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
             ejecutes el programa?
+      CSD End of Unit Survey - Unit 1 - IntroMD_2022:
+        teacher_markdown: |
+          **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
+
+          ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD U3 - Design a Game 1 - ExampleChoice_2022:
+        description: |-
+          Ahora que tienes todos los conocimientos necesarios, ¡es el momento de crear tu propio juego!
+
+          Con un compañero, haz una lluvia de ideas para tu juego. Podéis pensar en los juegos que ya habéis visto, o revisar más ejemplos de juegos para que os den ideas.
+
+          Una vez que hayas decidido un tipo de juego con tu compañero, rellena la Guía de Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego. Pasarás los siguientes niveles creando tu juego.
+        display_name: Crea tu propio juego
+        markdown: |
+          Ahora que tienes todos los conocimientos necesarios, ¡es el momento de crear tu propio juego!
+
+          Con un compañero, haz una lluvia de ideas para tu juego. Podéis pensar en los juegos que ya habéis visto, o consultar más ejemplos de juegos para que os den ideas.
+
+          Una vez que hayas decidido un tipo de juego con tu compañero, rellena la Guía de Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego. Pasarás los siguientes niveles creando tu juego.
+      CSD U3 - Interactive Card - ExampleChoice_2022:
+        description: En los próximos niveles, completarás tu propia tarjeta interactiva.
+          Aquí tienes algunos ejemplos para darte algunas ideas. No olvides mirar
+          el código para ver cómo funcionan.
+        display_name: Tu Tarjeta Interactiva
+      Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
+        teacher_markdown: |
+          **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una encuesta rápida para el profesor
+
+          ## [Pulsa aquí para ver la encuesta del profesorado](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
+      Student End of Unit Survey - Intro+TeacherMD_csd3-2022:
+        teacher_markdown: |
+          **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
+
+          ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)
+      Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
+        teacher_markdown: |
+          **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
+
+          ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
+        teacher_markdown: |-
+          **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
+
+          ## [Pulsa aquí para ver la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+      Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
+        teacher_markdown: |
+          **Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor.
+
+          ## [Pulsa aquí para ver la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: "¡Ahora puedes usar lo que has aprendido para hacer lo que quieras!
+          ¡Crea un programa interactivo con muchos sprites!"
+        display_name: Montones de Sprites - Juego Libre
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con eventos y grupos de sprites!"
+        display_name: Montones de Sprites - Práctica

@@ -61,7 +61,11 @@
             "name": "нарисовать правую ногу"
           },
           "draw body and arms": {
-            "name": "нарисовать туловище и руки"
+            "name": "нарисовать туловище и руки",
+            "parameters": {
+              "armlength": "armlength",
+              "bodylength": "bodylength"
+            }
           },
           "draw a head": {
             "name": "нарисовать голову"
@@ -336,7 +340,8 @@
           "get 5 nectar": {
             "name": "собрать нектар х5",
             "parameters": {
-              "direction": "направление"
+              "direction": "направление",
+              "nectar units": "единицы нектара"
             }
           }
         },
@@ -461,7 +466,8 @@
           "get nectar": {
             "name": "собрать нектар",
             "parameters": {
-              "counter": "счетчик"
+              "counter": "счетчик",
+              "dir": "dir"
             }
           }
         },
@@ -470,7 +476,10 @@
             "name": "нарисовать квадрат 20"
           },
           "draw octagons": {
-            "name": "нарисовать восьмиугольники"
+            "name": "нарисовать восьмиугольники",
+            "parameters": {
+              "numOctagons": "numOctagons"
+            }
           },
           "draw an octagon": {
             "name": "нарисовать восьмиугольник"
@@ -599,7 +608,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "проверить догадку"
+            "name": "проверить догадку",
+            "parameters": {
+              "theGuess": "theGuess"
+            }
           }
         },
         "InspirationalArtwork": {
