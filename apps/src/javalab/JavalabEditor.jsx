@@ -527,7 +527,7 @@ class JavalabEditor extends React.Component {
     let newTabs = [...orderedTabKeys];
     newTabs.push(newTabKey);
 
-    // add new file to sources
+    // add new file to sources - newTabIndex is the new file order as displayed in the editor
     setSource(filename, fileContents, newTabIndex);
     projectChanged();
     setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
