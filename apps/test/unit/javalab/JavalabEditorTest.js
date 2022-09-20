@@ -525,8 +525,6 @@ describe('Java Lab Editor Test', () => {
         store.dispatch(setOrderedTabKeys(['file-2', 'file-0', 'file-1']));
         store.dispatch(sourceFileOrderUpdated());
         const sources = store.getState().javalab.sources;
-        console.log('sources in failed test');
-        console.log(sources);
         const file0 = sources['ClassName1.java'];
         const file1 = sources['ClassName2.java'];
         const file2 = sources['ClassName3.java'];
@@ -778,6 +776,48 @@ describe('Java Lab Editor Test', () => {
         expect(javalabEditor.props.activeTabKey).to.be.null;
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({});
+      });
+
+      it('updates sources when file is deleted', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          fileToDelete: 'file-0'
+        });
+        store.dispatch(openEditorDialog(JavalabEditorDialog.DELETE_FILE));
+        store.dispatch(
+          setAllSourcesAndFileMetadata({
+            'ClassName1.java': {
+              text: '',
+              order: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'ClassName2.java': {
+              text: '',
+              order: 1,
+              isVisible: true,
+              isValidation: false
+            },
+            'ClassName3.java': {
+              text: '',
+              order: 2,
+              isVisible: true,
+              isValidation: false
+            }
+          })
+        );
+        javalabEditor.onDeleteFile();
+        store.dispatch(sourceFileOrderUpdated());
+        const sources = store.getState().javalab.sources;
+        const file1 = sources['ClassName2.java'];
+        const file2 = sources['ClassName3.java'];
+
+        expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
+        expect(file1.order).to.equal(0);
+        expect(file2.order).to.equal(1);
       });
     });
 

@@ -23,11 +23,11 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   let unorderedTabKeys = [];
   // sources contains file information as key-value pairs.
   // The key is the file name such as 'MyClass.java'.
-  // The value is an file object with the keys: text (source code),
+  // The value is a file object with the keys: text (source code),
   // order (order of the file tab in orderedTabs from 0 to number of files - 1),
   // isVisible, and isValidation.
-  // orderOfFiles will contain the 'order' of each file as they are assigned their
-  // tabKey names (such as 'file-0', 'file-1') for fileMetadata
+  // The orderOfFiles array will contain the 'order' of each file as they are assigned
+  // their tabKey names (such as 'file-0', 'file-1') which is stored in fileMetadata
   let orderOfFiles = [];
   let fileIndex = 0; // may be different from index below due to hidden files
   let isValid = true;
@@ -37,6 +37,7 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
       fileMetadata[tabKey] = file;
       unorderedTabKeys.push(tabKey);
       let order = sources[file].order;
+      // files that are stored may not currently have an order assigned so that order is undefined
       if (Number.isInteger(order)) {
         orderOfFiles.push(sources[file].order);
       } else {
