@@ -273,7 +273,7 @@ class DeleteAccountsHelper
 
   def clean_and_destroy_code_reviews(user_id)
     # anonymize notes the user wrote
-    comments_written = CodeReviewNote.where(commenter_id: user_id)
+    comments_written = CodeReviewComment.where(commenter_id: user_id)
     comments_written_count = comments_written.count
     comments_written.each do |comment|
       comment.comment = nil
@@ -281,7 +281,7 @@ class DeleteAccountsHelper
       comment.save!
     end
     comments_written.destroy_all
-    @log.puts "Cleared and deleted #{comments_written_count} CodeReviewNote" if comments_written_count > 0
+    @log.puts "Cleared and deleted #{comments_written_count} CodeReviewComment" if comments_written_count > 0
     # Clear comments and soft delete any code reviews for the user.
     code_reviews = CodeReview.where(user_id: user_id)
     code_reviews_count = code_reviews.count
