@@ -3,14 +3,28 @@ import PropTypes from 'prop-types';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const DataDocFormEditor = props => {
   const {dataDocKey, originalDataDocName, originalDataDocContent} = props;
   const [dataDocContent, setDataDocContent] = useState(originalDataDocContent);
   const [dataDocName, setDataDocName] = useState(originalDataDocName);
 
+  const save = () => {
+    $.ajax({
+      url: '/data_docs/' + dataDocKey,
+      method: 'PUT',
+      data: {
+        name: dataDocName,
+        content: dataDocContent
+      }
+    }).done(() => {
+      navigateToHref('/data_docs/' + dataDocKey);
+    });
+  };
+
   return (
-    <form action="/data_docs" method="post">
+    <div>
       <RailsAuthenticityToken />
       <h1>Edit Data Doc</h1>
       <h2>
@@ -51,10 +65,10 @@ const DataDocFormEditor = props => {
         markdown={dataDocContent || ''}
       />
       <br />
-      <button className="btn btn-primary" type="submit">
+      <button className="btn btn-primary" type="submit" onClick={save}>
         Save Changes
       </button>
-    </form>
+    </div>
   );
 };
 

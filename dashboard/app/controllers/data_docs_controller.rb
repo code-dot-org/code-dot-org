@@ -47,11 +47,11 @@ class DataDocsController < ApplicationController
 
   # PATCH /data_docs/:key
   def update
+    @data_doc = DataDoc.find_by(key: params[:key])
     # ensure data_doc key is immutable
     new_attributes = data_doc_params.except(:key)
-
     @data_doc.update!(new_attributes)
-    @data_doc.write_serialization
+
     render json: @data_doc.summarize_for_edit.to_json
   end
 
