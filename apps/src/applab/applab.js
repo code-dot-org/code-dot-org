@@ -392,6 +392,7 @@ Applab.init = function(config) {
   Applab.generatedProperties = {
     ...config.initialGeneratedProperties
   };
+  //remove
   getStore().dispatch(
     setExportGeneratedProperties(Applab.generatedProperties.export)
   );
@@ -655,6 +656,7 @@ Applab.init = function(config) {
     designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
   }.bind(this);
 
+  // get rid of expo page constants
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
     playspacePhoneFrame,
@@ -1018,6 +1020,7 @@ Applab.exportApp = function() {
   );
 };
 
+// remove
 Applab.setAndroidExportProps = function(props) {
   // Spread the previous object so changes here will always fail shallow
   // compare and trigger react prop changes

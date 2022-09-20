@@ -571,18 +571,17 @@ export default class P5Lab {
   }
 
   /**
-   * Export the project for web or use within Expo.
-   * @param {Object} expoOpts
+   * Export the project for web.
    */
-  async exportApp(expoOpts) {
+  async exportApp() {
     await this.whenAnimationsAreReady();
     return this.exportAppWithAnimations(
       project.getCurrentName() || 'my-app',
-      getStore().getState().animationList,
-      expoOpts
+      getStore().getState().animationList
     );
   }
 
+  // remove
   setAndroidExportProps(props) {
     // Spread the previous object so changes here will always fail shallow
     // compare and trigger react prop changes
@@ -601,24 +600,17 @@ export default class P5Lab {
    * Export the project for web or use within Expo.
    * @param {string} appName
    * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
-   * @param {Object} expoOpts
    */
-  exportAppWithAnimations(appName, animationList, expoOpts) {
+  exportAppWithAnimations(appName, animationList) {
     const {pauseAnimationsByDefault} = this.level;
     const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(
       getStore().getState()
     );
-    return Exporter.exportApp(
-      appName,
-      this.studioApp_.editor.getValue(),
-      {
-        animationList,
-        allAnimationsSingleFrame,
-        pauseAnimationsByDefault
-      },
-      expoOpts,
-      this.studioApp_.config
-    );
+    return Exporter.exportApp(appName, this.studioApp_.editor.getValue(), {
+      animationList,
+      allAnimationsSingleFrame,
+      pauseAnimationsByDefault
+    });
   }
 
   /**
