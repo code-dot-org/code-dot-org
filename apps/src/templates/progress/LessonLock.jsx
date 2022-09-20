@@ -8,7 +8,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
 
-const LessonLock = ({unitId, lessonId}) => {
+const LessonLock = ({unitId, lessonId, isHidden}) => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
@@ -27,6 +27,7 @@ const LessonLock = ({unitId, lessonId}) => {
         <LessonLockDialog
           unitId={unitId}
           lessonId={lessonId}
+          lessonIsHidden={isHidden}
           handleClose={() => setDialogOpen(false)}
         />
       )}
@@ -36,7 +37,8 @@ const LessonLock = ({unitId, lessonId}) => {
 
 LessonLock.propTypes = {
   unitId: PropTypes.number.isRequired,
-  lessonId: PropTypes.number.isRequired
+  lessonId: PropTypes.number.isRequired,
+  isHidden: PropTypes.bool
 };
 
 const styles = {

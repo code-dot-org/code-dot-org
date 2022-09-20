@@ -5,9 +5,14 @@ import CertificateBatch from '@cdo/apps/templates/certificates/CertificateBatch'
 
 $(document).ready(function() {
   const certificateData = getScriptData('certificate');
-  const {courseName, imageUrl} = certificateData;
+  const {courseName, courseTitle, studentNames, imageUrl} = certificateData;
   ReactDOM.render(
-    <CertificateBatch courseName={courseName} imageUrl={imageUrl} />,
+    <CertificateBatch
+      courseName={courseName}
+      courseTitle={courseTitle}
+      initialStudentNames={studentNames}
+      imageUrl={imageUrl}
+    />,
     document.getElementById('certificate-batch')
   );
 });
