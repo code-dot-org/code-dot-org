@@ -77,11 +77,6 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import {
-  expoGenerateApk,
-  expoCheckApkBuild,
-  expoCancelApkBuild
-} from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
@@ -656,6 +651,7 @@ Applab.init = function(config) {
     designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
   }.bind(this);
 
+  // remove exposession, allowexportexpo
   // get rid of expo page constants
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
@@ -665,21 +661,6 @@ Applab.init = function(config) {
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
-    expoGenerateApk: expoGenerateApk.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
-    expoCheckApkBuild: expoCheckApkBuild.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
-    expoCancelApkBuild: expoCancelApkBuild.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode,
@@ -1017,21 +998,6 @@ Applab.exportApp = function() {
     project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
     html
-  );
-};
-
-// remove
-Applab.setAndroidExportProps = function(props) {
-  // Spread the previous object so changes here will always fail shallow
-  // compare and trigger react prop changes
-  Applab.generatedProperties.export = {
-    ...Applab.generatedProperties.export,
-    android: props
-  };
-  project.projectChanged();
-  project.saveIfSourcesChanged();
-  getStore().dispatch(
-    setExportGeneratedProperties(Applab.generatedProperties.export)
   );
 };
 
