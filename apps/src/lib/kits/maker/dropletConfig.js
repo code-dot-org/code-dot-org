@@ -21,7 +21,7 @@ export default config;
 
 const MAKER_CATEGORY = 'Maker';
 config.MAKER_CATEGORY = MAKER_CATEGORY;
-export const CIRCUIT_CATEGORY = 'Circuit';
+const CIRCUIT_CATEGORY = 'Circuit';
 const MICROBIT_CATEGORY = 'micro:bit';
 
 const emptySocketPrefix = '__.';
