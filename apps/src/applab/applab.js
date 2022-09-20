@@ -1005,11 +1005,7 @@ Applab.render = function() {
   );
 };
 
-/**
- * Export the project for web or use within Expo.
- * @param {Object} expoOpts
- */
-Applab.exportApp = function(expoOpts) {
+Applab.exportApp = function() {
   // Run, grab the html from divApplab, then reset:
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
@@ -1018,9 +1014,7 @@ Applab.exportApp = function(expoOpts) {
   return Exporter.exportApp(
     project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
-    html,
-    expoOpts,
-    studioApp().config
+    html
   );
 };
 
