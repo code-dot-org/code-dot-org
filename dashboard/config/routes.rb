@@ -475,6 +475,7 @@ Dashboard::Application.routes.draw do
 
     get '/certificates/blank'
     get '/certificates/batch'
+    post '/certificates/batch'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
@@ -994,7 +995,7 @@ Dashboard::Application.routes.draw do
       get :peers_with_open_reviews, on: :collection
     end
 
-    resources :code_review_notes, only: [:create, :update, :destroy]
+    resources :code_review_comments, only: [:create, :update, :destroy]
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 

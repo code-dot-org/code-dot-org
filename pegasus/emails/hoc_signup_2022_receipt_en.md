@@ -25,7 +25,7 @@ You can also help recruit more people from your school and community by [sending
 [Search our volunteer map](https://<%= codedotorg %>/volunteer/local) to find volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ### 4. Check-out Hour of Code swag
-Swag is a great way to get students excited about the Hour of Code and reward them for completing their activity. At the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220), you can [order posters](https://www.amazon.com/dp/B07J6T18DH?m=A2ZEA2ORKPFEVK) with inspirational role models, Hour of Code kits, fun stickers, and more! But hurry, supplies are limited.
+Swag is a great way to get students excited about the Hour of Code and reward them for completing their activity. At the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220), you can order Hour of Code swag kits, fun stickers, buttons, temporary tattoos, and more. But hurry, supplies are limited.
 
 ### Encourage kids to continue learning 
 <% if form.data["hoc_event_country_s"] == 'US' %> An Hour of Code is just the beginning! We hear over and over again how much students love the Hour of Code and discover a newfound interest in computer science. Encourage them to continue learning. Whether you’re an administrator, teacher, or advocate, we have professional learning, curriculum, and resources to help you [bring computer science classes to your school](https://<%= codedotorg %>/yourschool) or expand your offerings.  
