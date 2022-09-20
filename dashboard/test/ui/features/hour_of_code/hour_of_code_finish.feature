@@ -87,6 +87,11 @@ Scenario: pegasus congrats page redirects to dashboard congrats page
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
 
+Scenario: pegasus batch page redirects to dashboard batch page
+  When I am on "http://code.org/certificates"
+  And I wait until current URL contains "http://studio.code.org/certificates/batch"
+  And I wait to see element with ID "certificate-batch"
+
 @eyes
 Scenario: congrats certificate pages
   Given I am on "http://studio.code.org/congrats"
