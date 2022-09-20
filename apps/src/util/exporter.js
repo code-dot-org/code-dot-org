@@ -1,70 +1,17 @@
 /**
  * @fileoverview Utility functions shared by applab and gamelab exporters.
  */
+// REMOVE EXPO DIR
+// remove snack dependencies, maybe one more? look at original commit
 // delete a bunch of stuff from this file
-// these no longer used by applab
-//   createPackageFilesFromZip,
-//   createPackageFilesFromExpoFiles,
-//   createSnackSession,
-//   getEnvironmentPrefix,
 import $ from 'jquery';
-import {SnackSession} from 'snack-sdk';
 import {buildAsync, cancelBuild} from 'snack-build';
 import project from '@cdo/apps/code-studio/initApp/project';
 import download from '../assetManagement/download';
 import {EXPO_SESSION_SECRET} from '../constants';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
-import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
-import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 import {EXPO_SDK_VERSION, PLATFORM_ANDROID} from './exporterConstants';
-
-const EXPO_REACT_NATIVE_WEBVIEW_VERSION = '7.4.3';
-
-export function createPackageFilesFromZip(zip, appName) {
-  const moduleList = [];
-  zip.folder(appName + '/assets').forEach((fileName, file) => {
-    if (!file.dir) {
-      moduleList.push({fileName});
-    }
-  });
-  const entries = moduleList.map(module =>
-    exportExpoPackagedFilesEntryEjs({module})
-  );
-  return exportExpoPackagedFilesEjs({entries});
-}
-
-export function createPackageFilesFromExpoFiles(files) {
-  const moduleList = [];
-  const assetPrefix = 'assets/';
-  const assetPrefixLength = assetPrefix.length;
-  for (const fileName in files) {
-    if (fileName.indexOf(assetPrefix) !== 0) {
-      continue;
-    }
-    const relativePath = fileName.substring(assetPrefixLength);
-    moduleList.push({fileName: relativePath});
-  }
-  const entries = moduleList.map(module =>
-    exportExpoPackagedFilesEntryEjs({module})
-  );
-  return exportExpoPackagedFilesEjs({entries});
-}
-
-export function createSnackSession(files, expoSession) {
-  return new SnackSession({
-    sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
-    files,
-    name: `project-${project.getCurrentId()}`,
-    sdkVersion: EXPO_SDK_VERSION,
-    dependencies: {
-      'react-native-webview': {version: EXPO_REACT_NATIVE_WEBVIEW_VERSION}
-    },
-    user: {
-      sessionSecret: expoSession || EXPO_SESSION_SECRET
-    }
-  });
-}
 
 async function expoBuildOrCheckApk(options, mode, sessionSecret) {
   const {iconUri, splashImageUri, apkBuildId} = options;
@@ -265,30 +212,6 @@ export function rewriteAssetUrls(appAssets, data) {
       `"${assetToDownload.rootRelativePath}"`
     );
   }, data);
-}
-
-export function getEnvironmentPrefix() {
-  const {hostname} = window.location;
-  if (hostname.includes('adhoc')) {
-    // As adhoc hostnames may include other keywords, check it first.
-    return 'cdo-adhoc';
-  }
-  if (hostname.includes('test')) {
-    return 'cdo-test';
-  }
-  if (hostname.includes('levelbuilder')) {
-    return 'cdo-levelbuilder';
-  }
-  if (hostname.includes('staging')) {
-    return 'cdo-staging';
-  }
-  if (hostname.includes('localhost')) {
-    return 'cdo-development';
-  }
-  if (hostname.includes('code.org')) {
-    return 'cdo';
-  }
-  return 'cdo-unknown';
 }
 
 // Returns a Deferred which resolves with the webpack runtime, or rejects
