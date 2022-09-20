@@ -122,18 +122,11 @@ social:
             %button.ctabutton-white
               = hoc_s(:hoc_live_learn_more)
 
-
-
   -# Description
-
-  #description.row
-    .col-xs-1
-      &nbsp;
-    .col-xs-10.hoc-description
-      .number-served= hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-      = hoc_s(:front_intro_default_2)
-      %br
-      = view :hoc_events_counter
+  %section.hoc-description
+    %h1.number-served=hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+    %h2=hoc_s(:front_intro_default_2)
+    %h2=view :hoc_events_counter
 
   -# Map
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
@@ -147,7 +140,6 @@ social:
           %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
         .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
 
-
   -# Join the movement
   %section.join-the-movement
     %h1=hoc_s(:hoc_homepage_join_the_movement_heading)
@@ -157,7 +149,7 @@ social:
     -else
       = view :home_signup, hoc_mode: hoc_mode
 
--# What is the HoC?
+-# What is HoC?
 %section.what-is-hoc
   .wrapper
     %h1=hoc_s(:front_what_is_hoc)
