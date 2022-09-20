@@ -1,7 +1,12 @@
 /**
  * @fileoverview Utility functions shared by applab and gamelab exporters.
  */
-
+// delete a bunch of stuff from this file
+// these no longer used by applab
+//   createPackageFilesFromZip,
+//   createPackageFilesFromExpoFiles,
+//   createSnackSession,
+//   getEnvironmentPrefix,
 import $ from 'jquery';
 import {SnackSession} from 'snack-sdk';
 import {buildAsync, cancelBuild} from 'snack-build';
