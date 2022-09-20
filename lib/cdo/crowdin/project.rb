@@ -10,11 +10,10 @@ module Crowdin
     attr_reader :id
 
     # @param project_identifier [String]
-    # @param api_key [String]
     # @param api_token [String]
     # @see https://crowdin.com/project/codeorg/integrations/api for an example of
     #  how to retrieve these values for the "code.org" project
-    def initialize(project_identifier, api_key, api_token)
+    def initialize(project_identifier, api_token)
       @id = project_identifier
       @crowdin_client = Crowdin::Client.new do |config|
         config.api_token = api_token
