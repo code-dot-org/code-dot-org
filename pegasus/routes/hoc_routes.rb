@@ -13,13 +13,6 @@ get '/:short_code' do |short_code|
   launch_tutorial(tutorial)
 end
 
-get '/v2/hoc/tutorial-metrics.json' do
-  only_for 'code.org'
-  forbidden! unless dashboard_user_helper&.admin?
-  content_type :json
-  JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
-end
-
 # Link from Hour of Code 2014 employee engagement pages
 get '/api/hour/begin_company/:company' do |company|
   redirect "/learn?company=#{company}"

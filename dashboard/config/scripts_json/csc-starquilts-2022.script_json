@@ -2,18 +2,20 @@
   "script": {
     "name": "csc-starquilts-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSC",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2022-08-08 20:55:07 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-09-13 14:48:02 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -37,7 +39,7 @@
   "lessons": [
     {
       "key": "Nat American Star Quilts",
-      "name": "Native American Star Quilts",
+      "name": "Native American Star Quilts (beta)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -56,7 +58,7 @@
     },
     {
       "key": "Getting Started with The Artist",
-      "name": "Getting Started with The Artist",
+      "name": "Getting Started with The Artist (beta)",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -74,7 +76,7 @@
     },
     {
       "key": "Code Your Star Quilt",
-      "name": "Code Your Star Quilt",
+      "name": "Code Your Star Quilt (beta)",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -359,8 +361,24 @@
       }
     },
     {
-      "key": "b61c5a27-7f2a-4284-b831-fb161aafe98e",
+      "key": "4635b747-8c61-497c-ae91-2000cb6ac3c9",
       "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4635b747-8c61-497c-ae91-2000cb6ac3c9",
+        "lesson_activity.key": "dfc93745-78d5-4554-a070-7cc054612a60"
+      }
+    },
+    {
+      "key": "b61c5a27-7f2a-4284-b831-fb161aafe98e",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them follow the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to draw a 6-pointed star. It is a very simple shape that looks like an asterisk. Students will draw a line, jump back to the middle, turn the artist and draw another line. Then they learn how to loop the Artist to repeat a chunk of the code. \n\n- **Level 2**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 3**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 4**: Students will need to repeat the code until they have a 6 point star. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n",
         "progression_name": "Skill Building"
@@ -372,7 +390,7 @@
     },
     {
       "key": "7a919955-778a-4227-9dbf-81003f5223f0",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Repeat Blocks” video\n\n- **Level 5**: Students will be watching a video about looping here. The video is also provided in the slides. Decide if you would like to have students watch the video independently, or regroup the class and watch the video together.\n",
         "progression_name": "Video - Repeat Blocks"
@@ -384,7 +402,7 @@
     },
     {
       "key": "e25a067b-d288-4513-8152-3da953466849",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Video"
       },
@@ -395,7 +413,7 @@
     },
     {
       "key": "cd37c7fa-ef01-4d7e-976f-e8c27219d0b5",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Goal:** The next few levels mirror the first levels but with increased complexity. \n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n\n",
         "progression_name": "Skill Building"
@@ -407,7 +425,7 @@
     },
     {
       "key": "3d7bdc6b-47e3-4abe-92e2-1d262b893dd7",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
         "progression_name": "Free Play"
@@ -418,18 +436,18 @@
       }
     },
     {
-      "key": "4635b747-8c61-497c-ae91-2000cb6ac3c9",
-      "position": 7,
+      "key": "8df2efb3-7649-47de-a856-39a81515c9f1",
+      "position": 8,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
+            "markdown": "Free Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be used as assessments if there is a rubric attached to the project."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4635b747-8c61-497c-ae91-2000cb6ac3c9",
+        "activity_section.key": "8df2efb3-7649-47de-a856-39a81515c9f1",
         "lesson_activity.key": "dfc93745-78d5-4554-a070-7cc054612a60"
       }
     },
@@ -546,11 +564,27 @@
       "key": "b5ad76d1-2fe5-4e4e-b889-32cb0a9b2348",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play\" slide\n\n**Level 9**: Early finishers can move on to Level 9 and free play. This is a great opportunity for students to connect their finished projects to the purpose of Star Quilts in Native American culture. Have students consider choosing specific colors that would represent the recipient of their gift if they were making a real quilt.\n\n**Overview**: This is a free play level for students to make an awesome Star Quilt. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles, borders, and loops to make a unique star shape. Star Quilts are very special gifts; when designing your Star Quilt think of someone special and select meaningful colors.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play\" slide\n\n**Level 9**: This is a free play level for students to apply the skills they’ve learned in the previous levels and make an awesome Star Quilt. ",
         "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "b5ad76d1-2fe5-4e4e-b889-32cb0a9b2348",
+        "lesson_activity.key": "b3e70b5a-4465-4c1e-b881-21cd877e7d06"
+      }
+    },
+    {
+      "key": "c467981b-d8d1-48d6-bba3-c4a928fa756e",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The free play level is a great opportunity for students to connect their finished projects to the purpose of Star Quilts in Native American culture. Star Quilts are very special gifts; when designing their Star Quilts have students think of someone special and select meaningful colors. Students can experiment with colors, angles, borders, and loops to make a unique star shape."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c467981b-d8d1-48d6-bba3-c4a928fa756e",
         "lesson_activity.key": "b3e70b5a-4465-4c1e-b881-21cd877e7d06"
       }
     },

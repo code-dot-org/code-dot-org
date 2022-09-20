@@ -2,18 +2,20 @@
   "script": {
     "name": "csc-fables-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSC",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-08-30 15:27:12 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-09-13 15:11:05 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -37,7 +39,7 @@
   "lessons": [
     {
       "key": "Hello World CSC",
-      "name": "Hello World of Stories",
+      "name": "Hello World of Stories (beta)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -56,14 +58,14 @@
     },
     {
       "key": "lesson-5",
-      "name": "Stories Around the World",
+      "name": "Stories Around the World (beta)",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson, students will compare and contrast similar themes, topics, and patterns of events in traditional literature from different cultures in order to begin writing and coding their own short stories.",
-        "preparation": "- Review the [Fables Guide](https://docs.google.com/document/d/1Xl78e2Ii7eW2fp-xaehWCjFKos0cz6mnFRTvfd8Hpqg/template/preview) document\n- Choose a theme to focus on \n- Choose stories from within the theme for students to read for this lesson\n",
+        "preparation": "- Review the [Short Stories Guide](https://docs.google.com/document/d/1IPCkvjGVEN568dWD3tA-4oePrC8ylkaYD-F8oiSkfd0/template/preview) document\n- Choose a theme to focus on \n- Choose stories from within the theme for students to read for this lesson\n",
         "purpose": "Students will begin to compare and contrast common topics and elements of short stories (fairy tales, folklore, myths, and fables). Students can identify similar themes, topics, and patterns of events in traditional literature from across different cultures. Students will use their knowledge of story patterns to code and program their own short story scene. "
       },
       "seeding_key": {
@@ -74,14 +76,14 @@
     },
     {
       "key": "Plan Your Fable",
-      "name": "Plan Your Story",
+      "name": "Plan Your Story (beta)",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, students will ​​recount short stories they have previously learned about, including fables, folktales, and myths from diverse cultures and determine the morals the stories taught. Students will then plan a simple computer program that uses key details to retell a short story of their choice with code. Students will write a detailed plan in order to begin coding their program in the next lesson. ",
-        "preparation": "- Review the lesson slides.\n- Review the [Fables Guide](https://docs.google.com/document/d/1Xl78e2Ii7eW2fp-xaehWCjFKos0cz6mnFRTvfd8Hpqg/template/preview) document\n- Choose a common lesson/moral for your students to write about. (ex: hard work pays off)\n- Have students read and discuss stories prior to this module. ",
+        "preparation": "- Review the lesson slides.\n- Review the [Short Stories Guide](https://docs.google.com/document/d/1IPCkvjGVEN568dWD3tA-4oePrC8ylkaYD-F8oiSkfd0/template/preview) document\n- Choose a common lesson/moral for your students to write about. (ex: hard work pays off)\n- Have students read and discuss stories prior to this module. ",
         "purpose": "Students will use their knowledge of similar themes and topics and patterns of events in traditional literature from different cultures. Students will use this knowledge in order to begin crafting their own story. Students are able to use knowledge of the patterns of events in traditional literature from different cultures to begin crafting their own story. "
       },
       "seeding_key": {
@@ -92,14 +94,14 @@
     },
     {
       "key": "Code Your Fable",
-      "name": "Code Your Story",
+      "name": "Code Your Story (beta)",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students will use their planning sheets and knowledge of short story structures. They will program a retelling of a short story to describe the moral and demonstrate how it is conveyed through key details in the text.",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Review the Fables Guide.\n- It may be helpful to have students choose a fable to retell before this activity. \n",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Review the [Short Stories Guide](https://docs.google.com/document/d/1IPCkvjGVEN568dWD3tA-4oePrC8ylkaYD-F8oiSkfd0/template/preview) document\n- It may be helpful to have students choose a short story to retell before this activity. \n",
         "purpose": "Students will preview an example project to examine the characters and what they say or think. Students will be able to discuss how a character’s actions affect the key details in the story. Students will then retell their own short story through a set of project building levels."
       },
       "seeding_key": {
@@ -110,7 +112,7 @@
     },
     {
       "key": "Share Your Fable",
-      "name": "Share Your Story",
+      "name": "Share Your Story (beta)",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -118,7 +120,7 @@
       "properties": {
         "overview": "In this lesson, students will have time to reflect on their projects and share them with their peers. Students should work with their peers to debug any errors in their code. They are encouraged to  make connections to peers who have similar problems in their code, how they solved those problems, or see different ways to program. ",
         "preparation": "- Print [Project Reflection](https://docs.google.com/document/d/1ZA4EsDmNolOQDn0K-p1CzT4Mn9CnBigTGfE5ZijKu0g/template/preview) handouts for each student\n- Review the activity prior to starting \n",
-        "purpose": "Students will take on varying roles to collaborate with peers during the review stage of programming their fable. Students will describe choices made during programming, offer feedback to students, and reflect upon what they learned in the module. "
+        "purpose": "Students will take on varying roles to collaborate with peers during the review stage of programming their short story. Students will describe choices made during programming, offer feedback to students, and reflect upon what they learned in the module. "
       },
       "seeding_key": {
         "lesson.key": "Share Your Fable",
@@ -488,8 +490,24 @@
       }
     },
     {
-      "key": "d21b305e-1b4d-41e2-85f5-27bde527b4e1",
+      "key": "16409c09-60fc-4de2-aacf-c1930e45c58f",
       "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Free Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be used as assessments if there is a rubric attached to the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16409c09-60fc-4de2-aacf-c1930e45c58f",
+        "lesson_activity.key": "037fbccb-3d45-49b6-9250-5693b2f2a064"
+      }
+    },
+    {
+      "key": "d21b305e-1b4d-41e2-85f5-27bde527b4e1",
+      "position": 9,
       "properties": {
         "description": "If a group or individual finishes early, encourage them to continue building a project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your project?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- What should your sprites do when they are clicked?\n- Invite students to share ideas and to learn from each other. They can also attempt another tutorial by visiting [code.org/learn](https://code.org/learn).\n"
       },
@@ -514,7 +532,7 @@
       "key": "2f8a5c70-23e2-4225-8bda-f0cfeb2a21fe",
       "position": 1,
       "properties": {
-        "description": "**Do This**: Before the lesson, choose a theme to focus on. For example, “truth prevails over lies”. Gather and plan to read aloud one story as a class and also 4-5 additional stories for this activity. All stories should fall under the same theme. You can choose from our Fables Guide or curate your own stories. Be sure to identify the moral of each story and the scene where the moral/lesson is learned before reading.\n"
+        "description": "**Do This**: Before the lesson, choose a theme to focus on. For example, “truth prevails over lies”. Gather and plan to read aloud one story as a class and also 4-5 additional stories for this activity. All stories should fall under the same theme. You can choose from our Short Stories Guide or curate your own stories. Be sure to identify the moral of each story and the scene where the moral/lesson is learned before reading.\n"
       },
       "seeding_key": {
         "activity_section.key": "2f8a5c70-23e2-4225-8bda-f0cfeb2a21fe",
@@ -666,7 +684,7 @@
       "key": "0892aece-69c5-4662-8aff-4778a049b91e",
       "position": 4,
       "properties": {
-        "description": "In most fables, it’s the characters actions that lead to the **moral**. When we create our own retelling of a short story, we will also have to think carefully about scenes or key details that convey the moral.",
+        "description": "In most short stories, it’s the characters actions that lead to the **moral**. When we create our own retelling of a short story, we will also have to think carefully about scenes or key details that convey the moral.",
         "duration": "5",
         "name": "What is a Moral",
         "remarks": true
@@ -718,7 +736,7 @@
       "key": "0990f9cd-4af6-436f-b963-412453bcc721",
       "position": 8,
       "properties": {
-        "description": "Now that we have reviewed fables and their purpose, we are going to start planning to retell our own. It is important to think about the moral of the story, and the character’s traits as we begin to adapt our short story.",
+        "description": "Now that we have reviewed short stories\n\n\n\n and their purpose, we are going to start planning to retell our own. It is important to think about the moral of the story, and the character’s traits as we begin to adapt our short story.",
         "remarks": true
       },
       "seeding_key": {
@@ -746,7 +764,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Retelling Your Own Short Story**: The Fables Guide has been supplied with several existing short stories in the public domain. However, you may decide to add other stories to this list based on your students' interests and cultures. In particular, if you heard examples of stories that students shared in the first lesson, you could add those to this reference guide for students to choose from."
+            "markdown": "**Retelling Your Own Short Story**: The [Short Stories Guide](https://docs.google.com/document/d/1IPCkvjGVEN568dWD3tA-4oePrC8ylkaYD-F8oiSkfd0/template/preview) has been supplied with several existing short stories in the public domain. However, you may decide to add other stories to this list based on your students' interests and cultures. In particular, if you heard examples of stories that students shared in the first lesson, you could add those to this reference guide for students to choose from."
           }
         ]
       },
@@ -855,7 +873,7 @@
       "key": "4877f407-4669-4fc8-b15d-d19a77eb135d",
       "position": 1,
       "properties": {
-        "description": "Today, we are going to use our plan from the previous class to code our remixed fables. Before we get started, let’s review what we talked about in the previous class.",
+        "description": "Today, we are going to use our plan from the previous class to code our remixed short stories. Before we get started, let’s review what we talked about in the previous class.",
         "remarks": true
       },
       "seeding_key": {
@@ -867,7 +885,7 @@
       "key": "dd181ec2-4915-46e6-b164-51bb4f593fbf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Match - Check out an example program\" slide\n\n**Match**: \n- Check out the example program in Lesson 4\n- In the [Fables Warm Up Activity](https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview) handout, draw a line to match each block to what it does\n\n**Do This**: Give students time to match the blocks with the corresponding action. Students will review what the blocks do and think about when it is best to use each one.  \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Match - Check out an example program\" slide\n\n**Match**: \n- Check out the example program in Lesson 4\n- In the [Short Stories Warm Up Activity](https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview) handout, draw a line to match each block to what it does\n\n**Do This**: Give students time to match the blocks with the corresponding action. Students will review what the blocks do and think about when it is best to use each one.  \n",
         "duration": "5",
         "name": "Activity"
       },
@@ -880,7 +898,7 @@
       "key": "3339de28-d1d4-47c2-acac-d21a60793c17",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relate to the moral of the story. They should also understand that the reader typically learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling short stories?_\n- _Why are characters important in a short story?_\n\n**Discussion Goal**: Students should understand that the purpose of a short story is to teach a moral or lesson. They should be able to explain that a character and their traits directly relate to the moral of the story. They should also understand that the reader typically learns the central lesson through the main character's traits and actions. Students can refer back to previous short stories as examples, where they learned the moral through the actions of the characters."
       },
       "seeding_key": {
         "activity_section.key": "3339de28-d1d4-47c2-acac-d21a60793c17",
@@ -894,7 +912,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Choose a specific story that you have read as a class, or that is widely popular for your students to help guide the discussion. You can use the example to help explain the purpose of reading fables and why characters are important. "
+            "markdown": "Choose a specific story that you have read as a class, or that is widely popular for your students to help guide the discussion. You can use the example to help explain the purpose of reading short stories and why characters are important. "
           }
         ]
       },
@@ -918,7 +936,7 @@
       "key": "7b616f2e-fd32-42f6-95fe-84ea98c77f5d",
       "position": 6,
       "properties": {
-        "description": "Now that we have reviewed fables and their purpose, we are going to start working on our projects. Let’s get started with Level 1, which has some sample programs to check out. ",
+        "description": "Now that we have reviewed short stories and their purpose, we are going to start working on our projects. Let’s get started with Level 1, which has some sample programs to check out. ",
         "remarks": true
       },
       "seeding_key": {
@@ -994,7 +1012,7 @@
       "key": "6fb41dc6-00ff-458a-bd42-0c0a2c8ea180",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-10 - Code Your Fable” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-10 - Code Your Short Story” slide"
       },
       "seeding_key": {
         "activity_section.key": "6fb41dc6-00ff-458a-bd42-0c0a2c8ea180",
@@ -1044,7 +1062,7 @@
       "key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7",
       "position": 10,
       "properties": {
-        "progression_name": "Code Your Fable"
+        "progression_name": "Code Your Short Story"
       },
       "seeding_key": {
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7",
@@ -1097,7 +1115,7 @@
       "key": "bbb8a46d-1382-4537-9ade-11d69ee1bf92",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: \n-  _**Three** things that I learned about programming are…_\n- _**Two** things I learned about fables and their characters are…_\n- _**One** thing I would like more information about is…_\n\n**Discussion Goal**:  Students should reflect on their biggest takeaways from today’s lesson. They should be able to describe how a character’s motivation leads to their actions in a short story and illustrate how a character’s actions affect other characters. "
+        "description": "**Discuss**: \n-  _**Three** things that I learned about programming are…_\n- _**Two** things I learned about short stories and their characters are…_\n- _**One** thing I would like more information about is…_\n\n**Discussion Goal**:  Students should reflect on their biggest takeaways from today’s lesson. They should be able to describe how a character’s motivation leads to their actions in a short story and illustrate how a character’s actions affect other characters. "
       },
       "seeding_key": {
         "activity_section.key": "bbb8a46d-1382-4537-9ade-11d69ee1bf92",
@@ -1196,7 +1214,7 @@
       "key": "29dd7fc3-2b04-45e8-9c5a-c06f4314c79b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates' programs?_\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, and/or character traits. Encourage students to think about the elements of a fable that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates' programs?_\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, and/or character traits. Encourage students to think about the elements of a short story that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1208,7 +1226,7 @@
       "key": "b2329ede-5baa-4a59-a0b5-b2066f89edf2",
       "position": 2,
       "properties": {
-        "description": "Throughout this module, we have identified common patterns of a fable. You then used your knowledge of character traits to create your own stories. You were able to code a story to teach readers a moral or lesson. Wonderful job! ",
+        "description": "Throughout this module, we have identified common patterns of a short story. You then used your knowledge of character traits to create your own stories. You were able to code a story to teach readers a moral or lesson. Wonderful job! ",
         "remarks": true
       },
       "seeding_key": {
@@ -1627,7 +1645,7 @@
         "level_keys": [
           "csc_fables_setting"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -1652,7 +1670,7 @@
         "level_keys": [
           "csc_fables_characters"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -1677,7 +1695,7 @@
         "level_keys": [
           "csc_fables_say"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -1702,7 +1720,7 @@
         "level_keys": [
           "csc_fables_behaviors"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -1727,7 +1745,7 @@
         "level_keys": [
           "csc_fables_events"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -1752,7 +1770,7 @@
         "level_keys": [
           "csc_fables_events_say"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -1777,7 +1795,7 @@
         "level_keys": [
           "csc_fables_next scene"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -1802,7 +1820,7 @@
         "level_keys": [
           "csc_fables_moral"
         ],
-        "progression": "Code Your Fable"
+        "progression": "Code Your Short Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -2148,7 +2166,7 @@
   ],
   "resources": [
     {
-      "name": "Fable Adaptations",
+      "name": "Short Stories",
       "url": "https://docs.google.com/presentation/d/1qwrRfj0udh4wM08WhH1pMK9enARkZW3tQ1lFTBsLfxE/template/preview",
       "key": "fable_adaptations",
       "properties": {
@@ -2185,8 +2203,8 @@
       }
     },
     {
-      "name": "Fables Guide",
-      "url": "https://docs.google.com/document/d/1Xl78e2Ii7eW2fp-xaehWCjFKos0cz6mnFRTvfd8Hpqg/template/preview",
+      "name": "Short Stories Guide",
+      "url": "https://docs.google.com/document/d/1IPCkvjGVEN568dWD3tA-4oePrC8ylkaYD-F8oiSkfd0/template/preview",
       "key": "fables_guide",
       "properties": {
         "audience": "Student",
@@ -2197,7 +2215,7 @@
       }
     },
     {
-      "name": "Fables Warm Up Activity",
+      "name": "Short Stories Warm Up Activity",
       "url": "https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview",
       "key": "fables_warm_up_activity",
       "properties": {
@@ -2562,6 +2580,13 @@
     {
       "seeding_key": {
         "lesson.key": "Code Your Fable",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.RL.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Fable",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
       }
@@ -2611,6 +2636,34 @@
     {
       "seeding_key": {
         "lesson.key": "Plan Your Fable",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.RL.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plan Your Fable",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.W.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plan Your Fable",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.W.3.a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plan Your Fable",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.W.3.b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plan Your Fable",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
@@ -2639,6 +2692,20 @@
     {
       "seeding_key": {
         "lesson.key": "Share Your Fable",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "2.SL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Share Your Fable",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "K.L.1.f"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Share Your Fable",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-16"
       }
@@ -2648,6 +2715,41 @@
         "lesson.key": "Share Your Fable",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.RL.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.RL.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.2"
       }
     }
   ],

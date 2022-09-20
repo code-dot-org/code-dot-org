@@ -1,8 +1,14 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
+import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES} from './constants';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_THRESHOLD} from './constants';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert
+} from '../../code-studio/projectRedux';
+import msg from '@cdo/locale';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -352,10 +358,7 @@ export default class CoreLibrary {
 
   getMaxAllowedNewSprites(numRequested) {
     const numSpritesSoFar = this.getNumberOfSprites();
-    const numNewSpritesPossible = Math.max(
-      0,
-      MAX_NUM_SPRITES - numSpritesSoFar
-    );
+    const numNewSpritesPossible = MAX_NUM_SPRITES - numSpritesSoFar;
     return Math.min(numRequested, numNewSpritesPossible);
   }
 
@@ -366,12 +369,40 @@ export default class CoreLibrary {
     return speechBubbles[speechBubbles.length - 1];
   }
 
+  reachedSpriteMax() {
+    return this.getNumberOfSprites() >= MAX_NUM_SPRITES;
+  }
+
+  reachedSpriteWarningThreshold() {
+    return this.getNumberOfSprites() === SPRITE_WARNING_THRESHOLD;
+  }
+
+  // This function is called within the addSprite function BEFORE a new sprite is created
+  // If the total number of sprites is equal to SPRITE_WARNING_THRESHOLD, a workspace
+  // alert warning is displayed to let user know they have reached the sprite limit
+  // Note that SPRITE_WARNING_THRESHOLD = MAX_NUM_SPRITES - 1
+  dispatchSpriteLimitWarning() {
+    getStore().dispatch(
+      displayWorkspaceAlert(
+        workspaceAlertTypes.warning,
+        /* display warning when user exceeds SPRITE_WARNING_THRESHOLD */
+        msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
+        /* bottom */ true
+      )
+    );
+  }
+
   /**
    * Adds the specified sprite to the native sprite map
    * @param {Sprite} sprite
    * @returns {Number} A unique id to reference the sprite.
    */
   addSprite(opts) {
+    if (this.reachedSpriteMax()) {
+      return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
+    }
     opts = opts || {};
     if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
       return;

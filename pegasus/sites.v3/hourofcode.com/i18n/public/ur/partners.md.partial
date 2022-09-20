@@ -2,13 +2,11 @@
 title: پارٹنرز
 ---
 
-کوڈ کا قیام کوڈ آفس اور کمپیوٹر سائنس تعلیم ہفتہ مشاورتی اور جائزہ لینے والے کمیٹیوں کے ذریعہ چلایا جاتا ہے.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. یہ کمیٹی کوڈ آفس کی مہم کے لئے حکمت عملی کی ہدایت کرتا ہے.
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. یہ محققین طالب علم کی قیادت کی سرگرمیوں اور سینکڑوں سرگرمی شراکت داروں کی جانب سے جمع کردہ طالب علموں کی قیادت کی منصوبہ بندی کا مطالعہ کرتے ہیں، سرگرمیوں کی 'تعلیمی قیمت، سیکھنے والوں کو مشغول کرنے کی صلاحیت، اور طالب علموں کے متنوع سیٹوں پر ممکنہ اپیل کی تشخیص کرتے ہیں.
-
-کمیٹریشن کی کامیابی اور ہر طالب علم کے لئے کمپیوٹر سائنس کے تعارف پیش کرنے کے اس نقطہ نظر میں دونوں کمیٹیوں کے کام اور وقفے نے حصہ لیا.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Major Partners and Corporate Supporters
 

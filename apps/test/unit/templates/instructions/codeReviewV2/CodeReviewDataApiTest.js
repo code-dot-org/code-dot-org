@@ -259,7 +259,7 @@ describe('CodeReviewDataApi', () => {
       utils.findProfanity.restore();
     });
 
-    it('calls code_review_note endpoint if profanity is not found', async () => {
+    it('calls code_review_comments endpoint if profanity is not found', async () => {
       sinon.stub(utils, 'findProfanity').returns({
         done: successCallback => successCallback(null)
       });
@@ -267,7 +267,7 @@ describe('CodeReviewDataApi', () => {
       await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
 
       expect(ajaxStub).to.have.been.calledWith({
-        url: `/code_review_notes`,
+        url: `/code_review_comments`,
         type: 'POST',
         headers: {'X-CSRF-Token': undefined},
         data: {
@@ -303,10 +303,10 @@ describe('CodeReviewDataApi', () => {
       ajaxStub.restore();
     });
 
-    it('calls code_review_notes PATCH endpoint with the isResolved value to set', async () => {
+    it('calls code_review_comments PATCH endpoint with the isResolved value to set', async () => {
       await dataApi.toggleResolveComment(11, true);
       expect(ajaxStub).to.have.been.calledWith({
-        url: `/code_review_notes/11`,
+        url: `/code_review_comments/11`,
         type: 'PATCH',
         headers: {'X-CSRF-Token': undefined},
         data: {

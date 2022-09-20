@@ -1,7 +1,7 @@
 {
   "key": "csc-fables",
-  "display_name": "csc-fables",
-  "category": "other",
-  "is_featured": false,
+  "display_name": "Storytelling Module",
+  "category": "csc",
+  "is_featured": true,
   "assignable": true
 }
