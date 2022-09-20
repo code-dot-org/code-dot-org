@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
+import _ from 'lodash';
 
 function LessonLockDialog({
   unitId,
@@ -81,7 +82,7 @@ function LessonLockDialog({
   the dialog without sending to api post method.
   */
   const handleSave = async () => {
-    if (serverLockState === clientLockState) {
+    if (_.isEqual(serverLockState, clientLockState)) {
       handleClose();
     } else {
       sendSave();
