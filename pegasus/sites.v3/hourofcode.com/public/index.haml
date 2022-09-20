@@ -9,8 +9,8 @@ social:
 
   hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
-%link{rel: "stylesheet", type: "text/css", href: "/css/generated/front-page.css"}
-%link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
+%link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
+%link{href: "/css/generated/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -# These are needed for the signup form, even if the map isn't currently showing.
 %script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
@@ -35,30 +35,6 @@ social:
 
 
 
-:css
-  html, body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
-  .hero-image {
-    z-index: -5;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-
-  @media screen and (max-width: 991px) {
-    .no-padding-on-narrow {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-- imageheight = 590
 
 #top{style: "position: relative; width: 100%; overflow: hidden;"}
 
@@ -171,43 +147,40 @@ social:
           %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
         .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
 
-  -# Signup and Highlights
 
-  -# Show sign up form above highlights when we're trying to increase sign ups. Otherwise, feature highlights first which is more engaging and evergreen.
-  -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
-    = view :home_signup, hoc_mode: hoc_mode
-    = view :home_highlights
-  -else
-    = view :home_highlights
-    = view :home_signup, hoc_mode: hoc_mode
+  -# Join the movement
+  %section.join-the-movement
+    %h1=hoc_s(:hoc_homepage_join_the_movement_heading)
+    %h3=hoc_s(:hoc_homepage_join_the_movement_description)
+    -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
+      = view :home_signup, hoc_mode: hoc_mode
+    -else
+      = view :home_signup, hoc_mode: hoc_mode
 
+-# What is the HoC?
+%section.what-is-hoc
+  .wrapper
+    %h1=hoc_s(:front_what_is_hoc)
+    %h2=hoc_s(:hoc_homepage_what_is_hoc_subhead)
+    =view :index_video
+    %p=hoc_s(:hoc_homepage_what_is_hoc_description)
+    %a.cta-btn=hoc_s(:cta_try_an_activity)
+    %p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide)
 
+-# Highlights
+%section.highlights
+  .wrapper
+    %h1=hoc_s(:highlights_header)
+    =view :home_highlights
 
-  -# Stats
-  %section.stats
-    %figure
-      %img{src: "/images/stats-languages.png"}
-      %p=hoc_s(:stats_i18n)
+-# Stats
+%section.stats
+  .wrapper
+    =view :home_stats
 
-    %figure
-      -if @language == "en"
-        %img{src: "/images/stats-1b.png"}
-      -else
-        %img{src: "/images/stats-map.png"}
-      %p=hoc_s(:stats_global)
-
-    %figure
-      -if @language == "en"
-        %img{src: "/images/stats-females.png"}
-        %p!=hoc_s(:stats_females_more_markdown, markdown: :inline)
-      -else
-        %img{src: "/images/stats-info3.png"}
-        %p=hoc_s(:stats_girls_more)
-
-
-
-  -# Host an hour
-  %section.host-an-hour
+-# Host an hour
+%section.host-an-hour
+  .wrapper
     =view :signup_button
 
 

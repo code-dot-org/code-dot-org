@@ -1,18 +1,68 @@
 @import 'imports/_breakpoints.scss', 'imports/_color.scss', 'imports/_fonts.scss';
 
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 section {
   padding: 7em 1em;
+
+  .wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  h2:first-of-type,
+  h3:first-of-type {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+// Join the Movement
+section.join-the-movement {
+
+  h3 {
+    margin-bottom: 5em;
+  }
+
+}
+
+// What is the HoC?
+section.what-is-hoc {
+  background: rgba($color-main, .05);
+  text-align: center;
+
+  h2 {
+    font-family: $gotham-normal;
+    color: $color-main;
+  }
+
+  #homepage-video {
+    margin: 4em auto;
+  }
 }
 
 // Stats
 section.stats {
-  margin-top: 7em;
-  padding-top: 5em;
-  border-top: 1px solid rgba($color-main, .3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+
+  .wrapper {
+    padding-top: 6em;
+    border-top: 1px solid rgba($color-main, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
   figure {
     width: 26%;
