@@ -410,6 +410,14 @@
 
   cta_see_whats_new: "See what's new"
   cta_try_more_activities: 'Try more activities'
+  cta_try_an_activity: 'Try an activity'
+
+  hoc_homepage_join_the_movement_heading: 'Join the movement'
+  hoc_homepage_join_the_movement_description: 'Hour of Code is available year round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October.'
+  hoc_homepage_what_is_hoc_subhead: 'One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round.'
+  hoc_homepage_what_is_hoc_description: 'The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This grassroots campaign is supported by over 400 partners and 200,000 educators worldwide.'
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "or <a href='%{howto_guide_url}'>read our How-to guide</a> to plan an event for your class"
+  hoc_homepage_highlights_heading: 'Hour of Code highlights'
 
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
