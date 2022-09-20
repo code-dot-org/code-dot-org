@@ -6,29 +6,35 @@ ta:
   front_title: சரித்திரத்திலேயே மிகப்பெரிய கற்றுக் கொள்ளும் நிகழ்வில் இணையுங்கள்,
     %{campaign_date}
   coming_soon: விரைவில் வரவிருக்கிறது
-  campaign_date_start_short: டிச. 6
+  campaign_date_start_short: டிச. 5
   campaign_date_start_long: டிசம்பர் 6
-  campaign_date_short: டிச. 4-10
-  campaign_date_full: டிசம்பர் 6-12
-  campaign_date_year: '2021'
-  campaign_date_full_year: டிசம்பர் 6-12, 2021
+  campaign_date_short: டிச. 5-11
+  campaign_date_full: டிசம்பர் 5-11
+  campaign_date_year: '2022'
+  campaign_date_full_year: டிசம்பர் 5-11, 2022
+  nonus_campaign_date_start_short: அக்., 1
+  nonus_campaign_date_start_long: அக்டோபர் 1
+  nonus_campaign_date_short: அக்., 1 - டிச .18
+  nonus_campaign_date_full: அக்டோபர் 1 - டிசம்பர் 18
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: அக்டோபர் 1, 2022 - டிசம்பர் 18, 2022
   latam_campaign_date_start_short: அக்., 1
   latam_campaign_date_start_long: அக்டோபர் 1
   latam_campaign_date_short: அக்., 1 - டிச .18
   latam_campaign_date_full: அக்டோபர் 1 - டிசம்பர் 18
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: அக்டோபர் 1, 2020 - டிசம்பர் 18, 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: அக்டோபர் 1, 2022 - டிசம்பர் 18, 2022
   europe_campaign_date_start_short: அக் .10
   europe_campaign_date_start_long: அக்டோபர் 10
   europe_campaign_date_short: அக்., 10-25
   europe_campaign_date_full: அக்டோபர் 10-25
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: அக்டோபர் 10-25, 2020
-  africa_campaign_date_start_short: டிச. 6
-  africa_campaign_date_start_long: டிசம்பர் 6
+  africa_campaign_date_start_short: அக்., 1
+  africa_campaign_date_start_long: அக்டோபர் 1
   africa_campaign_date_short: அக். 1-31
   africa_campaign_date_full: அக்டோபர் 1-31
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: அக்டோபர் 1-31, 2020
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -565,7 +571,6 @@ ta:
     பெயர் மற்றும் நகரத்தை நாங்கள் இடுவோம். நீங்கள் பல நிகழ்வுகளை நடத்துகிறீர்கள் என்றால்,
     ஒவ்வொன்றிற்கும் ஒரு தனித்துவமான பெயர் அல்லது மின்னஞ்சலை தயவுசெய்து சமர்ப்பிக்கவும்.
     ஒரு பெயர் மற்றும் மின்னஞ்சல் கூட்டுக்கு நாங்கள் ஒரு எண்ணிக்கை நிகழ்வையே எண்ணுவோம்.
-  signup_registration_deadline: Hour of Codeக்கான பதிவு டிசம்பர் 11 உடன் முடிகிறது.
   signup_name_placeholder: உங்கள் பெயர்
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: உதாரணத்திற்கு, லின்கன் உயர்நிலைப் பள்ளி

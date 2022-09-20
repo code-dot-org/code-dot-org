@@ -32,6 +32,7 @@ ko:
         personal_email_markdown: 개인 이메일 주소 [(만약 이메일 주소가 없다면 여기를 클릭하십시오)](%{url})
         username: username
         password: 비밀번호
+        verified_teacher: 인증된 교사
         password_confirmation: 비밀번호 재확인
         current_password: 현재 비밀번호
         locale: 언어
@@ -664,6 +665,7 @@ ko:
     try_hour_of_code: Hour of Code 를 해보세요!
     store: 스토어
     cookie_notice: 쿠키 방침
+    view_code: 코드 보기
   reference_area:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트
@@ -1163,6 +1165,7 @@ ko:
         israel: 이스라엘
         malaysia: 말레이시아
         mexico: 멕시코
+        paraguay: 파라과이
         thailand: 태국
         uzbekistan: 우즈베키스탄
       ages:
@@ -1274,3 +1277,10 @@ ko:
   unit_prefix: 단원 %{n}
   code_org_logo_alt: Cord.org 홈
   teacher_feedback: 교사 피드백
+  lesson_lock:
+    error:
+      no_updates: 실행할 업데이트 없음
+      missing_params: 사용자와 레벨, 단위 ID를 제공해야 합니다
+      cannot_view_locked_answers: 잠겨있는 동안에는 답을 볼 수 없습니다
+      forbidden: 사용자는 학생의 잠금 상태를 업데이트할 수 없습니다
+  reset_predict_progress_button: 답 삭제

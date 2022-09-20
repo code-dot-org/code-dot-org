@@ -9,26 +9,32 @@ fa:
   campaign_date_start_long: ۴ دسامبر
   campaign_date_short: ۴ تا ۱۰ دسامبر
   campaign_date_full: ۴ تا ۱۰ دسامبر
-  campaign_date_year: '2021'
+  campaign_date_year: '2022'
   campaign_date_full_year: ۴ تا دسامبر ۲۰۱۷
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: 1 اکتبر  - 18 دسامبر
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 5 دسامبر
-  europe_campaign_date_start_long: ۴ دسامبر
-  europe_campaign_date_short: ۴ تا ۱۰ دسامبر
-  europe_campaign_date_full: ۴ تا ۱۰ دسامبر
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: ۴ تا دسامبر ۲۰۱۷
-  africa_campaign_date_start_short: 5 دسامبر
-  africa_campaign_date_start_long: ۴ دسامبر
-  africa_campaign_date_short: ۴ تا ۱۰ دسامبر
-  africa_campaign_date_full: ۴ تا ۱۰ دسامبر
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: ۴ تا دسامبر ۲۰۱۷
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: 1 اکتبر  - 18 دسامبر
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: 1 اکتبر  - 18 دسامبر
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: 1 اکتبر  - 18 دسامبر
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -533,8 +539,6 @@ fa:
   signup_multiple_event_warning: We will put your school name and city on the map
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
-  signup_registration_deadline: Registration for the Hour of Code closes December
-    13.
   signup_name_placeholder: نام شما
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: به عنوان مثال، دبیرستان لينكلن
@@ -667,11 +671,11 @@ fa:
     نژادي در اين زمينه است. <a href='http://code.org/about/partners'> ائتلافي بی سابقه
     </a> از همكاران گرد آمده اند و ساعت کدنويسي را حمايت مي‌كنند &mdash; از جمله مایکروسافت،
     اپل، آمازون، باشگاه‌هاي پسران و دختران امریکا و هیئت مدیره کالج‌ها.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: من چيزي درباره كد نويسي نمي دانم. آيا همچنان مي توانم ميزبان چنين
     رويدادي باشم؟
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have

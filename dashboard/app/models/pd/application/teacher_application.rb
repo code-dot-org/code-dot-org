@@ -58,12 +58,6 @@ module Pd::Application
       *(1..12).map {|n| "Grade #{n}".freeze}
     ].freeze
 
-    PRINCIPAL_APPROVAL_STATE = [
-      NOT_REQUIRED = 'Not required',
-      IN_PROGRESS = 'Incomplete - Principal email sent on ',
-      COMPLETE = 'Complete - '
-    ]
-
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
     # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
@@ -262,20 +256,6 @@ module Pd::Application
       pd_application_principal_approval_url(application_guid) if application_guid
     end
 
-    def principal_approval_state
-      principal_approval = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-
-      if principal_approval
-        if principal_approval.placeholder?
-          'Sent'
-        else
-          sanitize_form_data_hash[:principal_approval]
-        end
-      else
-        'No approval sent'
-      end
-    end
-
     # @override
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
@@ -422,15 +402,15 @@ module Pd::Application
     # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      return COMPLETE + response.full_answers[:do_you_approve] if response
+      return PRINCIPAL_APPROVAL_STATE[:complete] + response.full_answers[:do_you_approve] if response
 
       principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
-        return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
+        return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
       end
 
-      return NOT_REQUIRED if principal_approval_not_required
+      return PRINCIPAL_APPROVAL_STATE[:not_required] if principal_approval_not_required
 
       nil
     end

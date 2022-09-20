@@ -5,30 +5,36 @@ it:
   language: Italiano
   front_title: Partecipa all'evento didattico più popolare del mondo, %{campaign_date}
   coming_soon: Sta arrivando
-  campaign_date_start_short: 6 dic.
-  campaign_date_start_long: 6 dicembre
-  campaign_date_short: 6 -12 dic.
-  campaign_date_full: 6-12 dicembre
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6- 12 dicembre 2021
+  campaign_date_start_short: 5 dic.
+  campaign_date_start_long: 5 dicembre
+  campaign_date_short: 5 - 11 dic.
+  campaign_date_full: 5-11 dicembre
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5 - 11 dicembre 2022
+  nonus_campaign_date_start_short: 1 ott.
+  nonus_campaign_date_start_long: '1 ottobre '
+  nonus_campaign_date_short: 1 ott. - 18 dic.
+  nonus_campaign_date_full: 1 ottobre - 18 dicembre
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
   latam_campaign_date_start_short: 1 ott.
   latam_campaign_date_start_long: '1 ottobre '
-  latam_campaign_date_short: 1 ott. - 12 dic.
-  latam_campaign_date_full: 1 ottobre - 12 dicembre
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1 ottobre 2020 - 12 dicembre 2021
-  europe_campaign_date_start_short: 6 dic.
-  europe_campaign_date_start_long: 6 dicembre
-  europe_campaign_date_short: 6 -12 dic.
-  europe_campaign_date_full: 6-12 dicembre
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6- 12 dicembre 2021
-  africa_campaign_date_start_short: 6 dic.
-  africa_campaign_date_start_long: 6 dicembre
+  latam_campaign_date_short: 1 ott. - 18 dic.
+  latam_campaign_date_full: 1 ottobre - 18 dicembre
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
+  europe_campaign_date_start_short: 1 ott.
+  europe_campaign_date_start_long: '1 ottobre '
+  europe_campaign_date_short: 1 ott. - 18 dic.
+  europe_campaign_date_full: 1 ottobre - 18 dicembre
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
+  africa_campaign_date_start_short: 1 ott.
+  africa_campaign_date_start_long: '1 ottobre '
   africa_campaign_date_short: 1-31 ott.
-  africa_campaign_date_full: 6-12 dicembre
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6- 12 dicembre 2021
+  africa_campaign_date_full: 1 ottobre - 18 dicembre
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
   social_hoc2021_cse: Durante l'#OraDelCodice (#HourOfCode), stiamo celebrando l'#informaticaovunque
     (#CSEverywhere). Scopri le connessioni.
   hoc2020_header: Impara oggi, costruisci un domani più luminoso.
@@ -567,8 +573,6 @@ it:
     per favore indica un differente nome o indirizzo di posta elettronica per ognuno
     di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo
     di posta elettronica.
-  signup_registration_deadline: Le iscrizioni per l'Ora del Codice si chiudono il
-    13 dicembre.
   signup_name_placeholder: Il tuo nome
   signup_email_placeholder: Per esempio, nome.cognome@posta.istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
@@ -1073,7 +1077,8 @@ it:
     Neymar Jr, Carmelo Anthony e altri ancora stimolano gli studenti a dare il massimo.
   highlights_constant_athletes_short_heading: Dai il massimo
   footer_copyright_message: Copyright %{current_year} Code.org. Tutti i diritti riservati.
-  footer_trademark_message: Hour of Code™ è un marchio registrato di Code.org.
+  footer_trademark_message: Hour of Code® e Hora del Código® sono marchi registrati
+    di Code.org.
   footer_built_on_github: Progettato su GitHub da Microsoft
   footer_menu_partners: Partner e Consulenti
   footer_menu_contact: Contattaci

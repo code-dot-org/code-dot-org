@@ -5,29 +5,35 @@ la:
   language: Inglés
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 6 Dic.
+  campaign_date_start_short: 5 Dic.
   campaign_date_start_long: 6 de diciembre
-  campaign_date_short: 7-13 dic.
-  campaign_date_full: Del 6 al 12 de diciembre
-  campaign_date_year: '2021'
-  campaign_date_full_year: Del 6 al 12 de diciembre de 2021
+  campaign_date_short: 5-11 dic.
+  campaign_date_full: Del 5 al 11 de diciembre
+  campaign_date_year: '2022'
+  campaign_date_full_year: Del 5 al 11 de diciembre de 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: Octubre 1
+  nonus_campaign_date_short: Oct. 1 - Dic. 18
+  nonus_campaign_date_full: Octubre 1 - Diciembre 18
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: Octubre 1, 2022 - Diciembre 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: Octubre 1
   latam_campaign_date_short: Oct. 1 - Dic. 18
   latam_campaign_date_full: Octubre 1 - Diciembre 18
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: Octubre 1, 2022 - Diciembre 18, 2022
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: Octubre 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: Octubre 10-25
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: Octubre 10-25, 2020
-  africa_campaign_date_start_short: 6 Dic.
-  africa_campaign_date_start_long: 6 de diciembre
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: Octubre 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: Octubre 1-31
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Octubre 1-31, 2020
   social_hoc2021_cse: 'Durante la #HourOfCode, estamos celebrando #CSEverywhere. ¡Descubre
     las conexiones!'
@@ -556,8 +562,6 @@ la:
     mapa cuando te inscribas. Si organizas varios eventos, envía un nombre o correo
     electrónico para cada uno. Solo podemos contar un evento por combinación de nombre
     y correo electrónico.
-  signup_registration_deadline: La inscripción para la Hora del Código cierra el 11
-    de diciembre.
   signup_name_placeholder: Tu nombre
   signup_email_placeholder: tu@ejemplo.com
   signup_organization_name_placeholder: Por ejemplo, escuela Lincoln

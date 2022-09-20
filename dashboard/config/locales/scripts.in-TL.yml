@@ -65,6 +65,7 @@ in:
           description: crwdns2659450:0crwdne2659450:0
           description_short: crwdns2659452:0crwdne2659452:0
           student_description: crwdns2659496:0crwdne2659496:0
+          name: crwdns3120072:0crwdne3120072:0
         infinity:
           title: crwdns2659498:0crwdne2659498:0
           description: crwdns2659500:0crwdne2659500:0
@@ -528,11 +529,13 @@ in:
           description: crwdns2661582:0crwdne2661582:0
           description_short: crwdns2661584:0crwdne2661584:0
           student_description: crwdns2661608:0crwdne2661608:0
+          name: crwdns3120074:0crwdne3120074:0
         AlgebraB:
           title: crwdns2661610:0crwdne2661610:0
           description: crwdns2661612:0crwdne2661612:0
           description_short: crwdns2661614:0crwdne2661614:0
           student_description: crwdns2661640:0crwdne2661640:0
+          name: crwdns3120076:0crwdne3120076:0
         gamelab-hackathon:
           title: crwdns2661642:0crwdne2661642:0
           description: crwdns2661644:0crwdne2661644:0
@@ -5720,7 +5723,7 @@ in:
             cspSurvey:
               display_name: crwdns2907008:0crwdne2907008:0
           title: crwdns2907010:0crwdne2907010:0
-          description: crwdns2907012:0[0]crwdnd2907012:0[1]crwdnd2907012:0[2]crwdnd2907012:0[3]crwdne2907012:0
+          description: crwdns2907012:0[0]crwdnd2907012:0[1]crwdnd2907012:0[2]crwdnd2907012:0[3]crwdnd2907012:0[4]crwdne2907012:0
           student_description: crwdns2907014:0crwdne2907014:0
           description_short: crwdns2907016:0crwdne2907016:0
           name: crwdns2908414:0crwdne2908414:0
@@ -5733,7 +5736,7 @@ in:
             cspSurvey:
               display_name: crwdns2907286:0crwdne2907286:0
           title: crwdns2907288:0crwdne2907288:0
-          description: crwdns2907290:0[0]crwdnd2907290:0[1]crwdnd2907290:0[2]crwdnd2907290:0[3]crwdne2907290:0
+          description: crwdns2907290:0[0]crwdnd2907290:0[1]crwdnd2907290:0[2]crwdnd2907290:0[3]crwdnd2907290:0[4]crwdne2907290:0
           student_description: crwdns2907292:0crwdne2907292:0
           description_short: crwdns2907294:0crwdne2907294:0
           name: crwdns2908422:0crwdne2908422:0
@@ -5746,7 +5749,7 @@ in:
             cspSurvey:
               display_name: crwdns2907528:0crwdne2907528:0
           title: crwdns2907530:0crwdne2907530:0
-          description: crwdns2907532:0[0]crwdnd2907532:0[1]crwdne2907532:0
+          description: crwdns2907532:0[0]crwdnd2907532:0[1]crwdnd2907532:0[2]crwdne2907532:0
           student_description: crwdns2907534:0crwdne2907534:0
           description_short: crwdns2907536:0crwdne2907536:0
           name: crwdns2908430:0crwdne2908430:0
@@ -5759,7 +5762,7 @@ in:
             cspSurvey:
               display_name: crwdns2907694:0crwdne2907694:0
           title: crwdns2907696:0crwdne2907696:0
-          description: crwdns2907698:0[0]crwdnd2907698:0[1]crwdne2907698:0
+          description: crwdns2907698:0[0]crwdnd2907698:0[1]crwdnd2907698:0[2]crwdne2907698:0
           student_description: crwdns2907700:0crwdne2907700:0
           description_short: crwdns2907702:0crwdne2907702:0
           name: crwdns2908438:0crwdne2908438:0
@@ -5772,7 +5775,7 @@ in:
             lessonGroup-4:
               display_name: crwdns2907892:0crwdne2907892:0
           title: crwdns2907894:0crwdne2907894:0
-          description: crwdns2907896:0[0]crwdnd2907896:0[1]crwdnd2907896:0[2]crwdnd2907896:0[3]crwdnd2907896:0[4]crwdnd2907896:0[5]crwdne2907896:0
+          description: crwdns2907896:0[0]crwdnd2907896:0[1]crwdnd2907896:0[2]crwdnd2907896:0[3]crwdnd2907896:0[4]crwdnd2907896:0[5]crwdnd2907896:0[6]crwdne2907896:0
           student_description: crwdns2907898:0crwdne2907898:0
           description_short: crwdns2907900:0crwdne2907900:0
           name: crwdns2908446:0crwdne2908446:0
@@ -5787,7 +5790,7 @@ in:
           name: crwdns2908580:0crwdne2908580:0
           title: crwdns2908582:0crwdne2908582:0
           description_short: crwdns2908586:0crwdne2908586:0
-          description: crwdns2908588:0[0]crwdnd2908588:0[1]crwdnd2908588:0[2]crwdnd2908588:0[3]crwdnd2908588:0[4]crwdnd2908588:0[5]crwdne2908588:0
+          description: crwdns2908588:0[0]crwdnd2908588:0[1]crwdnd2908588:0[2]crwdnd2908588:0[3]crwdnd2908588:0[4]crwdnd2908588:0[5]crwdnd2908588:0[6]crwdne2908588:0
           student_description: crwdns2908590:0crwdne2908590:0
         csd-post-survey-2022:
           name: crwdns2908598:0crwdne2908598:0
@@ -6013,6 +6016,11 @@ in:
               name: crwdns2950614:0crwdne2950614:0
             lesson-16:
               name: crwdns2950616:0crwdne2950616:0
+        csa-draft-pl:
+          lessons:
+            lesson-2:
+              name: crwdns3120092:0crwdne3120092:0
+          name: crwdns3120094:0crwdne3120094:0
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-1:
@@ -6041,3 +6049,177 @@ in:
           title: crwdns3054924:0crwdne3054924:0
           description_short: crwdns3054928:0crwdne3054928:0
           description: crwdns3054930:0crwdne3054930:0
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: crwdns3120106:0crwdne3120106:0
+            lessonGroup-2:
+              display_name: crwdns3120108:0crwdne3120108:0
+            lessonGroup-3:
+              display_name: crwdns3120110:0crwdne3120110:0
+            lessonGroup-4:
+              display_name: crwdns3120112:0crwdne3120112:0
+          title: crwdns3120114:0crwdne3120114:0
+          description: crwdns3120116:0[0]crwdnd3120116:0[1]crwdnd3120116:0[2]crwdne3120116:0
+          student_description: crwdns3120118:0crwdne3120118:0
+          description_short: crwdns3120120:0crwdne3120120:0
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120124:0crwdne3120124:0
+            lessonGroup-3:
+              display_name: crwdns3120126:0crwdne3120126:0
+            lessonGroup-4:
+              display_name: crwdns3120128:0crwdne3120128:0
+          title: crwdns3120130:0crwdne3120130:0
+          description: crwdns3120132:0[0]crwdnd3120132:0[1]crwdnd3120132:0[2]crwdne3120132:0
+          student_description: crwdns3120134:0crwdne3120134:0
+          description_short: crwdns3120136:0crwdne3120136:0
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120140:0crwdne3120140:0
+            lessonGroup-3:
+              display_name: crwdns3120142:0crwdne3120142:0
+            lessonGroup-4:
+              display_name: crwdns3120144:0crwdne3120144:0
+          title: crwdns3120146:0crwdne3120146:0
+          description: crwdns3120148:0[0]crwdnd3120148:0[1]crwdnd3120148:0[2]crwdne3120148:0
+          student_description: crwdns3120150:0crwdne3120150:0
+          description_short: crwdns3120152:0crwdne3120152:0
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120156:0crwdne3120156:0
+            lessonGroup-3:
+              display_name: crwdns3120158:0crwdne3120158:0
+            lessonGroup-4:
+              display_name: crwdns3120160:0crwdne3120160:0
+          title: crwdns3120162:0crwdne3120162:0
+          description: crwdns3120164:0[0]crwdnd3120164:0[1]crwdnd3120164:0[2]crwdne3120164:0
+          student_description: crwdns3120166:0crwdne3120166:0
+          description_short: crwdns3120168:0crwdne3120168:0
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120172:0crwdne3120172:0
+            lessonGroup-3:
+              display_name: crwdns3120174:0crwdne3120174:0
+            lessonGroup-4:
+              display_name: crwdns3120176:0crwdne3120176:0
+          title: crwdns3120178:0crwdne3120178:0
+          description: crwdns3120180:0[0]crwdnd3120180:0[1]crwdnd3120180:0[2]crwdne3120180:0
+          student_description: crwdns3120182:0crwdne3120182:0
+          description_short: crwdns3120184:0crwdne3120184:0
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120188:0crwdne3120188:0
+            lessonGroup-3:
+              display_name: crwdns3120190:0crwdne3120190:0
+            lessonGroup-4:
+              display_name: crwdns3120192:0crwdne3120192:0
+          title: crwdns3120194:0crwdne3120194:0
+          description: crwdns3120196:0[0]crwdnd3120196:0[1]crwdnd3120196:0[2]crwdne3120196:0
+          student_description: crwdns3120198:0crwdne3120198:0
+          description_short: crwdns3120200:0crwdne3120200:0
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120204:0crwdne3120204:0
+            lessonGroup-3:
+              display_name: crwdns3120206:0crwdne3120206:0
+            lessonGroup-4:
+              display_name: crwdns3120208:0crwdne3120208:0
+          title: crwdns3120210:0crwdne3120210:0
+          description: crwdns3120212:0[0]crwdnd3120212:0[1]crwdnd3120212:0[2]crwdne3120212:0
+          student_description: crwdns3120214:0crwdne3120214:0
+          description_short: crwdns3120216:0crwdne3120216:0
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120220:0crwdne3120220:0
+            lessonGroup-3:
+              display_name: crwdns3120222:0crwdne3120222:0
+            lessonGroup-4:
+              display_name: crwdns3120224:0crwdne3120224:0
+            lessonGroup-5:
+              display_name: crwdns3120226:0crwdne3120226:0
+          title: crwdns3120228:0crwdne3120228:0
+          description: crwdns3120230:0[0]crwdnd3120230:0[1]crwdnd3120230:0[2]crwdne3120230:0
+          student_description: crwdns3120232:0crwdne3120232:0
+        csa9-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3120238:0crwdne3120238:0
+            lessonGroup-3:
+              display_name: crwdns3120240:0crwdne3120240:0
+            lessonGroup-4:
+              display_name: crwdns3120242:0crwdne3120242:0
+          title: crwdns3120244:0crwdne3120244:0
+          description: crwdns3120246:0crwdne3120246:0
+          student_description: crwdns3120248:0crwdne3120248:0
+          description_short: crwdns3120250:0crwdne3120250:0
+        csa1-2023:
+          name: crwdns3159930:0crwdne3159930:0
+          title: crwdns3159932:0crwdne3159932:0
+          description_short: crwdns3159936:0crwdne3159936:0
+          description: crwdns3159938:0[0]crwdnd3159938:0[1]crwdnd3159938:0[2]crwdne3159938:0
+          student_description: crwdns3159940:0crwdne3159940:0
+        csa2-2023:
+          name: crwdns3159942:0crwdne3159942:0
+          title: crwdns3159944:0crwdne3159944:0
+          description_short: crwdns3159948:0crwdne3159948:0
+          description: crwdns3159950:0[0]crwdnd3159950:0[1]crwdnd3159950:0[2]crwdne3159950:0
+          student_description: crwdns3159952:0crwdne3159952:0
+        csa3-2023:
+          name: crwdns3159954:0crwdne3159954:0
+          title: crwdns3159956:0crwdne3159956:0
+          description_short: crwdns3159960:0crwdne3159960:0
+          description: crwdns3159962:0[0]crwdnd3159962:0[1]crwdnd3159962:0[2]crwdne3159962:0
+          student_description: crwdns3159964:0crwdne3159964:0
+        csa4-2023:
+          name: crwdns3159966:0crwdne3159966:0
+          title: crwdns3159968:0crwdne3159968:0
+          description_short: crwdns3159972:0crwdne3159972:0
+          description: crwdns3159974:0[0]crwdnd3159974:0[1]crwdnd3159974:0[2]crwdne3159974:0
+          student_description: crwdns3159976:0crwdne3159976:0
+        csa5-2023:
+          name: crwdns3159978:0crwdne3159978:0
+          title: crwdns3159980:0crwdne3159980:0
+          description_short: crwdns3159984:0crwdne3159984:0
+          description: crwdns3159986:0[0]crwdnd3159986:0[1]crwdnd3159986:0[2]crwdne3159986:0
+          student_description: crwdns3159988:0crwdne3159988:0
+        csa6-2023:
+          name: crwdns3159990:0crwdne3159990:0
+          title: crwdns3159992:0crwdne3159992:0
+          description_short: crwdns3159996:0crwdne3159996:0
+          description: crwdns3159998:0[0]crwdnd3159998:0[1]crwdnd3159998:0[2]crwdne3159998:0
+          student_description: crwdns3160000:0crwdne3160000:0
+        csa7-2023:
+          name: crwdns3160002:0crwdne3160002:0
+          title: crwdns3160004:0crwdne3160004:0
+          description_short: crwdns3160008:0crwdne3160008:0
+          description: crwdns3160010:0[0]crwdnd3160010:0[1]crwdnd3160010:0[2]crwdne3160010:0
+          student_description: crwdns3160012:0crwdne3160012:0
+        csa8-2023:
+          name: crwdns3160014:0crwdne3160014:0
+          title: crwdns3160016:0crwdne3160016:0
+          description: crwdns3160022:0[0]crwdnd3160022:0[1]crwdnd3160022:0[2]crwdne3160022:0
+          student_description: crwdns3160024:0crwdne3160024:0
+        vpl-csd3-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3160026:0crwdne3160026:0
+            lessonGroup-3:
+              display_name: crwdns3160028:0crwdne3160028:0
+          name: crwdns3160030:0crwdne3160030:0
+          title: crwdns3160032:0crwdne3160032:0
+        vpl-csd4-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3160042:0crwdne3160042:0
+            lessonGroup-3:
+              display_name: crwdns3160044:0crwdne3160044:0
+          name: crwdns3160046:0crwdne3160046:0
+          title: crwdns3160048:0crwdne3160048:0

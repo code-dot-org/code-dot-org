@@ -58,7 +58,7 @@ module Foorm
       unless form_data.allow_signed_out
         return render :logged_out unless current_user
         return render :not_teacher unless current_user.teacher?
-        return render :no_teacher_email unless current_user.email.present?
+        return render :no_teacher_email if current_user.email.blank?
 
         key_params[:user_id] = current_user.id
       end

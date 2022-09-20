@@ -1,5 +1,11 @@
 import UserPreferences from '../lib/util/UserPreferences';
 import {DisplayTheme} from './DisplayTheme';
+import {
+  DEFAULT_FONT_SIZE_PX,
+  FONT_SIZE_INCREMENT_PX,
+  MAX_FONT_SIZE_PX,
+  MIN_FONT_SIZE_PX
+} from './editorThemes';
 import {JavalabEditorDialog} from './JavalabEditorDialogManager';
 import {fileMetadataForEditor} from './JavalabFileHelper';
 
@@ -48,6 +54,8 @@ const SET_NEW_FILE_ERROR = 'javalab/SET_NEW_FILE_ERROR';
 const CLEAR_NEW_FILE_ERROR = 'javalab/CLEAR_NEW_FILE_ERROR';
 const SET_RENAME_FILE_ERROR = 'javalab/SET_RENAME_FILE_ERROR';
 const CLEAR_RENAME_FILE_ERROR = 'javalab/CLEAR_RENAME_FILE_ERROR';
+const INCREASE_EDITOR_FONT_SIZE = 'javalab/INCREASE_EDITOR_FONT_SIZE';
+const DECREASE_EDITOR_FONT_SIZE = 'javalab/DECREASE_EDITOR_FONT_SIZE';
 
 const initialSources = {
   'MyClass.java': {text: '', isVisible: true, isValidation: false}
@@ -85,7 +93,10 @@ export const initialState = {
   editorOpenDialogName: null,
   newFileError: null,
   renameFileError: null,
-  isJavabuilderConnecting: false
+  isJavabuilderConnecting: false,
+  editorFontSize: DEFAULT_FONT_SIZE_PX,
+  canIncreaseFontSize: DEFAULT_FONT_SIZE_PX < MAX_FONT_SIZE_PX,
+  canDecreaseFontSize: DEFAULT_FONT_SIZE_PX > MIN_FONT_SIZE_PX
 };
 
 // Action Creators
@@ -240,6 +251,14 @@ export const closeEditorDialog = () => ({
 export const setIsJavabuilderConnecting = isJavabuilderConnecting => ({
   type: SET_IS_JAVABUILDER_CONNECTING,
   isJavabuilderConnecting
+});
+
+export const increaseEditorFontSize = () => ({
+  type: INCREASE_EDITOR_FONT_SIZE
+});
+
+export const decreaseEditorFontSize = () => ({
+  type: DECREASE_EDITOR_FONT_SIZE
 });
 
 // Selectors
@@ -691,6 +710,30 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isJavabuilderConnecting: action.isJavabuilderConnecting
+    };
+  }
+  if (action.type === INCREASE_EDITOR_FONT_SIZE) {
+    const newFontSize = Math.min(
+      MAX_FONT_SIZE_PX,
+      state.editorFontSize + FONT_SIZE_INCREMENT_PX
+    );
+    return {
+      ...state,
+      editorFontSize: newFontSize,
+      canIncreaseFontSize: newFontSize < MAX_FONT_SIZE_PX,
+      canDecreaseFontSize: newFontSize > MIN_FONT_SIZE_PX
+    };
+  }
+  if (action.type === DECREASE_EDITOR_FONT_SIZE) {
+    const newFontSize = Math.max(
+      MIN_FONT_SIZE_PX,
+      state.editorFontSize - FONT_SIZE_INCREMENT_PX
+    );
+    return {
+      ...state,
+      editorFontSize: newFontSize,
+      canIncreaseFontSize: newFontSize < MAX_FONT_SIZE_PX,
+      canDecreaseFontSize: newFontSize > MIN_FONT_SIZE_PX
     };
   }
   return state;

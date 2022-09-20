@@ -2,6 +2,8 @@
 id:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: mengonfirmasi pengguna {QUESTION} untuk variabel {VAR} dengan pilihan {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       BadGuys_setSizeAll_dropdown:

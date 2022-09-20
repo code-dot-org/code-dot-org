@@ -71,7 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
-require 'cdo/user_helpers'
+require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
@@ -527,7 +527,7 @@ class User < ApplicationRecord
   end
 
   def normalize_email
-    return unless email.present?
+    return if email.blank?
     self.email = email.strip.downcase
   end
 
@@ -536,7 +536,7 @@ class User < ApplicationRecord
   end
 
   def hash_email
-    return unless email.present?
+    return if email.blank?
     self.hashed_email = User.hash_email(email)
   end
 
@@ -851,7 +851,7 @@ class User < ApplicationRecord
     return false unless teacher? && purged_at.nil?
 
     # new teacher accounts should always require an email
-    return true unless created_at.present?
+    return true if created_at.blank?
 
     # existing accounts created after the email requirement must have an email.
     # FND-1130: The created_at exception will no longer be required
@@ -987,7 +987,7 @@ class User < ApplicationRecord
 
   def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
-    return false unless email.present?
+    return false if email.blank?
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER

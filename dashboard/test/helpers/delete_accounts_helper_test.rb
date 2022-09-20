@@ -885,44 +885,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.code_review_comments
-  #
-
-  test "soft deletes and clears comments written by purged user" do
-    student = create :student
-
-    comment = create :code_review_comment, commenter: student
-    refute comment.deleted?
-    refute_nil comment.comment
-
-    # Confirm that the contents of soft deleted comments
-    # are fully deleted.
-    deleted_comment = create :code_review_comment, commenter: student, deleted_at: Time.now
-    assert deleted_comment.deleted?
-    refute_nil deleted_comment.comment
-
-    purge_user student
-
-    comment.reload
-    assert comment.deleted?
-    assert_nil comment.comment
-
-    deleted_comment.reload
-    assert deleted_comment.deleted?
-    assert_nil deleted_comment.comment
-
-    assert_logged 'Cleared 2 CodeReviewComment'
-  end
-
-  #
   # Table: dashboard.code_review_requests
-  # Table: dashboard.code_review_notes
+  # Table: dashboard.code_review_comments
   #
   test "deletes comment text and soft deletes comments for purged user" do
     student = create :student
     review = create :code_review, user_id: student.id
     student_2 = create :student
-    comment = create :code_review_note, commenter: student_2, code_review: review
+    comment = create :code_review_comment, commenter: student_2, code_review: review
     assert_nil review.deleted_at
     assert_nil comment.deleted_at
     refute_nil comment.comment
@@ -940,7 +910,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "anonymizes and deletes code review comments written by user" do
     student = create :student
-    comment = create :code_review_note, commenter: student
+    comment = create :code_review_comment, commenter: student
     refute_nil comment.commenter
     refute_nil comment.comment
     assert_nil comment.deleted_at

@@ -46,6 +46,349 @@
         "ai-training/oceans/unversioned": {
           "type": "Videó"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Grafikus programozás",
+          "type": "Értékelés"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Páros programozás"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Videó"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Feltételek kártyákkal",
+          "type": "Értékelés"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "Projektútmutató"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Tanári fórum"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Videó"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Videó"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Videó"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Videó"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Videó"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet",
+          "type": "Értékelés"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Az internet"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Rubrika"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Tanári fórum"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Videó"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Értékelés"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Videó"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Rubrika"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Tanári fórum"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Páros programozás"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Videó"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "Videó"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Ciklikusság"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Ciklikusság"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Ciklikusság",
+          "type": "Értékelés"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Ciklikusság"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Videó"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "A nagy esemény"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "A nagy esemény",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "A nagy esemény"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Tanári fórum"
+        },
+        "pair_programming/express/2022": {
+          "name": "Páros programozás",
+          "type": "Videó"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Videó"
+        },
+        "turns_angles/express/2022": {
+          "type": "Videó"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Videó"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Videó"
+        },
+        "variables/express/2022": {
+          "name": "változók"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Rubrika"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "Projektútmutató"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Tanári fórum"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Videó"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Páros programozás"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Videó"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Videó"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Tanári fórum"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Videó"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Páros programozás"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Videó"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Vidám térképek"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Videó"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Videó"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Videó"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Videó"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "A nagy esemény"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "A nagy esemény",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "A nagy esemény"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Tanári fórum"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Páros programozás",
+          "type": "Videó"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "A nagy esemény"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "A nagy esemény",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "A nagy esemény"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Videó"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Bináris karkötők",
+          "type": "Értékelés"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Tanári fórum"
+        },
         "representing_information/csd/2022": {
           "name": "Az információ ábrázolása"
         },

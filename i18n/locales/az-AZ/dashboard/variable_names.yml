@@ -59,6 +59,7 @@ az:
       name: ad
       nectar: nektar
       nectars: nektar
+      object: əşya
       planet: planet
       points: xallar
       random: təsadüfi
@@ -79,6 +80,7 @@ az:
       speed: sürət
       startX: başlaX
       startY: başlaY
+      type: tip
       variable: dəyişən
       width: enlik
       wizard: sehrbaz

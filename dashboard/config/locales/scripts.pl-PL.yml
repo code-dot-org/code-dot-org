@@ -109,6 +109,7 @@ pl:
           description: Poznaj programowanie funkcjonalne za pomocą algebry.
           description_short: Poznaj programowanie funkcjonalne za pomocą algebry.
           student_description: Poznaj programowanie funkcjonalne za pomocą algebry.
+          name: algebra
         infinity:
           title: Disney Infinity Play Lab
           description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
@@ -326,11 +327,13 @@ pl:
           description: Poznaj programowanie funkcjonalne za pomocą algebry
           description_short: Poznaj programowanie funkcjonalne za pomocą algebry
           student_description: Poznaj programowanie funkcjonalne za pomocą algebry
+          name: AlgebraA
         AlgebraB:
           title: 'Informatyka w algebrze: Kurs B'
           description: Poznaj programowanie funkcjonalne za pomocą algebry
           description_short: Poznaj programowanie funkcjonalne za pomocą algebry
           student_description: Poznaj programowanie funkcjonalne za pomocą algebry
+          name: AlgebraB
         algebraPD1:
           title: Informatyka w algebrze, część I
         csp1-2017:
@@ -5942,7 +5945,7 @@ pl:
           description_short: W małych grupach uczniowie prowadzą badania, korzystając
             z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez
             siebie obszarze sztucznej inteligencji (AI).
-          description_audience: klasy 6-12
+          description_audience: Klasy 6-12
           name: ai-ethics-2021
         poem-art-2021:
           title: Sztuka poezji
@@ -6847,6 +6850,10 @@ pl:
           name: csc-fables-2022
         csc-timecapsule-2022:
           name: csc-timecapsule-2022
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Rozszerzenie debugowania asynchronicznego
         alltheblocklythings:
           lesson_groups:
             lessonGroup-2:
@@ -6884,5 +6891,122 @@ pl:
               name: Aktywność otwarta
             lesson-16:
               name: Aktywność otwarta
+        csa-draft-pl:
+          name: csa-draft-pl
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Moduł 2 Praca asynchroniczna
         soccer:
           name: piłka nożna
+          title: Zakoduj własną grę w piłkę nożną
+          description_short: Utwórz mecz piłki nożnej
+          description: Utwórz mecz piłki nożnej
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Ankieta
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          title: Programowanie obiektowe ('22-'23)
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          title: Struktura i projekt klas ('22-'23)
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          title: Tabkice i algorytmy ('22-'23)
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          title: Warunki i Logika ('22-'23)
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż Tydzień, co wiesz
+          title: Tablice dwuwymiarowe ('22 -'23)
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Ankieta
+        csa9-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przegląd i praktyka
+            lessonGroup-3:
+              display_name: Egzaminy próbne
+          title: Przegląd egzaminu AP i praktyka ('22-'23)
+          description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez
+            przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań
+            z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie
+            identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane
+            plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje
+            postępy.
+          student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA
+            poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru
+            i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania
+            testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane
+            plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje
+            postępy.
+          description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc
+            odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+        csa1-2023:
+          name: csa1-2023
+          title: Programowanie obiektowe
+        csa2-2023:
+          name: csa2-2023
+          title: Struktura klas i Projekt
+        csa3-2023:
+          name: csa3-2023
+          title: Tablice i Algorytmy
+        csa4-2023:
+          name: csa4-2023
+          title: Warunki i Logika
+        csa5-2023:
+          name: csa5-2023
+          title: Tablice dwuwymiarowe
+        csa6-2023:
+          name: csa6-2023
+          title: Listy tablic i Metody łańcuchów
+        csa7-2023:
+          name: csa7-2023
+          title: Metoda dokompozycji i Rekurencja
+        csa8-2023:
+          name: csa8-2023
+          title: Wyszukiwanie i porządkowanie
+        vpl-csd3-ayw-pilot-2022:
+          name: vpl-csd3-ayw-pilot-2022
+          title: Odkrycia informatyki wirtualny moduł 3
+        vpl-csd4-ayw-pilot-2022:
+          name: vpl-csd4-ayw-pilot-2022
+          title: Odkrycia informatyki wirtualny moduł 4

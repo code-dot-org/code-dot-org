@@ -5,30 +5,36 @@ ph:
   language: Ingles
   front_title: Sumali sa pinakamalaking kaganapan ng pag-aaral sa kasaysayan, %{campaign_date}
   coming_soon: Malapit na
-  campaign_date_start_short: Dis. 6
-  campaign_date_start_long: Disyembre 6
-  campaign_date_short: Dis. 7-13
-  campaign_date_full: Disyembre 6-12
-  campaign_date_year: '2021'
-  campaign_date_full_year: Disyembre 6-12, 2021
+  campaign_date_start_short: Dis. 5
+  campaign_date_start_long: Disyembre 5
+  campaign_date_short: Dis. 5-11
+  campaign_date_full: Disyembre 5-11
+  campaign_date_year: '2022'
+  campaign_date_full_year: Disyembre 5-11, 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Okt. 1 - Dis. 18
+  nonus_campaign_date_full: Oktubre 1 - Disyembre 18
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Dis. 6
-  europe_campaign_date_start_long: Disyembre 6
-  europe_campaign_date_short: Dis. 7-13
-  europe_campaign_date_full: Disyembre 6-12
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: Disyembre 6-12, 2021
-  africa_campaign_date_start_short: Dis. 6
-  africa_campaign_date_start_long: Disyembre 6
-  africa_campaign_date_short: Dis. 7-13
-  africa_campaign_date_full: Disyembre 6-12
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: Disyembre 6-12, 2021
+  latam_campaign_date_short: Okt. 1 - Dis. 18
+  latam_campaign_date_full: Oktubre 1 - Disyembre 18
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Okt. 1 - Dis. 18
+  europe_campaign_date_full: Oktubre 1 - Disyembre 18
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Okt. 1 - Dis. 18
+  africa_campaign_date_full: Oktubre 1 - Disyembre 18
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Matuto ngayon, buuhin ang mas maliwanag na bukas.  "
@@ -553,8 +559,6 @@ ph:
     sa mapa kapag ikaw ay nag-register. Kung mag-ho-host ka ng maraming kaganapan,
     mangyaring mag-sumite ng magkaibang pangalan o email para sa bawat isa. Binibilang
     lamang namin ang isang kaganapan sa bawat kombinasyon ng pangalan at email.
-  signup_registration_deadline: Ang pagpaparehistro para sa Hour of Code ay magsasara
-    ng Disyembre 11.
   signup_name_placeholder: iyong Pangalan
   signup_email_placeholder: pangalan@example.com
   signup_organization_name_placeholder: Halimbawa, Southville International School
