@@ -65,8 +65,8 @@ module Crowdin
             [
               filepath,
               {
-                etag: response["data"]["etag"],
-                download_url: response["data"]["url"]
+                download_url: response["data"]["url"],
+                etag: response["data"]["etag"]
               }
             ]
           when 304
@@ -119,7 +119,7 @@ module Crowdin
             destfile.write(response.body)
           end
 
-          [file, {etag: files[file]["etag"]}]
+          [file, files[file]["etag"]]
         end.to_h
 
         # Save incremental progress so we don't have to re-download everything
@@ -136,7 +136,7 @@ module Crowdin
         File.write @files_to_download_json, JSON.pretty_generate(files_to_download)
 
         etags[code] ||= {}
-        etags[code].merge! downloaded_files.each {|file, data| downloaded_files[file] = data[:etag]}
+        etags[code].merge! downloaded_files
         File.write @etags_json, JSON.pretty_generate(etags)
       end
     end
