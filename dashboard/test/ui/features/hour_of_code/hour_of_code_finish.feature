@@ -82,6 +82,11 @@ Scenario: blank certificate
 
   Then I wait to see an image "/images/hour_of_code_certificate.jpg"
 
+Scenario: pegasus congrats page redirects to dashboard congrats page
+  When I am on "http://code.org/congrats"
+  And I wait until current URL contains "http://studio.code.org/congrats"
+  And I wait to see element with ID "uitest-certificate"
+
 @eyes
 Scenario: congrats certificate pages
   Given I am on "http://studio.code.org/congrats"
