@@ -852,6 +852,7 @@
   "enterSectionCode": "Enter section code",
   "enrollmentDescription": "Join your teacher's classroom by entering their section code below. Teachers will be able to see your course progress, projects, and reset your password in case you forget it.",
   "equalTo": "Equal to",
+  "errorResettingAnswer": "There was an error deleting your answer. You may not have permissions to delete this answer.",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
   "errorExceededLimitedBlocks": "You did it! Now go find the pattern in your code and take out the extra blocks. You can only use {limit} of these blocks:",
   "errorFindingClassLibraries": "Unable to load your class libraries at this time. Please check your internet connection and try again.",

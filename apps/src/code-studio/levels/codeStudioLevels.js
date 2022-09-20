@@ -168,7 +168,7 @@ export function resetContainedLevel() {
     );
   }
   return getAuthenticityToken().then(() => {
-    fetch('/delete_predict_level_progress', {
+    return fetch('/delete_predict_level_progress', {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
@@ -185,7 +185,7 @@ export function resetContainedLevel() {
         const runButton = $('#runButton');
         runButton.prop('disabled', true);
       } else {
-        throw 'Error resetting answer';
+        throw `Error resetting answer with status code ${response.status}`;
       }
     });
   });
