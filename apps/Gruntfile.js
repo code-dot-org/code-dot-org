@@ -714,6 +714,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/certificates.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
+    'code.org/public/sharecertificate':
+      './src/sites/code.org/pages/public/sharecertificate.js',
     'code.org/public/teacher-dashboard/index':
       './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/yourschool':
