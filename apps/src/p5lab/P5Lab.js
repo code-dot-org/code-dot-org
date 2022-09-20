@@ -70,11 +70,6 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './gamelab/MobileControls';
 import Exporter from './gamelab/Exporter';
-import {
-  expoGenerateApk,
-  expoCheckApkBuild,
-  expoCancelApkBuild
-} from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
@@ -430,26 +425,9 @@ export default class P5Lab {
       }
     }
 
-    const setAndroidExportProps = this.setAndroidExportProps.bind(this);
-
     this.studioApp_.setPageConstants(config, {
       allowExportExpo: experiments.isEnabled('exportExpo'),
       exportApp: this.exportApp.bind(this),
-      expoGenerateApk: expoGenerateApk.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCheckApkBuild: expoCheckApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCancelApkBuild: expoCancelApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
       channelId: config.channel,
       nonResponsiveVisualizationColumnWidth: APP_WIDTH,
       showDebugButtons: showDebugButtons,
@@ -578,21 +556,6 @@ export default class P5Lab {
     return this.exportAppWithAnimations(
       project.getCurrentName() || 'my-app',
       getStore().getState().animationList
-    );
-  }
-
-  // remove
-  setAndroidExportProps(props) {
-    // Spread the previous object so changes here will always fail shallow
-    // compare and trigger react prop changes
-    this.generatedProperties.export = {
-      ...this.generatedProperties.export,
-      android: props
-    };
-    project.projectChanged();
-    project.saveIfSourcesChanged();
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
     );
   }
 
