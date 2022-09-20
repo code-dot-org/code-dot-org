@@ -51,17 +51,17 @@ function Certificate(props) {
     return btoa(JSON.stringify(data));
   };
 
-  const getCertificateImagePath = certificate => {
+  const getCertificateImagePath = () => {
     const filename = getEncodedParams();
     return `/certificate_images/${filename}.jpg`;
   };
 
-  const getPrintPath = certificate => {
+  const getPrintPath = () => {
     const encoded = getEncodedParams();
     return `/print_certificates/${encoded}`;
   };
 
-  const getCertificateSharePath = certificate => {
+  const getCertificateSharePath = () => {
     const encoded = getEncodedParams();
     return `/certificates/${encoded}`;
   };
@@ -78,11 +78,11 @@ function Certificate(props) {
   } = props;
 
   const certificate = certificateId || 'blank';
-  const personalizedCertificate = getCertificateImagePath(certificate);
+  const personalizedCertificate = getCertificateImagePath();
   const imgSrc = personalized
     ? personalizedCertificate
     : initialCertificateImageUrl;
-  const certificateShareLink = getCertificateSharePath(certificate);
+  const certificateShareLink = getCertificateSharePath();
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -101,7 +101,7 @@ function Certificate(props) {
       : i18n.justDidHourOfCode()
   });
 
-  const print = getPrintPath(certificate);
+  const print = getPrintPath();
 
   const wrapperClassName = 'show-studio-certificate';
 
