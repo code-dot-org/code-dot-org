@@ -21,13 +21,25 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   let fileMetadata = {};
   let orderedTabKeys = [];
   let unorderedTabKeys = [];
-  // sources contains file information as key-value pairs.
-  // The key is the file name such as 'MyClass.java'.
-  // The value is a file object with the keys: text (source code),
-  // order (order of the file tab in orderedTabs from 0 to number of files - 1),
-  // isVisible, and isValidation.
-  // The orderOfFiles array will contain the 'order' of each file as they are assigned
-  // their tabKey names (such as 'file-0', 'file-1') which is stored in fileMetadata
+  /*
+  'sources' contains file information as key-value pairs.
+  The key is the file name such as 'Class1.java'.
+  The value is a file object with the keys: text (source code),
+  order (order of the file tab in orderedTabs from 0 to number of files - 1),
+  isVisible, and isValidation (default is false)
+  The orderOfFiles array will contain the 'order' of each file as they are assigned
+  their tabKey names (such as 'file-0', 'file-1') which is stored in fileMetadata.
+  For example, if sources contains the following:
+  {
+    'Class1.java': {text: '', order: 2, isVisible: true},
+    'Class2.java': {text: '', order: 0, isVisible: true},
+    'Class3.java': {text: '', order: 1, isVisible: true}
+  },
+  then depending on how Object.keys iterates through the keys on sources, we could have
+  fileMetata assigned:
+  {'file-0': 'Class2.java', 'file-1': 'Class1.java', 'file-2': 'Class3.java'}.
+  The corresponding orderOfFiles would be [0, 2, 1].
+  */
   let orderOfFiles = [];
   let fileIndex = 0; // may be different from index below due to hidden files
   let isValid = true;
@@ -37,7 +49,8 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
       fileMetadata[tabKey] = file;
       unorderedTabKeys.push(tabKey);
       let order = sources[file].order;
-      // files that are stored may not currently have an order assigned so that order is undefined
+      // files that are stored may not currently have an order assigned so that
+      // order is undefined
       if (Number.isInteger(order)) {
         orderOfFiles.push(sources[file].order);
       } else {
@@ -55,10 +68,11 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
       }
     }
   }
-  // assign orderedTabKeys the ordering of files stored in orderOfFiles
-  // if any of the orders from sources were invalid,
-  // (undefined, duplicates, missing orders, out of bounds), assign order based on
-  // file metadata
+  // Assign orderedTabKeys the ordering of files stored in orderOfFiles corresponding to
+  // file names stored in fileMetata.
+  // If any of the orders from sources were invalid
+  // (undefined, duplicates, missing orders, out of bounds), assign orderedTabKeys the
+  // the order ['file-0', 'file-1', 'file-2', ...]
   for (let i = 0; i < numVisibleFiles; i++) {
     if (isValid) {
       let index = orderOfFiles.indexOf(i);
