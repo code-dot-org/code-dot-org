@@ -9,6 +9,7 @@ const sections = [
   {
     id: 1,
     name: 'NoStudents',
+    courseVersionName: 'cv',
     loginType: 'word',
     studentCount: 0,
     code: 'ABCD',
@@ -21,6 +22,7 @@ const sections = [
   {
     id: 2,
     name: 'ThirdParty',
+    courseVersionName: 'cv',
     loginType: 'google_classroom',
     studentCount: 0,
     code: 'EFGH',
@@ -33,6 +35,7 @@ const sections = [
   {
     id: 3,
     name: 'HasStudents',
+    courseVersionName: 'cv',
     loginType: 'picture',
     studentCount: 4,
     code: 'IJKL',
@@ -45,6 +48,7 @@ const sections = [
   {
     id: 4,
     name: 'Hidden',
+    courseVersionName: 'cv',
     loginType: 'email',
     studentCount: 2,
     code: 'MNOP',
@@ -103,7 +107,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.not.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(
-      wrapper.find(<PrintCertificates sectionId={2} assignmentName="a" />)
+      wrapper.find(<PrintCertificates sectionId={2} courseVersionName="cv" />)
         .length,
       1
     );
@@ -118,7 +122,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(
-      wrapper.find(<PrintCertificates sectionId={1} assignmentName="a" />)
+      wrapper.find(<PrintCertificates sectionId={1} courseVersionName="cv" />)
         .length,
       1
     );
