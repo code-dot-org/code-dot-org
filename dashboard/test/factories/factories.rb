@@ -1592,7 +1592,7 @@ FactoryGirl.define do
     storage_id 1
   end
 
-  factory :code_review_note do
+  factory :code_review_comment do
     association :commenter, factory: :student
     association :code_review
 
