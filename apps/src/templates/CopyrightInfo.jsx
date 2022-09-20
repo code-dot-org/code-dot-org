@@ -7,13 +7,18 @@ const CopyrightInfo = () => {
   const licenseURL = 'http://creativecommons.org/licenses/by-nc-sa/4.0/';
 
   return (
-    <div style={{marginTop: 20}}>
+    <div>
       <div
-        style={{display: 'flex', flexWrap: 'nowrap', alignItems: 'baseline'}}
+        style={{
+          display: 'flex',
+          flexWrap: 'nowrap',
+          alignItems: 'baseline',
+          margin: '20px 0 5px 0'
+        }}
       >
         <a rel="license" href={licenseURL}>
           <img
-            style={{height: 30, paddingRight: 10}}
+            style={{height: 40, paddingRight: 10}}
             src={CreativeCommons}
             alt="Creative Commons License (CC BY-NC-SA 4.0)."
           />
