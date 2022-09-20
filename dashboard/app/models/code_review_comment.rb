@@ -15,9 +15,9 @@
 #
 #  index_code_review_notes_on_code_review_request_id  (code_review_request_id)
 #
-class CodeReviewNote < ApplicationRecord
-  # TODO: This model will be renamed to CodeReviewComment once the old models are
-  # removed.
+class CodeReviewComment < ApplicationRecord
+  # TODO: rename the table to code_review_notes
+  self.table_name = :code_review_notes
 
   belongs_to :commenter, class_name: 'User', optional: true
   # TODO: When the column is renamed, update this association

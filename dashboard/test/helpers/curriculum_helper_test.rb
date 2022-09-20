@@ -42,4 +42,21 @@ class CurriculumHelperTest < ActiveSupport::TestCase
     @object_to_validate.stubs(:key).returns("beautiful_key1")
     assert @object_to_validate.validate_key_format
   end
+
+  test "find_matching_course_version" do
+    standalone_unit = create :script, is_course: true
+    course_version = create :course_version, content_root: standalone_unit
+
+    assert_equal course_version, CurriculumHelper.find_matching_course_version(standalone_unit.name)
+
+    unit_group = create :unit_group
+    unit = create :script
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    course_version = create :course_version, content_root: unit_group
+
+    assert_equal course_version, CurriculumHelper.find_matching_course_version(unit_group.name)
+    assert_nil CurriculumHelper.find_matching_course_version(unit.name)
+
+    assert_nil CurriculumHelper.find_matching_course_version('foo')
+  end
 end
