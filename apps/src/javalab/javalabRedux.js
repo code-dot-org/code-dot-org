@@ -290,7 +290,10 @@ export const getValidation = state => {
   let validation = {};
   for (let key in state.javalab.sources) {
     if (state.javalab.sources[key].isValidation) {
-      validation[key] = {text: state.javalab.sources[key].text};
+      validation[key] = {
+        text: state.javalab.sources[key].text,
+        order: state.javalab.sources[key].order
+      };
     }
   }
   return validation;
