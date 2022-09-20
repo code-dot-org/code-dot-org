@@ -1147,3 +1147,10 @@ hu:
   unit_prefix: "Egység %{n}"
   code_org_logo_alt: "Code.org kezdőlap"
   teacher_feedback: "Tanári visszajelzés"
+  lesson_lock:
+    error:
+      no_updates: "Nincs végrehajtandó frissítés"
+      missing_params: "Meg kell adni a felhasználó, a szint és az egység azonosítóját"
+      cannot_view_locked_answers: "Zárolt állapotban a válaszokat nem lehet megtekinteni"
+      forbidden: "A felhasználó nem frissítheti a tanuló zárolható állapotát"
+  reset_predict_progress_button: "Válasz törlése"

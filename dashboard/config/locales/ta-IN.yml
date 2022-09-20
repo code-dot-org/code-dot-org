@@ -1487,3 +1487,10 @@ ta:
   unit_prefix: அலகு %{n}
   code_org_logo_alt: Code.org முகப்பு
   teacher_feedback: ஆசிரியர் கருத்து
+  lesson_lock:
+    error:
+      no_updates: செயல்படுத்த புதுப்பிப்புகள் இல்லை
+      missing_params: பயனர், நிலை மற்றும் யூனிட் ஐடிகளை வழங்க வேண்டும்
+      cannot_view_locked_answers: பூட்டப்பட்டிருக்கும் போது பதில்களைப் பார்க்க முடியாது
+      forbidden: மாணவர் பூட்டக்கூடிய நிலையைப் பயனர் புதுப்பிக்க முடியாது
+  reset_predict_progress_button: பதிலை நீக்கு

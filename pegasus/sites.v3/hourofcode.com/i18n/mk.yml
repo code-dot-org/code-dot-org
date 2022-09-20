@@ -678,11 +678,11 @@ mk:
     како и без преседан коалицијата на партнери кои се здружија за поддршка на Часот
     на кодот &mdash; вклучувајќи ги и Мајкрософт, Епл, Амазон, Клубови на Момци и
     Девојки на Америка и Одбор на Колеџ.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Не знам ништо за кодирање. Може ли уште да бидам домаќин на настанот?
   hoc_faq_host_a: Секако. Активностите на Hour of Code се само-управувани. Се што
     треба да направите е <a href='%{codeorg_url}/learn'>пробајте ги нашите тековни
@@ -1001,7 +1001,7 @@ mk:
     резервирани.
   footer_trademark_message: Час на Код™ е заштитен знак на Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
-  footer_menu_partners: Partners and Advisors
+  footer_menu_partners: Партнери
   footer_menu_contact: Contact us
   footer_menu_support: Support
   footer_menu_terms: Terms

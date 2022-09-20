@@ -1985,6 +1985,8 @@ he:
         csa-pl-module-2-test: {}
         csa-pl-module-3-test: {}
         csa6-pilot-facilitator: {}
+        ai-ethics-2021:
+          description_audience: כיתות ו-י"ב
         poem-art-2021:
           title: אומנות השירה
         poetry-2021: {}
@@ -2300,3 +2302,13 @@ he:
             lessonGroup-5:
               display_name: סקר
         csa9-validation-pilot-2022: {}
+        csa1-2023: {}
+        csa2-2023: {}
+        csa3-2023: {}
+        csa4-2023: {}
+        csa5-2023: {}
+        csa6-2023: {}
+        csa7-2023: {}
+        csa8-2023: {}
+        vpl-csd3-ayw-pilot-2022: {}
+        vpl-csd4-ayw-pilot-2022: {}

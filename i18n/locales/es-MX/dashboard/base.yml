@@ -1146,3 +1146,4 @@ es-MX:
   unit_prefix: "Unidad %{n}"
   code_org_logo_alt: "Inicio de Code.org"
   teacher_feedback: "Retroalimentación del docente"
+  reset_predict_progress_button: "Borrar respuesta"

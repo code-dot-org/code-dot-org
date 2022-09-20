@@ -1430,3 +1430,10 @@ cs:
   unit_prefix: Jednotka %{n}
   code_org_logo_alt: Hlavní strana Code.org
   teacher_feedback: Zpětná vazba učitele
+  lesson_lock:
+    error:
+      no_updates: Nejsou žádné aktualizace k provedení
+      missing_params: Je třeba zadat identifikátory uživatele, úrovně a jednotky
+      cannot_view_locked_answers: Při uzamčení nelze zobrazit odpovědi
+      forbidden: Uživatel nemůže aktualizovat stav uzamykatelnosti studenta
+  reset_predict_progress_button: Vymazat odpověď
