@@ -7,19 +7,24 @@ const CopyrightInfo = () => {
   const licenseURL = 'http://creativecommons.org/licenses/by-nc-sa/4.0/';
 
   return (
-    <div>
-      <a rel="license" href={licenseURL}>
-        <img
-          style={{height: 30, margin: '10px 10px 5px 0'}}
-          src={CreativeCommons}
-          alt="Creative Commons License (CC BY-NC-SA 4.0)."
+    <div style={{marginTop: 20}}>
+      <div
+        style={{display: 'flex', flexWrap: 'nowrap', alignItems: 'baseline'}}
+      >
+        <a rel="license" href={licenseURL}>
+          <img
+            style={{height: 30, paddingRight: 10}}
+            src={CreativeCommons}
+            alt="Creative Commons License (CC BY-NC-SA 4.0)."
+          />
+        </a>
+        <SafeMarkdown
+          markdown={i18n.licenseInformation({
+            link: 'http://creativecommons.org/licenses/by-nc-sa/4.0/'
+          })}
+          openExternalLinksInNewTab
         />
-      </a>
-      This work is licensed under a{' '}
-      <a rel="license" href={licenseURL}>
-        Creative Commons BY-NC-SA 4.0 International License
-      </a>
-      .
+      </div>
       <SafeMarkdown
         markdown={i18n.licenseMaterials({link: 'https://code.org/contact'})}
       />
