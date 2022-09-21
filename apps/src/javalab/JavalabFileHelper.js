@@ -34,7 +34,7 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   },
   then depending on how Object.keys iterates through the keys on sources, we could have
   fileMetadata assigned: {'file-0': 'Class2.java', 'file-1': 'Class1.java', 'file-2': 'Class3.java'}.
-  The corresponding orderOfFiles would be [0, 2, 1]
+  The corresponding orderOfFiles would be [0, 2, 1], unorderedTabKeys would be ['file-0', 'file-1', 'file-2],
   and orderedTabKeys would be ['file-0', 'file-2', 'file-1'].
   */
   let fileMetadata = {};
@@ -43,23 +43,23 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   let orderOfFiles = [];
   let fileIndex = 0;
   let isValid = true;
-  Object.keys(sources).forEach(file => {
-    if (sources[file].isVisible || isEditingStartSources) {
-      let tabKey = getTabKey(fileIndex);
-      fileMetadata[tabKey] = file;
-      unorderedTabKeys.push(tabKey);
-      let tabOrder = sources[file].tabOrder;
+  Object.keys(sources).forEach(fileName => {
+    if (sources[fileName].isVisible || isEditingStartSources) {
+      let fileTabKey = getTabKey(fileIndex);
+      fileMetadata[fileTabKey] = fileName;
+      unorderedTabKeys.push(fileTabKey);
+      let tabOrder = sources[fileName].tabOrder;
       // files that are stored may not currently have an tabOrder assigned so that
       // order is undefined
       if (Number.isInteger(tabOrder)) {
-        orderOfFiles.push(sources[file].tabOrder);
+        orderOfFiles.push(sources[fileName].tabOrder);
       } else {
         isValid = false;
       }
       fileIndex++;
     }
   });
-  const numFiles = fileIndex;
+  const numTotalFiles = fileIndex;
   // check orderOfFiles for duplicates
   isValid = isValid && new Set(orderOfFiles).size === orderOfFiles.length;
 
@@ -77,19 +77,19 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   assign orderedTabKeys the order ['file-0', 'file-1', 'file-2', ...]
   */
   if (isValid) {
-    let count = 0;
-    let i = 0;
-    while (count < numFiles) {
-      let index = orderOfFiles.indexOf(i);
-      if (index > -1) {
-        orderedTabKeys.push(unorderedTabKeys[index]);
-        count++;
+    let fileCount = 0;
+    let tabOrder = 0;
+    while (fileCount < numTotalFiles) {
+      let fileIndex = orderOfFiles.indexOf(tabOrder);
+      if (fileIndex > -1) {
+        orderedTabKeys.push(unorderedTabKeys[fileIndex]);
+        fileCount++;
       }
-      i++;
+      tabOrder++;
     }
   } else {
-    for (let i = 0; i < numFiles; i++) {
-      orderedTabKeys.push(getTabKey(i));
+    for (let fileIndex = 0; fileIndex < numTotalFiles; fileIndex++) {
+      orderedTabKeys.push(getTabKey(fileIndex));
     }
   }
   const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
@@ -107,10 +107,10 @@ export const updateAllSourceFileOrders = (
   fileMetadata,
   orderedTabKeys
 ) => {
-  for (let i = 0; i < orderedTabKeys.length; i++) {
-    let file = orderedTabKeys[i];
-    let fileName = fileMetadata[file];
-    sources[fileName].tabOrder = i;
+  for (let fileIndex = 0; fileIndex < orderedTabKeys.length; fileIndex++) {
+    let fileTabKey = orderedTabKeys[fileIndex];
+    let fileName = fileMetadata[fileTabKey];
+    sources[fileName].tabOrder = fileIndex;
   }
   return sources;
 };
