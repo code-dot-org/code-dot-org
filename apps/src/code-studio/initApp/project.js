@@ -334,6 +334,7 @@ var projects = (module.exports = {
    * generatedProperties.
    * @return {string} md5 hash string.
    */
+  // not used anywhere?
   md5CurrentSources() {
     const {
       generatedProperties, // eslint-disable-line no-unused-vars
