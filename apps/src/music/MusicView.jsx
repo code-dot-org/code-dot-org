@@ -230,6 +230,19 @@ class MusicView extends React.Component {
         },
         {
           kind: 'category',
+          name: 'Math',
+          cssConfig: {
+            container: moduleStyles.toolboxCategoryContainer
+          },
+          contents: [
+            {
+              kind: 'block',
+              type: 'example_number'
+            }
+          ]
+        },
+        {
+          kind: 'category',
           name: 'Variables',
           cssConfig: {
             container: moduleStyles.toolboxCategoryContainer
@@ -238,11 +251,11 @@ class MusicView extends React.Component {
             {
               kind: 'block',
               type: 'variable_get'
+            },
+            {
+              kind: 'block',
+              type: 'variable_set'
             }
-            // {
-            //   kind: 'block',
-            //   type: 'set_variable'
-            // },
           ]
         }
       ]
@@ -485,7 +498,7 @@ class MusicView extends React.Component {
     Blockly.Blocks['variable_get'] = {
       init: function() {
         this.jsonInit({
-          type: 'variable_get',
+          type: 'variables_get',
           message0: '%1',
           args0: [
             {
@@ -494,27 +507,52 @@ class MusicView extends React.Component {
               variable: 'measure'
             }
           ],
-          output: null
+          output: null,
+          colour: '24'
         });
       }
     };
 
-    // Blockly.Blocks['set_variable'] = {
-    //   init: function() {
-    //     this.jsonInit({
-    //       type: 'variable_get',
-    //       message0: '%1',
-    //       args0: [
-    //         {
-    //           type: 'field_variable',
-    //           name: 'var',
-    //           variable: 'measure'
-    //         }
-    //       ],
-    //       output: null
-    //     });
-    //   }
-    // };
+    Blockly.Blocks['variable_set'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'variables_set',
+          message0: '%{BKY_VARIABLES_SET}',
+          args0: [
+            {
+              type: 'field_variable',
+              name: 'var',
+              variable: 'measure'
+            },
+            {
+              type: 'input_value',
+              name: 'value'
+            }
+          ],
+          previousStatement: null,
+          nextStatement: null,
+          colour: '24'
+        });
+      }
+    };
+
+    Blockly.Blocks['example_number'] = {
+      init: function() {
+        this.jsonInit({
+          type: 'example_number',
+          message0: '%1',
+          args0: [
+            {
+              type: 'field_number',
+              name: 'num',
+              value: 1,
+              min: 1
+            }
+          ],
+          output: 'Number'
+        });
+      }
+    };
 
     Blockly.JavaScript.when_run = function() {
       // Generate JavaScript for handling click event.
@@ -550,6 +588,31 @@ class MusicView extends React.Component {
     Blockly.JavaScript.variable_get = function(ctx) {
       return Blockly.JavaScript.valueToCode(ctx, 'measure');
       //return ctx.getFieldValue('var');
+    };
+
+    Blockly.JavaScript.variable_set = function(ctx) {
+      // Variable setter.
+      const argument0 =
+        Blockly.JavaScript.valueToCode(
+          ctx,
+          'value',
+          Blockly.JavaScript.ORDER_ASSIGNMENT
+        ) || '0';
+      const varName = Blockly.JavaScript.nameDB_.getName(
+        ctx.getFieldValue('var'),
+        Blockly.Names.NameType.VARIABLE
+      );
+      return varName + ' = ' + argument0 + ';\n';
+    };
+
+    Blockly.JavaScript.example_number = function(ctx) {
+      // Numeric value.
+      const code = Number(ctx.getFieldValue('num'));
+      const order =
+        code >= 0
+          ? Blockly.JavaScript.ORDER_ATOMIC
+          : Blockly.JavaScript.ORDER_UNARY_NEGATION;
+      return [code, order];
     };
 
     /*var theme = Blockly.Theme.defineTheme('dark', {
