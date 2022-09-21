@@ -12,10 +12,12 @@ export default function CertificateBatch({
   initialStudentNames,
   imageUrl
 }) {
-  const [studentNames, setStudentNames] = useState(initialStudentNames || []);
+  const [studentNames, setStudentNames] = useState(
+    initialStudentNames?.join('\n') || ''
+  );
 
   const onChange = e => {
-    setStudentNames(e.target.value && e.target.value.split('\n'));
+    setStudentNames(e.target.value);
   };
 
   return (
@@ -42,7 +44,7 @@ export default function CertificateBatch({
           name="studentNames"
           rows="10"
           style={styles.textarea}
-          value={studentNames.join('\n')}
+          value={studentNames}
           onChange={onChange}
         />
         <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
