@@ -93,7 +93,7 @@ export default function SpriteManagementDirectory() {
           onClick={confirmReleaseChangesToLevelbuilder}
           style={styles.button}
         />
-        <StatusIcon displayStatus={moveChangesStatus} />
+        <StatusIcon status={moveChangesStatus} />
       </div>
     </div>
   );

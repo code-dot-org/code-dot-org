@@ -81,7 +81,7 @@ export default class AddDefaultSprite extends React.Component {
           onClick={() => this.handleSpriteAdd(false)}
           size={Button.ButtonSize.narrow}
         />
-        <StatusIcon displayStatus={displaySuccess} />
+        <StatusIcon status={displaySuccess} />
       </div>
     );
   }

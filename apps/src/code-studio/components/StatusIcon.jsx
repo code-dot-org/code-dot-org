@@ -7,7 +7,7 @@ export const iconStatus = makeEnum('none', 'success', 'failure');
 
 export default function StatusIcon(props) {
   let icon;
-  switch (props.displayStatus) {
+  switch (props.status) {
     case iconStatus.success:
       icon = 'check';
       break;
@@ -33,7 +33,7 @@ export default function StatusIcon(props) {
 }
 
 StatusIcon.propTypes = {
-  displayStatus: PropTypes.oneOf()
+  status: PropTypes.oneOf(iconStatus)
 };
 
 const styles = {
