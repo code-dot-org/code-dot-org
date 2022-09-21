@@ -426,7 +426,6 @@ export default class P5Lab {
     }
 
     this.studioApp_.setPageConstants(config, {
-      allowExportExpo: experiments.isEnabled('exportExpo'),
       exportApp: this.exportApp.bind(this),
       channelId: config.channel,
       nonResponsiveVisualizationColumnWidth: APP_WIDTH,

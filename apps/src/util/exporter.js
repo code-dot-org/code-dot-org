@@ -1,10 +1,6 @@
 /**
  * @fileoverview Utility functions shared by applab and gamelab exporters.
  */
-// REMOVE EXPO DIR
-// remove snack dependencies, maybe one more? look at original commit
-// EXPO_SESSION_SECRET needs to be removed from secrets manager
-// delete a bunch of stuff from this file
 import $ from 'jquery';
 import download from '../assetManagement/download';
 import * as assetPrefix from '../assetManagement/assetPrefix';
