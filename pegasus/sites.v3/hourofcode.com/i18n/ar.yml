@@ -6,35 +6,35 @@ ar:
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ، %{campaign_date}
   coming_soon: قريباً
   campaign_date_start_short: 5 ديسمبر
-  campaign_date_start_long: 6 ديسمبر
-  campaign_date_short: 11 - 5 ديسمبر
-  campaign_date_full: 5-11 ديسمبر
+  campaign_date_start_long: 5 ديسمبر
+  campaign_date_short: 5 - 11 ديسمبر
+  campaign_date_full: 5 - 11 ديسمبر
   campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 ديسمبر 2022
+  campaign_date_full_year: 5 - 11 ديسمبر 2022
   nonus_campaign_date_start_short: 1 أكتوبر
   nonus_campaign_date_start_long: 1 أكتوبر
-  nonus_campaign_date_short: 1 أكتوبر- 18 ديسمبر
-  nonus_campaign_date_full: 1 أكتوبر-18 ديسمبر
+  nonus_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  nonus_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 أكتوبر 2022-18 ديسمبر 2022
+  nonus_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   latam_campaign_date_start_short: 1 أكتوبر
   latam_campaign_date_start_long: 1 أكتوبر
-  latam_campaign_date_short: 1 أكتوبر- 18 ديسمبر
-  latam_campaign_date_full: 1 أكتوبر-18 ديسمبر
+  latam_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  latam_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 أكتوبر 2022-18 ديسمبر 2022
+  latam_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   europe_campaign_date_start_short: 1 أكتوبر
   europe_campaign_date_start_long: 1 أكتوبر
-  europe_campaign_date_short: 1 أكتوبر- 18 ديسمبر
-  europe_campaign_date_full: 1 أكتوبر-18 ديسمبر
+  europe_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  europe_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 1 أكتوبر 2022-18 ديسمبر 2022
+  europe_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   africa_campaign_date_start_short: 1 أكتوبر
   africa_campaign_date_start_long: 1 أكتوبر
-  africa_campaign_date_short: 1 أكتوبر- 18 ديسمبر
-  africa_campaign_date_full: 1 أكتوبر-18 ديسمبر
+  africa_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  africa_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: 1 أكتوبر 2022-18 ديسمبر 2022
+  africa_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: نتعلم اليوم، لنبني غداً مشرقاً
@@ -970,7 +970,7 @@ ar:
     محفوظة.
   footer_trademark_message: إن ™ساعة من البرمجة هي علامة تجارية لمنظمة Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
-  footer_menu_partners: الشركاء والمستشارون
+  footer_menu_partners: الشركاء
   footer_menu_contact: إتصل بنا
   footer_menu_support: الدعم
   footer_menu_terms: الشروط

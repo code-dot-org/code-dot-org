@@ -3254,6 +3254,30 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo."
+        },
+        "Big Game Vars 1": {
+          "big_game_finish": "Pulsa en el botón de finalización cuando estés listo para pasar al siguiente nivel."
+        },
+        "Eval Booleans 2": {
+          "Eval Booleans 2 1": "Selecciona un número que haga que esta expresión se evalúe como verdadera"
+        },
+        "Eval Define Funcs 3": {
+          "Eval Define Funcs 3": "Haz que nuestra función utilice el parámetro radio en lugar de tener siempre un radio de 50."
+        },
+        "Eval Define Funcs Test": {
+          "Eval Define Funcs 3": "Haz que nuestra función utilice el parámetro radio en lugar de tener siempre un radio de 50."
+        },
+        "Luigi's Pizza 1": {
+          "luigi's pizza 1": "Intenta pedir una pizza de pepperoni"
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Pestaña disfraces"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Pestaña disfraces"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Pulsa el botón azul para abrir o cerrar."
         }
       }
     }

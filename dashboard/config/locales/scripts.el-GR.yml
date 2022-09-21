@@ -1790,6 +1790,8 @@ el:
           title: Έξαρση
         csd-post-survey-2021:
           title: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
+        ai-ethics-2021:
+          description_audience: Τάξεις Έκτης Δημοτικού ως Γ Λυκείου
         explore-data-1-2021:
           title: Οπτικοποίηση Δεδομένων
         2022drafting:
@@ -1977,8 +1979,19 @@ el:
         aiml-2022:
           name: aiml-2022
           description_short: Μάθετε για την Τεχνητή Νοημοσύνη και την Μηχανική Μάθηση
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Ασύγχρονη επέκταση εντοπισμού σφαλμάτων
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Ενότητα 2 Ασύγχρονη Εργασία
         soccer:
           name: ποδόσφαιρο
+          title: Δημιουργήστε κώδικα για το δικό σας παιχνίδι ποδοσφαίρου
+          description_short: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
+          description: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:

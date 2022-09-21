@@ -1138,3 +1138,10 @@ ar:
   unit_prefix: "وحدة %{n}"
   code_org_logo_alt: "الصفحة الرئيسية Code.org"
   teacher_feedback: "ملاحظات المعلمين"
+  lesson_lock:
+    error:
+      no_updates: "لا توجد تحديثات يمكن إجراؤها"
+      missing_params: "يجب توفير المستخدم والمستوى ومعرّفات الوحدات"
+      cannot_view_locked_answers: "لا يمكن مشاهدة الإجابات أثناء القفل"
+      forbidden: "لا يمكن للمستخدم تحديث حالة الطالب القابلة للقفل "
+  reset_predict_progress_button: "حذف الإجابة"
