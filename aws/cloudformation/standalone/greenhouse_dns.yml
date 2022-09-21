@@ -6,10 +6,11 @@ Resources:
   GreenhouseHostedZone:
     Type: "AWS::Route53::HostedZone"
     Properties:
-      Name: 'gh-mail.code.org'
+      Name: gh-mail.code.org.
 
   NameServerRecord:
     Type: AWS::Route53::RecordSet
+    DependsOn: GreenhouseHostedZone
     Properties:
       HostedZoneName : code.org.
       Name: gh-mail.code.org
@@ -19,9 +20,10 @@ Resources:
 
   GreenhouseRecords:
     Type: AWS::Route53::RecordSetGroup
+    DependsOn: GreenhouseHostedZone
     Properties:
       Comment: Creating records for mail server
-      HostedZoneName: gh-mail.code.org.
+      HostedZoneId: !Ref GreenhouseHostedZone
       RecordSets:
       - Name: gh-mail.code.org.
         ResourceRecords:
