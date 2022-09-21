@@ -103,7 +103,7 @@ const styles = {
   pageBreak: {
     borderTop: `1px solid ${color.dark_slate_gray}`,
     display: 'flex',
-    alignItems: 'flexStart'
+    alignItems: 'start'
   },
   button: {
     margin: 20,
