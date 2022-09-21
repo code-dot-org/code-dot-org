@@ -378,8 +378,8 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
   font-size: 16px;
+  font-weight: normal;
   letter-spacing: normal;
   margin: 0;
   padding: 8px 24px;
