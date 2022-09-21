@@ -1,26 +1,85 @@
 {
   "groups": [
     {
+      "id": "pop",
+      "name": "Upbeat Pop",
+      "imageSrc": "samplepack3.png",
+      "themeImageSrc": "highlight3.png",
+      "path": "pop",
+      "folders": [
+        {
+          "name": "all",
+          "sounds": [
+            {
+              "id": "drums-alt1",
+              "src": "drums-alt1",
+              "length": 1
+            },
+            {
+              "id": "drums-alt2",
+              "src": "drums-alt2",
+              "length": 1
+            },
+            {
+              "id": "drums1",
+              "src": "drums1",
+              "length": 2
+            },
+            {
+              "id": "synth1",
+              "src": "synth1",
+              "length": 4
+            },
+            {
+              "id": "synth2",
+              "src": "synth2",
+              "length": 2
+            },
+            {
+              "id": "bass1",
+              "src": "bass1",
+              "length": 4
+            },
+            {
+              "id": "guitar1",
+              "src": "guitar1",
+              "length": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "country",
       "name": "Country",
       "imageSrc": "samplepack1.png",
       "themeImageSrc": "highlight1.png",
       "path": "country",
-      "sounds": [
+      "folders": [
         {
-          "id": "bass",
-          "src": "bass",
-          "length": 2
+          "name": "low",
+          "sounds": [
+            {
+              "id": "bass",
+              "src": "bass",
+              "length": 2
+            },
+            {
+              "id": "drum",
+              "src": "drum",
+              "length": 2
+            }
+          ]
         },
         {
-          "id": "drum",
-          "src": "drum",
-          "length": 2
-        },
-        {
-          "id": "lead",
-          "src": "lead",
-          "length": 2
+          "name": "hi",
+          "sounds": [
+            {
+              "id": "lead",
+              "src": "lead",
+              "length": 2
+            }
+          ]
         }
       ]
     },
@@ -30,21 +89,26 @@
       "imageSrc": "samplepack2.png",
       "themeImageSrc": "highlight2.png",
       "path": "dance",
-      "sounds": [
+      "folders": [
         {
-          "id": "bass",
-          "src": "bass",
-          "length": 2
-        },
-        {
-          "id": "drum",
-          "src": "drum",
-          "length": 2
-        },
-        {
-          "id": "lead",
-          "src": "lead",
-          "length": 2
+          "name": "all",
+          "sounds": [
+            {
+              "id": "bass",
+              "src": "bass",
+              "length": 2
+            },
+            {
+              "id": "drum",
+              "src": "drum",
+              "length": 2
+            },
+            {
+              "id": "lead",
+              "src": "lead",
+              "length": 2
+            }
+          ]
         }
       ]
     },
@@ -54,21 +118,26 @@
       "imageSrc": "samplepack3.png",
       "themeImageSrc": "highlight3.png",
       "path": "hip",
-      "sounds": [
+      "folders": [
         {
-          "id": "bass",
-          "src": "bass",
-          "length": 2
-        },
-        {
-          "id": "drum",
-          "src": "drum",
-          "length": 2
-        },
-        {
-          "id": "lead",
-          "src": "lead",
-          "length": 2
+          "name": "all",
+          "sounds": [
+            {
+              "id": "bass",
+              "src": "bass",
+              "length": 2
+            },
+            {
+              "id": "drum",
+              "src": "drum",
+              "length": 2
+            },
+            {
+              "id": "lead",
+              "src": "lead",
+              "length": 2
+            }
+          ]
         }
       ]
     }
