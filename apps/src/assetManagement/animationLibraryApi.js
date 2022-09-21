@@ -257,16 +257,6 @@ export function regenerateDefaultSpriteMetadata(listData) {
     .then(defaultMetadata => {
       return uploadDefaultListMetadata(defaultMetadata, 'levelbuilder');
     })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(
-          `Default Sprite Metadata Upload Error(${response.status}: ${
-            response.statusText
-          })`
-        );
-      }
-      return Promise.resolve();
-    })
     .catch(err => Promise.reject(err));
 }
 

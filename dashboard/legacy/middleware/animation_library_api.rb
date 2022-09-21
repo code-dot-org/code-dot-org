@@ -219,15 +219,14 @@ class AnimationLibraryApi < Sinatra::Base
     dont_cache
     if request.content_type == 'application/json'
       body = request.body.string
-      ANIMATION_MANIFEST = {
-        levelbuilder: ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER,
-        production: ANIMATION_DEFAULT_MANIFEST_JSON
-      }.freeze
-
-      key = ANIMATION_MANIFEST[env]
-      unless key
+      if env == 'production'
+        key = ANIMATION_DEFAULT_MANIFEST_JSON
+      elsif evn == 'levelbuilder'
+        key = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
+      else
         bad_request
       end
+
       Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
