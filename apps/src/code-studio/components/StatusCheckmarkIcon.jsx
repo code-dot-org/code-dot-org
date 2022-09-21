@@ -3,7 +3,7 @@ import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 
-export const iconStatus = makeEnum('noAction', 'success', 'failure');
+export const iconStatus = makeEnum('none', 'success', 'failure');
 
 export default function StatusCheckmarkIcon(props) {
   let icon;

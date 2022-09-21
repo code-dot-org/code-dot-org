@@ -14,20 +14,20 @@ export default class AddDefaultSprite extends React.Component {
   state = {
     spriteName: '',
     spriteCategory: '',
-    displaySuccess: iconStatus.noAction
+    displaySuccess: iconStatus.none
   };
 
   handleNameChange = event => {
     this.setState({
       spriteName: event.target.value,
-      displaySuccess: iconStatus.noAction
+      displaySuccess: iconStatus.none
     });
   };
 
   handleCategoryChange = event => {
     this.setState({
       spriteCategory: event.target.value,
-      displaySuccess: iconStatus.noAction
+      displaySuccess: iconStatus.none
     });
   };
 

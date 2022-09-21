@@ -7,9 +7,7 @@ import StatusCheckmarkIcon, {
 } from '@cdo/apps/code-studio/components/StatusCheckmarkIcon';
 
 export default function SpriteManagementDirectory() {
-  const [moveChangesStatus, setMoveChangesStatus] = useState(
-    iconStatus.noAction
-  );
+  const [moveChangesStatus, setMoveChangesStatus] = useState(iconStatus.none);
 
   const moveChangesToProduction = () => {
     //Files to move to production folder: defaultSprites.json
