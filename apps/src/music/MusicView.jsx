@@ -151,12 +151,14 @@ class MusicView extends React.Component {
     this.loadLibrary().then(library => {
       this.setState({library});
       const soundList = library.groups
-        .map(group =>
-          group.sounds.map(sound => {
-            return group.path + '/' + sound.src;
-          })
-        )
-        .flat();
+        .map(group => {
+          return group.folders?.map(folder => {
+            return folder.sounds.map(sound => {
+              return group.path + '/' + folder.name + '/' + sound.src;
+            });
+          });
+        })
+        .flat(2);
       InitSound(soundList);
     });
   }
@@ -261,10 +263,17 @@ class MusicView extends React.Component {
         new Blockly.FieldDropdown(function() {
           var options = [['anything', 'anything']];
           if (self.state.samplePanel && self.state.samplePanel !== 'main') {
-            const sounds = self.getCurrentSamplePackSounds();
-            options = sounds.map(sound => {
-              return [sound.id, sound.id];
-            });
+            const folders = self.getCurrentSamplePackSounds();
+            options = folders
+              .map(folder => {
+                return folder.sounds.map(sound => {
+                  return [
+                    folder.name + '/' + sound.id,
+                    folder.name + '/' + sound.id
+                  ];
+                });
+              })
+              .flat(1);
           }
 
           return options;
@@ -290,7 +299,11 @@ class MusicView extends React.Component {
             {
               type: 'field_dropdown',
               name: 'sound',
-              options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
+              options: [
+                ['all/lead', 'all/lead'],
+                ['all/bass', 'all/bass'],
+                ['all/drum', 'all/drum']
+              ]
             },
             {
               type: 'field_variable',
@@ -325,7 +338,11 @@ class MusicView extends React.Component {
             {
               type: 'field_dropdown',
               name: 'sound',
-              options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
+              options: [
+                ['all/lead', 'all/lead'],
+                ['all/bass', 'all/bass'],
+                ['all/drum', 'all/drum']
+              ]
             }
           ],
           inputsInline: true,
@@ -714,7 +731,7 @@ class MusicView extends React.Component {
   };
 
   getCurrentSamplePackSounds = () => {
-    return this.getCurrentSamplePack()?.sounds;
+    return this.getCurrentSamplePack()?.folders;
   };
 
   getWaveformImage = id => {
@@ -946,52 +963,72 @@ class MusicView extends React.Component {
               </div>
             )}
             {currentSamplePack && (
-              <div
-                style={{
-                  padding: 10,
-                  backgroundImage: `url("${baseUrl +
-                    currentSamplePack.path +
-                    '/' +
-                    currentSamplePack.themeImageSrc}")`,
-                  backgroundSize: '100% 110%',
-                  backgroundPositionY: '100%',
-                  height: '100%',
-                  boxSizing: 'border-box'
-                }}
-              >
+              <div style={{height: '100%'}}>
                 <div
-                  style={{cursor: 'pointer'}}
+                  style={{cursor: 'pointer', height: 20, padding: 10}}
                   onClick={() => this.setSamplePanel('main')}
                 >
                   &lt; Back
                 </div>
-                <br />
-                <div>"{currentSamplePack.name}" sample pack</div>
-                <br />
-                <div>
-                  <img
-                    src={
-                      baseUrl +
+                <div
+                  style={{
+                    padding: 10,
+                    backgroundImage: `url("${baseUrl +
                       currentSamplePack.path +
                       '/' +
-                      currentSamplePack.imageSrc
-                    }
-                    style={{width: '70%'}}
-                  />
-                </div>
+                      currentSamplePack.themeImageSrc}")`,
+                    backgroundSize: '100% 110%',
+                    backgroundPositionY: '100%',
+                    height: 'calc(100% - 40px)',
+                    boxSizing: 'border-box',
+                    overflow: 'scroll'
+                  }}
+                >
+                  <br />
+                  <div>"{currentSamplePack.name}" sample pack</div>
+                  <br />
+                  <div>
+                    <img
+                      src={
+                        baseUrl +
+                        currentSamplePack.path +
+                        '/' +
+                        currentSamplePack.imageSrc
+                      }
+                      style={{width: '70%'}}
+                    />
+                  </div>
 
-                {currentSamplePackSounds.map((sound, index) => {
-                  return (
-                    <div key={index}>
-                      <img
-                        src={this.getWaveformImage(sound.id)}
-                        style={{width: 90, paddingRight: 20, cursor: 'pointer'}}
-                        onClick={() => this.previewSound(sound.id)}
-                      />
-                      {sound.id}
-                    </div>
-                  );
-                })}
+                  {currentSamplePackSounds.map((folder, folderIndex) => {
+                    return (
+                      <div key={folderIndex}>
+                        <details>
+                          <summary>{folder.name}</summary>
+                          {folder.sounds.map((sound, soundIndex) => {
+                            return (
+                              <div key={soundIndex}>
+                                <img
+                                  src={this.getWaveformImage(sound.id)}
+                                  style={{
+                                    width: 90,
+                                    paddingRight: 20,
+                                    cursor: 'pointer'
+                                  }}
+                                  onClick={() =>
+                                    this.previewSound(
+                                      folder.name + '/' + sound.id
+                                    )
+                                  }
+                                />
+                                {sound.id}
+                              </div>
+                            );
+                          })}
+                        </details>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
