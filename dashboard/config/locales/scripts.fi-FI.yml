@@ -1526,6 +1526,8 @@ fi:
               description: ehto
         spelling-bee:
           title: Kirjurimehiläinen
+        ai-ethics-2021:
+          description_audience: Luokat 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:

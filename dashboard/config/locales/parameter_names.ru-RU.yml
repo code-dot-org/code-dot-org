@@ -6,16 +6,20 @@ ru:
       actor: персонаж
       color: цвет
       counter: счетчик
+      dir: dir
       direction: направление
       height: высота
       honey: мед
       left: влево
       length: длина
       min: минимум
+      nectar units: единицы нектара
       nectars: нектары
+      numOctagons: numOctagons
       points: очки
       radius: радиус
       sides: стороны
       size: размер
       speed: скорость
+      theGuess: theGuess
       width: ширина

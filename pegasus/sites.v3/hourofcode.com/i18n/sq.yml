@@ -671,11 +671,11 @@ sq:
     i paprecedent partnerësh</a> janë bashkuar ta përkrahin Orën e Kodimit &mdash;
     duke përfshirë Microsoft, Apple, Amazon, Boys and Girls Clubs of America dhe College
     Board."
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Nuk di asgjë për kodimin. A mund të jem organizator i ndonjë eventi?
   hoc_faq_host_a: Sigurisht që mundeni. Aktivitetet e Orës së Kodimit janë të vetë-drejtuara.
     Ajo çfarë duhet të bëni është <a href='%{codeorg_url}/learn'>të provoni tutorialet

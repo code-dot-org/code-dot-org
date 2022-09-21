@@ -4218,6 +4218,8 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 샌드박스
+        ai-ethics-2021:
+          description_audience: 6-12 학년
         poem-art-2021:
           title: 시학
         explore-data-1-2021:
@@ -4733,8 +4735,19 @@ ko:
               display_name: 환영합니다
         dlp-csp-mod1-2022:
           title: CS 원리 심화 학습 모듈 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 비동기 디버깅 확장
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 모듈 2 비동기 작업
         soccer:
           name: 축구
+          title: 축구 게임 코딩
+          description_short: 축구 게임 만들기
+          description: 축구 게임 만들기
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
