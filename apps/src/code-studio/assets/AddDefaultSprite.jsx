@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
-import StatusCheckmarkIcon, {
+import StatusIcon, {
   iconStatus
-} from '@cdo/apps/code-studio/components/StatusCheckmarkIcon';
+} from '@cdo/apps/code-studio/components/StatusIcon';
 
 export default class AddDefaultSprite extends React.Component {
   static propTypes = {
@@ -81,7 +81,7 @@ export default class AddDefaultSprite extends React.Component {
           onClick={() => this.handleSpriteAdd(false)}
           size={Button.ButtonSize.narrow}
         />
-        <StatusCheckmarkIcon displayStatus={displaySuccess} />
+        <StatusIcon displayStatus={displaySuccess} />
       </div>
     );
   }

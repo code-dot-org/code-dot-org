@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export const iconStatus = makeEnum('none', 'success', 'failure');
 
-export default function StatusCheckmarkIcon(props) {
+export default function StatusIcon(props) {
   let icon;
   switch (props.displayStatus) {
     case iconStatus.success:
@@ -32,7 +32,7 @@ export default function StatusCheckmarkIcon(props) {
   );
 }
 
-StatusCheckmarkIcon.propTypes = {
+StatusIcon.propTypes = {
   displayStatus: PropTypes.oneOf()
 };
 

@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {moveDefaultSpriteMetadataToProduction} from '@cdo/apps/assetManagement/animationLibraryApi';
-import StatusCheckmarkIcon, {
+import StatusIcon, {
   iconStatus
-} from '@cdo/apps/code-studio/components/StatusCheckmarkIcon';
+} from '@cdo/apps/code-studio/components/StatusIcon';
 
 export default function SpriteManagementDirectory() {
   const [moveChangesStatus, setMoveChangesStatus] = useState(iconStatus.none);
@@ -93,7 +93,7 @@ export default function SpriteManagementDirectory() {
           onClick={confirmReleaseChangesToLevelbuilder}
           style={styles.button}
         />
-        <StatusCheckmarkIcon displayStatus={moveChangesStatus} />
+        <StatusIcon displayStatus={moveChangesStatus} />
       </div>
     </div>
   );
