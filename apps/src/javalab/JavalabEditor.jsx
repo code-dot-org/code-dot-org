@@ -527,7 +527,7 @@ class JavalabEditor extends React.Component {
     let newTabs = [...orderedTabKeys];
     newTabs.push(newTabKey);
 
-    // add new file to sources - newTabIndex is the new file order as displayed in the editor
+    // add new file to sources - newTabIndex is the new file tabOrder as displayed in the editor
     setSource(filename, fileContents, newTabIndex);
     projectChanged();
     setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
@@ -579,7 +579,7 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  onImportFile(filename, fileContents, order) {
+  onImportFile(filename, fileContents, tabOrder) {
     const {fileMetadata, orderedTabKeys} = this.props;
     // If filename already exists in sources, replace file contents.
     // Otherwise, create a new file.
@@ -595,8 +595,8 @@ class JavalabEditor extends React.Component {
       editor.dispatch({
         changes: {from: 0, to: editor.state.doc.length, insert: fileContents}
       });
-      const order = orderedTabKeys.indexOf(editorKey);
-      this.props.setSource(filename, fileContents, order);
+      const tabOrder = orderedTabKeys.indexOf(editorKey);
+      this.props.setSource(filename, fileContents, tabOrder);
     } else {
       // create new file
       this.onCreateFile(filename, fileContents);
@@ -830,8 +830,8 @@ export default connect(
     editorFontSize: state.javalab.editorFontSize
   }),
   dispatch => ({
-    setSource: (filename, source, order) =>
-      dispatch(setSource(filename, source, order)),
+    setSource: (filename, source, tabOrder) =>
+      dispatch(setSource(filename, source, tabOrder)),
     sourceFileOrderUpdated: () => dispatch(sourceFileOrderUpdated()),
     sourceVisibilityUpdated: (filename, isVisible) =>
       dispatch(sourceVisibilityUpdated(filename, isVisible)),

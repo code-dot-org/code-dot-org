@@ -224,13 +224,13 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             },
             'Class2.java': {
               text: '',
-              order: 1,
+              tabOrder: 1,
               isVisible: true,
               isValidation: false
             }
@@ -267,7 +267,7 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             }
@@ -278,7 +278,7 @@ describe('Java Lab Editor Test', () => {
           setAllValidation({
             'Validation.java': {
               text: '',
-              order: 1,
+              tabOrder: 1,
               isVisible: false,
               isValidation: true
             }
@@ -311,7 +311,7 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             }
@@ -351,7 +351,7 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             }
@@ -470,13 +470,13 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             },
             'Class2.java': {
               text: '',
-              order: 1,
+              tabOrder: 1,
               isVisible: true,
               isValidation: false
             }
@@ -504,19 +504,19 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'ClassName1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             },
             'ClassName2.java': {
               text: '',
-              order: 1,
+              tabOrder: 1,
               isVisible: true,
               isValidation: false
             },
             'ClassName3.java': {
               text: '',
-              order: 2,
+              tabOrder: 2,
               isVisible: true,
               isValidation: false
             }
@@ -528,9 +528,9 @@ describe('Java Lab Editor Test', () => {
         const file0 = sources['ClassName1.java'];
         const file1 = sources['ClassName2.java'];
         const file2 = sources['ClassName3.java'];
-        expect(file0.order).to.equal(1);
-        expect(file1.order).to.equal(2);
-        expect(file2.order).to.equal(0);
+        expect(file0.tabOrder).to.equal(1);
+        expect(file1.tabOrder).to.equal(2);
+        expect(file2.tabOrder).to.equal(0);
       });
     });
 
@@ -722,13 +722,13 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             },
             'Class2.java': {
               text: '',
-              order: 1,
+              tabOrder: 1,
               isVisible: true,
               isValidation: false
             }
@@ -791,19 +791,19 @@ describe('Java Lab Editor Test', () => {
           setAllSourcesAndFileMetadata({
             'ClassName1.java': {
               text: '',
-              order: 0,
+              tabOrder: 0,
               isVisible: true,
               isValidation: false
             },
             'ClassName2.java': {
               text: '',
-              order: 1,
+              tabOrder: 1,
               isVisible: true,
               isValidation: false
             },
             'ClassName3.java': {
               text: '',
-              order: 2,
+              tabOrder: 2,
               isVisible: true,
               isValidation: false
             }
@@ -816,8 +816,8 @@ describe('Java Lab Editor Test', () => {
         const file2 = sources['ClassName3.java'];
 
         expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
-        expect(file1.order).to.equal(0);
-        expect(file2.order).to.equal(1);
+        expect(file1.tabOrder).to.equal(0);
+        expect(file2.tabOrder).to.equal(1);
       });
     });
 

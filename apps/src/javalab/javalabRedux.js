@@ -62,7 +62,7 @@ const INCREASE_EDITOR_FONT_SIZE = 'javalab/INCREASE_EDITOR_FONT_SIZE';
 const DECREASE_EDITOR_FONT_SIZE = 'javalab/DECREASE_EDITOR_FONT_SIZE';
 
 const initialSources = {
-  'MyClass.java': {text: '', order: 0, isVisible: true, isValidation: false}
+  'MyClass.java': {text: '', tabOrder: 0, isVisible: true, isValidation: false}
 };
 
 // Exported for test
@@ -151,14 +151,14 @@ export const renameFile = (oldFilename, newFilename) => ({
 export const setSource = (
   filename,
   source,
-  order,
+  tabOrder,
   isVisible = true,
   isValidation = false
 ) => ({
   type: SET_SOURCE,
   filename,
   source,
-  order,
+  tabOrder,
   isVisible,
   isValidation
 });
@@ -279,7 +279,7 @@ export const getSources = state => {
       sources[key] = {
         text: state.javalab.sources[key].text,
         isVisible: state.javalab.sources[key].isVisible,
-        order: state.javalab.sources[key].order
+        tabOrder: state.javalab.sources[key].tabOrder
       };
     }
   }
@@ -292,7 +292,7 @@ export const getValidation = state => {
     if (state.javalab.sources[key].isValidation) {
       validation[key] = {
         text: state.javalab.sources[key].text,
-        order: state.javalab.sources[key].order
+        tabOrder: state.javalab.sources[key].tabOrder
       };
     }
   }
@@ -442,7 +442,7 @@ export default function reducer(state = initialState, action) {
     let newSources = {...state.sources};
     newSources[action.filename] = {
       text: action.source,
-      order: action.order,
+      tabOrder: action.tabOrder,
       isVisible: action.isVisible,
       isValidation: action.isValidation
     };

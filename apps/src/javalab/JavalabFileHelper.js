@@ -18,70 +18,80 @@ export function getDefaultFileContents(filename, viewMode) {
 export const getTabKey = index => `file-${index}`;
 
 export const fileMetadataForEditor = (sources, isEditingStartSources) => {
-  let fileMetadata = {};
-  let orderedTabKeys = [];
-  let unorderedTabKeys = [];
   /*
   'sources' contains file information as key-value pairs.
   The key is the file name such as 'Class1.java'.
   The value is a file object with the keys: text (source code),
-  order (order of the file tab in orderedTabs from 0 to number of files - 1),
+  tabOrder (order of the file tab in orderedTabs from 0 to (number of files - 1)),
   isVisible, and isValidation (default is false)
-  The orderOfFiles array will contain the 'order' of each file as they are assigned
+  The orderOfFiles array will contain the 'fileOrder' of each file as they are assigned
   their tabKey names (such as 'file-0', 'file-1') which is stored in fileMetadata.
   For example, if sources contains the following:
   {
-    'Class1.java': {text: '', order: 2, isVisible: true},
-    'Class2.java': {text: '', order: 0, isVisible: true},
-    'Class3.java': {text: '', order: 1, isVisible: true}
+    'Class1.java': {text: '', tabOrder: 2, isVisible: true},
+    'Class2.java': {text: '', tabOrder: 0, isVisible: true},
+    'Class3.java': {text: '', tabOrder: 1, isVisible: true}
   },
   then depending on how Object.keys iterates through the keys on sources, we could have
-  fileMetata assigned:
-  {'file-0': 'Class2.java', 'file-1': 'Class1.java', 'file-2': 'Class3.java'}.
-  The corresponding orderOfFiles would be [0, 2, 1].
+  fileMetadata assigned: {'file-0': 'Class2.java', 'file-1': 'Class1.java', 'file-2': 'Class3.java'}.
+  The corresponding orderOfFiles would be [0, 2, 1]
+  and orderedTabKeys would be ['file-0', 'file-2', 'file-1'].
   */
+  let fileMetadata = {};
+  let orderedTabKeys = [];
+  let unorderedTabKeys = [];
   let orderOfFiles = [];
-  let fileIndex = 0; // may be different from index below due to hidden files
+  let fileIndex = 0;
   let isValid = true;
   Object.keys(sources).forEach(file => {
     if (sources[file].isVisible || isEditingStartSources) {
       let tabKey = getTabKey(fileIndex);
       fileMetadata[tabKey] = file;
       unorderedTabKeys.push(tabKey);
-      let order = sources[file].order;
-      // files that are stored may not currently have an order assigned so that
+      let tabOrder = sources[file].tabOrder;
+      // files that are stored may not currently have an tabOrder assigned so that
       // order is undefined
-      if (Number.isInteger(order)) {
-        orderOfFiles.push(sources[file].order);
+      if (Number.isInteger(tabOrder)) {
+        orderOfFiles.push(sources[file].tabOrder);
       } else {
         isValid = false;
       }
       fileIndex++;
     }
   });
-  const numVisibleFiles = fileIndex;
-  // check orderOfFiles for duplicates, out of bounds, or missing orders
+  const numFiles = fileIndex;
+  // check orderOfFiles for duplicates
+  isValid = isValid && new Set(orderOfFiles).size === orderOfFiles.length;
+
+  /*
+  Assign orderedTabKeys the ordering of files stored in orderOfFiles corresponding to
+  file names stored in fileMetadata.
+  There may be missing tab orders due to validation or support files saved in start_sources
+  mode that are not included outside of start_sources mode.
+  For example, if a levelbuilder created a support file, validation file and 2 starter files,
+  and ordered the file tabs as: 'Validation.java', 'Starter1.java', 'Support.java', 'Starter2.java',
+  then the corresponding tabOrders for each file would be: 0, 1, 2, 3. When isEditingStartSources
+  is false, only 'Start1.java' and 'Starter2.java' would be loaded into sources with
+  the corredponding tabOrders would be 1, 3.
+  If isValid is false due to duplicate tabOrders or any undefined tabOrders, then
+  assign orderedTabKeys the order ['file-0', 'file-1', 'file-2', ...]
+  */
   if (isValid) {
-    for (let i = 0; i < numVisibleFiles; i++) {
-      if (!orderOfFiles.includes(i)) {
-        isValid = false;
-      }
-    }
-  }
-  // Assign orderedTabKeys the ordering of files stored in orderOfFiles corresponding to
-  // file names stored in fileMetata.
-  // If any of the orders from sources were invalid
-  // (undefined, duplicates, missing orders, out of bounds), assign orderedTabKeys the
-  // the order ['file-0', 'file-1', 'file-2', ...]
-  for (let i = 0; i < numVisibleFiles; i++) {
-    if (isValid) {
+    let count = 0;
+    let i = 0;
+    while (count < numFiles) {
       let index = orderOfFiles.indexOf(i);
-      orderedTabKeys.push(unorderedTabKeys[index]);
-    } else {
+      if (index > -1) {
+        orderedTabKeys.push(unorderedTabKeys[index]);
+        count++;
+      }
+      i++;
+    }
+  } else {
+    for (let i = 0; i < numFiles; i++) {
       orderedTabKeys.push(getTabKey(i));
     }
   }
-
   const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
 
   return {
@@ -100,7 +110,7 @@ export const updateAllSourceFileOrders = (
   for (let i = 0; i < orderedTabKeys.length; i++) {
     let file = orderedTabKeys[i];
     let fileName = fileMetadata[file];
-    sources[fileName].order = i;
+    sources[fileName].tabOrder = i;
   }
   return sources;
 };
