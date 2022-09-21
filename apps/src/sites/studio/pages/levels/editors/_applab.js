@@ -14,13 +14,12 @@ $(document).ready(function() {
   $('#level_makerlab_enabled').change(function() {
     // Get the set of blocks for the Maker Category, the Circuit Category, and the Micro:bit category
 
+    // Setting block values to null to match the expected behavior in code_functions.
     // The maker type given here sets the defaultPin in the example block. Since we are just using the function name,
     // which doesn't include a pin parameter, we could use any block type.
     const configMaker = getMakerBlocks(null);
     let makerBlocks = {};
-    // Setting block values to null to match the expected behavior in code_functions.
     configMaker.forEach(block => (makerBlocks[block.func] = null));
-
     let microbitBlocks = {};
     configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
     let circuitBlocks = {};
