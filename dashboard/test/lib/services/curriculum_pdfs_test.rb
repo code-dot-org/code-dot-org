@@ -110,5 +110,11 @@ module Services
         Services::CurriculumPdfs.upload_generated_pdfs_to_s3(tmpdir)
       end
     end
+
+    test 'canonicalize_s3_filename only allows safe characters' do
+      assert_equal 'keep*safe_chars()', Services::CurriculumPdfs.canonicalize_s3_filename('keep*safe_chars()')
+      assert_equal '-replace-problem-chars-', Services::CurriculumPdfs.canonicalize_s3_filename('"replace&problem?chars"')
+      assert_equal 'preserve-dashes', Services::CurriculumPdfs.canonicalize_s3_filename('preserve-dashes')
+    end
   end
 end
