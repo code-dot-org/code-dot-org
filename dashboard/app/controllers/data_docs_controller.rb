@@ -45,7 +45,7 @@ class DataDocsController < ApplicationController
     }
   end
 
-  # PATCH /data_docs/:key
+  # PUT /data_docs/:key
   def update
     @data_doc = DataDoc.find_by(key: params[:key])
     # ensure data_doc key is immutable
