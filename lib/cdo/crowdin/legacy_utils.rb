@@ -1,5 +1,6 @@
 require 'json'
 require 'parallel'
+require 'httparty'
 
 module Crowdin
   # Crowdin's API is limited to 20 simultaneous requests. Limit our
