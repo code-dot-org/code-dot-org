@@ -25,7 +25,7 @@ class PrintCertificatesController < ApplicationController
   def batch
     view_options(no_header: true, no_footer: true, white_background: true, full_width: true)
 
-    student_names = params[:studentNames]&.split("\n")&.map(&:strip)&.shift(30)
+    student_names = params[:studentNames]&.strip&.split("\n")&.map(&:strip)&.shift(30)
     course_name = params[:courseName].presence || ScriptConstants::HOC_NAME
     image_urls = student_names.map do |student_name|
       certificate_image_url(student_name, course_name, nil)

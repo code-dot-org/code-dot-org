@@ -8500,6 +8500,8 @@ en:
               display_name: Celebrity Lab
             lessonGroup-4:
               display_name: Consumer Review Lab
+            lessonGroup-5:
+              display_name: Data Lab
           name: csa-labs-2022
           title: AP CSA College Board Labs
           description_audience: ''
@@ -8526,6 +8528,14 @@ en:
             lesson-15:
               name: Create a Positive or Negative Review
             lesson-16:
+              name: Open-Ended Activity
+            lesson-17:
+              name: Data, Data, Data!
+            lesson-18:
+              name: Designing and Implementing a Custom Class
+            lesson-19:
+              name: Putting It All Together
+            lesson-20:
               name: Open-Ended Activity
         csa-draft-pl:
           lessons:
@@ -9034,4 +9044,113 @@ en:
             What motivation do people have for creating these fake reviews or comments, and what should be done to prevent it, if anything? If technology can be used to create and post positive reviews for the company's own products or negative reviews of the competition, what are the ethical implications of this?
 
             Creating fake reviews has ethical implications, and it is important to emphasize that although students are going through the process to see one way in which they can be generated, this is in no way advocating this type of behavior. This is similar to "white hat" hackers needing to understand the same tools and processes of criminal hackers in order to do their job. Discuss with students the ethical concerns and how understanding this process is important to preventing unwanted behaviors online.
+          student_description: ''
+        csa-data-lab:
+          lessons:
+            lesson-1:
+              name: Data, Data, Data!
+            lesson-2:
+              name: Designing and Implementing a Custom Class
+            lesson-3:
+              name: Putting It All Together
+            lesson-4:
+              name: Open-Ended Activity
+          lesson_groups: {}
+          name: csa-data-lab
+          title: AP CSA Data Lab
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Students are motivated if they feel connected to the material they are studying. One way to make computer science content relevant, meaningful, relatable, and exciting is to incorporate real-world data sets into hands-on programming assignments.
+
+            Data are values. Values by themselves are not knowledge, knowledge is what you gain from studying data. This lab is designed to encourage students to derive knowledge about a topic of interest to them by examining a set of freely available data from the web. In order to gain knowledge from data in this lab, students will pose a question, search for a data set on that topic, and then process that data to determine the answer to their question.
+
+            ###Real-World Connection
+
+            Being able to access and process data is an important part of many industries. Whether it is determining the best allocation of resources or deciding what new product to create, analyzing data is a necessary component of those conversations. Luckily there are tools available to help read and process data, and this lab will introduce one such tool to students and ask them to utilize existing real-world data to answer a question of their own interest.
+          student_description: Data are values. Values by themselves are not knowledge, knowledge is what you gain from studying data. This lab is designed to encourage you to derive knowledge about a topic of interest to you by examining a set of freely available data from the web. In order to gain knowledge from data in this lab, you will pose a question, search for a data set on that topic, and then process that data to determine the answer to your question.
+        hello-world-space-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: hello-world-space-2022
+          title: Hello World Space
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-soccer-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: hello-world-soccer-2022
+          title: Hello World Soccer
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd1-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+            lessonGroup-4:
+              display_name: Alternative Lessons
+          name: csd1-2023
+          title: Problem Solving
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd2-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-page Websites'
+          name: csd2-2023
+          title: Web Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd4-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          name: csd4-2023
+          title: The Design Process
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd5-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+          name: csd5-2023
+          title: Data and Society
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd3-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+          name: csd3-2023
+          title: Interactive Animations and Games
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''
