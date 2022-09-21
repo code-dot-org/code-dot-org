@@ -1,7 +1,6 @@
 require_relative '../../test_helper'
 require_relative '../../../cdo/crowdin/legacy_utils'
 require 'tempfile'
-require 'HTTParty'
 require 'webmock/minitest'
 
 class MockCrowdinProject < Minitest::Mock
