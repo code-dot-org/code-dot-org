@@ -9,6 +9,16 @@ export const fakeTeacherAnnouncement = {
   visibility: VisibilityType.teacher
 };
 
+export const fakeTeacherAnnouncementWithDismissibleAndButtonText = {
+  notice: 'Notice - Teacher',
+  details: 'Teachers are the best',
+  link: '/foo/bar/teacher',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacher,
+  dismissible: false,
+  buttonText: 'Push the button'
+};
+
 export const fakeStudentAnnouncement = {
   notice: 'Notice - Student',
   details: 'Students are the best',

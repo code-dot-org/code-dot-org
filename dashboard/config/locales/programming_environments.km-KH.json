@@ -1,0 +1,87 @@
+{
+  "km-KH": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "បន្ទប់វេប"
+        },
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "ក្រុម"
+            },
+            "drawing": {
+              "name": "គំនូរ"
+            },
+            "math": {
+              "name": "គណិត​វិទ្យា"
+            },
+            "variables": {
+              "name": "អ​ថេរ"
+            },
+            "functions": {
+              "name": "អនុ​គមន៍"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "math": {
+              "name": "គណិត​វិទ្យា"
+            },
+            "variables": {
+              "name": "អ​ថេរ"
+            },
+            "functions": {
+              "name": "អនុ​គមន៍"
+            },
+            "advanced": {
+              "name": "ជម្រើស​កម្រិត​ខ្ពស់"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "world": {
+              "name": "ពិភពលោក"
+            },
+            "location": {
+              "name": "ទីតាំង"
+            },
+            "actions": {
+              "name": "សកម្មភាព"
+            },
+            "events": {
+              "name": "ព្រឹត្តិការណ៍"
+            },
+            "behaviors": {
+              "name": "ឥរិយាបទ"
+            },
+            "loops": {
+              "name": "រង្វិល​ជុំ"
+            },
+            "variables": {
+              "name": "អ​ថេរ"
+            },
+            "math": {
+              "name": "គណិត​វិទ្យា"
+            },
+            "logic": {
+              "name": "តក្ក"
+            },
+            "functions": {
+              "name": "អនុ​គមន៍"
+            },
+            "text": {
+              "name": "អត្ថ​​បទ"
+            },
+            "comments": {
+              "name": "មតិយោបល់"
+            }
+          }
+        }
+      }
+    }
+  }
+}

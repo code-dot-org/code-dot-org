@@ -16,7 +16,7 @@ arrayName[index]
 For example, assume we have the `topScores` array declared and initialized as follows:
 
 ```
-int topScores = {98, 96, 95, 94, 91};
+int[] topScores = {98, 96, 95, 94, 91};
 ``` 
 
 Let's look at this array in a table:

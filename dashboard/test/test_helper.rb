@@ -59,8 +59,6 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
-    # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
-    UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
 
@@ -480,7 +478,7 @@ class ActionController::TestCase
   def self.test_user_gets_response_for(action, method: :get, response: :success,
     user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
-    unless name.present?
+    if name.blank?
       raise 'name is required when a block is provided' if block
       user_display_name =
         if user.is_a?(Proc)
@@ -615,31 +613,6 @@ def with_locale(locale)
     yield
   ensure
     I18n.locale = old_locale
-  end
-end
-
-# Mock Projects to generate random tokens
-class Projects
-  def initialize(storage_id)
-    @storage_id = storage_id
-  end
-
-  def create(_, _)
-    # project_id must be an integer > 0
-    project_id = 1 + SecureRandom.random_number(100000)
-    storage_encrypt_channel_id(@storage_id, project_id)
-  end
-
-  def most_recent(_)
-    create(nil, nil)
-  end
-
-  def get(_)
-    {
-      'name' => "Stubbed test project name",
-      'hidden' => false,
-      'frozen' => false
-    }
   end
 end
 

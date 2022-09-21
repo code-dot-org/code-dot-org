@@ -2,6 +2,237 @@
   "ca-ES": {
     "data": {
       "resources": {
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programació de paper quadriculat"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programació de paper quadriculat"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programació de paper quadriculat"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programació de paper quadriculat"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programació de paper quadriculat"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programació de paper quadriculat"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programació per parelles"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Programació en relleus"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Programació en relleus"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Programació en relleus"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Programació en relleus"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Programació en relleus"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Programació en relleus"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Condicionals amb targetes"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Condicionals amb targetes"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Condicionals amb targetes"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Condicionals amb targetes"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Condicionals amb targetes"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Guia d'implementació"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Guia d'implementació"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Guia d'implementació"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Mou-lo, Mou-lo"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Mou-lo, Mou-lo"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Mou-lo, Mou-lo"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Mou-te, mou-te"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programació per parelles"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Fent bucles"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Fent bucles"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Fent bucles"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Fent bucles"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Guia d'implementació"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programació per parelles"
+        },
+        "variables/express/2022": {
+          "name": "Variables"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programació per parelles"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programació per parelles"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Mapes feliços"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Guia d'implementació"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Els meus amics robòtics"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Els meus amics robòtics"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Els meus amics robòtics"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Els meus amics robòtics"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Els meus amics robòtics"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programació per parelles"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "El gran esdeveniment"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Polseres binàries"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Polseres binàries"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Polseres binàries"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Polseres binàries"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Polseres binàries"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Guia d'implementació"
+        },
+        "variables/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_3/csd/2022": {
+          "name": "Variables"
+        },
+        "text/csd/2022": {
+          "name": "text"
+        },
+        "conditionals/csd/2022": {
+          "name": "Condicionals"
+        },
+        "functions/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funcions"
+        },
+        "lists/csd/2022": {
+          "name": "Llistes"
+        },
+        "design_mode/csd/2022": {
+          "name": "Mode de disseny"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "La informàtica ho està canviant tot"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variables"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funcions"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funcions amb Paràmetres"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funcions"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Plans d'estudi"
         },

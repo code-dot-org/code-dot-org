@@ -22,6 +22,8 @@ class FollowersControllerTest < ActionController::TestCase
     @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
     @admin = create(:admin)
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "student in picture section should be redirected to picture login when joining section" do

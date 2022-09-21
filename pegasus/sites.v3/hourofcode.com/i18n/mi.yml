@@ -12,24 +12,30 @@ mi:
   campaign_date_full: 5- 11 o Hakihea
   campaign_date_year: '2016'
   campaign_date_full_year: 7-13 Hakihea, 2020
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2016'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 5 Hakihea
-  europe_campaign_date_start_long: 5 Hakihea
-  europe_campaign_date_short: 5-11 Hakihea
-  europe_campaign_date_full: 5- 11 o Hakihea
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: 7-13 Hakihea, 2020
-  africa_campaign_date_start_short: 5 Hakihea
-  africa_campaign_date_start_long: 5 Hakihea
-  africa_campaign_date_short: 5-11 Hakihea
-  africa_campaign_date_full: 5- 11 o Hakihea
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: 7-13 Hakihea, 2020
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -540,7 +546,6 @@ mi:
   signup_multiple_event_warning: Mēnā e taurima ana koe i ngā takunetanga huhua me
     tāpae koe i tētahi ingoa motuhake, i tētahi īmēra motuhale rānei mō ia takunetanga.
     Ka tatauhia noa iho tētahi takunetanga ki tētahi pahekotanga ingoa me te īmēra.
-  signup_registration_deadline: Kati ai te Rēhita mō te Hour of Code ā te 12 o Hakihea.
   signup_name_placeholder: Tō Ingoa
   signup_email_placeholder: koe@tauira.com
   signup_organization_name_placeholder: Hei tauira, Te Kura Tuarua o Lincoln
@@ -683,11 +688,11 @@ mi:
     Pūtaiao Rorohiko, ka mutu, tētahi kāhui hoa kua whakapiri mai ki te tautoko i
     te Hour of Code &mdash; pēnei i Microsoft, Apple, Amazon, Ngā Karapu Tamatāne,
     Tamahine hoki o Amerika me te Poari Kāreti.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Kāore aku mōhiotanga ki tēnei mea te waehere. E whakaae tonu ana
     māku tētahi takunetanga e taurima?
   hoc_faq_host_a: Āna. He mea ārahi-whaiaro ngā ngohe o Hour of Code. Ko tāu he<a

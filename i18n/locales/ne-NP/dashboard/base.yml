@@ -252,7 +252,6 @@ ne:
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'तपाईँको प्रगति'
-      lines: 'Total lines of code: %{lines}'
       close: 'बन्द गर्नुहोस्'
       mastery: 'Concepts'
       puzzle_map: 'Stages'

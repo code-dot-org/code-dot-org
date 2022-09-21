@@ -1,0 +1,83 @@
+{
+  "ur-PK": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "ویب لیب"
+        },
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "گروپس"
+            },
+            "drawing": {
+              "name": "ڈرائنگ"
+            },
+            "math": {
+              "name": "ریاضی"
+            },
+            "variables": {
+              "name": "متغیرات"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "data": {
+              "name": "ڈیٹا"
+            },
+            "math": {
+              "name": "ریاضی"
+            },
+            "variables": {
+              "name": "متغیرات"
+            },
+            "advanced": {
+              "name": "اعلی درجے کی"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "دنیا"
+            },
+            "location": {
+              "name": "مقامات"
+            },
+            "actions": {
+              "name": "ایکشنز"
+            },
+            "events": {
+              "name": "ایونٹس/واقعات"
+            },
+            "behaviors": {
+              "name": "رویے"
+            },
+            "loops": {
+              "name": "لوپس"
+            },
+            "variables": {
+              "name": "متغیرات"
+            },
+            "math": {
+              "name": "ریاضی"
+            },
+            "logic": {
+              "name": "منطق"
+            },
+            "text": {
+              "name": "متن"
+            },
+            "comments": {
+              "name": "تبصرے"
+            }
+          }
+        },
+        "javalab": {
+          "name": "جاوا لیب"
+        }
+      }
+    }
+  }
+}

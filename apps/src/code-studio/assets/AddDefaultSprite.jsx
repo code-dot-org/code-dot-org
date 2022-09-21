@@ -48,9 +48,9 @@ export default class AddDefaultSprite extends React.Component {
     let {displaySuccess} = this.state;
     return (
       <div style={styles.assetRow}>
-        <h3>Add a sprite: </h3>
+        <h3>Add an animation: </h3>
         <label htmlFor="sprite-name" style={styles.addSpriteLabel}>
-          Sprite name:
+          Name:
         </label>
         <input
           type="text"
@@ -60,7 +60,7 @@ export default class AddDefaultSprite extends React.Component {
           required
         />
         <label htmlFor="sprite-path" style={styles.addSpriteLabel}>
-          Sprite category path:
+          Category path:
         </label>
         <input
           type="text"

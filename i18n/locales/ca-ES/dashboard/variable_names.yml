@@ -22,6 +22,7 @@ ca:
       score: puntuació
       size: mida
       speed: velocitat
+      type: tipus
       variable: variable
       width: amplada
       x: x

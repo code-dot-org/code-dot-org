@@ -193,9 +193,6 @@ class JavalabPanels extends React.Component {
       case CsaViewMode.THEATER:
         $('#theater-container').css('transform', scaleCss);
         break;
-      case CsaViewMode.PLAYGROUND:
-        $('#playground-container').css('transform', scaleCss);
-        break;
     }
 
     // Size the visualization div (which will actually set the rendered

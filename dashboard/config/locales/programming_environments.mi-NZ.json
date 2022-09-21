@@ -1,0 +1,64 @@
+{
+  "mi-NZ": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "math": {
+              "name": "Pāngarau"
+            },
+            "variables": {
+              "name": "Ngā Taurangi"
+            },
+            "functions": {
+              "name": "Ngā Taumahi"
+            }
+          }
+        },
+        "applab": {
+          "name": "Taiwhanga Taupānga",
+          "description": "He taiao papatono te Taiwhanga Taupānga e hangaia ai ngā taupānga māmā. Waihangahia he taupānga me ngā paraka waehere, me JavaScript rānei kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho.",
+          "categories": {
+            "math": {
+              "name": "Pāngarau"
+            },
+            "variables": {
+              "name": "Ngā Taurangi"
+            },
+            "functions": {
+              "name": "Ngā Taumahi"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Ngā Hohenga"
+            },
+            "events": {
+              "name": "Ngā Takunetanga"
+            },
+            "loops": {
+              "name": "Ngā Koromeke"
+            },
+            "variables": {
+              "name": "Ngā Taurangi"
+            },
+            "math": {
+              "name": "Pāngarau"
+            },
+            "logic": {
+              "name": "Ararau"
+            },
+            "functions": {
+              "name": "Ngā Taumahi"
+            },
+            "text": {
+              "name": "Kuputuhi"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -250,6 +250,184 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "program/coursed/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "debugging/coursed/2022": {
+          "word": "Pagdedebug"
+        },
+        "event/coursed/2022": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "code/coursed/2022": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Mga conditional"
+        },
+        "behavior/coursef/2022": {
+          "word": "Paggawi"
+        },
+        "program/coursef/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/coursef/2022": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "variable/coursef/2022": {
+          "word": "Variable"
+        },
+        "input/coursef/2022": {
+          "word": "Input"
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Mga Modelo at Simulation",
+          "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "magtakda"
+        },
+        "behavior/coursee/2022": {
+          "word": "Paggawi"
+        },
+        "function/coursee/2022": {
+          "word": "Function"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Mga conditional"
+        },
+        "copyright/coursee/2022": {
+          "word": "Karapatang-ari"
+        },
+        "define/coursee/2022": {
+          "word": "magtakda"
+        },
+        "debugging/courseb/2022": {
+          "word": "Pagdedebug"
+        },
+        "drop/courseb/2022": {
+          "word": "Drop"
+        },
+        "program/courseb/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/courseb/2022": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "debugging/express/2022": {
+          "word": "Pagdedebug"
+        },
+        "program/express/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "behavior/express/2022": {
+          "word": "Paggawi"
+        },
+        "event/express/2022": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "conditionals/express/2022": {
+          "word": "Mga conditional"
+        },
+        "function/express/2022": {
+          "word": "Function"
+        },
+        "variable/express/2022": {
+          "word": "Variable"
+        },
+        "define/express/2022": {
+          "word": "magtakda"
+        },
+        "drop/pre-express/2022": {
+          "word": "Drop"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Pagdedebug"
+        },
+        "program/pre-express/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/pre-express/2022": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "debugging/coursea/2022": {
+          "word": "Pagdedebug"
+        },
+        "program/coursea/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "drop/coursea/2022": {
+          "word": "Drop"
+        },
+        "event/coursea/2022": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "debugging/coursec/2022": {
+          "word": "Pagdedebug"
+        },
+        "program/coursec/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/coursec/2022": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "data/coursec/2022": {
+          "word": "Data"
+        },
+        "binary/coursec/2022": {
+          "word": "Binary"
+        },
+        "input/csd/2022": {
+          "word": "Input"
+        },
+        "processing/csd/2022": {
+          "word": "Pagproseso"
+        },
+        "debugging/csd/2022": {
+          "word": "Pagdedebug"
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "variable/csd/2022": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2022": {
+          "word": "Mga conditional"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraction"
+        },
+        "function/csd/2022": {
+          "word": "Function"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Digital na Bakas"
+        },
+        "copyright/csd/2022": {
+          "word": "Karapatang-ari"
+        },
+        "user_interface/csd/2022": {
+          "word": "Interface ng User"
+        },
         "code/poem-art/unversioned": {
           "word": "Code"
         },

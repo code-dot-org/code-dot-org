@@ -371,7 +371,6 @@ he:
     popup:
       progress_for_user: "ההתקדמות של %{name}"
       progress: 'ההתקדמות שלך'
-      lines: 'סה כ שורות קוד: %{lines}'
       close: 'קרוב'
       mastery: 'עקרונות'
       puzzle_map: 'שלבים'

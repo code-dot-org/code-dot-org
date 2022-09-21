@@ -1158,6 +1158,11 @@ export function assignedUnitTextToSpeechEnabled(state) {
   return assignment ? assignment.text_to_speech_enabled : false;
 }
 
+export function assignedUnitRequiresVerifiedInstructor(state) {
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.requires_verified_instructor : false;
+}
+
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);
@@ -1174,6 +1179,7 @@ export function getSectionRows(state, sectionIds) {
     ..._.pick(sections[id], [
       'id',
       'name',
+      'courseVersionName',
       'loginType',
       'studentCount',
       'code',
@@ -1198,6 +1204,7 @@ export function getAssignmentName(state, sectionId) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,

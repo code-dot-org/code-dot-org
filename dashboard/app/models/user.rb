@@ -71,7 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
-require 'cdo/user_helpers'
+require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
@@ -230,7 +230,7 @@ class User < ApplicationRecord
     if teacher?
       EmailPreference.upsert!(
         email: email,
-        opt_in: email_preference_opt_in.downcase == "yes",
+        opt_in: email_preference_opt_in.casecmp?("yes"),
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
@@ -243,7 +243,7 @@ class User < ApplicationRecord
     if student? && parent_email.present?
       EmailPreference.upsert!(
         email: parent_email,
-        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
         ip_address: parent_email_preference_request_ip,
         source: parent_email_preference_source,
         form_kind: nil
@@ -254,7 +254,7 @@ class User < ApplicationRecord
   # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
     user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
       user.save!
     end
@@ -527,7 +527,7 @@ class User < ApplicationRecord
   end
 
   def normalize_email
-    return unless email.present?
+    return if email.blank?
     self.email = email.strip.downcase
   end
 
@@ -536,7 +536,7 @@ class User < ApplicationRecord
   end
 
   def hash_email
-    return unless email.present?
+    return if email.blank?
     self.hashed_email = User.hash_email(email)
   end
 
@@ -851,7 +851,7 @@ class User < ApplicationRecord
     return false unless teacher? && purged_at.nil?
 
     # new teacher accounts should always require an email
-    return true unless created_at.present?
+    return true if created_at.blank?
 
     # existing accounts created after the email requirement must have an email.
     # FND-1130: The created_at exception will no longer be required
@@ -987,7 +987,7 @@ class User < ApplicationRecord
 
   def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
-    return false unless email.present?
+    return false if email.blank?
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
@@ -1289,6 +1289,11 @@ class User < ApplicationRecord
     UserLevel.where(conditions).
       order(updated_at: :desc).
       first
+  end
+
+  #sections owned by the user AND not deleted
+  def owned_section_ids
+    sections.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this

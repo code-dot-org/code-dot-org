@@ -27,7 +27,7 @@ title: آور آف کوڈ کے طریقہ کار کا رہنما
 
 <a id="how-to-video"></a>
 
-## 1. آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

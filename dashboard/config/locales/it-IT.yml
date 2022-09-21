@@ -39,7 +39,8 @@ it:
         personal_email_markdown: E-mail personale[(clicca qui se non hai un indirizzo
           e-mail)](%{url})
         username: Nome utente
-        password: password
+        password: Password
+        verified_teacher: Insegnante Verificato
         password_confirmation: Conferma della password
         current_password: Password attuale
         locale: Linguaggio
@@ -432,6 +433,7 @@ it:
       educate_beyond: Dopo Code.org
       educate_inspire: Ispira uno studente
       educate_community: Comunità Online
+      educate_requirements: Requisiti Tecnici
       educate_tools: Strumenti e video
       about_us: Chi siamo
       about_leadership: Leadership
@@ -456,7 +458,7 @@ it:
       district_dashboard: Dashboard
       label: Ciao %{username}
       stats: Code Studio
-      my_projects: Collezione Privata
+      my_projects: I miei progetti
       settings: Il mio account
       logout: Esci
       signin: Accedi
@@ -505,7 +507,6 @@ it:
     popup:
       progress_for_user: "%{name} in corso"
       progress: I tuoi progressi
-      lines: 'Totale delle linee di codice:  %{lines}'
       close: CHIUDI
       mastery: Concetti
       puzzle_map: Fasi
@@ -1457,3 +1458,10 @@ it:
   unit_prefix: Unità %{n}
   code_org_logo_alt: Code.org Home
   teacher_feedback: Commento dell'insegnante
+  lesson_lock:
+    error:
+      no_updates: Nessun aggiornamento da effettuare
+      missing_params: È necessario fornite gli ID utente, livello e unità
+      cannot_view_locked_answers: Impossibile visualizzare le risposte se bloccato
+      forbidden: L'utente non può aggiornare lo stato bloccabile dello studente
+  reset_predict_progress_button: Eliminare la risposta

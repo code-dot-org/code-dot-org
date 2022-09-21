@@ -1,8 +1,8 @@
 require 'cdo/honeybadger'
-require 'cdo/languages'
 require 'net/http'
 require 'dynamic_config/gatekeeper'
 require 'cdo/throttle'
+require 'dashboard_languages'
 
 module AzureTextToSpeech
   # Azure authentication token is valid for 10 minutes, so cache it for 9.
@@ -86,7 +86,7 @@ module AzureTextToSpeech
 
       voice_dictionary = {}
       voices.each do |voice|
-        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+        native_locale_name = DashboardLanguages.get_native_name_by_locale(voice["Locale"])
         next if native_locale_name.empty?
         native_name_s = native_locale_name[0][:native_name_s]
         voice_dictionary[native_name_s] ||= {}
@@ -124,13 +124,13 @@ module AzureTextToSpeech
 
   def self.get_voice_by(locale, gender)
     voice = get_voices&.values&.find {|v| v["locale"] == locale}
-    return nil unless voice.present?
+    return nil if voice.blank?
     voice[gender]
   end
 
   def self.ssml(text, gender, locale)
     voice_name = get_voice_by(locale, gender)
-    return nil unless voice_name.present?
+    return nil if voice_name.blank?
     "<speak version='1.0' xmlns='https://www.w3.org/2001/10/synthesis' xml:lang='en-US'><voice name='#{voice_name}'>#{text}</voice></speak>"
   end
 end

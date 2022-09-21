@@ -55,6 +55,7 @@ module Curriculum
         CSF_self_paced_pl: 'CSF Self Paced PL',
         CSP_virtual_pl: 'CSP Virtual PL',
         CSD_virtual_pl: 'CSD Virtual PL',
+        CSA_virtual_pl: 'CSA Virtual PL',
         student_self_paced: 'Student Self Paced Courses'
       }
     ).freeze

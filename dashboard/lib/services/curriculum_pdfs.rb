@@ -112,7 +112,7 @@ module Services
       return false if DCDO.get('disable_curriculum_pdf_generation', false)
 
       script = Script.find_by(name: script_data['name'])
-      return false unless script.present?
+      return false if script.blank?
 
       new_timestamp = script_data['serialized_at']
       existing_timestamp = script.seeded_from
@@ -127,7 +127,7 @@ module Services
     # Do no generate the resources pdf is there are no lesson plans since
     # resources are attached to lesson plans
     def self.should_generate_resource_pdf?(unit)
-      !unit.unit_without_lesson_plans?
+      !unit.unit_without_lesson_plans? && unit.lessons.map(&:resources).flatten.any?
     end
 
     # Actually generate PDFs for the given script, and upload the results to S3.

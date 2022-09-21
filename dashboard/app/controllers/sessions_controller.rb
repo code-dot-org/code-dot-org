@@ -11,7 +11,6 @@ class SessionsController < Devise::SessionsController
       redirect_to maker_google_oauth_confirm_login_path
       return
     end
-    @already_hoc_registered = params[:already_hoc_registered]
     @hide_sign_in_option = true
     @is_english = request.language == 'en'
     if params[:providerNotLinked]

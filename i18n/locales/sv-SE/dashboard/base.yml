@@ -318,7 +318,6 @@ sv:
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: 'Dina framsteg'
-      lines: 'Totalt antal rader kod: %{lines}'
       close: 'STÄNG'
       mastery: 'koncept'
       puzzle_map: 'Nivåer'

@@ -120,35 +120,6 @@ class AdminReportsController < ApplicationController
     render locals: {headers: headers, data: data_array}
   end
 
-  def pd_progress
-    script_id_or_name = params[:script] || 'K5PD'
-    begin
-      script = Script.get_from_cache(script_id_or_name)
-    rescue ActiveRecord::RecordNotFound
-      render(
-        layout: 'application',
-        html: "Script #{script_id_or_name} not found.",
-        status: 404
-      ) && return
-    end
-
-    ActiveRecord::Base.connected_to(role: :reading) do
-      locals_options = Properties.get("pd_progress_#{script.id}")
-      if locals_options
-        render locals: locals_options.symbolize_keys
-      else
-        sanitized_script_name = ActionController::Base.helpers.sanitize(
-          script.name
-        )
-        render(
-          layout: 'application',
-          html: "PD progress data not found for #{sanitized_script_name}.",
-          status: 404
-        )
-      end
-    end
-  end
-
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]

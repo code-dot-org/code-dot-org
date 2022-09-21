@@ -127,10 +127,22 @@ describe('JavabuilderConnection', () => {
       sinon.stub(window, 'WebSocket').returns({
         close: closeStub
       });
-      const javabuilderConnection = new JavabuilderConnection(null, () => {});
+      const javabuilderConnection = new JavabuilderConnection(
+        null,
+        onOutputMessage,
+        null,
+        null,
+        null,
+        sinon.stub()
+      );
+
       javabuilderConnection.establishWebsocketConnection('fake-token');
       javabuilderConnection.closeConnection();
+
       expect(closeStub).to.have.been.calledOnce;
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} Program stopped.`
+      );
       window.WebSocket.restore();
     });
   });

@@ -8,6 +8,7 @@ import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
+  fakeTeacherAnnouncementWithDismissibleAndButtonText,
   fakeOldTeacherAnnouncement
 } from './FakeAnnouncementsTestData';
 
@@ -57,6 +58,33 @@ describe('Announcements', () => {
       />
     );
     assert.equal(wrapper.find(Notification).length, 1);
+  });
+
+  it('defaults to dismissible and no button text for teacher announcement without dismissible and button text', () => {
+    const wrapper = shallow(
+      <Announcements
+        {...defaultProps}
+        announcements={[fakeTeacherAnnouncement]}
+      />
+    );
+    assert.equal(wrapper.find(Notification).length, 1);
+    assert.equal(wrapper.find(Notification).props().dismissible, true);
+    assert.equal(wrapper.find(Notification).props().buttonText, 'Learn more');
+  });
+
+  it('displays new teacher announcement with dismissible and button text for instructor', () => {
+    const wrapper = shallow(
+      <Announcements
+        {...defaultProps}
+        announcements={[fakeTeacherAnnouncementWithDismissibleAndButtonText]}
+      />
+    );
+    assert.equal(wrapper.find(Notification).length, 1);
+    assert.equal(wrapper.find(Notification).props().dismissible, false);
+    assert.equal(
+      wrapper.find(Notification).props().buttonText,
+      'Push the button'
+    );
   });
 
   it('has only instructor announcements', () => {

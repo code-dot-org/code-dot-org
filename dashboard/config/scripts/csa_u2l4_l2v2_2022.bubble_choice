@@ -1,6 +1,6 @@
 name 'CSA U2L4-L2v2_2022'
 display_name 'Parameterized PainterPlus'
-description 'Create a parameterized constructor in the PainterPlus class and use it to place a PainterPlus object at a specific location.'
+description 'Create a parameterized constructor in the `PainterPlus` class and use it to place a `PainterPlus` object at a specific location.'
 
 sublevels
 level 'CSA U2L4-L2a_2022'

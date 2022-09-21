@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:41:03.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -64,14 +60,14 @@
     "parent_level_id": 20820,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/csd-2022/guides/velocity",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/if-else-statements",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/multi-frame-animations"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "map_reference": "/courses/csd-2022/guides/collision-detection",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
@@ -79,6 +75,10 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"33abeb33-4d74-48ad-958a-8fe0ca059aef\",\r\n    \"c680e284-3529-4a3f-9a0d-7b65bf9dff17\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"33abeb33-4d74-48ad-958a-8fe0ca059aef\": {\r\n      \"name\": \"blender\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/Ry9L40IAPQb_SBIhQoEEEg/33abeb33-4d74-48ad-958a-8fe0ca059aef.png?version=JEBesmONW8evB2Ly4opA_lv3fhwrjB4S\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 134\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"JEBesmONW8evB2Ly4opA_lv3fhwrjB4S\"\r\n    },\r\n    \"c680e284-3529-4a3f-9a0d-7b65bf9dff17\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/Ry9L40IAPQb_SBIhQoEEEg/c680e284-3529-4a3f-9a0d-7b65bf9dff17.png?version=97qBNp.sfx0CANl37kuXZKGfFkJZpaeY\",\r\n      \"frameSize\": {\r\n        \"x\": 40,\r\n        \"y\": 44\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"97qBNp.sfx0CANl37kuXZKGfFkJZpaeY\"\r\n    }\r\n  }\r\n}",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:41:03.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:03.220+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions egg_2021\\\"\"],\"cloned_from\":\"CSD U3 collisions egg_2021\"}]"

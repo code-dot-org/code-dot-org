@@ -41,11 +41,12 @@ class UnitOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
+    isProfessionalLearningCourse: PropTypes.bool,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
-    professionalLearningCourse: PropTypes.bool,
+    deeperLearningCourse: PropTypes.bool,
     hasPerLevelResults: PropTypes.bool.isRequired,
     unitCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
@@ -103,7 +104,7 @@ class UnitOverviewTopRow extends React.Component {
       sectionsForDropdown,
       selectedSectionId,
       currentCourseId,
-      professionalLearningCourse,
+      deeperLearningCourse,
       scriptId,
       scriptName,
       unitTitle,
@@ -120,7 +121,8 @@ class UnitOverviewTopRow extends React.Component {
       unitCompleted,
       hasPerLevelResults,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -138,17 +140,27 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress = IN_PROGRESS;
     }
 
+    /*
+     * We are turning off Printing Certificates for Professional Learning Courses
+     * until we can create a specialized certificate for PL courses.
+     * */
+    let completedProfessionalLearningCourse =
+      isProfessionalLearningCourse && unitProgress === COMPLETED;
+
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
-        {!professionalLearningCourse && viewAs === ViewType.Participant && (
+        {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            <Button
-              __useDeprecatedTag
-              href={`/s/${scriptName}/next`}
-              text={NEXT_BUTTON_TEXT[unitProgress]}
-              size={Button.ButtonSize.large}
-              style={{marginRight: 10}}
-            />
+            {!completedProfessionalLearningCourse && (
+              <Button
+                __useDeprecatedTag
+                href={`/s/${scriptName}/next`}
+                text={NEXT_BUTTON_TEXT[unitProgress]}
+                size={Button.ButtonSize.large}
+                style={{marginRight: 10}}
+              />
+            )}
+
             {studentResources.length > 0 && (
               <ResourcesDropdown
                 resources={studentResources}
@@ -169,7 +181,7 @@ class UnitOverviewTopRow extends React.Component {
         )}
 
         <div style={styles.resourcesRow}>
-          {!professionalLearningCourse &&
+          {!deeperLearningCourse &&
             viewAs === ViewType.Instructor &&
             (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
@@ -212,7 +224,7 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!professionalLearningCourse && viewAs === ViewType.Instructor && (
+        {!deeperLearningCourse && viewAs === ViewType.Instructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}
@@ -293,7 +305,7 @@ export default connect((state, ownProps) => ({
     ownProps.courseVersionId,
     state.progress.scriptId
   ),
-  professionalLearningCourse: state.progress.professionalLearningCourse,
+  deeperLearningCourse: state.progress.deeperLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
   unitCompleted: !!state.progress.unitCompleted,
   scriptId: state.progress.scriptId,

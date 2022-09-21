@@ -1,0 +1,27 @@
+$max-cell-width: 350px;
+
+.columnName {
+  display: inline-block;
+  max-width: $max-cell-width;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container {
+  justify-content: space-between;
+  padding: 6px 0;
+  display: flex;
+  &IsEditing {
+    display: none;
+  }
+}
+
+.iconWrapper {
+  align-self: flex-end;
+  padding-left: 5px;
+}
+
+.icon {
+  color: white;
+  cursor: pointer;
+}

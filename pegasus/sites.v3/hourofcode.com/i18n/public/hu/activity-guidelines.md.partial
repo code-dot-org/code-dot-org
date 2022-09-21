@@ -232,12 +232,15 @@ Minden október 1-je előtt beküldött tevékenység normál áttekintésben r�
 
 ## Védjegyre vonatkozó irányelvek
 
-** Adj lehetőséget a visszajelzésre a tevékenységek végén. ** (Pl. „Befejezted a 10. szintet, mellyel megtanultad a loopokat!”. Remek munka!")
+** Adj lehetőséget a visszajelzésre a tevékenységek végén. ** (Pl. „Befejezted a 10. szintet, mellyel megtanultad a loopokat!”. Remek munka!") We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. A Kódolás órájára történő bármilyen utalást csak az alábbi módokon szabad alkalmazni. Példa helyes felhasználásra: "Vegyen részt a Kódolás óráján™ az ACMECorp.com-on". Példa helytelen felhasználásra: "Próbálja ki a Kódolás óráját az ACME Corp-nál".
-2. Használd a "TM" feliratot a legfontosabb megjelenésekkor, weboldalakon vagy az alkalmazásleírásokban.
-3. Helyezd el az idegen nyelvű leírásokat az oldal aján (lábléc), továbbá a Kódolás órája, a CSEdWeek és a Code.org webhelyekre mutató linkeket is az alábbi szöveggel együtt: "A Kódolás órája™ egy országos kezdeményezés, amelyet a Számítástechnikai Oktatási Hét [csedweek.org] és a Code.org [code.org] közösen hívott életre, hogy több millió diákot vezessen be egy óra leforgás alatt a számítástechnika és a számítógépes programozás világába."
-4. Ne használd a Kódolás órája kifejezést applikációk elnevezésekor.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**Vissza az elejére**](#top)
 

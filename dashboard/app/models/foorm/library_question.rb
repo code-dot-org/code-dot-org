@@ -25,7 +25,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   validate :validate_question
   validates :question_name, :question, presence: true
-  validates_uniqueness_of :question_name, scope: [:library_name, :library_version]
+  validates_uniqueness_of :question_name, case_sensitive: true, scope: [:library_name, :library_version]
 
   after_commit :write_to_file
 

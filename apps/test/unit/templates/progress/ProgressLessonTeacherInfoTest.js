@@ -36,6 +36,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -60,6 +61,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={false}
         toggleHiddenLesson={() => {}}
@@ -93,6 +95,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -125,6 +128,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -133,8 +137,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('Connect(LessonLock)').length, 1);
-    assert.equal(wrapperUnlockable.find('Connect(LessonLock)').length, 0);
+    assert.equal(wrapperLockable.find('LessonLock').length, 1);
+    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
   });
 
   it('does not render LessonLock button when lesson is lockable and teacher is not lockable authorized', () => {
@@ -153,6 +157,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -161,8 +166,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('Connect(LessonLock)').length, 0);
-    assert.equal(wrapperUnlockable.find('Connect(LessonLock)').length, 0);
+    assert.equal(wrapperLockable.find('LessonLock').length, 0);
+    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
   });
 
   it('does not render our LessonLock button when we have no sections', () => {
@@ -176,6 +181,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
@@ -183,7 +189,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('Connect(LessonLock)').length, 0);
+    assert.equal(wrapper.find('LessonLock').length, 0);
   });
 
   it('renders SendLessonDialog with only start url', () => {
@@ -199,6 +205,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
@@ -220,6 +227,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
@@ -244,6 +252,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
@@ -265,6 +274,7 @@ describe('ProgressLessonTeacherInfo', () => {
             hiddenLessonState={Immutable.fromJS({
               lessonsBySection: {11: {}}
             })}
+            unitId={17}
             unitName="My Unit"
             hasNoSections={false}
             toggleHiddenLesson={() => {}}

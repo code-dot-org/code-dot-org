@@ -40,6 +40,7 @@ es:
           tienes correo electrónico)](%{url})
         username: nombre de usuario
         password: Contraseña
+        verified_teacher: Profesor Verificado
         password_confirmation: Confirmación de la contraseña
         current_password: Contraseña actual
         locale: Idioma
@@ -506,7 +507,6 @@ es:
     popup:
       progress_for_user: progreso de %{name}
       progress: Tu progreso
-      lines: 'Total de líneas de código: %{lines}'
       close: CERRAR
       mastery: Conceptos
       puzzle_map: Etapas
@@ -1468,3 +1468,10 @@ es:
   unit_prefix: Unidad %{n}
   code_org_logo_alt: Inicio de Code.org
   teacher_feedback: Retroalimentación del docente
+  lesson_lock:
+    error:
+      no_updates: No hay actualizaciones disponibles
+      missing_params: Debe proporcionar los ID de usuario, nivel y unidad
+      cannot_view_locked_answers: No se pueden ver las respuestas mientras están bloqueadas
+      forbidden: El usuario no puede actualizar el estado bloqueable del estudiante
+  reset_predict_progress_button: Borrar respuesta

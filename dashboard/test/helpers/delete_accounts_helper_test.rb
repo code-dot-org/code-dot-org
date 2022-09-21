@@ -885,44 +885,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.code_review_comments
-  #
-
-  test "soft deletes and clears comments written by purged user" do
-    student = create :student
-
-    comment = create :code_review_comment, commenter: student
-    refute comment.deleted?
-    refute_nil comment.comment
-
-    # Confirm that the contents of soft deleted comments
-    # are fully deleted.
-    deleted_comment = create :code_review_comment, commenter: student, deleted_at: Time.now
-    assert deleted_comment.deleted?
-    refute_nil deleted_comment.comment
-
-    purge_user student
-
-    comment.reload
-    assert comment.deleted?
-    assert_nil comment.comment
-
-    deleted_comment.reload
-    assert deleted_comment.deleted?
-    assert_nil deleted_comment.comment
-
-    assert_logged 'Cleared 2 CodeReviewComment'
-  end
-
-  #
   # Table: dashboard.code_review_requests
-  # Table: dashboard.code_review_notes
+  # Table: dashboard.code_review_comments
   #
   test "deletes comment text and soft deletes comments for purged user" do
     student = create :student
     review = create :code_review, user_id: student.id
     student_2 = create :student
-    comment = create :code_review_note, commenter: student_2, code_review: review
+    comment = create :code_review_comment, commenter: student_2, code_review: review
     assert_nil review.deleted_at
     assert_nil comment.deleted_at
     refute_nil comment.comment
@@ -940,7 +910,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "anonymizes and deletes code review comments written by user" do
     student = create :student
-    comment = create :code_review_note, commenter: student
+    comment = create :code_review_comment, commenter: student
     refute_nil comment.commenter
     refute_nil comment.comment
     assert_nil comment.deleted_at
@@ -1657,7 +1627,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "soft-deletes all of a soft-deleted user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       assert_equal 'active', projects_table.where(id: project_id).first[:state]
@@ -1675,7 +1644,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-deletes all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       assert_equal 'active', projects_table.where(id: project_id).first[:state]
@@ -1695,7 +1663,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not soft-delete anyone else's projects" do
-    skip
     student_a = create :student
     student_b = create :student
     with_channel_for student_a do |project_id_a|
@@ -1712,7 +1679,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "sets updated_at when soft-deleting projects" do
-    skip
     student = create :student
     Timecop.freeze do
       with_channel_for student do |project_id|
@@ -1731,7 +1697,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-delete does not set updated_at on already soft-deleted projects" do
-    skip
     student = create :student
     Timecop.freeze do
       with_channel_for student do |project_id|
@@ -1752,7 +1717,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "user purge does set updated_at on already soft-deleted projects" do
-    skip
     student = create :student
     Timecop.freeze do
       with_channel_for student do |project_id|
@@ -1773,7 +1737,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'value' for all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       refute_nil projects_table.where(id: project_id).first[:value]
@@ -1791,7 +1754,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'updated_ip' for all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id, storage_id|
       refute_empty projects_table.where(id: project_id).first[:updated_ip]
@@ -1813,7 +1775,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears 'comment' on any version of all of a purged user's projects" do
-    skip
     student = create :student
     with_channel_for student do |project_id|
       comment_text = 'a comment'
@@ -1834,7 +1795,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not clear 'comment' on any version of anyone else's projects" do
-    skip
     student_to_purge = create :student
     other_student = create :student
     with_channel_for student_to_purge do |project_id_to_purge|
@@ -1871,7 +1831,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "unfeatures any featured projects owned by soft-deleted user" do
-    skip
     student = create :student
     with_channel_for student do |project_id|
       featured_project = create :featured_project,
@@ -1888,7 +1847,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "unfeatures any featured projects owned by purged user" do
-    skip
     student = create :student
     with_channel_for student do |project_id|
       featured_project = create :featured_project,
@@ -1905,7 +1863,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not change unfeature time on previously unfeatured projects" do
-    skip
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
@@ -1939,22 +1896,18 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "SourceBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents SourceBucket
   end
 
   test "AssetBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents AssetBucket
   end
 
   test "AnimationBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents AnimationBucket
   end
 
   test "FileBucket: hard-deletes all of user's channels" do
-    skip
     assert_bucket_hard_deletes_contents FileBucket
   end
 
@@ -1985,7 +1938,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "Firebase: deletes content for all of user's channels" do
-    skip
     student = create :student
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, storage_id|
@@ -2028,7 +1980,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test 'with_channel_for owns channel' do
-    skip
     student = create :student
 
     with_storage_id_for student do |storage_id|

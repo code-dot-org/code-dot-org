@@ -21,7 +21,6 @@ class RegistrationsController < Devise::RegistrationsController
       @user = User.new_with_session(user_params.permit(:user_type), session)
     else
       save_default_sign_up_user_type
-      @already_hoc_registered = params[:already_hoc_registered]
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
     end
@@ -211,7 +210,7 @@ class RegistrationsController < Devise::RegistrationsController
   # from cached pages which will not populate the CSRF token
   def set_age
     return head(:forbidden) unless current_user
-    current_user.update(age: params[:user][:age]) unless current_user.age.present?
+    current_user.update(age: params[:user][:age]) if current_user.age.blank?
   end
 
   def upgrade

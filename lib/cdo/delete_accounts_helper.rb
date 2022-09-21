@@ -1,5 +1,4 @@
 require_relative '../../shared/middleware/helpers/storage_id'
-require_relative '../../shared/middleware/helpers/projects'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
@@ -35,14 +34,14 @@ class DeleteAccountsHelper
 
     @log.puts "Deleting project backed progress"
 
-    project_ids = Projects.table.where(storage_id: user.user_storage_id).map(:id)
+    project_ids = DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
     channel_count = project_ids.count
     encrypted_channel_ids = project_ids.map do |project_id|
       storage_encrypt_channel_id user.user_storage_id, project_id
     end
 
     # Clear potential PII from user's channels
-    Projects.table.
+    DASHBOARD_DB[:projects].
       where(id: project_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
@@ -272,22 +271,9 @@ class DeleteAccountsHelper
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
   end
 
-  def purge_code_review_comments(user_id)
-    @log.puts "Removing CodeReviewComment"
-
-    comments = CodeReviewComment.with_deleted.where(commenter_id: user_id)
-    comments_count = comments.count
-    comments.each do |comment|
-      comment.comment = nil
-      comment.destroy
-      comment.save(validate: false)
-    end
-    @log.puts "Cleared #{comments_count} CodeReviewComment" if comments_count > 0
-  end
-
   def clean_and_destroy_code_reviews(user_id)
     # anonymize notes the user wrote
-    comments_written = CodeReviewNote.where(commenter_id: user_id)
+    comments_written = CodeReviewComment.where(commenter_id: user_id)
     comments_written_count = comments_written.count
     comments_written.each do |comment|
       comment.comment = nil
@@ -295,7 +281,7 @@ class DeleteAccountsHelper
       comment.save!
     end
     comments_written.destroy_all
-    @log.puts "Cleared and deleted #{comments_written_count} CodeReviewNote" if comments_written_count > 0
+    @log.puts "Cleared and deleted #{comments_written_count} CodeReviewComment" if comments_written_count > 0
     # Clear comments and soft delete any code reviews for the user.
     code_reviews = CodeReview.where(user_id: user_id)
     code_reviews_count = code_reviews.count
@@ -391,7 +377,6 @@ class DeleteAccountsHelper
     user.destroy
 
     purge_teacher_feedbacks(user.id)
-    purge_code_review_comments(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?

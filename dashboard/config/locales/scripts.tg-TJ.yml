@@ -59,10 +59,6 @@ tg:
           description_audience: 'Синну сол: 5-18'
         grade2:
           description_audience: 'Синну сол: 5-18'
-        csp4-pilot:
-          lessons:
-            Surveys:
-              name: Тадқиқҳо
         2022drafting:
           lesson_groups:
             lessonGroup-8:

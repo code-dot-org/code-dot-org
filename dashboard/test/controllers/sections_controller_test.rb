@@ -30,6 +30,8 @@ class SectionsControllerTest < ActionController::TestCase
     create(:unit_group_unit, script: @script_in_course, unit_group: @unit_group, position: 1)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "do not show login screen for invalid section code" do
