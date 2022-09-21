@@ -1,10 +1,16 @@
 @use "../constants.module.scss";
+@use "color.scss";
 
 .container {
   width: constants.$visualization-width;
   height: constants.$visualization-height;
+  background-color: none;
+  opacity: 1;
 
   &.overlay {
+    background-color: color.$dark_charcoal;
+    opacity: 0.2;
+
     &:hover {
       cursor: crosshair;
     }
