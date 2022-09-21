@@ -1,6 +1,5 @@
 /* global appOptions */
 import $ from 'jquery';
-import MD5 from 'crypto-js/md5';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
@@ -136,7 +135,6 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
     libraries: data.libraries
@@ -327,20 +325,6 @@ var projects = (module.exports = {
    */
   getMakerAPIs() {
     return currentSources.makerAPIsEnabled;
-  },
-
-  /**
-   * Calculates a md5 hash for everything within sources except the
-   * generatedProperties.
-   * @return {string} md5 hash string.
-   */
-  // not used anywhere?
-  md5CurrentSources() {
-    const {
-      generatedProperties, // eslint-disable-line no-unused-vars
-      ...sourcesWithoutProperties
-    } = currentSources;
-    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
   },
 
   getCurrentSourceVersionId() {
@@ -676,8 +660,6 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
-   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
-   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -714,12 +696,6 @@ var projects = (module.exports = {
 
       if (currentSources.libraries) {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
-      }
-
-      if (currentSources.generatedProperties) {
-        sourceHandler.setInitialGeneratedProperties(
-          currentSources.generatedProperties
-        );
       }
 
       if (isEditing) {
@@ -1299,7 +1275,6 @@ var projects = (module.exports = {
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
-          const generatedProperties = this.sourceHandler.getGeneratedProperties();
           const libraries = this.sourceHandler.getLibrariesList();
           callback({
             source,
@@ -1308,7 +1283,6 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
-            generatedProperties,
             libraries
           });
         })
@@ -1318,10 +1292,6 @@ var projects = (module.exports = {
 
   getSelectedSong() {
     return currentSources.selectedSong;
-  },
-
-  getGeneratedProperties() {
-    return currentSources.generatedProperties;
   },
 
   /**
