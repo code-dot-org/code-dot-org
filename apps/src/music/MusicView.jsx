@@ -8,6 +8,7 @@ import {InitSound, GetCurrentAudioTime, PlaySound, StopSound} from './sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
+import moduleStyles from './music.module.scss';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
@@ -187,31 +188,62 @@ class MusicView extends React.Component {
     var self = this;
 
     var toolbox = {
-      kind: 'flyoutToolbox',
+      kind: 'categoryToolbox',
       contents: [
         {
-          kind: 'block',
-          type: 'play_sound'
+          kind: 'category',
+          name: 'Samples',
+          cssConfig: {
+            container: moduleStyles.toolboxCategoryContainer
+          },
+          contents: [
+            {
+              kind: 'block',
+              type: 'play_sound'
+            },
+            {
+              kind: 'block',
+              type: 'play_sound_with_variable'
+            },
+            {
+              kind: 'block',
+              type: 'play_sound_next_measure'
+            }
+          ]
         },
         {
-          kind: 'block',
-          type: 'play_sound_with_variable'
+          kind: 'category',
+          name: 'Control',
+          cssConfig: {
+            container: moduleStyles.toolboxCategoryContainer
+          },
+          contents: [
+            {
+              kind: 'block',
+              type: 'loop_from_to'
+            },
+            {
+              kind: 'block',
+              type: 'if_even_then'
+            }
+          ]
         },
         {
-          kind: 'block',
-          type: 'play_sound_next_measure'
-        },
-        {
-          kind: 'block',
-          type: 'loop_from_to'
-        },
-        {
-          kind: 'block',
-          type: 'variable_get'
-        },
-        {
-          kind: 'block',
-          type: 'if_even_then'
+          kind: 'category',
+          name: 'Variables',
+          cssConfig: {
+            container: moduleStyles.toolboxCategoryContainer
+          },
+          contents: [
+            {
+              kind: 'block',
+              type: 'variable_get'
+            }
+            // {
+            //   kind: 'block',
+            //   type: 'set_variable'
+            // },
+          ]
         }
       ]
     };
@@ -466,6 +498,23 @@ class MusicView extends React.Component {
         });
       }
     };
+
+    // Blockly.Blocks['set_variable'] = {
+    //   init: function() {
+    //     this.jsonInit({
+    //       type: 'variable_get',
+    //       message0: '%1',
+    //       args0: [
+    //         {
+    //           type: 'field_variable',
+    //           name: 'var',
+    //           variable: 'measure'
+    //         }
+    //       ],
+    //       output: null
+    //     });
+    //   }
+    // };
 
     Blockly.JavaScript.when_run = function() {
       // Generate JavaScript for handling click event.
