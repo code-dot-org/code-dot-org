@@ -1,0 +1,31 @@
+@use "../constants.module.scss";
+
+.container {
+  width: constants.$visualization-width;
+  height: constants.$visualization-height;
+
+  &.overlay {
+    &:hover {
+      cursor: crosshair;
+    }
+  }
+}
+
+.image {
+  // Start hidden so we can start the audio and gif at the same time.
+  visibility: hidden;
+  width: constants.$visualization-width;
+  height: constants.$visualization-height;
+}
+
+.previewBackground {
+  background-image: url("/blockly/media/javalab/Theater.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  opacity: 1;
+
+  &.collapsed {
+    opacity: 0;
+  }
+}
