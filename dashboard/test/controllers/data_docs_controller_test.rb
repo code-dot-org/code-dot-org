@@ -44,4 +44,31 @@ class DataDocsControllerTest < ActionController::TestCase
     get :show, params: {key: 'unknown_key'}
     assert_response :not_found
   end
+
+  test 'data doc is updated through update route' do
+    sign_in @levelbuilder
+    new_key = 'doc_key'
+    editable_data_doc = create :data_doc, {key: new_key, name: 'Doc name', content: 'Doc content.'}
+
+    get :edit, params: {key: new_key}
+    edited_name = 'New doct name'
+    edited_content = 'New doc content.'
+    post :update, params: {
+      key: new_key,
+      name: edited_name,
+      content: edited_content
+    }
+    assert_response :ok
+
+    editable_data_doc.reload
+    assert_equal new_key, editable_data_doc.key
+    assert_equal edited_name, editable_data_doc.name
+    assert_equal edited_content, editable_data_doc.content
+  end
+
+  test 'edit page renders 404 when data doc is not found' do
+    sign_in @levelbuilder
+    get :edit, params: {key: 'unknown_key'}
+    assert_response :not_found
+  end
 end
