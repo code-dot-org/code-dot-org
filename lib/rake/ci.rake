@@ -2,6 +2,7 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/aws/cloudfront'
 require 'tempfile'
 
 namespace :ci do
@@ -84,7 +85,7 @@ namespace :ci do
   desc 'flush CDN and frontend caches'
   task :flush_cache do
     ChatClient.wrap('Flush cache') do
-      RakeUtils.system "bin/flush_cache"
+      AWS::CloudFront.invalidate_caches
     end
   end
 
