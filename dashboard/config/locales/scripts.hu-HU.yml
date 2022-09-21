@@ -2802,6 +2802,8 @@ hu:
               display_name: Tartalom
             lessonGroup-5:
               display_name: Homokozó
+        ai-ethics-2021:
+          description_audience: 6-12. évfolyam
         poem-art-2021:
           title: Versművészet
         explore-data-1-2021:
@@ -3129,8 +3131,19 @@ hu:
         aiml-2022:
           name: aiml-2022
           description_short: Ismerkedés a mesterséges intelligenciával és a gépi tanulással
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Aszinkron hibakeresési kiterjesztés
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: '2.  modul: Aszinkron munka'
         soccer:
           name: foci
+          title: Saját focimeccs kódolása
+          description_short: Focimeccs készítése
+          description: Focimeccs készítése
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:

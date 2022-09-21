@@ -84,6 +84,17 @@ social:
 <div style="clear:both"></div>
 <br>
 
+<a class="linktag" id="nasa-appdev" href="http://www.nasa.gov/education/appchallenge" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/nasa-adc.png" alt="Logo for NASA App Development Challenge">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="nasa-appdev" href="http://www.nasa.gov/education/appchallenge" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>NASA App Development Challenge</strong></h3></a>
+  <p>The NASA App Development Challenge (ADC) is a coding challenge in which NASA presents technical problems to middle and high school students seeking student contributions to future deep space exploration missions. By responding to the ADC, students take a part directly in the Artemis Generation endeavors to land American astronauts, including the first woman and first person of color on the Moon.</p>
+  <p><i>Team registration closes September 28th.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
 <a class="linktag" id="technovation" href="https://technovationchallenge.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/technovation.png" alt="Technovation logo">
 </a>

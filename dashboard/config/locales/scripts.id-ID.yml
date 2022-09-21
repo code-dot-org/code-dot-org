@@ -4874,6 +4874,8 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Kelas 6-12
         poem-art-2021:
           title: Seni Puisi
         explore-data-1-2021:
@@ -5522,10 +5524,21 @@ id:
               display_name: Selamat Datang
         dlp-csp-mod1-2022:
           title: CS Principles Deeper Learning Modul 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Ekstensi Debugging Tidak Sinkron
         self-paced-pl-csd5-2022:
           title: self-paced-pl-csd5
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Tugas Tidak Sinkron
         soccer:
           name: sepak bola
+          title: Buat kode game sepakbolamu sendiri
+          description_short: Buat game sepak bola
+          description: Buat game sepak bola
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:

@@ -1159,3 +1159,7 @@ ko:
   lesson_lock:
     error:
       no_updates: "실행할 업데이트 없음"
+      missing_params: "사용자와 레벨, 단위 ID를 제공해야 합니다"
+      cannot_view_locked_answers: "잠겨있는 동안에는 답을 볼 수 없습니다"
+      forbidden: "사용자는 학생의 잠금 상태를 업데이트할 수 없습니다"
+  reset_predict_progress_button: "답 삭제"

@@ -664,11 +664,11 @@ si:
     පිලිබඳ කමිටුව</a> විසින් කරනු ලබයි. මීට අමතරව සහකරුවන් බොහෝ පිරිසක් ඇත. මේ අතර
     ප්‍රධාන වශයෙන්&mdash; මයික්‍රෝසොෆ්ට්, ඇපල්, ඇමේසන් යන සමාගම් සහ ඇමරිකාවේ ගැහැණු
     හා පිරිමි ළමුන්ගේ සංගම් සහ ඇමරිකාවේ පාසල් කමිටුව ද වේ.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: මම පරිගණක ක්‍රමලේඛය (Coding) පිළිබඳ කිසිදු දෙයක් දන්නේනෑ. නමුත්
     තවමත් මට Hour of Code වැඩසටහනක් පැවැත්විය හැකිද?
   hoc_faq_host_a: ඇත්ත වශයෙන්ම ඔව්. හි සියලුම ක්‍රියාකාරකම් තනිවම සිදු කල හැකි ඒවාය.

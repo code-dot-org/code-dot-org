@@ -671,11 +671,11 @@ fa:
     نژادي در اين زمينه است. <a href='http://code.org/about/partners'> ائتلافي بی سابقه
     </a> از همكاران گرد آمده اند و ساعت کدنويسي را حمايت مي‌كنند &mdash; از جمله مایکروسافت،
     اپل، آمازون، باشگاه‌هاي پسران و دختران امریکا و هیئت مدیره کالج‌ها.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: من چيزي درباره كد نويسي نمي دانم. آيا همچنان مي توانم ميزبان چنين
     رويدادي باشم؟
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
