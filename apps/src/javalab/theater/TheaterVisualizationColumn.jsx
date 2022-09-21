@@ -53,7 +53,6 @@ class TheaterVisualizationColumn extends React.Component {
             isCollapsed && style.collapsed
           )}
         >
-          {/* create ResponsiveVisualization */}
           <div
             id={VISUALIZATION_DIV_ID}
             className={classNames(responsive && 'responsive')}
