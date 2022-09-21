@@ -156,8 +156,6 @@ export function getAppOptionsFile(expoMode) {
   }
   const options = getAppOptionsAtPath(APP_OPTIONS_ALLOWLIST, getAppOptions());
   _.merge(options, APP_OPTIONS_OVERRIDES);
-  // remove references to nativeexport
-  // options.nativeExport = expoMode;
 
   // call non-allowlisted hasDataAPIs() function and persist as a bool in
   // the exported options:

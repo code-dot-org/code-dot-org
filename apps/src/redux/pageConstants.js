@@ -77,7 +77,6 @@ var ALLOWED_KEYS = new Set([
   'serverProjectLevelId',
   'serverScriptId',
   'exportApp',
-  'allowExportExpo',
   'widgetMode',
   'librariesEnabled',
   'validationEnabled',

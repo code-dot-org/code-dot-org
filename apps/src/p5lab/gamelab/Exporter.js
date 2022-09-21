@@ -95,7 +95,6 @@ export default {
       p5playAsset
     ];
 
-    // do we need gamelab-api?
     return new Promise((resolve, reject) => {
       $.when(
         ...staticDownloads,

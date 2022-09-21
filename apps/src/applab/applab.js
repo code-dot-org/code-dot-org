@@ -74,7 +74,6 @@ import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
-import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
@@ -651,15 +650,12 @@ Applab.init = function(config) {
     designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
   }.bind(this);
 
-  // remove exposession, allowexportexpo
-  // get rid of expo page constants
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
     playspacePhoneFrame,
     hideRunButton: hideRunResetButtons,
     hideResetButton: hideRunResetButtons,
     channelId: config.channel,
-    allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
