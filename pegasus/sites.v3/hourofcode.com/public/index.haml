@@ -34,8 +34,6 @@ social:
 %script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
 
 
-
-
 #top{style: "position: relative; width: 100%; overflow: hidden;"}
 
   // Canada's default langauge is set to 'en' but since we don't support 'en-CA' we make an exception
@@ -103,8 +101,7 @@ social:
       %div{style: "clear: both;"}
 
 
-
-.container
+%main
   -# HoC Live Spanish banner
   - if @language == 'es' || @language == 'la'
     #hoclivebanner.row
@@ -124,62 +121,62 @@ social:
 
   -# Description
   %section.hoc-description
-    %h1.number-served=hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-    %h2=hoc_s(:front_intro_default_2)
-    %h2=view :hoc_events_counter
+    .wrapper
+      %h1.number-served=hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+      %h2=hoc_s(:front_intro_default_2)
+      %h2=view :hoc_events_counter
 
   -# Map
-  - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    #maparea.full-width
-      -# Show a picture of the map unless it is currently the week of HOC.
-      -if hoc_mode != "actual-hoc"
-        = view :hoc_events_map
-        .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
-      -else
-        %a{href: resolve_url('/map')}
-          %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
-        .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
+  %section.map
+    .wrapper
+      - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
+        #maparea.full-width
+          -# Show a picture of the map unless it is currently the week of HOC.
+          -if hoc_mode != "actual-hoc"
+            = view :hoc_events_map
+            .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
+          -else
+            %a{href: resolve_url('/map')}
+              %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
+            .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
 
   -# Join the movement
   %section#join.join-the-movement
-    %h1=hoc_s(:hoc_live_join_us)
-    %h3=hoc_s(:hoc_homepage_join_the_movement_description)
-    -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
-      = view :home_signup, hoc_mode: hoc_mode
+    .wrapper
+      %h1=hoc_s(:hoc_live_join_us)
+      %h3=hoc_s(:hoc_homepage_join_the_movement_description)
+      -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
+        = view :home_signup, hoc_mode: hoc_mode
 
--# What is HoC?
--# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
-%section.what-is-hoc
-  .wrapper
-    %h1=hoc_s(:front_what_is_hoc)
-    %h2=hoc_s(:hoc_homepage_what_is_hoc_subhead)
-    =view :index_video
-    %p=hoc_s(:hoc_homepage_what_is_hoc_description)
-    %a{href: resolve_url('/learn')}
-      %button=hoc_s(:cta_try_an_activity)
-    %p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide)
+  -# What is HoC?
+  -# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
+  %section.what-is-hoc
+    .wrapper
+      %h1=hoc_s(:front_what_is_hoc)
+      %h2=hoc_s(:hoc_homepage_what_is_hoc_subhead)
+      =view :index_video
+      %p=hoc_s(:hoc_homepage_what_is_hoc_description)
+      %a{href: resolve_url('/learn')}
+        %button=hoc_s(:cta_try_an_activity)
+      %p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide)
 
--# Highlights
-%section.highlights
-  .wrapper
-    %h1=hoc_s(:highlights_header)
-    =view :home_highlights
+  -# Highlights
+  %section.highlights
+    .wrapper
+      %h1=hoc_s(:highlights_header)
+      =view :home_highlights
 
--# Stats
-%section.stats
-  .wrapper
-    =view :home_stats
+  -# Stats
+  %section.stats
+    .wrapper
+      =view :home_stats
 
--# Host an hour
-%section.host-an-hour
-  .wrapper
-    =view :signup_button
+  -# Host an hour
+  %section.host-an-hour
+    .wrapper
+      =view :signup_button
 
-
-
-
-= view 'popup_window.js'
-
+  = view 'popup_window.js'
 
 
 :javascript
