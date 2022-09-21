@@ -12,14 +12,14 @@ const DataDocFormEditor = props => {
 
   const save = () => {
     $.ajax({
-      url: '/data_docs/' + dataDocKey,
+      url: `/data_docs/${dataDocKey}`,
       method: 'PUT',
       data: {
         name: dataDocName,
         content: dataDocContent
       }
     }).done(() => {
-      navigateToHref('/data_docs/' + dataDocKey);
+      navigateToHref(`/data_docs/${dataDocKey}`);
     });
   };
 
