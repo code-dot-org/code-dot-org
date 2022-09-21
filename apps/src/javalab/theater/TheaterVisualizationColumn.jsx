@@ -1,15 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import classNames from 'classnames';
 import PreviewPaneHeader from '../PreviewPaneHeader';
-import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import {
+  VISUALIZATION_DIV_ID,
+  isResponsiveFromState
+} from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import {toggleVisualizationCollapsed} from '../javalabRedux';
+import style from './theater-visualization-column.module.scss';
+import JavalabCrosshairOverlay, {
+  showOverlayFromState
+} from '../JavalabCrosshairOverlay';
 
 class TheaterVisualizationColumn extends React.Component {
   static propTypes = {
     // populated by redux
     isReadOnlyWorkspace: PropTypes.bool,
     isCollapsed: PropTypes.bool,
+    responsive: PropTypes.bool,
+    showOverlay: PropTypes.bool,
     toggleVisualizationCollapsed: PropTypes.func
   };
 
@@ -21,11 +31,11 @@ class TheaterVisualizationColumn extends React.Component {
     const {
       isReadOnlyWorkspace,
       isCollapsed,
+      responsive,
+      showOverlay,
       toggleVisualizationCollapsed
     } = this.props;
     const {isFullscreen} = this.state;
-
-    const opacity = isCollapsed ? 0 : 1;
 
     return (
       <div>
@@ -37,42 +47,41 @@ class TheaterVisualizationColumn extends React.Component {
           showPreviewTitle={false}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{...styles.theaterPreviewBackground, opacity}}>
-          <ProtectedVisualizationDiv>
-            <div id="theater-container" style={styles.theater}>
-              <img id="theater" style={styles.theaterImage} />
+        <div
+          className={classNames(
+            style.previewBackground,
+            isCollapsed && style.collapsed
+          )}
+        >
+          {/* create ResponsiveVisualization */}
+          <div
+            id={VISUALIZATION_DIV_ID}
+            className={classNames(responsive && 'responsive')}
+          >
+            <div
+              id="theater-container"
+              className={classNames(
+                style.container,
+                showOverlay && style.overlay
+              )}
+            >
+              <img id="theater" className={style.image} />
               <audio id="theater-audio" preload="auto" />
             </div>
-          </ProtectedVisualizationDiv>
+            <JavalabCrosshairOverlay visible={showOverlay} />
+          </div>
         </div>
       </div>
     );
   }
 }
 
-const styles = {
-  theater: {
-    width: 800,
-    height: 800
-  },
-  theaterImage: {
-    // Start hidden so we can start the audio and gif at the same time.
-    visibility: 'hidden',
-    width: 800,
-    height: 800
-  },
-  theaterPreviewBackground: {
-    backgroundImage: 'url("/blockly/media/javalab/Theater.png")',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'top'
-  }
-};
-
 export default connect(
   state => ({
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isCollapsed: state.javalab.isVisualizationCollapsed
+    isCollapsed: state.javalab.isVisualizationCollapsed,
+    responsive: isResponsiveFromState(state),
+    showOverlay: showOverlayFromState(state)
   }),
   dispatch => ({
     toggleVisualizationCollapsed() {
