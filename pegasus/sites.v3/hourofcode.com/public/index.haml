@@ -141,15 +141,14 @@ social:
         .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
 
   -# Join the movement
-  %section.join-the-movement
+  %section#join.join-the-movement
     %h1=hoc_s(:hoc_homepage_join_the_movement_heading)
     %h3=hoc_s(:hoc_homepage_join_the_movement_description)
     -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
       = view :home_signup, hoc_mode: hoc_mode
-    -else
-      = view :home_signup, hoc_mode: hoc_mode
 
 -# What is HoC?
+-# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
 %section.what-is-hoc
   .wrapper
     %h1=hoc_s(:front_what_is_hoc)
