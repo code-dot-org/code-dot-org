@@ -9,6 +9,10 @@ html, body {
 section {
   padding: 7em 1em;
 
+  @media screen and (max-width: $width-sm) {
+    padding: 4em 1.15em;
+  }
+
   .wrapper {
     max-width: 1170px;
     margin: 0 auto;
@@ -17,6 +21,10 @@ section {
   h1 {
     text-align: center;
     margin-top: 0;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 30px;
+    }
   }
 
   h2:first-of-type,
@@ -24,6 +32,10 @@ section {
     margin: 0 auto;
     line-height: 1.4;
     text-align: center;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -32,9 +44,18 @@ section.hoc-description {
   padding-bottom: 3em;
   text-align: center;
 
+  @media screen and (max-width: $width-sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .number-served{
     color: $color-main;
-    font-size: 64px;
+    font-size: 56px;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 40px;
+    }
   }
 
   h2 {
@@ -42,6 +63,10 @@ section.hoc-description {
     font-size: 24px;
     font-family: $gotham-normal;
     margin: 0 auto 0.25em;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -125,6 +150,11 @@ section.stats {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
+    @media screen and (max-width: $width-sm) {
+      padding-top: 1em;
+      border: 0;
+    }
   }
 
   figure {
@@ -132,7 +162,8 @@ section.stats {
     text-align: center;
 
     @media screen and (max-width: $width-sm) {
-      width: 100%;
+      margin: 0 auto;
+      width: 62%;
 
       &:not(:last-child){
         margin-bottom: 4em;
@@ -140,13 +171,21 @@ section.stats {
     }
 
     img {
-      width: 240px;
+      width: 250px;
+
+      @media screen and (max-width: $width-lg) {
+        width: 100%;
+      }
     }
 
     figcaption {
       text-align: center;
       font-size: 18px;
       margin-top: 1em;
+
+      @media screen and (max-width: $width-md) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -157,8 +196,8 @@ section.host-an-hour {
   padding: 0 1em 3em;
 
   button {
-    float: none !important; // remove inline styles on views/signup_button.haml
-    margin: 0 !important; // remove inline styles on views/signup_button.haml
+    float: none !important; // removes inline styles on views/signup_button.haml
+    margin: 0 !important; // removes inline styles on views/signup_button.haml
   }
 }
 

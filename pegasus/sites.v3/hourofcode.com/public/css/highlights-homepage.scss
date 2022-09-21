@@ -9,6 +9,11 @@
 
   .article-wrapper, .highlights-column {
     width: 50%;
+
+    @media screen and (max-width: $width-md) {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -16,6 +21,13 @@
   a.see-more {
     float: right;
     margin-top: 1em;
+
+    @media screen and (max-width: $width-md) {
+      float: none;
+      margin: 2em auto 0;
+      text-align: center;
+      display: block;
+    }
   }
 
   margin-top: 1em;
@@ -29,6 +41,11 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+
+  @media screen and (max-width: $width-md) {
+    justify-content: center;
+    margin-top: 2em;
+  }
 }
 
 .white-text {
@@ -45,17 +62,32 @@
 }
 
 .highlight-item {
-  width: 250px;
-  margin: 1em 0 0 1em;
+  width: 230px;
+  margin: 1.25em 0 0 1.25em;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: $width-lg) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: $width-md) {
+    margin: 1em 0.5em 0;
+  }
 }
 
 .highlight-img {
   border-radius: 5px;
   background-size: cover;
   background-position: 50%;
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   background-color: #f0f0f0;
+
+  @media screen and (max-width: $width-lg) {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .highlight-caption {
@@ -87,13 +119,13 @@
 }
 
 .learn-button {
-  width: 100%;
+  width: 95%;
   background-color: #7665a0;
   height: 30px;
   position: absolute;
-  bottom: 0px;
+  bottom: 9px;
   left: 0px;
-  padding: 3px;
+  padding: 4px;
   text-align: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;

@@ -46,6 +46,7 @@
   padding: 0;
   text-indent: 0;
   list-style-type: none;
+  vertical-align: top;
   max-width: 150px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -63,7 +64,7 @@
   color: #292F36;
   text-decoration: none;
 }
-#hoc-nav ul li a:hover {
+#hoc-nav ul li:hover {
   border-bottom: solid 2px rgb(255, 138, 0);
 }
 #hoc-nav-hamburger {
