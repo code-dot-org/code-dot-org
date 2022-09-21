@@ -51,7 +51,7 @@ sk:
         age: 'Vek'
         gender: 'Pohlavie'
         edit_header: 'Upraviť nastavenia účtu'
-        finish_sign_up_header: 'Dokonči vytvorenie svojho účtu'
+        finish_sign_up_header: 'Dokončite vytvorenie svojho účtu'
         finish_sign_up_subheader: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre **%{email}**.'
         finish_sign_up_subheader_provider: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.'
@@ -105,7 +105,7 @@ sk:
   prize: 'trofej'
   more_info: 'Viac info'
   auth:
-    continue_with: 'Pokračovať s %{provider}'
+    continue_with: 'Pokračovať s účtom %{provider}'
     sign_in_with: 'Prihlásiť sa cez %{provider}'
     signed_in: 'Prihlásený!'
     signed_out_markdown: '### Úspešne si sa odhlásil z [Code.org]%{url}.'
@@ -222,7 +222,7 @@ sk:
   signin_form:
     title: 'Máte už vytvorený účet? Prihláste sa'
     login: 'Email'
-    login_username: 'Email alebo užívateľské meno'
+    login_username: 'E-mail alebo používateľské meno'
     password: 'Heslo'
     remember: 'Zapamätať prihlásenie'
     submit: 'Prihlásiť sa'

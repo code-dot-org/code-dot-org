@@ -2,13 +2,11 @@
 title: Parceiros
 ---
 
-A Hora do Código é gerenciada pelos Comitês de Assessoria e Revisão da Semana da Educação em Ciência da Computação e da Hora do Código.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-O [Comitê de Assessoria]({{ urls/advisory_committee }}) é composto por representantes do ensino fundamental e médio, acadêmico, organizações sem fins lucrativos, organizações privadas e organizações internacionais. Esse comitê guia as estratégias para a campanha da Hora do Código.
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-O[Comitê de Revisão]({{ urls/review_committee }}) é composto por 15 educadores de grupos do ensino fundamental e médio que avaliam e recomendam atividades utilizando os critérios do Comitê de Assessoria. Esses educadores revisam as atividades dos alunos e os planos de aula dos professores que são enviados por centenas de parceiros, avaliando o valor educacional das atividades, sua capacidade de envolver os alunos e seu potencial atrativo para diferentes perfis de estudantes.
-
-O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hora do Código e sua visão de oferecer uma introdução à ciência da computação para todos os estudantes.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Principais Parceiros e Empresas Patrocinadoras
 

@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:18:45 UTC",
+    "serialized_at": "2022-09-02 13:09:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -349,7 +349,7 @@
     },
     {
       "key": "Console",
-      "name": "Console",
+      "name": "Sandbox: Console",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
@@ -364,7 +364,7 @@
     },
     {
       "key": "The Neighborhood",
-      "name": "The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -379,7 +379,7 @@
     },
     {
       "key": "lesson-16",
-      "name": "The Theater",
+      "name": "Sandbox: The Theater",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
@@ -6063,7 +6063,7 @@
     },
     {
       "name": "Casting",
-      "url": "https://youtu.be/l4BCk46Y9AA",
+      "url": "https://youtu.be/Xy1lVNguW3s",
       "key": "casting",
       "properties": {
         "audience": "Student",
@@ -6441,6 +6441,18 @@
       "seeding_key": {
         "resource.key": "unlocking_assessments"
       }
+    },
+    {
+      "name": "Welcome to The Theater",
+      "url": "https://youtu.be/Qa5NtHzPmos",
+      "key": "welcome_to_the_theater",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_theater"
+      }
     }
   ],
   "lessons_resources": [
@@ -6646,6 +6658,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "unit_4_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "welcome_to_the_theater"
       }
     },
     {

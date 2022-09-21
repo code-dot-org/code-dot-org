@@ -21,9 +21,12 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   let fileMetadata = {};
   let orderedTabKeys = [];
 
-  Object.keys(sources).forEach((file, index) => {
+  Object.keys(sources).forEach(file => {
     if (sources[file].isVisible || isEditingStartSources) {
-      let tabKey = getTabKey(index);
+      // tabIndex should be the length of orderedTabKeys, not the index
+      // from the list, because we skip hidden files in the tabs.
+      const tabIndex = orderedTabKeys.length;
+      let tabKey = getTabKey(tabIndex);
       fileMetadata[tabKey] = file;
       orderedTabKeys.push(tabKey);
     }
@@ -37,4 +40,8 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
     activeTabKey: firstTabKey,
     lastTabKeyIndex: orderedTabKeys.length - 1
   };
+};
+
+export const isJavaFile = filename => {
+  return filename.endsWith('.java');
 };

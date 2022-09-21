@@ -312,6 +312,445 @@
           "word": "Avtomatlaşdırılmış Öyrənmə",
           "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
         },
+        "algorithm/coursed/2022": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "program/coursed/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "bug/coursed/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/coursed/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "loop/coursed/2022": {
+          "word": "Dövr",
+          "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "programming/coursed/2022": {
+          "word": "Proqramlaşdırma",
+          "definition": "Proqram yaratmaq sənəti."
+        },
+        "frustrated/coursed/2022": {
+          "word": "Yorğun"
+        },
+        "persistence/coursed/2022": {
+          "word": "İnadkarlıq",
+          "definition": "Bir şey çox çətin olsa belə, təkrar -təkrar cəhd edin."
+        },
+        "event/coursed/2022": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "code/coursed/2022": {
+          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
+        },
+        "repeat/coursed/2022": {
+          "word": "Təkrar et",
+          "definition": "Bir şeyi yenə etmək."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Şərti ifadələr",
+          "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
+        },
+        "condition/coursed/2022": {
+          "word": "şərt",
+          "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprayt",
+          "definition": "Yeri, ölçüsü və görünüşü ilə ekranda qrafik."
+        },
+        "user/coursef/2022": {
+          "word": "İstifadəçi",
+          "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı tamamlamaq üçün addımların siyahısı."
+        },
+        "behavior/coursef/2022": {
+          "word": "Davranış "
+        },
+        "program/coursef/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "event/coursef/2022": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "variable/coursef/2022": {
+          "word": "Dəyişən",
+          "definition": "Proqramda istifadə olunan məlumat üçün etiket."
+        },
+        "prompt/coursef/2022": {
+          "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
+        },
+        "input/coursef/2022": {
+          "word": "Giriş"
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modellər və Simulyasiyalar",
+          "definition": "real həyatda eksperiment aparmaq üçün xərc, vaxt və ya təhlükə olmadan onun davranışını araşdırmaq üçün real dünya hadisəsinin əsas xüsusiyyətlərini təkrarlayan və ya təqlid edən proqram."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Avtomatlaşdırılmış Öyrənmə",
+          "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
+        },
+        "internet/coursef/2022": {
+          "word": "İnternet"
+        },
+        "url/coursef/2022": {
+          "word": "URL ünvan"
+        },
+        "define/coursef/2022": {
+          "word": "Təyin et"
+        },
+        "behavior/coursee/2022": {
+          "word": "Davranış "
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprayt",
+          "definition": "Yeri, ölçüsü və görünüşü ilə ekranda qrafik."
+        },
+        "loop/coursee/2022": {
+          "word": "Dövr",
+          "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "repeat/coursee/2022": {
+          "word": "Təkrar et",
+          "definition": "Bir şeyi yenə etmək."
+        },
+        "function/coursee/2022": {
+          "word": "Funksiya"
+        },
+        "condition/coursee/2022": {
+          "word": "şərt"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Şərti ifadələr",
+          "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
+        },
+        "copyright/coursee/2022": {
+          "word": "Müəllif Haqqı"
+        },
+        "define/coursee/2022": {
+          "word": "Təyin et"
+        },
+        "algorithm/courseb/2022": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "bug/courseb/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/courseb/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "click/courseb/2022": {
+          "word": "Bas",
+          "definition": "Siçanın düyməsini basın"
+        },
+        "double_click/courseb/2022": {
+          "word": "iki dəfə bas",
+          "definition": "Siçanın düyməsini çox tez basın"
+        },
+        "drag/courseb/2022": {
+          "word": "çəkmək",
+          "definition": "Siçan göstəricisini yeni bir yerə köçürdənədək siçan düyməsini  basıb saxlayın"
+        },
+        "drop/courseb/2022": {
+          "word": "Burax",
+          "definition": "Sürüklədiyiniz elementi \"buraxmaq\" üçün siçan düyməsini buraxın"
+        },
+        "program/courseb/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "programming/courseb/2022": {
+          "word": "Proqramlaşdırma",
+          "definition": "Proqram yaratmaq sənəti."
+        },
+        "persistence/courseb/2022": {
+          "word": "İnadkarlıq",
+          "definition": "Bir şey çox çətin olsa belə, təkrar -təkrar cəhd edin."
+        },
+        "loop/courseb/2022": {
+          "word": "Dövr",
+          "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "repeat/courseb/2022": {
+          "word": "Təkrar et",
+          "definition": "Bir şeyi yenə etmək."
+        },
+        "event/courseb/2022": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "algorithm/express/2022": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "bug/express/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/express/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "sequencing/express/2022": {
+          "word": "Ardıcıllıq qurmaq"
+        },
+        "program/express/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "programming/express/2022": {
+          "word": "Proqramlaşdırma",
+          "definition": "Proqram yaratmaq sənəti."
+        },
+        "behavior/express/2022": {
+          "word": "Davranış "
+        },
+        "sprite/express/2022": {
+          "word": "Sprayt",
+          "definition": "Yeri, ölçüsü və görünüşü ilə ekranda qrafik."
+        },
+        "event/express/2022": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "loop/express/2022": {
+          "word": "Dövr",
+          "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "repeat/express/2022": {
+          "word": "Təkrar et",
+          "definition": "Bir şeyi yenə etmək."
+        },
+        "condition/express/2022": {
+          "word": "şərt",
+          "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
+        },
+        "conditionals/express/2022": {
+          "word": "Şərti ifadələr",
+          "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
+        },
+        "function/express/2022": {
+          "word": "Funksiya",
+          "definition": "Dəfələrlə asanlıqla zəng edə biləcəyiniz kod parçası."
+        },
+        "prompt/express/2022": {
+          "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
+        },
+        "variable/express/2022": {
+          "word": "Dəyişən",
+          "definition": "Proqramda istifadə olunan məlumat üçün etiket."
+        },
+        "define/express/2022": {
+          "word": "Təyin et"
+        },
+        "click/pre-express/2022": {
+          "word": "Bas",
+          "definition": "Siçanın düyməsini basın"
+        },
+        "double_click/pre-express/2022": {
+          "word": "iki dəfə bas",
+          "definition": "Siçanın düyməsini çox tez basın"
+        },
+        "drag/pre-express/2022": {
+          "word": "çəkmək",
+          "definition": "Siçan göstəricisini yeni bir yerə köçürdənədək siçan düyməsini  basıb saxlayın"
+        },
+        "drop/pre-express/2022": {
+          "word": "Burax",
+          "definition": "Sürüklədiyiniz elementi \"buraxmaq\" üçün siçan düyməsini buraxın"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "bug/pre-express/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "program/pre-express/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "programming/pre-express/2022": {
+          "word": "Proqramlaşdırma",
+          "definition": "Proqram yaratmaq sənəti."
+        },
+        "persistence/pre-express/2022": {
+          "word": "İnadkarlıq",
+          "definition": "Bir şey çox çətin olsa belə, təkrar -təkrar cəhd edin."
+        },
+        "loop/pre-express/2022": {
+          "word": "Dövr",
+          "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Təkrar et",
+          "definition": "Bir şeyi yenə etmək."
+        },
+        "event/pre-express/2022": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "algorithm/coursea/2022": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "debugging/coursea/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "program/coursea/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "click/coursea/2022": {
+          "word": "Bas",
+          "definition": "Siçanın düyməsini basın"
+        },
+        "double_click/coursea/2022": {
+          "word": "iki dəfə bas",
+          "definition": "Siçanın düyməsini çox tez basın"
+        },
+        "drag/coursea/2022": {
+          "word": "çəkmək",
+          "definition": "Siçan göstəricisini yeni bir yerə köçürdənədək siçan düyməsini  basıb saxlayın"
+        },
+        "drop/coursea/2022": {
+          "word": "Burax",
+          "definition": "Sürüklədiyiniz elementi \"buraxmaq\" üçün siçan düyməsini buraxın"
+        },
+        "bug/coursea/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "programming/coursea/2022": {
+          "word": "Proqramlaşdırma",
+          "definition": "Proqram yaratmaq sənəti."
+        },
+        "loop/coursea/2022": {
+          "word": "Dövr",
+          "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "repeat/coursea/2022": {
+          "word": "Təkrar et",
+          "definition": "Bir şeyi yenə etmək."
+        },
+        "event/coursea/2022": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "bug/coursec/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/coursec/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "program/coursec/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Ardıcıllıq qurmaq"
+        },
+        "persistence/coursec/2022": {
+          "word": "İnadkarlıq"
+        },
+        "programming/coursec/2022": {
+          "word": "Proqramlaşdırma",
+          "definition": "Proqram yaratmaq sənəti."
+        },
+        "loop/coursec/2022": {
+          "word": "Dövr",
+          "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "repeat/coursec/2022": {
+          "word": "Təkrar et",
+          "definition": "Bir şeyi yenə etmək."
+        },
+        "event/coursec/2022": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "data/coursec/2022": {
+          "word": "məlumat"
+        },
+        "binary/coursec/2022": {
+          "word": "İkilik"
+        },
+        "input/csd/2022": {
+          "word": "Giriş"
+        },
+        "bug/csd/2022": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/csd/2022": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "program/csd/2022": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "variable/csd/2022": {
+          "word": "Dəyişən",
+          "definition": "Proqramda istifadə olunan məlumat üçün etiket."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprayt"
+        },
+        "condition/csd/2022": {
+          "word": "şərt"
+        },
+        "conditionals/csd/2022": {
+          "word": "Şərti ifadələr"
+        },
+        "abstraction/csd/2022": {
+          "word": "Mücərrədlik"
+        },
+        "function/csd/2022": {
+          "word": "Funksiya"
+        },
+        "copyright/csd/2022": {
+          "word": "Müəllif Haqqı"
+        },
+        "user/csd/2022": {
+          "word": "İstifadəçi",
+          "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
+        },
+        "machine_learning/csd/2022": {
+          "word": "Avtomatlaşdırılmış Öyrənmə",
+          "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
+        },
+        "ethics/csd/2022": {
+          "word": "Etika"
+        },
         "code/poem-art/unversioned": {
           "word": "Kod",
           "definition": "(v) kompüter üçün təlimatlar yazmaq."

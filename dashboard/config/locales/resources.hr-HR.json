@@ -24,6 +24,264 @@
         "ai-ml/oceans/unversioned": {
           "name": "AI: Strojno učenje"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Grafičko programiranje"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programiranje u paru"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Odnosno programiranje"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Uvjeti s kartama"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Vodič za implementaciju"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "name": "AI: Strojno učenje"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Vodič za implementaciju"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Vodič za implementaciju"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Pomakni, pomakni"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Pomakni, pomakni"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Pomakni, pomakni"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Pomakni, pomakni"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programiranje u paru"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Zapetljancije"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Zapetljancije"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Zapetljancije"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Zapetljancije"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Veliki događaj"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Vodič za implementaciju"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programiranje u paru"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "variables/express/2022": {
+          "name": "Varijable"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programiranje u paru"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programiranje u paru"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Vesele karte"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Veliki događaj"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Vodič za implementaciju"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programiranje u paru"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Veliki događaj"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Vodič za implementaciju"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Strojno učenje"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Što je računalo?"
+        },
+        "variables/csd/2022": {
+          "name": "Varijable"
+        },
+        "variables_3/csd/2022": {
+          "name": "Varijable"
+        },
+        "sprites/csd/2022": {
+          "name": "Likovi"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Likovi"
+        },
+        "text/csd/2022": {
+          "name": "tekst"
+        },
+        "conditionals/csd/2022": {
+          "name": "Uvjeti"
+        },
+        "functions/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funkcije"
+        },
+        "lists/csd/2022": {
+          "name": "Liste"
+        },
+        "design_mode/csd/2022": {
+          "name": "Dizajnerski način"
+        },
+        "variables_1/csd/2022": {
+          "name": "Varijable"
+        },
+        "variables_2/csd/2022": {
+          "name": "Varijable"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funkcije s parametrima"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funkcije"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Uvod u AI laboratorij"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Uvod u AI laboratorij"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Nastavni plan"
         },

@@ -186,7 +186,7 @@ module AWS
     # @param filename [String] The filename to write to.
     # @return [String] The filename written to.
     def self.download_to_file(bucket, key, filename)
-      open(filename, 'wb') do |file|
+      File.open(filename, 'wb') do |file|
         create_client.get_object(bucket: bucket, key: key) do |chunk|
           file.write(chunk)
         end

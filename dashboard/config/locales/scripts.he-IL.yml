@@ -1956,3 +1956,13 @@ he:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
             lessonGroup-4:
               display_name: סקר
+        soccer:
+          name: כדורגל
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר

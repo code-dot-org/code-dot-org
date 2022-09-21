@@ -693,7 +693,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         coursef-draft:
@@ -703,7 +703,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
         classic-hoc-impact-study:
           description_short: Découvre les bases des sciences informatiques grâce a
             de nombreux personnages rigolos !
@@ -740,7 +740,7 @@ fr:
         csf2harvey:
           lesson_groups:
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             content:
               display_name: Contenu
         csp5-support:
@@ -1006,7 +1006,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
           student_description: Commence à coder avec des algorithmes, des boucles,
@@ -1030,7 +1030,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -1355,7 +1355,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -1412,7 +1412,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         new-d:
@@ -1434,7 +1434,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
         new-stages-sept-2017:
           title: Nouvelles phases pour 9/17
         new-e:
@@ -1445,7 +1445,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         new-f:
@@ -1456,7 +1456,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
         csd5-old:
           title: CSD Unité 5 - Les Données et la Société
           description_short: Apprends comment les gens utilisent les ordinateurs pour
@@ -1577,7 +1577,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         course-f-2018:
@@ -1588,7 +1588,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
         csd6-old:
           title: "(OBSOLÈTE) CSD Unité 6 - Informatique Physique"
           lesson_groups:
@@ -1792,7 +1792,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
           student_description: Commence à coder avec des algorithmes, des boucles,
@@ -1816,7 +1816,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -2557,7 +2557,7 @@ fr:
           title: CSP Terrain de Jeux
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -2587,7 +2587,7 @@ fr:
             ramp_up:
               display_name: Progression
             csf_variables:
-              display_name: variables
+              display_name: Variables
             csf_data:
               display_name: Données
             csf_for_loops:
@@ -2595,11 +2595,11 @@ fr:
             csf_internet:
               display_name: Internet
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -2631,7 +2631,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Les élèves développent leur compréhension des boucles,
             des conditions et des événements. Au-delà du codage, les élèves apprennent
             la citoyenneté numérique.
@@ -2648,17 +2648,17 @@ fr:
             ramp_up:
               display_name: Progression
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
               display_name: Fonctions
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Commence à coder avec des algorithmes, des boucles,
             des conditions et des événements, puis tu passeras aux fonctions. Dans
             la deuxième partie de ce cours, conçois et crée un projet de synthèse
@@ -2686,11 +2686,11 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_variables:
-              display_name: variables
+              display_name: Variables
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
           student_description: Apprends l'informatique en essayant les cours ici à
             ton propre rythme ! Apprends à créer des logiciels, développe des compétences
             de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
@@ -2753,7 +2753,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -2777,7 +2777,7 @@ fr:
             et pour Code.org afin de maintenir et améliorer le cours. Merci pour ton
             temps et considération.
         gamelab:
-          title: Labo des Jeux
+          title: Labo Jeux
           description: Didacticiels, face à l'enseignant, pour le développement dans
             le Labo des Jeux. Ces didacticiels vont au-delà des concepts couverts
             dans CSD.
@@ -2819,7 +2819,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
           student_description: Apprends les bases de l'informatique et de la sécurité
@@ -2988,7 +2988,7 @@ fr:
           title: CSP Unité 4 Pilote - Les Variables, les Conditions et les Fonctions
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3199,7 +3199,7 @@ fr:
             ramp_up:
               display_name: Progression
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             time4cs_c1:
               display_name: 'Collection 1 : Les Everglades et ses Écosystèmes'
             time4cs_c2:
@@ -3221,7 +3221,7 @@ fr:
           title: 'Unité 1: Bits et Octets'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3232,7 +3232,7 @@ fr:
           title: 'Unité 2: L''Internet'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3245,7 +3245,7 @@ fr:
           title: 'Unité 4 : Les Variables, les conditions et les Fonctions'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3269,7 +3269,7 @@ fr:
           title: 'Unité 6 : Les Algorithmes'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3287,7 +3287,7 @@ fr:
           title: 'Unité 8: Créer PT'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3298,7 +3298,7 @@ fr:
           title: 'Unité 9 : Les Données'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3309,7 +3309,7 @@ fr:
           title: 'Unité 10 : L''Impact Mondial'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3634,7 +3634,7 @@ fr:
           title: 'CSP Aperçu : Les Variables, les Conditions et les Fonctions'
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3655,7 +3655,7 @@ fr:
             csf_functions:
               display_name: Fonctions
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
         time4cs-experiment-unit-2:
           title: Time4CS Expérience Unité 2
           description_short: "[Ajouter description]"
@@ -3685,11 +3685,11 @@ fr:
             csf_events:
               display_name: Événements
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             ramp_up:
               display_name: Progression
         time4cs-experiment-unit-1:
@@ -3704,11 +3704,11 @@ fr:
             csf_events:
               display_name: Événements
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             ramp_up:
               display_name: Progression
         csp7-pilot:
@@ -3727,7 +3727,7 @@ fr:
             - 2021)
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -3921,7 +3921,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
           student_description: Apprends les bases de l'informatique et de la sécurité
@@ -3950,7 +3950,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -3977,7 +3977,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Les élèves développent leur compréhension des boucles,
             des conditions et des événements. Au-delà du codage, les élèves apprennent
             la citoyenneté numérique.
@@ -3994,7 +3994,7 @@ fr:
             ramp_up:
               display_name: Progression
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_nested_loops:
@@ -4002,9 +4002,9 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Commence à coder avec des algorithmes, des boucles,
             des conditions et des événements, puis tu passeras aux fonctions. Dans
             la deuxième partie de ce cours, conçois et crée un projet de synthèse
@@ -4025,15 +4025,15 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_variables:
-              display_name: variables
+              display_name: Variables
             csf_data:
               display_name: Données
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -4062,13 +4062,13 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_variables:
-              display_name: variables
+              display_name: Variables
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends l'informatique en essayant les cours ici à
             ton propre rythme ! Apprends à créer des logiciels, développe des compétences
             de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
@@ -4228,7 +4228,7 @@ fr:
             introduction:
               display_name: Introduction
             lessonGroup-3:
-              display_name: variables
+              display_name: Variables
             outbreak:
               display_name: Simulateur d'épidémie
             contagion:
@@ -4349,7 +4349,7 @@ fr:
         csp4-2021:
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -4413,7 +4413,7 @@ fr:
             csf_events:
               display_name: Événements
             lessonGroup-5:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -4429,11 +4429,11 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
             lessonGroup-6:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -4455,7 +4455,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -4479,7 +4479,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             lessonGroup-6:
               display_name: Citoyenneté Numérique
         coursee-2021:
@@ -4488,7 +4488,7 @@ fr:
             ramp_up:
               display_name: Boucles Imbriquées
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_nested_loops:
@@ -4496,18 +4496,18 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             lessonGroup-7:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
         coursef-2021:
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
           lesson_groups:
             ramp_up:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_variables:
@@ -4515,16 +4515,17 @@ fr:
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             lessonGroup-8:
-              display_name: variables
+              display_name: Variables
             lessonGroup-9:
               display_name: supprimer
             lessonGroup-7:
               display_name: Citoyenneté Numérique
         express-2021:
+          title: Cours Express (2021)
           description: Apprends l'informatique en essayant les cours ici à ton propre
             rythme ! Apprends à créer des logiciels, développe des compétences de
             résolution de problèmes et plonge-toi dans des défis amusants ! Développe
@@ -4546,13 +4547,13 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_variables:
-              display_name: variables
+              display_name: Variables
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
-              display_name: Les sprites
+              display_name: Sprites
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
             lessonGroup-9:
               display_name: Événements
           student_description: Apprends l'informatique en essayant les cours ici à
@@ -4589,11 +4590,11 @@ fr:
             outbreak:
               display_name: Simulation de l'épidémie
             lessonGroup-3:
-              display_name: variables
+              display_name: Variables
             Sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             variables:
-              display_name: variables
+              display_name: Variables
         csd4-preview-2021:
           description: L'unité 4 présente les impacts sociaux plus larges de l'informatique.
             À travers une série de défis de conception, tu apprendras à mieux comprendre
@@ -5030,11 +5031,11 @@ fr:
         csf-2022-pilot:
           lesson_groups:
             lessonGroup-2:
-              display_name: Les Lutins
+              display_name: Sprites
             lessonGroup-3:
-              display_name: variables
+              display_name: Variables
             lessonGroup-4:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
         csd6-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5068,7 +5069,7 @@ fr:
             csf_events:
               display_name: Événements
             lessonGroup-5:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5079,7 +5080,7 @@ fr:
             csf_sequencing:
               display_name: Séquencement
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             lessonGroup-9:
               display_name: Événements
             csf_loops:
@@ -5089,11 +5090,11 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_variables:
-              display_name: variables
+              display_name: Variables
             csf_for_loops:
               display_name: Les Boucles « Pour »
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           description: Apprends l'informatique en essayant les cours ici à ton propre
             rythme ! Apprends à créer des logiciels, développe des compétences de
             résolution de problèmes et plonge-toi dans des défis amusants ! Développe
@@ -5126,7 +5127,7 @@ fr:
         csp4-2022:
           lesson_groups:
             csp_variables:
-              display_name: variables
+              display_name: Variables
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
@@ -5154,11 +5155,11 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_impacts:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             csf_events:
               display_name: Événements
             lessonGroup-6:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5178,7 +5179,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -5231,7 +5232,7 @@ fr:
             csf_conditionals:
               display_name: Instructions conditionnelles
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           title: Cours D (2021)
           description_short: Learn about conditional statements. Create your own art,
             games, and even a dance party.
@@ -5239,7 +5240,7 @@ fr:
         coursee-2022:
           lesson_groups:
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Sprites
             csf_digcit:
               display_name: Citoyenneté Numérique
             ramp_up:
@@ -5249,20 +5250,20 @@ fr:
             csf_nested_loops:
               display_name: Instructions conditionnelles
             lessonGroup-7:
-              display_name: Les Impacts de l'Informatique
+              display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           description_audience: 'Âge : 8 à 12 ans'
         coursef-2022:
           lesson_groups:
             ramp_up:
-              display_name: Les Lutins
+              display_name: Sprites
             lessonGroup-7:
               display_name: Citoyenneté Numérique
             lessonGroup-8:
-              display_name: variables
+              display_name: Variables
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
@@ -5336,11 +5337,11 @@ fr:
             lessonGroup-7:
               display_name: Citoyenneté Numérique
             ramp_up:
-              display_name: Les Lutins
+              display_name: Sprites
             lessonGroup-8:
-              display_name: variables
+              display_name: Variables
             end_of_course_project:
-              display_name: Fin du projet.
+              display_name: Projet final du cours
           description_audience: 'Àges : 9 à 13 ans'
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
@@ -5597,3 +5598,41 @@ fr:
               display_name: Bienvenue
         dlp-csp-mod1-2022:
           title: CS Principles Apprentissage Approfondi Module 1
+        soccer:
+          name: foot
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Enquête
+            lessonGroup-2:
+              display_name: Contenu
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Enquête

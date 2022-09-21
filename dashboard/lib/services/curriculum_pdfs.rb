@@ -112,7 +112,7 @@ module Services
       return false if DCDO.get('disable_curriculum_pdf_generation', false)
 
       script = Script.find_by(name: script_data['name'])
-      return false unless script.present?
+      return false if script.blank?
 
       new_timestamp = script_data['serialized_at']
       existing_timestamp = script.seeded_from

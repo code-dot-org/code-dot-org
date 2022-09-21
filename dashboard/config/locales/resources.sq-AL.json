@@ -2,6 +2,258 @@
   "sq-AL": {
     "data": {
       "resources": {
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programim në çift"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Programimi i Besuar"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Programimi i Besuar"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Programimi i Besuar"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Programimi i Besuar"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Programimi i Besuar"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Programimi i Besuar"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Kushtoret me Karta"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Kushtoret me Karta"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Kushtoret me Karta"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Kushtoret me Karta"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Kushtoret me Karta"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Guida e Implementimit"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Interneti"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Guida e Implementimit"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Guida e Implementimit"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Lëvize, Lëvize"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programim në çift"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Duke u Çmëndur"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Duke u Çmëndur"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Duke u Çmëndur"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Duke u Çmëndur"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Eventi i Madh"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Eventi i Madh"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Eventi i Madh"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Guida e Implementimit"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programim në çift"
+        },
+        "variables/express/2022": {
+          "name": "variabla"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programim në çift"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programim në çift"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Hartat e Gëzuara"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Eventi i Madh"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Eventi i Madh"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Eventi i Madh"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Guida e Implementimit"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Miqtë e mi Robotikë"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Miqtë e mi Robotikë"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Miqtë e mi Robotikë"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Miqtë e mi Robotikë"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Miqtë e mi Robotikë"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programim në çift"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Eventi i Madh"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Eventi i Madh"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Eventi i Madh"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Byzylykët Binarë"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Byzylykët Binarë"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Byzylykët Binarë"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Byzylykët Binarë"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Byzylykët Binarë"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Guida e Implementimit"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "variables/csd/2022": {
+          "name": "variabla"
+        },
+        "variables_3/csd/2022": {
+          "name": "variabla"
+        },
+        "text/csd/2022": {
+          "name": "Tekst"
+        },
+        "conditionals/csd/2022": {
+          "name": "Kushtet"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "functions/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_1/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_4/csd/2022": {
+          "name": "funksione"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "lists/csd/2022": {
+          "name": "Listat"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Rishikimi i ndërsjellë"
+        },
+        "design_mode/csd/2022": {
+          "name": "dan is a masive dick- "
+        },
+        "variables_1/csd/2022": {
+          "name": "variabla"
+        },
+        "variables_2/csd/2022": {
+          "name": "variabla"
+        },
+        "functions_2/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_3/csd/2022": {
+          "name": "funksione"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funksionet me parametra"
+        },
+        "functions_5/csd/2022": {
+          "name": "funksione"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Plani Mësimor"
         },

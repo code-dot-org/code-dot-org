@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:50.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -62,7 +58,7 @@
     "encrypted_examples": "S309A04NgTlmSMKvdI3+NQwONtRSK7iHV5oQkfHv4KbcLh6Q1qEoFfEVqmr1\nX0vA7dbts0zOfU4K6BYfB8dRoA==\n",
     "parent_level_id": 20560,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/maker-toolkit/the-accelerometer/",
+    "map_reference": "/courses/csd-2022/guides/the-accelerometer",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -70,12 +66,16 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/variables/"
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/variables"
     ],
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:50.000Z",
+  "user_id": 568,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:50.818+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - SB3_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - SB3_2022\"}]"

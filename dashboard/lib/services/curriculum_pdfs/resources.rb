@@ -33,7 +33,7 @@ module Services
         def get_unit_resources_url(script)
           return nil unless Services::CurriculumPdfs.should_generate_resource_pdf?(script)
           pathname = get_script_resources_pathname(script, true)
-          return nil unless pathname.present?
+          return nil if pathname.blank?
           File.join(get_base_url, pathname)
         end
 
@@ -172,7 +172,7 @@ module Services
             file.download_to_file(path)
             return path
           elsif url.end_with?(".pdf")
-            IO.copy_stream(URI.open(url), path)
+            IO.copy_stream(URI.parse(url)&.open, path)
             return path
           end
         rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e

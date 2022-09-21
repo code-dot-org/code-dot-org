@@ -121,7 +121,7 @@ def find_malformed_links_images(locale, file_path)
   is_json = File.extname(file_path) == '.json'
   data =
     if is_json
-      JSON.parse(File.read(file_path, 'r'))
+      JSON.parse(File.read(file_path))
     else
       YAML.load_file(file_path)
     end

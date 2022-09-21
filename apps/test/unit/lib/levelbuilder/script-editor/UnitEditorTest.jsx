@@ -579,7 +579,7 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
         publishedState: 'beta',
-        professionalLearningCourse: 'new-pl-course'
+        deeperLearningCourse: 'new-pl-course'
       });
 
       let returnData = {scriptPath: '/s/test-unit'};
