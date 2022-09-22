@@ -104,17 +104,15 @@ social:
 %main
   -# HoC Live Spanish banner
   - if @language == 'es' || @language == 'la'
-    #hoclivebanner.row
-      %div.banner-box
-        %div.banner-image-box
+    #hoclivebanner
+      .banner-box
+        .banner-image-box
           %img.banner-image{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
-        %div.banner-message-box
-          %div.banner-title
+        .banner-message-box
+          %h2.banner-title
             = hoc_s(:hoc_live_learn_title)
-          %br/
-          %div.banner-message
+          %p.banner-message
             = hoc_s(:hoc_live_learn_message)
-          %br/
           %a#signuplivebutton.ctabuttonatag{href: 'https://code.org/envivo'}
             %button.ctabutton-white
               = hoc_s(:hoc_live_learn_more)
