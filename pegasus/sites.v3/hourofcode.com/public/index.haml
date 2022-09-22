@@ -158,7 +158,7 @@ social:
       %p=hoc_s(:hoc_homepage_what_is_hoc_description)
       %a{href: resolve_url('/learn')}
         %button=hoc_s(:cta_try_an_activity)
-      %p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide)
+      %p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide, markdown: :inline, locals: {howto_guide_url: resolve_url('/how-to')})
 
   -# Highlights
   %section.highlights
