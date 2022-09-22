@@ -77,6 +77,10 @@ class Applab < Blockly
     %w(Maker Circuit)
   end
 
+  def self.maker_apis
+    %w(circuitPlayground microbit)
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -125,7 +129,7 @@ class Applab < Blockly
   end
 
   def validate_maker_if_needed
-    maker_enabled = properties['makerlab_enabled'] == 'true'
+    maker_enabled = properties['makerlab_enabled'] == 'circuitPlayground' || properties['makerlab_enabled'] == 'microbit'
     starting_category = properties['palette_category_at_start']
     if Applab.maker_palette_categories.include?(starting_category) && !maker_enabled
       raise ArgumentError.new(
