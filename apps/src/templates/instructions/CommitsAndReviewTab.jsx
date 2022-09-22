@@ -41,6 +41,7 @@ const CommitsAndReviewTab = props => {
   const [timelineData, setTimelineData] = useState([]);
   const [timelineLoadingError, setTimelineLoadingError] = useState(null);
   const [openReviewError, setOpenReviewError] = useState(null);
+  const [openingCodeReview, setOpeningCodeReview] = useState(false);
 
   const dataApi = useMemo(
     () =>
@@ -152,17 +153,19 @@ const CommitsAndReviewTab = props => {
 
   const handleOpenReview = async () => {
     try {
+      setOpeningCodeReview(true);
       await project.save(true);
       const currentVersion = project.getCurrentSourceVersionId();
       const newReview = await dataApi.openNewCodeReview(currentVersion);
+      setHasOpenCodeReview(true);
       setOpenReviewData(newReview);
       setIsReadOnlyWorkspace(true);
-      setHasOpenCodeReview(true);
       setOpenReviewError(false);
     } catch (err) {
       console.log(err);
       setOpenReviewError(true);
     }
+    setOpeningCodeReview(false);
   };
 
   // channelId is not available on projects where the student has not edited the starter code.
@@ -232,7 +235,7 @@ const CommitsAndReviewTab = props => {
                 onClick={handleOpenReview}
                 text={javalabMsg.startReview()}
                 color={Button.ButtonColor.blue}
-                disabled={!codeReviewEnabled}
+                disabled={!codeReviewEnabled || openingCodeReview}
               />
               {openReviewError && <CodeReviewError />}
             </div>
