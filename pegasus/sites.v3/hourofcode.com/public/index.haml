@@ -122,9 +122,9 @@ social:
   -# Description
   %section.hoc-description
     .wrapper
-      %h1.number-served=hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-      %h2=hoc_s(:front_intro_default_2)
-      %h2=view :hoc_events_counter
+      %h2.number-served=hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+      %p=hoc_s(:front_intro_default_2)
+      %p=view :hoc_events_counter
 
   -# Map
   %section.map
@@ -141,9 +141,9 @@ social:
             .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
 
   -# Join the movement
-  %section#join.join-the-movement
+  %section#join.join-us
     .wrapper
-      %h1=hoc_s(:hoc_live_join_us)
+      %h2=hoc_s(:hoc_live_join_us)
       %h3=hoc_s(:hoc_homepage_join_the_movement_description)
       -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
         = view :home_signup, hoc_mode: hoc_mode
@@ -152,8 +152,8 @@ social:
   -# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
   %section.what-is-hoc
     .wrapper
-      %h1=hoc_s(:front_what_is_hoc)
-      %h2=hoc_s(:hoc_homepage_what_is_hoc_subhead)
+      %h2=hoc_s(:front_what_is_hoc)
+      %h3=hoc_s(:hoc_homepage_what_is_hoc_subhead)
       =view :index_video
       %p=hoc_s(:hoc_homepage_what_is_hoc_description)
       %a{href: resolve_url('/learn')}
@@ -163,7 +163,7 @@ social:
   -# Highlights
   %section.highlights
     .wrapper
-      %h1=hoc_s(:highlights_header)
+      %h2=hoc_s(:highlights_header)
       =view :home_highlights
 
   -# Stats
