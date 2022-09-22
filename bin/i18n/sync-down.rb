@@ -24,9 +24,9 @@ def sync_down
 
     CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
-      api_key = YAML.load_file(options[:identity_file])["api_key"]
+      api_token = YAML.load_file(options[:identity_file])["api_token"]
       project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
-      project = Crowdin::Project.new(project_identifier, api_key)
+      project = Crowdin::Project.new(project_identifier, api_token)
       options = {
         etags_json: options[:etags_json],
         files_to_sync_out_json: options[:files_to_sync_out_json],
