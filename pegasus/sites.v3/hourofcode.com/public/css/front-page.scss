@@ -124,6 +124,10 @@ section.what-is-hoc {
     font-size: 22px;
     color: $color-main;
     max-width: 700px;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 20px;
+    }
   }
 
   p {
