@@ -129,12 +129,15 @@ class Applab < Blockly
   end
 
   def validate_maker_if_needed
-    maker_enabled = properties['makerlab_enabled'] == 'circuitPlayground' || properties['makerlab_enabled'] == 'microbit'
+    makerlab_property = properties['makerlab_enabled']
+    maker_enabled = Applab.maker_apis.include?(makerlab_property)
     starting_category = properties['palette_category_at_start']
-    if Applab.maker_palette_categories.include?(starting_category) && !maker_enabled
+    if (starting_category == 'Circuit' && makerlab_property != 'circuitPlayground') ||
+      (starting_category == 'micro:bit' && makerlab_property != 'microbit') ||
+      (starting_category == 'Maker' && !maker_enabled)
       raise ArgumentError.new(
         "Selected '#{starting_category}' as the palette category at start, " \
-            "but 'Enable Maker APIs' is not checked."
+            "but this level does not have a Maker API enabled."
       )
     end
   end
