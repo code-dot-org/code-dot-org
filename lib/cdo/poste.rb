@@ -234,7 +234,7 @@ class Deliverer
     to_address = parse_address(header['to'], recipient.merge({temporary_email: delivery[:contact_email]}))
     message.puts 'To: ' + format_address(to_address)
 
-    from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
+    from_address = parse_address(header['from'], {email: 'support@code.org', name: 'Code.org'})
     message.puts 'From: ' + format_address(from_address)
 
     # List of the email part of all destination addresses, including To, Cc, and Bcc
