@@ -667,11 +667,11 @@ az:
   hoc_faq_behind_hoc_a: |-
     Kod Saatı "Code.org" tərəfindən təşkil edilir, <a href='http://code.org'>Code.org</a> informatika təhsilinin əhatə dairəsinin genişləndirilməsi, bu sahədə az təmsil olunan qadınlar və rəngli tələbələrin iştirak sayının artırılmasına xidmət edən ictimai qeyri-kommersiya təşkilatıdır.
     "Microsoft", "Apple", "Amazon", "Boys and Girls Clubs of America" və "the College Board" &mdash; kimi <a href='http://code.org/about/partners'> təşkilatlar</a>bir araya gəldilər və Kod Saatına təstək vermək üçün misilsiz bir birlik yaratdılar.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Mən proqramlaşdırma barədə heç nə bilmirəm. Mən də tədbir təşkil
     edə bilərəm?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have

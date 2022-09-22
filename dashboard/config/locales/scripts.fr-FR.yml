@@ -693,7 +693,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         coursef-draft:
@@ -703,7 +703,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
         classic-hoc-impact-study:
           description_short: Découvre les bases des sciences informatiques grâce a
             de nombreux personnages rigolos !
@@ -740,7 +740,7 @@ fr:
         csf2harvey:
           lesson_groups:
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             content:
               display_name: Contenu
         csp5-support:
@@ -1006,7 +1006,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
           student_description: Commence à coder avec des algorithmes, des boucles,
@@ -1030,7 +1030,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -1355,7 +1355,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -1412,7 +1412,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         new-d:
@@ -1434,7 +1434,7 @@ fr:
             content:
               display_name: Contenu
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
         new-stages-sept-2017:
           title: Nouvelles phases pour 9/17
         new-e:
@@ -1445,7 +1445,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         new-f:
@@ -1456,7 +1456,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
         csd5-old:
           title: CSD Unité 5 - Les Données et la Société
           description_short: Apprends comment les gens utilisent les ordinateurs pour
@@ -1577,7 +1577,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
         course-f-2018:
@@ -1588,7 +1588,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
         csd6-old:
           title: "(OBSOLÈTE) CSD Unité 6 - Informatique Physique"
           lesson_groups:
@@ -1792,7 +1792,7 @@ fr:
             csf_e_2:
               display_name: Contenu du cours E
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             extra_course_content:
               display_name: Contenu du Cours Supplémentaire
           student_description: Commence à coder avec des algorithmes, des boucles,
@@ -1816,7 +1816,7 @@ fr:
             csf_f_2:
               display_name: Contenu du cours F
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -2599,7 +2599,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -2631,7 +2631,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Les élèves développent leur compréhension des boucles,
             des conditions et des événements. Au-delà du codage, les élèves apprennent
             la citoyenneté numérique.
@@ -2658,7 +2658,7 @@ fr:
             csf_functions:
               display_name: Fonctions
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Commence à coder avec des algorithmes, des boucles,
             des conditions et des événements, puis tu passeras aux fonctions. Dans
             la deuxième partie de ce cours, conçois et crée un projet de synthèse
@@ -2753,7 +2753,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -3655,7 +3655,7 @@ fr:
             csf_functions:
               display_name: Fonctions
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
         time4cs-experiment-unit-2:
           title: Time4CS Expérience Unité 2
           description_short: "[Ajouter description]"
@@ -3950,7 +3950,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -3977,7 +3977,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Les élèves développent leur compréhension des boucles,
             des conditions et des événements. Au-delà du codage, les élèves apprennent
             la citoyenneté numérique.
@@ -4004,7 +4004,7 @@ fr:
             csf_impacts:
               display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Commence à coder avec des algorithmes, des boucles,
             des conditions et des événements, puis tu passeras aux fonctions. Dans
             la deuxième partie de ce cours, conçois et crée un projet de synthèse
@@ -4033,7 +4033,7 @@ fr:
             csf_sprites:
               display_name: Sprites
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -4068,7 +4068,7 @@ fr:
             csf_sprites:
               display_name: Sprites
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends l'informatique en essayant les cours ici à
             ton propre rythme ! Apprends à créer des logiciels, développe des compétences
             de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
@@ -4413,7 +4413,7 @@ fr:
             csf_events:
               display_name: Événements
             lessonGroup-5:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -4433,11 +4433,12 @@ fr:
             csf_events:
               display_name: Événements
             lessonGroup-6:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
         coursec-2021:
+          title: Cours C (2021)
           description_short: Apprendre les rudiments de l’informatique et de créer
             vos propres œuvres d’art, vos histoires et vos jeux.
           description_audience: 'Âges: 6 à 10 ans'
@@ -4455,7 +4456,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -4479,7 +4480,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             lessonGroup-6:
               display_name: Citoyenneté Numérique
         coursee-2021:
@@ -4498,7 +4499,7 @@ fr:
             csf_impacts:
               display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             lessonGroup-7:
               display_name: L'impact de l'informatique
         coursef-2021:
@@ -4517,7 +4518,7 @@ fr:
             csf_sprites:
               display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             lessonGroup-8:
               display_name: Variables
             lessonGroup-9:
@@ -4553,7 +4554,7 @@ fr:
             csf_sprites:
               display_name: Sprites
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
             lessonGroup-9:
               display_name: Événements
           student_description: Apprends l'informatique en essayant les cours ici à
@@ -5003,6 +5004,8 @@ fr:
               display_name: Contenu
             lessonGroup-5:
               display_name: Le jeu Sandbox
+        ai-ethics-2021:
+          description_audience: De la Sixième à la Terminale
         poem-art-2021:
           title: Art du poème
         explore-data-1-2021:
@@ -5035,7 +5038,7 @@ fr:
             lessonGroup-3:
               display_name: Variables
             lessonGroup-4:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
         csd6-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5069,7 +5072,7 @@ fr:
             csf_events:
               display_name: Événements
             lessonGroup-5:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5094,7 +5097,7 @@ fr:
             csf_for_loops:
               display_name: Les Boucles « Pour »
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           description: Apprends l'informatique en essayant les cours ici à ton propre
             rythme ! Apprends à créer des logiciels, développe des compétences de
             résolution de problèmes et plonge-toi dans des défis amusants ! Développe
@@ -5159,7 +5162,7 @@ fr:
             csf_events:
               display_name: Événements
             lessonGroup-6:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5179,7 +5182,7 @@ fr:
             csf_data:
               display_name: Données
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -5232,7 +5235,7 @@ fr:
             csf_conditionals:
               display_name: Instructions conditionnelles
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           title: Cours D (2021)
           description_short: Learn about conditional statements. Create your own art,
             games, and even a dance party.
@@ -5252,7 +5255,7 @@ fr:
             lessonGroup-7:
               display_name: L'impact de l'informatique
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           description_audience: 'Âge : 8 à 12 ans'
         coursef-2022:
           lesson_groups:
@@ -5263,7 +5266,7 @@ fr:
             lessonGroup-8:
               display_name: Variables
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
@@ -5341,7 +5344,7 @@ fr:
             lessonGroup-8:
               display_name: Variables
             end_of_course_project:
-              display_name: Projet final du cours
+              display_name: Projet de fin de cours
           description_audience: 'Àges : 9 à 13 ans'
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.

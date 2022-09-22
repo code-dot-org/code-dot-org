@@ -670,16 +670,15 @@ tg:
     your community — like in an extracurricular club, non-profit or at work. Or, just
     try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Соати рамзро кӣ дастгирӣ мекунад?
-  hoc_faq_behind_hoc_a: The Hour of Code is driven by the Hour of Code and Computer
-    Science Education Week <a href='%{partner_url}'>Advisory and Review Committees</a>
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs
-    of America and the College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a: The Hour of Code is organized by Code.org and driven by the
+    Hour of Code Review Committee as well as an unprecedented coalition of <a href='%{partner_url}'>partners</a>
+    that have come together to support the Hour of Code — including Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Ман дар бораи барномарезӣ асло намедонам. Оё ман чорабиниро иштирок
     карда метавонам?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have

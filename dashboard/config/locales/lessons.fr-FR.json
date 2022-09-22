@@ -371,9 +371,9 @@
         },
         "coursed-2022/Dance Party": {
           "name": "Soirée Dansante",
-          "overview": "Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves programmeront une soirée dansante interactive.",
           "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
-          "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
+          "student_overview": "C'est l'heure de faire la fête ! Dans cette leçon, tu vas programmer ta propre soirée dansante interactive."
         },
         "coursed-2022/Loops in Ice Age": {
           "name": "Les boucles dans l'Âge de Glace",
@@ -424,7 +424,7 @@
           "student_overview": "Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !"
         },
         "coursed-2022/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
@@ -512,7 +512,7 @@
           "student_overview": "T'es-tu déjà demandé comment l'information circule sur Internet ? C'est pas de la magie ! Cette leçon t'apprendra les bases du fonctionnement d'Internet."
         },
         "coursef-2022/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "preparation": "Passez du temps à créer votre propre projet avec Artist et Sprite Lab. Familiarisez-vous avec les capacités et les limites de chaque outil.\n\n-   Modifiez la rubrique pour l'adapter aux objectifs de votre classe et imprimez une copie pour chaque élève.\n-   Modifiez la feuille de travail de conception de projet pour l'adapter à votre classe et imprimez un paquet pour chaque élève.",
           "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
@@ -603,7 +603,7 @@
           "student_overview": "Dans cette leçon, tu découvriras les défis et les avantages de la propriété et du droit d'auteur. "
         },
         "coursee-2022/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Les quatre leçons suivantes offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d'exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l'opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c'est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs.",
           "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
@@ -691,7 +691,7 @@
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "courseb-2022/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et des événements dans un projet ouvert avec Play Lab.",
           "preparation": "-   Codez vos propres projets Play Lab à l'avance pour inspirer les élèves !",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
@@ -743,10 +743,11 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2022/Virtual Pet with Sprite Lab": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins",
+          "name": "Animal domestique virtuel avec le Labo des Sprites",
           "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon permet aux étudiants d'appliquer les concepts de programmation des leçons précédentes dans un autre contexte créatif. ",
@@ -754,10 +755,10 @@
         },
         "express-2022/Dance Party": {
           "name": "Soirée Dansante",
-          "overview": "Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves programmeront une soirée dansante interactive.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Voyez s'il y a besoin d'écouteurs pour cette activité audio. ",
           "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
-          "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
+          "student_overview": "C'est l'heure de faire la fête ! Dans cette leçon, tu vas programmer ta propre soirée dansante interactive."
         },
         "express-2022/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8",
@@ -875,7 +876,7 @@
           "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
         },
         "express-2022/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
@@ -1026,7 +1027,7 @@
           "student_overview": "Crée ton jeu ou ta propre histoire."
         },
         "coursea-2022/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et les boucles avec l'Artiste. ",
           "preparation": "-   Écrivez et codez à l'avance votre propre histoire pour l'Artiste afin d'inspirer les élèves ! ",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
@@ -1121,7 +1122,7 @@
           "student_overview": "Crée ton propre bracelet binaire et apprends comment les ordinateurs se souviennent des informations !"
         },
         "coursec-2022/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon de synthèse guide les élèves à travers le processus de conception, de développement et de présentation de leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement de ce processus, nous avons fourni aux étudiants une structure, étape par étape, à suivre, de la planification sur papier au codage sur notre site web. De plus, nous offrons des idées pour aider les enseignants à animer un show de clôture ! ",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Imprimez un **\\*Guide de planification de projet** pour chaque élève (ou groupe de deux).\n-   Consultez le document **\\*Guide de planification de projet (exemplaire)**.\n-   (Facultatif) Complétez votre propre guide de planification et codez votre propre projet pour le montrer aux élèves ! ",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
@@ -2379,7 +2380,7 @@
           "name": "Les Comportements dans le Labo des Lutins"
         },
         "coursef-2019/Virtual Pet": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins"
+          "name": "Animal domestique virtuel avec le Labo des Sprites"
         },
         "coursef-2019/The Power of Words": {
           "name": "Le Pouvoir des Mots"
@@ -2391,7 +2392,7 @@
           "name": "Partage Numérique"
         },
         "coursef-2019/End of Course Project": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "coursee-2019/Sequencing in the Maze": {
           "name": "Le Séquençage dans le Labyrinthe"
@@ -2445,7 +2446,7 @@
           "name": "Les Fonctions avec L'Artiste"
         },
         "coursee-2019/End of Course Project": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "express-2019/Dance Party": {
           "name": "Soirée Dansante"
@@ -2526,10 +2527,10 @@
           "name": "Les Comportements dans le Labo des Lutins"
         },
         "express-2019/Virtual Pet with Sprite Lab": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins"
+          "name": "Animal domestique virtuel avec le Labo des Sprites"
         },
         "express-2019/Build A Project": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "coursec-2019/Screen Out the Mean": {
           "name": "Filtrer la Moyenne"
@@ -2583,7 +2584,7 @@
           "name": "Représenter les Données"
         },
         "coursec-2019/End of Course Project: Create a Play Lab Game": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "pre-express-2019/Learn to Drag and Drop": {
           "name": "Apprends à Faire Glisser et Déposer"
@@ -4242,7 +4243,7 @@
           "student_overview": "T'es-tu déjà demandé comment l'information circule sur Internet ? C'est pas de la magie ! Cette leçon t'apprendra les bases du fonctionnement d'Internet."
         },
         "coursef-2021/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "preparation": "Passez du temps à créer votre propre projet avec Artist et Sprite Lab. Familiarisez-vous avec les capacités et les limites de chaque outil.\n\n-   Modifiez la rubrique pour l'adapter aux objectifs de votre classe et imprimez une copie pour chaque élève.\n-   Modifiez la feuille de travail de conception de projet pour l'adapter à votre classe et imprimez un paquet pour chaque élève.",
           "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
@@ -4331,7 +4332,7 @@
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "courseb-2021/lesson-1": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et des événements dans un projet ouvert avec Play Lab.",
           "preparation": "-   Codez vos propres projets Play Lab à l'avance pour inspirer les élèves !",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
@@ -4420,7 +4421,7 @@
           "student_overview": "Crée ton jeu ou ta propre histoire."
         },
         "coursea-2021/lesson-1": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et les boucles avec l'Artiste. ",
           "preparation": "-   Écrivez et codez à l'avance votre propre histoire pour l'Artiste afin d'inspirer les élèves ! ",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
@@ -4529,7 +4530,7 @@
           "student_overview": "Crée ton propre bracelet binaire et apprends comment les ordinateurs se souviennent des informations !"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon de synthèse guide les élèves à travers le processus de conception, de développement et de présentation de leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement de ce processus, nous avons fourni aux étudiants une structure, étape par étape, à suivre, de la planification sur papier au codage sur notre site web. De plus, nous offrons des idées pour aider les enseignants à animer un show de clôture ! ",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Imprimez un **\\*Guide de planification de projet** pour chaque élève (ou groupe de deux).\n-   Consultez le document **\\*Guide de planification de projet (exemplaire)**.\n-   (Facultatif) Complétez votre propre guide de planification et codez votre propre projet pour le montrer aux élèves ! ",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
@@ -4585,10 +4586,10 @@
         },
         "coursed-2021/Dance Party": {
           "name": "Soirée Dansante",
-          "overview": "Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves programmeront une soirée dansante interactive.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Voyez s'il y a besoin d'écouteurs pour cette activité audio. ",
           "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
-          "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
+          "student_overview": "C'est l'heure de faire la fête ! Dans cette leçon, tu vas programmer ta propre soirée dansante interactive."
         },
         "coursed-2021/Loops in Ice Age": {
           "name": "Les boucles dans l'Âge de Glace",
@@ -4647,7 +4648,7 @@
           "student_overview": "Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !"
         },
         "coursed-2021/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
@@ -4698,10 +4699,11 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins",
+          "name": "Animal domestique virtuel avec le Labo des Sprites",
           "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon permet aux étudiants d'appliquer les concepts de programmation des leçons précédentes dans un autre contexte créatif. ",
@@ -4709,10 +4711,10 @@
         },
         "express-2021/lesson-1": {
           "name": "Soirée Dansante",
-          "overview": "Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves programmeront une soirée dansante interactive.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Voyez s'il y a besoin d'écouteurs pour cette activité audio. ",
           "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
-          "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
+          "student_overview": "C'est l'heure de faire la fête ! Dans cette leçon, tu vas programmer ta propre soirée dansante interactive."
         },
         "express-2021/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8",
@@ -4831,7 +4833,7 @@
           "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
         },
         "express-2021/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
@@ -4994,7 +4996,7 @@
           "student_overview": "Découvre l’accessibilité et la valeur de l’empathie, grâce à une réflexion en groupes et à la conception de solutions accessibles pour les applications hypothétiques "
         },
         "coursee-2021/End of Course Project": {
-          "name": "Projet final du cours",
+          "name": "Projet de fin de cours",
           "overview": "Les quatre leçons suivantes offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d'exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l'opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c'est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs.",
           "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
@@ -5382,10 +5384,10 @@
           "name": "Les Comportements dans le Labo des Lutins"
         },
         "express-2020/Virtual Pet with Sprite Lab": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins"
+          "name": "Animal domestique virtuel avec le Labo des Sprites"
         },
         "express-2020/End of Course Project": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "courseb-2020/Move It, Move It": {
           "name": "Bouge, Bouge"
@@ -5472,7 +5474,7 @@
           "name": "Artiste binaire"
         },
         "coursed-2020/End of Course Project": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "coursec-2020/Programming: My Robotic Friends": {
           "name": "Mes Amis Robotiques Jr."
@@ -5520,7 +5522,7 @@
           "name": "Représenter les Données"
         },
         "coursec-2020/End of Course Project: Create a Play Lab Game": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "coursee-2020/Sequencing in the Maze": {
           "name": "Le Séquençage dans le Labyrinthe"
@@ -5577,7 +5579,7 @@
           "name": "Concevoir pour l'Accessibilité"
         },
         "coursee-2020/End of Course Project": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "Apprends à Faire Glisser et Déposer"
@@ -5664,10 +5666,10 @@
           "name": "Les Comportements dans le Labo des Lutins"
         },
         "coursef-2020/Virtual Pet": {
-          "name": "Animal de compagnie virtuel avec le Labo des Lutins"
+          "name": "Animal domestique virtuel avec le Labo des Sprites"
         },
         "coursef-2020/End of Course Project": {
-          "name": "Projet final du cours"
+          "name": "Projet de fin de cours"
         }
       }
     }
