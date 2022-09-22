@@ -1608,7 +1608,7 @@
           "student_overview": "**Pregunta del día: ¿Cómo podemos asegurarnos de que nuestra información privada siga siendo privada?**\n\nEn esta lección, los estudiantes pensarán en la información personal que eligen compartir digitalmente a través de varios sitios web, aplicaciones y redes sociales. "
         },
         "csd2-2022/Styling Text with CSS": {
-          "name": "Estilos de texto con CSS",
+          "name": "Estilo de Texto con CSS",
           "overview": "**Pregunta del día: ¿Cómo podemos cambiar la apariencia de un texto en una página web?**\n\nEsta lección presenta el CSS como una forma de diseñar los elementos que conforman una página. Los estudiantes aprenderán la sintaxis básica de los conjuntos de reglas CSS y luego explorarán las propiedades que afectan los elementos de texto HTML. Tendrán la oportunidad de crear y plasmar su propio estilo a una página HTML acerca de las personas que poseen récord Guinness. ",
           "purpose": "Los estudiantes aprenderán un nuevo lenguaje (el CSS), y comprenderán que los distintos lenguajes utilizados en las computadoras tienen distintas funciones y sintaxis.  Si bien en esta lección se presentarán sólo algunas propiedades del CSS, los estudiantes podrán realizar distintas actividades opcionales y explorar más formas de utilizar el CSS para su expresión.",
           "student_overview": "**Pregunta del día: ¿Cómo podemos cambiar la apariencia de un texto en una página web?**\n\nEn esta lección, los estudiantes aprenderán cómo usar CSS para diseñar los elementos HTML en su página web. "
@@ -2762,7 +2762,7 @@
           "name": "Proyecto - Sitios web con varias páginas"
         },
         "csd2-2018/Styling Text with CSS": {
-          "name": "Estilos de texto con CSS"
+          "name": "Estilo de Texto con CSS"
         },
         "csd2-2018/Styling Elements with CSS": {
           "name": "Estilos de Texto con CSS"
@@ -3476,7 +3476,7 @@
           "name": "Proyecto - Sitios web con varias páginas"
         },
         "csd2-2019/Styling Text with CSS": {
-          "name": "Estilos de texto con CSS"
+          "name": "Estilo de Texto con CSS"
         },
         "csd2-2019/Styling Elements with CSS": {
           "name": "Estilos de Texto con CSS"
@@ -4115,7 +4115,7 @@
           "name": "Proyecto - Sitios web con varias páginas"
         },
         "csd2-2017/Styling Text with CSS": {
-          "name": "Estilos de texto con CSS"
+          "name": "Estilo de Texto con CSS"
         },
         "csd2-2017/Styling Elements with CSS": {
           "name": "Estilos de Texto con CSS"
@@ -6451,7 +6451,7 @@
           "student_overview": "**Pregunta del día: ¿Cómo podemos asegurarnos de que nuestra información privada siga siendo privada?**\n\nEn esta lección, los estudiantes pensarán en la información personal que eligen compartir digitalmente a través de varios sitios web, aplicaciones y redes sociales. "
         },
         "csd2-2021/Styling Text with CSS": {
-          "name": "Estilos de texto con CSS",
+          "name": "Estilo de Texto con CSS",
           "overview": "**Pregunta del día: ¿Cómo podemos cambiar la apariencia de un texto en una página web?**\n\nEsta lección presenta el CSS como una forma de diseñar los elementos que conforman una página. Los estudiantes aprenderán la sintaxis básica de los conjuntos de reglas CSS y luego explorarán las propiedades que afectan los elementos de texto HTML. Tendrán la oportunidad de crear y plasmar su propio estilo a una página HTML acerca de las personas que poseen récord Guinness. ",
           "preparation": "-   Si los estudiantes no utilizan una bitácora, deben elaborar un nuevo cartel titulado **Propiedades CSS**",
           "purpose": "Los estudiantes aprenderán un nuevo lenguaje (el CSS), y comprenderán que los distintos lenguajes utilizados en las computadoras tienen distintas funciones y sintaxis.  Si bien en esta lección se presentarán sólo algunas propiedades del CSS, los estudiantes podrán realizar distintas actividades opcionales y explorar más formas de utilizar el CSS para su expresión.",
