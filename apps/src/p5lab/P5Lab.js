@@ -559,7 +559,7 @@ export default class P5Lab {
   }
 
   /**
-   * Export the project for web or use within Expo.
+   * Export the project for web.
    * @param {string} appName
    * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
    */

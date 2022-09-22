@@ -133,7 +133,7 @@ const APP_OPTIONS_OVERRIDES = {
   readonlyWorkspace: true
 };
 
-export function getAppOptionsFile(expoMode) {
+export function getAppOptionsFile() {
   function getAppOptionsAtPath(allowlist, sourceOptions) {
     if (!allowlist || !sourceOptions) {
       return null;
@@ -226,8 +226,6 @@ export default {
 
     var zip = new JSZip();
     zip.file(appName + '/README.txt', readme);
-    // remove/update this comment
-    // NOTE: for expoMode, it is important that index.html comes first in the assets zip folder...
     zip.file(
       mainProjectFilesPrefix + 'index.html',
       rewriteAssetUrls(appAssets, html)

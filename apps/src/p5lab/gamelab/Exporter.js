@@ -56,8 +56,6 @@ export default {
     const mainProjectFilesPrefix = appName + '/';
 
     var zip = new JSZip();
-    // remove/update comment
-    // NOTE: for expoMode, it is important that index.html comes first...
     zip.file(mainProjectFilesPrefix + 'index.html', html);
     zip.file(
       mainProjectFilesPrefix + 'code.js',
