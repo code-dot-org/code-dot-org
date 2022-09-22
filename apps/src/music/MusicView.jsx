@@ -79,7 +79,7 @@ class MusicView extends React.Component {
       // ideally our music player will use the above data structure as the source
       // of truth, but since the current implementation has already told WebAudio
       // about all known sounds to play, let's tee up this one here.
-      const fullSoundId = this.getCurrentSamplePack().path + '/' + id;
+      const fullSoundId = this.getCurrentGroup().path + '/' + id;
       PlaySound(fullSoundId, '', nextMeasureStartTime);
     }
   };
@@ -129,8 +129,8 @@ class MusicView extends React.Component {
       windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
       appHeight: this.codeAppRef.offsetHeight,
-      currentPanel: 'samplepacks',
-      samplePanel: 'main',
+      currentPanel: 'groups',
+      groupPanel: 'all',
       isPlaying: false,
       startPlayingAudioTime: null,
       currentAudioTime: null,
@@ -155,7 +155,7 @@ class MusicView extends React.Component {
         .map(group => {
           return group.folders?.map(folder => {
             return folder.sounds.map(sound => {
-              return group.path + '/' + folder.name + '/' + sound.src;
+              return group.path + '/' + folder.path + '/' + sound.src;
             });
           });
         })
@@ -312,14 +312,14 @@ class MusicView extends React.Component {
       this.getInput('sound').appendField(
         new Blockly.FieldDropdown(function() {
           var options = [['anything', 'anything']];
-          if (self.state.samplePanel && self.state.samplePanel !== 'main') {
-            const folders = self.getCurrentSamplePackSounds();
+          if (self.state.groupPanel && self.state.groupPanel !== 'main') {
+            const folders = self.getCurrentGroupSounds();
             options = folders
               .map(folder => {
                 return folder.sounds.map(sound => {
                   return [
-                    folder.name + '/' + sound.id,
-                    folder.name + '/' + sound.id
+                    folder.name + '/' + sound.name,
+                    folder.path + '/' + sound.src
                   ];
                 });
               })
@@ -761,8 +761,8 @@ class MusicView extends React.Component {
     this.resizeBlockly();
   };
 
-  setSamplePanel = panel => {
-    this.setState({samplePanel: panel});
+  setGroupPanel = panel => {
+    this.setState({groupPanel: panel});
   };
 
   playTrigger = () => {
@@ -803,7 +803,7 @@ class MusicView extends React.Component {
     for (const songEvent of songData.events) {
       if (songEvent.type === 'play') {
         PlaySound(
-          this.getCurrentSamplePack().path + '/' + songEvent.id,
+          this.getCurrentGroup().path + '/' + songEvent.id,
           'mainaudio',
           currentAudioTime + this.convertMeasureToSeconds(songEvent.when)
         );
@@ -824,7 +824,7 @@ class MusicView extends React.Component {
   previewSound = id => {
     StopSound('mainaudio');
 
-    PlaySound(this.getCurrentSamplePack().path + '/' + id, 'mainaudio', 0);
+    PlaySound(this.getCurrentGroup().path + '/' + id, 'mainaudio', 0);
   };
 
   getVerticalOffsetForEventId = id => {
@@ -849,19 +849,19 @@ class MusicView extends React.Component {
     );
   };
 
-  getCurrentSamplePack = () => {
-    const currentSamplePack =
-      this.state.samplePanel !== 'main' &&
+  getCurrentGroup = () => {
+    const currentGroup =
+      this.state.groupPanel !== 'main' &&
       this.state.library &&
       this.state.library.groups.find(
-        group => group.id === this.state.samplePanel
+        group => group.id === this.state.groupPanel
       );
 
-    return currentSamplePack;
+    return currentGroup;
   };
 
-  getCurrentSamplePackSounds = () => {
-    return this.getCurrentSamplePack()?.folders;
+  getCurrentGroupSounds = () => {
+    return this.getCurrentGroup()?.folders;
   };
 
   getWaveformImage = id => {
@@ -915,8 +915,6 @@ class MusicView extends React.Component {
     const mobileWidth = 601;
     const isDesktop = this.state.windowWidth >= mobileWidth;
 
-    const showSamplePacks =
-      isDesktop || this.state.currentPanel === 'samplepacks';
     const showCode = isDesktop || this.state.currentPanel === 'code';
     const showTimeline = isDesktop || this.state.currentPanel === 'timeline';
 
@@ -928,8 +926,7 @@ class MusicView extends React.Component {
         this.convertMeasureToSeconds(1)
       : null;
 
-    const currentSamplePack = this.getCurrentSamplePack();
-    const currentSamplePackSounds = this.getCurrentSamplePackSounds();
+    const currentGroup = this.getCurrentGroup();
 
     return (
       <div
@@ -945,6 +942,18 @@ class MusicView extends React.Component {
           overflow: 'hidden'
         }}
       >
+        <div
+          id="blocklyArea"
+          style={{
+            float: 'left',
+            width: '100%',
+            marginTop: 10,
+            height: showCode ? 'calc(100% - 110px)' : 0
+          }}
+        >
+          <div id="blocklyDiv" style={{position: 'absolute'}} />
+        </div>
+
         {showTimeline && (
           <div
             style={{
@@ -955,11 +964,11 @@ class MusicView extends React.Component {
               padding: 10,
               boxSizing: 'border-box',
               backgroundImage:
-                currentSamplePack &&
+                currentGroup &&
                 `url("${baseUrl +
-                  currentSamplePack.path +
+                  currentGroup.path +
                   '/' +
-                  currentSamplePack.themeImageSrc}")`,
+                  currentGroup.themeImageSrc}")`,
               backgroundSize: '100% 200%'
             }}
           >
@@ -1056,124 +1065,6 @@ class MusicView extends React.Component {
             </div>
           </div>
         )}
-        {showSamplePacks && (
-          <div
-            style={{
-              backgroundColor: '#222',
-              float: 'left',
-              width: isDesktop ? 'calc(40% - 10px)' : '100%',
-              height: 'calc(100% - 110px)',
-              borderRadius: 4,
-              marginTop: 10,
-              boxSizing: 'border-box',
-              marginRight: isDesktop ? 10 : 0
-            }}
-          >
-            {!currentSamplePack && (
-              <div style={{padding: 10}}>
-                <div>Sample packs</div>
-                <br />
-
-                {this.state.library &&
-                  this.state.library.groups.map((group, index) => {
-                    return (
-                      <div
-                        key={index}
-                        style={{cursor: 'pointer', paddingBottom: 10}}
-                        onClick={() => this.setSamplePanel(group.id)}
-                      >
-                        <img
-                          src={baseUrl + group.path + '/' + group.imageSrc}
-                          style={{width: 60, paddingRight: 20}}
-                        />
-                        {group.name}
-                      </div>
-                    );
-                  })}
-              </div>
-            )}
-            {currentSamplePack && (
-              <div style={{height: '100%'}}>
-                <div
-                  style={{cursor: 'pointer', height: 20, padding: 10}}
-                  onClick={() => this.setSamplePanel('main')}
-                >
-                  &lt; Back
-                </div>
-                <div
-                  style={{
-                    padding: 10,
-                    backgroundImage: `url("${baseUrl +
-                      currentSamplePack.path +
-                      '/' +
-                      currentSamplePack.themeImageSrc}")`,
-                    backgroundSize: '100% 110%',
-                    backgroundPositionY: '100%',
-                    height: 'calc(100% - 40px)',
-                    boxSizing: 'border-box',
-                    overflow: 'scroll'
-                  }}
-                >
-                  <br />
-                  <div>"{currentSamplePack.name}" sample pack</div>
-                  <br />
-                  <div>
-                    <img
-                      src={
-                        baseUrl +
-                        currentSamplePack.path +
-                        '/' +
-                        currentSamplePack.imageSrc
-                      }
-                      style={{width: '70%'}}
-                    />
-                  </div>
-
-                  {currentSamplePackSounds.map((folder, folderIndex) => {
-                    return (
-                      <div key={folderIndex}>
-                        <details>
-                          <summary>{folder.name}</summary>
-                          {folder.sounds.map((sound, soundIndex) => {
-                            return (
-                              <div key={soundIndex}>
-                                <img
-                                  src={this.getWaveformImage(sound.id)}
-                                  style={{
-                                    width: 90,
-                                    paddingRight: 20,
-                                    cursor: 'pointer'
-                                  }}
-                                  onClick={() =>
-                                    this.previewSound(
-                                      folder.name + '/' + sound.id
-                                    )
-                                  }
-                                />
-                                {sound.id}
-                              </div>
-                            );
-                          })}
-                        </details>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-        <div
-          id="blocklyArea"
-          style={{
-            float: 'left',
-            width: isDesktop ? '60%' : '100%',
-            marginTop: 10,
-            height: showCode ? 'calc(100% - 110px)' : 0
-          }}
-        >
-          <div id="blocklyDiv" style={{position: 'absolute'}} />
-        </div>
         <div
           style={{
             position: 'fixed',
@@ -1193,13 +1084,12 @@ class MusicView extends React.Component {
             style={{
               textAlign: 'center',
               cursor: 'pointer',
-              color:
-                isDesktop || currentPanel === 'samplepacks' ? 'white' : '#777'
+              color: isDesktop || currentPanel === 'groups' ? 'white' : '#777'
             }}
-            onClick={() => this.choosePanel('samplepacks')}
+            onClick={() => this.choosePanel('groups')}
           >
             <FontAwesome icon="book" style={{fontSize: 25}} />
-            <div style={{fontSize: 8}}>Sample packs</div>
+            <div style={{fontSize: 8}}>Groups</div>
           </div>
           <div
             style={{
