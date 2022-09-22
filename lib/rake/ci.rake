@@ -83,7 +83,7 @@ namespace :ci do
   end
 
   desc 'flush Content Distribution Network (CDN) caches'
-  task :flush_cdn_cache do
+  task :flush_cloudfront_cache do
     ChatClient.wrap('Flush cache') do
       AWS::CloudFront.invalidate_caches
     end
@@ -93,7 +93,7 @@ namespace :ci do
   all_tasks << 'firebase:ci'
   all_tasks << :build
   all_tasks << :deploy_multi
-  all_tasks << :flush_cache
+  all_tasks << :flush_cloudfront_cache
   all_tasks << :publish_github_release if rack_env?(:production)
   task all: all_tasks
 
