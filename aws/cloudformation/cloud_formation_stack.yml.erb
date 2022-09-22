@@ -292,6 +292,7 @@ Resources:
               # APIs used by ci:flush_cloudfront_cache task.
               - Effect: Allow
                 Action:
+                  - 'ec2:DescribeInstances'
                   - 'cloudfront:ListDistributions'
                   - 'cloudfront:CreateInvalidation'
                   - 'cloudfront:GetInvalidation'
