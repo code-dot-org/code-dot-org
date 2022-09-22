@@ -1355,6 +1355,9 @@ class Script < ApplicationRecord
   end
 
   def write_script_json
+    # make sure we only write script json in the levelbuilder environment.
+    return unless Rails.application.config.levelbuilder_mode
+
     filepath = Script.script_json_filepath(name)
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
