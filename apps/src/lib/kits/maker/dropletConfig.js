@@ -128,7 +128,7 @@ function sharedLedBlocks({category, blockPrefix, objectDropdown}) {
 /**
  * Generic Johnny-Five / Firmata blocks
  */
-function getMakerBlocks(boardType) {
+export function getMakerBlocks(boardType) {
   let defaultPin = '"A6"';
   if (boardType === MICROBIT_CATEGORY) {
     defaultPin = '0';
