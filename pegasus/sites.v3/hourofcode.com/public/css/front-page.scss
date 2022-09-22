@@ -44,7 +44,7 @@ section {
 
 // Description
 section.hoc-description {
-  padding-bottom: 3em;
+  padding: 3em 1em;
   text-align: center;
 
   @media screen and (max-width: $width-sm) {
