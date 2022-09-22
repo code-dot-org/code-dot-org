@@ -675,11 +675,11 @@ ne:
     सहभागीहरूको अभूतपूर्व गठबन्धनले</a> Hour of Code, &mdash लाई पनि; माइक्रोसफ्टको
     समावेश गरि, एपल, अमेजन, अमेरिका र कलेजको समितिका केटा र केटीका क्लबहरूलाई समर्थन
     गर्न सँगै आउँछ।
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: मलाई कोडिङको बारेमा केहि पनि थाहा छैन। के मैले अझै घटनालाई होस्ट
     गर्न सक्छु?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have

@@ -2921,7 +2921,7 @@ fr-FR:
       courseD_EOC_2020:
         description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
           créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -3850,7 +3850,7 @@ fr-FR:
         content1: Page du Manuel du Test Markdown
       courseE_EOC_2020:
         description: Tu as finis le Cours E! Choisis un projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Ce même programme fonctionnera pour résoudre ce puzzle, aussi.
@@ -4070,7 +4070,7 @@ fr-FR:
 
       courseF_EOC_2020:
         description: Tu as finis le Cours F! Choisis un projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseF_bee_variables_8a_2018:
         answers:
         - text: 'L''abeille ne recueillera aucun nectar parce que la variable ne s''appelle
@@ -5977,7 +5977,7 @@ fr-FR:
       courseExpress_EOC_2020:
         description: Tu as atteint la dernière leçon du cours Express ! Choisis un
           projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseF_EOC_samples_2021:
         display_name: Projet de Fin de Cours
         description: 'Tu es sur le point de commencer ton projet final. Avant de commencer,
@@ -16183,10 +16183,10 @@ fr-FR:
           dans cet esprit!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseAB_EOC2022:
         description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseB_EOC2022:
         description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseC_multi_artist_prog6_predict12022:
         answers:
         - text: L'artiste va dessiner un triangle à 3 côtés égaux.
@@ -16286,7 +16286,7 @@ fr-FR:
       courseD_EOC2022:
         description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
           créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseD_EOC_examples2022:
         description: 'Vous êtes sur le point de commencer votre projet final. Avant
           de commencer, prenez le temps d''examiner les exemples de projets. '
@@ -16487,10 +16487,10 @@ fr-FR:
             tu cliqueras sur "Démarrer"?
       courseE_EOC2022:
         description: Tu as finis le Cours E! Choisis un projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseE_EOC_examples2022:
         description: Tu as finis le Cours E! Choisis un projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseE_multi_farmer_functions11_predict2022:
         answers:
         - text: La fermière ramassera 2 citrouilles.
@@ -16544,11 +16544,11 @@ fr-FR:
         - text: Regarde de près le code ci-dessous. Que va-t-il se passer une fois
             qu'on a cliqué sur « Démarrer » ?
       courseF_EOC_examples2022_2022_pilot_-2022-2:
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseF_EOC_samples2022:
         description: 'Vous êtes sur le point de commencer votre projet final. Avant
           de commencer, prenez le temps d''examiner les exemples de projets. '
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: 'Exploration - Exemples de programmes '
       courseF_events_freeplay2022_2022_pilot_-2022-2:
@@ -16791,7 +16791,7 @@ fr-FR:
         markdown: "### Votre formation en informatique"
       express_EOC2022:
         description: Tu as finis le Cours E! Choisis un projet à créer.
-        display_name: Projet final du cours
+        display_name: Projet de fin de cours
       express_EOC_examples2022:
         description: 'Vous êtes sur le point de commencer votre projet final. Avant
           de commencer, prenez le temps d''examiner les exemples de projets. '
@@ -16814,3 +16814,9 @@ fr-FR:
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il va se passer lorsqu'on
             exécute le programme ?
+      csf_safety_in_my_online_neighborhood:
+        markdown: "# Mon quartier en ligne\n\n## Comment se déplacer en ligne en toute
+          sécurité ? "
+      csf_safety_in_my_online_neighborhood2022:
+        markdown: "# Mon quartier en ligne\n\n## Comment se déplacer en ligne en toute
+          sécurité ? "

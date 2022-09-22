@@ -44,11 +44,8 @@
         "text-compression": "Compressione del testo",
         "csa-self-paced-pl": "Navigare nel sito Code.org per gli Insegnanti di CSA Pilota",
         "poembot-hoc": "poembot-hoc",
-        "counting-csc": "Conteggio con la collezionista",
-        "explore-data-1": "Scatola di esplorazione - Trame e istogrammi",
         "outbreak-csc": "Epidemia",
         "poem-art": "L'arte della poesia",
-        "poetry": "Informatica e poesia",
         "k5-onlinepd": "Insegnare i Fondamenti di Informatica",
         "csf-pilot": "csf-pilot",
         "peru": "peru",
@@ -89,6 +86,7 @@
         "halloween": "halloween",
         "step": "passo",
         "csa5-exemplars": "esemplari-csa5",
+        "katie-practice": "prova katie",
         "soccer": "calcio"
       }
     }

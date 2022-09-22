@@ -2,37 +2,37 @@
 title: Parteneri
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Hour of Code este condusă de Comitetul de Evaluare Hour of Code
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Comitetul de Evaluare []({{ urls/review_committee }}) este alcătuit din 12 actuali și foști educatori din clasele K-12, care evaluează și recomandă activități folosind o rubrică stabilită de un comitet consultativ. Acești educatori analizează activitățile conduse de elevi și planurile de lecții conduse de profesori trimise de sute de parteneri de activități, evaluând valoarea educațională a activităților, capacitatea de a implica elevii și potențialul lor de a atrage diverse grupuri de elevi.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Munca și dedicarea comitetului au contribuit la succesul Hour of Code și la viziunea sa de a oferi o introducere în informatică pentru fiecare elev.
 
-# Major Partners and Corporate Supporters
+# Parteneri Importanți și Susținători Corporatiști
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Parteneri Internaționali
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Parteneri Curriculari și Tutoriali
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Parteneri și Instrumente de Infrastructură
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Parteneri Suplimentari
 
 {{ partners/additional_partners }}
 

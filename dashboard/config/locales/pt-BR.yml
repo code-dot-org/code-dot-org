@@ -1433,3 +1433,11 @@ pt:
   behaviors:
     this_sprite: este personagem
   teacher_feedback: Feedback do Professor
+  lesson_lock:
+    error:
+      no_updates: Nenhuma atualização a ser executada
+      missing_params: As IDs de usuário, nível e unidade são obrigatórias
+      cannot_view_locked_answers: Não é possível visualizar as respostas com o item
+        bloqueado
+      forbidden: O usuário não pode atualizar o status bloqueável do aluno
+  reset_predict_progress_button: Excluir resposta

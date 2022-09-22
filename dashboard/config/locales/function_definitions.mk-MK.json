@@ -587,6 +587,22 @@
           "end game": {
             "name": "Крај на играта"
           }
+        },
+        "Geometric Sun": {
+          "sun": {
+            "name": "сонце"
+          },
+          "square": {
+            "name": "квадрат"
+          }
+        },
+        "Geometric Sun_2018": {
+          "sun": {
+            "name": "сонце"
+          },
+          "square": {
+            "name": "квадрат"
+          }
         }
       }
     }

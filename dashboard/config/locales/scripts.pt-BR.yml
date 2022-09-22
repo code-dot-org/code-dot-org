@@ -5052,6 +5052,9 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Área restrita
+        ai-ethics-2021:
+          description_audience: Entre sexto ano do fundamental e terceiro do ensino
+            médio
         poem-art-2021:
           title: Arte poética
         explore-data-1-2021:
@@ -5613,8 +5616,19 @@ pt:
               display_name: Bem-vindo
         dlp-csp-mod1-2022:
           title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Extensão de depuração assíncrona
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Trabalho assíncrono do módulo 2
         soccer:
           name: futebol
+          title: Codifique seu próprio jogo de futebol
+          description_short: Desenvolva um jogo de futebol
+          description: Desenvolva um jogo de futebol
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
