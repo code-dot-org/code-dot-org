@@ -43,35 +43,10 @@ var toTranspileWithinNodeModules = [
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 
-// As of Webpack 5, Node APIs are no longer automatically polyfilled.
-// resolve.fallback resolves the API to its NPM package, and the plugin
-// makes the API available as a global.
-const nodePolyfillConfig = {
-  plugins: [
-    new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],
-      stream: 'stream-browserify',
-      path: 'path-browserify',
-      process: 'process/browser',
-      timers: 'timers-browserify'
-    })
-  ],
-  resolve: {
-    fallback: {
-      stream: require.resolve('stream-browserify'),
-      path: require.resolve('path-browserify'),
-      timers: require.resolve('timers-browserify'),
-      crypto: false
-    }
-  }
-};
-
 // Our base config, on which other configs are derived
 var baseConfig = {
-  plugins: [...nodePolyfillConfig.plugins],
   resolve: {
     extensions: ['.js', '.jsx'],
-    fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
       '@cdo/locale': path.resolve(
         __dirname,
@@ -150,7 +125,7 @@ var baseConfig = {
   },
   module: {
     rules: [
-      {test: /\.exported_json$/, type: 'asset/source'},
+      {test: /\.exported_json$/, loader: 'raw-loader'},
       {
         test: /\.ejs$/,
         include: [
@@ -159,8 +134,28 @@ var baseConfig = {
         ],
         loader: 'ejs-webpack-loader'
       },
-      {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
+      {test: /\.css$/, loader: 'style-loader!css-loader'},
 
+      // Rules for global SCSS (*.scss) and modules (*.module.scss)
+      // are currently duplicated for Webpack 4. This can be simplified via
+      // css-loader's options.modules.auto option when we upgrade to Webpack 5:
+      // https://v4.webpack.js.org/loaders/css-loader/#auto
+      {
+        test: /\.scss$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [scssIncludePath],
+              implementation: sass,
+              quietDeps: true
+            }
+          }
+        ],
+        exclude: /\.module\.scss$/
+      },
       {
         test: /\.scss$/,
         use: [
@@ -169,18 +164,17 @@ var baseConfig = {
           {
             loader: 'sass-loader',
             options: {
+              includePaths: [scssIncludePath],
               implementation: sass,
-              sassOptions: {
-                includePaths: [scssIncludePath],
-                outputStyle: 'compressed'
-              }
+              quietDeps: true
             }
           }
-        ]
+        ],
+        include: /\.module\.scss$/
       },
 
-      {test: /\.interpreted.js$/, type: 'asset/source'},
-      {test: /\.exported_js$/, type: 'asset/source'},
+      {test: /\.interpreted.js$/, loader: 'raw-loader'},
+      {test: /\.exported_js$/, loader: 'raw-loader'},
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         include: [
@@ -194,17 +188,7 @@ var baseConfig = {
         // this file when asset digests are turned off, it will return a
         // 404 because it thinks the hash is a digest and it won't
         // be able to find the file without the hash. :( :(
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1024,
-              // uses the file-loader when file size is over the limit
-              name: '[name]wp[contenthash].[ext]',
-              esModule: false
-            }
-          }
-        ]
+        loader: 'url-loader?limit=1024&name=[name]wp[hash].[ext]'
       },
       {
         test: /\.jsx?$/,
@@ -215,7 +199,7 @@ var baseConfig = {
         ].concat(toTranspileWithinNodeModules),
         exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
         loader: 'babel-loader',
-        options: {
+        query: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
@@ -246,7 +230,7 @@ if (envConstants.COVERAGE) {
       // about the contents of the compiled version of this file :(
       path.resolve(__dirname, 'src', 'flappy', 'levels.js')
     ],
-    options: {
+    query: {
       cacheDirectory: true,
       compact: false,
       esModules: true
@@ -259,10 +243,8 @@ function devtool(options) {
     return 'eval';
   } else if (options && options.minify) {
     return 'source-map';
-  } else if (process.env.DEBUG_MINIFIED) {
-    return 'eval-source-map';
   } else if (process.env.DEV) {
-    return 'inline-cheap-source-map';
+    return 'cheap-inline-source-map';
   } else {
     return 'inline-source-map';
   }
@@ -305,7 +287,7 @@ function storybookConfig(sbConfig) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
+      new webpack.IgnorePlugin(/^serialport$/)
     ]
   };
 }
@@ -374,8 +356,7 @@ var karmaConfig = _.extend({}, baseConfig, {
         'kits',
         'maker',
         'StubChromeSerialPort.js'
-      ),
-      serialport: false
+      )
     })
   }),
   externals: {
@@ -394,11 +375,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     bindings: true
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      React: 'react',
-      Buffer: ['buffer', 'Buffer'],
-      process: 'process/browser'
-    }),
+    new webpack.ProvidePlugin({React: 'react'}),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
       IN_STORYBOOK: JSON.stringify(false),
@@ -449,22 +426,20 @@ function create(options) {
     devtool: devtool(options),
     entry: entries,
     externals: externals,
-    optimization: {chunkIds: 'total-size', moduleIds: 'size', ...optimization},
+    optimization: optimization,
     mode: mode,
     plugins: [
-      ...baseConfig.plugins,
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(
           envConstants.NODE_ENV || 'development'
         ),
-        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
-        DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
-      ...plugins
-    ],
+      new webpack.IgnorePlugin(/^serialport$/),
+      new webpack.optimize.OccurrenceOrderPlugin(true)
+    ].concat(plugins),
     watch: watch,
     keepalive: watch,
     failOnError: !watch

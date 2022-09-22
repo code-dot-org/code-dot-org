@@ -1,6 +1,14 @@
-@use "./progress-table-constants.module.scss" as constants;
+@use "sass:math";
 @import "color.scss";
 @import "style-constants";
+
+$scrollbar-height: 15px;
+$row-height: 42px;
+$expanded-row-height: 30px;
+$max-rows: 14;
+$max-height: $max-rows * $row-height + $scrollbar-height;
+$student-list-width: 170px;
+$content-view-width: $content-width - $student-list-width;
 
 .progress-table {
   table {
@@ -14,7 +22,7 @@
     color: $charcoal;
     border-width: 0 1px 2px 0;
     border-color: $border-gray;
-    height: constants.$row-height;
+    height: $row-height;
   }
   th,
   td {
@@ -31,12 +39,12 @@
   }
   .primary-row {
     td {
-      height: constants.$row-height;
+      height: $row-height;
     }
   }
   .expanded-row {
     td {
-      height: constants.$expanded-row-height;
+      height: $expanded-row-height;
       border-width: 0 1px 1px 0;
       border-style: solid;
       border-color: $border-gray;
@@ -57,7 +65,7 @@
     table,
     th,
     td {
-      width: constants.$student-list-width;
+      width: $student-list-width;
     }
     tbody {
       tr,
@@ -67,7 +75,7 @@
       }
     }
     .content {
-      height: constants.$row-height;
+      height: $row-height;
       box-sizing: border-box;
       padding: 10px;
       font-size: 14px;
@@ -97,7 +105,7 @@
   .content-view {
     thead,
     tbody {
-      max-width: constants.$content-view-width;
+      max-width: $content-view-width;
       td {
         text-align: center;
       }
@@ -128,4 +136,14 @@
       }
     }
   }
+}
+
+/* stylelint-disable */
+:export {
+  MAX_BODY_HEIGHT: math.div($max-height, 1px);
+  STUDENT_LIST_WIDTH: math.div($student-list-width, 1px);
+  CONTENT_VIEW_WIDTH: math.div($content-view-width, 1px);
+  ROW_HEIGHT: math.div($row-height, 1px);
+  MAX_ROWS: $max-rows;
+  MIN_COLUMN_WIDTH: 40;
 }
