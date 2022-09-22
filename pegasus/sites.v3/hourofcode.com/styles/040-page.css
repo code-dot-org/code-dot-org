@@ -105,7 +105,6 @@ ul {
 ul li {
     padding-left: 1em;
     text-indent: -.7em;
-    margin: 4px 0;
 }
 
 ul li:before {
