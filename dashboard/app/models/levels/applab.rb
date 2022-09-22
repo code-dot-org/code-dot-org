@@ -74,7 +74,7 @@ class Applab < Blockly
   end
 
   def self.maker_palette_categories
-    %w(Maker Circuit)
+    %w(Maker Circuit micro:bit)
   end
 
   def self.maker_apis
