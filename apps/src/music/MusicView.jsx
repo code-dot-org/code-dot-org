@@ -249,6 +249,11 @@ class MusicView extends React.Component {
           },
           contents: [
             {
+              kind: 'button',
+              text: 'Create variable...',
+              callbackKey: 'createVariableHandler'
+            },
+            {
               kind: 'block',
               type: 'variable_get'
             },
@@ -352,7 +357,7 @@ class MusicView extends React.Component {
             },
             {
               type: 'field_variable',
-              name: 'measure',
+              name: 'var',
               variable: 'measure'
             }
           ],
@@ -579,15 +584,20 @@ class MusicView extends React.Component {
         'Music.play_sound("' +
         ctx.getFieldValue('sound') +
         '", ' +
-        'measure' +
-        //ctx.getFieldValue('measure') +
+        Blockly.JavaScript.nameDB_.getName(
+          ctx.getFieldValue('var'),
+          Blockly.Names.NameType.VARIABLE
+        ) +
         ');\n'
       );
     };
 
     Blockly.JavaScript.variable_get = function(ctx) {
-      return Blockly.JavaScript.valueToCode(ctx, 'measure');
-      //return ctx.getFieldValue('var');
+      const code = Blockly.JavaScript.nameDB_.getName(
+        ctx.getFieldValue('var'),
+        Blockly.Names.NameType.VARIABLE
+      );
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
     };
 
     Blockly.JavaScript.variable_set = function(ctx) {
@@ -667,6 +677,14 @@ class MusicView extends React.Component {
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
+
+    this.workspace.registerButtonCallback('createVariableHandler', button => {
+      Blockly.Variables.createVariableButtonHandler(
+        button.getTargetWorkspace(),
+        null,
+        null
+      );
+    });
   };
 
   onBlockSpaceChange = () => {
