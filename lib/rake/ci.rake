@@ -82,8 +82,8 @@ namespace :ci do
     ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text', color: 'red'
   end
 
-  desc 'flush CDN and frontend caches'
-  task :flush_cache do
+  desc 'flush Content Distribution Network (CDN) caches'
+  task :flush_cdn_cache do
     ChatClient.wrap('Flush cache') do
       AWS::CloudFront.invalidate_caches
     end

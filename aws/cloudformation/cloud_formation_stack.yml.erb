@@ -289,10 +289,9 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # APIs used by ci:flush_cache task.
+              # APIs used by ci:flush_cdn_cache task.
               - Effect: Allow
                 Action:
-                  - 'ec2:DescribeInstances'
                   - 'cloudfront:ListDistributions'
                   - 'cloudfront:CreateInvalidation'
                   - 'cloudfront:GetInvalidation'
