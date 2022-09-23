@@ -4097,7 +4097,7 @@ pl:
           description: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która odnosi się do wybranego obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np. prezentacja slajdów, dokument lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców na całym świecie.
           student_description: Przeprowadź badania korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej inteligencji (AI).
           description_short: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI).
-          description_audience: klasy 6-12
+          description_audience: Klasy 6-12
           name: ai-ethics-2021
         poem-art-2021:
           title: Sztuka poezji
@@ -4996,3 +4996,33 @@ pl:
           description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
           student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
           description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+        csa1-2023:
+          name: csa1-2023
+          title: Programowanie obiektowe
+        csa2-2023:
+          name: csa2-2023
+          title: Struktura klas i Projekt
+        csa3-2023:
+          name: csa3-2023
+          title: Tablice i Algorytmy
+        csa4-2023:
+          name: csa4-2023
+          title: Warunki i Logika
+        csa5-2023:
+          name: csa5-2023
+          title: Tablice dwuwymiarowe
+        csa6-2023:
+          name: csa6-2023
+          title: Listy tablic i Metody łańcuchów
+        csa7-2023:
+          name: csa7-2023
+          title: Metoda dokompozycji i Rekurencja
+        csa8-2023:
+          name: csa8-2023
+          title: Wyszukiwanie i porządkowanie
+        vpl-csd3-ayw-pilot-2022:
+          name: vpl-csd3-ayw-pilot-2022
+          title: Odkrycia informatyki wirtualny moduł 3
+        vpl-csd4-ayw-pilot-2022:
+          name: vpl-csd4-ayw-pilot-2022
+          title: Odkrycia informatyki wirtualny moduł 4

@@ -3,6 +3,10 @@ mk:
   data:
     script:
       name:
+        sports:
+          name: спортови
+        hero:
+          name: херој
         aquatic:
           name: водно
         cspplayground:

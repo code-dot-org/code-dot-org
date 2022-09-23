@@ -41,6 +41,7 @@ MONITORING_GROUPS = {
   'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Jess', 'EdPop Kristyn', 'EdPop Rosie', 'EdPop Tawny'],
   'facilitator-things' => ['PnP Andrea'],
   'foundations' => ['Accounts'],
+  'hour-of-code' => ['Hour of Code'],
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],

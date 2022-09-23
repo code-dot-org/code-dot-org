@@ -6,32 +6,32 @@ pt:
   front_title: Junte-se ao maior evento de aprendizagem da história, %{campaign_date}
   coming_soon: Em breve
   campaign_date_start_short: 5 de dez.
-  campaign_date_start_long: 6 de dezembro
-  campaign_date_short: 5-11 de dezembro
+  campaign_date_start_long: '5 de dezembro '
+  campaign_date_short: 5 a 11 de dezembro
   campaign_date_full: 5 a 11 de dezembro
   campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 de dezembro de 2022
+  campaign_date_full_year: 5 a 11 de dezembro de 2022
   nonus_campaign_date_start_short: Oct. 1
   nonus_campaign_date_start_long: October 1
-  nonus_campaign_date_short: 1 de outubro a 18 de dezembro
+  nonus_campaign_date_short: 1º de outubro a 18 de dezembro
   nonus_campaign_date_full: 1º de outubro - 18 de dezembro
   nonus_campaign_date_year: '2022'
   nonus_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: 1 de outubro a 18 de dezembro
+  latam_campaign_date_short: 1º de outubro a 18 de dezembro
   latam_campaign_date_full: 1º de outubro - 18 de dezembro
   latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
   europe_campaign_date_start_short: Oct. 1
   europe_campaign_date_start_long: October 1
-  europe_campaign_date_short: 1 de outubro a 18 de dezembro
+  europe_campaign_date_short: 1º de outubro a 18 de dezembro
   europe_campaign_date_full: 1º de outubro - 18 de dezembro
   europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: 1 de outubro a 18 de dezembro
+  africa_campaign_date_short: 1º de outubro a 18 de dezembro
   africa_campaign_date_full: 1º de outubro - 18 de dezembro
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
@@ -1037,7 +1037,7 @@ pt:
   highlights_constant_athletes_short_heading: Esforce-se
   footer_copyright_message: Copyright %{current_year} Code.org. Todos os direitos
     reservados.
-  footer_trademark_message: Hour of Code™ é uma marca registrada de Code.org.
+  footer_trademark_message: 'Hour of Code™ é uma marca registrada da Code.org. '
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Parceiros e conselheiros
   footer_menu_contact: Fale conosco

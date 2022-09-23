@@ -709,3 +709,10 @@ th:
     link_your_email: เชื่อมต่ออีเมลของคุณ
     not_now: ไม่ใช่ตอนนี้
   teacher_feedback: ข้อเสนอแนะของผู้สอน
+  lesson_lock:
+    error:
+      no_updates: ไม่มีการอัปเดตที่ต้องดำเนินการ
+      missing_params: ต้องระบุผู้ใช้ ระดับ และรหัสหน่วย
+      cannot_view_locked_answers: ไม่สามารถดูคำตอบขณะล็อกได้
+      forbidden: ผู้ใช้ไม่สามารถอัปเดตสถานะล็อกของนักเรียนได้
+  reset_predict_progress_button: ลบคำตอบ
