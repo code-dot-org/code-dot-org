@@ -144,7 +144,14 @@ def get_social_metadata_for_page(request)
         description: hoc_s(:social_hoc2022_explore_play_create),
         image: images[:hoc_2022_social]
       }
-    }
+    },
+    "learn-cdo" => {
+      "default" => {
+        title: hoc_s(:social_hoc_anybody),
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -165,6 +172,8 @@ def get_social_metadata_for_page(request)
     page = "learn"
   elsif request.path == "/hourofcode/overview" && request.site == "code.org"
     page = "hoc-overview"
+  elsif request.path == "/learn" && request.site == "code.org"
+    page = "learn-cdo"
   else
     return {}
   end
