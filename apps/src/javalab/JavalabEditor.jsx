@@ -402,11 +402,6 @@ class JavalabEditor extends React.Component {
     newTabs[index2] = file1;
     setOrderedTabKeys(newTabs);
     this.updateFileOrder();
-    // closes the tab menu if it is open
-    this.setState({
-      showMenu: false,
-      contextTarget: null
-    });
   }
 
   // This is called from the dropdown menu on the active tab
