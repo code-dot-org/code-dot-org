@@ -33,6 +33,12 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :levelbuilder, response: :success
 
+  # only levelbuilder can edit
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: :levelbuilder, response: :success
+
   test 'creating a new data doc writes serialization and redirects to show page with key in URL' do
     sign_in @levelbuilder
     new_key = 'doc_key'
@@ -54,7 +60,7 @@ class DataDocsControllerTest < ActionController::TestCase
     editable_data_doc = create :data_doc, {key: new_key, name: 'Doc name', content: 'Doc content.'}
 
     get :edit, params: {key: new_key}
-    edited_name = 'New doct name'
+    edited_name = 'New doc name'
     edited_content = 'New doc content.'
     post :update, params: {
       key: new_key,
