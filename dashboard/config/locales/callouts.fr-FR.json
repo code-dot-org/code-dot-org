@@ -1696,16 +1696,16 @@
           "locations_category": "Clique ici pour ouvrir la catégorie Emplacements. "
         },
         "courseF_events_key": {
-          "whenKey": "Utilisez le nouveau bloc d'événement trouvé ici. "
+          "whenKey": "Utilise le nouveau bloc événement qui se trouve ici. "
         },
         "courseF_events_practice_reorder": {
           "stopAllBug": "Ce block n'est pas dans le bon ordre."
         },
         "courseF_events_time": {
-          "events_category": "Cliquez ici pour ouvrir la catégorie Événements. "
+          "events_category": "Clique ici pour ouvrir la catégorie Événements. "
         },
         "courseF_text_events": {
-          "events_category": "Cliquez ici pour ouvrir la catégorie Événements. "
+          "events_category": "Clique ici pour ouvrir la catégorie Événements. "
         },
         "Virtual Pet 2_2021": {
           "vp_costumes": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
@@ -1724,7 +1724,7 @@
           "text_generic_finish": "Avez-vous fini ? Si c'est le cas, appuyez sur « Terminer ». Sinon, appuyez sur « Réinitialiser », modifiez votre code et appuyez à nouveau sur « Exécuter » "
         },
         "courseF_events_choice_penguin": {
-          "whenToWhile": "Essayez de changer le when en while."
+          "whenToWhile": "Essaie de remplacer quand par pendant."
         },
         "courseF_label_predict": {
           "variablesPredict": "Regardez attentivement le code en dessous de ce point. "
@@ -2288,13 +2288,13 @@
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_events_choice_penguin_-2022-2": {
-          "whenToWhile": "Essayez de changer le when en while."
+          "whenToWhile": "Essaie de remplacer quand par pendant."
         },
         "courseF_events_conflict_-2022-2": {
           "stops_block": "Nouveaux blocs ici !"
         },
         "courseF_events_key_-2022-2": {
-          "whenKey": "Utilisez le nouveau bloc d'événement trouvé ici. "
+          "whenKey": "Utilise le nouveau bloc événement qui se trouve ici. "
         },
         "courseF_events_practice_reorder_-2022-2": {
           "stopAllBug": "Ce block n'est pas dans le bon ordre."
@@ -2303,7 +2303,7 @@
           "behaviors_edit": "Clique ici pour voir comment ce comportement fonctionne.\n"
         },
         "courseF_events_time_-2022-2": {
-          "events_category": "Cliquez ici pour ouvrir la catégorie Événements. "
+          "events_category": "Clique ici pour ouvrir la catégorie Événements. "
         },
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Regardez attentivement le code en dessous de ce point. "
@@ -2337,7 +2337,7 @@
           "join_blocks": "Recherchez de nouveaux blocs ici ! "
         },
         "courseF_text_events_-2022-2": {
-          "events_category": "Cliquez ici pour ouvrir la catégorie Événements. "
+          "events_category": "Clique ici pour ouvrir la catégorie Événements. "
         },
         "courseF_text_print_-2022-2": {
           "print_block": "Trouvez le bloc d'impression ici !",

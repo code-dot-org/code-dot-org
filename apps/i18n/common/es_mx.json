@@ -1944,6 +1944,7 @@
   "specialAnnouncementHeadingPostHoc2019": "Una Hora de Código y más",
   "specialAnnouncementDescriptionPostHoc2019": "Una hora es solo el comienzo. Ofrecemos un plan de estudios completo desde el jardín de infantes hasta la escuela secundaria, programas de aprendizaje profesional que incluyen talleres locales, y recursos para ayudarte a ti y a tu escuela a dar los primeros pasos.",
   "sprite": "sprite",
+  "spriteLimitReached": "No puedes crear más de {limit} sprites en el Laboratorio de Sprites.",
   "stageExtras": "Lecciones adicionales",
   "standaloneToolsDescription": "Además de nuestros cursos, los profesores pueden usar App Lab y Game Lab en cualquier curso para enseñarles a los estudiantes cómo crear aplicaciones, animaciones y juegos en JavaScript. También tenemos lecciones y widgets para enseñar encriptación, compresión de texto y otros conceptos de informática.",
   "standaloneToolsHeading": "Herramientas para la escuela media y secundaria",
