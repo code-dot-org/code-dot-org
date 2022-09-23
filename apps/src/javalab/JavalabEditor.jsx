@@ -407,7 +407,6 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null
     });
-    this.props.closeEditorDialog();
   }
 
   // This is called from the dropdown menu on the active tab
@@ -637,7 +636,7 @@ class JavalabEditor extends React.Component {
     setActiveTabKey(key);
     setOrderedTabKeys(newTabs);
     this.updateFileOrder();
-    projectChanged();
+
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,

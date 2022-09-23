@@ -28,18 +28,17 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
   their tabKey names (such as 'file-0', 'file-1') which is stored in fileMetadata.
   For example, if sources contains the following:
   {
-    'Class1.java': {text: '', tabOrder: 2, isVisible: true},
-    'Class2.java': {text: '', tabOrder: 0, isVisible: true},
-    'Class3.java': {text: '', tabOrder: 1, isVisible: true}
+    'ClassOne.java': {text: '', tabOrder: 2, isVisible: true},
+    'ClassTwo.java': {text: '', tabOrder: 0, isVisible: true},
+    'ClassThree.java': {text: '', tabOrder: 1, isVisible: true}
   },
   then depending on how Object.keys iterates through the keys on sources, we could have
-  fileMetadata assigned: {'file-0': 'Class2.java', 'file-1': 'Class1.java', 'file-2': 'Class3.java'}.
-  The corresponding orderOfFiles would be [0, 2, 1], unorderedTabKeys would be ['file-0', 'file-1', 'file-2],
-  and orderedTabKeys would be ['file-0', 'file-2', 'file-1'].
+  fileMetadata assigned: {'file-0': 'ClassOne.java', 'file-1': 'ClassTwo.java', 'file-2': 'ClassThree.java'}.
+  The corresponding orderOfFiles would be [2, 0, 1], and orderedTabKeys would be
+  ['file-1', 'file-2', 'file-0'].
   */
   let fileMetadata = {};
   let orderedTabKeys = [];
-  let unorderedTabKeys = [];
   let orderOfFiles = [];
   let fileIndex = 0;
   let isValid = true;
@@ -47,51 +46,45 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
     if (sources[fileName].isVisible || isEditingStartSources) {
       let fileTabKey = getTabKey(fileIndex);
       fileMetadata[fileTabKey] = fileName;
-      unorderedTabKeys.push(fileTabKey);
       let tabOrder = sources[fileName].tabOrder;
       // files that are stored may not currently have an tabOrder assigned so that
       // order is undefined
       if (Number.isInteger(tabOrder)) {
-        orderOfFiles.push(sources[fileName].tabOrder);
+        orderOfFiles.push(tabOrder);
+        orderedTabKeys[tabOrder] = fileTabKey;
       } else {
         isValid = false;
       }
       fileIndex++;
     }
   });
-  const numTotalFiles = fileIndex;
-  // check orderOfFiles for duplicates
+  /*
+  If there were any support or validation files within this level, these invisible
+  files are not included in the editor so their tabOrder would be undefined.
+  For example, if a level had one validation file with tabOrder 0 and one starter
+  file with tabOrder 1, the orderedTabKeys would currently be [undefined, 1].
+  Filter out the undefined's next.
+  */
+  orderedTabKeys = orderedTabKeys.filter(
+    fileTabKey => fileTabKey !== undefined
+  );
+
+  // Check orderOfFiles for duplicates
   isValid = isValid && new Set(orderOfFiles).size === orderOfFiles.length;
 
-  /*
-  Assign orderedTabKeys the ordering of files stored in orderOfFiles corresponding to
-  file names stored in fileMetadata.
-  There may be missing tab orders due to validation or support files saved in start_sources
-  mode that are not included outside of start_sources mode.
-  For example, if a levelbuilder created a support file, validation file and 2 starter files,
-  and ordered the file tabs as: 'Validation.java', 'Starter1.java', 'Support.java', 'Starter2.java',
-  then the corresponding tabOrders for each file would be: 0, 1, 2, 3. When isEditingStartSources
-  is false, only 'Start1.java' and 'Starter2.java' would be loaded into sources with
-  the corredponding tabOrders would be 1, 3.
-  If isValid is false due to duplicate tabOrders or any undefined tabOrders, then
-  assign orderedTabKeys the order ['file-0', 'file-1', 'file-2', ...]
-  */
-  if (isValid) {
-    let fileCount = 0;
-    let tabOrder = 0;
-    while (fileCount < numTotalFiles) {
-      let fileIndex = orderOfFiles.indexOf(tabOrder);
-      if (fileIndex > -1) {
-        orderedTabKeys.push(unorderedTabKeys[fileIndex]);
-        fileCount++;
-      }
-      tabOrder++;
-    }
-  } else {
-    for (let fileIndex = 0; fileIndex < numTotalFiles; fileIndex++) {
-      orderedTabKeys.push(getTabKey(fileIndex));
-    }
+  // If any of the visible file tabOrders were undefined or there were duplicate tabOrders,
+  // iterate through fileMetadata keys (fileTabKeys) and reassign tabOrders of all the files
+  // and add to orderedTabKeys the fileTabKeys
+  if (!isValid) {
+    fileIndex = 0;
+    orderedTabKeys = [];
+    Object.keys(fileMetadata).forEach(fileTabKey => {
+      orderedTabKeys.push(fileTabKey);
+      let fileName = fileMetadata[fileTabKey];
+      sources[fileName].tabOrder = fileIndex;
+    });
   }
+
   const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
 
   return {
