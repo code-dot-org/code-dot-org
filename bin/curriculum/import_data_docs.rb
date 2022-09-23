@@ -68,7 +68,7 @@ def main(options)
 
   until data_doc_path_stack.empty?
     current_path = data_doc_path_stack.pop
-    url = "#{cb_url_prefix}/documentation/export/#{current_path}.json?format=json"
+    url = "http://www.codecurricula.com/documentation/export/#{current_path}.json?format=json"
     guide_json = fetch(url)
     guide = JSON.parse(guide_json)
 
