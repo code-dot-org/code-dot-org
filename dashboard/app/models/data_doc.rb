@@ -21,7 +21,7 @@ class DataDoc < ApplicationRecord
   validate :validate_key_format
 
   def file_path
-    Rails.root.join("config/data_docs/#{key.parameterize(preserve_case: false)}.json")
+    Rails.root.join("config/data_docs/#{key}.json")
   end
 
   def serialize
