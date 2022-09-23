@@ -21,7 +21,7 @@ h2 {
 }
 
 h3 {
-  color: #292F36;
+  color: #272822;
   font-size: 18px;
   font-family: 'Gotham 4r', sans-serif;
   margin-top:25px;
@@ -30,7 +30,7 @@ h3 {
 }
 
 h4 {
-  color: #292F36;
+  color: #272822;
   font-size: 14px;
   font-family: 'Gotham 5r', sans-serif;
   line-height: 1.2em;
@@ -55,7 +55,7 @@ a:visited {
 }
 
 a:hover, a:active {
-  color: #292F36;
+  color: #272822;
 }
 
 blockquote {
@@ -92,7 +92,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   font-weight: normal;
-  color: #292F36;
+  color: #272822;
   margin: 0;
 }
 

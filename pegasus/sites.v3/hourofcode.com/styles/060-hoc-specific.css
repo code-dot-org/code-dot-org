@@ -61,7 +61,7 @@
 #hoc-nav ul li a {
   font-family: 'Gotham 4r', sans-serif;
   font-size: 18px;
-  color: #292F36;
+  color: #272822;
   text-decoration: none;
 }
 #hoc-nav ul li:hover {
@@ -69,7 +69,7 @@
 }
 #hoc-nav-hamburger {
   font-size: 2em;
-  color: #292F36;
+  color: #272822;
   vertical-align: middle;
   text-decoration: none;
   display: none;

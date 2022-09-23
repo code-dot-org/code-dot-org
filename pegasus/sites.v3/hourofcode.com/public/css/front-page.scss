@@ -1,4 +1,4 @@
-@import 'imports/_breakpoints.scss', 'imports/_color.scss', 'imports/_fonts.scss';
+@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
 
 html, body {
   height: 100%;
@@ -20,9 +20,9 @@ section {
 
   h2 { // using the same styles as h1's elsewhere, but h2 is a more appropriate element to use here
     text-align: center;
-    color: $color-purple;
+    color: $dark_purple;
     font-size: 32px;
-    font-family: $gotham-bold;
+    font-family: $gotham-extra-bold;
     margin: 0 auto 1em;
     line-height: 1.2em;
 
@@ -53,8 +53,8 @@ section.hoc-description {
   }
 
   .number-served{
-    color: $color-main;
-    font-family: $gotham-bold;
+    color: $darkest_gray;
+    font-family: $gotham-extra-bold;
     font-size: 56px;
     margin: 0 auto 0.5em;
 
@@ -95,8 +95,8 @@ section.join-us {
       h2 {
         margin: 0 0 1em;
         text-align: left;
-        color: $color-teal;
-        font-family: $gotham-semibold;
+        color: $teal;
+        font-family: $gotham-bold;
         font-size: 22px;
       }
     }
@@ -110,7 +110,7 @@ section.join-us {
 
 // What is HoC?
 section.what-is-hoc {
-  background: rgba($color-main, .05);
+  background: rgba($darkest_gray, .05);
   text-align: center;
 
   .wrapper {
@@ -118,9 +118,9 @@ section.what-is-hoc {
   }
 
   h3 {
-    font-family: $gotham-normal;
+    font-family: $gotham-regular;
     font-size: 22px;
-    color: $color-main;
+    color: $darkest_gray;
     max-width: 700px;
 
     @media screen and (max-width: $width-sm) {
@@ -165,7 +165,7 @@ section.stats {
 
   .wrapper {
     padding-top: 6em;
-    border-top: 1px solid rgba($color-main, .1);
+    border-top: 1px solid rgba($darkest_gray, .1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -239,8 +239,8 @@ section.host-an-hour {
   padding-right: 30px;
   margin: 5px 0px;
   background-color: white;
-  border-color: $color-main;
-  color: $color-main;
+  border-color: $darkest_gray;
+  color: $darkest_gray;
 }
 
 .ctabutton-white-border {
@@ -250,8 +250,8 @@ section.host-an-hour {
   padding-right: 30px;
   margin: 5px 0px;
   background-color: white;
-  border-color: $color-main;
-  color: $color-main;
+  border-color: $darkest_gray;
+  color: $darkest_gray;
 }
 
 .ctabutton-white-inverse {
@@ -281,14 +281,14 @@ section.host-an-hour {
 }
 
 .category-header {
-  font-family: $gotham-semibold;
+  font-family: $gotham-bold;
 }
 
 .category-button {
   background-color: #5b6770;
   border-radius: 5px;
   color: white;
-  font-family: $gotham-normal;
+  font-family: $gotham-regular;
   margin: 5px 0px;
   padding: 8px;
 }
@@ -361,7 +361,7 @@ a.category-link {
   }
 
   .banner-title {
-    font-family: $gotham-bold;
+    font-family: $gotham-extra-bold;
     color: white;
     line-height: 1.2;
     margin: 0 auto 1em;
@@ -477,7 +477,7 @@ a.category-link {
 }
 
 .teal-background {
-  background-color: #00adbc;
+  background-color: $teal;
 }
 
 #textbacking {
@@ -499,7 +499,7 @@ a.category-link {
 }
 
 .front-header-banner .front-header-title p {
-  font-family: $gotham-semibold !important;
+  font-family: $gotham-bold !important;
   margin-bottom: 0px;
 }
 
@@ -544,7 +544,7 @@ a.category-link {
 
 #volunteer-signup a {
   color: white;
-  font-family: $gotham-normal;
+  font-family: $gotham-regular;
   text-decoration: none;
 }
 
