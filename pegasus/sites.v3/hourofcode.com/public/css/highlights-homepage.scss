@@ -98,8 +98,8 @@
   line-height: 20px;
   top: 0px;
   left: 0px;
-  height: 210px;
-  width: 210px;
+  height: 230px;
+  width: 230px;
   display: none;
 }
 
@@ -119,17 +119,21 @@
 }
 
 .learn-button {
-  width: 95%;
+  width: 100%;
   background-color: #7665a0;
-  height: 30px;
+  height: 34px;
   position: absolute;
-  bottom: 9px;
+  bottom: 0;
   left: 0px;
-  padding: 4px;
+  padding: 6px;
   text-align: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 0 0 5px 5px;
   color: white;
+
+  @media screen and (max-width: $width-md) {
+    bottom: 30px;
+    width: 95%;
+  }
 }
 
 @media only screen and (max-width: 990px) {
@@ -157,11 +161,5 @@
 
   .highlights-column {
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 767px) {
-  .highlights-column {
-    display: none;
   }
 }
