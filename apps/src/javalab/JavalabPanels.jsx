@@ -199,6 +199,8 @@ class JavalabPanels extends React.Component {
 
     // Only theater uses the <JavalabCrosshairOverlay> right now, so this will
     // currently no-op in other viewModes.
+    // The visualization and its overlay have different default sizes and are thus scaled
+    // differently. See ./constants.module.scss for details.
     const overlayScaleCss = `scale(${scale *
       parseInt(styleConstants.visualizationOverlayScale)})`;
     $('#visualizationOverlay').css('transform', overlayScaleCss);
