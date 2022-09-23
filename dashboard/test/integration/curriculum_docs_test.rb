@@ -188,7 +188,7 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
     end
 
     test "environment get_summary_by_name query count" do
-      assert_queries(7) do
+      assert_queries(8) do
         get get_summary_by_name_programming_environment_path(@programming_environment.name)
       end
       assert_response :success
