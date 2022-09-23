@@ -43,6 +43,7 @@ def get_social_metadata_for_page(request)
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
     hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
     coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
+    hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -59,8 +60,8 @@ def get_social_metadata_for_page(request)
     "hourofcode.com" => {
       "default" => {
         title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2021_cse),
-        image: images[:hoc_cse_social]
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
       }
     },
     "challenge" => {
@@ -133,15 +134,15 @@ def get_social_metadata_for_page(request)
     "learn" => {
       "default" => {
         title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2021_cse),
-        image: images[:hoc_cse_social]
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
       }
     },
     "hoc-overview" => {
       "default" => {
         title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2021_cse),
-        image: images[:hoc_cse_social]
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
       }
     }
   }
