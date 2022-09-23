@@ -79,6 +79,8 @@ var Dance = function() {
     // Time between last run click and last time the song actually started playing
     lastRunButtonDelay: null
   };
+
+  this.enableRunButton = this.enableRunButton.bind(this);
 };
 
 module.exports = Dance;
@@ -136,6 +138,8 @@ Dance.prototype.init = function(config) {
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(true));
     }
+
+    this.isUsingIOSDevice() && this.disableRunButton();
   };
 
   const showFinishButton =
@@ -149,17 +153,17 @@ Dance.prototype.init = function(config) {
 
   this.initSongsPromise = this.initSongs(config);
 
-  // As students add new characters to their programs,
-  // load sprites asynchronously. Previously, we waited to load
-  // sprites once students hit the run button.
-  // This is in place to support iOS, which will not play audio
-  // if started asynchronously after fetching sprites.
-  if (!!DCDO.get('use-html5-audio-dance-party', true)) {
+  // On iOS devices, load sprites as students add new characters
+  // to their programs. Block the run button until all characters have loaded.
+  if (this.isUsingIOSDevice()) {
     const computeCharactersReferenced = () =>
       this.computeCharactersReferenced(this.studioApp_.getCode());
-    this.studioApp_.addChangeHandler(() =>
-      this.nativeAPI?.ensureSpritesAreLoaded(computeCharactersReferenced())
-    );
+    this.studioApp_.addChangeHandler(() => {
+      this.disableRunButton();
+      this.nativeAPI
+        ?.ensureSpritesAreLoaded(computeCharactersReferenced())
+        .then(this.enableRunButton);
+    });
   }
 
   this.awaitTimingMetrics();
@@ -210,22 +214,29 @@ Dance.prototype.initSongs = async function(config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
-  loadSong(selectedSong, songData, status => {
-    if (status === 403) {
-      // Something is wrong, because we just fetched cloudfront credentials.
-      firehoseClient.putRecord(
-        {
-          study: 'restricted-song-auth',
-          event: 'initial-auth-error',
-          data_json: JSON.stringify({
-            currentUrl: window.location.href,
-            channelId: config.channel
-          })
-        },
-        {includeUserId: true}
-      );
-    }
-  });
+  this.isUsingIOSDevice() && this.disableRunButton();
+  loadSong(
+    selectedSong,
+    songData,
+    status => {
+      if (status === 403) {
+        // Something is wrong, because we just fetched cloudfront credentials.
+        firehoseClient.putRecord(
+          {
+            study: 'restricted-song-auth',
+            event: 'initial-auth-error',
+            data_json: JSON.stringify({
+              currentUrl: window.location.href,
+              channelId: config.channel
+            })
+          },
+          {includeUserId: true}
+        );
+      }
+    },
+    this.isUsingIOSDevice() && this.enableRunButton,
+    this.isUsingIOSDevice()
+  );
   this.updateSongMetadata(selectedSong);
 
   if (config.channel) {
@@ -247,30 +258,37 @@ Dance.prototype.setSongCallback = function(songId) {
 
   getStore().dispatch(setSelectedSong(songId));
 
+  this.isUsingIOSDevice() && this.disableRunButton();
   unloadSong(lastSongId, songData);
-  loadSong(songId, songData, status => {
-    if (status === 403) {
-      // The cloudfront signed cookies may have expired.
-      fetchSignedCookies().then(() =>
-        loadSong(songId, songData, status => {
-          if (status === 403) {
-            // Something is wrong, because we just re-fetched cloudfront credentials.
-            firehoseClient.putRecord(
-              {
-                study: 'restricted-song-auth',
-                event: 'repeated-auth-error',
-                data_json: JSON.stringify({
-                  currentUrl: window.location.href,
-                  channelId: getStore().getState().pageConstants.channelId
-                })
-              },
-              {includeUserId: true}
-            );
-          }
-        })
-      );
-    }
-  });
+  loadSong(
+    songId,
+    songData,
+    status => {
+      if (status === 403) {
+        // The cloudfront signed cookies may have expired.
+        fetchSignedCookies().then(() =>
+          loadSong(songId, songData, status => {
+            if (status === 403) {
+              // Something is wrong, because we just re-fetched cloudfront credentials.
+              firehoseClient.putRecord(
+                {
+                  study: 'restricted-song-auth',
+                  event: 'repeated-auth-error',
+                  data_json: JSON.stringify({
+                    currentUrl: window.location.href,
+                    channelId: getStore().getState().pageConstants.channelId
+                  })
+                },
+                {includeUserId: true}
+              );
+            }
+          })
+        );
+      }
+    },
+    this.isUsingIOSDevice() && this.enableRunButton,
+    this.isUsingIOSDevice()
+  );
 
   this.updateSongMetadata(songId);
 
@@ -545,8 +563,7 @@ Dance.prototype.runButtonClick = async function() {
   // that the button was pressed. toggleRunReset() will
   // eventually execute down below, but there are some long-running
   // tasks that need to complete first
-  const runButton = document.getElementById('runButton');
-  runButton.disabled = true;
+  this.disableRunButton();
   const divDanceLoading = document.getElementById('divDanceLoading');
   divDanceLoading.style.display = 'flex';
   getStore().dispatch(setRunIsStarting(true));
@@ -740,4 +757,28 @@ Dance.prototype.captureThumbnailImage = function() {
   } else {
     setThumbnailBlobFromCanvas(canvas);
   }
+};
+
+Dance.prototype.enableRunButton = function() {
+  this.getRunButton().disabled = false;
+};
+
+Dance.prototype.disableRunButton = function() {
+  this.getRunButton().disabled = true;
+};
+
+Dance.prototype.getRunButton = function() {
+  if (!this.runButton) {
+    this.runButton = document.getElementById('runButton');
+  }
+  return this.runButton;
+};
+
+Dance.prototype.isUsingIOSDevice = function() {
+  if (this.usingIOSDevice) {
+    return this.usingIOSDevice;
+  }
+  this.usingIOSDevice = dom.isIOS();
+  // Temporarily allow turning of differentiation for iOS via flag
+  return this.usingIOSDevice && !!DCDO.get('use-html5-audio-dance-party', true);
 };

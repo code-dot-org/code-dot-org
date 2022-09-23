@@ -1,5 +1,4 @@
 import Sounds from '../Sounds';
-import DCDO from '@cdo/apps/dcdo';
 
 /**
  * Requests the song manifest in parallel with signed cloudfront cookies. These cookies
@@ -79,16 +78,20 @@ export function getSelectedSong(songManifest, config) {
  * @param songData {Object<Object>} Song data containing urls of songs.
  * @param onPreloadError {function} Error callback with status code.
  */
-export function loadSong(songId, songData, onPreloadError) {
+export function loadSong(songId, songData, onPreloadError, onLoad, forceHTML5) {
   const url = songData[songId].url;
   const options = {
     id: url,
     mp3: url,
     onPreloadError,
-    forceHTML5: !!DCDO.get('use-html5-audio-dance-party', true),
-    allowHTML5Mobile: !!DCDO.get('use-html5-audio-dance-party', true)
+    forceHTML5: forceHTML5,
+    allowHTML5Mobile: forceHTML5
   };
-  Sounds.getSingleton().register(options);
+
+  const sound = Sounds.getSingleton().register(options);
+  if (onLoad) {
+    sound.onLoad = onLoad;
+  }
 }
 
 export function unloadSong(songId, songData) {
