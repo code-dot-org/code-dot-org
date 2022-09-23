@@ -226,7 +226,7 @@ class RegionalPartnersController < ApplicationController
     errors = []
     csv.each do |row|
       region = row['Region']
-      unless region.present?
+      if region.blank?
         regions_missing = true
         next
       end

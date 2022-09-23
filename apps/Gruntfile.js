@@ -2,6 +2,7 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
+var os = require('os');
 var _ = require('lodash');
 var webpackConfig = require('./webpack');
 var offlineWebpackConfig = require('./webpackOffline.config');
@@ -12,8 +13,8 @@ var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('sass');
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-var ManifestPlugin = require('webpack-manifest-plugin');
+var TerserPlugin = require('terser-webpack-plugin');
+var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
 module.exports = function(grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -37,7 +38,7 @@ module.exports = function(grunt) {
       : `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `/* eslint-disable */
 // Auto-generated from Gruntfile.js
-import '@babel/polyfill';
+import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
 import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
@@ -342,6 +343,10 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          [
+            'build/package/css/certificates.css',
+            'style/curriculum/certificates.scss'
+          ],
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
@@ -430,6 +435,17 @@ describe('entry tests', () => {
       : ''
   };
 
+  // Workaround for https://github.com/ryanclark/karma-webpack/issues/498.
+  // This is the default karma-webpack output directory, but we define it here
+  // so we can configure webpack's output.publicPath and karma's options.files
+  // so that bundled files will be properly served.
+  // this is the source of the following warning, which can be ignored:
+  // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
+  const webpackOutputPath =
+    path.join(os.tmpdir(), '_karma_webpack_') +
+    Math.floor(Math.random() * 1000000);
+  const webpackOutputPublicPath = '/webpack_output/';
+
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
@@ -467,8 +483,39 @@ describe('entry tests', () => {
         },
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
         {pattern: 'build/**/*', watched: false, included: false, nocache: true},
-        {pattern: 'static/**/*', watched: false, included: false, nocache: true}
+        {
+          pattern: 'static/**/*',
+          watched: false,
+          included: false,
+          nocache: true
+        },
+        {
+          pattern: `${webpackOutputPath}/**/*`,
+          watched: false,
+          included: false,
+          nocache: true
+        }
       ],
+      proxies: {
+        // configure karma server to serve files from the source tree for
+        // various paths (the '/base' prefix points to the apps directory where
+        // karma.conf.js is located)
+        '/blockly/media/': '/base/static/',
+        '/lib/blockly/media/': '/base/static/',
+        '/v3/assets/': '/base/test/integration/assets/',
+        '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
+
+        // requests to the webpack output public path should be served from the
+        // webpack output path where bundled assets are written
+        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/'
+      },
+
+      webpack: {
+        output: {
+          path: webpackOutputPath,
+          publicPath: webpackOutputPublicPath
+        }
+      },
       client: {
         mocha: {
           timeout: 14000,
@@ -521,6 +568,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
     'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
@@ -530,9 +578,12 @@ describe('entry tests', () => {
     'courses/resources': './src/sites/studio/pages/courses/resources.js',
     'courses/code': './src/sites/studio/pages/courses/code.js',
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
+    'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'print_certificates/batch':
+      './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
       './src/sites/studio/pages/programming_classes/show.js',
     'programming_environments/index':
@@ -586,7 +637,6 @@ describe('entry tests', () => {
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
-    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -620,6 +670,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     'courses/new': './src/sites/studio/pages/courses/new.js',
+    'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -699,8 +750,10 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/regional-partner/playbook':
-      './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
+    'code.org/public/certificates/blank':
+      './src/sites/code.org/pages/public/certificates/blank.js',
+    'code.org/public/certificates':
+      './src/sites/code.org/pages/public/certificates.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -870,13 +923,10 @@ describe('entry tests', () => {
       mode: minify ? 'production' : 'development',
       optimization: {
         minimizer: [
-          new UglifyJsPlugin({
+          new TerserPlugin({
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
-            cache: true,
-            parallel: true,
-            sourceMap: envConstants.DEBUG_MINIFIED
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/]
           })
         ],
 
@@ -976,7 +1026,7 @@ describe('entry tests', () => {
               },
               test(module) {
                 return [
-                  '@babel/polyfill',
+                  '@babel/polyfill/noConflict',
                   'immutable',
                   'lodash',
                   'moment',
@@ -1017,20 +1067,20 @@ describe('entry tests', () => {
         }),
         // The [contenthash] placeholder generates a 32-character hash when
         // used within the copy plugin.
-        new CopyPlugin(
-          [
+        new CopyPlugin({
+          patterns: [
             // Always include unhashed locale files in the package, since unit
             // tests rely on these in both minified and unminified environments.
             // The order of these rules is important to ensure that the hashed
             // locale files appear in the manifest when minifying.
             {
               from: 'build/locales',
-              to: '[path]/[name].[ext]',
+              to: '[path][name][ext]',
               toType: 'template'
             },
             minify && {
               from: 'build/locales',
-              to: '[path]/[name]wp[contenthash].[ext]',
+              to: '[path][name]wp[contenthash][ext]',
               toType: 'template'
             },
             // Libraries in this directory are assumed to have .js and .min.js
@@ -1046,27 +1096,29 @@ describe('entry tests', () => {
             {
               context: 'build/minifiable-lib/',
               from: minify ? `**/*.min.js` : '**/*.js',
-              to: minify
-                ? '[path]/[name]wp[contenthash].[ext]'
-                : '[path]/[name].[ext]',
+              to: minify ? '[path][name]wp[contenthash].js' : '[path][name].js',
               toType: 'template',
-              ignore: minify ? [] : ['*.min.js'],
-              transformPath: targetPath => targetPath.replace(/\.min/, '')
+              globOptions: {
+                ignore: minify ? [] : ['*.min.js']
+              }
             }
           ].filter(entry => !!entry)
-        ),
+        }),
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
           include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
         }),
-        new ManifestPlugin({
+        new WebpackManifestPlugin({
           basePath: 'js/',
           map: file => {
             if (minify) {
               // Remove contenthash in manifest key from files generated via
               // copy-webpack-plugin. See:
               // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
-              file.name = file.name.replace(/wp[a-f0-9]{32}\./, '.');
+              // Also remove .min extension from manifest key, which started appearing after moving from webpack-manifest-plugin 2 -> 4
+              file.name = file.name
+                .replace(/wp[a-f0-9]{32}\./, '.')
+                .replace(/\.min/, '');
             }
             return file;
           }

@@ -8,10 +8,19 @@
         {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=1",
           "type": "feedback",
           "visibility": "Teacher-only",
-          "buttonText": ""
+          "buttonText": "Learn More"
+        },
+        {
+          "notice": "Nominate A Student for Student Insight Groups!",
+          "details": "Do you know of CS Principles students who identify as female or nonbinary, and/or as members of underrepresented racial and ethnic groups? Code.org is recruiting currently enrolled CSP students to participate in our CSP Student Insight Groups for the 22-23 school year. Students who join these groups will meet monthly during the school year to discuss their experiences with the CSP curriculum and provide feedback to our team. If you have students who meet the criteria and would be interested, please complete this nomination form by September 23rd. ",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSfS1bvQ3rRx9F5UbdBkXOWSTdONhtReAvIcZUdJR873BVn0Tg/viewform",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -29,7 +38,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-15 17:01:25 UTC",
+    "serialized_at": "2022-09-09 17:03:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -237,7 +246,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
-        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_-_digital_information_1/csp/2022]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_-_digital_information/csp/2022]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
         "student_overview": "Learn how computers represent color images using bits."
       },
@@ -2029,7 +2038,7 @@
       "key": "8dadd407-4848-4ddc-9877-b0f44833eee7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and playwith the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and play with the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
         "progression_name": "Widget: Binary Odometer"
       },
       "seeding_key": {
@@ -5812,7 +5821,7 @@
     },
     {
       "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/view",
+      "url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/copy",
       "key": "csp_unit_1_-_digital_information",
       "properties": {
         "audience": "Teacher",

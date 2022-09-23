@@ -678,7 +678,7 @@ class Script < ApplicationRecord
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
     # No redirect if unit or its course are not versioned.
     current_version_year = version_year || unit_group&.version_year
-    return nil unless current_version_year.present?
+    return nil if current_version_year.blank?
 
     # Redirect user to the latest assigned unit in this family,
     # if one exists and it is newer than the current unit.
@@ -725,7 +725,7 @@ class Script < ApplicationRecord
   # @param locale [String] User or request locale. Optional.
   # @return [Script|nil] Returns the latest version in a unit family.
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
-    return nil unless family_name.present?
+    return nil if family_name.blank?
 
     unit_versions = Script.get_family_from_cache(family_name).
       sort_by(&:version_year).reverse
@@ -1355,6 +1355,9 @@ class Script < ApplicationRecord
   end
 
   def write_script_json
+    # make sure we only write script json in the levelbuilder environment.
+    return unless Rails.application.config.levelbuilder_mode
+
     filepath = Script.script_json_filepath(name)
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
@@ -1553,13 +1556,14 @@ class Script < ApplicationRecord
       courseOfferingId: get_course_version&.course_offering&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      updated_at: updated_at.to_s
+      updated_at: updated_at.to_s,
+      isPlCourse: pl_course?
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
     summary[:lessonGroups] = lesson_groups.map(&:summarize)
     summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-    summary[:professionalLearningCourse] = professional_learning_course if old_professional_learning_course?
+    summary[:deeperLearningCourse] = professional_learning_course if old_professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
     summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
 

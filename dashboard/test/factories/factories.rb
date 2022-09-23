@@ -1017,6 +1017,11 @@ FactoryGirl.define do
     definition 'definition'
   end
 
+  factory :data_doc do
+    sequence(:name) {|n| "data doc #{n}"}
+    sequence(:key) {|n| "data-doc-#{n}"}
+  end
+
   factory :programming_environment do
     sequence(:name) {|n| "programming-environment-#{n}"}
     published true
@@ -1587,20 +1592,12 @@ FactoryGirl.define do
     storage_id 1
   end
 
-  factory :code_review_note do
+  factory :code_review_comment do
     association :commenter, factory: :student
     association :code_review
 
     is_resolved false
     comment 'a note about the project'
-  end
-
-  factory :code_review_comment do
-    association :commenter, factory: :student
-    association :project_owner, factory: :student
-
-    project_id 1
-    comment 'a comment about your project'
   end
 
   factory :code_review_group do
@@ -1611,13 +1608,6 @@ FactoryGirl.define do
   factory :code_review_group_member do
     association :follower
     association :code_review_group
-  end
-
-  factory :reviewable_project do
-    sequence(:project_id)
-    association :user, factory: :student
-    association :level
-    association :script
   end
 
   factory :project_commit do

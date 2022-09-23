@@ -2,39 +2,37 @@
 title: Đối tác
 ---
 
-Giờ Lập Trình được phát triển bởi Hour of Code và Tuần Tham vấn Giáo dục Khoa học Máy tính và Ủy ban Phê bình.
+Giờ lập trình là ý tưởng của Hội đồng đánh giá Giờ lập trình.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Ủy ban này sẽ hướng dẫn chiến lược cho các chiến dịch Giờ Lập Trình.
+[Hội đồng đánh giá]({{ urls/review_committee }}) bao gồm 12 thành viên đã từng hoặc đang đảm nhiệm công việc là nhà giáo dục ở các cấp đào tạo K-12, có vai trò đánh giá và đề xuất các hoạt động bằng phiếu đánh giá do hội đồng cố vấn ban hành. Các nhà giáo dục này đánh giá các hoạt động do học sinh tổ chức và các giáo án do giáo viên tổ chức do hàng trăm đối tác hoạt động gửi về, đánh giá các giá trị giáo dục của các hoạt động này, khả năng tương tác với học viên và sức hấp dẫn tiềm ẩn đối với các nhóm học sinh đa dạng.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Các nhà giáo dục đánh giá hoạt động của sinh viên và giáo án bài học của giảng viên đã gửi đến bởi hàng trăm đối tác hoạt động của chúng tôi, đánh giá các hoạt động giáo dục có giá trị, khả năng hứa hẹn của học viên, và tiềm năng phản biện để bộc lộ khả năng đa dạng của sinh viên.
+Công việc và cống hiến của hội đồng này đã đóng góp vào sự thành công của Giờ lập trình cũng như tầm nhìn của hội đồng đối với hoạt động giới thiệu khoa học máy tính tới tất cả các bạn học sinh.
 
-Hoạt động của Ủy ban và sự cống hiến đã đóng góp vào sự thành công của Giờ Lập Trình và tầm nhìn của nó như cung cấp một lời giới thiệu cho khoa học máy tính đến với tất cả mọi học viên.
-
-# Major Partners and Corporate Supporters
+# Đối tác chính và doanh nghiệp ủng hộ
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Đối tác quốc tế
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Đối tác chương trình đào tạo và hướng dẫn
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Đối tác cơ sở vật chất và công cụ
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Đối tác khác
 
 {{ partners/additional_partners }}
 

@@ -2,6 +2,8 @@
 en:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
       BadGuys_makeNewBadGuysSprite:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       BadGuys_setSizeAll_dropdown:
@@ -1510,15 +1512,6 @@ en:
         text: "[SPRITE][0] think [SPEECH][1]"
       gamelab_spriteThinkTime:
         text: "[SPRITE][0]think[TEXT1][1]for[NUM][2]seconds"
-      gamelab_spriteThink_fables1:
-        text: "[SPRITE][0] think [THOUGHT][1]"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': I am hungry, too.
-            '"I only want the biggest goat."': I only want the biggest goat.
-            '"I''m a green troll."': I'm a green troll.
-            '"No one will cross my bridge."': No one will cross my bridge.
       gamelab_spriteThink_fables2:
         text: "[SPRITE][0] think [THOUGHT][1]"
         options:

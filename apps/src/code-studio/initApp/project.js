@@ -7,7 +7,6 @@ import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 import NameFailureError from '../NameFailureError';
 import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
@@ -31,6 +30,8 @@ var channels = require('./clientApi').create('/v3/channels');
 var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
+import {getStore} from '../../redux';
+import {workspaceAlertTypes, displayWorkspaceAlert} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -277,7 +278,7 @@ var projects = (module.exports = {
       const port = 'localhost' === environmentKey ? `:${location.port}` : '';
       return `${
         location.protocol
-      }//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
+      }//${subdomain}codeprojects.org${port}/projects/weblab/${this.getCurrentId()}`;
     } else {
       return location.origin + this.getPathName();
     }
@@ -568,9 +569,7 @@ var projects = (module.exports = {
 
   showProjectHeader() {
     if (this.shouldUpdateHeaders()) {
-      header.showProjectHeader({
-        showExport: this.shouldShowExport()
-      });
+      header.showProjectHeader();
     }
   },
 
@@ -592,23 +591,10 @@ var projects = (module.exports = {
     );
   },
 
-  // Currently, only applab when the experiment is enabled. Hide if
-  // hideShareAndRemix is set on the level.
-  shouldShowExport() {
-    const {level = {}, app} = appOptions;
-    const {hideShareAndRemix} = level;
-    return (
-      !hideShareAndRemix &&
-      (app === 'applab' || app === 'gamelab') &&
-      experiments.isEnabled('exportExpo')
-    );
-  },
-
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix(),
-        showExport: this.shouldShowExport()
+        showShareAndRemix: !this.shouldHideShareAndRemix()
       });
     }
   },
@@ -1177,6 +1163,15 @@ var projects = (module.exports = {
               );
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
+              }
+              if (err.message.includes('httpStatusCode: 422')) {
+                getStore().dispatch(
+                  displayWorkspaceAlert(
+                    workspaceAlertTypes.error,
+                    msg.invalidCharactersErrorMessage(),
+                    /* bottom */ true
+                  )
+                );
               }
             }
             return;

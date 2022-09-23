@@ -20,6 +20,8 @@ Dashboard::Application.routes.draw do
     resource :pairing, only: [:show, :update]
 
     resources :user_levels, only: [:update, :destroy]
+    post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
+    get '/user_levels/get_token', to: 'user_levels#get_token'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -345,6 +347,8 @@ Dashboard::Application.routes.draw do
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
+    resources :data_docs, only: [:new, :create, :show], param: :key
+
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
@@ -466,8 +470,12 @@ Dashboard::Application.routes.draw do
 
     get '/certificate_images/:filename', to: 'certificate_images#show'
 
+    post '/print_certificates/batch'
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
 
+    get '/certificates/blank'
+    get '/certificates/batch'
+    post '/certificates/batch'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
@@ -987,22 +995,13 @@ Dashboard::Application.routes.draw do
       get :peers_with_open_reviews, on: :collection
     end
 
-    resources :code_review_notes, only: [:create, :update, :destroy]
-
-    resources :code_review_comments, only: [:create, :destroy] do
-      patch :toggle_resolved, on: :member
-      get :project_comments, on: :collection
-    end
+    resources :code_review_comments, only: [:create, :update, :destroy]
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
-
-    resources :reviewable_projects, only: [:create, :destroy]
-    get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
-    get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
 
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').
