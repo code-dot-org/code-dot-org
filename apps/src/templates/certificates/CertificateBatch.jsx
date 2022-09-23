@@ -8,13 +8,16 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 export default function CertificateBatch({
   courseName,
+  courseTitle,
   initialStudentNames,
   imageUrl
 }) {
-  const [studentNames, setStudentNames] = useState(initialStudentNames || []);
+  const [studentNames, setStudentNames] = useState(
+    initialStudentNames?.join('\n') || ''
+  );
 
   const onChange = e => {
-    setStudentNames(e.target.value && e.target.value.split('\n'));
+    setStudentNames(e.target.value);
   };
 
   return (
@@ -23,7 +26,7 @@ export default function CertificateBatch({
       <div style={styles.imageWrapper}>
         <img src={imageUrl} width={240} height={170} />
         <span style={styles.instructions}>
-          <SafeMarkdown markdown={i18n.enterCertificateNames({courseName})} />
+          <SafeMarkdown markdown={i18n.enterCertificateNames({courseTitle})} />
           {i18n.wantBlankCertificateTemplate()}{' '}
           <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
         </span>
@@ -41,7 +44,7 @@ export default function CertificateBatch({
           name="studentNames"
           rows="10"
           style={styles.textarea}
-          value={studentNames.join('\n')}
+          value={studentNames}
           onChange={onChange}
         />
         <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
@@ -86,6 +89,7 @@ const styles = {
 
 CertificateBatch.propTypes = {
   courseName: PropTypes.string,
+  courseTitle: PropTypes.string,
   initialStudentNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   imageUrl: PropTypes.string.isRequired
 };

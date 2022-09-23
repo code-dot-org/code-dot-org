@@ -11,7 +11,7 @@ class DataDocsController < ApplicationController
     @data_doc = DataDoc.new(key: params[:key], name: params[:name], content: params[:content])
 
     if @data_doc.save
-      # TODO [meg] : Write serialization
+      @data_doc.write_serialization
       redirect_to action: :show, key: params[:key]
     else
       render :not_acceptable, json: @data_doc.errors

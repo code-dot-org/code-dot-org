@@ -33,9 +33,12 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :levelbuilder, response: :success
 
-  test 'creating a new data doc redirects to show page with key in URL' do
+  test 'creating a new data doc writes serialization and redirects to show page with key in URL' do
     sign_in @levelbuilder
     new_key = 'doc_key'
+
+    DataDoc.any_instance.expects(:write_serialization).once
+
     get :create, params: {key: new_key}
     assert_redirected_to action: 'show', key: new_key
   end
