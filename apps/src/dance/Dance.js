@@ -43,6 +43,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import queryString from 'query-string';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
+import DCDO from '@cdo/apps/dcdo';
 
 const ButtonState = {
   UP: 0,
