@@ -365,30 +365,26 @@ class JavalabEditor extends React.Component {
   // This moves the active tab to the left in the tab menu
   moveTabLeft() {
     const {activeTabKey, orderedTabKeys} = this.props;
-    let newTabs = [...orderedTabKeys];
-    let index = newTabs.indexOf(activeTabKey);
-    if (index > 0) {
-      this.swapTabsSetKeyCloseTab(index - 1, index, newTabs);
-    }
+    let index = orderedTabKeys.indexOf(activeTabKey);
+    this.swapTabsSetKeysCloseTab(index - 1, index);
   }
 
   // This moves the active tab to the right in the tab menu
   moveTabRight() {
     const {activeTabKey, orderedTabKeys} = this.props;
-    let newTabs = [...orderedTabKeys];
-    let index = newTabs.indexOf(activeTabKey);
-    if (index < newTabs.length - 1) {
-      this.swapTabsSetKeyCloseTab(index, index + 1, newTabs);
-    }
+    let index = orderedTabKeys.indexOf(activeTabKey);
+    this.swapTabsSetKeysCloseTab(index, index + 1);
   }
 
-  swapTabsSetKeyCloseTab(index1, index2, newTabs) {
-    const {setOrderedTabKeys} = this.props;
+  swapTabsSetKeysCloseTab(index1, index2) {
     // handle swapping of tabs and closing the tab menu
-    let file1 = newTabs[index1];
-    newTabs[index1] = newTabs[index2];
-    newTabs[index2] = file1;
-    setOrderedTabKeys(newTabs);
+    const newTabs = [...this.props.orderedTabKeys];
+    if (index1 >= 0 && index2 <= newTabs.length - 1) {
+      let file1 = newTabs[index1];
+      newTabs[index1] = newTabs[index2];
+      newTabs[index2] = file1;
+      this.props.setOrderedTabKeys(newTabs);
+    }
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
