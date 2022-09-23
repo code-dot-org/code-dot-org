@@ -8,7 +8,7 @@ import {InitSound, GetCurrentAudioTime, PlaySound, StopSound} from './sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
-import moduleStyles from './music.module.scss';
+import {baseToolbox, createMusicToolbox} from '@cdo/apps/music/blocks/toolbox';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
@@ -160,6 +160,7 @@ class MusicView extends React.Component {
           });
         })
         .flat(2);
+      this.workspace.updateToolbox(createMusicToolbox(library));
       InitSound(soundList);
     });
   }
@@ -186,85 +187,6 @@ class MusicView extends React.Component {
 
   initBlockly = () => {
     var self = this;
-
-    var toolbox = {
-      kind: 'categoryToolbox',
-      contents: [
-        {
-          kind: 'category',
-          name: 'Samples',
-          cssConfig: {
-            container: moduleStyles.toolboxCategoryContainer
-          },
-          contents: [
-            {
-              kind: 'block',
-              type: 'play_sound'
-            },
-            {
-              kind: 'block',
-              type: 'play_sound_with_variable'
-            },
-            {
-              kind: 'block',
-              type: 'play_sound_next_measure'
-            }
-          ]
-        },
-        {
-          kind: 'category',
-          name: 'Control',
-          cssConfig: {
-            container: moduleStyles.toolboxCategoryContainer
-          },
-          contents: [
-            {
-              kind: 'block',
-              type: 'loop_from_to'
-            },
-            {
-              kind: 'block',
-              type: 'if_even_then'
-            }
-          ]
-        },
-        {
-          kind: 'category',
-          name: 'Math',
-          cssConfig: {
-            container: moduleStyles.toolboxCategoryContainer
-          },
-          contents: [
-            {
-              kind: 'block',
-              type: 'example_number'
-            }
-          ]
-        },
-        {
-          kind: 'category',
-          name: 'Variables',
-          cssConfig: {
-            container: moduleStyles.toolboxCategoryContainer
-          },
-          contents: [
-            {
-              kind: 'button',
-              text: 'Create variable...',
-              callbackKey: 'createVariableHandler'
-            },
-            {
-              kind: 'block',
-              type: 'variable_get'
-            },
-            {
-              kind: 'block',
-              type: 'variable_set'
-            }
-          ]
-        }
-      ]
-    };
 
     Blockly.Blocks['play_sound'] = {
       init: function() {
@@ -663,8 +585,8 @@ class MusicView extends React.Component {
     const container = document.getElementById('blocklyDiv');
 
     this.workspace = Blockly.inject(container, {
-      toolbox: toolbox,
-      horizontalLayout: true,
+      // Toolbox will be programmatically generated once music manifest is loaded
+      toolbox: baseToolbox,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true}
       //theme: {componentStyles: {workspaceBackgroundColour: '#222'}}
     });
