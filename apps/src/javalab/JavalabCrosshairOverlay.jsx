@@ -44,9 +44,5 @@ export function resizeCrosshairOverlay() {
 }
 
 export function showOverlayFromState(state) {
-  return (
-    !state.pageConstants.isReadOnlyWorkspace &&
-    !state.javalab.isVisualizationCollapsed &&
-    !state.javalab.isRunning
-  );
+  return !state.javalab.isVisualizationCollapsed && !state.javalab.isRunning;
 }
