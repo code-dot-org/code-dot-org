@@ -202,11 +202,11 @@ export default class AnimationUpload extends React.Component {
   };
 
   handleAvailabilityChange = event => {
-    event.persist();
+    const value = event.target.value;
     let {filename, category, fileData} = this.state;
     this.setState(
       {
-        availability: event.target.value || this.state.availability,
+        availability: value || this.state.availability,
         category: '',
         metadata: '',
         destination: '',
@@ -215,7 +215,7 @@ export default class AnimationUpload extends React.Component {
       () => {
         if (this.state.availability === AnimationLocations.level) {
           this.determineIfAnimationAlreadyExists(
-            event.target.value,
+            value,
             filename.split('.')[0],
             category,
             fileData
@@ -226,11 +226,11 @@ export default class AnimationUpload extends React.Component {
   };
 
   handleCategoryChange = event => {
-    event.persist();
+    const value = event.target.value;
     let {filename, availability, fileData} = this.state;
     this.setState(
       {
-        category: event.target.value,
+        category: value,
         metadata: '',
         [ANIMATION_EXISTS_CHECK]: Status.WAITING
       },
@@ -238,7 +238,7 @@ export default class AnimationUpload extends React.Component {
         this.determineIfAnimationAlreadyExists(
           availability,
           filename.split('.')[0],
-          event.target.value,
+          value,
           fileData
         );
       }
