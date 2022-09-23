@@ -39,10 +39,6 @@ def parse_options
 
       opts.separator ""
 
-      opts.on('-l', '--local', 'Use local curriculum builder running on localhost:8000.') do
-        options.local = true
-      end
-
       opts.on('-n', '--dry-run', 'Perform basic validation without importing any data.') do
         options.dry_run = true
       end
@@ -66,49 +62,28 @@ def parse_options
 end
 
 def main(options)
-  cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
-
-  # recursively find all the data docs!
-  data_doc_slug_stack = ['concepts/data-library']
-  data_doc_key_set = Set[]
+  # recursively find all the data docs using a stack
+  data_doc_path_stack = ['concepts/data-library']
   data_doc_count = 0
 
-  until data_doc_slug_stack.empty?
-    current_slug = data_doc_slug_stack.pop
-
-    # only import Data Docs
-    # next unless current_slug.start_with?('concepts/data-library')
-
-    url = "#{cb_url_prefix}/documentation/export/#{current_slug}.json?format=json"
+  until data_doc_path_stack.empty?
+    current_path = data_doc_path_stack.pop
+    url = "#{cb_url_prefix}/documentation/export/#{current_path}.json?format=json"
     guide_json = fetch(url)
-
     guide = JSON.parse(guide_json)
 
-    # find a unique key based on the end of the slug
-    # if there are duplicates, append -N where N is a number that makes it unique
-    key_base = guide['slug'].rpartition('/').last
+    key = guide['slug'].rpartition('/').last
 
-    unique_key = key_base
-    iteration = 2
-    while data_doc_key_set.include?(unique_key)
-      unique_key = "#{key_base}-#{iteration}"
-      iteration += 1
-    end
+    data_doc_path_stack.concat(guide['children'])
 
-    # don't reuse that key
-    data_doc_key_set.add(unique_key)
-
-    # store the children with their parent key because we only want its children
-    data_doc_slug_stack.concat(guide['children'])
-
-    # skip serializing the 'concepts/data-library' map
+    # skip serializing the 'concepts/data-library' map, as we only want its children
     next if guide['slug'] == 'concepts/data-library'
 
     next if options.dry_run
 
     data_doc = DataDoc.find_or_initialize_by(
       {
-        key: unique_key,
+        key: key,
       }
     )
 
