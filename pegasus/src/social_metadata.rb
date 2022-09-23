@@ -7,6 +7,7 @@
 #   code.org/minecraft
 #   code.org/oceans
 #   code.org/hourofcode/overview
+#   code.org/learn
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
