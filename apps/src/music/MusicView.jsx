@@ -35,7 +35,7 @@ const songData = {
 
 const barWidth = 60;
 
-const secondsPerMeasure = 4;
+const secondsPerMeasure = 2;
 
 var hooks = {};
 
@@ -924,7 +924,7 @@ class MusicView extends React.Component {
                     <div
                       key={index}
                       style={{
-                        width: barWidth,
+                        width: barWidth * 2,
                         _borderLeft: '1px white solid',
                         position: 'absolute',
                         left: barWidth * eventData.when,
@@ -933,7 +933,7 @@ class MusicView extends React.Component {
                     >
                       <img
                         src={this.getWaveformImage(eventData.id)}
-                        style={{width: 90, paddingRight: 20}}
+                        style={{width: barWidth * 2, paddingRight: 20}}
                       />
                     </div>
                   );
