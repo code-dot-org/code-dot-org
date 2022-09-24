@@ -50,6 +50,10 @@ class MusicView extends React.Component {
     play_sound: (id, measure) => {
       //console.log('play sound', id, measure);
 
+      if (measure === undefined) {
+        return;
+      }
+
       // The user should see measures as 1-based, but
       // internally, we'll treat them as 0-based.
       songData.events.push({
@@ -60,6 +64,10 @@ class MusicView extends React.Component {
     },
     play_sound_next_measure: id => {
       //console.log('play sound next measure', id);
+
+      if (!this.state.isPlaying) {
+        return;
+      }
 
       // work out the next measure by rounding time up.
       const currentMeasure = this.getCurrentMeasure();
@@ -756,6 +764,8 @@ class MusicView extends React.Component {
       return 6;
     } else if (id.indexOf('drum') !== -1) {
       return 12;
+    } else {
+      return 0;
     }
   };
 
