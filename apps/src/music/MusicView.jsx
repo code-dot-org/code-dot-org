@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-import FontAwesome from '../templates/FontAwesome';
 import {InitSound, GetCurrentAudioTime, PlaySound, StopSound} from './sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
 import {baseToolbox, createMusicToolbox} from '@cdo/apps/music/blocks/toolbox';
+import Tabs from './Tabs';
+import Timeline from './Timeline';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
@@ -32,8 +33,6 @@ const songData = {
     }*/
   ]
 };
-
-const barWidth = 60;
 
 const secondsPerMeasure = 2;
 
@@ -122,7 +121,13 @@ class MusicView extends React.Component {
       windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
       appHeight: this.codeAppRef.offsetHeight,
-      library: null
+      library: null,
+      currentPanel: 'groups',
+      groupPanel: 'all',
+      isPlaying: false,
+      startPlayingAudioTime: null,
+      currentAudioTime: null,
+      updateNumber: 0
     };
   }
 
@@ -136,13 +141,7 @@ class MusicView extends React.Component {
       windowWidth,
       windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
-      appHeight: this.codeAppRef.offsetHeight,
-      currentPanel: 'groups',
-      groupPanel: 'all',
-      isPlaying: false,
-      startPlayingAudioTime: null,
-      currentAudioTime: null,
-      updateNumber: 0
+      appHeight: this.codeAppRef.offsetHeight
     });
 
     const resizeThrottleWaitTime = 100;
@@ -757,18 +756,6 @@ class MusicView extends React.Component {
     PlaySound(this.getCurrentGroup().path + '/' + id, 'mainaudio', 0);
   };
 
-  getVerticalOffsetForEventId = id => {
-    if (id.indexOf('lead') !== -1) {
-      return 0;
-    } else if (id.indexOf('bass') !== -1) {
-      return 6;
-    } else if (id.indexOf('drum') !== -1) {
-      return 12;
-    } else {
-      return 0;
-    }
-  };
-
   getCurrentMeasure = () => {
     const currentAudioTime = GetCurrentAudioTime();
     if (currentAudioTime === null) {
@@ -794,18 +781,6 @@ class MusicView extends React.Component {
 
   getCurrentGroupSounds = () => {
     return this.getCurrentGroup()?.folders;
-  };
-
-  getWaveformImage = id => {
-    const filenameToImgUrl = {
-      waveform_lead: require('@cdo/static/music/waveform-lead.png'),
-      waveform_bass: require('@cdo/static/music/waveform-bass.png'),
-      waveform_drum: require('@cdo/static/music/waveform-drum.png')
-    };
-
-    return (
-      filenameToImgUrl['waveform_' + id] || filenameToImgUrl['waveform_lead']
-    );
   };
 
   render() {
@@ -849,16 +824,12 @@ class MusicView extends React.Component {
 
     const showCode = isDesktop || this.state.currentPanel === 'code';
     const showTimeline = isDesktop || this.state.currentPanel === 'timeline';
-
     const currentPanel = this.state.currentPanel;
 
-    const playHeadOffset = this.state.isPlaying
-      ? ((this.state.currentAudioTime - this.state.startPlayingAudioTime) *
-          barWidth) /
-        this.convertMeasureToSeconds(1)
-      : null;
-
     const currentGroup = this.getCurrentGroup();
+    const currentAudioElapsedtime =
+      this.state.currentAudioTime - this.state.startPlayingAudioTime;
+    const currentMeasure = this.getCurrentMeasure();
 
     return (
       <div
@@ -887,181 +858,24 @@ class MusicView extends React.Component {
         </div>
 
         {showTimeline && (
-          <div
-            style={{
-              backgroundColor: '#222',
-              height: 100,
-              width: '100%',
-              borderRadius: 4,
-              padding: 10,
-              boxSizing: 'border-box',
-              backgroundImage:
-                currentGroup &&
-                `url("${baseUrl +
-                  currentGroup.path +
-                  '/' +
-                  currentGroup.themeImageSrc}")`,
-              backgroundSize: '100% 200%'
-            }}
-          >
-            <div style={{float: 'left'}}>
-              Timeline
-              <br />
-              <br />
-            </div>
-            {this.state.isPlaying && (
-              <div style={{float: 'right'}}>
-                <button
-                  type="button"
-                  onClick={() => this.playTrigger()}
-                  style={{padding: 2, fontSize: 10, margin: 0}}
-                >
-                  trigger
-                </button>
-              </div>
-            )}
-            <div
-              style={{
-                width: '100%',
-                overflow: 'hidden',
-                height: 50,
-                position: 'relative'
-              }}
-            >
-              <div style={{width: 900}}>
-                {songData.events.map((eventData, index) => {
-                  return (
-                    <div
-                      key={index}
-                      style={{
-                        width: barWidth * 2,
-                        _borderLeft: '1px white solid',
-                        position: 'absolute',
-                        left: barWidth * eventData.when,
-                        top: 12 + this.getVerticalOffsetForEventId(eventData.id)
-                      }}
-                    >
-                      <img
-                        src={this.getWaveformImage(eventData.id)}
-                        style={{width: barWidth * 2, paddingRight: 20}}
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
-                {playHeadOffset !== null && (
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: playHeadOffset,
-                      width: 1,
-                      height: 40,
-                      borderLeft: '3px yellow solid'
-                    }}
-                  >
-                    &nbsp;
-                  </div>
-                )}
-              </div>
-
-              <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
-                {[...Array(30).keys()].map((measure, index) => {
-                  return (
-                    <div
-                      key={index}
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: measure * barWidth,
-                        width: 1,
-                        height: 40,
-                        borderLeft:
-                          measure === this.getCurrentMeasure()
-                            ? '2px #888 solid'
-                            : '2px #444 solid',
-                        color:
-                          measure === this.getCurrentMeasure()
-                            ? '#ddd'
-                            : '#888',
-                        paddingLeft: 5
-                      }}
-                    >
-                      {measure + 1}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+          <Timeline
+            currentGroup={currentGroup}
+            isPlaying={this.state.isPlaying}
+            playTrigger={this.playTrigger}
+            songData={songData}
+            currentAudioElapsedTime={currentAudioElapsedtime}
+            convertMeasureToSeconds={this.convertMeasureToSeconds}
+            baseUrl={baseUrl}
+            currentMeasure={currentMeasure}
+          />
         )}
-        <div
-          style={{
-            position: 'fixed',
-            bottom: 0,
-            backgroundColor: '#222',
-            height: 50,
-            left: 10,
-            right: 10,
-            borderRadius: 4,
-            marginTop: 10,
-            justifyContent: 'space-evenly',
-            display: 'flex',
-            alignItems: 'center'
-          }}
-        >
-          <div
-            style={{
-              textAlign: 'center',
-              cursor: 'pointer',
-              color: isDesktop || currentPanel === 'groups' ? 'white' : '#777'
-            }}
-            onClick={() => this.choosePanel('groups')}
-          >
-            <FontAwesome icon="book" style={{fontSize: 25}} />
-            <div style={{fontSize: 8}}>Groups</div>
-          </div>
-          <div
-            style={{
-              textAlign: 'center',
-              cursor: 'pointer',
-              color: isDesktop || currentPanel === 'code' ? 'white' : '#777'
-            }}
-            onClick={() => this.choosePanel('code')}
-          >
-            <FontAwesome icon="music" style={{fontSize: 25}} />
-            <div style={{fontSize: 8}}>Code song</div>
-          </div>
-          <div
-            style={{
-              textAlign: 'center',
-              cursor: 'pointer',
-              color: isDesktop || currentPanel === 'timeline' ? 'white' : '#777'
-            }}
-            onClick={() => this.choosePanel('timeline')}
-          >
-            <FontAwesome
-              icon={this.state.isPlaying ? 'stop' : 'play'}
-              style={{fontSize: 25}}
-            />
-            <div style={{fontSize: 8}}>
-              {this.state.isPlaying ? 'Stop song' : 'Play song'}
-            </div>
-          </div>
-          <div
-            style={{
-              textAlign: 'center',
-              cursor: 'pointer',
-              color: isDesktop || currentPanel === 'liveplay' ? 'white' : '#777'
-            }}
-            onClick={() => this.choosePanel('liveplay')}
-          >
-            <FontAwesome icon="th" style={{fontSize: 25}} />
-            <div style={{fontSize: 8}}>Live play</div>
-          </div>
-        </div>
+
+        <Tabs
+          isDesktop={isDesktop}
+          currentPanel={currentPanel}
+          choosePanel={this.choosePanel}
+          isPlaying={this.state.isPlaying}
+        />
       </div>
     );
   }
