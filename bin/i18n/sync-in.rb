@@ -444,36 +444,6 @@ def localize_course_offerings
   write_dashboard_json('course_offerings', hash)
 end
 
-# Encapsulation of the sync-in process for our `Script`
-# model's attributes. This is meant to be built on top of
-# for any future attributes we end up needing to translate.
-def localize_scripts
-  puts "Preparing scripts"
-
-  scripts_hash = Hash.new
-  Script.all.each do |script|
-    next unless ScriptConstants.i18n? script.name
-
-    # Announcements
-    scripts_hash['script_announcements'] = Hash.new if scripts_hash['script_announcements'].nil?
-    script.announcements&.each do |announcement|
-      # An announcement is not translatable if it doesn't have a key
-      next unless announcement['key']
-
-      translations = Hash.new
-      %w(notice details buttonText).each do |attribute|
-        translations[attribute] = announcement[attribute] unless announcement[attribute].nil?
-      end
-
-      scripts_hash['script_announcements'][announcement['key']] = translations
-    end
-  end
-
-  scripts_hash.each do |key, value|
-    write_dashboard_json(key, value)
-  end
-end
-
 def write_dashboard_json(location, hash)
   File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), "w+") do |f|
     f.write(JSON.pretty_generate(hash))
