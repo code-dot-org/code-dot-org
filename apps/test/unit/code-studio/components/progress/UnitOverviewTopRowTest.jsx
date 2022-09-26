@@ -23,7 +23,8 @@ const defaultProps = {
   showAssignButton: true,
   isMigrated: false,
   unitCompleted: false,
-  hasPerLevelResults: false
+  hasPerLevelResults: false,
+  isProfessionalLearningCourse: false
 };
 
 describe('UnitOverviewTopRow', () => {
@@ -107,6 +108,28 @@ describe('UnitOverviewTopRow', () => {
         />
       )
     ).to.be.true;
+  });
+
+  it('does not render "Print Certificate" button for participant in professional learning course', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        viewAs={ViewType.Participant}
+        unitCompleted={true}
+        isProfessionalLearningCourse={true}
+      />
+    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          __useDeprecatedTag
+          href="/s/test-script/next"
+          text={i18n.printCertificate()}
+          size={Button.ButtonSize.large}
+        />
+      )
+    ).to.be.false;
   });
 
   it('renders SectionAssigner for instructor', () => {

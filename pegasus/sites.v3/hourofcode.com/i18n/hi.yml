@@ -5,30 +5,36 @@ hi:
   language: अंग्रेजी
   front_title: इतिहास में सबसे बडे शिक्षण कार्यक्रम से जुड़ें, %{campaign_date}
   coming_soon: जल्दी आ रहा है
-  campaign_date_start_short: दिसम्बर 6
-  campaign_date_start_long: दिसम्बर 6
-  campaign_date_short: दिसम्बर 7-13
-  campaign_date_full: दिसम्बर 6-12
-  campaign_date_year: '2021'
-  campaign_date_full_year: दिसंबर 6-12, 2021
+  campaign_date_start_short: दिसम्बर 5
+  campaign_date_start_long: दिसम्बर 5
+  campaign_date_short: दिसम्बर 5-11
+  campaign_date_full: दिसम्बर 5-11
+  campaign_date_year: '2022'
+  campaign_date_full_year: दिसंबर 5-11, 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
+  nonus_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: दिसम्बर 6
-  europe_campaign_date_start_long: दिसम्बर 6
-  europe_campaign_date_short: दिसम्बर 7-13
-  europe_campaign_date_full: दिसम्बर 6-12
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: दिसंबर 6-12, 2021
-  africa_campaign_date_start_short: दिसम्बर 6
-  africa_campaign_date_start_long: दिसम्बर 6
-  africa_campaign_date_short: दिसम्बर 7-13
-  africa_campaign_date_full: दिसम्बर 6-12
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: दिसंबर 6-12, 2021
+  latam_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
+  latam_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
+  europe_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
+  africa_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  आज सीखें, अपना कल बेहतर बनाएँ।  "
@@ -550,8 +556,6 @@ hi:
     शहर को मानचित्र मे लेंगे।यदि आप कई ईवेंट होस्ट कर रहे हैं, तो कृपया प्रत्येक के
     लिए एक अनोखा म या ईमेल सबमिट करें।हम केवल एक इवैंट प्रति नाम और ईमेल संयोजन की
     गणना करते हैं।
-  signup_registration_deadline: ऑवर ऑफ़ कोड के लिए पंजीकरण 11 दिसंबर को बंद हो जाता
-    है।
   signup_name_placeholder: आपका नाम
   signup_email_placeholder: आप@नमूना.com
   signup_organization_name_placeholder: उदाहरण के लिए, लिंकन हाई स्कूल
@@ -990,7 +994,7 @@ hi:
   title_proclamation: कंप्यूटर विज्ञान शिक्षा सप्ताह का नमूना संकल्प सहायक और ऑवर
     ऑफ़ कोड
   title_stats: ब्लर्ब और आँकड़े
-  title_partners: साझेदार
+  title_partners: भागीदार
   title_resources: संसाधन
   title_past_posters: Past Hour of Code Posters
   title_signup_thanks: ऑवर ऑफ़ कोड की मेजबानी करने के लिए साइन अप करने के लिए धन्यवाद!

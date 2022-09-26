@@ -39,16 +39,14 @@
     "instructions_icon": "crab",
     "name_suffix": "_2022",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "If6N/MuQgLukMZWRxexo4Y3G6Wf3GLlnRBeBW2z7T80K+ZnmnlMhn8kXbN0g\nFpT/ElgbyeqhYQftEIHprwo1Vw==\n"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-06-13T21:00:27.000Z",
   "level_num": "custom",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:27.723+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_freeplay\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_freeplay\"},{\"changed_at\":\"2022-07-20 21:57:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-07-21 17:31:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-23 19:08:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:27.723+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_freeplay\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_freeplay\"},{\"changed_at\":\"2022-07-20 21:57:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-07-21 17:31:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-23 19:08:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 18:43:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

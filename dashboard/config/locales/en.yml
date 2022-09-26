@@ -571,6 +571,7 @@ en:
     choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Print Certificate"
   certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
+  certificate_hour_of_code: "Hour of Code"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
@@ -1109,6 +1110,8 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
@@ -1222,3 +1225,4 @@ en:
       missing_params: "Must provide user, level, and unit ids"
       cannot_view_locked_answers: "Cannot view answers while locked"
       forbidden: "User cannot update student's lockable state"
+  reset_predict_progress_button: "Delete Answer"

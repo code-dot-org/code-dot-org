@@ -1470,3 +1470,10 @@ pl:
   unit_prefix: Jednostka %{n}
   code_org_logo_alt: Strona domowa Code.org
   teacher_feedback: Opinie nauczycieli
+  lesson_lock:
+    error:
+      no_updates: Brak aktualizacji do wykonania
+      missing_params: Należy podać iużytkownika, poziom i identyfikator jednostki
+      cannot_view_locked_answers: Nie można wyświetlić odpowiedzi, gdy jest zablokowany
+      forbidden: Użytkownik nie może zaktualizować stanu blokady ucznia
+  reset_predict_progress_button: Usuń odpowiedź

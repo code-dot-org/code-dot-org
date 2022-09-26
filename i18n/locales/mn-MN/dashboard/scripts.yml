@@ -2783,6 +2783,8 @@ mn:
           title: Зөв бичих дүрэм заах зөгий
         csd-post-survey-2021:
           title: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+        ai-ethics-2021:
+          description_audience: Анги 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -3053,3 +3055,11 @@ mn:
           title: КШУ-ны нээлтийг гүн гүнзгий сурах модуль 1
         soccer:
           name: хөлбөмбөг
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа

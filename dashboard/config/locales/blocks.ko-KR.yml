@@ -2,6 +2,8 @@
 ko:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       BadGuys_makeNewBadGuysSprite:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       BadGuys_setSizeAll_dropdown:

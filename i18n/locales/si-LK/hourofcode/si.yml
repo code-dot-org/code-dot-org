@@ -11,6 +11,12 @@ si:
   campaign_date_full: දෙසැම්බර් 5-11
   campaign_date_year: '2016'
   campaign_date_full_year: දෙසැම්බර් 6-12, 2021
+  nonus_campaign_date_start_short: ඔක්තෝම්බර් 1
+  nonus_campaign_date_start_long: ඔක්තෝම්බර් 1
+  nonus_campaign_date_short: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
+  nonus_campaign_date_full: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
+  nonus_campaign_date_year: '2016'
+  nonus_campaign_date_full_year: 2021 ඔක්තෝම්බර් 1 - 2021 දෙසැම්බර් 12
   latam_campaign_date_start_short: ඔක්තෝම්බර් 1
   latam_campaign_date_start_long: ඔක්තෝම්බර් 1
   latam_campaign_date_short: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
@@ -23,8 +29,8 @@ si:
   europe_campaign_date_full: ඔක්තෝම්බර් 9 - 24
   europe_campaign_date_year: '2016'
   europe_campaign_date_full_year: 2021 ඔක්තෝම්බර් 9 - 24
-  africa_campaign_date_start_short: දෙසැ. 5
-  africa_campaign_date_start_long: දෙසැම්බර් 5
+  africa_campaign_date_start_short: ඔක්තෝම්බර් 1
+  africa_campaign_date_start_long: ඔක්තෝම්බර් 1
   africa_campaign_date_short: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_full: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_year: '2016'
@@ -529,8 +535,6 @@ si:
   signup_multiple_event_warning: ඔබ විසින් වැඩසටහන් කීපයක් සංවිධානය කරන්නේ නම් සෑම
     වැඩසටහණක් සඳහාම වෙනස් නාමයක් භාවිත කරන්න. අප විසින් සලකා බලන්නේ සෑම වැඩසටහණකටම
     අදාල නාමය හා එහි ඊ-මේල් ලිපිනය කන යුගලයයි.
-  signup_registration_deadline: Hour of Code ලියාපදිංචිය දෙසැම්බර් දොලොස් වන දායින්
-    අවසන් වේ.
   signup_name_placeholder: ඔබේ නම
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: උදාහරණයක් ලෙස, මධ්‍ය මහා විද්‍යාලය පොළොන්නරුව
@@ -660,11 +664,11 @@ si:
     පිලිබඳ කමිටුව</a> විසින් කරනු ලබයි. මීට අමතරව සහකරුවන් බොහෝ පිරිසක් ඇත. මේ අතර
     ප්‍රධාන වශයෙන්&mdash; මයික්‍රෝසොෆ්ට්, ඇපල්, ඇමේසන් යන සමාගම් සහ ඇමරිකාවේ ගැහැණු
     හා පිරිමි ළමුන්ගේ සංගම් සහ ඇමරිකාවේ පාසල් කමිටුව ද වේ.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: මම පරිගණක ක්‍රමලේඛය (Coding) පිළිබඳ කිසිදු දෙයක් දන්නේනෑ. නමුත්
     තවමත් මට Hour of Code වැඩසටහනක් පැවැත්විය හැකිද?
   hoc_faq_host_a: ඇත්ත වශයෙන්ම ඔව්. හි සියලුම ක්‍රියාකාරකම් තනිවම සිදු කල හැකි ඒවාය.

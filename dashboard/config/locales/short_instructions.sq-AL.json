@@ -382,7 +382,31 @@
         "2-3 Maze 1": "Me udhëhiq për tek green evilness! (Kujdes nga TNT)",
         "2-3 Maze 3": "Qetësohu dhe më ndihmo të gjej derrkucin e keq. Përndryshe\nunë mund të nevrikosem!",
         "Overworld Chop Tree - allthethings": "Druri është një burim shumë i rëndësishëm. Shumë gjera\njanë bërë prej saj. Ecni në pemë dhe përdorni komandën \"shkatërro bllokun\" për\nta prerë atë.",
-        "allthethings-anigif-instructions": "Më leviz drejt lindjes për të me çuar te derrkuci!"
+        "allthethings-anigif-instructions": "Më leviz drejt lindjes për të me çuar te derrkuci!",
+        "Overworld Avoid Monsters2022": "Vrapimi drejt bimëve kacavjerrëse është një ide e keqe. Levizni me kujdes mbrapa bimëve kacavjerrëse në shtëpinë tuaj.",
+        "Overworld Chop Tree2022": "Druri është një burim shumë i rëndësishëm. Shumë gjera\njanë bërë prej saj. Ecni në pemë dhe përdorni komandën \"shkatërro bllokun\" për\nta prerë atë.",
+        "Overworld Chop Trees2022": "Ne kemi nevojë për të ndërtuar një shtëpi përpara se djelli të perëndoj. Shtëpitë kërkojnë shumë dru. Shkurtoni të gjitha 3 pemët.",
+        "Overworld Free Play 20x202022": "Urime! Ju keni përfunduar\ntë gjitha puzzles tona! Tani minoni, ndërtoni, dhe krijoni diçka unike duke përdorur çdo gjë ju keni mësuar deri tani.",
+        "Overworld House Frame Chosen2022": "Ndërtoni pjesën tjetër të shtëpise duke përdorur cdo material që ju dëshironi. Komanda \"përsërit\" do të jetë e nevojshme.",
+        "Overworld Move to Sheep2022": "Shto një komandë të dytë \"ec përpara\" për të\narritur delet.",
+        "Overworld Place Wall2022": "Çdo shtëpi fillon me një mur. Ndërtoni të\npjesën  e parë të shtëpisë tuaj duke vendosur komandën \"vendi\" dhe \"ec përpara\" \nbrenda ciklit përsëritës .",
+        "Overworld Plant Crops2022": "Është e mirë ta planifikoni përpara. Korrni bimët në të  dy anët e ujit kështu që ju nuk do të keni  uri më vonë.",
+        "Overworld Powered Minecart2022": "Punë e mrekullueshme! Ju keni mbledhur shumë nga burimet dhe ndërtuat një shtëpi modeste. Tani vendos gardhin nga kufiri i hartës te dera e shtëpisë tuaj.",
+        "Overworld Shear Sheep2022": "Koha e qethjes së deleve! Përdor komandën \"qethje\"\npër të mbledhur lesh nga të dyja delet.",
+        "Underground Avoiding Lava2022": "Llava është fshehur nën disa nga këto\nblloqe, të cilat ju do të duhet t\\`i mbuloni para se të lëvizin përpara. Një komand \"nëse\" \ndo të jetë e nevojshme këtu. Shto një komandë \"lëviz përpara\" në vendin e duhur\npër të minuar këto blloqe",
+        "Underground If Statements2022": "Tani gjërat po ndërlikohen. Mino \n3 gur të kuq, por mos bjerë në llavë. Përdorni një komand \"nëse\" për të vendosur kalldrëm mbi çdo llavë të zbuluar.\n ",
+        "Underground Iron2022": "Ecja në llavën e derdhur është një ide e keqe. Vendos\nkalldrëm për të krijuar një urë, pastaj mino të paktën dy nga blloqet e hekurit.",
+        "Underground Mining Coal2022": "Ju do të gjeni burimet më të vlefshme nëntokësore, por aty mund të bëhet errësirë. Vendosni të paktën 2 pishtarë dhe mino të paktën 2 thëngji.",
+        "courseC_PlayLab_events32022": "Mund të shkruani një program të bëj Jorge (aktorin 1) të lëvizi drejt Maces Olive?",
+        "courseC_artist_prog52022": "Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:\ntë treja brinjët janë të së njëjtës gjatësi.",
+        "courseD_bee_nestedLoops82022": "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. ",
+        "courseD_maze_nestedLoops42022": "Më ço tek luledielli!",
+        "courseD_maze_nestedLoops62022": "Më ço tek luledielli!",
+        "courseF_artist_for72022": "Bëjë tre ndryshime të vogla në\nkod nga niveli i fundit për të marrë këtë!\n !",
+        "courseF_artist_for_challenge12022": "A mund të kuptoni se si të rikrijoni këtë vizatim?",
+        "courseF_artist_for_challenge22022": "A mund të kuptoni se si të rikrijoni këtë vizatim me një cikël të thjeshtë?",
+        "courseF_bee_for82022": "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\\\r\nMos harro:\nNëse cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \\\r",
+        "courseF_bee_for_challenge22022": "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       }
     }
   }

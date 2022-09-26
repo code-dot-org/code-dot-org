@@ -1,4 +1,11 @@
 -#
+  This is the old banner we should show GDPR countries in order to inform them
+  about our privacy policy. This file should be removed once we finish the
+  'onetrust_cookie_scripts' experiment.
+
+-# Don't show this banner if we are showing the new OneTrust GDPR cookie banner.
+- return if experiment_value('onetrust_cookie_scripts')
+-#
   Only show cookie banner when in a GDPR country, or when we are in the test
   environment and the show_cookie_banner_on_test URL parameter is specified,
   presumably by a UI test.

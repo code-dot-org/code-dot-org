@@ -5,29 +5,35 @@ pl:
   language: Polski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
-  campaign_date_start_short: 6 grudnia
-  campaign_date_start_long: 6 grudnia
-  campaign_date_short: 7-13 grudnia
-  campaign_date_full: 6-12 grudnia
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 grudnia 2021
+  campaign_date_start_short: 5 grudnia
+  campaign_date_start_long: 7 grudnia
+  campaign_date_short: 5-11 grudnia
+  campaign_date_full: 5-11 grudnia
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 grudnia 2022
+  nonus_campaign_date_start_short: 1 października
+  nonus_campaign_date_start_long: 1 października
+  nonus_campaign_date_short: 1 października - 18 grudnia
+  nonus_campaign_date_full: 1 października - 18 grudnia
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
   latam_campaign_date_start_short: 1 października
   latam_campaign_date_start_long: 1 października
   latam_campaign_date_short: 1 października - 18 grudnia
   latam_campaign_date_full: 1 października - 18 grudnia
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1 października 2020 - 18 grudnia 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
   europe_campaign_date_start_short: 10 października
   europe_campaign_date_start_long: 10 października
   europe_campaign_date_short: '10 - 25 października '
   europe_campaign_date_full: 10 - 25 października
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10 - 25 października 2020
-  africa_campaign_date_start_short: 6 grudnia
-  africa_campaign_date_start_long: 6 grudnia
+  africa_campaign_date_start_short: 1 października
+  africa_campaign_date_start_long: 1 października
   africa_campaign_date_short: '1- 31 października '
   africa_campaign_date_full: 1 -  31 października
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 - 31 października 2020
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -542,8 +548,6 @@ pl:
   signup_multiple_event_warning: Jeśli jesteś gospodarzem wielu wydarzeń, prosimy
     o przesłanie unikatową nazwę lub e-mail dla każdego z nich. Liczymy tylko jedno
     wydarzenie po kombinacji nazwy i e-mail.
-  signup_registration_deadline: Rejestracja uczestnictwa w Godzinie Kodowania kończy
-    się 12 grudnia.
   signup_name_placeholder: Twoje imię i nazwisko
   signup_email_placeholder: Jan.Kowalski@example.com
   signup_organization_name_placeholder: Na przykład Lincoln High School

@@ -5,30 +5,36 @@ ja:
   language: 日本語
   front_title: "%{campaign_date} は、史上最大の学習イベントに参加しよう"
   coming_soon: 近日公開
-  campaign_date_start_short: 12 月 6 日
-  campaign_date_start_long: 12 月 6 日
-  campaign_date_short: 12月 7 − 13日
-  campaign_date_full: 12月 6 − 12日
-  campaign_date_year: '2021'
-  campaign_date_full_year: 2021 年 12 月 6 - 12 日
+  campaign_date_start_short: 12月5日
+  campaign_date_start_long: 12月5日
+  campaign_date_short: 12月5日～11日
+  campaign_date_full: 12月5日～11日
+  campaign_date_year: '2022'
+  campaign_date_full_year: 2022年12月5日～11 日
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 10月1日～12月18日
+  nonus_campaign_date_full: 10月1日～12月18日
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 2022年10月1日～2022年12月18日
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 12 月 6 日
-  europe_campaign_date_start_long: 12 月 6 日
-  europe_campaign_date_short: 12月 7 − 13日
-  europe_campaign_date_full: 12月 6 − 12日
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 2021 年 12 月 6 - 12 日
-  africa_campaign_date_start_short: 12 月 6 日
-  africa_campaign_date_start_long: 12 月 6 日
-  africa_campaign_date_short: 12月 7 − 13日
-  africa_campaign_date_full: 12月 6 − 12日
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 2021 年 12 月 6 - 12 日
+  latam_campaign_date_short: 10月1日～12月18日
+  latam_campaign_date_full: 10月1日～12月18日
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 2022年10月1日～2022年12月18日
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 10月1日～12月18日
+  europe_campaign_date_full: 10月1日～12月18日
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 2022年10月1日～2022年12月18日
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 10月1日～12月18日
+  africa_campaign_date_full: 10月1日～12月18日
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 2022年10月1日～2022年12月18日
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  今日から学び、明るい明日を築く。  "
@@ -465,7 +471,6 @@ ja:
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: 複数のイベントを開催する場合は、それぞれに一意の名前またはメールアドレスを提出してください。我々は、名前とメールアドレスの組み合わせごとに1
     つのイベントとしてカウントします。
-  signup_registration_deadline: Hour of Codeの登録締切は12月11日です。
   signup_name_placeholder: 'お名前
 
 '
@@ -769,7 +774,7 @@ ja:
     ように促しています。
   highlights_constant_athletes_short_heading: 自分を駆り立てましょう
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code™ は Code.orgの商標です。
+  footer_trademark_message: Hour of Code®とHora del Código®は Code.orgの商標です。
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: パートナー
   footer_menu_contact: お問い合わせ

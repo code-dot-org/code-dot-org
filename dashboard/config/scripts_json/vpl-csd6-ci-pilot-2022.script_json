@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-09 03:04:11 UTC",
+    "serialized_at": "2022-09-20 16:18:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -59,8 +59,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Install the Maker App and set up your Circuit Playground . \n* Test Circuit Playground features. \n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Install the Maker App and set up your Circuit Playground . \n* Test Circuit Playground features. \n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Install the Maker App and set up your Circuit Playground. \n* Test Circuit Playground features. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Install the Maker App and set up your Circuit Playground. \n* Test Circuit Playground features. \n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -451,6 +451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CS is Changing Everything"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -498,6 +501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L2"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -698,6 +704,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -720,6 +729,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -995,6 +1007,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1121,6 +1136,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Review_2222"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1143,6 +1161,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1240,6 +1261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

@@ -3,7 +3,7 @@
   "atFlower": "à la fleur",
   "atHoneycomb": "au nid d'abeille",
   "avoidCowAndRemove": "éviter la vache et retirer 1",
-  "collect": "collecte",
+  "collect": "ramasser",
   "collectiblePresent": "il y a des trésors",
   "collectorCollectTooltip": "Collecte un objet",
   "collectorCollectedEverything": "Bravo! Tu as collecté {count, plural, one {the item} other {all # items}}!",

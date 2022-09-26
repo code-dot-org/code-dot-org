@@ -10,26 +10,32 @@ gl:
   campaign_date_start_long: 7 de Decembro
   campaign_date_short: Do 7 ao 13 de Decembro
   campaign_date_full: Do 7 ao 13 de Decembro
-  campaign_date_year: '2021'
-  campaign_date_full_year: December 6-12, 2021
+  campaign_date_year: '2022'
+  campaign_date_full_year: December 5-11, 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 7 Dec.
-  europe_campaign_date_start_long: 7 de Decembro
-  europe_campaign_date_short: Do 7 ao 13 de Decembro
-  europe_campaign_date_full: Do 7 ao 13 de Decembro
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: December 6-12, 2021
-  africa_campaign_date_start_short: 7 Dec.
-  africa_campaign_date_start_long: 7 de Decembro
-  africa_campaign_date_short: Do 7 ao 13 de Decembro
-  africa_campaign_date_full: Do 7 ao 13 de Decembro
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: December 6-12, 2021
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -535,8 +541,6 @@ gl:
   signup_multiple_event_warning: Se estás a organizar varios eventos, por favor, rexistra
     un único nome ou email para cada un deles. Nós unicamente contamos un evento por
     cada combinación de nome e email.
-  signup_registration_deadline: Registration for the Hour of Code closes December
-    13.
   signup_name_placeholder: O teu nome
   signup_email_placeholder: ti@exemplo.com
   signup_organization_name_placeholder: Por exemplo, Colexio Rosalía de Castro
@@ -675,11 +679,11 @@ gl:
     precedentes de socios</a>reuníronse para apoiar tamén a Hora do Código, &mdash;
     incluíndo a Microsoft, Apple, Amazon, Boys e Girls Clubs of America e o College
     Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Non sei nada sobre programación. Aínda así podo organizar un evento?
   hoc_faq_host_a: Por suposto. As actividades da Hora do Código son autoguiadas. Todo
     o que tes que facer é <a href='%{codeorg_url}/learn'>probar os nosos titoriais

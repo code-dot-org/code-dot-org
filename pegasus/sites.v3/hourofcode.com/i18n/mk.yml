@@ -11,24 +11,30 @@ mk:
   campaign_date_full: Декември 4-10
   campaign_date_year: '2017'
   campaign_date_full_year: Декември 7-13, 2020
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2017'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2017'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Дек. 4
-  europe_campaign_date_start_long: Декември 4
-  europe_campaign_date_short: Дек. 4-10
-  europe_campaign_date_full: Декември 4-10
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: Декември 7-13, 2020
-  africa_campaign_date_start_short: Дек. 4
-  africa_campaign_date_start_long: Декември 4
-  africa_campaign_date_short: Дек. 4-10
-  africa_campaign_date_full: Декември 4-10
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: Декември 7-13, 2020
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -536,7 +542,6 @@ mk:
     на мапата кога ќе се регистрирате. Ако сте домаќин на повеќе настани, ве молиме
     да поднесете уникатно име или имејл за секој од нив. Ние броиме само еден настан
     по име и комбинација на имејл.
-  signup_registration_deadline: Регистрацијата за Hour of Code се затвора на 11 Декември.
   signup_name_placeholder: Вашето име
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: На пример, средното училиште Lincoln
@@ -673,11 +678,11 @@ mk:
     како и без преседан коалицијата на партнери кои се здружија за поддршка на Часот
     на кодот &mdash; вклучувајќи ги и Мајкрософт, Епл, Амазон, Клубови на Момци и
     Девојки на Америка и Одбор на Колеџ.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Не знам ништо за кодирање. Може ли уште да бидам домаќин на настанот?
   hoc_faq_host_a: Секако. Активностите на Hour of Code се само-управувани. Се што
     треба да направите е <a href='%{codeorg_url}/learn'>пробајте ги нашите тековни
@@ -996,7 +1001,7 @@ mk:
     резервирани.
   footer_trademark_message: Час на Код™ е заштитен знак на Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
-  footer_menu_partners: Partners and Advisors
+  footer_menu_partners: Партнери
   footer_menu_contact: Contact us
   footer_menu_support: Support
   footer_menu_terms: Terms

@@ -129,7 +129,11 @@ describe('JavabuilderConnection', () => {
       });
       const javabuilderConnection = new JavabuilderConnection(
         null,
-        onOutputMessage
+        onOutputMessage,
+        null,
+        null,
+        null,
+        sinon.stub()
       );
 
       javabuilderConnection.establishWebsocketConnection('fake-token');

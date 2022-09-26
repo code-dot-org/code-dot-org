@@ -1363,6 +1363,7 @@ fr-FR:
   coursed-2020_name: Cours D (2020)
   coursee-2020_name: Cours E (2020)
   coursef-2020_name: Cours F (2020)
+  coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
   coursed-2022_name: Cours D (2021)
   express-2018_name: Cours Express (2018)
@@ -1371,6 +1372,7 @@ fr-FR:
   pre-express-2019_name: Cours Express pour les Pré-lecteurs (2019)
   express-2020_name: Cours Express (2020)
   pre-express-2020_name: Cours rapide pour les primo-lecteurs (2020)
+  express-2021_name: Cours Express (2021)
   pre-express-2021_name: Cours rapide pour les primo-lecteurs (2021)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
@@ -2650,8 +2652,8 @@ fr-FR:
   hoc2018_aquatic_video3: 'Minecraft : Voyage Aquatique - Les Conditions'
   hoc2018_aquatic_video4: 'Minecraft : Voyage aquatique - Félicitations'
   hoc2018_dance_video1: Soirée Dansante - Introduction
-  hoc2018_dance_video2: Soirée Dansante – Les Événements
-  hoc2018_dance_video3: Soirée Dansante – Les Propriétés
+  hoc2018_dance_video2: Soirée Dansante – Événements
+  hoc2018_dance_video3: Soirée Dansante – Propriétés
   hoc2018_dance_video4: Soirée Dansante - Félicitations
   dance_box_higher_power_line_1: Codez une danse au son de "Higher Power" de Coldplay
     et vous pourriez avoir l'occasion de voir le groupe en live!

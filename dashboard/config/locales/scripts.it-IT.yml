@@ -3302,6 +3302,8 @@ it:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Da 11 a 17 anni
         poem-art-2021:
           title: L'arte della poesia
         poetry-2021:
@@ -3838,6 +3840,7 @@ it:
         hello-world-csc:
           title: Ciao Mondo
         csd-playground:
+          name: csd-playground
           title: Alla Scoperta dell'informatica Parco giochi
           description_audience: Scrittori di curriculum
           description_short: Per allestire gli aggiornamenti nelle lezioni o nei livelli
@@ -3901,5 +3904,54 @@ it:
           student_description: Questa unità contiene un sondaggio per quando la tua
             classe ha finito le unità di CS Discoveries. Il tuo insegnante ti dirà
             quando è il momento di fare questo sondaggio.
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Estensione correzione degli errori asincrona
+        self-paced-pl-csd5-2022:
+          title: Insegnare IA e Apprendimento Automatico
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Lavoro asincrono modulo 2
         soccer:
           name: calcio
+          title: Codifica il tuo gioco di calcio
+          description_short: Crea un gioco di calcio
+          description: Crea un gioco di calcio
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sondaggio
+            lessonGroup-2:
+              display_name: Contenuto
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Sondaggio
