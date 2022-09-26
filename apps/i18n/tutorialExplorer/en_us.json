@@ -19,6 +19,7 @@
   "filterPlatformComputers": "Computers",
   "filterPlatformAndroid": "Android",
   "filterPlatformIos": "iPad/iPhone",
+  "filterPlatformRobotics": "Robotics, circuits",
   "filterPlatformNoInternet": "Poor or no internet",
   "filterPlatformNoComputers": "No computers or devices",
   "filterPlatformScreenReader": "Screen reader",
