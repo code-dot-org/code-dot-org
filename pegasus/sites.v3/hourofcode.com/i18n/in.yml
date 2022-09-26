@@ -474,7 +474,7 @@ in:
   hoc_faq_how_participate_a_markdown: crwdns2364808:0%{howto}crwdnd2364808:0%{campaign_date}crwdne2364808:0
   hoc_faq_behind_hoc_q: crwdns104930:0crwdne104930:0
   hoc_faq_behind_hoc_a: crwdns104931:0%{partner_url}crwdne104931:0
-  hoc_faq_behind_hoc_a_markdown: crwdns2364810:0%{partner_url}crwdne2364810:0
+  hoc_faq_behind_hoc_a_markdown: crwdns2364810:0[partners]crwdnd2364810:0%{partner_url}crwdne2364810:0
   hoc_faq_host_q: crwdns104932:0crwdne104932:0
   hoc_faq_host_a: crwdns104933:0%{codeorg_url}crwdne104933:0
   hoc_faq_host_a_markdown: crwdns2364812:0%{codeorg_url}crwdnd2364812:0%{howto}crwdne2364812:0

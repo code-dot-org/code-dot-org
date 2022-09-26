@@ -678,11 +678,11 @@ te:
     వీక్ <a href='%{partner_url}'>సలహా మరియు సమీక్షా కమిటీలు</a>తోపాటు మైక్రోసాఫ్ట్,
     ఆపిల్, అమేజాన్, అమెరికాలోని బాయ్స్ అండ్ గర్ల్స్ క్లబ్బులు మరియు కాలేజ్ బోర్డుతోసహా
     భాగస్వాముల ఒక అభూతపూర్వ కూటమి ద్వారా అవర్ ఆఫ్ కోడ్ స్ఫూర్తి పొందింది.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: నాకు కోడింగ్ గురించి ఏమీ తెలియదు. అయినా నేను ఒక ఈవెంట్ హోస్ట్ చేయగలనా?
   hoc_faq_host_a: అవును. అవర్ ఆఫ్ కోడ్ కార్యకలాపాలు స్వీయ-మార్గదర్శనం కలవి. మీరు చేయవలసినదల్లా
     <a href='%{codeorg_url}/learn'>మా ప్రస్తుత ట్యుటోరియల్స్ ప్రయత్నించడమే</a>, మీకు

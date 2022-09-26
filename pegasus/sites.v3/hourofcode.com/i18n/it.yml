@@ -6,7 +6,7 @@ it:
   front_title: Partecipa all'evento didattico più popolare del mondo, %{campaign_date}
   coming_soon: Sta arrivando
   campaign_date_start_short: 5 dic.
-  campaign_date_start_long: 6 dicembre
+  campaign_date_start_long: 5 dicembre
   campaign_date_short: 5 - 11 dic.
   campaign_date_full: 5-11 dicembre
   campaign_date_year: '2022'
@@ -1077,7 +1077,8 @@ it:
     Neymar Jr, Carmelo Anthony e altri ancora stimolano gli studenti a dare il massimo.
   highlights_constant_athletes_short_heading: Dai il massimo
   footer_copyright_message: Copyright %{current_year} Code.org. Tutti i diritti riservati.
-  footer_trademark_message: Hour of Code™ è un marchio registrato di Code.org.
+  footer_trademark_message: Hour of Code® e Hora del Código® sono marchi registrati
+    di Code.org.
   footer_built_on_github: Progettato su GitHub da Microsoft
   footer_menu_partners: Partner e Consulenti
   footer_menu_contact: Contattaci

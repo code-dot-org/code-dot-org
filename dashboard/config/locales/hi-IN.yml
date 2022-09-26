@@ -1475,3 +1475,10 @@ hi:
   unit_prefix: इकाई %{n}
   code_org_logo_alt: Code.org होम
   teacher_feedback: अध्यापक की प्रतिक्रिया
+  lesson_lock:
+    error:
+      no_updates: करने के लिए कोई अपडेट नहीं
+      missing_params: उपयोगकर्ता, स्तर और इकाई आईडी प्रदान करनी चाहिए
+      cannot_view_locked_answers: लॉक होने पर उत्तर नहीं देख सकते
+      forbidden: उपयोगकर्ता छात्र की लॉक करने योग्य स्थिति को अपडेट नहीं कर सकता
+  reset_predict_progress_button: उत्तर मिटाएँ

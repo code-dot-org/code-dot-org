@@ -1132,3 +1132,10 @@ it:
   unit_prefix: "Unità %{n}"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Commento dell'insegnante"
+  lesson_lock:
+    error:
+      no_updates: "Nessun aggiornamento da effettuare"
+      missing_params: "È necessario fornite gli ID utente, livello e unità"
+      cannot_view_locked_answers: "Impossibile visualizzare le risposte se bloccato"
+      forbidden: "L'utente non può aggiornare lo stato bloccabile dello studente"
+  reset_predict_progress_button: "Eliminare la risposta"

@@ -3024,6 +3024,8 @@ hi:
           lesson_groups:
             lessonGroup-5:
               display_name: सैंडबॉक्स
+        ai-ethics-2021:
+          description_audience: ग्रेड्स 6-12
         poem-art-2021:
           title: कविता आर्ट
         explore-data-1-2021:
@@ -3536,8 +3538,19 @@ hi:
               display_name: स्वागत है
         dlp-csp-mod1-2022:
           title: CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: अतुल्यकालिक डिबगिंग एक्सटेंशन
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: मॉड्यूल 2 अतुल्यकालिक कार्य
         soccer:
           name: फ़ुटबॉल
+          title: अपना खुद का सॉकर गेम कोड करें
+          description_short: अपना खुद का सॉकर गेम कोड करें
+          description: अपना खुद का सॉकर गेम कोड करें
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
