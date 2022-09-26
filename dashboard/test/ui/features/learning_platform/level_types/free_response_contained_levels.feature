@@ -88,3 +88,21 @@ Scenario: Authorized Teacher on App Lab with free response contained level
   Then I press "runButton"
   And I see no difference for "level run"
   Then I close my eyes
+
+Scenario: Teacher can reset progress on free response contained level
+  When I open my eyes to test "reset free response contained level"
+  Given I sign in as "Teacher_Lillian"
+  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/3?enableExperiments=instructorPredictLevelReset"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And I press keys "Here is my response!" for element ".response"
+  Then I press "runButton"
+  Then I press "resetButton"
+  Then I click selector "button:contains('Delete Answer')"
+  And I wait 10 seconds
+  And I see no difference for "level reset"
+  And I press keys "Here is my response!" for element ".response"
+  Then I press "runButton"
+  Then I press "resetButton"
+  And I see no difference for "new response after level reset"
+  Then I close my eyes

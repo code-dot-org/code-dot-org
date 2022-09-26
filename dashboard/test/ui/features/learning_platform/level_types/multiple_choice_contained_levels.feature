@@ -62,3 +62,22 @@ Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   Then I press "runButton"
   And I see no difference for "level run"
   Then I close my eyes
+
+Scenario: Teacher can reset progress on multiple choice contained level
+  When I open my eyes to test "reset multiple choice contained level"
+  Given I sign in as "Teacher_Lillian"
+  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2?enableExperiments=instructorPredictLevelReset"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  Then I press "unchecked_0"
+  Then I press "runButton"
+  And I see no difference for "level run" using stitch mode "none"
+  Then I press "resetButton"
+  Then I click selector "button:contains('Delete Answer')"
+  And I wait 10 seconds
+  And I see no difference for "level reset"
+  Then I press "unchecked_1"
+  Then I press "runButton"
+  Then I press "resetButton"
+  And I see no difference for "new response after level reset"
+  Then I close my eyes
