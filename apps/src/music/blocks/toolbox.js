@@ -7,7 +7,8 @@ export const baseToolbox = {
       kind: 'category',
       name: 'Samples',
       cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer
+        container: moduleStyles.toolboxCategoryContainer,
+        row: moduleStyles.blocklyTreeRow
       },
       contents: []
     },
@@ -15,7 +16,8 @@ export const baseToolbox = {
       kind: 'category',
       name: 'Control',
       cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer
+        container: moduleStyles.toolboxCategoryContainer,
+        row: moduleStyles.blocklyTreeRow
       },
       contents: [
         {
@@ -32,7 +34,8 @@ export const baseToolbox = {
       kind: 'category',
       name: 'Math',
       cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer
+        container: moduleStyles.toolboxCategoryContainer,
+        row: moduleStyles.blocklyTreeRow
       },
       contents: [
         {
@@ -45,7 +48,8 @@ export const baseToolbox = {
       kind: 'category',
       name: 'Variables',
       cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer
+        container: moduleStyles.toolboxCategoryContainer,
+        row: moduleStyles.blocklyTreeRow
       },
       contents: [
         {
@@ -68,6 +72,7 @@ export const baseToolbox = {
 
 export const createMusicToolbox = library => {
   const toolbox = {...baseToolbox};
+
   // Currently only supports 1 group
   const group = library.groups[0];
   for (let folder of group.folders) {
@@ -75,7 +80,8 @@ export const createMusicToolbox = library => {
       kind: 'category',
       name: folder.name,
       cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer
+        container: moduleStyles.toolboxCategoryContainer,
+        row: moduleStyles.blocklyTreeRow
       },
       contents: []
     };
