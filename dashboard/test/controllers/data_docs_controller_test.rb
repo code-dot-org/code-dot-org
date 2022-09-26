@@ -37,6 +37,12 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
 
+  # only levelbuilder can edit
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: :levelbuilder, response: :success
+
   test 'creating a new data doc writes serialization and redirects to show page with key in URL' do
     sign_in @levelbuilder
     new_key = 'doc_key'
@@ -49,6 +55,33 @@ class DataDocsControllerTest < ActionController::TestCase
 
   test 'show page renders 404 when data doc is not found' do
     get :show, params: {key: 'unknown_key'}
+    assert_response :not_found
+  end
+
+  test 'data doc is updated through update route' do
+    sign_in @levelbuilder
+    new_key = 'doc_key'
+    editable_data_doc = create :data_doc, {key: new_key, name: 'Doc name', content: 'Doc content.'}
+
+    get :edit, params: {key: new_key}
+    edited_name = 'New doc name'
+    edited_content = 'New doc content.'
+    post :update, params: {
+      key: new_key,
+      name: edited_name,
+      content: edited_content
+    }
+    assert_response :ok
+
+    editable_data_doc.reload
+    assert_equal new_key, editable_data_doc.key
+    assert_equal edited_name, editable_data_doc.name
+    assert_equal edited_content, editable_data_doc.content
+  end
+
+  test 'edit page renders 404 when data doc is not found' do
+    sign_in @levelbuilder
+    get :edit, params: {key: 'unknown_key'}
     assert_response :not_found
   end
 end

@@ -435,7 +435,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     explanation = JSON.parse(summary.audit_data)['explanation']
     validate_explanation(explanation)
     # only one datum shoud be used for the decision
-    assert_equal 1, explanation.map {|e| e['used'] ? 1 : 0}.reduce(:+), explanation
+    assert_equal 1, explanation.sum {|e| e['used'] ? 1 : 0}, explanation
   end
 
   def empty_compute_teaches_cs_args
