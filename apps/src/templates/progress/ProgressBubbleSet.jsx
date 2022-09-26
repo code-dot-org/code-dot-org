@@ -98,7 +98,6 @@ class ProgressBubbleSet extends React.Component {
         {levels.map((level, index) => {
           return (
             <span key={index}>
-              <div>This level.bonus is {level.bonus ? 'true' : 'false'}</div>
               {this.renderBubble(level, index, false)}
               {showSublevels &&
                 level.sublevels &&
