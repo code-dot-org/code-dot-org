@@ -41,7 +41,7 @@ class Plc::UserCourseEnrollment < ApplicationRecord
     other_failure_errors = []
 
     user_keys.each do |user_key|
-      user = user_key =~ /^\d+$/ ? User.find(user_key) : User.find_by_email_or_hashed_email(user_key)
+      user = /^\d+$/.match?(user_key) ? User.find(user_key) : User.find_by_email_or_hashed_email(user_key)
 
       email = user.try(:email)
 

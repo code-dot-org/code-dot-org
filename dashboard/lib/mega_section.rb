@@ -65,7 +65,7 @@ class MegaSection
       user.sections.each do |section|
         # Hard-delete all students in each section.
         section.students.each do |student_user|
-          raise "Not a sample student - #{student_user.name}" unless student_user.name =~ SAMPLE_STUDENT_NAME_REGEX
+          raise "Not a sample student - #{student_user.name}" unless SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
           environment_check!
           UserGeo.where(user_id: student_user.id).destroy_all
           student_user.really_destroy!
