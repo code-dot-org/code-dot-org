@@ -307,25 +307,25 @@ class Homepage
         {
           id: "at-home-en",
           type: "block",
-          title: "homepage_slot_text_title_at_home",
-          text: "homepage_slot_text_blurb_at_home",
+          title: "homepage_slot_text_title_hoc",
+          text: "homepage_slot_text_blurb_hoc",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/athome",
+          url: "https://hourofcode.com/us",
           image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
               {
-                text: "homepage_slot_text_link_do_hoc",
+                text: "homepage_slot_text_link_hoc",
                 url: "/hourofcode/overview"
               },
               {
-                text: "homepage_slot_text_link_express_course",
-                url: "/educate/curriculum/express-course"
+                text: "homepage_slot_text_link_about_hoc",
+                url: "https://hourofcode.com/"
               },
               {
-                text: "homepage_slot_text_link_code_break",
-                url: "/break"
+                text: "homepage_slot_text_link_host",
+                url: "https://hourofcode.com/us/#join"
               }
             ]
         },
