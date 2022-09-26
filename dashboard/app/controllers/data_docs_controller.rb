@@ -1,7 +1,6 @@
 class DataDocsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
   before_action :set_data_doc, only: [:show, :edit, :update]
-  authorize_resource
 
   # GET /data_docs/new
   def new

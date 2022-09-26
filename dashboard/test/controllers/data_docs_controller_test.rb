@@ -32,6 +32,11 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :levelbuilder, response: :redirect, redirected_to: '/data_docs/unique_key'
 
+  test_user_gets_response_for :create, params: -> {@test_params}, user: nil, response: :redirect
+  test_user_gets_response_for :create, params: -> {@test_params}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, params: -> {@test_params}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :levelbuilder, response: :found
+
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: nil, response: :success
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :student, response: :success
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :teacher, response: :success
