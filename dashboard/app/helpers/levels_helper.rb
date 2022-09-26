@@ -116,7 +116,7 @@ module LevelsHelper
   # Other levels are considered started when progress has been saved for the level (for example
   # clicking the run button saves progress).
   def level_started?(level, script, user)
-    return false unless user.present?
+    return false if user.blank?
 
     if level.channel_backed?
       return get_channel_for(level, script.id, user).present?
@@ -126,7 +126,7 @@ module LevelsHelper
   end
 
   def level_passing?(level, script, user)
-    return false unless user.present?
+    return false if user.blank?
     last_attempt = user.last_attempt(level, script)
     return last_attempt.present? && last_attempt.passing?
   end
@@ -196,7 +196,7 @@ module LevelsHelper
     # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
     level_requires_channel = (@level.channel_backed? &&
-          !@level.try(:contained_levels).present? &&
+          @level.try(:contained_levels).blank? &&
           params[:action] != 'edit_blocks')
     # Javalab requires a channel if Javabuilder needs to access project-specific assets,
     # or if we want to access a project's code from S3.
@@ -665,11 +665,6 @@ module LevelsHelper
       if level_options[key]
         app_options[key.to_sym] = level_options.delete key
       end
-    end
-
-    # Expo-specific options (only needed for Applab and Gamelab)
-    if (@level.is_a? Gamelab) || (@level.is_a? Applab)
-      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
     end
 
     # User/session-dependent options

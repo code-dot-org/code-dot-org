@@ -1,6 +1,7 @@
 require_relative '../../test_helper'
 require_relative '../../../cdo/crowdin/legacy_utils'
 require 'tempfile'
+require 'webmock/minitest'
 
 class MockCrowdinProject < Minitest::Mock
   LATEST_ETAG_VALUE = "0123"
@@ -10,29 +11,45 @@ class MockCrowdinProject < Minitest::Mock
   end
 
   def languages
-    [{"name" => "Test Language", "code" => "i1-8n"}]
+    [{"name" => "Test Language", "id" => "i1-8n"}]
   end
 
   def list_files
-    ["/foo.bar", "/baz.bat"]
+    [
+      {"id" => 1, "path" => "/foo.bar"},
+      {"id" => 1, "path" => "/baz.bat"}
+    ]
   end
 
   def export_file(file, language, etag: nil, attempts: 3, only_head: false)
-    mock_response = Minitest::Mock.new
+    mock_response = OpenStruct.new
     if etag.nil? || (etag != LATEST_ETAG_VALUE)
-      def mock_response.body; "test"; end
-      def mock_response.headers; {"etag" => LATEST_ETAG_VALUE}; end
-      def mock_response.code; 200; end
+      mock_response.code = 200
+      mock_response["data"] = {
+        "url" => CrowdinLegacyUtilsTest::DOWNLOAD_URL,
+        "etag" => LATEST_ETAG_VALUE
+      }
     else
-      def mock_response.code; 304; end
+      mock_response.code = 304
     end
+
     mock_response
   end
 end
 
 class CrowdinLegacyUtilsTest < Minitest::Test
+  DOWNLOAD_URL = "http://foo.com/"
+
   def setup
     @mock_project = MockCrowdinProject.new
+
+    stub_request(
+      :get,
+      DOWNLOAD_URL
+    ).to_return(
+      status: 200,
+      body: "Test body"
+    )
 
     @options = {
       etags_json: Tempfile.new('etags.json'),
@@ -46,6 +63,18 @@ class CrowdinLegacyUtilsTest < Minitest::Test
       "i1-8n" => {
         "/foo.bar" => MockCrowdinProject::LATEST_ETAG_VALUE,
         "/baz.bat" => MockCrowdinProject::LATEST_ETAG_VALUE,
+      }
+    }
+    @latest_files_to_download = {
+      "i1-8n" => {
+        "/foo.bar" => {
+          "download_url" => DOWNLOAD_URL,
+          "etag" => MockCrowdinProject::LATEST_ETAG_VALUE
+        },
+        "/baz.bat" => {
+          "download_url" => DOWNLOAD_URL,
+          "etag" => MockCrowdinProject::LATEST_ETAG_VALUE
+        }
       }
     }
   end
@@ -71,7 +100,7 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     @utils.fetch_changes
 
     assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
-    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_download_json]))
+    assert_equal @latest_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
   end
 
   def test_fetching_is_idempotent
@@ -84,7 +113,7 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     @utils.fetch_changes
 
     assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
-    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_download_json]))
+    assert_equal @latest_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
   end
 
   def test_fetching_respects_unchanged_files
@@ -103,7 +132,10 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     assert_equal local_etags, JSON.parse(File.read(@options[:etags_json]))
     expected_files_to_download = {
       "i1-8n" => {
-        "/baz.bat" => MockCrowdinProject::LATEST_ETAG_VALUE,
+        "/baz.bat" => {
+          "download_url" => DOWNLOAD_URL,
+          "etag" => MockCrowdinProject::LATEST_ETAG_VALUE
+        }
       }
     }
     assert_equal expected_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
@@ -128,7 +160,7 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     # If +download_changed_files+ successfully downloads files from Crowdin,
     # it should update the local state tracked by the 3 files: etags_json,
     # files_to_sync_out_json, and files_to_download_json.
-    File.write @options[:files_to_download_json], JSON.pretty_generate(@latest_crowdin_etags)
+    File.write @options[:files_to_download_json], JSON.pretty_generate(@latest_files_to_download)
     File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
     File.write @options[:etags_json], JSON.pretty_generate({})
 
@@ -149,7 +181,10 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     # already exists in etags_json and files_to_sync_out.
     files_to_download = {
       "i1-8n" => {
-        "/baz.bat" => MockCrowdinProject::LATEST_ETAG_VALUE
+        "/baz.bat" => {
+          "download_url" => DOWNLOAD_URL,
+          "etag" => MockCrowdinProject::LATEST_ETAG_VALUE
+        }
       }
     }
     files_to_sync_out = {
@@ -170,9 +205,13 @@ class CrowdinLegacyUtilsTest < Minitest::Test
 
     @utils.download_changed_files
 
+    # Deep dup
+    expected_downloaded_files = JSON.parse(files_to_download.to_json)
+    expected_downloaded_files["i1-8n"]["/baz.bat"] = expected_downloaded_files["i1-8n"]["/baz.bat"]["etag"]
+
     assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
-    assert_equal files_to_sync_out.deep_merge(files_to_download), JSON.parse(File.read(@options[:files_to_sync_out_json]))
-    assert_equal local_etags.deep_merge(files_to_download), JSON.parse(File.read(@options[:etags_json]))
+    assert_equal files_to_sync_out.deep_merge(expected_downloaded_files), JSON.parse(File.read(@options[:files_to_sync_out_json]))
+    assert_equal local_etags.deep_merge(expected_downloaded_files), JSON.parse(File.read(@options[:etags_json]))
     expected_local_files = ["#{@options[:locales_dir]}/Test Language/baz.bat"]
     assert_equal expected_local_files, Dir.glob(@options[:locales_dir] + "/**/*.*")
   end

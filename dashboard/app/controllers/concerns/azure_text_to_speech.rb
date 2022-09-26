@@ -124,13 +124,13 @@ module AzureTextToSpeech
 
   def self.get_voice_by(locale, gender)
     voice = get_voices&.values&.find {|v| v["locale"] == locale}
-    return nil unless voice.present?
+    return nil if voice.blank?
     voice[gender]
   end
 
   def self.ssml(text, gender, locale)
     voice_name = get_voice_by(locale, gender)
-    return nil unless voice_name.present?
+    return nil if voice_name.blank?
     "<speak version='1.0' xmlns='https://www.w3.org/2001/10/synthesis' xml:lang='en-US'><voice name='#{voice_name}'>#{text}</voice></speak>"
   end
 end

@@ -6160,3 +6160,66 @@ in:
           description: crwdns3120246:0crwdne3120246:0
           student_description: crwdns3120248:0crwdne3120248:0
           description_short: crwdns3120250:0crwdne3120250:0
+        csa1-2023:
+          name: crwdns3159930:0crwdne3159930:0
+          title: crwdns3159932:0crwdne3159932:0
+          description_short: crwdns3159936:0crwdne3159936:0
+          description: crwdns3159938:0[0]crwdnd3159938:0[1]crwdnd3159938:0[2]crwdne3159938:0
+          student_description: crwdns3159940:0crwdne3159940:0
+        csa2-2023:
+          name: crwdns3159942:0crwdne3159942:0
+          title: crwdns3159944:0crwdne3159944:0
+          description_short: crwdns3159948:0crwdne3159948:0
+          description: crwdns3159950:0[0]crwdnd3159950:0[1]crwdnd3159950:0[2]crwdne3159950:0
+          student_description: crwdns3159952:0crwdne3159952:0
+        csa3-2023:
+          name: crwdns3159954:0crwdne3159954:0
+          title: crwdns3159956:0crwdne3159956:0
+          description_short: crwdns3159960:0crwdne3159960:0
+          description: crwdns3159962:0[0]crwdnd3159962:0[1]crwdnd3159962:0[2]crwdne3159962:0
+          student_description: crwdns3159964:0crwdne3159964:0
+        csa4-2023:
+          name: crwdns3159966:0crwdne3159966:0
+          title: crwdns3159968:0crwdne3159968:0
+          description_short: crwdns3159972:0crwdne3159972:0
+          description: crwdns3159974:0[0]crwdnd3159974:0[1]crwdnd3159974:0[2]crwdne3159974:0
+          student_description: crwdns3159976:0crwdne3159976:0
+        csa5-2023:
+          name: crwdns3159978:0crwdne3159978:0
+          title: crwdns3159980:0crwdne3159980:0
+          description_short: crwdns3159984:0crwdne3159984:0
+          description: crwdns3159986:0[0]crwdnd3159986:0[1]crwdnd3159986:0[2]crwdne3159986:0
+          student_description: crwdns3159988:0crwdne3159988:0
+        csa6-2023:
+          name: crwdns3159990:0crwdne3159990:0
+          title: crwdns3159992:0crwdne3159992:0
+          description_short: crwdns3159996:0crwdne3159996:0
+          description: crwdns3159998:0[0]crwdnd3159998:0[1]crwdnd3159998:0[2]crwdne3159998:0
+          student_description: crwdns3160000:0crwdne3160000:0
+        csa7-2023:
+          name: crwdns3160002:0crwdne3160002:0
+          title: crwdns3160004:0crwdne3160004:0
+          description_short: crwdns3160008:0crwdne3160008:0
+          description: crwdns3160010:0[0]crwdnd3160010:0[1]crwdnd3160010:0[2]crwdne3160010:0
+          student_description: crwdns3160012:0crwdne3160012:0
+        csa8-2023:
+          name: crwdns3160014:0crwdne3160014:0
+          title: crwdns3160016:0crwdne3160016:0
+          description: crwdns3160022:0[0]crwdnd3160022:0[1]crwdnd3160022:0[2]crwdne3160022:0
+          student_description: crwdns3160024:0crwdne3160024:0
+        vpl-csd3-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3160026:0crwdne3160026:0
+            lessonGroup-3:
+              display_name: crwdns3160028:0crwdne3160028:0
+          name: crwdns3160030:0crwdne3160030:0
+          title: crwdns3160032:0crwdne3160032:0
+        vpl-csd4-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns3160042:0crwdne3160042:0
+            lessonGroup-3:
+              display_name: crwdns3160044:0crwdne3160044:0
+          name: crwdns3160046:0crwdne3160046:0
+          title: crwdns3160048:0crwdne3160048:0

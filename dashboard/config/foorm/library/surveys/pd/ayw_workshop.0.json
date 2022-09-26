@@ -351,55 +351,36 @@
         {
           "type": "panel",
           "name": "teaching_ap_panel",
+          "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='Computer Science A'",
           "elements": [
             {
-              "type": "matrix",
-              "title": "How much do you agree or disagree with the following statements about teaching an AP Computer Science course?",
-              "name": "teaching_ap_course",
-              "columns": [
-                {
-                  "value": "1",
-                  "text": "Strongly Disagree"
-                },
-                {
-                  "value": "2",
-                  "text": "Disagree"
-                },
-                {
-                  "value": "3",
-                  "text": "Slightly Disagree"
-                },
-                {
-                  "value": "4",
-                  "text": "Neutral"
-                },
-                {
-                  "value": "5",
-                  "text": "Slightly Agree"
-                },
-                {
-                  "value": "6",
-                  "text": "Agree"
-                },
-                {
-                  "value": "7",
-                  "text": "Strongly Agree"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "ap_exam_pacing",
-                  "text": "I have a plan to ensure I keep my class on track to finish the content before the AP exam."
-                },
-                {
-                  "value": "student_success_ap_exam",
-                  "text": "I am confident my students can be successful on the AP {workshop_course} exam."
-                },
-                {
-                  "value": "support_preparation_ap_exam",
-                  "text": "I will need a lot of extra support to prepare students for the AP exam and performance tasks."
-                }
-              ]
+              "type": "html",
+              "name": "Intro_teaching_ap",
+              "html": "<b><font size=3> How much do you agree or disagree with the following statements about teaching an AP Computer Science course? </p>"
+            },
+            {
+              "type": "rating",
+              "name": "ap_exam_pacing",
+              "title": "I have a plan to ensure I keep my class on track to finish the content before the AP exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "student_success_ap_exam",
+              "title": "I am confident my students can be successful on the AP {workshop_course} exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "support_preparation_ap_exam",
+              "title": "I will need a lot of extra support to prepare students for the AP exam and performance tasks.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
             }
           ]
         },
@@ -476,6 +457,7 @@
             {
               "type": "radiogroup",
               "name": "postwork_complete",
+              "visibleIf": "{workshop_agenda}<>'module1'",
               "title": "After the prior module, you received some post-work. Did you complete it? ",
               "choices": [
                 {
@@ -495,6 +477,7 @@
             {
               "type": "comment",
               "name": "postwork_comment",
+              "visibleIf": "{workshop_agenda}<>'module1'",
               "title": "If you have any thoughts on how we can improve the post-work to be more helpful to participants in future workshops, please use this space to share them.",
               "maxLength": 4000,
               "cols": 60,

@@ -670,11 +670,11 @@ gb:
     coalition of partners</a> have come together to support the Hour of Code, too
     &mdash; including Microsoft, Apple, Amazon, Computing at Schools, and the Department
     for Education.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: I don't know anything about coding. Can I still host an event?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
     to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the
@@ -980,7 +980,7 @@ gb:
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
   footer_trademark_message: Hour of Code® and Hora del Código® are trademarks of Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
-  footer_menu_partners: Partners and Advisors
+  footer_menu_partners: Partners
   footer_menu_contact: Contact us
   footer_menu_support: Support
   footer_menu_terms: Terms

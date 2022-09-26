@@ -1252,6 +1252,8 @@ az:
   no_script_access_teacher: Sizin bu bölməyə girişinizə icazə yoxdur. Əgər bu bölməyə
     girişinizə icazə verilməli olduğunuzu düşünürsünüzsə, zəhmət olmasa support@code.org-a
     yazın ki bu problemi həll edək.
+  no_level_access_student: Sizin bu bölməyə girişinizə icazə yoxdur. Xahiş edirik
+    müəlliminizdən hansı bölmədə olmalı olduğunuzu soruşun.
   return_unit_overview: Mündərəcat bölməsinə keçin
   return_course_overview: Kurs icmalına gedin
   view_all_units: Bütün bölmələri görmək

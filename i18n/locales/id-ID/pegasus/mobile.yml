@@ -1827,6 +1827,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Pembelajaran Mesin untuk Anak-Anak'
   ai_ecs: 'ECS: Kecerdasan Buatan (AI)'
   ai_ecs_description: "Unit kurikulum alternatif baru untuk kurikulum Exploring Computer Science (ECS)."
+  ai_aiedu_intro: 'aiEDU: Pengantar Kecerdasan Buatan'
+  ai_aiedu_intro_description: "Pengantar Kecerdasan Buatan adalah sebuah kurikulum yang gratis, inovatif, relevan secara budaya dimana murid mengembangkan pengetahuan konseptual tentang kecerdasan buatan dan bagaimana penggunaannya di dunia nyata."
   ai_elements: "Unsur AI"
   ai_elements_description: "Serangkaian kursus online gratis yang dibuat oleh Reaktor dan University of Helsinki."
   ai_cognimates: "Kognimat"
