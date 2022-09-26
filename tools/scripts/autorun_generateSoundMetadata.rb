@@ -42,7 +42,7 @@ class NewSoundAliasesMetadataBuilder
     Dir[folder_path + "/*.mp3"].each do |f|
       filename = File.basename(f, File.extname(f))
 
-      if filename =~ CORRUPTED_FILENAME_REGEX
+      if CORRUPTED_FILENAME_REGEX.match?(filename)
         fixed_name = fix_corrupted_filename(filename)
         File.rename(f, folder_path + "/" + fixed_name + File.extname(f))
         f.gsub!(f.split('/')[-1], "#{fixed_name}.mp3")
@@ -89,12 +89,12 @@ class NewSoundAliasesMetadataBuilder
       Dir[folder_path + "/mp3_files/*"].each do |file_path|
         regex = /^#{name}$/
 
-        if file_path.split('/')[-1].downcase =~ CORRUPTED_FILENAME_REGEX
+        if CORRUPTED_FILENAME_REGEX.match?(file_path.split('/')[-1].downcase)
           raise "#{file_path.split('/')[-1].downcase} is corrupted with space/multiple underscores"
         end
 
         next unless file_path.split('/')[-1].downcase.match(regex)
-        raise "Aliase is corrupted with space/multiple commas/spaces/uppercase/dots: #{aliases}" if aliases =~ /(,{2,}|\s|[A-Z]|[.])/
+        raise "Aliase is corrupted with space/multiple commas/spaces/uppercase/dots: #{aliases}" if /(,{2,}|\s|[A-Z]|[.])/.match?(aliases)
         aliases << ",category_#{file_path.split('/')[-3].downcase},noResale"
         puts `./generateSoundMetadata.rb --aliases "#{aliases}" "#{file_path}"`
       end
