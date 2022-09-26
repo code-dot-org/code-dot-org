@@ -187,7 +187,7 @@ namespace :seed do
     script_name = ENV['SCRIPT_NAME']
     raise "must specify SCRIPT_NAME=" unless script_name
     script_files = Dir.glob("config/scripts_json/#{script_name}.script_json")
-    raise "no matching scripts found" unless script_files.present?
+    raise "no matching scripts found" if script_files.blank?
     puts "seeding only scripts:\n#{script_files.join("\n")}"
     update_scripts(script_files: script_files)
   end

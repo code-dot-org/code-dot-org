@@ -1,7 +1,7 @@
 {
   "key": "poetry",
-  "display_name": "Coding with Poetry",
+  "display_name": "Poetry Module",
   "category": "csc",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true
 }
