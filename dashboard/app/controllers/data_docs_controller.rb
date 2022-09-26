@@ -1,6 +1,6 @@
 class DataDocsController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
-  load_and_authorize_resource
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
+  authorize_resource
 
   # GET /data_docs/new
   def new
@@ -27,5 +27,10 @@ class DataDocsController < ApplicationController
       dataDocName: @data_doc.name,
       dataDocContent: @data_doc.content,
     }
+  end
+
+  # GET /data_docs
+  def index
+    @data_docs = DataDoc.all.order(:name).map(&:serialize)
   end
 end
