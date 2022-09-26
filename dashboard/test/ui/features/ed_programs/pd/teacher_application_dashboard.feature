@@ -1,3 +1,4 @@
+@skip
 @dashboard_db_access
 @eyes
 Feature: Teacher Application Dashboard

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-09-08 19:38:49 UTC",
+    "serialized_at": "2022-09-13 15:11:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -39,7 +39,7 @@
   "lessons": [
     {
       "key": "Hello World CSC",
-      "name": "Hello World of Stories",
+      "name": "Hello World of Stories (beta)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -58,7 +58,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "Stories Around the World",
+      "name": "Stories Around the World (beta)",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -76,7 +76,7 @@
     },
     {
       "key": "Plan Your Fable",
-      "name": "Plan Your Story",
+      "name": "Plan Your Story (beta)",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +94,7 @@
     },
     {
       "key": "Code Your Fable",
-      "name": "Code Your Story",
+      "name": "Code Your Story (beta)",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -112,7 +112,7 @@
     },
     {
       "key": "Share Your Fable",
-      "name": "Share Your Story",
+      "name": "Share Your Story (beta)",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,

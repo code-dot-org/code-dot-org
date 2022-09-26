@@ -15,6 +15,7 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       CourseOffering,
+      DataDoc,
       UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
@@ -66,6 +67,8 @@ class Ability
       CodeReview
     ]
     cannot :index, Level
+
+    can :show, DataDoc
 
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
@@ -128,20 +131,20 @@ class Ability
         in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
       end
 
-      can :create, CodeReviewNote do |code_review_note|
-        code_review_note.code_review.open? && can?(:code_review, code_review_note.code_review.owner)
+      can :create, CodeReviewComment do |code_review_comment|
+        code_review_comment.code_review.open? && can?(:code_review, code_review_comment.code_review.owner)
       end
 
-      can :update, CodeReviewNote do |code_review_note|
-        code_review_note.code_review.user_id == user.id
+      can :update, CodeReviewComment do |code_review_comment|
+        code_review_comment.code_review.user_id == user.id
       end
 
-      can :destroy, CodeReviewNote do |code_review_note|
+      can :destroy, CodeReviewComment do |code_review_comment|
         # Teachers can delete comments on their student's projects,
         # their own comments anywhere, and comments on their projects.
-        code_review_note.code_review.owner&.student_of?(user) ||
-          (user.teacher? && user.id == code_review_note.commenter_id) ||
-          (user.teacher? && user.id == code_review_note.code_review.user_id)
+        code_review_comment.code_review.owner&.student_of?(user) ||
+          (user.teacher? && user.id == code_review_comment.commenter_id) ||
+          (user.teacher? && user.id == code_review_comment.code_review.user_id)
       end
 
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
@@ -387,6 +390,7 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        DataDoc,
         CourseOffering,
         UnitGroup,
         Resource,

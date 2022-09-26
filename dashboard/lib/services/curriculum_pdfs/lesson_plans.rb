@@ -31,7 +31,7 @@ module Services
         # Expect this to look something like this: "https://lesson-plans.code.org/csp1-2021/20210909014219/teacher-lesson-plans/Welcome+to+CSP.pdf"
         def get_lesson_plan_url(lesson, student_facing=false)
           pathname = get_lesson_plan_pathname(lesson, student_facing, true)
-          return nil unless pathname.present?
+          return nil if pathname.blank?
 
           File.join(get_base_url, pathname)
         end
