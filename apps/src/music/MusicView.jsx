@@ -49,7 +49,7 @@ class MusicView extends React.Component {
     play_sound: (id, measure) => {
       //console.log('play sound', id, measure);
 
-      if (measure === undefined) {
+      if (!measure) {
         return;
       }
 
@@ -220,10 +220,8 @@ class MusicView extends React.Component {
               name: 'sound'
             },
             {
-              type: 'field_number',
-              name: 'measure',
-              value: 1,
-              min: 1
+              type: 'input_value',
+              name: 'measure'
             }
           ],
           inputsInline: true,
@@ -503,7 +501,11 @@ class MusicView extends React.Component {
         'Music.play_sound("' +
         ctx.getFieldValue('sound') +
         '", ' +
-        ctx.getFieldValue('measure') +
+        Blockly.JavaScript.valueToCode(
+          ctx,
+          'measure',
+          Blockly.JavaScript.ORDER_ASSIGNMENT
+        ) +
         ');\n'
       );
     };
