@@ -12,14 +12,10 @@ class DataDocsController < ApplicationController
 
     if @data_doc.save
       @data_doc.write_serialization
-      redirect_to action: :show, key: params[:key]
+      redirect_to @data_doc
     else
-      render :not_acceptable, json: @data_doc.errors
+      render status: :bad_request, json: @data_doc.errors
     end
-  end
-
-  def to_param
-    key
   end
 
   # GET /data_docs/:key
