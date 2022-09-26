@@ -271,13 +271,11 @@ class JavalabEditor extends React.Component {
     };
   };
 
+  // This function updates the tabOrder of files in sources according to orderedTabKeys,
+  // saves the project.
   updateFileOrder() {
     this.props.sourceFileOrderUpdated();
     projectChanged();
-    this.setState({
-      showMenu: false,
-      contextTarget: null
-    });
   }
 
   updateVisibility(key, isVisible) {
@@ -397,6 +395,7 @@ class JavalabEditor extends React.Component {
       newTabs[index2] = file1;
       this.props.setOrderedTabKeys(newTabs);
     }
+    this.updateFileOrder();
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
