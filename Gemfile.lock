@@ -13,19 +13,6 @@ GIT
     newrelic_rpm (6.12.0)
 
 GIT
-  remote: https://github.com/code-dot-org/petit.git
-  revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
-  specs:
-    petit (0.3.0)
-      activesupport
-      aws-sdk-dynamodb (~> 1)
-      jsonapi-serializers
-      rack-parser
-      rake
-      sinatra
-      unicorn
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -519,14 +506,11 @@ GEM
     json-schema (2.8.1)
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
-    jsonapi-serializers (1.0.0)
-      activesupport
     jumphash (0.1.0)
     jwt (2.2.3)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.11.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     libv8 (8.4.255.0)
@@ -670,8 +654,6 @@ GEM
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
-    rack-parser (0.7.0)
-      rack
     rack-protection (2.1.0)
       rack
     rack-ssl-enforcer (0.2.9)
@@ -710,7 +692,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
-    raindrops (0.19.0)
     rake (11.3.0)
     rambling-trie (2.2.1)
     rb-fsevent (0.10.2)
@@ -862,9 +843,6 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.1.0)
     unicode_utils (1.4.0)
-    unicorn (5.1.0)
-      kgio (~> 2.6)
-      raindrops (~> 0.7)
     user_agent_parser (2.3.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
@@ -1016,7 +994,6 @@ DEPENDENCIES
   parallel_tests
   paranoia (~> 2.5.0)
   pdf-reader
-  petit!
   pg
   phantomjs (~> 1.9.7.1)
   pry
@@ -1070,7 +1047,6 @@ DEPENDENCIES
   twilio-ruby
   uglifier (>= 1.3.0)
   unf_ext (= 0.0.7.2)
-  unicorn (~> 5.1.0)
   user_agent_parser
   validates_email_format_of
   vcr

@@ -117,7 +117,6 @@ gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
-gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
 
@@ -216,7 +215,6 @@ gem 'sequel'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
-gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', '~> 0.10.13'
