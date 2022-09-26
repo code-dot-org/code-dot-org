@@ -73,7 +73,6 @@ export default class ProgressionDetails extends Component {
           />
         )}
         <div style={styles.progressionBox}>
-          <div>What is this</div>
           <ProgressLevelSet
             name={section.progressionName}
             levels={section.scriptLevels.map(scriptLevel =>
