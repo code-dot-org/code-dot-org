@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-08-12 14:48:03 UTC",
+    "serialized_at": "2022-09-16 14:58:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Data Lab"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-labs-2022"
       }
     }
@@ -344,6 +356,68 @@
       "seeding_key": {
         "lesson.key": "lesson-16",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Data, Data, Data!",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+        "overview": "Being able to access and process data is an important part of many industries. Whether\nit is determining the best allocation of resources or deciding what new product to\ncreate, analyzing data is a necessary component of those conversations. Luckily there\nare tools available to help read and process data, and this lab will introduce one such\ntool to students and ask them to utilize existing real-world data to answer a question\nof their own interest.",
+        "student_overview": "Being able to access and process data is an important part of many industries. Whether\nit is determining the best allocation of resources or deciding what new product to\ncreate, analyzing data is a necessary component of those conversations. Luckily there\nare tools available to help read and process data, and this lab will introduce one such\ntool to you, asking you to utilize existing real-world data to answer a question\nrelated to your own interest."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Designing and Implementing a Custom Class",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "Putting It All Together",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "Open-Ended Activity",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-labs-2022"
       }
     }
@@ -895,7 +969,7 @@
       "key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1014,6 +1088,48 @@
         "lesson_activity.key": "aa1c8c55-861a-4e2c-9621-77f6638de127",
         "lesson.key": "lesson-16",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "898c5ab2-6112-4835-9ee0-7f32122cefd7",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "898c5ab2-6112-4835-9ee0-7f32122cefd7",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "f4b7cd6f-e135-40f2-8d74-6b62a7848b7d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4b7cd6f-e135-40f2-8d74-6b62a7848b7d",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-labs-2022"
       }
     }
@@ -2727,6 +2843,8 @@
       "key": "14d5c8c9-44da-403d-90f0-1dc610406850",
       "position": 1,
       "properties": {
+        "description": "*Note: This is a longer lesson, therefore you may need to take several class periods in order to complete the required activities*\n\n**Do This:** With a partner, have students use sticky notes to generate both strongly positive and strongly negative adjectives. They can use a tool like analog or digital thesaurus to assist. Students can also look back on the reviews they read for the first activity,  or can find new reviews to look at to help generate adjectives. \n\n**Do This:** Create a timeline that goes from negative at one end to positive at the other. The middle is considered neutral. Have each group choose one word and rate its sentiment analysis along the spectrum by affixing their sticky note where they think it belongs. \n\n**Discussion:** Do any of the words need to be rearranged in relation to one another? \n",
+        "name": "What's An Adjective?"
       },
       "seeding_key": {
         "activity_section.key": "14d5c8c9-44da-403d-90f0-1dc610406850",
@@ -2734,20 +2852,49 @@
       }
     },
     {
-      "key": "8d05978a-876e-4aab-8ced-44231e30d2a8",
+      "key": "17599d06-2172-4f11-84eb-eb80bbe22e57",
       "position": 2,
       "properties": {
-        "progression_name": "The Good and the Bad"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prior to beginning this activity ensure that all students have the same  understanding of how an adjective is defined. Because positive and  negative adjectives are contextual, discuss examples of each type before  starting this activity."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "8d05978a-876e-4aab-8ced-44231e30d2a8",
+        "activity_section.key": "17599d06-2172-4f11-84eb-eb80bbe22e57",
         "lesson_activity.key": "25cdbc90-c2ef-4dcd-9668-f354b75f8533"
       }
     },
     {
-      "key": "d306d225-224b-498f-a638-3fe90fc43050",
+      "key": "397ee227-7135-4fc3-b5e9-913a4f031ef3",
       "position": 1,
       "properties": {
+        "description": "**Distribute**: The Activity Guide for this lesson\n\n**Do This:** Have students work on *The Good and the Bad* level alongside filling in information on their Activity Guide.\n\nStudents can use the sticky notes that have been arranged along the classroom continuum in order to add values to the `positiveAdjectives` and `negativeAdjectives` files.\n",
+        "name": "Autogenerated Reviews",
+        "progression_name": "The Good and the Bad"
+      },
+      "seeding_key": {
+        "activity_section.key": "397ee227-7135-4fc3-b5e9-913a4f031ef3",
+        "lesson_activity.key": "dc32bb8a-b5cd-4ad1-93a3-d6ae4fda55fc"
+      }
+    },
+    {
+      "key": "e2efedbb-4e50-4980-8082-92f69db36d62",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e2efedbb-4e50-4980-8082-92f69db36d62",
+        "lesson_activity.key": "dc32bb8a-b5cd-4ad1-93a3-d6ae4fda55fc"
+      }
+    },
+    {
+      "key": "d306d225-224b-498f-a638-3fe90fc43050",
+      "position": 3,
+      "properties": {
+        "description": "To complete this activity, students will need a review to work with. Students can use\nthe same review that they used in the previous activity, such as `SimpleReview.txt`.\nIn addition, they will be calling the same method used in Activity 2 to read in a text file\nand return the contents of the file as a single long string.\n\nStudents can technically annotate adjectives with whatever type of symbol or markup\nthey want. The ***** is used as a matter of keeping things simple for both teachers and\nstudents, but there is no difference between this and any other symbol or string.\nIt’s important not to choose anything that might come naturally at the beginning of\na word, since we want a clear way to differentiate an adjective from other types of\nwords. This is why choosing something like “a”, or any other letter, would not be a\ngood idea.\n\n**Do This:** Have students complete levels 2 & 3 under the *Creating Autogenerated Reviews* section below",
         "progression_name": "Creating Autogenerated Reviews"
       },
       "seeding_key": {
@@ -2756,9 +2903,39 @@
       }
     },
     {
-      "key": "5f2add4f-2717-4a3c-9402-68a3b4479158",
+      "key": "a5d1f2e8-874b-412f-95bb-a4531c4083fd",
+      "position": 4,
+      "properties": {
+        "description": "**Option for Differentiation:** When completing the `fakeReview` method, students can\nannotate and replace more than just adjectives within the review or replace a single\nadjective with between one and three adjectives.\n",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Multiple method calls can be joined into a single expression, and the return\nvalues from those method calls will be a combination of all the methods\nexecuted in order to create a single value.\n\nThe values returned from method calls can be stored in local variables and\nused as actual parameters in other method calls or combined with other\nlocal variables to form new expressions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a5d1f2e8-874b-412f-95bb-a4531c4083fd",
+        "lesson_activity.key": "dc32bb8a-b5cd-4ad1-93a3-d6ae4fda55fc"
+      }
+    },
+    {
+      "key": "3e56928d-e9ce-471f-9d0f-64d26bfcfcb6",
       "position": 1,
       "properties": {
+        "description": "Now that we've added the `fakeReview` method to your project, use your work on both to answer questions 5 and 6 in your activity guide.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3e56928d-e9ce-471f-9d0f-64d26bfcfcb6",
+        "lesson_activity.key": "dddbcd18-551d-49d1-a3ea-32d9a0c81085"
+      }
+    },
+    {
+      "key": "5f2add4f-2717-4a3c-9402-68a3b4479158",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Students should continue to work through their activity guide with their partner.",
         "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
@@ -2767,9 +2944,39 @@
       }
     },
     {
-      "key": "470bf05c-8912-4cf6-8917-a84c6befecbb",
+      "key": "f1a91613-f7ca-4cc7-89f1-008277d0f084",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are sample responses to these questions available in the activity guide solutions document. Additionally, students have access to the methods that they wrote and the questions from the activity guide in the level that is provided with this activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f1a91613-f7ca-4cc7-89f1-008277d0f084",
+        "lesson_activity.key": "dddbcd18-551d-49d1-a3ea-32d9a0c81085"
+      }
+    },
+    {
+      "key": "d15071fb-7e8e-409d-8e3b-2b72c60b8798",
       "position": 1,
       "properties": {
+        "description": "What is one possible reason that someone would want to autogenerate a negative review?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d15071fb-7e8e-409d-8e3b-2b72c60b8798",
+        "lesson_activity.key": "ed645d5d-f646-4a5f-b807-dda0d0e88e2c"
+      }
+    },
+    {
+      "key": "470bf05c-8912-4cf6-8917-a84c6befecbb",
+      "position": 2,
+      "properties": {
+        "description": "**Think, Pair, Share**: With a partner, students should discuss one possible reason to autogenerate a *negative* review. Once students have discussed together, open up the discussion to the whole class.\n",
+        "name": "How Can This Be Used?"
       },
       "seeding_key": {
         "activity_section.key": "470bf05c-8912-4cf6-8917-a84c6befecbb",
@@ -2777,8 +2984,51 @@
       }
     },
     {
-      "key": "8bdabab8-25e1-439c-9f2d-faa4d952d583",
+      "key": "5715088e-d45a-414c-8872-58571341d675",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Sample Responses (Negative):** Internet trolls may create fake negative reviews. Competitors could generate negative reviews to help increase their own business.\n\n**Sample Responses (Positive):** Marketing specialists may consider creating fake positive reviews of products they are promoting. Others may create many reviews, both positive and negative, posted under false identities to simply drive up the number of reviews or comments posted on a subject. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5715088e-d45a-414c-8872-58571341d675",
+        "lesson_activity.key": "ed645d5d-f646-4a5f-b807-dda0d0e88e2c"
+      }
+    },
+    {
+      "key": "42710f68-01bc-46de-8fe5-d247f5f39b8f",
       "position": 1,
+      "properties": {
+        "description": "**Distribute**: The Activity Guide for this lesson\n\n**Do This:** Have students discuss with a partner what the `fakeReview` method needs to do to create a stronger review and write down the algorithm using pseudocode. "
+      },
+      "seeding_key": {
+        "activity_section.key": "42710f68-01bc-46de-8fe5-d247f5f39b8f",
+        "lesson_activity.key": "41a09dcc-2529-48c5-bcd1-d5b4d869f368"
+      }
+    },
+    {
+      "key": "04e3c820-1ae2-4943-a39f-358d28ec8846",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Possible Pseudocode:** \n\n› Have the method loop over the words in the review. Each time the method finds an adjective, pass the adjective to the `sentimentVal` method in Review to determine its sentiment value, `v`.\n \n› When trying to create a more positive review, call the `randomPositiveAdj` method to obtain a new adjective. Find the sentiment value of the new adjective and compare its sentiment value to the original adjective until an adjective with a greater sentiment value is chosen (check this by calling `sentimentVal` and passing whatever adjective gets returned).\n\n When trying to create a more negative review, call the \n`randomNegativeAdj` method to obtain a new adjective. Find the \nsentiment value of the new adjective and compare its sentiment value to the original adjective until an adjective with a lesser (more negative) sentiment value is chosen (check this by calling `sentimentVal` and passing whatever adjective gets returned). \n\n› Replace the original adjective with the new adjective in the output string.\n\n › Once the entire review has been processed, return the new review string. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04e3c820-1ae2-4943-a39f-358d28ec8846",
+        "lesson_activity.key": "41a09dcc-2529-48c5-bcd1-d5b4d869f368"
+      }
+    },
+    {
+      "key": "8bdabab8-25e1-439c-9f2d-faa4d952d583",
+      "position": 3,
       "properties": {
         "progression_name": "Strengthening the Sentiment"
       },
@@ -2788,13 +3038,53 @@
       }
     },
     {
-      "key": "3a4ff15e-a447-457f-9205-a6b68159d536",
+      "key": "3c6a00de-d0bd-414e-ab5e-cbea67bd3e99",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Have students convert the pseudocode that they brainstormed and discussed with a partner into the actual `fakeReview` method"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c6a00de-d0bd-414e-ab5e-cbea67bd3e99",
+        "lesson_activity.key": "41a09dcc-2529-48c5-bcd1-d5b4d869f368"
+      }
+    },
+    {
+      "key": "5104d0d1-1fae-4562-ad2b-f2228d9b108d",
       "position": 1,
       "properties": {
+        "description": "Now that we've updated the `fakeReview` method in your project, use your work on both to answer questions 5 through 7 in your activity guide.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5104d0d1-1fae-4562-ad2b-f2228d9b108d",
+        "lesson_activity.key": "675c00c9-948d-4cbf-a2b2-970e12259b40"
+      }
+    },
+    {
+      "key": "3a4ff15e-a447-457f-9205-a6b68159d536",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Students should continue to work through their activity guide with their partner.",
         "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
         "activity_section.key": "3a4ff15e-a447-457f-9205-a6b68159d536",
+        "lesson_activity.key": "675c00c9-948d-4cbf-a2b2-970e12259b40"
+      }
+    },
+    {
+      "key": "5fe56845-cd21-4be0-b942-02408efc12b5",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are sample responses to these questions available in the activity guide solutions document. Additionally, students have access to the methods that they wrote and the questions from the activity guide in the level that is provided with this activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe56845-cd21-4be0-b942-02408efc12b5",
         "lesson_activity.key": "675c00c9-948d-4cbf-a2b2-970e12259b40"
       }
     },
@@ -2936,6 +3226,156 @@
       "seeding_key": {
         "activity_section.key": "263504f9-8325-4ae5-8065-56b65496960f",
         "lesson_activity.key": "aa1c8c55-861a-4e2c-9621-77f6638de127"
+      }
+    },
+    {
+      "key": "226dea66-b0fd-4018-b3d4-b974d04bba9d",
+      "position": 1,
+      "properties": {
+        "description": "Today we will begin by spending a few minutes discussing **privacy policies**. Regardless of whether a service is\noffered for free or at a cost, the companies that we all interact with on a regular\nbasis collect data about us. Privacy policies are commonplace everywhere from\nsocial media to your local doctor’s office. By agreeing to use a service, and often\njust by visiting a website, you are agreeing to the privacy policy.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "226dea66-b0fd-4018-b3d4-b974d04bba9d",
+        "lesson_activity.key": "898c5ab2-6112-4835-9ee0-7f32122cefd7"
+      }
+    },
+    {
+      "key": "3b423eeb-e1d1-4774-bb25-453f0178815d",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** What are some of the websites that you use on a regular basis?\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b423eeb-e1d1-4774-bb25-453f0178815d",
+        "lesson_activity.key": "898c5ab2-6112-4835-9ee0-7f32122cefd7"
+      }
+    },
+    {
+      "key": "4599cf77-1425-4aaa-82a3-316c46cd2709",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Students should use sticky notes to write the names of the top three sites that they visit. On the back of the sticky note, have them write down what type of data they believe that this website collects about them. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have the students post their sticky notes on some available wall space. Have the students see if they can categorize these sticky notes into broad types of website (i.e. Social Media, Gaming, Videos). Rearrange the sticky notes into these categories."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4599cf77-1425-4aaa-82a3-316c46cd2709",
+        "lesson_activity.key": "898c5ab2-6112-4835-9ee0-7f32122cefd7"
+      }
+    },
+    {
+      "key": "f0d19840-c749-49df-a0cb-3774f0dc7df7",
+      "position": 1,
+      "properties": {
+        "description": "**Discuss:** Which of these websites collect the most data? At what point does a website cross the line and collect too much data? \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0d19840-c749-49df-a0cb-3774f0dc7df7",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "89aaae59-820e-40cc-aef6-7a330d6ec685",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Whether data collection is worth the risk to personal privacy is a personal\nopinion that can be influenced by several factors. If possible, pair students\nwho have different perspectives about the risk to privacy so they are\nintroduced to additional viewpoints."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "89aaae59-820e-40cc-aef6-7a330d6ec685",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "61157aa1-2aa6-49ad-b3e1-55e7f2c79cb3",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Working in small groups, students should choose one website that they all have visited before. Students should go onto the internet and find the *privacy policy* for that particular site. In their Activity Guides, students should and identify two or three pieces of information that are collected for users of the site.\n\nAs students progress with this lab, they will be relying heavily on the Activity Guide to direct their investigation and research into how data is used."
+      },
+      "seeding_key": {
+        "activity_section.key": "61157aa1-2aa6-49ad-b3e1-55e7f2c79cb3",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "24e12a8e-cf26-4769-baa3-ce1c4d115d09",
+      "position": 4,
+      "properties": {
+        "description": "Now that we've examined how companies collect and store our personal data when we access their services, let's take a look at how that data might be stored so that it is *useful* and *useable* later on.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "24e12a8e-cf26-4769-baa3-ce1c4d115d09",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "50103c40-54b6-4d96-bdc9-fee6281e4adc",
+      "position": 5,
+      "properties": {
+        "description": "**Do This:** Have students open both *cereal.csv* and *cereal.xlsx* from the Resources section of this lesson. Have them compare the structure of both of these file types and note similarities and differences."
+      },
+      "seeding_key": {
+        "activity_section.key": "50103c40-54b6-4d96-bdc9-fee6281e4adc",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "87b5c669-5646-4a4d-bb05-952590514706",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "CSV stands for Comma-separated values and contains a comma as a **delimiter** (*some character that marks the beginning and end of a unit of data*)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "87b5c669-5646-4a4d-bb05-952590514706",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "1ef23a97-5db7-4d80-8ab9-6009728dd686",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:** Have students work through the Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "1ef23a97-5db7-4d80-8ab9-6009728dd686",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "f2252027-e391-4a24-86a4-b1b51edd4d69",
+      "position": 8,
+      "properties": {
+        "description": "**Differentiation Option:** For students who have experience with data or who are\ninterested in doing more, they can investigate the idea of “cleaning data.” Cleaning\ndata is a process that makes the data uniform without changing its meaning. For\nexample, replacing all abbreviations, spellings, and capitalizations with the same word.\nStudents can investigate techniques for detecting inaccurate data, correcting data,\nand determining whether it is most appropriate to correct or remove such records."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2252027-e391-4a24-86a4-b1b51edd4d69",
+        "lesson_activity.key": "b3a55cd7-a0de-41b1-b871-b2b371d9eebb"
+      }
+    },
+    {
+      "key": "e5a41ca5-27ca-4910-acd8-5c08881ce2e8",
+      "position": 1,
+      "properties": {
+        "description": "In addition to understanding the types of data that are collected about individuals, this\nactivity exposes students to the different ways that this data can be stored, and also\nhow to find appropriate data to answer questions of interest. Although students do not\nprogram in this activity, it sets them up to be able to complete the open-ended activity.\nStudents are typically able to list privacy concerns with data storage, such as security\nbreaches that might result in identity theft, but data also allows for improvements to\nbe made that can affect the lives of millions.\n\nThe purpose of the check for understanding questions in this activity is to get students\nthinking about some of the positive aspects of data collection that might not be as\nimmediately apparent as the negative aspects. The final question could be answered\nin a number of ways, and the focus should be on the explanation or justification more\nthan the “yes” or “no.”\n\n**Do This:** Have students complete the *Check for Understanding* section of the Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "e5a41ca5-27ca-4910-acd8-5c08881ce2e8",
+        "lesson_activity.key": "f4b7cd6f-e135-40f2-8d74-6b62a7848b7d"
       }
     }
   ],
@@ -4008,7 +4448,7 @@
         "lesson.key": "lesson-14",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "8d05978a-876e-4aab-8ced-44231e30d2a8"
+        "activity_section.key": "397ee227-7135-4fc3-b5e9-913a4f031ef3"
       },
       "level_keys": [
         "CSA CB_Lab Sentiment-L3-L1_2022"
@@ -4095,6 +4535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L4-L1_2022"
+        ],
         "progression": "Strengthening the Sentiment"
       },
       "bonus": false,
@@ -4117,6 +4560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L4-L2_2022"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4139,6 +4585,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Sentiment-L5-L1_2022"
+        ],
         "progression": "Open-Ended Activity"
       },
       "bonus": false,
@@ -4670,7 +5119,7 @@
         "lesson.key": "lesson-14",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "8d05978a-876e-4aab-8ced-44231e30d2a8"
+        "activity_section.key": "397ee227-7135-4fc3-b5e9-913a4f031ef3"
       }
     },
     {
@@ -4865,6 +5314,18 @@
       },
       "seeding_key": {
         "resource.key": "celebrity_lab_presentation"
+      }
+    },
+    {
+      "name": "cereal.csv",
+      "url": "https://docs.google.com/spreadsheets/d/1E1em3Xt8gosaxjtc-6hpuwInVWyy4LOLvfXsQa10Fjo/edit?usp=sharing",
+      "key": "cereal_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cereal_dataset"
       }
     },
     {
@@ -5311,6 +5772,12 @@
       "seeding_key": {
         "lesson.key": "lesson-16",
         "resource.key": "activity_5-_open-ended_activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "cereal_dataset"
       }
     },
     {
@@ -5888,6 +6355,34 @@
         "lesson.key": "lesson-15",
         "framework.shortcode": "csa",
         "standard.shortcode": "IOC-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.2"
       }
     },
     {

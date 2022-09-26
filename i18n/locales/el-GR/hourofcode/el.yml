@@ -6,30 +6,36 @@ el:
   front_title: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση,
     %{campaign_date}
   coming_soon: Προσεχώς
-  campaign_date_start_short: 6 Δεκεμβρίου
-  campaign_date_start_long: 6 Δεκεμβρίου
-  campaign_date_short: 7-13 Δεκεμβρίου
-  campaign_date_full: 6-12 Δεκεμβρίου
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 Δεκεμβρίου, 2021
+  campaign_date_start_short: 5 Δεκ.
+  campaign_date_start_long: 5 Δεκεμβρίου
+  campaign_date_short: 5-11 Δεκ.
+  campaign_date_full: 5-11 Δεκεμβρίου
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 Δεκεμβρίου, 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1 Οκτ. - 18 Δεκ.
+  nonus_campaign_date_full: 1 Οκτωβρίου - 18 Δεκεμβρίου
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 Οκτωβρίου 2022 - 18 Δεκεμβρίου 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6 Δεκεμβρίου
-  europe_campaign_date_start_long: 6 Δεκεμβρίου
-  europe_campaign_date_short: 7-13 Δεκεμβρίου
-  europe_campaign_date_full: 6-12 Δεκεμβρίου
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 Δεκεμβρίου, 2021
-  africa_campaign_date_start_short: 6 Δεκεμβρίου
-  africa_campaign_date_start_long: 6 Δεκεμβρίου
-  africa_campaign_date_short: 7-13 Δεκεμβρίου
-  africa_campaign_date_full: 6-12 Δεκεμβρίου
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 Δεκεμβρίου, 2021
+  latam_campaign_date_short: 1 Οκτ. - 18 Δεκ.
+  latam_campaign_date_full: 1 Οκτωβρίου - 18 Δεκεμβρίου
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 Οκτωβρίου 2022 - 18 Δεκεμβρίου 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1 Οκτ. - 18 Δεκ.
+  europe_campaign_date_full: 1 Οκτωβρίου - 18 Δεκεμβρίου
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 Οκτωβρίου 2022 - 18 Δεκεμβρίου 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1 Οκτ. - 18 Δεκ.
+  africa_campaign_date_full: 1 Οκτωβρίου - 18 Δεκεμβρίου
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 Οκτωβρίου 2022 - 18 Δεκεμβρίου 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Μάθετε σήμερα, χτίστε ένα καλύτερο αύριο.
@@ -562,7 +568,6 @@ el:
   signup_multiple_event_warning: Εάν φιλοξενείτε πολλές εκδηλώσεις, παρακαλούμε να
     υποβάλλετε ένα μοναδικό όνομα ή ηλεκτρονικό ταχυδρομείο για κάθε μια. Μετράμε
     μόνο μία εκδήλωση ανά συνδυασμό ονόματος και ηλεκτρονικού ταχυδρομείου.
-  signup_registration_deadline: Η εγγραφή για την Ώρα του Κώδικα λήγει την 11η Δεκεμβρίου.
   signup_name_placeholder: Το όνομα σας
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Για παράδειγμα, Γυμνάσιο του Λίνκολν
@@ -1099,7 +1104,8 @@ el:
   highlights_constant_athletes_short_heading: Ώθησε τον εαυτό σου
   footer_copyright_message: Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα
     είναι κατοχυρωμένα.
-  footer_trademark_message: Η Ώρα του κώδικα ™ είναι εμπορικό σήμα της Code.org.
+  footer_trademark_message: Τα Hour of Code® και Hora del Código®  είναι εμπορικά
+    σήματα της Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Συνεργάτες
   footer_menu_contact: Επικοινωνείστε μαζί μας

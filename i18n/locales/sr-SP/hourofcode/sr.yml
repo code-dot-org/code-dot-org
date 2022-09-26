@@ -12,24 +12,30 @@ sr:
   campaign_date_full: 7-13 децембра
   campaign_date_year: '2016'
   campaign_date_full_year: Децембар 6-12, 2021
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2016'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 7. Дец
-  europe_campaign_date_start_long: 7. децембра
-  europe_campaign_date_short: 7-13 децембра
-  europe_campaign_date_full: 7-13 децембра
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: Децембар 6-12, 2021
-  africa_campaign_date_start_short: 7. Дец
-  africa_campaign_date_start_long: 7. децембра
-  africa_campaign_date_short: 7-13 децембра
-  africa_campaign_date_full: 7-13 децембра
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: Децембар 6-12, 2021
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -532,7 +538,6 @@ sr:
   signup_multiple_event_warning: Ако планирате да организујете већи број догађаја,
     молим вас да обезбедите јединствено име догађаја и имејл за сваки од њих. Прихватамо
     само један догађај по имејл адреси.
-  signup_registration_deadline: Регистрација за час кодирања се затвара 12. децембра.
   signup_name_placeholder: Ваш име
   signup_email_placeholder: vi@primer.rs
   signup_organization_name_placeholder: На пример, Средња школа Тесла
@@ -667,11 +672,11 @@ sr:
     href='http://code.org/about/partners'>Јединствени скуп партнера</a> се окупио
     у подршци Hour of Code-а &mdash; укључијући Microsoft, Apple, Amazon, Boys and
     Girls Clubs of America и College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Не знам ништа о програмиранју. Да ли ипак могу бити домаћин догађаја?
   hoc_faq_host_a: Наравно, активности Часа кодирања су самосталне. Све што морате
     урадити је да <a href='%{codeorg_url}/learn'> пробате наш актуелни водич</a>,

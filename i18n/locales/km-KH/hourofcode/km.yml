@@ -9,15 +9,23 @@ km:
   campaign_date_start_long: ខែធ្នូ ថ្ងៃទី ៥
   campaign_date_short: ខែធ្នូ​ ថ្ងៃទី ៥ ដល់ ថ្ងៃទី ១១
   campaign_date_full: ខែធ្នូ ថ្ងៃទី ៥ ដល់ ថ្ងៃទី ១១
-  campaign_date_year: '2021'
+  campaign_date_year: '2022'
   campaign_date_full_year: ខែធ្នូ ថ្ងៃទី ៥ ដល់ ថ្ងៃទី ១១ ឆ្នាំ ២០១៦
+  nonus_campaign_date_start_short: 'ថ្ងៃទី 1 ខែ តុលា
+
+'
+  nonus_campaign_date_start_long: ថ្ងៃទី 1 ខែ តុលា
+  nonus_campaign_date_short: ថ្ងៃទី 1 តុលា - 18 ធ្នូ
+  nonus_campaign_date_full: ថ្ងៃទី 1 តុលា - 18 ធ្នូ
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: ថ្ងៃទី 1 ខែ តុលា - ថ្ងៃទី 18 ខែ ធ្នូ
   latam_campaign_date_start_short: 'ថ្ងៃទី 1 ខែ តុលា
 
 '
   latam_campaign_date_start_long: ថ្ងៃទី 1 ខែ តុលា
   latam_campaign_date_short: ថ្ងៃទី 1 តុលា - 18 ធ្នូ
   latam_campaign_date_full: ថ្ងៃទី 1 តុលា - 18 ធ្នូ
-  latam_campaign_date_year: '2021'
+  latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: ថ្ងៃទី 1 ខែ តុលា - ថ្ងៃទី 18 ខែ ធ្នូ
   europe_campaign_date_start_short: 'ថ្ងៃទី 10 ខែ តុលា
 
@@ -25,13 +33,15 @@ km:
   europe_campaign_date_start_long: ថ្ងៃទី 10 ខែ តុលា
   europe_campaign_date_short: ថ្ងៃទី 10 -25 តុលា
   europe_campaign_date_full: ថ្ងៃទី 10 -25 តុលា
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: ថ្ងៃទី10 -25 តុលា
-  africa_campaign_date_start_short: ខែធ្នូ​ ថ្ងៃទី ៥
-  africa_campaign_date_start_long: ខែធ្នូ ថ្ងៃទី ៥
+  africa_campaign_date_start_short: 'ថ្ងៃទី 1 ខែ តុលា
+
+'
+  africa_campaign_date_start_long: ថ្ងៃទី 1 ខែ តុលា
   africa_campaign_date_short: ថ្ងៃទី1-31 តុលា
   africa_campaign_date_full: ថ្ងៃទី 1-31 តុលា
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: ថ្ងៃទី 1-31 តុលា
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -535,8 +545,6 @@ km:
   signup_multiple_event_warning: We will put your school name and city on the map
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
-  signup_registration_deadline: Registration for the Hour of Code closes December
-    13.
   signup_name_placeholder: ឈ្មេាះរបស់អ្នក
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: ឧះ Lincoln High School
@@ -662,16 +670,15 @@ km:
     your community — like in an extracurricular club, non-profit or at work. Or, just
     try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Who is behind the Hour of Code?
-  hoc_faq_behind_hoc_a: The Hour of Code is driven by the Hour of Code and Computer
-    Science Education Week <a href='%{partner_url}'>Advisory and Review Committees</a>
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs
-    of America and the College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a: The Hour of Code is organized by Code.org and driven by the
+    Hour of Code Review Committee as well as an unprecedented coalition of <a href='%{partner_url}'>partners</a>
+    that have come together to support the Hour of Code — including Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: |-
     Hour of Code ត្រូវបានរៀបចំបង្កើតឡើងដោយ <a href='http://code.org'>Code.org</a> ដែលជាអង្គការសាធារណៈ មិនរកប្រាក់កម្រៃ 501c3 មួយប្ដេជ្ញាពង្រីកការចូលរួមក្នុងវិទ្យាសាស្ត្រកុំព្យូទ័រ ដោយរយៈការធ្វើឲ្យទៅដល់សាលារៀនឲ្យបានកាន់តែច្រើនឡើង និងបង្កើនការចូលរួមពីសំណាក់ស្ត្រី និងសិស្សដែលគ្មានតំណាងឬសម្លេង។
     An <a href='http://code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board.
@@ -979,9 +986,9 @@ km:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code™ and Hora del Código® are trademarks of Code.org.
+  footer_trademark_message: Hour of Code® and Hora del Código® are trademarks of Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
-  footer_menu_partners: Partners and Advisors
+  footer_menu_partners: Partners
   footer_menu_contact: Contact us
   footer_menu_support: Support
   footer_menu_terms: Terms

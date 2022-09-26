@@ -478,7 +478,7 @@ class ActionController::TestCase
   def self.test_user_gets_response_for(action, method: :get, response: :success,
     user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
-    unless name.present?
+    if name.blank?
       raise 'name is required when a block is provided' if block
       user_display_name =
         if user.is_a?(Proc)

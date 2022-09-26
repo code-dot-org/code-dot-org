@@ -12,7 +12,7 @@ module UsersHelper
   # Returns a boolean - true if all steps were successful, false otherwise.
   def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
     # No-op if source_user is nil
-    return true unless source_user.present?
+    return true if source_user.blank?
 
     firehose_params = {
       source_user: source_user,
@@ -223,7 +223,7 @@ module UsersHelper
     return user_data unless user
 
     if unit.old_professional_learning_course?
-      user_data[:professionalLearningCourse] = true
+      user_data[:deeperLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: unit.plc_course_unit)
       if unit_assignment
         user_data[:focusAreaLessonIds] = unit_assignment.focus_area_lesson_ids

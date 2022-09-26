@@ -10,25 +10,31 @@ ky:
   campaign_date_short: Дек. 4-10
   campaign_date_full: 4-10-декабрда
   campaign_date_year: '2017'
-  campaign_date_full_year: 2021, 6-12-декабрда
+  campaign_date_full_year: 2017, 4-10-декабрда
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2017'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2017'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 4-дек
-  europe_campaign_date_start_long: 4-декабрдан
-  europe_campaign_date_short: Дек. 4-10
-  europe_campaign_date_full: 4-10-декабрда
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: 2021, 6-12-декабрда
-  africa_campaign_date_start_short: 4-дек
-  africa_campaign_date_start_long: 4-декабрдан
-  africa_campaign_date_short: Дек. 4-10
-  africa_campaign_date_full: 4-10-декабрда
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: 2021, 6-12-декабрда
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -531,7 +537,6 @@ ky:
     жаана шаарыңарды картага кошобуз. Эгерде сиз бир нече долбоорлордо катышсаңар,
     сураныч, ар бирөөсүндө бир гана ысымды жана эмейлди колдонуңуз. Биз бир ысым жана
     эмейлге бир долбоорду гана туура табабыз.
-  signup_registration_deadline: Код саатына катталуу 11-декабрда аяктайт.
   signup_name_placeholder: Ысымыңыз
   signup_email_placeholder: sizdin_email@example.com
   signup_organization_name_placeholder: 'Мисалы: Линкольн жогорку мектеби'
@@ -661,11 +666,11 @@ ky:
     жана Байкоочу комитеттери </a>, аты аталбаган, бирок Код сааттын колдоо максатында
     &mdash; Microsoft, Apple, Amazon, Американын балдар жана кыздар клубдары жана
     College Board менен биргелешкен өнөктөр тарабынан башкарылат.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Код жазуу тууралуу эч нерсе билбейм. Иш-чарага катышсам болобу?
   hoc_faq_host_a: Албетте. Код сааты тапшырмалары өз алдынча аткарылат. Болгону <a
     href='%{codeorg_url}/learn'>учурдагы жетектемелерибизди байкап көргүлө</a>. Жаккан

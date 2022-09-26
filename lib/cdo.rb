@@ -137,23 +137,31 @@ module Cdo
         # DNS record that redirects requests to localhost. Javabuilder, as a
         # separate service, uses a different port. Therefore, we can access the
         # the service directly.
-        # To use a developer instance of Javabuilder instead, replace this url with
-        # 'wss://<your-javabuilder-domain>.dev-code.org'
-        'ws://localhost:8080/javabuilder'
+        # On localhost, we default to using the "test" Javabuilder stack. To point
+        # to your Javabuilder WebSocket server running on localhost, set
+        # 'use_localhost_javabuilder: true' in your locals.yml. To point to a
+        # deployed development instance of Javabuilder, set
+        # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
+        return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
+        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{stack_name}.code.org"
       else
-        # TODO: change the default to javabuilder once we have switched over
-        DCDO.get("javabuilder_websocket_url", 'wss://javabuilderbeta.code.org')
+        DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
     end
 
     def javabuilder_upload_url(path = '', scheme = '')
       if rack_env?(:development)
-        # To use a developer instance of Javabuilder instead, replace this url with
-        # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
-        'http://localhost:8080/javabuilderfiles/seedsources'
+        # On localhost, we default to using the "test" Javabuilder stack. To point
+        # to your Javabuilder WebSocket server running on localhost, set
+        # 'use_localhost_javabuilder: true' in your locals.yml. To point to a
+        # deployed development instance of Javabuilder, set
+        # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
+        return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
+        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{stack_name}-http.code.org/seedsources/sources.json"
       else
-        # TODO: change the default to javabuilder once we have switched over
-        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilderbeta-http.code.org')
+        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"
       end
     end

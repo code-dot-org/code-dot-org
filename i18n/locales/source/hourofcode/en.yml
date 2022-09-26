@@ -5,33 +5,40 @@
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
 
-  campaign_date_start_short: "Dec. 6"
-  campaign_date_start_long: "December 6"
-  campaign_date_short: "Dec. 6-12"
-  campaign_date_full: "December 6-12"
-  campaign_date_year: "2021"
-  campaign_date_full_year: "December 6-12, 2021"
+  campaign_date_start_short: "Dec. 5"
+  campaign_date_start_long: "December 5"
+  campaign_date_short: "Dec. 5-11"
+  campaign_date_full: "December 5-11"
+  campaign_date_year: "2022"
+  campaign_date_full_year: "December 5-11, 2022"
+
+  nonus_campaign_date_start_short: "Oct. 1"
+  nonus_campaign_date_start_long: "October 1"
+  nonus_campaign_date_short: "Oct. 1 - Dec. 18"
+  nonus_campaign_date_full: "October 1 - December 18"
+  nonus_campaign_date_year: "2022"
+  nonus_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
 
   latam_campaign_date_start_short: "Oct. 1"
   latam_campaign_date_start_long: "October 1"
-  latam_campaign_date_short: "Oct. 1 - Dec. 12"
-  latam_campaign_date_full: "October 1 - December 12"
-  latam_campaign_date_year: "2021"
-  latam_campaign_date_full_year: "October 1, 2021 - December 12, 2021"
+  latam_campaign_date_short: "Oct. 1 - Dec. 18"
+  latam_campaign_date_full: "October 1 - December 18"
+  latam_campaign_date_year: "2022"
+  latam_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
 
-  europe_campaign_date_start_short: "Dec. 6"
-  europe_campaign_date_start_long: "December 6"
-  europe_campaign_date_short: "Dec. 6-12"
-  europe_campaign_date_full: "December 6-12"
-  europe_campaign_date_year: "2021"
-  europe_campaign_date_full_year: "December 6-12, 2021"
+  europe_campaign_date_start_short: "Oct. 1"
+  europe_campaign_date_start_long: "October 1"
+  europe_campaign_date_short: "Oct. 1 - Dec. 18"
+  europe_campaign_date_full: "October 1 - December 18"
+  europe_campaign_date_year: "2022"
+  europe_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
 
-  africa_campaign_date_start_short: "Dec. 6"
-  africa_campaign_date_start_long: "December 6"
-  africa_campaign_date_short: "Dec. 6-12"
-  africa_campaign_date_full: "December 6-12"
-  africa_campaign_date_year: "2021"
-  africa_campaign_date_full_year: "December 6-12, 2021"
+  africa_campaign_date_start_short: "Oct. 1"
+  africa_campaign_date_start_long: "October 1"
+  africa_campaign_date_short: "Oct. 1 - Dec. 18"
+  africa_campaign_date_full: "October 1 - December 18"
+  africa_campaign_date_year: "2022"
+  africa_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
 
   social_hoc2021_cse: "During the #HourOfCode, we're celebrating #CSEverywhere. Discover the connections!"
 
@@ -428,7 +435,6 @@
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "We will put your school name and city on the map when you register. If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 13."
 
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
@@ -510,8 +516,8 @@
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community — like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: 'Who is behind the Hour of Code?'
-  hoc_faq_behind_hoc_a: "The Hour of Code is driven by the Hour of Code and Computer Science Education Week <a href='%{partner_url}'>Advisory and Review Committees</a> as well as an unprecedented coalition of partners that have come together to support the Hour of Code &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
-  hoc_faq_behind_hoc_a_markdown: "The Hour of Code is driven by the Hour of Code and Computer Science Education Week [Advisory and Review Committees](%{partner_url}) as well as an unprecedented coalition of partners that have come together to support the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
+  hoc_faq_behind_hoc_a: "The Hour of Code is organized by Code.org and driven by the Hour of Code Review Committee as well as an unprecedented coalition of <a href='%{partner_url}'>partners</a> that have come together to support the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
+  hoc_faq_behind_hoc_a_markdown: "The Hour of Code is organized by Code.org and driven by the Hour of Code Review Committee as well as an unprecedented coalition of [partners](%{partner_url}) that have come together to support the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
   hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_host_a_markdown: "Of course. Hour of Code activities are self-guided. All you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the tutorial you want, and pick an hour — we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our [how to guide](%{howto})."
@@ -678,10 +684,10 @@
   highlights_constant_athletes_short_heading: Push yourself
 
   footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
-  footer_trademark_message: 'Hour of Code™ and Hora del Código® are trademarks of Code.org.'
+  footer_trademark_message: 'Hour of Code® and Hora del Código® are trademarks of Code.org.'
   footer_built_on_github: 'Built on GitHub from Microsoft'
 
-  footer_menu_partners: 'Partners and Advisors'
+  footer_menu_partners: 'Partners'
   footer_menu_contact: 'Contact us'
   footer_menu_support: 'Support'
   footer_menu_terms: 'Terms'

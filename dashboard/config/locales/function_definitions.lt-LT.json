@@ -1976,6 +1976,224 @@
               "length": "n"
             }
           }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "Mano funkcija"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          },
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "baigti žaidimą"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "baigti žaidimą"
+          }
         }
       }
     }

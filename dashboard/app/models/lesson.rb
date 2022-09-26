@@ -150,13 +150,13 @@ class Lesson < ApplicationRecord
 
   def unplugged_lesson?
     script_level = get_script_level_by_id
-    return false unless script_level.present?
+    return false if script_level.blank?
     script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
     script_level = get_script_level_by_id
-    return false unless script_level.present?
+    return false if script_level.blank?
     script_level.oldest_active_level.spelling_bee?
   end
 
@@ -632,7 +632,7 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      next nil unless objective['description'].present?
+      next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!

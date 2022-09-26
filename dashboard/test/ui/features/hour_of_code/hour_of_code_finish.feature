@@ -76,15 +76,23 @@ Scenario: Course A 2017 uncustomized dashboard certificate pages
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
 
+Scenario: blank certificate
+  When I am on "http://code.org/certificates/blank?enableExperiments=studioCertificate"
+  And I wait until current URL contains "http://studio.code.org/certificates/blank"
+
+  Then I wait to see an image "/images/hour_of_code_certificate.jpg"
+
 @eyes
 Scenario: congrats certificate pages
   Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
   And I wait until element "#uitest-certificate" is visible
+  And element "#uitest-certificate.show-studio-certificate" is visible
   And I open my eyes to test "congrats certificate pages"
 
   When I am on "http://code.org/api/hour/finish/flappy"
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate.show-studio-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized flappy certificate"
 
@@ -96,6 +104,7 @@ Scenario: congrats certificate pages
   When I am on "http://code.org/api/hour/finish/oceans"
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate.show-studio-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized oceans certificate"
 
@@ -107,6 +116,7 @@ Scenario: congrats certificate pages
   When I am on "http://code.org/congrats/coursea-2017?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate.show-studio-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized Course A 2017 certificate"
 
@@ -118,6 +128,7 @@ Scenario: congrats certificate pages
   When I am on "http://code.org/congrats/accelerated?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate.show-studio-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized 20-hour certificate"
 

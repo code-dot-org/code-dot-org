@@ -1273,6 +1273,8 @@ mr:
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
+        ai-ethics-2021:
+          description_audience: इयत्ता 6-12
         poem-art-2021:
           title: कविता कला
         explore-data-1-2021:

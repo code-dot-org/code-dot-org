@@ -227,14 +227,47 @@
         "csta/1B-CS-02": {
           "description": "Modelovanie toho, ako spolu počítačový hardvér a softvér fungujú ako systém, aby splnili úlohy."
         },
+        "csta/1B-NI-05": {
+          "description": "Diskutovanie o problémoch kyberbezpečnosti z reálneho sveta a o tom, ako sa dajú chrániť osobné údaje."
+        },
+        "csta/1B-AP-11": {
+          "description": "Rozkladanie problémov na menšie, zvládnuteľné podproblémy s cieľom podporiť proces vývoja programov."
+        },
+        "csta/1B-AP-14": {
+          "description": "Dodržiavanie práv intelektuálneho vlastníctva a správne uvedenie zdroja pri vytváraní alebo remixovaní programov."
+        },
+        "csta/1B-IC-21": {
+          "description": "Používanie médií z verejného vlastníctva alebo s licenciou Creative Commons, vyhýbanie sa kopírovaniu alebo používaniu materiálov iných ľudí bez povolenia."
+        },
+        "csta/1B-IC-18": {
+          "description": "Diskusia o výpočtových technológiách, ktoré zmenili svet, a vysvetlenie, ako tieto technológie ovplyvňujú kultúrne zvyklosti a ako sú nimi ovplyvňované."
+        },
+        "csta/1B-AP-08": {
+          "description": "Porovnávanie a zdokonaľovanie viacerých algoritmov slúžiacich na tú istú úlohu a určenie toho, ktorý je najvhodnejší."
+        },
+        "csta/1B-DA-07": {
+          "description": "Používanie údajov na zdôraznenie alebo načrtnutie príčinných súvislostí, predpovedanie výsledkov alebo vyjadrenie myšlienky."
+        },
+        "csta/1B-AP-16": {
+          "description": "Schopnosť zaujať s pomocou učiteľa rôzne roly pri spolupráci s rovesníkmi počas dizajnovej, implementačnej a kontrolnej fázy vývoja programu."
+        },
+        "csta/1B-IC-20": {
+          "description": "Vyhľadávanie rozmanitých pohľadov s cieľom zlepšiť počítačové výtvory."
+        },
         "csta/2-AP-10": {
           "description": "Používanie vývojových diagramov alebo pseudokódu na riešenie zložitých problémov ako algoritmov."
         },
         "csta/2-AP-13": {
           "description": "Rozloženie problémov a podproblémov na časti s cieľom uľahčiť návrh, implementáciu a testovanie programov."
         },
+        "csta/2-IC-22": {
+          "description": "Spolupráca s množstvom prispievateľov prostredníctvom stratégií, ako sú crowdsourcing či dotazníky, pri vytváraní počítačového výtvoru."
+        },
         "csta/2-IC-20": {
           "description": "Porovnávanie výhod a nevýhod výpočtovej techniky, ktorá má vplyv na každodenné aktivity ľudí a ich kariérne možnosti. "
+        },
+        "csta/2-IC-23": {
+          "description": "Opísanie výhod a nevýhod toho, keď sa informácie zverejnia v porovnaní s tým, keď sa zachovajú súkromné a zabezpečené."
         },
         "csta/2-AP-15": {
           "description": "Získavanie a zohľadňovanie spätnej väzby od členov tímu a používateľov s cieľom vylepšiť riešenie, ktoré spĺňa potreby používateľov."
@@ -242,20 +275,14 @@
         "csta/2-AP-18": {
           "description": "Rozdeľovanie úloh a dodržiavanie časového plánu projektu pri spoločnom vývoji počítačových artefaktov."
         },
-        "csta/1B-AP-08": {
-          "description": "Porovnávanie a zdokonaľovanie viacerých algoritmov slúžiacich na tú istú úlohu a určenie toho, ktorý je najvhodnejší."
-        },
-        "csta/1B-AP-11": {
-          "description": "Rozkladanie problémov na menšie, zvládnuteľné podproblémy s cieľom podporiť proces vývoja programov."
-        },
-        "csta/1B-AP-16": {
-          "description": "Schopnosť zaujať s pomocou učiteľa rôzne roly pri spolupráci s rovesníkmi počas dizajnovej, implementačnej a kontrolnej fázy vývoja programu."
-        },
         "csta/2-AP-17": {
           "description": "Systematické testovanie a vylepšovanie programov pomocou rôznych testovacích prípadov."
         },
         "csta/2-CS-02": {
-          "description": "Navrhovanie projektov, koré spájajú hardvérové a softvérové súčasti na zbieranie a výmenu údajov."
+          "description": "Navrhovanie projektov, ktoré spájajú hardvérové a softvérové súčasti na zbieranie a výmenu údajov."
+        },
+        "csta/2-IC-21": {
+          "description": "Diskutovanie o témach skreslenia a dostupnosti v dizajne existujúcich technológií."
         },
         "csta/2-AP-19": {
           "description": "Dokumentovanie programov s cieľom uľahčiť ich sledovanie, testovanie a ladenie."
@@ -274,9 +301,6 @@
         },
         "csta/3A-AP-20": {
           "description": "Vyhodnotenie licencií, ktoré obmedzujú použitie informatických produktov pri použití rozličných zdrojov, napríklad knižníc."
-        },
-        "csta/1B-IC-18": {
-          "description": "Diskusia o výpočtových technológiách, ktoré zmenili svet, a vysvetlenie, ako tieto technológie ovplyvňujú kultúrne zvyklosti a ako sú nimi ovplyvňované."
         },
         "ai4k12-2021/3-A-ii.3-5": {
           "description": "Modelovanie toho, ako učenie pod dohľadom identifikuje vzory v označených údajoch."
@@ -332,8 +356,8 @@
         "ai4k12-2021/3-A-ii.9-12": {
           "description": "Použite algoritmus učenia s dohľadom alebo bez dohľadu na trénovanie modelu na údajoch z reálneho sveta a potom vyhodnoťte výsledky."
         },
-        "csta/1B-DA-07": {
-          "description": "Používanie údajov na zdôraznenie alebo načrtnutie príčinných súvislostí, predpovedanie výsledkov alebo vyjadrenie myšlienky."
+        "ai4k12-2021/3-A-iv.9-12": {
+          "description": "Vysvetlenie, čo sa deje v každom z krokov potrebných pri použití strojového učenia na vytvorenie klasifikátora alebo prediktora."
         }
       }
     }

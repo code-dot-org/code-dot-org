@@ -4307,6 +4307,8 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 沙盒
+        ai-ethics-2021:
+          description_audience: 年級 6-12
         poem-art-2021:
           title: 詩歌藝術
         explore-data-1-2021:
@@ -4794,3 +4796,39 @@ zh-TW:
           title: 電腦科學原理深入學習 模組 1
         soccer:
           name: 足球
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: 問卷
+            lessonGroup-2:
+              display_name: 內容
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 問卷

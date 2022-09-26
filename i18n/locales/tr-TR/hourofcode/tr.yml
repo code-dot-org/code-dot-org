@@ -5,29 +5,35 @@ tr:
   language: İngilizce
   front_title: Tarihteki ben büyük eğitim etkinliğine katıl, %{campaign_date}
   coming_soon: Çok Yakında
-  campaign_date_start_short: 6 Ara.
-  campaign_date_start_long: 6 Aralık
-  campaign_date_short: 7-13 Aralık
-  campaign_date_full: 6-12 Aralık
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 Aralık, 2021
+  campaign_date_start_short: 5 Ara.
+  campaign_date_start_long: 5 Aralık
+  campaign_date_short: 5-11 Aralık
+  campaign_date_full: 5-11 Aralık
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 Aralık, 2022
+  nonus_campaign_date_start_short: 1 Eki.
+  nonus_campaign_date_start_long: 1 Ekim
+  nonus_campaign_date_short: 1 Eki. - 18 Ara.
+  nonus_campaign_date_full: 1 Ekim - 18 Aralık
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
   latam_campaign_date_start_short: 1 Eki.
   latam_campaign_date_start_long: 1 Ekim
   latam_campaign_date_short: 1 Eki. - 18 Ara.
   latam_campaign_date_full: 1 Ekim - 18 Aralık
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
   europe_campaign_date_start_short: 10 Eki.
   europe_campaign_date_start_long: 10 Ekim
   europe_campaign_date_short: 10-25 Eki.
   europe_campaign_date_full: 10-25 Ekim
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10-25 Ekim 2020
-  africa_campaign_date_start_short: 6 Ara.
-  africa_campaign_date_start_long: 6 Aralık
+  africa_campaign_date_start_short: 1 Eki.
+  africa_campaign_date_start_long: 1 Ekim
   africa_campaign_date_short: 1-31 Eki.
   africa_campaign_date_full: 1-31 Ekim
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1-31 Ekim 2020
   social_hoc2021_cse: "#HourOfCode sırasında #CSEverywhere'i kutluyoruz. Bağlantıları
     keşfedin!"
@@ -544,7 +550,6 @@ tr:
   signup_email_preference_error: E-posta tercihi gereklidir
   signup_multiple_event_warning: Eğer birden fazla etkinliğe ev sahipliği ediyorsan,
     lütfen isim veya mail adresinden birini gönder. Bir e-mail için bir etkinlik ayarlanır.
-  signup_registration_deadline: Hour of Code kaydı 13 Aralık'ta kapanır.
   signup_name_placeholder: İsminiz
   signup_email_placeholder: ornek@hotmail.com
   signup_organization_name_placeholder: Örnek, Bursa Hocailyas Ortakulu

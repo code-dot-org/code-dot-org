@@ -1468,3 +1468,10 @@ es:
   unit_prefix: Unidad %{n}
   code_org_logo_alt: Inicio de Code.org
   teacher_feedback: Retroalimentación del docente
+  lesson_lock:
+    error:
+      no_updates: No hay actualizaciones disponibles
+      missing_params: Debe proporcionar los ID de usuario, nivel y unidad
+      cannot_view_locked_answers: No se pueden ver las respuestas mientras están bloqueadas
+      forbidden: El usuario no puede actualizar el estado bloqueable del estudiante
+  reset_predict_progress_button: Borrar respuesta

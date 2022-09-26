@@ -2273,6 +2273,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        ai-ethics-2021:
+          description_audience: 6.klasse til vidaregåande skule
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2564,3 +2566,39 @@ nn:
               display_name: Undersøking
         soccer:
           name: fotball
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Undersøking
+            lessonGroup-2:
+              display_name: Innhald
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+            lessonGroup-5:
+              display_name: Undersøking

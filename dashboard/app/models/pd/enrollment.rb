@@ -157,7 +157,7 @@ class Pd::Enrollment < ApplicationRecord
   # @return [Enumerable<Pd::Enrollment>]
   def self.filter_for_survey_completion(enrollments, select_completed = true)
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
-        enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
+        enrollments.is_a?(Enumerable) && enrollments.all?(Pd::Enrollment)
 
     # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
     # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
@@ -202,8 +202,8 @@ class Pd::Enrollment < ApplicationRecord
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
-    # any other non-academic year workshop uses foorm. We don't automatically provide survey urls for AYW
-    elsif !ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(workshop.subject)
+    # any other non-academic year workshop uses foorm
+    else
       CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
     end
   end
@@ -222,8 +222,6 @@ class Pd::Enrollment < ApplicationRecord
     return unless should_send_exit_survey?
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
-
-    update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,

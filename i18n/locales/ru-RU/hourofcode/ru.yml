@@ -6,30 +6,36 @@ ru:
   front_title: Присоединяетесь к самому масштабному образовательному событию 7-13
     декабря 2015
   coming_soon: Скоро
-  campaign_date_start_short: 6 декабря
+  campaign_date_start_short: 5 декабря
   campaign_date_start_long: 6 декабря
   campaign_date_short: 5-11 декабря
-  campaign_date_full: 6-12 декабря
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 декабря 2021 года
+  campaign_date_full: 5-11 декабря
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 декабря 2022 года
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1 октября - 18 декабря
+  nonus_campaign_date_full: 1 октября - 18 декабря
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6 декабря
-  europe_campaign_date_start_long: 6 декабря
-  europe_campaign_date_short: 5-11 декабря
-  europe_campaign_date_full: 6-12 декабря
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 декабря 2021 года
-  africa_campaign_date_start_short: 6 декабря
-  africa_campaign_date_start_long: 6 декабря
-  africa_campaign_date_short: 5-11 декабря
-  africa_campaign_date_full: 6-12 декабря
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 декабря 2021 года
+  latam_campaign_date_short: 1 октября - 18 декабря
+  latam_campaign_date_full: 1 октября - 18 декабря
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1 октября - 18 декабря
+  europe_campaign_date_full: 1 октября - 18 декабря
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1 октября - 18 декабря
+  africa_campaign_date_full: 1 октября - 18 декабря
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -552,7 +558,6 @@ ru:
   signup_multiple_event_warning: Если вы организуете сразу несколько мероприятий,
     просьба присвоить свое уникальное название и email каждому из них. Мы принимаем
     к регистрации только одно название для мероприятия с присвоенным ему email.
-  signup_registration_deadline: Регистрация на Час кода закроется 12 декабря
   signup_name_placeholder: Ваше имя
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Например, Старшая школа им.Линкольна
