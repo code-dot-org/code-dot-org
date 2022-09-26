@@ -63,7 +63,17 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: 'variable_set'
+          type: 'variable_set',
+          inputs: {
+            value: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
         }
       ]
     }
@@ -86,28 +96,25 @@ export const createMusicToolbox = library => {
       contents: []
     };
 
-    // TODO: Create block per sample. For now, just add the standard play blocks for each category
-    category.contents.push(
-      {
+    for (let sound of folder.sounds) {
+      category.contents.push({
         kind: 'block',
-        type: 'play_sound'
-      },
-      {
-        kind: 'block',
-        type: 'play_sound_with_variable'
-      },
-      {
-        kind: 'block',
-        type: 'play_sound_next_measure'
-      }
-    );
-
-    // for (let sound of folder.sounds) {
-    //   category.contents.push({
-    //     kind: 'block',
-    //     type: 'play_sample'
-    //   });
-    // }
+        type: 'play_sound',
+        fields: {
+          sound: folder.path + '/' + sound.src
+        },
+        inputs: {
+          measure: {
+            shadow: {
+              type: 'math_number',
+              fields: {
+                NUM: 1
+              }
+            }
+          }
+        }
+      });
+    }
 
     // Add to samples category
     toolbox.contents[0].contents.push(category);
