@@ -243,7 +243,6 @@ mi:
     popup:
       progress_for_user: "Te kauneketanga o %{name}"
       progress: 'Tō kauneketanga'
-      lines: 'Ngā rārangi waehere katoa: %{lines}'
       close: 'KATI'
       mastery: 'Ariā'
       puzzle_map: 'Wāhanga'

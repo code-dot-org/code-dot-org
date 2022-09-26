@@ -442,6 +442,8 @@ cs:
         hoc_dance_events: Taneční večírek  - Události
         hoc_dance_properties: Taneční večírek  - vlastnosti
         hoc_dance_congrats: Dance Party - Jedeme dál!
+        c_and_c_great_to_create: Tvoření a férová hra jsou super
+        c_and_c_digital_sharing: Digitální sdílení
         what_is_cs: Co je informatika?
         lesson_planning: Plánování hodiny
         writing_first_program: Psaní svého prvního počítačového programu
@@ -460,6 +462,7 @@ cs:
         hoc_dance_properties_2019: Dance Party 2019 - Vlastnosti
         csd_what_computers_do: Co dělají počítače?
         csf_my_online_neighborhood_2020: Mé online sousedství
+        csf_private_and_personal_information: Soukromé a osobní informace
         outbreak_mike: CodeBytes Díl 3 s Mikem - Simulátor epidemií
         csf_lots_of_sprites: 'Laboratoř sprajtů: spousta sprajtů'
         playlab_2021: Úvod do Play Labu
@@ -508,6 +511,7 @@ cs:
         CSA-PL-two-way-selection: Volba dvou možností
         CSA-PL-Printing-in-Java: Tisk v Java
         CSA-PL-multi-selection-statements: Příkazy s více volbami
+        CS_Changing_Everything: Informatika mění vše
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

@@ -115,6 +115,9 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kódolás órája 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
           "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
@@ -124,8 +127,297 @@
           "name": "AI óceánok",
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Először a diákok szemetet próbálnak eltávolítani az óceánból és a tárgyakat \"hal\" vagy \"nem hal\" kategóriába sorolják. Ezután a tanulóknak ki kell bővíteniük az adathalmazt más tengeri élőlénnyel. A foglalkozás második részében a tanulók maguk választanak címkéket, amelyeket a véletlenszerűen generált halak képeire helyeznek. Ezeket az adatokat egy gépi tanuló modellben használják, amely ezután képes lesz arra, hogy önállóan címkézzen fel új képeket."
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "hurkok"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Események"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Feltételek"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "funkciók"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "változók"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Számláló ciklusok"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite labor"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Hangulat tanulmányozása"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Első lépések"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "A számítógép-tudomány alapjai"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Tervezés"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Első lépések"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "A számítógép-tudomány alapjai"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Tervezés"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "name": "Miniprojekt: Virtuális kisállat",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2022/Mini-Project: User Input Programs": {
+          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
+        },
+        "coursef-2022/Outbreak": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
+        },
+        "coursef-2022/The Internet": {
+          "name": "Az internet"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Magán és személyes információk"
+        },
+        "coursee-2022/Swimming Fish with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Hello World: Food": {
+          "name": "Helló világ"
+        },
+        "coursee-2022/Mini-Project: About Me": {
+          "name": "Miniprojekt: Rólam"
+        },
+        "coursee-2022/Drawing with Loops": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2022/Functions in Minecraft": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Functions with Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Conditionals with the Farmer": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Functions with Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Designing for Accessibility": {
+          "name": "Hozzáférhetőség tervezése"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "Digitális megosztás"
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "courseb-2022/The Right App": {
+          "name": "A megfelelő alkalmazás"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "express-2022/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "express-2022/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "express-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "pre-express-2022/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
+        },
+        "coursea-2022/Learn to Drag and Drop": {
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Vidám térképek"
+        },
+        "coursea-2022/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
+          "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "coursec-2022/The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "Az adatok leképezése"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Bináris karkötők"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Bevezetés a problémamegoldásba",
+          "preparation": "**Minden csoportnak**\n\n-   2 lap aufólia, mindkettő 13x13 cm méretben.\n-   1 tároló, amiben elfér 7-13 cm víz\n-   Több papírtörlő vagy rongyok, amiket a tárol alá lehet helyezni\n-   15 penny\n-   1 másolat a tevékenységi útmutatóról\n\n**A tanároknak**\n\n-   1 tároló, amiben elfér 7-13 cm víz\n-   50 penny\n-   Extra papírtörlő vagy rongyok\n-   Nézze meg a [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) fórumot az ellenőrzött tanárok számára, hogy további stratégiákat vagy forrásokat találjon, amelyeket tanártársaik is megosztottak.\n-   Ha virtuálisan tanít, fontolja meg a [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ünk megnézését."
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Mi az a számítógép?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2022/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2022/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd3-2022/Variables": {
+          "name": "változók"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Véletlen számok"
+        },
+        "csd3-2022/Sprites": {
+          "name": "sprite-ok"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprite tulajdonságok"
+        },
+        "csd3-2022/Text": {
+          "name": "szöveg"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Feltételek"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Sebesség"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Ütközések"
+        },
+        "csd3-2022/Functions": {
+          "name": "funkciók"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
+        "csd2-2022/Headings": {
+          "name": "Címsorok"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "CSS osztályok"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Oldalak összekapcsolása"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Színes LED-ek"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Zene Készítése"
+        },
+        "csd6-2022/Functions": {
+          "name": "funkciók"
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
@@ -289,6 +581,9 @@
         "csd3-2018/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2018/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2018/Collisions": {
           "name": "Ütközések"
         },
@@ -304,6 +599,9 @@
         "csd6-2018/Getting Properties": {
           "name": "Tulajdonságok szerzése"
         },
+        "csd6-2018/Making Music": {
+          "name": "Zene Készítése"
+        },
         "csd6-2018/Functions with Parameters": {
           "name": "Paraméteres függvények"
         },
@@ -317,7 +615,7 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2018/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -328,11 +626,47 @@
         "csd4-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
+        "csd2-2018/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
+        },
+        "csd2-2018/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
+        },
+        "csd2-2018/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
         "csd2-2018/Headings": {
           "name": "Címsorok"
         },
+        "csd2-2018/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
         "csd2-2018/Lists": {
           "name": "Listák"
+        },
+        "csd2-2018/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2018/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2018/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2018/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2018/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2018/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
+        },
+        "csd2-2018/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
+        },
+        "csd2-2018/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
         },
         "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -343,8 +677,20 @@
         "csd1-2018/The Problem Solving Process": {
           "name": "A probléma-megoldási folyamat"
         },
+        "csd1-2018/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2018/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd1-2018/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2018/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2018/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Biztonságos utazás"
@@ -466,6 +812,9 @@
         "csd3-2019/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2019/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2019/Collisions": {
           "name": "Ütközések"
         },
@@ -477,6 +826,9 @@
         },
         "csd6-2019/Getting Properties": {
           "name": "Tulajdonságok szerzése"
+        },
+        "csd6-2019/Making Music": {
+          "name": "Zene Készítése"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Paraméteres függvények"
@@ -491,19 +843,70 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2019/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2019/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd1-2019/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2019/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2019/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
+        },
+        "csd2-2019/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
         },
         "csd2-2019/Headings": {
           "name": "Címsorok"
         },
+        "csd2-2019/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
         "csd2-2019/Lists": {
           "name": "Listák"
+        },
+        "csd2-2019/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2019/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2019/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2019/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2019/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2019/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
+        },
+        "csd2-2019/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
+        },
+        "csd2-2019/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
         },
         "coursef-2017/Building a Foundation": {
           "name": "Az alap megépítése"
@@ -516,6 +919,9 @@
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Valós algoritmusok: Ültess el egy magot!"
+        },
+        "pre-express-2017/Programming: Star Wars": {
+          "name": "Programozás: Star Wars"
         },
         "pre-express-2017/Spelling Bee": {
           "name": "Betüző méh"
@@ -562,6 +968,9 @@
         "csd3-2017/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2017/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2017/Collisions": {
           "name": "Ütközések"
         },
@@ -574,14 +983,53 @@
         "csd6-2017/Getting Properties_": {
           "name": "Tulajdonságok szerzése"
         },
+        "csd6-2017/Making Music_": {
+          "name": "Zene Készítése"
+        },
         "csd6-2017/Functions with Parameters_": {
           "name": "Paraméteres függvények"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
+        },
+        "csd2-2017/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
+        },
+        "csd2-2017/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
         },
         "csd2-2017/Headings": {
           "name": "Címsorok"
         },
+        "csd2-2017/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
         "csd2-2017/Lists": {
           "name": "Listák"
+        },
+        "csd2-2017/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2017/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2017/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2017/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2017/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2017/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
+        },
+        "csd2-2017/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
+        },
+        "csd2-2017/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
         },
         "csd1-2017/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
@@ -589,8 +1037,26 @@
         "csd1-2017/The Problem Solving Process": {
           "name": "A probléma-megoldási folyamat"
         },
+        "csd1-2017/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2017/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd1-2017/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2017/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2017/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2017/Apps and Problem Solving": {
+          "name": "Appok és Problémamegoldás"
+        },
+        "csd1-2017/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
         },
         "csd5-2017/Representing Images": {
           "name": "Képek ábrázolása"
@@ -599,7 +1065,7 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2017/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd4-2017/Linking Screens": {
           "name": "Képernyők összekapcsolása"
@@ -669,6 +1135,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extrém kihívás - Átfogó"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Bevezetés a számítógép tudományába"
+        },
+        "20-hour/The Maze": {
+          "name": "A labirintus"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Számítógépes gondolkodás"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "20-hour/The Artist": {
+          "name": "A Művész"
+        },
+        "20-hour/Algorithms": {
+          "name": "algoritmusok"
+        },
+        "20-hour/The Artist 2": {
+          "name": "A Művész 2"
+        },
+        "20-hour/Functions": {
+          "name": "funkciók"
+        },
+        "20-hour/The Farmer": {
+          "name": "A Farmer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Feltételek"
+        },
+        "20-hour/The Artist 3": {
+          "name": "A Művész 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Dal iras"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "A Farmer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Absztrakció"
+        },
+        "20-hour/The Artist 4": {
+          "name": "A Művész 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "A Farmer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Az internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "A Művész 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Összefoglaló"
         },
         "course2/Graph Paper Programming": {
           "name": "Grafikus programozás"
@@ -848,8 +1374,68 @@
           "name": "Kirakós játék",
           "overview": "Ez a leckében a diákok megismerik, hogy mire számíthatnak egy számítógépes laborban. A lecke egy rövid megbeszéléssel kezdődik a számítógépes laborban való megfelelő viselkedésről, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
           "preparation": "-   A [Mindennapi tudás iskolája](https://www.commonsense.org/education/digital-citizenship) webhelyen további tartalmak találhatók az online biztonságról.",
-          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel egyenlőbb feltételeket lesznek az osztályban, amikor a diákok majd rejtvényeket fognak megoldani. Ez a lecke remek lehetőséget nyújt arra is, hogy bemutassuk az alapvető számítógépes hardverterminológiát, beleértve az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" fogalmakat, attól függően, hogy milyen eszközt használunk.",
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel az osztályban a diákok lényegében azonos szintre kerülnek, amikor majd feladványokat kell megoldaniuk. Ez a lecke remek lehetőséget nyújt arra is, hogy megismerjék a számítógépes hardver alapvető kifejezéseit, többek között az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" kifejezéseket, attól függően, hogy milyen eszközt használnak.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Kirakós játék"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintus"
+        },
+        "allthethings/Artist": {
+          "name": "Művész"
+        },
+        "allthethings/Bee": {
+          "name": "Méh"
+        },
+        "allthethings/Farmer": {
+          "name": "Farmer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Ugrál"
+        },
+        "allthethings/Multi": {
+          "name": "Feleletválasztás"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Párosítás"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Text Compression": {
+          "name": "Szöveg tömörítése"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web-Lab"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite labor"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Tánc Labor"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java laboratórium"
         },
         "coursef-2021/Virtual Pet": {
           "name": "Miniprojekt: Virtuális kisállat",
@@ -904,7 +1490,7 @@
           "name": "Kurzus Projekt vége"
         },
         "coursea-2021/Learn to Drag and Drop": {
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Vidám térképek"
@@ -992,7 +1578,7 @@
           "name": "Kurzus Projekt vége"
         },
         "pre-express-2021/Learn to Drag and Drop": {
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével",
@@ -1052,6 +1638,9 @@
         "csd6-2021/Getting Properties": {
           "name": "Tulajdonságok szerzése"
         },
+        "csd6-2021/Making Music": {
+          "name": "Zene Készítése"
+        },
         "csd6-2021/Functions with Parameters": {
           "name": "Paraméteres függvények"
         },
@@ -1062,7 +1651,7 @@
           "name": "Képek ábrázolása"
         },
         "csd5-2021/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd5-2021/Keeping Data Secret": {
           "name": "Adatok titokban tartása"
@@ -1091,6 +1680,9 @@
         "csd3-2021/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
+        "csd3-2021/Velocity": {
+          "name": "Sebesség"
+        },
         "csd3-2021/Collisions": {
           "name": "Ütközések"
         },
@@ -1103,11 +1695,41 @@
         "csd1-2021/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
         },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2021/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
         "csd1-2021/What is a Computer?": {
           "name": "Mi az a számítógép?"
         },
+        "csd1-2021/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2021/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2021/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2021/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2021/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
         "csd2-2021/Headings": {
           "name": "Címsorok"
+        },
+        "csd2-2021/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2021/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2021/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
         },
         "csd2-2021/CSS Classes": {
           "name": "CSS osztályok"

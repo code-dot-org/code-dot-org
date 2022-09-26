@@ -1966,6 +1966,219 @@
               "length": "gjatesi"
             }
           }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "vizato një yll",
+            "parameters": {
+              "points": "pikët",
+              "length": "gjatesi"
+            }
+          },
+          "draw a circle": {
+            "name": "vizato një rreth"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "gjatesi",
+              "repeat": "përsërit"
+            }
+          },
+          "draw a triangle": {
+            "name": "vizato nje trekendesh",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a house": {
+            "name": "vizato një shtëpi",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a square": {
+            "name": "vizato një katror",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "vizato një yll",
+            "parameters": {
+              "points": "pikët",
+              "length": "gjatesi"
+            }
+          },
+          "draw a circle": {
+            "name": "vizato një rreth"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "gjatesi",
+              "repeat": "përsërit"
+            }
+          },
+          "draw a triangle": {
+            "name": "vizato nje trekendesh",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a house": {
+            "name": "vizato një shtëpi",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a square": {
+            "name": "vizato një katror",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "vizato një yll",
+            "parameters": {
+              "points": "pikët",
+              "length": "gjatesi"
+            }
+          },
+          "draw a circle": {
+            "name": "vizato një rreth"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "gjatesi",
+              "repeat": "përsërit"
+            }
+          },
+          "draw a triangle": {
+            "name": "vizato nje trekendesh",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a house": {
+            "name": "vizato një shtëpi",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a square": {
+            "name": "vizato një katror",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "vizato një katror"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "vizato një yll"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "vizato një yll"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "vizato një katror"
+          },
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "vizato një katror"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "bëj diqka"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "përfundo lojën"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "përfundo lojën"
+          }
         }
       }
     }

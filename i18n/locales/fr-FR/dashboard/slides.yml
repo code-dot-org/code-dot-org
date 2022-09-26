@@ -260,7 +260,7 @@ fr:
       1:
         text: "Maintenant, nous allons apprendre quelque chose que tous les programmeurs de jeux utilisent tous les jours. On les appelle des événements. Un événement dit à ton programme d’écouter lorsque quelque chose se passe. Lorsque cette chose se passe, il effectue une action."
       2:
-        text: "Quelques exemples d'évènements sont: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
+        text: "Quelques exemples d'évènements : guetter un clic de la souris, une touche fléchée ou une tape sur l'écran."
       3:
         text: "Ici, nous allons faire en sorte que le robot venu de l’espace salue les terriens lorsqu'un joueur clique sur lui. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «Dire». Lorsque le joueur clique sur le robot venu de l'espace, tout ce qui est attaché à l’événement « Quand clic » sera effectué. Que dit ton extra-terrestre ?"
       4:
@@ -425,15 +425,15 @@ fr:
         text: "Encore une chose, tu peux mettre autant de commandes que tu veux à l'intérieur du bloc « Répéter ». Ainsi dans cet exemple, tu lui dis d’avancer et de tourner à gauche, ce qu’il fera cinq fois. Amuse-toi bien!"
     C2_artist_intro:
       1:
-        text: "Tu ne serais même pas qualifié pour la course si tu n'avais pas les gens compétents en informatique - à cause de la quantité de données recueillies par les voitures et de la nécessité d'avoir des gens capable d'écrire des programmes afin de savoir comment continuer à être performant."
+        text: "On ne serait même pas qualifié pour la course si on n'avait pas des gens compétents en informatique, à cause de la quantité de données recueillies par les voitures et du besoin d'avoir des gens capables d'écrire des programmes qui nous permettent de voir comment être de plus en plus performant."
       2:
-        text: "Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
+        text: "Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
       3:
-        text: "Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de tous petits carrés sur ton écran."
+        text: "Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés sur ton écran."
       4:
-        text: "L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de 90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner l’artiste comme tu veux. C’est un virage à 90 degrés."
+        text: "L'autre bloc que nous avons dans ce casse-tête fait tourner à droite de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de 90 degrés."
       5:
-        text: "Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté des chiffres pour les pixels et les degrés. Amuse-toi à dessiner avec ton artiste !"
+        text: "Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et de degrés. Amuse-toi bien en dessinant avec ton artiste !"
     C2_bee_conditionals:
       1:
         text: "Il s'agit d’un bloc conditionnel. Il dit que SI il y a du nectar ou du miel qui est inférieur, égal ou supérieur à un certain nombre, ALORS il faut faire quelque chose."
@@ -562,15 +562,15 @@ fr:
         text: "Dans le programme que nous avons construit, nous avons appris comment dessiner un carré en avançant et en tournant quatre fois. Nous pouvons prendre cette fonction et lui donner un nom comme «Dessiner un carré» pour que chaque fois qu’on en a envie, on puisse simplement dire « Dessiner un carré », et l’ordinateur appellera cette fonction, ce code. Il le fera pour nous. Nous avons ajouté cette notion dans notre langage de programmation."
     C3_artist_intro:
       1:
-        text: "Tu ne serais même pas qualifié pour la course si tu n'avais pas les gens compétents en informatique - à cause de la quantité de données recueillies par les voitures et de la nécessité d'avoir des gens capable d'écrire des programmes afin de savoir comment continuer à être performant."
+        text: "On ne serait même pas qualifié pour la course si on n'avait pas des gens compétents en informatique, à cause de la quantité de données recueillies par les voitures et du besoin d'avoir des gens capables d'écrire des programmes qui nous permettent de voir comment être de plus en plus performant."
       2:
-        text: "Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
+        text: "Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
       3:
-        text: "Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de tous petits carrés sur ton écran."
+        text: "Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés sur ton écran."
       4:
-        text: "L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de 90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner l’artiste comme tu veux. C’est un virage à 90 degrés."
+        text: "L'autre bloc que nous avons dans ce casse-tête fait tourner à droite de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de 90 degrés."
       5:
-        text: "Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté des chiffres pour les pixels et les degrés. Amuse-toi à dessiner avec ton artiste !"
+        text: "Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et de degrés. Amuse-toi bien en dessinant avec ton artiste !"
     C3_artist_nested_loops:
       1:
         text: "Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle ça une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour dessiner un triangle de 100 pixels de côté en utilisant le bloc « Répéter » calé sur trois, une fois pour chaque côté du triangle."
@@ -1641,34 +1641,34 @@ fr:
       1:
         text: "Heure de Code | Soirée Dansante : Échauffement"
       2:
-        text: "Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels et créateur d'iLuminate."
+        text: "Salut ! Je m'appelle Miral Kotb et je suis danseuse, développeuse informatique et la créatrice d'iLuminate."
       3:
         text: "L'informatique est liée à la créativité, de plein de manières différentes, de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel, vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je fais avec des costumes au lumière. On peut faire tellement de choses, une fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment infinies."
       4:
-        text: "Au cours de la prochaine heure, vous allez commencer avec l'informatique en programmant votre propre soirée dansante ! Nous avons sélectionné de la musique branchée et une équipe de grands danseurs avec lesquels vous pourrez jouer."
+        text: "Au cours de l'heure qui vient, tu vas te mettre à l'informatique en programmant ta propre soirée dansante ! On a sélectionné de la musique branchée et une super équipe de danseurs avec lesquels tu vas pouvoir t'amuser."
       5:
-        text: "Vous utiliserez des blocs de code pour choisir différents danseurs, modifier leurs mouvements de danse, les faire répondre à la musique et les rendre interactifs."
+        text: "Tu vas te servir de blocs de code pour choisir différents danseurs, modifier leurs pas de danse, les faire réagir à la musique et les rendre interactifs."
       6:
-        text: "Vous verrez que votre écran est divisé en 3 parties principales. Sur la gauche se trouve l'espace de jeu où vos danseurs se présenteront."
+        text: "Tu verras que ton écran se divise en 3 parties principales. Sur la gauche se trouve l'espace de jeu. C'est là que tes danseurs apparaîtront. "
       7:
         text: "La zone centrale est une boîte à outils. De nouveaux blocs de code seront disponibles dans cet espace au fur et à mesure des cours."
       8:
-        text: "À droite, vous avez l’espace de travail. Vous pouvez faire glisser des blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire votre programme."
+        text: "À droite, tu as l’espace de travail. Tu peux faire glisser des blocs depuis la boîte à outils jusque dans l'espace de travail pour construire ton programme."
       9:
-        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule."
+        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si tu as besoin d'un indice, il te suffit de cliquer sur l'ampoule."
       10:
         text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat et il s'appelle \"my_first_dancer\". Vous pouvez changer le nom en cliquant ici."
       11:
-        text: "Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de jeu, avec ça."
+        text: "Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace de jeu, avec ça."
       12:
-        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme apparaissent dans l'espace de lecture et la musique démarre."
+        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a un très gros choix de chansons, alors amuse-toi à trouver tes préférées. En dessous de l'espace de jeu, il y a le bouton « Démarrer ». Lorsque tu appuies dessus, les danseurs de ton programme vont apparaître dans l'espace de jeu et la musique va démarrer."
       13:
         text: "Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave, vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va ?"
     hoc_dance_events:
       1:
         text: "Heure de Code | Soirée Dansante : Événements"
       2:
-        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie, car elle contrôle littéralement nos vies."
+        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète et artiste. Je pense que c'est très important d’avoir des connaissances en informatique, parce que c'est l'avenir. Je crois qu'il faut être à même de contrôler la technologie qui contrôle littéralement nos vies."
       3:
         text: "Pour générer différents mouvements de danse au bon moment avec la musique, vous pouvez utiliser les Évènements. Un événement demande à votre programme d’écouter quelque chose, puis d’y réagir tout de suite."
       4:
@@ -1678,26 +1678,26 @@ fr:
       6:
         text: "En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4 temps."
       7:
-        text: "Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement vert. Ce bloc Évènement dit « après 4 mesures »."
+        text: "Pour faire se déchaîner tes danseurs, tu vas avoir besoin d'un bloc événement vert. Ce bloc évènement indique : « après 4 mesures »."
       8:
-        text: "Si vous faites glisser un bloc violet « Faire pour toujours », vous pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc d'événements « après 4 mesures », votre danseur attendra 4 mesures de la chanson, avant de commencer sa danse."
+        text: "Si tu sors un bloc violet « faire pour toujours », tu peux choisir une danse pour ton danseur. Parce que tu vas le mettre en dessous du bloc événement « après 4 mesures », ton danseur va attendre que 4 mesures de la chanson passent avant de se mettre à danser."
       9:
-        text: "Surveillez bien le compteur de mesures situé en haut de la zone d'affichage."
+        text: "Garde un œil sur le compteur de mesures situé en haut de la zone d'affichage."
       10:
-        text: "Recherchez et écoutez l'événement qui déclenchera le code de danse. Et juste au bon moment, le danseur commencera."
+        text: "Observe et guette l'événement qui va déclencher le code de danse. Hop, pile au bon moment, notre danseur s'y met."
     hoc_dance_properties:
       1:
         text: "Heure de Code | Soirée Dansante : Propriétés"
       2:
-        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Amazon Future Ingénieure."
+        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Future Ingénieure Amazon."
       3:
-        text: "J'adore l'informatique car ça allie résolution de problèmes et pensée critique, et après des heures de travail, on a quelque chose de vraiment cool et gratifiant."
+        text: "J'adore l'informatique parce que ça demande de la débrouillardise et un esprit critique, et que quand on investit des heures de travail, on peut obtenir quelque chose de vraiment cool et d'enrichissant."
       4:
         text: "Jusque-là, vous avez pu jouer avec différents types de danseurs, que vous avez programmés pour différents types de mouvements de danse. Mais comment fonctionnent ces mouvements ?"
       5:
-        text: "Chaque mouvement de danse est constitué d’une série d’images appelées Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand votre programme s'exécute, votre ordinateur affiche un cadre après l'autre. Ils s'affichent tellement vite que cela donne l'impression que la danseuse bouge. C’est là le secret derrière chaque animation."
+        text: "Chaque pas de danse est composé d’une série d’images qu'on appel les photogrammes. Chaque photogramme est légèrement différent de celui qui le précède. Quand ton programme s'exécute, ton ordinateur affiche un photogramme après l'autre. Ils s'affichent tellement rapidement qu'on a l'impression que le danseur bouge. C'est ça le secret de tout dessin animé. "
       6:
-        text: "Non seulement vous pouvez changer les mouvements d'un danseur, mais aussi ses propriétés qui décrivent des choses comme la position du danseur à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir."
+        text: "Tu peux non seulement changer les pas de ton danseur, mais aussi ses propriétés. Les propriétés décrivent des choses comme l'emplacement du danseur sur l'écran, sa taille et sa couleur. "
       7:
         text: "Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme. Choisissez ensuite le danseur que vousvoulez modifier et tapez la taille que vous voulez qu’ils aient à l’écran."
       8:
@@ -1710,17 +1710,17 @@ fr:
       1:
         text: "Heure de Code | Soirée Dansante : C’est la fête !"
       2:
-        text: "Félicitations ! Vous venez d'apprendre les bases de l'informatique. Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante avec votre propre design à partager avec vos amis."
+        text: "Félicitations ! Tu viens d'apprendre les bases de l'informatique. Maintenant, tu peux utiliser ces blocs pour créer une soirée dansante que tu auras conçue toi-même et que tu pourras montrer à tes amis."
       3:
-        text: "Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser le bloc Disposition pour organiser les danseurs de différentes façons à l'écran."
+        text: "Si tu regardes dans la boîte à outils, tu trouveras de tout nouveaux blocs que tu n'as pas encore vus. Tu peux, par exemple, utiliser le bloc disposition pour arranger les danseurs de différentes manières à l'écran."
       4:
-        text: "Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités. Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré ?"
+        text: "Jette un coup d'œil à tout ça et fais des essais avec ces nouveaux blocs et fonctionnalités. Peux-tu créer une danse dont la chorégraphie précise colle bien avec ton morceau préféré ?"
       5:
-        text: "Ou bien une chorégraphie avec vos amis ?"
+        text: "Ou bien faire un battle de danse avec tes amis ?"
       6:
-        text: "Ou encore autre chose qui regrouperait tout ?"
+        text: "Ou quelque chose de tout autre encore ? "
       7:
-        text: "À la fin du didacticiel, vous pouvez partager un lien vers votre création avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien !"
+        text: "À la fin du tutoriel, tu recevras un lien avec lequel tu pourras partager ta création avec tes amis. Laisse libre cours à ton imagination et amuse-toi bien !"
     mc_2018_intro:
       1:
         text: "Salut! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je suis sur le point de me lancer dans une quête pour trouver un trésor sous-marin caché et je suis très heureux d'avoir ton aide. Qui sait ce que nous allons rencontrer le long de ces mystérieux cours d'eau ? Nous sommes censés rencontrer notre premier guide quelque part sur ce quai."
@@ -1870,127 +1870,127 @@ fr:
       1:
         text: "Heure de Code | Soirée Dansante : Échauffement"
       2:
-        text: "Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels et créateur d'iLuminate."
+        text: "Salut ! Je m'appelle Miral Kotb et je suis danseuse, développeuse informatique et la créatrice d'iLuminate."
       3:
-        text: "L'informatique est liée à la créativité, de plein de manières différentes, de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel, vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je fais avec des costumes au lumière. On peut faire tellement de choses, une fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment infinies."
+        text: "L'informatique est liée à la créativité de tout un tas de façons. De manière presque illimitée, en fait. Une fois qu'on est capable d'écrire un logiciel, tu peux infuser tout ce que tu veux avec tes idées. Moi, je le fais avec des costumes lumineux. On peut faire tellement de choses, une fois qu’on a les outils pour rédiger des logiciels. Les possibilités sont vraiment infinies."
       4:
-        text: "Au cours de la prochaine heure, vous allez commencer avec l'informatique en programmant votre propre soirée dansante ! Nous avons sélectionné de la musique branchée et une équipe de grands danseurs avec lesquels vous pourrez jouer."
+        text: "Au cours de l'heure qui vient, tu vas te mettre à l'informatique en programmant ta propre soirée dansante ! On a sélectionné de la musique branchée et une super équipe de danseurs avec lesquels tu vas pouvoir t'amuser."
       5:
         image: 'notes/hoc_dance_warmup_2019_5.png'
-        text: "Vous utiliserez des blocs de code pour choisir différents danseurs, modifier leurs mouvements de danse, les faire répondre à la musique et les rendre interactifs."
+        text: "Tu vas te servir de blocs de code pour choisir différents danseurs, modifier leurs pas de danse, les faire réagir à la musique et les rendre interactifs."
       6:
         image: 'notes/hoc_dance_warmup_2019_6.png'
-        text: "Vous verrez que votre écran est divisé en 3 parties principales. Sur la gauche se trouve l'espace de jeu où vos danseurs se présenteront."
+        text: "Tu verras que ton écran se divise en 3 parties principales. Sur la gauche se trouve l'espace de jeu. C'est là que tes danseurs apparaîtront. "
       7:
         image: 'notes/hoc_dance_warmup_2019_7.png'
-        text: "La zone centrale est une boîte à outils. De nouveaux blocs de code seront disponibles dans cet espace, au fur et à mesure des cours."
+        text: "La zone centrale, c'est la boîte à outils. De nouveaux blocs de code deviendront disponibles dans cet espace, au fur et à mesure qu'on avance avec les leçons."
       8:
         image: 'notes/hoc_dance_warmup_2019_8.png'
-        text: "À droite, vous avez l’espace de travail. Vous pouvez faire glisser des blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire votre programme."
+        text: "À droite, tu as l’espace de travail. Tu peux faire glisser des blocs depuis la boîte à outils jusque dans l'espace de travail pour construire ton programme."
       9:
         image: 'notes/hoc_dance_warmup_2019_9.png'
-        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule."
+        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si tu as besoin d'un indice, il te suffit de cliquer sur l'ampoule."
       10:
         image: 'notes/hoc_dance_warmup_2019_10.png'
-        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat."
+        text: "Pour commencer, on va faire un nouveau danseur avec ce bloc rouge. Fais-le d’abord glisser en dehors de la boîte à outils et accroche-le au bas du bloc orange « configuration ». Ce danseur-ci est un chat."
       11:
         image: 'notes/hoc_dance_warmup_2019_11.png'
-        text: "Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de jeu, avec ça."
+        text: "Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace de jeu, avec ça."
       12:
         image: 'notes/hoc_dance_warmup_2019_12.png'
-        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme apparaissent dans l'espace de lecture et la musique démarre."
+        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a un très gros choix de chansons, alors amuse-toi à trouver tes préférées. En dessous de l'espace de jeu, il y a le bouton « Démarrer ». Lorsque tu appuies dessus, les danseurs de ton programme vont apparaître dans l'espace de jeu et la musique va démarrer."
       13:
-        text: "Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave, vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va?"
+        text: "Essaie toi-même ! Et si tu te sens coincé, ne t'inquiètes pas, il suffit de se lever et de se lancer sur la piste ! Avant même de t'en rendre compte, tu auras déjà créé ta propre soirée dansante. Alors, on y va ?"
     hoc_dance_events_2019:
       1:
         text: "Heure de Code | Soirée Dansante : Événements"
       2:
         image: 'notes/hoc_dance_events_2019_2.png'
-        text: "Je m’appelle Erin et je suis un ingénieur en logiciel chez code.org. J’ai contribué à l’élaboration de Dance Party !"
+        text: "Je m’appelle Erin, je suis ingénieure logiciel ici chez Code.org et j’ai participé à l'élaboration de Soirée Dansante !"
       3:
         image: 'notes/hoc_dance_events_2019_3.png'
-        text: "Pour générer différents mouvements de danse au bon moment avec la musique, vous pouvez utiliser les Évènements. Un événement demande à votre programme d’écouter quelque chose, puis d’y réagir tout de suite."
+        text: "Pour générer différents pas de danse au rythme de la musique, on va utiliser ce qu'on appelle les événements. Un événement demande à ton programme de « guetter » et puis de réagir tout de suite quand il se passe quelque chose."
       4:
         image: 'notes/hoc_dance_events_2019_4.png'
-        text: "Quelques exemples d'évènements sont: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
+        text: "Quelques exemples d'évènements : guetter un clic de la souris, une touche fléchée ou une tape sur l'écran."
       5:
         image: 'notes/hoc_dance_events_2019_5.png'
-        text: "Là vous allez programmer un danseur pour faire un mouvement lorsque vous appuyez sur les boutons fléchés de votre écran, ou sur les touches de votre clavier."
+        text: "Ici, on va programmer un danseur pour lui faire faire un mouvement quand tu appuies sur les boutons fléchés sur l'écran ou sur les touches de ton clavier."
       6:
         image: 'notes/hoc_dance_events_2019_6.png'
-        text: "Vous pouvez utiliser le bloc d’événements « quand flèche du haut » et le connecter à un bloc « faire une fois ». Lorsque vous appuyez sur la flèche du haut, le code associé au bloc de flèche « quand en haut » s’exécute. Quelle danse allez-vous choisir ?"
+        text: "Tu peux utiliser le bloc événement « quand flèche du haut » et y connecter un bloc « faire une fois ». Lorsqu'on appuie sur la flèche du haut, le code rattaché au bloc « quand flèche du haut » s’exécutera. Quel pas de danse vas-tu choisir ?"
       7:
         image: 'notes/hoc_dance_events_2019_7.png'
-        text: "Veillez à ce que le type de danseur que vous choisissez corresponde bien à l'un des danseurs que vous avez créés dans le bloc de configuration, sinon il ne se passera rien."
+        text: "Veille à ce que le type de danseur que tu choisis corresponde bien à l'un des danseurs que tu as créés dans le bloc de configuration, ou il risque de ne rien se passer."
       8:
         image: 'notes/hoc_dance_events_2019_8.png'
-        text: "Pour finir, vous pouvez créer plus d'événements comme celui-ci, pour que vos danseurs effectuent des mouvements différents avec chaque touche. Essayez-le et avec les quelques lignes de code, vous pourrez créer votre propre danse interactive !"
+        text: "À terme, tu vas pouvoir créer plus d'événements comme celui-ci pour faire faire différents pas de danse à tes danseurs avec chaque touche. Vas-y, essaie, et avec quelques lignes de code, tu pourras créer ta propre danse interactive !"
     hoc_dance_measures_2019:
       1:
         image: 'notes/hoc_dance_measures_2019_1.png'
         text: "Heure de Code | Soirée Dansante : Temps"
       2:
         image: 'notes/hoc_dance_measures_2019_2.png'
-        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie, car elle contrôle littéralement nos vies."
+        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète et artiste. Je pense que c'est très important d’avoir des connaissances en informatique, parce que c'est l'avenir. Je crois qu'il faut être à même de contrôler la technologie qui contrôle littéralement nos vies."
       3:
         image: 'notes/hoc_dance_measures_2019_3.png'
-        text: "L’événement que nous allons utiliser maintenant va écouter les variations dans le morceau. Cette variation incitera votre danseur à faire une nouvelle danse."
+        text: "L’événement qu'on va maintenant utiliser va guetter un changement au sein de la chanson. Ce changement va déclencher nouvelle danse chez ton danseur."
       4:
         image: 'notes/hoc_dance_measures_2019_4.png'
-        text: "Les danseurs professionnels font leur chorégraphie en comptant les temps de la chanson. En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4temps."
+        text: "Les danseurs professionnels répètent leur chorégraphie en comptant les temps d'une chanson. En musique, une mesure contient un certain nombre de temps. Dans la plupart des chansons qu'on apprécie, une mesure dure quatre temps."
       5:
         image: 'notes/hoc_dance_measures_2019_5.png'
-        text: "Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement vert. Ce bloc Évènement dit « après 4 mesures »."
+        text: "Pour faire se déchaîner tes danseurs, tu vas avoir besoin d'un bloc événement vert. Ce bloc évènement indique : « après 4 mesures »."
       6:
         image: 'notes/hoc_dance_measures_2019_6.png'
-        text: "Si vous faites glisser un bloc violet « Faire pour toujours », vous pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc d'événements « après 4 mesures », votre danseur attendra 4 mesures de la chanson, avant de commencer sa danse."
+        text: "Si tu sors un bloc violet « faire pour toujours », tu peux choisir une danse pour ton danseur. Parce que tu vas le mettre en dessous du bloc événement « après 4 mesures », ton danseur va attendre que 4 mesures de la chanson passent avant de se mettre à danser."
       7:
         image: 'notes/hoc_dance_measures_2019_7.png'
-        text: "Surveillez bien le compteur de mesures situé en haut de la zone d'affichage."
+        text: "Garde un œil sur le compteur de mesures situé en haut de la zone d'affichage."
       8:
         image: 'notes/hoc_dance_measures_2019_8.png'
-        text: "Recherchez et écoutez l'événement qui déclenchera le code de danse. Et juste au bon moment, le danseur commencera."
+        text: "Observe et guette l'événement qui va déclencher le code de danse. Hop, pile au bon moment, notre danseur s'y met."
     hoc_dance_properties_2019:
       1:
         text: "Heure de Code | Soirée Dansante : Propriétés"
       2:
-        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Amazon Future Ingénieure."
+        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Future Ingénieure Amazon."
       3:
-        text: "J'adore l'informatique car ça allie résolution de problèmes et pensée critique, et après des heures de travail, on a quelque chose de vraiment cool et gratifiant."
+        text: "J'adore l'informatique parce que ça demande de la débrouillardise et un esprit critique, et que quand on investit des heures de travail, on peut obtenir quelque chose de vraiment cool et d'enrichissant."
       4:
-        text: "Jusque-là, vous avez pu jouer avec différents types de danseurs, que vous avez programmés pour différents types de mouvements de danse. Mais comment fonctionnent ces mouvements ?"
+        text: "Jusque-là, tu as pu jouer avec différents types de danseurs, que tu as programmés pour faire différents types de pas de danse. Mais comment ça marche en fait, ces pas ?"
       5:
-        text: "Chaque mouvement de danse est constitué d’une série d’images appelées Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand votre programme s'exécute, votre ordinateur affiche un cadre après l'autre. Ils s'affichent tellement vite que cela donne l'impression que la danseuse bouge. C’est là le secret derrière chaque animation."
+        text: "Chaque pas de danse est composé d’une série d’images qu'on appel les photogrammes. Chaque photogramme est légèrement différent de celui qui le précède. Quand ton programme s'exécute, ton ordinateur affiche un photogramme après l'autre. Ils s'affichent tellement rapidement qu'on a l'impression que le danseur bouge. C'est ça le secret de tout dessin animé. "
       6:
-        text: "Non seulement vous pouvez changer les mouvements d'un danseur, mais aussi ses propriétés qui décrivent des choses comme la position du danseur à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir."
+        text: "Tu peux non seulement changer les pas de ton danseur, mais aussi ses propriétés. Les propriétés décrivent des choses comme l'emplacement du danseur sur l'écran, sa taille et sa couleur. "
       7:
         image: 'notes/hoc_dance_properties_2019_7.png'
-        text: "Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme."
+        text: "Pour modifier les propriétés d'un danseur, tu vas utiliser un bloc « définir ». On va utiliser un bloc définir pour rendre nos danseurs plus petits. Fais d’abord glisser le bloc définir dans ton programme."
       8:
         image: 'notes/hoc_dance_properties_2019_8.png'
-        text: "Choisissez ensuite le danseur que vous voulez modifier et tapez la taille que vous voulez qu'ils aient à l'écran. La taille normale est 100. Si vous choisissez un nombre inférieur, cela réduira la taille des danseurs. Plus le danseur est petit, plus il semble éloigné."
+        text: "Ensuite, sélectionne le danseur que tu veux modifier et saisis la taille que tu veux qu'il ait à l'écran. La taille normale est de 100. Si tu choisis un nombre inférieur, ça va rétrécir le danseur. Plus le danseur est petit, plus il va sembler éloigné."
       9:
         image: 'notes/hoc_dance_properties_2019_9.png'
-        text: "À l'aide du bloc Définir, vous pouvez également modifier les dimensions, la rotation, la position et la couleur d'un danseur. En jouant avec ces propriétés, vous pouvez faire plein de modifications, et les relier à différentes parties de la chanson."
+        text: "En te servant du bloc définir, tu peux aussi modifier les dimensions, l'angle, la position et la couleur d'un danseur. En jouant avec ces propriétés, tu peux faire plein de changements, et les relier à différents morceaux de la chanson."
       10:
         image: 'notes/hoc_dance_properties_2019_10.png'
-        text: "N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur déjà existant. Veillez à ce que votre bloc Définir soit après celuiCréer un nouveau danseur. N'hésitez pas à faire des expériences, à être créatifet à vous amuser !"
+        text: "N'oublie pas que tu ne peux définir que les propriétés d'un danseur qui existe déjà. Veille à ce que ton bloc définir vienne bien à la suite du bloc « Créer un nouveau danseur ». N'hésite pas à faire des essais, à faire preuve d'inventivité, et à t'amuser !"
     hoc_dance_congrats_2019:
       1:
         text: "Heure de Code | Soirée Dansante : C’est la fête !"
       2:
-        text: "Félicitations ! Vous venez d'apprendre les bases de l'informatique. Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante avec votre propre design à partager avec vos amis."
+        text: "Félicitations ! Tu viens d'apprendre les bases de l'informatique. Maintenant, tu peux utiliser ces blocs pour créer une soirée dansante que tu auras conçue toi-même et que tu pourras montrer à tes amis."
       3:
-        text: "Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser le bloc Disposition pour organiser les danseurs de différentes façons à l'écran."
+        text: "Si tu regardes dans la boîte à outils, tu trouveras de tout nouveaux blocs que tu n'as pas encore vus. Tu peux, par exemple, utiliser le bloc disposition pour arranger les danseurs de différentes manières à l'écran."
       4:
-        text: "Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités. Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré ?"
+        text: "Jette un coup d'œil à tout ça et fais des essais avec ces nouveaux blocs et fonctionnalités. Peux-tu créer une danse dont la chorégraphie précise colle bien avec ton morceau préféré ?"
       5:
-        text: "Ou bien une chorégraphie avec vos amis ?"
+        text: "Ou bien faire un battle de danse avec tes amis ?"
       6:
-        text: "Ou encore autre chose qui regrouperait tout ?"
+        text: "Ou quelque chose de tout autre encore ? "
       7:
         image: 'notes/hoc_dance_congrats_7.png'
-        text: "À la fin du didacticiel, vous pouvez partager un lien vers votre création avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien !"
+        text: "À la fin du tutoriel, tu recevras un lien avec lequel tu pourras partager ta création avec tes amis. Laisse libre cours à ton imagination et amuse-toi bien !"
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'

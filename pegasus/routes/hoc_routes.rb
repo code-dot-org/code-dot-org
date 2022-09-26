@@ -13,13 +13,6 @@ get '/:short_code' do |short_code|
   launch_tutorial(tutorial)
 end
 
-get '/v2/hoc/tutorial-metrics.json' do
-  only_for 'code.org'
-  forbidden! unless dashboard_user_helper && dashboard_user_helper.admin?
-  content_type :json
-  JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
-end
-
 # Link from Hour of Code 2014 employee engagement pages
 get '/api/hour/begin_company/:company' do |company|
   redirect "/learn?company=#{company}"
@@ -69,7 +62,7 @@ get '/api/hour/certificate/:filename' do |filename|
   width = 0 unless width > 0 && width < 1754
 
   begin
-    image = CertificateImage.create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
+    image = CertificateImage.create_course_certificate_image(row[:name].to_s.strip, row[:tutorial], default_random_donor: true)
     image.resize_to_fit!(width) unless width == 0
     image.format = extname[1..-1]
 
@@ -77,7 +70,7 @@ get '/api/hour/certificate/:filename' do |filename|
     content_type image.format.to_sym
     image.to_blob
   ensure
-    image && image.destroy!
+    image&.destroy!
   end
 end
 
@@ -96,14 +89,14 @@ get '/v2/hoc/certificate/:filename' do |filename|
 
   format = extname[1..-1]
   begin
-    image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
+    image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'], default_random_donor: true)
     image.format = format
 
     content_type format.to_sym
     expires 0, :private, :must_revalidate
     image.to_blob
   ensure
-    image && image.destroy!
+    image&.destroy!
   end
 end
 
@@ -122,14 +115,14 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
 
   format = extname[1..-1]
   begin
-    image = CertificateImage.create_course_certificate_image(label, course)
+    image = CertificateImage.create_course_certificate_image(label, course, default_random_donor: true)
     image.format = format
 
     content_type format.to_sym
     expires 0, :private, :must_revalidate
     image.to_blob
   ensure
-    image && image.destroy!
+    image&.destroy!
   end
 end
 

@@ -51,23 +51,24 @@ export default class FieldVariable extends GoogleBlockly.FieldVariable {
       }
     }
   }
+  menuGenerator_ = function() {
+    const options = FieldVariable.dropdownCreate.call(this);
+
+    // Remove the last two options (Delete and Rename)
+    options.pop();
+    options.pop();
+
+    // Add our custom options (Rename this variable, Rename all)
+    options.push([
+      msg.renameAll({variableName: this.getText()}),
+      RENAME_ALL_ID
+    ]);
+    options.push([msg.renameThis(), RENAME_THIS_ID]);
+
+    return options;
+  };
 }
-
-FieldVariable.originalDropdownCreate = FieldVariable.dropdownCreate;
-FieldVariable.dropdownCreate = function() {
-  const options = FieldVariable.originalDropdownCreate.call(this);
-
-  // Remove the last two options (Delete and Rename)
-  options.pop();
-  options.pop();
-
-  // Add our custom options (Rename this variable, Rename all)
-  options.push([msg.renameAll({variableName: this.getText()}), RENAME_ALL_ID]);
-  options.push([msg.renameThis(), RENAME_THIS_ID]);
-
-  return options;
-};
-
+// Fix built-in block
 /**
  * Prompt the user for a variable name and perform some whitespace cleanup
  * @param {string} promptText description text for window prompt

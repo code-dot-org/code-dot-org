@@ -2,6 +2,8 @@
 it:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -42,7 +44,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -55,7 +57,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -101,7 +103,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -120,7 +122,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -188,7 +190,7 @@ it:
             MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -217,7 +219,7 @@ it:
             MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -288,7 +290,7 @@ it:
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Roll: Piroetta
@@ -1519,7 +1521,7 @@ it:
       gamelab_whenLeftArrow:
         text: quando viene premuta la freccia a sinistra
       gamelab_whenPromptAnswered:
-        text: quando {VAR} ha dato una risposta
+        text: quando {VAR} ha risposto
       gamelab_whenRightArrow:
         text: quando viene premuta la freccia a destra
       gamelab_whenSpriteCreated:
@@ -1739,7 +1741,7 @@ it:
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Roll: Piroetta
@@ -2111,7 +2113,7 @@ it:
             '9': '9'
             '10': '10'
       Poetry_whenPromptAnswered:
-        text: quando {VAR} ha dato una risposta
+        text: quando {VAR} ha risposto
       RyanLab_moveForward:
         text: vai avanti
       RyanLab_turnLeft:

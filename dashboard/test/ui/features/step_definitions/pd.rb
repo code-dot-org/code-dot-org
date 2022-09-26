@@ -425,7 +425,7 @@ def create_enrollment(workshop, name=nil)
   user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do
     FactoryGirl.create :teacher
   end
-  enrollment = Pd::Enrollment.create!(
+  Pd::Enrollment.create!(
     first_name: first_name,
     last_name: last_name,
     email: user.email,
@@ -440,8 +440,6 @@ def create_enrollment(workshop, name=nil)
     ),
     pd_workshop_id: workshop.id
   )
-
-  PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
 end
 
 def create_facilitator(course)

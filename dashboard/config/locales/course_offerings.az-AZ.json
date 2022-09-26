@@ -38,7 +38,6 @@
         "text-compression": "Mətnin sıxılması",
         "csa-pilot-facilitator": "CSA təcrübi vasitəçilər",
         "poembot-hoc": "poembot-hoc",
-        "poetry": "Kompüter Elmləri və Şeir",
         "hello-world-animals": "Salam Dünya",
         "hello-world-emoji": "Salam Dünya",
         "hello-world-food": "Salam Dünya",
@@ -54,7 +53,8 @@
         "valentine": "sevgili",
         "allthethingscourse": "bütübhərşeyinkursu",
         "halloween": "hallovin",
-        "step": "addım"
+        "step": "addım",
+        "soccer": "futbol"
       }
     }
   }

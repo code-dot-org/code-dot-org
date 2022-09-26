@@ -3,6 +3,7 @@ import CodeReviewDataApi, {
   timelineElementType
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import sinon from 'sinon';
+import * as utils from '@cdo/apps/utils';
 
 const fakeCommitData = [
   {
@@ -211,6 +212,107 @@ describe('CodeReviewDataApi', () => {
     it('appends timelineElementType of review onto response', async () => {
       const result = await dataApi.openNewCodeReview(fakeVersion);
       expect(result.timelineElementType).to.equal(timelineElementType.review);
+    });
+  });
+
+  describe('submitNewCodeReviewComment', () => {
+    let dataApi, ajaxStub;
+    const fakeReviewId = 11;
+    const fakeComment = 'A comment';
+    before(() => {
+      dataApi = new CodeReviewDataApi(
+        fakeChannelId,
+        fakeLevelId,
+        fakeProjectLevelId,
+        fakeScriptId
+      );
+    });
+
+    beforeEach(() => {
+      ajaxStub = sinon.stub($, 'ajax').returns({
+        done: successCallback => {
+          successCallback(fakeReviewData[0]);
+          return {fail: () => {}};
+        }
+      });
+    });
+
+    afterEach(() => {
+      ajaxStub.restore();
+    });
+
+    it('rejects with profanity error if profanity is found', async () => {
+      const profaneWordsRes = ['word1', 'word2'];
+      sinon
+        .stub(utils, 'findProfanity')
+        .returns({done: successCallback => successCallback(profaneWordsRes)});
+
+      try {
+        await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
+        new Error('Expected promise to reject');
+      } catch (err) {
+        expect(err.profanityFoundError).to.equal(
+          'Your comment contains inappropriate language, so it will not be saved. Please update your comment to remove the words "word1, word2".'
+        );
+      }
+
+      utils.findProfanity.restore();
+    });
+
+    it('calls code_review_comments endpoint if profanity is not found', async () => {
+      sinon.stub(utils, 'findProfanity').returns({
+        done: successCallback => successCallback(null)
+      });
+
+      await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
+
+      expect(ajaxStub).to.have.been.calledWith({
+        url: `/code_review_comments`,
+        type: 'POST',
+        headers: {'X-CSRF-Token': undefined},
+        data: {
+          codeReviewId: fakeReviewId,
+          comment: fakeComment
+        }
+      });
+      utils.findProfanity.restore();
+    });
+  });
+
+  describe('toggleResolveComment', () => {
+    let dataApi, ajaxStub;
+    before(() => {
+      dataApi = new CodeReviewDataApi(
+        fakeChannelId,
+        fakeLevelId,
+        fakeProjectLevelId,
+        fakeScriptId
+      );
+    });
+
+    beforeEach(() => {
+      ajaxStub = sinon.stub($, 'ajax').returns({
+        done: successCallback => {
+          successCallback(fakeReviewData[0]);
+          return {fail: () => {}};
+        }
+      });
+    });
+
+    afterEach(() => {
+      ajaxStub.restore();
+    });
+
+    it('calls code_review_comments PATCH endpoint with the isResolved value to set', async () => {
+      await dataApi.toggleResolveComment(11, true);
+      expect(ajaxStub).to.have.been.calledWith({
+        url: `/code_review_comments/11`,
+        type: 'PATCH',
+        headers: {'X-CSRF-Token': undefined},
+        data: {
+          isResolved: true
+        }
+      });
     });
   });
 });

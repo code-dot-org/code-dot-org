@@ -11,10 +11,10 @@ In addition to declaring and initializing variables, we also want to update the 
 
 ```
 1. // declare and initialize a String bestDate
-2. String bestDate = “April 25th”
+2. String bestDate = “April 25th”;
 3. 
 4. // update the variable bestDate
-5. bestDate = “May 4th”
+5. bestDate = “May 4th”;
 ```
 
 **Explanation:** In the example above, we would read line 5 as “bestDate gets May 4th”.  `“May 4th”` is now stored in `bestDate` and the old value is essentially "forgotten" by the computer.

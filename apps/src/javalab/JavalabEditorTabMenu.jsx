@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import JavalabDropdown from './components/JavalabDropdown';
 import javalabMsg from '@cdo/javalab/locale';
+import onClickOutside from 'react-onclickoutside';
 
 /**
  * A menu with a set of clickable file options that calls the cancel handler if you
  * click outside the menu or the cancel button.
  */
-export default class JavalabEditorTabMenu extends Component {
+export class JavalabEditorTabMenu extends Component {
   static propTypes = {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired,
@@ -26,7 +27,6 @@ export default class JavalabEditorTabMenu extends Component {
     const {
       renameFromTabMenu,
       deleteFromTabMenu,
-      cancelTabMenu,
       showVisibilityOption,
       changeFileTypeFromTabMenu,
       fileIsVisible,
@@ -94,15 +94,16 @@ export default class JavalabEditorTabMenu extends Component {
         );
       }
     }
-    elements.push(
-      <button key="cancel" onClick={cancelTabMenu} type="button">
-        {javalabMsg.cancel()}
-      </button>
-    );
     return elements;
+  };
+
+  handleClickOutside = () => {
+    this.props.cancelTabMenu();
   };
 
   render() {
     return <JavalabDropdown>{this.dropdownElements()}</JavalabDropdown>;
   }
 }
+
+export default onClickOutside(JavalabEditorTabMenu);

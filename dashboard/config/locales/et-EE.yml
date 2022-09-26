@@ -301,7 +301,6 @@ et:
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
-      lines: 'Koodiridade koguarv: %{lines}'
       close: SULGE
       mastery: Mõisted
       puzzle_map: Etapid

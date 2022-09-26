@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:14.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -76,14 +72,14 @@
     "parent_level_id": 19223,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/",
+    "map_reference": "/courses/csd-2022/guides/sprites",
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
@@ -95,6 +91,10 @@
     "encrypted_examples": "07DtdmjtsELvUnUXEUk4er9d7U4u3r/Io02suGip7JrAmZVXjTTDA0egPI0G\nBsVxgbNk70Ch2nQQwj13594N6A==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:14.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:14.930+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites names_2021\\\"\"],\"cloned_from\":\"CSD U3 Sprites names_2021\"}]"

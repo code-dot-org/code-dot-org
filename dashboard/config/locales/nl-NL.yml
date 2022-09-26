@@ -463,7 +463,6 @@ nl:
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: Jouw voortgang
-      lines: 'Totaal aantal regels code: %{lines}'
       close: SLUITEN
       mastery: Begrippen
       puzzle_map: Niveaus

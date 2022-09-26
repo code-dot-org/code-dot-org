@@ -17,15 +17,16 @@
 #
 
 class Census::OtherCurriculumOffering < ApplicationRecord
-  belongs_to :school, required: true
+  belongs_to :school
 
   validates_presence_of :curriculum_provider_name, :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
   SUPPORTED_PROVIDERS = %w(
     BootUp
-    TEALS
     PLTW
+    SkillsStruck
+    TEALS
   ).freeze
 
   def self.seed_from_csv(provider_code, school_year, filename, dry_run = false)

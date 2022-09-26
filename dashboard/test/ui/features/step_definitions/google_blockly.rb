@@ -19,7 +19,6 @@ end
 Then /^Google Blockly block "([^"]*)" is child of block "([^"]*)"$/ do |child_index, parent_index|
   id_selector = get_id_selector
   child_item = @browser.find_elements(class: 'blocklyDraggable')[child_index.to_i]
-  child_id = child_item.attribute(id_selector)
   parent_item = @browser.find_elements(class: 'blocklyDraggable')[parent_index.to_i]
   parent_id = parent_item.attribute(id_selector)
   actual_parent_item = child_item.find_element(:xpath, "..")

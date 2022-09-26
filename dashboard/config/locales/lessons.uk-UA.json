@@ -57,8 +57,227 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Година коду 2013"
+        },
         "dance-2019/Dance Party": {
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Послідовність дій"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Цикли"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Події"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Умови"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функції"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Змінні"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Цикли For"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Наступні кроки"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Починаємо"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Основи інформатики"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Дивлячись вперед"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Успішні методики викладання інформатики"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Планування"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Наступні Кроки"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Починаємо"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Основи інформатики"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Дивлячись вперед"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Успішні методики викладання інформатики"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Планування"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Наступні Кроки"
+        },
+        "coursed-2022/Password Power-Up": {
+          "purpose": "Навчальна програма «Цифрове громадянство» від Common Sense охоплює шість основних тем на основі останніх досліджень щодо дітей, засобів масової інформації та технологій. Цей урок присвячений конфіденційності та безпеці. Студенти дізнаються, як захистити особисту інформацію та глибше розберуться у своїх правах на конфіденційність даних, щоб вони могли відстоювати себе та інших."
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Програмування по клітинках"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Естафетне програмування"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Танцювальна вечірка",
+          "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Петлі в Ice Age"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Листівки та умови"
+        },
+        "coursef-2022/The Power of Words": {
+          "student_overview": "Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті."
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Представляємо Лабораторію спрайтів"
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "Спрайт в Дії"
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "name": "Міні-проект: Віртуальний вихованець"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "Спалах"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Інтернет"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Приватна та Особиста інформація",
+          "purpose": "Навчальна програма «Цифрове громадянство» від Common Sense охоплює шість основних тем на основі останніх досліджень щодо дітей, засобів масової інформації та технологій. Цей урок присвячений конфіденційності та безпеці. Студенти дізнаються, як захистити особисту інформацію та глибше розберуться у своїх правах на конфіденційність даних, щоб вони могли відстоювати себе та інших."
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Написання пісень"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Рухайся, рухайся"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Економія на повторах"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "Спрайт в Дії"
+        },
+        "express-2022/Dance Party": {
+          "name": "Танцювальна вечірка",
+          "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "purpose": "Основна мета цього уроку – формування в учнів досвіду роботи з комп’ютером. Охоплюючи основні функції комп’ютера, такі як клацання кнопкою миші або перенесення, ми створюємо рівніше ігрове поле в класі для майбутніх головоломок. Цей урок також дає чудову нагоду ознайомитися з базовою термінологією комп’ютерного обладнання, таке як «миша», «трекпад» або «сенсорний екран», залежно від ваших пристроїв."
+        },
+        "coursea-2022/Safety in My Online Neighborhood": {
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nЦей урок початково створений компанією Common Sense Education. [Детальніше.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nМожливості Інтернету дозволяють учням випробувати та відвідати місця, які вони, можливо, не змогли б побачити особисто. Але що під час подорожі в реальному світі, що при мандрах в Інтернеті, важливо залишатися в безпеці. У цій віртуальній екскурсії діти матимуть змогу попрактикуватися в онлайн-пригодах без ризику.",
+          "preparation": "-   Перегляньте навчальні матеріали.\n-   Роздрукуйте роздатковий матеріал (матеріали) для кожного учня.\n-   (Необов'язково) Роздрукуйте плакат з віршами для демонстрації в класі.",
+          "purpose": "Навчальна програма «Цифрове громадянство» від Common Sense охоплює шість основних тем на основі останніх досліджень щодо дітей, засобів масової інформації та технологій. Цей урок присвячений конфіденційності та безпеці. Студенти дізнаються, як захистити особисту інформацію та глибше розберуться у своїх правах на конфіденційність даних, щоб вони могли відстоювати себе та інших."
+        },
+        "coursea-2022/Learn to Drag and Drop": {
+          "preparation": "-   Перегляньте **\\*Як створити розділ класу** на Code.org - Відео для вчителів. Створіть власний розділ класу на Code.org і переконайтеся, що кожен учень має картку зі своїм паролем.\n-   Переконайтеся, що учні зможуть отримати доступ до уроку 2 зі своїх пристроїв. Подумайте, чи хочете ви приховати майбутні уроки, щоб запобігти швидким просуванням учнів.\n-   Попросіть шкільного ІТ-спеціаліста додати швидке посилання на розділ вашого класу на робочий стіл комп’ютера.\n-   Перегляньте вебсайт Common Sense Education, щоб дізнатися більше про безпеку в Інтернеті.",
+          "purpose": "Основна мета цього уроку – формування в учнів досвіду роботи з комп’ютером. Охоплюючи основні функції комп’ютера, такі як клацання кнопкою миші або перенесення, ми створюємо рівніше ігрове поле в класі для майбутніх головоломок. Цей урок також дає чудову нагоду ознайомитися з базовою термінологією комп’ютерного обладнання, таке як «миша», «трекпад» або «сенсорний екран», залежно від ваших пристроїв."
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Щасливі карти"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Велика подія"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Двійкові браслети"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Процес вирішення проблем"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Що таке комп’ютер?"
+        },
+        "csd1-2022/Processing": {
+          "name": "В обробці"
+        },
+        "csd1-2022/Storage": {
+          "name": "Сховище"
+        },
+        "csd3-2022/Variables": {
+          "name": "Змінні"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Спрайти"
+        },
+        "csd3-2022/Text": {
+          "name": "Текст"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Умови"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Швидкість"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Зіткнення"
+        },
+        "csd3-2022/Functions": {
+          "name": "Функції"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Вступ до HTML"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "Інтелектуальна власність"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "Класи CSS"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Визначення потреб користувачів"
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "Проект - Паперовий прототип"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Випробування прототипів"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Кольорові LEDи"
+        },
+        "csd6-2022/Accelerometer": {
+          "name": "Акселерометр"
+        },
+        "csd6-2022/Functions": {
+          "name": "Функції"
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "Опитування після курсу Відкриття інформатики"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Рухайся, рухайся"
@@ -201,9 +420,6 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Грамотна Бджілка"
         },
-        "csd3-2018/Programming for Entertainment": {
-          "name": "Опитування по закінченню курсу Відкриття інформатики"
-        },
         "csd3-2018/Variables": {
           "name": "Змінні"
         },
@@ -336,9 +552,6 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Грамотна Бджілка"
         },
-        "csd3-2019/Plotting Shapes": {
-          "name": "Опитування після курсу Відкриття інформатики"
-        },
         "csd3-2019/Variables": {
           "name": "Змінні"
         },
@@ -357,17 +570,11 @@
         "csd3-2019/Functions": {
           "name": "Функції"
         },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Опитування після курсу Відкриття інформатики"
-        },
         "csd6-2019/Accelerometer": {
           "name": "Акселерометр"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Функції з параметрами"
-        },
-        "csd4-2019/Understanding Your User": {
-          "name": "Опитування після курсу Відкриття інформатики"
         },
         "csd4-2019/Identifying User Needs": {
           "name": "Визначення потреб користувачів"
@@ -381,17 +588,14 @@
         "csd4-2019/Prototype Testing": {
           "name": "Випробування прототипів"
         },
-        "csd5-2019/Patterns and Representation": {
-          "name": "Опитування після курсу Відкриття інформатики"
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Процес вирішення проблем"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Що таке комп’ютер?"
         },
         "csd1-2019/Processing": {
           "name": "В обробці"
-        },
-        "csd2-2019/Websites for Expression ": {
-          "name": "Опитування після курсу Відкриття інформатики"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Вступ до HTML"
@@ -485,9 +689,6 @@
         },
         "express-2017/Nested Loops": {
           "name": "Вкладені цикли"
-        },
-        "csd3-2017/Programming for Entertainment": {
-          "name": "Опитування по закінченню курсу Відкриття інформатики"
         },
         "csd3-2017/Variables": {
           "name": "Змінні"
@@ -608,6 +809,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Екстремальний виклик - комплексний"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Вступ до інформатики"
+        },
+        "20-hour/The Maze": {
+          "name": "Лабіринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Обчислювальне мислення"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Програмування по клітинках"
+        },
+        "20-hour/The Artist": {
+          "name": "Художник"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритми"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Художник 2"
+        },
+        "20-hour/Functions": {
+          "name": "Функції"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермерка"
+        },
+        "20-hour/Conditionals": {
+          "name": "Умови"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Художник 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Написання пісень"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фермерка 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Абстракції"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Художник 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Естафетне програмування"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фермерка 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Інтернет"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Художник 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Підведення підсумків"
         },
         "course2/Graph Paper Programming": {
           "name": "Програмування по клітинках"
@@ -786,6 +1047,51 @@
         "jigsaw/Jigsaw": {
           "name": "Пазли"
         },
+        "allthethings/Jigsaw": {
+          "name": "Пазли"
+        },
+        "allthethings/Maze": {
+          "name": "Лабіринт"
+        },
+        "allthethings/Artist": {
+          "name": "Художник"
+        },
+        "allthethings/Bee": {
+          "name": "Бджілка"
+        },
+        "allthethings/Farmer": {
+          "name": "Фермер"
+        },
+        "allthethings/Flappy": {
+          "name": "Пурх"
+        },
+        "allthethings/Bounce": {
+          "name": "Арканоід"
+        },
+        "allthethings/Multi": {
+          "name": "Множинний вибір"
+        },
+        "allthethings/Match": {
+          "name": "Відповідність"
+        },
+        "allthethings/Odometer": {
+          "name": "Одометр"
+        },
+        "allthethings/Text Compression": {
+          "name": "Стиснення тексту"
+        },
+        "allthethings/Pixelation": {
+          "name": "Пікселізаціі"
+        },
+        "allthethings/AppLab": {
+          "name": "Програмна лабораторія"
+        },
+        "allthethings/Studio": {
+          "name": "Студія"
+        },
+        "allthethings/Minecraft": {
+          "name": "Майнкрафт"
+        },
         "coursef-2021/lesson-6": {
           "name": "Представляємо Лабораторію спрайтів"
         },
@@ -917,6 +1223,9 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Процес вирішення проблем"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Що таке комп’ютер?"

@@ -12,6 +12,7 @@ import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const CodeReviewTimelineReview = ({
   review,
@@ -24,13 +25,22 @@ const CodeReviewTimelineReview = ({
 }) => {
   const {id, createdAt, isOpen, version, ownerId, ownerName, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
+  const isViewingOldVersion = !!queryParams('version');
+
   const handleCloseCodeReview = () => {
+    setIsClosing(true);
     closeReview(
-      () => setDisplayCloseError(false), // on success
-      () => setDisplayCloseError(true) // on failure
+      () => handleCloseComplete(false), // on success
+      () => handleCloseComplete(true) // on failure
     );
+  };
+
+  const handleCloseComplete = requestFailed => {
+    setDisplayCloseError(requestFailed);
+    setIsClosing(false);
   };
 
   const viewingAsOwner = ownerId === currentUserId;
@@ -41,7 +51,10 @@ const CodeReviewTimelineReview = ({
       isLast={isLastElementInTimeline}
       projectVersionId={version}
     >
-      <div style={styles.wrapper}>
+      <div
+        style={styles.wrapper}
+        className="uitest-code-review-timeline-review"
+      >
         <div style={styles.header}>
           <div style={styles.icon}>
             <FontAwesome icon="comments-o" />
@@ -56,14 +69,16 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && viewingAsOwner && (
+          {isOpen && viewingAsOwner && !isViewingOldVersion && (
             <div>
               <Button
+                className="uitest-close-code-review"
                 icon="close"
                 style={{fontSize: 13, margin: 0}}
                 onClick={handleCloseCodeReview}
                 text={javalabMsg.closeReview()}
                 color={Button.ButtonColor.blue}
+                disabled={isClosing}
               />
               {displayCloseError && <CodeReviewError />}
             </div>
@@ -88,7 +103,10 @@ const CodeReviewTimelineReview = ({
               />
             );
           })}
-        {isOpen && !viewingAsOwner && (
+        {comments?.length === 0 && !isOpen && (
+          <span>{javalabMsg.noFeedbackGiven()}</span>
+        )}
+        {isOpen && !viewingAsOwner && !isViewingOldVersion && (
           <CodeReviewCommentEditor
             addCodeReviewComment={(commentText, onSuccess, onFailure) =>
               addCodeReviewComment(commentText, id, onSuccess, onFailure)

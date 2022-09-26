@@ -1,5 +1,5 @@
-# This can be viewed on non-production environments at /rails/mailers/pd/teacher_application_mailer
-class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
+# This can be viewed on non-production environments at /rails/mailers/pd_teacher_application_mailer
+class PdTeacherApplicationMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
   include Pd::Application::ActiveApplicationModels
 

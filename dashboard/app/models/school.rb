@@ -35,7 +35,7 @@ class School < ApplicationRecord
 
   self.primary_key = 'id'
 
-  belongs_to :school_district
+  belongs_to :school_district, optional: true
 
   has_many :school_stats_by_year
   has_many :school_info
@@ -70,7 +70,7 @@ class School < ApplicationRecord
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
-    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
+    (stats.frl_eligible_total.to_f / stats.students_total) >= 0.5
   end
 
   # Determines if school meets Amazon Fugure Engineer criteria.
@@ -139,7 +139,7 @@ class School < ApplicationRecord
   # @returns [String, nil] the sanitized version of the string, with equal signs and double
   #   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
   def self.sanitize_string_for_db(unsanitized)
-    unsanitized = NIL_CHARS.include?(unsanitized) ? nil : unsanitized
+    unsanitized = nil if NIL_CHARS.include?(unsanitized)
     unsanitized&.tr('="', '')
   end
 
@@ -404,6 +404,38 @@ class School < ApplicationRecord
             state_school_id:              row['State School ID [Public School] 2020-21'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2020-21']].presence,
             last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2020-21']) ? '2020-2021' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2019-2020 private school data."
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_schools_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false) do |row|
+          {
+            id:                           row['School ID - NCES Assigned [Private School] Latest available year'],
+            name:                         row['Private School Name'].upcase,
+            address_line1:                row['Physical Address [Private School] 2019-20'].to_s.upcase.truncate(50).presence,
+            address_line2:                nil,
+            address_line3:                nil,
+            city:                         row['City [Private School] 2019-20'].to_s.upcase.presence,
+            state:                        row['State Abbr [Private School] Latest available year'].to_s.strip.upcase.presence,
+            zip:                          row['ZIP [Private School] 2019-20'],
+            latitude:                     nil,
+            longitude:                    nil,
+            school_type:                  'private',
+            school_district_id:           nil,
+            state_school_id:              nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2019-2020 private school geographic data."
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
+          {
+            id:                 row['PPIN'],
+            latitude:           row['LAT'].to_f,
+            longitude:          row['LON'].to_f
           }
         end
       end

@@ -1,0 +1,28 @@
+{
+  "dv-MV": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "ގްރޫޕުތައް"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "ދުނިޔެ"
+            },
+            "events": {
+              "name": "އިވެންޓުތައް"
+            },
+            "logic": {
+              "name": "ލޮޖިކް"
+            }
+          }
+        }
+      }
+    }
+  }
+}

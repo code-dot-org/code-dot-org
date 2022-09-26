@@ -5,30 +5,36 @@ zu:
   language: English
   front_title: Zibandakanye nawona mcimbi omkhulu kumlandu, uZiba 7-13, 2015
   coming_soon: Okuzayo Maduze
-  campaign_date_start_short: Ziba. 6
+  campaign_date_start_short: Ziba. 5
   campaign_date_start_long: uZibandlela 5
   campaign_date_short: Ziba. 5-11
   campaign_date_full: uZibandlela 5-11
   campaign_date_year: '2016'
   campaign_date_full_year: uZibandlela 5-11, 2016
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2016'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Ziba. 6
-  europe_campaign_date_start_long: uZibandlela 5
-  europe_campaign_date_short: Ziba. 5-11
-  europe_campaign_date_full: uZibandlela 5-11
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: uZibandlela 5-11, 2016
-  africa_campaign_date_start_short: Ziba. 6
-  africa_campaign_date_start_long: uZibandlela 5
-  africa_campaign_date_short: Ziba. 5-11
-  africa_campaign_date_full: uZibandlela 5-11
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: uZibandlela 5-11, 2016
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -534,7 +540,6 @@ zu:
   signup_multiple_event_warning: Uma uhlela imicimbi eminingi, sicela usiphe igama
     elikhethekile okanye i-imeyili yalowo nalowo. Umcimbi owodwa siwubala ngenhlanganisela
     yegama kanye ne-imeyili.
-  signup_registration_deadline: Ukubhalisa kweHora lokufingqwa kuvalwa mhlaka 12 Disemba.
   signup_name_placeholder: Igama lakho
   signup_email_placeholder: wena@isibonelo.com
   signup_organization_name_placeholder: Isibonelo, Lincoln High School
@@ -675,11 +680,11 @@ zu:
     kube khona kwaba lingani</a> beze ngokubumbana ukuzoxhasa iHora loKufingqwa, kanye
     &mdash; okubala iMicrosoft, Apple, Amazon, ikilabhu yabafana kanye namantombazane
     yase Melika neBhodi yeKholiji.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Angazi lutho ngoku fingqwa. Ngingakwazi ukuhlela umcimbi?
   hoc_faq_host_a: Kunjalo. Izifundiso zeHora loKufingqwa uzihola ngokwakho. Konke
     ekufuneka ukwenze ukuba <a href='%{codeorg_url}/funda'>linga izifundiso zethu

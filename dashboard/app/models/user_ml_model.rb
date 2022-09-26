@@ -18,7 +18,7 @@
 #  index_user_ml_models_on_user_id   (user_id)
 #
 class UserMlModel < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   validates :name, presence: true
 
   # Model ids are 12-character random alphanumeric strings.

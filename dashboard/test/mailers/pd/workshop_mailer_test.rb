@@ -67,12 +67,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'exit survey emails are skipped for academic year workshops' do
+  test 'exit survey emails are not skipped for academic year workshops' do
     workshop = create :csp_academic_year_workshop, :ended
     enrollment = create :pd_enrollment, workshop: workshop
     Pd::Enrollment.any_instance.expects(:exit_survey_url).returns('a url')
 
-    assert_emails 0 do
+    assert_emails 1 do
       Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
     end
   end
@@ -187,7 +187,9 @@ class WorkshopMailerTest < ActionMailer::TestCase
       {course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2},
+      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP},
       {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
@@ -197,7 +199,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
       {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_4},
       {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5},
       {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_6},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
     ]
 
     test_cases.each do |test_case|
@@ -219,15 +220,17 @@ class WorkshopMailerTest < ActionMailer::TestCase
     test_cases = [
       {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP, days_before: 3},
       {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP, days_before: 10},
+      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_WORKSHOP_1, days_before: 3},
+      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_WORKSHOP_1, days_before: 10},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, days_before: 3},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, days_before: 10},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 3},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 10},
       {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 3},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 10},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, days_before: 3},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, days_before: 10},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 3},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 10},
     ]
 
     test_cases.each do |test_case|

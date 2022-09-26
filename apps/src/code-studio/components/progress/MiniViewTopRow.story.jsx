@@ -12,7 +12,7 @@ const initialState = {
     ],
     focusAreaLessonIds: [],
     isSummaryView: false,
-    professionalLearningCourse: false
+    deeperLearningCourse: false
   }
 };
 
@@ -25,10 +25,7 @@ export default storybook =>
         name: 'basic',
         story: () => (
           <div style={{width: 635, position: 'relative'}}>
-            <MiniViewTopRow
-              scriptName="course1"
-              linesOfCodeText="Total lines of code: 120"
-            />
+            <MiniViewTopRow scriptName="course1" />
           </div>
         )
       },

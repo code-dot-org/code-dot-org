@@ -116,7 +116,7 @@ module LevelsHelper
   # Other levels are considered started when progress has been saved for the level (for example
   # clicking the run button saves progress).
   def level_started?(level, script, user)
-    return false unless user.present?
+    return false if user.blank?
 
     if level.channel_backed?
       return get_channel_for(level, script.id, user).present?
@@ -125,12 +125,18 @@ module LevelsHelper
     end
   end
 
+  def level_passing?(level, script, user)
+    return false if user.blank?
+    last_attempt = user.last_attempt(level, script)
+    return last_attempt.present? && last_attempt.passing?
+  end
+
   def select_and_track_autoplay_video
     return if @level.try(:autoplay_blocked_by_level?)
 
     autoplay_video = nil
 
-    is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
+    is_legacy_level = @script_level&.script&.legacy_curriculum?
 
     if is_legacy_level
       autoplay_video = @level.related_videos.find {|video| !client_state.video_seen?(video.key)}
@@ -190,7 +196,7 @@ module LevelsHelper
     # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
     level_requires_channel = (@level.channel_backed? &&
-          !@level.try(:contained_levels).present? &&
+          @level.try(:contained_levels).blank? &&
           params[:action] != 'edit_blocks')
     # Javalab requires a channel if Javabuilder needs to access project-specific assets,
     # or if we want to access a project's code from S3.
@@ -198,6 +204,9 @@ module LevelsHelper
     # where we load the exemplar code from the level definition, edit it locally in Javalab,
     # and pass the edited code directly to Javabuilder.
     level_requires_channel = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
+
+    # When viewing a peer during code review their name is displayed in a banner above the code editor
+    view_options(code_owners_name: @user&.name || @current_user&.name)
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
@@ -208,8 +217,12 @@ module LevelsHelper
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
-      # readonly if viewing another user's channel or a code review is open for that project
-      readonly_view_options if @user || CodeReview.open_for_project?(channel: channel)
+
+      viewing_another_user = !!@user
+      code_review_open = CodeReview.open_for_project?(channel: channel)
+
+      view_options(is_viewing_own_project: !viewing_another_user, has_open_code_review: code_review_open)
+      readonly_view_options if viewing_another_user || code_review_open
     end
 
     view_options(
@@ -356,6 +369,7 @@ module LevelsHelper
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+        @app_options[:level][:isPassing] = level_passing?(@level, @script, @user || current_user)
       end
     end
 
@@ -447,7 +461,7 @@ module LevelsHelper
 
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
-    if @script && @script.text_to_speech_enabled?
+    if @script&.text_to_speech_enabled?
       level_options['ttsShortInstructionsUrl'] = @level.tts_short_instructions_text.empty? ? "" : @level.tts_url(@level.tts_short_instructions_text)
       level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? "" : @level.tts_url(@level.tts_long_instructions_text)
     end
@@ -521,7 +535,7 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
-    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
+    if @game&.owns_footer_for_share? || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -653,18 +667,13 @@ module LevelsHelper
       end
     end
 
-    # Expo-specific options (only needed for Applab and Gamelab)
-    if (@level.is_a? Gamelab) || (@level.is_a? Applab)
-      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
-    end
-
     # User/session-dependent options
-    app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
+    app_options[:disableSocialShare] = true if current_user&.under_13? || app_options[:embed]
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
     app_options.merge!(firebase_options)
-    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
+    app_options[:canResetAbuse] = true if current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
@@ -704,7 +713,7 @@ module LevelsHelper
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
-    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
+    if @game&.owns_footer_for_share? || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -933,7 +942,7 @@ module LevelsHelper
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
-    if current_user && current_user.under_13? && current_user.terms_version.nil?
+    if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?
         error_message = I18n.t("errors.messages.teacher_must_accept_terms")
       else

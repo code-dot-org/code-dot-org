@@ -852,7 +852,7 @@ es:
         hoc_dance_congrats_2019: Fiesta de baile - ¡Que siga la fiesta!
         hoc_dance_warmup_2019: Fiesta de baile - Calentamiento
         hoc_dance_events_2019: Fiesta de baile - Eventos
-        hoc_dance_measures_2019: 'Fiesta de Baile: Compaces'
+        hoc_dance_measures_2019: 'Fiesta de Baile: Compases'
         hoc_dance_properties_2019: Fiesta de Baile - Propiedades
         csd_what_computers_do: "¿Qué hacen los ordenadores?"
         csf_my_online_neighborhood_2020: Mi barrio en línea
@@ -976,6 +976,7 @@ es:
         CSA-PL-two-way-selection: Selección bidireccional
         CSA-PL-Printing-in-Java: Impresión en Java
         CSA-PL-multi-selection-statements: Sentencias de Selección Múltiple
+        CS_Changing_Everything: Las Ciencias de la Computación están cambiando todo
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -3,7 +3,7 @@ import BaseDialog from './BaseDialog';
 import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';

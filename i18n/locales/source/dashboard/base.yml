@@ -58,6 +58,7 @@ en:
         personal_email_markdown: "Personal email address [(click here if you don't have an email address)](%{url})"
         username: 'Username'
         password: 'Password'
+        verified_teacher: 'Verified Teacher'
         password_confirmation: 'Password confirmation'
         current_password: 'Current password'
         locale: 'Language'
@@ -451,7 +452,6 @@ en:
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
-      lines: 'Total lines of code: %{lines}'
       close: 'CLOSE'
       mastery: 'Concepts'
       puzzle_map: 'Stages'
@@ -623,6 +623,7 @@ en:
     try_hour_of_code: 'Try an Hour of Code!'
     store: 'Store'
     cookie_notice: 'Cookie Notice'
+    view_code: 'View Code'
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
@@ -1215,3 +1216,10 @@ en:
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Teacher Feedback"
+  lesson_lock:
+    error:
+      no_updates: "No updates to perform"
+      missing_params: "Must provide user, level, and unit ids"
+      cannot_view_locked_answers: "Cannot view answers while locked"
+      forbidden: "User cannot update student's lockable state"
+  reset_predict_progress_button: "Delete Answer"

@@ -435,7 +435,6 @@ de:
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: 'Dein Fortschritt'
-      lines: 'Gesamte Codezeilen: %{lines}'
       close: 'SCHLIESSEN'
       mastery: 'Konzepte'
       puzzle_map: 'Level'

@@ -13,7 +13,7 @@ class Properties
       @@table.where(key: key.to_s).first
     end
     return nil unless i
-    JSON.load(StringIO.new(i[:value]))
+    JSON.parse(i[:value])
   end
 
   # @param key [String] the key to insert

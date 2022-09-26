@@ -29,6 +29,87 @@
         "infinity/Infinity": {
           "name": "Disney infinit Play Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora de codi 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Esdeveniments"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funcions"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Per bucles"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratori de personatges"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fonaments de la informàtica"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fonaments de la informàtica"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Programació en relleus"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Festa de ball"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Condicionals amb targetes"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Composició de cançons"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Mou-lo, Mou-lo"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Fent bucles"
+        },
+        "express-2022/Dance Party": {
+          "name": "Festa de ball"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Mapes feliços"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "El gran esdeveniment"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Polseres binàries"
+        },
+        "csd3-2022/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2022/Text": {
+          "name": "text"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Condicionals"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funcions"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funcions"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Mou-lo, Mou-lo"
         },
@@ -332,6 +413,66 @@
         "course4/Super Challenge - Functions and Parameters": {
           "name": "Súper-repte - funcions i paràmetres"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introducció a la informàtica"
+        },
+        "20-hour/The Maze": {
+          "name": "El Laberint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pensament computacional"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
+        },
+        "20-hour/The Artist": {
+          "name": "L'artista"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algorismes"
+        },
+        "20-hour/The Artist 2": {
+          "name": "L'artista 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funcions"
+        },
+        "20-hour/The Farmer": {
+          "name": "La pagesa"
+        },
+        "20-hour/Conditionals": {
+          "name": "Condicionals"
+        },
+        "20-hour/The Artist 3": {
+          "name": "L'artista 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Escriptura de la cançó"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "La pagesa 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstracció"
+        },
+        "20-hour/The Artist 4": {
+          "name": "L'artista 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programació en relleus"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "La pagesa 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "L'artista 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Recapitulació"
+        },
         "course2/Graph Paper Programming": {
           "name": "Programació de paper quadriculat"
         },
@@ -505,6 +646,42 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Puzzle"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puzzle"
+        },
+        "allthethings/Maze": {
+          "name": "Laberint"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Abella"
+        },
+        "allthethings/Farmer": {
+          "name": "Pagès"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Rebota"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Relacionar"
+        },
+        "allthethings/Odometer": {
+          "name": "odòmetre"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Laboratori de personatges"
         },
         "coursef-2021/Internet": {
           "name": "Internet"

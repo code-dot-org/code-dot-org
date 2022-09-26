@@ -12,7 +12,7 @@ module UsersHelper
   # Returns a boolean - true if all steps were successful, false otherwise.
   def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
     # No-op if source_user is nil
-    return true unless source_user.present?
+    return true if source_user.blank?
 
     firehose_params = {
       source_user: source_user,
@@ -108,8 +108,6 @@ module UsersHelper
   # Summarize a user and their progress within a certain unit.
   # Example return value:
   # {
-  #   "linesOfCode": 34,
-  #   "linesOfCodeText": "Total lines of code: 34",
   #   "disableSocialShare": true,
   #   "lockableAuthorized": true,
   #   "levels": {
@@ -119,12 +117,13 @@ module UsersHelper
   def summarize_user_progress(unit, user = current_user, exclude_level_progress = false)
     user_data = {}
     if user
+      is_instructor = unit.can_be_instructor?(user)
+
       user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
+      user_data[:lockableAuthorized] = is_instructor ? user.verified_instructor? : user.student_of_verified_instructor?
       user_data[:isTeacher] = true if user.teacher?
+      user_data[:isInstructor] = is_instructor
       user_data[:isVerifiedInstructor] = true if user.verified_instructor?
-      user_data[:linesOfCode] = user.total_lines
-      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
 
     merge_unit_progress(user_data, user, unit, exclude_level_progress)
@@ -224,7 +223,7 @@ module UsersHelper
     return user_data unless user
 
     if unit.old_professional_learning_course?
-      user_data[:professionalLearningCourse] = true
+      user_data[:deeperLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: unit.plc_course_unit)
       if unit_assignment
         user_data[:focusAreaLessonIds] = unit_assignment.focus_area_lesson_ids
@@ -414,7 +413,7 @@ module UsersHelper
         level_id = embedded_level.id
 
         # Do we have a valid result for this level in the LevelGroup last_attempt?
-        if last_attempt && last_attempt.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
+        if last_attempt&.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
           page_valid_result_count += 1
         end
       end

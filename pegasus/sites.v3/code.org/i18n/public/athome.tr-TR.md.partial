@@ -144,9 +144,9 @@ theme: responsive
 <br>
 <p><a href="#top">[Back to top]</a></p>
 
-</div>
+</div></p>
 
-</p><div style="clear: both; margin-bottom: 20px"></div>
+<div style="clear: both; margin-bottom: 20px"></div>
 
 <p spaces-before="0">
   <a id="express"></a>
@@ -306,18 +306,18 @@ theme: responsive
   <p>Ekran yok, sorun yok! Bir cihaz olmadan yapabileceğiniz hızlı, eğlenceli CS etkinliklerinden oluşan bir "örnekleyici" bir araya getirdik. Etkinlikleri öğrenirken bir aile Dance Party partisi yapın ya da resim çizmek için birbirinizi 'programlayın'!</p>
   <br>
   <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Bağlantısız etkinlikleri görüntüleyin</button></a>
-</div>
+</div></p>
 
-</p><div style="clear: both; margin-bottom: 10px"></div>
+<div style="clear: both; margin-bottom: 10px"></div>
 
 <p spaces-before="0">
   <p>Veya diğer kuruluşlardan bu bağlantısız seçenekleri görüntüleyin:</p>
 <ul>
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Merhaba Ruby</a> - Bilgisayarlar, teknoloji ve programlama hakkında bilgi edinmek için dünyanın en tuhaf yolu. Bir problemi parçalara ayırma, nokta örüntüleri, algoritmik olarak düşünme, problemleri çözme ve birlikte çalışma gibi bir dizi CS konusuna dair aktiviteler. (4-10 yaş için)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Bağlantısız</a> - Kartlar, ipler, boya kalemleri ve çok sayıda koşuşturma kullanan ilgi çekici oyunlar ve bulmacalar yoluyla bilgisayar bilimini öğreten ücretsiz öğretim materyali koleksiyonu. (5-14 yaş için)</li>
-</ul>
+</ul></p>
 
-</p><h2>Evde bilgisayar yok mu? İş ortaklarımızın sunduğu bu uygulamalarla telefonunuzda CS'yi deneyin</h2>
+<h2>Evde bilgisayar yok mu? İş ortaklarımızın sunduğu bu uygulamalarla telefonunuzda CS'yi deneyin</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
   <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Algoritmalar, örüntü tanıma, diziler, döngüler ve koşullar gibi kodlamanın temellerini öğretirken öğrencileri heyecan verici bir maceraya çıkaran büyüleyici bir mobil kodlama oyunu. <i>(tüm yaşlar için)</i>
@@ -337,9 +337,9 @@ theme: responsive
 
 <p spaces-before="0">
   <a id="livecoding"></a>
-<h2>Code.org ekibinden ve özel konuklardan öğrenin!</h2>
+<h2>Code.org ekibinden ve özel konuklardan öğrenin!</h2></p>
 
-</p><div class="col-50">
+<div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
         <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logosu">

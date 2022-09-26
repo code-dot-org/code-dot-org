@@ -29,6 +29,8 @@ class LevelsControllerTest < ActionController::TestCase
     }
     stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
       to_return({"status" => 200, "body" => "{}", "headers" => {}})
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "should get rubric" do
@@ -842,7 +844,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should route new to levels" do
-    assert_routing({method: "post", path: "/levels"}, {controller: "levels", action: "create"})
+    assert_routing({method: "post", path: "http://#{CDO.dashboard_hostname}/levels"}, {controller: "levels", action: "create"})
   end
 
   test "should use level for route helper" do

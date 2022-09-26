@@ -63,14 +63,9 @@
   "poster": "póster",
   "csa-pilot-facilitator": "Organizadores del Proyecto Piloto CSA",
   "poembot-hoc": "botpoema-hoc",
-  "ai-ethics": "Nuestro Código Ético de la Inteligencia Artificial",
   "dance-unplugged": "Hora del Código - Fiesta de Baile - Desconectado",
-  "counting-csc": "Contando con Laurel",
-  "explore-data-1": "Explorando los Gráficos de Caja e Histogramas",
   "outbreak-csc": "Brote",
-  "spelling-bee": "Deletreando con la Abeja",
   "poem-art": "Arte del Poema",
-  "poetry": "Codificación con Poesía",
   "hello-world-animals": "Hola Mundo: Animales",
   "hello-world-emoji": "Hola Mundo: Emoji",
   "hello-world-food": "Hola Mundo: Alimentos",
@@ -348,5 +343,6 @@
   "csd5-preview-2021": "CSD Unidad 5 - Datos y sociedad (21-22 Vista Previa Beta)",
   "jess-test-script": "guión-prueba-jess",
   "contagion-pilot": "Simulador de Contagio",
-  "csa-pl-standalone-code-2022": "csa-pl-código-independiente-2022"
+  "csa-pl-standalone-code-2022": "csa-pl-código-independiente-2022",
+  "soccer": "fútbol"
 }

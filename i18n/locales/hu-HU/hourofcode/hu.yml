@@ -5,31 +5,37 @@ hu:
   language: Magyar
   front_title: Csatlakozz minden idők legnagyobb tanulmányi eseményéhez %{campaign_date}
   coming_soon: Hamarosan!
-  campaign_date_start_short: Dec. 6.
-  campaign_date_start_long: December 6.
-  campaign_date_short: Dec. 6-12.
-  campaign_date_full: December 6-12.
-  campaign_date_year: '2021.'
-  campaign_date_full_year: 2021. december 6-12.
+  campaign_date_start_short: Dec. 5.
+  campaign_date_start_long: December 5.
+  campaign_date_short: Dec. 5-11.
+  campaign_date_full: December 5-11.
+  campaign_date_year: '2022.'
+  campaign_date_full_year: 2022. december 5-11.
+  nonus_campaign_date_start_short: Okt. 1.
+  nonus_campaign_date_start_long: Október 1.
+  nonus_campaign_date_short: Okt. 1. - dec. 18.
+  nonus_campaign_date_full: Október 1. - december 18.
+  nonus_campaign_date_year: '2022.'
+  nonus_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   latam_campaign_date_start_short: Okt. 1.
   latam_campaign_date_start_long: Október 1.
-  latam_campaign_date_short: Okt. 1. - dec. 12.
-  latam_campaign_date_full: Október 1. - december 12.
-  latam_campaign_date_year: '2021.'
-  latam_campaign_date_full_year: 2021. október 1. - 2021. december 12.
+  latam_campaign_date_short: Okt. 1. - dec. 18.
+  latam_campaign_date_full: Október 1. - december 18.
+  latam_campaign_date_year: '2022.'
+  latam_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   europe_campaign_date_start_short: 'Okt. 10.
 
 '
   europe_campaign_date_start_long: Október 10.
   europe_campaign_date_short: Okt. 10-25.
   europe_campaign_date_full: Október 10-25.
-  europe_campaign_date_year: '2021.'
+  europe_campaign_date_year: '2022.'
   europe_campaign_date_full_year: 2020. október 10-25.
-  africa_campaign_date_start_short: Dec. 6.
-  africa_campaign_date_start_long: December 6.
+  africa_campaign_date_start_short: Okt. 1.
+  africa_campaign_date_start_long: Október 1.
   africa_campaign_date_short: Okt. 1-31.
   africa_campaign_date_full: Október 1-31.
-  africa_campaign_date_year: '2021.'
+  africa_campaign_date_year: '2022.'
   africa_campaign_date_full_year: 2020. október 1-31.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -547,7 +553,6 @@ hu:
   signup_email_preference_error: Kérlek adj meg email preferenciát
   signup_multiple_event_warning: Ha több eseményt szervezel, akkor adj egyedi nevet
     vagy emailt mindegyikhez. Csak egy eseménynek számolunk egy név és email kombinációt.
-  signup_registration_deadline: A Kódolás Órájának regisztrációja december 11-én zárul.
   signup_name_placeholder: Neved
   signup_email_placeholder: nev@pelda.hu
   signup_organization_name_placeholder: Például Kossuth Szakközépiskola

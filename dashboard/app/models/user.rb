@@ -71,7 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
-require 'cdo/user_helpers'
+require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
@@ -149,7 +149,7 @@ class User < ApplicationRecord
   ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
-  belongs_to :studio_person
+  belongs_to :studio_person, optional: true
   has_many :hint_view_requests
 
   # courses a facilitator is able to teach
@@ -166,7 +166,7 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
-  belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+  belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -195,7 +195,7 @@ class User < ApplicationRecord
 
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
-  belongs_to :school_info
+  belongs_to :school_info, optional: true
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
@@ -230,7 +230,7 @@ class User < ApplicationRecord
     if teacher?
       EmailPreference.upsert!(
         email: email,
-        opt_in: email_preference_opt_in.downcase == "yes",
+        opt_in: email_preference_opt_in.casecmp?("yes"),
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
@@ -243,7 +243,7 @@ class User < ApplicationRecord
     if student? && parent_email.present?
       EmailPreference.upsert!(
         email: parent_email,
-        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
         ip_address: parent_email_preference_request_ip,
         source: parent_email_preference_source,
         form_kind: nil
@@ -254,7 +254,7 @@ class User < ApplicationRecord
   # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
     user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
       user.save!
     end
@@ -316,7 +316,7 @@ class User < ApplicationRecord
     end
   end
 
-  belongs_to :invited_by, polymorphic: true
+  belongs_to :invited_by, polymorphic: true, optional: true
 
   validate :admins_must_be_teachers_without_followeds
 
@@ -430,7 +430,7 @@ class User < ApplicationRecord
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
 
-  belongs_to :secret_picture
+  belongs_to :secret_picture, optional: true
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
@@ -527,7 +527,7 @@ class User < ApplicationRecord
   end
 
   def normalize_email
-    return unless email.present?
+    return if email.blank?
     self.email = email.strip.downcase
   end
 
@@ -536,7 +536,7 @@ class User < ApplicationRecord
   end
 
   def hash_email
-    return unless email.present?
+    return if email.blank?
     self.hashed_email = User.hash_email(email)
   end
 
@@ -575,7 +575,7 @@ class User < ApplicationRecord
       self.email = ''
       self.full_address = nil
       self.school_info = nil
-      studio_person.destroy! if studio_person
+      studio_person&.destroy!
       self.studio_person_id = nil
     end
 
@@ -851,7 +851,7 @@ class User < ApplicationRecord
     return false unless teacher? && purged_at.nil?
 
     # new teacher accounts should always require an email
-    return true unless created_at.present?
+    return true if created_at.blank?
 
     # existing accounts created after the email requirement must have an email.
     # FND-1130: The created_at exception will no longer be required
@@ -884,13 +884,13 @@ class User < ApplicationRecord
   def update_with_password(params, *options)
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
-      update_attributes(params, *options)
+      update(params, *options)
     else
       super
     end
   end
 
-  def update_email_for(provider: nil, uid: nil, email:)
+  def update_email_for(email:, provider: nil, uid: nil)
     if migrated?
       # Provider and uid are required to update email on AuthenticationOption for migrated user.
       return unless provider.present? && uid.present?
@@ -987,7 +987,7 @@ class User < ApplicationRecord
 
   def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
-    return false unless email.present?
+    return false if email.blank?
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
@@ -1291,10 +1291,15 @@ class User < ApplicationRecord
       first
   end
 
+  #sections owned by the user AND not deleted
+  def owned_section_ids
+    sections.select(:id).all
+  end
+
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
-    return false if try(:teacher?)
+    return false if script_level.script.can_be_instructor?(self)
 
     sections = sections_as_student
     return false if sections.empty?
@@ -1320,7 +1325,7 @@ class User < ApplicationRecord
 
   # Is the given unit hidden for this user (based on the sections that they are in)
   def unit_hidden?(unit)
-    return false if try(:teacher?)
+    return false if unit.can_be_instructor?(self)
 
     return false if sections_as_student.empty?
 
@@ -1339,7 +1344,7 @@ class User < ApplicationRecord
     unit = Script.get_from_cache(unit_name)
     return [] if unit.nil?
 
-    teacher? ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
+    unit.can_be_instructor?(self) ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1349,7 +1354,9 @@ class User < ApplicationRecord
   def get_hidden_unit_ids(unit_group = nil)
     return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
+    # If there isn't a unit_group then we are on the homepage and looking for all the hidden units for an instructor
+    return get_instructor_hidden_ids(false) if unit_group.nil?
+    unit_group.can_be_instructor?(self) ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1436,7 +1443,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
@@ -1803,7 +1810,7 @@ class User < ApplicationRecord
   end
 
   def visible_scripts
-    scripts.map(&:cached).select {|s| [SharedCourseConstants::PUBLISHED_STATE.stable, SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
+    scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
@@ -2013,7 +2020,6 @@ class User < ApplicationRecord
       user_type: user_type,
       gender: gender,
       birthday: birthday,
-      total_lines: total_lines,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
       secret_picture_path: secret_picture&.path,
@@ -2170,7 +2176,7 @@ class User < ApplicationRecord
 
   def lesson_extras_enabled?(unit)
     return false unless unit.lesson_extras_available?
-    return true if teacher?
+    return true if unit.can_be_instructor?(self)
 
     sections_as_student.any? do |section|
       section.script_id == unit.id && section.lesson_extras
@@ -2467,7 +2473,7 @@ class User < ApplicationRecord
   end
 
   # The data returned by this method is set to cookies for the marketing team to
-  # use in Optimizely for segmenting teacher user experience.
+  # use in Google Optimize for segmenting teacher user experience.
   def marketing_segment_data
     return unless teacher?
 

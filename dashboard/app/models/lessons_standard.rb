@@ -15,8 +15,8 @@
 class LessonsStandard < ApplicationRecord
   self.table_name = 'stages_standards'
 
-  belongs_to :lesson, foreign_key: 'stage_id'
-  belongs_to :standard
+  belongs_to :lesson, foreign_key: 'stage_id', optional: true
+  belongs_to :standard, optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.

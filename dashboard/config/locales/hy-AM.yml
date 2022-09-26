@@ -222,7 +222,6 @@ hy:
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: Ձեր առաջընթացը
-      lines: 'Ընդհանուր կոդի տողերի քանակի: %{lines}'
       close: ՓԱԿԵԼ
       mastery: Concepts
       puzzle_map: փուլերը

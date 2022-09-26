@@ -13,7 +13,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "instructions_important": "true",
-    "never_autoplay_video": "true",
+    "never_autoplay_video": "false",
     "ideal": "3",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -109,7 +109,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:41.624+00:00\",\"changed\":[\"cloned from \\\"Overworld Move to Sheep_2021\\\"\"],\"cloned_from\":\"Overworld Move to Sheep_2021\"},{\"changed_at\":\"2022-03-07 16:59:46 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:41.624+00:00\",\"changed\":[\"cloned from \\\"Overworld Move to Sheep_2021\\\"\"],\"cloned_from\":\"Overworld Move to Sheep_2021\"},{\"changed_at\":\"2022-03-07 16:59:46 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-22 17:17:39 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2
   }

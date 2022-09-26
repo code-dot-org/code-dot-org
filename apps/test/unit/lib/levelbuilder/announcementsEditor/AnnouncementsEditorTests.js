@@ -57,7 +57,9 @@ describe('AnnouncementsEditor', () => {
         link: '',
         notice: '',
         type: 'information',
-        visibility: 'Teacher-only'
+        visibility: 'Teacher-only',
+        dismissible: true,
+        buttonText: ''
       }
     ]);
   });

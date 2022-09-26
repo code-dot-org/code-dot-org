@@ -215,8 +215,8 @@ export function getHiddenLessons(scriptName, canHideLessons) {
  */
 function initializeHiddenLessons(data, canHideLessons) {
   return dispatch => {
-    // For a teacher, we get back a map of section id to hidden lesson ids
-    // For a student, we just get back a list of hidden lesson ids. Turn that
+    // For a instructor, we get back a map of section id to hidden lesson ids
+    // For a participant, we just get back a list of hidden lesson ids. Turn that
     // into an object, under the 'sectionId' of STUDENT_SECTION_ID
     if (Array.isArray(data)) {
       data = {[STUDENT_SECTION_ID]: data};

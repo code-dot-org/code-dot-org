@@ -5,6 +5,8 @@ import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
+import {stringifyQueryParams} from '@cdo/apps/utils';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',
@@ -29,8 +31,11 @@ const CodeReviewTimelineElement = ({
   viewAsCodeReviewer,
   children
 }) => {
+  const params = queryParams();
+  params['version'] = projectVersionId;
+
   const versionLink =
-    location.origin + location.pathname + '?version=' + projectVersionId;
+    location.origin + location.pathname + stringifyQueryParams(params);
 
   // You can only see previous versions of your own project
   const displayEyeball = !viewAsCodeReviewer && !!projectVersionId;

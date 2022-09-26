@@ -226,7 +226,6 @@ eu:
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena
-      lines: 'Kode lerro kopuru osoa: %{lines}'
       close: ITXI
       mastery: Kontzeptuak
       puzzle_map: Mailak

@@ -1,10 +1,10 @@
 import React from 'react';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
 import {connect} from 'react-redux';
 import throttle from 'lodash/debounce';
+import style from './copy-element-to-screen-button.module.scss';
 
 /**
  * A duplicate button that helps replicate elements
@@ -84,10 +84,11 @@ class CopyElementToScreenButton extends React.Component {
       ));
 
     return (
-      <div style={styles.main} ref={element => (this.element = element)}>
+      <div className={style.main} ref={element => (this.element = element)}>
         <button
           type="button"
-          style={[commonStyles.button, styles.copyElementToScreenButton]}
+          style={{...commonStyles.button}}
+          className={style.copyElementToScreenButton}
           onClick={this.handleDropdownClick}
         >
           Copy to screen <i className="fa fa-chevron-down" />
@@ -98,7 +99,7 @@ class CopyElementToScreenButton extends React.Component {
             targetPoint={targetPoint}
             offset={{x: 0, y: 0}}
             onClose={this.onClose}
-            style={styles.menu}
+            className={style.menu}
           >
             {otherScreens}
           </PopUpMenu>
@@ -108,21 +109,8 @@ class CopyElementToScreenButton extends React.Component {
   }
 }
 
-const styles = {
-  copyElementToScreenButton: {
-    backgroundColor: '#0aa',
-    color: 'white',
-    float: 'right'
-  },
-  screen: {},
-  menu: {
-    maxHeight: '200px',
-    overflowY: 'auto'
-  }
-};
-
 export default connect(function propsFromStore(state) {
   return {
     currentScreenId: state.screens.currentScreenId
   };
-})(Radium(CopyElementToScreenButton));
+})(CopyElementToScreenButton);

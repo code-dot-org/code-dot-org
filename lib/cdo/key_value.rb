@@ -25,8 +25,8 @@ module Cdo
     end
 
     def flush
-      @reader.close if @reader
-      @writer.close if @writer
+      @reader&.close
+      @writer&.close
       @reader = nil
       @writer = nil
     end

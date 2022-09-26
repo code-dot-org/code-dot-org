@@ -19,7 +19,6 @@ const defaultProps = {
   descriptionTeacher:
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
-  teacherResources: [],
   viewAs: ViewType.Instructor,
   scripts: [
     {
@@ -42,8 +41,7 @@ const defaultProps = {
   versions: {},
   sectionsForDropdown: [],
   announcements: [],
-  isSignedIn: true,
-  useMigratedResources: false
+  isSignedIn: true
 };
 
 const fakeTeacherAnnouncement = {

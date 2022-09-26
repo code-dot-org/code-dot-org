@@ -53,7 +53,7 @@ class TestController < ApplicationController
     return unless (user = current_user)
     script = Script.find_by_name(params.require(:script_name))
 
-    Section.create!(name: "New Section", user: user, script: script, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     head :ok
   end
 
@@ -74,7 +74,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -96,7 +96,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script: script, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: fake_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -111,7 +111,7 @@ class TestController < ApplicationController
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Script.create!(name: script_name, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development)
+      Script.create!(name: script_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     script.is_migrated = true
     script.save!

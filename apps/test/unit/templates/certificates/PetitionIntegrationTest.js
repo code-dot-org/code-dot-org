@@ -74,7 +74,7 @@ describe('Petition on submit', () => {
     submitForm(petition);
 
     const serverCalledWith = $.ajax.getCall(0).args[0];
-    expect(serverCalledWith.data).to.deep.equal(
+    expect(JSON.parse(serverCalledWith.data)).to.deep.equal(
       expectedDataFromInputs(minimumInputs)
     );
   });
@@ -92,7 +92,7 @@ describe('Petition on submit', () => {
     submitForm(petition);
 
     const serverCalledWith = $.ajax.getCall(0).args[0];
-    expect(serverCalledWith.data).to.deep.equal({
+    expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
       name_s: '',
       email_s: 'anonymous@code.org'
@@ -117,7 +117,7 @@ describe('Petition on submit', () => {
     submitForm(petition);
 
     const serverCalledWith = $.ajax.getCall(0).args[0];
-    expect(serverCalledWith.data).to.deep.equal({
+    expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
       role_s: 'engineer' // The 'role' value has a consistent name regardless of language
     });

@@ -258,7 +258,6 @@ si:
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: 'ඔබගේ ප්‍රගතිය'
-      lines: 'සම්පූර්ණ කේත පේලි ගණන: %{lines}'
       close: 'වහන්න'
       mastery: 'අදහස්'
       puzzle_map: 'අදියරයන්'

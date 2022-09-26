@@ -30,11 +30,11 @@ class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
 
-  belongs_to :game
+  belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
-  belongs_to :user
+  belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
+  belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
@@ -51,7 +51,7 @@ class Level < ApplicationRecord
   # context on these categories and level keys, see:
   # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
-  validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+  validates_uniqueness_of :level_num, case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
 
   validate :validate_game, on: [:create, :update]
 
@@ -150,7 +150,7 @@ class Level < ApplicationRecord
   end
 
   def unplugged?
-    game && game.unplugged?
+    game&.unplugged?
   end
 
   def finishable?
@@ -379,7 +379,7 @@ class Level < ApplicationRecord
   ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
-    where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
     where('ideal_level_source_id is null').
     to_a.reject {|level| level.try(:free_play)}
   end
@@ -722,6 +722,19 @@ class Level < ApplicationRecord
       )
     else
       properties['teacher_markdown']
+    end
+  end
+
+  def localized_rubric_property(property)
+    if should_localize?
+      I18n.t(
+        property,
+        scope: [:data, :mini_rubric, name],
+        default: properties[property],
+        smart: true
+      )
+    else
+      properties[property]
     end
   end
 

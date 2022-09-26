@@ -4,14 +4,14 @@ display_name 'Design Your Game'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6 - End of Chapter 1 Project
+# Physical Computing - End of Chapter 1 Project
 ## Lesson 9: Make a Game
 **Estimated time: 20 minutes**
 
-Unit 6, Chapter 1 ends with Lesson 9 in which students develop an app of their own design that uses the Circuit Playground to output information.  Students have the opportunity to show what they've learned throughout Chapter 1 (event handlers, using the Circuit Playground as output, etc).
+Physical Computing, Chapter 1 ends with Lesson 9 in which students develop an app of their own design that uses the Circuit Playground to output information.  Students have the opportunity to show what they've learned throughout Chapter 1 (event handlers, using the Circuit Playground as output, etc).
 
 
-## Explore Unit 6 - Chapter 1 Project Resources
+## Explore Physical Computing - Chapter 1 Project Resources
 
 * Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit6/9/" target="_blank">Lesson 9: Project - Make a Game</a>
 

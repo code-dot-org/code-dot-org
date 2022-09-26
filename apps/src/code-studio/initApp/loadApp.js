@@ -3,13 +3,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore} from '../redux';
-import {
-  setAppLoadStarted,
-  setAppLoaded
-} from '@cdo/apps/code-studio/headerRedux';
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 import renderProjectNotFound from './renderProjectNotFound';
+import renderVersionNotFound from './renderVersionNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -72,7 +70,10 @@ export function setupApp(appOptions) {
         const isTeacher =
           getStore().getState().currentUser?.userType === 'teacher';
         const isViewingStudent = !!queryParams('user_id');
-        if (project.isOwner() || (isTeacher && isViewingStudent)) {
+        if (
+          project.isOwner() ||
+          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+        ) {
           $('#versions-header').show();
         }
       }
@@ -264,7 +265,10 @@ function loadProjectAndCheckAbuse(appOptions) {
       })
       .catch(() => {
         if (project.channelNotFound()) {
-          renderProjectNotFound(project);
+          renderProjectNotFound();
+          return;
+        } else if (project.sourceNotFound()) {
+          renderVersionNotFound();
           return;
         }
       });
@@ -359,6 +363,7 @@ async function loadAppAsync(appOptions) {
     const data = await userAppOptionsRequest;
 
     appOptions.disableSocialShare = data.disableSocialShare;
+    appOptions.isInstructor = data.isInstructor;
 
     if (data.isStarted) {
       appOptions.level.isStarted = data.isStarted;
@@ -481,13 +486,6 @@ const sourceHandler = {
     } else {
       callback({});
     }
-  },
-  setInitialGeneratedProperties(generatedProperties) {
-    getAppOptions().initialGeneratedProperties = generatedProperties;
-  },
-  getGeneratedProperties() {
-    const {getGeneratedProperties} = getAppOptions();
-    return getGeneratedProperties && getGeneratedProperties();
   },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();

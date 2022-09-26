@@ -13,11 +13,11 @@
     "encrypted": "false",
     "optional": "false"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2022-04-05T18:59:29.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-04-05T18:59:29.000Z",
   "user_id": 155,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-05T18:59:29.037+00:00\",\"changed\":[\"cloned from \\\"CSDU6 array index predict contained_2021\\\"\"],\"cloned_from\":\"CSDU6 array index predict contained_2021\"},{\"changed_at\":\"2022-04-05 19:07:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-05 19:09:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {

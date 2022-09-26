@@ -4,7 +4,7 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Unit 5 - Lesson 2:  Patterns and Representation 
+#Data and Society - Lesson 2:  Patterns and Representation
 **Estimated time: 15 minutes**
 
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ## Investigation Tasks
 
-* Review the lesson plan, <a href="https://studio.code.org/s/csd5-2021/lessons/2" target="_blank">Lesson 2: Patterns and Recognition</a>
+* Review the lesson plan, <a href="https://studio.code.org/s/csd5-2022/lessons/2" target="_blank">Lesson 2: Patterns and Recognition</a>
 * Become familiar with the vocabulary (encode, decode)
 * Skim the activity guide to support students in completing the activity within this lesson
 	* **Note:** This activity may be challenging for some students. Consider doing this hands-on activity with the cards before teaching the lesson to identify where students might struggle or need clarifying directions.

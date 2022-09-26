@@ -356,7 +356,6 @@ se:
     popup:
       progress_for_user: "%{name} ovdáneapmi"
       progress: 'Du ovdáneapmi'
-      lines: 'Oktiibuot linjját kodas: %{lines}'
       close: 'GIDDE'
       mastery: 'Konseaptat'
       puzzle_map: 'Dásit'

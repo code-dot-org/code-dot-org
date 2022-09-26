@@ -5,8 +5,7 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from './resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
@@ -50,8 +49,7 @@ class CourseOverview extends Component {
       })
     ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
@@ -65,8 +63,7 @@ class CourseOverview extends Component {
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    isSignedIn: PropTypes.bool.isRequired,
-    useMigratedResources: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -125,7 +122,6 @@ class CourseOverview extends Component {
       sectionsInfo,
       sectionsForDropdown,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       viewAs,
       scripts,
@@ -137,8 +133,7 @@ class CourseOverview extends Component {
       redirectToCourseUrl,
       showAssignButton,
       userId,
-      isSignedIn,
-      useMigratedResources
+      isSignedIn
     } = this.props;
 
     const showNotification =
@@ -217,10 +212,8 @@ class CourseOverview extends Component {
             id={id}
             title={title}
             teacherResources={teacherResources}
-            migratedTeacherResources={migratedTeacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
-            useMigratedResources={useMigratedResources}
             isInstructor={viewAs === ViewType.Instructor}
           />
         </div>

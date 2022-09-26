@@ -6,6 +6,7 @@ mr:
         Unplug2: कॉम्प्युटेशनल विचार  
         Unplug6: कंडीशनल्स 
         Custom: आर्टीस्ट
+        Spritelab: स्प्राइट लॅब
     level:
       instructions:
         maze_2_2: 'तुम्ही मला हे खोडकर डुक्कर पकडायला मदत करू शकता का? दोन-तीन "move forward" ब्लॉक्स एकत्र जोडा आणि मला तिथे जायला मदत करण्यासाठी "Run" दाबा.'
@@ -89,6 +90,7 @@ mr:
         CSF_artist_angles: आर्टीस्टमध्ये कोन
         CSF_debugging_k1_blocks: डीबगिंग
         CSF_debugging_text_blocks: डीबगिंग
+        CSF_my_robotic_friends: माझे रोबोटिक मित्र
         frozen_intro: अवर ऑफ कोड प्रस्तावना
         frozen_loops: लूप्सची ओळख
         frozen_functions: फंक्शन्सची ओळख
@@ -166,6 +168,7 @@ mr:
         CSA-PL-two-way-selection: दुहेरी निवड
         CSA-PL-Printing-in-Java: जावा मध्ये प्रिंटिंग
         CSA-PL-multi-selection-statements: मल्टी सिलेक्शन स्टेटमेंट्स
+        CS_Changing_Everything: संगणक शास्त्रामुळे सगळे काही बदलत आहे
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा

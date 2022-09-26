@@ -66,7 +66,7 @@
 
 class UserProficiency < ApplicationRecord
   include ConceptDifficulties
-  belongs_to :user
+  belongs_to :user, optional: true
 
   # WARNING: This class makes strong assumptions about the columns in the DB.
 

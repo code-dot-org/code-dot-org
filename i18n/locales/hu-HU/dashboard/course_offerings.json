@@ -6,7 +6,7 @@
   "coursee": "E tanfolyam",
   "coursef": "F tanfolyam",
   "express": "Expressz tanfolyam",
-  "csd": "Számítógép-tudományi Felfedezések",
+  "csd": "Számítástechnikai Felfedezések",
   "csp": "Számítógép-tudományi Alapelvek",
   "20-hour": "Gyorsított bemutató a CS tanfolyamra",
   "flappy": "Flappy kód",
@@ -31,8 +31,6 @@
   "sports": "Kódold le a saját sportjátékodat",
   "text-compression": "Szöveg tömörítése",
   "csa-self-paced-pl": "Navigálás a Code.org platformon a CSA kísérletben résztvevő tanárok számára",
-  "counting-csc": "Számolás Laurer segítségével",
-  "explore-data-1": "Dobozdiagramok és hisztogramok felfedezése",
   "poem-art": "Versművészet",
   "edit-code": "Kód szerkesztése",
   "poetry-hoc3": "poetry-hoc3",
@@ -42,5 +40,7 @@
   "allthethingscourse": "minden-dolog tanfolyam",
   "halloween": "halloween",
   "step": "lépés",
-  "csa5-exemplars": "csa5-exemplars"
+  "csa5-exemplars": "csa5-exemplars",
+  "katie-practice": "katie-practice",
+  "soccer": "foci"
 }

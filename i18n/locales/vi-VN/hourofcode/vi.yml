@@ -5,32 +5,44 @@ vi:
   language: Tiếng Việt
   front_title: Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}
   coming_soon: Sắp diễn ra
-  campaign_date_start_short: 6 tháng Mười Hai
-  campaign_date_start_long: 6 Tháng Mười Hai
-  campaign_date_short: Tháng 12 Ngày 5-11
-  campaign_date_full: Tháng 12 6-12
-  campaign_date_year: '2021'
-  campaign_date_full_year: Tháng 12 6-12, 2021
+  campaign_date_start_short: Ngày 5 tháng 12
+  campaign_date_start_long: Ngày 6 tháng 12
+  campaign_date_short: Ngày 5-11 tháng 12
+  campaign_date_full: Ngày 5-11 tháng 12
+  campaign_date_year: '2022'
+  campaign_date_full_year: Ngày 5-11 tháng 12 năm 2022
+  nonus_campaign_date_start_short: ngày 1 tháng 10
+  nonus_campaign_date_start_long: 'ngày 1 tháng 10
+
+'
+  nonus_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  nonus_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm 2022
   latam_campaign_date_start_short: ngày 1 tháng 10
   latam_campaign_date_start_long: 'ngày 1 tháng 10
 
 '
-  latam_campaign_date_short: ngày 1 tháng 10 - ngày 12 tháng 12
-  latam_campaign_date_full: ngày 1 tháng 10 - ngày 12 tháng 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: ngày 1 tháng 10 năm 2021 - ngày 12 tháng 12 năm 2021
-  europe_campaign_date_start_short: 6 tháng Mười Hai
-  europe_campaign_date_start_long: 6 Tháng Mười Hai
-  europe_campaign_date_short: Tháng 12 Ngày 5-11
-  europe_campaign_date_full: Tháng 12 6-12
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: Tháng 12 6-12, 2021
-  africa_campaign_date_start_short: 6 tháng Mười Hai
-  africa_campaign_date_start_long: 6 Tháng Mười Hai
-  africa_campaign_date_short: Tháng 12 Ngày 5-11
-  africa_campaign_date_full: Tháng 12 6-12
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: Tháng 12 6-12, 2021
+  latam_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  latam_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm 2022
+  europe_campaign_date_start_short: Ngày 1 tháng 10
+  europe_campaign_date_start_long: Ngày 1 tháng 10
+  europe_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  europe_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm
+    2022
+  africa_campaign_date_start_short: Ngày 1 tháng 10
+  africa_campaign_date_start_long: 'Ngày 1 tháng 10
+
+'
+  africa_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  africa_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm
+    2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Học lập trình hôm nay, xây dựng tươi lai tươi sáng hơn ngày mai.
@@ -556,8 +568,6 @@ vi:
   signup_multiple_event_warning: Chúng tôi sẽ hiển thị tên trường và thành phố bạn
     đăng ký lên bản đồ. Nếu bạn sẽ tổ chức nhiều sự kiện, xin vui lòng đăng ký tên
     sự kiện hoặc email khác nhau cho mỗi sự kiện.
-  signup_registration_deadline: Hạn đăng ký cho sự kiện Hour of Code là ngày 13 tháng
-    12.
   signup_name_placeholder: Tên của bạn
   signup_email_placeholder: You@example.com
   signup_organization_name_placeholder: Ví dụ, Trường THPT Phan Châu Trinh / Tổ chức
@@ -1036,8 +1046,8 @@ vi:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Bản quyền %{current_year} Code.org. Đã đăng ký Bản quyền.
-  footer_trademark_message: Hour of Code là một tác quyền cá nhân/ thương hiệu của
-    Code.org.
+  footer_trademark_message: Hour of Code® và Hora del Código® là nhãn hiệu đăng ký
+    của Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Đối tác
   footer_menu_contact: Liên hệ với chúng tôi

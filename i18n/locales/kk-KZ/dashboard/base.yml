@@ -235,7 +235,6 @@ kk:
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: 'Сіздің сабақ оқу барысыңыз'
-      lines: 'Жазылған жалпы код жолы: %{lines}'
       close: 'ЖАБУ'
       mastery: 'Ұғымдар'
       puzzle_map: 'Деңгейлер'

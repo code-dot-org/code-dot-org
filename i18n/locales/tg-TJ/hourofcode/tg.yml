@@ -12,24 +12,30 @@ tg:
   campaign_date_full: 5-11-уми декабр
   campaign_date_year: '2016'
   campaign_date_full_year: 6-12-уми декабри соли 2021
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2016'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 5-уми декабр
-  europe_campaign_date_start_long: 5-уми декабр
-  europe_campaign_date_short: 5-11-уми декабр
-  europe_campaign_date_full: 5-11-уми декабр
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: 6-12-уми декабри соли 2021
-  africa_campaign_date_start_short: 5-уми декабр
-  africa_campaign_date_start_long: 5-уми декабр
-  africa_campaign_date_short: 5-11-уми декабр
-  africa_campaign_date_full: 5-11-уми декабр
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: 6-12-уми декабри соли 2021
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -536,8 +542,6 @@ tg:
   signup_multiple_event_warning: We will put your school name and city on the map
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
-  signup_registration_deadline: Registration for the Hour of Code closes December
-    13.
   signup_name_placeholder: Номи шумо
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Барои мисол, Донишкадаи соҳибкорӣ ва хизмат
@@ -666,16 +670,15 @@ tg:
     your community — like in an extracurricular club, non-profit or at work. Or, just
     try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Соати рамзро кӣ дастгирӣ мекунад?
-  hoc_faq_behind_hoc_a: The Hour of Code is driven by the Hour of Code and Computer
-    Science Education Week <a href='%{partner_url}'>Advisory and Review Committees</a>
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs
-    of America and the College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a: The Hour of Code is organized by Code.org and driven by the
+    Hour of Code Review Committee as well as an unprecedented coalition of <a href='%{partner_url}'>partners</a>
+    that have come together to support the Hour of Code — including Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Ман дар бораи барномарезӣ асло намедонам. Оё ман чорабиниро иштирок
     карда метавонам?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have

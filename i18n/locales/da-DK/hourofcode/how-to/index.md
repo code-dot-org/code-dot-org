@@ -1,14 +1,14 @@
 ---
-title: Hour of Code How-to Guide
+title: Guide til Hour of Code
 ---
 
 {{ tilmeld_knap }}
 
 # Sådan planlægger du din Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Tilslut dig bevægelsen og indfør en gruppe elever i deres første time med datalogi ved at bruge disse trin.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Datalogisk tankegang styrker evnen til problemløsning samt de logiske og kreative evner. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
@@ -27,7 +27,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -109,7 +109,7 @@ Det er okay, hvis både du og dine elever er helt nye med hensyn til programmeri
 
 <a id="code"></a>
 
-## 6. Get coding!
+## Kom igang med at kode!
 
 Hjælp eleverne i gang med aktiviteten
 

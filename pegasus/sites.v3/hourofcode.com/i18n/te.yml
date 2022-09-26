@@ -11,24 +11,30 @@ te:
   campaign_date_full: డిసెంబరు 6-12
   campaign_date_year: '2021'
   campaign_date_full_year: డిసెంబరు 6-12, 2021
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2021'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: డిసె. 6
-  europe_campaign_date_start_long: డిసెంబరు 6
-  europe_campaign_date_short: డిసె. 4-10
-  europe_campaign_date_full: డిసెంబరు 6-12
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: డిసెంబరు 6-12, 2021
-  africa_campaign_date_start_short: డిసె. 6
-  africa_campaign_date_start_long: డిసెంబరు 6
-  africa_campaign_date_short: డిసె. 4-10
-  africa_campaign_date_full: డిసెంబరు 6-12
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: డిసెంబరు 6-12, 2021
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -539,7 +545,6 @@ te:
   signup_multiple_event_warning: మీరు రిజిస్టర్ చేసుకున్నప్పుడు, మేము మీ పాఠశాల పేరు
     మరియు నగరాన్ని మ్యాప్‌లో ఉంచుతాము. మీరు బహు ఈవెంట్లను హోస్ట్ చేస్తున్నట్లైతే,
     ప్రతి దానికి దయచేసి ఒక ప్రత్యేక పేరు లేక ఇమెయిల్ ఇవ్వండి.
-  signup_registration_deadline: అవర్ ఆఫ్ కోడ్‌కు రిజిస్ట్రేషన్ డిసెంబరు 11 న ముగుస్తుంది.
   signup_name_placeholder: మీ పేరు
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: ఉదాహరణకు, లింకన్ హైస్కూల్
@@ -673,11 +678,11 @@ te:
     వీక్ <a href='%{partner_url}'>సలహా మరియు సమీక్షా కమిటీలు</a>తోపాటు మైక్రోసాఫ్ట్,
     ఆపిల్, అమేజాన్, అమెరికాలోని బాయ్స్ అండ్ గర్ల్స్ క్లబ్బులు మరియు కాలేజ్ బోర్డుతోసహా
     భాగస్వాముల ఒక అభూతపూర్వ కూటమి ద్వారా అవర్ ఆఫ్ కోడ్ స్ఫూర్తి పొందింది.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: నాకు కోడింగ్ గురించి ఏమీ తెలియదు. అయినా నేను ఒక ఈవెంట్ హోస్ట్ చేయగలనా?
   hoc_faq_host_a: అవును. అవర్ ఆఫ్ కోడ్ కార్యకలాపాలు స్వీయ-మార్గదర్శనం కలవి. మీరు చేయవలసినదల్లా
     <a href='%{codeorg_url}/learn'>మా ప్రస్తుత ట్యుటోరియల్స్ ప్రయత్నించడమే</a>, మీకు

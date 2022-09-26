@@ -1,7 +1,7 @@
 /** @file Arranges child components as columns of equal width, filling available space */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {AnyChildren} from './types';
 
 class EqualColumns extends React.Component {

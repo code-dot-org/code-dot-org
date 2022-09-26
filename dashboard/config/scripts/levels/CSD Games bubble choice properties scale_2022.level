@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:22.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -70,14 +66,14 @@
     "parent_level_id": 20950,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/",
-      "/docs/concepts/game-lab/sprites/sprite-interactions/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/sprite-interactions"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -93,9 +89,13 @@
     "thumbnail_url": "https://images.code.org/3a1a5a54a3065e2467e80e71b9ed8732-image-1582072742157.png",
     "display_name": "Scale Property",
     "encrypted_examples": "ymHT2xd7LVnS0xr7pYkKNnaOT31+qwP3A3J31Ob/Nf4nL6KfQempAUtAxcai\nFWUzfADf2zyv/BvjhTfMg/iBuw==\n",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:22.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:22.389+00:00\",\"changed\":[\"cloned from \\\"CSD Games bubble choice properties scale_2021\\\"\"],\"cloned_from\":\"CSD Games bubble choice properties scale_2021\"}]"

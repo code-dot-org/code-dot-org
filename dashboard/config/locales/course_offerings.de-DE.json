@@ -54,8 +54,6 @@
         "starwarsblocks": "Star Wars: Erschaffe eine Galaxie mit Code (Blocky)",
         "text-compression": "Text-Kompression",
         "csa-self-paced-pl": "Navigieren in Code.org für Lehrer von CSA Pilot",
-        "counting-csc": "Zählen mit Laurel",
-        "explore-data-1": "Untersuchung von Boxplots und Histogrammen",
         "outbreak-csc": "Ausbruch",
         "poem-art": "Dichtkunst",
         "k5-onlinepd": "Grundlagen der Informatik unterrichten",
@@ -78,7 +76,8 @@
         "step": "Schritt",
         "kodea-pd-2021": "kodea-pd-2021",
         "coursee-ramp": "coursee-ramp",
-        "csa5-exemplars": "csa5-exemplare"
+        "csa5-exemplars": "csa5-exemplare",
+        "soccer": "Fußball"
       }
     }
   }

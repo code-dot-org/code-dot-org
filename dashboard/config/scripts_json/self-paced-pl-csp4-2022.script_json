@@ -2,13 +2,15 @@
   "script": {
     "name": "self-paced-pl-csp4-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-25 22:28:17 UTC",
+    "serialized_at": "2022-06-23 17:43:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -963,6 +965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-Connect"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -985,6 +990,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-CSJourneys"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -1007,6 +1015,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSJourneys-Vid"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -1029,6 +1040,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-CSJourneys2"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -1051,6 +1065,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-CSJourneysResources"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -1073,6 +1090,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-LocalCommunity"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -1095,6 +1115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSP-22-mod4-WrapUp-2022"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,

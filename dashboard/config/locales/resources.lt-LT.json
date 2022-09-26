@@ -2,6 +2,267 @@
   "lt-LT": {
     "data": {
       "resources": {
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programavimas poroje"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Programavimas komandoje"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Programavimas komandoje"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Programavimas komandoje"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Programavimas komandoje"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Programavimas komandoje"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Programavimas komandoje"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Diegimo vadovas"
+        },
+        "internet/coursef/2022": {
+          "name": "Internetas"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internetas"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internetas"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Diegimo vadovas"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Diegimo vadovas"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Judėk, judėk"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Judėk, judėk"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Judėk, judėk"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Judėk, judėk"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programavimas poroje"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Kartojimo supratimas"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Kartojimo supratimas"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Kartojimo supratimas"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Kartojimo supratimas"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Didelis įvykis"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Didelis įvykis"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Didelis įvykis"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Diegimo vadovas"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programavimas poroje"
+        },
+        "variables/express/2022": {
+          "name": "Kintamieji"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programavimas poroje"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programavimas poroje"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Laimingieji žemėlapiai"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Didelis įvykis"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Didelis įvykis"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Didelis įvykis"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Diegimo vadovas"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mano draugai robotai"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mano draugai robotai"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mano draugai robotai"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mano draugai robotai"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mano draugai robotai"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programavimas poroje"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Didelis įvykis"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Didelis įvykis"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Didelis įvykis"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Diegimo vadovas"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "variables/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "variables_3/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "text/csd/2022": {
+          "name": "Tekstas"
+        },
+        "conditionals/csd/2022": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "velocity/csd/2022": {
+          "name": "Greitis"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Greitis"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Greitis"
+        },
+        "functions/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_1/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_4/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "lists/csd/2022": {
+          "name": "Sąrašai"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "design_mode/csd/2022": {
+          "name": "Dizaino režimas"
+        },
+        "variables_1/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "variables_2/csd/2022": {
+          "name": "Kintamieji"
+        },
+        "functions_2/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_3/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Komandos su parametrais"
+        },
+        "functions_5/csd/2022": {
+          "name": "Komandų kūrimas"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Pamokos planai"
         },

@@ -4,8 +4,7 @@ import {
   SyncOmniAuthSectionButton,
   READY,
   IN_PROGRESS,
-  SUCCESS,
-  FAILURE
+  SUCCESS
 } from './SyncOmniAuthSectionControl';
 import {action} from '@storybook/addon-actions';
 
@@ -13,7 +12,7 @@ export default storybook => {
   const stories = [];
   [OAuthSectionTypes.clever, OAuthSectionTypes.google_classroom].forEach(
     provider => {
-      [READY, IN_PROGRESS, SUCCESS, FAILURE].forEach(buttonState => {
+      [READY, IN_PROGRESS, SUCCESS].forEach(buttonState => {
         stories.push({
           name: `Sync ${provider} - ${buttonState}`,
           story: () => (

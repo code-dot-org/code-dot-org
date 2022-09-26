@@ -535,6 +535,7 @@ mn:
         csd_u6_circuit_playground: Биет тооцоолол
         csd_u6_input_output: Оролт ба гаралт
         csp_applab_parameters: Параметртэй функцүүд
+        CS_Changing_Everything: Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна
     callout:
       text:
         drag_blocks: '"Шилжих" хэсгийг чирж, нөгөө блокийн доор байрлуулна уу'

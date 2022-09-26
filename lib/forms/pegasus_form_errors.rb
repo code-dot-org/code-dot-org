@@ -13,7 +13,7 @@ class FormError < ArgumentError
     @kind = kind
     @errors = errors
 
-    logger.warn to_s if logger
+    logger&.warn to_s
   end
 
   def to_s

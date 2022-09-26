@@ -41,6 +41,75 @@
         "infinity/Infinity": {
           "name": "Taiwhanga Tākaro Disney Infinity"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ngā Koromeke"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Ngā Takunetanga"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Ngā Here"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Ngā Taumahi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Ngā Taurangi"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Mō Ngā Koromeke"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Te Ipurangi"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Te Tito Waiata"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "E Neke, E Neke"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Kia Koromeke"
+        },
+        "express-2022/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Ngā Mahere Harikoa"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Te Takahanga Nui"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "csd3-2022/Variables": {
+          "name": "Ngā Taurangi"
+        },
+        "csd3-2022/Text": {
+          "name": "Kuputuhi"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Ngā Here"
+        },
+        "csd3-2022/Functions": {
+          "name": "Ngā Taumahi"
+        },
+        "csd6-2022/Functions": {
+          "name": "Ngā Taumahi"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "E Neke, E Neke"
         },
@@ -344,6 +413,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Wero Nui Rawa Atu - Matawhānui"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Whakatakinga ki te Pūtaiao Rorohiko"
+        },
+        "20-hour/The Maze": {
+          "name": "Te Rīrapa"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Whakaaro ā-Rorohiko"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "20-hour/The Artist": {
+          "name": "Te Rehetoi"
+        },
+        "20-hour/Algorithms": {
+          "name": "Ngā Hātepe"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Te Rehetoi 2"
+        },
+        "20-hour/Functions": {
+          "name": "Ngā Taumahi"
+        },
+        "20-hour/The Farmer": {
+          "name": "Te Kaiahuwhenua"
+        },
+        "20-hour/Conditionals": {
+          "name": "Ngā Here"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Te Rehetoi 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Tito Waiata"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Te Kaiahuwhenua 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Te Whakawaitara"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Te Rehetoi 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Te Kaiahuwhenua 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Te Ipurangi"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Te Rehetoi 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Tākaia"
+        },
         "course2/Graph Paper Programming": {
           "name": "Papatono Pepa Kauwhata"
         },
@@ -520,6 +649,27 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Pangahono"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Pangahono"
+        },
+        "allthethings/Maze": {
+          "name": "Rīrapa"
+        },
+        "allthethings/Artist": {
+          "name": "Rehetoi"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Tupana"
+        },
+        "allthethings/Studio": {
+          "name": "Taupuni"
+        },
+        "allthethings/Minecraft": {
+          "name": "Mahimaina"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Kia Ngahau te Mahi Koromeke"

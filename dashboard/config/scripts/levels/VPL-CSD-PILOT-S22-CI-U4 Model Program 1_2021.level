@@ -49,10 +49,10 @@
     "name_suffix": "_2021",
     "mini_rubric": "false",
     "reference_links": [
-      "/courses/vpl-csd4-ci-pilot-2022/guides/design-mode",
-      "/courses/vpl-csd4-ci-pilot-2022/guides/design-mode-elements"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode-elements"
     ],
-    "map_reference": "/courses/vpl-csd4-ci-pilot-2022/guides/multi-screen-apps",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/multi-screen-apps",
     "encrypted": "false",
     "libraries_enabled": "false",
     "widget_mode": "false",

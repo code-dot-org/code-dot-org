@@ -2,7 +2,7 @@ name 'OPD-K5 for loops intro_2022'
 title 'For Loops Intro'
 description 'description here'
 markdown <<MARKDOWN
-# Introduction to For Loops
+# Introduction to Nested Loops
 
 <img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 20px 20px;">
 
@@ -10,17 +10,11 @@ markdown <<MARKDOWN
 
 After completing Lesson 14 you will be able to:
 
-* define for loop,
-* use for loops blocks with Maze Puzzles, 
-* and use for loop blocks with The Artist to create a spiral.
+* define a loop,
+* use nested loop blocks with the Artist
 
 ## CS Concept
 
-A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
+A **loop** is the action of doing something over and over again.
 
-#### Lesson in Action
-
-Watch <a href="https://www.youtube.com/watch?v=HO4uhoahtjM" target="blank">this video </a> demonstration of a teacher introducing "for loops" to students with the **context-setting** lesson in Course F - Lesson 13:  For Loop Fun. 
-
-**Note:** The video will open in a new tab.  Be sure to return to the tab with this online course after watching the video.
 MARKDOWN

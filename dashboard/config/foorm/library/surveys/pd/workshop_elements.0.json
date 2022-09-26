@@ -121,7 +121,7 @@
             },
             {
               "value": "equitable_discussion",
-              "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, or small-group or large-group discussions."
+              "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group, or large-group discussions."
             },
             {
               "value": "normalize_failure",
@@ -257,7 +257,7 @@
           "type": "matrix",
           "name": "codedotorg_teaching_strategies_csp",
           "title": "Right now, I have concrete teaching strategies to...",
-          "visibleIf": "{workshop_course} = 'CS Principles'",
+          "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'Computer Science A'",
           "questionTitleLocation": "hidden",
           "columns": [
             {
@@ -304,7 +304,7 @@
             },
             {
               "value": "equitable_discussion",
-              "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group, or large-group discussions. "
+              "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group, or large-group discussions."
             },
             {
               "value": "normalize_failure",
@@ -336,7 +336,7 @@
             },
             {
               "value": "no",
-              "text": "Yo"
+              "text": "No"
             }
           ]
         },

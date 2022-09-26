@@ -1,6 +1,6 @@
 require 'twilio-ruby'
 class SmsController < ApplicationController
-  protect_from_forgery except: [:send_to_phone, :send_download_url_to_phone] # the page that posts here is cached
+  protect_from_forgery except: [:send_to_phone] # the page that posts here is cached
 
   # set up a client to talk to the Twilio REST API
   def send_to_phone
@@ -17,11 +17,6 @@ class SmsController < ApplicationController
     else
       head :not_acceptable
     end
-  end
-
-  def send_download_url_to_phone
-    body = "Install this app created in Code Studio on your Android device: #{params[:url]} (reply STOP to stop receiving this)"
-    send_sms(body, params[:phone])
   end
 
   private

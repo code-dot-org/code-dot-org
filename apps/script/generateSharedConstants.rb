@@ -107,7 +107,7 @@ def main
       COURSE_OFFERING_CATEGORIES
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
-      source_module: SharedCourseConstants, transform_keys: false
+      source_module: Curriculum::SharedCourseConstants, transform_keys: false
     ),
     "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
   )
@@ -124,6 +124,7 @@ def main
         VIRTUAL_ONLY_SUBJECTS
         HIDE_FEE_INFORMATION_SUBJECTS
         HIDE_ON_WORKSHOP_MAP_SUBJECTS
+        HIDE_FUNDED_SUBJECTS
         MUST_SUPPRESS_EMAIL_SUBJECTS
         ACADEMIC_YEAR_WORKSHOP_SUBJECTS
         LEGACY_SUBJECTS
@@ -161,7 +162,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      %w(PRINCIPAL_APPROVAL_STATE YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),

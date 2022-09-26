@@ -5,6 +5,9 @@
         "ccela": {
           "name": "Normas de Língua e Literatura Inglesa do Núcleo Comum"
         },
+        "csta": {
+          "name": "Normas de ciência da computação CSTA K-12 (2017)"
+        },
         "ccmath": {
           "name": "Normas de Matemática do Núcleo Comum"
         },
@@ -13,6 +16,9 @@
         },
         "iste": {
           "name": "Normas ISTE para Estudantes"
+        },
+        "csp2021": {
+          "name": "Estrutura conceitual de CSP"
         }
       }
     }

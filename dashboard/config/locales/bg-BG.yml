@@ -481,7 +481,6 @@ bg:
     popup:
       progress_for_user: на %{name} в прогрес
       progress: Вашият напредък
-      lines: 'Общо реда код: %{lines}'
       close: ЗАТВОРИ
       mastery: Концепции
       puzzle_map: Етапи

@@ -2,6 +2,8 @@
 vi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1488,16 +1490,6 @@ vi:
         text: "{SPRITE} nghĩ {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE} nghĩ {TEXT1} trong {NUM} giây"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} nghĩ {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hừm...
-            '"I am hungry, too."': Ta cũng đang đói.
-            '"I only want the biggest goat."': Ta chỉ cần con dê mập nhất.
-            '"I''m a green troll."': Ta là người khổng lồ xanh lá.
-            '"No one will cross my bridge."': Không ai có thể băng qua cây cầu của
-              ta.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} nghĩ {THOUGHT}"
         options:
