@@ -74,14 +74,8 @@ import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
-import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import {
-  expoGenerateApk,
-  expoCheckApkBuild,
-  expoCancelApkBuild
-} from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
@@ -392,6 +386,7 @@ Applab.init = function(config) {
   Applab.generatedProperties = {
     ...config.initialGeneratedProperties
   };
+  //remove
   getStore().dispatch(
     setExportGeneratedProperties(Applab.generatedProperties.export)
   );
@@ -661,23 +656,7 @@ Applab.init = function(config) {
     hideRunButton: hideRunResetButtons,
     hideResetButton: hideRunResetButtons,
     channelId: config.channel,
-    allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
-    expoGenerateApk: expoGenerateApk.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
-    expoCheckApkBuild: expoCheckApkBuild.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
-    expoCancelApkBuild: expoCancelApkBuild.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode,
@@ -1005,11 +984,7 @@ Applab.render = function() {
   );
 };
 
-/**
- * Export the project for web or use within Expo.
- * @param {Object} expoOpts
- */
-Applab.exportApp = function(expoOpts) {
+Applab.exportApp = function() {
   // Run, grab the html from divApplab, then reset:
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
@@ -1018,23 +993,7 @@ Applab.exportApp = function(expoOpts) {
   return Exporter.exportApp(
     project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
-    html,
-    expoOpts,
-    studioApp().config
-  );
-};
-
-Applab.setAndroidExportProps = function(props) {
-  // Spread the previous object so changes here will always fail shallow
-  // compare and trigger react prop changes
-  Applab.generatedProperties.export = {
-    ...Applab.generatedProperties.export,
-    android: props
-  };
-  project.projectChanged();
-  project.saveIfSourcesChanged();
-  getStore().dispatch(
-    setExportGeneratedProperties(Applab.generatedProperties.export)
+    html
   );
 };
 
