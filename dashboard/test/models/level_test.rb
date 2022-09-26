@@ -708,6 +708,78 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal callouts[1].callout_text, "second english markdown"
   end
 
+  test 'localizes rubric properties' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'mini_rubric' => {
+          level_name => {
+            "rubric_key_concept": "first test markdown",
+            "rubric_performance_level_1": "second test markdown",
+            "rubric_performance_level_2": "third test markdown",
+            "rubric_performance_level_3": "fourth test markdown",
+            "rubric_performance_level_4": "fifth test markdown"
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      mini_rubric: 'true',
+      rubric_key_concept: "first english markdown",
+      rubric_performance_level_1: "second english markdown",
+      rubric_performance_level_2: "third english markdown",
+      rubric_performance_level_3: "fourth english markdown",
+      rubric_performance_level_4: "fifth english markdown"
+    )
+
+    assert_equal level.localized_rubric_property('rubric_key_concept'), "first test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_1'), "second test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_2'), "third test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_3'), "fourth test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_4'), "fifth test markdown"
+  end
+
+  test 'handles rubric properties localization with non-existent translations' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'mini_rubric' => {
+          level_name => {
+            "rubric_key_concept": nil,
+            "rubric_performance_level_1": nil
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      mini_rubric: 'true',
+      rubric_key_concept: "first english markdown",
+      rubric_performance_level_1: "second english markdown"
+    )
+
+    # Should return default English string if it exists and translation lookup is nil
+    assert_equal level.localized_rubric_property('rubric_key_concept'), "first english markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_1'), "second english markdown"
+    # Should return nil on a non-existing property
+    assert_equal level.localized_rubric_property('rubric_performance_level_9'), nil
+  end
+
   test 'create unplugged level from level builder' do
     Unplugged.any_instance.stubs(:update_i18n).with do |name, new_strings|
       I18n.backend.store_translations I18n.locale, {'data' => {'unplugged' => {name => new_strings}}}

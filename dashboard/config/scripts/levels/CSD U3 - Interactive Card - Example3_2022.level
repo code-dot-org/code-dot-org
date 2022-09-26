@@ -200,11 +200,11 @@
     "long_instructions": "# Interactive Card Example\r\n\r\nIn the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas.",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-03-22T22:51:54.000Z",
   "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-22T22:51:54.000Z",
   "user_id": 14639,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2022-03-22T22:51:54.209+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Interactive Card - Example2_2022\\\"\"],\"cloned_from\":\"CSD U3 - Interactive Card - Example2_2022\"},{\"changed_at\":\"2022-03-22 23:00:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"thumbnail_url\",\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>

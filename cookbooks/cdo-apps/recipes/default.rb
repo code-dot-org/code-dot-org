@@ -89,7 +89,6 @@ node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
-include_recipe 'cdo-varnish'
 
 include_recipe 'cdo-cloudwatch-agent'
 include_recipe 'cdo-syslog'

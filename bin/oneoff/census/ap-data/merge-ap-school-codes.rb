@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require_relative '../../../../dashboard/config/environment'
-require 'street_address'
 
 CENSUS_BUCKET_NAME = "cdo-census".freeze
 

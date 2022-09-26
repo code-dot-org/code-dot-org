@@ -1022,20 +1022,35 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_nil @workshop.processed_location
   end
 
-  test 'suppress_reminders?' do
+  test 'suppress_reminders? is true for certain subjects by default' do
     suppressed = [
       create(:fit_workshop, course: Pd::Workshop::COURSE_CSF),
       create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
       create(:fit_workshop, course: Pd::Workshop::COURSE_CSD),
       create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
       create(:fit_workshop, course: Pd::Workshop::COURSE_CSP),
-      create(:admin_counselor_workshop, course: Pd::Workshop::COURSE_ADMIN_COUNSELOR),
+      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME),
+      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO),
+      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1),
+      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL2),
+      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL3),
+      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL4)
     ]
 
     refute @workshop.suppress_reminders?
     suppressed.each do |workshop|
       assert workshop.suppress_reminders?
     end
+  end
+
+  test 'workshops not suppressing reminders by default will suppress_reminders once suppress_email is set' do
+    workshop = build :workshop
+
+    workshop.virtual = false
+    refute workshop.suppress_reminders?
+
+    workshop.suppress_email = true
+    assert workshop.suppress_reminders?
   end
 
   test 'ready_to_close?' do
@@ -1066,7 +1081,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey_units_and_lessons' do
-    unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test'
+    unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test-1991', family_name: 'pd-workshop-pre-survey-test', version_year: '1991'
+    CourseOffering.add_course_offering(unit_group)
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
       create(:script, name: unit_name).tap do |script|
@@ -1082,7 +1098,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
-    workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
+    workshop.stubs(:pre_survey_course_offering_name).returns('pd-workshop-pre-survey-test')
+    UnitGroup.expects(:latest_stable_version).with('pd-workshop-pre-survey-test').returns(unit_group)
 
     expected = [
       ['pre-survey-unit-1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
@@ -1103,16 +1120,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
-    workshop.stubs(:pre_survey_course_name).returns(course_name)
-    UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
+    workshop.stubs(:pre_survey_course_offering_name).returns(course_name)
+    UnitGroup.expects(:latest_stable_version).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 
     # With invalid course name
-    UnitGroup.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    UnitGroup.expects(:latest_stable_version).with(course_name).raises(ActiveRecord::RecordNotFound)
     e = assert_raises RuntimeError do
       workshop.pre_survey_course
     end
-    assert_equal "No course found for name #{course_name}", e.message
+    assert_equal "No course found for course offering key #{course_name}", e.message
   end
 
   test 'friendly date range same month' do
@@ -1423,37 +1440,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.virtual = true
     workshop.suppress_email = false
     assert workshop.valid?
-
-    workshop.suppress_email = true
-    assert workshop.valid?
-  end
-
-  test 'academic year workshops must suppress email' do
-    workshop = build :workshop, course: COURSE_CSP
-
-    # Non-academic year workshops may suppress email or not
-    workshop.subject = SUBJECT_SUMMER_WORKSHOP
-    workshop.suppress_email = false
-    assert workshop.valid?
-
-    workshop.suppress_email = true
-    assert workshop.valid?
-
-    # Academic year workshops must suppress email
-    workshop.subject = SUBJECT_CSP_WORKSHOP_1
-    workshop.suppress_email = false
-    refute workshop.valid?
-
-    workshop.suppress_email = true
-    assert workshop.valid?
-  end
-
-  test 'EIR:Admin/Counselor Welcome workshop must suppress email' do
-    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
-
-    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
-    workshop.suppress_email = false
-    refute workshop.valid?
 
     workshop.suppress_email = true
     assert workshop.valid?

@@ -1,4 +1,4 @@
-require_relative '../../../shared/middleware/helpers/projects'
+require_relative '../../../dashboard/legacy/middleware/helpers/projects'
 require_relative '../../../shared/middleware/helpers/storage_id'
 
 # Tools that help test projects

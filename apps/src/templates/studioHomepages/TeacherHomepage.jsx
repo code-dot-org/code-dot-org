@@ -19,6 +19,7 @@ import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -43,7 +44,8 @@ export const UnconnectedTeacherHomepage = ({
   teacherName,
   topCourse,
   topPlCourse,
-  beginGoogleImportRosterFlow
+  beginGoogleImportRosterFlow,
+  hasFeedback
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -240,13 +242,21 @@ export const UnconnectedTeacherHomepage = ({
           topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
+          hasFeedback={false}
         />
+        {hasFeedback && (plCourses?.length > 0 || topPlCourse) && (
+          <ParticipantFeedbackNotification
+            studentId={teacherId}
+            isProfessionalLearningCourse={true}
+          />
+        )}
         {(plCourses?.length > 0 || topPlCourse) && (
           <RecentCourses
             courses={plCourses}
             topCourse={topPlCourse}
             showAllCoursesLink={true}
             isProfessionalLearningCourse={true}
+            hasFeedback={hasFeedback}
           />
         )}
         <TeacherResources />
@@ -288,7 +298,8 @@ UnconnectedTeacherHomepage.propTypes = {
   teacherName: PropTypes.string,
   topCourse: shapes.topCourse,
   topPlCourse: shapes.topCourse,
-  beginGoogleImportRosterFlow: PropTypes.func
+  beginGoogleImportRosterFlow: PropTypes.func,
+  hasFeedback: PropTypes.bool
 };
 
 const styles = {

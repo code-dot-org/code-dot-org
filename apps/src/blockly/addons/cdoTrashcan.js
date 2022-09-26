@@ -30,8 +30,8 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     const svg = this.workspace.getParentSvg();
     this.container = Blockly.utils.dom.createSvgElement(Blockly.utils.Svg.SVG);
     this.container.style.visibility = 'hidden';
-    this.position(this.workspace.getMetricsManager().getUiMetrics());
     this.createTrashcanSvg();
+    this.position(this.workspace.getMetricsManager().getUiMetrics());
 
     svg.parentNode.insertBefore(this.container, svg);
 
@@ -55,11 +55,6 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       Blockly.utils.Svg.G,
       {class: 'blocklyTrash'},
       this.container
-    );
-    const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
-    this.svgGroup_.setAttribute(
-      'transform',
-      `translate(${left}, ${MARGIN_TOP})`
     );
 
     // trashcan body
@@ -188,8 +183,12 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
       this.container.style.visibility = trashcanVisibility;
 
-      const isDeletable = blocklyEvent.blocks.every(block =>
-        block.isDeletable()
+      // Shadow blocks can/should be successfully deleted
+      // when dragged in conjunction with another deletable block;
+      // however, isDeletable() returns false for shadow blocks,
+      // so we manually override here.
+      const isDeletable = blocklyEvent.blocks.every(
+        block => block.isDeletable() || block.isShadow()
       );
       if (trashcanVisibility === 'visible' && !isDeletable) {
         this.notAllowed_.style.visibility = 'visible';
@@ -201,16 +200,28 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
   /**
    * IPositionable method
-   * Positions the element. Called when the window is resized.
+   * Positions the container and the trashcan itself. Called when the window is resized and on initialization.
    * @param {!Blockly.MetricsManager.UiMetrics} metrics The workspace metrics.
    */
   position(metrics) {
+    const toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
+
+    // Position container
     this.container.style.height = `${metrics.viewMetrics.height}px`;
-    this.container.style.width = `${Blockly.cdoUtils.getToolboxWidth()}px`;
-    this.container.style.left = '0px';
+    this.container.style.width = `${toolboxWidth}px`;
+    this.container.style.left = this.workspace.RTL
+      ? `${metrics.viewMetrics.width}px`
+      : '0px';
     this.container.style.top = '0px';
     this.container.style.position = 'absolute';
     this.container.style.zIndex = '75';
+
+    // Position trashcan within container
+    const left = toolboxWidth / 2 - WIDTH / 2;
+    this?.svgGroup_.setAttribute(
+      'transform',
+      `translate(${left}, ${MARGIN_TOP})`
+    );
   }
 
   /**

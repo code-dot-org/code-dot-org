@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:49:10.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -54,16 +50,20 @@
     "project_template_level_name": "ml-data decisions-app template_2022",
     "long_instructions": "# Customizing Your App\r\n\r\nLet’s improve the user experience of our app! Choose two of the following options to improve your app:\r\n\r\n# Options:\r\n\r\n- Add a theme to your app and improve the font, size, colors, and borders of UI elements\r\n- Add a “Welcome” screen that gives an overview of the app to a new user\r\n- Add images to your app to make it more visually appealing\r\n- Change the text of each feature to be a question rather than a 1-word statement\r\n- **Challenge:** Make the Prediction be on a separate screen that includes an image",
     "reference_links": [
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/",
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/responding-to-user-input/"
+      "/courses/csd-2022/guides/design-mode",
+      "/courses/csd-2022/guides/multi-screen-apps",
+      "/courses/csd-2022/guides/design-mode-elements",
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/responding-to-user-input"
     ],
     "video_key": "applab_intro_events",
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:10.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:10.593+00:00\",\"changed\":[\"cloned from \\\"ml-data decisions- customize app-2021\\\"\"],\"cloned_from\":\"ml-data decisions- customize app-2021\"}]"

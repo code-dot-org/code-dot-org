@@ -4,7 +4,7 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Unit 5 - Lesson 1:  Representation Matters  
+#Data and Society - Lesson 1:  Representation Matters
 **Estimated time: 10 minutes**
 
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ## Investigation Tasks
 
-* Review the lesson plan, <a href="https://studio.code.org/s/csd5-2021/lessons/1" target="_blank">Lesson 1: Representation Matters</a>
+* Review the lesson plan, <a href="https://studio.code.org/s/csd5-2022/lessons/1" target="_blank">Lesson 1: Representation Matters</a>
 
 * Become familiar with the different data representations in the activity to support students during this lesson
 

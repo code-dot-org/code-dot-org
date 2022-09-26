@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 /* global ga */
 
-const PetitionForm = ({gaPagePath}) => {
+const PetitionForm = ({tutorial}) => {
   // data starts with all fields having an empty value to ensure consistent data shape
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [invalidFields, setInvalidFields] = useState([]);
@@ -54,8 +54,8 @@ const PetitionForm = ({gaPagePath}) => {
         setErrorMessage('');
         // Do not send email or name server-side for under sixteen users to protect privacy.
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
-        ga('send', 'event', 'petition', 'click', {
-          page: gaPagePath
+        ga('send', 'event', 'studio_petition', 'click', {
+          tutorial: tutorial
         });
       }
     },
@@ -71,10 +71,10 @@ const PetitionForm = ({gaPagePath}) => {
     };
 
     $.ajax({
-      url: pegasus('/forms/Petition'),
+      url: '/v2/forms/Petition',
       type: 'post',
-      dataType: 'json',
-      data: data
+      contentType: 'application/json; charset=UTF-8',
+      data: JSON.stringify(data)
     })
       .done(handleSuccessfulSubmit)
       .fail(handleFailedSubmit);
@@ -164,7 +164,7 @@ const PetitionForm = ({gaPagePath}) => {
 };
 
 PetitionForm.propTypes = {
-  gaPagePath: PropTypes.string.isRequired // in the form '/congrats/coursea-2020' to be sent to ga
+  tutorial: PropTypes.string
 };
 
 export default PetitionForm;

@@ -22,13 +22,17 @@ describe('JavabuilderConnection', () => {
     connection,
     setIsRunning,
     setIsTesting,
-    handleTestResult;
+    handleTestResult,
+    onValidationPassed,
+    onValidationFailed;
 
   beforeEach(() => {
     sinon.stub(project, 'getCurrentId');
     onOutputMessage = sinon.stub();
     handleException = sinon.stub(ExceptionHandler, 'handleException');
     handleTestResult = sinon.stub(TestResultHandler, 'onTestResult');
+    onValidationPassed = sinon.stub();
+    onValidationFailed = sinon.stub();
     setIsRunning = sinon.stub();
     setIsTesting = sinon.stub();
     connection = new JavabuilderConnection(
@@ -41,7 +45,12 @@ describe('JavabuilderConnection', () => {
       setIsRunning,
       setIsTesting,
       ExecutionType.RUN,
-      CsaViewMode.NEIGHBORHOOD
+      CsaViewMode.NEIGHBORHOOD,
+      null,
+      null,
+      null,
+      onValidationPassed,
+      onValidationFailed
     );
   });
 
@@ -89,6 +98,10 @@ describe('JavabuilderConnection', () => {
       const event = {
         data: JSON.stringify(data)
       };
+      handleTestResult.returns({
+        success: true,
+        isValidation: false
+      });
       connection.onMessage(event);
       expect(handleTestResult).to.have.been.calledWith(data, onOutputMessage);
     });
@@ -114,10 +127,22 @@ describe('JavabuilderConnection', () => {
       sinon.stub(window, 'WebSocket').returns({
         close: closeStub
       });
-      const javabuilderConnection = new JavabuilderConnection(null, () => {});
+      const javabuilderConnection = new JavabuilderConnection(
+        null,
+        onOutputMessage,
+        null,
+        null,
+        null,
+        sinon.stub()
+      );
+
       javabuilderConnection.establishWebsocketConnection('fake-token');
       javabuilderConnection.closeConnection();
+
       expect(closeStub).to.have.been.calledOnce;
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} Program stopped.`
+      );
       window.WebSocket.restore();
     });
   });
@@ -139,6 +164,82 @@ describe('JavabuilderConnection', () => {
 
       sinon.assert.calledWith(setIsTesting, false);
       sinon.assert.notCalled(setIsRunning);
+    });
+
+    it('Calls validation passed if validation passed', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: UserTestResultSignalType.TEST_STATUS,
+        detail: {
+          status: TestStatus.SUCCESSFUL,
+          className: 'MyTestClass',
+          methodName: 'myTestMethod'
+        }
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      handleTestResult.returns({
+        success: true,
+        isValidation: true
+      });
+      // send a single passed validation message
+      connection.onMessage(event);
+      connection.handleExecutionFinished();
+      sinon.assert.called(onValidationPassed);
+      sinon.assert.notCalled(onValidationFailed);
+    });
+
+    it('Calls validation failed if validation failed', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: UserTestResultSignalType.TEST_STATUS,
+        detail: {
+          status: TestStatus.SUCCESSFUL,
+          className: 'MyTestClass',
+          methodName: 'myTestMethod'
+        }
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      // two tests, first succeeds, second passes
+      handleTestResult.onCall(0).returns({
+        success: true,
+        isValidation: true
+      });
+      handleTestResult.onCall(1).returns({
+        success: false,
+        isValidation: true
+      });
+      connection.onMessage(event);
+      connection.onMessage(event);
+      connection.handleExecutionFinished();
+      sinon.assert.called(onValidationFailed);
+      sinon.assert.notCalled(onValidationPassed);
+    });
+
+    it('Does not call validation passed or failed if no validation tests were seen', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: UserTestResultSignalType.TEST_STATUS,
+        detail: {
+          status: TestStatus.SUCCESSFUL,
+          className: 'MyTestClass',
+          methodName: 'myTestMethod'
+        }
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      handleTestResult.returns({
+        success: true,
+        isValidation: false
+      });
+      connection.onMessage(event);
+      connection.handleExecutionFinished();
+      sinon.assert.notCalled(onValidationFailed);
+      sinon.assert.notCalled(onValidationPassed);
     });
 
     function createJavabuilderConnection(executionType) {

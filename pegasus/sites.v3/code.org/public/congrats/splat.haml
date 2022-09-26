@@ -17,7 +17,7 @@ max_age: 60
 
 - course = File.basename(request.path_info)
 
-- if ScriptConstants.has_congrats_page?(course)
+- if ScriptConstants.has_csf_congrats_page?(course)
   = view :csf_congrats, course: course
 - else
   - redirect "/congrats"

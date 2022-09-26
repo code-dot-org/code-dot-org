@@ -46,7 +46,7 @@ Resources:
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
               - !Ref ChefConfig
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
               - !Ref DatabaseSecret
 <% end -%>
             Condition:
@@ -149,7 +149,7 @@ Resources:
       Subnets: <%= public_subnets.to_json %>
       LoadBalancerAttributes:
         - Key: deletion_protection.enabled
-          Value: true
+          Value: <%=rack_env?(:adhoc) ? 'false' : 'true'%>
         - Key: access_logs.s3.enabled
           Value: true
         - Key: access_logs.s3.bucket
@@ -453,7 +453,7 @@ Resources:
 <% end -%>
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT2H
+        Timeout: PT4H
     Properties:
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
@@ -500,7 +500,8 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
-<% if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<% if database && !rack_env?(:production) %>
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
@@ -515,6 +516,7 @@ Resources:
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
+      DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
       Tags:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
@@ -542,7 +544,8 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-<%   if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<%   if database && !rack_env?(:production)%>
     DependsOn: Aurora1
 <%   end -%>
 <% end-%>

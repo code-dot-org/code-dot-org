@@ -366,7 +366,7 @@ DEPENDENCIES
   test-kitchen
 
 RUBY VERSION
-   ruby 2.5.0p0
+   ruby 2.6.6p146
 
 BUNDLED WITH
-   1.17.0
+   1.17.3

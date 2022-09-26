@@ -56,6 +56,10 @@ def dashboard_dir(*dirs)
   deploy_dir('dashboard', *dirs)
 end
 
+def dashboard_legacy_dir(*dirs)
+  deploy_dir('dashboard', 'legacy', *dirs)
+end
+
 def pegasus_dir(*paths)
   deploy_dir('pegasus', *paths)
 end

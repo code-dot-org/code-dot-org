@@ -17,8 +17,8 @@
 class Pd::RegionalPartnerContact < ApplicationRecord
   include Pd::Form
 
-  belongs_to :user
-  belongs_to :regional_partner
+  belongs_to :user, optional: true
+  belongs_to :regional_partner, optional: true
 
   # Note: this model and associated entities
   # have been deprecated in favor of Pd::RegionalPartnerMiniContact.

@@ -23,7 +23,7 @@
 
 class AuthenticationOption < ApplicationRecord
   acts_as_paranoid
-  belongs_to :user
+  belongs_to :user, optional: true
 
   # These are duplicated from the user model, until we're ready to cut over and remove them from there
   before_validation :normalize_email, :hash_email,
@@ -34,7 +34,7 @@ class AuthenticationOption < ApplicationRecord
 
   validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
 
-  validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at]}
+  validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at], case_sensitive: true}
 
   after_create :set_primary_contact_info
 
@@ -116,7 +116,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def normalize_email
-    return unless email.present?
+    return if email.blank?
     self.email = email.strip.downcase
   end
 
@@ -125,7 +125,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def hash_email
-    return unless email.present?
+    return if email.blank?
     self.hashed_email = AuthenticationOption.hash_email(email)
   end
 

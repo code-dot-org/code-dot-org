@@ -52,8 +52,8 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
-    belongs_to :user
-    belongs_to :regional_partner
+    belongs_to :user, optional: true
+    belongs_to :regional_partner, optional: true
 
     after_initialize :set_type_and_year
 
@@ -355,7 +355,7 @@ module Pd::Application
     end
 
     def formatted_partner_contact_email
-      return nil unless regional_partner&.contact_email_with_backup.present?
+      return nil if regional_partner&.contact_email_with_backup.blank?
 
       if regional_partner.contact_name.present? && regional_partner.contact_email.present?
         "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"

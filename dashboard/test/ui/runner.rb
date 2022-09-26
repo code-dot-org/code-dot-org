@@ -304,9 +304,9 @@ def open_log_files
 end
 
 def close_log_files
-  $success_log.close if $success_log
-  $error_log.close if $error_log
-  $errorbrowsers_log.close if $errorbrowsers_log
+  $success_log&.close
+  $error_log&.close
+  $errorbrowsers_log&.close
 end
 
 def log_success(msg)
@@ -576,7 +576,7 @@ def how_many_reruns?(test_run_string)
     if !flakiness
       $lock.synchronize {puts "No flakiness data for #{test_run_string}".green}
       return 1
-    elsif flakiness == 0.0
+    elsif flakiness.abs < Float::EPSILON
       $lock.synchronize {puts "#{test_run_string} is not flaky".green}
       return 1
     else

@@ -49,9 +49,9 @@
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/vpl-csd3-ci-pilot-2022/guides/drawing-shapes"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/drawing-shapes"
     ],
-    "map_reference": "/courses/vpl-csd3-ci-pilot-2022/guides/shapes-and-parameters",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/shapes-and-parameters",
     "long_instructions": "<img src=\"https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Help a Student Debug Their Code\r\n\r\nA student is using the four parameter version of `rect()` and `ellipse()` to draw a simple scene. They expected the green rectangle representing the grass to extend all the way to the edge of the screen, but it is only covering half of the screen. \r\n\r\n# Do This\r\n\r\n* Find the bug in the program that is preventing the grass from extending across the entire bottom of the screen.\r\n* Consider the guiding questions that you might use to help the student debug their code. ",
     "parent_level_id": 20655,
     "encrypted": "false",

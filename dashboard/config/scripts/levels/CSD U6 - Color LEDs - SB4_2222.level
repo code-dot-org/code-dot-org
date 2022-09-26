@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:03:05.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -65,7 +61,7 @@
     "encrypted_examples": "j8UurlTVPH8PL6LWPJH9y0EG+fNDL459QLL0GLXaUxTRvhWrf6+0q+2form6\npV6joniAgc9zets6aEiWQ4R5wQ==\n",
     "parent_level_id": 20513,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/maker-toolkit/color-lights/",
+    "map_reference": "/courses/csd-2022/guides/color-lights",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -73,6 +69,10 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:03:05.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:05.466+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - SB4_2022\"}]"

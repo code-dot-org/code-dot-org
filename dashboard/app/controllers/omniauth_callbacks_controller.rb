@@ -320,32 +320,31 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def extract_powerschool_data(auth)
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
     args = JSON.parse(auth.extra.response.message.to_json)['args']
-    auth_info = auth.info.merge(OmniAuth::AuthHash.new(
+    powerschool_data = OmniAuth::AuthHash.new(
       user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
       email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
       name: {
         first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
         last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
-      },
-      )
+      }
     )
-    auth.info = auth_info
+
+    auth.info.merge!(powerschool_data)
     auth
   end
 
   def extract_microsoft_data(auth)
-    auth_info = auth.info.merge(OmniAuth::AuthHash.new(
+    microsoft_data = OmniAuth::AuthHash.new(
       email: auth[:extra][:raw_info][:userPrincipalName],
       name: auth[:extra][:raw_info][:displayName]
-      )
     )
-    auth.info = auth_info
+
+    auth.info.merge!(microsoft_data)
     auth
   end
 
   def just_authorized_google_classroom?
-    current_user &&
-    current_user.providers.include?(AuthenticationOption::GOOGLE) &&
+    current_user&.providers&.include?(AuthenticationOption::GOOGLE) &&
       has_google_oauth2_scope?('classroom.rosters.readonly')
   end
 
@@ -380,7 +379,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
     provider = auth_hash.provider.to_s
 
-    unless lookup_user.present?
+    if lookup_user.blank?
       # Even if silent takeover is not available for imported student, we still
       # want to attach the email received from the provider to the student's
       # account since many imports do not provide emails.
@@ -488,7 +487,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
-    return false unless auth_hash.provider.present?
+    return false if auth_hash.provider.blank?
     return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     return false if oauth_user.persisted?
 

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:00.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -73,8 +69,8 @@
     "parent_level_id": 23050,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/javascript/random-numbers/"
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/random-numbers"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -84,6 +80,10 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:00.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:00.287+00:00\",\"changed\":[\"cloned from \\\"CSD web project animated movement_2021\\\"\"],\"cloned_from\":\"CSD web project animated movement_2021\"}]"

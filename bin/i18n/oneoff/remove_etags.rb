@@ -3,7 +3,7 @@ require 'json'
 
 # The first argument should be a string which will match the keys of the etags you want to remove.
 files_to_remove = ARGV.first
-etags_file_path = '../crowdin/codeorg_etags.json'
+etags_file_path = './bin/i18n/crowdin/codeorg_etags.json'
 etags_file = File.read(etags_file_path)
 etags_json = JSON.parse(etags_file)
 etags_json.each do |locale, records|

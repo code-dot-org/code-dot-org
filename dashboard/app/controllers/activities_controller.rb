@@ -44,7 +44,7 @@ class ActivitiesController < ApplicationController
     #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
     #  - this is the final level in the script - we always post on final level
     unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
-      head 503
+      head :service_unavailable
       return
     end
 
@@ -98,7 +98,7 @@ class ActivitiesController < ApplicationController
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?
       # we have a lockable lesson, and user_level is locked. disallow milestone requests
       if nonsubmitted_lockable || user_level.try(:show_as_locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
-        return head 403
+        return head :forbidden
       end
     end
 
@@ -119,14 +119,9 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    total_lines = if current_user && current_user.total_lines
-                    current_user.total_lines
-                  end
-
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
-      total_lines: total_lines,
       solved?: solved,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
@@ -221,6 +216,9 @@ class ActivitiesController < ApplicationController
 
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
+      # TODO: The user's total line count is no longer shown anywhere in the UI.
+      # Remove this as part of LP-2291 to clean up the code that stores and
+      # maintains the total line count.
       current_user.total_lines += lines
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)

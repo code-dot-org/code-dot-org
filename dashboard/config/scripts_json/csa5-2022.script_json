@@ -6,18 +6,13 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +22,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-03 14:17:57 UTC",
+    "serialized_at": "2022-09-06 17:49:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2434,7 +2430,7 @@
       "key": "bb1690b7-93b5-48c3-9d29-ac29283ad6a4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Where have you seen deepfakes before?*\n\n**Discussion Goal:** Students share examples of deepfakes they have seen, including in media and TV shows or on social media.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – **This is Not Morgan Freeman*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did this example make you wonder or feel?*\n* *What do you think are some benefits of deepfakes?*\n* *What do you think are some harmful impacts of deepfakes?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deepfakes. Students identify some benefits of deepfakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Given the harmful impacts of deepfakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deepfakes should be developed. Students justify their ideas with positive or negative impacts of deepfakes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Where have you seen deepfakes before?*\n\n**Discussion Goal:** Students share examples of deepfakes they have seen, including in media and TV shows or on social media.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *This is Not Morgan Freeman*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did this example make you wonder or feel?*\n* *What do you think are some benefits of deepfakes?*\n* *What do you think are some harmful impacts of deepfakes?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deepfakes. Students identify some benefits of deepfakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Given the harmful impacts of deepfakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deepfakes should be developed. Students justify their ideas with positive or negative impacts of deepfakes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2476,7 +2472,7 @@
       "key": "48c04230-868c-4e6b-a7c0-8fe721a48321",
       "position": 5,
       "properties": {
-        "description": "Now that you have a list of how your data is collected, let's think about the ethical and social implications of data collection.",
+        "description": "The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial or harmful. Now that you have a list of how your data is collected, let's think about the ethical and social implications of data collection.",
         "remarks": true
       },
       "seeding_key": {
@@ -6070,11 +6066,24 @@
       }
     },
     {
+      "name": "Column-Major Traversal",
+      "url": "https://youtu.be/wgYqBhDDNEc",
+      "key": "column-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "column-major_traversal"
+      }
+    },
+    {
       "name": "Creating Image Filters",
       "url": "https://docs.google.com/document/d/1roMH6K4FHugoTNiOwls50lZLvpk_pGpzPKjbRaVaK-8/edit?usp=sharing",
       "key": "creating_image_filters",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6099,6 +6108,7 @@
       "key": "cs_bingo_definitions_5",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6111,6 +6121,7 @@
       "key": "data_collection",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6135,6 +6146,7 @@
       "key": "enhanced_for_loops_anticipation_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6147,6 +6159,7 @@
       "key": "finding_duplicates_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6159,6 +6172,7 @@
       "key": "grayscale_images",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6183,6 +6197,7 @@
       "key": "grayscaleimage_frq_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6195,10 +6210,23 @@
       "key": "grayscaleimage_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "Images and Pixels",
+      "url": "https://youtu.be/eTcPLcODrk0",
+      "key": "images_and_pixels",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "images_and_pixels"
       }
     },
     {
@@ -6207,6 +6235,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6219,6 +6248,7 @@
       "key": "personal_narrative_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6231,10 +6261,23 @@
       "key": "reversing_a_2d_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "reversing_a_2d_array"
+      }
+    },
+    {
+      "name": "Row-Major Traversal",
+      "url": "https://youtu.be/vS_yPc-2Eb8",
+      "key": "row-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "row-major_traversal"
       }
     },
     {
@@ -6243,6 +6286,7 @@
       "key": "shifting_a_2d_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6267,6 +6311,7 @@
       "key": "tracing_2d_array_traversals",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6279,6 +6324,7 @@
       "key": "tracing_column-major_traversals",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6291,10 +6337,23 @@
       "key": "tracing_enhanced_for_loops",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "Two-Dimensional (2D) Arrays",
+      "url": "https://youtu.be/QIPNA3p6FBo",
+      "key": "two-dimensional_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-dimensional_2d_arrays"
       }
     },
     {
@@ -6303,6 +6362,7 @@
       "key": "u5l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6315,6 +6375,7 @@
       "key": "u5l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6327,6 +6388,7 @@
       "key": "u5l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6339,6 +6401,7 @@
       "key": "u5l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6351,6 +6414,7 @@
       "key": "u5l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6363,6 +6427,7 @@
       "key": "u5l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6375,6 +6440,7 @@
       "key": "u5l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6387,6 +6453,7 @@
       "key": "u5l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6399,6 +6466,7 @@
       "key": "u5l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6411,6 +6479,7 @@
       "key": "u5l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6423,6 +6492,7 @@
       "key": "unit_5_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6459,6 +6529,7 @@
       "key": "unit_5_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6475,6 +6546,18 @@
       },
       "seeding_key": {
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Working with 2D Array Elements",
+      "url": "https://youtu.be/t0ZyG6uWSLE",
+      "key": "working_with_2d_array_elements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_2d_array_elements"
       }
     }
   ],
@@ -6656,6 +6739,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "two-dimensional_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u5l1_extra_practice"
       }
     },
@@ -6673,6 +6762,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "working_with_2d_array_elements"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_tracing_2d_array_traversals"
       }
@@ -6681,6 +6776,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "row-major_traversal"
       }
     },
     {
@@ -6711,6 +6812,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u5l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "column-major_traversal"
       }
     },
     {
@@ -6873,6 +6980,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "creating_image_filters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "images_and_pixels"
       }
     },
     {

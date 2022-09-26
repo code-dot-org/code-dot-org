@@ -9,9 +9,6 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExt
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
@@ -19,7 +16,7 @@ import {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -65,7 +62,6 @@ class UnitEditor extends React.Component {
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
@@ -101,23 +97,13 @@ class UnitEditor extends React.Component {
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
-      .isRequired,
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
-
-    const teacherResources = [...props.initialTeacherResources];
-
-    if (!props.isMigrated) {
-      // add empty entries to get to max
-      while (teacherResources.length < Object.keys(ResourceType).length) {
-        teacherResources.push({type: '', link: ''});
-      }
-    }
 
     this.state = {
       isSaving: false,
@@ -136,7 +122,7 @@ class UnitEditor extends React.Component {
       loginRequired: this.props.initialLoginRequired,
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
-      professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      deeperLearningCourse: this.props.initialProfessionalLearningCourse,
       onlyInstructorReviewRequired: this.props
         .initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
@@ -160,7 +146,6 @@ class UnitEditor extends React.Component {
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      teacherResources: teacherResources,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       publishedState: this.props.initialPublishedState,
@@ -248,7 +233,7 @@ class UnitEditor extends React.Component {
       return;
     } else if (
       !this.props.hasCourse &&
-      this.state.professionalLearningCourse === '' &&
+      this.state.deeperLearningCourse === '' &&
       this.state.publishedState !== PublishedState.in_development &&
       (!this.state.isCourse ||
         this.state.versionYear === '' ||
@@ -341,7 +326,7 @@ class UnitEditor extends React.Component {
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
-      professional_learning_course: this.state.professionalLearningCourse,
+      professional_learning_course: this.state.deeperLearningCourse,
       only_instructor_review_required: this.state.onlyInstructorReviewRequired,
       peer_reviews_to_complete: this.state.peerReviewsRequired,
       wrapup_video: this.state.wrapupVideo,
@@ -364,11 +349,7 @@ class UnitEditor extends React.Component {
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
-      resourceLinks: this.state.teacherResources.map(resource => resource.link),
-      resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      resourceIds: this.props.migratedTeacherResources.map(
-        resource => resource.id
-      ),
+      resourceIds: this.props.teacherResources.map(resource => resource.id),
       studentResourceIds: this.props.studentResources.map(
         resource => resource.id
       ),
@@ -415,9 +396,6 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const useMigratedTeacherResources =
-      this.props.isMigrated && !this.state.teacherResources?.length;
-
     const allowMajorCurriculumChanges =
       this.props.initialUnitPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.in_development ||
@@ -968,13 +946,8 @@ class UnitEditor extends React.Component {
               <div />
               <ResourcesEditor
                 inputStyle={styles.input}
-                resources={this.state.teacherResources}
-                updateResources={teacherResources =>
-                  this.setState({teacherResources})
-                }
-                useMigratedResources={useMigratedTeacherResources}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedResources={this.props.migratedTeacherResources}
+                resources={this.props.teacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
@@ -987,9 +960,8 @@ class UnitEditor extends React.Component {
                 </div>
                 <ResourcesEditor
                   inputStyle={styles.input}
-                  useMigratedResources
                   courseVersionId={this.props.initialCourseVersionId}
-                  migratedResources={this.props.studentResources}
+                  resources={this.props.studentResources}
                   studentFacing
                 />
               </div>
@@ -1052,7 +1024,7 @@ class UnitEditor extends React.Component {
               </i>
             </b>
             <label>
-              Professional Learning Course
+              Deeper Learning Course Name
               <HelpTip>
                 <p>
                   When filled out, the course unit associated with this unit
@@ -1062,10 +1034,10 @@ class UnitEditor extends React.Component {
                 </p>
               </HelpTip>
               <input
-                value={this.state.professionalLearningCourse}
+                value={this.state.deeperLearningCourse}
                 style={styles.input}
                 onChange={e =>
-                  this.setState({professionalLearningCourse: e.target.value})
+                  this.setState({deeperLearningCourse: e.target.value})
                 }
               />
             </label>
@@ -1165,7 +1137,7 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    migratedTeacherResources: state.resources,
+    teacherResources: state.resources,
     studentResources: state.studentResources
   }),
   {

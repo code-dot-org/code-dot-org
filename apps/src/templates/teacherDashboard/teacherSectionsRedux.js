@@ -1158,6 +1158,11 @@ export function assignedUnitTextToSpeechEnabled(state) {
   return assignment ? assignment.text_to_speech_enabled : false;
 }
 
+export function assignedUnitRequiresVerifiedInstructor(state) {
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.requires_verified_instructor : false;
+}
+
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);
@@ -1174,6 +1179,7 @@ export function getSectionRows(state, sectionIds) {
     ..._.pick(sections[id], [
       'id',
       'name',
+      'courseVersionName',
       'loginType',
       'studentCount',
       'code',
@@ -1198,6 +1204,7 @@ export function getAssignmentName(state, sectionId) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
@@ -1232,7 +1239,6 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   id: serverStudent.id,
   name: serverStudent.name,
   sharingDisabled: serverStudent.sharing_disabled,
-  totalLines: serverStudent.total_lines,
   secretPicturePath: serverStudent.secret_picture_path,
   secretWords: serverStudent.secret_words
 });
@@ -1404,7 +1410,6 @@ export const studentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   sharingDisabled: PropTypes.bool,
-  totalLines: PropTypes.number,
   secretPicturePath: PropTypes.string,
   secretWords: PropTypes.string
 });

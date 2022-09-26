@@ -31,11 +31,10 @@ class Pd::ScholarshipInfo < ApplicationRecord
   SCHOLARSHIP_YEARS = APPLICATION_YEARS.drop(1).freeze
 
   belongs_to :user
-  belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
-  belongs_to :application, class_name: 'Pd::Application::TeacherApplication', foreign_key: :pd_application_id
+  belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id, optional: true
+  belongs_to :application, class_name: 'Pd::Application::TeacherApplication', foreign_key: :pd_application_id, optional: true
 
   validate :scholarship_must_be_valid_for_course
-  validates_presence_of :user_id
   validates_inclusion_of :application_year, in: SCHOLARSHIP_YEARS
   validates_inclusion_of :course, in: COURSE_KEY_MAP.values
 

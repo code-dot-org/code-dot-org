@@ -4,17 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSF Self Paced PL",
       "is_course": true,
       "is_migrated": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "k5-onlinepd",
-    "serialized_at": "2022-06-03 20:48:05 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2022-06-29 17:08:19 UTC",
+    "published_state": "stable",
+    "instruction_type": "self_paced",
+    "instructor_audience": "universal_instructor",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "k5-onlinepd-2022"
     }
@@ -254,27 +255,12 @@
       }
     },
     {
-      "key": "For Loops",
-      "name": "For Loops",
+      "key": "End of Course projects",
+      "name": "End of Course Projects",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022"
-      }
-    },
-    {
-      "key": "End of Course projects",
-      "name": "End of Course projects",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -286,10 +272,10 @@
     {
       "key": "Reviewing your reflections",
       "name": "Reviewing your reflections",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -301,10 +287,10 @@
     {
       "key": "Taking next steps",
       "name": "Taking next steps",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -480,19 +466,6 @@
       "seeding_key": {
         "lesson_activity.key": "5409ec53-331d-432d-ae65-9980a69be53c",
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022"
-      }
-    },
-    {
-      "key": "8105cba4-e42d-4fa1-b635-ab3c6d16e110",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8105cba4-e42d-4fa1-b635-ab3c6d16e110",
-        "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2022"
       }
@@ -676,16 +649,6 @@
       "seeding_key": {
         "activity_section.key": "b6678f3d-e722-4cfb-8a60-7d1946dee2b0",
         "lesson_activity.key": "5409ec53-331d-432d-ae65-9980a69be53c"
-      }
-    },
-    {
-      "key": "8054a489-ce70-495a-a87a-50cea69d677a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a",
-        "lesson_activity.key": "8105cba4-e42d-4fa1-b635-ab3c6d16e110"
       }
     },
     {
@@ -3236,6 +3199,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5-PromptsVariables_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3258,13 +3224,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-VariablesArtist_2022"
+          "OPD-K5-Variables-2022-23"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-VariablesArtist_2022"
+          "OPD-K5-Variables-2022-23"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -3272,7 +3238,7 @@
         "activity_section.key": "b6678f3d-e722-4cfb-8a60-7d1946dee2b0"
       },
       "level_keys": [
-        "OPD-K5-VariablesArtist_2022"
+        "OPD-K5-Variables-2022-23"
       ]
     },
     {
@@ -3282,13 +3248,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-ArtistVariables_2022"
+          "OPD-K5-SpritesVariables-2022-23"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-ArtistVariables_2022"
+          "OPD-K5-SpritesVariables-2022-23"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -3296,7 +3262,7 @@
         "activity_section.key": "b6678f3d-e722-4cfb-8a60-7d1946dee2b0"
       },
       "level_keys": [
-        "OPD-K5-ArtistVariables_2022"
+        "OPD-K5-SpritesVariables-2022-23"
       ]
     },
     {
@@ -3306,13 +3272,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-VariablesBee_2022"
+          "OPD-K5-CountingVariables_22-23"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-VariablesBee_2022"
+          "OPD-K5-CountingVariables_22-23"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -3320,7 +3286,7 @@
         "activity_section.key": "b6678f3d-e722-4cfb-8a60-7d1946dee2b0"
       },
       "level_keys": [
-        "OPD-K5-VariablesBee_2022"
+        "OPD-K5-CountingVariables_22-23"
       ]
     },
     {
@@ -3378,150 +3344,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 for loops intro_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 for loops intro_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      },
-      "level_keys": [
-        "OPD-K5 for loops intro_2022"
-      ]
-    },
-    {
-      "chapter": 109,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-CounterVariableVid_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-CounterVariableVid_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      },
-      "level_keys": [
-        "OPD-K5-CounterVariableVid_2022"
-      ]
-    },
-    {
-      "chapter": 110,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-ForLoopsVidF_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-ForLoopsVidF_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      },
-      "level_keys": [
-        "OPD-K5-ForLoopsVidF_2022"
-      ]
-    },
-    {
-      "chapter": 111,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-ForLoopFBee_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-ForLoopFBee_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      },
-      "level_keys": [
-        "OPD-K5-ForLoopFBee_2022"
-      ]
-    },
-    {
-      "chapter": 112,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-ForLoopFArtist_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-ForLoopFArtist_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      },
-      "level_keys": [
-        "OPD-K5-ForLoopFArtist_2022"
-      ]
-    },
-    {
-      "chapter": 113,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 for loops free response_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 for loops free response_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      },
-      "level_keys": [
-        "OPD-K5 for loops free response_2022"
-      ]
-    },
-    {
-      "chapter": 114,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "OPD-K5 project_2022"
         ]
       },
@@ -3540,7 +3362,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 109,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3564,7 +3386,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 110,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3588,7 +3410,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 111,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3612,7 +3434,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 112,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3636,7 +3458,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 113,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -3660,7 +3482,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 114,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -3684,19 +3506,19 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 115,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-EoCProjectF_2022"
+          "OPD-K5-EoCF_22-23"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-EoCProjectF_2022"
+          "OPD-K5-EoCF_22-23"
         ],
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -3704,11 +3526,11 @@
         "activity_section.key": "bad825e7-3811-478d-bf98-cb5560d63790"
       },
       "level_keys": [
-        "OPD-K5-EoCProjectF_2022"
+        "OPD-K5-EoCF_22-23"
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 116,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -3732,7 +3554,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3757,7 +3579,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3782,7 +3604,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3807,7 +3629,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3832,7 +3654,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3857,7 +3679,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -3882,7 +3704,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 123,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -3907,7 +3729,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 124,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3932,7 +3754,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 125,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3957,7 +3779,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 126,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -3982,7 +3804,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 127,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -4007,7 +3829,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 128,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4032,7 +3854,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 129,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -4057,7 +3879,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 130,
       "position": 14,
       "activity_section_position": 3,
       "assessment": false,
@@ -4082,7 +3904,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 131,
       "position": 15,
       "activity_section_position": 4,
       "assessment": false,
@@ -4107,7 +3929,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 132,
       "position": 16,
       "activity_section_position": 5,
       "assessment": false,
@@ -4132,7 +3954,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 133,
       "position": 17,
       "activity_section_position": 6,
       "assessment": false,
@@ -4157,7 +3979,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 134,
       "position": 18,
       "activity_section_position": 7,
       "assessment": false,
@@ -4182,7 +4004,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 135,
       "position": 19,
       "activity_section_position": 8,
       "assessment": false,
@@ -4207,7 +4029,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 136,
       "position": 20,
       "activity_section_position": 9,
       "assessment": false,
@@ -4232,7 +4054,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4256,7 +4078,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 138,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4280,7 +4102,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 139,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4304,7 +4126,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 140,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4328,7 +4150,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 141,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5579,9 +5401,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-VariablesArtist_2022",
+        "level.key": "OPD-K5-Variables-2022-23",
         "script_level.level_keys": [
-          "OPD-K5-VariablesArtist_2022"
+          "OPD-K5-Variables-2022-23"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -5591,9 +5413,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-ArtistVariables_2022",
+        "level.key": "OPD-K5-SpritesVariables-2022-23",
         "script_level.level_keys": [
-          "OPD-K5-ArtistVariables_2022"
+          "OPD-K5-SpritesVariables-2022-23"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -5603,9 +5425,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-VariablesBee_2022",
+        "level.key": "OPD-K5-CountingVariables_22-23",
         "script_level.level_keys": [
-          "OPD-K5-VariablesBee_2022"
+          "OPD-K5-CountingVariables_22-23"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -5635,78 +5457,6 @@
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2022",
         "activity_section.key": "b6678f3d-e722-4cfb-8a60-7d1946dee2b0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 for loops intro_2022",
-        "script_level.level_keys": [
-          "OPD-K5 for loops intro_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-CounterVariableVid_2022",
-        "script_level.level_keys": [
-          "OPD-K5-CounterVariableVid_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-ForLoopsVidF_2022",
-        "script_level.level_keys": [
-          "OPD-K5-ForLoopsVidF_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-ForLoopFBee_2022",
-        "script_level.level_keys": [
-          "OPD-K5-ForLoopFBee_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-ForLoopFArtist_2022",
-        "script_level.level_keys": [
-          "OPD-K5-ForLoopFArtist_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 for loops free response_2022",
-        "script_level.level_keys": [
-          "OPD-K5 for loops free response_2022"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2022",
-        "activity_section.key": "8054a489-ce70-495a-a87a-50cea69d677a"
       }
     },
     {
@@ -5795,9 +5545,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-EoCProjectF_2022",
+        "level.key": "OPD-K5-EoCF_22-23",
         "script_level.level_keys": [
-          "OPD-K5-EoCProjectF_2022"
+          "OPD-K5-EoCF_22-23"
         ],
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",

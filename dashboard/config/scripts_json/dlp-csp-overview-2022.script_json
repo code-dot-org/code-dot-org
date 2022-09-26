@@ -9,8 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-18 15:27:32 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-06-30 20:16:25 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
     "participant_audience": "facilitator",
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21_overview1_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -102,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21_overview2_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21_overview3_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,6 +153,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21_overview4_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -165,6 +177,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21_overview5_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {

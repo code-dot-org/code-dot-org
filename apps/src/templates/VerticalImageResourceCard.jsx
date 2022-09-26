@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import {connect} from 'react-redux';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../util/color';
 import Button from './Button';
@@ -21,7 +19,6 @@ class VerticalImageResourceCard extends Component {
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
     MCShareLink: PropTypes.string,
     jumbo: PropTypes.bool,
     hasAdjustableHeight: PropTypes.bool
@@ -33,7 +30,6 @@ class VerticalImageResourceCard extends Component {
       description,
       link,
       buttonText,
-      isRtl,
       jumbo,
       MCShareLink,
       image,
@@ -49,7 +45,6 @@ class VerticalImageResourceCard extends Component {
       ? {...styles.jumboImage, ...imageHeight}
       : {...styles.image, ...imageHeight};
 
-    const localeStyle = isRtl ? styles.rtl : styles.ltr;
     const descriptionStyle = hasAdjustableHeight
       ? styles.description
       : {...styles.description, ...styles.descriptionHeight};
@@ -86,20 +81,20 @@ class VerticalImageResourceCard extends Component {
     const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={[cardStyle, localeStyle]}>
+      <div style={cardStyle}>
         <div style={imageStyle}>
           <a href={link}>
             <img src={imgSrc} alt={title} />
           </a>
         </div>
         <div>
-          <div style={[styles.text, styles.title, localeStyle]}>{title}</div>
-          <div style={[styles.text, descriptionStyle, localeStyle]}>
+          <div style={{...styles.text, ...styles.title}}>{title}</div>
+          <div style={{...styles.text, ...descriptionStyle}}>
             {description}
             {MCShareLink && (
               <input
                 type="text"
-                style={[styles.text, styles.shareLink, localeStyle]}
+                style={{...styles.text, ...styles.shareLink}}
                 value={MCShareLink}
                 onChange={() => {}}
                 onClick={e => e.target.select()}
@@ -111,7 +106,7 @@ class VerticalImageResourceCard extends Component {
             href={link}
             color={Button.ButtonColor.gray}
             text={buttonText}
-            style={[styles.button, localeStyle]}
+            style={[styles.button]}
           />
         </div>
       </div>
@@ -180,16 +175,7 @@ const styles = {
     marginTop: 5,
     padding: 5,
     width: 258
-  },
-  ltr: {
-    float: 'left'
-  },
-  rtl: {
-    float: 'right',
-    textAlign: 'right'
   }
 };
 
-export default connect(state => ({
-  isRtl: state.isRtl
-}))(Radium(VerticalImageResourceCard));
+export default VerticalImageResourceCard;

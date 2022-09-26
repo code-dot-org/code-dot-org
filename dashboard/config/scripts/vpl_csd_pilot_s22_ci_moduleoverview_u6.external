@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ##### Welcome! This professional learning module is designed help you prepare to teach Code.org's Physical Computing unit. 
 
-<img src="https://images.code.org/59eb2814fb713d5f66dfe867efea6bd3-image-1649311889108.JPG" alt="Image of a Clicker Race App" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/3b3e70c43d22260c1cd76d409a94f0b3-image-1654802658623.png" alt="Image of a Circuit Playground" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this module, you will:
@@ -19,6 +19,8 @@ markdown <<MARKDOWN
 
 
 ### **Suggested time:** 90 minutes
+
+##### **NOTE:** You will need a Circuit Playground to complete this module. 
 
 ## Let's get started!
 

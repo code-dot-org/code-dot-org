@@ -11,6 +11,7 @@ import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReview
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import sinon from 'sinon';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
+import * as utils from '@cdo/apps/code-studio/utils';
 
 const DEFAULT_REVIEW = {
   id: 1,
@@ -146,9 +147,25 @@ describe('CodeReviewTimelineReview', () => {
     expect(wrapper.find('Button')).to.have.length(0);
   });
 
+  it('hides the close button if viewing an older version of the project', () => {
+    sinon.stub(utils, 'queryParams').returns('versionParam');
+    // Viewing own project with open code review
+    const review = {...DEFAULT_REVIEW, isOpen: true, ownerId: 1};
+    const wrapper = setUp({review: review, currentUserId: 1});
+    expect(wrapper.find('Button')).to.have.length(0);
+    utils.queryParams.restore();
+  });
+
   it('displays Comments for each comment', () => {
     const wrapper = setUp();
     expect(wrapper.find(Comment)).to.have.length(2);
+  });
+
+  it('displays message for closed review with no comments', () => {
+    const review = {...DEFAULT_REVIEW, comments: [], isOpen: false};
+    const wrapper = setUp({review});
+    expect(wrapper.find(Comment)).to.have.length(0);
+    expect(wrapper.contains(javalabMsg.noFeedbackGiven())).to.be.true;
   });
 
   it('displays code review disabled note if the review is open and viewing as owner', () => {
@@ -190,5 +207,14 @@ describe('CodeReviewTimelineReview', () => {
     };
     const wrapper = setUp({review: review, currentUserId: 1});
     expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(0);
+  });
+
+  // Note: teachers can view older version of student projects
+  it('hides the CodeReviewCommentEditor if viewing an older version of the project', () => {
+    sinon.stub(utils, 'queryParams').returns('versionParam');
+    const review = {...DEFAULT_REVIEW, isOpen: true, ownerId: 1};
+    const wrapper = setUp({review: review, currentUserId: 2});
+    expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(0);
+    utils.queryParams.restore();
   });
 });

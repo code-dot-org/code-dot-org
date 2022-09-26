@@ -108,10 +108,6 @@ export default function ProgrammingEnvironmentEditor({
   return (
     <div>
       <h1>{`Editing ${name}`}</h1>
-      <h2>
-        This feature is in development. Please continue to use curriculum
-        builder to edit code documentation.
-      </h2>
       <label>
         Title
         <input

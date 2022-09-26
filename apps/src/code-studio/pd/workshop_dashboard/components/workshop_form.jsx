@@ -38,6 +38,7 @@ import {
   Subjects,
   HideFeeInformationSubjects,
   HideOnWorkshopMapSubjects,
+  HideFundedSubjects,
   VirtualOnlySubjects,
   NotFundedSubjects,
   MustSuppressEmailSubjects
@@ -371,7 +372,13 @@ export class WorkshopForm extends React.Component {
       isCsf &&
       this.state.subject &&
       !HideOnWorkshopMapSubjects.includes(this.state.subject);
-    const showFundedInput = !isAdminCounselor;
+    const isCsfSubjectWithHiddenFundedField =
+      isCsf &&
+      this.state.subject &&
+      HideFundedSubjects.includes(this.state.subject);
+    const showFundedInput = !(
+      isAdminCounselor || isCsfSubjectWithHiddenFundedField
+    );
 
     return (
       <FormGroup>
@@ -433,15 +440,8 @@ export class WorkshopForm extends React.Component {
                 Enable workshop reminders?
                 <HelpTip>
                   <p>
-                    <strong>
-                      This functionality is disabled for all academic year
-                      workshops.
-                    </strong>
-                  </p>
-                  <p>
-                    For in-person CSF workshops, choose if you'd like automated
-                    10-day and 3-day pre-workshop reminders to be sent to your
-                    participants.
+                    Choose if you'd like automated 10-day and 3-day pre-workshop
+                    reminders to be sent to your participants.
                   </p>
                 </HelpTip>
               </ControlLabel>
@@ -726,13 +726,14 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators, subject, and funding
+    // clear facilitators, subject, funding, and email reminders
     this.setState({
       facilitators: [],
       subject: null,
       fee: null,
       funded: '',
-      funding_type: null
+      funding_type: null,
+      suppress_email: false
     });
     this.loadAvailableFacilitators(course);
   };
@@ -740,7 +741,10 @@ export class WorkshopForm extends React.Component {
   handleSubjectChange = event => {
     const subject = this.handleFieldChange(event);
 
-    if (NotFundedSubjects.includes(subject)) {
+    if (
+      HideFundedSubjects.includes(subject) ||
+      NotFundedSubjects.includes(subject)
+    ) {
       this.setState({
         funded: false
       });
@@ -755,6 +759,10 @@ export class WorkshopForm extends React.Component {
     if (MustSuppressEmailSubjects.includes(subject)) {
       this.setState({
         suppress_email: true
+      });
+    } else {
+      this.setState({
+        suppress_email: false
       });
     }
   };

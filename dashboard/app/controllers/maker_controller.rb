@@ -100,7 +100,7 @@ class MakerController < ApplicationController
     # check to see if we have an existing application for any users associated with
     # this studio_person_id (in which case we can't start another)
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
-    return head :forbidden if application && application.has_confirmed_school?
+    return head :forbidden if application&.has_confirmed_school?
 
     # Create our application
     # For 2020, applications by default get the non "full discount" (ie, without shipping)

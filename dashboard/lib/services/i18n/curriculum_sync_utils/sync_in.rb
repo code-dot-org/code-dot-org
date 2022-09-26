@@ -20,7 +20,9 @@ module Services
             next unless ScriptConstants.i18n? script.name
 
             # prepare data
-            data = ScriptCrowdinSerializer.new(script).as_json.compact
+            # Select only lessons that pass `numbered_lesson?` for consistent `relative_position` values
+            # throughout our translation pipeline
+            data = Serializers::ScriptCrowdinSerializer.new(script, scope: {only_numbered_lessons: true}).as_json.compact
             # The JSON object will have the script's crowdin_key as the top level key, but we don't
             # need that, so we will discard the crowdin_key and set data to be the object it is
             # pointing to.
@@ -58,7 +60,7 @@ module Services
           return "Hour of Code" if Script.unit_in_category?('hoc', script.name)
 
           # catchall for scripts without courses
-          return 'other' unless script.get_course_version.present?
+          return 'other' if script.get_course_version.blank?
 
           # special-case CSF; we want to group all CSF courses together, even though
           # they all have different course offerings.

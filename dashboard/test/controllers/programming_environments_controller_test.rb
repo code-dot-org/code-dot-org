@@ -134,6 +134,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'can create a new programming environment' do
+    @request.host = CDO.dashboard_hostname
     sign_in @levelbuilder
 
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "new-ide.json"}.once

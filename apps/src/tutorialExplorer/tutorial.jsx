@@ -58,17 +58,15 @@ export default class Tutorial extends React.Component {
 const styles = {
   tutorialOuter: {
     float: 'left',
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 7,
-    paddingRight: 7,
+    padding: '7px 7px',
     cursor: 'pointer'
   },
   tutorialImageContainer: {
     position: 'relative',
     width: '100%',
     height: 0,
-    paddingTop: '75%'
+    paddingTop: '75%',
+    borderRadius: '8px 8px 0 0'
   },
   tutorialImageBackground: {
     position: 'absolute',
@@ -77,25 +75,38 @@ const styles = {
     left: 0,
     bottom: 0,
     backgroundColor: '#f1f1f1',
-    border: 'solid 1px #cecece'
+    border: '1px solid rgb(162, 162, 162)',
+    borderRadius: '8px 8px 0 0'
   },
   tutorialImage: {
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '100%'
+    width: '100%',
+    borderRadius: '8px 8px 0 0',
+    border: '1px solid rgb(162, 162, 162)'
   },
   tutorialName: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 15,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    borderLeft: '1px solid rgb(162, 162, 162)',
+    borderRight: '1px solid rgb(162, 162, 162)',
+    padding: '8px 10px 0'
   },
   tutorialSub: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
     lineHeight: '16px',
-    height: 40
+    height: 28,
+    border: '1px solid rgb(162, 162, 162)',
+    borderTop: 0,
+    padding: '0px 10px 8px',
+    borderRadius: '0 0 8px 8px',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis'
   }
 };

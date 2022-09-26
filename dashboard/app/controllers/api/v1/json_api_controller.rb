@@ -1,4 +1,4 @@
-class Api::V1::JsonApiController < ApplicationController
+class Api::V1::JSONApiController < ApplicationController
   layout false
 
   # Don't bother redirecting to login when denying access to the JSON APIs

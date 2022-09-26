@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
+    @is_teacher = (current_user&.teacher?) || params[:view] == 'teacher'
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
     @force_race_interstitial = params[:forceRaceInterstitial]
@@ -64,9 +64,9 @@ class CoursesController < ApplicationController
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
-      instruction_type: params[:instruction_type] ? params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-      participant_audience: params[:participant_audience] ? params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      instruction_type: params[:instruction_type] ? params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+      participant_audience: params[:participant_audience] ? params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       has_numbered_units: true
     )
     if @unit_group.save
@@ -83,7 +83,6 @@ class CoursesController < ApplicationController
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload
 
-    @unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless @unit_group.has_migrated_unit?
     if @unit_group.has_migrated_unit? && @unit_group.course_version
       @unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
@@ -124,7 +123,7 @@ class CoursesController < ApplicationController
 
   def get_rollup_resources
     course_version = @unit_group.course_version
-    return render status: 400, json: {error: 'Course does not have course version'} unless course_version
+    return render status: :bad_request, json: {error: 'Course does not have course version'} unless course_version
     rollup_pages = []
     if @unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.programming_expressions.empty?}}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(@unit_group), course_version_id: course_version.id))
@@ -195,7 +194,7 @@ class CoursesController < ApplicationController
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-    cp[:published_state] = SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
+    cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
     cp
   end

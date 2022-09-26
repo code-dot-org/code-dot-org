@@ -130,22 +130,14 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (
-    action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT &&
-    state.allowResize &&
-    Math.abs(action.height - state.renderedHeight) > 1
-  ) {
+  if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT && state.allowResize) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
       expandedHeight: !state.isCollapsed ? action.height : state.expandedHeight
     });
   }
 
-  if (
-    action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
-    Math.abs(action.maxNeededHeight - state.maxNeededHeight) > 1 &&
-    state.allowResize
-  ) {
+  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED && state.allowResize) {
     return Object.assign({}, state, {
       maxNeededHeight: action.maxNeededHeight
     });

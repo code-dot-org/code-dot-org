@@ -19,16 +19,26 @@ export const BOARD_TYPE = {
 export function detectBoardTypeFromPort(port) {
   let boardType = BOARD_TYPE.OTHER;
   if (port) {
-    const vendorId = port.vendorId ? parseInt(port.vendorId, 16) : null;
-    const productId = port.productId ? parseInt(port.productId, 16) : null;
-    if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
+    const {vendorId, productId} = port;
+    const parsedVendorId = vendorId ? parseInt(vendorId, 16) : null;
+    const parsedProductId = productId ? parseInt(productId, 16) : null;
+    if (
+      (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) ||
+      (parsedVendorId === ADAFRUIT_VID &&
+        parsedProductId === CIRCUIT_PLAYGROUND_PID)
+    ) {
       boardType = BOARD_TYPE.CLASSIC;
     } else if (
-      vendorId === ADAFRUIT_VID &&
-      productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
+      (vendorId === ADAFRUIT_VID &&
+        productId === CIRCUIT_PLAYGROUND_EXPRESS_PID) ||
+      (parsedVendorId === ADAFRUIT_VID &&
+        parsedProductId === CIRCUIT_PLAYGROUND_EXPRESS_PID)
     ) {
       boardType = BOARD_TYPE.EXPRESS;
-    } else if (vendorId === MICROBIT_VID && productId === MICROBIT_PID) {
+    } else if (
+      (vendorId === MICROBIT_VID && productId === MICROBIT_PID) ||
+      (parsedVendorId === MICROBIT_VID && parsedProductId === MICROBIT_PID)
+    ) {
       boardType = BOARD_TYPE.MICROBIT;
     }
   }
