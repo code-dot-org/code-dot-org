@@ -156,6 +156,7 @@ Dance.prototype.init = function(config) {
 
   // On iOS devices, load sprites as students add new characters
   // to their programs. Block the run button until all characters have loaded.
+  // maybe add check that all sprite have loaded too before run button enabled?
   if (this.isUsingIOSDevice()) {
     const computeCharactersReferenced = () =>
       this.computeCharactersReferenced(this.studioApp_.getCode());
@@ -215,6 +216,11 @@ Dance.prototype.initSongs = async function(config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
+  const onLoadSongCallback = () => {
+    this.onLoadSong();
+    this.enableRunButton();
+  };
+
   this.isUsingIOSDevice() && this.disableRunButton();
   loadSong(
     selectedSong,
@@ -235,10 +241,16 @@ Dance.prototype.initSongs = async function(config) {
         );
       }
     },
-    this.isUsingIOSDevice() && this.enableRunButton,
+    this.isUsingIOSDevice() && onLoadSongCallback,
     this.isUsingIOSDevice()
   );
+
+  const onLoadMetadataCallback = () => {
+    this.onLoadMetadata();
+    this.enableRunButton();
+  };
   this.updateSongMetadata(selectedSong);
+  this.songMetadataPromise.then(onLoadMetadataCallback);
 
   if (config.channel) {
     // Ensure that the selected song will be stored in the project the first
@@ -628,6 +640,7 @@ Dance.prototype.execute = async function() {
   // songMetadataPromise will resolve immediately if the request which populates
   // it has not yet been initiated. Therefore we must first wait for song init
   // to complete before awaiting songMetadataPromise.
+  // pretty sure this will load...
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
@@ -760,7 +773,13 @@ Dance.prototype.captureThumbnailImage = function() {
 };
 
 Dance.prototype.enableRunButton = function() {
-  this.getRunButton().disabled = false;
+  if (
+    this.getAssetsLoaded().includes('metadata') &&
+    this.getAssetsLoaded().includes('song')
+  ) {
+    this.getRunButton().disabled = false;
+  }
+  // this.getRunButton().disabled = false;
 };
 
 Dance.prototype.disableRunButton = function() {
@@ -781,4 +800,19 @@ Dance.prototype.isUsingIOSDevice = function() {
   this.usingIOSDevice = dom.isIOS();
   // Temporarily allow turning of differentiation for iOS via flag
   return this.usingIOSDevice && !!DCDO.get('use-html5-audio-dance-party', true);
+};
+
+Dance.prototype.onLoadMetadata = function() {
+  this.getAssetsLoaded().push('metadata');
+};
+Dance.prototype.onLoadSong = function() {
+  this.getAssetsLoaded().push('song');
+};
+
+Dance.prototype.getAssetsLoaded = function() {
+  if (!this.assetsLoaded) {
+    this.assetsLoaded = [];
+  }
+
+  return this.assetsLoaded;
 };
