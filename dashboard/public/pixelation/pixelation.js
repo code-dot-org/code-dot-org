@@ -142,10 +142,6 @@ function initProjects() {
       getAnimationList: function(callback) {
         callback({});
       },
-      setInitialGeneratedProperties: function(_) {},
-      getGeneratedProperties: function() {
-        return undefined;
-      },
       setInitialLibrariesList: function(_) {},
       getLibrariesList: function() {
         return undefined;

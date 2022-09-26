@@ -8,7 +8,6 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import lessonLock from './lessonLockRedux';
 import viewAs from './viewAsRedux';
 import shareDialog from './components/shareDialogRedux';
-import exportDialog from './components/exportDialogRedux';
 import hiddenLesson from './hiddenLessonRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
@@ -29,7 +28,6 @@ registerReducers({
   lessonLock,
   viewAs,
   shareDialog,
-  exportDialog,
   hiddenLesson,
   isRtl,
   responsive,
