@@ -1,16 +1,6 @@
 import WebAudio from './soundSub';
 
-var soundList = [
-  'stem-hip-lead',
-  'stem-hip-bass',
-  'stem-hip-drum',
-  'stem-dance-lead',
-  'stem-dance-bass',
-  'stem-dance-drum',
-  'stem-country-lead',
-  'stem-country-bass',
-  'stem-country-drum'
-];
+var soundList = [];
 
 var baseSoundUrl;
 
@@ -40,7 +30,6 @@ function LoadSounds(desiredSounds) {
 
   for (var i = 0; i < soundList.length; i++) {
     audioSystem.LoadSound(
-      //soundList[i],
       baseSoundUrl + soundList[i] + '.mp3',
       function(id, buffer) {
         audioSoundBuffers[id] = buffer;
