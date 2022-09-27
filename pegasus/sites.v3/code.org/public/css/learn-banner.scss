@@ -1,0 +1,38 @@
+@import 'color.scss', 'font.scss';
+
+#fullwidth {
+  overflow: hidden;
+  background-size: cover;
+}
+
+section.banner {
+  text-align: center;
+  color: $black;
+
+  h1, h2 {
+    color: $black;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-family: $gotham-regular;
+    font-size: 1.2em;
+    margin: 1em auto 2em;
+  }
+
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4em 0;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+    font-family: 'Gotham 5r', sans-serif;
+  }
+}
