@@ -210,11 +210,6 @@ Performance/CollectionLiteralInLoop:
 Performance/Detect:
   Enabled: false
 
-# Offense count: 9
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/InefficientHashSearch:
-  Enabled: false
-
 # Offense count: 20
 Performance/MethodObjectAsBlock:
   Enabled: false
