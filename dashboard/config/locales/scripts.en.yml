@@ -9201,3 +9201,25 @@ en:
 
             **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: 'Book Cover '
+          lesson_groups: {}
+          name: csc-bookcover
+          title: CSC Bookcover
+          description_audience: ''
+          description_short: ''
+          description: 'this is an internal script as the source of truth for this lesson that will be reused in other CSC modules. '
+          student_description: ''
+        csc-landmarks-pilot:
+          lessons:
+            lesson-1:
+              name: U.S. Landmarks
+          lesson_groups: {}
+          name: csc-landmarks-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: 'Winter 2022 Pilot module - Historical Landmark and Mapping Module '
+          student_description: ''
