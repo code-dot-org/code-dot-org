@@ -3,7 +3,7 @@ import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES, SPRITE_WARNING_THRESHOLD} from './constants';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert
@@ -374,18 +374,18 @@ export default class CoreLibrary {
   }
 
   reachedSpriteWarningThreshold() {
-    return this.getNumberOfSprites() === SPRITE_WARNING_THRESHOLD;
+    return (
+      this.getNumberOfSprites() === MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER
+    );
   }
 
   // This function is called within the addSprite function BEFORE a new sprite is created
-  // If the total number of sprites is equal to SPRITE_WARNING_THRESHOLD, a workspace
-  // alert warning is displayed to let user know they have reached the sprite limit
-  // Note that SPRITE_WARNING_THRESHOLD = MAX_NUM_SPRITES - 1
+  // If the total number of sprites is equal to (MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER),
+  // a workspace alert warning is displayed to let user know they have reached the sprite limit
   dispatchSpriteLimitWarning() {
     getStore().dispatch(
       displayWorkspaceAlert(
         workspaceAlertTypes.warning,
-        /* display warning when user exceeds SPRITE_WARNING_THRESHOLD */
         msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
         /* bottom */ true
       )
