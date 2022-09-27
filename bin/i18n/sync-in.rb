@@ -252,7 +252,7 @@ def get_placeholder_texts(document, block_type, title_names)
 
       # Skip empty or untranslatable string.
       # A translatable string must have at least 3 consecutive alphabetic characters.
-      next unless title&.content =~ /[a-zA-Z]{3,}/
+      next unless /[a-zA-Z]{3,}/.match?(title&.content)
 
       # Use only alphanumeric characters in lower cases as string key
       text_key = Digest::MD5.hexdigest title.content
