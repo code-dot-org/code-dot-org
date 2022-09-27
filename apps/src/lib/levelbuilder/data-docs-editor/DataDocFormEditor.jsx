@@ -10,7 +10,7 @@ const DataDocFormEditor = props => {
   const [dataDocContent, setDataDocContent] = useState(originalDataDocContent);
   const [dataDocName, setDataDocName] = useState(originalDataDocName);
 
-  const save = () => {
+  const save = saveAndClose => {
     $.ajax({
       url: `/data_docs/${dataDocKey}`,
       method: 'PUT',
@@ -19,7 +19,9 @@ const DataDocFormEditor = props => {
         content: dataDocContent
       }
     }).done(() => {
-      navigateToHref(`/data_docs/${dataDocKey}`);
+      if (saveAndClose) {
+        navigateToHref(`/data_docs/${dataDocKey}`);
+      }
     });
   };
 
@@ -65,8 +67,19 @@ const DataDocFormEditor = props => {
         markdown={dataDocContent || ''}
       />
       <br />
-      <button className="btn btn-primary" type="submit" onClick={save}>
-        Save Changes
+      <button
+        className="btn btn-gray"
+        type="button"
+        onClick={() => save(false)}
+      >
+        Save and Keep Editing
+      </button>
+      <button
+        className="btn btn-primary"
+        type="button"
+        onClick={() => save(true)}
+      >
+        Save and Close
       </button>
     </div>
   );
