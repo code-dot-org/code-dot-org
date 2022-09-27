@@ -17,8 +17,7 @@
 #
 class CodeReviewComment < ApplicationRecord
   belongs_to :commenter, class_name: 'User', optional: true
-  # TODO: When the column is renamed, update this association
-  belongs_to :code_review, class_name: 'CodeReview', foreign_key: :code_review_request_id, optional: true
+  belongs_to :code_review, class_name: 'CodeReview', optional: true
 
   acts_as_paranoid
 
