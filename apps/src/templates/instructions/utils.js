@@ -111,6 +111,7 @@ function removeCommentNodes(root) {
  * Converts any inline XML in the container element into embedded
  * readonly BlockSpaces
  * @param {Element} xmlContainer The element in which to search for XML
+ * @param {Boolean} isRtl True if we are displaying in RTL
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
   const xmls = xmlContainer.getElementsByTagName('xml');

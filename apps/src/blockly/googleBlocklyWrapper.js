@@ -427,11 +427,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
 
       // Core Blockly requires a container div to be LTR, regardless of page direction.
-      const div = document.createElement('div');
-      div.setAttribute('dir', 'LTR');
-      div.style.display = 'inline-block';
-      div.appendChild(svg);
-      container.appendChild(div);
+      container.setAttribute('dir', 'LTR');
+      container.style.display = 'inline-block';
+      container.appendChild(svg);
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
 
