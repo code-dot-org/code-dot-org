@@ -157,6 +157,12 @@ module Crowdin
     end
   end
 
+  class CrowdinInternalServerError < StandardError
+  end
+
+  class CrowdinServiceUnavailableError < StandardError
+  end
+
   class Client
     include ClientExtensions
   end
