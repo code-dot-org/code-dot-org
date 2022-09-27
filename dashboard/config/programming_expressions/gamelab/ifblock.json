@@ -36,6 +36,6 @@
   ],
   "return_value": "No return value.",
   "short_description": "Executes a block of statements if the specified condition is true.",
-  "syntax": "```\nif (condition) {\n    statement\n}\n```",
+  "syntax": "if (condition) {\n    statement\n}",
   "tips": "- Unlike an event handler, an if statement does not constantly monitor your program checking the condition to see if it's true or false. An if statement is an instruction just like any other that gets executed line by line in order from top to bottom.\n- = is the assignment operator. == is the boolean check for equivalency operator."
 }
