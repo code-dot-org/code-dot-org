@@ -30,6 +30,6 @@
     }
   ],
   "short_description": "Executes a block of statements a certain number of times depending on the initialization expression, conditional expression, and increment expression.",
-  "syntax": "```\nfor (initialization; condition; increment) {\n  // block of statements\n}\n```",
+  "syntax": "for (initialization; condition; increment) {\n  // block of statements\n}",
   "tips": "- You do not need to use *i* in the for loop statement, you can use any declared and initialized identifier.\n- You can start (initialization) and end (condition) the loop at any values. \n- You can use any increment, positive or negative.\n- Be careful not to code an infinite loop where the condition is never false.\n- Be careful not to code a loop that never executes because the condition is never true.\n"
 }
