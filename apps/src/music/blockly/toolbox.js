@@ -1,4 +1,5 @@
 import moduleStyles from '@cdo/apps/music/music.module.scss';
+import {BlockTypes} from './blockTypes';
 
 export const baseToolbox = {
   kind: 'categoryToolbox',
@@ -22,11 +23,11 @@ export const baseToolbox = {
       contents: [
         {
           kind: 'block',
-          type: 'loop_from_to'
+          type: BlockTypes.LOOP_FROM_TO
         },
         {
           kind: 'block',
-          type: 'if_even_then'
+          type: BlockTypes.IF_EVEN_THEN
         }
       ]
     },
@@ -40,7 +41,7 @@ export const baseToolbox = {
       contents: [
         {
           kind: 'block',
-          type: 'example_number'
+          type: BlockTypes.NUMBER
         }
       ]
     },
@@ -59,11 +60,11 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: 'variable_get'
+          type: BlockTypes.VARIABLES_GET
         },
         {
           kind: 'block',
-          type: 'variable_set',
+          type: BlockTypes.VARIABLES_SET,
           inputs: {
             value: {
               shadow: {
@@ -99,7 +100,7 @@ export const createMusicToolbox = library => {
     for (let sound of folder.sounds) {
       category.contents.push({
         kind: 'block',
-        type: 'play_sound',
+        type: BlockTypes.PLAY_SOUND,
         fields: {
           sound: folder.path + '/' + sound.src
         },
