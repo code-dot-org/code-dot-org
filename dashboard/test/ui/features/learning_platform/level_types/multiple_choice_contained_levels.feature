@@ -74,7 +74,7 @@ Scenario: Teacher can reset progress on multiple choice contained level
   And I see no difference for "level run" using stitch mode "none"
   Then I press "resetButton"
   Then I click selector "button:contains('Delete Answer')"
-  And I wait 10 seconds
+  And I wait for 10 seconds
   And I see no difference for "level reset"
   Then I press "unchecked_1"
   Then I press "runButton"

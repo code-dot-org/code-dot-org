@@ -99,7 +99,7 @@ Scenario: Teacher can reset progress on free response contained level
   Then I press "runButton"
   Then I press "resetButton"
   Then I click selector "button:contains('Delete Answer')"
-  And I wait 10 seconds
+  And I wait for 10 seconds
   And I see no difference for "level reset"
   And I press keys "Here is my response!" for element ".response"
   Then I press "runButton"
