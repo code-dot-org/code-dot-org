@@ -105,7 +105,7 @@ class SchoolStatsByYear < ApplicationRecord
   # Percentage of underrepresented minorities students
   # Note these are values between 0-100, not 0-1!
   def urm_percent
-    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
+    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.sum)
   end
 
   # Percentage of free/reduced lunch eligible students
