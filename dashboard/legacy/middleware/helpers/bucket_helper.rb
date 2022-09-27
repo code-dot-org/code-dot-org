@@ -56,7 +56,7 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, storage_app_id
     track_list_operation 'BucketHelper.app_size'
-    s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
+    s3.list_objects(bucket: @bucket, prefix: prefix).contents.sum(&:size).to_i
   end
 
   #
@@ -77,7 +77,7 @@ class BucketHelper
     objects = s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
     target_object = objects.find {|x| x.key == target_object_prefix}
 
-    app_size = objects.map(&:size).reduce(:+).to_i
+    app_size = objects.sum(&:size).to_i
     object_size = target_object.nil? ? nil : target_object.size.to_i
 
     [object_size, app_size]

@@ -71,7 +71,6 @@ import {
 import MobileControls from './gamelab/MobileControls';
 import Exporter from './gamelab/Exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -115,7 +114,6 @@ export default class P5Lab {
     /** @private {JsInterpreterLogger} */
     this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-    this.generatedProperties = {};
     this.eventHandlers = {};
     this.Globals = {};
     this.currentCmdQueue = null;
@@ -466,13 +464,6 @@ export default class P5Lab {
         defaultSprites /* spritesForV3Migration */,
         this.isBlockly
       )
-    );
-
-    this.generatedProperties = {
-      ...config.initialGeneratedProperties
-    };
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
     );
 
     // Pre-register all audio preloads with our Sounds API, which will load
@@ -1568,18 +1559,6 @@ export default class P5Lab {
         );
       })
     );
-  }
-
-  /**
-   * Get the project properties for upload to the sources API.
-   * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
-   */
-  getGeneratedProperties() {
-    // Must return a new object instance each time so the project
-    // system can properly compare currentSources vs newSources
-    return {
-      ...this.generatedProperties
-    };
   }
 
   /**
