@@ -42,7 +42,7 @@ import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArti
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import queryString from 'query-string';
-import DCDO from '@cdo/apps/dcdo';
+import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 
 const ButtonState = {
   UP: 0,
@@ -148,19 +148,6 @@ Dance.prototype.init = function(config) {
   });
 
   this.initSongsPromise = this.initSongs(config);
-
-  // As students add new characters to their programs,
-  // load sprites asynchronously. Previously, we waited to load
-  // sprites once students hit the run button.
-  // This is in place to support iOS, which will not play audio
-  // if started asynchronously after fetching sprites.
-  if (!!DCDO.get('use-html5-audio-dance-party', true)) {
-    const computeCharactersReferenced = () =>
-      this.computeCharactersReferenced(this.studioApp_.getCode());
-    this.studioApp_.addChangeHandler(() =>
-      this.nativeAPI?.ensureSpritesAreLoaded(computeCharactersReferenced())
-    );
-  }
 
   this.awaitTimingMetrics();
 
@@ -628,8 +615,7 @@ Dance.prototype.initInterpreter = function() {
 
   const studentCode = this.studioApp_.getCode();
 
-  let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
-  code += studentCode;
+  const code = danceCode + studentCode;
 
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
