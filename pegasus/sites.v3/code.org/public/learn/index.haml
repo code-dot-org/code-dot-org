@@ -70,7 +70,7 @@ style_min: false
       - else
         = view :mobile_header_responsive
 
-  - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
+  - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
     .banner.container_responsive{style: "display: flex"}
       .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
       .col-33
