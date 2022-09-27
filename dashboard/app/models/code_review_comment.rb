@@ -2,18 +2,18 @@
 #
 # Table name: code_review_comments
 #
-#  id                     :bigint           not null, primary key
-#  code_review_request_id :integer          not null
-#  commenter_id           :integer
-#  is_resolved            :boolean          not null
-#  comment                :text(16777215)
-#  deleted_at             :datetime
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
+#  id             :bigint           not null, primary key
+#  code_review_id :integer          not null
+#  commenter_id   :integer
+#  is_resolved    :boolean          not null
+#  comment        :text(16777215)
+#  deleted_at     :datetime
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
-#  index_code_review_comments_on_code_review_request_id  (code_review_request_id)
+#  index_code_review_comments_on_code_review_id  (code_review_id)
 #
 class CodeReviewComment < ApplicationRecord
   belongs_to :commenter, class_name: 'User', optional: true
