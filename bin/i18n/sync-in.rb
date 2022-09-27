@@ -25,7 +25,6 @@ def sync_in
   localize_shared_functions
   localize_course_offerings
   localize_docs
-  localize_scripts
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
