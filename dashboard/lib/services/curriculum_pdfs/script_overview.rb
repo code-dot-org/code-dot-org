@@ -19,6 +19,7 @@ module Services
           return nil unless script&.seeded_from
           version_number = Time.parse(script.seeded_from).to_s(:number)
           filename = ActiveStorage::Filename.new(script.localized_title + ".pdf").sanitized
+          filename = canonicalize_s3_filename(filename)
           filename = CGI.escape(filename) if as_url
           return Pathname.new(File.join(script.name, version_number, filename))
         end
@@ -52,6 +53,7 @@ module Services
 
           # Include a PDF of the /s/script.name page itself
           script_filename = ActiveStorage::Filename.new("script.#{script.name}.pdf").sanitized
+          script_filename = canonicalize_s3_filename(script_filename)
           script_path = File.join(pdfs_dir, script_filename)
           # Make sure to specify
           # 1. 'no_redirect' so we're guaranteed to get the actual script we want
