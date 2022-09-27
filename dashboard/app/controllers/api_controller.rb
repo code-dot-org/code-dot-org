@@ -436,7 +436,7 @@ class ApiController < ApplicationController
     if current_user
       if params[:user_id].present?
         user = User.find(params[:user_id])
-        return head :forbidden unless user.student_of?(current_user)
+        return head :forbidden unless user.student_of?(current_user) || user.id == current_user.id
       else
         user = current_user
       end
