@@ -535,103 +535,232 @@ describe('Java Lab Editor Test', () => {
     });
 
     describe('Moving file tabs', () => {
-      it('When moveTabLeft is called, activeTab is swapped with tab to the left', () => {
+      describe('When there are 3 or more tabs in Java Lab editor', () => {
+        let editor;
+        let javalabEditor;
+        beforeEach(() => {
+          editor = createWrapper();
+          javalabEditor = editor.find('JavalabEditor').instance();
+          store.dispatch(
+            setAllSourcesAndFileMetadata({
+              'Class1.java': {
+                text: '',
+                tabOrder: 0,
+                isVisible: true,
+                isValidation: false
+              },
+              'Class2.java': {
+                text: '',
+                tabOrder: 1,
+                isVisible: true,
+                isValidation: false
+              },
+              'Class3.java': {
+                text: '',
+                tabOrder: 2,
+                isVisible: true,
+                isValidation: false
+              }
+            })
+          );
+        });
+
+        it('When moveTabLeft is called, activeTab is swapped with tab to the left', () => {
+          javalabEditor.setState({
+            showMenu: true,
+            contextTarget: 'file-1'
+          });
+          store.dispatch(setActiveTabKey('file-1'));
+          javalabEditor.moveTabLeft();
+          expect(javalabEditor.props.activeTabKey).to.equal('file-1');
+          expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
+            'file-1',
+            'file-0',
+            'file-2'
+          ]);
+          expect(javalabEditor.state.showMenu).to.be.false;
+          expect(javalabEditor.state.contextTarget).to.be.null;
+        });
+
+        it('When moveTabRight is called, activeTab is swapped with tab to the right', () => {
+          javalabEditor.setState({
+            showMenu: true,
+            contextTarget: 'file-1'
+          });
+          store.dispatch(setActiveTabKey('file-1'));
+          javalabEditor.moveTabRight();
+          expect(javalabEditor.props.activeTabKey).to.equal('file-1');
+          expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
+            'file-0',
+            'file-2',
+            'file-1'
+          ]);
+          expect(javalabEditor.state.showMenu).to.be.false;
+          expect(javalabEditor.state.contextTarget).to.be.null;
+        });
+
+        it('When moveTabLeft is called and activeTab is leftmost tab, no change occurs', () => {
+          javalabEditor.setState({
+            showMenu: true,
+            contextTarget: 'file-0'
+          });
+          store.dispatch(setActiveTabKey('file-0'));
+          javalabEditor.moveTabLeft();
+          expect(javalabEditor.props.activeTabKey).to.equal('file-0');
+          expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
+            'file-0',
+            'file-1',
+            'file-2'
+          ]);
+          expect(javalabEditor.state.showMenu).to.be.false;
+          expect(javalabEditor.state.contextTarget).to.be.null;
+        });
+
+        it('When moveTabRight is called and activeTab is rightmost tab, no change occurs', () => {
+          javalabEditor.setState({
+            showMenu: true,
+            contextTarget: 'file-2'
+          });
+          store.dispatch(setActiveTabKey('file-2'));
+          javalabEditor.moveTabRight();
+          expect(javalabEditor.props.activeTabKey).to.equal('file-2');
+          expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
+            'file-0',
+            'file-1',
+            'file-2'
+          ]);
+          expect(javalabEditor.state.showMenu).to.be.false;
+          expect(javalabEditor.state.contextTarget).to.be.null;
+        });
+      });
+
+      describe('When there is only one tab in Java Lab editor', () => {
+        it('When moveTabRight and moveTabLeft are called and there is only one file, no change occurs', () => {
+          const editor = createWrapper();
+          const javalabEditor = editor.find('JavalabEditor').instance();
+          javalabEditor.setState({
+            showMenu: true,
+            contextTarget: 'file-0'
+          });
+          store.dispatch(setActiveTabKey('file-0'));
+          store.dispatch(setOrderedTabKeys(['file-0']));
+          javalabEditor.moveTabRight();
+          expect(javalabEditor.props.activeTabKey).to.equal('file-0');
+          expect(javalabEditor.props.orderedTabKeys).to.deep.equal(['file-0']);
+          javalabEditor.moveTabLeft();
+          expect(javalabEditor.props.activeTabKey).to.equal('file-0');
+          expect(javalabEditor.props.orderedTabKeys).to.deep.equal(['file-0']);
+          expect(javalabEditor.state.showMenu).to.be.false;
+          expect(javalabEditor.state.contextTarget).to.be.null;
+        });
+      });
+    });
+
+    describe('tabOrders of files in sources', () => {
+      it('When there gaps in file tabOrders (projects with validation and hidden files', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
-        javalabEditor.setState({
-          showMenu: true,
-          contextTarget: 'file-1'
-        });
-        store.dispatch(setActiveTabKey('file-1'));
-        store.dispatch(setOrderedTabKeys(['file-0', 'file-1', 'file-2']));
-        javalabEditor.moveTabLeft();
-        expect(javalabEditor.props.activeTabKey).to.equal('file-1');
+        store.dispatch(
+          setAllSourcesAndFileMetadata({
+            'Class1.java': {
+              text: '',
+              tabOrder: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {
+              text: '',
+              tabOrder: 2,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class3.java': {
+              text: '',
+              tabOrder: 4,
+              isVisible: true,
+              isValidation: false
+            }
+          })
+        );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
-          'file-1',
           'file-0',
+          'file-1',
           'file-2'
         ]);
-        expect(javalabEditor.state.showMenu).to.be.false;
-        expect(javalabEditor.state.contextTarget).to.be.null;
+        expect(javalabEditor.props.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java',
+          'file-2': 'Class3.java'
+        });
       });
-
-      it('When moveTabRight is called, activeTab is swapped with tab to the right', () => {
+      it('When file tabOrders are invalid - tabOrders undefined', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
-        javalabEditor.setState({
-          showMenu: true,
-          contextTarget: 'file-1'
-        });
-        store.dispatch(setActiveTabKey('file-1'));
-        store.dispatch(setOrderedTabKeys(['file-0', 'file-1', 'file-2']));
-        javalabEditor.moveTabRight();
-        expect(javalabEditor.props.activeTabKey).to.equal('file-1');
-        expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
-          'file-0',
-          'file-2',
-          'file-1'
-        ]);
-        expect(javalabEditor.state.showMenu).to.be.false;
-        expect(javalabEditor.state.contextTarget).to.be.null;
-      });
-
-      it('When moveTabLeft is called and activeTab is leftmost tab, no change occurs', () => {
-        const editor = createWrapper();
-        const javalabEditor = editor.find('JavalabEditor').instance();
-        javalabEditor.setState({
-          showMenu: true,
-          contextTarget: 'file-0'
-        });
-        store.dispatch(setActiveTabKey('file-0'));
-        store.dispatch(setOrderedTabKeys(['file-0', 'file-1', 'file-2']));
-        javalabEditor.moveTabLeft();
-        expect(javalabEditor.props.activeTabKey).to.equal('file-0');
+        store.dispatch(
+          setAllSourcesAndFileMetadata({
+            'Class1.java': {
+              text: '',
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {
+              text: '',
+              isVisible: true,
+              isValidation: false
+            },
+            'Class3.java': {
+              text: '',
+              isVisible: true,
+              isValidation: false
+            }
+          })
+        );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
           'file-1',
           'file-2'
         ]);
-        expect(javalabEditor.state.showMenu).to.be.false;
-        expect(javalabEditor.state.contextTarget).to.be.null;
+        expect(javalabEditor.props.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java',
+          'file-2': 'Class3.java'
+        });
       });
-
-      it('When moveTabRight is called and activeTab is rightmost tab, no change occurs', () => {
+      it('When file tabOrders invalid - duplicates', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
-        javalabEditor.setState({
-          showMenu: true,
-          contextTarget: 'file-2'
-        });
-        store.dispatch(setActiveTabKey('file-2'));
-        store.dispatch(setOrderedTabKeys(['file-0', 'file-1', 'file-2']));
-        javalabEditor.moveTabRight();
-        expect(javalabEditor.props.activeTabKey).to.equal('file-2');
+        store.dispatch(
+          setAllSourcesAndFileMetadata({
+            'Class1.java': {
+              text: '',
+              tabOrder: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {
+              text: '',
+              tabOrder: 0,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class3.java': {
+              text: '',
+              tabOrder: 1,
+              isVisible: true,
+              isValidation: false
+            }
+          })
+        );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
           'file-1',
           'file-2'
         ]);
-        expect(javalabEditor.state.showMenu).to.be.false;
-        expect(javalabEditor.state.contextTarget).to.be.null;
-      });
-
-      it('When moveTabRight and moveTabLeft are called and there is only one file, no change occurs', () => {
-        const editor = createWrapper();
-        const javalabEditor = editor.find('JavalabEditor').instance();
-        javalabEditor.setState({
-          showMenu: true,
-          contextTarget: 'file-0'
+        expect(javalabEditor.props.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java',
+          'file-2': 'Class3.java'
         });
-        store.dispatch(setActiveTabKey('file-0'));
-        store.dispatch(setOrderedTabKeys(['file-0']));
-        javalabEditor.moveTabRight();
-        expect(javalabEditor.props.activeTabKey).to.equal('file-0');
-        expect(javalabEditor.props.orderedTabKeys).to.deep.equal(['file-0']);
-        javalabEditor.moveTabLeft();
-        expect(javalabEditor.props.activeTabKey).to.equal('file-0');
-        expect(javalabEditor.props.orderedTabKeys).to.deep.equal(['file-0']);
-        expect(javalabEditor.state.showMenu).to.be.false;
-        expect(javalabEditor.state.contextTarget).to.be.null;
       });
     });
 
