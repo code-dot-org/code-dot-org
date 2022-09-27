@@ -736,7 +736,6 @@ function getFilters({robotics, mobile}) {
         {name: 'computers', text: i18n.filterPlatformComputers()},
         {name: 'android', text: i18n.filterPlatformAndroid()},
         {name: 'ios', text: i18n.filterPlatformIos()},
-        {name: 'screenreader', text: i18n.filterPlatformScreenReader()},
         {name: 'no-internet', text: i18n.filterPlatformNoInternet()},
         {name: 'no-computers', text: i18n.filterPlatformNoComputers()}
       ]
@@ -771,6 +770,17 @@ function getFilters({robotics, mobile}) {
         {name: '1hour', text: i18n.filterLength1Hour()},
         {name: '1hour-follow', text: i18n.filterLength1HourFollow()},
         {name: 'few-hours', text: i18n.filterLengthFewHours()}
+      ]
+    },
+    {
+      name: 'accessibility',
+      text: i18n.filterAccessibility(),
+      entries: [
+        {name: 'screenreader', text: i18n.filterAccessibilityScreenReader()},
+        {name: 'tts', text: i18n.filterAccessibilityTTS()},
+        {name: 'keyboard', text: i18n.filterAccessibilityKeyboard()},
+        {name: 'captions', text: i18n.filterAccessibilityCaptions()},
+        {name: 'highcontrast', text: i18n.filterAccessibilityHighContrast()}
       ]
     },
     {
