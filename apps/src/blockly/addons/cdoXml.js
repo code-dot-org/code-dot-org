@@ -44,11 +44,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  invisible blocks don't cause the visible blocks to flow
     //  differently, which could leave gaps between the visible blocks.
     const blocks = [];
-    /**
-     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-     */
-    Array.prototype.forEach.call(xml.childNodes, function(xmlChild) {
+    xml.childNodes.forEach(xmlChild => {
       if (xmlChild.nodeName.toLowerCase() !== 'block') {
         // skip non-block xml elements
         return;
@@ -63,25 +59,22 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       });
     });
 
+    // Note that RTL languages position blocks from the left within a
+    // blockSpace. For instructions and embedded hints, there is no viewWidth,
+    // so we determine the starting point based on the width of the block.
     const metrics = blockSpace.getMetrics();
     const viewWidth = metrics ? metrics.viewWidth : 0;
-    const width = blocks[0]
+    const blockWidth = blocks[0]
       ? blocks[0].blockly_block.getHeightWidth().width
       : 0;
     const padding = 16;
     const verticalSpaceBetweenBlocks = 10;
 
-    // Block positioning rules:
-    // If the block XML has X/Y coordinates, use them to set the block
-    // position. Note that RTL languages position from the left.
-    // Otherwise, position the block in line with other blocks,
-    // flowing from top to bottom. Blocks with absolute Y positions
-    // do not influence the placement of other blocks.
     let cursor = {
       x: blockSpace.RTL
         ? viewWidth
           ? viewWidth - padding
-          : width + padding
+          : blockWidth + padding
         : padding,
       y: padding
     };
