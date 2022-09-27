@@ -19,6 +19,7 @@ module Services
         # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+('21-'22)+-+Resources.pdf>
         def get_script_resources_pathname(script, as_url = false)
           filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
+          filename = canonicalize_s3_filename(filename)
           filename = CGI.escape(filename) if as_url
           script_overview_pathname = get_script_overview_pathname(script)
           return nil unless script_overview_pathname
@@ -121,6 +122,7 @@ module Services
           )
 
           filename = ActiveStorage::Filename.new("lesson.#{lesson.key}.title.pdf").sanitized
+          filename = canonicalize_s3_filename(filename)
           path = File.join(directory, filename)
 
           PDF.generate_from_html(page_content, path)
@@ -153,6 +155,7 @@ module Services
         # based on the key of that Resource) to the given directory.
         def fetch_resource_pdf(resource, directory="/tmp/")
           filename = ActiveStorage::Filename.new("resource.#{resource.key}.pdf").sanitized
+          filename = canonicalize_s3_filename(filename)
           path = File.join(directory, filename)
           return path if File.exist?(path)
           return fetch_url_to_path(resource.url, path)
