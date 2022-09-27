@@ -726,7 +726,7 @@ describe('Java Lab Editor Test', () => {
           'file-2': 'Class3.java'
         });
       });
-      it('When file tabOrders invalid - duplicates', () => {
+      it('When file tabOrders are invalid - duplicate tabOrders', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
