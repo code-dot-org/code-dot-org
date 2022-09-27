@@ -2,6 +2,7 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/aws/cloudfront'
 require 'tempfile'
 
 namespace :ci do
@@ -81,10 +82,10 @@ namespace :ci do
     ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text', color: 'red'
   end
 
-  desc 'flush CDN and frontend caches'
-  task :flush_cache do
+  desc 'flush Content Distribution Network (CDN) caches'
+  task :flush_cloudfront_cache do
     ChatClient.wrap('Flush cache') do
-      RakeUtils.system "bin/flush_cache"
+      AWS::CloudFront.invalidate_caches
     end
   end
 
@@ -92,7 +93,7 @@ namespace :ci do
   all_tasks << 'firebase:ci'
   all_tasks << :build
   all_tasks << :deploy_multi
-  all_tasks << :flush_cache
+  all_tasks << :flush_cloudfront_cache
   all_tasks << :publish_github_release if rack_env?(:production)
   task all: all_tasks
 
