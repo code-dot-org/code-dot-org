@@ -10,7 +10,7 @@ import queryString from 'query-string';
 import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
 import Tabs from './Tabs';
 import Timeline from './Timeline';
-import {ALL_BLOCKS} from './blockly/allBlocks';
+import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
@@ -227,14 +227,14 @@ class MusicView extends React.Component {
         'workspaceBackgroundColour': '#222'
       },*/
 
-    for (let blockType of Object.keys(ALL_BLOCKS)) {
+    for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
         init: function() {
-          this.jsonInit(ALL_BLOCKS[blockType].definition);
+          this.jsonInit(MUSIC_BLOCKS[blockType].definition);
         }
       };
 
-      Blockly.JavaScript[blockType] = ALL_BLOCKS[blockType].generator;
+      Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
 
     const container = document.getElementById('blocklyDiv');
