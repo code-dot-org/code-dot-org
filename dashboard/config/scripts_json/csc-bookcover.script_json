@@ -1,0 +1,211 @@
+{
+  "script": {
+    "name": "csc-bookcover",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csc-bookcover",
+    "serialized_at": "2022-09-26 21:38:32 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csc-bookcover"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Book Cover ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "29c4edab-2385-4c81-adbb-b3e2ac09e014",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "29c4edab-2385-4c81-adbb-b3e2ac09e014",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4370f514-0009-466e-bef0-dffccbcb861e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e",
+        "lesson_activity.key": "29c4edab-2385-4c81-adbb-b3e2ac09e014"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+      },
+      "level_keys": [
+        "CourseF_video_introSpriteLab_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_title"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+      },
+      "level_keys": [
+        "csc_bookcover_title"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_background"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+      },
+      "level_keys": [
+        "csc_bookcover_background"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CourseF_video_introSpriteLab_2021",
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_title",
+        "script_level.level_keys": [
+          "csc_bookcover_title"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_background",
+        "script_level.level_keys": [
+          "csc_bookcover_background"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
