@@ -7,9 +7,11 @@ import {InitSound, GetCurrentAudioTime, PlaySound, StopSound} from './sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
-import {baseToolbox, createMusicToolbox} from '@cdo/apps/music/blocks/toolbox';
+import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
 import Tabs from './Tabs';
 import Timeline from './Timeline';
+import {MUSIC_BLOCKS} from './blockly/musicBlocks';
+import {BlockTypes} from './blockly/blockTypes';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
@@ -195,46 +197,6 @@ class MusicView extends React.Component {
   initBlockly = () => {
     var self = this;
 
-    Blockly.Blocks['play_sound'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'play_sound',
-          message0: '%1 play %2 at measure %3',
-          args0: [
-            {
-              type: 'field_image',
-              src: 'https://code.org/shared/images/play-button.png',
-              width: 15,
-              height: 20,
-              alt: '*',
-              flipRtl: false
-            },
-            /*
-            {
-              type: 'field_dropdown',
-              name: 'sound',
-              options: [['lead', 'lead'], ['bass', 'bass'], ['drum', 'drum']]
-            },*/
-            {
-              type: 'input_dummy',
-              name: 'sound'
-            },
-            {
-              type: 'input_value',
-              name: 'measure'
-            }
-          ],
-          inputsInline: true,
-          previousStatement: null,
-          nextStatement: null,
-          colour: 230,
-          tooltip: 'play sound',
-          helpUrl: '',
-          extensions: ['dynamic_menu_extension']
-        });
-      }
-    };
-
     Blockly.blockly_.Extensions.register('dynamic_menu_extension', function() {
       this.getInput('sound').appendField(
         new Blockly.FieldDropdown(function() {
@@ -259,337 +221,21 @@ class MusicView extends React.Component {
       );
     });
 
-    Blockly.Blocks['play_sound_with_variable'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'play_sound',
-          message0: '%1 play %2 at measure %3',
-          args0: [
-            {
-              type: 'field_image',
-              src: 'https://code.org/shared/images/play-button.png',
-              width: 15,
-              height: 20,
-              alt: '*',
-              flipRtl: false
-            },
-            {
-              type: 'field_dropdown',
-              name: 'sound',
-              options: [
-                ['all/lead', 'all/lead'],
-                ['all/bass', 'all/bass'],
-                ['all/drum', 'all/drum']
-              ]
-            },
-            {
-              type: 'field_variable',
-              name: 'var',
-              variable: 'measure'
-            }
-          ],
-          inputsInline: true,
-          previousStatement: null,
-          nextStatement: null,
-          colour: 230,
-          tooltip: 'play sound',
-          helpUrl: ''
-        });
-      }
-    };
-
-    Blockly.Blocks['play_sound_next_measure'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'play_sound_next_measure',
-          message0: '%1 play %2 at next measure',
-          args0: [
-            {
-              type: 'field_image',
-              src: 'https://code.org/shared/images/play-button.png',
-              width: 15,
-              height: 20,
-              alt: '*',
-              flipRtl: false
-            },
-            {
-              type: 'field_dropdown',
-              name: 'sound',
-              options: [
-                ['all/lead', 'all/lead'],
-                ['all/bass', 'all/bass'],
-                ['all/drum', 'all/drum']
-              ]
-            }
-          ],
-          inputsInline: true,
-          previousStatement: null,
-          nextStatement: null,
-          colour: 230,
-          tooltip: 'play sound at next measure',
-          helpUrl: ''
-        });
-      }
-    };
-
-    Blockly.Blocks['when_run'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'when_run',
-          message0: 'when run',
-          inputsInline: true,
-          nextStatement: null,
-          colour: 230,
-          tooltip: 'when run',
-          helpUrl: ''
-        });
-      }
-    };
-
-    Blockly.Blocks['when_trigger'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'when_trigger',
-          message0: 'when trigger',
-          inputsInline: true,
-          nextStatement: null,
-          colour: 230,
-          tooltip: 'when triger',
-          helpUrl: ''
-        });
-      }
-    };
-
-    Blockly.Blocks['loop_from_to'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'loop_from_to',
-          message0: 'loop %1 from %2 to %3',
-          args0: [
-            {
-              type: 'field_variable',
-              name: 'measure',
-              variable: 'measure'
-            },
-            {
-              type: 'field_number',
-              name: 'from',
-              value: 1,
-              min: 1
-            },
-            {
-              type: 'field_number',
-              name: 'to',
-              value: 5,
-              min: 1
-            }
-          ],
-          message1: 'do %1',
-          args1: [
-            {
-              type: 'input_statement',
-              name: 'code'
-            }
-          ],
-          inputsInline: true,
-          previousStatement: null,
-          nextStatement: null,
-          colour: 230,
-          tooltip: 'loop from a number to another number',
-          helpUrl: ''
-        });
-      }
-    };
-
-    Blockly.Blocks['if_even_then'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'if_even_then',
-          message0: 'if %1 is even then %2',
-          args0: [
-            {
-              type: 'field_variable',
-              name: 'measure',
-              variable: 'measure'
-            },
-            {
-              type: 'input_statement',
-              name: 'code'
-            }
-          ],
-          inputsInline: true,
-          previousStatement: null,
-          nextStatement: null,
-          colour: 230,
-          tooltip: 'does something if the measure is even',
-          helpUrl: ''
-        });
-      }
-    };
-
-    Blockly.Blocks['variable_get'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'variables_get',
-          message0: '%1',
-          args0: [
-            {
-              type: 'field_variable',
-              name: 'var',
-              variable: 'measure'
-            }
-          ],
-          output: null,
-          colour: '24'
-        });
-      }
-    };
-
-    Blockly.Blocks['variable_set'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'variables_set',
-          message0: '%{BKY_VARIABLES_SET}',
-          args0: [
-            {
-              type: 'field_variable',
-              name: 'var',
-              variable: 'measure'
-            },
-            {
-              type: 'input_value',
-              name: 'value'
-            }
-          ],
-          previousStatement: null,
-          nextStatement: null,
-          colour: '24'
-        });
-      }
-    };
-
-    Blockly.Blocks['example_number'] = {
-      init: function() {
-        this.jsonInit({
-          type: 'example_number',
-          message0: '%1',
-          args0: [
-            {
-              type: 'field_number',
-              name: 'num',
-              value: 1,
-              min: 1
-            }
-          ],
-          output: 'Number'
-        });
-      }
-    };
-
-    Blockly.JavaScript.when_run = function() {
-      // Generate JavaScript for handling click event.
-      return '\n';
-    };
-
-    Blockly.JavaScript.when_trigger = function() {
-      // Generate JavaScript for handling click event.
-      return '\n';
-    };
-
-    Blockly.JavaScript.play_sound = function(ctx) {
-      return (
-        'Music.play_sound("' +
-        ctx.getFieldValue('sound') +
-        '", ' +
-        Blockly.JavaScript.valueToCode(
-          ctx,
-          'measure',
-          Blockly.JavaScript.ORDER_ASSIGNMENT
-        ) +
-        ');\n'
-      );
-    };
-
-    Blockly.JavaScript.play_sound_with_variable = function(ctx) {
-      return (
-        'Music.play_sound("' +
-        ctx.getFieldValue('sound') +
-        '", ' +
-        Blockly.JavaScript.nameDB_.getName(
-          ctx.getFieldValue('var'),
-          Blockly.Names.NameType.VARIABLE
-        ) +
-        ');\n'
-      );
-    };
-
-    Blockly.JavaScript.variable_get = function(ctx) {
-      const code = Blockly.JavaScript.nameDB_.getName(
-        ctx.getFieldValue('var'),
-        Blockly.Names.NameType.VARIABLE
-      );
-      return [code, Blockly.JavaScript.ORDER_ATOMIC];
-    };
-
-    Blockly.JavaScript.variable_set = function(ctx) {
-      // Variable setter.
-      const argument0 =
-        Blockly.JavaScript.valueToCode(
-          ctx,
-          'value',
-          Blockly.JavaScript.ORDER_ASSIGNMENT
-        ) || '0';
-      const varName = Blockly.JavaScript.nameDB_.getName(
-        ctx.getFieldValue('var'),
-        Blockly.Names.NameType.VARIABLE
-      );
-      return varName + ' = ' + argument0 + ';\n';
-    };
-
-    Blockly.JavaScript.example_number = function(ctx) {
-      // Numeric value.
-      const code = Number(ctx.getFieldValue('num'));
-      const order =
-        code >= 0
-          ? Blockly.JavaScript.ORDER_ATOMIC
-          : Blockly.JavaScript.ORDER_UNARY_NEGATION;
-      return [code, order];
-    };
-
     /*var theme = Blockly.Theme.defineTheme('dark', {
       'base': Blockly.Themes.Classic,
       'componentStyles': {
         'workspaceBackgroundColour': '#222'
       },*/
 
-    Blockly.JavaScript.play_sound_next_measure = function(ctx) {
-      return (
-        'Music.play_sound_next_measure("' + ctx.getFieldValue('sound') + '");\n'
-      );
-    };
+    for (let blockType of Object.keys(MUSIC_BLOCKS)) {
+      Blockly.Blocks[blockType] = {
+        init: function() {
+          this.jsonInit(MUSIC_BLOCKS[blockType].definition);
+        }
+      };
 
-    Blockly.JavaScript.loop_from_to = function(ctx) {
-      return (
-        'for (var measure = ' +
-        ctx.getFieldValue('from') +
-        '; measure <= ' +
-        ctx.getFieldValue('to') +
-        '; measure++) {\n' +
-        //ctx.getFieldValue('code') +
-        Blockly.JavaScript.statementToCode(ctx, 'code') +
-        '\n}\n'
-      );
-    };
-
-    Blockly.JavaScript.if_even_then = function(ctx) {
-      return (
-        'if(' +
-        'measure % 2 == 0' +
-        ') {\n' +
-        Blockly.JavaScript.statementToCode(ctx, 'code') +
-        '\n}\n'
-      );
-    };
+      Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
+    }
 
     const container = document.getElementById('blocklyDiv');
 
@@ -603,7 +249,11 @@ class MusicView extends React.Component {
     this.resizeBlockly();
 
     const xml = parseXmlElement(
-      '<xml><block type="when_run" deletable="false" x="30" y="30"></block><block type="when_trigger" deletable="false" x="30" y="170"></block></xml>'
+      `<xml><block type="${
+        BlockTypes.WHEN_RUN
+      }" deletable="false" x="30" y="30"></block><block type="${
+        BlockTypes.WHEN_TRIGGER
+      }" deletable="false" x="30" y="170"></block></xml>`
     );
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 
@@ -707,8 +357,8 @@ class MusicView extends React.Component {
     );
 
     const events = {
-      whenRunButton: {code: generator('when_run')},
-      whenTriggerButton: {code: generator('when_trigger')}
+      whenRunButton: {code: generator(BlockTypes.WHEN_RUN)},
+      whenTriggerButton: {code: generator(BlockTypes.WHEN_TRIGGER)}
     };
 
     CustomMarshalingInterpreter.evalWithEvents(
