@@ -1526,7 +1526,7 @@ class Script < ApplicationRecord
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
-      announcements: announcements,
+      announcements: localized_announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
@@ -1732,6 +1732,30 @@ class Script < ApplicationRecord
 
   def localized_student_description
     I18n.t "data.script.name.#{name}.student_description"
+  end
+
+  def localized_announcements
+    return announcements if announcements.nil?
+    announcements.deep_dup.each do |announcement|
+      announcement['notice'] = I18n.t(
+        "notice",
+        default: announcement['notice'],
+        scope: [:data, :script_announcements, announcement['key']],
+        smart: true
+      )
+      announcement['details'] = I18n.t(
+        "details",
+        default: announcement['details'],
+        scope: [:data, :script_announcements, announcement['key']],
+        smart: true
+      )
+      announcement['buttonText'] = I18n.t(
+        "buttonText",
+        default: announcement['buttonText'],
+        scope: [:data, :script_announcements, announcement['key']],
+        smart: true
+      )
+    end
   end
 
   def disable_post_milestone?
