@@ -591,4 +591,11 @@ module SharedConstants
     # An unhandleable error that results in a program crash.
     FATAL: 4
   }.freeze
+
+  # Used to translate between Maker APIs and Maker Palette Categories
+  MAKER_PALETTE_CATEGORIES = {
+    'maker' => "Maker",
+    'circuitPlayground' => "Circuit",
+    'microbit' => "micro:bit"
+  }.freeze
 end
