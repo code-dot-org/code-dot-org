@@ -26,6 +26,7 @@ http {
   client_max_body_size 4G;
   keepalive_timeout 30;
 
+<% unless node['cdo-varnish']['enabled'] -%>
   # Copy Accept-Language header to X-Varnish-Accept-Language.
   # TODO: Update application code to read Accept-Language instead of X-Varnish-Accept-Language.
   proxy_set_header X-Varnish-Accept-Language $http_accept_language;
@@ -58,6 +59,15 @@ http {
       proxy_set_header Host $upstream_host;
     }
   }
+<%   redirects = node['cdo-varnish']['redirects'].group_by(&:last).transform_values {|v| v.to_h.keys}
+     redirects.each do |site, domains| -%>
+  server {
+    listen 80;
+    server_name <%=domains.join(' ')%>;
+    return 301 https://<%=site%>$request_uri;
+  }
+<%   end -%>
+<% end -%>
 
   server {
     listen <%= node['cdo-apps']['dashboard']['port'] %> default deferred;
@@ -67,7 +77,6 @@ http {
       proxy_set_header Host $http_host;
     }
   }
-
   server {
     listen <%= node['cdo-apps']['pegasus']['port'] %> default deferred;
     server_name pegasus_proxy;
@@ -76,13 +85,17 @@ http {
       proxy_set_header Host $http_host;
     }
   }
-
   server {
     server_name ssl_proxy;
     listen 443 ssl;
     <%= render 'nginx.erb', cookbook: 'ssl_certificate' %>
     location / {
+<% if node['cdo-varnish']['enabled'] -%>
+      # Pass the request on to Varnish.
+      proxy_pass  http://127.0.0.1;
+<% else -%>
       proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
+<% end -%>
       proxy_set_header Host $http_host;
       proxy_set_header X-Forwarded-Proto https;
     }
