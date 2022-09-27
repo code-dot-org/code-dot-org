@@ -1,0 +1,84 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "**Let's learn to change the size of sprites.**\r\n- Use the new block in the toolbox to change the size of a sprite.\r\n- Make sure to choose a size other than `100`.\r\n\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "rikki",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"To set the size of a sprite just once, you can use this block:\\n<xml><block type=\\\"gamelab_setProp\\\"><field name=\\\"PROPERTY\\\">\\\"scale\\\"</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"purple bunny\\\"</field></block></value><value name=\\\"VAL\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">50</field></block></value></block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b89d953b87a2f4b5c2381dc4915ee774/csc_landmarks_size.mp3\"}]",
+    "project_template_level_name": "csc_landmarks_template",
+    "preload_asset_list": null
+  },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-26T22:20:14.000Z",
+  "user_id": 1196,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-09-26T22:20:14.092+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_location\\\"\"],\"cloned_from\":\"csc_landmarks_location\"},{\"changed_at\":\"2022-09-26 22:21:48 +0000\",\"changed\":[\"long_instructions\",\"authored_hints\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-26 22:23:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"bear"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH"/>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"bear"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"bear"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number">
+              <field name="NUM">50</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

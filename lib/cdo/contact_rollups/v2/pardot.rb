@@ -262,7 +262,7 @@ class PardotV2
   rescue StandardError => e
     # If the input pardot_id does not exist, Pardot will response with
     # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
-    return false if e.message =~ /Pardot request failed with HTTP 400/
+    return false if /Pardot request failed with HTTP 400/.match?(e.message)
     raise e
   end
 
@@ -275,7 +275,7 @@ class PardotV2
   rescue StandardError => e
     # If the input email does not exist, Pardot will response with
     # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
-    return [] if e.message =~ /Pardot request failed with HTTP 400/
+    return [] if /Pardot request failed with HTTP 400/.match?(e.message)
     raise e
   end
 
