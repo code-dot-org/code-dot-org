@@ -7,7 +7,7 @@ class ClassSubmission < Form
     # Class fields
     result[:class_description_s] = required stripped data[:class_description_s]
     result[:class_format_s] = required downcased stripped data[:class_format_s]
-    result[:class_format_other_s] = required stripped data[:class_format_other_s] if result[:class_format_s] =~ /_other$/
+    result[:class_format_other_s] = required stripped data[:class_format_other_s] if /_other$/.match?(result[:class_format_s])
     result[:class_languages_ss] = required stripped data[:class_languages_ss]
     if result[:class_languages_ss].class != FieldError && result[:class_languages_ss].include?('Other')
       result[:class_languages_other_ss] = required stripped csv_multivalue data[:class_languages_other_ss]
@@ -15,7 +15,7 @@ class ClassSubmission < Form
 
     # School fields
     result[:school_name_s] = required stripped data[:school_name_s]
-    result[:school_address_s] = result[:class_format_s] =~ /^online_/ ? nil_if_empty(stripped(data[:school_address_s])) : required(stripped(data[:school_address_s]))
+    result[:school_address_s] = /^online_/.match?(result[:class_format_s]) ? nil_if_empty(stripped(data[:school_address_s])) : required(stripped(data[:school_address_s]))
     result[:school_website_s] = required stripped data[:school_website_s]
     result[:school_level_ss] = required downcased stripped data[:school_level_ss]
     result[:school_gender_s] = required enum(data[:school_gender_s].to_s.strip.downcase, ['both', 'girls', 'boys'])
@@ -160,7 +160,7 @@ class ClassSubmission < Form
 
     ['in_school', 'out_of_school', 'online'].each do |prefix|
       class_format = data['class_format_s']
-      if class_format =~ /^#{prefix}_/
+      if /^#{prefix}_/.match?(class_format)
         new_data['class_format_category_s'] = prefix
         new_data['class_format_subcategory_s'] = class_format.sub(/^#{prefix}_/, '')
       end
