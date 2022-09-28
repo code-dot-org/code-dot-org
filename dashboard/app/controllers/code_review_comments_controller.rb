@@ -10,7 +10,7 @@ class CodeReviewCommentsController < ApplicationController
     @code_review_comment = CodeReviewComment.new(
       {
         comment: params[:comment],
-        code_review_request_id: params[:codeReviewId],
+        code_review_id: params[:codeReviewId],
         commenter_id: current_user.id,
         is_resolved: false
       }
