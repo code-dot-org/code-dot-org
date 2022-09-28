@@ -1,0 +1,107 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "project_template_level_name": "csc_bookcover_template2",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Connect a `say` block under a `when click` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_spriteSay\\\">\\n        <title name=\\\"SPEECH\\\">Hello, world!</title>\\n        <value name=\\\"SPRITE\\\">\\n          <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n            <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db4684f80de2b03bb311a1aec559cc6a/csc_bookcover_clicksay.mp3\"}]",
+    "long_instructions": "**Let’s make your sprites say something when you click on them!**\r\n- Connect a `say` block under a `when clicked` block.\r\n- Select the same costume in each block of code.\r\n- Press the \"Run\" button.\r\n- Click or tap the sprite to have it say something.\r\n\r\n*Extra Challenge: Make both sprites say something when they are clicked!*\r\n\r\n\r\n\r\n",
+    "instructions_icon": "bear",
+    "preload_asset_list": null
+  },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-27T23:21:36.000Z",
+  "user_id": 1196,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-09-27T23:21:36.734+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_prop\\\"\"],\"cloned_from\":\"csc_bookcover_prop\"},{\"changed_at\":\"2022-09-27 23:23:31 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-27 23:24:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_showTitleScreen">
+          <value name="TITLE">
+            <block type="gamelab_textJoin">
+              <field name="TEXT1"/>
+            </block>
+          </value>
+          <value name="SUBTITLE">
+            <block type="gamelab_textJoin">
+              <field name="TEXT1"/>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"sci_fi"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"video_game_controller"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Hello, world!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"video_game_controller"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"video_game_controller"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number" can_disconnect_from_parent="false">
+              <field name="NUM">50</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"video_game_controller"</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
