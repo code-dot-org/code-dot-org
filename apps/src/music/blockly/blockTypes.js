@@ -7,6 +7,7 @@ export const BlockTypes = {
   LOOP_FROM_TO: 'loop_from_to',
   IF_EVEN_THEN: 'if_even_then',
   NUMBER: 'number',
+  ROUND: 'round',
   VARIABLES_GET: 'variables_get',
   VARIABLES_SET: 'variables_set'
 };

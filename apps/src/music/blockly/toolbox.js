@@ -42,6 +42,20 @@ export const baseToolbox = {
         {
           kind: 'block',
           type: BlockTypes.NUMBER
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.ROUND,
+          inputs: {
+            NUM: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
         }
       ]
     },
