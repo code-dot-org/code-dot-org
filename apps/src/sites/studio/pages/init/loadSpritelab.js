@@ -38,9 +38,6 @@ function initializeOptionsAndSpritelab(spritelab, options) {
   options.getAnimationList = spritelab.getSerializedAnimationList.bind(
     spritelab
   );
-  options.getGeneratedProperties = spritelab.getGeneratedProperties.bind(
-    spritelab
-  );
 
   spritelab.injectStudioApp(studioApp());
   appMain(spritelab, levels, options);

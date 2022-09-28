@@ -1160,6 +1160,47 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal(expected, summary[:studentDescription])
   end
 
+  test 'summarize translates announcements' do
+    unit = create :script
+    announcement_key = SecureRandom.uuid
+    unit.announcements = [{
+      'key': announcement_key,
+      'notice': 'Announcement notice',
+      'details': 'Announcement details',
+      'buttonText': 'Announcement button text'
+    }]
+    unit.save!
+
+    # Add translation mapping to the I18n backend
+    test_locale = 'te-ST'
+    localized_notice = 'Localized notice'
+    localized_details = 'Localized details'
+    localized_button_text = 'Localized button text'
+    custom_i18n = {
+      'data' => {
+        'script_announcements' => {
+          announcement_key => {
+            notice: localized_notice,
+            details: localized_details,
+            buttonText: localized_button_text
+          }
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    summary = unit.summarize
+
+    expected_announcements = [{
+      'key' => announcement_key,
+      'notice' => localized_notice,
+      'details' => localized_details,
+      'buttonText' => localized_button_text
+    }]
+    assert_equal expected_announcements, summary[:announcements]
+  end
+
   test 'should generate PLC objects for migrated unit' do
     i18n = {
       'en' => {

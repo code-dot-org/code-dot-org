@@ -58,6 +58,7 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
+import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -69,16 +70,11 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './gamelab/MobileControls';
 import Exporter from './gamelab/Exporter';
-import {
-  expoGenerateApk,
-  expoCheckApkBuild,
-  expoCancelApkBuild
-} from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import DCDO from '@cdo/apps/dcdo';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -103,7 +99,12 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  */
 export default class P5Lab {
   constructor(defaultAnimations = []) {
-    this.defaultAnimations = defaultAnimations;
+    if (!!DCDO.get('use-s3-path-for-default-animations', true)) {
+      this.defaultAnimations = defaultAnimations;
+    } else {
+      this.defaultAnimations = defaultSprites;
+    }
+
     this.skin = null;
     this.level = null;
     this.tickIntervalId = 0;
@@ -120,7 +121,6 @@ export default class P5Lab {
     /** @private {JsInterpreterLogger} */
     this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-    this.generatedProperties = {};
     this.eventHandlers = {};
     this.Globals = {};
     this.currentCmdQueue = null;
@@ -430,26 +430,8 @@ export default class P5Lab {
       }
     }
 
-    const setAndroidExportProps = this.setAndroidExportProps.bind(this);
-
     this.studioApp_.setPageConstants(config, {
-      allowExportExpo: experiments.isEnabled('exportExpo'),
       exportApp: this.exportApp.bind(this),
-      expoGenerateApk: expoGenerateApk.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCheckApkBuild: expoCheckApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCancelApkBuild: expoCancelApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
       channelId: config.channel,
       nonResponsiveVisualizationColumnWidth: APP_WIDTH,
       showDebugButtons: showDebugButtons,
@@ -490,13 +472,6 @@ export default class P5Lab {
         this.defaultAnimations /* animationsForV3Migration */,
         this.isBlockly
       )
-    );
-
-    this.generatedProperties = {
-      ...config.initialGeneratedProperties
-    };
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
     );
 
     // Pre-register all audio preloads with our Sounds API, which will load
@@ -579,54 +554,31 @@ export default class P5Lab {
   }
 
   /**
-   * Export the project for web or use within Expo.
-   * @param {Object} expoOpts
+   * Export the project for web.
    */
-  async exportApp(expoOpts) {
+  async exportApp() {
     await this.whenAnimationsAreReady();
     return this.exportAppWithAnimations(
       project.getCurrentName() || 'my-app',
-      getStore().getState().animationList,
-      expoOpts
-    );
-  }
-
-  setAndroidExportProps(props) {
-    // Spread the previous object so changes here will always fail shallow
-    // compare and trigger react prop changes
-    this.generatedProperties.export = {
-      ...this.generatedProperties.export,
-      android: props
-    };
-    project.projectChanged();
-    project.saveIfSourcesChanged();
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
+      getStore().getState().animationList
     );
   }
 
   /**
-   * Export the project for web or use within Expo.
+   * Export the project for web.
    * @param {string} appName
    * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
-   * @param {Object} expoOpts
    */
-  exportAppWithAnimations(appName, animationList, expoOpts) {
+  exportAppWithAnimations(appName, animationList) {
     const {pauseAnimationsByDefault} = this.level;
     const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(
       getStore().getState()
     );
-    return Exporter.exportApp(
-      appName,
-      this.studioApp_.editor.getValue(),
-      {
-        animationList,
-        allAnimationsSingleFrame,
-        pauseAnimationsByDefault
-      },
-      expoOpts,
-      this.studioApp_.config
-    );
+    return Exporter.exportApp(appName, this.studioApp_.editor.getValue(), {
+      animationList,
+      allAnimationsSingleFrame,
+      pauseAnimationsByDefault
+    });
   }
 
   /**
@@ -1622,18 +1574,6 @@ export default class P5Lab {
         );
       })
     );
-  }
-
-  /**
-   * Get the project properties for upload to the sources API.
-   * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
-   */
-  getGeneratedProperties() {
-    // Must return a new object instance each time so the project
-    // system can properly compare currentSources vs newSources
-    return {
-      ...this.generatedProperties
-    };
   }
 
   /**

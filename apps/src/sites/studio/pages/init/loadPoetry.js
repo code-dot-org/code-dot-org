@@ -36,7 +36,6 @@ export default function loadPoetry(options) {
 function initializeOptionsAndPoetry(poetry, options) {
   // Bind helper that provides project metadata for gamelab autosave
   options.getAnimationList = poetry.getSerializedAnimationList.bind(poetry);
-  options.getGeneratedProperties = poetry.getGeneratedProperties.bind(poetry);
 
   poetry.injectStudioApp(studioApp());
   appMain(poetry, levels, options);
