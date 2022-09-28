@@ -200,12 +200,12 @@ class MicrobitDescription extends React.Component {
         </center>
         <SafeMarkdown
           markdown={
-          'The [micro:bit](https://microbit.org/) is a circuit board designed by the BBC with a variety of sensors and other components, like a compass and an 8 by 8 array of programmable LEDs.'
+            'The [micro:bit](https://microbit.org/) is a circuit board designed by the BBC with a variety of sensors and other components, like a compass and an 8 by 8 array of programmable LEDs.'
           }
         />
         <SafeMarkdown
           markdown={
-          'Please follow the instructions below to connect your board to Code.org.'
+            'Please follow the instructions below to connect your board to Code.org.'
           }
         />
       </div>
@@ -215,13 +215,13 @@ class MicrobitDescription extends React.Component {
 
 class CircuitPlaygroundDescription extends React.Component {
   render() {
-    return(
+    return (
       <div>
         <h2>The Circuit Playground</h2>
         <center>
           <a
             href={
-            'https://learn.adafruit.com/introducing-circuit-playground/overview'
+              'https://learn.adafruit.com/introducing-circuit-playground/overview'
             }
           >
             <img
