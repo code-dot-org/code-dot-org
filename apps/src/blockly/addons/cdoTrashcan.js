@@ -167,11 +167,13 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         toolboxVisibility = 'hidden';
       }
 
+      // query selector for uncategorized toolbox contents
       document
         .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
         .forEach(x => {
           x.style.visibility = toolboxVisibility;
         });
+      // query selector for categorized toolbox contents
       document.querySelectorAll('.blocklyToolboxContents').forEach(x => {
         x.style.visibility = toolboxVisibility;
       });
