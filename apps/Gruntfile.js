@@ -561,6 +561,12 @@ describe('entry tests', () => {
     }
   };
 
+  config.ts = {
+    default: {
+      tsconfig: './tsconfig.json'
+    }
+  };
+
   var appsEntries = _.fromPairs(
     appsToBuild.map(function(app) {
       return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
@@ -599,6 +605,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/devise/registrations/edit.js',
     essential: './src/sites/studio/pages/essential.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+    'labs/show': './src/sites/studio/pages/labs/show.js',
     'layouts/_parent_email_banner':
       './src/sites/studio/pages/layouts/_parent_email_banner.js',
     'layouts/_race_interstitial':
@@ -1395,4 +1402,6 @@ describe('entry tests', () => {
   grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
+
+  grunt.registerTask('default', ['ts']);
 };

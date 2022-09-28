@@ -1,0 +1,6 @@
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/labs/show.js'), data: @script_data}
+
+#lab-container
+  -# populated by react
