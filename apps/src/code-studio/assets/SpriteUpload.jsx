@@ -307,7 +307,7 @@ export default class AnimationUpload extends React.Component {
       case Status.SUCCEEDED:
         return 'This path and filename are available.';
       case Status.ALERT:
-        return 'Filename already exists at this path. Please rename and try again.';
+        return 'Filename already exists at this path. Please rename and reupload, then try again.';
       case Status.WAITING:
         return 'Select a file and destination above.';
     }
