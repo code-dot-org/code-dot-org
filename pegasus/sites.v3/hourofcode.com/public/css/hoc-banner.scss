@@ -13,6 +13,10 @@ section.banner.homepage {
 
   h1 {
     font-size: 4em;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 3.5em;
+    }
   }
 
   h2 {
@@ -21,6 +25,7 @@ section.banner.homepage {
 
   .wrapper {
     padding: 4em 0 8em;
+    width: 100%;
   }
 }
 
