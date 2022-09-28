@@ -1,16 +1,24 @@
 import React, {useState} from 'react';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import {navigateToHref} from '@cdo/apps/utils';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const DataDocFormEditor = props => {
   const {dataDocKey, originalDataDocName, originalDataDocContent} = props;
-  const [dataDocContent, setDataDocContent] = useState(originalDataDocContent);
   const [dataDocName, setDataDocName] = useState(originalDataDocName);
+  const [dataDocContent, setDataDocContent] = useState(originalDataDocContent);
+  const [isSaving, setIsSaving] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(null);
 
-  const save = saveAndClose => {
+  const save = (e, saveAndClose) => {
+    if (isSaving) {
+      return;
+    }
+    setIsSaving(true);
     $.ajax({
       url: `/data_docs/${dataDocKey}`,
       method: 'PUT',
@@ -19,6 +27,8 @@ const DataDocFormEditor = props => {
         content: dataDocContent
       }
     }).done(() => {
+      setIsSaving(false);
+      setLastUpdated(Date.now());
       if (saveAndClose) {
         navigateToHref(`/data_docs/${dataDocKey}`);
       }
@@ -67,20 +77,7 @@ const DataDocFormEditor = props => {
         markdown={dataDocContent || ''}
       />
       <br />
-      <button
-        className="btn btn-gray"
-        type="button"
-        onClick={() => save(false)}
-      >
-        Save and Keep Editing
-      </button>
-      <button
-        className="btn btn-primary"
-        type="button"
-        onClick={() => save(true)}
-      >
-        Save and Close
-      </button>
+      <SaveBar handleSave={save} isSaving={isSaving} lastSaved={lastUpdated} />
     </div>
   );
 };
