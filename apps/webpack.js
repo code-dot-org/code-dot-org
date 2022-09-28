@@ -186,22 +186,7 @@ var baseConfig = {
           path.resolve(__dirname, 'test'),
           path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images')
         ],
-        // note that in the name template given below, a dash prefixing
-        // the hash is explicitly avoided. If rails tries to serve
-        // this file when asset digests are turned off, it will return a
-        // 404 because it thinks the hash is a digest and it won't
-        // be able to find the file without the hash. :( :(
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1024,
-              // uses the file-loader when file size is over the limit
-              name: '[name]wp[contenthash].[ext]',
-              esModule: false
-            }
-          }
-        ]
+        type: 'asset'
       },
       {
         test: /\.jsx?$/,
@@ -441,7 +426,8 @@ function create(options) {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: `[name]${suffix}`
+      filename: `[name]${suffix}`,
+      assetModuleFilename: '[name]wp[contenthash][ext]'
     },
     devtool: devtool(options),
     entry: entries,
