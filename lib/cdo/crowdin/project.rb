@@ -56,8 +56,8 @@ module Crowdin
         "/projects/#{@crowdin_client.config.project_id}/translations/builds/files/#{file_id}",
         options
       )
-      raise CrowdinInternalServerError.new "Internal Server Error" if response.code == 500
-      raise CrowdinServiceUnavailableError.new "Service Unavailable" if response.code == 503
+      raise CrowdinInternalServerError if response.code == 500
+      raise CrowdinServiceUnavailableError if response.code == 503
 
       response
     rescue Net::ReadTimeout, Net::OpenTimeout, CrowdinInternalServerError, CrowdinServiceUnavailableError => error

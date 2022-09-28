@@ -16,21 +16,13 @@ def with_elapsed
   return Time.at(after - before).utc.strftime('%H:%M:%S')
 end
 
-# dj = Crowdin::Project.new('codeorg', '923a2787d4381052eefa42f769a16192')
-# dj = Crowdin::Project.new('codeorg', '57cc0e4a80c4db5e983106a1fa0ea63e2bb9fc1198fa39c3cd41348c268304fc900e3512b1eaf0b1')
-
-# pj = Crowdin::Client.new do |config|
-#   config.api_token = '57cc0e4a80c4db5e983106a1fa0ea63e2bb9fc1198fa39c3cd41348c268304fc900e3512b1eaf0b1'
-#   config.project_id = '26074'
-# end
-
 def sync_down
   I18nScriptUtils.with_synchronous_stdout do
     puts "Sync down starting"
     logger = Logger.new(STDOUT)
     logger.level = Logger::INFO
 
-    CROWDIN_TEST_PROJECTS.each do |name, options|
+    CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
       api_token = YAML.load_file(options[:identity_file])["api_token"]
       project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
@@ -53,9 +45,6 @@ def sync_down
 
       utils = Crowdin::LegacyUtils.new(project, options)
 
-      # puts "Fetching list of changed files"
-      # elapsed = with_elapsed {utils.fetch_changes}
-      # puts "Changes fetched in #{elapsed}"
       puts "Downloading changed files"
       elapsed = with_elapsed {utils.download_changed_files}
       puts "Files downloaded in #{elapsed}"
