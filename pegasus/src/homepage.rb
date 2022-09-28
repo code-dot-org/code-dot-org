@@ -308,7 +308,7 @@ class Homepage
           id: "at-home-en",
           type: "block",
           title: "homepage_slot_text_title_hoc",
-          text: "homepage_slot_text_blurb_hoc",
+          text: "homepage_slot_text_blurb_hoc_2022",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
           url: "https://hourofcode.com/us",
