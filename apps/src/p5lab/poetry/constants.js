@@ -33,7 +33,6 @@ export const PALETTES = {
 //   in the array.
 // - If the locales attribute is set, then title is used and is not translated.
 // - If the locales attribute is set, then linesSplit is used and is not translated.
-// make sure single quotes look ok
 export const POEMS = {
   hafez: {author: 'Hafez'},
   field: {author: 'Eugene Field'},
