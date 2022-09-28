@@ -5,11 +5,28 @@
   background-size: cover;
   background: url('/images/hoc2022-hero-banner.svg') no-repeat center center;
   background-size: cover;
+  margin-bottom: 2em;
+}
+
+section.banner.homepage {
+  padding: 0;
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .wrapper {
+    padding: 4em 0 8em;
+  }
 }
 
 section.banner {
   text-align: center;
-  color: $black;
+  color: $darkest_gray;
 
   &.hoc-mode {
 
@@ -19,7 +36,7 @@ section.banner {
   }
 
   h1, h2 {
-    color: $black;
+    color: $darkest_gray;
     margin: 0;
   }
 

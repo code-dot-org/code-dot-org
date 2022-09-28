@@ -35,35 +35,17 @@ social:
 %script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
 
 
-#top{style: "position: relative; width: 100%; overflow: hidden;"}
-
-  #fullwidth{style: "width: 100%;"}
-
-    .thegap{style: "height: 1px;"}
-      &nbsp;
-
+#top
+  #fullwidth
     = view :header
-
-    .container
-      .row
+    %section.banner.homepage
+      .wrapper
         - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-          %div{style: "color: black; display: flex"}
-            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 00%; background-size: contain; background-repeat: no-repeat"}
-            .col-sm-12.col-md-4.no-padding-on-narrow
-              #textbacking.no-padding-on-narrow
-                .front-header-banner.no-padding-on-narrow
-                  .front-header-title{style: "color: black; font-size: 52px; line-height: 1.2em"}
-                    = hoc_s(:codeorg_homepage_celebrate_cse, markdown: true)
-                  .front-header-description{style: "margin-bottom: 20px"}
-                    = hoc_s(:hourofcode_homepage_hoc2018_header_line1)
-                %img.hidden-md.hidden-lg{src: "/shared/images/fit-1200/hoc-cse-arrows.png", style: "width: 100%; padding-bottom: 20px"}
-                .ctabuttongroup
-                  #tryittext.ctatext
-                    = view :hoc_action_buttons, hoc_mode: hoc_mode
-              %br/
-              %br/
-            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 0% 0%; background-size: contain; background-repeat: no-repeat"}
-
+          %h1=hoc_s(:hoc2022_header)
+          %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
+          .ctabuttongroup
+            #tryittext.ctatext
+              = view :hoc_action_buttons, hoc_mode: hoc_mode
         - else
           .col-12
             #textbacking
@@ -72,15 +54,9 @@ social:
                   = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
                 .front-header-description
                   = hoc_s(:hourofcode_homepage_hoc2018_header_line1)
-              %br/
-              %br/
               .ctabuttongroup
                 #tryittext.ctatext
                   = view :hoc_action_buttons, hoc_mode: hoc_mode
-            %br/
-            %br/
-
-      %div{style: "clear: both;"}
 
 
 %main
@@ -160,23 +136,6 @@ social:
 
 
 :javascript
-
-  var currentImage = 0;
-  var timerId;
-  var videoStarted = false;
-
-  function cycleImage()
-  {
-    var nextImage = (currentImage + 1) % 6;
-    $("#fullwidth" + currentImage).fadeTo(2000, 0);
-    $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
-    currentImage = nextImage;
-  }
-
-  $(document).ready(function() {
-    // hoc2018: temporarily disable the cycling.
-    //timerId = setInterval(cycleImage, 6000);
-  });
 
   $(function() {
     $('.highlight-item').mouseover(function() {
