@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SpriteLabAnimationUpload from '@cdo/apps/code-studio/assets/SpriteLabAnimationUpload';
+import SpriteUpload from '@cdo/apps/code-studio/assets/SpriteUpload';
 
 $(document).ready(function() {
   ReactDOM.render(
-    <SpriteLabAnimationUpload />,
+    <SpriteUpload />,
     document.getElementById('sprite-upload-container')
   );
 });
