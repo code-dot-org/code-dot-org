@@ -21,16 +21,16 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :index, user: :levelbuilder, response: :success
 
   # new page is levelbuilder only
-  test_user_gets_response_for :new, user: nil, response: :redirect
+  test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :new, user: :student, response: :forbidden
   test_user_gets_response_for :new, user: :teacher, response: :forbidden
   test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
   # only levelbuilder can create
-  test_user_gets_response_for :create, params: -> {@test_params}, user: nil, response: :redirect
-  test_user_gets_response_for :create, params: -> {@test_params}, user: :student, response: :forbidden
-  test_user_gets_response_for :create, params: -> {@test_params}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :levelbuilder, response: :found
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :levelbuilder, response: :redirect, redirected_to: '/data_docs/unique_key'
 
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: nil, response: :success
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :student, response: :success
@@ -38,7 +38,7 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
 
   # only levelbuilder can edit
-  test_user_gets_response_for :edit, params: -> {@test_params}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :student, response: :forbidden
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :levelbuilder, response: :success
