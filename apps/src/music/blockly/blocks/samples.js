@@ -31,7 +31,7 @@ export const playSound = {
     extensions: ['dynamic_menu_extension']
   },
   generator: ctx =>
-    'Music.play_sound("' +
+    'MusicPlayer.playSoundAtMeasure("' +
     ctx.getFieldValue('sound') +
     '", ' +
     Blockly.JavaScript.valueToCode(
@@ -56,13 +56,8 @@ export const playSoundNextMeasure = {
         flipRtl: false
       },
       {
-        type: 'field_dropdown',
-        name: 'sound',
-        options: [
-          ['all/lead', 'all/lead'],
-          ['all/bass', 'all/bass'],
-          ['all/drum', 'all/drum']
-        ]
+        type: 'input_dummy',
+        name: 'sound'
       }
     ],
     inputsInline: true,
@@ -70,8 +65,9 @@ export const playSoundNextMeasure = {
     nextStatement: null,
     colour: 230,
     tooltip: 'play sound at next measure',
-    helpUrl: ''
+    helpUrl: '',
+    extensions: ['dynamic_menu_extension']
   },
   generator: ctx =>
-    'Music.play_sound_next_measure("' + ctx.getFieldValue('sound') + '");\n'
+    'MusicPlayer.playSoundAtMeasure("' + ctx.getFieldValue('sound') + '");\n'
 };

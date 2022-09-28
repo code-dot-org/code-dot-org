@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-import {InitSound, GetCurrentAudioTime, PlaySound, StopSound} from './sound';
+import {InitSound} from './player/sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
@@ -12,29 +12,9 @@ import Tabs from './Tabs';
 import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
+import MusicPlayer from './player/MusicPlayer';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
-
-const songData = {
-  events: [
-    /*
-    {
-      type: 'play',
-      id: 'baddie-seen',
-      when: 0
-    },
-    {
-      type: 'play',
-      id: 'baddie-seen',
-      when: 1
-    },
-    {
-      type: 'play',
-      id: 'baddie-seen',
-      when: 3
-    }*/
-  ]
-};
 
 const secondsPerMeasure = 2;
 
@@ -47,55 +27,9 @@ class MusicView extends React.Component {
     onMount: PropTypes.func.isRequired
   };
 
-  api = {
-    play_sound: (id, measure) => {
-      //console.log('play sound', id, measure);
-
-      if (!measure) {
-        return;
-      }
-
-      // The user should see measures as 1-based, but
-      // internally, we'll treat them as 0-based.
-      songData.events.push({
-        type: 'play',
-        id: id,
-        when: measure - 1
-      });
-    },
-    play_sound_next_measure: id => {
-      //console.log('play sound next measure', id);
-
-      if (!this.state.isPlaying) {
-        return;
-      }
-
-      // work out the next measure by rounding time up.
-      const currentMeasure = this.getCurrentMeasure();
-      const nextMeasure = currentMeasure + 1;
-      const nextMeasureStartTime =
-        this.state.startPlayingAudioTime +
-        this.convertMeasureToSeconds(nextMeasure);
-
-      // The user should see measures as 1-based, but
-      // internally, we'll treat them as 0-based.
-      songData.events.push({
-        type: 'play',
-        id: id,
-        when: nextMeasure
-      });
-
-      // ideally our music player will use the above data structure as the source
-      // of truth, but since the current implementation has already told WebAudio
-      // about all known sounds to play, let's tee up this one here.
-      const fullSoundId = this.getCurrentGroup().path + '/' + id;
-      PlaySound(fullSoundId, '', nextMeasureStartTime);
-    }
-  };
-
   callUserGeneratedCode = fn => {
     try {
-      fn.call(MusicView, this.api);
+      fn.call(MusicView, this.player);
     } catch (e) {
       // swallow error. should we also log this somewhere?
       if (console) {
@@ -108,6 +42,7 @@ class MusicView extends React.Component {
     super(props);
 
     this.codeAppRef = document.getElementById('codeApp');
+    this.player = new MusicPlayer();
 
     // We have seen on Android devices that window.innerHeight will always be the
     // same whether in landscape or portrait orientation.  Given that we tell
@@ -128,7 +63,7 @@ class MusicView extends React.Component {
       groupPanel: 'all',
       isPlaying: false,
       startPlayingAudioTime: null,
-      currentAudioTime: null,
+      currentAudioElapsedTime: 0,
       updateNumber: 0
     };
   }
@@ -170,6 +105,7 @@ class MusicView extends React.Component {
         })
         .flat(2);
       this.workspace.updateToolbox(createMusicToolbox(library));
+      this.player.setGroupPath(this.getCurrentGroup().path);
       InitSound(soundList);
     });
   }
@@ -180,7 +116,9 @@ class MusicView extends React.Component {
 
   updateTimer = () => {
     if (this.state.isPlaying) {
-      this.setState({currentAudioTime: GetCurrentAudioTime()});
+      this.setState({
+        currentAudioElapsedTime: this.player.getCurrentAudioElapsedTime()
+      });
     }
   };
 
@@ -253,7 +191,9 @@ class MusicView extends React.Component {
         BlockTypes.WHEN_RUN
       }" deletable="false" x="30" y="30"></block><block type="${
         BlockTypes.WHEN_TRIGGER
-      }" deletable="false" x="30" y="170"></block></xml>`
+      }" deletable="false" x="30" y="170"></block><block type="${
+        BlockTypes.TRIGGERED_AT
+      }" deletable="false" x="500" y="30"></block></xml>`
     );
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 
@@ -347,7 +287,8 @@ class MusicView extends React.Component {
   };
 
   playTrigger = () => {
-    this.callUserGeneratedCode(hooks.whenTriggerButton);
+    console.log('Playhead position: ' + this.player.getPlayheadPosition());
+    this.callUserGeneratedCode(hooks.triggeredAtButton);
   };
 
   executeSong = () => {
@@ -358,66 +299,41 @@ class MusicView extends React.Component {
 
     const events = {
       whenRunButton: {code: generator(BlockTypes.WHEN_RUN)},
-      whenTriggerButton: {code: generator(BlockTypes.WHEN_TRIGGER)}
+      whenTriggerButton: {code: generator(BlockTypes.WHEN_TRIGGER)},
+      triggeredAtButton: {code: generator(BlockTypes.TRIGGERED_AT)}
     };
 
     CustomMarshalingInterpreter.evalWithEvents(
-      {Music: this.api},
+      {MusicPlayer: this.player},
       events
     ).hooks.forEach(hook => {
       //console.log('hook', hook);
       hooks[hook.name] = hook.func;
     });
 
-    songData.events = [];
+    this.player.clearQueue();
 
     this.callUserGeneratedCode(hooks.whenRunButton);
   };
 
   playSong = () => {
-    StopSound('mainaudio');
-
+    this.player.stopSong();
     this.executeSong();
+    this.player.playSong();
 
-    const currentAudioTime = GetCurrentAudioTime();
-
-    for (const songEvent of songData.events) {
-      if (songEvent.type === 'play') {
-        PlaySound(
-          this.getCurrentGroup().path + '/' + songEvent.id,
-          'mainaudio',
-          currentAudioTime + this.convertMeasureToSeconds(songEvent.when)
-        );
-      }
-    }
-
-    this.setState({isPlaying: true, startPlayingAudioTime: currentAudioTime});
+    this.setState({isPlaying: true});
 
     console.log(Blockly.getWorkspaceCode());
   };
 
   stopSong = () => {
-    StopSound('mainaudio');
+    this.player.stopSong();
 
     this.setState({isPlaying: false});
   };
 
   previewSound = id => {
-    StopSound('mainaudio');
-
-    PlaySound(this.getCurrentGroup().path + '/' + id, 'mainaudio', 0);
-  };
-
-  getCurrentMeasure = () => {
-    const currentAudioTime = GetCurrentAudioTime();
-    if (currentAudioTime === null) {
-      // In case we are rendering before we've initialized audio system.
-      return -1;
-    }
-
-    return this.convertSecondsToMeasure(
-      GetCurrentAudioTime() - this.state.startPlayingAudioTime
-    );
+    this.player.playSoundImmediately(id);
   };
 
   getCurrentGroup = () => {
@@ -479,9 +395,10 @@ class MusicView extends React.Component {
     const currentPanel = this.state.currentPanel;
 
     const currentGroup = this.getCurrentGroup();
-    const currentAudioElapsedtime =
-      this.state.currentAudioTime - this.state.startPlayingAudioTime;
-    const currentMeasure = this.getCurrentMeasure();
+
+    const songData = {
+      events: this.player.getSoundEvents()
+    };
 
     return (
       <div
@@ -515,10 +432,10 @@ class MusicView extends React.Component {
             isPlaying={this.state.isPlaying}
             playTrigger={this.playTrigger}
             songData={songData}
-            currentAudioElapsedTime={currentAudioElapsedtime}
+            currentAudioElapsedTime={this.state.currentAudioElapsedTime}
             convertMeasureToSeconds={this.convertMeasureToSeconds}
             baseUrl={baseUrl}
-            currentMeasure={currentMeasure}
+            currentMeasure={this.player.getCurrentMeasure()}
           />
         )}
 
