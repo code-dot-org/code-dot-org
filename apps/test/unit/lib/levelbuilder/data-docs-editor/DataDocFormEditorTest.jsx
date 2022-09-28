@@ -26,6 +26,11 @@ describe('DataDocFormEditor', () => {
     ).to.equal(docContent);
   });
 
+  it('ensures key input is disabled in editor', () => {
+    const wrapper = isolateComponent(<DataDocFormEditor {...defaultProps} />);
+    expect(wrapper.findAll('input')[0].props.disabled).to.be.true;
+  });
+
   it('modifies doc name', () => {
     const wrapper = isolateComponent(<DataDocFormEditor {...defaultProps} />);
     const newDocName = 'New Name of Doc';
