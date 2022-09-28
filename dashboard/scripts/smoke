@@ -33,7 +33,7 @@ end
 #
 
 @host = ARGV.shift || "localhost:3000"
-@host = "http://#{@host}" if @host !~ /^http:\/\//
+@host = "http://#{@host}" unless /^http:\/\//.match?(@host)
 @host = @host.gsub(/\/$/, "")
 
 thread_count = [ARGV.shift.to_i, 1].max
@@ -73,7 +73,7 @@ def run_tests(options = {})
         raise "Redirect error. Expecting #{test[:redirect]}, got #{location_uri.path}- #{" - #{test[:failure_message]}" if test[:failure_message]}" if location_uri.path != test[:redirect]
       end
     rescue Exception => e
-      exit 1 if e.inspect =~ /Interrupt/
+      exit 1 if /Interrupt/.match?(e.inspect)
       if options[:quiet]
         puts "#{url} ... #{e}"
       else
