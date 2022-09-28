@@ -2,6 +2,11 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocFormEditor';
 import {isolateComponent} from 'isolate-react';
+import {getStore} from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+import {mount} from 'enzyme';
+import * as utils from '@cdo/apps/utils';
 
 describe('DataDocFormEditor', () => {
   let defaultProps;
@@ -55,5 +60,59 @@ describe('DataDocFormEditor', () => {
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
     ).to.equal(newDocContent);
+  });
+
+  it('clicking Save And Keep Editing button sends PUT request and does not redirect', () => {
+    sinon.stub(utils, 'navigateToHref');
+    let server = sinon.fakeServer.create();
+    server.respondWith('PUT', `/data_docs/${docKey}`, [
+      200,
+      {'Content-Type': 'application/json'},
+      ''
+    ]);
+
+    let store = getStore();
+    const wrapper = mount(
+      <Provider store={store}>
+        <DataDocFormEditor {...defaultProps} />
+      </Provider>
+    );
+    const saveAndKeepEditingButton = wrapper.find('button').at(0);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect(utils.navigateToHref).to.not.have.been.called;
+
+    utils.navigateToHref.restore();
+    server.restore();
+  });
+
+  it('clicking Save And Close button sends PUT request and redirects', () => {
+    /* sinon.stub(utils, 'navigateToHref');
+    let server = sinon.fakeServer.create();
+    server.respondWith('PUT', `/data_docs/${docKey}`, [
+      200,
+      {'Content-Type': 'application/json'},
+      ''
+    ]);
+
+    let store = getStore();
+    const wrapper = mount(
+      <Provider store={store}>
+        <DataDocFormEditor {...defaultProps} />
+      </Provider>
+    );
+
+    const saveAndCloseButton = wrapper.find('button').at(1);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+    saveAndCloseButton.simulate('click');
+
+    expect(utils.navigateToHref).to.have.been.calledWith(
+      `/data_docs/${docKey}`
+    );
+
+    utils.navigateToHref.restore();
+    server.restore(); */
   });
 });
