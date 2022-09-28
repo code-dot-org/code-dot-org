@@ -6,35 +6,39 @@ class DataDocsControllerTest < ActionController::TestCase
   setup_all do
     @levelbuilder = create :levelbuilder
 
-    @data_doc_key = 'new_doc'.freeze
     @test_params = {
-      key: @data_doc_key,
+      key: 'new_doc',
       name: 'New Doc',
       content: 'This doc contains things.'
     }.freeze
 
-    @data_doc = create :data_doc, key: @data_doc_key
+    @data_doc = create :data_doc, key: @test_params[:key]
   end
 
+  test_user_gets_response_for :index, user: nil, response: :success
+  test_user_gets_response_for :index, user: :student, response: :success
+  test_user_gets_response_for :index, user: :teacher, response: :success
+  test_user_gets_response_for :index, user: :levelbuilder, response: :success
+
   # new page is levelbuilder only
-  test_user_gets_response_for :new, user: nil, response: :redirect
+  test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :new, user: :student, response: :forbidden
   test_user_gets_response_for :new, user: :teacher, response: :forbidden
   test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
   # only levelbuilder can create
-  test_user_gets_response_for :create, params: -> {@test_params}, user: nil, response: :redirect
-  test_user_gets_response_for :create, params: -> {@test_params}, user: :student, response: :forbidden
-  test_user_gets_response_for :create, params: -> {@test_params}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :create, params: -> {@test_params}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :levelbuilder, response: :redirect, redirected_to: '/data_docs/unique_key'
 
-  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: nil, response: :success
-  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :student, response: :success
-  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :teacher, response: :success
-  test_user_gets_response_for :show, params: -> {{key: @data_doc_key}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: nil, response: :success
+  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :student, response: :success
+  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :teacher, response: :success
+  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
 
   # only levelbuilder can edit
-  test_user_gets_response_for :edit, params: -> {@test_params}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: -> {@test_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :student, response: :forbidden
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :levelbuilder, response: :success
