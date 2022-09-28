@@ -140,7 +140,7 @@ end
 
 Given(/^I enter a temp data doc key and temp data doc name$/) do
   @temp_data_doc_key = "temp-data-doc-#{Time.now.to_i}-#{rand(1_000_000)}"
-  @temp_data_doc_name = "Name: #{@temp_data_doc_key}"
+  @temp_data_doc_name = "A Name: #{@temp_data_doc_key}"
   steps %{
     And I wait until element "input[name='key']" is visible
     And I press keys "#{@temp_data_doc_key}" for element "input[name='key']"
@@ -155,9 +155,15 @@ Given(/^I wait for the temp data doc page to load$/) do
   }
 end
 
-Given(/^element "([^"]*)" contains of the temp data doc$/) do |selector|
+Given(/^element "([^"]*)" contains the name of the temp data doc$/) do |selector|
   steps %{
      And element "#{selector}" contains text "#{@temp_data_doc_name}"
+  }
+end
+
+Given(/^the element contains path to temp data doc$/) do
+  steps %{
+    And the href of selector "a:contains(#{@temp_data_doc_name})" contains "/data_docs/#{@temp_data_doc_key}"
   }
 end
 
