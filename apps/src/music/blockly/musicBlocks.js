@@ -2,12 +2,13 @@ import {playSound, playSoundNextMeasure} from './blocks/samples';
 import {ifEvenThen, loopFromTo} from './blocks/control';
 import {number} from './blocks/math';
 import {variablesGet, variablesSet} from './blocks/variables';
-import {whenRun, whenTrigger} from './blocks/events';
+import {atTrigger, whenRun, whenTrigger} from './blocks/events';
 
 // All blocks
 const blockList = [
   whenRun,
   whenTrigger,
+  atTrigger,
   playSound,
   playSoundNextMeasure,
   loopFromTo,

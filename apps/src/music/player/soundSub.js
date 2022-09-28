@@ -1,7 +1,7 @@
 // audio
 var audioContext = null;
 
-var soundSourceIdUpto = 0;
+// var soundSourceIdUpto = 0;
 
 function createAudioContext(desiredSampleRate) {
   var AudioCtor = window.AudioContext || window.webkitAudioContext;

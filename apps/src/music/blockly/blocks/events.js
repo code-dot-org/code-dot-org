@@ -25,3 +25,27 @@ export const whenTrigger = {
   },
   generator: () => '\n'
 };
+
+export const atTrigger = {
+  definition: {
+    type: BlockTypes.AT_TRIGGER,
+    message0: 'button triggered at time %1',
+    args0: [
+      {
+        type: 'field_variable',
+        name: 'var',
+        variable: 'currentTime'
+      }
+    ],
+    nextStatement: null,
+    colour: 230,
+    tooltip: 'at trigger'
+  },
+  generator: ctx => {
+    const varName = Blockly.JavaScript.nameDB_.getName(
+      ctx.getFieldValue('var'),
+      Blockly.Names.NameType.VARIABLE
+    );
+    return varName + ' = MusicPlayer.getPlayheadPosition();\n';
+  }
+};
