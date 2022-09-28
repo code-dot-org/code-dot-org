@@ -4,7 +4,6 @@ import DataDocIndex from '@cdo/apps/templates/dataDocs/DataDocIndex';
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('DataDocIndex', () => {
-  let defaultProps;
   const dataDoc1 = {
     key: 'key1',
     name: 'First Name',
@@ -17,15 +16,13 @@ describe('DataDocIndex', () => {
   };
   const allDocs = [dataDoc1, dataDoc2];
 
-  beforeEach(() => {
-    defaultProps = {
-      dataDocs: allDocs
-    };
-  });
+  const getLinksOnIndexPage = dataDocs => {
+    const wrapper = isolateComponentTree(<DataDocIndex dataDocs={dataDocs} />);
+    return wrapper.findAll('a').map(link => link.toString());
+  };
 
   it('shows names of Data Docs and links to their pages', () => {
-    const wrapper = isolateComponentTree(<DataDocIndex {...defaultProps} />);
-    const links = wrapper.findAll('a').map(link => link.toString());
+    const links = getLinksOnIndexPage(allDocs);
     allDocs.forEach((doc, index) => {
       expect(links[index]).to.contain(doc.name);
       expect(links[index]).to.contain(`/data_docs/${doc.key}`);
@@ -37,22 +34,16 @@ describe('DataDocIndex', () => {
       key: 'noName',
       content: 'Content'
     };
-    const wrapper = isolateComponentTree(
-      <DataDocIndex dataDocs={[docNoName]} />
-    );
-    const links = wrapper.findAll('a').map(link => link.toString());
+    const links = getLinksOnIndexPage([docNoName]);
     expect(links).to.have.length(0);
   });
 
   it('does not show Doc without content', () => {
-    const docNoName = {
+    const docNoContent = {
       key: 'noContent',
       name: 'Name'
     };
-    const wrapper = isolateComponentTree(
-      <DataDocIndex dataDocs={[docNoName]} />
-    );
-    const links = wrapper.findAll('a').map(link => link.toString());
+    const links = getLinksOnIndexPage([docNoContent]);
     expect(links).to.have.length(0);
   });
 });
