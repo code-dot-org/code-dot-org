@@ -52,6 +52,7 @@ class TheaterVisualizationColumn extends React.Component {
             style.previewBackground,
             isCollapsed && style.collapsed
           )}
+          style={styles.theaterPreviewBackground}
         >
           <div
             id={VISUALIZATION_DIV_ID}
@@ -74,6 +75,18 @@ class TheaterVisualizationColumn extends React.Component {
     );
   }
 }
+
+// Note (madelynkasula 09/28/2022): Do not add to this styles object. Use theater-visualization-column.module.scss instead.
+// SCSS modules currently aren't able to load static assets (i.e., Theater.png below), so these styles will be removed
+// when that is fixed.
+const styles = {
+  theaterPreviewBackground: {
+    backgroundImage: 'url("/blockly/media/javalab/Theater.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'top'
+  }
+};
 
 export default connect(
   state => ({

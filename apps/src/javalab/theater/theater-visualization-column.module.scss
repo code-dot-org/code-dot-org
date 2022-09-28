@@ -25,10 +25,12 @@
 }
 
 .previewBackground {
-  background-image: url("/blockly/media/javalab/Theater.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  // TODO (madelynkasula 09/28/2022): Use background styles below once SCSS modules
+  // are able to load webpack assets. Remove styles object from <TheaterVisualizationColumn> as well.
+  // background-image: url("/blockly/media/javalab/Theater.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: top;
   opacity: 1;
 
   &.collapsed {
