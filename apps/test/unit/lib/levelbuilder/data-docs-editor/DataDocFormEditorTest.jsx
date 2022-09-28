@@ -2,6 +2,11 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocFormEditor';
 import {isolateComponent} from 'isolate-react';
+import {getStore} from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+import {mount} from 'enzyme';
+import * as utils from '@cdo/apps/utils';
 
 describe('DataDocFormEditor', () => {
   let defaultProps;
@@ -55,5 +60,81 @@ describe('DataDocFormEditor', () => {
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
     ).to.equal(newDocContent);
+  });
+
+  it('clicking Save And Keep Editing button sends PUT request and does not redirect', () => {
+    let server = sinon.fakeServer.create();
+    sinon.stub(utils, 'navigateToHref');
+
+    let store = getStore();
+    const provider = mount(
+      <Provider store={store}>
+        <DataDocFormEditor {...defaultProps} />
+      </Provider>
+    );
+    const wrapper = provider.find('DataDocFormEditor');
+
+    let returnData = {
+      key: docKey,
+      name: docName,
+      content: docContent
+    };
+    server.respondWith('PUT', `/data_docs/${docKey}`, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
+
+    const saveBar = wrapper.find('SaveBar');
+    const saveAndCloseButton = saveBar.find('button').at(0);
+    expect(saveAndCloseButton.contains('Save and Keep Editing')).to.be.true;
+    saveAndCloseButton.simulate('click');
+
+    server.respond();
+    provider.update();
+
+    expect(utils.navigateToHref).to.not.have.been.called;
+
+    server.restore();
+    utils.navigateToHref.restore();
+  });
+
+  it('clicking Save And Close button sends PUT request and redirects', () => {
+    let server = sinon.fakeServer.create();
+    sinon.stub(utils, 'navigateToHref');
+
+    let store = getStore();
+    const provider = mount(
+      <Provider store={store}>
+        <DataDocFormEditor {...defaultProps} />
+      </Provider>
+    );
+    const wrapper = provider.find('DataDocFormEditor');
+
+    let returnData = {
+      key: docKey,
+      name: docName,
+      content: docContent
+    };
+    server.respondWith('PUT', `/data_docs/${docKey}`, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
+
+    const saveBar = wrapper.find('SaveBar');
+    const saveAndCloseButton = saveBar.find('button').at(1);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+    saveAndCloseButton.simulate('click');
+
+    server.respond();
+    provider.update();
+
+    expect(utils.navigateToHref).to.have.been.calledWith(
+      `/data_docs/${docKey}`
+    );
+
+    server.restore();
+    utils.navigateToHref.restore();
   });
 });
