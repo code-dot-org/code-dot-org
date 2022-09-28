@@ -411,7 +411,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
         theme: CdoTheme,
-        plugins: {}
+        plugins: {},
+        RTL: options.rtl
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -424,16 +425,25 @@ function initializeBlocklyWrapper(blocklyInstance) {
         },
         null
       );
+
+      // Core Blockly requires a container div to be LTR, regardless of page direction.
+      container.setAttribute('dir', 'LTR');
+      container.style.display = 'inline-block';
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
 
-      // Loop through all the child blocks and remove transform
+      // Loop through all the parent blocks and remove vertical translation value
+      // This makes the output more condensed and readable, while preserving
+      // horizontal translation values for RTL rendering.
       const blocksInWorkspace = workspace.getAllBlocks();
       blocksInWorkspace
         .filter(block => block.getParent() === null)
         .forEach(block => {
-          block.svgGroup_.removeAttribute('transform');
+          const svgTransformList = block.svgGroup_.transform.baseVal;
+          const svgTransform = svgTransformList.getItem(0);
+          const svgTranslationX = svgTransform.matrix.e;
+          svgTransform.setTranslate(svgTranslationX, 0);
         });
 
       // Shrink SVG to size of the block
@@ -442,7 +452,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.setAttribute('width', bbox.width + bbox.x);
       // Add a transform to center read-only blocks on their line
       const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
-
       svg.setAttribute(
         'style',
         `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
