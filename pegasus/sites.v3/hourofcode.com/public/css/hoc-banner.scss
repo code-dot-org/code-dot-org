@@ -5,7 +5,6 @@
   background-size: cover;
   background: url('/images/hoc2022-hero-banner.svg') no-repeat center center;
   background-size: cover;
-  margin-bottom: 2em;
 }
 
 section.banner.homepage {
@@ -17,15 +16,27 @@ section.banner.homepage {
     @media screen and (max-width: $width-md) {
       font-size: 3.5em;
     }
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 3em;
+    }
   }
 
   h2 {
     font-size: 1.5em;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 1.25em;
+    }
   }
 
   .wrapper {
-    padding: 4em 0 8em;
+    padding: 3em 0 6em;
     width: 100%;
+
+    @media screen and (max-width: $width-sm) {
+      padding: 3em 1em;
+    }
   }
 }
 
