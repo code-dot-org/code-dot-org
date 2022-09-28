@@ -205,7 +205,7 @@
     "rehype-sanitize": "^2.0.2",
     "remark-rehype": "^4.0.0",
     "rgbcolor": "0.0.4",
-    "sanitize-html": "^1.11.3",
+    "sanitize-html": "^2.7.2",
     "sass": "^1.51.0",
     "sass-loader": "^12.1.0",
     "save-csv": "^4.0.6",
