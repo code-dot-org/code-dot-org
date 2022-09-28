@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-landmarks-pilot",
-    "serialized_at": "2022-09-26 23:23:54 UTC",
+    "serialized_at": "2022-09-27 22:38:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -82,6 +82,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_hello-world"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -103,6 +106,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -124,6 +130,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_location"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -145,6 +154,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_size"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -166,6 +178,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmark_explain"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -187,6 +202,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -208,6 +226,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,6 +250,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_behavior"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -250,6 +274,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -271,6 +298,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -292,6 +322,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,6 +346,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
