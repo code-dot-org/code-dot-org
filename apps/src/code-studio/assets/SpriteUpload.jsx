@@ -79,6 +79,8 @@ export default class AnimationUpload extends React.Component {
     });
   }
 
+  // The submit button is used to upload the selected image file (png) and corresponding
+  // generated metadata (.json) to the selected destination on S3.
   handleSubmit = event => {
     event.preventDefault();
     this.setState({
