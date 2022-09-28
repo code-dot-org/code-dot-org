@@ -18,6 +18,12 @@ section.banner {
     @media screen and (max-width: $width-md) {
       padding: 1.25em 0;
     }
+
+    @media screen and (max-width: $width-sm) {
+      background: url('/images/hoc2022-codeorg-hero-banner-mobile-01.svg') no-repeat center center;
+      background-size: cover;
+      padding: 4.5em 0px;
+    }
   }
 
   h1, h2 {
@@ -38,6 +44,10 @@ section.banner {
     font-size: 1.2em;
     line-height: 1.4;
     margin: 1em auto 2em;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 1em;
+    }
   }
 
   .wrapper {
