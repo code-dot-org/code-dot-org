@@ -1,7 +1,7 @@
 class DataDocsController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
   before_action :set_data_doc, only: [:show, :edit, :update]
-  load_and_authorize_resource
+  authorize_resource
 
   # GET /data_docs/new
   def new
@@ -13,14 +13,10 @@ class DataDocsController < ApplicationController
 
     if @data_doc.save
       @data_doc.write_serialization
-      redirect_to action: :show, key: params[:key]
+      redirect_to @data_doc
     else
-      render :not_acceptable, json: @data_doc.errors
+      render status: :bad_request, json: @data_doc.errors
     end
-  end
-
-  def to_param
-    key
   end
 
   # GET /data_docs/:key
@@ -29,6 +25,11 @@ class DataDocsController < ApplicationController
       dataDocName: @data_doc.name,
       dataDocContent: @data_doc.content,
     }
+  end
+
+  # GET /data_docs
+  def index
+    @data_docs = DataDoc.all.order(:name).map(&:serialize)
   end
 
   # GET /data_docs/:key/edit
@@ -46,7 +47,7 @@ class DataDocsController < ApplicationController
     new_attributes = data_doc_params.except(:key)
     @data_doc.update!(new_attributes)
 
-    render json: @data_doc.summarize_for_edit.to_json
+    render json: @data_doc.serialize.to_json
   end
 
   def data_doc_params
