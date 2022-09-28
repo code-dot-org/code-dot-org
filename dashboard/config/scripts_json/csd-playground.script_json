@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-09-07 21:31:16 UTC",
+    "serialized_at": "2022-09-27 23:30:22 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -483,6 +483,17 @@
       },
       "seeding_key": {
         "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53",
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3"
+      }
+    },
+    {
+      "key": "61b713d2-7a27-4104-93ef-75b49ef93741",
+      "position": 2,
+      "properties": {
+        "description": "[`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)"
+      },
+      "seeding_key": {
+        "activity_section.key": "61b713d2-7a27-4104-93ef-75b49ef93741",
         "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3"
       }
     },
@@ -2352,6 +2363,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions predict set velocity code_validation-test"
+        ],
         "progression": "Code Prediction"
       },
       "bonus": false,
@@ -2374,6 +2388,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace x_validation-test"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2396,6 +2413,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace y_validation-test"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2418,6 +2438,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro_validation-test"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2440,6 +2463,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks_validation-test"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2462,6 +2488,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions practice choice_validation-test"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2484,6 +2513,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD games collisions assessment_validation-test"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2506,6 +2538,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions challenge choice_validation-test"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,

@@ -219,20 +219,9 @@ Performance/InefficientHashSearch:
 Performance/MethodObjectAsBlock:
   Enabled: false
 
-# Offense count: 56
-# This cop supports safe auto-correction (--auto-correct).
-Performance/RegexpMatch:
-  Enabled: false
-
 # Offense count: 29
 # This cop supports safe auto-correction (--auto-correct).
 Performance/StringInclude:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: OnlySumOrWithInitialValue.
-Performance/Sum:
   Enabled: false
 
 # Offense count: 20
