@@ -20,8 +20,7 @@ module Services
         def get_lesson_plan_pathname(lesson, student_facing = false, as_url = false)
           return nil unless lesson&.script&.seeded_from
           version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
-          filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
-          filename = canonicalize_s3_filename(filename)
+          filename = ActiveStorage::Filename.new(lesson.key.parameterize(preserve_case: true) + ".pdf").to_s
           filename = CGI.escape(filename) if as_url
           subdir = student_facing ? "student-lesson-plans" : "teacher-lesson-plans"
           return Pathname.new(File.join(lesson.script.name, version_number, subdir, filename))

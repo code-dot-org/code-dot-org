@@ -18,8 +18,7 @@ module Services
         def get_script_overview_pathname(script, as_url = false)
           return nil unless script&.seeded_from
           version_number = Time.parse(script.seeded_from).to_s(:number)
-          filename = ActiveStorage::Filename.new(script.localized_title + ".pdf").sanitized
-          filename = canonicalize_s3_filename(filename)
+          filename = ActiveStorage::Filename.new(script.localized_title.parameterize(preserve_case: true) + ".pdf").to_s
           filename = CGI.escape(filename) if as_url
           return Pathname.new(File.join(script.name, version_number, filename))
         end
@@ -52,8 +51,7 @@ module Services
           pdfs = []
 
           # Include a PDF of the /s/script.name page itself
-          script_filename = ActiveStorage::Filename.new("script.#{script.name}.pdf").sanitized
-          script_filename = canonicalize_s3_filename(script_filename)
+          script_filename = ActiveStorage::Filename.new("script.#{script.name.parameterize(preserve_case: true)}.pdf").to_s
           script_path = File.join(pdfs_dir, script_filename)
           # Make sure to specify
           # 1. 'no_redirect' so we're guaranteed to get the actual script we want

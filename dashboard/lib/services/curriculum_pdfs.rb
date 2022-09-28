@@ -106,13 +106,6 @@ module Services
       end
     end
 
-    # safe characters are those listed at:
-    # https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html
-    S3_UNSAFE_CHARACTER_REGEX = %r{[^-0-9a-zA-Z!_.*'()]}
-    def self.canonicalize_s3_filename(filename)
-      filename.gsub(S3_UNSAFE_CHARACTER_REGEX, '-')
-    end
-
     def self.get_pdf_enabled_scripts
       Script.all.select do |script|
         next false if [PUBLISHED_STATE.pilot, PUBLISHED_STATE.in_development].include?(script.get_published_state)
