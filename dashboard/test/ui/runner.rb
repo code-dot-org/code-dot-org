@@ -242,11 +242,11 @@ def parse_options
       options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /(localhost|ngrok)/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /(localhost|ngrok)/
+      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
     elsif rack_env?(:test)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /test/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /test/
+      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config

@@ -238,7 +238,7 @@ module Pegasus
     end
 
     after do
-      response.headers.keys.each {|i| response.headers.delete(i) if i =~ /^X-Pegasus-/;}
+      response.headers.keys.each {|i| response.headers.delete(i) if /^X-Pegasus-/.match?(i);}
 
       status = response.status.to_s.to_i
       message = "#{status} returned for #{request.site}#{request.path_info}"
