@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_13_225915) do
+ActiveRecord::Schema.define(version: 2022_09_27_184247) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -275,6 +275,17 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
+    t.integer "code_review_id", null: false
+    t.integer "commenter_id"
+    t.boolean "is_resolved", null: false
+    t.text "comment", size: :medium
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["code_review_id"], name: "index_code_review_comments_on_code_review_id"
+  end
+
   create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "code_review_group_id", null: false
     t.bigint "follower_id", null: false
@@ -290,17 +301,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["section_id"], name: "index_code_review_groups_on_section_id"
-  end
-
-  create_table "code_review_notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
-    t.integer "code_review_request_id", null: false
-    t.integer "commenter_id"
-    t.boolean "is_resolved", null: false
-    t.text "comment", size: :medium
-    t.datetime "deleted_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
   end
 
   create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

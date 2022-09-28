@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2022-09-20 18:53:22 UTC",
+    "serialized_at": "2022-09-27 22:03:03 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -100,7 +100,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "1. **Use heading tags to change the appearance of text on a web page.**\n\n\tSee the multiple choice question on Level 4.\n\n2. **Structure content into headings, subheadings, lists, and paragraphs.**\n\n\tSee the assessment on Level 8.\n    \n3. **Use a structured practice to collaboratively create a digital artifact.**\n\n\tAs students move through the lesson, ensure that they are following the guidelines for pair programming as described in the video.  In the wrap-up journal prompt, check that student responses describe effective collaboration.",
+        "assessment_opportunities": "1. **Use heading tags to change the appearance of text on a web page.**\n\n\tSee the multiple choice question on Level 4.\n\n2. **Structure content into headings, subheadings, lists, and paragraphs.**\n\n\tSee the assessment on Level 9.\n    \n3. **Use a structured practice to collaboratively create a digital artifact.**\n\n\tAs students move through the lesson, ensure that they are following the guidelines for pair programming as described in the video.  In the wrap-up journal prompt, check that student responses describe effective collaboration.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we work together to fix problems with our websites?**\n\nIn this lesson, students continue to use HTML to structure text on web pages, this time in pairs, with a focus on working together and debugging problems with their sites.  Students learn how to use the different heading and list elements and practice using them to give their web pages more structure.  ",
         "preparation": "* Have student journals ready to give back.\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
@@ -2153,7 +2153,7 @@
       "key": "77f6c421-a274-4a17-852e-4ed11e2bd99e",
       "position": 10,
       "properties": {
-        "description": "**Optional:** It may be helpful for your students to have them pause pair programming and bring the class back together at this point in order to discuss lists. \n\n* Ask students to identify two different types of lists and when someone might use each type\n\n* *Example: bulleted/unordered list might be used to make a grocery list while a numbered/ordered list might be used to list your favorite movies or the steps in a recipe* \n\nHave students continue Pair Programming through the remainder of the lesson. ",
+        "description": "**Transition:** Have your students pause pair programming and bring the class back together at this point in order to discuss lists. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Ask students to identify when someone might use a list. \n\n*Keep track of the different types of lists students identify.*\n\n*Examples: a* **bulleted** *list might be used to make a grocery list and a* **numbered** *list might be used to list your favorite movies or the steps in a recipe.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slides to help students update their anchor chart/poster. \n\nHave students continue Pair Programming through the remainder of the lesson. ",
         "name": "Web Lab: Lists",
         "progression_name": "Skill Building"
       },
@@ -2235,7 +2235,7 @@
       "key": "feb8738d-5c03-4f35-8fd3-ecdf6449077a",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we work together to fix problems with our websites?**\r\n\r\n**Prompt:** Have students update their \"HTML Tags\" log with the heading tags they learned in this lesson.\r\n\r\n**Key Vocabulary:**\r\n\r\n* **heading** - a title or summary for a document or section of a document",
+        "description": "**Question of the Day: How can we work together to fix problems with our websites?**\n\n**Prompt:** Have students update their \"HTML Tags\" log with the heading tags they learned in this lesson. Have students make sure they added list tags with the class earlier in the lesson.\n\n**Key Vocabulary:**\n\n* **heading** - a title or summary for a document or section of a document\n* **list** - allows web developers to group a set of related items",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3082,19 +3082,8 @@
       }
     },
     {
-      "key": "341e4c3a-d205-4925-a19c-470ba83eea60",
-      "position": 6,
-      "properties": {
-        "progression_name": "Challenge: RGB Colors"
-      },
-      "seeding_key": {
-        "activity_section.key": "341e4c3a-d205-4925-a19c-470ba83eea60",
-        "lesson_activity.key": "c8082ad0-4ea1-430a-a013-838aef3a80a5"
-      }
-    },
-    {
       "key": "7aa3a1a8-3fe5-4e82-ad83-0bc7aff94325",
-      "position": 7,
+      "position": 6,
       "properties": {
         "progression_name": "Add Content and Structure to Your Page",
         "tips": [
@@ -3111,7 +3100,7 @@
     },
     {
       "key": "43ee1323-2464-4081-a740-cdf6397fc3e4",
-      "position": 8,
+      "position": 7,
       "properties": {
         "progression_name": "Add Style to Your Page"
       },
@@ -3122,7 +3111,7 @@
     },
     {
       "key": "cc5f8106-ee5d-4aae-9100-2bae1cd76a58",
-      "position": 9,
+      "position": 8,
       "properties": {
         "progression_name": "Review Your Page"
       },
@@ -3133,7 +3122,7 @@
     },
     {
       "key": "9e2fe888-81d4-48b2-8533-b7be0ba1f118",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "Students should have a chance to think about what they liked best about their pages.  You may also want to allow students to formally or informally present their work to the rest of the class.",
         "name": "Step 4: Reflect"
@@ -3145,7 +3134,7 @@
     },
     {
       "key": "c7827a9e-fe94-4469-8aa4-94f378f3f9d0",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "As part of this project, you may give students the opportunity to give feedback to their peers using the Peer Review form.  This will likely extend the project by at least one day.",
         "name": "Peer Feedback"
@@ -6110,12 +6099,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Dev choice level ul 1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD HTML project Lists_2023"
+          "CSD Web Dev choice level ul 1_2023"
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "lessonGroup-2",
@@ -6123,12 +6115,37 @@
         "activity_section.key": "77f6c421-a274-4a17-852e-4ed11e2bd99e"
       },
       "level_keys": [
-        "CSD HTML project Lists_2023"
+        "CSD Web Dev choice level ul 1_2023"
       ]
     },
     {
       "chapter": 14,
       "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Web Dev choice level ol 1_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Dev choice level ol 1_2023"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "77f6c421-a274-4a17-852e-4ed11e2bd99e"
+      },
+      "level_keys": [
+        "CSD Web Dev choice level ol 1_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6152,8 +6169,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 7,
+      "chapter": 16,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6177,8 +6194,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 8,
+      "chapter": 17,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6202,8 +6219,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 9,
+      "chapter": 18,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6227,7 +6244,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6252,7 +6269,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6277,7 +6294,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6302,7 +6319,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6327,7 +6344,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6352,7 +6369,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6377,7 +6394,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6402,7 +6419,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6427,7 +6444,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6452,9 +6469,59 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style RGB intro_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style RGB intro_2023"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "b0edd2db-5428-4723-8b2f-444795e9769f"
+      },
+      "level_keys": [
+        "CSD U2 text style RGB intro_2023"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style rgb practice_2023"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "b0edd2db-5428-4723-8b2f-444795e9769f"
+      },
+      "level_keys": [
+        "CSD U2 text style rgb practice_2023"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6477,8 +6544,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 7,
+      "chapter": 31,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6502,8 +6569,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 8,
+      "chapter": 32,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6527,8 +6594,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 33,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6552,8 +6619,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 10,
+      "chapter": 34,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6577,8 +6644,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 11,
+      "chapter": 35,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6602,7 +6669,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6627,33 +6694,8 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD CSS project RGB_2023"
-        ],
-        "progression": "Challenge: RGB Colors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD CSS project RGB_2023"
-        ],
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2023",
-        "activity_section.key": "341e4c3a-d205-4925-a19c-470ba83eea60"
-      },
-      "level_keys": [
-        "CSD CSS project RGB_2023"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6677,8 +6719,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 4,
+      "chapter": 38,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6702,8 +6744,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 5,
+      "chapter": 39,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6727,7 +6769,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6752,7 +6794,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6777,7 +6819,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6802,7 +6844,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6827,7 +6869,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6852,7 +6894,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6877,7 +6919,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6902,7 +6944,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6927,7 +6969,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6952,7 +6994,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6977,7 +7019,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7002,7 +7044,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7027,7 +7069,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7052,7 +7094,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7077,7 +7119,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7102,7 +7144,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7127,7 +7169,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7152,7 +7194,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7177,7 +7219,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7202,7 +7244,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7227,7 +7269,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7252,7 +7294,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7277,7 +7319,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7302,7 +7344,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7327,7 +7369,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7352,7 +7394,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7377,7 +7419,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7402,7 +7444,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7427,7 +7469,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7452,7 +7494,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7477,7 +7519,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7502,7 +7544,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7527,7 +7569,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7552,7 +7594,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7577,7 +7619,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7602,7 +7644,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7627,7 +7669,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7652,7 +7694,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7677,7 +7719,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7702,7 +7744,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7727,7 +7769,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7752,7 +7794,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7777,7 +7819,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7802,7 +7844,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7827,7 +7869,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7852,7 +7894,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7877,7 +7919,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7902,7 +7944,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7927,7 +7969,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7952,7 +7994,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7977,7 +8019,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8002,7 +8044,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8027,7 +8069,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8198,9 +8240,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD HTML project Lists_2023",
+        "level.key": "CSD Web Dev choice level ul 1_2023",
         "script_level.level_keys": [
-          "CSD HTML project Lists_2023"
+          "CSD Web Dev choice level ul 1_2023"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "77f6c421-a274-4a17-852e-4ed11e2bd99e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Dev choice level ol 1_2023",
+        "script_level.level_keys": [
+          "CSD Web Dev choice level ol 1_2023"
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "lessonGroup-2",
@@ -8366,6 +8420,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U2 text style RGB intro_2023",
+        "script_level.level_keys": [
+          "CSD U2 text style RGB intro_2023"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "b0edd2db-5428-4723-8b2f-444795e9769f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style rgb practice_2023",
+        "script_level.level_keys": [
+          "CSD U2 text style rgb practice_2023"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "b0edd2db-5428-4723-8b2f-444795e9769f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U2 text style size_2023",
         "script_level.level_keys": [
           "CSD U2 text style size_2023"
@@ -8446,18 +8524,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
         "activity_section.key": "b70a9cf7-8b55-45f2-8604-65cab2c84621"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD CSS project RGB_2023",
-        "script_level.level_keys": [
-          "CSD CSS project RGB_2023"
-        ],
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2023",
-        "activity_section.key": "341e4c3a-d205-4925-a19c-470ba83eea60"
       }
     },
     {
@@ -9319,8 +9385,8 @@
       }
     },
     {
-      "name": "Headings",
-      "url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/template/preview",
+      "name": "Headings and Lists",
+      "url": "https://docs.google.com/presentation/d/1Al6euAqLNyka0vClWcPhmrtYOlqbF72nytVxGgDNoGs/template/preview",
       "key": "headings",
       "properties": {
         "audience": "Teacher",
@@ -11083,6 +11149,27 @@
         "lesson.key": "Headings",
         "programming_environment.name": "weblab",
         "programming_expression.key": "h"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "li"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "ol"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "ul"
       }
     },
     {
