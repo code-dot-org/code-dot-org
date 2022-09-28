@@ -2873,7 +2873,7 @@ columns:
     collation: 
     comment: 
   - &191 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: code_review_request_id
+    name: code_review_id
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: int(11)
@@ -23416,7 +23416,7 @@ columns_hash:
     updated_at: *189
   code_review_comments:
     id: *190
-    code_review_request_id: *191
+    code_review_id: *191
     commenter_id: *192
     is_resolved: *193
     comment: *194
@@ -25799,10 +25799,10 @@ indexes:
   code_review_comments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_comments
-    name: index_code_review_comments_on_code_review_request_id
+    name: index_code_review_comments_on_code_review_id
     unique: false
     columns:
-    - code_review_request_id
+    - code_review_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -30155,7 +30155,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20220927170718
+version: 20220927184247
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
