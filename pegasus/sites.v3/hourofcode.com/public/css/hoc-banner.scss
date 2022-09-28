@@ -1,4 +1,8 @@
-@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+@import 'color.scss', 'font.scss';
+
+$width-md: 992px; // Tablet
+$width-sm: 640px; // Mobile
+$width-xs: 374px; // Mobile - extra small
 
 #fullwidth {
   overflow: hidden;
