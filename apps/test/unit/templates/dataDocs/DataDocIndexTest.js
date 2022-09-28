@@ -7,11 +7,13 @@ describe('DataDocIndex', () => {
   let defaultProps;
   const dataDoc1 = {
     key: 'key1',
-    name: 'First Name'
+    name: 'First Name',
+    content: 'First Content'
   };
   const dataDoc2 = {
     key: 'key2',
-    name: 'Second Name'
+    name: 'Second Name',
+    content: 'Second Content'
   };
   const allDocs = [dataDoc1, dataDoc2];
 
@@ -28,5 +30,29 @@ describe('DataDocIndex', () => {
       expect(links[index]).to.contain(doc.name);
       expect(links[index]).to.contain(`/data_docs/${doc.key}`);
     });
+  });
+
+  it('does not show Doc without a name', () => {
+    const docNoName = {
+      key: 'noName',
+      content: 'Content'
+    };
+    const wrapper = isolateComponentTree(
+      <DataDocIndex dataDocs={[docNoName]} />
+    );
+    const links = wrapper.findAll('a').map(link => link.toString());
+    expect(links).to.have.length(0);
+  });
+
+  it('does not show Doc without content', () => {
+    const docNoName = {
+      key: 'noContent',
+      name: 'Name'
+    };
+    const wrapper = isolateComponentTree(
+      <DataDocIndex dataDocs={[docNoName]} />
+    );
+    const links = wrapper.findAll('a').map(link => link.toString());
+    expect(links).to.have.length(0);
   });
 });
