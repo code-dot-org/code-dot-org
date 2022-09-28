@@ -158,9 +158,15 @@ module Crowdin
   end
 
   class CrowdinInternalServerError < StandardError
+    def initialize(msg="Internal Server Error")
+      super
+    end
   end
 
   class CrowdinServiceUnavailableError < StandardError
+    def initialize(msg="Service Unavailable")
+      super
+    end
   end
 
   class Client

@@ -81,6 +81,7 @@ module Crowdin
           end
         end.compact.to_h
 
+        next if downloaded_files.empty?
         # Save incremental progress so we don't have to re-download everything
         # if the current run fails for any reason.
         # The order of saving progress is important for recovery purpose.
@@ -104,7 +105,7 @@ module Crowdin
       File.open(dest, "w:#{response.body.encoding}") do |destfile|
         destfile.write(response.body)
       end
-    rescue HTTParty::Error => error
+    rescue Net::ReadTimeout, Net::OpenTimeout => error
       # Only attempting retries on network errors. Surfacing errors during write.
       STDERR.puts "download_file(#{dest}) timed out: #{error}"
       raise if attempts <= 1
