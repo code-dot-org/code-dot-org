@@ -119,7 +119,7 @@ module Services
             type: :haml
           )
 
-          filename = ActiveStorage::Filename.new("lesson.#{lesson.key.parameterize(preserve_case: true)}.title.pdf").to_s
+          filename = ActiveStorage::Filename.new("lesson.#{lesson.key.parameterize}.title.pdf").to_s
           path = File.join(directory, filename)
 
           PDF.generate_from_html(page_content, path)
@@ -151,7 +151,7 @@ module Services
         # Given a Resource object, persist a PDF of that Resource (with a name
         # based on the key of that Resource) to the given directory.
         def fetch_resource_pdf(resource, directory="/tmp/")
-          filename = ActiveStorage::Filename.new("resource.#{resource.key.parameterize(preserve_case: true)}.pdf").to_s
+          filename = ActiveStorage::Filename.new("resource.#{resource.key.parameterize}.pdf").to_s
           path = File.join(directory, filename)
           return path if File.exist?(path)
           return fetch_url_to_path(resource.url, path)

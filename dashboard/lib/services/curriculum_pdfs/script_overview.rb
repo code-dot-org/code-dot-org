@@ -50,7 +50,7 @@ module Services
           pdfs = []
 
           # Include a PDF of the /s/script.name page itself
-          script_filename = ActiveStorage::Filename.new("script.#{script.name.parameterize(preserve_case: true)}.pdf").to_s
+          script_filename = ActiveStorage::Filename.new("script.#{script.name.parameterize}.pdf").to_s
           script_path = File.join(pdfs_dir, script_filename)
           # Make sure to specify
           # 1. 'no_redirect' so we're guaranteed to get the actual script we want
