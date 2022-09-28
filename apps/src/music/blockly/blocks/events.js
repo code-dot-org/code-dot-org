@@ -26,9 +26,9 @@ export const whenTrigger = {
   generator: () => '\n'
 };
 
-export const atTrigger = {
+export const triggeredAt = {
   definition: {
-    type: BlockTypes.AT_TRIGGER,
+    type: BlockTypes.TRIGGERED_AT,
     message0: 'button triggered at time %1',
     args0: [
       {

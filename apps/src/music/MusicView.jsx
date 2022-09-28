@@ -192,7 +192,7 @@ class MusicView extends React.Component {
       }" deletable="false" x="30" y="30"></block><block type="${
         BlockTypes.WHEN_TRIGGER
       }" deletable="false" x="30" y="170"></block><block type="${
-        BlockTypes.AT_TRIGGER
+        BlockTypes.TRIGGERED_AT
       }" deletable="false" x="500" y="30"></block></xml>`
     );
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
@@ -287,7 +287,8 @@ class MusicView extends React.Component {
   };
 
   playTrigger = () => {
-    this.callUserGeneratedCode(hooks.atTriggerButton);
+    console.log('Playhead position: ' + this.player.getPlayheadPosition());
+    this.callUserGeneratedCode(hooks.triggeredAtButton);
   };
 
   executeSong = () => {
@@ -299,7 +300,7 @@ class MusicView extends React.Component {
     const events = {
       whenRunButton: {code: generator(BlockTypes.WHEN_RUN)},
       whenTriggerButton: {code: generator(BlockTypes.WHEN_TRIGGER)},
-      atTriggerButton: {code: generator(BlockTypes.AT_TRIGGER)}
+      triggeredAtButton: {code: generator(BlockTypes.TRIGGERED_AT)}
     };
 
     CustomMarshalingInterpreter.evalWithEvents(

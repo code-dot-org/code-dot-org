@@ -1,7 +1,7 @@
 export const BlockTypes = {
   WHEN_RUN: 'when_run',
   WHEN_TRIGGER: 'when_trigger',
-  AT_TRIGGER: 'at_trigger',
+  TRIGGERED_AT: 'triggered_at',
   PLAY_SOUND: 'play_sound',
   PLAY_SOUND_NEXT_MEASURE: 'play_sound_next_measure',
   LOOP_FROM_TO: 'loop_from_to',
