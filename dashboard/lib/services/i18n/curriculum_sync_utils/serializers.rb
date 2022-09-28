@@ -102,6 +102,15 @@ module Services::I18n::CurriculumSyncUtils
       end
     end
 
+    class AnnouncementCrowdinSerializer < CrowdinSerializer
+      attributes :notice, :details, :buttonText
+
+      # override
+      def crowdin_key
+        object.key
+      end
+    end
+
     class VocabularyCrowdinSerializer < CrowdinSerializer
       attributes :word, :definition
 
@@ -167,6 +176,12 @@ module Services::I18n::CurriculumSyncUtils
       end
       has_many :resources, serializer: ResourceCrowdinSerializer
       has_many :student_resources, serializer: ResourceCrowdinSerializer
+      has_many :announcements, serializer: AnnouncementCrowdinSerializer do
+        next if object.announcements.nil?
+
+        translatable_announcements = object.announcements.select {|announcement| announcement['key'].present?}
+        translatable_announcements.map {|announcement| Announcement.new(announcement)}
+      end
 
       # override
       def crowdin_key
