@@ -22,7 +22,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
     script = create(:script, name: "test-escapes-script", seeded_from: Time.at(0))
     lesson = create(:lesson, script: script, key: "Some!key_with?special/characters")
     assert_equal Pathname.new("test-escapes-script/19700101000000/teacher-lesson-plans/Some%21key_with%3Fspecial-characters.pdf"),
-      Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, false, true)
+      Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, false)
     assert_equal "https://lesson-plans.code.org/test-escapes-script/19700101000000/teacher-lesson-plans/Some%21key_with%3Fspecial-characters.pdf",
       Services::CurriculumPdfs.get_lesson_plan_url(lesson, false)
   end

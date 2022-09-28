@@ -17,9 +17,8 @@ module Services
         # version of the script in the environment.
         #
         # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+('21-'22)+-+Resources.pdf>
-        def get_script_resources_pathname(script, as_url = false)
+        def get_script_resources_pathname(script)
           filename = ActiveStorage::Filename.new(script.localized_title.parameterize(preserve_case: true) + "-Resources.pdf").to_s
-          filename = CGI.escape(filename) if as_url
           script_overview_pathname = get_script_overview_pathname(script)
           return nil unless script_overview_pathname
           subdirectory = File.dirname(script_overview_pathname)
@@ -32,7 +31,7 @@ module Services
         # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29+-+Resources.pdf
         def get_unit_resources_url(script)
           return nil unless Services::CurriculumPdfs.should_generate_resource_pdf?(script)
-          pathname = get_script_resources_pathname(script, true)
+          pathname = get_script_resources_pathname(script)
           return nil if pathname.blank?
           File.join(get_base_url, pathname)
         end
