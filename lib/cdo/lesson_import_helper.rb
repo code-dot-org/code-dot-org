@@ -25,7 +25,7 @@ module LessonImportHelper
     # course version id should always be present for CSF/CSD/CSP 2020 courses and hoc courses.
     if (['Vocabulary', 'Resource'] & models_to_import).any?
       course_version_id = lesson.script&.get_course_version&.id
-      raise "Script must have course version" unless course_version_id
+      raise "Unit must have course version" unless course_version_id
     end
 
     lesson_levels = lesson.script_levels.to_a
