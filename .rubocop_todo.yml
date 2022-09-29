@@ -306,12 +306,6 @@ Rails/Pick:
 Rails/Pluck:
   Enabled: false
 
-# Offense count: 33
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
-Rails/Present:
-  Enabled: false
-
 # Offense count: 85
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Include.
