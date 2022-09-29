@@ -76,7 +76,6 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
@@ -382,15 +381,6 @@ Applab.init = function(config) {
 
   // Necessary for tests.
   thumbnailUtils.init();
-
-  Applab.generatedProperties = {
-    ...config.initialGeneratedProperties
-  };
-  //remove
-  getStore().dispatch(
-    setExportGeneratedProperties(Applab.generatedProperties.export)
-  );
-  config.getGeneratedProperties = getGeneratedProperties;
 
   // Set information about the current Applab level being displayed.
   getStore().dispatch(
@@ -1219,14 +1209,6 @@ Applab.onReportComplete = function(response) {
   studioApp().onReportComplete(response);
   displayFeedback();
 };
-
-function getGeneratedProperties() {
-  // Must return a new object instance each time so the project
-  // system can properly compare currentSources vs newSources
-  return {
-    ...Applab.generatedProperties
-  };
-}
 
 /**
  * Execute the app

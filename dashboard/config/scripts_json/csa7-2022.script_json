@@ -10,7 +10,8 @@
           "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
           "link": "",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "5de0804a-a6f1-442d-a53a-39779cef8ff0"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -19,7 +20,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey"
+          "buttonText": "End of Unit Survey",
+          "key": "17490b30-9569-42bb-bad2-13526a3d7f91"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -34,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-02 13:12:42 UTC",
+    "serialized_at": "2022-09-28 14:32:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

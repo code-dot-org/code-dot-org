@@ -20,6 +20,10 @@ class DataDoc < ApplicationRecord
   validates_uniqueness_of :key, case_sensitive: false
   validate :validate_key_format
 
+  def to_param
+    key
+  end
+
   def file_path
     Rails.root.join("config/data_docs/#{key}.json")
   end

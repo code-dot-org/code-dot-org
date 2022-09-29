@@ -574,3 +574,13 @@
   font-weight: 900;
   margin-bottom: 25px;
 }
+
+/* Styling for items in the OneTrust cookie banner */
+
+/*
+   We have some default styling which adds bullet points on <li> items, but we
+   don't want to see those in the OneTrust dialog.
+ */
+#onetrust-consent-sdk ul li:before {
+  content: none;
+}
