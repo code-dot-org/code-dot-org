@@ -7,7 +7,6 @@ export default class Timeline extends React.Component {
   static propTypes = {
     currentGroup: PropTypes.object,
     isPlaying: PropTypes.bool.isRequired,
-    playTrigger: PropTypes.func.isRequired,
     songData: PropTypes.object.isRequired,
     currentAudioElapsedTime: PropTypes.number.isRequired,
     convertMeasureToSeconds: PropTypes.func.isRequired,
@@ -43,7 +42,6 @@ export default class Timeline extends React.Component {
     const {
       currentGroup,
       isPlaying,
-      playTrigger,
       songData,
       currentAudioElapsedTime,
       convertMeasureToSeconds,
@@ -59,7 +57,7 @@ export default class Timeline extends React.Component {
       <div
         style={{
           backgroundColor: '#222',
-          height: 100,
+          height: 70,
           width: '100%',
           borderRadius: 4,
           padding: 10,
@@ -70,25 +68,11 @@ export default class Timeline extends React.Component {
               currentGroup.path +
               '/' +
               currentGroup.themeImageSrc}")`,
-          backgroundSize: '100% 200%'
+          backgroundSize: '100% 200%',
+          position: 'absolute',
+          bottom: 0
         }}
       >
-        <div style={{float: 'left'}}>
-          Timeline
-          <br />
-          <br />
-        </div>
-        {isPlaying && (
-          <div style={{float: 'right'}}>
-            <button
-              type="button"
-              onClick={() => playTrigger()}
-              style={{padding: 2, fontSize: 10, margin: 0}}
-            >
-              trigger
-            </button>
-          </div>
-        )}
         <div
           style={{
             width: '100%',
