@@ -159,4 +159,36 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     expected_local_files = ["#{@options[:locales_dir]}/Test Language/baz.bat"]
     assert_equal expected_local_files, Dir.glob(@options[:locales_dir] + "/**/*.*")
   end
+
+  def test_downloading_updates_with_aws_error
+    error = {
+      status: 503,
+      body: "Error"
+    }
+    success = {
+      status: 200,
+      body: "Success"
+    }
+    # Return error on first request, succeed on retry
+    stub_request(
+      :get,
+      DOWNLOAD_URL
+    ).to_return(
+      error,
+      success
+    )
+
+    File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
+    File.write @options[:etags_json], JSON.pretty_generate({})
+
+    @utils.download_changed_files
+
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_sync_out_json]))
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:etags_json]))
+    expected_local_files = [
+      "#{@options[:locales_dir]}/Test Language/baz.bat",
+      "#{@options[:locales_dir]}/Test Language/foo.bar"
+    ]
+    assert_equal expected_local_files, Dir.glob(@options[:locales_dir] + "/**/*.*").sort
+  end
 end
