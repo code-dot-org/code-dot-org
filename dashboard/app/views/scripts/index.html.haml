@@ -1,7 +1,7 @@
 %h1= @page_title = 'All Scripts'
 = link_to 'Update all', scripts_path(rake: '1')
 %br
-= link_to 'Create New Script', new_script_path
+= link_to 'Create New Unit', new_script_path
 - if @errors && @errors.any?
   #error_explanation
     %h2 Error updating scripts:
