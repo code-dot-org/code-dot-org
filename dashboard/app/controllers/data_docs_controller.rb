@@ -1,6 +1,7 @@
 class DataDocsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
   before_action :set_data_doc, only: [:show, :edit, :update]
+  before_action :index, only: [:edit_all]
   authorize_resource
 
   # GET /data_docs/new
@@ -30,6 +31,10 @@ class DataDocsController < ApplicationController
   # GET /data_docs
   def index
     @data_docs = DataDoc.all.order(:name).map(&:serialize)
+  end
+
+  #GET /data_docs/edit
+  def edit_all
   end
 
   # GET /data_docs/:key/edit
