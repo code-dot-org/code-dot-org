@@ -41,7 +41,7 @@ class PeerReview < ApplicationRecord
 
   belongs_to :submitter, class_name: 'User', optional: true
   belongs_to :reviewer, class_name: 'User', optional: true
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :level, optional: true
   belongs_to :level_source, optional: true
 

@@ -39,7 +39,7 @@ class ScriptLevel < ApplicationRecord
   include SharedConstants
   include Rails.application.routes.url_helpers
 
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :lesson, foreign_key: 'stage_id', optional: true
 
   # This field will only be present in scripts which are being edited in the
