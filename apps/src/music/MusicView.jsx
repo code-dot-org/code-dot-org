@@ -8,7 +8,7 @@ import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarsha
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
 import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
-import Tabs from './Tabs';
+import Controls from './Controls';
 import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
@@ -268,16 +268,15 @@ class MusicView extends React.Component {
 
   choosePanel = panel => {
     this.setState({currentPanel: panel});
-
-    if (panel === 'timeline') {
-      if (this.state.isPlaying) {
-        this.stopSong();
-      } else {
-        this.playSong();
-      }
-    }
-
     this.resizeBlockly();
+  };
+
+  setPlaying = play => {
+    if (play) {
+      this.playSong();
+    } else {
+      this.stopSong();
+    }
   };
 
   setGroupPanel = panel => {
@@ -384,13 +383,10 @@ class MusicView extends React.Component {
       containerWidth = minAppWidth;
     }
 
-    const mobileWidth = 601;
-    const isDesktop = this.state.windowWidth >= mobileWidth;
+    const isDesktop = true;
 
     const showCode = isDesktop || this.state.currentPanel === 'code';
     const showTimeline = isDesktop || this.state.currentPanel === 'timeline';
-    const currentPanel = this.state.currentPanel;
-
     const currentGroup = this.getCurrentGroup();
 
     const songData = {
@@ -404,7 +400,7 @@ class MusicView extends React.Component {
           backgroundColor: 'black',
           color: 'white',
           width: '100%',
-          height: 'calc(100% - 50px)',
+          height: 'calc(100% - 0px)',
           borderRadius: 4,
           padding: 0,
           boxSizing: 'border-box',
@@ -417,17 +413,23 @@ class MusicView extends React.Component {
             float: 'left',
             width: '100%',
             marginTop: 10,
-            height: showCode ? 'calc(100% - 110px)' : 0
+            height: showCode ? 'calc(100% - 90px)' : 0,
+            position: 'relative'
           }}
         >
-          <div id="blocklyDiv" style={{position: 'absolute'}} />
+          <div id="blocklyDiv" />
+
+          <Controls
+            isPlaying={this.state.isPlaying}
+            setPlaying={this.setPlaying}
+            playTrigger={this.playTrigger}
+          />
         </div>
 
         {showTimeline && (
           <Timeline
             currentGroup={currentGroup}
             isPlaying={this.state.isPlaying}
-            playTrigger={this.playTrigger}
             songData={songData}
             currentAudioElapsedTime={this.state.currentAudioElapsedTime}
             convertMeasureToSeconds={this.convertMeasureToSeconds}
@@ -435,13 +437,6 @@ class MusicView extends React.Component {
             currentMeasure={this.player.getCurrentMeasure()}
           />
         )}
-
-        <Tabs
-          isDesktop={isDesktop}
-          currentPanel={currentPanel}
-          choosePanel={this.choosePanel}
-          isPlaying={this.state.isPlaying}
-        />
       </div>
     );
   }
