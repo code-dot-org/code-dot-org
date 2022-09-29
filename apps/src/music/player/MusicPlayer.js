@@ -40,7 +40,7 @@ export default class MusicPlayer {
   playSoundImmediately(id) {
     this.stopSong();
 
-    this.playSoundEvent({type: 'play', id, when: 0});
+    this.playSoundEvent({type: 'play', id, when: 0}, true);
   }
 
   playSong() {

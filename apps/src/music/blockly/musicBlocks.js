@@ -1,6 +1,6 @@
 import {playSound, playSoundNextMeasure} from './blocks/samples';
 import {ifEvenThen, loopFromTo} from './blocks/control';
-import {number, round} from './blocks/math';
+import {arithmetic, number, round} from './blocks/math';
 import {variablesGet, variablesSet} from './blocks/variables';
 import {triggeredAt, whenRun, whenTrigger} from './blocks/events';
 
@@ -15,6 +15,7 @@ const blockList = [
   ifEvenThen,
   number,
   round,
+  arithmetic,
   variablesSet,
   variablesGet
 ];

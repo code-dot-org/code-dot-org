@@ -75,3 +75,54 @@ export const round = {
     return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   }
 };
+
+export const arithmetic = {
+  definition: {
+    type: BlockTypes.ARITHMETIC,
+    message0: '%1 %2 %3',
+    args0: [
+      {
+        type: 'input_value',
+        name: 'A',
+        check: 'Number'
+      },
+      {
+        type: 'field_dropdown',
+        name: 'OP',
+        options: [
+          ['%{BKY_MATH_ADDITION_SYMBOL}', 'ADD'],
+          ['%{BKY_MATH_SUBTRACTION_SYMBOL}', 'MINUS'],
+          ['%{BKY_MATH_MULTIPLICATION_SYMBOL}', 'MULTIPLY'],
+          ['%{BKY_MATH_DIVISION_SYMBOL}', 'DIVIDE'],
+          ['%', 'MODULO']
+        ]
+      },
+      {
+        type: 'input_value',
+        name: 'B',
+        check: 'Number'
+      }
+    ],
+    inputsInline: true,
+    output: 'Number',
+    style: 'math_blocks',
+    helpUrl: '%{BKY_MATH_ARITHMETIC_HELPURL}',
+    extensions: ['math_op_tooltip']
+  },
+  generator: ctx => {
+    const OPERATORS = {
+      ADD: [' + ', Blockly.JavaScript.ORDER_ADDITION],
+      MINUS: [' - ', Blockly.JavaScript.ORDER_SUBTRACTION],
+      MULTIPLY: [' * ', Blockly.JavaScript.ORDER_MULTIPLICATION],
+      DIVIDE: [' / ', Blockly.JavaScript.ORDER_DIVISION],
+      MODULO: [' % ', Blockly.JavaScript.ORDER_MODULUS]
+    };
+    const tuple = OPERATORS[ctx.getFieldValue('OP')];
+    const operator = tuple[0];
+    const order = tuple[1];
+    const argument0 = Blockly.JavaScript.valueToCode(ctx, 'A', order) || '0';
+    const argument1 = Blockly.JavaScript.valueToCode(ctx, 'B', order) || '0';
+    const code = argument0 + operator + argument1;
+    return [code, order];
+  }
+};
