@@ -155,7 +155,7 @@ class PeerReview < ApplicationRecord
       }
 
       # First, create a placeholder Peer Review entry for someone else enrolled in the course to review.
-      # Only create it if this CourseUnit (PLC Courses equivalent of a Script) requires review from peers.
+      # Only create it if this CourseUnit (PLC Courses equivalent of a Unit) requires review from peers.
       create!(base_peer_review_attributes) unless user_level.script&.only_instructor_review_required?
 
       # Always create a Peer Review entry in order for the instructor to provide a review.

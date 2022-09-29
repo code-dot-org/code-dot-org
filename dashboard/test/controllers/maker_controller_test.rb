@@ -13,21 +13,21 @@ class MakerControllerTest < ActionController::TestCase
     @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
     @csd_2017 = ensure_course 'csd-2017', '2017'
-    @csd6_2017 = ensure_script Script::CSD6_NAME
+    @csd6_2017 = ensure_script Unit::CSD6_NAME
     create(:unit_group_unit, position: 1, unit_group: @csd_2017, script: @csd6_2017)
     CourseOffering.add_course_offering(@csd_2017)
     @csd_2017.reload
     @csd6_2017.reload
 
     @csd_2018 = ensure_course 'csd-2018', '2018'
-    @csd6_2018 = ensure_script Script::CSD6_2018_NAME
+    @csd6_2018 = ensure_script Unit::CSD6_2018_NAME
     create(:unit_group_unit, position: 1, unit_group: @csd_2018, script: @csd6_2018)
     CourseOffering.add_course_offering(@csd_2018)
     @csd_2018.reload
     @csd6_2018.reload
 
     @csd_2019 = ensure_course 'csd-2019', '2019'
-    @csd6_2019 = ensure_script Script::CSD6_2019_NAME
+    @csd6_2019 = ensure_script Unit::CSD6_2019_NAME
     create(:unit_group_unit, position: 1, unit_group: @csd_2019, script: @csd6_2019)
     CourseOffering.add_course_offering(@csd_2019)
     @csd_2019.reload
@@ -40,7 +40,7 @@ class MakerControllerTest < ActionController::TestCase
     @csd_2020_unstable.reload
     @csd6_2020_unstable.reload
 
-    Script.clear_cache
+    Unit.clear_cache
   end
 
   test_redirect_to_sign_in_for :home
@@ -521,7 +521,7 @@ class MakerControllerTest < ActionController::TestCase
   private
 
   def ensure_script(script_name, is_stable=true)
-    Script.find_by_name(script_name) ||
+    Unit.find_by_name(script_name) ||
       create(:script, name: script_name, is_maker_unit: true, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group

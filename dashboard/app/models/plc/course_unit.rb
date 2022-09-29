@@ -19,7 +19,7 @@
 #
 
 # A named group of learning modules within a PLC course.
-# Corresponds to a Script in our regular curriculum hierarchy.
+# Corresponds to a Unit in our regular curriculum hierarchy.
 class Plc::CourseUnit < ApplicationRecord
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :plc_course, class_name: '::Plc::Course'

@@ -27,12 +27,12 @@ class Library < ApplicationRecord
   end
 
   def self.content_from_cache(name)
-    if Script.should_cache?
+    if Unit.should_cache?
       @@all_library_names ||= Library.distinct.pluck(:name)
       return nil unless @@all_library_names.include? name
     end
 
-    Rails.cache.fetch("libraries/#{name}", force: !Script.should_cache?) do
+    Rails.cache.fetch("libraries/#{name}", force: !Unit.should_cache?) do
       Library.find_by(name: name).try(:content)
     end
   end
