@@ -28,7 +28,6 @@ const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
 const CHROMEBOOK = 'chromebook';
-//const MICROBIT = 'microbit';
 
 const style = {
   icon: {
@@ -41,6 +40,7 @@ const style = {
     margin: '0 0 15px 10px'
   },
   microbitImg: {
+    borderRadius: '0',
     float: 'right',
     margin: '0 0 15px 10px'
   }
@@ -85,13 +85,21 @@ export default class SetupGuide extends React.Component {
       );
     }
 
+    // Experiment 'microbit' renders additional description.
+    let isMicrobit = experiments.isEnabled('microbit');
+
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (
-      <Provider store={store}>
-        <Downloads />
-      </Provider>
+      <div>
+        <h1>{applabI18n.makerSetupPageTitle()}</h1>
+        <CircuitPlaygroundDescription />
+        {isMicrobit && <MicrobitDescription />}
+        <Provider store={store}>
+          <Downloads />
+        </Provider>
+      </div>
     );
   }
 }
@@ -135,24 +143,8 @@ class Downloads extends React.Component {
 
   render() {
     const {platform} = this.state;
-    // const {enableExperiments} = request.params['enableExperiments']
     return (
       <div>
-        <h1>CS Discoveries Maker Toolkit IT Setup</h1>
-        {/*Adding logic here
-        if request.params['enableExperiments'] === 'microbit'
-          return(
-            <CircuitPlaygroundDescription />
-            <MicrobitDescription />
-            )
-        else
-          return(
-            <CircuitPlaygroundDescription />
-          )
-        */}
-        <CircuitPlaygroundDescription />
-        <MicrobitDescription />
-
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
           <button type="button" value={WINDOWS}>
             <FontAwesome icon="windows" /> {i18n.windows()}
@@ -184,71 +176,45 @@ const downloadButtonStyle = {
   textAlign: 'center'
 };
 
-class MicrobitDescription extends React.Component {
-  render() {
-    return (
-      <div>
-        <h2>The micro:bit</h2>
-        <center>
-          <a href={'https://microbit.org/'}>
-            <img
-              src={'maker/microbit-drawing-green.png'}
-              width={200}
-              style={style.microbitImg}
-            />
-          </a>
-        </center>
-        <SafeMarkdown
-          markdown={
-            'The [micro:bit](https://microbit.org/) is a circuit board designed by the BBC with a variety of sensors and other components, like a compass and an 8 by 8 array of programmable LEDs.'
-          }
-        />
-        <SafeMarkdown
-          markdown={
-            'Please follow the instructions below to connect your board to Code.org.'
-          }
-        />
-      </div>
-    );
-  }
+function MicrobitDescription() {
+  return (
+    <div>
+      <h2>{applabI18n.makerSetupMicrobitTitle()}</h2>
+      <center>
+        <a href="https://microbit.org/">
+          <img
+            src="../assets/maker/microbit-drawing-green.png"
+            width={200}
+            style={style.microbitImg}
+          />
+        </a>
+      </center>
+      <SafeMarkdown
+        markdown={applabI18n.makerSetupMicrobitDescription()}
+        width={'45 %'}
+      />
+    </div>
+  );
 }
 
-class CircuitPlaygroundDescription extends React.Component {
-  render() {
-    return (
-      <div>
-        <h2>The Circuit Playground</h2>
-        <center>
-          <a
-            href={
-              'https://learn.adafruit.com/introducing-circuit-playground/overview'
-            }
-          >
-            <img
-              src={'maker/circuit-playground-200.jpg'}
-              width={200}
-              style={style.circuitPlaygroundImg}
-            />
-          </a>
-        </center>
-        <SafeMarkdown
-          markdown={
-            'The Adafruit [Circuit Playground Express](https://www.adafruit.com/product/3399) (and the older [Circuit Playground Classic](https://www.adafruit.com/product/3000)) is a programmable circuit board with built-in components that make getting started with physical computing quick and fun.'
-          }
-        />
-        <SafeMarkdown
-          markdown={
-            'In unit 6 of [Computer Science Discoveries](https://code.org/educate/csd) students use the Circuit Playground tethered via USB to their computers to allow for online curriculum integration and interactive debugging of programs.'
-          }
-        />
-        <SafeMarkdown
-          markdown={
-            'Please follow the instructions below to connect your board to Code.org.'
-          }
-        />
-      </div>
-    );
-  }
+function CircuitPlaygroundDescription() {
+  return (
+    <div>
+      <h2>{applabI18n.makerSetupCircuitPlaygroundTitle()}</h2>
+      <center>
+        <a href="https://learn.adafruit.com/introducing-circuit-playground/overview">
+          <img
+            src="../assets/maker/circuit-playground-200.jpg"
+            width={200}
+            style={style.circuitPlaygroundImg}
+          />
+        </a>
+      </center>
+      <SafeMarkdown
+        markdown={applabI18n.makerSetupCircuitPlaygroundDescription()}
+      />
+    </div>
+  );
 }
 
 class WindowsDownloads extends React.Component {
