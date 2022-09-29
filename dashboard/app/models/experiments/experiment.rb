@@ -77,7 +77,7 @@ class Experiment < ApplicationRecord
   # section and/or script.
   # @param user [User]
   # @param section [Section]
-  # @param script [Script]
+  # @param script [Unit]
   # @param experiment_name [String]
   # @returns [Boolean]
   def self.enabled?(user: nil, section: nil, script: nil, experiment_name: nil)
@@ -93,7 +93,7 @@ class Experiment < ApplicationRecord
   # section and/or script.
   # @param user [User]
   # @param section [Section]
-  # @param script [Script]
+  # @param script [Unit]
   # @param experiment_names [Array[String]]
   # @returns [Boolean]
   def self.any_enabled?(user: nil, section: nil, script: nil, experiment_names: [])

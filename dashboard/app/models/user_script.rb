@@ -33,7 +33,7 @@ class UserScript < ApplicationRecord
   )
 
   def script
-    Script.get_from_cache(script_id)
+    Unit.get_from_cache(script_id)
   end
 
   # @return [Boolean] Whether the user completed the script, e.g., if there are no more progression

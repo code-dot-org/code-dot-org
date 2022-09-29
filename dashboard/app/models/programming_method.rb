@@ -119,7 +119,7 @@ class ProgrammingMethod < ApplicationRecord
   end
 
   def get_overloads
-    Rails.cache.fetch("programming_methods/#{id}/get_overloads", force: !Script.should_cache?) do
+    Rails.cache.fetch("programming_methods/#{id}/get_overloads", force: !Unit.should_cache?) do
       ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).to_a
     end
   end

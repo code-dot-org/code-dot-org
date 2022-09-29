@@ -36,7 +36,7 @@ module CaptureQueries
   end
 
   IGNORE_FILTERS = [
-    # Script/course-cache related queries don't count.
+    # Unit/course-cache related queries don't count.
     /(script|unit_group)\.rb.*get_from_cache/,
     /(script|unit_group)\.rb.*all_(scripts|courses)/,
     # Level-cache queries don't count.

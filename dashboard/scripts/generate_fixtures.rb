@@ -49,7 +49,7 @@ scripts_map = {
 
 scripts_map.each do |_script_id, name|
   puts name
-  script = Script.find_by_name name
+  script = Unit.find_by_name name
   @scripts[name] = script.attributes
 
   script.unit_groups&.each do |unit_group|
