@@ -204,7 +204,7 @@ class AdminUsersController < ApplicationController
     search_term = params[:search_term]
     permission = params[:permission]
     if search_term.present?
-      if search_term =~ /^\d+$/
+      if /^\d+$/.match?(search_term)
         @user = restricted_users.find_by(id: search_term)
       else
         users = restricted_users.where(hashed_email: User.hash_email(search_term)).or(restricted_users.where(username: search_term))

@@ -246,7 +246,7 @@ module GitHub
   def self.open_url(url)
     raise "GitHub.open_url called on non-dev environment" unless rack_env?(:development)
     # Based on http://stackoverflow.com/a/14053693/5000129
-    if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
+    if /linux|bsd/.match?(RbConfig::CONFIG['host_os'])
       system "sensible-browser \"#{url}\""
     else
       system "open \"#{url}\""
