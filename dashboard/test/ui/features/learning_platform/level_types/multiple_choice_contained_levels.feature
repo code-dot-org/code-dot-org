@@ -70,11 +70,15 @@ Scenario: Teacher can reset progress on multiple choice contained level
   And I rotate to landscape
   And I wait for the page to fully load
   Then I press "unchecked_0"
+  And I wait up to 5 seconds for element "#checked_0" to be visible
   Then I press "runButton"
+  And I verify progress in the header of the current page is "perfect" for level 2
   And I see no difference for "level run" using stitch mode "none"
   Then I press "resetButton"
   Then I click selector "button:contains('Delete Answer')"
-  And I wait for 10 seconds
+  And I wait up to 5 seconds for element "#unchecked_0" to be visible
+  And I wait for 5 seconds
+  And I verify progress in the header of the current page is "not_tried" for level 2
   And I see no difference for "level reset"
   Then I press "unchecked_1"
   Then I press "runButton"
