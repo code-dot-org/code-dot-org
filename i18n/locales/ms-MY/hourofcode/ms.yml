@@ -5,21 +5,21 @@ ms:
   language: Bahasa Inggeris
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
-  campaign_date_start_short: 5 Dis.
-  campaign_date_start_long: 7 Disember
-  campaign_date_short: 5-11 Dis.
+  campaign_date_start_short: 5 Disember
+  campaign_date_start_long: 5 Disember
+  campaign_date_short: 5-11 Disember
   campaign_date_full: 5-11 Disember
   campaign_date_year: '2020'
   campaign_date_full_year: 5-11 Disember 2022
   nonus_campaign_date_start_short: 1 Okt.
   nonus_campaign_date_start_long: 1 Oktober
-  nonus_campaign_date_short: 1 Okt. - 18 Dis.
+  nonus_campaign_date_short: 1 Oktober - 18 Disember
   nonus_campaign_date_full: 1 Oktober - 18 Disember
   nonus_campaign_date_year: '2020'
   nonus_campaign_date_full_year: 1 Oktober 2022 - 18 Disember 2022
   latam_campaign_date_start_short: 1 Okt.
   latam_campaign_date_start_long: 1 Oktober
-  latam_campaign_date_short: 1 Okt. - 18 Dis.
+  latam_campaign_date_short: 1 Oktober - 18 Disember
   latam_campaign_date_full: 1 Oktober - 18 Disember
   latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: 1 Oktober 2022 - 18 Disember 2022
@@ -1054,7 +1054,8 @@ ms:
     pelajar untuk mendorong diri mereka.
   highlights_constant_athletes_short_heading: Mendorong diri sendiri
   footer_copyright_message: Hak Cipta 2015 Code.org. Semua hak terpelihara.
-  footer_trademark_message: Hour of Code™ adalah tanda perniagaan bagi Code.org.
+  footer_trademark_message: Hour of Code® dan Hora del Código® ialah tanda dagangan
+    Code.org.
   footer_built_on_github: Dibina di atas GitHub daripada Microsoft
   footer_menu_partners: Rakan kongsi
   footer_menu_contact: Hubungi kami

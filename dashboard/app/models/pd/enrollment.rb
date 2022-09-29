@@ -202,8 +202,8 @@ class Pd::Enrollment < ApplicationRecord
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
-    # any other non-academic year workshop uses foorm. We don't automatically provide survey urls for AYW
-    elsif !ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(workshop.subject)
+    # any other non-academic year workshop uses foorm
+    else
       CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
     end
   end
@@ -222,8 +222,6 @@ class Pd::Enrollment < ApplicationRecord
     return unless should_send_exit_survey?
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
-
-    update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,

@@ -347,7 +347,7 @@ Dashboard::Application.routes.draw do
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-    resources :data_docs, only: [:new, :create, :show], param: :key
+    resources :data_docs, only: [:new, :create, :edit, :update, :show, :index], param: :key
 
     resources :lessons, only: [:edit, :update] do
       member do
@@ -568,7 +568,6 @@ Dashboard::Application.routes.draw do
     get '/too_young', to: 'too_young#index'
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
-    post '/sms/send_download', to: 'sms#send_download_url_to_phone', as: 'send_download_url_to_phone'
 
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
     get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
@@ -995,7 +994,7 @@ Dashboard::Application.routes.draw do
       get :peers_with_open_reviews, on: :collection
     end
 
-    resources :code_review_notes, only: [:create, :update, :destroy]
+    resources :code_review_comments, only: [:create, :update, :destroy]
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 

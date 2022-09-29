@@ -3990,6 +3990,7 @@
         "jigsaw/Jigsaw": {
           "name": "Quebra-cabeça",
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "purpose": "O principal objetivo desta lição é construir a experiência dos alunos com computadores. Ao cobrir as funções mais básicas do computador, como clicar, arrastar e soltar, estamos criando um ambiente mais igualitário na classe para futuros quebra-cabeças. Esta lição também oferece uma ótima oportunidade para introduzir o comportamento apropriado no laboratório de informática.",
           "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
         },
         "csd-post-survey/CSD post-course survey": {

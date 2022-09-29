@@ -2818,6 +2818,8 @@ ro:
               display_name: Conţinut
             lessonGroup-5:
               display_name: Cutie cu nisip
+        ai-ethics-2021:
+          description_audience: Clasele 6-12
         poem-art-2021:
           title: Arta Poeziei
         counting-csc-2021:
@@ -3325,8 +3327,19 @@ ro:
           student_description: Această unitate conține un sondaj care va fi distribuit
             când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți
             va spune când trebuie să răspunzi la acest sondaj.
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Extensie de Depanare Asincronă
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modulul  2 Muncă Asincronă
         soccer:
           name: fotbal
+          title: Codifică-ți propriul joc de fotbal
+          description_short: Creează un joc de fotbal
+          description: Creează un joc de fotbal
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:

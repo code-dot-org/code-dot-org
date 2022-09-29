@@ -323,10 +323,12 @@ class Section < ApplicationRecord
     link_to_assigned = base_url
     title_of_current_unit = ''
     link_to_current_unit = ''
+    course_version_name = nil
 
     if unit_group
       title = unit_group.localized_title
       link_to_assigned = course_path(unit_group)
+      course_version_name = unit_group.name
       if script_id
         title_of_current_unit = script.title_for_display
         link_to_current_unit = script_path(script)
@@ -334,6 +336,7 @@ class Section < ApplicationRecord
     elsif script_id
       title = script.title_for_display
       link_to_assigned = script_path(script)
+      course_version_name = script.name
     end
 
     # Remove ordering from scope when not including full
@@ -353,6 +356,7 @@ class Section < ApplicationRecord
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
+      courseVersionName: course_version_name,
       numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage_students",
       code: code,
