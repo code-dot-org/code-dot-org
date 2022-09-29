@@ -69,7 +69,7 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
 
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
 
   has_many :section_hidden_lessons

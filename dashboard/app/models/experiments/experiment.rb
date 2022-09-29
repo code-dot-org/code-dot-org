@@ -30,7 +30,7 @@
 MAX_CACHE_AGE = Rails.application.config.experiment_cache_time_seconds.seconds
 
 class Experiment < ApplicationRecord
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
 
   validates :name, presence: true
   after_save {Experiment.update_cache}

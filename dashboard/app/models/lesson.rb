@@ -31,7 +31,7 @@ class Lesson < ApplicationRecord
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  belongs_to :script, inverse_of: :lessons, optional: true
+  belongs_to :script, class_name: 'Unit', inverse_of: :lessons, optional: true
   belongs_to :lesson_group, optional: true
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :activity_sections, through: :lesson_activities

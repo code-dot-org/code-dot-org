@@ -26,7 +26,7 @@ class UserScript < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user
-  belongs_to :script
+  belongs_to :script, class_name: 'Unit'
 
   serialized_attrs %w(
     version_warning_dismissed
