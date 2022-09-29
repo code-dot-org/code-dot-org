@@ -63,7 +63,7 @@ end
 
 def main(options)
   options.unit_names.each do |unit_name|
-    script = Script.find_by_name!(unit_name)
+    script = Unit.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
     if script.is_migrated?
