@@ -108,7 +108,7 @@ module Crowdin
       File.open(dest, "w:#{response.body.encoding}") do |destfile|
         destfile.write(response.body)
       end
-    rescue Net::ReadTimeout, Net::OpenTimeout, AWSSlowDownError => error
+    rescue Net::ReadTimeout, Net::OpenTimeout, AWSBadGatewayError, AWSSlowDownError => error
       # Only attempting retries on network errors. Surfacing errors during write.
       STDERR.puts "download_file(#{dest}) timed out: #{error}"
       raise if attempts <= 1
