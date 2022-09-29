@@ -38,7 +38,7 @@ TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
 # A sequence of Levels
 class Unit < ApplicationRecord
-  self.table_name = 'stages'
+  self.table_name = 'scripts'
 
   include ScriptConstants
   include Curriculum::SharedCourseConstants
