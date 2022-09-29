@@ -56,11 +56,12 @@ module Crowdin
         "/projects/#{@crowdin_client.config.project_id}/translations/builds/files/#{file_id}",
         options
       )
+      raise CrowdinRateLimitError if response.code == 429
       raise CrowdinInternalServerError if response.code == 500
       raise CrowdinServiceUnavailableError if response.code == 503
 
       response
-    rescue Net::ReadTimeout, Net::OpenTimeout, CrowdinInternalServerError, CrowdinServiceUnavailableError => error
+    rescue Net::ReadTimeout, Net::OpenTimeout, CrowdinRateLimitError, CrowdinInternalServerError, CrowdinServiceUnavailableError => error
       # Handle a timeout by simply retrying. We default to three attempts before
       # giving up; if this doesn't work out, other things we could consider:
       #
@@ -68,6 +69,7 @@ module Crowdin
       #   - increasing the number of attempts for certain high-failure-rate calls
       #   - increasing the timeout, either globally or for this specific call
       STDERR.puts "Crowdin.export_file(#{file_id}) error: #{error}"
+      sleep(3) if response&.code == 429
       raise if attempts <= 1
       export_file(file_id, language, etag: etag, attempts: attempts - 1)
     end
