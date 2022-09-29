@@ -15,13 +15,19 @@ export default function CsaSkinnyBanner() {
   const text =
     'Creative projects and real world connections in our equity-driven curriculum';
 
+  // TODO (madelynkasula 09/29/2022): Remove JS styles below and address TODO in
+  // csaSkinnyBanner.scss once asset loading has been fixed for webpack 5.
+  const asideStyle = {
+    background: `url("${IMAGE_BASE_URL}csa-skinny-banner-bg.svg") center no-repeat`
+  };
+
   if (!!DCDO.get('csa-skinny-banner', false)) {
     return (
       <a
         href={pegasus('/educate/csa')}
         title="Learn more about Code.org's AP® CSA curriculum"
       >
-        <aside>
+        <aside style={asideStyle}>
           <div className="text-wrapper">
             <h1>{headerText}</h1>
             <p>{text}</p>
