@@ -8,6 +8,7 @@ export const BlockTypes = {
   IF_EVEN_THEN: 'if_even_then',
   NUMBER: 'number',
   ROUND: 'round',
+  ARITHMETIC: 'arithmetic',
   VARIABLES_GET: 'variables_get',
   VARIABLES_SET: 'variables_set'
 };
