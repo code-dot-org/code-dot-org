@@ -136,7 +136,7 @@
     "isolate-react": "^2.3.0",
     "istanbul-instrumenter-loader": "^3.0.1",
     "jquery": "1.12.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.2",
     "js-cookie": "^2.1.2",
     "js-yaml": "^3.6.0",
     "json-parse-better-errors": "^1.0.1",
