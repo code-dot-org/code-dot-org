@@ -26,7 +26,7 @@ export function getAnimationLibraryFile(filename) {
 
 // Returns the list of default sprites in SpriteLab in English
 export function getDefaultList() {
-  return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
+  return fetch('/api/v1/animation-library/default-spritelab').then(response =>
     response.json()
   );
 }
