@@ -162,7 +162,7 @@ class Blockly < Level
   end
 
   def self.count_xml_blocks(xml_string)
-    unless xml_string.blank?
+    if xml_string.present?
       xml = Nokogiri::XML(xml_string, &:noblanks)
       # The structure of the XML will be
       # <document>
