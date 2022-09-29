@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2022-09-27 22:03:03 UTC",
+    "serialized_at": "2022-09-29 04:28:19 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2150,10 +2150,33 @@
       }
     },
     {
-      "key": "77f6c421-a274-4a17-852e-4ed11e2bd99e",
+      "key": "89272528-829d-4abf-8692-13511ada6b08",
       "position": 10,
       "properties": {
-        "description": "**Transition:** Have your students pause pair programming and bring the class back together at this point in order to discuss lists. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Ask students to identify when someone might use a list. \n\n*Keep track of the different types of lists students identify.*\n\n*Examples: a* **bulleted** *list might be used to make a grocery list and a* **numbered** *list might be used to list your favorite movies or the steps in a recipe.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slides to help students update their anchor chart/poster. \n\nHave students continue Pair Programming through the remainder of the lesson. ",
+        "description": "**Transition:** Have your students pause programming and bring the class back together at this point in order to add heading tags to their HTML Tag Chart.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slides and the remarks below to help students add heading tags to their HTML Tag Chart.\n\n`<h1>` - Largest heading tag, typically used for web page titles - `</h1>`\n\n`<h2>` to `<h6>` - Heading tags, typically used for subtitles - `</h2>` to `</h6>`"
+      },
+      "seeding_key": {
+        "activity_section.key": "89272528-829d-4abf-8692-13511ada6b08",
+        "lesson_activity.key": "d223f6c5-0d0d-42e6-ae0a-0805e6c10143"
+      }
+    },
+    {
+      "key": "21c46aea-55f7-4e49-b739-f1904912438d",
+      "position": 11,
+      "properties": {
+        "description": "It is important to remember and get down in our HTML chart that heading tags, h1 through h6 are used any time we have a title or a subtitle. Just like it says on the slide, h1 is normally used for the webpage title, while h2 to h6 are used for subtitles on webpages. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "21c46aea-55f7-4e49-b739-f1904912438d",
+        "lesson_activity.key": "d223f6c5-0d0d-42e6-ae0a-0805e6c10143"
+      }
+    },
+    {
+      "key": "77f6c421-a274-4a17-852e-4ed11e2bd99e",
+      "position": 12,
+      "properties": {
+        "description": "**Transition:** Have your students continue to pause pair programming in order to discuss lists. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** When might someone use a list?\n\n  - *Think about times when you have made lists.* \n  - *Why did you make the list?*\n  - *What was the list for?*\n  - *What type of stuff was in your list(s)?*\n\nKeep track of the different types of lists students identify.\n\n**Discussion Goal:** There are many possible answers. Examples could include a **bulleted** list used to make a grocery list and a **numbered** list used to list your favorite movies or the steps in a recipe.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slides and the remarks below to show examples of list tags and describe how students will use the tags to create lists in HTML. \n",
         "name": "Web Lab: Lists",
         "progression_name": "Skill Building"
       },
@@ -2163,8 +2186,32 @@
       }
     },
     {
+      "key": "0c5e5896-7483-4092-920e-11a87f815368",
+      "position": 13,
+      "properties": {
+        "description": "Another term for a bulleted list is an unordered list. This is the type of list we will make when it does not matter the order of our items. If we want our list to be numbered, we will create an ordered list.  \n\nMaking a list can be tricky, which is why we are talking about it before you go into Web Lab and do it yourselves. As you can see on the slide, to make a list, we need two different HTML tags. The first tag will create the **type** of list we want - an ordered list or an unordered list - \"ol\" or \"ul\". \n\nUnlike other tags we've used so far, *nothing* goes next to this tag. Instead, you will see that we go down to the next line and use the second HTML tag needed to create a list, the \"li\" tag, which stands for \"list item\".  \n\nThis tag looks like the other tags we've used so far like the paragraph or heading tags, with an opening tag, the HTML element, and followed with the closing tag. We can have as many \"list items\" as we want. \n\nWhen we are done making our list, we will go down to the next line, and **this** is where we will put the closing tag for the **type** of list we started. So we'll either be closing an \"ol\" or \"ul\" tag. \n\nLet's look at examples of you might use an unordered and ordered list on the next two slides. Notice on both slides, the title of the list still gets one of the heading tags we just learned about. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0c5e5896-7483-4092-920e-11a87f815368",
+        "lesson_activity.key": "d223f6c5-0d0d-42e6-ae0a-0805e6c10143"
+      }
+    },
+    {
+      "key": "4c803233-659d-40e0-a0a7-6e2410e48f21",
+      "position": 14,
+      "properties": {
+        "description": "**Do This:** Use the slide to help students add list tags to their HTML Tag Chart. \n\n`<ol>` - Starts an **O**rdered **L**ist - `</ol>`\n\n`<ul>` - Starts an **U**nordered **L**ist - `</ul>`\n\n`<li>` - Actually creates the **l**ist **i**tem - `</li>`\n\n\nHave students continue Pair Programming through the remainder of the lesson. ",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c803233-659d-40e0-a0a7-6e2410e48f21",
+        "lesson_activity.key": "d223f6c5-0d0d-42e6-ae0a-0805e6c10143"
+      }
+    },
+    {
       "key": "05a83d63-0813-410e-8ede-4d9baecaff3d",
-      "position": 11,
+      "position": 15,
       "properties": {
         "description": "**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?",
         "progression_name": "Video: Debugging",
@@ -2182,7 +2229,7 @@
     },
     {
       "key": "b280185e-dda4-455b-aed4-9d00447e1f23",
-      "position": 12,
+      "position": 16,
       "properties": {
         "progression_name": "Practice",
         "tips": [
@@ -2199,7 +2246,7 @@
     },
     {
       "key": "ae73a380-4248-472d-b5cc-dea8d31c0ecb",
-      "position": 13,
+      "position": 17,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2216,7 +2263,7 @@
     },
     {
       "key": "c1eedb45-70a6-418c-b591-b8aa31154f82",
-      "position": 14,
+      "position": 18,
       "properties": {
         "progression_name": "Challenges",
         "tips": [
@@ -6099,23 +6146,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD Web Dev choice level ul 1_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Web Dev choice level ul 1_2023"
+          "CSD Web Dev choice level ol 1_2023"
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
-        "activity_section.key": "77f6c421-a274-4a17-852e-4ed11e2bd99e"
+        "activity_section.key": "4c803233-659d-40e0-a0a7-6e2410e48f21"
       },
       "level_keys": [
-        "CSD Web Dev choice level ul 1_2023"
+        "CSD Web Dev choice level ol 1_2023"
       ]
     },
     {
@@ -6124,23 +6168,20 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD Web Dev choice level ol 1_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Web Dev choice level ol 1_2023"
+          "CSD Web Dev choice level ul 1_2023"
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
-        "activity_section.key": "77f6c421-a274-4a17-852e-4ed11e2bd99e"
+        "activity_section.key": "4c803233-659d-40e0-a0a7-6e2410e48f21"
       },
       "level_keys": [
-        "CSD Web Dev choice level ol 1_2023"
+        "CSD Web Dev choice level ul 1_2023"
       ]
     },
     {
@@ -6475,31 +6516,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U2 text style RGB intro_2023"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U2 text style RGB intro_2023"
-        ],
-        "lesson.key": "Styling Text with CSS",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2023",
-        "activity_section.key": "b0edd2db-5428-4723-8b2f-444795e9769f"
-      },
-      "level_keys": [
-        "CSD U2 text style RGB intro_2023"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 7,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CSD U2 text style rgb practice_2023"
         ],
         "progression": "Skill Building"
@@ -6516,6 +6532,28 @@
       },
       "level_keys": [
         "CSD U2 text style rgb practice_2023"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style rgb practice 2_2023"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "b0edd2db-5428-4723-8b2f-444795e9769f"
+      },
+      "level_keys": [
+        "CSD U2 text style rgb practice 2_2023"
       ]
     },
     {
@@ -8240,18 +8278,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD Web Dev choice level ul 1_2023",
-        "script_level.level_keys": [
-          "CSD Web Dev choice level ul 1_2023"
-        ],
-        "lesson.key": "Headings",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2023",
-        "activity_section.key": "77f6c421-a274-4a17-852e-4ed11e2bd99e"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD Web Dev choice level ol 1_2023",
         "script_level.level_keys": [
           "CSD Web Dev choice level ol 1_2023"
@@ -8259,7 +8285,19 @@
         "lesson.key": "Headings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
-        "activity_section.key": "77f6c421-a274-4a17-852e-4ed11e2bd99e"
+        "activity_section.key": "4c803233-659d-40e0-a0a7-6e2410e48f21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Dev choice level ul 1_2023",
+        "script_level.level_keys": [
+          "CSD Web Dev choice level ul 1_2023"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "4c803233-659d-40e0-a0a7-6e2410e48f21"
       }
     },
     {
@@ -8420,9 +8458,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 text style RGB intro_2023",
+        "level.key": "CSD U2 text style rgb practice_2023",
         "script_level.level_keys": [
-          "CSD U2 text style RGB intro_2023"
+          "CSD U2 text style rgb practice_2023"
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
@@ -8432,9 +8470,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 text style rgb practice_2023",
+        "level.key": "CSD U2 text style rgb practice 2_2023",
         "script_level.level_keys": [
-          "CSD U2 text style rgb practice_2023"
+          "CSD U2 text style rgb practice 2_2023"
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
@@ -11007,6 +11045,16 @@
       }
     },
     {
+      "key": "list",
+      "word": "List",
+      "definition": "allows web developers to group a set of related items",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "list"
+      }
+    },
+    {
       "key": "relevant",
       "word": "Relevant",
       "definition": "closely connected to a topic",
@@ -11074,6 +11122,12 @@
       "seeding_key": {
         "lesson.key": "Headings",
         "vocabulary.key": "heading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "vocabulary.key": "list"
       }
     },
     {

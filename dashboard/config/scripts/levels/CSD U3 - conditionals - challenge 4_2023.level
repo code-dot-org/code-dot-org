@@ -26,7 +26,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "long_instructions": "<img src=\"https://images.code.org/1e82776bb9eeecdf763844dc2f6e5c31-image-1663964850495.gif\" style=\"width:200px;float:right; left-margin: 30px\">\r\n\r\n# Never-Ending Fish Scene\r\n\r\nYou can use what you learned in the previous level in order to make scene that never stops! We are revisiting our fish scene with some new fish to make an underwater scene with fish that never stop swimming!\r\n\r\n# Do This\r\nMake all the see creature sprites wrap back around once they go off screen!\r\n\r\n* Add a conditional for **each** sprite that checks to see whether the sprite has gone off the edge of the screen. *Hint: You will check either the sprite's x location or y location, depending on if the sprite is traveling left to right or up and down* \r\n* Inside the conditional, reset the sprite's x **and** y location \r\n  * **Tip:** For sprites traveling across the screen, you should give a random y location. For sprites traveling up and down the screen, you should give a random x location.\r\n* Add a conditonal to check the value of the bubble variable. \r\n  * Check the watcher to see what the value of the bubble variable is when the last bubble reaches the top of the screen. Use this value for your conditional.\r\n  * Inside the conditional, reset the bubble variable to it's original value of 400.",
+    "long_instructions": "<img src=\"https://images.code.org/1e82776bb9eeecdf763844dc2f6e5c31-image-1663964850495.gif\" style=\"width:200px;float:right; left-margin: 30px\">\r\n\r\n# Never-Ending Fish Scene (Part 2)\r\n\r\nLet's continue making an underwater scene with fish that never stop swimming!\r\n\r\n# Do This\r\nMake two more fish sprites wrap back around once they go off screen!\r\n\r\n1) Pick two more of the provided fish animations or add your own sea creatures\r\n2) Move each sprite in a different direction. You can use the image to the right for inspiration.\r\n3) Add a conditional for **each** of the fish sprites you chose that checks to see whether the sprite has gone off the edge of the screen. \r\n\t- *Hint: You will check either the sprite's x location or y location, depending on the direction the sprite is moving.* \r\n4) Inside the conditional, reset the sprite's x **and** y location \r\n\t- **Tip:** For sprites traveling across the screen, you should give a random y location. For sprites traveling up and down the screen, you should give a random x location.\r\n\r\nGo forward to the [next Challenge level](./5) to make the starfish and bubbles restart!",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_animation_mode": "false",
@@ -39,7 +39,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "display_name": "Never-Ending Fish Scene",
+    "display_name": "Never-Ending Fish Scene 2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
@@ -61,7 +61,7 @@
     "map_reference": "/courses/csd-2022/guides/if-statements",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "bubble_choice_description": "Use conditionals to create a never-ending fish scene!",
+    "bubble_choice_description": "Use conditionals to continue creating a never-ending fish scene!",
     "validation_enabled": "false",
     "watchers_prepopulated": "bubble",
     "project_template_level_name": "CSD U3 - conditionals - challenge 3 template_2023",
@@ -73,7 +73,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-28T00:02:16.807+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - challenge 3_2023\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - challenge 3_2023\"},{\"changed_at\":\"2022-09-28 00:03:06 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-28T00:02:16.807+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - challenge 3_2023\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - challenge 3_2023\"},{\"changed_at\":\"2022-09-28 00:03:06 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-28 20:31:36 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-28 20:35:32 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-28 20:46:31 +0000\",\"changed\":[\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-28 23:06:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-28 23:07:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
