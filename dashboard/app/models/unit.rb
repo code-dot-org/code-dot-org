@@ -48,22 +48,22 @@ class Unit < ApplicationRecord
   include Rails.application.routes.url_helpers
 
   include Seeded
-  has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
+  has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
   has_many :lessons, through: :lesson_groups
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
-  has_and_belongs_to_many :resources, join_table: :scripts_resources
-  has_many :scripts_resources
-  has_many :scripts_student_resources, dependent: :destroy
+  has_and_belongs_to_many :resources, join_table: :scripts_resources, foreign_key: 'script_id'
+  has_many :scripts_resources, foreign_key: 'script_id'
+  has_many :scripts_student_resources, foreign_key: 'script_id', dependent: :destroy
   has_many :student_resources, through: :scripts_student_resources, source: :resource
   has_many :users, through: :user_scripts
-  has_many :user_scripts
-  has_many :hint_view_requests
+  has_many :user_scripts, foreign_key: 'script_id'
+  has_many :hint_view_requests, foreign_key: 'script_id'
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, class_name: 'Video', optional: true
   belongs_to :user, optional: true
-  has_many :unit_group_units
+  has_many :unit_group_units, foreign_key: 'script_id'
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
