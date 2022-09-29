@@ -640,7 +640,7 @@ class Pd::Workshop < ApplicationRecord
   # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
-    actual_hours = sessions.map(&:hours).reduce(&:+)
+    actual_hours = sessions.sum(&:hours)
     [actual_hours, time_constraint(:max_hours)].compact.min
   end
 
