@@ -126,3 +126,58 @@ export const arithmetic = {
     return [code, order];
   }
 };
+
+export const random = {
+  definition: {
+    type: BlockTypes.RANDOM,
+    message0: '%{BKY_MATH_RANDOM_INT_TITLE}',
+    args0: [
+      {
+        type: 'input_value',
+        name: 'FROM',
+        check: 'Number'
+      },
+      {
+        type: 'input_value',
+        name: 'TO',
+        check: 'Number'
+      }
+    ],
+    inputsInline: true,
+    output: 'Number',
+    style: 'math_blocks',
+    tooltip: '%{BKY_MATH_RANDOM_INT_TOOLTIP}',
+    helpUrl: '%{BKY_MATH_RANDOM_INT_HELPURL}'
+  },
+  generator: ctx => {
+    // Random integer between [X] and [Y].
+    const argument0 =
+      Blockly.JavaScript.valueToCode(
+        ctx,
+        'FROM',
+        Blockly.JavaScript.ORDER_NONE
+      ) || '0';
+    const argument1 =
+      Blockly.JavaScript.valueToCode(
+        ctx,
+        'TO',
+        Blockly.JavaScript.ORDER_NONE
+      ) || '0';
+    const functionName = Blockly.JavaScript.provideFunction_(
+      'mathRandomInt',
+      `
+      function ${Blockly.JavaScript.FUNCTION_NAME_PLACEHOLDER_}(a, b) {
+        if (a > b) {
+          // Swap a and b to ensure a is smaller.
+          var c = a;
+          a = b;
+          b = c;
+        }
+        return Math.floor(Math.random() * (b - a + 1) + a);
+      }
+      `
+    );
+    const code = functionName + '(' + argument0 + ', ' + argument1 + ')';
+    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  }
+};
