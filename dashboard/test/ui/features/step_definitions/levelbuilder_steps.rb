@@ -137,3 +137,40 @@ Given(/^I delete the temp level$/) do
     body: {id: @temp_level_id}
   )
 end
+
+Given(/^I enter a temp data doc key and temp data doc name$/) do
+  @temp_data_doc_key = "temp-data-doc-#{Time.now.to_i}-#{rand(1_000_000)}"
+  @temp_data_doc_name = "A Name: #{@temp_data_doc_key}"
+  steps %{
+    And I wait until element "input[name='key']" is visible
+    And I press keys "#{@temp_data_doc_key}" for element "input[name='key']"
+    And I press keys "#{@temp_data_doc_name}" for element "input[name='name']"
+  }
+end
+
+Given(/^I wait for the temp data doc page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/data_docs/#{@temp_data_doc_key}"
+    And I wait until element "#view-data-doc" is visible
+  }
+end
+
+Given(/^element "([^"]*)" contains the name of the temp data doc$/) do |selector|
+  steps %{
+     And element "#{selector}" contains text "#{@temp_data_doc_name}"
+  }
+end
+
+Given(/^the element contains path to temp data doc$/) do
+  steps %{
+    And the href of selector "a:contains(#{@temp_data_doc_name})" contains "/data_docs/#{@temp_data_doc_key}"
+  }
+end
+
+Given(/^I delete the temp data doc$/) do
+  browser_request(
+    url: '/api/test/destroy_data_doc',
+    method: 'POST',
+    body: {key: @temp_data_doc_key}
+  )
+end
