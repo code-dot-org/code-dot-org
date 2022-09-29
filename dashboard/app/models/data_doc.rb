@@ -24,14 +24,6 @@ class DataDoc < ApplicationRecord
     key
   end
 
-  def summarize_for_edit
-    {
-      key: key,
-      name: name,
-      content: content
-    }
-  end
-
   def file_path
     Rails.root.join("config/data_docs/#{key}.json")
   end

@@ -11,7 +11,8 @@
           "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=3",
           "type": "feedback",
           "visibility": "Teacher-only",
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "cf2c84fe-cbbb-4e69-8650-5c0dbd937855"
         },
         {
           "notice": "Nominate A Student for Student Insight Groups!",
@@ -20,7 +21,8 @@
           "type": "bullhorn",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "1538091b-a1c5-461a-936e-0a93f1508835"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -38,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-06 18:15:18 UTC",
+    "serialized_at": "2022-09-28 14:31:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

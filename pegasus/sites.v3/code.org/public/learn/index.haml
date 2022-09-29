@@ -58,40 +58,6 @@ style_min: false
     opacity: 0;
   }
 
-  /* Center the foreground image when it's below the header text. */
-  @media screen and (max-width: 970px) {
-    #studentImage img {
-      position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
-      height: 278px;
-    }
-  }
-
-- unless ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-  :css
-    @media screen and (min-width: 992px) {
-      #fullwidth {
-        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
-        background-position: 70% 70%;
-      }
-    }
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-      #fullwidth {
-        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
-        background-position: 67% 50%;
-        padding-bottom: 200px;
-      }
-    }
-    /* Use the narrow image for narrower screens */
-    @media screen and (max-width: 767px) {
-      #fullwidth {
-        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
-        background-position: 50% 80%;
-        padding-bottom: 160px;
-      }
-    }
-
 #fullwidth
   - if request.site == 'code.org'
     = view :header
@@ -104,7 +70,7 @@ style_min: false
       - else
         = view :mobile_header_responsive
 
-  - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
+  - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
     .banner.container_responsive{style: "display: flex"}
       .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
       .col-33

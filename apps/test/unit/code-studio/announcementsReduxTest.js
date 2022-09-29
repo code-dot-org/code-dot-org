@@ -10,6 +10,7 @@ describe('announcementsRedux', () => {
     const state = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -22,6 +23,7 @@ describe('announcementsRedux', () => {
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -37,6 +39,7 @@ describe('announcementsRedux', () => {
     const state = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -49,6 +52,7 @@ describe('announcementsRedux', () => {
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -64,6 +68,7 @@ describe('announcementsRedux', () => {
     const state = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -76,6 +81,7 @@ describe('announcementsRedux', () => {
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -92,6 +98,7 @@ describe('announcementsRedux', () => {
     const state1 = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -104,6 +111,7 @@ describe('announcementsRedux', () => {
     const state = reducer(
       state1,
       addAnnouncement({
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
@@ -116,6 +124,7 @@ describe('announcementsRedux', () => {
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -125,6 +134,7 @@ describe('announcementsRedux', () => {
         buttonText: 'Push the button'
       },
       {
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
@@ -140,6 +150,7 @@ describe('announcementsRedux', () => {
     const state1 = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -152,6 +163,7 @@ describe('announcementsRedux', () => {
     const state = reducer(
       state1,
       addAnnouncement({
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
@@ -164,6 +176,7 @@ describe('announcementsRedux', () => {
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
@@ -173,6 +186,7 @@ describe('announcementsRedux', () => {
         buttonText: 'Push the button'
       },
       {
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
