@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactDataDocEditAll from '../../../../lib/levelbuilder/data-docs-editor/ReactDataDocEditAll';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import DataDocEditAll from '../../../../lib/levelbuilder/data-docs-editor/DataDocEditAll';
 
-$(document).ready(() => {
-  ReactDOM.render(<ReactDataDocEditAll />);
+$(() => {
+  const dataDocs = getScriptData('dataDocs');
+  ReactDOM.render(
+    <DataDocEditAll dataDocs={dataDocs} />,
+    document.getElementById('edit-all-data-docs')
+  );
 });
