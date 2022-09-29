@@ -99,8 +99,7 @@ module Crowdin
 
     def download_file(download_url, dest, attempts: 3)
       response = HTTParty.get(download_url)
-      raise AWSBadGatewayError if response.code == 502
-      raise AWSSlowDownError if response.code == 503
+      raise AWSError if response.code != 200
 
       FileUtils.mkdir_p(File.dirname(dest))
       # Make sure to specify the encoding; we expect to get quite a lot
@@ -108,7 +107,7 @@ module Crowdin
       File.open(dest, "w:#{response.body.encoding}") do |destfile|
         destfile.write(response.body)
       end
-    rescue Net::ReadTimeout, Net::OpenTimeout, AWSBadGatewayError, AWSSlowDownError => error
+    rescue Net::ReadTimeout, Net::OpenTimeout, AWSError => error
       # Only attempting retries on network errors. Surfacing errors during write.
       STDERR.puts "download_file(#{dest}) timed out: #{error}"
       raise if attempts <= 1
@@ -116,14 +115,8 @@ module Crowdin
     end
   end
 
-  class AWSBadGatewayError < StandardError
-    def initialize(msg="Bad Gateway Error")
-      super
-    end
-  end
-
-  class AWSSlowDownError < StandardError
-    def initialize(msg="SlowDown Error")
+  class AWSError < StandardError
+    def initialize(msg="AWS Error")
       super
     end
   end
