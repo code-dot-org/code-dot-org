@@ -21,7 +21,10 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
-import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {
+  WEB_SERIAL_FILTERS,
+  isWebSerialPortAvailable
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -53,7 +56,8 @@ export default class SetupGuide extends React.Component {
     const {webSerialPort} = this.state;
 
     // Experiment 'webserial' uses the WebSerial protocol and requires no downloads.
-    let isWebSerial = experiments.isEnabled('webserial');
+    let isWebSerial =
+      experiments.isEnabled('webserial') && isWebSerialPortAvailable();
 
     // WebSerial requires user input for user to select port.
     // Add a button for user interaction before initiated Setup Checklist
