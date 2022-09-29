@@ -67,7 +67,7 @@ module Crowdin
       #   - increasing the default number of attempts
       #   - increasing the number of attempts for certain high-failure-rate calls
       #   - increasing the timeout, either globally or for this specific call
-      STDERR.puts "Crowdin.export_file(#{file_id}) timed out: #{error}"
+      STDERR.puts "Crowdin.export_file(#{file_id}) error: #{error}"
       raise if attempts <= 1
       export_file(file_id, language, etag: etag, attempts: attempts - 1)
     end
