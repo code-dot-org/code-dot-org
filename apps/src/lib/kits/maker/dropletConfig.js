@@ -587,6 +587,7 @@ config.categories = {
 export let configMicrobit = {
   categories: {
     [MICROBIT_CATEGORY]: {
+      id: 'microbit',
       color: 'red',
       rgb: color.droplet_red,
       blocks: []
@@ -599,6 +600,7 @@ export let configMicrobit = {
 export let configCircuitPlayground = {
   categories: {
     [CIRCUIT_CATEGORY]: {
+      id: 'circuitPlayground',
       color: 'red',
       rgb: color.droplet_red,
       blocks: []

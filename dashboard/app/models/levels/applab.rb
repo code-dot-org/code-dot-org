@@ -74,7 +74,7 @@ class Applab < Blockly
   end
 
   def self.maker_palette_categories
-    SharedConstants::MAKER_PALETTE_CATEGORIES.values
+    %w(Maker) + maker_apis
   end
 
   def self.maker_apis
@@ -130,21 +130,20 @@ class Applab < Blockly
 
   def validate_maker_if_needed
     maker_api_property = properties['makerlab_enabled']
-    maker_enabled = SharedConstants::MAKER_PALETTE_CATEGORIES.keys.include?(maker_api_property)
+    maker_enabled = Applab.maker_apis.include?(maker_api_property)
     starting_category = properties['palette_category_at_start']
 
-    # If the "Maker" palette category is selected, either Maker API must be enabled.
-    if starting_category == 'Maker' && !maker_enabled
+    # If neither Maker API has been selected, but a Maker palette category is selected, throw an error
+    if !maker_enabled && Applab.maker_palette_categories.include?(starting_category)
       raise ArgumentError.new(
-        "Selected '#{starting_category}' as the palette category at start, " \
-            "but this level does not have either the circuitPlayground or micro:bit Maker API enabled."
+        "Selected '#{starting_category}' as the palette category at start. " \
+            "Either the circuitPlayground or micro:bit Maker API must be enabled."
       )
     end
 
     # If a board-specific maker palette ('Circuit' or 'micro:bit') is selected and the corresponding
     # maker API must also be selected
-    if ['Circuit', 'micro:bit'].include?(starting_category) &&
-      maker_api_property != SharedConstants::MAKER_PALETTE_CATEGORIES.key(starting_category)
+    if Applab.maker_apis.include?(starting_category) && starting_category != maker_api_property
       raise ArgumentError.new(
         "Selected '#{starting_category}' as the palette category at start, " \
             "but this level has '#{maker_api_property}' Maker API enabled."
