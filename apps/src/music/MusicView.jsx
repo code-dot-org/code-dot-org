@@ -190,8 +190,6 @@ class MusicView extends React.Component {
       `<xml><block type="${
         BlockTypes.WHEN_RUN
       }" deletable="false" x="30" y="30"></block><block type="${
-        BlockTypes.WHEN_TRIGGER
-      }" deletable="false" x="30" y="170"></block><block type="${
         BlockTypes.TRIGGERED_AT
       }" deletable="false" x="500" y="30"></block></xml>`
     );
@@ -299,7 +297,6 @@ class MusicView extends React.Component {
 
     const events = {
       whenRunButton: {code: generator(BlockTypes.WHEN_RUN)},
-      whenTriggerButton: {code: generator(BlockTypes.WHEN_TRIGGER)},
       triggeredAtButton: {code: generator(BlockTypes.TRIGGERED_AT)}
     };
 

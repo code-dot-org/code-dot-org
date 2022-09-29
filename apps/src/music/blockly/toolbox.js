@@ -78,6 +78,28 @@ export const baseToolbox = {
               }
             }
           }
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.RANDOM,
+          inputs: {
+            FROM: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            },
+            TO: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 5
+                }
+              }
+            }
+          }
         }
       ]
     },

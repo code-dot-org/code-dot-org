@@ -13,19 +13,6 @@ export const whenRun = {
   generator: () => '\n'
 };
 
-export const whenTrigger = {
-  definition: {
-    type: BlockTypes.WHEN_TRIGGER,
-    message0: 'when trigger',
-    inputsInline: true,
-    nextStatement: null,
-    colour: 230,
-    tooltip: 'when triger',
-    helpUrl: ''
-  },
-  generator: () => '\n'
-};
-
 export const triggeredAt = {
   definition: {
     type: BlockTypes.TRIGGERED_AT,
