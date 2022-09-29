@@ -108,7 +108,7 @@ module Crowdin
         destfile.write(response.body)
       end
     rescue Net::ReadTimeout, Net::OpenTimeout, AWSError => error
-      # Only attempting retries on network errors. Surfacing errors during write.
+      # Only attempting retries on request errors. Surfacing errors during write.
       STDERR.puts "download_file(#{dest}) timed out: #{error}"
       raise if attempts <= 1
       download_file(download_url, dest, attempts: attempts - 1)
