@@ -45,9 +45,6 @@ def sync_down
 
       utils = Crowdin::LegacyUtils.new(project, options)
 
-      puts "Fetching list of changed files"
-      elapsed = with_elapsed {utils.fetch_changes}
-      puts "Changes fetched in #{elapsed}"
       puts "Downloading changed files"
       elapsed = with_elapsed {utils.download_changed_files}
       puts "Files downloaded in #{elapsed}"
