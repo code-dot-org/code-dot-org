@@ -552,6 +552,7 @@ ar:
     choose_next_course: "جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل"
     print_certificate: "طباعة الشهادة"
   certificate_sponsor_message: "%{sponsor_name} تقدم بهدية سخية لرعاية تعلّمك."
+  certificate_hour_of_code: "ساعة البرمجة"
   move_students:
     new_section_dne: "عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال كود قسم مختلف."
     section_code_cant_be_current_section: "القسم الحالي لا يمكن أن يكون مثل القسم الجديد."
