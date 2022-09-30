@@ -11,19 +11,36 @@ export default class Timeline extends React.Component {
     currentAudioElapsedTime: PropTypes.number.isRequired,
     convertMeasureToSeconds: PropTypes.func.isRequired,
     baseUrl: PropTypes.string.isRequired,
-    currentMeasure: PropTypes.number.isRequired
+    currentMeasure: PropTypes.number.isRequired,
+    sounds: PropTypes.array
+  };
+
+  getUniqueIndexForEventId = id => {
+    // Each unique sound gets its own color/row.
+    const uniqueSounds = [];
+    for (const songEvent of this.props.songData.events) {
+      const id = songEvent.id;
+      if (uniqueSounds.indexOf(id) === -1) {
+        uniqueSounds.push(id);
+      }
+    }
+
+    return uniqueSounds.indexOf(id);
   };
 
   getVerticalOffsetForEventId = id => {
-    if (id.indexOf('lead') !== -1) {
-      return 0;
-    } else if (id.indexOf('bass') !== -1) {
-      return 6;
-    } else if (id.indexOf('drum') !== -1) {
-      return 12;
-    } else {
-      return 0;
-    }
+    return this.getUniqueIndexForEventId(id) * 24;
+  };
+
+  getColorsForEventId = id => {
+    const colors = [
+      {background: 'purple', border: 'lightpink'},
+      {background: 'blue', border: 'lightblue'},
+      {background: 'green', border: 'lightgreen'},
+      {background: 'yellow', border: 'brown'}
+    ];
+
+    return colors[this.getUniqueIndexForEventId(id) % 4];
   };
 
   getWaveformImage = id => {
@@ -36,6 +53,17 @@ export default class Timeline extends React.Component {
     return (
       filenameToImgUrl['waveform_' + id] || filenameToImgUrl['waveform_lead']
     );
+  };
+
+  getLengthForId = id => {
+    const splitId = id.split('/');
+    const path = splitId[0];
+    const src = splitId[1];
+
+    const folder = this.props.sounds.find(folder => folder.path === path);
+    const sound = folder.sounds.find(sound => sound.src === src);
+
+    return sound.length;
   };
 
   render() {
@@ -57,7 +85,7 @@ export default class Timeline extends React.Component {
       <div
         style={{
           backgroundColor: '#222',
-          height: 70,
+          height: 140,
           width: '100%',
           borderRadius: 4,
           padding: 10,
@@ -77,50 +105,19 @@ export default class Timeline extends React.Component {
           style={{
             width: '100%',
             overflow: 'hidden',
-            height: 50,
+            height: '100%',
             position: 'relative'
           }}
         >
-          <div style={{width: 900}}>
-            {songData.events.map((eventData, index) => {
-              return (
-                <div
-                  key={index}
-                  style={{
-                    width: barWidth * 2,
-                    _borderLeft: '1px white solid',
-                    position: 'absolute',
-                    left: barWidth * eventData.when,
-                    top: 12 + this.getVerticalOffsetForEventId(eventData.id)
-                  }}
-                >
-                  <img
-                    src={this.getWaveformImage(eventData.id)}
-                    style={{width: barWidth * 2, paddingRight: 20}}
-                  />
-                </div>
-              );
-            })}
-          </div>
-
-          <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
-            {playHeadOffset !== null && (
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: playHeadOffset,
-                  width: 1,
-                  height: 40,
-                  borderLeft: '3px yellow solid'
-                }}
-              >
-                &nbsp;
-              </div>
-            )}
-          </div>
-
-          <div style={{width: 900, position: 'absolute', top: 0, left: 0}}>
+          <div
+            style={{
+              width: 900,
+              height: '100%',
+              position: 'absolute',
+              top: 0,
+              left: 0
+            }}
+          >
             {[...Array(30).keys()].map((measure, index) => {
               return (
                 <div
@@ -130,7 +127,7 @@ export default class Timeline extends React.Component {
                     top: 0,
                     left: measure * barWidth,
                     width: 1,
-                    height: 40,
+                    height: '100%',
                     borderLeft:
                       measure === currentMeasure
                         ? '2px #888 solid'
@@ -143,6 +140,57 @@ export default class Timeline extends React.Component {
                 </div>
               );
             })}
+          </div>
+
+          <div style={{width: 900, height: '100%'}}>
+            {songData.events.map((eventData, index) => {
+              return (
+                <div
+                  key={index}
+                  style={{
+                    width: barWidth * this.getLengthForId(eventData.id),
+                    _borderLeft: '1px white solid',
+                    position: 'absolute',
+                    left: barWidth * eventData.when,
+                    top: 20 + this.getVerticalOffsetForEventId(eventData.id),
+                    backgroundColor: this.getColorsForEventId(eventData.id)
+                      .background,
+                    border:
+                      'solid 2px ' +
+                      this.getColorsForEventId(eventData.id).border,
+                    borderRadius: 8,
+                    height: 18
+                  }}
+                >
+                  &nbsp;
+                </div>
+              );
+            })}
+          </div>
+
+          <div
+            style={{
+              width: 900,
+              height: '100%',
+              position: 'absolute',
+              top: 0,
+              left: 0
+            }}
+          >
+            {playHeadOffset !== null && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: playHeadOffset,
+                  width: 1,
+                  height: '100%',
+                  borderLeft: '3px yellow solid'
+                }}
+              >
+                &nbsp;
+              </div>
+            )}
           </div>
         </div>
       </div>
