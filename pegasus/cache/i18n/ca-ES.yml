@@ -334,7 +334,8 @@ ca-ES:
   homepage_slot_text_link_stats: Veure les estadístiques
   homepage_slot_text_link_buy: Involucra't
   homepage_slot_text_link_donate: Fes una donació
-  homepage_gallery_header: Més de %{project_count} milions de projectes creats a Code.org
+  homepage_gallery_header: Més de %{project_count} milions de projectes  Code.org
+    creats
   homepage_header_donors: Code.org dóna gràcies als seus patrocinadors
   homepage_donors_seall: Mostra'ls tots
   homepage_donors_donate: Feu una donació
