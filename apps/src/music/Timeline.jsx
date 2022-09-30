@@ -56,7 +56,6 @@ export default class Timeline extends React.Component {
   };
 
   getLengthForId = id => {
-    console.log(id, this.props.sounds);
     const splitId = id.split('/');
     const path = splitId[0];
     const src = splitId[1];
