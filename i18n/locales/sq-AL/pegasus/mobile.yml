@@ -345,6 +345,7 @@
   homepage_slot_text_link_buy: "Përfshihu"
   homepage_slot_text_link_donate: "Bëj një donacion"
   homepage_slot_text_link_shop: "Këmisha, kapele dhe më shumë"
+  homepage_gallery_header: "Utworzono ponad %{project_count} milionów projektów Code.org"
   homepage_header_donors: "Code.org falenderon të gjithë mbështetësit"
   homepage_donors_seall: "Shiko të gjitha"
   homepage_donors_donate: "Dhuro"

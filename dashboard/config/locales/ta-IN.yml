@@ -678,6 +678,7 @@ ta:
     print_certificate: சான்றிதழை பிரிண்ட் செய்யவும்
   certificate_sponsor_message: "%{sponsor_name}உங்கள் கற்றலுக்கு நிதியுதவி செய்ய தாராளமான
     பரிசை வழங்கியது."
+  certificate_hour_of_code: நிரல்வரி நேரம்
   move_students:
     new_section_dne: மன்னிக்கவும், பிரிவு %{new_section_code} இல்லை. வேறு பிரிவுக்
       குறியீட்டை உள்ளிடவும்.

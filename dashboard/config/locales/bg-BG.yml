@@ -642,6 +642,7 @@ bg:
     print_certificate: Печат на сертификат
   certificate_sponsor_message: "%{sponsor_name} направи щедрият подарък да спонсорира
     твоето обучение."
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: Съжалявам, но %{new_section_code} раздел не съществува. Моля,
       въведете код за друг раздел.
