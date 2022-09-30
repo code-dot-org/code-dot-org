@@ -17,9 +17,10 @@ export default class Timeline extends React.Component {
           width: 100,
           backgroundColor: '#222',
           bottom: 10,
-          left: 140,
+          left: 10,
           borderRadius: 4,
-          position: 'absolute'
+          position: 'absolute',
+          zIndex: 70
         }}
       >
         {isPlaying && (
