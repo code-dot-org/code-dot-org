@@ -349,7 +349,7 @@ Dashboard::Application.routes.draw do
 
     get '/data_docs/edit', to: 'data_docs#edit_all'
 
-    resources :data_docs, only: [:new, :create, :edit, :update, :show, :index], param: :key
+    resources :data_docs, only: [:new, :create, :edit, :update, :show, :index, :destroy], param: :key
 
     resources :lessons, only: [:edit, :update] do
       member do

@@ -1,6 +1,6 @@
 class DataDocsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
-  before_action :set_data_doc, only: [:show, :edit, :update]
+  before_action :set_data_doc, only: [:show, :edit, :update, :destroy]
   before_action :index, only: [:edit_all]
   authorize_resource
 
@@ -53,6 +53,12 @@ class DataDocsController < ApplicationController
     @data_doc.update!(new_attributes)
 
     render json: @data_doc.serialize.to_json
+  end
+
+  # DELETE /data_docs/:key
+  def destroy
+    @data_doc.remove_serialization
+    @data_doc.destroy
   end
 
   def data_doc_params
