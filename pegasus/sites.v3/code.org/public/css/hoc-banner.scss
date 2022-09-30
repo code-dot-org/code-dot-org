@@ -5,6 +5,36 @@
   background-size: cover;
 }
 
+// Code.org HoC homepage banner
+.hoc-banner.homepage {
+  text-align: center;
+  color: $darkest_gray;
+  line-height: 1.4;
+
+  // Wrapper
+  #actions & {
+    padding: 5em 1em 7em;
+  }
+
+  // The Hour of Code is coming/here text
+  & > div.text:first-child p {
+    font-size: 1.75em;
+    font-family: $gotham-bold;
+  }
+
+  // Heading text
+  & > div.text:nth-child(2) p {
+    font-size: 5em;
+    font-family: $gotham-extra-bold;
+    margin: 0 auto 0.5em;
+
+    @media screen and (max-width: $width-lg) {
+      font-size: 4em;
+    }
+  }
+}
+
+// Code.org HoC /learn page banner
 section.banner {
   text-align: center;
   color: $black;
