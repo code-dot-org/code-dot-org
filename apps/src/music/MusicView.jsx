@@ -170,6 +170,7 @@ class MusicView extends React.Component {
         toolboxBackgroundColour: '#222'
       }
     });
+
     Blockly.blockly_.Extensions.register(
       'dynamic_trigger_extension',
       function() {
@@ -181,12 +182,6 @@ class MusicView extends React.Component {
         );
       }
     );
-
-    /*var theme = Blockly.Theme.defineTheme('dark', {
-      'base': Blockly.Themes.Classic,
-      'componentStyles': {
-        'workspaceBackgroundColour': '#222'
-      },*/
 
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
