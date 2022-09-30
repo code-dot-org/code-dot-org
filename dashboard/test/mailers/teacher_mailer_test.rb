@@ -63,7 +63,7 @@ class TeacherMailerTest < ActionMailer::TestCase
     teacher = build :teacher, email: 'test@example.com'
     mail = TeacherMailer.verified_teacher_email(teacher)
 
-    assert_equal I18n.t('teacher_mailer.verified_teacher_subject', locale: 'en-US'), mail.subject
+    assert_equal I18n.t('teacher_mailer.verified_teacher_subject'), mail.subject
     assert_equal [teacher.email], mail.to
     assert_equal ['teacher@code.org'], mail.from
     assert_match /Hi,/, mail.body.encoded
