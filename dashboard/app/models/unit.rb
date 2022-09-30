@@ -60,7 +60,7 @@ class Unit < ApplicationRecord
   has_many :users, through: :user_scripts
   has_many :user_scripts, foreign_key: 'script_id'
   has_many :hint_view_requests, foreign_key: 'script_id'
-  has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
+  has_one :plc_course_unit, class_name: 'Plc::CourseUnit', foreign_key: 'script_id', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, class_name: 'Video', optional: true
   belongs_to :user, optional: true
   has_many :unit_group_units, foreign_key: 'script_id'
