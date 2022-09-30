@@ -15,7 +15,6 @@ import {
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
-import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
@@ -56,8 +55,10 @@ export default class SetupGuide extends React.Component {
     const {webSerialPort} = this.state;
 
     // Experiment 'webserial' uses the WebSerial protocol and requires no downloads.
+    // WebSerial remains behind a flag on Chromium browsers. This feature is fully released on ChromeOS.
     let isWebSerial =
-      experiments.isEnabled('webserial') && isWebSerialPortAvailable();
+      (experiments.isEnabled('webserial') && isWebSerialPortAvailable()) ||
+      isChromeOS();
 
     // WebSerial requires user input for user to select port.
     // Add a button for user interaction before initiated Setup Checklist
@@ -338,50 +339,14 @@ const SetupInstructions = () => (
   </div>
 );
 
-const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
-
 class ChromebookInstructions extends React.Component {
-  webSerialSetupInstructions() {
-    return (
-      <div>
-        {applabI18n.makerSetupChromebook()}
-        <h4>{applabI18n.note()}</h4>
-        {applabI18n.makerSetupChromebookHistoricalNote()}
-      </div>
-    );
-  }
-
-  chromeAppSetupInstructions() {
-    return (
-      <div>
-        <SafeMarkdown
-          markdown={applabI18n.makerSetupSerialConnector({
-            webstoreURL: CHROME_APP_WEBSTORE_URL
-          })}
-        />
-        <h4>{i18n.instructions()}</h4>
-        <ol>
-          <li>
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupChromebookPage({
-                makerSetupPage: MAKER_SETUP_PAGE_URL
-              })}
-            />
-          </li>
-          <li>{applabI18n.makerSetupFollowInstructions()}</li>
-          <li>{applabI18n.makerSetupPlugInBoard()}</li>
-        </ol>
-      </div>
-    );
-  }
-
   render() {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
-        {experiments.isEnabled('webserial')
-          ? this.webSerialSetupInstructions()
-          : this.chromeAppSetupInstructions()}
+        {applabI18n.makerSetupChromebook()}
+        <h4>{applabI18n.note()}</h4>
+        {applabI18n.makerSetupChromebookHistoricalNote()}
       </div>
     );
   }
