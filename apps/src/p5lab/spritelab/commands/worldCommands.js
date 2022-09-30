@@ -123,5 +123,13 @@ export const commands = {
 
   textVariableJoin(text1, text2) {
     return [text1, text2].join('');
+  },
+
+  setHeading(heading) {
+    this.heading = heading;
+  },
+
+  setSubheading(subHeading) {
+    this.subHeading = subHeading;
   }
 };
