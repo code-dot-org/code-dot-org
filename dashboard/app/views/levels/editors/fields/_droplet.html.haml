@@ -6,10 +6,15 @@
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :lock_zero_param_functions, description: "Don't allow parameters to be added to user-defined functions with no parameters"}
 
   - if @level.is_a? Applab
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :autocomplete_palette_apis_only, description: "Autocomplete palette APIs only"}
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
+    .field
+      = f.label :makerlab_enabled, 'Select Maker API:'
+      -# Old level format - @level.makerlab_enabled = true/false
+      -# New level format - @level.makerlab_enabled = 'circuitPlayground', 'microbit', ''
+      -# When converting old format to new format, 'true' -> 'circuitPlayground'
+      = f.select :makerlab_enabled, options_for_select(@level.class.maker_apis, @level.makerlab_enabled == 'true' ? 'circuitPlayground' : @level.makerlab_enabled), {include_blank: true}
 
   .field
     = f.label :palette_category_at_start
