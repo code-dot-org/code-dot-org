@@ -210,11 +210,6 @@ Performance/CollectionLiteralInLoop:
 Performance/Detect:
   Enabled: false
 
-# Offense count: 9
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/InefficientHashSearch:
-  Enabled: false
-
 # Offense count: 20
 Performance/MethodObjectAsBlock:
   Enabled: false
@@ -304,12 +299,6 @@ Rails/Pick:
 # Offense count: 50
 # This cop supports safe auto-correction (--auto-correct).
 Rails/Pluck:
-  Enabled: false
-
-# Offense count: 33
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
-Rails/Present:
   Enabled: false
 
 # Offense count: 85
