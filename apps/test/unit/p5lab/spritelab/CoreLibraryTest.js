@@ -6,7 +6,7 @@ import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {
   MAX_NUM_SPRITES,
-  SPRITE_WARNING_THRESHOLD
+  SPRITE_WARNING_BUFFER
 } from '@cdo/apps/p5lab/spritelab/constants';
 import msg from '@cdo/locale';
 import {
@@ -201,51 +201,47 @@ describe('SpriteLab Core Library', () => {
       redux.getStore.restore();
     });
 
-    // if the total number of sprites created is equal to or less than SPRITE_WARNING_THRESHOLD
-    // then a display workspace alert should not have been called
-    it(`If ${SPRITE_WARNING_THRESHOLD} sprites or less are created, a workspace alert is NOT dispatched`, () => {
-      for (let i = 0; i < SPRITE_WARNING_THRESHOLD; i++) {
+    // If the total number of sprites created is equal to or less than
+    // MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER, then a display workspace alert
+    // should not have been dispatched
+    it(`If ${MAX_NUM_SPRITES -
+      SPRITE_WARNING_BUFFER} sprites or less are created, a workspace alert is NOT dispatched`, () => {
+      for (let i = 0; i < MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER; i++) {
         coreLibrary.addSprite();
       }
       expect(stubbedDispatch).to.not.have.been.calledWith(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          /* display warning when total number of sprites is equal to SPRITE_WARNING_THRESHOLD */
           msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
           /* bottom */ true
         )
       );
     });
-    // Once the total number of sprite is equal to SPRITE_WARNING_THRESHOLD, if
-    // an additional addSprite call will result in displayWorkspaceAlert being dispatched
-    // Note that SPRITE_WARNING_THRESHOLD = MAX_NUM_SPRITES - 1
-    it(`When ${SPRITE_WARNING_THRESHOLD} sprites is reached, an additional addSprite call will dispatch a workspace alert`, () => {
-      for (let i = 0; i < SPRITE_WARNING_THRESHOLD + 1; i++) {
+    // Once the total number of sprites created is equal to MAX_NUM_SPRITES, a
+    // displayWorkspaceAlert has been dispatched
+    it(`When ${MAX_NUM_SPRITES} sprites is reached, a workspace alert was dispatched`, () => {
+      for (let i = 0; i < MAX_NUM_SPRITES; i++) {
         coreLibrary.addSprite();
       }
       expect(stubbedDispatch).to.have.been.calledOnceWith(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          /* display warning when total number of sprites is equal to SPRITE_WARNING_THRESHOLD */
           msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
           /* bottom */ true
         )
       );
     });
 
-    // When total number of sprite is equal to SPRITE_WARNING_THRESHOLD, if multiple
-    // addSprite calls are made, the dispatch of displayWorkspaceAlert will occur
-    // only once due to the early return from the reachedSpriteMax function
-    // when total number of sprites is >= MAX_NUM_SPRITES.
-    // Note that SPRITE_WARNING_THRESHOLD = MAX_NUM_SPRITES - 1
-    it(`Even when 100 more than ${SPRITE_WARNING_THRESHOLD} sprites is reached, workspace alert is dispatched only once`, () => {
-      for (let i = 0; i < SPRITE_WARNING_THRESHOLD + 100; i++) {
+    // When total number of sprites is >= MAX_NUM_SPRITES, the dispatch of
+    // displayWorkspaceAlert will occur only once due to the early return from
+    // the reachedSpriteMax function
+    it(`Even when 100 more than ${MAX_NUM_SPRITES} sprites is reached, workspace alert is dispatched only once`, () => {
+      for (let i = 0; i < MAX_NUM_SPRITES + 100; i++) {
         coreLibrary.addSprite();
       }
       expect(stubbedDispatch).to.have.been.calledOnceWith(
         displayWorkspaceAlert(
           workspaceAlertTypes.warning,
-          /* display warning when total number of sprites is equal to SPRITE_WARNING_THRESHOLD */
           msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
           /* bottom */ true
         )

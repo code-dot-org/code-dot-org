@@ -74,7 +74,13 @@ class Applab < Blockly
   end
 
   def self.maker_palette_categories
-    %w(Maker Circuit)
+    %w(Maker) + maker_apis
+  end
+
+  # Previously, Maker was a boolean. After adding a second type of board,
+  # we moved from a boolean to a set of string options, listed here.
+  def self.maker_apis
+    %w(circuitPlayground microbit)
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -125,12 +131,27 @@ class Applab < Blockly
   end
 
   def validate_maker_if_needed
-    maker_enabled = properties['makerlab_enabled'] == 'true'
+    # Old format - properties["makerlab_enabled"] = true/false
+    # New format - properties["makerlab_enabled"] = 'circuitPlayground', 'microbit', ''
+    # When converting old format to new format, 'true' -> 'circuitPlayground'
+    maker_api_property = properties['makerlab_enabled']
+    maker_enabled = Applab.maker_apis.include?(maker_api_property) || maker_api_property == 'true'
     starting_category = properties['palette_category_at_start']
-    if Applab.maker_palette_categories.include?(starting_category) && !maker_enabled
+
+    # If neither Maker API has been selected, but a Maker palette category is selected, throw an error
+    if !maker_enabled && Applab.maker_palette_categories.include?(starting_category)
+      raise ArgumentError.new(
+        "Selected '#{starting_category}' as the palette category at start. " \
+            "Either the circuitPlayground or micro:bit Maker API must be enabled."
+      )
+    end
+
+    # If a board-specific maker palette ('Circuit' or 'micro:bit') is selected and the corresponding
+    # maker API must also be selected
+    if Applab.maker_apis.include?(starting_category) && starting_category != maker_api_property
       raise ArgumentError.new(
         "Selected '#{starting_category}' as the palette category at start, " \
-            "but 'Enable Maker APIs' is not checked."
+            "but this level has '#{maker_api_property}' Maker API enabled."
       )
     end
   end

@@ -6020,15 +6020,19 @@ sk-SK:
         display_name: Precvičovanie s Umelcom
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: sprajt včely v strede obrazovky
+        - text: sprajt včely vpravo dole
+          correct: true
+        - text: dva sprajty včely – jeden v strede obrazovky a druhý vpravo dole
+        - text: tri sprajty včely, všetky na rôznych miestach
+        - text: nič, vyskytne sa chyba
         questions:
-        - {}
+        - text: Čo zobrazí program?
+        content1: Pozri si nasledujúci kód a uhádni, kde sa objaví sprajt včely.
+        title: Umiestnenie sprajtu včely
       CSD Games Properties practice_2021:
         display_name: Vlastnosti postáv
+        description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -6216,10 +6220,13 @@ sk-SK:
         display_name: Náročnejšie úlohy
       CSD web draw loop practice choice_2021:
         display_name: Cvičenie
+        description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
       CSD web movement practice choice_2021:
         display_name: Cvičenie
+        description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
       CSD web text practice choice_2021:
         display_name: Cvičenie
+        description: Vyskúšaj si svoje zručnosti pri práci s textom pri týchto aktivitách.
       csd-pre-survey-levelgroup_21_22:
         title: Objavujeme Informatiku – Úvodný dotazník pre žiakov
       csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
@@ -6471,15 +6478,19 @@ sk-SK:
         - text: Žiadny z uvedených
       CSD Games Properties multi predict_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: sprajt včely v strede obrazovky
+        - text: sprajt včely vpravo dole
+          correct: true
+        - text: dva sprajty včely – jeden v strede obrazovky a druhý vpravo dole
+        - text: tri sprajty včely, všetky na rôznych miestach
+        - text: nič, vyskytne sa chyba
         questions:
-        - {}
+        - text: Čo zobrazí program?
+        content1: Pozri si nasledujúci kód a uhádni, kde sa objaví sprajt včely.
+        title: Umiestnenie sprajtu včely
       CSD Games Properties practice_2022:
         display_name: Vlastnosti postáv
+        description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
       CSD Header Size MC_2018_2019_pilot_2022:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -7640,10 +7651,13 @@ sk-SK:
         display_name: Náročnejšie úlohy
       CSD web draw loop practice choice_2022:
         display_name: Cvičenie
+        description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
       CSD web movement practice choice_2022:
         display_name: Cvičenie
+        description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
       CSD web text practice choice_2022:
         display_name: Cvičenie
+        description: Vyskúšaj si svoje zručnosti pri práci s textom pri týchto aktivitách.
       CSP PD Example Question 1:
         answers:
         - {}
@@ -17474,3 +17488,55 @@ sk-SK:
       CSD web mouse practice choice_2022:
         description: V týchto aktivitách si precvičíš zadávanie údajov pomocou klávesnice
           a používanie bloku if/else.
+      CSD Games Properties challenge_2021:
+        description: Vyskúšaj tieto nové úlohy s vlastnosťami sprajtov
+        display_name: 'Úlohy: Vlastnosti sprajtov'
+      CSD Games Properties challenge_2022:
+        description: Vyskúšaj tieto nové úlohy s vlastnosťami sprajtov
+        display_name: 'Úlohy: Vlastnosti sprajtov'
+      CSD Games Sprites Challenges_2021:
+        description: Vyskúšajte tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
+          tvoje sprajty.
+        display_name: 'Úlohy: Sprajty a animácie'
+      CSD Games Sprites Challenges_2022:
+        description: Vyskúšajte tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
+          tvoje sprajty.
+        display_name: 'Úlohy: Sprajty a animácie'
+      CSD Games Sprites practice_2021:
+        description: Na dokončenie týchto úrovní využi svoje nové vedomosti o sprajtoch
+          a animáciách.
+        display_name: Vytváranie sprajtov a animácií
+      CSD Games Sprites practice_2022:
+        description: Na dokončenie týchto úrovní využi svoje nové vedomosti o sprajtoch
+          a animáciách.
+        display_name: Vytváranie sprajtov a animácií
+      CSD Web Headings challenge_2021:
+        display_name: Nadpisy v jazyku HTML
+      CSD Web Headings challenge_2022:
+        display_name: Nadpisy v jazyku HTML
+      CSD Web Headings practice_2021:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.
+        display_name: Nadpisy v jazyku HTML
+      CSD Web Headings practice_2022:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.
+        display_name: Nadpisy v jazyku HTML
+      CSD games random challenge_2021:
+        description: Vyskúšaj tieto ďalšie úlohy s náhodnými číslami.
+        display_name: 'Úlohy: Náhodné čísla'
+      CSD games random challenge_2022:
+        description: Vyskúšaj tieto ďalšie úlohy s náhodnými číslami.
+        display_name: 'Úlohy: Náhodné čísla'
+      CSD web text challenge choice_2021:
+        description: Vyskúšaj si tieto nové bloky a úlohy.
+        display_name: Textové úlohy
+      CSD web text challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy.
+        display_name: Textové úlohy
+      ml-models in applab-choice parent:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.
+      ml-models in applab-choice parent_2022:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.

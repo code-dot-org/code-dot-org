@@ -648,6 +648,7 @@ tr:
     print_certificate: Sertifikayı Yazdır
   certificate_sponsor_message: "%{sponsor_name} öğreniminize sponsor olarak cömert
     bir bağışta bulundu."
+  certificate_hour_of_code: Saat Kodu
   move_students:
     new_section_dne: Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin.
@@ -1431,3 +1432,10 @@ tr:
   unit_prefix: Birim %{n}
   code_org_logo_alt: Code.org Ana Sayfası
   teacher_feedback: Öğretmen Geribildirimi
+  lesson_lock:
+    error:
+      no_updates: Yapılacak güncelleme yok
+      missing_params: Kullanıcı, seviye ve birim id'leri sağlanmalıdır
+      cannot_view_locked_answers: Kilitliyken yanıtlar görüntülenemez
+      forbidden: Kullanıcı, öğrencinin kilitlenebilme durumunu güncelleyemez
+  reset_predict_progress_button: Yanıtı Sil
