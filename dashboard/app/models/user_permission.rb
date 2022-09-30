@@ -62,7 +62,7 @@ class UserPermission < ApplicationRecord
   after_create :send_verified_teacher_email, if: proc {permission == AUTHORIZED_TEACHER}
 
   def send_verified_teacher_email
-    TeacherMailer.verified_teacher_email(user).deliver_now
+    TeacherMailer.verified_teacher_email(user).deliver_now if user&.email&.present?
   end
 
   def log_permission_save
