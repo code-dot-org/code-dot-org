@@ -21,7 +21,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `cd code-dot-org`
 
-1. `gem install bundler -v 1.17.3`
+1. `gem install bundler -v 2.3.22`
 
 1. `rbenv rehash`
 
@@ -491,7 +491,7 @@ mini_racer (0.4.0)
 Then run the following commands to successfully complete a bundle install:
 
 ```sh
-gem install bundler -v 1.17.3
+gem install bundler -v 2.3.22
 rbenv rehash
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl/lib/
 bundle install
