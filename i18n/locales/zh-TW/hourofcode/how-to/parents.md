@@ -22,7 +22,7 @@ You can try the Hour of Code with a computer, a tablet, a smartphone, or complet
 
 ## 1) 探索活動和教程。 
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. 我們鼓勵你提前看看一些選擇，這樣你就可以幫助指導孩子們進行他們喜歡的練習。 
 
@@ -36,7 +36,7 @@ There are countless [Hour of Code activities](https://hourofcode.com/us/learn) a
 
 If you’ll be using limited or no technology, you can filter [Hour of Code activities](https://hourofcode.com/us/learn) by selecting “No computers or devices” in the *Classroom technology* section.
 
-[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
+[![](/images/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
 You can also check out these [short videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) for more ideas on how to facilitate an unplugged activity at home!
 
@@ -85,9 +85,9 @@ Computer science is all about learning how to “debug” situations that didn�
 
 The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
 
-- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
-- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity
+- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise.
+- 在社交媒體上分享你在家進行的「一小時玩程式」的照片和視訊。 Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
