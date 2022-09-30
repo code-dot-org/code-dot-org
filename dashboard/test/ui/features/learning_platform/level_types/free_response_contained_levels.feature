@@ -98,6 +98,7 @@ Scenario: Teacher can reset progress on free response contained level
   And I rotate to landscape
   And I wait for the page to fully load
   And I press keys "Here is my response!" for element ".response"
+  And element ".response" has value "Here is my response!"
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 3
@@ -106,6 +107,7 @@ Scenario: Teacher can reset progress on free response contained level
   And I wait for 5 seconds
   And I verify progress in the header of the current page is "not_tried" for level 3
   And I press keys "Here is my response!" for element ".response"
+  And element ".response" has value "Here is my response!"
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 3

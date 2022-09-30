@@ -80,6 +80,7 @@ Scenario: Teacher can reset progress on multiple choice contained level
   And I wait for 5 seconds
   And I verify progress in the header of the current page is "not_tried" for level 2
   Then I press "unchecked_1"
+  And I wait up to 5 seconds for element "#checked_1" to be visible
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 2
