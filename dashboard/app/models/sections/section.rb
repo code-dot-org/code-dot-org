@@ -152,7 +152,7 @@ class Section < ApplicationRecord
   end
 
   def self.valid_participant_type?(type)
-    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.include? type
+    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.value?(type)
   end
 
   def self.valid_grade?(grade)
