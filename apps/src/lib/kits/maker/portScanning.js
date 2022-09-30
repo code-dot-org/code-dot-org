@@ -60,6 +60,7 @@ function listSerialDevices() {
     SerialPortType = SerialPort;
     return SerialPortType.list();
   } else {
+    // TODO remove as no longer needed with WebSerial
     SerialPortType = ChromeSerialPort;
     return new Promise((resolve, reject) => {
       SerialPortType.list((error, list) =>
