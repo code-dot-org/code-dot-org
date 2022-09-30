@@ -2,9 +2,13 @@
 
 #fullwidth {
   overflow: hidden;
-  background-size: cover;
   background: url('/images/hoc2022-hero-banner.svg') no-repeat center center;
   background-size: cover;
+
+  @media screen and (max-width: $width-sm) {
+    background: url('/images/hoc2022-hero-banner-mobile.svg') no-repeat center center;
+    background-size: cover;
+  }
 }
 
 section.banner.homepage {
@@ -18,7 +22,7 @@ section.banner.homepage {
     }
 
     @media screen and (max-width: $width-sm) {
-      font-size: 3em;
+      font-size: 2.75em;
     }
   }
 
@@ -90,6 +94,10 @@ section.banner {
     color: black;
     text-decoration: underline;
     font-family: 'Gotham 5r', sans-serif;
+
+    &.ctabuttonatag {
+      text-decoration: none;
+    }
   }
 
   p:last-child {
