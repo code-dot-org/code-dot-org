@@ -13,6 +13,8 @@ import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
+import GoogleBlockly from 'blockly/core';
+import CdoTheme from '../blockly/addons/cdoTheme';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
@@ -159,11 +161,12 @@ class MusicView extends React.Component {
       );
     });
 
-    /*var theme = Blockly.Theme.defineTheme('dark', {
-      'base': Blockly.Themes.Classic,
-      'componentStyles': {
-        'workspaceBackgroundColour': '#222'
-      },*/
+    var theme = GoogleBlockly.Theme.defineTheme('dark', {
+      base: CdoTheme,
+      componentStyles: {
+        toolboxBackgroundColour: '#222'
+      }
+    });
 
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
@@ -180,8 +183,8 @@ class MusicView extends React.Component {
     this.workspace = Blockly.inject(container, {
       // Toolbox will be programmatically generated once music manifest is loaded
       toolbox: baseToolbox,
-      grid: {spacing: 20, length: 0, colour: '#444', snap: true}
-      //theme: {componentStyles: {workspaceBackgroundColour: '#222'}}
+      grid: {spacing: 20, length: 0, colour: '#444', snap: true},
+      theme: theme
     });
 
     this.resizeBlockly();
@@ -413,7 +416,7 @@ class MusicView extends React.Component {
             float: 'left',
             width: '100%',
             marginTop: 10,
-            height: showCode ? 'calc(100% - 90px)' : 0,
+            height: showCode ? 'calc(100% - 160px)' : 0,
             position: 'relative'
           }}
         >
@@ -435,6 +438,7 @@ class MusicView extends React.Component {
             convertMeasureToSeconds={this.convertMeasureToSeconds}
             baseUrl={baseUrl}
             currentMeasure={this.player.getCurrentMeasure()}
+            sounds={this.getCurrentGroupSounds()}
           />
         )}
       </div>
