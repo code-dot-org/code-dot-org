@@ -86,17 +86,6 @@ export default class SetupChecklist extends Component {
         )
       )
 
-      // Is Chrome App Installed?
-      .then(
-        () =>
-          // Only necessary for ChromeOS when the webserial flag is not-enabled
-          (isChromeOS() || isChrome()) &&
-          !experiments.isEnabled('webserial') &&
-          this.detectStep(STATUS_APP_INSTALLED, () =>
-            setupChecker.detectChromeAppInstalled()
-          )
-      )
-
       // Is board plugged in?
       .then(() =>
         this.detectStep(STATUS_BOARD_PLUG, () =>
