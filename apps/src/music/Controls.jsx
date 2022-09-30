@@ -1,15 +1,35 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FontAwesome from '../templates/FontAwesome';
+import {Triggers} from '@cdo/apps/music/constants';
+import moduleStyles from './controls.module.scss';
 
-export default class Timeline extends React.Component {
+export default class Controls extends React.Component {
   static propTypes = {
     isPlaying: PropTypes.bool.isRequired,
     setPlaying: PropTypes.func.isRequired,
     playTrigger: PropTypes.func.isRequired
   };
+
+  renderTriggers = () => {
+    const triggerButtons = Triggers.map(trigger => (
+      <button
+        key={trigger.id}
+        type="button"
+        onClick={() => this.props.playTrigger(trigger.id)}
+        className={moduleStyles.triggerButton}
+      >
+        {trigger.buttonLabel}
+      </button>
+    ));
+
+    return (
+      <div className={moduleStyles.triggersContainer}>{triggerButtons}</div>
+    );
+  };
+
   render() {
-    const {isPlaying, setPlaying, playTrigger} = this.props;
+    const {isPlaying, setPlaying} = this.props;
 
     return (
       <div
@@ -23,17 +43,7 @@ export default class Timeline extends React.Component {
           zIndex: 70
         }}
       >
-        {isPlaying && (
-          <div style={{textAlign: 'left'}}>
-            <button
-              type="button"
-              onClick={() => playTrigger()}
-              style={{padding: 2, fontSize: 10, margin: 0}}
-            >
-              trigger
-            </button>
-          </div>
-        )}
+        {isPlaying && this.renderTriggers()}
         <br />
         <div
           style={{

@@ -15,6 +15,20 @@ export const baseToolbox = {
     },
     {
       kind: 'category',
+      name: 'Events',
+      cssConfig: {
+        container: moduleStyles.toolboxCategoryContainer,
+        row: moduleStyles.blocklyTreeRow
+      },
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.TRIGGERED_AT
+        }
+      ]
+    },
+    {
+      kind: 'category',
       name: 'Control',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,

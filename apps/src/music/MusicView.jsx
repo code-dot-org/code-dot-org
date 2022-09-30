@@ -15,6 +15,8 @@ import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
 import GoogleBlockly from 'blockly/core';
 import CdoTheme from '../blockly/addons/cdoTheme';
+import InputContext from './InputContext';
+import {Triggers} from './constants';
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
@@ -45,6 +47,7 @@ class MusicView extends React.Component {
 
     this.codeAppRef = document.getElementById('codeApp');
     this.player = new MusicPlayer();
+    this.inputContext = new InputContext();
 
     // We have seen on Android devices that window.innerHeight will always be the
     // same whether in landscape or portrait orientation.  Given that we tell
@@ -168,6 +171,18 @@ class MusicView extends React.Component {
       }
     });
 
+    Blockly.blockly_.Extensions.register(
+      'dynamic_trigger_extension',
+      function() {
+        this.getInput('trigger').appendField(
+          new Blockly.FieldDropdown(function() {
+            return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
+          }),
+          'trigger'
+        );
+      }
+    );
+
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
         init: function() {
@@ -286,8 +301,9 @@ class MusicView extends React.Component {
     this.setState({groupPanel: panel});
   };
 
-  playTrigger = () => {
+  playTrigger = id => {
     console.log('Playhead position: ' + this.player.getPlayheadPosition());
+    this.inputContext.onTrigger(id);
     this.callUserGeneratedCode(hooks.triggeredAtButton);
   };
 
@@ -303,7 +319,7 @@ class MusicView extends React.Component {
     };
 
     CustomMarshalingInterpreter.evalWithEvents(
-      {MusicPlayer: this.player},
+      {MusicPlayer: this.player, InputContext: this.inputContext},
       events
     ).hooks.forEach(hook => {
       //console.log('hook', hook);
@@ -327,6 +343,7 @@ class MusicView extends React.Component {
 
   stopSong = () => {
     this.player.stopSong();
+    this.inputContext.clearTriggers();
 
     this.setState({isPlaying: false});
   };
