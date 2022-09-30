@@ -6,6 +6,8 @@ import {
   MICROBIT_VID
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import {isChromeOS} from '../util/browserChecks';
+import experiments from '@cdo/apps/util/experiments';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',
@@ -53,10 +55,13 @@ export function isWebSerialPort(port) {
 }
 
 /**
- * Determines whether WebSerial port is available in the current browser
+ * Determines whether WebSerial port is available in the current browser.
+ * WebSerial should be available in ChromeOS and, when the microbit experiment is set, in Chromium browsers
  */
-export function isWebSerialPortAvailable() {
-  return 'serial' in navigator;
+export function shouldUseWebSerial() {
+  let experimentEnabledInChromium =
+    experiments.isEnabled('webserial') && 'serial' in navigator;
+  return isChromeOS() || experimentEnabledInChromium;
 }
 
 /** @const {number} serial port transfer rate */
