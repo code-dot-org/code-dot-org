@@ -289,7 +289,7 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # APIs used by ci:flush_cache task.
+              # APIs used by ci:flush_cloudfront_cache task.
               - Effect: Allow
                 Action:
                   - 'ec2:DescribeInstances'

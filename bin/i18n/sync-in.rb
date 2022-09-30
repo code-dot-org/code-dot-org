@@ -440,7 +440,11 @@ def localize_course_offerings
   CourseOffering.all.sort.each do |co|
     hash[co.key] = co.display_name
   end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.json"), "w+") do |f|
+  write_dashboard_json('course_offerings', hash)
+end
+
+def write_dashboard_json(location, hash)
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), "w+") do |f|
     f.write(JSON.pretty_generate(hash))
   end
 end

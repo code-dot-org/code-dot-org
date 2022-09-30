@@ -8988,7 +8988,7 @@ en:
           name: csa-magpie-lab
           title: AP CSA Magpie Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Magpie Lab explores the basics of natural language processing as students create a chatbot program. Students work with a variety of methods of the String class and practice using if statements to evaluate user input to determine an appropriate response.
           description: |-
             From Eliza in the 1960s to Siri and Watson today, the idea of talking to computers in natural language has fascinated people. (And yes, there have been more than one conversation between Eliza and Siri – search for "chatbot Eliza Siri.") While natural language processing (NLP) is a complicated field, it is fairly easy to create a simple program to respond to English sentences.
 
@@ -9033,7 +9033,7 @@ en:
           name: csa-consumer-review-lab
           title: AP CSA Consumer Review Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Consumer Review lab explores how reviews for products and services are evaluated and sometimes manipulated. Students work with methods in the String class and practice using conditionals and iteration to design and implement algorithms to process text files containing reviews.
           description: |-
             The Consumer Review Lab provides students with the opportunity to work on a larger assignment involving multiple classes early in the course, before they necessarily know how to write their own classes. By focusing on calling methods and using the control structures of selection and iteration, students will have practice that directly relates to the **Methods and Control Structures** free-response question type that they will see on the end-of-year exam. Because students often struggle with methods in the `String` class, this lab specifically focuses on calling these methods and building strings in an interesting and engaging way.
 
@@ -9059,7 +9059,7 @@ en:
           name: csa-data-lab
           title: AP CSA Data Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Data Lab explores data retrieval and analysis techniques. Students practice developing questions, identifying appropriate data sources, and then writing code to read and process data to answer their questions.
           description: |-
             Students are motivated if they feel connected to the material they are studying. One way to make computer science content relevant, meaningful, relatable, and exciting is to incorporate real-world data sets into hands-on programming assignments.
 
