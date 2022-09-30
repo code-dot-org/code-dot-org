@@ -648,6 +648,7 @@ tr:
     print_certificate: Sertifikayı Yazdır
   certificate_sponsor_message: "%{sponsor_name} öğreniminize sponsor olarak cömert
     bir bağışta bulundu."
+  certificate_hour_of_code: Saat Kodu
   move_students:
     new_section_dne: Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin.

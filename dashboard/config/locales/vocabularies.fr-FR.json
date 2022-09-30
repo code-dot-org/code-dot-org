@@ -830,11 +830,23 @@
         "function/csd/2022": {
           "word": "Fonction"
         },
+        "html/csd/2022": {
+          "word": "HTML"
+        },
+        "html_tag/csd/2022": {
+          "word": "Balise HTML"
+        },
         "digital_footprint/csd/2022": {
           "word": "L'Empreinte Numérique"
         },
+        "css/csd/2022": {
+          "word": "CSS"
+        },
         "copyright/csd/2022": {
           "word": "Copyright"
+        },
+        "relevant/csd/2022": {
+          "word": "Pertinent"
         },
         "user/csd/2022": {
           "word": "Utilisateur",
@@ -1425,11 +1437,23 @@
         "processing/csd/2021": {
           "word": "Le Traitement"
         },
+        "html/csd/2021": {
+          "word": "HTML"
+        },
+        "html_tag/csd/2021": {
+          "word": "Balise HTML"
+        },
         "digital_footprint/csd/2021": {
           "word": "L'Empreinte Numérique"
         },
+        "css/csd/2021": {
+          "word": "CSS"
+        },
         "copyright/csd/2021": {
           "word": "Copyright"
+        },
+        "relevant/csd/2021": {
+          "word": "Pertinent"
         }
       }
     }

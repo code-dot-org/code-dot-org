@@ -14,6 +14,8 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 خلال حملة "ساعة من البرمجة" ، يمكن لشركتك المساعدة في زيادة الوعي بحركة علوم الحاسوب. سواء كنت متطوعًا كفرد أو تخطِّط لإحدى الفعاليات لشركتك، فقد تُحدِث جهودك كلها أثرًا كبيرًا في الطريقة التي تنظر بها الشابات والطالبات من الفئات العرقية والعنصرية المهمَّشَة إلى مجال علوم الحاسوب وإمكانياتهم الخاصة.
 
+Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+
 - [شجِّع الموظفين على التطوُّع مع قاعة الدراسة](#encourage-employees)
 - [اربط شركتك بمدرسة](#connect-with-a-school)
 - [ضيِّف فعاليتك من "ساعة من البرمجة"](#host-hour-of-code)
@@ -28,13 +30,13 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-واحدة من أكثر الطرق إنجازًا للمشاركة في حركة "ساعة من البرمجة" هي التطوُّع مع إحدى قاعات الدراسة داخل المدارس، سواء شخصيًا أو عبر الإنترنت. وأفضل ما في الأمر أنه لا يتعيَّن عليك أن تكون مهندسًا للتطوُّع. وما يزال بإمكانك تقديم تجربة مفيدة للطلاب من خلال مشاركة تجربتك الخاصة في العمل، ومدى تأثير علوم الحاسوب والتقنية في دورك.
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
 
 [<button>سجِّل الاشتراك للتطوُّع</button>]({{ urls/volunteer }})
 
-بمجرد تسجيل المتطوِّع، يمكنك أن يُراجِع المعلِّم ملفه التعريفي على [خريطة المتطوعين بموقعنا](https://code.org/volunteer/local) - لذا؛ ينبغي إرسال الملفات التعريفية كاملةً قدر الإمكان. إذا كنت مناسبًا لقاعته الدراسية، فسيتواصَل معك أحد المعلِّمين عبر المنصة (ولن نشارِك عنوان بريدك الإلكتروني مع المعلِّم). ويمكنك بعد ذلك تنسيق التفاصيل مباشرةً مع المعلِّم بشأن [الطريقة الأفضل للتطوُّع مع قاعته الدراسية](https://hourofcode.com/us/how-to/volunteers).
+Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
-لمزيد من الإرشادات حول التطوع وعينة الرسائل لإثارة حماس شركتك بشأن حملة "ساعة البرمجة"، يُرجى مراجعة [دليل الشركاء من الشركات]({{ localized_files/hoc_corporate_toolkit }}).
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -42,19 +44,19 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 ## اربط شركتك بمدرسة
 
-لست مضطرًا إلى استخدام خريطة المتطوعين بموقعنا للتواصل مع قاعة الدراسة أو المدرسة. ونوصي في كثير من الأحيان بالبدء محليًا. ضع في اعتبارك ما إذا كانت هناك مدارس لديك أو لدى موظفيك صلة قوية بها، مثل المدرسة الأم، أو مدرسة الطفل، أو المؤسسة أو المدرسة التي تركز على خدمة فئة سكانية كانت ممثلة تمثيلا ناقصًا في علوم الحاسوب.
+You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-يمكنك من هناك أن تُجري زيارة للموقع الإلكتروني للمدرسة للعثور على جهات الاتصال المناسبة للتواصل معها، مثل المسؤولين كمدير المدرسة أو نائب المدير، ومدربي علوم الحاسوب، أو حتى مجلس الآباء والمعلِّمين والطلاب بالمدرسة. يمكنك أيضًا التعاون مع مؤسسات مثل مؤسسة Boys & Girls Clubs of America وأحد فروع مؤسسة جمعية الشبان المسيحية، وغيرها الكثير للمشاركة في استضافة إحدى الفعاليات.
+From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
 
-إذا لم تكن قادرًا على التواصل مع مدرسة، فيُرجى [التواصل معنا](https://support.code.org/hc/en-us/requests/new)، وسنوصِّلك بأحد شركائنا المحليين إن أمكن.
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
 
 * * *
 
 <h4><font color="00adbc"><i>"كنت سعيدًا برؤية حماس الأطفال. فمن بين الأمور الرائعة التي مررت بها أن المعلمين لاحظوا أن هناك بعض الطلاب الذين لم يحرزوا تقدمًا أكاديميًا بقدر تفوُّقهم في التفكير كمطوِّرين ومساعَدة غيرهم - وهذا يمنحهم شعورًا بالثقة."</i></font></h4>
 
--متطوِّع في حملة "ساعة من البرمجة"
+-Hour of Code volunteer
 
 * * *
 
@@ -62,7 +64,7 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 ## ضيِّف فعاليتك من "ساعة من البرمجة"
 
-إذا كنت تريد أن تبذل جهدًا إضافيًا، فيمكن لشركتك أيضًا أن تضيِّف إحدى فعاليات "ساعة من البرمجة". وليس هناك صيغة محددة لتضيِّف الفعالية؛ لذا نشجعك على أن تكون مبدعًا! ونظرًا لصغر حجم موظفينا (لكنهم عظماء!)، لا تخصِّص مؤسسة Code.org فريقًا لتنسيق فعاليات "ساعة من البرمجة". ومع ذلك، إليك بعض النصائح للبدء.
+If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
 
 ### ١. شاهد هذا الفيديو الإرشادي <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
@@ -74,13 +76,11 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 #### نموذج جدول الأعمال:
 
-|الوقت | عنصر جدول الأأعمال | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- ||1-5 دقائق | اعرِض [مقطع فيديو مُلهِمًا](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 دقائق | عرِّف نفسَك وتعلَّم المزيد عن الطلاب: أين تعمل، وماذا تعمل، وما أكثر شيء تحبّه في وظيفتك؟ مَن أو ما الذي يلهمك؟ كيف أصبحت مهتمًا بعلوم الحاسوب؟ هل لديك معلم خاص؟ اطرح أسئلة على الطلاب واترك لهم الوقت لطرح الأسئلة&والإجابة |  
-|30-60 دقيقة | البرمجة! إذا كانت فعاليتك تستهدِف الحضور شخصيًا، فهذا وقت الإجابة على الأسئلة، وتوجيه الطلاب من خلال الألغاز الصعبة. حاوِل ألا تقدِّم لهم الحل مباشرة، وجرِّب بدلاً من ذلك أن تطرح عليهم أسئلة حتى يتمكنوا من الإجابة بأنفسهم بشأن الخطأ الذي حدث، وشجِّع الطلاب على سؤال بعضهم البعض إذا كانت لديهم أسئلة. إذا كنت تتطوَّع عبر الإنترنت، فتعاوَن مع المعلِّم بشأن المنهجية الأفضل التي ربما تصلون إليها. وقد يكون الرجوع إلى نهاية الجلسة أكثر منطقية لمعرفة مستوى التقدُّم الذي أحرزه الطلاب. | ||1-3 دقائق | اشكر الجميع، وشارِك كلمات مُلهمة لوداع الطلاب. وزِّع أي منتج من المنتجات القيِّمة لشركتك ([الملصقات](#celebrate) رائعة)! | | <br />
+|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? مَن أو ما الذي يلهمك؟ كيف أصبحت مهتمًا بعلوم الحاسوب؟ هل لديك معلم خاص؟ اطرح أسئلة على الطلاب واترك لهم الوقت لطرح الأسئلة&والإجابة | |30-60 minutes | Code! إذا كانت فعاليتك تستهدِف الحضور شخصيًا، فهذا وقت الإجابة على الأسئلة، وتوجيه الطلاب من خلال الألغاز الصعبة. حاوِل ألا تقدِّم لهم الحل مباشرة، وجرِّب بدلاً من ذلك أن تطرح عليهم أسئلة حتى يتمكنوا من الإجابة بأنفسهم بشأن الخطأ الذي حدث، وشجِّع الطلاب على سؤال بعضهم البعض إذا كانت لديهم أسئلة. إذا كنت تتطوَّع عبر الإنترنت، فتعاوَن مع المعلِّم بشأن المنهجية الأفضل التي ربما تصلون إليها. وقد يكون الرجوع إلى نهاية الجلسة أكثر منطقية لمعرفة مستوى التقدُّم الذي أحرزه الطلاب. | ||1-3 دقائق | اشكر الجميع، وشارِك كلمات مُلهمة لوداع الطلاب. وزِّع أي منتج من المنتجات القيِّمة لشركتك ([الملصقات](#celebrate) رائعة)! | | <br />
 
 #### أفكار أخرى لإضافتها لفعاليتك
 
-- اشرح الطرق التي تؤثر فيها التقنية في حياتنا، ضاربًا أمثلة سيهتم بها الطلاب من جميع الخلفيات، وتحدَّث عن التقنية التي تنقذ حياتنا، وتساعِد الناس، وتربط بينهم. 
+- اشرح الطرق التي تؤثر فيها التقنية في حياتنا، ضاربًا أمثلة سيهتم بها الطلاب من جميع الخلفيات، وتحدَّث عن التقنية التي تنقذ حياتنا، وتساعِد الناس، وتربط بينهم.
 - إذا كنت شركة تقنية، فاستعرِض المنتجات المرحة والمبتكرة التي تطوِّرها شركتك. أما إذا لم تكن شركة تقنية، فناقِش الوسائل التي تستخدم فيها شركتك التقنية لحل المشكلات وتحقيق الأهداف.
 - ادع مهندسي البرمجيات من شركتك للحديث عن سبب قرارهم دراسة علوم الحاسوب والمشاريع التي يطورونها.
 - إذا كان معك مجموعة من الموظفين سيسهِّلون فعاليتك أو التطوع لإحدى المدارس المحلية، ففكِّر في طلب [تي شيرتات مخصصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لموظفيك.
@@ -108,7 +108,7 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 <a href="https://hourofcode.com/us/learn">استكشِف الأنشطة</a> وحدِّد مسبقًا ما إذا كنت تريد أن تختار برنامجًا تعليميًا واحدًا لجميع ضيوفك، أم تسمَح لكل طفل باختيار برنامج التعليمي. وتتطلَّب **جميع أنشطة "ساعة من البرمجة"** الحد الأدنى من وقت التحضير، كما أنها ذاتية التوجيه؛ ما يسمَح للمشاركين بالعمل بالسرعة التي تناسبهم وتناسب مستوى مهاراتهم.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 بمجرد أن يكون لديك خارطة طريق واضحة لفعاليتك، يمكنك بعد ذلك أن تبدأ في دعوة الطلاب أو المدرسة أو المجتمع. ونوصي بالبدء مع مدرسة داخل بلدك ترتبط بها بالفعل أو [استعرِض خريطتنا](https://hourofcode.com/us/map) لفعاليات "ساعة من البرمجة".
 
@@ -121,8 +121,8 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 بعد انتهاء الطلاب أو الضيوف من أنشطتهم في "ساعة من البرمجة"، يحين الوقت للاحتفال بنجاحهم. وإليك بعض الأفكار لتضفي مزيدًا من المرح على فعاليتك:
 
 - [اطبع الشهادات]({{ urls/certificates }}) للمشاركين والطلاب. 
-- [اطبع ملصقات عليه "أنهيت نشاطًا في "ساعة من البرمجة"]({{ promote/resources_stickers }}) أو ابحث عن جوائز أخرى أو منتجات قيِّمة على [Code.org Amazon Store](https://code.org/shop). 
-- شارك الصور ومقاطع الفيديو الخاصة بحدث "ساعة من البرمجة" على وسائل التواصل الاجتماعي. استخدم هاشتاج #HourOfCode و @codeorg حتى نتمكن من إبراز نجاحك أيضًا!
+- [اطبع ملصقات عليه "أنهيت نشاطًا في "ساعة من البرمجة"]({{ promote/resources_stickers }}) أو ابحث عن جوائز أخرى أو منتجات قيِّمة على [Code.org Amazon Store](https://code.org/shop).
+- شارِك الصور ومقاطع الفيديو الخاصة بفعاليتك من "ساعة من البرمجة" على مواقع التواصل الاجتماعي. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
 
 * * *
 
@@ -136,7 +136,7 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 ### 1. سجِّل فعاليتك
 
-عندما تسجِّل اشتراكك في إحدى فعاليات "ساعة من البرمجة"، فستحصل على رسائل بريد إلكترونية مفيدة، تتضمن الأخبار والنصائح لتضيِّف فعالية ناجحة من "ساعة من البرمجة". وهي أيضًا الطريقة التي يمكنك من خلالها السماح للمدارس المحلية وأولياء الأمور بمعرفة استضافتك للفعالية بالقرب منهم.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. وهي أيضًا الطريقة التي يمكنك من خلالها السماح للمدارس المحلية وأولياء الأمور بمعرفة استضافتك للفعالية بالقرب منهم.
 
 ### 2. انشر على مواقع التواصل الاجتماعي
 
@@ -144,23 +144,23 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 
 #### الإعلان العام عن أنشطة "ساعة من البرمجة"
 
-- علوم الحاسوب تغيِّر عالمنا. لذا؛ ساعِد الطلاب في أن يصبحوا جزءًا من هذا التعيير الذي يبدأ من خلال أحد أنشطة #ساعة_من_البرمجة. https://hourofcode.com/ 
-- لا تستخدِم التقنية فحسب، بل تعلَّم كيفية بنائها. ساعِد شخصًا في بدء ذلك من خلال أحد أنشطة #ساعة_من_البرمجة. https://hourofcode.com/ 
+- علوم الحاسوب تغيِّر عالمنا. لذا؛ ساعِد الطلاب في أن يصبحوا جزءًا من هذا التعيير الذي يبدأ من خلال أحد أنشطة #ساعة_من_البرمجة. https://hourofcode.com/
+- لا تستخدِم التقنية فحسب، بل تعلَّم كيفية بنائها. ساعِد شخصًا في بدء ذلك من خلال أحد أنشطة #ساعة_من_البرمجة. https://hourofcode.com/
 
 #### الإحصائيات
 
-- هل تعلم أن 45% فقط من مدارس الولايات المتحدة الأمريكية تدرس علوم الحاسوب؟ امنح جميع الطلاب الفرصة لتعلُّم أحد أنشطة #ساعة_من_البرمجة https://hourofcode.com/ 
-- 26% من متخصصي البرمجيات من السيدات فقط داخل الولايات المتحدة الأمريكية. عرِّف المزيد من الفتيات بمجال علوم الحاسوب من خلال أنشطة #ساعة_من_البرمجة https://hourofcode.com/ 
-- 67% من وظائف الحوسبة داخل الولايات المتحدة الأمريكية ليست مدرجة في قطاع التقنية. لذا؛ ساعِدنا في وضع علوم الحاسوب في خريطة المقرر الدراسي النموذجي من خلال أنشطة #ساعة_من_البرمجة https://hourofcode.com/ 
+- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- 26% من متخصصي البرمجيات من السيدات فقط داخل الولايات المتحدة الأمريكية. عرِّف المزيد من الفتيات بمجال علوم الحاسوب من خلال أنشطة #ساعة_من_البرمجة https://hourofcode.com/
+- 67% من وظائف الحوسبة داخل الولايات المتحدة الأمريكية ليست مدرجة في قطاع التقنية. لذا؛ ساعِدنا في وضع علوم الحاسوب في خريطة المقرر الدراسي النموذجي من خلال أنشطة #ساعة_من_البرمجة https://hourofcode.com/
 
 #### اكتب قصَّتك
 
-- نشاط واحد من أنشطة #ساعة_من_البرمجة قد تجعلك [اكتب قصَّتك]. https://hourofcode.com/ 
-- أدعم #ساعة_من_البرمجة لأن [اكتب أفكارك]. انضم إلينا https://hourofcode.com 
+- نشاط واحد من أنشطة #ساعة_من_البرمجة قد تجعلك [اكتب قصَّتك]. https://hourofcode.com/
+- أدعم #ساعة_من_البرمجة لأن [اكتب أفكارك]. انضم إلينا https://hourofcode.com
 
 #### خاص بالمهندسين
 
-- إذا كان السطر الأول في الكود البرمجي سببًا في تغيير حياتِك، فساعِد الطلاب القريبين منك في كتابة نشاطهم الأول من أنشطة #ساعة_من_البرمجة على https://code.org/volunteer 
+- إذا كان السطر الأول في الكود البرمجي سببًا في تغيير حياتِك، فساعِد الطلاب القريبين منك في كتابة نشاطهم الأول من أنشطة #ساعة_من_البرمجة على https://code.org/volunteer
 - إذا تعلَّمت البرمجة، فما قصَّتك؟ شجِّع أحد الطلاب القريبين منك من خلال نشاطه الأول من أنشطة #ساعة_من_البرمجة على https://code.org/volunteer
 
 <a href="https://hourofcode.com/promote/resources#posters">تعلَّم المزيد</a> حول اليافطات ومقاطع الفيديو والملصقات وغير ذلك من وسائل ترويج فعاليتك لمجتمعك.
@@ -174,11 +174,11 @@ title: دليل "ساعة من البرمجة" الإرشادي للشركات
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
 - انشر الوعي عن طريق ارتداء [منتجات Code.org القيٍّمة ](https://store.code.org/)(تذهب جميع العائدات لدعْم المزيد من الطلاب في الحصول على فرص تعلُّم علوم الحاسوب).
-- اختر مساعدة Code.org عندما تتسوَّق من [AmazonSmile](https://code.org/donate/amazonsmile). 
+- اختر مساعدة Code.org عندما تتسوَّق من [AmazonSmile](https://code.org/donate/amazonsmile).
 - اطلب من مديرك التنفيذي أن يُرسِل بريدًا إلكتروني على مستوى الشركة، مؤكِّدًا على أهمية علوم الحاسوب، ومشجِّعًا الموظفين على الترويج له.
 - امرح قليلاً مع زملائك في العمل في [حملة العطاء](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [وقِّع على هذه العريضة](https://code.org/promote) لنضمن توفير الفرصة لجميع الطلاب لتعلُّم علوم الحاسوب. 
-- [تبرَّع](https://code.org/donate) لمؤسسة Code.org حتى يمكننا أن نحافظ على مجانيَّة مواردنا التعليمية وإتاحتها للجميع. 
+- [وقِّع على هذه العريضة](https://code.org/promote) لنضمن توفير الفرصة لجميع الطلاب لتعلُّم علوم الحاسوب.
+- [تبرَّع](https://code.org/donate) لمؤسسة Code.org حتى يمكننا أن نحافظ على مجانيَّة مواردنا التعليمية وإتاحتها للجميع.
 
 لمزيد من الاقتراحات حول كيفية دعم مؤسسة Code.org وحركة "ساعة من البرمجة"، يُرجى زيارة [Code.org/Help](https://code.org/help)
 

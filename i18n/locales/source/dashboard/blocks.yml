@@ -2,6 +2,8 @@
 en:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: moving NESW with arrow keys
       AmysBlocks_setPromptWithChoices:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
       BadGuys_makeNewBadGuysSprite:
@@ -1447,6 +1449,8 @@ en:
             '100': large
       gamelab_setPrompt:
         text: prompt user [QUESTION][0] for variable [VAR][1]
+      gamelab_setPromptWith2Choices:
+        text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3]
       gamelab_setPromptWithChoices:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
       gamelab_setProp:

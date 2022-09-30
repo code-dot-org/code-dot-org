@@ -1300,11 +1300,11 @@ fr:
           de fonction verts peuvent faire.
     C3_bee_nested_loops:
       1:
-        text: Maintenant nous allons utiliser les boucles imbriquées avec l'abeille.
-          On nous a donné un code de démarrage qui dit à l'abeille d’avancer et d’obtenir
-          le nectar trois fois et puis de tourner à droite. Prenons ce morceau entier
-          de code et imbriquons-le à l'intérieur d’un autre bloc « Répéter » et réglons
-          la répétition à trois fois. Fait !
+        text: Maintenant, on va se servir de boucles imbriquées avec l'abeille. On
+          commence d'emblée avec du code qui indique à l'abeille d’avancer et de recueillir
+          trois fois le nectar, puis de tourner à droite. On va prendre tout ce bout
+          de code et l'imbriquer dans un autre bloc « répéter », et régler à trois
+          fois la répétition. Voilà, c'est fait !
     C3_bounce:
       1:
         text: Tu vas maintenant créer ton propre jeu de casse-brique à rebond, que
@@ -2613,60 +2613,60 @@ fr:
           Amuse-toi bien!
     mc_intro:
       1:
-        text: Mon nom est Jens Bergensten, mais je suis mieux connu sous le nom de
+        text: Je m'appelle Jens Bergensten, mais je suis mieux connu sous le nom de
           Jeb. Je suis le développeur en chef de Minecraft, ici chez Mojang à Stockholm.
           Je pense que j'avais onze ou douze ans quand j'ai commencé à programmer
           parce que je voulais faire des jeux. Un ami de mon père m'a dit que pour
-          faire des jeux, je devais apprendre à programmer. Voilà comment j'ai commencé.
-          J'aime concevoir et imaginer l'architecture des jeux. C'est ce que j'aime
-          vraiment à propos de Minecraft.
+          faire des jeux, je devais apprendre à programmer. C'est comme ça que j'ai
+          commencé. J'aime concevoir et imaginer l'architecture des jeux. C'est ce
+          que j'aime vraiment avec Minecraft.
       2:
-        text: Pendant l'heure qui vient, tu vas apprendre les bases de l'informatique
-          en programmant les déplacements d'Alex ou de Steve dans un endroit simulé
-          du monde de Minecraft.
+        text: Au cours de l'heure qui vient, tu vas apprendre les bases de l'informatique
+          en programmant les déplacements d'Alex ou de Steve dans un bout simulé du
+          monde de Minecraft.
       3:
         text: La programmation se fait traditionnellement avec du texte, mais aujourd'hui
-          nous allons utiliser Blockly qui utilise des blocs visuels que tu peux glisser
-          et déposer pour écrire des programmes. Mais en fait, tu crées du code Javascript.
+          on va se servir de Blockly, un système qui utilise des blocs visuels que
+          tu peux faire glisser et déposer pour écrire des programmes. Mais sous l'envers
+          du décor, tu crées du code Javascript.
       4:
-        text: Les concepts que tu vas apprendre sont ceux que les programmeurs utilisent
-          chaque jour et sont les fondamentaux de l'informatique. Chez Mojang, nous
-          utilisons ces mêmes concepts pour faire fonctionner Minecraft.
+        text: Les notions que tu vas apprendre sont celles que les programmeurs utilisent
+          chaque jour et forment les bases de l'informatique. Chez Mojang, on utilise
+          ces mêmes notions pour faire fonctionner Minecraft.
       5:
         text: Avant de commencer, tu vas choisir ton personnage. Je vais choisir Alex.
-          Construisons du code pour un programme qui lui permettra de se déplacer
-          partout sur l'écran.
+          On va construire du code pour un programme qui lui permettra de se déplacer
+          autour de l'écran.
       6:
         text: Ton écran est divisé en trois parties principales. Sur la gauche, il
           y a l'espace de jeu Minecraft où ton programme s'exécutera. Les instructions
-          pour chaque niveau sont écrites ci-dessous.
+          pour chaque niveau sont écrites en dessous.
       7:
-        text: 'Au milieu, la boîte à outils : chacun de ces blocs est une commande
-          qui dirige les actions d''Alex.'
+        text: 'Au milieu se trouve la boîte à outils : chacun de ces blocs est une
+          commande qui va dicter les actions d''Alex.'
       8:
         text: La zone blanche à droite s’appelle l'espace de travail, et c'est ici
-          que nous allons construire notre programme.
+          qu'on va construire notre programme.
       9:
-        text: Si nous glissons le bloc « Avancer ();» dans l'espace de travail et
-          cliquons sur »Exécuter», que se passe-t-il ? Alex avance d'un espace sur
-          la grille.
+        text: Si on glisse le bloc « Avancer(); » vers l'espace de travail et clique
+          sur « Démarrer », que se passe-t-il ? Alex avance d'un espace sur la grille.
       10:
-        text: Et que se passe-t-il si nous voulons faire quelque chose après qu'elle
-          a avancé d'un espace ? Nous pouvons ajouter un autre bloc à notre programme.
-          Je vais choisir le bloc « Tourner à droite de 90 degrés();» et je vais le
-          faire glisser sous mon bloc « Avancer ();» jusqu'à ce que cette ligne orange
-          apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque nous
-          appuyons à nouveau sur « Exécuter », Alex effectuera les commandes qui sont
-          empilées du haut vers le bas sur notre espace de travail.
+        text: Et que se passe-t-il si on veut faire quelque chose une fois qu'elle
+          a avancé d'un espace ? On peut ajouter un autre bloc à notre programme.
+          Je vais choisir le bloc « Tourner à droite de 90 degrés();»  et je vais
+          le faire glisser sous mon bloc « Avancer (); » jusqu'à ce que cette ligne
+          orange apparaisse. Puis je vais le déposer et les deux blocs s’emboîteront.
+          Lorsqu'on appuie à nouveau sur « Démarrer », Alex va exécuter les commandes
+          qui sont empilées du haut vers le bas dans notre espace de travail.
       11:
         text: Si jamais tu veux supprimer un bloc, il te suffit de le refaire glisser
           de la pile vers la boîte à outils.
       12:
-        text: 'Pour annuler tes modifications et revenir à la façon dont le niveau
-          a démarré, utilise le bouton Recommencer dans le coin supérieur droit de
-          l''espace de travail. Une dernière chose : tu vois le petit triangle sur
-          les blocs «Tourner» ? Chaque fois que tu vois ces triangles, cela signifie
-          que tu peux choisir une option différente. Commençons à coder !'
+        text: 'Pour annuler tes modifications et revenir à la version de base du niveau,
+          utilise le bouton « Recommencer » dans le coin en haut à droite de l''espace
+          de travail. Une dernière chose : tu vois le petit triangle sur les blocs
+          « Tourner » ? Chaque fois que tu vois ces triangles, cela veut dire que
+          tu peux choisir parmi différentes options. Allez, on se met à coder !'
     mc_repeat:
       1:
         text: Je suis Lydia Winters, directrice de la marque Mojang, et nous avons
@@ -2858,7 +2858,7 @@ fr:
           un morceau de code.
       6:
         text: La zone blanche à droite s’appelle l'espace de travail, et c'est ici
-          que nous allons construire notre programme.
+          qu'on va construire notre programme.
       7:
         text: Pour commencer, tu devras lier tes blocs au bloc orange « Lors du lancement
           ». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies
@@ -4033,76 +4033,80 @@ fr:
           bien !
     mc_2018_intro:
       1:
-        text: Salut! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je suis
-          sur le point de me lancer dans une quête pour trouver un trésor sous-marin
-          caché et je suis très heureux d'avoir ton aide. Qui sait ce que nous allons
-          rencontrer le long de ces mystérieux cours d'eau ? Nous sommes censés rencontrer
-          notre premier guide quelque part sur ce quai.
+        text: Salut ! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je
+          suis sur le point de me lancer dans une quête pour trouver un trésor sous-marin
+          caché et je suis très heureux d'avoir ton aide. Qui sait ce qu'on va rencontrer
+          le long de ces mystérieux cours d'eau ? On est censé retrouver notre premier
+          guide sur ce quai quelque part.
       2:
-        text: Bienvenue, aventuriers ! Pour terminer le Voyage Aquatique, vous devrez
-          résoudre une série d'énigmes en utilisant le code. Voici comment cela fonctionne.
-          Votre écran est divisé en trois parties principales.
+        text: Bienvenue, aventuriers ! Pour terminer le Voyage Aquatique, il va falloir
+          résoudre une série de casse-têtes avec du code. Voilà comment ça marche.
+          L'écran est divisé en trois zones principales.
       3:
-        text: Sur la gauche, vous verrez le monde de Minecraft.
+        text: Sur la gauche se trouvera le monde de Minecraft.
       4:
-        text: La zone du milieu est ta boîte à outils où tu peux trouver des commandes
+        text: La zone du milieu, c'est la boîte à outils, où l'on trouvera des commandes
           de codage.
       5:
-        text: Et la grande surface à droite est ton espace de travail. C'est là que
-          tu peux empiler des commandes pour construire ton programme et contrôler
-          tes mouvements.
+        text: Et la grande zone à droite, c'est l'espace de travail. C'est là qu'on
+          peut empiler les commandes pour construire un programme et contrôler ses
+          mouvements.
       6:
-        text: Les instructions de chaque niveau sont en haut de la page. Clique sur
-          le signe plus pour changer entre les instructions longues et courtes.
+        text: Les instructions pour chaque niveau se trouvent en haut de la page.
+          Clique sur le signe plus pour voir plutôt les instructions en version longue
+          ou courte.
       7:
-        text: Essaye de glisser des blocs de la boîte à outils dans l'espace de travail,
-          de les empiler, puis clique sur le bouton exécuter pour exécuter tes commandes.
+        text: Essaye de glisser des blocs de la boîte à outils vers l'espace de travail,
+          de les empiler, puis clique sur le bouton « démarrer » pour exécuter tes
+          commandes.
       8:
-        text: Tu devras peut-être essayer plusieurs fois pour bien faire les choses,
-          et certaines des énigmes ont plus d'une solution. Alors expérimente pour
-          voir ce qui fonctionne.
+        text: Tu auras peut-être besoin d'essayer plusieurs fois pour y arriver, et
+          certains casse-têtes ont plus d'une solution. Alors fais des tests pour
+          voir ce qui marche.
       9:
-        text: Si tu souhaites réessayer, clique sur le bouton réinitialiser pour revenir
-          à l'endroit où tu as commencé.
+        text: Si tu veux réessayer, clique sur le bouton réinitialiser pour revenir
+          là où tu as commencé.
       10:
-        text: Si tu dois supprimer une commande, glisse simplement le bloc de ton
-          espace de travail dans la boîte à outils. Rappelle-toi de cliquer sur «
-          Exécuter » pour voir à quoi ressemble ton code en action.
+        text: Si tu as besoin de supprimer une commande, glisse simplement le bloc
+          de ton espace de travail à la boîte à outils. N'oublie pas de cliquer sur
+          « Démarrer » pour voir ce à quoi ressemble ton code en action.
       11:
-        text: OK, fini les bêtises, camarade aventurier. Commençons à coder pour trouver
-          un trésor sous-marin.
+        text: Allez, trêve de plaisanteries, camarade aventurier. On va se mettre
+          à coder pour trouver du trésor sous-marin.
     MC_2018_loops:
       1:
-        text: Très bien! Nous avons attrapé une morue ! Savais-tu que si tu donnes
-          une morue à manger à un dauphin, le dauphin te guidera vers une épave où
-          il peut y avoir un trésor ? Nous devons nous approcher. La prochaine série
-          d'énigmes seront certainement plus délicates, donc nous ferions mieux de
-          gagner d'avantage de compétences en codage. Qu'est-ce ? Une grotte ?
+        text: Super ! On a attrapé une morue ! Savais-tu que si tu donnes une morue
+          à manger à un dauphin, le dauphin te guidera vers une épave de navire où
+          il pourrait y avoir un trésor ? On doit être en train de se rapprocher !
+          La prochaine série de casse-têtes sera sûrement plus corsée, donc on a intérêt
+          à développer nos compétences en codage. Attends, qu'est-ce que c'est ? Une
+          grotte ?
       2:
-        text: Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous
-          utilisiez le même ensemble de commandes à plusieurs reprises dans certains
-          des derniers casse-tête. Ça a dû être un peu fatiguant. N’avez-vous jamais
-          souhaité pouvoir faire encore et encore quelque chose comme, vous savez,
-          laver la vaisselle ou vous brosser les dents sans vous fatiguer ou vous
-          ennuyer ? Ce serait bien.
+        text: Bienvenue, aventurier ! Je m'appelle Calamar. J'ai remarqué que tu utilisais
+          le même ensemble de commandes à plusieurs reprises dans certains des derniers
+          casse-têtes. Ça a dû être un peu fatiguant. N’as-tu jamais voulu pouvoir
+          faire quelque chose qu'il faut faire encore et encore, du genre laver la
+          vaisselle ou se brosser les dents, sans t'en fatiguer ou t'ennuyer ? Ça
+          serait sympa.
       3:
-        text: Les ordinateurs sont vraiment bons à faire la même chose encore et encore
-          en utilisant des boucles de codage. Lorsque tu veux que ton programme fasse
-          les mêmes instructions plusieurs fois, tu peux utiliser une boucle !
+        text: Les ordinateurs sont vraiment doués pour faire la même chose encore
+          et encore en utilisant des boucles de codage. Quand tu veux que ton programme
+          exécute les mêmes instructions plusieurs fois, tu peux utiliser une boucle
+          !
       4:
-        text: Le bloc de boucle contient des instructions qui sont répétées jusqu'à
+        text: Le bloc « boucle » contient des instructions qui se répètent jusqu'à
           ce que l'objectif soit atteint. Une fois que ton programme démarre une boucle
-          « Répéter jusqu'à l'objectif », il continuera à répéter les instructions
-          à l'intérieur jusqu'à ce qu'il atteigne l'objectif.
+          « Répéter jusqu'à l'objectif », il continuera à répéter les instructions
+          qui sont dedans jusqu'à ce qu'il atteigne cet objectif.
       5:
-        text: Essaye ceci pour toi-même ! Place les commandes que tu souhaites répéter
-          à l'intérieur du bloc « Répéter jusqu'à l'objectif », clique sur "Exécuter"
-          et regarde-le partir !
+        text: Essaie ça toi-même ! Mets les commandes que tu veux répéter à l'intérieur
+          du bloc « Répéter jusqu'à l'objectif », clique sur « Démarrer » et regarde
+          les choses se faire !
       6:
-        text: Eh bien, c'était un peu bizarre. Qui aurait cru que les calmars pouvaient
-          coder ? Je ne pensais même pas qu'ils avaient des doigts. Alors, maintenant,
-          nous connaissons les boucles. Utilisons-les pour nous emparer d'un autre
-          trésor.
+        text: Bon, c'était un peu bizarre, ça. Qui aurait cru que les calamars pouvaient
+          coder ? Je ne pensais même pas qu'ils avaient des doigts. Bref, maintenant,
+          on en sait plus sur les boucles. Viens, on va s'en servir pour s'emparer
+          de plus de trésor.
     mc_2018_conditionals:
       1:
         text: Ça alors ! Trois nouvelles énigmes résolues ! Et nous avons attrapé...

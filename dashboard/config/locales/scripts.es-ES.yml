@@ -122,6 +122,7 @@ es:
           description: Aprende Programación Funcional a través del Álgebra.
           description_short: Aprende Programación Funcional a través del Álgebra.
           student_description: Aprende Programación Funcional a través del Álgebra.
+          name: álgebra
         infinity:
           title: Laboratorio de Juego Disney Infinity
           description: Utiliza el laboratorio de juegos para crear una historia o
@@ -250,12 +251,12 @@ es:
           student_description: Comprimir texto mediante la identificación de patrones
             repetidos.
         CSPPD:
-          title: Principios de la Ciencia de la Computación PD
+          title: Principios de Informática PD
           description: 'Fase 1: Introducción en Línea para CSP'
           description_short: 'Fase 1: Introducción en Línea para CSP'
           student_description: 'Fase 1: Introducción en Línea para CSP'
         CSPLessonSamples:
-          title: CSP lección muestras
+          title: Ejemplos de Lecciones CSP
           description: Ejemplos de lecciones para CSP
           description_short: Ejemplos de lecciones para CSP
           student_description: Ejemplos de lecciones para CSP
@@ -341,12 +342,12 @@ es:
           logo_image: izone\_logo.png
           student_description: 'Fase 1: Presentación en línea'
         sciencePD2:
-          title: 'CS en ciencias: parte 2'
+          title: 'Informática en Ciencias: Parte 2'
           description: Fase 2 Estudio de Verano Semipresencial en línea
           description_short: Fase 2 Estudio de Verano Semipresencial en línea
           student_description: Fase 2 Estudio de Verano Semipresencial en línea
         sciencePD3:
-          title: 'CS en ciencias: parte 3'
+          title: 'Informática en Ciencias: Parte 3'
           description: Apoyo al Curso Académico - Semestre 1
           description_short: Apoyo al Curso Académico - Semestre 1
           student_description: Apoyo al Curso Académico - Semestre 1
@@ -371,9 +372,9 @@ es:
             en code.org/educate/csp.
         algebraPD2a:
           title: Informática en Álgebra PD
-          description: Enseñar programación funcional a través de álgebra
-          description_short: Enseñar programación funcional a través de álgebra
-          student_description: Enseñar programación funcional a través de álgebra
+          description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          description_short: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          student_description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
         allthethings:
           title: "¡Todas las cosas!"
           description: Todos los tipos de niveles para las pruebas de la Interfaz
@@ -385,9 +386,9 @@ es:
           name: todo lo que hay
         algebraPD2b:
           title: Informática en Álgebra PD
-          description: Enseñar programación funcional a través de álgebra
-          description_short: Enseñar programación funcional a través de álgebra
-          student_description: Enseñar programación funcional a través de álgebra
+          description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          description_short: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          student_description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
         cspfacilitator:
           title: Taller para Profesores de Fundamentos de la Informática
           description: Niveles en línea para el taller de Desarrollo Profesional
@@ -408,9 +409,9 @@ es:
         ECSPD2:
           title: 'Explorando las Ciencias de la Computación PD: Estudio de Verano
             Semipresencial'
-          description: Enseñar programación funcional a través de álgebra
-          description_short: Enseñar programación funcional a través de álgebra
-          student_description: Enseñar programación funcional a través de álgebra
+          description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          description_short: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          student_description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
         equityPD:
           title: Dirigir un Debate sobre la Igualdad
           description: Cómo dirigir un debate sobre la igualdad en un Desarrollo Profesional
@@ -426,9 +427,9 @@ es:
           student_description: Apoyo al Curso Académico
         sciencePD2b:
           title: La informática en la Ciencia - Desarrollo Profesional Fase 2b
-          description: Enseñar programación funcional a través de álgebra
-          description_short: Enseñar programación funcional a través de álgebra
-          student_description: Enseñar programación funcional a través de álgebra
+          description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          description_short: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          student_description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
         equity-pd:
           title: Dirigir un Debate sobre la Igualdad
           description: Cómo dirigir un debate sobre la igualdad en un Desarrollo Profesional
@@ -452,21 +453,21 @@ es:
             en tu aula con este curso online gratuito y a tu ritmo.
         sciencePD2b-iZone:
           title: La informática en la Ciencia - Desarrollo Profesional Fase 2b
-          description: Enseñar programación funcional a través de álgebra
-          description_short: Enseñar programación funcional a través de álgebra
-          student_description: Enseñar programación funcional a través de álgebra
+          description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          description_short: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          student_description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
         ECSPD2-iZone:
           title: 'Explorando las Ciencias de la Computación PD: Estudio de Verano
             Semipresencial'
-          description: Enseñar programación funcional a través de álgebra
-          description_short: Enseñar programación funcional a través de álgebra
-          student_description: Enseñar programación funcional a través de álgebra
+          description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          description_short: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          student_description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
         ECSPD2-NexTech:
           title: 'Explorando las Ciencias de la Computación PD: Estudio de Verano
             Semipresencial'
-          description: Enseñar programación funcional a través de álgebra
-          description_short: Enseñar programación funcional a través de álgebra
-          student_description: Enseñar programación funcional a través de álgebra
+          description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          description_short: 'Fase 2 en línea: Estudio de Verano Semipresencial'
+          student_description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
         CSPPD2:
           title: 'Principios de la informática PD: Estudio de verano semipresencial'
           description: Desarrollo Profesional en línea de 8 horas que se basa en la
@@ -782,11 +783,13 @@ es:
           description: Aprender programación funcional a través del álgebra
           description_short: Aprender programación funcional a través del álgebra
           student_description: Aprender programación funcional a través del álgebra
+          name: ÁlgebraA
         AlgebraB:
           title: 'Ciencias de la Computación en Álgebra: curso B'
           description: Aprender programación funcional a través del álgebra
           description_short: Aprender programación funcional a través del álgebra
           student_description: Aprender programación funcional a través del álgebra
+          name: ÁlgebraB
         gamelab-hackathon:
           title: Hackathon en Laboratorio de Juegos
           description: Un lugar para probar cosas en Laboratorio de Juegos
@@ -4275,17 +4278,17 @@ es:
         time4csdemo:
           title: Time4CS Diversidad en Florida
           description_audience: Cuarto grado
-          description_short: Este módulo se enfoca en los estándares de estudios sociales
-            y de ciencias de cuarto grado. En ciencias, ven estándares de vida que
-            abarcan hábitats, ecosistemas, especies nativas y especies invasoras.
+          description_short: Este módulo se centra en los estándares de ciencias y
+            estudios sociales de 4º grado. En ciencias, ven los estándares de vida
+            que abarcan los hábitats, los ecosistemas, las especies nativas y las
+            especies invasoras. En estudios sociales, los estudiantes contemplan las
+            ramas del gobierno de Florida y cómo los ciudadanos cotidianos pueden
+            influir en las políticas locales y estatales.
+          description: Este módulo se centra en los estándares de ciencias y estudios
+            sociales de 4º grado. En ciencias, ven los estándares de vida que abarcan
+            los hábitats, los ecosistemas, las especies nativas y las especies invasoras.
             En estudios sociales, los estudiantes contemplan las ramas del gobierno
-            de Florida y cómo los ciudadanos pueden tener un impacto en las políticas
-            locales y estatales.
-          description: Este módulo se enfoca en los estándares de estudios sociales
-            y de ciencias de cuarto grado. En ciencias, ven estándares de vida que
-            abarcan hábitats, ecosistemas, especies nativas y especies invasoras.
-            En estudios sociales, los estudiantes contemplan las ramas del gobierno
-            de Florida y cómo los ciudadanos pueden tener un impacto en las políticas
+            de Florida y cómo los ciudadanos cotidianos pueden influir en las políticas
             locales y estatales.
           lesson_groups:
             ramp_up:
@@ -4303,12 +4306,12 @@ es:
                 Everglades)'
             time4cs_c5:
               display_name: 'Colección 5: Los ciudadanos toman medidas'
-          student_description: Este módulo se enfoca en los estándares de estudios
-            sociales y de ciencias de cuarto grado. En ciencias, ven estándares de
-            vida que abarcan hábitats, ecosistemas, especies nativas y especies invasoras.
-            En estudios sociales, los estudiantes contemplan las ramas del gobierno
-            de Florida y cómo los ciudadanos pueden tener un impacto en las políticas
-            locales y estatales.
+          student_description: Este módulo se centra en los estándares de ciencias
+            y estudios sociales de 4º grado. En ciencias, ven los estándares de vida
+            que abarcan los hábitats, los ecosistemas, las especies nativas y las
+            especies invasoras. En estudios sociales, los estudiantes contemplan las
+            ramas del gobierno de Florida y cómo los ciudadanos cotidianos pueden
+            influir en las políticas locales y estatales.
         csp1-pilot-staging:
           title: 'Unidad 1: Bits y bytes'
           lesson_groups:
@@ -4632,8 +4635,8 @@ es:
             Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho
             học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
         dlp19-csd-mod-fit:
-          title: Descripción del aprendizaje profundo en Descubrimientos de Ciencias
-            de la Computación 2019
+          title: Módulo de Aprendizaje Profundo en Descubrimientos de Informática
+            2019 para FiT
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
           description_short: Información de base y práctica para el taller de FiT
@@ -4658,8 +4661,8 @@ es:
           description_short: Depuración en el Laboratorio de juegos - Taller 1 del
             año académico
         dlp19-csd-mod-w1:
-          title: Módulo 1 de Aprendizaje Profundo de Descubrimientos de Ciencias de
-            la Computación - Muy pronto
+          title: 'Módulo de Aprendizaje Profundo en Descubrimientos de Informática
+            2019 para el Taller 1 '
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
           description_short: Taller 1 del año académico
@@ -4669,8 +4672,8 @@ es:
             content:
               display_name: Contenido
         dlp19-csd-mod-w2:
-          title: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias de
-            la Computación
+          title: Módulo de Aprendizaje Profundo en Descubrimientos de Informática
+            para el Taller 2
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
           lesson_groups:
@@ -4679,8 +4682,8 @@ es:
             content:
               display_name: Contenido
         dlp19-csd-mod-w3:
-          title: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de
-            la Computación
+          title: Módulo de Aprendizaje Profundo en Descubrimientos de Informática
+            para el Taller 3
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
           lesson_groups:
@@ -4689,8 +4692,8 @@ es:
             content:
               display_name: Contenido
         dlp19-csd-mod-w4:
-          title: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de
-            la Computación
+          title: Módulo de Aprendizaje Profundo en Descubrimientos de Informática
+            para el Taller 4
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
           lesson_groups:
@@ -4699,8 +4702,8 @@ es:
             content:
               display_name: Contenido
         dlp19-csp-mod-w1:
-          title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
-            Computación
+          title: Módulo de Aprendizaje Profundo en Principios de Informática para
+            el Taller 1
           description_audience: Facilitadores de Principios de las Ciencias de la
             Computación en período de formación 2019
           lesson_groups:
@@ -4709,8 +4712,8 @@ es:
             content:
               display_name: Contenido
         dlp19-csp-mod-w2:
-          title: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de la
-            Computación
+          title: Módulo de Aprendizaje Profundo en Principios de Informática para
+            el Taller 2
           description_audience: Facilitadores de Principios de las Ciencias de la
             Computación en período de formación 2019
           lesson_groups:
@@ -4720,8 +4723,8 @@ es:
               display_name: Contenido
           name: dlp19-csp-mod-w2
         dlp19-csp-mod-w3:
-          title: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la
-            Computación
+          title: Módulo de Aprendizaje Profundo en Principios de Informática para
+            el Taller 3
           description_audience: Facilitadores de Principios de las Ciencias de la
             Computación en período de formación 2019
           lesson_groups:
@@ -4730,8 +4733,8 @@ es:
             content:
               display_name: Contenido
         dlp19-csp-mod-w4:
-          title: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la
-            Computación
+          title: Módulo de Aprendizaje Profundo en Principios de Informática para
+            el Taller 4
           description_audience: Facilitadores de Principios de las Ciencias de la
             Computación en período de formación 2019
           lesson_groups:
@@ -7455,7 +7458,7 @@ es:
           description_audience: Grado 3, Grado 4
           description_short: " En este módulo, los alumnos explorarán diferentes formas
             geométricas examinando las relaciones entre ángulos, lados y longitudes.
-            También compararán las diferentes posibilidades de utilizar diferentes
+            También compararán las diferentes posibilidades de utilizar distintas
             herramientas para completar una tarea artística."
           description: "**Descripción general**\nLa herramienta Artist es una plataforma
             especialmente curiosa y creativa para construir y descomponer intrincados
@@ -7631,12 +7634,12 @@ es:
           description: "Este módulo es una breve introducción tanto a Code.org como
             a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-   Obtener
             una introducción a Code.org y Descubrimientos de la Informática.\n-   Aprender
-            a participar en este curso de aprendizaje profesional.\n\n**Tiempo sugerido:**
-            10 minutos"
+            como participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            sugerido:** 10 minutos"
           student_description: "Este módulo es una breve introducción tanto a Code.org
             como a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-
             \  Obtener una introducción a Code.org y Descubrimientos de la Informática.\n-
-            \  Aprender a participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            \  Aprender como participar en este curso de aprendizaje profesional.\n\n**Tiempo
             sugerido:** 10 minutos"
         self-paced-pl-csd2-2021:
           lesson_groups:
@@ -7669,25 +7672,25 @@ es:
               display_name: Resumen de los Descubrimientos de la Informática
           name: autodidáctico-pl-csd3-2021
           title: 'Módulo 3: Resumen de Descubrimientos de la Informática'
-          description: "Este módulo le proporcionará una visión general del curso
+          description: "Este módulo te proporcionará una visión general del curso
             Descubrimientos de Informática con énfasis en los conceptos que los estudiantes
             aprenderán y las herramientas que utilizarán a lo largo del curso. Participar
             en este módulo te ayudará a tomar decisiones sobre cómo seleccionar el
             contenido del curso que implementarás en tu aula. \n\n**Tú Podrás:**\n\n-
             \  Obtener una comprensión de alto nivel del plan de estudios de Descubrimientos
-            de Informática.\n-   Familiarizarse con los entornos de programación utilizados
+            de Informática.\n-   Familiarizarte con los entornos de programación utilizados
             en Descubrimientos de Informática.\n-   Decidir qué unidades de Descubrimientos
-            de Informática enseñará en su clase.\n\n**Tiempo sugerido:** 60 minutos"
-          student_description: "Este módulo le proporcionará una visión general del
+            de Informática enseñarás en tu clase.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo te proporcionará una visión general del
             curso Descubrimientos de Informática con énfasis en los conceptos que
             los estudiantes aprenderán y las herramientas que utilizarán a lo largo
             del curso. Participar en este módulo te ayudará a tomar decisiones sobre
             cómo seleccionar el contenido del curso que implementarás en tu aula.
             \n\n**Tú Podrás:**\n\n-   Obtener una comprensión de alto nivel del plan
-            de estudios de Descubrimientos de Informática.\n-   Familiarizarse con
+            de estudios de Descubrimientos de Informática.\n-   Familiarizarte con
             los entornos de programación utilizados en Descubrimientos de Informática.\n-
-            \  Decidir qué unidades de Descubrimientos de Informática enseñará en
-            su clase.\n\n**Tiempo sugerido:** 60 minutos"
+            \  Decidir qué unidades de Descubrimientos de Informática enseñarás en
+            tu clase.\n\n**Tiempo sugerido:** 60 minutos"
         self-paced-pl-csd4-2021:
           lesson_groups:
             lessonGroup-2:
@@ -7954,10 +7957,12 @@ es:
             lessonGroup-3:
               display_name: Etapa 2
           name: dlp21-csp-mod4
-          title: 2021 Deeper Learning Módulo 4 para el Taller 4 de Principios de Informática
+          title: Principios de Informática 2021 Módulo 4 de Aprendizaje Profundo para
+            el Taller 4
         dlp21-csp-mod1:
           name: dlp21-csp-mod1
-          title: 2021 Deeper Learning Módulo 1 para el Taller 1 de Principios de Informática
+          title: Principios de Informática 2021 Módulo 1 de Aprendizaje Profundo para
+            el Taller 1
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -7972,26 +7977,28 @@ es:
           name: dlp21-csd
         dlp21-csd-mod1:
           name: dlp21-csd-mod1
-          title: 2021 Deeper Learning  Módulo 1 para el Taller 1 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 1 de Aprendizaje Profundo
+            para el Taller 1
         dlp21-csd-mod2:
           name: dlp21-csd-mod2
-          title: 2021 Deeper Learning Módulo 2 para el Taller 2 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 2 de Aprendizaje Profundo
+            para el Taller 2
         dlp21-csd-mod3:
           name: dlp21-csd-mod3
-          title: 2021 Deeper Learning Módulo 3 para el Taller 3 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 3 de Aprendizaje Profundo
+            para el Taller 3
         dlp21-csd-mod4:
           name: dlp21-csd-mod4
-          title: 2021 Deeper Learning Módulo 4 para el Taller 4 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 4 de Aprendizaje Profundo
+            para el Taller 4
         dlp21-csp-mod2:
           name: dlp21-csp-mod2
-          title: 2021 Deeper Learning Módulo 2 para el Taller 2 de Principios de Informática
+          title: Principios de Informática 2021 Módulo 2 de Aprendizaje Profundo para
+            el Taller 2
         dlp21-csp-mod3:
           name: dlp21-csp-mod3
-          title: 2021 Deeper Learning Módulo 3 para el Taller 3 de Principios de Informática
+          title: Principios de Informática 2021 Módulo 3 de Aprendizaje Profundo para
+            el Taller 3
         dlp21-overview:
           name: dlp21-descripción
         dlp21-csd-overview:
@@ -9354,6 +9361,7 @@ es:
           description_audience: "¡Bienvenido al curso en línea gratuito para educadores,
             a su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos
             de Informática!"
+          name: k5-onlinepd-2022
         vpl-csd1-ci-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9746,6 +9754,7 @@ es:
           title: Aprendizaje Profesional Virtual de CS Discoveries 2021 - 22
         vpl-csp-2022:
           title: CS Principios de Aprendizaje Profesional Virtual 21 - 22
+          name: vpl-csp-2022
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9754,12 +9763,12 @@ es:
           description: "Este módulo es una breve introducción tanto a Code.org como
             a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-   Obtener
             una introducción a Code.org y Descubrimientos de la Informática.\n-   Aprender
-            a participar en este curso de aprendizaje profesional.\n\n**Tiempo sugerido:**
-            10 minutos"
+            como participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            sugerido:** 10 minutos"
           student_description: "Este módulo es una breve introducción tanto a Code.org
             como a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-
             \  Obtener una introducción a Code.org y Descubrimientos de la Informática.\n-
-            \  Aprender a participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            \  Aprender como participar en este curso de aprendizaje profesional.\n\n**Tiempo
             sugerido:** 10 minutos"
         self-paced-pl-csd2-2022:
           lesson_groups:
@@ -9786,25 +9795,25 @@ es:
             lessonGroup-2:
               display_name: Resumen de los Descubrimientos de la Informática
           title: 'Módulo 3: Resumen de Descubrimientos de la Informática'
-          description: "Este módulo le proporcionará una visión general del curso
+          description: "Este módulo te proporcionará una visión general del curso
             Descubrimientos de Informática con énfasis en los conceptos que los estudiantes
             aprenderán y las herramientas que utilizarán a lo largo del curso. Participar
             en este módulo te ayudará a tomar decisiones sobre cómo seleccionar el
             contenido del curso que implementarás en tu aula. \n\n**Tú Podrás:**\n\n-
             \  Obtener una comprensión de alto nivel del plan de estudios de Descubrimientos
-            de Informática.\n-   Familiarizarse con los entornos de programación utilizados
+            de Informática.\n-   Familiarizarte con los entornos de programación utilizados
             en Descubrimientos de Informática.\n-   Decidir qué unidades de Descubrimientos
-            de Informática enseñará en su clase.\n\n**Tiempo sugerido:** 60 minutos"
-          student_description: "Este módulo le proporcionará una visión general del
+            de Informática enseñarás en tu clase.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo te proporcionará una visión general del
             curso Descubrimientos de Informática con énfasis en los conceptos que
             los estudiantes aprenderán y las herramientas que utilizarán a lo largo
             del curso. Participar en este módulo te ayudará a tomar decisiones sobre
             cómo seleccionar el contenido del curso que implementarás en tu aula.
             \n\n**Tú Podrás:**\n\n-   Obtener una comprensión de alto nivel del plan
-            de estudios de Descubrimientos de Informática.\n-   Familiarizarse con
+            de estudios de Descubrimientos de Informática.\n-   Familiarizarte con
             los entornos de programación utilizados en Descubrimientos de Informática.\n-
-            \  Decidir qué unidades de Descubrimientos de Informática enseñará en
-            su clase.\n\n**Tiempo sugerido:** 60 minutos"
+            \  Decidir qué unidades de Descubrimientos de Informática enseñarás en
+            tu clase.\n\n**Tiempo sugerido:** 60 minutos"
         self-paced-pl-csd4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9834,8 +9843,37 @@ es:
             de la Informática.\n-   Hacer un plan de cómo apoyar el aprendizaje de
             los alumnos a través de la diferenciación, la evaluación continua, y la
             promoción de una cultura de inclusión. \n\n**Tiempo sugerido:** 50 minutos"
+        self-paced-pl-csp1-2022:
+          name: autodidáctico-pl-csp1-2022
         self-paced-pl-csp2-2022:
           title: 'Módulo 2: Navegando por Code.org'
+          name: autodidáctico-pl-csp2-2022
+        self-paced-pl-csp3-2022:
+          name: autodidáctico-pl-csp3-2022
+        self-paced-pl-csp4-2022:
+          description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+          student_description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+          name: autodidáctico-pl-csp4-2022
         csa9-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9883,20 +9921,71 @@ es:
             de Informática
         dlp-csp-mod1-2022:
           title: 2021 Deeper Learning Módulo 1 para el Taller 1 de Principios de Informática
+          name: dlp-csp-mod1-2022
         dlp-csp-mod2-2022:
           title: 2021 Deeper Learning Módulo 2 para el Taller 2 de Principios de Informática
+          name: dlp-csp-mod2-2022
         dlp-csp-mod3-2022:
           title: 2021 Deeper Learning Módulo 3 para el Taller 3 de Principios de Informática
+          name: dlp-csp-mod3-2022
         dlp-csp-mod4-2022:
           title: 2021 Deeper Learning Módulo 4 para el Taller 4 de Principios de Informática
+          name: dlp-csp-mod4-2022
         dlp-csp-overview-2022:
           title: 2021 Descripción General de Deeper Learning en Principios de Informática
           description: "### Bienvenido al programa Deeper Learning  2021 para la incorporación
             de facilitadores de Principios de Informática ."
+          name: dlp-csp-visióngeneral-2022
+        csc-ecosystems-2022:
+          name: csc-ecosistemas-2022
+        csc-starquilts-2022:
+          name: csc-starquilts-2022
+        csc-fables-2022:
+          name: csc-fábulas-2022
+        csc-timecapsule-2022:
+          name: csc-cápsuladeltiempo-2022
         vpl-csd1-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
           lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-3:
+              name: Depuración en la Plataforma Code.org
+            lesson-4:
+              name: Identificación y Depuración
+            lesson-5:
+              name: Cerrando
             lesson-6:
               name: Extensión de depuración asincrónica
+          name: vpl-csd1-ayw-piloto-2022
+          title: Descubrimientos de Informática - Módulo Virtual 1
+          description: |-
+            \*\*Los Participantes deberán: \*\*
+
+            -   Construir la confianza y los conocimientos en los conceptos básicos de la informática.
+            -   Revisar el contenido de depuración y conocer las herramientas de la plataforma y el plan de estudios para apoyar a los alumnos.
+            -   Reflexionar sobre los momentos personales de fracaso y depuración para considerar tu papel en la construcción de la cultura del aula.
+          student_description: |-
+            **Deberás:**
+
+            -   Volver a conectar con tu comunidad para celebrar los éxitos, desahogar las frustraciones, y resolver los problemas de los obstáculos.
+            -   Construir la confianza y el conocimiento de los conceptos básicos de la informática.
+            -   Reflexionar sobre los momentos personales de fracaso y depuración para considerar tu papel en la construcción de la cultura del aula.
+        alltheblocklythings:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Google Blockly
+            lessonGroup-3:
+              display_name: CDO Blockly
+          name: todaslascosasdeblockly
+          title: "¡Todas las Cosas de Blockly!"
+          description_short: Una selección de niveles de Blockly para pruebas internas
         self-paced-pl-csd5-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9929,10 +10018,64 @@ es:
             clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo
             de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo
             sugerido:** 2 horas"
+        vpl-csa-2022:
+          name: vpl-csa-2022
+          title: Aprendizaje Profesional Virtual de CSA
+          lessons:
+            lesson-2:
+              name: 'Trabajo posterior al Módulo 2: Entendiendo el contenido de la
+                Unidad 4'
+        csa-labs-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Laboratorio Magpie
+            lessonGroup-3:
+              display_name: " Laboratorio Celebrity"
+            lessonGroup-4:
+              display_name: Laboratorio de Opinión del Consumidor
+            lessonGroup-5:
+              display_name: Laboratorio de Datos
+          name: csa-labs-2022
+          title: Laboratorios de AP CSA College Board
+          lessons:
+            lesson-7:
+              name: 'La Clase de los Famosos: Una versión sencilla'
+            lesson-8:
+              name: Poniéndolo todo junto
+            lesson-9:
+              name: Ampliando la Clase de los Famosos
+            lesson-10:
+              name: Actividad sin Límites
+            lesson-11:
+              name: Opción Múltiple / Respuesta Libre
+            lesson-16:
+              name: Actividad sin Límites
+            lesson-19:
+              name: Poniéndolo todo junto
+            lesson-20:
+              name: Actividad sin Límites
+        csa-draft-pl:
+          lessons:
+            lesson-2:
+              name: 'Trabajo posterior del Módulo 3: El Teatro y los conjuntos de
+                datos de la Unidad 4'
+          name: csa-borrador-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
             lesson-6:
               name: Trabajo asincrónico de módulo 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+          title: Descubrimientos de Informática - Módulo Virtual 2
         soccer:
           name: fútbol
           title: Programa tu propio partido de fútbol
@@ -10184,3 +10327,99 @@ es:
             algorítmico. Con los conocimientos y habilidades adquiridos a lo largo
             del año, analizas la privacidad y la seguridad de los programas y los
             usuarios.
+        vpl-csd3-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+          title: Descubrimientos de Informática - Módulo Virtual 3
+        vpl-csd4-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+          title: Descubrimientos de Informática - Módulo Virtual 4
+        csa-consumer-review-lab:
+          lessons:
+            lesson-5:
+              name: Actividad sin Límites
+        csa-data-lab:
+          lessons:
+            lesson-3:
+              name: Poniéndolo todo junto
+            lesson-4:
+              name: Actividad sin Límites
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Resolución de Problemas
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+          title: El Proceso de Diseño
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Computación física
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Inteligencia Artificial y Aprendizaje Automático
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          description: |-
+            En la unidad de Computación Física, los estudiantes exploran el papel de los dispositivos físicos en la computación. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, los estudiantes desarrollan programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo básico puede conducir a un producto terminado. A continuación, los estudiantes exploran cómo se pueden utilizar los dispositivos físicos para reaccionar ante el mundo que les rodea utilizando una mentalidad "maker" para crear prototipos con materiales cotidianos.
+
+            **Guía de Implementación para la Computación Física**
+
+            -   Esta unidad asume que los alumnos están familiarizados con el Laboratorio de Aplicaciones, específicamente con el uso del Modo Diseño para crear una interfaz de usuario y con el uso de Eventos para cambiar la pantalla al hacer clic en un botón. Esto se puede lograr haciendo que los estudiantes completen la [Hora del Código de Laboratorio de Aplicaciones](https://studio.code.org/s/applab-intro/reset) antes de comenzar esta unidad.
+            -   Esta unidad requiere que los estudiantes tengan acceso al Circuit Playground - [pulsa aquí](https://code.org/circuitplayground) para más información sobre el uso de Circuit Playground's en tu aula.
+            -   En la [Guía de Niveles de Programación](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) y en la [Guía de Diferenciación](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview) se ofrece orientación sobre cómo apoyar a los estudiantes en los niveles de programación y diferenciar las tareas.
+
+            **Desarrollo profesional:** Si estás interesado en impartir este curso, te recomendamos que completes el módulo gratuito [Módulo de Desarrollo Profesional Autodidacta de Computación Física](<>). El módulo está diseñado para completarlo en 2 horas. No se asume ninguna experiencia previa con la programación o la Inteligencia Artificial.
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
