@@ -8,9 +8,9 @@ title: Hour of Codeハウツーガイド
 
 ### この運動に参加して、以下の手順でコンピュータサイエンスの世界を生徒たちに紹介しましょう。
 
-コンピューター的思考を養うと、問題解決能力、論理的思考、創造力が身に付きます。 また、テクノロジーは世界中の産業を変革しています。 今日の生徒は、テクノロジーを利用するだけでなく、それを創造する力をつけるべきです。 早いうちからコンピューターサイエンスを学んでおくと、21世紀のキャリアパスでの成功基盤を持つことになります。
+今日の生徒は、テクノロジーを利用するだけでなく、それを創造する力をつけるべきです。
 
-Hour of Codeをやってみることは、生徒にコンピューターサイエンスを教えるためのシンプルで楽しい方法です。おそらくこれが初めての試みであり、授業中や放課後の活動にぴったりです。 分からないことがあれば、[イベント開催ガイド]({{ localized_files/participation_guide }})をご一読ください。
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Hour of Codeハウツーガイドのビデオを見る](#how-to-video)
 - [アクティビティとチュートリアルを探す](#explore-activities)
@@ -20,8 +20,6 @@ Hour of Codeをやってみることは、生徒にコンピューターサイ�
 - [プログラミングを実施する](#code)
 - [生徒の成功を祝う](#celebrate)
 - [Hour of Codeの教育者向けその他資料](#other-resources)
-
-### Hour of Code はリモートでも開催できます！開始するには、 [Hour of Codeバーチャルイベント主催のヒント](https://hourofcode.com/us/how-to/virtual)をご覧ください。
 
 * * *
 
@@ -39,7 +37,7 @@ Hour of Codeをやってみることは、生徒にコンピューターサイ�
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -74,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 

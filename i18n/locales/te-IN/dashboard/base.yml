@@ -175,6 +175,7 @@ te:
     parent_guardian_email_label: "తల్లిదండ్రుల / సంరక్షకుల ఇమెయిల్"
     none: "ఏదీ కాదు"
     only_one_parent_email_supported_warning: "గమనిక: ఈ సమయములో మేము ఒక్కో విద్యార్థి ఖాతాకు ఒక పేరెంట్/సంరక్షకుడి ఇమెయిల్ చిరునామాకు మాత్రమే మద్దతు ఇవ్వగలిగి ఉంటాము."
+  certificate_hour_of_code: "అవర్ ఆఫ్ కోడ్"
   footer:
     copyright: 'కాపీరైట్'
     more: 'ఎక్కువ'
