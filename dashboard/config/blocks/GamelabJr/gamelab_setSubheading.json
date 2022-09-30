@@ -1,0 +1,13 @@
+{
+  "category": "World",
+  "config": {
+    "func": "setSubheading",
+    "blockText": "set subheading {SUBHEADING}",
+    "args": [
+      {
+        "name": "SUBHEADING",
+        "type": "String"
+      }
+    ]
+  }
+}
