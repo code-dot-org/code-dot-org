@@ -563,7 +563,8 @@ describe('entry tests', () => {
 
   config.ts = {
     default: {
-      tsconfig: './tsconfig.json'
+      tsconfig: './tsconfig.json',
+      src: ['./src/**/*.ts', './src/**/*.tsx']
     }
   };
 
@@ -1237,6 +1238,7 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
+        'ts',
         envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'
       ],
       options: {
@@ -1402,6 +1404,4 @@ describe('entry tests', () => {
   grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
-
-  grunt.registerTask('default', ['ts']);
 };
