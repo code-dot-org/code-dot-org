@@ -1,27 +1,23 @@
 # == Schema Information
 #
-# Table name: code_review_notes
+# Table name: code_review_comments
 #
-#  id                     :bigint           not null, primary key
-#  code_review_request_id :integer          not null
-#  commenter_id           :integer
-#  is_resolved            :boolean          not null
-#  comment                :text(16777215)
-#  deleted_at             :datetime
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
+#  id             :bigint           not null, primary key
+#  code_review_id :integer          not null
+#  commenter_id   :integer
+#  is_resolved    :boolean          not null
+#  comment        :text(16777215)
+#  deleted_at     :datetime
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
-#  index_code_review_notes_on_code_review_request_id  (code_review_request_id)
+#  index_code_review_comments_on_code_review_id  (code_review_id)
 #
 class CodeReviewComment < ApplicationRecord
-  # TODO: rename the table to code_review_notes
-  self.table_name = :code_review_notes
-
   belongs_to :commenter, class_name: 'User', optional: true
-  # TODO: When the column is renamed, update this association
-  belongs_to :code_review, class_name: 'CodeReview', foreign_key: :code_review_request_id, optional: true
+  belongs_to :code_review, class_name: 'CodeReview', optional: true
 
   acts_as_paranoid
 

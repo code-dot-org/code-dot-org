@@ -1,7 +1,16 @@
-import DCDO from '@cdo/apps/dcdo';
-
 function isMobile() {
   return 'ontouchstart' in document.documentElement;
+}
+
+function isIE9() {
+  /** @type {number} */
+  var version = -1;
+
+  if (/MSIE\s([\d.]+)/.test(navigator.userAgent)) {
+    version = parseInt(RegExp.$1);
+  }
+
+  return version === 9;
 }
 
 /**
@@ -306,21 +315,33 @@ Sound.prototype.fadeToGainHtml5Audio_ = function(gain, durationSeconds) {
 };
 
 Sound.prototype.getPlayableFile = function() {
-  if (!window.Audio) {
-    return false;
-  }
+  // IE9 Running on Windows Server SKU can throw an exception on window.Audio
+  try {
+    if (!window.Audio) {
+      return false;
+    }
 
-  const audioTest = new window.Audio();
+    var audioTest = new window.Audio();
 
-  if (this.config.hasOwnProperty('mp3') && audioTest.canPlayType('audio/mp3')) {
-    return this.config.mp3;
-  }
-  if (this.config.hasOwnProperty('ogg') && audioTest.canPlayType('audio/ogg')) {
-    return this.config.ogg;
-  }
-  if (this.config.hasOwnProperty('wav') && audioTest.canPlayType('audio/wav')) {
-    return this.config.wav;
-  }
+    if (
+      this.config.hasOwnProperty('mp3') &&
+      audioTest.canPlayType('audio/mp3')
+    ) {
+      return this.config.mp3;
+    }
+    if (
+      this.config.hasOwnProperty('ogg') &&
+      audioTest.canPlayType('audio/ogg')
+    ) {
+      return this.config.ogg;
+    }
+    if (
+      this.config.hasOwnProperty('wav') &&
+      audioTest.canPlayType('audio/wav')
+    ) {
+      return this.config.wav;
+    }
+  } catch (e) {}
 
   return false;
 };
@@ -334,7 +355,7 @@ Sound.prototype.getPlayableBytes = function() {
       return false;
     }
 
-    const audioTest = new window.Audio();
+    let audioTest = new window.Audio();
     if (
       this.config.hasOwnProperty('bytes') &&
       audioTest.canPlayType('audio/mp3')
@@ -396,11 +417,7 @@ Sound.prototype.preloadAudioElement = function(audioElement) {
     return;
   }
 
-  if (!!DCDO.get('use-html5-audio-dance-party', true)) {
-    // iOS Safari does not automatically attempt to load the audio source,
-    // so we need to manually load.
-    audioElement.load();
-  } else {
+  if (!isIE9()) {
     // Pre-cache audio
     audioElement.play();
     audioElement.pause();

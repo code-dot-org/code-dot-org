@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
+import _ from 'lodash';
 
 function LessonLockDialog({
   unitId,
@@ -76,7 +77,19 @@ function LessonLockDialog({
     );
   };
 
+  /*
+  Checks that the user is trying to save new information, otherwise closes
+  the dialog without sending to api post method.
+  */
   const handleSave = async () => {
+    if (_.isEqual(serverLockState, clientLockState)) {
+      handleClose();
+    } else {
+      sendSave();
+    }
+  };
+
+  const sendSave = async () => {
     setSaving(true);
     setError(null);
     const csrfToken = $('meta[name="csrf-token"]').attr('content');
