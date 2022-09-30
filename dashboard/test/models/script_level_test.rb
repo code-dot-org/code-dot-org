@@ -1042,7 +1042,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     error = assert_raises ActiveRecord::RecordInvalid do
       create :script_level, lesson: other_lesson, activity_section: activity_section, activity_section_position: 1
     end
-    assert_equal 'Validation failed: Unit level activity_section.lesson does not match lesson', error.message
+    assert_equal 'Validation failed: Script level activity_section.lesson does not match lesson', error.message
   end
 
   test 'adds variant to custom level in migrated script' do
