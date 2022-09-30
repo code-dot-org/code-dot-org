@@ -25,6 +25,9 @@ class Homepage
       # If the banner has a required DCDO flag, then it must be set.
       next if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
 
+      # If the banner has an array of required hoc_mode DCDO values, then one of them must be the current hoc_mode.
+      next if banner["hoc_modes"] && !banner["hoc_modes"].include?(DCDO.get("hoc_mode", CDO.default_hoc_mode))
+
       # If the banner has an array of languages, then the current language must be one of them.
       next if banner["languages"] && !banner["languages"].include?(request.language)
 
