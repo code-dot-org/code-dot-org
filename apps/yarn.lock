@@ -2886,6 +2886,15 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/react@^18.0.9":
+  version "18.0.21"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.21.tgz#b8209e9626bb00a34c76f55482697edd2b43cc67"
+  integrity sha512-7QUCOxvFgnD5Jk8ZKlUAhVcRj7GuJRjnjjiY/IUBWKgOlnvDvTMLD4RTF7NPyVmbRhNrbomZiOepg7M/2Kj1mA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
 "@types/scheduler@*":
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
@@ -10321,10 +10330,12 @@ isobject@^4.0.0:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-4.0.0.tgz#3f1c9155e73b192022a80819bacd0343711697b0"
   integrity sha512-S/2fF5wH8SJA/kmwr6HYhK/RI/OkhD84k8ntalo0iJjZikgq1XFvR5M8NPT1x5F7fBwCG3qHfnzeP/Vh/ZxCUA==
 
-isolate-react@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/isolate-react/-/isolate-react-2.0.0.tgz#4c88cb773baff929c15908f4a9af60c04a2b6826"
-  integrity sha512-quxb6hTC5FyEzoMrh0nwAzmmPwmkUZCgHHPMeIfi1FyhEHxEaJif1coYOKZq2F8sHl0fB7uoT4rpuKdX5poM3g==
+isolate-react@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/isolate-react/-/isolate-react-2.3.0.tgz#f4fc7ff7fbdbd9b884264926692a29aff02f10e4"
+  integrity sha512-xvNPPRQpRfvEGf3BXggQ97TO8Hjh5iVS56b7NWaPIDFwtshZwOh1JkQq3X+7drL6z1BLtNJzkrZAZ9tyn5VKYQ==
+  dependencies:
+    "@types/react" "^18.0.9"
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"
