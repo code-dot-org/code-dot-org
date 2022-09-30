@@ -14,7 +14,7 @@
       - @scripts.each do |script|
         - script_level = ScriptLevel.where(chapter: 1, script: script).first
         %tr
-          %td= link_to script.name, script
+          %td= link_to script.name, script_path(script)
           - if script_level
             %td= link_to 'Play', script_next_path(script)
           %td= link_to(t('crud.edit'), edit_script_path(script))
