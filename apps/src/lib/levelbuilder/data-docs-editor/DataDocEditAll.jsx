@@ -1,11 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Link, TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Dialog, {Title as DialogTitle} from '@cdo/apps/templates/Dialog';
 
-const DataDocEditAll = ({dataDocs}) => {
+const DataDocEditAll = props => {
+  const {dataDocs: initialDataDocs} = props;
+  const [dataDocs, setDataDocs] = useState(initialDataDocs);
+  const [showDeleteWarningDialog, setShowDeleteWarningDialog] = useState(false);
+  const [pendingDeleteDocKey, setPendingDeleteDocKey] = useState(null);
+
   const initiateDeleteDataDoc = docKeyToDelete => {
-    console.log('Doc to delete: ' + docKeyToDelete);
+    setPendingDeleteDocKey(docKeyToDelete);
+    setShowDeleteWarningDialog(true);
+  };
+
+  const deleteDataDoc = () => {
+    $.ajax({
+      url: `/data_docs/${pendingDeleteDocKey}`,
+      method: 'DELETE'
+    }).done(() => {
+      setDataDocs([
+        ...dataDocs.filter(
+          dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
+        )
+      ]);
+      setShowDeleteWarningDialog(false);
+      setPendingDeleteDocKey(null);
+    });
   };
 
   return (
@@ -20,24 +42,38 @@ const DataDocEditAll = ({dataDocs}) => {
           text="Create New Data Doc"
         />
       </div>
+      {showDeleteWarningDialog && (
+        <Dialog
+          body={
+            <DialogTitle>{`Are you sure you want to permanently delete data doc ${pendingDeleteDocKey}?`}</DialogTitle>
+          }
+          cancelText="Cancel"
+          confirmText="Delete"
+          confirmType="danger"
+          isOpen={true}
+          handleClose={() => setShowDeleteWarningDialog(false)}
+          onCancel={() => setShowDeleteWarningDialog(false)}
+          onConfirm={() => deleteDataDoc()}
+        />
+      )}
       <div className="guides-table">
         <span className="header">Actions</span>
         <span className="header">Data Docs</span>
-        {dataDocs.map(({key, name, content}) => {
+        {dataDocs.map(dataDoc => {
           return [
-            <React.Fragment key={`${key}_row`}>
+            <React.Fragment key={`${dataDoc.key}_row`}>
               <div className="actions-box">
                 <TextLink
                   icon={<FontAwesome icon={'pencil-square-o'} title={'edit'} />}
-                  href={`/data_docs/${key}/edit`}
+                  href={`/data_docs/${dataDoc.key}/edit`}
                 />
                 <TextLink
                   icon={<FontAwesome icon={'trash'} title={'delete'} />}
-                  onClick={() => initiateDeleteDataDoc(key)}
+                  onClick={() => initiateDeleteDataDoc(dataDoc.key)}
                 />
               </div>
               <div className="guide-box">
-                <Link href={`/data_docs/${key}`}>{name}</Link>
+                <Link href={`/data_docs/${dataDoc.key}`}>{dataDoc.name}</Link>
               </div>
             </React.Fragment>
           ];
