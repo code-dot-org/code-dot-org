@@ -413,7 +413,7 @@ class MusicView extends React.Component {
             float: 'left',
             width: '100%',
             marginTop: 10,
-            height: showCode ? 'calc(100% - 90px)' : 0,
+            height: showCode ? 'calc(100% - 160px)' : 0,
             position: 'relative'
           }}
         >
@@ -435,6 +435,7 @@ class MusicView extends React.Component {
             convertMeasureToSeconds={this.convertMeasureToSeconds}
             baseUrl={baseUrl}
             currentMeasure={this.player.getCurrentMeasure()}
+            sounds={this.getCurrentGroupSounds()}
           />
         )}
       </div>
