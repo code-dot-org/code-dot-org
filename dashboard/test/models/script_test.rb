@@ -118,7 +118,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'should not create two units with same name' do
     create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
-      create(:script, name: 'Unit', skip_name_format_validation: true)
+      create(:script, name: 'Script', skip_name_format_validation: true)
     end
     assert_equal 'Validation failed: Name has already been taken', raise.message
   end
