@@ -341,10 +341,19 @@ const SetupInstructions = () => (
 const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
 
 class ChromebookInstructions extends React.Component {
-  render() {
+  webSerialSetupInstructions() {
     return (
       <div>
-        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
+        {applabI18n.makerSetupChromebook()}
+        <h4> Note </h4>
+        {applabI18n.makerSetupChromebookHistoricalNote()}
+      </div>
+    );
+  }
+
+  chromeAppSetupInstructions() {
+    return (
+      <div>
         <SafeMarkdown
           markdown={applabI18n.makerSetupSerialConnector({
             webstoreURL: CHROME_APP_WEBSTORE_URL
@@ -362,6 +371,21 @@ class ChromebookInstructions extends React.Component {
           <li>{applabI18n.makerSetupFollowInstructions()}</li>
           <li>{applabI18n.makerSetupPlugInBoard()}</li>
         </ol>
+      </div>
+    );
+  }
+
+  render() {
+    let setupInstructions;
+    if (experiments.isEnabled('webserial')) {
+      setupInstructions = this.webSerialSetupInstructions();
+    } else {
+      setupInstructions = this.chromeAppSetupInstructions();
+    }
+    return (
+      <div>
+        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
+        {setupInstructions}
       </div>
     );
   }
