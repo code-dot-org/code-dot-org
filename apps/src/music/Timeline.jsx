@@ -12,7 +12,7 @@ export default class Timeline extends React.Component {
     convertMeasureToSeconds: PropTypes.func.isRequired,
     baseUrl: PropTypes.string.isRequired,
     currentMeasure: PropTypes.number.isRequired,
-    sounds: PropTypes.array.isRequired
+    sounds: PropTypes.array
   };
 
   getUniqueIndexForEventId = id => {
