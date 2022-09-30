@@ -345,7 +345,7 @@ class ChromebookInstructions extends React.Component {
     return (
       <div>
         {applabI18n.makerSetupChromebook()}
-        <h4> Note </h4>
+        <h4>{applabI18n.note()}</h4>
         {applabI18n.makerSetupChromebookHistoricalNote()}
       </div>
     );
@@ -376,16 +376,12 @@ class ChromebookInstructions extends React.Component {
   }
 
   render() {
-    let setupInstructions;
-    if (experiments.isEnabled('webserial')) {
-      setupInstructions = this.webSerialSetupInstructions();
-    } else {
-      setupInstructions = this.chromeAppSetupInstructions();
-    }
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
-        {setupInstructions}
+        {experiments.isEnabled('webserial')
+          ? this.webSerialSetupInstructions()
+          : this.chromeAppSetupInstructions()}
       </div>
     );
   }
