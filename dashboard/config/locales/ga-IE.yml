@@ -625,6 +625,7 @@ ga:
     print_certificate: Priontáil Teastas
   certificate_sponsor_message: Is é %{sponsor_name} a rinne urraíocht ar na ceachtanna
     seo.
+  certificate_hour_of_code: An Uair Chódála
   move_students:
     new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
       eile.

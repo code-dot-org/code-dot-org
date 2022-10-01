@@ -387,6 +387,7 @@ fa:
     no_primary_course: "یک کلاس را در کد استدیو امتحان کنید"
     choose_next_course: "یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید"
     print_certificate: "چاپ گواهینامه"
+  certificate_hour_of_code: "ساعت کد نویسی"
   move_students:
     section_code_cant_be_current_section: "بخش جاری نمیتواند همانند بخش جدید باشد."
     student_ids_not_entered: "لطفا student_ids را ارائه کنید."
