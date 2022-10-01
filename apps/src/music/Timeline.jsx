@@ -83,13 +83,12 @@ export default class Timeline extends React.Component {
 
     return (
       <div
+        id="timeline"
         style={{
           backgroundColor: '#222',
-          height: 140,
           width: '100%',
+          height: '100%',
           borderRadius: 4,
-          padding: 10,
-          boxSizing: 'border-box',
           backgroundImage:
             currentGroup &&
             `url("${baseUrl +
@@ -97,8 +96,8 @@ export default class Timeline extends React.Component {
               '/' +
               currentGroup.themeImageSrc}")`,
           backgroundSize: '100% 200%',
-          position: 'absolute',
-          bottom: 0
+          padding: 10,
+          boxSizing: 'border-box'
         }}
       >
         <div
@@ -148,7 +147,7 @@ export default class Timeline extends React.Component {
                 <div
                   key={index}
                   style={{
-                    width: barWidth * this.getLengthForId(eventData.id),
+                    width: barWidth * this.getLengthForId(eventData.id) - 1,
                     _borderLeft: '1px white solid',
                     position: 'absolute',
                     left: barWidth * eventData.when,
