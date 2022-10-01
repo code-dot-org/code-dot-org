@@ -126,16 +126,22 @@ export default class Timeline extends React.Component {
                     top: 0,
                     left: measure * barWidth,
                     width: 1,
-                    height: '100%',
-                    borderLeft:
-                      measure === currentMeasure
-                        ? '2px #888 solid'
-                        : '2px #444 solid',
-                    color: measure === currentMeasure ? '#ddd' : '#888',
-                    paddingLeft: 5
+                    height: '100%'
                   }}
                 >
-                  {measure + 1}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: 20,
+                      bottom: 0,
+                      borderLeft:
+                        measure === currentMeasure
+                          ? '2px #888 solid'
+                          : '2px #444 solid',
+                      color: measure === currentMeasure ? '#ddd' : '#888'
+                    }}
+                  />
+                  <div style={{paddingLeft: 6}}>{measure + 1}</div>
                 </div>
               );
             })}
@@ -147,8 +153,7 @@ export default class Timeline extends React.Component {
                 <div
                   key={index}
                   style={{
-                    width: barWidth * this.getLengthForId(eventData.id) - 1,
-                    _borderLeft: '1px white solid',
+                    width: barWidth * this.getLengthForId(eventData.id) - 4,
                     position: 'absolute',
                     left: barWidth * eventData.when,
                     top: 20 + this.getVerticalOffsetForEventId(eventData.id),
