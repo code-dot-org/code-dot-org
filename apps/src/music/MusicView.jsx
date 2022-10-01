@@ -103,6 +103,8 @@ class MusicView extends React.Component {
       window.visualViewport.addEventListener('scroll', this.resizeListener);
     }
 
+    document.body.addEventListener('keyup', this.handleKeyUp);
+
     this.initBlockly();
 
     setInterval(this.updateTimer, 1000 / 30);
@@ -438,7 +440,6 @@ class MusicView extends React.Component {
           boxSizing: 'border-box',
           overflow: 'hidden'
         }}
-        onKeyUp={this.handleKeyUp}
       >
         <div
           id="blockly-area"
