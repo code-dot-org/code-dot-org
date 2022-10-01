@@ -18,6 +18,14 @@ import CdoTheme from '../blockly/addons/cdoTheme';
 import InputContext from './InputContext';
 import {Triggers} from './constants';
 
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  // The maximum is inclusive and the minimum is inclusive.
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
 const secondsPerMeasure = 2;
@@ -69,7 +77,8 @@ class MusicView extends React.Component {
       isPlaying: false,
       startPlayingAudioTime: null,
       currentAudioElapsedTime: 0,
-      updateNumber: 0
+      updateNumber: 0,
+      timelineAtTop: !!getRandomIntInclusive(0, 1)
     };
   }
 
@@ -193,7 +202,7 @@ class MusicView extends React.Component {
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
 
-    const container = document.getElementById('blocklyDiv');
+    const container = document.getElementById('blockly-div');
 
     this.workspace = Blockly.inject(container, {
       // Toolbox will be programmatically generated once music manifest is loaded
@@ -254,8 +263,8 @@ class MusicView extends React.Component {
   };
 
   resizeBlockly = () => {
-    var blocklyArea = document.getElementById('blocklyArea');
-    var blocklyDiv = document.getElementById('blocklyDiv');
+    var blocklyArea = document.getElementById('blockly-area');
+    var blocklyDiv = document.getElementById('blockly-div');
 
     // Compute the absolute coordinates and dimensions of blocklyArea.
     /*
@@ -367,6 +376,12 @@ class MusicView extends React.Component {
     return this.getCurrentGroup()?.folders;
   };
 
+  handleKeyUp = event => {
+    if (event.key === 't') {
+      this.setState({timelineAtTop: !this.state.timelineAtTop});
+    }
+  };
+
   render() {
     // The tutorial has a width:height ratio of 16:9.
     const aspectRatio = 16 / 9;
@@ -403,10 +418,6 @@ class MusicView extends React.Component {
       containerWidth = minAppWidth;
     }
 
-    const isDesktop = true;
-
-    const showCode = isDesktop || this.state.currentPanel === 'code';
-    const showTimeline = isDesktop || this.state.currentPanel === 'timeline';
     const currentGroup = this.getCurrentGroup();
 
     const songData = {
@@ -415,6 +426,7 @@ class MusicView extends React.Component {
 
     return (
       <div
+        id="music-lab-container"
         style={{
           position: 'relative',
           backgroundColor: 'black',
@@ -426,18 +438,19 @@ class MusicView extends React.Component {
           boxSizing: 'border-box',
           overflow: 'hidden'
         }}
+        onKeyUp={this.handleKeyUp}
       >
         <div
-          id="blocklyArea"
+          id="blockly-area"
           style={{
             float: 'left',
             width: '100%',
-            marginTop: 10,
-            height: showCode ? 'calc(100% - 160px)' : 0,
-            position: 'relative'
+            height: 'calc(100% - 150px)',
+            position: 'absolute',
+            top: this.state.timelineAtTop ? 150 : 0
           }}
         >
-          <div id="blocklyDiv" />
+          <div id="blockly-div" />
 
           <Controls
             isPlaying={this.state.isPlaying}
@@ -446,7 +459,16 @@ class MusicView extends React.Component {
           />
         </div>
 
-        {showTimeline && (
+        <div
+          id="timeline-area"
+          style={{
+            height: 140,
+            width: '100%',
+            boxSizing: 'border-box',
+            position: 'absolute',
+            ...(this.state.timelineAtTop ? {top: 0} : {bottom: 0})
+          }}
+        >
           <Timeline
             currentGroup={currentGroup}
             isPlaying={this.state.isPlaying}
@@ -457,7 +479,7 @@ class MusicView extends React.Component {
             currentMeasure={this.player.getCurrentMeasure()}
             sounds={this.getCurrentGroupSounds()}
           />
-        )}
+        </div>
       </div>
     );
   }
