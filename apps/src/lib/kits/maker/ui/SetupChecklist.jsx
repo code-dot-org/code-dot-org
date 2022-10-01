@@ -18,7 +18,6 @@ import {
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import experiments from '@cdo/apps/util/experiments';
 import {BOARD_TYPE} from '../util/boardUtils';
-import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
@@ -198,37 +197,12 @@ export default class SetupChecklist extends Component {
         />
       );
     } else if (isChromeOS() || isChrome()) {
-      if (experiments.isEnabled('webserial')) {
-        // Chromebooks use WebSerial for connection
-        return (
-          <ValidationStep
-            stepName={applabI18n.makerSetupBrowserSupported()}
-            stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
-          />
-        );
-      } else {
-        // Chromebooks - Chrome App
-        return (
-          <ValidationStep
-            stepName={
-              applabI18n.makerSetupAppInstalled() +
-              (isChromeOS() ? '' : applabI18n.legacy())
-            }
-            stepStatus={this.state[STATUS_APP_INSTALLED]}
-          >
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupInstallSerialConnector({
-                webstoreURL: CHROME_APP_WEBSTORE_URL
-              })}
-            />
-            <br />
-            {applabI18n.makerSetupRedetect()}
-            <br />
-            {applabI18n.makerSetupAcceptPrompt()}
-            {this.contactSupport()}
-          </ValidationStep>
-        );
-      }
+      return (
+        <ValidationStep
+          stepName={applabI18n.makerSetupBrowserSupported()}
+          stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
+        />
+      );
     } else {
       // Unsupported Browser
       return (
