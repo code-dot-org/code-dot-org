@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import yaml from 'js-yaml';
 import SetupChecklist from './SetupChecklist';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -34,13 +35,24 @@ const style = {
     float: 'left',
     padding: '5px'
   },
-  circuitPlaygroundImg: {
-    borderRadius: '50%',
-    float: 'right',
-    margin: '0 0 15px 10px'
+  main: {
+    width: '80%',
+    maxWidth: '800px'
   },
-  microbitImg: {
-    borderRadius: '0',
+  boardDescriptions: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  microbitDescription: {
+    width: '45%'
+  },
+  circuitPlaygroundImg: {
+    float: 'right',
+    margin: '0 0 15px 10px',
+    borderRadius: '50%'
+  },
+  makerSetupImg: {
     float: 'right',
     margin: '0 0 15px 10px'
   }
@@ -94,8 +106,7 @@ export default class SetupGuide extends React.Component {
     return (
       <div>
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
-        <CircuitPlaygroundDescription />
-        {isMicrobit && <MicrobitDescription />}
+        <Description microbit={isMicrobit} />
         <Provider store={store}>
           <Downloads />
         </Provider>
@@ -176,28 +187,41 @@ const downloadButtonStyle = {
   textAlign: 'center'
 };
 
-function MicrobitDescription() {
-  return (
-    <div>
-      <h2>{applabI18n.makerSetupMicrobitTitle()}</h2>
-      <center>
-        <a href="https://microbit.org/">
-          <img
-            src="../assets/maker/microbit-drawing-green.png"
-            width={200}
-            style={style.microbitImg}
+function Description(props) {
+  if (props.microbit) {
+    return (
+      <div style={style.boardDescriptions}>
+        <div style={style.microbitDescription}>
+          <h2>{applabI18n.makerSetupCircuitPlaygroundTitle()}</h2>
+          <center>
+            <a href="https://learn.adafruit.com/introducing-circuit-playground/overview">
+              <img
+                src="../assets/maker/circuit-playground-200.jpg"
+                width={200}
+                style={style.circuitPlaygroundImg}
+              />
+            </a>
+          </center>
+          <SafeMarkdown
+            markdown={applabI18n.makerSetupCircuitPlaygroundDescription()}
           />
-        </a>
-      </center>
-      <SafeMarkdown
-        markdown={applabI18n.makerSetupMicrobitDescription()}
-        width={'45 %'}
-      />
-    </div>
-  );
-}
-
-function CircuitPlaygroundDescription() {
+        </div>
+        <div style={style.microbitDescription}>
+          <h2>{applabI18n.makerSetupMicrobitTitle()}</h2>
+          <center>
+            <a href="https://microbit.org/">
+              <img
+                src="../assets/maker/microbit-drawing-green.png"
+                width={200}
+                style={style.makerSetupImg}
+              />
+            </a>
+          </center>
+          <SafeMarkdown markdown={applabI18n.makerSetupMicrobitDescription()} />
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <h2>{applabI18n.makerSetupCircuitPlaygroundTitle()}</h2>
@@ -455,3 +479,7 @@ const latestInstaller = _.memoize(latestYamlUrl => {
       version: datum.version
     }));
 });
+
+Description.propTypes = {
+  microbit: PropTypes.bool.isRequired
+};

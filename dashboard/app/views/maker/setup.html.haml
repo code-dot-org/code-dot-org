@@ -8,32 +8,9 @@
     width: 80%;
     max-width: 800px;
   }
-
-  .board-descriptions {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .circuit-playground-description,
-  .microbit-description {
-    width: 45%
-  }
-
-  .maker-setup img {
-    float: right;
-    margin: 0 0 15px 10px;
-  }
-
   .validation-children div > p {
     font-size: 14px;
   }
 
 -# If in the micro:bit experiment, display both the CP and MB board descriptions
-- if request.params['enableExperiments'] === 'microbit'
-  .maker-setup
-    :markdown
-      <div id="setup-status-mount"/>
-- else
-  .maker-setup
-    :markdown
-      <div id="setup-status-mount"/>
+<div id="setup-status-mount"/>
