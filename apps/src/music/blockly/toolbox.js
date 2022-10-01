@@ -41,7 +41,33 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: BlockTypes.IF_EVEN_THEN
+          type: BlockTypes.FOR_LOOP,
+          inputs: {
+            FROM: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            },
+            TO: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            },
+            BY: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
         }
       ]
     },

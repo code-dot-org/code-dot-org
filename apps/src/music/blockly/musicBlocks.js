@@ -1,5 +1,5 @@
 import {playSound, playSoundNextMeasure} from './blocks/samples';
-import {ifEvenThen, loopFromTo} from './blocks/control';
+import {forLoop, loopFromTo} from './blocks/control';
 import {arithmetic, number, random, round} from './blocks/math';
 import {variablesGet, variablesSet} from './blocks/variables';
 import {triggeredAt, whenRun} from './blocks/events';
@@ -11,7 +11,7 @@ const blockList = [
   playSound,
   playSoundNextMeasure,
   loopFromTo,
-  ifEvenThen,
+  forLoop,
   number,
   round,
   arithmetic,
