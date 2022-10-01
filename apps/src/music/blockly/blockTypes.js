@@ -4,7 +4,7 @@ export const BlockTypes = {
   PLAY_SOUND: 'play_sound',
   PLAY_SOUND_NEXT_MEASURE: 'play_sound_next_measure',
   LOOP_FROM_TO: 'loop_from_to',
-  IF_EVEN_THEN: 'if_even_then',
+  FOR_LOOP: 'for_loop',
   NUMBER: 'number',
   ROUND: 'round',
   ARITHMETIC: 'arithmetic',
