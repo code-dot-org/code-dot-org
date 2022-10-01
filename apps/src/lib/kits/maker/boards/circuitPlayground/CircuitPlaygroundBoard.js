@@ -1,4 +1,5 @@
 /** @file Board controller for Adafruit Circuit Playground */
+/* global SerialPort */ // Maybe provided by the Code.org Browser
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import five from '@code-dot-org/johnny-five-deprecated';
@@ -26,7 +27,7 @@ import {
   isWebSerialPort,
   BOARD_TYPE
 } from '../../util/boardUtils';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import {isChromeOS} from '../../util/browserChecks';
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -391,9 +392,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    const SerialPortType = serialPortType();
-
-    const port = new SerialPortType(portName, {
+    const port = new SerialPort(portName, {
       baudRate: SERIAL_BAUD
     });
 
