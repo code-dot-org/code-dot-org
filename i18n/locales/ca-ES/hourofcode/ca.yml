@@ -35,6 +35,11 @@ ca:
   africa_campaign_date_full: 1 d'octubre - 18 de desembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 d'octubre, 2022 - 18 de desembre, 2022
+  hoc2022_header: Explora, Juga, Crea!
+  social_hoc2022_explore_play_create: Utilitzeu les ciències informàtiques per explorar,
+    jugar i crear!
+  codeorg_homepage_hoc2022_body: Exploreu l'univers, marqueu un gol, mou-te — hi ha
+    tantes maneres de provar les ciències informàtiques.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -494,6 +499,26 @@ ca:
   front_join_us_n_students_served: "# served."
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Learn more
+  cta_see_whats_new: Vagueu les novetats
+  cta_try_more_activities: Proveu més activitats
+  cta_try_an_activity: Proveu una activitat
+  hoc_homepage_join_the_movement_heading: Uneix-te al moviment
+  hoc_homepage_join_the_movement_description: L'Hora del Codi està disponible tot
+    l'any, però cada any al desembre poden afegir-se a la vostra classe pot milions
+    d'estudiants d'arreu del món celebrant la Setmana de l'educació de les ciències
+    informàtiques amb l'Hora del Codi. El registre a la celebració anual comença cada
+    any a l'octubre.
+  hoc_homepage_what_is_hoc_subhead: Tutorials d'una hora en més de 45 idiomes. No
+    és necessària cap experiència. Les activitats de l'Hora del Codi estan disponibles
+    de forma gratuïta tot l'any.
+  hoc_homepage_what_is_hoc_description: L'Hora del Codi és una introducció d'una hora
+    a les ciències informàtiques, utilitzant tutorials divertits per mostrar que qualsevol
+    pot aprendre els coneixements bàsics. Aquesta campanya de base està donada suport
+    per més de 400 socis i 200.000 educadors d'arreu del món.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Llegiu la nostra Guia- d'ús](%{howto_guide_url})
+    per planificar un esdeveniment per a la vostra classe."
+  hoc_homepage_highlights_heading: Punts destacables del Codi d'Honor
+  hoc_homepage_organized_by: El Codi d'Honor està organitzat per [Code.org](%{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -986,7 +1011,7 @@ ca:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright 2015 Code.org. Tots els drets reservats.
-  footer_trademark_message: Hora de Codi ™ és una marca registrada de Code.org.
+  footer_trademark_message: Hora de Codi® és una marca registrada de Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Col·laboradors
   footer_menu_contact: Contacta'ns
