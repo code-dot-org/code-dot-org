@@ -382,6 +382,11 @@ class MusicView extends React.Component {
     if (event.key === 't') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
+    Triggers.map(trigger => {
+      if (event.key === trigger.keyboardKey) {
+        this.playTrigger(trigger.id);
+      }
+    });
   };
 
   render() {
