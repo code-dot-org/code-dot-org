@@ -480,7 +480,7 @@ pl-PL:
   homepage_slot_text_link_shop: Koszulki, czapki i inne
   homepage_slot_text_link_thebadguys: Koduj ze złymi facetami
   homepage_slot_text_link_administrators: Wprowadź informatykę do swojej szkoły
-  homepage_gallery_header: Utworzono ponad %{project_count} mln projektów w Code.org
+  homepage_gallery_header: W code.org utworzono ponad %{project_count} mln projektów
   homepage_header_donors: Code.org dziękuje za wsparcie
   homepage_donors_seall: 'Zobacz więcej wspierających '
   homepage_donors_donate: Podaruj

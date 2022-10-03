@@ -707,6 +707,7 @@ el:
     print_certificate: Εκτύπωση πιστοποιητικού
   certificate_sponsor_message: "%{sponsor_name} έκανε το γενναιόδωρο δώρο να χορηγήσει
     την μάθησή σας."
+  certificate_hour_of_code: Ώρα του Κώδικα
   move_students:
     new_section_dne: Λυπάμαι, αλλά το τμήμα %{new_section_code} δεν υπάρχει. Παρακαλώ,
       εισάγετε ένα διαφορετικό κωδικό τμήματος.

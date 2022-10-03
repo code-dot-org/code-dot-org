@@ -17,7 +17,10 @@ aside {
   overflow: auto;
   margin: 4em auto 5em;
   padding: 0 2.5em;
-  background: url("@cdo/static/csa-skinny-banner-bg.svg") center no-repeat;
+  // TODO (madelynkasula 09/29/2022): Fix the asset path below and remove
+  // JS styles from <CsaSkinnyBanner> once asset loading has been fixed for
+  // webpack 5.
+  // background: url("@cdo/static/csa-skinny-banner-bg.svg") center no-repeat;
   display: flex;
   justify-content: space-between;
   align-items: center;
