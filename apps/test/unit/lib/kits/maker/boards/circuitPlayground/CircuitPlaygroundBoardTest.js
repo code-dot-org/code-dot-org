@@ -13,8 +13,6 @@ import {
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
-import ChromeSerialPort from 'chrome-serialport';
-import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
@@ -322,7 +320,6 @@ describe('CircuitPlaygroundBoard', () => {
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
-    ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
     circuitPlaygroundBoardSetup();
   });
 
@@ -331,7 +328,6 @@ describe('CircuitPlaygroundBoard', () => {
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
     EventEmitter.prototype.once.restore();
-    ChromeSerialPort.stub.reset();
     circuitPlaygroundBoardTeardown();
   });
 
