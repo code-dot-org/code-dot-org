@@ -4,7 +4,6 @@
       "id": "all",
       "name": "All",
       "imageSrc": "all.png",
-      "themeImageSrc": "all-theme.png",
       "path": "all",
       "folders": [
         {
