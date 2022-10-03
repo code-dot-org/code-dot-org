@@ -5,12 +5,10 @@ const barWidth = 60;
 
 export default class Timeline extends React.Component {
   static propTypes = {
-    currentGroup: PropTypes.object,
     isPlaying: PropTypes.bool.isRequired,
     songData: PropTypes.object.isRequired,
     currentAudioElapsedTime: PropTypes.number.isRequired,
     convertMeasureToSeconds: PropTypes.func.isRequired,
-    baseUrl: PropTypes.string.isRequired,
     currentMeasure: PropTypes.number.isRequired,
     sounds: PropTypes.array
   };
@@ -43,18 +41,6 @@ export default class Timeline extends React.Component {
     return colors[this.getUniqueIndexForEventId(id) % 4];
   };
 
-  getWaveformImage = id => {
-    const filenameToImgUrl = {
-      waveform_lead: require('@cdo/static/music/waveform-lead.png'),
-      waveform_bass: require('@cdo/static/music/waveform-bass.png'),
-      waveform_drum: require('@cdo/static/music/waveform-drum.png')
-    };
-
-    return (
-      filenameToImgUrl['waveform_' + id] || filenameToImgUrl['waveform_lead']
-    );
-  };
-
   getLengthForId = id => {
     const splitId = id.split('/');
     const path = splitId[0];
@@ -68,12 +54,10 @@ export default class Timeline extends React.Component {
 
   render() {
     const {
-      currentGroup,
       isPlaying,
       songData,
       currentAudioElapsedTime,
       convertMeasureToSeconds,
-      baseUrl,
       currentMeasure
     } = this.props;
 
@@ -89,12 +73,6 @@ export default class Timeline extends React.Component {
           width: '100%',
           height: '100%',
           borderRadius: 4,
-          backgroundImage:
-            currentGroup &&
-            `url("${baseUrl +
-              currentGroup.path +
-              '/' +
-              currentGroup.themeImageSrc}")`,
           backgroundSize: '100% 200%',
           padding: 10,
           boxSizing: 'border-box'

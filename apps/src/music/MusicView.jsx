@@ -429,8 +429,6 @@ class MusicView extends React.Component {
       containerWidth = minAppWidth;
     }
 
-    const currentGroup = this.getCurrentGroup();
-
     const songData = {
       events: this.player.getSoundEvents()
     };
@@ -522,12 +520,10 @@ class MusicView extends React.Component {
           }}
         >
           <Timeline
-            currentGroup={currentGroup}
             isPlaying={this.state.isPlaying}
             songData={songData}
             currentAudioElapsedTime={this.state.currentAudioElapsedTime}
             convertMeasureToSeconds={this.convertMeasureToSeconds}
-            baseUrl={baseUrl}
             currentMeasure={this.player.getCurrentMeasure()}
             sounds={this.getCurrentGroupSounds()}
           />
