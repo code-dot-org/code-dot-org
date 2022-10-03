@@ -56,7 +56,7 @@ export function isWebSerialPort(port) {
 
 /**
  * Determines whether WebSerial port is available in the current browser.
- * WebSerial should be available in ChromeOS and, when the microbit experiment is set, in Chromium browsers
+ * WebSerial is available in ChromeOS and, when the microbit experiment is set, in Chromium browsers
  */
 export function shouldUseWebSerial() {
   let experimentEnabledInChromium =
