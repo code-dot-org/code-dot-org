@@ -11,7 +11,7 @@ export const variablesGet = {
         variable: 'measure'
       }
     ],
-    output: null,
+    output: 'Number',
     colour: '24'
   },
   generator: ctx => {
@@ -35,7 +35,8 @@ export const variablesSet = {
       },
       {
         type: 'input_value',
-        name: 'value'
+        name: 'value',
+        check: 'Number'
       }
     ],
     previousStatement: null,

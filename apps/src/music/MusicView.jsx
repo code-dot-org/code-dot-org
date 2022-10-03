@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-import {InitSound} from './player/sound';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
@@ -27,8 +26,6 @@ function getRandomIntInclusive(min, max) {
 }
 
 const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
-
-const secondsPerMeasure = 2;
 
 var hooks = {};
 
@@ -112,18 +109,8 @@ class MusicView extends React.Component {
 
     this.loadLibrary().then(library => {
       this.setState({library});
-      const soundList = library.groups
-        .map(group => {
-          return group.folders?.map(folder => {
-            return folder.sounds.map(sound => {
-              return group.path + '/' + folder.path + '/' + sound.src;
-            });
-          });
-        })
-        .flat(2);
       this.workspace.updateToolbox(createMusicToolbox(library));
-      this.player.setGroupPath(this.getCurrentGroup().path);
-      InitSound(soundList);
+      this.player.initialize(library);
     });
   }
 
@@ -286,14 +273,6 @@ class MusicView extends React.Component {
     blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
     blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
     Blockly.svgResize(this.workspace);
-  };
-
-  convertMeasureToSeconds = measure => {
-    return measure * secondsPerMeasure;
-  };
-
-  convertSecondsToMeasure = seconds => {
-    return Math.floor(seconds / secondsPerMeasure);
   };
 
   choosePanel = panel => {
@@ -523,7 +502,9 @@ class MusicView extends React.Component {
             isPlaying={this.state.isPlaying}
             songData={songData}
             currentAudioElapsedTime={this.state.currentAudioElapsedTime}
-            convertMeasureToSeconds={this.convertMeasureToSeconds}
+            convertMeasureToSeconds={measure =>
+              this.player.convertMeasureToSeconds(measure)
+            }
             currentMeasure={this.player.getCurrentMeasure()}
             sounds={this.getCurrentGroupSounds()}
           />

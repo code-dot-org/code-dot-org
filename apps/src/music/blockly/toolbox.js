@@ -6,6 +6,44 @@ export const baseToolbox = {
   contents: [
     {
       kind: 'category',
+      name: 'Play',
+      cssConfig: {
+        container: moduleStyles.toolboxCategoryContainer,
+        row: moduleStyles.blocklyTreeRow
+      },
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.PLAY_SAMPLE,
+          inputs: {
+            measure: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.PLAY_SOUND,
+          inputs: {
+            measure: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      kind: 'category',
       name: 'Samples',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
@@ -196,7 +234,9 @@ export const createMusicToolbox = library => {
     };
 
     for (let sound of folder.sounds) {
-      category.contents.push({
+      // Dropdown Play block:
+      /*
+       category.contents.push({
         kind: 'block',
         type: BlockTypes.PLAY_SOUND,
         fields: {
@@ -213,10 +253,19 @@ export const createMusicToolbox = library => {
           }
         }
       });
+      */
+
+      category.contents.push({
+        kind: 'block',
+        type: BlockTypes.SAMPLE,
+        fields: {
+          sample: sound.name
+        }
+      });
     }
 
     // Add to samples category
-    toolbox.contents[0].contents.push(category);
+    toolbox.contents[1].contents.push(category);
   }
 
   return toolbox;
