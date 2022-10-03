@@ -554,6 +554,7 @@ ja:
     choose_next_course: "Code Studio コースを以下のリストから一つ試す"
     print_certificate: "証書を印刷"
   certificate_sponsor_message: "%{sponsor_name} は学習をサポートするために多大な支援をしてくれました。"
+  certificate_hour_of_code: "Hour of Code（アワー オブ コード）"
   move_students:
     new_section_dne: "申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。"
     section_code_cant_be_current_section: "現在のセクションを、新しいセクションと同じにすることはできません。"
