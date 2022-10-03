@@ -490,7 +490,7 @@ class Homepage
     custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner
       heroes_arranged =
-        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
+        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"], image_mobile: custom_banner["mobileImage"]}]
     elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
     else
