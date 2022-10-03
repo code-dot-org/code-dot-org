@@ -138,8 +138,11 @@ class CourseVersion < ApplicationRecord
   end
 
   def self.course_offering_keys(content_root_type)
+    raise "unexpected content_root_type #{content_root_type.inspect}" unless ['UnitGroup', 'Unit', 'Script'].include?(content_root_type)
+    # temporarily allow both 'Script' and 'Unit' while we transition the DB rows from Script to Unit.
+    db_types = content_root_type == 'UnitGroup' ? 'UnitGroup' : ['Unit', 'Script']
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
-      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
+      CourseVersion.includes(:course_offering).where(content_root_type: db_types).map {|cv| cv.course_offering&.key}.compact.uniq.sort
     end
   end
 
