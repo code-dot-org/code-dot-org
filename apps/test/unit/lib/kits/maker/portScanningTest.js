@@ -9,30 +9,15 @@ import {
   OSX_DEFAULT_PORTS,
   OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
-import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
 import {ConnectionFailedError} from '@cdo/apps/lib/kits/maker/MakerError';
 import {
   findPortWithViableDevice,
   getPreferredPort
 } from '@cdo/apps/lib/kits/maker/portScanning';
-import sinon from 'sinon';
 
 describe('maker/portScanning.js', function() {
-  let userAgentSpy;
   describe(`findPortWithViableDevice()`, () => {
-    beforeEach(() => {
-      // 'CrOS' represents ChromeOS
-      userAgentSpy = sinon.stub(navigator, 'userAgent').value('CrOS');
-    });
-
-    // Testing against StubChromeSerialPort.js
-    afterEach(() => {
-      ChromeSerialPort.stub.reset();
-      userAgentSpy.restore();
-    });
-
     it('resolves with a port if a viable device is found', () => {
-      ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
       return findPortWithViableDevice().then(port => {
         expect(port.comName).to.equal('COM5');
         expect(port.productId).to.equal('0x8011');
@@ -40,7 +25,6 @@ describe('maker/portScanning.js', function() {
     });
 
     it('rejects if no viable device is found', done => {
-      ChromeSerialPort.stub.setDeviceList(OTHER_BAD_SERIALPORTS);
       findPortWithViableDevice()
         .then(port => {
           done(
@@ -64,7 +48,6 @@ describe('maker/portScanning.js', function() {
     });
 
     it(`allows the Circuit Playground Express`, () => {
-      ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
       return findPortWithViableDevice().then(port => {
         expect(port.comName).to.equal('COM5');
         expect(port.productId).to.equal('8018');
@@ -72,7 +55,6 @@ describe('maker/portScanning.js', function() {
     });
 
     it(`allows the micro:bit`, () => {
-      ChromeSerialPort.stub.setDeviceList(MICROBIT_PORTS);
       return findPortWithViableDevice().then(port => {
         expect(port.comName).to.equal('COM3');
         expect(port.productId).to.equal('0204');
