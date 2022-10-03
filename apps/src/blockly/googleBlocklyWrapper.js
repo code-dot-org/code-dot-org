@@ -97,7 +97,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('FieldDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
@@ -158,20 +157,25 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
 
-  // Fix built-in block
+  // Force Google Blockly to use our custom versions of fields
   blocklyWrapper.blockly_.fieldRegistry.unregister('field_variable');
   blocklyWrapper.blockly_.fieldRegistry.register(
     'field_variable',
     CdoFieldVariable
   );
+  blocklyWrapper.blockly_.fieldRegistry.unregister('field_dropdown');
+  blocklyWrapper.blockly_.fieldRegistry.register(
+    'field_dropdown',
+    CdoFieldDropdown
+  );
 
+  // Overrides applied directly to blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
-  // FieldButton is a completely code.org-specific custom field.
-  // Access it via the wrapper, rather than
-  // adding it to blockly_ itself.
+  // Overrides applied only to our wrapper
   blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldDropdown = CdoFieldDropdown;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
