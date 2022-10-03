@@ -202,7 +202,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Script'}
+    course_versions.any? {|cv| cv.content_root_type == 'Unit'}
   end
 
   def self.single_unit_course_offerings_containing_units(unit_ids)
