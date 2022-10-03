@@ -5,7 +5,7 @@
 
   "banners": {
     "hoc2022": {
-      "hoc_modes": ["soon-hoc"],
+      "hoc_modes": ["soon-hoc", "actual-hoc"],
       "class": "hoc-banner homepage",
       "desktopImage": "/images/hoc2022-codeorg-hero-banner-01.svg",
       "actions": [

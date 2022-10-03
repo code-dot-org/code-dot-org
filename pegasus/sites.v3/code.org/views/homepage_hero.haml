@@ -58,20 +58,19 @@
   .clear{style: "clear: both"}
 
 #hero{style: "position: relative"}
-  - unless ["soon-hoc", "actual-hoc"].include?(hoc_mode)
-    - heroes_arranged.each_with_index do |entry, index|
-      -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
-      - if index == 0
-        -#
-          Use Link rel=preload HTTP headers to preload as early as possible.
-          Two headers with inverse media queries conditionally load the correctly-sized image.
-        - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
-        - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-        -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
-        .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
-      - else
-        -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
-        .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+  - heroes_arranged.each_with_index do |entry, index|
+    -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
+    - if index == 0
+      -#
+        Use Link rel=preload HTTP headers to preload as early as possible.
+        Two headers with inverse media queries conditionally load the correctly-sized image.
+      - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
+      - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
+      -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
+      .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
+    - else
+      -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
+      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
 
   #fullwidth
     - if request.site == 'code.org'

@@ -1,35 +1,38 @@
 @import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
 
-#fullwidth {
-  overflow: hidden;
-  background-size: cover;
-}
-
 // Code.org HoC homepage banner
 .hoc-banner.homepage {
   text-align: center;
   color: $darkest_gray;
+  padding: 6em 0;
   line-height: 1.4;
 
-  // Wrapper
-  #actions & {
-    padding: 5em 1em 7em;
+  @media screen and (max-width: $width-sm) {
+    padding: 8.25em 1em 7em;
+  }
+
+  h1 {
+    font-size: 4.5em;
+    font-family: $gotham-extra-bold;
+    margin: 0 auto 0.5em;
+    color: $darkest_gray;
+
+    @media screen and (max-width: $width-lg) {
+      font-size: 3.75em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 2.75em;
+    }
   }
 
   // The Hour of Code is coming/here text
-  & > div.text:first-child p {
-    font-size: 1.75em;
+  p {
+    font-size: 2em;
     font-family: $gotham-bold;
-  }
 
-  // Heading text
-  & > div.text:nth-child(2) p {
-    font-size: 5em;
-    font-family: $gotham-extra-bold;
-    margin: 0 auto 0.5em;
-
-    @media screen and (max-width: $width-lg) {
-      font-size: 4em;
+    @media screen and (max-width: $width-sm) {
+      font-size: 1.35em;
     }
   }
 }
