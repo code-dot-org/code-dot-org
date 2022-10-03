@@ -404,6 +404,7 @@ et:
     no_primary_course: Proovige Code Studio kursust
     choose_next_course: Proovige Code Studio kursuseid. Selleks valige üks altpoolt
     print_certificate: Prindi tunnistus
+  certificate_hour_of_code: KoodiTund
   move_students:
     new_section_dne: Vabandame, kuid seda sektsiooni ei ole olemas %{new_section_code}
       Palun lisa teine sektsiooni kood.
