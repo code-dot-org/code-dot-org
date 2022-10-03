@@ -5,6 +5,8 @@ es-MX:
       Actions: Acciones
       Advanced: Avanzado
       Behaviors: Comportamientos
+      'Behaviors ': 'Comportamientos '
+      Boolean: Booleano
       Brushes: Pinceles
       Category: Categoría
       Color: Color
@@ -26,9 +28,13 @@ es-MX:
       Logic: Lógica
       Loops: Bucles
       Math: Matemáticas
+      Number: Número
       Numbers: Números
+      Picker: Rocolector/a
+      Prebuilt: Prefabricado
       Properties: Propiedades
       Sprites: Sprites
+      String: Cadena
       Text: Texto
       Variables: Variables
       'Variables ': 'Variables '

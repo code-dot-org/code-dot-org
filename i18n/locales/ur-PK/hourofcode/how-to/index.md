@@ -8,9 +8,9 @@ title: آور آف کوڈ کے طریقہ کار کا رہنما
 
 ### تحریک میں شامل ہوں اور ان اقدامات کے ساتھ اپنے طلباء کو کمپیوٹر سائنس سے متعارف کروائیں۔
 
-کمپیوٹیشنل سوچ مسائل کو حل کرنے کی مہارت، منطق اور تخلیقی صلاحیتوں کو پروان چڑھانے میں مدد کرتی ہے۔ اور ٹیکنالوجی سیارے کی ہر انڈسٹری کو تبدیل کر رہی ہے۔ آج کے طالب علموں کو نہ صرف ٹیکنالوجی استمعال کرنا بلکہ بنانا بھی سیکھنا چاہیئے۔ جلد شروع کرنے سے، ان کے پاس 21ویں صدی کے کیریئر کے کسی بھی راستے میں کامیابی کی بنیاد ہوگی۔
+آج کے طالب علموں کو نہ صرف ٹیکنالوجی استمعال کرنا بلکہ بنانا بھی سیکھنا چاہیئے۔
 
-آور آف کوڈ کی آزمائش طلباء کو کمپیوٹر سائنس سے متعارف کرانے کا ایک آسان اور پرلطف طریقہ ہے، شاید پہلی بار، اور یہ کلاس میں اور بعد از سکول دونوں ترتیبات کے لیے بالکل مناسب ہے۔ Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں](#how-to-video)
 - [سرگرمیاں اور ٹیوٹوریل تلاش کریں](#explore-activities)
@@ -20,8 +20,6 @@ title: آور آف کوڈ کے طریقہ کار کا رہنما
 - [کوڈنگ شروع کریں!](#code)
 - [7. اپنے طلباء کی کامیابی کا جشن منائیں](#celebrate)
 - [دیگر وسائل کوڈ وسائل کے لئے وسائل](#other-resources)
-
-### آور آف کوڈ کی میزبانی ریموٹ طریقے سے بھی کی جا سکتی ہے! شروع کرنے کے لیے، یہاں دیکھیئے [ایک آور آف کوڈ کی میزبانی کرنے کے لیے ہمارے مشورے](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -39,7 +37,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 سرگرمیوں پر نظرِ ثانی کر کے آپ یہ فیصلہ کر سکتے ہیں کہ آیا ایک سبق ہی تمام طلباء کیلئے بہتر رہے گا یا ہر طالب علم کو انفرادی طور پر اپنے پسندیدہ سبق اور سرگرمی سے استفادہ حاصل کرنے دیا جائے۔.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ### دن اور وقت کا تعین کریں
 
-زیادہ تر لوگ hour of code سے ہمارے CS Education Week کے دوران استفادہ حاصل کرتے ہیں کیونکہ عموماً ہر سال دسمبر 9 سے دسمبر 13 کے درمیان ہم نئے اسباق اور سرگرمیاں متعارف کرواتے ہیں۔ لیکن اس کے باوجود آپ سال کے کسی بھی دن اس Hour of Code سے فائدہ اٹھا سکتے ہیں!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. لیکن اس کے باوجود آپ سال کے کسی بھی دن اس Hour of Code سے فائدہ اٹھا سکتے ہیں!
 
 * * *
 
@@ -74,11 +72,11 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ### اپنی تقریب کی آواز رضاکارانہ کام کرنے والوں کے کانوں تک پہنچائیں
 
-جیسے ہی آپ اپنے Hour of Code کی تقریب کو [رجسٹر کروائیں ](/)گے، آپکو کامیاب کوڈ نگ تقریب منعقد کرنے سے متعلق مفید معلومات ای میل کے ذریعے ملنا شروع ہو جائیں گی. اس سے آپ کو یہ فائدہ ہو گا کہ جو لوگ Hour of Code پر رضاکارانہ طور پر کام کرنا چاہتے ہیں ان تک آپکی تقریب کی خبر پہنچ جائے گی. رضاکار ایسے حالات میں بہت مفید ثابت ہوتے ہیں وہ آپکی کلاس کو کمپیوٹر سائنس کی مختلف سرگرمیاں کروا سکتے ہیں اور طلباء کی مدد کر سکتے ہیں.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. اس سے آپ کو یہ فائدہ ہو گا کہ جو لوگ Hour of Code پر رضاکارانہ طور پر کام کرنا چاہتے ہیں ان تک آپکی تقریب کی خبر پہنچ جائے گی. رضاکار ایسے حالات میں بہت مفید ثابت ہوتے ہیں وہ آپکی کلاس کو کمپیوٹر سائنس کی مختلف سرگرمیاں کروا سکتے ہیں اور طلباء کی مدد کر سکتے ہیں.
 
 ### طلباء میں جوش و خروش پیدا کریں
 
-ایسی [ کارآمد ویڈیوز](/promote/resources) اور دیگر مطالعاتی ریسورسز طلباء تک پہنچائیں جن کی بدولت وہ کوڈ اور کمپیوٹر سائنس کی اہمیت جان سکیں۔. اپنی کلاس روم میں ایسے پوسٹرز آویزاں کریں جن سے Hour of Code کا مقصد واضح ہو! طلباء اپنے جیسے دوسروں لوگوں کو جب یہ چیز سیکھتا ہوا پائیں گے تو ان میں سیکھنے کا جذبہ مزید پروان چڑھے گا.
+ایسی [ کارآمد ویڈیوز](/promote/resources) اور دیگر مطالعاتی ریسورسز طلباء تک پہنچائیں جن کی بدولت وہ کوڈ اور کمپیوٹر سائنس کی اہمیت جان سکیں۔. Or print inspirational posters for your classroom! طلباء اپنے جیسے دوسروں لوگوں کو جب یہ چیز سیکھتا ہوا پائیں گے تو ان میں سیکھنے کا جذبہ مزید پروان چڑھے گا.
 
 {{ promote_new_posters }}
 

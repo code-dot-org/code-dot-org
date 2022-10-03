@@ -10,6 +10,8 @@ te:
           student_description: ఈవెంట్లు
         dance:
           name: డాన్స్
+        aquatic:
+          name: జలచర
         coursed-2019:
           lesson_groups:
             csf_events:

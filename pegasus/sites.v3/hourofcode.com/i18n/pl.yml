@@ -5,36 +5,41 @@ pl:
   language: Polski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
-  campaign_date_start_short: 5 grudnia
-  campaign_date_start_long: 7 grudnia
-  campaign_date_short: 5-11 grudnia
+  campaign_date_start_short: 5 grud.
+  campaign_date_start_long: 5 grudnia
+  campaign_date_short: 5-11 grud.
   campaign_date_full: 5-11 grudnia
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 grudnia 2022
   nonus_campaign_date_start_short: 1 października
   nonus_campaign_date_start_long: 1 października
-  nonus_campaign_date_short: 1 października - 18 grudnia
+  nonus_campaign_date_short: 1 paźdz. - 18 grud.
   nonus_campaign_date_full: 1 października - 18 grudnia
   nonus_campaign_date_year: '2022'
   nonus_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
   latam_campaign_date_start_short: 1 października
   latam_campaign_date_start_long: 1 października
-  latam_campaign_date_short: 1 października - 18 grudnia
+  latam_campaign_date_short: 1 paźdz. - 18 grud.
   latam_campaign_date_full: 1 października - 18 grudnia
   latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
-  europe_campaign_date_start_short: 10 października
-  europe_campaign_date_start_long: 10 października
-  europe_campaign_date_short: '10 - 25 października '
-  europe_campaign_date_full: 10 - 25 października
+  europe_campaign_date_start_short: 1 paźdz.
+  europe_campaign_date_start_long: 1 października
+  europe_campaign_date_short: 1 paźdz. - 18 grud.
+  europe_campaign_date_full: 1 października - 18 grudnia
   europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: 10 - 25 października 2020
-  africa_campaign_date_start_short: 1 października
+  europe_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
+  africa_campaign_date_start_short: 1 paźdz.
   africa_campaign_date_start_long: 1 października
-  africa_campaign_date_short: '1- 31 października '
-  africa_campaign_date_full: 1 -  31 października
+  africa_campaign_date_short: 1 paźdz. - 18 grud.
+  africa_campaign_date_full: 1 października - 18 grudnia
   africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: 1 - 31 października 2020
+  africa_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
+  hoc2022_header: Odkrywaj, graj, twórz!
+  social_hoc2022_explore_play_create: Korzystaj z informatyki, by odkrywać, grać i
+    tworzyć!
+  codeorg_homepage_hoc2022_body: Eksploruj wszechświat, strzel gola, wykonaj ruch
+    — jest tak wiele sposobów wykorzystania informatyki.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Ucz się dzisiaj, buduj jaśniejsze jutro.
@@ -503,6 +508,25 @@ pl:
   front_join_us_n_students_served: "# ukończone"
   front_join_us_challenge: Wygraj rozmowę wideo dla Twojej klasy z sławą!
   front_join_us_learn_more: Dowiedz się więcej
+  cta_see_whats_new: Zobacz, co nowego
+  cta_try_more_activities: Wypróbuj więcej zajęć
+  cta_try_an_activity: Wypróbuj zajęcia
+  hoc_homepage_join_the_movement_heading: Dołącz do społeczności
+  hoc_homepage_join_the_movement_description: Godzina Kodowania jest dostępna przez
+    cały rok, ale co roku w grudniu Twoja klasa może dołączyć do milionów uczniów
+    na całym świecie, którzy świętują Tydzień Edukacji Informatycznej wraz z Godziną
+    Kodowania. Rejestracja na coroczne obchody rozpoczyna się co roku w październiku.
+  hoc_homepage_what_is_hoc_subhead: Godzinne samouczki w ponad 45 językach. Nie potrzeba
+    żadnego doświadczenia. Zajęcia Godziny Kodowania są dostępne bezpłatnie przez
+    cały rok.
+  hoc_homepage_what_is_hoc_description: Godzina Kodowania to godzinne wprowadzenie
+    do informatyki, wykorzystujące zabawne samouczki, aby pokazać, że każdy może nauczyć
+    się podstaw. Ta oddolna inicjatywa jest wspierana przez ponad 400 partnerów i
+    200 000 nauczycieli na całym świecie.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Przeczytaj nasz przewodnik](%{howto_guide_url}),
+    aby zaplanować wydarzenie dla swojej klasy."
+  hoc_homepage_highlights_heading: Atrakcje Godziny Kodowania
+  hoc_homepage_organized_by: Godzina Kodowania jest organizowana przez [Code.org](%{codeorg_url}).
   signup_closed: Rejestracja do Godziny Kodowania jest teraz zamknięta. Proszę sprawdzić
     ponownie w październiku, by zapisać się do następnej Godziny Kodowania.
   signup_registration_not_required: Nie musisz się rejestrować, aby wziąć udział!
@@ -646,8 +670,8 @@ pl:
     że każdy może nauczyć się podstaw i poszerzyć swój udział w obszarze informatyki.
     Od tego czasu ta inicjatywa stała się ogólnoświatowym wydarzeniem na rzecz informatyki,
     zapoczątkowana 1 godziną programowania, rozwijają się następnie jako różnorodne
-    przedsięwzięcia środowiska. Sprawdź [samouczki i zajęcia] ('%{tutorials}. Ta kampania
-    u podstaw jest wspierana przez ponad [400 partnerów] (%{partners} i 200 000 nauczycieli
+    przedsięwzięcia środowiska. Sprawdź [samouczki i zajęcia]('%{tutorials}. Ta kampania
+    u podstaw jest wspierana przez ponad [400 partnerów](%{partners} i 200 000 nauczycieli
     na całym świecie.
   hoc_faq_last_year: Wypróbuj samouczki
   hoc_faq_when_is_hoc_q: Kiedy jest Godzina Kodowania?
@@ -658,11 +682,11 @@ pl:
     pioniera informatyki, <a href='%{grace_hopper}'> Admirał Grace Murray Hopper</a>,
     urodzonej 9 grudnia 1906.
   hoc_faq_when_is_hoc_a_markdown: Godzina kodowania odbywa się każdego roku podczas
-    [Tygodnia Edukacji Informatycznej] (%{csedweek_url}). %{campaign_date_year} Tydzień
+    [Tygodnia Edukacji Informatycznej](%{csedweek_url}). %{campaign_date_year} Tydzień
     Edukacji Informatycznej odbędzie się %{campaign_date_full}, ale możesz organizować
     "Godzinę kodowania" przez cały rok. Tydzień Edukacji Informatycznej odbywa się
-    co roku dla uhonorowania pioniera informatyki,  [pani Admirał Grace Murray Hopper]
-    (%{grace_hopper}) (rodzonej 9 grudnia 1906).
+    co roku dla uhonorowania pioniera informatyki,  [pani Admirał Grace Murray Hopper](%{grace_hopper})
+    (rodzonej 9 grudnia 1906).
   hoc_faq_why_cs_q: Dlaczego informatyka?
   hoc_faq_why_cs_a: "<i>Każdy</i> uczeń powinien mieć możliwość nauki informatyki.
     Pomaga ona rozwijać umiejętności rozwiązywania problemów, logicznego myślenia
@@ -679,7 +703,7 @@ pl:
     nasz przewodnik. Możesz zorganizować Godzinę Kodowania w swojej szkole lub w okolicy
     &mdash; na przykład w ośrodku kultury, w centrum edukacji czy w pracy. Albo po
     prostu spróbuj kodowania sam, gdy nadejdzie %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: '[Rozpocznij planowanie tutaj] (%{howto}) przeglądając
+  hoc_faq_how_participate_a_markdown: '[Rozpocznij planowanie tutaj](%{howto}) przeglądając
     nasz przewodnik. Możesz zorganizować "Godzinę kodowania" w swojej szkole lub w
     okolicy &mdash; na przykład w ośrodku kultury, w centrum edukacji czy w pracy.
     Albo po prostu spróbuj kodowania sam, gdy nadejdzie %{campaign_date}.'

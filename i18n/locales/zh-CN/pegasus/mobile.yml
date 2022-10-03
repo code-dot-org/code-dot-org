@@ -378,7 +378,7 @@
   homepage_slot_text_link_shop: "T 恤，帽子，还有更多的东西"
   homepage_slot_text_link_thebadguys: "《坏蛋联盟》编程"
   homepage_slot_text_link_administrators: "带到您的学校或地区"
-  homepage_gallery_header: "已创建了 %{project_count} 万个 Code.org 项目"
+  homepage_gallery_header: "已创建超过%{project_count}百万个Code.org项目"
   homepage_header_donors: "Code.org 感谢各位支持者"
   homepage_donors_seall: "查看全部"
   homepage_donors_donate: "捐赠"

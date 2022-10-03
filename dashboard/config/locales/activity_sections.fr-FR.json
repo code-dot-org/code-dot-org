@@ -1490,7 +1490,7 @@
           "progression_name": "Développement des Compétences"
         },
         "5458d92e-83cc-46e8-8197-4d025e3e090f": {
-          "progression_name": "Vidéo : Boucles imbriquées avec l'abeille "
+          "progression_name": "Vidéo : Les boucles imbriquées avec l'abeille "
         },
         "da706b15-71f6-47dd-a6de-f113b509684c": {
           "progression_name": "Prévision"
@@ -1544,7 +1544,7 @@
           "name": "Introduction"
         },
         "2143fa63-5aea-47af-8684-29aa626fd1d7": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
+          "name": "Anticiper l'avenir avec Minecraft",
           "description": "#### Puzzles en ligne\n\nLes élèves vont se régaler avec cette leçon. Il est probable que la plupart de vos élèves aient entendu parler de _Minecraft_, mais faites une brève introduction pour ceux qui connaitraient pas.\n\n_Minecraft_ est un jeu de cubes. Vous pouvez incarner Alex ou Steve pendant que vous travaillez dans des labyrinthes. Vous devrez éviter la lave, ramasser des objets et explorer un monde composé de cubes de choses.\n\nMontrez l'une des énigmes à la classe (nous recommandons la 11.) Une fois que toutes les questions ont été traitées, faites passer les élèves aux ordinateurs et laissez-les commencer la programmation en binôme. "
         },
         "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
@@ -1579,7 +1579,7 @@
           "description": "Ces énigmes peuvent engendrer certaines questions, alors demandez aux élèves de travailler en binômes ou d'appliquer la règle \"Demandez à trois personnes avant de me demander à moi\" (Demandez-leur de demander de l'aide à trois autres camarades avant d'aller voir l'enseignant.) . Cela suscitera des discussions et ils comprendront mieux."
         },
         "f581d038-c3fb-4ac3-a56e-31b84d50ba91": {
-          "progression_name": "  Instructions « si »"
+          "progression_name": "Vidéo : Formules conditionnelles : Les indications « Si »"
         },
         "b7925091-8715-4ad6-8d94-6ca396d22fd6": {
           "progression_name": "Prévision"
@@ -1588,7 +1588,7 @@
           "progression_name": "Développement des Compétences"
         },
         "ec05bf5f-afd1-487a-a92f-45f2d0e1ddf3": {
-          "progression_name": "Video: Instructions conditionnelles « Si » et « Si/Sinon »"
+          "progression_name": "Vidéo : Formules conditionnelles : Indications « Si » et « Si/Sinon »"
         },
         "106bfc79-23ce-4a84-b0b6-38740eb9df89": {
           "progression_name": "Développement des Compétences"
@@ -1628,7 +1628,7 @@
           "progression_name": "Développement des Compétences"
         },
         "0fa595d7-bcf7-4bf3-a292-22abb41aa813": {
-          "progression_name": " Les Boucles Tant Que avec la Fermière"
+          "progression_name": " Vidéo : Les Boucles Tant Que avec la Fermière"
         },
         "af4d5d9b-dc83-44f1-b884-1aa62fcf1560": {
           "progression_name": "Prévision"
@@ -2488,19 +2488,19 @@
           "progression_name": "Développement des Compétences"
         },
         "60e4bed4-0af0-4f4c-87fd-d778bc66f1c8": {
-          "progression_name": "Vidéo : Minecraft : Voyage aquatique Repeat until (répéter jusque)"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique – Répéter Jusqu'à"
         },
         "d2e8a5d0-a31d-4a17-a649-8e1cc2aa735a": {
           "progression_name": "Développement des Compétences"
         },
         "1d87b667-a7f7-4fb7-811b-304ff0178d97": {
-          "progression_name": "Minecraft : Minecraft :Conditions Voyage Aquatique "
+          "progression_name": "Minecraft : Minecraft : Voyage Aquatique – Formules Conditionnelles"
         },
         "6d700f77-eea3-46c2-8ea6-27454cbaf9ab": {
           "progression_name": "Développement des Compétences"
         },
         "cc1c1ece-121e-4dd3-a117-dadaddcc56d1": {
-          "progression_name": "Vidéo : Minecraft : Félicitations Voyage Aquatique"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Félicitations"
         },
         "cbae92bc-d7b3-4707-a5f9-c5b373bdaee7": {
           "progression_name": "Jeu libre"
@@ -2522,7 +2522,7 @@
           "progression_name": "Développement des Compétences"
         },
         "bfb6e1c5-96c2-4d97-932f-2ca660c2854f": {
-          "progression_name": " Les Boucles Tant Que avec la Fermière"
+          "progression_name": " Vidéo : Les Boucles Tant Que avec la Fermière"
         },
         "ee4b7d3c-b6b2-4e05-bcb8-cedc77db80c0": {
           "progression_name": "Prévision"
@@ -3481,7 +3481,7 @@
           "progression_name": "Prévision"
         },
         "abb57063-4095-45d3-8ea6-f6a1b59b62e4": {
-          "progression_name": "Vidéo : Blocks \"Répéter\" avec BB-8"
+          "progression_name": "Vidéo : Les blocs « répéter » avec BB-8"
         },
         "398815f4-e1bb-4d7c-b2be-2c9380704b3e": {
           "progression_name": "Développement des Compétences"
@@ -3524,7 +3524,7 @@
         },
         "95e84aa8-80ce-430c-b12c-92d51483644e": {
           "description": "#### Mini-projet : Conception d'autocollants",
-          "progression_name": "Mini-projet : Création d'autocollants "
+          "progression_name": "Mini-projet : Design à base d'autocollants "
         },
         "568dc8e1-9914-45bf-98bf-b878327ea8c1": {
           "progression_name": "Jeu libre"
@@ -3551,7 +3551,7 @@
           "progression_name": "S'entraîner"
         },
         "28d3a549-2b83-411f-aae6-a8fd0e6c6005": {
-          "progression_name": "Vidéo : Boucles imbriquées avec l'abeille "
+          "progression_name": "Vidéo : Les boucles imbriquées avec l'abeille "
         },
         "fb1eaf7d-a8d3-47c5-9dfd-44aa4d8910b2": {
           "progression_name": "Prévision"
@@ -3596,7 +3596,7 @@
           "description": "Regroupez toute la classe et demandez à deux volontaires de marcher tout droit dans une certaine direction dans la salle de classe. S'ils voient une chaise déplacée, ils doivent l'enjamber. S'ils atteignent un mur, ils doivent s'asseoir.\n\nUne fois que tous les élèves seront assis, demandez comment vous programmeriez un robot pour qu'il réponde à un mur ou à une chaise. Rappelez aux élèves que vous ne pouvez pas simplement dire « Enjambe la chaise » à moins que vous ne sachiez qu'il y a une chaise, et vous ne saurez pas toujours qu'il y a une chaise. Il peut être utile de traduire la tâche en instructions telles que :\n\n-   tant qu'il y a un chemin à parcourir\n    -   avancer\n    -   s'il y a une chaise, l'enjamber\n-   s'asseoir\n\nDites aux élèves qu'ils utiliseront des conditions pendant cette leçon. Donnez la définition de :\n\n-   **Condition** : une déclaration qu'un programme vérifie pour voir si elle est vraie ou fausse. Si vrai, une action est entreprise. Sinon, l'action est ignorée.\n-   **Conditions** : instructions qui ne s'exécutent que sous certaines conditions.\n\nOuvrez une discussion pour voir quand vous pourrez utiliser une condition dans votre code. "
         },
         "83daad31-f1c9-4d21-897b-a291d39f55df": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
+          "name": "Anticiper l'avenir avec Minecraft",
           "description": "#### Puzzles en ligne\n\nLes élèves vont se régaler avec cette leçon. Il est probable que la plupart de vos élèves aient entendu parler de _Minecraft_, mais faites une brève introduction pour ceux qui connaitraient pas.\n\n_Minecraft_ est un jeu de cubes. Vous pouvez incarner Alex ou Steve pendant que vous travaillez dans des labyrinthes. Vous devrez éviter la lave, ramasser des objets et explorer un monde composé de cubes de choses.\n\nMontrez l'une des énigmes à la classe (nous recommandons la 11.) Une fois que toutes les questions ont été traitées, faites passer les élèves aux ordinateurs et laissez-les commencer la programmation en binôme. ",
           "progression_name": "Développement des Compétences"
         },
@@ -3622,7 +3622,7 @@
           "description": "Ces énigmes peuvent engendrer certaines questions, alors demandez aux élèves de travailler en binômes ou d'appliquer la règle \"Demandez à trois personnes avant de me demander à moi\" (Demandez-leur de demander de l'aide à trois autres camarades avant d'aller voir l'enseignant.) . Cela suscitera des discussions et ils comprendront mieux."
         },
         "b1dd72db-135f-4732-a4c7-6d157c9ffee9": {
-          "progression_name": "  Instructions « si »"
+          "progression_name": "Vidéo : Formules conditionnelles : Les indications « Si »"
         },
         "8504a81d-7f72-44e2-ac40-5fe386544817": {
           "progression_name": "Prévision"
@@ -3631,7 +3631,7 @@
           "progression_name": "Développement des Compétences"
         },
         "7c7cc1f1-c244-4f72-ad13-02b868da8070": {
-          "progression_name": "Video: Instructions conditionnelles « Si » et « Si/Sinon »"
+          "progression_name": "Vidéo : Formules conditionnelles : Indications « Si » et « Si/Sinon »"
         },
         "2ba5a718-c776-4973-b81b-46c01ee3a611": {
           "progression_name": "Développement des Compétences"
@@ -3666,7 +3666,7 @@
           "progression_name": "Développement des Compétences"
         },
         "c2b77086-18bd-4e80-a600-86dc6f32f253": {
-          "progression_name": " Les Boucles Tant Que avec la Fermière"
+          "progression_name": " Vidéo : Les Boucles Tant Que avec la Fermière"
         },
         "2590c04c-01f0-4e10-99af-2bf8d06922ca": {
           "progression_name": "Prévision"
@@ -3703,19 +3703,19 @@
           "progression_name": "Développement des Compétences"
         },
         "11a2db83-caba-4a29-8359-3367bfff4548": {
-          "progression_name": "Vidéo : Minecraft : Voyage aquatique Repeat until (répéter jusque)"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique – Répéter Jusqu'à"
         },
         "1604d928-c94d-4496-a973-156b5ce382a9": {
           "progression_name": "Développement des Compétences"
         },
         "de80d136-6c30-4f33-8f97-9cc4800b3ff0": {
-          "progression_name": "Minecraft : Minecraft :Conditions Voyage Aquatique "
+          "progression_name": "Minecraft : Minecraft : Voyage Aquatique – Formules Conditionnelles"
         },
         "6ebeff6b-35ce-4b04-8570-ea1ef77e68cc": {
           "progression_name": "Développement des Compétences"
         },
         "67444cba-ef3d-49b1-8e8a-d8ee10bafdc6": {
-          "progression_name": "Vidéo : Minecraft : Félicitations Voyage Aquatique"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Félicitations"
         },
         "828088e0-ab60-429b-ac4b-4317696c271c": {
           "progression_name": "Jeu libre"
@@ -5169,7 +5169,7 @@
           "progression_name": "Prévision"
         },
         "ac539445-fa4c-45cd-8d04-d794a3041826": {
-          "progression_name": "Vidéo : Blocks \"Répéter\" avec BB-8"
+          "progression_name": "Vidéo : Les blocs « répéter » avec BB-8"
         },
         "78b79d53-246f-40a9-ab3a-557fba2f5c1a": {
           "progression_name": "Développement des Compétences"
@@ -5247,6 +5247,9 @@
           "tips": [
             "Cette leçon peut sembler très différente du reste du cours. Ces niveaux ont de nouvelles caractéristiques qu'il faudra peut-être explorer avant de commencer. Le code que vos élèves écrivent dans un niveau sera automatiquement transféré aux autres. Cela leur permet de construire progressivement et d'itérer sur leurs idées au fur et à mesure qu'ils apprennent. Notez que l'exactitude de ces niveaux n'est pas vérifiée pour permettre une créativité plus ouverte. Donnez à vos élèves la possibilité de déterminer eux-mêmes quand ils ont terminé chaque tâche."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-projet : Design à base d'autocollants "
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Jeu libre"
@@ -5924,8 +5927,11 @@
         },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
-            null
+            "\\*\\*Les étapes suivantes sont également traitées dans une série de [r code_org_how-to_videos/csd/2022] disponibles sur le site Web de soutien aux enseignants de Code.org. Vous pouvez décider de regarder ces vidéos avant de lire les instructions ci-dessous."
           ]
+        },
+        "17a885d7-d6e7-490e-8307-bc31c01b6e64": {
+          "description": "## Avant le cours\n\n\\*\\*Vous pouvez regarder notre série de vidéos [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) pour avoir un aperçu de la manière de naviguer dans les plans de cours, de configurer une section de classe et d'autres fonctions importantes de la plate-forme Code.org. Chaque vidéo est également accompagnée d'un article de support si vous préférez lire ou imprimer les instructions - [cliquez ici pour en savoir plus](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Configuration d'une section de classe:** Vous pouvez utiliser une section de classe dans Code.org pour gérer vos élèves, voir leurs progrès et leur assigner un programme spécifique - [cliquez ici pour en savoir plus](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nSi vous utilisez un système de gestion de l'apprentissage, il peut y avoir des étapes supplémentaires pour synchroniser vos classes avec Code.org :\n\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) pour les étapes de configuration de vos classes avec Google Classroom\n-   Cliquez ici][4] pour connaître les étapes de configuration de vos cours avec Clever.\n\n\\*\\*Devenez un enseignant vérifié : \\*\\* Les plans de cours et les niveaux contiennent des ressources supplémentaires et des corrigés pour les enseignants vérifiés. Il s'agit d'un processus rapide qui permet de vérifier votre poste dans un établissement d'enseignement. [Cliquez ici pour remplir un formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) et vous devriez avoir accès aux ressources pour enseignants vérifiés en ~1 jour ouvrable. Les enseignants vérifiés ont également accès à la section [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) des forums.\n\n\\*\\*Inspirez-vous : regardez notre [liste de vidéos de conseils aux enseignants](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), qui présente des enseignants actuels de CS Discoveries."
         },
         "7dfa48db-7c8e-4682-b804-844a5d067be1": {
           "tips": [
@@ -6056,6 +6062,9 @@
             null
           ]
         },
+        "a1ff9435-c64d-47de-b80e-706e4d82d807": {
+          "description": "**Affichage:** Afficher [r what_is_a_computer/csd/2022]. Cette vidéo est également disponible pour les élèves sur le site Web de Code.org, y compris un lien alternatif pour les écoles où YouTube est bloqué. La vidéo présente un ordinateur comme une machine qui aide à effectuer certains types de travaux de réflexion en manipulant des informations.  Vous pouvez présenter la définition comme \"une machine qui travaille avec des informations\"."
+        },
         "59e91a3e-33a0-4f37-96d7-3c7ab5ca6e78": {
           "tips": [
             null
@@ -6083,7 +6092,7 @@
         },
         "f58f45ec-972c-4cfc-80d5-b3fb88621914": {
           "tips": [
-            null
+            "\\*\\*Options de synthèse vocale : \\*\\* Le panneau d'instructions comprend deux options qui peuvent aider à la compréhension des élèves.\n\n-   **Synthèse vocale** qui lit à haute voix les instructions pour les élèves.\n-   **Microsoft Immersive Reader** qui ouvre un nouveau panneau pour les instructions et offre des commandes pour modifier la taille du texte, le contraste ou la traduction dans une autre langue.\n\n[Cliquez ici pour en savoir plus sur ces options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ]
         },
         "63718979-8aa6-4a18-9058-b3d98348c21a": {
@@ -6177,7 +6186,7 @@
         },
         "79636d63-1378-4779-b0f6-c0e3d41dbaf6": {
           "tips": [
-            null
+            "**Création de groupes:** Idéalement, ce projet se fait en binôme. Si nécessaire, des groupes de 3 personnes peuvent fonctionner. Vous devez décider à l'avance si vous allez assigner ou permettre aux élèves de choisir leurs partenaires.\n\n\\*\\*Animation de projets de groupe : Si les élèves travaillent en binômes ou en petites équipes pour réaliser des projets, pensez à montrer ces deux vidéos à la classe :\n\n-   [Comment fonctionne le travail d'équipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Comment gérer les désaccords] [1].\n\nSelon vos objectifs pour ce projet, vous pouvez demander aux équipes de remplir le [Guide de l'élève pour la planification d'équipe](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), qui renforce le message de la vidéo."
           ]
         },
         "4ab37207-f96e-49e5-9f5a-cc547af387c2": {
@@ -6192,7 +6201,7 @@
         },
         "7017d684-e823-4892-9211-ed75e4b20bfa": {
           "tips": [
-            null
+            "**Quel genre d'application?:** Ce projet est censé aboutir à une application simple, dans la lignée de celles vues dans la leçon précédente. Même les grands problèmes ou les parties de grands problèmes peuvent être abordés en collectant et en traitant les informations de manière appropriée.\n\n\\*\\*Les élèves peuvent proposer des projets qui dépassent leurs compétences actuelles ou dont la mise en œuvre prendrait plus de temps que le temps imparti. Plutôt que de demander aux élèves de choisir un autre projet, envisagez de leur demander d'imaginer une version plus réduite de leur idée initiale. Par analogie, si l'idée initiale des élèves est l'étape \"Courir\", imaginez une version moins intense qui représente ce à quoi ressemblerait l'étape \"Marcher\". Si nécessaire, vous pouvez également revenir en arrière jusqu'à l'étape \"ramper\". \n\n**En savoir plus:** Cette étape est parfois appelée « Produit minimal viable » - vous pouvez en apprendre davantage sur ce processus et l'adapter à vos stratégies de projet en lisant cet article : [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) par Henrik Kniberg."
           ]
         },
         "7e8ae9d1-832d-42b9-bb2a-186d496375b7": {
@@ -6202,6 +6211,9 @@
         },
         "3258b13a-0f05-4f62-bf07-38aca3a745db": {
           "name": "Réflexion"
+        },
+        "8ad71590-c0af-4272-9a76-0b3a771d8efb": {
+          "description": "#### Assurez-vous d'être enregistré sur Code Studio en tant que compte d'enseignant \"vérifié\".\n\nTout le monde peut créer un compte d'enseignant sur Code Studio, ce qui signifie que nous avons besoin d'un niveau d'autorisation supplémentaire pour permettre aux enseignants de CS Discoveries de voir les évaluations, les corrigés et tout autre document auquel les élèves ne devraient pas pouvoir accéder de manière triviale. Si vous avez participé à un atelier d'apprentissage professionnel de Code.org pendant l'été, vous devriez déjà avoir cet accès.\n\nPour vérifier si vous avez cet accès :\n\n1.  Accédez à la [page de présentation du cours de l'unité 1](https://studio.code.org/s/csd1-2018).\n2.  Voyez-vous l'enquête préalable au cours Découvertes CS comme première \"étape\" du cours ?\n3.  Si non, veuillez remplir [ce formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Notez que l'obtention d'un compte d'enseignant vérifié peut prendre un jour ou deux, alors faites cette étape rapidement !\n\nSi vous ne disposez _pas_ d'un compte d'enseignant vérifié, vous pouvez toujours créer une section pour votre classe, mais vous ne pourrez pas administrer l'enquête préalable au cours le premier jour.\n\n#### Créer une section de classe sur Code Studio.\n\nPour créer une section :\n\n1.  Naviguez vers la [Page d'accueil du professeur](https://studio.code.org/home).\n2.  Cliquez sur \"Nouvelle section\" sous \"Sections de classe\".\n3.  Choisissez \"Connexion par courriel\". \n4.  Dans l'espace prévu, donnez un nom à votre section (par exemple CSD Période 1), le niveau de vos élèves, le cours : \" Computer Science Discoveries \", l'unité en cours : \" Unité 1 : Résolution de problèmes \", et cliquez sur \" Enregistrer \".\n5.  Une fois la section créée, cliquez sur le nom de la section.\n6.  Sur la nouvelle page, vous verrez une adresse URL unique de participation que vous distribuerez à vos élèves en classe. \n\nPour découvrir ces étapes en vidéo et en savoir plus sur la navigation dans votre compte Code.org, consultez la [Liste de vidéos pratiques de Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)."
         },
         "2b30cadb-489b-48a6-9412-77201cf56342": {
           "tips": [
@@ -6246,6 +6258,9 @@
             null
           ]
         },
+        "58b5ad32-dbdd-44a8-ba61-6172f83d2d34": {
+          "description": "#### Assurez-vous d'être enregistré sur Code Studio en tant que compte d'enseignant \"vérifié\".\n\nTout le monde peut créer un compte d'enseignant sur Code Studio, ce qui signifie que nous avons besoin d'un niveau d'autorisation supplémentaire pour permettre aux enseignants de CS Discoveries de voir les évaluations, les corrigés et tout autre document auquel les élèves ne devraient pas pouvoir accéder de manière triviale. Si vous avez participé à un atelier d'apprentissage professionnel de Code.org pendant l'été, vous devriez déjà avoir cet accès.\n\nPour vérifier si vous avez cet accès :\n\n1.  Accédez à la [page de présentation du cours de l'unité 1](https://studio.code.org/s/csd1-2018).\n2.  Voyez-vous l'enquête préalable au cours Découvertes CS comme première \"étape\" du cours ?\n3.  Si non, veuillez remplir [ce formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Notez que l'obtention d'un compte d'enseignant vérifié peut prendre un jour ou deux, alors faites cette étape rapidement !\n\nSi vous ne disposez _pas_ d'un compte d'enseignant vérifié, vous pouvez toujours créer une section pour votre classe, mais vous ne pourrez pas administrer l'enquête préalable au cours le premier jour.\n\n#### Créer une section de classe sur Code Studio.\n\nPour créer une section :\n\n1.  Naviguez vers la [Page d'accueil du professeur](https://studio.code.org/home).\n2.  Cliquez sur \"Nouvelle section\" sous \"Sections de classe\".\n3.  Choisissez \"Connexion par courriel\". \n4.  Dans l'espace prévu, donnez un nom à votre section (par exemple CSD Période 1), le niveau de vos élèves, le cours : \" Computer Science Discoveries \", l'unité en cours : \" Unité 1 : Résolution de problèmes \", et cliquez sur \" Enregistrer \".\n5.  Une fois la section créée, cliquez sur le nom de la section.\n6.  Sur la nouvelle page, vous verrez une URL de participation unique que vous distribuerez à vos élèves dans la classe. \n\nPour découvrir ces étapes en vidéo et en savoir plus sur la navigation dans votre compte Code.org, consultez la [Liste de vidéos pratiques de Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)."
+        },
         "305aebd8-9daf-4d68-b332-ed969803bced": {
           "tips": [
             null
@@ -6288,6 +6303,9 @@
           "tips": [
             null
           ]
+        },
+        "c5560ce8-1ca0-4b8b-b7ea-87b3a1618309": {
+          "description": "#### Assurez-vous d'être enregistré sur Code Studio en tant que compte d'enseignant \"vérifié\".\n\nTout le monde peut créer un compte d'enseignant sur Code Studio, ce qui signifie que nous avons besoin d'un niveau d'autorisation supplémentaire pour permettre aux enseignants de CS Discoveries de voir les évaluations, les corrigés et tout autre document auquel les élèves ne devraient pas pouvoir accéder de manière triviale. Si vous avez participé à un atelier d'apprentissage professionnel de Code.org pendant l'été, vous devriez déjà avoir cet accès.\n\nPour vérifier si vous avez cet accès :\n\n1.  Accédez à la [page de présentation du cours de l'unité 1](https://studio.code.org/s/csd1-2018).\n2.  Voyez-vous l'enquête préalable au cours Découvertes CS comme première \"étape\" du cours ?\n3.  Si non, veuillez remplir [ce formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Notez que l'obtention d'un compte d'enseignant vérifié peut prendre un jour ou deux, alors faites cette étape rapidement !\n\nSi vous ne disposez _pas_ d'un compte d'enseignant vérifié, vous pouvez toujours créer une section pour votre classe, mais vous ne pourrez pas administrer l'enquête préalable au cours le premier jour.\n\n#### Créer une section de classe sur Code Studio.\n\nPour créer une section :\n\n1.  Naviguez vers la [Page d'accueil du professeur](https://studio.code.org/home).\n2.  Cliquez sur \"Nouvelle section\" sous \"Sections de classe\".\n3.  Choisissez \"Connexion par courriel\". \n4.  Dans l'espace prévu, donnez un nom à votre section (par exemple CSD Période 1), le niveau de vos élèves, le cours : \" Computer Science Discoveries \", l'unité en cours : \" Unité 1 : Résolution de problèmes \", et cliquez sur \" Enregistrer \".\n5.  Une fois la section créée, cliquez sur le nom de la section.\n6.  Sur la nouvelle page, vous verrez une URL de participation unique que vous distribuerez à vos élèves dans la classe. \n\nPour découvrir ces étapes en vidéo et en savoir plus sur la navigation dans votre compte Code.org, consultez la [Liste de vidéos pratiques de Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)."
         },
         "824d14f1-04c5-4ec9-af8b-8c6717ea9fd0": {
           "tips": [
@@ -6398,9 +6416,13 @@
           ]
         },
         "56d3bbbd-9eec-4102-8e92-91724e9cdf52": {
+          "description": "\\*\\*Groupe : \\*\\* Placez les élèves en groupes de trois. Envisagez de permettre aux élèves de se regrouper en fonction de leurs intérêts communs, car chaque groupe explorera ensemble un domaine de divertissement.\n\n\\*\\*Distribuez : \\*\\* donnez à chaque groupe un exemplaire du guide d'activité.",
           "tips": [
             null
           ]
+        },
+        "a6630e9d-312a-4f4d-8674-ff84ae43cd2c": {
+          "description": "#### Exploration du divertissement\n\nAu cours de cette activité, les groupes d'élèves effectueront des recherches légères sur le rôle que jouent la CS et la programmation dans divers domaines du divertissement. L'objectif principal de cette activité est d'élargir les perspectives des élèves sur la façon dont la programmation peut être utilisée pour créer des choses amusantes ou divertissantes. Certains des domaines sur lesquels les élèves pourraient faire des recherches (tels que l'art, l'animation et les jeux) peuvent être directement liés aux programmes qu'ils écriront plus tard dans cette unité, tandis que d'autres peuvent servir davantage d'inspiration sur la façon dont les compétences qu'ils apprennent ici peuvent être appliquées dans différents domaines.\n\n#### Sujets\n\nLe guide d'activités présente un certain nombre de domaines de recherche potentiels. Ces domaines spécifiques ont été choisis pour aller de pair avec les ressources fournies sur Code Studio, mais vous pouvez demander aux élèves d'étudier d'autres domaines s'ils le souhaitent."
         },
         "ed04f320-0cda-418a-a633-200cc4862c9f": {
           "tips": [
@@ -6442,17 +6464,20 @@
         },
         "11eec8ff-c9ac-49fd-ab5a-816ead35f2f6": {
           "tips": [
-            null
+            "**Objectif** Amener les élèves à réaliser que la façon dont nous communiquons entre nous peut être plus informelle que celle dont nous communiquons avec un ordinateur. Par exemple, la communication avec un assistant numérique nécessite un langage et des commandes précises, qui commencent généralement par \" Hey \", puis le nom de l'appareil. De même, lorsque nous commencerons à coder dans cette unité, les élèves devront utiliser un ensemble précis de commandes pour communiquer avec un ordinateur."
           ]
+        },
+        "08c1a6f2-0d76-4eae-95c1-c8e09765d720": {
+          "description": "Pour donner des instructions à un ordinateur, nous devons utiliser un langage que l'ordinateur comprend. Pour réaliser nos animations et nos jeux, nous utiliserons une version de JavaScript qui utilise des blocs.  L'environnement dans lequel nous allons programmer s'appelle Game Lab."
         },
         "344501ed-df11-442a-b23b-062199520cc2": {
           "tips": [
-            null
+            "La programmation en binôme est un excellent moyen de renforcer la confiance des élèves et d'encourager les pratiques de collaboration et de communication. Vous pouvez en savoir plus sur la programmation en binôme dans le [Guide du programme d'études de la CDD](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit)."
           ]
         },
         "3639ace8-523d-473d-aa8c-f86d30d7bac4": {
           "tips": [
-            null
+            "\\*\\*Vous trouverez ci-dessous des recommandations pour l'utilisation des nombreuses ressources présentées aux élèves au cours de la leçon. Vous pourriez envisager de créer un « tableau des ressources » pour garder une trace de ces options et aider les élèves à être autonomes au fur et à mesure qu'ils progressent dans les niveaux. \n\n-   **Vidéos:** Regardées en classe, mais les élèves peuvent toujours y revenir.\n-   \\*\\*Onglet Aide et conseils : \\*\\* Cet onglet contient toutes les vidéos et les guides de référence pertinents pour un niveau particulier.\n-   \\*\\*Guides de référence : \\*\\* Contiennent du texte et des diagrammes expliquant le contenu. Ils sont conçus comme des ressources utiles pour les étudiants, et non comme des lectures de classe. Ils constituent une bonne source de révision après l'apprentissage du contenu ou lorsque les élèves sont bloqués dans les niveaux. Vous pouvez décider de les imprimer et de les mettre à la disposition des élèves pendant qu'ils travaillent sur les niveaux.\n-   **Documentation et exemples :** En passant la souris sur un bloc, vous verrez apparaître une brève description de ce que fait ce bloc. En cliquant sur le lien \"Voir les exemples\", vous ouvrirez la documentation de ce bloc. \n-   \\*\\*Instructions de niveau : \\*\\* Les instructions peuvent introduire de petits éléments de nouveau contenu. Chaque niveau comporte une section « Faites cela » expliquant ce que les élèves sont censés faire dans ce niveau. Faites comprendre très tôt qu'il est important de lire ces instructions, et pas seulement la section « Faites cela »."
           ],
           "progression_name": "Introduction au labo de jeux"
         },
@@ -6464,7 +6489,7 @@
         },
         "5e3a3411-6b46-44fc-aeeb-d8949db8bcfd": {
           "tips": [
-            null
+            "\\*\\*Options de synthèse vocale : \\*\\* Le panneau d'instructions comprend deux options qui peuvent aider à la compréhension des élèves.\n\n-   **Synthèse vocale** qui lit à haute voix les instructions pour les élèves.\n-   **Microsoft Immersive Reader** qui ouvre un nouveau panneau pour les instructions et offre des commandes pour modifier la taille du texte, le contraste ou la traduction dans une autre langue.\n\n[Cliquez ici pour en savoir plus sur ces options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Utiliser la grille"
         },
@@ -6476,25 +6501,25 @@
         },
         "7ac34d77-29c1-48f2-83f9-2958ace257d6": {
           "tips": [
-            null
+            "**Facilitation des niveaux de développement des compétences:** Les niveaux de développement des compétences sont conçus pour continuer à enseigner de nouvelles compétences et de nouveaux blocs par le biais de l'exploration, des essais et erreurs et de l'utilisation d'exemples travaillés à partir de code fourni au préalable. Les élèves sont encore en train de se familiariser avec les concepts de la leçon et auront besoin d'un soutien solide tout au long de ces niveaux pour prendre confiance, déboguer leur code et consolider leur compréhension. \n\nEnvisagez de demander aux élèves de compléter les niveaux de développement des compétences par paires en utilisant la **Programmation par paires**, qui permet aux élèves d'utiliser un ordinateur et d'échanger leur rôle de conducteur ou de navigateur. Ce processus est présenté dans [cette vidéo](https://www.youtube.com/watch?v=q7d_JtyCq1A), que vous pouvez montrer à la classe. Vous pouvez demander aux élèves de changer de rôle en fonction d'un minuteur, ou de changer chaque fois qu'ils terminent un niveau.\n\n**En savoir plus:** Pour plus de conseils sur la programmation des niveaux, consultez le [Guide CSD de la programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter les niveaux de programmation avec les élèves."
           ],
           "progression_name": "Développement des Compétences"
         },
         "39e245a3-6023-4437-9b2d-be1302738dcf": {
           "tips": [
-            null
+            "**Facilitation des niveaux d'entraînement:** Les niveaux d'entraînement sont conçus pour que les élèves appliquent leurs connaissances des niveaux précédents et développent une certaine fluidité dans l'utilisation des nouveaux blocs de code pour résoudre des problèmes. Les élèves peuvent choisir les niveaux de pratique qu'ils souhaitent compléter, et il n'est pas nécessaire qu'un élève complète chaque niveau de pratique avant de continuer.\n\nLes élèves ont tendance à s'impliquer davantage et à mieux réagir lorsqu'ils ont un choix authentique sur la façon de poursuivre leur apprentissage. Permettez aux élèves de choisir les niveaux de pratique en fonction de leurs intérêts et de leur niveau de confort, et envisagez de leur donner l'occasion de démontrer et d'expliquer à toute la classe les solutions qu'ils ont trouvées aux niveaux de pratique qu'ils ont choisis.\n\n\\*\\*Pour plus d'informations sur les niveaux de programmation, consultez le [Guide CSD des niveaux de programmation](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter les niveaux de programmation avec les élèves."
           ],
           "progression_name": "S'entraîner"
         },
         "598a2627-2915-46fd-849b-409a7702f66b": {
           "tips": [
-            null
+            "**Facilitation des niveaux d'évaluation:** Les niveaux d'évaluation contiennent une tâche unique qui nécessite l'application des compétences et des concepts du niveau afin de la résoudre. Les élèves doivent effectuer ces niveaux individuellement et vous pouvez utiliser votre jugement pour déterminer le degré d'aide externe dont les élèves doivent bénéficier. Les niveaux d'évaluation contiennent également une rubrique qui peut être utilisée pour l'évaluation formative et une case pour fournir un retour aux élèves - [cliquez ici pour en savoir plus sur l'utilisation des rubriques et le retour aux élèves](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n\\*\\*Approfondissement : \\*\\* Pour plus de conseils sur l'évaluation du travail des élèves, consultez le [Guide de l'évaluation de la CDD](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Évaluation"
         },
         "d9ef6c27-268b-4f69-83c3-19fb2d607d28": {
           "tips": [
-            null
+            "**Facilitation des niveaux de défi:** Les niveaux de défi sont conçus comme des extensions des concepts et des compétences que les élèves apprennent tout au long d'une leçon. Les niveaux de défi tendent à se concentrer sur des tâches plus ouvertes à réaliser par les élèves, ou sur des opportunités de combiner plusieurs compétences des leçons précédentes en un seul programme.\n\nLes niveaux de défi n'ont **pas** besoin d'être complétés pour que les élèves atteignent les objectifs fondamentaux d'une leçon. Au contraire, chaque tâche d'un niveau de défi est destinée à compléter et à enrichir les objectifs d'apprentissage d'une leçon, mais n'est pas requise pour les leçons suivantes. Les élèves peuvent tout de même démontrer qu'ils maîtrisent les objectifs d'une leçon sans avoir terminé aucun des niveaux de défi.\n\n\\*\\*En savoir plus : \\*\\* Pour plus de conseils sur la programmation des niveaux, consultez le [Guide CSD de la programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ],
           "progression_name": "Défis"
         },
@@ -6505,12 +6530,12 @@
         },
         "18df6cd3-adee-415d-abd4-71263ef3de6c": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "8edada5b-86d6-4a42-ac50-b07edf4532b9": {
           "tips": [
-            null
+            "**Normaliser les erreurs et favoriser le débogage:** À mesure que les niveaux de programmation deviennent plus complexes, les élèves peuvent se retrouver avec des bogues dans leur code qu'ils doivent démêler. Si cela se produit fréquemment, cela peut être une expérience démoralisante pour les élèves et peut affecter leur perception de leurs capacités en classe. \n\nPour contrer cela, nous recommandons de normaliser les bogues et les erreurs comme quelque chose qui arrive à tout le monde - cela fait simplement partie du processus. Vous pouvez montrer aux élèves notre [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s), qui montre plusieurs élèves normalisant leurs erreurs et discutant des stratégies de débogage que les élèves peuvent utiliser. En outre, vous pouvez afficher le [Guide du débogage pour les élèves](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) pour que les élèves puissent s'y référer tout au long de l'unité et mettre à leur disposition des [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Développement des Compétences"
         },
@@ -6538,12 +6563,12 @@
         },
         "e7468f3b-3e70-492a-9749-a45d6df1c3f7": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "d26059f8-ed8e-47d8-a1e4-00864675f48b": {
           "tips": [
-            null
+            "\\*\\*Facilitation des niveaux de prédiction : \\*\\* Les niveaux de prédiction sont une excellente occasion pour les élèves de réfléchir de manière critique au code et de participer à des discussions en classe. Considérez la possibilité de demander aux élèves de réfléchir à leur propre prédiction et d'en discuter avec un partenaire avant de taper leur réponse. Une fois qu'ils ont exécuté le code, réunissez la classe pour une discussion en groupe complet afin de déterminer si leurs prédictions étaient similaires ou différentes du programme obtenu. Profitez de l'occasion pour aborder les idées fausses que les élèves ont pu avoir sur le code au départ.\n\n\\*\\* Attention : Les entrées de prédiction ne peuvent pas être supprimées ! \\*\\* Une fois que vous avez entré une réponse dans la case de prédiction, vous ne pouvez pas la réinitialiser. Cela peut rendre difficile la répétition de ce processus avec plusieurs classes. Nous vous recommandons plutôt de saisir un texte fictif tel que « Discussion de classe » et d'exécuter le code. De cette façon, la réponse n'est pas \"gâchée\" pour les classes suivantes. Cependant, cela signifie que vous devrez garder une trace des prédictions séparément, par exemple sur un tableau blanc ou dans un document."
           ],
           "progression_name": "Prévision"
         },
@@ -6585,7 +6610,7 @@
         },
         "a8fb986b-7cf6-4689-a9ef-5d8804fa6d98": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "30726a72-deac-4fe2-b10e-fed405d0536c": {
@@ -6618,7 +6643,7 @@
         },
         "a84eba1a-65fd-4b4f-8d51-ef8d0f9f3041": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "11981557-3131-4ac6-acbc-71778988951f": {
@@ -6668,7 +6693,7 @@
         },
         "a748f14d-ac72-4518-affc-f8afdbd5f545": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "e2958d9a-e321-4132-8424-6103f6e7f76b": {
@@ -6694,9 +6719,12 @@
             null
           ]
         },
+        "a1b6c071-7374-44ea-86f5-4edfcf34e891": {
+          "description": "![Une scène en deux dimensions avec un robot pêche et un extraterrestre violet sur le sol et un extraterrestre rose accroupi sur un rocher flottant au-dessus d'eux. L'extraterrestre rose a une bulle de parole vide à côté de sa tête, comme s'il allait commencer à parler, mais la bulle est vide](https://curriculum.code.org/media/uploads/Screen-Shot-2020-04-01-at-3.51.06-AM.png).\n\n\\*\\*Affichez : \\*\\* le dessin animé pour que les élèves le voient.\n\n\\*\\*Questionnez : \\*\\* Regardez le dessin animé qui a été réalisé dans le laboratoire de jeux. A votre avis, que devrait dire l'extraterrestre ?\n\n**Partagez :** Permettez à des volontaires de partager leurs idées."
+        },
         "143eb56e-c445-4fde-a1f6-845371db821c": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "1248d040-dd08-49f6-b5ee-07852b579c56": {
@@ -6732,7 +6760,7 @@
         },
         "773f3c7e-a2a9-4c2d-8a88-5050f38d0d1f": {
           "tips": [
-            null
+            "\\*\\*Facilitation de mini-projets : \\*\\* Les mini-projets servent de points de contrôle dans le programme et couvrent le sous-ensemble de compétences que les élèves ont vu jusqu'à présent dans l'unité. Ils sont conçus pour être mis en œuvre pendant un ou deux jours et permettent de vérifier dans quelle mesure les élèves ont compris le contenu du cours jusqu'à présent. Vous pouvez décider de prolonger ces projets afin de soutenir les élèves ou de les mettre au défi, ce qui pourrait vous permettre de revenir sur des concepts difficiles ou de soutenir les élèves qui ont manqué des leçons et qui essaient de rattraper leur retard. Cependant, nous vous recommandons de prendre cette décision à l'avance et d'être ferme avec les élèves quant au temps dont ils disposent pour chaque projet. Dans le cas contraire, il est facile que les projets s'étendent sur plusieurs jours et que le travail des élèves dépasse le cadre de ce projet."
           ]
         },
         "576907fe-bf93-4136-b9cb-e36310bca046": {
@@ -6745,7 +6773,7 @@
         },
         "449a73b9-9e17-4a54-bbc6-8eacad2cfd30": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "a3005adc-9fdc-44c5-b692-236229a2d521": {
@@ -6771,7 +6799,7 @@
         },
         "aea2bc61-b817-404c-90e4-7fcadd60412a": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ],
           "progression_name": "Exploration"
         },
@@ -6811,7 +6839,7 @@
         },
         "286a1590-1a6c-4029-91c1-9166ef1ff766": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "d63180f7-6d8c-4704-a4d5-ea038e0ae74d": {
@@ -6853,10 +6881,11 @@
         },
         "d4023790-1810-4ddd-a510-133df9586856": {
           "tips": [
-            null
+            "\\*\\*Facilitation de mini-projets : \\*\\* Les mini-projets servent de points de contrôle dans le programme et couvrent le sous-ensemble de compétences que les élèves ont vu jusqu'à présent dans l'unité. Ils sont conçus pour être mis en œuvre pendant un ou deux jours et permettent de vérifier dans quelle mesure les élèves ont compris le contenu du cours jusqu'à présent. Vous pouvez décider de prolonger ces projets afin de soutenir les élèves ou de les mettre au défi, ce qui pourrait vous permettre de revenir sur des concepts difficiles ou de soutenir les élèves qui ont manqué des leçons et qui essaient de rattraper leur retard. Cependant, nous vous recommandons de prendre cette décision à l'avance et d'être ferme avec les élèves quant au temps dont ils disposent pour chaque projet. Dans le cas contraire, il est facile que les projets s'étendent sur plusieurs jours et que le travail des élèves dépasse le cadre de ce projet."
           ]
         },
         "539b36c9-fdb1-4f96-af81-fe2ceda35ba6": {
+          "description": "**Distribuez :** (facultatif) distribuez des exemplaires du guide d'activité. Les élèves peuvent utiliser cette feuille pour planifier l'animation qu'ils créeront à la fin de cette leçon, mais la planification peut également être effectuée sur du papier brouillon.",
           "tips": [
             null
           ]
@@ -6868,7 +6897,7 @@
         },
         "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "40657117-7d56-4a65-b054-6e21c1ee2d40": {
@@ -6894,7 +6923,7 @@
         "f0528d6a-0b12-4ff1-aa3a-51f47643023b": {
           "name": "Instructions conditionnelles",
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "ed3cc380-cd93-4699-9f7c-878fd09f8b03": {
@@ -6944,7 +6973,7 @@
         "e7c40cc1-5969-4bdb-bd17-0c0f786b9d76": {
           "name": "Entrée Au Clavier",
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "4975dfd3-be92-408b-9518-8a4cae7701a9": {
@@ -6971,14 +7000,16 @@
           ]
         },
         "ac698d02-ec2a-44b9-bee2-9889a2b5317d": {
+          "description": "**Transition:** Dirigez la classe vers Code Studio, et demandez aux élèves de compléter le niveau de prédiction en classe ou en petits groupes, puis de parler de ce qu'ils ont trouvé.",
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "1069a7b9-54f5-4414-bec3-3a7b86d799a1": {
           "progression_name": "Prévision"
         },
         "71dc54d3-ec2d-4193-84cd-9e994129aa36": {
+          "description": "**Vidéo:** Regardez la vidéo en classe et examinez les questions de discussion ensemble.\n\n**Questions à considérer avec la vidéo :**\n\n-   Quel est un exemple de cas où vous auriez besoin d'une instruction \"if/else\" ?",
           "tips": [
             null
           ],
@@ -7013,9 +7044,16 @@
           ]
         },
         "6fc9f0d1-23f2-45bf-879f-69b222793806": {
+          "description": "\\*\\*Discutez : \\*\\* demandez aux élèves de partager leurs observations et leurs analyses du programme. \n\nEncouragez la classe à considérer qu'il existe de multiples approches pour programmer quoi que ce soit, mais qu'il peut y avoir des indices sur la façon dont quelque chose a été créé. En particulier, lorsqu'ils partagent leurs réflexions, demandez-leur de préciser ce qui suit :\n\n-   Les indices qui suggèrent qu'un sprite a été utilisé\n-   Indices suggérant l'utilisation d'une conditionnelle\n-   Indices suggérant l'utilisation d'un modèle d'itérateur.\n\n\\*\\*Montrez : \\*\\* Montrez aux élèves la grille d'évaluation et la liste de contrôle des élèves.  Passez en revue les différentes composantes de la rubrique avec eux pour vous assurer qu'ils comprennent les composantes du projet.\n\n\\*\\*Objectif : \\*\\* Les élèves devraient planifier ce qu'ils veulent créer avant de se rendre à l'ordinateur, de sorte qu'une fois sur l'ordinateur, ils ne fassent qu'exécuter leur plan.",
           "tips": [
             null
           ]
+        },
+        "0320f16b-06ce-44af-b1bd-20794feb5a52": {
+          "description": "\\*\\*Distribuez : \\*\\* Distribue le guide du projet aux élèves. Les élèves l'utiliseront pour définir leurs projets avant de les créer. Donnez aux élèves un peu de temps pour réfléchir au type de carte qu'ils veulent créer et à son destinataire. \n\nDistribuez également une copie de la liste de contrôle de l'élève à chaque élève. Les élèves peuvent l'utiliser pour faire une autoévaluation et réfléchir à l'élaboration de leur projet.\n\n#### Étapes\n\n1.  La première couche de la carte interactive est un arrière-plan dessiné avec les seules commandes du tiroir Dessin. Le recto du Guide d'activité fournit une grille permettant aux élèves de dessiner leur arrière-plan, un tableau de référence des commandes de dessin et une zone permettant aux élèves de prendre des notes et d'écrire du pseudocode.\n\n2.  Ensuite, les élèves réfléchissent aux sprites dont ils auront besoin, en remplissant un tableau avec l'étiquette, les images et les propriétés de chaque sprite.\n\n3.  Enfin, les élèves réfléchissent aux conditionnels dont ils auront besoin pour rendre leur carte interactive."
+        },
+        "cb1ab56b-9c53-4c57-8de4-a618898990ee": {
+          "name": "Mettre en œuvre la carte interactive (Niveau 2 - 7)"
         },
         "c0090e7c-168b-4591-9c94-d636a0033dbe": {
           "tips": [
@@ -7024,7 +7062,7 @@
         },
         "4e0723c7-38ba-4d47-82fa-957aed03bab9": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ],
           "progression_name": "Travail projet"
         },
@@ -7051,11 +7089,13 @@
           ]
         },
         "e16bcb96-aa05-4fb1-8ac9-d3908e077e9a": {
+          "description": "**Transition:** Transférer les élèves vers Code Studio",
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "66c70a69-b26c-448c-bda8-2276640f676f": {
+          "description": "\\*\\*Circulez : \\*\\* Ces niveaux introduisent les propriétés velocityX, velocityY et rotationSpeed dont vous venez de discuter avec les élèves.  Vérifiez les progrès des élèves et notez quand tout le monde est arrivé à la fin du niveau 10.",
           "progression_name": "Développement des Compétences"
         },
         "6bfb34b7-8459-40b8-8d0b-72a3527e83c6": {
@@ -7126,16 +7166,19 @@
         },
         "4d0e1b05-6764-45b5-85f0-d956e11f0704": {
           "tips": [
-            null
+            "\\*\\*Facilitation de mini-projets : \\*\\* Les mini-projets servent de points de contrôle dans le programme et couvrent le sous-ensemble de compétences que les élèves ont vu jusqu'à présent dans l'unité. Ils sont conçus pour être mis en œuvre pendant un ou deux jours et permettent de vérifier dans quelle mesure les élèves ont compris le contenu du cours jusqu'à présent. Vous pouvez décider de prolonger ces projets afin de soutenir les élèves ou de les mettre au défi, ce qui pourrait vous permettre de revenir sur des concepts difficiles ou de soutenir les élèves qui ont manqué des leçons et qui essaient de rattraper leur retard. Cependant, nous vous recommandons de prendre cette décision à l'avance et d'être ferme avec les élèves quant au temps dont ils disposent pour chaque projet. Dans le cas contraire, il est facile que les projets s'étendent sur plusieurs jours et que le travail des élèves dépasse le cadre de ce projet."
           ]
         },
         "847ce2b1-b2de-4932-af9c-ad5b8ca0499b": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "35b59e9a-23f1-4aae-9a5a-854ac2dc740d": {
           "progression_name": "Interactions de sprite"
+        },
+        "fd996d24-c10f-42f8-81ea-d73816e91478": {
+          "description": "\\*\\*Affichez : \\*\\* Montrez à la classe les deux images d'une grenouille qui saute.\n\n![Une animation d'une grenouille sautant de haut en bas avec un mouvement très linéaire](https://curriculum.code.org/media/uploads/triangleJump.gif) ![Une animation d'une grenouille sautant de haut en bas avec un mouvement plus nuancé qui semble plus réaliste et affecté par la gravité](https://curriculum.code.org/media/uploads/curveJump.gif)."
         },
         "fb103c70-07e6-49be-a12a-ce480a70c199": {
           "tips": [
@@ -7144,7 +7187,7 @@
         },
         "3f6d101f-bccb-4a4d-9b16-5db525802046": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "5cb88190-4077-42c3-8202-97e9e6eaf470": {
@@ -7177,6 +7220,9 @@
           "tips": [
             null
           ]
+        },
+        "fc153167-32a3-4078-aa3c-c34b69b29131": {
+          "description": "**Affichez** : Affiche l'image animée. Elle est également disponible en tant que niveau dans Code Studio.\n\n![Un emoji girafe se déplace sur l'écran vers un emoji singe immobile. Lorsqu'il touche l'emoji singe, le singe et la girafe continuent à se déplacer sur l'écran](https://curriculum.code.org/media/uploads/collision.gif).\n\n\\*\\*Questionnez : \\*\\* En utilisant les blocs que nous savons déjà utiliser, comment pourrions-nous créer l'interaction des sprites que nous voyons dans ce programme ?"
         },
         "23d7a87f-664b-4fb0-b2e9-d2e1acbee2d8": {
           "tips": [
@@ -7215,12 +7261,12 @@
         },
         "19ffef2d-aa7f-40fd-bb4b-b075ac7306c4": {
           "tips": [
-            null
+            "\\*\\*Facilitation de mini-projets : \\*\\* Les mini-projets servent de points de contrôle dans le programme et couvrent le sous-ensemble de compétences que les élèves ont vu jusqu'à présent dans l'unité. Ils sont conçus pour être mis en œuvre pendant un ou deux jours et permettent de vérifier dans quelle mesure les élèves ont compris le contenu du cours jusqu'à présent. Vous pouvez décider de prolonger ces projets afin de soutenir les élèves ou de les mettre au défi, ce qui pourrait vous permettre de revenir sur des concepts difficiles ou de soutenir les élèves qui ont manqué des leçons et qui essaient de rattraper leur retard. Cependant, nous vous recommandons de prendre cette décision à l'avance et d'être ferme avec les élèves quant au temps dont ils disposent pour chaque projet. Dans le cas contraire, il est facile que les projets s'étendent sur plusieurs jours et que le travail des élèves dépasse le cadre de ce projet."
           ]
         },
         "1acd883d-261b-4c22-8a50-167d3ab9832f": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "1f891879-1df5-43fa-8960-39d2465556c7": {
@@ -7257,7 +7303,7 @@
         },
         "3bcae8d2-a829-4fab-aef2-444e9e331654": {
           "tips": [
-            null
+            "**Niveau 7 : Fonctions en contexte**\n\nDans ces niveaux, les élèves utiliseront des fonctions pour organiser le code dans un jeu simple. Bien qu'il ne soit pas identique au jeu de défilement latéral, de nombreuses compétences et utilisations des fonctions dans ces niveaux peuvent et doivent être utilisées lorsqu'ils terminent leur jeu de défilement latéral."
           ],
           "progression_name": "Jeu Collector"
         },
@@ -7338,13 +7384,17 @@
           ]
         },
         "4cedbe11-f01d-4877-8772-99baae5c7d46": {
+          "description": "**Groupe:** Ce projet peut être réalisé individuellement ou en binôme. À votre discrétion, vous pouvez également choisir de former des groupes plus importants.",
           "tips": [
             null
           ]
         },
+        "cd32a6fd-953a-44c7-a55a-4c8bbdda4db2": {
+          "description": "\\*\\*Distribuez : \\*\\* chaque élève ou groupe d'élèves doit recevoir un exemplaire du guide du projet. En classe, passez en revue les différentes étapes du projet et l'endroit où elles apparaissent dans le guide du projet.\n\n\\*\\*Distribuez : \\*\\* donnez à chaque élève une copie de la grille d'évaluation ou de la liste de contrôle de l'élève afin qu'il sache dès le début quels éléments du projet vous recherchez."
+        },
         "2f874f2f-5f9e-4d5a-a84f-61151378280c": {
           "tips": [
-            null
+            "**Réflexion en classe:** Avant de vous plonger dans les projets individuels, envisagez de mener une réflexion en classe sur ce à quoi pourraient ressembler des exemples de projets répondant à ces critères. Vous pouvez également décider de montrer une ou deux des applications exemplaires pour aider à inspirer le remue-méninges. En utilisant ces idées, les élèves peuvent trouver plus facilement une idée initiale pour leur projet."
           ]
         },
         "b8798164-0848-4f12-b1c2-4e41799cda93": {
@@ -7359,7 +7409,7 @@
         },
         "0296c25a-c7e0-4f70-9254-e3742c469a84": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ],
           "progression_name": "Projet - Contexte et variables"
         },
@@ -7375,7 +7425,8 @@
           "name": "Partager"
         },
         "574e77dd-d6f7-4d59-80db-f24e54851aa1": {
-          "name": "Réfléchir"
+          "name": "Réfléchir",
+          "description": "Envoyez les élèves sur Code Studio pour répondre à une rapide enquête de fin d'unité. Bien que leurs réponses soient anonymes, les données agrégées vous seront accessibles dès qu'au moins cinq élèves auront répondu à l'enquête."
         },
         "324ed892-67b4-45b3-96d1-5e0ea6563e2e": {
           "name": "Test Post-Projet"
@@ -7392,9 +7443,13 @@
           ]
         },
         "d43801bf-efbb-477d-8bdc-4365121344d0": {
+          "description": "**Groupe :** Mettez les élèves par groupes de deux.\n\n**Distribution :** Distribuez un exemplaire du guide d'activité à chaque élève.",
           "tips": [
             null
           ]
+        },
+        "6f6470cd-6589-428d-b3fc-30fbdd935e19": {
+          "description": "**Code Studio :** Dirigez les élèves vers le niveau \" Exemples de pages web \" sur Code Studio."
         },
         "cd25afa1-2718-46ab-870d-64e47ec1e98f": {
           "name": "Explorer des Sites Web",
@@ -7419,7 +7474,7 @@
         },
         "77f5dec3-feb5-4b0d-8ced-9dc5e6baf7e6": {
           "tips": [
-            null
+            "**Utilisation des ressources:** Vous trouverez ci-dessous des recommandations pour l'utilisation des nombreuses ressources présentées aux élèves au cours de la leçon. Attendez que les élèves aient vu toutes ces ressources pour les passer en revue à la fin de la leçon, mais ajoutez-les à la liste et montrez-leur comment les utiliser correctement au fur et à mesure qu'elles apparaissent.\n\n-   \\*\\*Vidéos : \\*\\* Visionnées en classe, mais les élèves peuvent toujours y revenir.\n-   **Onglet Aide et conseils** Cet onglet contient toutes les vidéos et les guides de référence pertinents pour un niveau particulier.\n-   \\*\\*Guides de référence : \\*\\* Contiennent du texte et des diagrammes expliquant le contenu. Ils sont conçus comme des ressources utiles pour les étudiants, et non comme des lectures de classe. Ils constituent une bonne source de révision après l'apprentissage du contenu ou lorsque les élèves sont bloqués dans les niveaux. Vous pouvez décider de les imprimer et de les mettre à la disposition des élèves pendant qu'ils travaillent sur les niveaux.\n-   **Documentation** Un lien vers la documentation de Web Lab est disponible dans le coin supérieur droit du panneau d'instructions. Les élèves peuvent l'utiliser pour se rafraîchir la mémoire sur les balises importantes introduites dans l'unité.\n-   \\*\\*Instructions de niveau : \\*\\* Les instructions peuvent présenter de petits éléments de nouveau contenu. Chaque niveau comporte une section « Faites cela » expliquant ce que les élèves sont censés faire dans ce niveau. Faites comprendre très tôt qu'il est important de lire ces instructions, et pas seulement la section « Faites cela ».\n-   \\*\\*Conseils déroulants pour les niveaux : \\*\\* Les élèves peuvent cliquer sur ces conseils dans les zones d'instruction des leçons.\n-   \\*\\*Outil d'inspection : \\*\\* met en évidence le code correspondant à un élément de page web lorsqu'il est survolé dans la zone de prévisualisation."
           ]
         },
         "87f8c6ae-da83-425a-a565-66ffd284b9c8": {
@@ -7435,11 +7490,15 @@
         },
         "c11f205a-d1a7-40e5-a4fc-e47e3a1698a6": {
           "tips": [
-            null
+            "**Utilisation de l'outil**\nAu fur et à mesure que les élèves explorent le site, assurez-vous qu'ils comprennent comment utiliser l'outil d'inspection, les conseils déroulants sur le côté droit du panneau d'instructions, et l'onglet \"Aide et conseils\", qui leur donnera accès à la vidéo précédente.\n\n\\*\\*Options de synthèse vocale : \\*\\* Le panneau d'instructions comprend deux options qui peuvent favoriser la compréhension des élèves.\n\n-   **Texte-parole** qui lit à haute voix les instructions pour les élèves.\n-   **Microsoft Immersive Reader** qui ouvre un nouveau panneau pour les instructions et offre des commandes pour modifier la taille du texte, le contraste ou la traduction dans une autre langue.\n\n[Cliquez ici pour en savoir plus sur ces options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Explorer le HTML"
         },
+        "eb5a7696-af19-4552-bb1b-d937fa3a4d18": {
+          "description": "**Discussion sur le HTML**\nVous devez réunir les élèves après qu'ils aient passé quelques minutes à parcourir ce niveau. Les questions de discussion énumérées dans le niveau doivent être utilisées dans le cadre d'une structure standard de type Pensez-Discutez-Partagez.\n\n-   Quel texte apparaît à la fois dans le code et dans la page web ?\n-   Comment ce langage communique-t-il des informations supplémentaires sur la manière de représenter le texte ?\n\nL'objectif de la discussion est d'attirer l'attention des élèves sur les caractéristiques du langage HTML qu'ils ont remarquées. Les deux principaux points à retenir (également renforcés dans la vidéo suivante) sont que le HTML utilise un système de balises pour entourer le contenu et indiquer ce qu'il est et comment il doit être affiché."
+        },
         "deb0583d-27f9-418c-84c6-b51da846f056": {
+          "description": "**Vidéo :** Montrer aux élèves la vidéo suivante\n\n**Questions à considérer avec la vidéo :**\n\n-   Pourquoi les balises HTML sont-elles utiles ?\n-   Que fait la balise paragraphe ?",
           "tips": [
             null
           ],
@@ -7500,7 +7559,7 @@
         },
         "f07ea960-3ec3-4d96-86e0-cc073c17b228": {
           "tips": [
-            null
+            "**Facilitation des niveaux de développement des compétences:** Les niveaux de développement des compétences sont conçus pour continuer à enseigner de nouvelles compétences et de nouveaux blocs par le biais de l'exploration, des essais et erreurs et de l'utilisation d'exemples travaillés à partir de code fourni au préalable. Les élèves sont encore en train de se familiariser avec les concepts de la leçon et auront besoin d'un soutien solide tout au long de ces niveaux pour prendre confiance, déboguer leur code et consolider leur compréhension. "
           ],
           "progression_name": "Développement des Compétences"
         },
@@ -7516,19 +7575,19 @@
         },
         "91162ef9-2afa-4ddc-b382-2d5bd220fdfb": {
           "tips": [
-            null
+            "**Facilitation des niveaux d'entraînement:** Les niveaux d'entraînement sont conçus pour que les élèves appliquent leurs connaissances des niveaux précédents et développent une certaine fluidité dans l'utilisation des nouveaux blocs de code pour résoudre des problèmes. Les élèves peuvent choisir les niveaux de pratique qu'ils souhaitent compléter, et il n'est pas nécessaire qu'un élève complète chaque niveau de pratique avant de continuer.\n\nLes élèves ont tendance à s'impliquer davantage et à mieux réagir lorsqu'ils ont un choix authentique sur la façon de poursuivre leur apprentissage. Permettez aux élèves de choisir les niveaux de pratique en fonction de leurs intérêts et de leur niveau de confort, et envisagez de leur donner l'occasion de démontrer et d'expliquer à toute la classe les solutions qu'ils ont trouvées aux niveaux de pratique qu'ils ont choisis.\n\n\\*\\*Pour plus d'informations sur les niveaux de programmation, consultez le [Guide CSD des niveaux de programmation](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter les niveaux de programmation avec les élèves."
           ],
           "progression_name": "S'entraîner"
         },
         "20649a32-e25a-48d4-b642-5c62900f9a2b": {
           "tips": [
-            null
+            "**Facilitation des niveaux d'évaluation:** Les niveaux d'évaluation contiennent une tâche unique qui nécessite l'application des compétences et des concepts du niveau afin de la résoudre. Les élèves doivent effectuer ces niveaux individuellement et vous pouvez utiliser votre jugement pour déterminer le degré d'aide externe dont les élèves doivent bénéficier. Les niveaux d'évaluation contiennent également une rubrique qui peut être utilisée pour l'évaluation formative et une case pour fournir un retour aux élèves - [cliquez ici pour en savoir plus sur l'utilisation des rubriques et le retour aux élèves](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n\\*\\*Approfondissement : \\*\\* Pour plus de conseils sur l'évaluation du travail des élèves, consultez le [Guide de l'évaluation de la CDD](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Évaluation"
         },
         "6c97c37a-209b-4258-84ea-d3dbeecdd625": {
           "tips": [
-            null
+            "**Facilitation des niveaux de défi:** Les niveaux de défi sont conçus comme des extensions des concepts et des compétences que les élèves apprennent tout au long d'une leçon. Les niveaux de défi tendent à se concentrer sur des tâches plus ouvertes à réaliser par les élèves, ou sur des opportunités de combiner plusieurs compétences des leçons précédentes en un seul programme.\n\nLes niveaux de défi n'ont **pas** besoin d'être complétés pour que les élèves atteignent les objectifs fondamentaux d'une leçon. Au contraire, chaque tâche d'un niveau de défi est destinée à compléter et à enrichir les objectifs d'apprentissage d'une leçon, mais n'est pas requise pour les leçons suivantes. Les élèves peuvent tout de même démontrer qu'ils maîtrisent les objectifs d'une leçon sans avoir terminé aucun des niveaux de défi.\n\n\\*\\*En savoir plus : \\*\\* Pour plus de conseils sur la programmation des niveaux, consultez le [Guide CSD de la programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ],
           "progression_name": "Défis"
         },
@@ -7544,7 +7603,7 @@
         },
         "8600f333-fd3e-46ab-81ab-764018ab6813": {
           "tips": [
-            null
+            "\\*\\*Facilitation de mini-projets : \\*\\* Les mini-projets servent de points de contrôle dans le programme et couvrent le sous-ensemble de compétences que les élèves ont vu jusqu'à présent dans l'unité. Ils sont conçus pour être mis en œuvre pendant un ou deux jours et permettent de vérifier dans quelle mesure les élèves ont compris le contenu du cours jusqu'à présent. Vous pouvez décider de prolonger ces projets afin de soutenir les élèves ou de les mettre au défi, ce qui pourrait vous permettre de revenir sur des concepts difficiles ou de soutenir les élèves qui ont manqué des leçons et qui essaient de rattraper leur retard. Cependant, nous vous recommandons de prendre cette décision à l'avance et d'être ferme avec les élèves quant au temps dont ils disposent pour chaque projet. Dans le cas contraire, il est facile que les projets s'étendent sur plusieurs jours et que le travail des élèves dépasse le cadre de ce projet."
           ]
         },
         "347a163d-847a-47cd-aa36-7fe36784752f": {
@@ -7554,8 +7613,11 @@
         },
         "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
+        },
+        "473ecda6-e252-46f2-a88e-ca95cc87be54": {
+          "name": "Rétroaction des pairs"
         },
         "cb9326d3-237f-4e7e-9dcc-659a0699d870": {
           "tips": [
@@ -7587,7 +7649,7 @@
         },
         "d3fdeb5c-af82-4887-8b01-8451380d7778": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "08c20944-96bb-4de7-b140-3eeb37a24f73": {
@@ -7604,7 +7666,7 @@
         },
         "2f24bcd8-4cad-4f5e-8e48-e447e7f11643": {
           "tips": [
-            null
+            "**Normaliser les erreurs et favoriser le débogage:** À mesure que les niveaux de programmation deviennent plus complexes, les élèves peuvent se retrouver avec des bogues dans leur code qu'ils doivent démêler. Si cela se produit fréquemment, cela peut être une expérience démoralisante pour les élèves et peut affecter leur perception de leurs capacités en classe. \n\nPour contrer cela, nous recommandons de normaliser les bogues et les erreurs comme quelque chose qui arrive à tout le monde - cela fait simplement partie du processus. Vous pouvez montrer aux élèves notre [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s), qui montre plusieurs élèves normalisant leurs erreurs et discutant des stratégies de débogage que les élèves peuvent utiliser. En outre, vous pouvez afficher le [Guide du débogage pour les élèves](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) pour que les élèves puissent s'y référer tout au long de l'unité et mettre à leur disposition des [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Développement des Compétences"
         },
@@ -7648,7 +7710,7 @@
         },
         "bc957d4e-fb61-42e3-baf0-98aca6e96cf3": {
           "tips": [
-            null
+            "**Remue-méninges en classe** : avant de vous plonger dans les projets individuels, envisagez de mener un remue-méninges en classe sur ce à quoi pourraient ressembler des exemples de projets répondant à ces critères. Vous pouvez également décider de montrer un ou deux des sites web exemplaires pour aider à inspirer le remue-méninge. En utilisant ces idées, les élèves peuvent trouver plus facilement une idée initiale pour leur projet."
           ]
         },
         "5e40e0e2-c1f1-4cd6-8330-e851d8973119": {
@@ -7663,7 +7725,7 @@
         },
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "93c4939e-a948-4c3a-9420-8f6fae1a712b": {
@@ -7713,7 +7775,7 @@
           "name": "Ajouter des images",
           "tips": [
             null,
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "314d9957-e9b4-45c0-9440-7462d749c5b3": {
@@ -7761,7 +7823,7 @@
         },
         "854d8db1-4ccd-49d1-8904-d7e596f94dd8": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "f458746f-0808-4e96-96d3-aaf56317b668": {
@@ -7815,7 +7877,7 @@
         },
         "523e9cfe-861d-487e-b922-43f06047aa06": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ],
           "progression_name": "Projet de site Web"
         },
@@ -7913,6 +7975,9 @@
             null
           ]
         },
+        "6d498025-ef17-49e7-ad51-0d964c7bd4ce": {
+          "description": "**Affichage :** Regardez la [r video_how_search_works/csd/2022] avec la classe."
+        },
         "d10dc778-4998-41f7-8121-8d199e21f2f7": {
           "tips": [
             null
@@ -7926,7 +7991,7 @@
         "f569c2b7-4743-4c63-99b0-5e9cb150b0f8": {
           "name": "Classes",
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "6b2aedee-56b9-4dfe-a890-ddd497d10554": {
@@ -7966,14 +8031,18 @@
           ]
         },
         "ffda900a-8bdf-48b8-a840-e6372047c0b1": {
+          "description": "\\*\\*Affichez les deux questions suivantes au tableau et demandez aux élèves de trouver les réponses en ligne en utilisant un moteur de recherche de leur choix ou toute autre méthode qu'ils utilisent normalement pour leurs recherches.\n\n1.  Quelle a été la première page Web jamais créée ?\n2.  Quelle est la caractéristique de cette page que nous n'avons pas encore appris à faire ?",
           "tips": [
             null
           ]
         },
+        "6b9eb1e8-4a21-47a5-ba81-b7fe9615bfe2": {
+          "description": "**Partager :** Après avoir donné aux élèves le temps de faire des recherches en ligne, laissez-les partager leurs réponses."
+        },
         "b4c82606-44ed-49c1-9ac1-5a672b1a5c00": {
           "name": "Lab du Web",
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "a5a3020f-a679-4d10-8be2-2e66108f91c8": {
@@ -8013,7 +8082,7 @@
         },
         "3a14abd4-7d6f-4742-be18-b32c2faaf3b4": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "231de8d8-f781-423f-8820-1ec396d59ac1": {
@@ -8031,8 +8100,14 @@
             null
           ]
         },
+        "02053aac-92d9-4d70-a1fa-9e82cbb76686": {
+          "description": "**Distribuez** une copie de la réflexion sur le projet **à chaque élève**.\n\nDans cette réflexion, les élèves doivent réfléchir à la fois au processus et au produit. Ils doivent identifier les aspects de la page elle-même dont ils sont fiers, ainsi que la façon dont le groupe a travaillé ensemble.  Ils décrivent également ce qu'ils ont appris au cours du projet.\n\nEnvoyez les élèves à Code Studio pour qu'ils répondent à une courte enquête de fin d'unité. Bien que leurs réponses soient anonymes, les données agrégées vous seront accessibles dès qu'au moins cinq élèves auront répondu à l'enquête."
+        },
         "7d00d4b5-a67a-49b7-8bfd-e9b76f0895d2": {
           "name": "Test Post-Projet"
+        },
+        "6dcffd20-f9fd-45a2-b864-237a4b513b91": {
+          "name": "Sondage de fin de cours"
         },
         "801caf59-c280-4c39-bc79-d24845df960b": {
           "tips": [
@@ -8241,7 +8316,7 @@
         "e397d996-dc5b-42de-89ef-703458ff0392": {
           "name": "La Mise en Route",
           "tips": [
-            null
+            "**Réflexion en classe:** Avant de vous plonger dans les projets individuels, envisagez de mener une réflexion en classe sur ce à quoi pourraient ressembler des exemples de projets répondant à ces critères. Vous pouvez également décider de montrer une ou deux des applications exemplaires pour aider à inspirer le remue-méninges. En utilisant ces idées, les élèves peuvent trouver plus facilement une idée initiale pour leur projet."
           ]
         },
         "eab2969e-cf85-4bb7-a74c-1c509d246353": {
@@ -8314,7 +8389,7 @@
         },
         "0b0c2586-ba90-460b-a640-d63de42be967": {
           "tips": [
-            null
+            "\\*\\*Personnalisation des règles : Les règles du contrat d'équipe sont suffisamment générales pour convenir à la plupart des classes, mais pour renforcer l'impact de ce contrat, vous devriez envisager de le personnaliser en y incluant les règles de votre classe ou de votre école.\n\n\\*\\*Ressources pour le projet d'équipe : \\*\\* Envisagez de montrer ces deux vidéos à la classe à ce stade de la leçon et de les revoir tout au long de l'unité :\n\n-   [Comment fonctionne le travail d'équipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gérer les désaccords] [1].\n\nSelon vos objectifs pour ce projet, vous pouvez demander aux équipes de remplir le [Guide de l'élève pour la planification d'équipe](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), qui renforce le message de la vidéo."
           ]
         },
         "3173ec10-2796-4f59-bb12-649e5b83e6fb": {
@@ -8428,19 +8503,20 @@
           ]
         },
         "95d0c831-8b6a-4a34-80b1-92befbf89ba0": {
+          "description": "**Code Studio:** Demandez aux élèves de se connecter à leur ordinateur et d'ouvrir Code Studio.",
           "tips": [
-            null
+            "**Facilitation des niveaux de programmation:** Ces niveaux de programmation sont conçus pour continuer à enseigner de nouvelles compétences et de nouveaux blocs par le biais de l'exploration, des essais et erreurs, et de l'utilisation d'exemples travaillés à partir d'un code fourni au préalable. Les élèves sont encore en train de se familiariser avec les concepts de la leçon et auront besoin d'un soutien solide tout au long de ces niveaux pour prendre confiance, déboguer leur code et consolider leur compréhension. \n\nEnvisagez de demander aux élèves de compléter les niveaux par paires en utilisant la **Programmation par paires**, qui permet aux élèves d'utiliser un ordinateur et d'échanger leur rôle de conducteur ou de navigateur. Ce processus est présenté dans [cette vidéo](https://www.youtube.com/watch?v=q7d_JtyCq1A), que vous pouvez montrer à la classe. Vous pouvez demander aux élèves de changer de rôle en fonction d'une minuterie, ou de changer chaque fois qu'ils terminent un niveau."
           ]
         },
         "0244527b-aac8-48c8-8c0f-02f3c490b4be": {
           "tips": [
-            null
+            "\\*\\*Options de synthèse vocale : \\*\\* Le panneau d'instructions comprend deux options qui peuvent aider à la compréhension des élèves.\n\n-   **Synthèse vocale** qui lit à haute voix les instructions pour les élèves.\n-   **Microsoft Immersive Reader** qui ouvre un nouveau panneau pour les instructions et offre des commandes pour modifier la taille du texte, le contraste ou la traduction dans une autre langue.\n\n[Cliquez ici pour en savoir plus sur ces options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Construisez un écran"
         },
         "73c9926c-51c3-4b0f-969c-b4120379004b": {
           "tips": [
-            null
+            "\\*\\*Vous trouverez ci-dessous des recommandations pour l'utilisation des nombreuses ressources présentées aux élèves au cours de la leçon. Vous pourriez envisager de créer un « tableau des ressources » pour garder une trace de ces options et aider les élèves à être autonomes au fur et à mesure qu'ils progressent dans les niveaux. \n\n-   **Vidéos:** Regardées en classe, mais les élèves peuvent toujours y revenir.\n-   \\*\\*Onglet Aide et conseils : \\*\\* Cet onglet contient toutes les vidéos et les guides de référence pertinents pour un niveau particulier.\n-   \\*\\*Guides de référence : \\*\\* Contiennent du texte et des diagrammes expliquant le contenu. Ils sont conçus comme des ressources utiles pour les étudiants, et non comme des lectures de classe. Ils constituent une bonne source de révision après l'apprentissage du contenu ou lorsque les élèves sont bloqués dans les niveaux. Vous pouvez décider de les imprimer et de les mettre à la disposition des élèves pendant qu'ils travaillent sur les niveaux.\n-   **Documentation et exemples :** En passant la souris sur un bloc, vous verrez apparaître une brève description de ce que fait ce bloc. En cliquant sur le lien \"Voir les exemples\", vous ouvrirez la documentation de ce bloc. \n-   \\*\\*Instructions de niveau : \\*\\* Les instructions peuvent introduire de petits éléments de nouveau contenu. Chaque niveau comporte une section « Faites cela » expliquant ce que les élèves sont censés faire dans ce niveau. Faites comprendre très tôt qu'il est important de lire ces instructions, et pas seulement la section « Faites cela »."
           ],
           "progression_name": "Terminer l'écran"
         },
@@ -8478,9 +8554,15 @@
             null
           ]
         },
+        "17a2215c-52ce-485c-a518-493e2d778803": {
+          "description": "**Vidéo:** Montrer aux élèves la vidéo \" Événements dans App Lab \"."
+        },
+        "59bb3ddc-28e7-4257-9245-68d4d48bf3d2": {
+          "description": "**Code Studio :** Demandez aux élèves de se connecter à leur ordinateur et d'ouvrir Code Studio. Si vous avez utilisé la programmation en binôme dans les leçons précédentes, envisagez de demander aux élèves de l'utiliser tout au long de ces niveaux."
+        },
         "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d": {
           "tips": [
-            null
+            "**Normaliser les erreurs et favoriser le débogage:** À mesure que les niveaux de programmation deviennent plus complexes, les élèves peuvent se retrouver avec des bogues dans leur code qu'ils doivent démêler. Si cela se produit fréquemment, cela peut être une expérience démoralisante pour les élèves et peut affecter leur perception de leurs capacités en classe. \n\nPour contrer cela, nous recommandons de normaliser les bogues et les erreurs comme quelque chose qui arrive à tout le monde - cela fait simplement partie du processus. Vous pouvez montrer aux élèves notre [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s), qui montre plusieurs élèves normalisant leurs erreurs et discutant des stratégies de débogage que les élèves peuvent utiliser. En outre, vous pouvez afficher le [Guide du débogage pour les élèves](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) pour que les élèves puissent s'y référer tout au long de l'unité et mettre à leur disposition des [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Ajouter des écrans"
         },
@@ -8608,6 +8690,9 @@
             null
           ]
         },
+        "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b": {
+          "description": "**Code Studio :** Demandez aux élèves de se connecter à Code Studio et de répondre à une courte enquête sur l'unité.  Bien que leurs réponses soient anonymes, les données agrégées vous seront accessibles dès qu'au moins cinq élèves auront répondu à l'enquête."
+        },
         "4650c6de-71ab-47d0-bea2-61ff838fba65": {
           "name": "Test Post-Projet"
         },
@@ -8640,7 +8725,7 @@
         },
         "29b1832f-4872-46da-a270-a41592f155ae": {
           "tips": [
-            null
+            "\\*\\*Options de synthèse vocale : \\*\\* Le panneau d'instructions comprend deux options qui peuvent aider à la compréhension des élèves.\n\n-   **Synthèse vocale** qui lit à haute voix les instructions pour les élèves.\n-   **Microsoft Immersive Reader** qui ouvre un nouveau panneau pour les instructions et offre des commandes pour modifier la taille du texte, le contraste ou la traduction dans une autre langue.\n\n[Cliquez ici pour en savoir plus sur ces options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ]
         },
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
@@ -8652,7 +8737,7 @@
         },
         "8521baa9-94ef-4752-ad13-09bacfd132d6": {
           "tips": [
-            null
+            "**Facilitation des niveaux de développement des compétences:** Les niveaux de développement des compétences sont conçus pour continuer à enseigner de nouvelles compétences et de nouveaux blocs par le biais de l'exploration, des essais et erreurs et de l'utilisation d'exemples travaillés à partir de code fourni au préalable. Les élèves sont encore en train de se familiariser avec les concepts de la leçon et auront besoin d'un soutien solide tout au long de ces niveaux pour prendre confiance, déboguer leur code et consolider leur compréhension. \n\nEnvisagez de demander aux élèves de compléter les niveaux de développement des compétences par paires en utilisant la **Programmation par paires**, qui permet aux élèves d'utiliser un ordinateur et d'échanger leur rôle de conducteur ou de navigateur. Ce processus est présenté dans [cette vidéo](https://www.youtube.com/watch?v=q7d_JtyCq1A), que vous pouvez montrer à la classe. Vous pouvez demander aux élèves de changer de rôle en fonction d'un minuteur, ou de changer chaque fois qu'ils terminent un niveau.\n\n**En savoir plus:** Pour plus de conseils sur la programmation des niveaux, consultez le [Guide CSD de la programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter les niveaux de programmation avec les élèves."
           ],
           "progression_name": "Développement des Compétences"
         },
@@ -8664,31 +8749,31 @@
         },
         "010e456f-614d-48fe-a5bc-05ba548140ba": {
           "tips": [
-            null
+            "\\*\\*Vous trouverez ci-dessous des recommandations pour l'utilisation des nombreuses ressources présentées aux élèves au cours de la leçon. Vous pourriez envisager de créer un « tableau des ressources » pour garder une trace de ces options et aider les élèves à être autonomes au fur et à mesure qu'ils progressent dans les niveaux. \n\n-   **Vidéos:** Regardées en classe, mais les élèves peuvent toujours y revenir.\n-   \\*\\*Onglet Aide et conseils : \\*\\* Cet onglet contient toutes les vidéos et les guides de référence pertinents pour un niveau particulier.\n-   \\*\\*Guides de référence : \\*\\* Contiennent du texte et des diagrammes expliquant le contenu. Ils sont conçus comme des ressources utiles pour les étudiants, et non comme des lectures de classe. Ils constituent une bonne source de révision après l'apprentissage du contenu ou lorsque les élèves sont bloqués dans les niveaux. Vous pouvez décider de les imprimer et de les mettre à la disposition des élèves pendant qu'ils travaillent sur les niveaux.\n-   **Documentation et exemples :** En passant la souris sur un bloc, vous verrez apparaître une brève description de ce que fait ce bloc. En cliquant sur le lien \"Voir les exemples\", vous ouvrirez la documentation de ce bloc. \n-   \\*\\*Instructions de niveau : \\*\\* Les instructions peuvent introduire de petits éléments de nouveau contenu. Chaque niveau comporte une section « Faites cela » expliquant ce que les élèves sont censés faire dans ce niveau. Faites comprendre très tôt qu'il est important de lire ces instructions, et pas seulement la section « Faites cela »."
           ],
           "progression_name": "Développement des Compétences"
         },
         "e8a29551-e19b-47bd-9263-f1c1a08575ff": {
           "tips": [
-            null
+            "**Facilitation des niveaux d'entraînement:** Les niveaux d'entraînement sont conçus pour que les élèves appliquent leurs connaissances des niveaux précédents et développent une certaine fluidité dans l'utilisation des nouveaux blocs de code pour résoudre des problèmes. Les élèves peuvent choisir les niveaux de pratique qu'ils souhaitent compléter, et il n'est pas nécessaire qu'un élève complète chaque niveau de pratique avant de continuer.\n\nLes élèves ont tendance à s'impliquer davantage et à mieux réagir lorsqu'ils ont un choix authentique sur la façon de poursuivre leur apprentissage. Permettez aux élèves de choisir les niveaux de pratique en fonction de leurs intérêts et de leur niveau de confort, et envisagez de leur donner l'occasion de démontrer et d'expliquer à toute la classe les solutions qu'ils ont trouvées aux niveaux de pratique qu'ils ont choisis.\n\n\\*\\*Pour plus d'informations sur les niveaux de programmation, consultez le [Guide CSD des niveaux de programmation](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter les niveaux de programmation avec les élèves."
           ],
           "progression_name": "S'entraîner"
         },
         "287099bd-5275-4c84-88bc-f7c5d93e99c8": {
           "tips": [
-            null
+            "**Facilitation des niveaux d'évaluation:** Les niveaux d'évaluation contiennent une tâche unique qui nécessite l'application des compétences et des concepts du niveau afin de la résoudre. Les élèves doivent effectuer ces niveaux individuellement et vous pouvez utiliser votre jugement pour déterminer le degré d'aide externe dont les élèves doivent bénéficier. Les niveaux d'évaluation contiennent également une rubrique qui peut être utilisée pour l'évaluation formative et une case pour fournir un retour aux élèves - [cliquez ici pour en savoir plus sur l'utilisation des rubriques et le retour aux élèves](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n\\*\\*Approfondissement : \\*\\* Pour plus de conseils sur l'évaluation du travail des élèves, consultez le [Guide de l'évaluation de la CDD](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Évaluation"
         },
         "6b3acaa2-c6c8-40b4-ad1c-f764207be9a2": {
           "tips": [
-            null
+            "**Facilitation des niveaux de défi:** Les niveaux de défi sont conçus comme des extensions des concepts et des compétences que les élèves apprennent tout au long d'une leçon. Les niveaux de défi tendent à se concentrer sur des tâches plus ouvertes à réaliser par les élèves, ou sur des opportunités de combiner plusieurs compétences des leçons précédentes en un seul programme.\n\nLes niveaux de défi n'ont **pas** besoin d'être complétés pour que les élèves atteignent les objectifs fondamentaux d'une leçon. Au contraire, chaque tâche d'un niveau de défi est destinée à compléter et à enrichir les objectifs d'apprentissage d'une leçon, mais n'est pas requise pour les leçons suivantes. Les élèves peuvent tout de même démontrer qu'ils maîtrisent les objectifs d'une leçon sans avoir terminé aucun des niveaux de défi.\n\n\\*\\*En savoir plus : \\*\\* Pour plus de conseils sur la programmation des niveaux, consultez le [Guide CSD de la programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ],
           "progression_name": "Défi"
         },
         "9ae0e497-0968-45f0-aa40-82f5d1d01712": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "c77e40a7-1e58-48b3-a333-c458c9983ef8": {
@@ -8700,7 +8785,7 @@
         },
         "a0549135-da45-4397-be95-1aad863b37d2": {
           "tips": [
-            null
+            "**Normaliser les erreurs et favoriser le débogage:** À mesure que les niveaux de programmation deviennent plus complexes, les élèves peuvent se retrouver avec des bogues dans leur code qu'ils doivent démêler. Si cela se produit fréquemment, cela peut être une expérience démoralisante pour les élèves et peut affecter leur perception de leurs capacités en classe. \n\nPour contrer cela, nous recommandons de normaliser les bogues et les erreurs comme quelque chose qui arrive à tout le monde - cela fait simplement partie du processus. Vous pouvez montrer aux élèves notre [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s), qui montre plusieurs élèves normalisant leurs erreurs et discutant des stratégies de débogage que les élèves peuvent utiliser. En outre, vous pouvez afficher le [Guide du débogage pour les élèves](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) pour que les élèves puissent s'y référer tout au long de l'unité et mettre à leur disposition des [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Développement des Compétences"
         },
@@ -8718,7 +8803,7 @@
         },
         "d95e3c69-5b66-4c2c-a137-0fa48ecf0dfc": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "0570736b-7259-4187-8305-3dabf7ee65a8": {
@@ -8749,7 +8834,7 @@
         },
         "94238b4f-60fa-4645-8cd3-13120815edef": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "e9d45b03-0bff-41bc-9727-8e21f8f0256a": {
@@ -8812,7 +8897,7 @@
         },
         "1ae47ba4-9015-40e9-93fd-605c972cdf5d": {
           "tips": [
-            null
+            "\\*\\*Facilitation de mini-projets : \\*\\* Les mini-projets servent de points de contrôle dans le programme et couvrent le sous-ensemble de compétences que les élèves ont vu jusqu'à présent dans l'unité. Ils sont conçus pour être mis en œuvre pendant un ou deux jours et permettent de vérifier dans quelle mesure les élèves ont compris le contenu du cours jusqu'à présent. Vous pouvez décider de prolonger ces projets afin de soutenir les élèves ou de les mettre au défi, ce qui pourrait vous permettre de revenir sur des concepts difficiles ou de soutenir les élèves qui ont manqué des leçons et qui essaient de rattraper leur retard. Cependant, nous vous recommandons de prendre cette décision à l'avance et d'être ferme avec les élèves quant au temps dont ils disposent pour chaque projet. Dans le cas contraire, il est facile que les projets s'étendent sur plusieurs jours et que le travail des élèves dépasse le cadre de ce projet."
           ]
         },
         "68996d30-3dce-47d9-86e1-678c8164023b": {
@@ -8842,7 +8927,7 @@
         },
         "4045ce4e-232d-49f8-b831-12073f3d9495": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "39019e91-9bb5-46f0-80c8-1b28ede42c68": {
@@ -8869,7 +8954,7 @@
         },
         "57cb955d-f937-4b8c-990b-0ceeac0bd2a3": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "47cf28d0-a32f-46bb-89b5-c3488628a1fd": {
@@ -8898,7 +8983,7 @@
         },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "a43fd1ca-e808-415f-8b73-ecc0caf330e2": {
@@ -8965,6 +9050,9 @@
             null
           ]
         },
+        "1370ac6b-ceff-421e-b3b7-1b710bfcfb48": {
+          "description": "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
+        },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "Conclusion"
         },
@@ -8986,7 +9074,7 @@
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c": {
@@ -9018,7 +9106,7 @@
         },
         "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "8fbee503-556a-40cd-be06-2fe300b09ef5": {
@@ -9045,7 +9133,7 @@
         "b29096d1-be92-43d1-b40d-48dc44779fcb": {
           "name": "Créer de la Musique",
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66": {
@@ -9087,7 +9175,7 @@
         },
         "48fd15be-8f76-4d8e-9fa3-90bfc4b890eb": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "5c0e38f9-bfaf-4555-8051-d867140232fc": {
@@ -9139,7 +9227,7 @@
         },
         "e5f4b521-ba78-4410-9629-f6a72ecb4114": {
           "tips": [
-            null
+            "\\*\\*Facilitation de mini-projets : \\*\\* Les mini-projets servent de points de contrôle dans le programme et couvrent le sous-ensemble de compétences que les élèves ont vu jusqu'à présent dans l'unité. Ils sont conçus pour être mis en œuvre pendant un ou deux jours et permettent de vérifier dans quelle mesure les élèves ont compris le contenu du cours jusqu'à présent. Vous pouvez décider de prolonger ces projets afin de soutenir les élèves ou de les mettre au défi, ce qui pourrait vous permettre de revenir sur des concepts difficiles ou de soutenir les élèves qui ont manqué des leçons et qui essaient de rattraper leur retard. Cependant, nous vous recommandons de prendre cette décision à l'avance et d'être ferme avec les élèves quant au temps dont ils disposent pour chaque projet. Dans le cas contraire, il est facile que les projets s'étendent sur plusieurs jours et que le travail des élèves dépasse le cadre de ce projet."
           ]
         },
         "13377864-9faa-4893-b0c2-262903a7710e": {
@@ -9154,7 +9242,7 @@
         },
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "04f9d7e1-c590-4d22-ab74-069209762be4": {
@@ -9162,7 +9250,7 @@
         },
         "c960fb55-e814-4e24-a9d4-07f5875c76f9": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "f7118f4f-2fc6-430c-a803-09df0254c7dc": {
@@ -9188,7 +9276,7 @@
         },
         "9cc97556-4746-41d2-aacd-4520dec3be96": {
           "tips": [
-            null
+            "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
         },
         "5ef6b3a1-45cf-420c-9ba9-db06070441df": {
@@ -9218,7 +9306,7 @@
         },
         "5be532a8-3a04-478b-8840-962b2c499894": {
           "tips": [
-            null
+            "\\*\\*Stratégies de débogage : \\*\\* Au fur et à mesure que les élèves conçoivent et mettent en œuvre leurs propres idées de projet, ils peuvent se retrouver avec de nouveaux bogues qu'ils doivent démêler et vous pouvez vous retrouver face à un code complètement inconnu lorsque les élèves cherchent de l'aide pour résoudre leurs erreurs. Pour faciliter l'expérience de débogage, envisagez les stratégies suivantes :\n\n-   Consultez le [Guide du débogage pour les enseignants](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) pour trouver des questions et des stratégies courantes permettant d'aider les élèves à déboguer leur code.\n-   Demandez aux élèves de suivre les étapes du [Guide de l'élève sur le débogage](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) et d'utiliser les [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) comme étape initiale du processus de débogage. Cela permet aux élèves de préparer et de communiquer leur problème avant de demander de l'aide.\n-   Si les élèves ne l'ont pas encore vue, envisagez de montrer la [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s) à la classe pour renforcer les meilleures pratiques de débogage.\n\n**Aller plus loin** Envisagez de fournir aux élèves un objet auquel ils peuvent parler dans le cadre du processus de débogage. Cette méthode est parfois connue sous le nom de \" débogage du canard \" - vous pouvez en apprendre davantage sur le site Web <https://rubberduckdebugging.com/>."
           ]
         },
         "7388bea7-d580-4ea6-bbc2-3e43b0686080": {
@@ -9406,7 +9494,7 @@
         },
         "4b1c5fe5-6544-41f1-8b12-60761bb08d95": {
           "tips": [
-            null
+            "\\*\\*Vous trouverez ci-dessous des recommandations pour l'utilisation des nombreuses ressources présentées aux élèves au cours de la leçon. Vous pourriez envisager de créer un « tableau des ressources » pour garder une trace de ces options et aider les élèves à être autonomes au fur et à mesure qu'ils progressent dans les niveaux. \n\n-   **Vidéos:** Regardées en classe, mais les élèves peuvent toujours y revenir.\n-   \\*\\*Onglet Aide et conseils : \\*\\* Cet onglet contient toutes les vidéos et les guides de référence pertinents pour un niveau particulier.\n-   \\*\\*Guides de référence : \\*\\* Contiennent du texte et des diagrammes expliquant le contenu. Ils sont conçus comme des ressources utiles pour les étudiants, et non comme des lectures de classe. Ils constituent une bonne source de révision après l'apprentissage du contenu ou lorsque les élèves sont bloqués dans les niveaux. Vous pouvez décider de les imprimer et de les mettre à la disposition des élèves pendant qu'ils travaillent sur les niveaux.\n-   **Documentation et exemples :** En passant la souris sur un bloc, vous verrez apparaître une brève description de ce que fait ce bloc. En cliquant sur le lien \"Voir les exemples\", vous ouvrirez la documentation de ce bloc. \n-   \\*\\*Instructions de niveau : \\*\\* Les instructions peuvent introduire de petits éléments de nouveau contenu. Chaque niveau comporte une section « Faites cela » expliquant ce que les élèves sont censés faire dans ce niveau. Faites comprendre très tôt qu'il est important de lire ces instructions, et pas seulement la section « Faites cela »."
           ]
         },
         "68e6f1dd-9b52-42c1-bc94-eaeb006124ce": {
@@ -9511,7 +9599,7 @@
         },
         "6d9af5ce-913c-4c16-8a89-081c23545139": {
           "tips": [
-            null
+            "**Normaliser les erreurs et favoriser le débogage:** À mesure que les niveaux de programmation deviennent plus complexes, les élèves peuvent se retrouver avec des bogues dans leur code qu'ils doivent démêler. Si cela se produit fréquemment, cela peut être une expérience démoralisante pour les élèves et peut affecter leur perception de leurs capacités en classe. \n\nPour contrer cela, nous recommandons de normaliser les bogues et les erreurs comme quelque chose qui arrive à tout le monde - cela fait simplement partie du processus. Vous pouvez montrer aux élèves notre [Vidéo de débogage](https://www.youtube.com/watch?v=auv10y-dN4s), qui montre plusieurs élèves normalisant leurs erreurs et discutant des stratégies de débogage que les élèves peuvent utiliser. En outre, vous pouvez afficher le [Guide du débogage pour les élèves](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) pour que les élèves puissent s'y référer tout au long de l'unité et mettre à leur disposition des [quarts de feuille de rapport de bogue](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ]
         },
         "9fdc77c9-e72c-4fbf-b6a8-bb80f4ad5116": {
@@ -11597,7 +11685,7 @@
           "progression_name": "Jeu libre"
         },
         "7ab4168b-2e87-4c12-a76a-8e98f20c7260": {
-          "progression_name": "Mini-projet : Création d'autocollants "
+          "progression_name": "Mini-projet : Design à base d'autocollants "
         },
         "7922a128-215c-4076-9a6a-b0c22a626d92": {
           "name": "Jeu libre",
@@ -15699,7 +15787,7 @@
           "progression_name": "Prévision"
         },
         "adc69f16-8ed9-4265-b368-4a8e99c56aa5": {
-          "progression_name": "Vidéo : Blocks \"Répéter\" avec BB-8"
+          "progression_name": "Vidéo : Les blocs « répéter » avec BB-8"
         },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
           "progression_name": "Développement des Compétences"
@@ -16409,7 +16497,7 @@
           "progression_name": "Développement des Compétences"
         },
         "77b85e56-dc72-45d6-8d17-cd2073e74560": {
-          "progression_name": "Vidéo : Boucles imbriquées avec l'abeille "
+          "progression_name": "Vidéo : Les boucles imbriquées avec l'abeille "
         },
         "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
           "progression_name": "Prévision"
@@ -16474,7 +16562,7 @@
           "description": "Regroupez toute la classe et demandez à deux volontaires de marcher tout droit dans une certaine direction dans la salle de classe. S'ils voient une chaise déplacée, ils doivent l'enjamber. S'ils atteignent un mur, ils doivent s'asseoir.\n\nUne fois que tous les élèves seront assis, demandez comment vous programmeriez un robot pour qu'il réponde à un mur ou à une chaise. Rappelez aux élèves que vous ne pouvez pas simplement dire « Enjambe la chaise » à moins que vous ne sachiez qu'il y a une chaise, et vous ne saurez pas toujours qu'il y a une chaise. Il peut être utile de traduire la tâche en instructions telles que :\n\n-   tant qu'il y a un chemin à parcourir\n    -   avancer\n    -   s'il y a une chaise, l'enjamber\n-   s'asseoir\n\nDites aux élèves qu'ils utiliseront des conditions pendant cette leçon. Donnez la définition de :\n\n-   **Condition** : une déclaration qu'un programme vérifie pour voir si elle est vraie ou fausse. Si vrai, une action est entreprise. Sinon, l'action est ignorée.\n-   **Conditions** : instructions qui ne s'exécutent que sous certaines conditions.\n\nOuvrez une discussion pour voir quand vous pourrez utiliser une condition dans votre code. "
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
+          "name": "Anticiper l'avenir avec Minecraft",
           "description": "#### Puzzles en ligne\n\nLes élèves vont se régaler avec cette leçon. Il est probable que la plupart de vos élèves aient entendu parler de _Minecraft_, mais faites une brève introduction pour ceux qui connaitraient pas.\n\n_Minecraft_ est un jeu de cubes. Vous pouvez incarner Alex ou Steve pendant que vous travaillez dans des labyrinthes. Vous devrez éviter la lave, ramasser des objets et explorer un monde composé de cubes de choses.\n\nMontrez l'une des énigmes à la classe (nous recommandons la 11.) Une fois que toutes les questions ont été traitées, faites passer les élèves aux ordinateurs et laissez-les commencer la programmation en binôme. ",
           "progression_name": "Développement des Compétences"
         },
@@ -16504,7 +16592,7 @@
           "description": "Ces énigmes peuvent engendrer certaines questions, alors demandez aux élèves de travailler en binômes ou d'appliquer la règle \"Demandez à trois personnes avant de me demander à moi\" (Demandez-leur de demander de l'aide à trois autres camarades avant d'aller voir l'enseignant.) . Cela suscitera des discussions et ils comprendront mieux."
         },
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
-          "progression_name": "  Instructions « si »"
+          "progression_name": "Vidéo : Formules conditionnelles : Les indications « Si »"
         },
         "f1f109b3-a855-40c1-b062-66f433dee5e8": {
           "progression_name": "Prévision"
@@ -16513,7 +16601,7 @@
           "progression_name": "Développement des Compétences"
         },
         "e50811f9-8d07-4737-841d-ae3ebf402649": {
-          "progression_name": "Video: Instructions conditionnelles « Si » et « Si/Sinon »"
+          "progression_name": "Vidéo : Formules conditionnelles : Indications « Si » et « Si/Sinon »"
         },
         "3f6678b5-e568-42f2-a629-56defb6374fe": {
           "progression_name": "Développement des Compétences"
@@ -16553,7 +16641,7 @@
           "progression_name": "Développement des Compétences"
         },
         "5b71ce88-2e79-4478-888a-796bed9dacb9": {
-          "progression_name": " Les Boucles Tant Que avec la Fermière"
+          "progression_name": " Vidéo : Les Boucles Tant Que avec la Fermière"
         },
         "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
           "progression_name": "Prévision"
@@ -17006,7 +17094,7 @@
           "progression_name": "Prévision"
         },
         "d7c1115e-9c85-40fc-a0f8-10f6c715a292": {
-          "progression_name": "Vidéo : Blocks \"Répéter\" avec BB-8"
+          "progression_name": "Vidéo : Les blocs « répéter » avec BB-8"
         },
         "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
           "progression_name": "Développement des Compétences"
@@ -17049,7 +17137,7 @@
         },
         "8661dd7f-0898-4902-89a3-9695c52e77c4": {
           "description": "#### Mini-projet : Conception d'autocollants",
-          "progression_name": "Mini-projet : Création d'autocollants "
+          "progression_name": "Mini-projet : Design à base d'autocollants "
         },
         "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
           "progression_name": "Jeu libre"
@@ -17076,7 +17164,7 @@
           "progression_name": "S'entraîner"
         },
         "e7851e33-7e57-47f2-96c2-bfb177d83303": {
-          "progression_name": "Vidéo : Boucles imbriquées avec l'abeille "
+          "progression_name": "Vidéo : Les boucles imbriquées avec l'abeille "
         },
         "6d0c65ec-45f6-4665-a5a0-89e06fa22ca1": {
           "progression_name": "Prévision"
@@ -17121,7 +17209,7 @@
           "description": "Regroupez toute la classe et demandez à deux volontaires de marcher tout droit dans une certaine direction dans la salle de classe. S'ils voient une chaise déplacée, ils doivent l'enjamber. S'ils atteignent un mur, ils doivent s'asseoir.\n\nUne fois que tous les élèves seront assis, demandez comment vous programmeriez un robot pour qu'il réponde à un mur ou à une chaise. Rappelez aux élèves que vous ne pouvez pas simplement dire « Enjambe la chaise » à moins que vous ne sachiez qu'il y a une chaise, et vous ne saurez pas toujours qu'il y a une chaise. Il peut être utile de traduire la tâche en instructions telles que :\n\n-   tant qu'il y a un chemin à parcourir\n    -   avancer\n    -   s'il y a une chaise, l'enjamber\n-   s'asseoir\n\nDites aux élèves qu'ils utiliseront des conditions pendant cette leçon. Donnez la définition de :\n\n-   **Condition** : une déclaration qu'un programme vérifie pour voir si elle est vraie ou fausse. Si vrai, une action est entreprise. Sinon, l'action est ignorée.\n-   **Conditions** : instructions qui ne s'exécutent que sous certaines conditions.\n\nOuvrez une discussion pour voir quand vous pourrez utiliser une condition dans votre code. "
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
+          "name": "Anticiper l'avenir avec Minecraft",
           "description": "#### Puzzles en ligne\n\nLes élèves vont se régaler avec cette leçon. Il est probable que la plupart de vos élèves aient entendu parler de _Minecraft_, mais faites une brève introduction pour ceux qui connaitraient pas.\n\n_Minecraft_ est un jeu de cubes. Vous pouvez incarner Alex ou Steve pendant que vous travaillez dans des labyrinthes. Vous devrez éviter la lave, ramasser des objets et explorer un monde composé de cubes de choses.\n\nMontrez l'une des énigmes à la classe (nous recommandons la 11.) Une fois que toutes les questions ont été traitées, faites passer les élèves aux ordinateurs et laissez-les commencer la programmation en binôme. ",
           "progression_name": "Développement des Compétences"
         },
@@ -17147,7 +17235,7 @@
           "description": "Ces énigmes peuvent engendrer certaines questions, alors demandez aux élèves de travailler en binômes ou d'appliquer la règle \"Demandez à trois personnes avant de me demander à moi\" (Demandez-leur de demander de l'aide à trois autres camarades avant d'aller voir l'enseignant.) . Cela suscitera des discussions et ils comprendront mieux."
         },
         "c622f540-96a1-4448-9a80-18850f23abdd": {
-          "progression_name": "  Instructions « si »"
+          "progression_name": "Vidéo : Formules conditionnelles : Les indications « Si »"
         },
         "d8adccb1-7876-4c08-9ece-7fb8c7f9873f": {
           "progression_name": "Prévision"
@@ -17156,7 +17244,7 @@
           "progression_name": "Développement des Compétences"
         },
         "de68c7d7-06ea-4aca-b533-5e0644760022": {
-          "progression_name": "Video: Instructions conditionnelles « Si » et « Si/Sinon »"
+          "progression_name": "Vidéo : Formules conditionnelles : Indications « Si » et « Si/Sinon »"
         },
         "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
           "progression_name": "Développement des Compétences"
@@ -17192,7 +17280,7 @@
           "progression_name": "Développement des Compétences"
         },
         "2094fb7f-31a7-4639-be69-0baf39649007": {
-          "progression_name": " Les Boucles Tant Que avec la Fermière"
+          "progression_name": " Vidéo : Les Boucles Tant Que avec la Fermière"
         },
         "3bcc5818-64c5-43b1-b0c3-44535e842497": {
           "progression_name": "Prévision"
@@ -17229,19 +17317,19 @@
           "progression_name": "Développement des Compétences"
         },
         "662c896c-c495-45ba-9fdd-2b0f1f575804": {
-          "progression_name": "Vidéo : Minecraft : Voyage aquatique Repeat until (répéter jusque)"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique – Répéter Jusqu'à"
         },
         "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
           "progression_name": "Développement des Compétences"
         },
         "95865f7b-83c4-47e1-af6f-af1800541434": {
-          "progression_name": "Minecraft : Minecraft :Conditions Voyage Aquatique "
+          "progression_name": "Minecraft : Minecraft : Voyage Aquatique – Formules Conditionnelles"
         },
         "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
           "progression_name": "Développement des Compétences"
         },
         "8b0a5467-42bc-4347-a75e-e9047751ce56": {
-          "progression_name": "Vidéo : Minecraft : Félicitations Voyage Aquatique"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Félicitations"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Jeu libre"
@@ -18190,19 +18278,19 @@
           "progression_name": "Développement des Compétences"
         },
         "f51b34f8-e3c0-47f3-a4e6-b387df09189d": {
-          "progression_name": "Vidéo : Minecraft : Voyage aquatique Repeat until (répéter jusque)"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique – Répéter Jusqu'à"
         },
         "735452ce-870a-4728-8b1b-00a77c5bffbb": {
           "progression_name": "Développement des Compétences"
         },
         "b20028da-bf4a-4238-a59f-a02ebdcf8488": {
-          "progression_name": "Minecraft : Minecraft :Conditions Voyage Aquatique "
+          "progression_name": "Minecraft : Minecraft : Voyage Aquatique – Formules Conditionnelles"
         },
         "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
           "progression_name": "Développement des Compétences"
         },
         "df9a0219-fbb3-4a3a-9895-431aea978687": {
-          "progression_name": "Vidéo : Minecraft : Félicitations Voyage Aquatique"
+          "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Félicitations"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Jeu libre"
@@ -18224,7 +18312,7 @@
           "progression_name": "Développement des Compétences"
         },
         "a63ac211-7ad4-4c28-af4a-cfa489ec8a77": {
-          "progression_name": " Les Boucles Tant Que avec la Fermière"
+          "progression_name": " Vidéo : Les Boucles Tant Que avec la Fermière"
         },
         "22826fb5-5cdf-4918-970d-680d9ba82f88": {
           "progression_name": "Prévision"
@@ -22524,7 +22612,7 @@
           "progression_name": "Jeu libre"
         },
         "ec290ff1-322f-443a-a148-83f7be2da31c": {
-          "progression_name": "Mini-projet : Création d'autocollants "
+          "progression_name": "Mini-projet : Design à base d'autocollants "
         },
         "78cd35d9-e60c-4add-b041-78ad1104a479": {
           "name": "Jeu libre",
