@@ -319,6 +319,7 @@ eu:
     no_primary_course: Probatu Code Studioko ikastaro bat
     choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
     print_certificate: Inprimatu ziurtagiria
+  certificate_hour_of_code: Kode Ordua
   share:
     title: Ezagutu Code Studio
     description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu
