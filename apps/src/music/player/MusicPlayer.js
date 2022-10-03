@@ -1,4 +1,4 @@
-import {GetCurrentAudioTime, PlaySound, StopSound} from './sound';
+import {GetCurrentAudioTime, InitSound, PlaySound, StopSound} from './sound';
 
 // Default to 4/4 time
 const BEATS_PER_MEASURE = 4;
@@ -11,16 +11,38 @@ export default class MusicPlayer {
     this.soundEvents = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
-    this.groupPath = 'all';
+    this.soundList = [];
+    this.library = {};
+    this.groupPrefix = 'all';
+    this.isInitialized = false;
   }
 
-  setGroupPath(path) {
-    this.groupPath = path;
+  initialize(library) {
+    this.library = library;
+    this.soundList = library.groups
+      .map(group => {
+        return group.folders?.map(folder => {
+          return folder.sounds.map(sound => {
+            return group.path + '/' + folder.path + '/' + sound.src;
+          });
+        });
+      })
+      .flat(2);
+    InitSound(this.soundList);
+    this.isInitialized = true;
   }
 
-  playSoundAtMeasure(id, measure) {
-    if (!measure) {
-      console.log('invalid measure ' + measure);
+  playSoundAtMeasureById(id, measure) {
+    if (!this.isInitialized) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
+    if (
+      !id ||
+      this.soundList.indexOf(`${this.groupPrefix}/${id}`) === -1 ||
+      !measure
+    ) {
+      console.log(`Invalid input. id: ${id} measure: ${measure}`);
       return;
     }
 
@@ -37,7 +59,28 @@ export default class MusicPlayer {
     }
   }
 
+  playSoundAtMeasureByName(name, measure) {
+    this.playSoundAtMeasureById(this.getIdForSoundName(name), measure);
+  }
+
+  getIdForSoundName(name) {
+    for (let group of this.library.groups) {
+      for (let folder of group.folders) {
+        const sound = folder.sounds.find(sound => sound.name === name);
+        if (sound) {
+          return `${folder.path}/${sound.src}`;
+        }
+      }
+    }
+
+    return null;
+  }
+
   playSoundImmediately(id) {
+    if (!this.isInitialized) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
     this.stopSong();
 
     this.playSoundEvent({type: 'play', id, when: 0}, true);
@@ -104,7 +147,7 @@ export default class MusicPlayer {
       return;
     }
     if (sound.type === 'play') {
-      PlaySound(this.groupPath + '/' + sound.id, GROUP_TAG, eventStart);
+      PlaySound(this.groupPrefix + '/' + sound.id, GROUP_TAG, eventStart);
     }
   }
 
