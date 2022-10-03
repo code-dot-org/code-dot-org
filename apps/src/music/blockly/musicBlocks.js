@@ -1,4 +1,4 @@
-import {playSound, playSoundNextMeasure} from './blocks/samples';
+import {playSample, playSound, sample} from './blocks/samples';
 import {forLoop, loopFromTo} from './blocks/control';
 import {arithmetic, number, random, round} from './blocks/math';
 import {variablesGet, variablesSet} from './blocks/variables';
@@ -9,7 +9,8 @@ const blockList = [
   whenRun,
   triggeredAt,
   playSound,
-  playSoundNextMeasure,
+  playSample,
+  sample,
   loopFromTo,
   forLoop,
   number,
