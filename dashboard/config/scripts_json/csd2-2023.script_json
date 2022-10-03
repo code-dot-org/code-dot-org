@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2022-09-30 03:29:33 UTC",
+    "serialized_at": "2022-10-01 00:04:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -142,11 +142,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "1. **Understand and explain reasons that it is difficult to control who sees information published online.**\r\n\r\n\tIn page 2 the Social Sleuth activity guide, look at students' explanations of how information was accidentally shared.\r\n\r\n2. **Understand and justify guidelines for safely publishing information online.**\r\n\r\n\tReview students' checklists in the lesson wrap up.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can you make sure that your private information stays private?**\r\n\r\nThis lesson takes a step back from students’ work developing web pages to help them articulate what personal information they choose to share digitally and with whom. It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r\n\r\nStudents look at several social media pages to determine what sorts of information people are sharing about themselves or one another. Last, students reflect on what guidelines they think are appropriate for posting information online.\r\n\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realize that they don’t have control over information released online.",
+        "overview": "**Question of the Day: How can you make sure that your private information stays private?**\n\nIn this lesson, students pause their own on developing web pages so they can develop an understanding of how personal information is surfaced on the internet, sometimes intentionally and sometimes unintentionally. Students look at several fictitious social media pages to see what they can learn about different people purely from publicly available information. They then reflect on what guidelines are appropriate for posting their own information online, especially as they prepare to create more personalized websites.",
         "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "purpose": "Now that students are beginning to share information publicly, it's crucial that they are instilled with an understanding of the potential consequences of sharing personal information online.\n\nIn this lesson students look through several example social media profiles for fake students. Individually these pages contain relatively innocuous information, but when students cross reference information across multiple profiles they see how a detailed picture (or [v digital_footprint/csd2/2023]) can start to form. Through this activity students see that even information that they may not see as private on its own can share more information than intended when combined with other small details.",
         "student_overview": "**Question of the Day: How can you make sure that your private information stays private?**\n\nIn this lesson, you will think about the personal information that you choose to share digitally through various websites, apps, and social media. \n\n"
       },
       "seeding_key": {
@@ -2165,7 +2163,7 @@
       "key": "77f6c421-a274-4a17-852e-4ed11e2bd99e",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** When might someone use a list?\n\n  - *Think about times when you have made lists ... Why did you make the list? What was the list for? What type of stuff was in your list(s)?*\n\nKeep track of the different types of lists students identify.\n\n**Discussion Goal:** There are many possible answers. Examples could include a **bulleted** list used to make a grocery list and a **numbered** list used to list your favorite movies or the steps in a recipe.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the first example of an HTML list and the result. Ask the students *\"What do you notice? What do you wonder?\"* \n\n**Discussion Goals:** Student responses to the first prompt, *What do you notice,* may vary but could include: \n\n* *There are two new tags - `<ul>` and `<li>`*\n* *The result is a bulleted list*\n* *The closing `<ul>` tag comes after all of the `<li>` tags*\n\nStudent responses to the second prompt, *What do you wonder,* may also vary but could include: \n\n* What do \"ul\" and \"li\" mean?\n* Why are there multiple `<li>` elements?\n* Why does the `<ul>` tag not seem to do anything? \n\n*It is important to note that this prompt is purposefully open-ended which could result in unexpected student responses, which is okay.*\n\n**Do This:** Move on to the second example before answering any questions. Allow their *What do you wonder* questions to linger. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the second example of an HTML list and the result. Again, ask the students *What do you notice? What do you wonder?*\n\n**Discussion Goals:** Student responses for the first prompt, *What do you notice*, may again vary but could include:\n\n* The `<li>` tag is being used again\n* `<ol>` is being used instead of `<ul>`\n* This time a numbered list was made\n* There is no content next to the starting `<ol>` tag, similar to the `<ul>` start tag in the first example \n  * This last observation is important to draw out of your students. You may consider sharing with students that it is something *you* noticed if there are no students who volunteer that information. \n\nStudent responses to the second prompt, \"What do you wonder\", for the second example may again vary but could include: \n\n* What does \"ol\" mean?\n* Why did this example make a numbered list?\n* Why are both examples using the `<li>` tag?\n* Why does making a list involve two different HTML tags? \n\nUse student responses from both rounds of *What do you notice? What do you wonder* to guide your discussion, making sure to cover the following key points:\n\n* `<ul>` stands for **U**nordered **L**list and is used to start a bulleted list.\n* `<ol>` stands for **O**rdered **L**ist and is used to start a numbered list.\n* `<li>` stands for **L**ist **I**tem and is the tag they will put around each item in their list. \n* They can have as many list items as they want. \n* To make an HTML list, they need both tags - the tag indicating the type of list they want and the tag indicating a list item.\n* The structure of the HTML list element is unlike other HTML elements they have used so far since there is no content that goes right next to the start `<ul>` or `<ol>` tag.\n* Once they have finished listing their items using the `<li>` tag, that is when they will finally use the closing `</ul>` or `</ol>` tag.\n* If they want their list to have a title, they need to use one of the heading tags they just learned about. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** When might someone use a list?\n\n  - *Think about times when you have made lists ... Why did you make the list? What was the list for? What type of stuff was in your list(s)?*\n\nKeep track of the different types of lists students identify.\n\n**Discussion Goal:** There are many possible answers. Examples could include a **bulleted** list used to make a grocery list and a **numbered** list used to list your favorite movies or the steps in a recipe.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the first example of an HTML list and the result. Ask the students *\"What do you notice? What do you wonder?\"* \n\n**Discussion Goals:** Student responses to the first prompt, *What do you notice,* may vary but could include: \n\n* *There are two new tags - `<ul>` and `<li>`*\n* *The result is a bulleted list*\n* *The closing `<ul>` tag comes after all of the `<li>` tags*\n\nStudent responses to the second prompt, *What do you wonder,* may also vary but could include: \n\n* What do \"ul\" and \"li\" mean?\n* Why are there multiple `<li>` elements?\n* Why does the `<ul>` tag not seem to do anything? \n\n*It is important to note that this prompt is purposefully open-ended which could result in unexpected student responses, which is okay.*\n\n**Do This:** Move on to the second example before answering any questions. Allow their *What do you wonder* questions to linger. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the second example of an HTML list and the result. Again, ask the students *What do you notice? What do you wonder?*\n\n**Discussion Goals:** Student responses for the first prompt, *What do you notice*, may again vary but could include:\n\n* The `<li>` tag is being used again\n* `<ol>` is being used instead of `<ul>`\n* This time a numbered list was made\n* There is no content next to the starting `<ol>` tag, similar to the `<ul>` start tag in the first example \n  * This last observation is important to draw out of your students. You may consider sharing with students that it is something *you* noticed if there are no students who volunteer that information. \n\nStudent responses to the second prompt, *What do you wonder*, for the second example may again vary but could include: \n\n* What does \"ol\" mean?\n* Why did this example make a numbered list?\n* Why are both examples using the `<li>` tag?\n* Why does making a list involve two different HTML tags? \n\n**Discussion Goal:** Use student responses from both rounds of *What do you notice? What do you wonder* to guide your discussion, making sure to cover the following key points:\n\n* To make an HTML list, they need both tags - the tag indicating the type of list they want and the tag indicating a list item.\n* The structure of the HTML list element is unlike other HTML elements they have used so far since there is no content that goes right next to the start `<ul>` or `<ol>` tag.\n* Once they have finished listing their items using the `<li>` tag, that is when they will finally use the closing `</ul>` or `</ol>` tag.\n* If they want their list to have a title, they need to use one of the heading tags they just learned about. ",
         "name": "Web Lab: Lists",
         "progression_name": "Skill Building"
       },
@@ -2496,8 +2494,14 @@
       "key": "2a7a8e31-e066-4cf4-a3e5-661cbb045251",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Ask the students to consider what websites they have given personal information to. In small groups, ask students to come up with a list of websites that they have accounts on (even if they use sign-in with Facebook, Google, or similar) and what kind of information they think these websites might have about them.",
-        "name": "Your Digital Footprint\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think of 2-3 websites you have accounts on. What kind of information could someone learn about you by looking on these websites?_\n\nHave students silently brainstorm or journal, then share with a partner, and finally share as a full class. \n\n**Discussion Goal:** This discussion is not about coming up with a comprehensive list of personal information students may have shared with websites, nor is it to frighten them out of sharing information. The goal is for students to start thinking more critically about when and where they share information about themselves. Based on their responses, create a list of all of the websites that may have their personal information.",
+        "name": "Your Digital Footprint\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Extending the Discussion:** If students are having trouble thinking of information, you may want to follow up with some more specific prompts:\n- What information do you know you've given to a website (eg. your email address)\n- What information might you have unknowingly given to a website (eg. a picture with your home address)\n- What information might other people have shared about you without your knowledge or permission (eg. tagging you on Facebook)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2a7a8e31-e066-4cf4-a3e5-661cbb045251",
@@ -2505,27 +2509,10 @@
       }
     },
     {
-      "key": "3ea709a0-1923-4155-aa97-7a5613d23165",
+      "key": "0fd58aa9-99a0-471a-ae7e-3eeebc94c966",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students silently brainstorm or journal, then share with a partner, and finally share as a full class. Create a comprehensive list of all of the websites that may have their personal information.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion is not about coming up with a comprehensive list of personal information students may have shared with websites, nor is it to frighten them out of sharing information. The goal is for students to start thinking more critically about when and where they share information about themselves.\r\n\r\nThis will prime them for the main activity of the day, looking at specific pieces of information and audiences to consider when their privacy matters, and whether they are unknowingly giving up their privacy.\r\n\r\nIf students are having trouble thinking of information, you may want to follow up with some more specific prompts: \r\n\r\n* What information do you know you've given to a website (eg. your email address)\r\n* What information might you have unknowingly given to a website (eg. a picture with your home address)\r\n* What information might other people have shared about you without your knowledge or permission (eg. tagging you on Facebook)\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3ea709a0-1923-4155-aa97-7a5613d23165",
-        "lesson_activity.key": "77aa2bdf-6c61-4563-85e9-f5424988c1bf"
-      }
-    },
-    {
-      "key": "0fd58aa9-99a0-471a-ae7e-3eeebc94c966",
-      "position": 3,
-      "properties": {
-        "description": "There's a lot of information that we put on the internet, whether we mean to do it or not.  While we might be okay with some of that information being online, there are other things that we would like to keep private. All of the information about us that can be found on the Internet is known as our digital footprint. We want to be careful about what information is included in that digital footprint.",
+        "description": "There's a lot of information that we put on the internet, whether we mean to do it or not. As we learn more about creating our own websites and start developing our own personal projects, you may find yourself wanting to include some of your own personal information. That’s why today we’re going to pause on making websites and instead focus on how we may want to share personal information online and making sure our digital footprint doesn’t contain information that could put us in danger or make us unsafe.",
         "remarks": true
       },
       "seeding_key": {
@@ -2535,9 +2522,9 @@
     },
     {
       "key": "b794c1a6-605d-4446-a85d-cb5df35bdc69",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "**Key Vocabulary:**\r\n\r\n* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.\r\n\r\n\r\n**Question of the Day: How can you make sure that your private information stays private?**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day: How can you make sure that your private information stays private?**"
       },
       "seeding_key": {
         "activity_section.key": "b794c1a6-605d-4446-a85d-cb5df35bdc69",
@@ -2548,8 +2535,9 @@
       "key": "3d303d98-938e-4b9a-b7bc-57a699989ed4",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Explore how small pieces of personal information, spread across multiple sites on the Internet, can produce a fairly detailed picture of a person, known as a [v digital_footprint/csd2/2023].\n\n**Group:** This activity can be done individually, but is better when students are in groups of 2-3\n\n**Distribute:** Activity guide to \"Social Sleuth\"\n\n**Transition:** Send students to Code Studio.",
-        "name": "Investigating Social Profiles"
+        "description": "**Group:** Decide if you would like to have students complete this activity individually or in groups of 2-3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Social Sleuth activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the overview of the activity guide. Have students read the Sleuthing Online section out loud to get an overview of the activity they are about to complete.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.\n\n",
+        "name": "Investigating Social Profiles",
+        "progression_name": "Social Sleuth"
       },
       "seeding_key": {
         "activity_section.key": "3d303d98-938e-4b9a-b7bc-57a699989ed4",
@@ -2560,7 +2548,14 @@
       "key": "35267ad7-e429-4623-9464-dae68860e165",
       "position": 2,
       "properties": {
-        "progression_name": "Social Sleuth"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students look through all of the provided social media pages on Code Studio. The pages represent three unique individuals, each of whom has an account on three social media platforms. Then have students choose two users they want to investigate.",
+        "progression_name": "Social Sleuth",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Short on Time?** Students are asked to choose two users from the available profiles, but if you are short on time, you can ask students to complete just one of the footprints."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "35267ad7-e429-4623-9464-dae68860e165",
@@ -2571,7 +2566,7 @@
       "key": "13f13537-5a2f-4fb4-bf76-fb1604f5f5e7",
       "position": 3,
       "properties": {
-        "description": "[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Step 1:** Students look through all of the provided social media pages on Code Studio. The pages represent several unique individuals, each of whom has an account on three social media platforms. They are distributed as follows (do not share this with students):",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students explore the different social media pages and record the information they find in the table on their activity guide.\n\n[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Circulate:**  Students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another).\n\nMake sure students have dedicated time before the end of class to answer the questions at the end of the activity guide, even if they don’t finish completely sleuthing on the social media websites.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2588,7 +2583,7 @@
       "key": "f1f84c62-4ba4-40e6-acfc-fce679d58999",
       "position": 4,
       "properties": {
-        "description": "**Step 2:** Once they've looked through the pages, students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share some of their answers to the last questions on the activity guide\n- What was one piece of information about either of your users that they probably did not want to share?  How was it accidentally shared?\n- Which of the two users do you think was more successful in protecting their privacy?  What made them successful?\n\n**Discussion Goal:** Student answers will vary, and it’s okay to not have a class consensus. Instead, focus on the reasoning and justification students use when explaining their answers. These thoughts will segue into the wrap-up activity where students consider a “checklist” of what should or shouldn’t be shared online."
       },
       "seeding_key": {
         "activity_section.key": "f1f84c62-4ba4-40e6-acfc-fce679d58999",
@@ -2596,42 +2591,8 @@
       }
     },
     {
-      "key": "32c41f7a-88b5-4e2a-b940-984417c022ae",
-      "position": 5,
-      "properties": {
-        "description": "**Share:** Have the class share the digital footprints that they developed through the activity."
-      },
-      "seeding_key": {
-        "activity_section.key": "32c41f7a-88b5-4e2a-b940-984417c022ae",
-        "lesson_activity.key": "7774be52-e1a2-4de2-8af9-77c01ba0ecf6"
-      }
-    },
-    {
-      "key": "35b5125b-ef42-4f97-835f-3a789569187e",
-      "position": 6,
-      "properties": {
-        "description": "**Discuss:**\n\n- Which information was most difficult to find?\n- Which details were innocuous on their own, but revealed private information when combined with other details?\n- How does this make you think differently about what you choose to post online?"
-      },
-      "seeding_key": {
-        "activity_section.key": "35b5125b-ef42-4f97-835f-3a789569187e",
-        "lesson_activity.key": "7774be52-e1a2-4de2-8af9-77c01ba0ecf6"
-      }
-    },
-    {
-      "key": "e733ae07-ca2f-443f-b1b9-d6e1e4e4cd57",
-      "position": 1,
-      "properties": {
-        "description": "**Question of the Day: How can you make sure that your private information stays private?**",
-        "name": "Shaping Your Digital Footprint\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "e733ae07-ca2f-443f-b1b9-d6e1e4e4cd57",
-        "lesson_activity.key": "9e61a025-9b3a-48fb-a818-e38cc5c159ea"
-      }
-    },
-    {
       "key": "e609552c-8300-476a-a13b-e7c684dd7a40",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "The activity today focused on how social media websites contribute to a digital footprint. As we prepare to publish our first web pages, you'll need to think about how those contribute to your digital footprint.",
         "remarks": true
@@ -2643,15 +2604,9 @@
     },
     {
       "key": "61f300f5-2a05-4178-963b-4df832f32470",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "**Prompt:** With your elbow partner, come up with a checklist that you can use to determine what should, and shouldn't, be posted online.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Goal:** Use this discussion to create a lasting checklist of best practices for when publishing information online. Possible checks include:\r\n\r\n* Could someone identify me with this information?: for example name, address, phone number, etc.\r\n* Do I want everyone to see this?: Don't publish anything you don't want to possibly be published to the world.\r\n* Do I want this to be permanent?: You lose control of information once it's published and it could be around for your entire life.\r\n\r\nStudents' lists may be different but should cover these principles and additional ones they saw in today's lesson.\r\n\r\nEnsure that students are using the lesson's key vocabulary:\r\n\r\n**digital footprint** - the collected information about an individual across multiple websites on the Internet\r\n\r\n\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _With your elbow partner, come up with a checklist that you can use to determine what should, and shouldn't, be posted online._\n\n**Discussion Goal:** Use this discussion to create a lasting checklist of best practices for when publishing information online. Possible checks include:\n\n* Could someone identify me with this information?: for example name, address, phone number, etc.\n* Do I want everyone to see this?: Don't publish anything you don't want to possibly be published to the world.\n* Do I want this to be permanent?: You lose control of information once it's published and it could be around for your entire life.\n\nStudents' lists may be different but should cover these principles and additional ones they saw in today's lesson."
       },
       "seeding_key": {
         "activity_section.key": "61f300f5-2a05-4178-963b-4df832f32470",
@@ -2660,9 +2615,9 @@
     },
     {
       "key": "254b0afa-8736-4d2e-840a-45f17b4143ce",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "**Share:** Allow groups to share out their checklists, using the responses to develop a class-wide web publishing checklist. Consider making a poster of your class-wide checklist that you can refer back to throughout the unit."
+        "description": "**(Optional) Share:** Allow groups to share out their checklists, using the responses to develop a class-wide web publishing checklist. Consider making a poster of your class-wide checklist that you can refer back to throughout the unit.\n\n**Question of the Day: How can you make sure that your private information stays private?**"
       },
       "seeding_key": {
         "activity_section.key": "254b0afa-8736-4d2e-840a-45f17b4143ce",
@@ -2778,7 +2733,7 @@
       "key": "b479d1c6-1f8e-4e48-9188-2bdcae7746c4",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with the video:**\n- How is the style of a web page different from the structure?\n- Why might you want your web page to have a certain style?\n\n**Discussion Goal:** Key Vocabulary:\n\n**CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n\n**CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide that displays the different between web page content, structure and style (i.e. the \"Content-Structure-Style\" paradigm).\n\n**Discussion Goal:** Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.",
+        "description": "**Questions to Consider with the video:**\n- How is the style of a web page different from the structure?\n- Why might you want your web page to have a certain style?\n\n**Discussion Goal:** Key Vocabulary:\n\n**CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n\n**CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n",
         "progression_name": "Video: Intro to CSS - Part 1",
         "tips": [
           {
@@ -2796,7 +2751,7 @@
       "key": "509c697c-454a-41cc-a168-3da5a2e38b21",
       "position": 5,
       "properties": {
-        "description": "**Circulate:** Support students as they continue through the first set of skill building levels."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide that displays the  \"Content-Structure-Style\" paradigm.\n\n**Discussion Goal:** Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.\n\n**Circulate:** Support students as they continue through the first set of skill building levels."
       },
       "seeding_key": {
         "activity_section.key": "509c697c-454a-41cc-a168-3da5a2e38b21",
@@ -2824,7 +2779,7 @@
       "key": "caee3464-814a-48e1-82d6-bfaa3f62d73c",
       "position": 7,
       "properties": {
-        "description": "**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Watch and discuss the second CSS video as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
         "progression_name": "Video: Intro to CSS - Part 2"
       },
       "seeding_key": {
@@ -2893,7 +2848,7 @@
       "key": "5b7fa2ec-6ddd-4eaa-a388-8f96ffce030b",
       "position": 12,
       "properties": {
-        "description": "**Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5892,6 +5847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5939,6 +5897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6286,9 +6247,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Social Sleuth_2018_2019_pilot_2023"
-        ],
         "progression": "Social Sleuth"
       },
       "bonus": false,
@@ -6299,7 +6257,7 @@
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
-        "activity_section.key": "35267ad7-e429-4623-9464-dae68860e165"
+        "activity_section.key": "3d303d98-938e-4b9a-b7bc-57a699989ed4"
       },
       "level_keys": [
         "Social Sleuth_2018_2019_pilot_2023"
@@ -6311,6 +6269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample CSS text_2023"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -8302,7 +8263,7 @@
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
-        "activity_section.key": "35267ad7-e429-4623-9464-dae68860e165"
+        "activity_section.key": "3d303d98-938e-4b9a-b7bc-57a699989ed4"
       }
     },
     {
@@ -9248,7 +9209,7 @@
     },
     {
       "name": "Digital Footprint",
-      "url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1erPjRFCS7_RvMafbmIqv2_NWV0Fd6ndmMZloqoj_njg/template/preview",
       "key": "digital_footprint",
       "properties": {
         "audience": "Teacher",
