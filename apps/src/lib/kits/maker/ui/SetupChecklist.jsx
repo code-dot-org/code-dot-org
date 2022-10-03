@@ -169,13 +169,8 @@ export default class SetupChecklist extends Component {
    * Helper to be used on second/subsequent attempts at detecting board usability.
    */
   redetect() {
-    if (
-      this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED ||
-      ((isChromeOS() || isChrome()) &&
-        this.state[STATUS_APP_INSTALLED] !== Status.SUCCEEDED)
-    ) {
-      // If the Chrome app was not installed last time we checked, but has been
-      // installed since, we'll probably need a full page reload to pick it up.
+    if (this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED) {
+      // Full page reload
       utils.reload();
     } else {
       // Otherwise we should be able to redetect without a page reload.

@@ -252,9 +252,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       setTimeout(() => {
         // Close the serialport, cleaning it up properly so we can open it again
         // on the next run.
-        // Note: This doesn't seem to be necessary when using browser-serialport
-        // and the Chrome App connector, but it is required for native
-        // node serialport in the Code.org Maker App.
+        // Note: This is required for native node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
         }
