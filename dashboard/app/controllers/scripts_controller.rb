@@ -8,7 +8,7 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource
+  authorize_resource class: 'Unit'
 
   use_reader_connection_for_route(:show)
 
