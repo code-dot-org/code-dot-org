@@ -43,6 +43,12 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit, params: -> {@test_params}, user: :levelbuilder, response: :success
 
+  # only levelbuilder can edit_all
+  test_user_gets_response_for :edit_all, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :edit_all, user: :student, response: :forbidden
+  test_user_gets_response_for :edit_all, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit_all, user: :levelbuilder, response: :success
+
   test 'creating a new data doc writes serialization and redirects to show page with key in URL' do
     sign_in @levelbuilder
     new_key = 'doc_key'
@@ -83,5 +89,29 @@ class DataDocsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     get :edit, params: {key: 'unknown_key'}
     assert_response :not_found
+  end
+
+  test 'data is passed to edit_all page' do
+    sign_in @levelbuilder
+
+    get :edit_all
+    assert_response :ok
+
+    show_data = css_select('script[data-datadocs]').first.attribute('data-datadocs').to_s
+    assert_equal DataDoc.all.order(:name).map(&:serialize).to_json, show_data
+  end
+
+  test 'data doc is deleted through destroy route' do
+    sign_in @levelbuilder
+    data_doc_to_delete = create :data_doc, key: 'doc_to_delete'
+
+    post :destroy, params: {
+      key: data_doc_to_delete.key
+    }
+    assert_response :no_content
+
+    assert_raise ActiveRecord::RecordNotFound do
+      data_doc_to_delete.reload
+    end
   end
 end
