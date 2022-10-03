@@ -47,7 +47,7 @@ MONITORING_GROUPS = {
   'product' => ['Product'],
   'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
-  'student-learning' => ['*Labs', 'CSA Engineering']
+  'student-learning' => ['Student Learning']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
