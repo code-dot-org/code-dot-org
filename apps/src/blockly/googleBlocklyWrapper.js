@@ -169,11 +169,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoFieldDropdown
   );
 
-  // Overrides applied directly to blockly
+  // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
-  // Overrides applied only to our wrapper
+  // Additions for when our wrapper is accessed in /apps code
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldDropdown = CdoFieldDropdown;
 
