@@ -23,7 +23,7 @@
 }
 
 #save_image {
-  margin: 3px 0 5px 0;
+  margin: 3px 10px 5px 0;
 }
 
 #actual_size_label {
@@ -82,6 +82,10 @@
   width: 140px;
 }
 
+#image_controls {
+  margin-top: 10px;
+}
+
 #image_controls td {
   white-space: nowrap;
 }
@@ -96,6 +100,7 @@
 
 input[type=radio] {
   margin: 0 3px;
+  vertical-align: baseline;
 }
 
 input[type=number] {
@@ -106,8 +111,14 @@ input[type=range] {
   width: 100%;
 }
 
+.label_group {
+  text-align: left;
+}
+
 .label_group label {
+  border: 1px solid $bootstrap_border_color;
   display: inline-block;
+  padding: 5px 10px;
 }
 
 #file_format {
