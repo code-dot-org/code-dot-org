@@ -78,7 +78,8 @@ class MusicView extends React.Component {
       startPlayingAudioTime: null,
       currentAudioElapsedTime: 0,
       updateNumber: 0,
-      timelineAtTop: !!getRandomIntInclusive(0, 1)
+      timelineAtTop: !!getRandomIntInclusive(0, 1),
+      showInstructions: false
     };
   }
 
@@ -382,6 +383,9 @@ class MusicView extends React.Component {
     if (event.key === 't') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
+    if (event.key === 'i') {
+      this.setState({showInstructions: !this.state.showInstructions});
+    }
     Triggers.map(trigger => {
       if (event.key === trigger.keyboardKey) {
         this.playTrigger(trigger.id);
@@ -431,6 +435,26 @@ class MusicView extends React.Component {
       events: this.player.getSoundEvents()
     };
 
+    const blocklyAreaHeight = this.state.showInstructions
+      ? 'calc(100% - 250px)'
+      : 'calc(100% - 150px)';
+
+    const blocklyAreaTop = this.state.showInstructions
+      ? this.state.timelineAtTop
+        ? 250
+        : 100
+      : this.state.timelineAtTop
+      ? 150
+      : 0;
+
+    const timelinePosition = this.state.showInstructions
+      ? this.state.timelineAtTop
+        ? {top: 100}
+        : {bottom: 0}
+      : this.state.timelineAtTop
+      ? {top: 0}
+      : {bottom: 0};
+
     return (
       <div
         id="music-lab-container"
@@ -446,14 +470,36 @@ class MusicView extends React.Component {
           overflow: 'hidden'
         }}
       >
+        {this.state.showInstructions && (
+          <div
+            id="instructions-area"
+            style={{
+              color: 'white',
+              height: 90,
+              backgroundColor: 'black',
+              borderRadius: 4,
+              padding: 0,
+              boxSizing: 'border-box',
+              overflow: 'scroll'
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        )}
         <div
           id="blockly-area"
           style={{
             float: 'left',
             width: '100%',
-            height: 'calc(100% - 150px)',
+            height: blocklyAreaHeight,
             position: 'absolute',
-            top: this.state.timelineAtTop ? 150 : 0
+            top: blocklyAreaTop
           }}
         >
           <div id="blockly-div" />
@@ -472,7 +518,7 @@ class MusicView extends React.Component {
             width: '100%',
             boxSizing: 'border-box',
             position: 'absolute',
-            ...(this.state.timelineAtTop ? {top: 0} : {bottom: 0})
+            ...timelinePosition
           }}
         >
           <Timeline
