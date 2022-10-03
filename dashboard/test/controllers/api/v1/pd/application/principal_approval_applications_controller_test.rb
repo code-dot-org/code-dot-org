@@ -111,7 +111,7 @@ module Api::V1::Pd::Application
         principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
       actual_principal_fields = teacher_application.reload.sanitize_form_data_hash.select do |k, _|
-        expected_principal_fields.keys.include? k
+        expected_principal_fields.key?(k)
       end
 
       assert_equal expected_principal_fields, actual_principal_fields

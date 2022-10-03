@@ -368,7 +368,7 @@
   homepage_slot_text_link_shop: "T 恤、帽子等更多"
   homepage_slot_text_link_thebadguys: "壞蛋聯盟編程"
   homepage_slot_text_link_administrators: "將 CS 帶入校園"
-  homepage_gallery_header: "已經建立了超過 %{project_count} 萬個專案"
+  homepage_gallery_header: "已創建超過%{project_count}百萬個Code.org項目"
   homepage_header_donors: "Code.org 感謝所有支持者"
   homepage_donors_seall: "檢視全部"
   homepage_donors_donate: "贊助"
