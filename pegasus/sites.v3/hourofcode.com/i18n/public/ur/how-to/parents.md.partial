@@ -6,7 +6,7 @@ nav: how_to_nav
 
 # اپنے بچے کے ساتھ ایک گھنٹے کا کوڈ کیسے مکمل کرنا
 
-اپنے بچے کو شاید پہلی بار کمپیوٹر سائنس سے متعارف کرانے کے لئے، آور آف کوڈ کی کوشش آسان اور تفریحی طریقہ ہے. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+اپنے بچے کو شاید پہلی بار کمپیوٹر سائنس سے متعارف کرانے کے لئے، آور آف کوڈ کی کوشش آسان اور تفریحی طریقہ ہے. کمپیوٹر سائنس نہ صرف مطالعہ کے تمام شعبوں کی بنیاد ہے، بلکہ [حالیہ مطالعات سے پتہ چلتا ہے کہ](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): جو بچے کمپیوٹر سائنس پڑھتے ہیں وہ دوسرے مضامین میں بہتر کارکردگی کا مظاہرہ کرتے ہیں، مسائل حل کرنے میں مہارت رکھتے ہیں اور <font color="00adbc">ان کا کالج میں داخلے کا امکان 17٪ زیادہ ہوتا ہے</font>.
 
 اپ اس عالمی ایونٹ میں دنیا بھر کے لاکھوں طلباء میں شامل ہوسکتے ہیں. ہم بچوں کو سیکھنے، دقیانوسی تصورات کو توڑنے اور بچوں کو نئی دلچسپی دریافت کرنے میں مدد کر سکتے ہیں. بہترین بات یہ کہ آپ کے پاس آور آف کوڈ کا گھر میں انتظام کرنے کے لئے سب کچھ موجود ہے!
 
@@ -24,9 +24,9 @@ You can try the Hour of Code with a computer, a tablet, a smartphone, or complet
 
 ## 1) سرگرمیاں اور سبق تلاش کر لیں.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
-There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. ہم تاکید کرتے ہیں کہ آپ وقت سے پہلے اپنے کچھ آپشنز پر نظر ڈالیں تاکہ آپ اپنے بچوں ایسی مشقوں کی جانب راہنمائی کریں جو ان کے لئے پر لطف ہوں گے.
+اگر آپ انٹرنیٹ سے جڑے کمپیوٹر پر کام کر رہے ہیں، تو آپ کو[ آور آف کوڈ](https://hourofcode.com/us/learn)کی ان گنت سرگرمیاں دستیاب ہیں. ہم تاکید کرتے ہیں کہ آپ وقت سے پہلے اپنے کچھ آپشنز پر نظر ڈالیں تاکہ آپ اپنے بچوں ایسی مشقوں کی جانب راہنمائی کریں جو ان کے لئے پر لطف ہوں گے.
 
 ہماری تمام سرگرمیاں تفریح اور تخلیقی صلاحیتوں کو مسائل حل کرنے کی مہارت اور تنقیدی سوچ سے مربوط کرتیں ہیں، لیکن یہاں طلباء کے کچھ پسندیدہ انتخاب ہیں:
 
@@ -38,9 +38,9 @@ There are countless [Hour of Code activities](https://hourofcode.com/us/learn) a
 
 If you’ll be using limited or no technology, you can filter [Hour of Code activities](https://hourofcode.com/us/learn) by selecting “No computers or devices” in the *Classroom technology* section.
 
-[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
+[![](/images/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-You can also check out these [short videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) for more ideas on how to facilitate an unplugged activity at home!
+گھر میں کسی کمپیوٹر کے بغیر سرگرمی کا انتظام کرنے کے لئے آپ یہ [ مختصر ویڈیو](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) بھی دیکھ سکتے ہیں.
 
 ## 2) قبل از وقت تیاری کریں
 
@@ -52,15 +52,15 @@ You can also check out these [short videos](https://www.youtube.com/playlist?lis
 
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). جوڑوں میں پروگرامنگ سے بچوں میں ساتھ کام کرنے کی حوصلہ افزائی ہوتی ہے. شراکت کے دوران وا مسائل حل کرنے میں ایک دوسرے کی مدد کرتے ہیں. وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔.
+اگر آپ صرف ایک ڈیوائس استعمال کر رہے ہیں، یا محض اپنے آور کوڈ کو مزید انٹرایکٹو بنانا چاہتے ہیں، [ تو دو دو اکھٹے طلباء بٹھائیں](https://www.youtube.com/watch?v=vgkahOzFH2Q). جوڑوں میں پروگرامنگ سے بچوں میں ساتھ کام کرنے کی حوصلہ افزائی ہوتی ہے. شراکت کے دوران وا مسائل حل کرنے میں ایک دوسرے کی مدد کرتے ہیں. وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔.
 
 <h3>بچوں کو پرجوش کرو! </h3>
 
 This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
 
-- Show them an [inspirational video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) that features one of their favorite role models
-- Inspire them with a video on one of the [many careers](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) that computer science skills can lead to
-- [Order some swag](https://store.code.org/)! آپ ٹی شرٹس، اسٹیکرز، یا عارضی ٹیٹو کا بھی انتخاب کر سکتے ہیں. انہیں پرجوش کرنے کے لئے اسے فوری طور پر دے دیں، یا انہیں آور آف کوڈ کے اختتام پر بطور خاص انعام نوازیں. 
+- انہیں ایک [متاثر کن ویڈیو دکھائیں](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ)جس میں ان کا پسندیدہ رول ماڈل ہو
+- انہیں کیریئر کے بہت سے راہوں میں سے ایک پر ویڈیو [ دکھا کر ان کی حوصلہ افزائی کریں](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)کہ کمپیوٹر سائنس کی مہارت کے نتیجے میں اپنائی جا سکتی ہیں
+- [کچھ فخریہ چیزوں کا آرڈر دیں](https://store.code.org/)! آپ ٹی شرٹس، اسٹیکرز، یا عارضی ٹیٹو کا بھی انتخاب کر سکتے ہیں. انہیں پرجوش کرنے کے لئے اسے فوری طور پر دے دیں، یا انہیں آور آف کوڈ کے اختتام پر بطور خاص انعام نوازیں.
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
@@ -75,7 +75,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 <h3>Have young women at home?</h3>
 
-<a href="https://code.org/girls">یہ یہاں ہماری چند سفارشات ہیں</a>جو کمپیوٹر سائنس میں دلچسپی بڑھانے میں مدد کر سکتے ہیں. **Pro-tip**: You can start just by telling them they’d be great at it!
+<a href="https://code.org/girls">یہ یہاں ہماری چند سفارشات ہیں</a>جو کمپیوٹر سائنس میں دلچسپی بڑھانے میں مدد کر سکتے ہیں. **پیشہ ورانہ مشورہ**: آپ صرف یہ کہہ کر آغاز کر سکتے ہیں کہ وہ بہت اچھا کر پائیں گے!
 
 <h3>ایک ساتھ مل کر مسائل حل کریں</h3>
 
@@ -87,9 +87,9 @@ Computer science is all about learning how to “debug” situations that didn�
 
 The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
 
-- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
-- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity
+- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise.
+- اپنے گھر میں آور آف کوڈ کی تصاویر اور ویڈیوز سوشل میڈیا پر شیئر کریں. [#HourOfCode](https://twitter.com/hashtag/hourofcode) استعمال کریں اور [@codeorg](https://twitter.com/codeorg) تاکہ ہم بھی آپ کی کامیابی کو ایک جھلکی کے طور پر دکھا سکیں!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
