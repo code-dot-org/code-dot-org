@@ -33,6 +33,7 @@ export default class Controls extends React.Component {
 
     return (
       <div
+        id="controls"
         style={{
           width: 100,
           backgroundColor: '#222',
