@@ -18,6 +18,9 @@ import {
 describe('maker/portScanning.js', function() {
   describe(`findPortWithViableDevice()`, () => {
     it('resolves with a port if a viable device is found', () => {
+      window.SerialPort = {
+        list: () => CIRCUIT_PLAYGROUND_PORTS
+      };
       return findPortWithViableDevice().then(port => {
         expect(port.comName).to.equal('COM5');
         expect(port.productId).to.equal('0x8011');
@@ -25,6 +28,9 @@ describe('maker/portScanning.js', function() {
     });
 
     it('rejects if no viable device is found', done => {
+      window.SerialPort = {
+        list: () => OTHER_BAD_SERIALPORTS
+      };
       findPortWithViableDevice()
         .then(port => {
           done(
@@ -48,6 +54,9 @@ describe('maker/portScanning.js', function() {
     });
 
     it(`allows the Circuit Playground Express`, () => {
+      window.SerialPort = {
+        list: () => CIRCUIT_PLAYGROUND_EXPRESS_PORTS
+      };
       return findPortWithViableDevice().then(port => {
         expect(port.comName).to.equal('COM5');
         expect(port.productId).to.equal('8018');
@@ -55,6 +64,9 @@ describe('maker/portScanning.js', function() {
     });
 
     it(`allows the micro:bit`, () => {
+      window.SerialPort = {
+        list: () => MICROBIT_PORTS
+      };
       return findPortWithViableDevice().then(port => {
         expect(port.comName).to.equal('COM3');
         expect(port.productId).to.equal('0204');
