@@ -14,3 +14,5 @@
     %ul
       - if Rails.application.config.levelbuilder_mode
         %li= link_to 'Edit', "#{@base_url.to_s}/#{@reference_guide.key}/edit"
+      - else
+        %li= link_to 'View on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", "#{@base_url.to_s}/#{@reference_guide.key}").to_s
