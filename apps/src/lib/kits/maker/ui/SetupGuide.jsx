@@ -241,6 +241,10 @@ function Description(props) {
   );
 }
 
+Description.propTypes = {
+  microbit: PropTypes.bool.isRequired
+};
+
 class WindowsDownloads extends React.Component {
   state = {installer: null, error: null};
 
@@ -479,7 +483,3 @@ const latestInstaller = _.memoize(latestYamlUrl => {
       version: datum.version
     }));
 });
-
-Description.propTypes = {
-  microbit: PropTypes.bool.isRequired
-};
