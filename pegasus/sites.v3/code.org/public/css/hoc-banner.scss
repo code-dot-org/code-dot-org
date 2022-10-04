@@ -62,10 +62,10 @@
 
 section.banner {
   text-align: center;
-  color: $black;
+  color: $darkest_gray;
 
   h1, h2 {
-    color: $black;
+    color: $darkest_gray;
     margin: 0;
   }
 
@@ -105,7 +105,7 @@ section.banner {
   }
 
   a {
-    color: black;
+    color: $darkest_gray;
     text-decoration: underline;
     font-family: 'Gotham 5r', sans-serif;
   }
