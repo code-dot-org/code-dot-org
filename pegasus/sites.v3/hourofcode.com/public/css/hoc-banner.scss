@@ -93,9 +93,9 @@ section.banner {
   }
 
   a {
-    color: black;
+    color: $darkest_gray;
     text-decoration: underline;
-    font-family: 'Gotham 5r', sans-serif;
+    font-family: $gotham-bold;
 
     &.ctabuttonatag {
       text-decoration: none;
