@@ -1,0 +1,18 @@
+%figure
+  %img{src: "/images/stats-languages.png"}
+  %figcaption=hoc_s(:stats_i18n)
+
+%figure
+  -if @language == "en"
+    %img{src: "/images/stats-1b.png"}
+  -else
+    %img{src: "/images/stats-map.png"}
+  %figcaption=hoc_s(:stats_global)
+
+%figure
+  -if @language == "en"
+    %img{src: "/images/stats-females.png"}
+    %figcaption!=hoc_s(:stats_females_more_markdown, markdown: :inline)
+  -else
+    %img{src: "/images/stats-info3.png"}
+    %figcaption=hoc_s(:stats_girls_more)
