@@ -36,6 +36,11 @@ id:
   africa_campaign_date_full: 1 Oktober - 18 Desember
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
+  hoc2022_header: Menjelajah, Bermain, Berkreasi!
+  social_hoc2022_explore_play_create: Manfaatkan ilmu komputer untuk menjelajah, bermain,
+    dan berkreasi!
+  codeorg_homepage_hoc2022_body: Jelajahi alam semesta, cetak gol, atau lakukan gerakan
+    — ada banyak cara untuk mencoba ilmu komputer.
   social_hoc2021_cse: 'Selama #HourOfCode, kami merayakan #CSEverywhere. Temukan koneksinya!'
   hoc2020_header: Pelajari hari ini, ciptakan hari esok yang lebih cerah.
   hoc2020_header_with_line_break_markdown: |-
@@ -513,6 +518,27 @@ id:
   front_join_us_n_students_served: "# tersaji"
   front_join_us_challenge: Menangkan obrolan video untuk kelas Anda dengan selebriti!
   front_join_us_learn_more: Belajarlah lagi
+  cta_see_whats_new: Lihat yang baru
+  cta_try_more_activities: Coba kegiatan lainnya
+  cta_try_an_activity: Coba sebuah kegiatan
+  hoc_homepage_join_the_movement_heading: 'Bergabunglah dengan gerakan ini
+
+'
+  hoc_homepage_join_the_movement_description: Hour of Code tersedia sepanjang tahun,
+    akan tetapi setiap tahun di bulan Desember kelas Anda dapat bergabung dengan jutaan
+    siswa di seluruh dunia untuk merayakan Pekan Pendidikan Ilmu Komputer bersama
+    Hour of Code. Pendaftaran untuk perayaan tahunan ini dimulai setiap tahun pada
+    bulan Oktober.
+  hoc_homepage_what_is_hoc_subhead: Tutorial satu jam dalam lebih dari 45 bahasa.
+    Tidak perlu pengalaman. Kegiatan Hour of Code tersedia gratis sepanjang tahun.
+  hoc_homepage_what_is_hoc_description: Hour of Code merupakan pengantar ilmu komputer
+    yang berdurasi satu jam, dan menggunakan tutorial yang menyenangkan untuk menunjukkan
+    bahwa siapa pun dapat mempelajari dasar-dasarnya. Kampanye ini didukung oleh lebih
+    dari 400 mitra dan 200.000 pendidik di seluruh dunia.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Baca Panduan](%{howto_guide_url}) kami
+    untuk merencanakan event bagi kelas Anda."
+  hoc_homepage_highlights_heading: Manfaat Hour of Code
+  hoc_homepage_organized_by: Hour of Code diselenggarakan oleh [Code.org](%{codeorg_url}).
   signup_closed: Pendaftaran untuk Jam Kode sekarang ditutup. Silakan periksa lagi
     di bulan Oktober untuk mendaftar ke Hour of Code berikutnya.
   signup_registration_not_required: You don't need to register to participate! The

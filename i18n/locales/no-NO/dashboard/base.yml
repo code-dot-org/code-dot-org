@@ -491,6 +491,7 @@
     no_primary_course: "Prøv et kurs på Code Studio"
     choose_next_course: "Prøv et av Code Studio kursene ved å velge nedenfor"
     print_certificate: "Skriv ut diplom"
+  certificate_hour_of_code: "Kodetimen"
   move_students:
     new_section_dne: "Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn en annen seksjonskode."
     section_code_cant_be_current_section: "Gjeldende seksjon kan ikke være den samme som den nye seksjonen."

@@ -157,6 +157,24 @@ module Crowdin
     end
   end
 
+  class CrowdinRateLimitError < StandardError
+    def initialize(msg="Rate Limit Error")
+      super
+    end
+  end
+
+  class CrowdinInternalServerError < StandardError
+    def initialize(msg="Internal Server Error")
+      super
+    end
+  end
+
+  class CrowdinServiceUnavailableError < StandardError
+    def initialize(msg="Service Unavailable")
+      super
+    end
+  end
+
   class Client
     include ClientExtensions
   end
