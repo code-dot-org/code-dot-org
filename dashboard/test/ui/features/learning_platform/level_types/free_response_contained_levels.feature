@@ -1,10 +1,10 @@
-@eyes
 Feature: Free Response Contained Levels
 
   Background:
     Given I create an authorized teacher-associated student named "Lillian"
     Then I sign in as "Lillian"
 
+@eyes
 Scenario: Applab with free response contained level
   When I open my eyes to test "applab contained level"
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
@@ -29,6 +29,7 @@ Scenario: Applab with free response contained level
   And I wait until current URL contains "/lessons/18/levels/16"
   Then I close my eyes
 
+@eyes
 Scenario: Javalab with free response contained level
   When I open my eyes to test "javalab contained level"
   Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
@@ -53,6 +54,7 @@ Scenario: Javalab with free response contained level
   And I see no difference for "finished level with contained level" using stitch mode "none"
   Then I close my eyes
 
+@eyes
 Scenario: Authorized Teacher on Maze with free response contained level
   When I open my eyes to test "maze free response contained level"
   Given I sign in as "Teacher_Lillian"
@@ -71,6 +73,7 @@ Scenario: Authorized Teacher on Maze with free response contained level
   And I see no difference for "level run"
   Then I close my eyes
 
+@eyes
 Scenario: Authorized Teacher on App Lab with free response contained level
   When I open my eyes to test "applab free response contained level"
   Given I sign in as "Teacher_Lillian"
@@ -88,3 +91,23 @@ Scenario: Authorized Teacher on App Lab with free response contained level
   Then I press "runButton"
   And I see no difference for "level run"
   Then I close my eyes
+
+Scenario: Teacher can reset progress on free response contained level
+  Given I sign in as "Teacher_Lillian"
+  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/3?enableExperiments=instructorPredictLevelReset"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And I press keys "Here is my response!" for element ".response"
+  And element ".response" has value "Here is my response!"
+  Then I press "runButton"
+  Then I press "resetButton"
+  And I verify progress in the header of the current page is "perfect" for level 3
+  Then I click selector "button:contains('Delete Answer')"
+  And I wait until ".response" does not contain text "Here is my response!"
+  And I wait for 5 seconds
+  And I verify progress in the header of the current page is "not_tried" for level 3
+  And I press keys "Here is my response!" for element ".response"
+  And element ".response" has value "Here is my response!"
+  Then I press "runButton"
+  Then I press "resetButton"
+  And I verify progress in the header of the current page is "perfect" for level 3
