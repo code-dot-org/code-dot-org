@@ -99,7 +99,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
-  blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
@@ -154,8 +153,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
-
   // Force Google Blockly to use our custom versions of fields
   blocklyWrapper.blockly_.fieldRegistry.unregister('field_variable');
   blocklyWrapper.blockly_.fieldRegistry.register(
@@ -175,6 +172,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Additions for when our wrapper is accessed in /apps code
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
