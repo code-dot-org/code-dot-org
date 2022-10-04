@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import {Link, TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
