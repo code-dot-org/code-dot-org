@@ -1,2 +1,9 @@
 %script{src: webpack_asset_path('js/data_docs/show.js'), data: {dataDoc: @data_doc_data.to_json}}
 #view-data-doc
+
+- if can? :edit, @data_doc
+  = render layout: 'shared/extra_links' do
+    %strong= @data_doc.name
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to 'Edit', edit_data_doc_path(@data_doc)
