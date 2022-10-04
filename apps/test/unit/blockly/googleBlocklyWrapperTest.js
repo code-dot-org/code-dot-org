@@ -50,7 +50,6 @@ describe('Google Blockly Wrapper', () => {
       'FieldColourDropdown',
       'FieldIcon',
       'FieldImage',
-      'FieldImageDropdown',
       'FieldLabel',
       'FieldParameter',
       'FieldRectangularDropdown',
