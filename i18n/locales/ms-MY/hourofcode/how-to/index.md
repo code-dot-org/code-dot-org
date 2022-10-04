@@ -8,9 +8,9 @@ title: Panduan Menggunakan Hour of Code
 
 ### Sertai pergerakan ini dan perkenalkan pelajar anda kepada sains komputer dengan langkah ini.
 
-Pemikiran pengkomputeran membantu memupuk kemahiran, logik dan kreativiti penyelesaian masalah. Dan teknologi mengubah setiap industri di planet ini. Pelajar hari ini sepatutnya mempelajari cara mencipta teknologi, bukan sekadar menggunakannya. Dengan memulakannya lebih awal, mereka akan mempunyai asas untuk berjaya di dalam mana-mana laluan kerjaya pada abad ke-21.
+Pelajar hari ini sepatutnya mempelajari cara mencipta teknologi, bukan sekadar menggunakannya.
 
-Mencuba Hour of Code ialah cara mudah dan menyeronokkan untuk memperkenalkan pelajar kepada sains komputer, mungkin buat kali pertama dan amat sesuai bagi tetapan di dalam kelas dan selepas sekolah. Sila lihat pada [panduan penyertaan kami sekiranya anda masih mempunyai soalan]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Sila tonton video panduan cara melakukan Hour of Code](#how-to-video)
 - [Terokai aktiviti dan tutorial](#explore-activities)
@@ -20,8 +20,6 @@ Mencuba Hour of Code ialah cara mudah dan menyeronokkan untuk memperkenalkan pel
 - [Mari mengekod](#code)
 - [Raikan kejayaan pelajar anda](#celebrate)
 - [Sumber Hour of Code lain untuk pendidik](#other-resources)
-
-### Hour of Code juga boleh dianjurkan dari jarak jauh! Untuk memulakan, sila lihat [petua untuk menganjurkan acara Hour of Code maya](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -39,7 +37,7 @@ Kami menyediakan pelbagai [ tutorial berpandukan pelajar]({{ urls/learn }}) yang
 
 Terokai aktiviti dan tentukan lebih awal sekiranya anda mahu memilih tutorial tunggal untuk semua pelajar anda, atau biarkan setiap kanak-kanak memilihnya sendiri.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Terokai aktiviti dan tentukan lebih awal sekiranya anda mahu memilih tutorial tu
 
 ### Pilih hari dan masa
 
-Individu di seluruh dunia menyertai sambutan Hour of Code semasa Minggu Pendidikan CS (9-13 Disember) apabila tutorial dan aktiviti terkini dikeluarkan. Tetapi anda boleh melakukan Hour of Code pada bila-bila masa sepanjang tahun!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Tetapi anda boleh melakukan Hour of Code pada bila-bila masa sepanjang tahun!
 
 * * *
 
@@ -74,11 +72,11 @@ Promosikan Hour of Code kepada guru lain yang mungkin mahu menyertai keseronokan
 
 ### Biarkan Sukarelawan Tahu dengan Mendaftar Acara Anda
 
-Apabila anda [mendaftar acara Hour of Code](/), anda akan menerima komunikasi e-mel yang berguna bersama berita dan petua untuk menganjurkan acara Hour of Code yang berjaya. Ini juga ialah cara anda memberitahu sukarelawan tempatan bahawa sekolah anda akan menyertainya. Sukarelawan ialah sumber yang hebat dan boleh bercakap dengan kelas anda tentang sains komputer atau hanya membantu pelajar anda dengan aktiviti Hour of Code.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Ini juga ialah cara anda memberitahu sukarelawan tempatan bahawa sekolah anda akan menyertainya. Sukarelawan ialah sumber yang hebat dan boleh bercakap dengan kelas anda tentang sains komputer atau hanya membantu pelajar anda dengan aktiviti Hour of Code.
 
 ### Buatkan Pelajar Anda Teruja
 
-Bersiap sedia untuk acara tersebut dengan berkongsi [video yang memberikan inspirasi](/promote/resources) menonjolkan pelbagai individu dan cara kreatif yang sains komputer boleh digunakan. Atau pesan poster yang memberikan inspirasi untuk kelas anda! Pelajar lebih teruja menyertai subjek apabila mereka melihat individu yang kelihatan seperti mereka menggalakkannya.
+Bersiap sedia untuk acara tersebut dengan berkongsi [video yang memberikan inspirasi](/promote/resources) menonjolkan pelbagai individu dan cara kreatif yang sains komputer boleh digunakan. Or print inspirational posters for your classroom! Pelajar lebih teruja menyertai subjek apabila mereka melihat individu yang kelihatan seperti mereka menggalakkannya.
 
 {{ promote_new_posters }}
 
@@ -152,7 +150,7 @@ Bagaimanakah jika pelajar selesai lebih awal?
 - Lawati [Forum Guru Hour of Code](http://forum.code.org/c/plc/hour-of-code) untuk mendapatkan nasihat, pandangan dan sokongan daripada pendidik lain.
 - Menyemak semula [Soalan Lazim Jam Kod](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-### Apakah yang seterusnya selepas Hour of Code?
+### Apakah yang seterusnya selepas Jam Kod?
 
 Sains komputer tidak seharusnya diakhiri dengan Hour of Code! Kurikulum kami berasaskan web dan boleh digunakan secara percuma, selama-lamanya. [Ketahui cara](/beyond) membawa CS ke sekolah dan kepada pelajar anda.
 
