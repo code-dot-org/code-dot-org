@@ -109,7 +109,7 @@ class MusicView extends React.Component {
 
     this.loadLibrary().then(library => {
       this.setState({library});
-      this.workspace.updateToolbox(createMusicToolbox(library));
+      this.workspace.updateToolbox(createMusicToolbox(library, 'dropdown'));
       this.player.initialize(library);
     });
   }
@@ -370,6 +370,24 @@ class MusicView extends React.Component {
         this.playTrigger(trigger.id);
       }
     });
+    if (event.key === 'd') {
+      this.workspace.updateToolbox(
+        createMusicToolbox(this.state.library, 'dropdown')
+      );
+    }
+    if (event.key === 'v') {
+      this.workspace.updateToolbox(
+        createMusicToolbox(this.state.library, 'valueSample')
+      );
+    }
+    if (event.key === 'p') {
+      this.workspace.updateToolbox(
+        createMusicToolbox(this.state.library, 'playSample')
+      );
+    }
+    if (event.code === 'Space') {
+      this.setPlaying(!this.state.isPlaying);
+    }
   };
 
   render() {
@@ -460,13 +478,14 @@ class MusicView extends React.Component {
               overflow: 'scroll'
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <p>Music Lab Prototype Keyboard Shortcuts:</p>
+            <p>i: show/hide instructions</p>
+            <p>t: move timeline to bottom/top</p>
+            <p>d: sample block mode = play block + dropdown </p>
+            <p>v: sample block mode = values </p>
+            <p>p: sample block mode = play block + values</p>
+            <p>space: play/stop song</p>
+            <p>[1, 2, 3]: trigger buttons</p>
           </div>
         )}
         <div

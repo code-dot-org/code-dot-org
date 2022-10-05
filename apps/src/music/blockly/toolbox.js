@@ -217,8 +217,14 @@ export const baseToolbox = {
   ]
 };
 
-export const createMusicToolbox = library => {
+export const createMusicToolbox = (library, mode) => {
   const toolbox = {...baseToolbox};
+
+  if (!library) {
+    return toolbox;
+  }
+
+  toolbox.contents[1].contents = [];
 
   // Currently only supports 1 group
   const group = library.groups[0];
@@ -234,34 +240,62 @@ export const createMusicToolbox = library => {
     };
 
     for (let sound of folder.sounds) {
-      // Dropdown Play block:
-      /*
-       category.contents.push({
-        kind: 'block',
-        type: BlockTypes.PLAY_SOUND,
-        fields: {
-          sound: folder.path + '/' + sound.src
-        },
-        inputs: {
-          measure: {
-            shadow: {
-              type: 'math_number',
-              fields: {
-                NUM: 1
+      switch (mode) {
+        case 'dropdown': {
+          category.contents.push({
+            kind: 'block',
+            type: BlockTypes.PLAY_SOUND,
+            fields: {
+              sound: folder.path + '/' + sound.src
+            },
+            inputs: {
+              measure: {
+                shadow: {
+                  type: 'math_number',
+                  fields: {
+                    NUM: 1
+                  }
+                }
               }
             }
-          }
+          });
+          break;
         }
-      });
-      */
-
-      category.contents.push({
-        kind: 'block',
-        type: BlockTypes.SAMPLE,
-        fields: {
-          sample: sound.name
+        case 'valueSample': {
+          category.contents.push({
+            kind: 'block',
+            type: BlockTypes.SAMPLE,
+            fields: {
+              sample: sound.name
+            }
+          });
+          break;
         }
-      });
+        case 'playSample': {
+          category.contents.push({
+            kind: 'block',
+            type: BlockTypes.PLAY_SAMPLE,
+            inputs: {
+              sample: {
+                block: {
+                  type: BlockTypes.SAMPLE,
+                  fields: {
+                    sample: sound.name
+                  }
+                }
+              },
+              measure: {
+                shadow: {
+                  type: 'math_number',
+                  fields: {
+                    NUM: 1
+                  }
+                }
+              }
+            }
+          });
+        }
+      }
     }
 
     // Add to samples category
