@@ -25,6 +25,9 @@ class Homepage
       # If the banner has a required DCDO flag, then it must be set.
       next if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
 
+      # If the banner has an array of required hoc_mode DCDO values, then one of them must be the current hoc_mode.
+      next if banner["hoc_modes"] && !banner["hoc_modes"].include?(DCDO.get("hoc_mode", CDO.default_hoc_mode))
+
       # If the banner has an array of languages, then the current language must be one of them.
       next if banner["languages"] && !banner["languages"].include?(request.language)
 
@@ -307,25 +310,25 @@ class Homepage
         {
           id: "at-home-en",
           type: "block",
-          title: "homepage_slot_text_title_at_home",
-          text: "homepage_slot_text_blurb_at_home",
+          title: "homepage_slot_text_title_hoc",
+          text: "homepage_slot_text_blurb_hoc_2022",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/athome",
+          url: "https://hourofcode.com/us",
           image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
               {
-                text: "homepage_slot_text_link_do_hoc",
+                text: "homepage_slot_text_link_hoc",
                 url: "/hourofcode/overview"
               },
               {
-                text: "homepage_slot_text_link_express_course",
-                url: "/educate/curriculum/express-course"
+                text: "homepage_slot_text_link_about_hoc",
+                url: "https://hourofcode.com/"
               },
               {
-                text: "homepage_slot_text_link_code_break",
-                url: "/break"
+                text: "homepage_slot_text_link_host",
+                url: "https://hourofcode.com/us/#join"
               }
             ]
         },
@@ -487,7 +490,7 @@ class Homepage
     custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner
       heroes_arranged =
-        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
+        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"], image_mobile: custom_banner["mobileImage"]}]
     elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
     else

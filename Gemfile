@@ -141,7 +141,7 @@ gem 'gemoji'
 # Authentication and permissions.
 gem 'cancancan', '~> 3.0.0'
 gem 'devise', '~> 4.7.0'
-gem 'devise_invitable', '~> 1.6.0'
+gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
