@@ -8,9 +8,9 @@ title: Hour of Code Nasıl Yapılır? Rehberi
 
 ### Bu harekete katılın ve öğrencilerinizi bilgisayar bilimiyle şu adımlarla tanıştırın.
 
-Bilişimsel düşünme, problem çözme becerilerini, mantığı ve yaratıcılığı geliştirmeye yardımcı olur. Teknoloji de gezegendeki her sanayiyi dönüştürüyor. Bugün öğrenciler teknolojiyi kullanmakla kalmayıp onu nasıl üretebileceğini de öğrenmeliler. Erken başlayan öğrenciler, 21. yüzyılın kariyer yolunda başarılı olmak için temel atmış olacaklar.
+Bugün öğrenciler teknolojiyi kullanmakla kalmayıp onu nasıl üretebileceğini de öğrenmeliler.
 
-Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tanıştırmanın basit ve eğlenceli bir yolu olup hem sınıf içi hem de okul sonrası ortamlar için mükemmel bir uyum sağlar [Hâlâ sorularınız varsa katılımcı rehberimize]({{ localized_files/participation_guide }}) göz atabilirsiniz.
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Hour of Code Nasıl Yapılır? videosunu izleyin](#how-to-video)
 - [Aktiviteleri ve öğretici materyalleri keşfedin](#explore-activities)
@@ -20,8 +20,6 @@ Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tan
 - [Kodlamaya başlayın](#code)
 - [Öğrencilerinizin başarısını kutlayın](#celebrate)
 - [Eğitimciler için diğer Kod-Saati kaynakları](#other-resources)
-
-### Hour of Code'a uzaktan da ev sahipliği yapılabilir! Başlamak için [ sanal bir Hour of Code etkinliği düzenlemeye yönelik ipuçlarımıza](https://hourofcode.com/us/how-to/virtual) göz atın.
 
 * * *
 
@@ -39,7 +37,7 @@ Tüm yaş grupları ve deneyim düzeyleri için eğlenceli, [öğrenci rehberli 
 
 Aktiviteleri keşfedin ve şuna önceden karar verin: Tüm öğrencileriniz için tek bir öğretici materyal mi seçmek istiyorsunuz yoksa her çocuğun kendi dersini seçmesine izin mi vereceksiniz.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Aktiviteleri keşfedin ve şuna önceden karar verin: Tüm öğrencileriniz içi
 
 ### Tarih ve saat seçin
 
-Dünyanın her yerinden insanlar, Hour of Code kutlamalarına en yeni öğreticiler ve aktivitelerin yayımlandığı Bilgisayar Bilimi Eğitim Haftası (9-13 Aralık) sırasında katılıyor. Ancak yılın herhangi bir günü Hour of Code yapabilirsiniz!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Ancak yılın herhangi bir günü Hour of Code yapabilirsiniz!
 
 * * *
 
@@ -74,11 +72,11 @@ Eğlenceye katılmak isteyebilecek diğer öğretmenlere Hour of Code'u tanıtı
 
 ### Etkinliğini Kaydederek Gönüllülere Haber Verin
 
-[Hour of Code etkinliğinizi kaydettirdiğinizde](/), başarılı bir Hour of Code düzenlemek için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki gönüllülere, okulunuzun katıldığını da bu şekilde bildirirsiniz. Harika bir kaynak olan gönüllüler sınıfınıza gelerek bilgisayar bilimi hakkında konuşabilir veya öğrencilerinize Hour of Code aktivitelerinde yardımcı olabilirler.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Aynı zamanda, bölgenizdeki gönüllülere, okulunuzun katıldığını da bu şekilde bildirirsiniz. Harika bir kaynak olan gönüllüler sınıfınıza gelerek bilgisayar bilimi hakkında konuşabilir veya öğrencilerinize Hour of Code aktivitelerinde yardımcı olabilirler.
 
 ### Öğrencilerinizi Heyecanlandırın
 
-Farklı insanları ve bilgisayar biliminin kullanılabileceği yaratıcı yolları vurgulayan [ilham verici videoları](/promote/resources) paylaşarak etkinliğe öncülük edin. Veya sınıfınız için ilham verici posterler sipariş edin! Öğrenciler, kendilerine benzeyen insanların teşvikini gördüklerinde o konuya katılmak için daha heyecanlı olurlar.
+Farklı insanları ve bilgisayar biliminin kullanılabileceği yaratıcı yolları vurgulayan [ilham verici videoları](/promote/resources) paylaşarak etkinliğe öncülük edin. Or print inspirational posters for your classroom! Öğrenciler, kendilerine benzeyen insanların teşvikini gördüklerinde o konuya katılmak için daha heyecanlı olurlar.
 
 {{ promote_new_posters }}
 

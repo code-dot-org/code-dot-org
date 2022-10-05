@@ -75,7 +75,7 @@ Gdy jesteś gospodarzem wydarzenia "Godziny kodowania", przejrzyj poniższy prog
 - Postaraj się, aby Twój profil był możliwie jak najbardziej kompletny - to zwiększa szansę, że nauczyciel wybierze właśnie ciebie.
 - Nauczyciel skontaktuje się z tobą poprzez ten formularz (twój adres email nie zostanie nigdy udostępniony). *Jeśli otrzymujesz za dużo zapytań od nauczycieli, możesz uaktualnić swoje preferencje. Kliknij link umieszczony na dole każdej wiadomości od nauczyciela, aby zmienić swoje informacje albo wypisać się.*
 
-## Wolontariat w trakcie najczęściej zadawanych pytań i odpowiedzi [FAQ] w ramach "Godziny kodowania"
+## Wolontariat w trakcie najczęściej zadawanych pytań i odpowiedzi [FAQ] w ramach Godziny kodowania
 
 ### Nauczyciel jeszcze się ze mną nie kontaktował. W jaki sposób mogę się jeszcze zgłosić jako wolontariusz?
 Spróbuj poszukać miejscowych szkół, zadzwoń do dyrektora/nauczyciela/sekretariatu i zapytaj jak możesz pomóc.

@@ -354,8 +354,8 @@ describe('entry tests', () => {
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
-            'build/package/css/reference_guides.css',
-            'style/curriculum/reference_guides.scss'
+            'build/package/css/curriculum_table_styling.css',
+            'style/curriculum/curriculum_table_styling.scss'
           ],
           [
             'build/package/css/curriculum_navigation.css',

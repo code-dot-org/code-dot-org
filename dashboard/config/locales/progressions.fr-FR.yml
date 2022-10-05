@@ -209,13 +209,14 @@ fr:
         virtuel'
       'Mini-Project: Outbreak Simulator': " Simulateur d'épidémie"
       'Mini-Project: Royal Battle': 'Mini-projet : Bataille Royale'
+      'Mini-Project: Sticker Art': 'Mini-projet : Design à base d''autocollants '
       'Mini-Project: Virtual Pet': 'Mini-projet : animal de compagnie virtuel '
       'Mini-project: Chase Game': 'Mini-projet : Jeu Chase'
       'Mini-project: Flappy Game': 'Mini-projet : Jeu Flappy'
       'Mini-project: Interactive Poster': 'Mini-project : Poster interactif'
       'Mini-project: Jorge the Dog': 'Mini-projet : Jorge le chien'
       'Mini-project: Sticker Art': 'Mini-projet : l''art de l''autocollant '
-      'Mini-project: Sticker Design': 'Mini-projet : Création d''autocollants '
+      'Mini-project: Sticker Design': 'Mini-projet : Design à base d''autocollants '
       Modify simulation variables: Modifier les variables de simulation
       Modifying Arrays: Modifier et créer des tableaux
       Modifying and Creating Arrays: Modifier et créer des tableaux
@@ -346,9 +347,10 @@ fr:
       'Video: Code Your Own Flappy Game': 'Vidéo : Codez votre propre jeu Flappy'
       'Video: Conditional Statements': 'Vidéo : Instructions conditionnelles'
       'Video: Conditionals': 'Vidéo : Instructions conditionnelles'
-      'Video: Conditionals: If Statements': "  Instructions « si »"
-      'Video: Conditionals: If and If/Else Statements': 'Video: Instructions conditionnelles
-        « Si » et « Si/Sinon »'
+      'Video: Conditionals: If Statements': 'Vidéo : Formules conditionnelles : Les
+        indications « Si »'
+      'Video: Conditionals: If and If/Else Statements': 'Vidéo : Formules conditionnelles :
+        Indications « Si » et « Si/Sinon »'
       'Video: Dance Party Events': 'Vidéo : Événements – Soirée Dansante'
       'Video: Dance Party Measures': 'Vidéo : Mesures – Soirée Dansante'
       'Video: Dance Party Party On!': 'Vidéo : Soirée Dansante Allez On Danse !'
@@ -397,16 +399,16 @@ fr:
       'Video: Minecraft - Functions': 'Vidéo : Minecraft - Fonctions'
       'Video: Minecraft - Repeat Loops': 'Vidéo : Minecraft - Répétition de boucles'
       'Video: Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
-      'Video: Minecraft: Voyage Aquatic Conditionals': 'Minecraft : Minecraft :Conditions
-        Voyage Aquatique '
-      'Video: Minecraft: Voyage Aquatic Congratulations': 'Vidéo : Minecraft : Félicitations
-        Voyage Aquatique'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Minecraft : Minecraft : Voyage
+        Aquatique – Formules Conditionnelles'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Vidéo : Minecraft : Voyage
+        Aquatique - Félicitations'
       'Video: Minecraft: Voyage Aquatic Introduction': 'Vidéo : Minecraft : Voyage
         Aquatique - Introduction'
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Vidéo : Minecraft : Voyage
-        aquatique Repeat until (répéter jusque)'
+        Aquatique – Répéter Jusqu''à'
       'Video: Nested Loops': 'Vidéo : Boucles imbriquées'
-      'Video: Nested Loops with the Bee': 'Vidéo : Boucles imbriquées avec l''abeille '
+      'Video: Nested Loops with the Bee': 'Vidéo : Les boucles imbriquées avec l''abeille '
       'Video: Pair Programming': " Programmation en Binôme"
       'Video: Pair Programming ': " Programmation en Binôme "
       'Video: Problem Solving Process': Processus de Résolution De Problème
@@ -414,7 +416,7 @@ fr:
       'Video: Programming with Rey and BB-8': " Vidéo : Programmer avec Rey et BB-8"
       'Video: Properties': " Propriétés"
       'Video: Repeat Blocks': 'Video: Les blocs `Répéter`'
-      'Video: Repeat Blocks with BB-8': 'Vidéo : Blocks "Répéter" avec BB-8'
+      'Video: Repeat Blocks with BB-8': 'Vidéo : Les blocs « répéter » avec BB-8'
       'Video: Repeat Blocks with the Artist': 'Vidéo : Répéter les blocs avec l''Artiste '
       'Video: Repeat Until Blocks': 'Video: Les blocs Répéter Jusqu’à'
       'Video: Repeat Until Statements': 'Vidéo : Instructions Répéter tant que'
@@ -439,7 +441,8 @@ fr:
         ?'
       'Video: What is Machine Learning?': 'Vidéo : Qu''est-ce que l''apprentissage
         automatique ?'
-      'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
+      'Video: While Loops with the Farmer': " Vidéo : Les Boucles Tant Que avec la
+        Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
       Warm Up: Warm-up (Séance d’échauffement)
       Website Project: Projet de site Web

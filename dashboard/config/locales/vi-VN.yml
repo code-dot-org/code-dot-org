@@ -675,6 +675,7 @@ vi:
     print_certificate: In giấy chứng nhận
   certificate_sponsor_message: "%{sponsor_name} đã hào phóng trao tặng một món quà
     để tài trợ cho việc học của bạn."
+  certificate_hour_of_code: Giờ của mã
   move_students:
     new_section_dne: Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui
       lòng nhập một mã khác cho phần học.
