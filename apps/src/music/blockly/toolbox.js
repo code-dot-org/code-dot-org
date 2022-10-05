@@ -9,7 +9,8 @@ export const baseToolbox = {
       name: 'Play',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
+        row: moduleStyles.blocklyTreeRow,
+        label: moduleStyles.blocklyTreeLabel
       },
       contents: [
         {
@@ -47,7 +48,8 @@ export const baseToolbox = {
       name: 'Samples',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
+        row: moduleStyles.blocklyTreeRow,
+        label: moduleStyles.blocklyTreeLabel
       },
       contents: []
     },
@@ -56,7 +58,8 @@ export const baseToolbox = {
       name: 'Events',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
+        row: moduleStyles.blocklyTreeRow,
+        label: moduleStyles.blocklyTreeLabel
       },
       contents: [
         {
@@ -70,7 +73,8 @@ export const baseToolbox = {
       name: 'Control',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
+        row: moduleStyles.blocklyTreeRow,
+        label: moduleStyles.blocklyTreeLabel
       },
       contents: [
         {
@@ -114,7 +118,8 @@ export const baseToolbox = {
       name: 'Math',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
+        row: moduleStyles.blocklyTreeRow,
+        label: moduleStyles.blocklyTreeLabel
       },
       contents: [
         {
@@ -186,7 +191,8 @@ export const baseToolbox = {
       name: 'Variables',
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
+        row: moduleStyles.blocklyTreeRow,
+        label: moduleStyles.blocklyTreeLabel
       },
       contents: [
         {
@@ -228,7 +234,8 @@ export const createMusicToolbox = library => {
       name: folder.name,
       cssConfig: {
         container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
+        row: moduleStyles.blocklyTreeRow,
+        label: moduleStyles.blocklyTreeLabel
       },
       contents: []
     };

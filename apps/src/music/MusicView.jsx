@@ -167,6 +167,10 @@ class MusicView extends React.Component {
       base: CdoTheme,
       componentStyles: {
         toolboxBackgroundColour: '#222'
+      },
+      fontStyle: {
+        family: '"Gotham 4r", sans-serif',
+        size: 11
       }
     });
 
