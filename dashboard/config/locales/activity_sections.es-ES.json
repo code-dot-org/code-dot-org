@@ -1637,6 +1637,9 @@
         "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "8e887047-0b51-46cf-8c62-4ef56d1b58c0": {
+          "progression_name": "Desafío/Práctica"
+        },
         "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad": {
           "name": "Reflexión"
         },
@@ -1696,6 +1699,9 @@
         },
         "7e3632b0-108a-4179-adf0-89a8e204b031": {
           "progression_name": "Desarrollo de Habilidades"
+        },
+        "a0c3172d-bf7f-4842-b719-5c987d502489": {
+          "progression_name": "Desafío/Práctica"
         },
         "9280e14f-90c1-467a-ab01-b3a0d7d42415": {
           "name": "Reflexión"
@@ -2423,6 +2429,9 @@
         "56262489-b084-4a55-a4e2-b45138492e6c": {
           "progression_name": "Predicción"
         },
+        "9a30234f-6c15-4525-aa78-4b8905d29133": {
+          "progression_name": "Vídeo: Muchos Sprites"
+        },
         "e2e2e67f-7883-47c0-b018-118af90abc79": {
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -2465,14 +2474,26 @@
         "f621cd05-64b4-41d4-8c9a-b310731edecb": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "2203aacd-4e1b-4cb5-ab3e-b0b72011a6f9": {
+          "progression_name": "Exploración: Juego de Clicker"
+        },
+        "08684dd6-65f9-42b1-877a-05814f08c46c": {
+          "progression_name": "Mini-Proyecto: Juego de Clicker"
+        },
         "30357f1e-97b8-43b2-9fa9-edace8299c36": {
           "name": "Reflexionar"
         },
         "37214efe-4044-4968-8924-71472b1d2725": {
           "name": "Introducción"
         },
+        "229b6ed8-f28d-4d6b-98ea-39fe3ac44fab": {
+          "name": "Mini-Proyecto: Juego de Coleccionista"
+        },
         "22b7037c-93fc-4723-a172-22f1501dbf3b": {
           "progression_name": "Exploración: Ejemplos de Programas"
+        },
+        "61043979-dfcc-47f4-b882-94ea107cd123": {
+          "progression_name": "Mini-Proyecto: Juego de Coleccionista"
         },
         "0e088be7-4df3-4826-842b-2c6655bc02e9": {
           "name": "Presentación"
@@ -2525,14 +2546,23 @@
         "fc407406-3b2b-46cd-be85-000640f4f949": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "43ec708f-4fc2-467d-b096-303d4f897b68": {
+          "progression_name": "Vídeo: Simulador de Brote: Eventos"
+        },
         "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
           "progression_name": "Desarrollo de Habilidades"
+        },
+        "29a7a268-d78c-4217-9c8e-42bd781dee2a": {
+          "progression_name": "Vídeo: Simulador de Brote: Pensando como un Científico"
         },
         "9456da46-d269-42c3-ab51-42e617b07542": {
           "progression_name": "Aprendiendo de las Simulaciones"
         },
         "7e9c17d4-3d1e-4a6c-a9ef-e1d09bfedee1": {
           "progression_name": "Miniproyecto: Simulador de Brotes"
+        },
+        "50845627-ac76-4f69-b95d-2e3718a6ed49": {
+          "progression_name": "Vídeo: Simulador de Brote: Juego Libre"
         },
         "40fc31a6-1dc5-41dd-88d1-80206579453f": {
           "progression_name": "Miniproyecto: Simulador de Brotes"
@@ -2762,13 +2792,20 @@
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
-          "name": "Hola Mundo"
+          "name": "Hola Mundo",
+          "progression_name": "Vídeo: Hola Mundo: Bienvenido a Laboratorio Sprite"
         },
         "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "0a9662e0-8661-4cfe-be3c-e5fe52ed582f": {
+          "progression_name": "Vídeo: Hola Mundo: Programación con Eventos"
+        },
         "0121aca1-bd15-436e-ac4d-5424f269e25a": {
           "progression_name": "Desarrollo de Habilidades"
+        },
+        "e1fbbc5b-976f-47d0-a9d6-749b9b3c916b": {
+          "progression_name": "Vídeo: Hola Mundo: Haz lo que quieras"
         },
         "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
           "progression_name": "Juego libre"
@@ -4526,6 +4563,12 @@
         "93c42114-b7e6-4d21-9e93-0760e125a7b9": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "a88f91f8-569f-40db-a8f8-700323940f53": {
+          "progression_name": "Exploración: Juego de Clicker"
+        },
+        "92b27a47-c534-4671-afd1-23a3586897c9": {
+          "progression_name": "Mini-Proyecto: Juego de Clicker"
+        },
         "b8a87ad4-50ba-433f-8c86-27093af1fafd": {
           "name": "Reflexionar"
         },
@@ -6120,6 +6163,9 @@
         "b8275a09-3de2-42a9-844f-0ac27f7ee3ea": {
           "progression_name": "Proyecto"
         },
+        "4b6c542e-6c02-498e-83bb-7f153f6f8eea": {
+          "progression_name": "Lección Extra"
+        },
         "e5d05d8d-961f-4885-b074-cfce5bb4f87d": {
           "name": "Presentación"
         },
@@ -6684,6 +6730,9 @@
             null
           ]
         },
+        "1892c7ae-6927-42df-a1ee-d590267476da": {
+          "progression_name": "Encuesta Final de la Unidad"
+        },
         "63bed78d-f5a0-44ae-8f02-99c0bb81ba05": {
           "name": "Prueba posterior al proyecto"
         },
@@ -6696,8 +6745,11 @@
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "description": "A lo largo del año, para que puedas ver el trabajo de los alumnos y para que éstos puedan acceder a las herramientas y recursos en línea, todos los alumnos deben estar en la misma sección en Code Studio. Para ver las evaluaciones y las claves de respuesta que Code.org proporciona, también es necesario ser un \"profesor verificado\".",
           "tips": [
-            null
+            "\\*\\*Videos de Como Hacerlo: \\*\\* Los siguientes pasos también se explican en una serie de [code\\_org\\_how-to\\_videos] que se ubiquen en Code.org’s “Teacher Support Website” (Centro de Soporte para los maestros página web). Puedes decidir mirar estés videos antes de leer las instrucciones de abajo. "
           ]
+        },
+        "17a885d7-d6e7-490e-8307-bc31c01b6e64": {
+          "description": "## Antes De Clase\n\n\\*\\*Como empezar en Code.org: \\*\\* Considera mirando nuestro [Getting Started with Code.org] \\(Empezando en Code.org) serié de videos para una descripción general de como navegar nuestros planes de lección, crear una sección de salón de clases, y otros aspectos importantes de la plataforma de Code.org. Cada video también tiene un artículo de soporte si prefieres leer o sacar copias de instrucciones. - [click here to learn more] \\(oprima aquí para aprender más.)\n\n\\*\\*Como Crear un Sección de salón de Clases: \\*\\* Tú puedes usar un Salón de Clases en Code.org para manejar tus estudiantes, ver su progreso, a asignar un curricular especifico - [click here to learn more] \\(Oprima aquí para aprender más.)"
         },
         "b0d9f9cb-d953-47a3-9e09-3dd5d822d198": {
           "description": "## Al comienzo de la clase\n\n1.  Haz que los alumnos creen una cuenta de Code Studio en <https://studio.code.org> si aún no la tienen.\n2.  Comparte la URL de la sección con los alumnos y diles que naveguen hasta ella para unirse a tu sección\n    -   Puedes confirmar que un estudiante se ha unido con éxito a tu sección teniendo abierta la página de progreso de la sección en la página de inicio del profesor y pulsando actualizar a medida que los estudiantes se unen. Los estudiantes deberían ver una pequeña barra verde en la parte superior de su página que dice 'Te has unido con éxito...' \n3.  Desde [studio.code.org](https://studio.code.org) haz que los estudiantes localicen el mosaico de Descubrimientos de la Informática y hagan clic en 'Ver curso', y luego vayan a la Unidad 1.\n\nUna vez que los estudiantes estén viendo la página de la Unidad 1, estarán listos para realizar la encuesta previa al curso de CSD"
@@ -7342,7 +7394,8 @@
         },
         "3258b13a-0f05-4f62-bf07-38aca3a745db": {
           "name": "Reflexión",
-          "description": "**Pregunta del Día: ¿Cómo puede ayudarnos el modelo IOSP a diseñar una aplicación que resuelva un problema?**\n\n**Reflexión:** Los alumnos reflexionan sobre la siguiente pregunta en sus diarios: \n\n-   ¿De qué estás más orgullo en tu proyecto?\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta."
+          "description": "**Pregunta del Día: ¿Cómo puede ayudarnos el modelo IOSP a diseñar una aplicación que resuelva un problema?**\n\n**Reflexión:** Los alumnos reflexionan sobre la siguiente pregunta en sus diarios: \n\n-   ¿De qué estás más orgullo en tu proyecto?\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta.",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "62bf93c9-f7ae-40b7-a515-4b81b83acee9": {
           "name": "Tanque de Tiburones",
@@ -9429,7 +9482,8 @@
           "name": "Diario"
         },
         "574e77dd-d6f7-4d59-80db-f24e54851aa1": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "324ed892-67b4-45b3-96d1-5e0ea6563e2e": {
           "name": "Prueba posterior al proyecto"
@@ -10795,7 +10849,8 @@
           "progression_name": "Incorporar los Comentarios"
         },
         "02053aac-92d9-4d70-a1fa-9e82cbb76686": {
-          "name": "Reflexionar: Reflexión final"
+          "name": "Reflexionar: Reflexión final",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "45d6560e-cf16-40cc-b076-b9f90a091668": {
           "name": "Configuración de la Exposición",
@@ -11339,6 +11394,9 @@
             null
           ]
         },
+        "17a2215c-52ce-485c-a518-493e2d778803": {
+          "progression_name": "Vídeo: Eventos en Laboratorio de Aplicaciones"
+        },
         "59bb3ddc-28e7-4257-9245-68d4d48bf3d2": {
           "name": "Sucesos en Laboratorio de Aplicaciones"
         },
@@ -11502,6 +11560,9 @@
             null
           ]
         },
+        "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b": {
+          "progression_name": "Encuesta Final de la Unidad"
+        },
         "4650c6de-71ab-47d0-bea2-61ff838fba65": {
           "name": "Prueba posterior al proyecto"
         },
@@ -11554,12 +11615,13 @@
         "29b1832f-4872-46da-a270-a41592f155ae": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Configuración"
         },
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
           "tips": [
             null,
-            null
+            "Al pulsar el botón de la pantalla, el código encenderá un pequeño LED rojo cerca de la clavija USB del Circuit Playground. Es posible que los alumnos esperen que se encienda una de las luces LED más grandes, por lo que es posible que no se den cuenta inmediatamente del LED rojo más pequeño. "
           ],
           "progression_name": "Predecir"
         },
@@ -11571,7 +11633,7 @@
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
-            null
+            "Este código utiliza el zumbador del Circuit Playground para crear un sonido. El primer número del bloque de frecuencias controla la nota del zumbador: los números bajos crean notas graves más bajas, y los números altos crean sonidos de mayor frecuencia. Los estudiantes explorarán estas frecuencias en los próximos niveles"
           ],
           "progression_name": "Predecir"
         },
@@ -11692,7 +11754,8 @@
         "a0f4ad44-579c-4404-8ba2-bcb19e459e0c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Variables"
         },
         "c8cebe3f-35da-44ac-9cc6-29190c5b6544": {
           "progression_name": "Desarrollo de Habilidades"
@@ -11700,7 +11763,8 @@
         "64e9d8c1-f351-4dec-b424-f4c03bd5324a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - El Patrón de Contador"
         },
         "99737e58-9db8-43d5-8437-03794c232a9c": {
           "progression_name": "Desarrollo de Habilidades"
@@ -11708,7 +11772,8 @@
         "314cd764-1846-45e2-951b-1fc00d8b5aed": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Sentencias If"
         },
         "c9fa6f0e-80c5-4009-b74a-8bc73095ecbe": {
           "tips": [
@@ -11762,7 +11827,8 @@
           "name": "Code Studio",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplicación de Recolector de Campo"
         },
         "cdba4023-5235-4505-8c9e-903e45be9ca4": {
           "tips": [
@@ -11908,7 +11974,8 @@
         "7757e358-925f-460e-8204-919de76b3d9f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Interacción entre Dispositivo y Persona"
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "Actividad de cierre"
@@ -12005,6 +12072,9 @@
           ],
           "progression_name": "Predecir"
         },
+        "3be863d9-6e87-48f3-a2ed-86a64ccc5ffa": {
+          "progression_name": "Investigar"
+        },
         "ee143b4c-c0a3-41f2-a7ad-f6a9d17b1aa0": {
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -12017,7 +12087,8 @@
         "11718267-5da6-4e25-9cf3-0782a3820c8d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Introducción a los Arrays"
         },
         "1789c265-b590-41c2-856d-381d22646c28": {
           "progression_name": "Desarrollo de Habilidades"
@@ -12056,7 +12127,8 @@
         "0cb8acf6-d4c7-4cc8-b550-fa53b04303f9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Funciones"
         },
         "ee36fb1a-c452-4da6-a983-33c5987f9085": {
           "progression_name": "Desarrollo de Habilidades"
@@ -12070,7 +12142,8 @@
         "69fa3327-7be1-4285-859c-d2f87a36b550": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Parámetros"
         },
         "f0d4f74c-c410-4931-aef8-6438559f83a4": {
           "progression_name": "Desarrollo de Habilidades"
@@ -12118,7 +12191,8 @@
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Arte Interactivo"
         },
         "04f9d7e1-c590-4d22-ab74-069209762be4": {
           "name": "Reflexión"
@@ -12128,6 +12202,9 @@
           "tips": [
             null
           ]
+        },
+        "e64406a9-57fb-477d-bdc7-3921a12129cb": {
+          "progression_name": "Configuración"
         },
         "f7118f4f-2fc6-430c-a803-09df0254c7dc": {
           "tips": [
@@ -12155,6 +12232,9 @@
           "tips": [
             null
           ]
+        },
+        "1fc60f0f-8066-4a49-86d7-2f3dda01d427": {
+          "progression_name": "Configuración"
         },
         "5ef6b3a1-45cf-420c-9ba9-db06070441df": {
           "progression_name": "Desarrollo de Habilidades"
@@ -12213,6 +12293,9 @@
           "tips": [
             "**Celebrar:** Como este es el proyecto culminante de todo el curso, considera la posibilidad de hacerlo a lo grande. Invita a los padres y administradores, o incluso organiza un evento después de la escuela para proporcionar a los estudiantes una audiencia real para compartir sus logros."
           ]
+        },
+        "266e20ca-98da-4140-80a3-b88831c809bc": {
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "9d25bedc-e25e-4765-933d-124a5f27be74": {
           "name": "Prueba posterior al proyecto"
@@ -13003,7 +13086,8 @@
           "name": "Actividad de cierre"
         },
         "5d04c580-a932-46bd-86c4-649793eac948": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "d1b8559e-ee84-4203-bed9-7674842fb791": {
           "tips": [
