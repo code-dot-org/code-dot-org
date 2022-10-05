@@ -35,7 +35,7 @@ const DataDocFormEditor = props => {
           navigateToHref(`/data_docs/${dataDocKey}`);
         }
       })
-      .catch(err => setError(err));
+      .fail(err => setError(err.responseText));
   };
 
   return (
