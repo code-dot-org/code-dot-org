@@ -663,6 +663,7 @@ az:
     print_certificate: Sertifikatı çap edin
   certificate_sponsor_message: "%{sponsor_name} sizin təlim sponsor üçün səxavətli
     hədiyyə etdi."
+  certificate_hour_of_code: Kod Saatı
   move_students:
     new_section_dne: Üzr istəyirik, lakin %{new_section_code} bölməsi mövcud deyil.
       Xahiş edirəm başqa bir bölmə kodu daxil edin.

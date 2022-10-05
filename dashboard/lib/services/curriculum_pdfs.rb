@@ -127,7 +127,7 @@ module Services
           any_pdf_generated = false
 
           get_pdfless_lessons(script).each do |lesson|
-            puts "Generating missing PDFs for #{lesson.key} (from #{script.name})"
+            puts "Generating missing Lesson PDFs for #{lesson.key} (from #{script.name})"
             generate_lesson_pdf(lesson, dir)
             generate_lesson_pdf(lesson, dir, true)
             any_pdf_generated = true

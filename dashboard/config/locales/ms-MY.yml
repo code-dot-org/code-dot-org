@@ -671,6 +671,7 @@ ms:
     print_certificate: Sijil Cetak
   certificate_sponsor_message: "%{sponsor_name} memberikan hadiah yang baik untuk
     menaja pembelajaran anda."
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: Maaf, seksyen %{new_section_code} tidak wujud. Sila masukkan
       kod seksyen yang lain.
@@ -1464,3 +1465,10 @@ ms:
   unit_prefix: Unit %{n}
   code_org_logo_alt: Halaman Utama Code.org
   teacher_feedback: Maklum balas Pengajar
+  lesson_lock:
+    error:
+      no_updates: Tiada kemas kini untuk dilaksanakan
+      missing_params: Mesti memberikan pengguna, tahap dan id unit
+      cannot_view_locked_answers: Tidak dapat melihat jawapan semasa dikunci
+      forbidden: Pengguna tidak boleh mengemas kini keadaan pelajar yang dikunci
+  reset_predict_progress_button: Padamkan Jawapan

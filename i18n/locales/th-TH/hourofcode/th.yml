@@ -36,6 +36,9 @@ th:
   africa_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
   africa_campaign_date_year: '2565'
   africa_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
+  hoc2022_header: สำรวจ เล่น สร้าง!
+  social_hoc2022_explore_play_create: ใช้วิทยาการคอมพิวเตอร์เพื่อสำรวจ เล่น และสร้าง!
+  codeorg_homepage_hoc2022_body: สำรวจจักรวาล ยิงประตู ทำลายการเคลื่อนไหว — มีหลายวิธีที่จะลองใช้วิทยาการคอมพิวเตอร์
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่เราสร้างขึ้นเอง  "
@@ -473,6 +476,22 @@ th:
   front_join_us_n_students_served: "# คนที่เข้าร่วมแล้ว"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: เรียน​รู้​เพิ่ม​เติม
+  cta_see_whats_new: ดูว่ามีอะไรใหม่
+  cta_try_more_activities: ลองกิจกรรมเพิ่มเติม
+  cta_try_an_activity: ลองทำกิจกรรม
+  hoc_homepage_join_the_movement_heading: เข้าร่วมการเคลื่อนไหว
+  hoc_homepage_join_the_movement_description: Hour of Code เปิดให้บริการตลอดทั้งปี
+    แต่ทุกๆ ปีในเดือนธันวาคม ชั้นเรียนของคุณสามารถเข้าร่วมกับนักเรียนหลายล้านคนทั่วโลกเพื่อเฉลิมฉลองสัปดาห์การศึกษาวิทยาการคอมพิวเตอร์ด้วย
+    Hour of Code การลงทะเบียนสำหรับการเฉลิมฉลองประจำปีจะเริ่มขึ้นในเดือนตุลาคมทุกปี
+  hoc_homepage_what_is_hoc_subhead: บทช่วยสอนหนึ่งชั่วโมงในกว่า 45 ภาษา ไม่จำเป็นต้องมีประสบการณ์
+    กิจกรรม Hour of Code ให้บริการฟรีตลอดทั้งปี
+  hoc_homepage_what_is_hoc_description: Hour of Code คือบทนำหนึ่งชั่วโมงเกี่ยวกับวิทยาการคอมพิวเตอร์
+    โดยใช้บทช่วยสอนแสนสนุกเพื่อแสดงให้เห็นว่าทุกคนสามารถเรียนรู้พื้นฐานได้ แคมเปญระดับรากหญ้านี้ได้รับการสนับสนุนจากพันธมิตรกว่า
+    400 รายและนักการศึกษา 200,000 คนทั่วโลก
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[อ่านคำแนะนำวิธีใช้ของเรา](%{howto_guide_url})
+    เพื่อวางแผนกิจกรรมสำหรับชั้นเรียนของคุณ"
+  hoc_homepage_highlights_heading: ไฮไลท์ Hour of Code
+  hoc_homepage_organized_by: Hour of Code จัดโดย [Code.org](%{codeorg_url}).
   signup_closed: ตอนนี้ปิดการลงทะเบียนสำหรับ Hour of Code แล้ว กรุณาตรวจสอบอีกครั้งในเดือนตุลาคมสำหรับการลงทะเบียน
     Hour of Code ถัดไป
   signup_registration_not_required: คุณไม่จำเป็นต้องลงทะเบียนเพื่อเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดเพราะกิจกรรมนี้เปิดตลอดปี

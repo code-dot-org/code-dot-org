@@ -17,11 +17,11 @@ module Services
         # <Pathname:csp1-2021/20210216001309/teacher-lesson-plans/Welcome to CSP.pdf>
         # and this for student lesson plans
         # <Pathname:csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf>
-        def get_lesson_plan_pathname(lesson, student_facing = false, as_url = false)
+        def get_lesson_plan_pathname(lesson, student_facing = false)
           return nil unless lesson&.script&.seeded_from
           version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
-          filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
-          filename = CGI.escape(filename) if as_url
+          suffix = student_facing ? '-Student' : ''
+          filename = ActiveStorage::Filename.new(lesson.localized_name.parameterize(preserve_case: true) + suffix + ".pdf").to_s
           subdir = student_facing ? "student-lesson-plans" : "teacher-lesson-plans"
           return Pathname.new(File.join(lesson.script.name, version_number, subdir, filename))
         end
@@ -30,7 +30,7 @@ module Services
         #
         # Expect this to look something like this: "https://lesson-plans.code.org/csp1-2021/20210909014219/teacher-lesson-plans/Welcome+to+CSP.pdf"
         def get_lesson_plan_url(lesson, student_facing=false)
-          pathname = get_lesson_plan_pathname(lesson, student_facing, true)
+          pathname = get_lesson_plan_pathname(lesson, student_facing)
           return nil if pathname.blank?
 
           File.join(get_base_url, pathname)

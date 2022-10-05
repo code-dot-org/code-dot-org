@@ -8,9 +8,9 @@ title: ऑवर ऑफ़ कोड कैसे करें मार्गद�
 
 ### इस अभियान से जुड़ें और छात्रों को इन दिए गए चरणों द्वारा कंप्यूटर विज्ञान के साथ परिचय कराएं।
 
-कम्प्यूटेशनल सोच समस्या सुलझाने के कौशल, तर्कक्षमता और रचनात्मकता के विकास में मदद करती है। साथ में, तकनीक दुनिया के सभी उद्योगों में तेजी से बदलाव ला रही है। आज, छात्रों को तकनीक के इस्तेमाल से आगे बढ़ कर इसे बनाने के बारे में सीखना शुरू करना चाहिए। जल्दी शुरुआत करने से, उनके पास 21वीं सदी के किसी भी करियर में सफलता की नींव होगी।
+आज, छात्रों को तकनीक के इस्तेमाल से आगे बढ़ कर इसे बनाने के बारे में सीखना शुरू करना चाहिए।
 
-ऑवर ऑफ़ कोड आज़माना छात्रों को कंप्यूटर साइंस से परिचित कराने का एक सरल और मज़ेदार तरीका है, शायद पहली बार के लिए, और यह कक्षा के अन्दर और स्कूल के बाद में, दोनों सेटिंग में पूरी तरह से फिट बैठता है। Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+छात्रों को कंप्यूटर विज्ञान से परिचित कराने का एक आसान और मज़ेदार तरीका एक ऑवर ऑफ़ कोड को आज़माना है, शायद पहली बार के लिए! एक ऐसी गतिविधि खोजें जो आपके केंद्र के अनुकूल हो, चाहे वह कक्षा में हो या स्कूल के बाद, व्यक्तिगत रूप से या आभासी। यदि नीचे दिए गए चरण देखने के बाद, यदि आपके अभी भी प्रश्न हैं, तो हमारी [भागीदारी मार्गदर्शिका]({{ localized_files/participation_guide }}) पर एक नज़र डालें:
 
 - [ऑवर ऑफ़ कोड हाउ-टू विडियो देखें](#how-to-video)
 - [ गतिविधियाँ और ट्यूटोरियल देखें। ](#explore-activities)
@@ -20,8 +20,6 @@ title: ऑवर ऑफ़ कोड कैसे करें मार्गद�
 - [कोडिंग प्राप्त करें](#code)
 - [अपने छात्र की सफलता की ख़ुशी मनाएं](#celebrate)
 - [Other Hour of Code resources for educators](#other-resources)
-
-### ऑवर ऑफ़ कोड को दूर से भी होस्ट किया जा सकता है! आरंभ करने के लिए, हमारी [वर्चुअल ऑवर ऑफ़ कोड इवेंट को होस्ट करने के लिए नुस्ख़े](https://hourofcode.com/us/how-to/virtual) देखें। 
 
 * * *
 
@@ -39,7 +37,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+नवीनतम ट्यूटोरियल्स और गतिविधियां जारी होने पर दुनिया भर के लोग सीएस शिक्षा सप्ताह (5-11 दिसंबर) के दौरान आवर ऑफ कोड उत्सव में शामिल होते हैं। But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -74,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+जब आप [अपने ऑवर ऑफ़ कोड ईवेंट पर साइन अप करते हैं](/#join), तो आपको एक सफल ऑवर ऑफ़ कोड की मेजबानी के लिए समाचार और सुझावों के साथ उपयोगी ईमेल संचार प्राप्त होंगे। It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. या अपनी कक्षा के लिए प्रेरणादायक पोस्टर प्रिंट करें! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 

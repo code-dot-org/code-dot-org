@@ -8,9 +8,9 @@ title: Guide pratique d'Une Heure de Code
 
 ### Rejoignez le mouvement et initiez vos étudiants à l'informatique en suivant ces étapes.
 
-La pensée computationnelle contribue à développer les compétences de résolution de problèmes, la logique et la créativité. Et la technologie est en train de transformer toutes les industries au monde. Les élèves d'aujourd'hui doivent apprendre à fabriquer la technologie, et non seulement à l'utiliser. En commençant tôt, ils auront les bases de réussite nécessaires pour n'importe quel parcours du XXIème siècle.
+Les élèves d'aujourd'hui doivent apprendre à fabriquer la technologie, et non seulement à l'utiliser.
 
-Essayer une Heure de Code est un moyen simple et amusant d'initier les élèves à l'informatique, peut-être pour la toute première fois, et convient parfaitement à la fois au cadre scolaire et aux activités extrascolaires. Consultez notre [guide de participation si vous avez d’autres questions]({{ localized_files/participation_guide }}). 
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Regardez la vidéo pratique de l'Heure de Code](#guide-pratique-vidéo)
 - [Découvrez les activités et les tutoriels](#découvrez-les-activités)
@@ -20,8 +20,6 @@ Essayer une Heure de Code est un moyen simple et amusant d'initier les élèves 
 - [Se mettre à coder](#code)
 - [Fêtez le succès de vos élèves](#fêtez)
 - [Autres ressources de l'Heure de Code pour les enseignants](#autres-ressources)
-
-### Une Heure de Code peut aussi s'animer à distance ! Pour commencer, consultez nos [conseils pour organiser un événement Une Heure de Code virtuel](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -39,7 +37,7 @@ Nous proposons divers [tutoriels amusants et guidés par les élèves]({{ urls/l
 
 Explorez les activités et décidez, à l'avance, si vous voulez faire un seul tutoriel pour tous vos élèves, ou si vous souhaitez laissé chaque enfant choisir le sien. 
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -47,7 +45,7 @@ Explorez les activités et décidez, à l'avance, si vous voulez faire un seul t
 
 ## 3. Créez votre planning pour la journée
 
-### Réfléchissez à vos besoins technologiques – les ordinateurs sont facultatifs ! 
+### Réfléchissez à vos besoins en technologie – les ordinateurs ont facultatifs ! 
 
 - Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. Mais vous n’avez pas besoin d’un ordinateur pour chaque enfant, et vous pouvez même faire une Heure de Code sans ordinateur du tout ! Pour les [activités débranchées](/learn), il vous suffit d'utiliser le filtre dans la section « Technologie de la salle de classe » pour afficher les options lorsque vous n'avez « Ni ordinateur ni appareil » à votre disposition. 
 - Veuillez essayer les tutoriels sur les ordinateurs ou appareils mis à votre disposition pour vous assurer qu'ils fonctionnent correctement sur les navigateurs utilisés, notamment au niveau du son et de la vidéo. Vous avez un faible débit ? Prévoyez de projeter les vidéos pour toute la classe, pour éviter que chaque participant ne télécharge ses propres vidéos. Ou bien essayez les tutoriels hors-ligne.
@@ -56,9 +54,9 @@ Explorez les activités et décidez, à l'avance, si vous voulez faire un seul t
 
 <img src="/images/fit-600/group_ipad.jpg" />
 
-### Choisissez un jour et un horaire
+### Choisissez un jour et une heure 
 
-Des individus du monde entier se rejoignent pour fêter l'Heure de Code pendant la Semaine de l’enseignement de l’informatique (du 9 au 13 décembre), lors de laquelle les derniers tutoriels et activités sont publiés. Mais vous pouvez faire une Heure de Code n’importe quel jour de l’année ! 
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Mais vous pouvez faire une Heure de Code n’importe quel jour de l’année ! 
 
 * * *
 
@@ -68,17 +66,17 @@ Des individus du monde entier se rejoignent pour fêter l'Heure de Code pendant 
 
 Maintenant que votre événement est planifié, il est temps de le promouvoir ! 
 
-### Informez-en votre école et votre communauté 
+### Dites-le à votre école et votre communauté 
 
 Faites la promotion de l’Heure de Code auprès d’autres enseignants qui voudront peut-être se joindre au jeu ! C'est aussi une excellente occasion de contacter l’association de parents d'élèves de votre école ou d’en faire part aux parents dans les bulletins d'information, en leur faisant savoir que leurs enfants pourraient rentrer à la maison avec l'envie d’essayer plus d'activités et de tutoriels ! 
 
-### Informez-les volontaires de votre événement en l'enregistrant 
+### Informez les bénévoles en enregistrant votre événement 
 
-Lorsque vous [enregistrerez votre événement Une Heure de Code](/), vous recevrez des courriels utiles contenant des nouvelles et des conseils astuces pour bien réussir son Heure de Code. C’est aussi de cette manière que vous informerez vos volontaires locaux que votre école y participe. Les volontaires sont une excellente ressource, et peuvent venir parler à votre classe d'informatique ou simplement aider vos élèves avec les activités de l'Heure de Code. 
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. C’est aussi de cette manière que vous informerez vos volontaires locaux que votre école y participe. Les volontaires sont une excellente ressource, et peuvent venir parler à votre classe d'informatique ou simplement aider vos élèves avec les activités de l'Heure de Code. 
 
-### Enthousiasmez vos élèves 
+### Stimulez vos élèves 
 
-Créez de l'engouement pour l'évènement en partageant des [vidéos qui inspirent](/promote/resources) et valorisent des personnes diverses ainsi que des façons créatives de se servir de l'informatique. Ou bien commandez des affiches qui inspirent pour votre salle de classe ! Les élèves sont plus enthousiasmés à l'idée de prendre part à une activité lorsqu'ils voient des personnes qui leur ressemblent les encourager à y participer. 
+Créez de l'engouement pour l'évènement en partageant des [vidéos qui inspirent](/promote/resources) et valorisent des personnes diverses ainsi que des façons créatives de se servir de l'informatique. Or print inspirational posters for your classroom! Les élèves sont plus enthousiasmés à l'idée de prendre part à une activité lorsqu'ils voient des personnes qui leur ressemblent les encourager à y participer. 
 
 {{ promote_new_posters }}
 
