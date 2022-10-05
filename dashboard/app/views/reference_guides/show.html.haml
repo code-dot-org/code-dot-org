@@ -8,7 +8,7 @@
 
 #show-container
 
-- if can? :edit, @reference_guide
+- if current_user.try(:levelbuilder?)
   = render layout: 'shared/extra_links' do
     %strong= @reference_guide.display_name
     %ul
