@@ -424,7 +424,7 @@ ko-KR:
   homepage_slot_text_link_shop: T-셔츠, 모자 등
   homepage_slot_text_link_thebadguys: 더 배드 가이즈로 코딩
   homepage_slot_text_link_administrators: 학교에 CS 과목 도입
-  homepage_gallery_header: Code.org에서 제작된 프로젝트 %{project_count}개 이상
+  homepage_gallery_header: "%{project_count} 백만 건 이상의 Code.org 프로젝트 제작됨"
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기

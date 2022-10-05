@@ -354,8 +354,8 @@ describe('entry tests', () => {
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
-            'build/package/css/reference_guides.css',
-            'style/curriculum/reference_guides.scss'
+            'build/package/css/curriculum_table_styling.css',
+            'style/curriculum/curriculum_table_styling.scss'
           ],
           [
             'build/package/css/curriculum_navigation.css',
@@ -749,6 +749,7 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
+    'code.org/public/congrats': './src/sites/code.org/pages/public/congrats.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
@@ -758,6 +759,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/certificates.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
+    'code.org/public/sharecertificate':
+      './src/sites/code.org/pages/public/sharecertificate.js',
     'code.org/public/teacher-dashboard/index':
       './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/yourschool':
