@@ -108,6 +108,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.11.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "events": "^3.3.0",
     "fast-memoize": "2.0.2",
     "file-loader": "^6.2.0",
     "firebase": "^2.4.2",

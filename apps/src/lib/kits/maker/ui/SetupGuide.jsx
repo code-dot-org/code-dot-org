@@ -21,7 +21,10 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
-import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {
+  WEB_SERIAL_FILTERS,
+  isWebSerialPortAvailable
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -53,7 +56,8 @@ export default class SetupGuide extends React.Component {
     const {webSerialPort} = this.state;
 
     // Experiment 'webserial' uses the WebSerial protocol and requires no downloads.
-    let isWebSerial = experiments.isEnabled('webserial');
+    let isWebSerial =
+      experiments.isEnabled('webserial') && isWebSerialPortAvailable();
 
     // WebSerial requires user input for user to select port.
     // Add a button for user interaction before initiated Setup Checklist
@@ -337,10 +341,19 @@ const SetupInstructions = () => (
 const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
 
 class ChromebookInstructions extends React.Component {
-  render() {
+  webSerialSetupInstructions() {
     return (
       <div>
-        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
+        {applabI18n.makerSetupChromebook()}
+        <h4>{applabI18n.note()}</h4>
+        {applabI18n.makerSetupChromebookHistoricalNote()}
+      </div>
+    );
+  }
+
+  chromeAppSetupInstructions() {
+    return (
+      <div>
         <SafeMarkdown
           markdown={applabI18n.makerSetupSerialConnector({
             webstoreURL: CHROME_APP_WEBSTORE_URL
@@ -358,6 +371,17 @@ class ChromebookInstructions extends React.Component {
           <li>{applabI18n.makerSetupFollowInstructions()}</li>
           <li>{applabI18n.makerSetupPlugInBoard()}</li>
         </ol>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
+        {experiments.isEnabled('webserial')
+          ? this.webSerialSetupInstructions()
+          : this.chromeAppSetupInstructions()}
       </div>
     );
   }
