@@ -604,7 +604,14 @@
         "courseF_groups_practice_bunny_-2022-2": "Termina el juego y ayuda al conejito a conseguir las zanahorias.",
         "courseF_groups_practice_costumes_-2022-2": "Practica el cambio de disfraz de cada sprite usando eventos.",
         "courseF_groups_remove_-2022-2": "Eliminar los sprites cuando se pulse sobre ellos.",
-        "ramp_artist_loops62022": "Arregla el bucle de esta escalera para completar el rompecabezas."
+        "ramp_artist_loops62022": "Arregla el bucle de esta escalera para completar el rompecabezas.",
+        "CSD U6 - Board Outputs - ChalA_2222": "Haz que cada animal emita un sonido único usando el zumbador.",
+        "CSD U6 - Board Outputs - ChalB_2222": "Hacer que el LED se ilumine cuando el ratón pasa por encima de un objeto oculto en la pantalla",
+        "CSD U6 - Board Outputs - PracA_2222": "¡Crea un despertador!",
+        "CSD U6 - Board Outputs - PracB_2222": "¡Ayuda a corregir el error en el código!",
+        "CSD U6 - Board Outputs - PracC_2222": "¡Ayuda a encontrar el error en el código!",
+        "CSD U6 - Board Outputs - PracD_2222": "Añadir código para que cada botón reproduzca una determinada frecuencia",
+        "CSD U6 - Board Outputs - PracE_2222": "Haz que el LED parpadee a diferentes velocidades"
       }
     }
   }

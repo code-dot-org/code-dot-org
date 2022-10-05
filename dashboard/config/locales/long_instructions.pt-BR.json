@@ -5456,7 +5456,8 @@
         "ramp_artist_loops82022": "**Desafio:** Procure por um padrão e deixe esse código menos utilizando laços.",
         "ramp_artist_loops92022": "Resolva este enigma desenhando um quadrado com lados de 200 pixels.",
         "simconfig_-2022-2": "# Mude e Preveja\n\nEscolha uma das variáveis que controlam essa simulação para modificar e prever como isso irá mudar o resultado.\n\nDepois de ter anotado sua previsão, execute a simulação 5 vezes e anote suas descobertas. Sua previsão foi parecida com o resultado?",
-        "simstarter_-2022-2": "# Coletando Dados\n\nExecute a simulação 5 vezes. A cada vez, use o guia de atividade de coleta de dados para registrar:\n\n-   Quantas maçãs o elefante pegou?\n-   Quantas maçãs o hipopótamo pegou?\n-   Quanto tempo levou para que todas as maçãs fossem pegas?"
+        "simstarter_-2022-2": "# Coletando Dados\n\nExecute a simulação 5 vezes. A cada vez, use o guia de atividade de coleta de dados para registrar:\n\n-   Quantas maçãs o elefante pegou?\n-   Quantas maçãs o hipopótamo pegou?\n-   Quanto tempo levou para que todas as maçãs fossem pegas?",
+        "courseF_apps_pet2022": "Animal de estimação virtual\n\nArraste os objetos para o cachorro e veja como ele reage"
       }
     }
   }
