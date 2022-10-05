@@ -1,10 +1,10 @@
-@eyes
 Feature: Multiple Choice Contained Levels
 
   Background:
     Given I create an authorized teacher-associated student named "Lillian"
     Then I sign in as "Lillian"
 
+@eyes
 Scenario: GameLab with a submittable contained level
   When I open my eyes to test "gamelab submittable contained level"
   Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/7"
@@ -20,6 +20,7 @@ Scenario: GameLab with a submittable contained level
   And I wait until current URL contains "/lessons/41/levels/8"
   Then I close my eyes
 
+@eyes
 Scenario: Gamelab with multiple choice contained level
   When I open my eyes to test "gamelab multiple choice contained level"
   Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
@@ -44,6 +45,7 @@ Scenario: Gamelab with multiple choice contained level
   And I wait until current URL contains "/lessons/41/levels/3"
   Then I close my eyes
 
+@eyes
 Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   When I open my eyes to test "maze multi contained level"
   Given I create a teacher-associated student named "Sally"
@@ -62,3 +64,23 @@ Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   Then I press "runButton"
   And I see no difference for "level run"
   Then I close my eyes
+
+Scenario: Teacher can reset progress on multiple choice contained level
+  Given I sign in as "Teacher_Lillian"
+  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2?enableExperiments=instructorPredictLevelReset"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  Then I press "unchecked_0"
+  And I wait up to 5 seconds for element "#checked_0" to be visible
+  Then I press "runButton"
+  And I verify progress in the header of the current page is "perfect" for level 2
+  Then I press "resetButton"
+  Then I click selector "button:contains('Delete Answer')"
+  And I wait up to 5 seconds for element "#unchecked_0" to be visible
+  And I wait for 5 seconds
+  And I verify progress in the header of the current page is "not_tried" for level 2
+  Then I press "unchecked_1"
+  And I wait up to 5 seconds for element "#checked_1" to be visible
+  Then I press "runButton"
+  Then I press "resetButton"
+  And I verify progress in the header of the current page is "perfect" for level 2
