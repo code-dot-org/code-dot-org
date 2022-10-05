@@ -1,7 +1,5 @@
-/** @file Top-level view for Fish */
-import PropTypes from 'prop-types';
+/** @file Top-level view for Music */
 import React from 'react';
-import {connect} from 'react-redux';
 import _ from 'lodash';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
@@ -29,13 +27,7 @@ const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
 var hooks = {};
 
-class MusicView extends React.Component {
-  static propTypes = {
-    isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    onMount: PropTypes.func.isRequired
-  };
-
+export default class MusicView extends React.Component {
   callUserGeneratedCode = fn => {
     try {
       fn.call(MusicView, this.player);
@@ -81,8 +73,6 @@ class MusicView extends React.Component {
   }
 
   componentDidMount() {
-    this.props.onMount();
-
     const windowWidth = Math.max(window.innerWidth, window.innerHeight);
     const windowHeight = Math.min(window.innerWidth, window.innerHeight);
 
@@ -513,8 +503,3 @@ class MusicView extends React.Component {
     );
   }
 }
-
-export default connect(state => ({
-  isProjectLevel: state.pageConstants.isProjectLevel,
-  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
-}))(MusicView);
