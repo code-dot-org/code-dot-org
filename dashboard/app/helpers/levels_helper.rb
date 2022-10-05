@@ -416,7 +416,6 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
-
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
@@ -654,9 +653,6 @@ module LevelsHelper
     if level_overrides[:embed]
       view_options(no_header: true, no_footer: true, white_background: true)
     end
-
-    # Temp for Music
-    view_options(no_footer: true)
 
     view_options(has_contained_levels: @level.try(:contained_levels).present?)
 

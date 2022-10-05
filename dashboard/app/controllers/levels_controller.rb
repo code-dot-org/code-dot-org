@@ -44,7 +44,6 @@ class LevelsController < ApplicationController
     Match,
     Maze,
     Multi,
-    Music,
     NetSim,
     Odometer,
     Pixelation,
@@ -420,8 +419,6 @@ class LevelsController < ApplicationController
         @game = Game.ailab
       elsif @type_class == Javalab
         @game = Game.javalab
-      elsif @type_class == Music
-        @game = Game.music
       end
       @level = @type_class.new
       render :edit

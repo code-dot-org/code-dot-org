@@ -36,6 +36,8 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
+    get "/musiclab", to: "musiclab#index"
+
     resources :activity_hints, only: [:update]
 
     resources :hint_view_requests, only: [:create]
