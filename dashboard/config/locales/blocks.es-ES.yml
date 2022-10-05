@@ -1221,6 +1221,8 @@ es:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutGrid:
+        text: diseño de sprites como una cuadrícula
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:

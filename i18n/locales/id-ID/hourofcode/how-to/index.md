@@ -8,9 +8,9 @@ title: Panduan Hour of Code
 
 ### Bergabunglah dengan gerakan ini dan kenalkan siswa Anda dengan ilmu komputer dengan langkah-langkah ini.
 
-Pemikirian komputasional membantu pengembangan keahlian memecahkan masalah, logika, dan kreativitas. Dan teknologi berhasil merombak setiap industri di planet ini. Siswa di masa ini harus belajar cara menciptakan teknologi, bukan hanya menggunakannya. Dengan memulai sejak dini, mereka akan memiliki pondasi menuju kesuksesan karier pada abad 21 ini.
+Siswa di masa ini harus belajar cara menciptakan teknologi, bukan hanya menggunakannya.
 
-Mencoba Hour of Code adalah satu cara sederhana dan seru untuk mengenalkan siswa ke ilmu komputer, mungkin untuk pertama kalinya, dan program ini sangat cocok untuk pengaturan dalam kelas atau ekstrakulikuler. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Tonton video panduan Hour of Code](#how-to-video)
 - [Telusuri aktivitas dan tutorial](#explore-activities)
@@ -20,8 +20,6 @@ Mencoba Hour of Code adalah satu cara sederhana dan seru untuk mengenalkan siswa
 - [Mulai menulis kode](#code)
 - [Rayakan keberhasilan siswa Anda](#celebrate)
 - [Sumber lain Hour of Code untuk pendidik](#other-resources)
-
-### Hour of Code juga bisa diselenggarakan secara jarak jauh! Untuk memulai, lihat kiat [kami untuk menggelar acara Hour of Code virtual](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -39,7 +37,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -74,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 

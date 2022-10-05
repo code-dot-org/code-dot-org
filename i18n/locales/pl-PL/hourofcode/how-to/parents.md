@@ -35,7 +35,7 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
 </h2>
 
 <p>
-  <a href="{{ urls/learn }}"><img src="/images/fit-600/tutorials.png" /></a>
+  <a href="{{ urls/learn }}"><img src="/images/tutorials.png" /></a>
 </p>
 
 <p>
@@ -65,7 +65,7 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
 </p>
 
 <p>
-  <a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" /></a>
+  <a href="{{ urls/learn }}"><img src="/images/Marketing/filtering-activities-hoc.jpg" /></a>
 </p>
 
 <p>
@@ -172,7 +172,7 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
     <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Wydrukuj naklejki</a> w domu albo <a href="https://store.code.org/">kup je online</a>, w ramach dodatkowej niespodzianki.
   </li>
   <li>
-    Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania w domu. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
+    Udostępniaj zdjęcia i filmy z Waszej "Godziny kodowania" w domu w mediach społecznościowych. Use <a href="https://twitter.com/hashtag/hourofcode">#HourOfCode</a> and <a href="https://twitter.com/codeorg">@codeorg</a> so we can highlight your success, too!
   </li>
 </ul>
 

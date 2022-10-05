@@ -35,6 +35,11 @@ pt:
   africa_campaign_date_full: 1º de outubro - 18 de dezembro
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  hoc2022_header: Explore, jogue, crie!
+  social_hoc2022_explore_play_create: Use a ciência da computação para explorar, jogar
+    e criar!
+  codeorg_homepage_hoc2022_body: Explore o universo, marque um gol, faça um movimento
+    – existem incontáveis maneiras de experimentar a ciência da computação.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -497,6 +502,25 @@ pt:
   front_join_us_challenge: Ganhe uma chamada de vídeo para sua sala de aula com uma
     celebridade!
   front_join_us_learn_more: Saiba mais
+  cta_see_whats_new: Veja o que há de novo
+  cta_try_more_activities: Experimente mais atividades
+  cta_try_an_activity: Experimentar uma atividade
+  hoc_homepage_join_the_movement_heading: Junte-se ao movimento
+  hoc_homepage_join_the_movement_description: O Hour of Code está disponível o ano
+    todo, mas a cada ano, no mês de dezembro, sua turma pode se juntar a milhões de
+    alunos em todo o mundo para celebrar a Semana da formação em ciência da computação
+    com o Hour of Code. As inscrições para a celebração anual começam no mês de outubro.
+  hoc_homepage_what_is_hoc_subhead: Tutoriais de uma hora em mais de 45 idiomas. Não
+    requer experiência. As atividades do Hour of Code estão disponíveis gratuitamente
+    o ano todo.
+  hoc_homepage_what_is_hoc_description: O Hour of Code é uma introdução de uma hora
+    à ciência da computação, utilizando tutoriais divertidos para mostrar que qualquer
+    pessoa pode aprender os fundamentos. Esta campanha popular tem o apoio de mais
+    de 400 parceiros e 200.000 educadores em todo o mundo.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Leia nosso Guia de instruções](%{howto_guide_url})
+    para planejar um evento para sua classe."
+  hoc_homepage_highlights_heading: Destaques do Hour of Code
+  hoc_homepage_organized_by: O Hour of Code é organizado pela [Code.org](%{codeorg_url}).
   signup_closed: Estão encerradas as inscrições para a Hora do Código. Por favor,
     verifique novamente em outubro para se inscrever para a próxima Hora do Código.
   signup_registration_not_required: Você não precisa se registrar para participar!
