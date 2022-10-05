@@ -104,7 +104,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldVariable');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -173,6 +172,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.FieldVariable = CdoFieldVariable;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
