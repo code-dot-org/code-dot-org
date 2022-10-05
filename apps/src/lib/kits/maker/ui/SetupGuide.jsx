@@ -52,9 +52,26 @@ const style = {
     margin: '0 0 15px 10px',
     borderRadius: '50%'
   },
-  makerSetupImg: {
+  microbitImg: {
     float: 'right',
     margin: '0 0 15px 10px'
+  }
+};
+
+const setupGuideContent = {
+  microbit: {
+    title: applabI18n.makerSetupMicrobitTitle(),
+    href: "https://microbit.org/",
+    imgSrc: "../assets/maker/microbit-drawing-green.png",
+    description: applabI18n.makerSetupMicrobitDescription(),
+    imgStyle: style.microbitImg
+  },
+  circuitPlayground: {
+    title: applabI18n.makerSetupCircuitPlaygroundTitle(),
+    href: "https://learn.adafruit.com/introducing-circuit-playground/overview",
+    imgSrc: "../assets/maker/circuit-playground-200.jpg",
+    description: applabI18n.makerSetupCircuitPlaygroundDescription(),
+    imgStyle: style.circuitPlaygroundImg
   }
 };
 
@@ -106,7 +123,16 @@ export default class SetupGuide extends React.Component {
     return (
       <div>
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
-        <Description microbit={isMicrobit} />
+        <div style={isMicrobit ? style.boardDescriptions : {}}>
+          <Description
+            {...setupGuideContent.circuitPlayground}
+            divStyle={isMicrobit ? style.microbitDescription : {}}
+          />
+          {isMicrobit && <Description
+            {...setupGuideContent.microbit}
+            divStyle={style.microbitDescription}
+          />}
+        </div>
         <Provider store={store}>
           <Downloads />
         </Provider>
@@ -188,61 +214,26 @@ const downloadButtonStyle = {
 };
 
 function Description(props) {
-  if (props.microbit) {
-    return (
-      <div style={style.boardDescriptions}>
-        <div style={style.microbitDescription}>
-          <h2>{applabI18n.makerSetupCircuitPlaygroundTitle()}</h2>
-          <center>
-            <a href="https://learn.adafruit.com/introducing-circuit-playground/overview">
-              <img
-                src="../assets/maker/circuit-playground-200.jpg"
-                width={200}
-                style={style.circuitPlaygroundImg}
-              />
-            </a>
-          </center>
-          <SafeMarkdown
-            markdown={applabI18n.makerSetupCircuitPlaygroundDescription()}
-          />
-        </div>
-        <div style={style.microbitDescription}>
-          <h2>{applabI18n.makerSetupMicrobitTitle()}</h2>
-          <center>
-            <a href="https://microbit.org/">
-              <img
-                src="../assets/maker/microbit-drawing-green.png"
-                width={200}
-                style={style.makerSetupImg}
-              />
-            </a>
-          </center>
-          <SafeMarkdown markdown={applabI18n.makerSetupMicrobitDescription()} />
-        </div>
-      </div>
-    );
-  }
   return (
-    <div>
-      <h2>{applabI18n.makerSetupCircuitPlaygroundTitle()}</h2>
+    <div style={props.divStyle}>
+      <h2>{props.title}</h2>
       <center>
-        <a href="https://learn.adafruit.com/introducing-circuit-playground/overview">
-          <img
-            src="../assets/maker/circuit-playground-200.jpg"
-            width={200}
-            style={style.circuitPlaygroundImg}
-          />
+        <a href={props.href}>
+          <img src={props.imgSrc} width={200} style={props.imgStyle} />
         </a>
       </center>
-      <SafeMarkdown
-        markdown={applabI18n.makerSetupCircuitPlaygroundDescription()}
-      />
+      <SafeMarkdown markdown={props.description} />
     </div>
   );
 }
 
 Description.propTypes = {
-  microbit: PropTypes.bool.isRequired
+  title: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  imgStyle: PropTypes.object,
+  description: PropTypes.string.isRequired,
+  divStyle: PropTypes.object
 };
 
 class WindowsDownloads extends React.Component {
