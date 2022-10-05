@@ -19,6 +19,9 @@ social:
   "og:video:type": ""
 ---
 
+- studio_redirect_url = CDO.studio_url("/certificates/blank")
+%script{type: 'text/javascript', src: webpack_asset_path('js/code.org/public/sharecertificate.js'), 'data': {studio_redirect_url: studio_redirect_url}}
+
 #index
   #gap.feature-codeorg
 
