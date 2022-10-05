@@ -2,9 +2,9 @@
 #
 # Helper methods for the analyze_hoc_activity cron job.
 #
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require_relative '../src/env'
 require src_dir 'database'
-require_relative '../pegasus/helpers/properties'
+require_relative 'properties'
 
 PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader, query_timeout: 1200)
 
