@@ -53,7 +53,7 @@ class TestFlakiness
       break if new_jobs.empty?
       jobs += new_jobs
     end
-    jobs.group_by {|job| job['name']}.map do |name, samples|
+    jobs.group_by {|job| job['name']}.filter_map do |name, samples|
       passed = samples.select {|job| job['passed']}
       next if passed.empty?
       summary = {
@@ -64,7 +64,7 @@ class TestFlakiness
         'duration' => 1.0 * passed.sum {|job| job['end_time'].to_f - job['start_time'].to_f} / passed.count
       }
       [name, summary]
-    end.compact.to_h
+    end.to_h
   end
 
   # Recommends a number of re-runs based on the flakiness score.
