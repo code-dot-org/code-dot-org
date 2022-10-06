@@ -1,0 +1,14 @@
+- if !!DCDO.get('cs-leaders-prize', false)
+  = inline_css 'generated/cs-leaders-prize.css'
+
+  %aside.homepage-cs-leaders-prize
+    .wrapper
+      %img{src: '/images/marketing/hoc2022-cs-leaders-prize-money-bag.png'}
+      %h1
+        Code.org is awarding
+        %strong
+          $1 million
+        to US schools
+      %a.btn{href: '/prize'} Enter to win
+
+  .clear

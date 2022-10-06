@@ -1,0 +1,51 @@
+@import 'font.scss', 'color.scss', 'imports/_breakpoints.scss';
+
+.homepage-cs-leaders-prize {
+  padding: 2em;
+  //background: url('/images/marketing/hoc2022-cs-leaders-prize-skinny-banner-bg.png') center center no-repeat;
+  //background-size: cover;
+  background-color: #eee;
+  margin-bottom: 2em;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $width-md) {
+      max-width: 750px;
+    }
+
+    img {
+      width: 80px;
+    }
+
+    h1 {
+      color: $darkest-gray;
+      margin: 0;
+      font-family: $gotham-regular;
+      font-size: 26px;
+
+      @media screen and (max-width: $width-md) {
+        font-size: 2.5em;
+      }
+
+      @media screen and (max-width: $width-sm) {
+
+      }
+    }
+
+    a.btn {
+      background-color: $darkest-gray;
+      color: white;
+      border-radius: 4px;
+      font-size: 1.25em;
+      font-family: $gotham-bold;
+      padding: 0.5em 1em;
+    }
+  }
+}
+
