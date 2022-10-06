@@ -54,6 +54,8 @@ module Services
 
           FileUtils.mkdir_p(File.join(directory, pathname.dirname))
           PDF.generate_from_url(url, File.join(directory, pathname))
+
+          FileUtils.mkdir_p(File.join(directory, fallback_pathname.dirname))
           FileUtils.cp(File.join(directory, pathname), File.join(directory, fallback_pathname))
         end
       end
