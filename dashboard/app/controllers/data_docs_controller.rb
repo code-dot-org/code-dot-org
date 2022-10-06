@@ -59,7 +59,7 @@ class DataDocsController < ApplicationController
   def destroy
     begin
       @data_doc.remove_serialization
-      @data_doc.destroy
+      @data_doc.destroy!
       render(status: :ok, plain: "Destroyed #{@data_doc.key}")
     rescue
       render(status: :not_acceptable, plain: @data_doc.errors)
