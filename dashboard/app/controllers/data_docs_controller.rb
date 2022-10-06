@@ -57,8 +57,13 @@ class DataDocsController < ApplicationController
 
   # DELETE /data_docs/:key
   def destroy
-    @data_doc.remove_serialization
-    @data_doc.destroy
+    begin
+      @data_doc.remove_serialization
+      @data_doc.destroy
+      render(status: :ok, plain: "Destroyed #{@data_doc.key}")
+    rescue
+      render(status: :not_acceptable, plain: @data_doc.errors)
+    end
   end
 
   def data_doc_params
