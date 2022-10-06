@@ -95,19 +95,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldButton');
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('FieldDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
-  blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldVariable');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -156,19 +152,27 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
-  blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
-  blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
-
-  // Fix built-in block
+  // Force Google Blockly to use our custom versions of fields
   blocklyWrapper.blockly_.fieldRegistry.unregister('field_variable');
   blocklyWrapper.blockly_.fieldRegistry.register(
     'field_variable',
     CdoFieldVariable
   );
+  blocklyWrapper.blockly_.fieldRegistry.unregister('field_dropdown');
+  blocklyWrapper.blockly_.fieldRegistry.register(
+    'field_dropdown',
+    CdoFieldDropdown
+  );
 
+  // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
+
+  // Additions for when our wrapper is accessed in /apps code
+  blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.FieldVariable = CdoFieldVariable;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
