@@ -223,8 +223,16 @@ class MusicView extends React.Component {
     });
   };
 
-  onBlockSpaceChange = () => {
-    //console.log('onBlockSpaceChange');
+  onBlockSpaceChange = e => {
+    // A drag event can leave the blocks in a temporarily unusable state,
+    // e.g. when a disabled variable is dragged into a slot, it can still
+    // be disabled.
+    // A subsequent non-drag event should arrive and the blocks will be
+    // usable then.
+    // It's possible that other events should similarly be ignored here.
+    if (e.type === Blockly.blockly_.Events.BLOCK_DRAG) {
+      return;
+    }
 
     this.executeSong();
 
