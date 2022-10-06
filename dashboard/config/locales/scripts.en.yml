@@ -8796,7 +8796,9 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description_audience: ''
         csa1-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
           lesson_groups: {}
           name: csa1-2023
           title: Object-Oriented Programming

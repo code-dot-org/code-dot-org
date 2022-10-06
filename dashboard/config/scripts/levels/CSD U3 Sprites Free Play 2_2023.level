@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Hair Styles!\r\n\r\nIt's time to combine all the different ways to create sprites and have fun! For this free play challenge, either draw your own sprites or edit existing sprites to give them your favorite hair styles!\r\n\r\n# Do This\r\nUsing the sprites in our library or by drawing your own sprites, create sprites with all of your favorite hair styles! Be creative!\r\n\r\n",
+    "long_instructions": "# Your Unique Style!\r\n\r\nFor this free play challenge, either draw your own sprites or edit existing sprites to give them your unique fashion style!\r\n\r\n# Do This\r\nUsing the sprites in our library or by drawing your own sprites, create sprites with your fashion sense! Be creative!\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -75,24 +75,24 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "encrypted": "false",
-    "display_name": "Fun Hairstyles",
+    "display_name": "Your Fashion Style",
     "mini_rubric": "false",
-    "thumbnail_url": "https://images.code.org/71404e4c2f980641b7d6bfca3fb9df50-woman.png",
+    "thumbnail_url": "https://images.code.org/4a81a4649b19c0239c7b34b24c53bf3d-wardrobe.png",
     "libraries_enabled": "false",
+    "bubble_choice_description": "For this free play challenge, either draw your own sprites or edit existing sprites to give them your unique fashion style!",
+    "validation_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "bubble_choice_description": "For this free play challenge, either draw your own sprites or edit existing sprites to give them your favorite hairstyles!",
-    "validation_enabled": "false"
+    ]
   },
   "game_id": 50,
   "published": true,
-  "created_at": "2022-09-19T22:53:17.000Z",
+  "created_at": "2022-10-05T20:20:19.000Z",
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:17.708+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites combine_2022\\\"\"],\"cloned_from\":\"CSD U3 Sprites combine_2022\"},{\"changed_at\":\"2022-10-05 20:17:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"teacher_markdown\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 20:19:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-05T20:20:19.872+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites combine_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites combine_2023\"},{\"changed_at\":\"2022-10-05 20:25:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
