@@ -1,6 +1,9 @@
 require 'selenium/webdriver'
 require 'webdrivers'
 
+# Pin to the same version of Chromedriver as the version of Chrome we use in SauceLabs.
+Webdrivers::Chromedriver.version = '75.0.3770.8'
+
 module SeleniumBrowser
   def self.local(headless=true, browser=:chrome)
     browser = browser.to_sym
