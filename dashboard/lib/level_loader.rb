@@ -51,8 +51,7 @@ class LevelLoader
       # Load level properties from disk and build a collection of levels that
       # have changed.
       changed_levels = level_file_paths.
-          map {|path| load_custom_level path, level_md5s_by_name}.
-          compact.
+          filter_map {|path| load_custom_level path, level_md5s_by_name}.
           select(&:changed?)
 
       if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
@@ -67,7 +66,7 @@ class LevelLoader
 
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.
-      changed_lcds = changed_levels.map(&:level_concept_difficulty).compact
+      changed_lcds = changed_levels.filter_map(&:level_concept_difficulty)
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
           reject {|column| %i{id level_id created_at}.include? column}
       LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
