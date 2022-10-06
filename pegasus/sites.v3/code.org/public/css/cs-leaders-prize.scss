@@ -1,11 +1,17 @@
 @import 'font.scss', 'color.scss', 'imports/_breakpoints.scss';
 
 .homepage-cs-leaders-prize {
+  background-color: #E5EEEE;
   padding: 2em;
-  //background: url('/images/marketing/hoc2022-cs-leaders-prize-skinny-banner-bg.png') center center no-repeat;
-  //background-size: cover;
-  background-color: #eee;
   margin-bottom: 2em;
+
+  @media screen and (max-width: $width-md) {
+    padding: 1em;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 1.5em 1.5em 2em;
+  }
 
   .wrapper {
     display: flex;
@@ -21,20 +27,25 @@
 
     img {
       width: 80px;
+
+      @media screen and (max-width: $width-md) {
+        width: 58px;
+      }
     }
 
     h1 {
       color: $darkest-gray;
       margin: 0;
       font-family: $gotham-regular;
-      font-size: 26px;
+      font-size: 1.875em;
 
       @media screen and (max-width: $width-md) {
-        font-size: 2.5em;
+        font-size: 1.5em;
       }
 
       @media screen and (max-width: $width-sm) {
-
+        text-align: center;
+        margin: .75em auto;
       }
     }
 
@@ -42,9 +53,13 @@
       background-color: $darkest-gray;
       color: white;
       border-radius: 4px;
-      font-size: 1.25em;
+      font-size: 18px;
       font-family: $gotham-bold;
-      padding: 0.5em 1em;
+      padding: 0.45em 1em;
+
+      @media screen and (max-width: $width-md) {
+        font-size: 14px;
+      }
     }
   }
 }
