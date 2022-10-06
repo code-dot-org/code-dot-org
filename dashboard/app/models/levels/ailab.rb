@@ -51,13 +51,12 @@ class Ailab < Level
 
     parsed_default_value = JSON.parse(default_value)
     parsed_default_value.keys.each do |prop|
-      translated_prop = I18n.t(
+      parsed_default_value[prop] = I18n.t(
         prop,
         scope: [:data, 'dynamic_instructions', name],
-        default: nil,
+        default: parsed_default_value[prop],
         smart: true
       )
-      parsed_default_value[prop] = translated_prop unless translated_prop.nil?
     end
 
     JSON.dump(parsed_default_value)
