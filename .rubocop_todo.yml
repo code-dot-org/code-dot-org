@@ -605,11 +605,6 @@ Style/RedundantBegin:
 Style/RedundantCondition:
   Enabled: false
 
-# Offense count: 42
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantFileExtensionInRequire:
-  Enabled: false
-
 # Offense count: 2
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowComments.
