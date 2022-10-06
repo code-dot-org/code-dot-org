@@ -13,15 +13,10 @@
 #
 require 'optparse'
 require 'parallel'
+require 'taglib'
 require_relative '../../deployment'
 require_relative '../../lib/cdo/cdo_cli'
 include CdoCli
-
-begin
-  require 'taglib'
-rescue LoadError
-  puts "You need taglib installed locally to run this script. Run 'brew install taglib' then 'gem install taglib-ruby'."
-end
 
 DEFAULT_S3_BUCKET = 'cdo-sound-library'.freeze
 DEFAULT_OUTPUT_FILE = 'apps/src/code-studio/soundLibrary.json'.freeze
@@ -42,7 +37,7 @@ class MetadataBuilder
         metadata = {}
         metadata['name'] = basename
         metadata['aliases'] = @options[:aliases] || []
-        metadata['time'] = mp3_file.audio_properties.length
+        metadata['time'] = mp3_file.audio_properties.length_in_seconds
 
         # Write metadata to file
         File.open(File.join(dirname, basename + '.json'), 'w') do |json_file|
