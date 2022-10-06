@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 require_relative '../lib/cdo/mysql_console_helper'
+require 'uri'
 
-raise 'please define CDO.dashboard_db_writer' unless CDO.dashboard_db_writer
+raise 'please define CDO.db_writer_endpoint' unless CDO.db_writer_endpoint
 
-MysqlConsoleHelper.run(CDO.dashboard_db_writer, ARGV.join(' ').strip)
+db_connection_settings = URI("mysql://#{CDO.db_writer_user}:#{CDO.db_writer_password}@#{CDO.db_writer_endpoint}:3306/#{CDO.dashboard_db_name}")
+MysqlConsoleHelper.run(db_connection_settings, ARGV.join(' ').strip)

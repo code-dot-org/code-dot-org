@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 require_relative '../lib/cdo/mysql_console_helper'
+require 'uri'
 
-raise 'please define CDO.db_admin' unless CDO.db_admin
+raise 'please define CDO.db_admin_user' unless CDO.db_admin_user
 
-MysqlConsoleHelper.run(CDO.db_admin, ARGV.join(' ').strip)
+db_connection_settings = URI("mysql://#{CDO.db_admin_user}:#{CDO.db_admin_password}@#{CDO.db_writer_endpoint}:3306/")
+MysqlConsoleHelper.run(db_connection_settings, ARGV.join(' ').strip)
