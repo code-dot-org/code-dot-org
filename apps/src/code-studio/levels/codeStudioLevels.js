@@ -176,7 +176,7 @@ export function resetContainedLevel() {
         'X-CSRF-Token': authenticityToken
       },
       body: JSON.stringify({
-        script_id: appOptions.serverScriptId,
+        script_id: appOptions.scriptId,
         level_id: levelIds[0]
       })
     }).then(response => {
