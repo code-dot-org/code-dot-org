@@ -13,6 +13,7 @@ class DataDocsControllerTest < ActionController::TestCase
     }.freeze
 
     @data_doc = create :data_doc, key: @test_params[:key]
+    @levelbuild_destroy_doc = create :data_doc, key: 'levelbuild_destroy_doc'
   end
 
   test_user_gets_response_for :index, user: nil, response: :success
@@ -48,6 +49,12 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :edit_all, user: :student, response: :forbidden
   test_user_gets_response_for :edit_all, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit_all, user: :levelbuilder, response: :success
+
+  # only levelbuilder can destroy
+  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: :student, response: :forbidden
+  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
 
   test 'creating a new data doc writes serialization and redirects to show page with key in URL' do
     sign_in @levelbuilder
@@ -108,7 +115,7 @@ class DataDocsControllerTest < ActionController::TestCase
     post :destroy, params: {
       key: data_doc_to_delete.key
     }
-    assert_response :no_content
+    assert_response :ok
 
     assert_raise ActiveRecord::RecordNotFound do
       data_doc_to_delete.reload
