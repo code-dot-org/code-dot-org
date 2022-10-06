@@ -89,7 +89,6 @@ section.join-us {
   .row {
 
     & > div:first-child {
-      float: none;
       margin: 0 auto;
 
       h2 {
@@ -105,6 +104,43 @@ section.join-us {
   h1#thanks-header {
     text-align: center;
     font-size: 22px;
+  }
+}
+
+// Announcements box
+aside.million-promo {
+  background: url('/images/hoc2022-cs-leaders-prize-bg-square.svg') no-repeat top center;
+  background-size: cover;
+  border: 2px solid #F1DC98;
+  margin: 0 2em;
+  padding: 3.5em 2em 2.75em;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+
+  @media screen and (max-width: $width-md) {
+    margin: 3em auto 0;
+    padding: 5em 1em 3.5em;
+
+    p {
+      width: 70%;
+      margin: 0 auto;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  h1 {
+    color: $darkest_gray;
+    margin: 0 auto .15em;
+  }
+
+  img {
+    width: 150px;
+    display: block;
+    margin: 1em auto 2em;
   }
 }
 

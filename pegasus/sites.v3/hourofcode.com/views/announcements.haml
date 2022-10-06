@@ -1,19 +1,37 @@
-:ruby
-  providers = []
+-# Commenting out the Robotics promo code below for potential future use
+  instead of refactoring or deleting.
+  :ruby
+    providers = []
 
-  providers << {id: "sphero", url: "https://sphero.com"}
-  providers << {id: "iRobot", url: "https://root.irobot.com"}
-  providers << {id: "microbit", url: "https://microbit.org"}
-  providers << {id: "Makeblock", url: "https://www.makeblock.com"}
+    providers << {id: "sphero", url: "https://sphero.com"}
+    providers << {id: "iRobot", url: "https://root.irobot.com"}
+    providers << {id: "microbit", url: "https://microbit.org"}
+    providers << {id: "Makeblock", url: "https://www.makeblock.com"}
 
-#joindescription
-  #calltoaction
-    %h2.join-us-header=hoc_s(:front_join_us_robotics)
-    .robotics-providers
-      .announcements-body
-        =hoc_s(:front_join_us_robotics_link)
-      - providers.each do |provider|
-        %a.category-link.robotics-provider{href: provider[:url], target: "_blank"}
-          %img{style: "width: 100%; margin-bottom: 20px", src: "/images/fit-200/robotics/hoc2019/#{provider[:id].downcase}-logo.png"}
-          %img{style: "width: 100%", src: "/images/fit-200/robotics/hoc2019/#{provider[:id].downcase}-image.png"}
-    .clear
+  #joindescription
+    #calltoaction
+      %h2.join-us-header=hoc_s(:front_join_us_robotics)
+      .robotics-providers
+        .announcements-body
+          =hoc_s(:front_join_us_robotics_link)
+        - providers.each do |provider|
+          %a.category-link.robotics-provider{href: provider[:url], target: "_blank"}
+            %img{style: "width: 100%; margin-bottom: 20px", src: "/images/fit-200/robotics/hoc2019/#{provider[:id].downcase}-logo.png"}
+            %img{style: "width: 100%", src: "/images/fit-200/robotics/hoc2019/#{provider[:id].downcase}-image.png"}
+      .clear
+
+
+-# HoC 2022 - CS Leaders Prize million dollar promo code starts below.
+  This promo is for U.S. schools only, but we'll show it to everyone.
+%aside.million-promo
+  %h1
+    CS Leaders Prize
+  %p
+    Code.org is awarding
+    %strong
+      $1 million to US schools
+    to help more students access computer science!
+  %img{src: "shared/images/announcement/hoc2022-cs-leaders-prize-money-bag.png", alt:"Cute cartoon icon of a green bag with a purple dollar sign on it surrounded by gold coins"}
+  %a{href: "https://code.org/prize", target: "_blank", rel: "noopener noreferrer"}
+    %button
+      Enter to win
