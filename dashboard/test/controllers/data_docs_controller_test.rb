@@ -121,4 +121,13 @@ class DataDocsControllerTest < ActionController::TestCase
       data_doc_to_delete.reload
     end
   end
+
+  test 'cannot delete non-existent data doc' do
+    sign_in @levelbuilder
+
+    post :destroy, params: {
+      key: 'non_existent_data_doc'
+    }
+    assert_response :not_found
+  end
 end
