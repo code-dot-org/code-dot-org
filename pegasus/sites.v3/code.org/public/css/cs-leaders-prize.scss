@@ -57,8 +57,16 @@
       font-family: $gotham-bold;
       padding: 0.45em 1em;
 
+      @media screen and (max-width: $width-lg) {
+        font-size: 16px;
+      }
+
       @media screen and (max-width: $width-md) {
         font-size: 14px;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        font-size: 16px;
       }
     }
   }
