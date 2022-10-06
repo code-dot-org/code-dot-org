@@ -1,5 +1,5 @@
 {
-  "category": "World",
+  "category": "Story Lab",
   "config": {
     "func": "setSubheading",
     "blockText": "set subheading {SUBHEADING}",

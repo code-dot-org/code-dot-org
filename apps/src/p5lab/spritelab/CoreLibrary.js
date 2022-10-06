@@ -10,10 +10,6 @@ import {
 } from '../../code-studio/projectRedux';
 import msg from '@cdo/locale';
 
-const PLAYSPACE_SIZE = 400;
-const OUTER_MARGIN = 50;
-const LINE_HEIGHT = 50;
-
 export default class CoreLibrary {
   constructor(p5) {
     this.p5 = p5;
@@ -34,6 +30,7 @@ export default class CoreLibrary {
     this.promptVars = {};
     this.eventLog = [];
     this.speechBubbles = [];
+    this.storyLabText = {};
     this.soundLog = [];
     this.criteria = [];
     this.bonusCriteria = [];
@@ -57,9 +54,7 @@ export default class CoreLibrary {
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
         }
-        if (this.heading || this.subHeading) {
-          this.drawHeadings();
-        }
+        commands.drawStoryLabText.call(this, this.storyLabText);
       },
       ...commands
     };
@@ -874,43 +869,5 @@ export default class CoreLibrary {
 
   runBehaviors() {
     this.behaviors.forEach(behavior => behavior.func({id: behavior.sprite.id}));
-  }
-
-  drawHeadings() {
-    let yCursor = OUTER_MARGIN;
-    if (this.heading) {
-      const x = PLAYSPACE_SIZE / 2;
-      const y = yCursor;
-      const size = this.getScaledFontSize(this.heading, 50);
-      this.drawLine(this.heading, size, x, y);
-      yCursor += LINE_HEIGHT / 2;
-    }
-    if (this.subHeading) {
-      const x = PLAYSPACE_SIZE / 2;
-      const y = yCursor;
-      const size = this.getScaledFontSize(this.subHeading, 16);
-      this.drawLine(this.subHeading, size, x, y);
-    }
-  }
-
-  drawLine(text, size, x, y) {
-    this.p5.textAlign(this.p5.CENTER);
-    this.p5.fill('black');
-    this.p5.textSize(size);
-    this.p5.text(text, x, y);
-  }
-
-  getScaledFontSize(text, desiredSize) {
-    this.p5.push();
-    this.p5.textSize(desiredSize);
-    const fullWidth = this.p5.textWidth(text);
-    const scaledSize = Math.min(
-      desiredSize,
-      (desiredSize * (PLAYSPACE_SIZE - OUTER_MARGIN)) / fullWidth
-    );
-    const maxLineHeight = 30;
-
-    this.p5.pop();
-    return Math.min(scaledSize, maxLineHeight);
   }
 }
