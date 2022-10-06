@@ -15,8 +15,6 @@ const sections = [
     code: 'ABCD',
     grade: '10',
     providerManaged: false,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
     hidden: false
   },
   {
@@ -28,8 +26,6 @@ const sections = [
     code: 'EFGH',
     grade: '11',
     providerManaged: true,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
     hidden: false
   },
   {
@@ -41,8 +37,6 @@ const sections = [
     code: 'IJKL',
     grade: '9',
     providerManaged: false,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
     hidden: false
   },
   {
@@ -54,8 +48,6 @@ const sections = [
     code: 'MNOP',
     grade: '6',
     providerManaged: false,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
     hidden: true
   }
 ];
