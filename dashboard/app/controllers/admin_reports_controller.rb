@@ -1,5 +1,4 @@
 require 'cdo/env'
-require 'cdo/properties'
 
 # The controller for reports of internal admin-only data.
 class AdminReportsController < ApplicationController
