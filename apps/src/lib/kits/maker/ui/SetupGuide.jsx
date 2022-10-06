@@ -44,7 +44,7 @@ const style = {
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
-  microbitDescription: {
+  descriptionFlexCard: {
     width: '45%'
   },
   circuitPlaygroundImg: {
@@ -61,15 +61,15 @@ const style = {
 const setupGuideContent = {
   microbit: {
     title: applabI18n.makerSetupMicrobitTitle(),
-    href: "https://microbit.org/",
-    imgSrc: "../assets/maker/microbit-drawing-green.png",
+    href: 'https://microbit.org/',
+    imgSrc: '../assets/maker/microbit-drawing-green.png',
     description: applabI18n.makerSetupMicrobitDescription(),
     imgStyle: style.microbitImg
   },
   circuitPlayground: {
     title: applabI18n.makerSetupCircuitPlaygroundTitle(),
-    href: "https://learn.adafruit.com/introducing-circuit-playground/overview",
-    imgSrc: "../assets/maker/circuit-playground-200.jpg",
+    href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
+    imgSrc: '../assets/maker/circuit-playground-200.jpg',
     description: applabI18n.makerSetupCircuitPlaygroundDescription(),
     imgStyle: style.circuitPlaygroundImg
   }
@@ -126,12 +126,14 @@ export default class SetupGuide extends React.Component {
         <div style={isMicrobit ? style.boardDescriptions : {}}>
           <Description
             {...setupGuideContent.circuitPlayground}
-            divStyle={isMicrobit ? style.microbitDescription : {}}
+            divStyle={isMicrobit ? style.descriptionFlexCard : {}}
           />
-          {isMicrobit && <Description
-            {...setupGuideContent.microbit}
-            divStyle={style.microbitDescription}
-          />}
+          {isMicrobit && (
+            <Description
+              {...setupGuideContent.microbit}
+              divStyle={style.descriptionFlexCard}
+            />
+          )}
         </div>
         <Provider store={store}>
           <Downloads />
