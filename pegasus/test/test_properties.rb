@@ -1,5 +1,5 @@
-require_relative '../test_helper'
-require 'cdo/properties'
+require_relative 'test_helper'
+require_relative '../helpers/properties'
 
 class PropertiesTest < Minitest::Test
   KEY = 'key_to_delete'.freeze
