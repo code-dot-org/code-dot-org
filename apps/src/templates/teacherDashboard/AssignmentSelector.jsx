@@ -220,7 +220,7 @@ export default class AssignmentSelector extends Component {
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
       courseOfferings,
-      section.participantType
+      'student'
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];

@@ -1,10 +1,10 @@
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha, :multi_update_assignment]
   before_action :get_course_and_unit, only: [:create, :update]
 
-  skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
+  skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update, :multi_update_assignment]
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
@@ -101,6 +101,29 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       end
     end
     render json: section.summarize
+  end
+
+  def multi_update_assignment
+    puts 'hello!'
+    sections = Section.where(id: params[:section_ids]).compact
+    puts sections.inspect
+    course_offering = CourseOffering.find(params[:course_offering_id])
+    puts course_offering.inspect
+    course_version = course_offering.course_versions.find(params[:course_version_id])
+    puts course_version.inspect
+    course_id = course_version.content_root_id if course_version.content_root_type = 'UnitGroup'
+    puts course_id.inspect
+    script_id = params[:script_id]
+    unless script_id
+      script_id = course_version.content_root_id if course_version.content_root_type = 'Script'
+    end
+    puts script_id.inspect
+
+    sections.each do |section|
+      section.course_id = course_id
+      section.script_id = script_id
+      section.save! if section.changed?
+    end
   end
 
   # DELETE /api/v1/sections/<id>
