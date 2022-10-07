@@ -12,9 +12,9 @@ def filter_eslint_apps(modified_files)
     (f.end_with?(".js", ".jsx")) &&
       !(f.end_with?('.min.js') ||
         f.match(/public\/.+package\//) ||
-        f.match(/apps\/lib\//) ||
-        f.match(/shared\//) ||
-        f.match(/dashboard\/config\//)
+        f.include?('apps/lib/') ||
+        f.include?('shared/') ||
+        f.include?('dashboard/config/')
        )
   end
 end
@@ -26,7 +26,7 @@ def filter_eslint_shared(modified_files)
 end
 
 def filter_scss_apps(modified_files)
-  modified_files.select {|f| f.match(/apps\//) && f.end_with?(".scss")}
+  modified_files.select {|f| f.include?('apps/') && f.end_with?(".scss")}
 end
 
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile', 'Gemfile'].freeze

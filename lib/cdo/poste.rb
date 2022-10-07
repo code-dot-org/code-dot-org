@@ -560,7 +560,7 @@ module Poste2
       end
 
       content_type = body_part.content_type
-      raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
+      raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type.include?('charset=UTF-8')
       body = body_part.body.to_s
 
       sender_email = mail.from.first
