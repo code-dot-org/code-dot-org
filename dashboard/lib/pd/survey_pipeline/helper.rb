@@ -1,8 +1,8 @@
-require 'pd/survey_pipeline/daily_survey_retriever.rb'
-require 'pd/survey_pipeline/daily_survey_parser.rb'
-require 'pd/survey_pipeline/daily_survey_joiner.rb'
-require 'pd/survey_pipeline/generic_mapper.rb'
-require 'pd/survey_pipeline/daily_survey_decorator.rb'
+require 'pd/survey_pipeline/daily_survey_retriever'
+require 'pd/survey_pipeline/daily_survey_parser'
+require 'pd/survey_pipeline/daily_survey_joiner'
+require 'pd/survey_pipeline/generic_mapper'
+require 'pd/survey_pipeline/daily_survey_decorator'
 
 module Pd::SurveyPipeline::Helper
   include Pd::JotForm::Constants

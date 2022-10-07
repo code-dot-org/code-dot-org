@@ -6548,13 +6548,18 @@ en:
           description: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           student_description: Learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.
         csc-things:
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Scratch Paper
           name: csc-things
           title: 'CSC Brain Dump '
           description_audience: ''
           description_short: ''
           description: 'These are just a work in progress :) '
           student_description: ''
+          lessons:
+            lesson-2:
+              name: book cover
         poetry-hoc2:
           lesson_groups: {}
           name: poetry-hoc2
@@ -9224,4 +9229,15 @@ en:
           description_audience: ''
           description_short: ''
           description: 'Winter 2022 Pilot module - Historical Landmark and Mapping Module '
+          student_description: ''
+        csc-playground:
+          lessons:
+            lesson-1:
+              name: function machines playground
+          lesson_groups: {}
+          name: csc-playground
+          title: CSC Playground
+          description_audience: ''
+          description_short: ''
+          description: 'A place to park CSC stuff '
           student_description: ''
