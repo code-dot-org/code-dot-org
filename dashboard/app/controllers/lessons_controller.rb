@@ -3,8 +3,10 @@ class LessonsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
+  before_action :disable_session_for_cached_pages
 
   include LevelsHelper
+  include CachedScriptHelper
 
   # Script levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
