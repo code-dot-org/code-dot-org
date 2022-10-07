@@ -1,6 +1,11 @@
 ---
-title: 'CS Leaders Prize'
+title: 'CS Leaders Prize - $1 Million for U.S. Schools'
 theme: responsive
+social:
+  "og:description": "Tell us how your school will expand computer science, and you could win $10,000 to make it happen!"
+  "og:image": "/images/marketing/hoc2022-cs-leaders-prize-opengraph.png"
+  "og:image:width": 1200
+  "og:image:height": 630
 ---
 
 <link href="/css/generated/cs-leaders-prize.css" rel="stylesheet">
@@ -36,7 +41,7 @@ See <a href="/prize-terms">terms and conditions</a>.
 
 
 <a id="form"></a>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfx9NrM-J-Vahqtrrqy5bDylTKqMnLAxgcrh4iqjkFWAm_KPA/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfx9NrM-J-Vahqtrrqy5bDylTKqMnLAxgcrh4iqjkFWAm_KPA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
 ## FAQ
