@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require_relative '../lib/cdo/mysql_console_helper'
+
+raise 'please define CDO.dashboard_reporting_db_writer' unless CDO.dashboard_reporting_db_writer
+
+MysqlConsoleHelper.run(CDO.dashboard_reporting_db_writer, ARGV.join(' ').strip)
