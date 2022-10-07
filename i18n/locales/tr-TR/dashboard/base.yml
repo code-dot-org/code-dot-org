@@ -552,6 +552,7 @@ tr:
     choose_next_course: "Aşağıdaki Code Studio derslerinden birini seçerek deneyin"
     print_certificate: "Sertifikayı Yazdır"
   certificate_sponsor_message: "%{sponsor_name} öğreniminize sponsor olarak cömert bir bağışta bulundu."
+  certificate_hour_of_code: "Saat Kodu"
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
     section_code_cant_be_current_section: "Şimdiki bölüm yeni bölümle aynı olamaz."

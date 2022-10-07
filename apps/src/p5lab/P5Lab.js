@@ -74,6 +74,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import DCDO from '@cdo/apps/dcdo';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -97,7 +98,13 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 export default class P5Lab {
-  constructor() {
+  constructor(defaultAnimations = []) {
+    if (!!DCDO.get('use-s3-path-for-default-animations', true)) {
+      this.defaultAnimations = defaultAnimations;
+    } else {
+      this.defaultAnimations = defaultSprites;
+    }
+
     this.skin = null;
     this.level = null;
     this.tickIntervalId = 0;
@@ -228,7 +235,7 @@ export default class P5Lab {
 
     this.level.softButtons = this.level.softButtons || [];
     if (this.level.useDefaultSprites) {
-      this.startAnimations = defaultSprites;
+      this.startAnimations = this.defaultAnimations;
     } else if (
       this.level.startAnimations &&
       this.level.startAnimations.length > 0
@@ -269,7 +276,7 @@ export default class P5Lab {
       getStore().dispatch(
         setInitialAnimationList(
           this.startAnimations,
-          null /* spritesForV3Migration */,
+          null /* animationsForV3Migration */,
           this.isBlockly
         )
       );
@@ -455,13 +462,14 @@ export default class P5Lab {
       ? config.initialAnimationList
       : this.startAnimations;
     initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList
+      initialAnimationList,
+      this.defaultAnimations
     );
 
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        defaultSprites /* spritesForV3Migration */,
+        this.defaultAnimations /* animationsForV3Migration */,
         this.isBlockly
       )
     );
@@ -504,8 +512,12 @@ export default class P5Lab {
    * the "set background to" block, which needs to have backgrounds in the
    * animation list at the start in order to look not broken.
    * @param {Object} initialAnimationList
+   * @param {Object} defaultAnimations
    */
-  loadAnyMissingDefaultAnimations(initialAnimationList) {
+  loadAnyMissingDefaultAnimations(
+    initialAnimationList,
+    defaultAnimations = {orderedKeys: [], propsByKey: {}}
+  ) {
     if (!this.isBlockly) {
       return initialAnimationList;
     }
@@ -514,24 +526,27 @@ export default class P5Lab {
       const name = initialAnimationList.propsByKey[key].name;
       configDictionary[name] = key;
     });
-    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultAnimations.
     // This is primarily to handle pre existing levels that don't have animations in their list yet
     const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
       const {categories} = initialAnimationList.propsByKey[key];
       return categories && categories.includes('backgrounds');
     });
-    const nameCheck = defaultSprites.orderedKeys.filter(key => {
+    const nameCheck = defaultAnimations.orderedKeys.filter(key => {
       return (
-        defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
-        configDictionary[defaultSprites.propsByKey[key].name]
+        defaultAnimations.propsByKey[key].categories.includes('backgrounds') &&
+        configDictionary[defaultAnimations.propsByKey[key].name]
       );
     });
     const hasBackgrounds = categoryCheck.length > 0 || nameCheck.length > 0;
     if (!hasBackgrounds) {
-      defaultSprites.orderedKeys.forEach(key => {
-        if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+      defaultAnimations.orderedKeys.forEach(key => {
+        if (
+          defaultAnimations.propsByKey[key].categories.includes('backgrounds')
+        ) {
           initialAnimationList.orderedKeys.push(key);
-          initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+          initialAnimationList.propsByKey[key] =
+            defaultAnimations.propsByKey[key];
         }
       });
     }
