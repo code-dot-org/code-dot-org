@@ -1,4 +1,4 @@
-require_relative 'hooks_utils.rb'
+require_relative 'hooks_utils'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 BLOCKS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/blocks', __FILE__).freeze
