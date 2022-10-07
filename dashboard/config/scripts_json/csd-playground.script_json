@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-09-30 22:01:30 UTC",
+    "serialized_at": "2022-10-06 19:56:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -172,6 +172,21 @@
       },
       "seeding_key": {
         "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Wonder Book Cover ",
+      "name": "Wonder Book Cover ",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Wonder Book Cover ",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -522,6 +537,48 @@
       "seeding_key": {
         "lesson_activity.key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e",
         "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "5c165f8c-5ee0-45e4-9483-0f582fb6621d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c165f8c-5ee0-45e4-9483-0f582fb6621d",
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "89dbbd83-a049-4f6c-acbb-e465a27f754d",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d",
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "1be0df49-fc1d-4a30-bf61-9d8158e778d7",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1be0df49-fc1d-4a30-bf61-9d8158e778d7",
+        "lesson.key": "Wonder Book Cover ",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1427,6 +1484,145 @@
       "seeding_key": {
         "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303",
         "lesson_activity.key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e"
+      }
+    },
+    {
+      "key": "ec95fa0f-6078-4560-a2ff-3e2b4bd5d6d1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ec95fa0f-6078-4560-a2ff-3e2b4bd5d6d1",
+        "lesson_activity.key": "5c165f8c-5ee0-45e4-9483-0f582fb6621d"
+      }
+    },
+    {
+      "key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6",
+      "position": 1,
+      "properties": {
+        "name": "Wonder: Book Cover",
+        "progression_name": "Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "282cca02-5d47-4990-bdb1-64e172cdf161",
+      "position": 2,
+      "properties": {
+        "name": "Introduction to Sprite Lab",
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "282cca02-5d47-4990-bdb1-64e172cdf161",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "5136c071-5838-4fb7-9c72-0dd8791c4726",
+      "position": 3,
+      "properties": {
+        "name": "Bud Not Buddy",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "defaabb9-c123-4159-bd74-0576619191da",
+      "position": 4,
+      "properties": {
+        "name": "Blended",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "8284326b-722d-4b11-a841-4554b01b541a",
+      "position": 5,
+      "properties": {
+        "name": "New Kid/Class Act",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "305105a4-60d3-4076-ae42-af9b991a0cf7",
+      "position": 6,
+      "properties": {
+        "name": "Hello World: When Clicked",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "305105a4-60d3-4076-ae42-af9b991a0cf7",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "552b1b84-0b71-4209-82e1-1981fcdf8968",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "552b1b84-0b71-4209-82e1-1981fcdf8968",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31",
+      "position": 8,
+      "properties": {
+        "name": "Number The Stars",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "a51001ac-4b27-4476-a5de-d7e1794ed909",
+      "position": 9,
+      "properties": {
+        "name": "Front Desk",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "0267a64a-56c8-430f-b23b-450ab29e32c2",
+      "position": 10,
+      "properties": {
+        "name": "Free Play",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "0267a64a-56c8-430f-b23b-450ab29e32c2",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "d6023249-0369-4571-85a0-97c0c0c65f36",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d6023249-0369-4571-85a0-97c0c0c65f36",
+        "lesson_activity.key": "1be0df49-fc1d-4a30-bf61-9d8158e778d7"
       }
     }
   ],
@@ -2637,6 +2833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2658,6 +2857,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_title"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2679,6 +2881,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_background"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2700,6 +2905,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_say"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2721,6 +2929,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_location"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2742,6 +2953,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_say2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2763,6 +2977,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_prop"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2784,6 +3001,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_print"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2805,6 +3025,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2826,6 +3049,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2847,6 +3073,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_clicksay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2868,6 +3097,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_prompt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2889,6 +3121,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_promptanswered"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2910,6 +3145,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2931,6 +3169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_hello-world"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2952,6 +3193,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2973,6 +3217,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_location"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2994,6 +3241,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_size"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3015,6 +3265,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmark_explain"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3036,6 +3289,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3057,6 +3313,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3078,6 +3337,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_behavior"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3099,6 +3361,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3120,6 +3385,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3141,6 +3409,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3162,6 +3433,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3175,6 +3449,336 @@
       },
       "level_keys": [
         "csc_landmarks_freeplay"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_widget_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6"
+      },
+      "level_keys": [
+        "csc_bookcover_widget_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "282cca02-5d47-4990-bdb1-64e172cdf161"
+      },
+      "level_keys": [
+        "CourseF_video_introSpriteLab_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_title_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      },
+      "level_keys": [
+        "csc_bookcover_title_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_background_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      },
+      "level_keys": [
+        "csc_bookcover_background_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      },
+      "level_keys": [
+        "csc_bookcover_say_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_location_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      },
+      "level_keys": [
+        "csc_bookcover_location_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say2_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      },
+      "level_keys": [
+        "csc_bookcover_say2_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_prop_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      },
+      "level_keys": [
+        "csc_bookcover_prop_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_print_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      },
+      "level_keys": [
+        "csc_bookcover_print_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_click_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "305105a4-60d3-4076-ae42-af9b991a0cf7"
+      },
+      "level_keys": [
+        "helloworld_food_click_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "552b1b84-0b71-4209-82e1-1981fcdf8968"
+      },
+      "level_keys": [
+        "coursee_helloworld_eventsvideo_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31"
+      },
+      "level_keys": [
+        "csc_bookcover_clicksay_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_prompt_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      },
+      "level_keys": [
+        "csc_bookcover_prompt_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_promptanswered_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      },
+      "level_keys": [
+        "csc_bookcover_promptanswered_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "0267a64a-56c8-430f-b23b-450ab29e32c2"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay_-book-recommendation"
       ]
     }
   ],
@@ -4065,6 +4669,186 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_widget_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_widget_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_video_introSpriteLab_-book-recommendation",
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "282cca02-5d47-4990-bdb1-64e172cdf161"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_title_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_title_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_background_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_background_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_say_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_location_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_location_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say2_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_say2_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_prop_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_prop_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_print_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_print_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_click_-book-recommendation",
+        "script_level.level_keys": [
+          "helloworld_food_click_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "305105a4-60d3-4076-ae42-af9b991a0cf7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_eventsvideo_-book-recommendation",
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "552b1b84-0b71-4209-82e1-1981fcdf8968"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_clicksay_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_prompt_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_prompt_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_promptanswered_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_promptanswered_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "0267a64a-56c8-430f-b23b-450ab29e32c2"
       }
     }
   ],
