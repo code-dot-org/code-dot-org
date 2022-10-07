@@ -128,7 +128,10 @@ aside.cs-leaders-prize {
 
   @media screen and (max-width: $width-md) {
     margin: 3em auto 0;
-    padding: 5.25em 1em 3.5em;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 2.5em 3em 3em;
   }
 
   h1 {
