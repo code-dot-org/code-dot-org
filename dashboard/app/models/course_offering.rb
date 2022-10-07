@@ -19,7 +19,7 @@
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
-  has_many :course_versions
+  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Script'])}
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
 

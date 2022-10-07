@@ -3,7 +3,6 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'cdo/properties'
 require 'varnish_environment'
 require_relative '../../dashboard/legacy/middleware/files_api'
 require_relative '../../dashboard/legacy/middleware/channels_api'
