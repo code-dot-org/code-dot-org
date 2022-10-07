@@ -642,6 +642,11 @@ FactoryGirl.define do
     end
   end
 
+  factory :ailab, parent: :level, class: Ailab do
+    game {Game.ailab}
+    level_num 'custom'
+  end
+
   factory :free_response, parent: :level, class: FreeResponse do
     game {Game.free_response}
     level_num 'custom'
@@ -1015,11 +1020,6 @@ FactoryGirl.define do
     sequence(:key, 'a') {|char| "vocab_#{char}"}
     word 'word'
     definition 'definition'
-  end
-
-  factory :data_doc do
-    sequence(:name) {|n| "data doc #{n}"}
-    sequence(:key) {|n| "data-doc-#{n}"}
   end
 
   factory :programming_environment do
