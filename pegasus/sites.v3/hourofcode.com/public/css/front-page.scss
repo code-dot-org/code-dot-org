@@ -119,11 +119,9 @@ section.join-us {
 
 // Announcements box
 aside.cs-leaders-prize {
-  background: url('/images/hoc2022-cs-leaders-prize-bg-square.png') no-repeat top center;
-  background-size: cover;
-  border: 2px solid #f6cc22;
+  background: #E5EEEE;
   margin: 0 2em;
-  padding: 3.5em 2em 2.75em;
+  padding: 2.5em 2em 3em;
   border-radius: 5px;
   text-align: center;
   font-size: 16px;
@@ -131,26 +129,23 @@ aside.cs-leaders-prize {
   @media screen and (max-width: $width-md) {
     margin: 3em auto 0;
     padding: 5.25em 1em 3.5em;
-
-    p {
-      width: 70%;
-      margin: 0 auto;
-
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
   }
 
   h1 {
     color: $darkest_gray;
-    margin: 0 auto .15em;
+    margin: 0 auto;
+    font-size: 1.65em;
   }
 
   img {
     width: 150px;
     display: block;
     margin: 1em auto 2em;
+  }
+
+  button {
+    background-color: $darkest-gray;
+    border: 1px solid $darkest-gray;
   }
 }
 
@@ -316,7 +311,6 @@ section.host-an-hour {
 .ctabuttonatag {
   text-decoration: none;
 }
-
 
 .ctatext {
   display: inline-block;
@@ -592,8 +586,6 @@ a.category-link {
   font-family: $gotham-regular;
   text-decoration: none;
 }
-
-
 
 .students-served {
   font-size: 16px;
