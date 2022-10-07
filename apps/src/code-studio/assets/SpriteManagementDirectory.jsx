@@ -1,36 +1,6 @@
-import React, {useState} from 'react';
-import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
-import {moveDefaultSpriteMetadataToProduction} from '@cdo/apps/assetManagement/animationLibraryApi';
-import StatusIcon, {
-  iconStatus
-} from '@cdo/apps/code-studio/components/StatusIcon';
+import React from 'react';
 
 export default function SpriteManagementDirectory() {
-  const [moveChangesStatus, setMoveChangesStatus] = useState(iconStatus.none);
-
-  const moveChangesToProduction = () => {
-    //Files to move to production folder: defaultSprites.json
-    moveDefaultSpriteMetadataToProduction()
-      .then(() => {
-        setMoveChangesStatus(iconStatus.success);
-      })
-      .catch(err => {
-        setMoveChangesStatus(iconStatus.failure);
-        console.log(err);
-      });
-  };
-
-  const confirmReleaseChangesToLevelbuilder = () => {
-    let shouldRelease = confirm(
-      'This will release all the sprites you have added and updates to the default sprite list to ' +
-        'production. Are you sure?'
-    );
-    if (shouldRelease) {
-      moveChangesToProduction();
-    }
-  };
-
   return (
     <div>
       <h1>Manage Sprite Lab Assets</h1>
@@ -85,27 +55,6 @@ export default function SpriteManagementDirectory() {
         changes to the Default list on LevelBuilder, until you 'Release Changes
         to Default Animations to Production'.
       </p>
-      <div style={styles.pageBreak}>
-        <Button
-          text="Release Changes to Production"
-          color={Button.ButtonColor.red}
-          onClick={confirmReleaseChangesToLevelbuilder}
-          style={styles.button}
-        />
-        <StatusIcon status={moveChangesStatus} />
-      </div>
     </div>
   );
 }
-
-const styles = {
-  pageBreak: {
-    borderTop: `1px solid ${color.dark_slate_gray}`,
-    display: 'flex',
-    alignItems: 'start'
-  },
-  button: {
-    margin: 20,
-    fontSize: 20
-  }
-};
