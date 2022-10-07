@@ -75,7 +75,7 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:14.193+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2022-10-06 03:01:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:02:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:03:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:14.193+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2022-10-06 03:01:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:02:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:03:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 03:27:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -84,13 +84,18 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="gamelab_makeNewSpriteAnon">
-              <field name="ANIMATION_NAME">"soccer_player_4"</field>
-              <value name="LOCATION">
-                <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                  <field name="LOCATION">{"x":200,"y":200}</field>
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"soccer_field_4"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <field name="ANIMATION_NAME">"soccer_player_4"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                      <field name="LOCATION">{"x":186,"y":322}</field>
+                    </block>
+                  </value>
                 </block>
-              </value>
+              </next>
             </block>
           </next>
         </block>
