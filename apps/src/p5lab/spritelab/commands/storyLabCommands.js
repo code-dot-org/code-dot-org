@@ -7,6 +7,13 @@ export const commands = {
     }
   },
 
+  clearHeadings() {
+    this.storyLabText = {
+      heading: '',
+      subHeading: ''
+    };
+  },
+
   setHeading(heading) {
     this.storyLabText.heading = heading;
   },
