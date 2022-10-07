@@ -121,6 +121,15 @@ class User < ApplicationRecord
     share_teacher_email_regional_partner_opt_in
   )
 
+  attr_accessor :child_users, :data_transfer_agreement_required,
+    :email_preference_form_kind, :email_preference_opt_in,
+    :email_preference_opt_in_required, :email_preference_request_ip,
+    :email_preference_source, :login, :parent_email_preference_email,
+    :parent_email_preference_opt_in, :parent_email_preference_opt_in_required,
+    :parent_email_preference_request_ip, :parent_email_preference_source,
+    :parent_email_update_only, :raw_token,
+    :share_teacher_email_reg_partner_opt_in_radio_choice
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
@@ -396,24 +405,6 @@ class User < ApplicationRecord
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
   ].freeze
-
-  attr_accessor :login
-  attr_accessor :email_preference_opt_in_required
-  attr_accessor :email_preference_opt_in
-  attr_accessor :email_preference_request_ip
-  attr_accessor :email_preference_source
-  attr_accessor :email_preference_form_kind
-
-  attr_accessor :parent_email_update_only
-  attr_accessor :parent_email_preference_opt_in_required
-  attr_accessor :parent_email_preference_opt_in
-  attr_accessor :parent_email_preference_email
-  attr_accessor :parent_email_preference_request_ip
-  attr_accessor :parent_email_preference_source
-
-  attr_accessor :share_teacher_email_reg_partner_opt_in_radio_choice
-
-  attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -1510,8 +1501,6 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  attr_accessor :raw_token
-
   def self.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -1524,8 +1513,6 @@ class User < ApplicationRecord
     associated_users = User.associated_users(email)
     return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
-
-  attr_accessor :child_users
 
   def send_reset_password_for_users(email, users)
     if users.empty?
