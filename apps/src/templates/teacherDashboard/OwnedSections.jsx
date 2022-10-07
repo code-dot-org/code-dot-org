@@ -13,6 +13,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
+import MultiChangeAssignmentDialog from './MultiChangeAssignmentDialog';
 
 class OwnedSections extends React.Component {
   static propTypes = {
@@ -25,7 +26,8 @@ class OwnedSections extends React.Component {
   };
 
   state = {
-    viewHidden: false
+    viewHidden: false,
+    multiAssignmentDialogOpen: false
   };
 
   constructor(props) {
@@ -112,6 +114,17 @@ class OwnedSections extends React.Component {
                   onEdit={this.onEditSection}
                 />
               </div>
+            )}
+            <Button
+              onClick={() => this.setState({multiAssignmentDialogOpen: true})}
+              text="Change assignment of multiple sections"
+            />
+            {this.state.multiAssignmentDialogOpen && (
+              <MultiChangeAssignmentDialog
+                handleClose={() =>
+                  this.setState({multiAssignmentDialogOpen: false})
+                }
+              />
             )}
           </div>
         )}

@@ -386,6 +386,8 @@ export const reloadAfterEditingSection = () => (dispatch, getState) => {
 export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
 
+  console.log('hello');
+
   let apis = [
     '/dashboardapi/sections',
     '/dashboardapi/sections/valid_course_offerings',
@@ -396,6 +398,8 @@ export const asyncLoadSectionData = id => dispatch => {
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
+
+  console.log(apis);
 
   return Promise.all(apis.map(fetchJSON))
     .then(
