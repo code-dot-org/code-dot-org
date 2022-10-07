@@ -60,6 +60,7 @@ const style = {
 
 const setupGuideContent = {
   microbit: {
+    class: 'microbit-description',
     title: applabI18n.makerSetupMicrobitTitle(),
     href: 'https://microbit.org/',
     imgSrc: '../assets/maker/microbit-drawing-green.png',
@@ -67,6 +68,7 @@ const setupGuideContent = {
     imgStyle: style.microbitImg
   },
   circuitPlayground: {
+    class: 'circuit-playground-description',
     title: applabI18n.makerSetupCircuitPlaygroundTitle(),
     href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
     imgSrc: '../assets/maker/circuit-playground-200.jpg',
@@ -114,27 +116,30 @@ export default class SetupGuide extends React.Component {
       );
     }
 
-    // Experiment 'microbit' renders additional description.
+    // Experiment 'microbit' renders additional description. Terniary rendering
+    // implemented to facilitated future changes in the layout of Setup Guide.
     let isMicrobit = experiments.isEnabled('microbit');
 
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (
-      <div>
+      <div className="maker-setup">
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
-        <div style={isMicrobit ? style.boardDescriptions : {}}>
-          <Description
-            {...setupGuideContent.circuitPlayground}
-            divStyle={isMicrobit ? style.descriptionFlexCard : {}}
-          />
-          {isMicrobit && (
+        {isMicrobit ? (
+          <div style={style.boardDescriptions}>
+            <Description
+              {...setupGuideContent.circuitPlayground}
+              divStyle={style.descriptionFlexCard}
+            />
             <Description
               {...setupGuideContent.microbit}
               divStyle={style.descriptionFlexCard}
             />
-          )}
-        </div>
+          </div>
+        ) : (
+          <Description {...setupGuideContent.circuitPlayground} />
+        )}
         <Provider store={store}>
           <Downloads />
         </Provider>
@@ -217,7 +222,7 @@ const downloadButtonStyle = {
 
 function Description(props) {
   return (
-    <div style={props.divStyle}>
+    <div className={props.class} style={props.divStyle}>
       <h2>{props.title}</h2>
       <center>
         <a href={props.href}>
@@ -230,6 +235,7 @@ function Description(props) {
 }
 
 Description.propTypes = {
+  class: PropTypes.string,
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
