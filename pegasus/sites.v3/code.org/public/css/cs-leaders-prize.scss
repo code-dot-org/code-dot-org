@@ -1,5 +1,9 @@
 @import 'font.scss', 'color.scss', 'imports/_breakpoints.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Homepage banner
 .homepage-cs-leaders-prize {
   background-color: #E5EEEE;
@@ -73,7 +77,7 @@
   }
 }
 
-// Landing page
+// Landing page - code.org/prize
 header {
   display: flex;
   justify-content: space-between;
@@ -81,7 +85,7 @@ header {
   flex-wrap: wrap;
 
   & > div:first-child {
-    width: 60%;
+    width: 64%;
 
     h2 {
       margin-top: 0;
@@ -109,6 +113,13 @@ header {
       width: 150px;
     }
   }
+}
+
+iframe {
+  border-bottom: 1px solid $light-gray;
+  background: #f0ebf8;
+  padding-top: 1em;
+  margin-top: 1em;
 }
 
 details {

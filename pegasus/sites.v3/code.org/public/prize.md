@@ -9,8 +9,8 @@ theme: responsive
 
 <header>
   <div>
-    <h2>We’re awarding $1 million — YOUR school could win!</h2>
-    <p>To help more students access computer science, we’re giving away $1 million in prizes — that’s right, a MILLION dollars. As part of our 10th Hour of Code celebration, one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
+    <h2>Expand computer science at your school, win $10,000</h2>
+    <p>To help more students access computer science, especially students from underserved communities, we're giving away $1 million in prizes — that's right, a MILLION dollars. In partnership with DonorsChoose, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
     <a href="#form"><button>Enter to win</button></a>
   </div>
   <div>
@@ -19,34 +19,30 @@ theme: responsive
 </header>
 
 
-
 ## To be eligible a school must commit to:
 
 <ul>
-  <li>Establishing a <strong><em>new</em></strong> <a href="/educate/csp">Computer Science Principles</a>, <a href="/educate/csa">Computer Science A</a>, or <a href="/educate/csd">Computer Science Discoveries</a> course using Code.org
-  <li>Providing a short statement of support from district leadership for expanding of CS opportunities as a district priority
-  <li>Organizing a school-wide Hour of Code event
+  <li>Establishing a <strong><em>new</em></strong> <a href="/educate/csp">Computer Science Principles</a>, <a href="/educate/csa">Computer Science A</a>, or <a href="/educate/csd">Computer Science Discoveries</a> course using Code.org.</li>
+  <li>Provide a short statement of support from district leadership for expanding of CS opportunities as a district priority.</li>
+  <li>Organize a school-wide <a href="https://hourofcode.com/">Hour of Code</a> or other event/assembly for <a href="https://www.csedweek.org/">CSEdWeek</a> to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
 </ul>
 
 
-In addition to the $10,000 award, the implementing teacher in each winning school will receive a no-cost scholarship to attend Code.org’s [Professional Learning Program](/educate/professional-learning/middle-high).
+In addition to the $10,000 awarded through DonorsChoose, the implementing teacher(s) in each winning school will receive a no-cost scholarship to attend Code.org's [Professional Learning Program](/educate/professional-learning/middle-high).
 
-<a href="#terms">Click here for terms and conditions.</a>
+See <a href="/prize-terms">terms and conditions</a>.
 
-Enter to win before November 21, 2022 by filling out the form below!
+<p>Enter to win before <strong>November 21, 2022</strong> by filling out the form below!</p>
 
 
 <a id="form"></a>
-
-## Form
-
-
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfx9NrM-J-Vahqtrrqy5bDylTKqMnLAxgcrh4iqjkFWAm_KPA/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
 ## FAQ
 <details>
   <summary>Who is eligible to win?</summary>
-  <p>Any public middle or high school in the U.S. is eligible to apply.</p>
+  <p>Any public middle or high school in the U.S. is eligible to apply. We especially encourage schools in low-income underserved communities to participate, to help advance diversity and equity in computer science.</p>
 </details>
 
 <details>
@@ -70,26 +66,14 @@ Enter to win before November 21, 2022 by filling out the form below!
 </details>
 
 <details>
-  <summary>My school already offers CS Discovers, CS Principles, or Computer Science A. Am I still eligible to apply?</summary>
-  <p>Your school can apply as long as the course you are committing to establishing is a new course. For example, if your school already offers CS Principles, but you are committing to a new Computer Science A course, your school is eligible to apply.</p>
+  <summary>My school already offers CS Discoveries, CS Principles, or Computer Science A. Am I still eligible to apply?</summary>
+  <p>Your school can apply as long as the course you are committing to establishing is a <em>new course</em>. For example, if your school already offers CS Principles, but you are committing to a new Computer Science A course, your school is eligible to apply.</p>
 </details>
 
 <details>
-  <summary>Are there any restrictions to how my school uses the award money?</summary>
-  <p>TBD</p>
+  <summary>Are there any restrictions to how my school uses the Donors Choose gift code?</summary>
+  <p>View <a href="https://help.donorschoose.org/hc/en-us/articles/203895786-Project-eligibility-requirements">project eligibility requirements</a> on <a href="https://donorschoose.org">donorschoose.org</a>.</p>
 </details>
 
 
-
-
 <a id="terms"></a>
-
-## Terms and conditions
-Prize limited to public middle and high U.S. schools only. To qualify, a school representative (staff, teacher, principal) must fill out the submission form on this page. One middle school and one high school in every U.S. state and in D.C. will receive a $10,000 gift code via DonorsChoose.org. Code.org will select and notify winners via email by November 30, 2022.
-
-To clarify, this is not a sweepstakes or a contest involving pure chance.
-
-1) There is no financial stake or risk involved in applying - any school may participate, without any payment to Code.org or any other organization
-
-2) Winners will only be selected among public middle and high U.S. schools who fill out the submission form on this page and commit to (1) establishing a new Computer Science Principles, Computer Science A, or Computer Science Discoveries course using Code.org; (2) providing a short statement of support from district leadership for expanding of CS opportunities as a district priority; and (3) organizing a school-wide Hour of Code event
-
