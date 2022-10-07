@@ -673,6 +673,7 @@ describe('entry tests', () => {
     'courses/new': './src/sites/studio/pages/courses/new.js',
     'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
     'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
+    'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
