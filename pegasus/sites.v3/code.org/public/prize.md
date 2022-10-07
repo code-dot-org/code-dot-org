@@ -19,7 +19,7 @@ social:
     <a href="#form"><button>Enter to win</button></a>
   </div>
   <div>
-    <img src="/images/marketing/hoc2022-cs-leaders-prize-money-bag.png" alt="Cute cartoon icon of a green bag with a purple dollar sign on it surrounded by gold coins">
+    <img src="/images/marketing/hoc2022-cs-leaders-prize-money-bag.png" alt="Icon of a green bag with a purple dollar sign on it surrounded by gold coins">
   </div>
 </header>
 
@@ -79,6 +79,3 @@ See <a href="/prize-terms">terms and conditions</a>.
   <summary>Are there any restrictions to how my school uses the Donors Choose gift code?</summary>
   <p>View <a href="https://help.donorschoose.org/hc/en-us/articles/203895786-Project-eligibility-requirements">project eligibility requirements</a> on <a href="https://donorschoose.org">donorschoose.org</a>.</p>
 </details>
-
-
-<a id="terms"></a>

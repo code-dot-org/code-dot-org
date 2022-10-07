@@ -8,7 +8,7 @@ html {
 .homepage-cs-leaders-prize {
   background-color: #E5EEEE;
   padding: 1.5em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 
   @media screen and (max-width: $width-md) {
     padding: 1em;
@@ -118,7 +118,7 @@ header {
 
 iframe {
   border-bottom: 1px solid $light-gray;
-  background: #f0ebf8;
+  background: $background_gray;
   padding-top: 1em;
   margin-top: 1em;
 }
@@ -132,6 +132,4 @@ details {
       cursor: pointer;
     }
   }
-
 }
-
