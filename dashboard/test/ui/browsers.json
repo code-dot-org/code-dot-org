@@ -26,7 +26,7 @@
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "platformVersion": "15.4",
+    "platformVersion": "16.0",
     "browserName": "safari",
     "deviceName": "iPhone Simulator",
     "mobile": true,
@@ -36,7 +36,7 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "platformVersion": "15.4",
+    "platformVersion": "16.0",
     "browserName": "safari",
     "deviceName": "iPad Simulator",
     "mobile": true,
