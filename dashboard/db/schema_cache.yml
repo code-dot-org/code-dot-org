@@ -26125,11 +26125,12 @@ indexes:
   course_versions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_versions
-    name: index_course_versions_on_course_offering_id_and_key
+    name: index_course_versions_on_offering_id_and_key_and_type
     unique: true
     columns:
     - course_offering_id
     - key
+    - content_root_type
     lengths: {}
     orders: {}
     opclasses: {}
@@ -30155,7 +30156,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20220927184247
+version: 20221003141047
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
