@@ -52,6 +52,13 @@ export function isWebSerialPort(port) {
   return port instanceof WebSerialPortWrapper;
 }
 
+/**
+ * Determines whether WebSerial port is available in the current browser
+ */
+export function isWebSerialPortAvailable() {
+  return 'serial' in navigator;
+}
+
 /** @const {number} serial port transfer rate */
 export const SERIAL_BAUD = 57600;
 
