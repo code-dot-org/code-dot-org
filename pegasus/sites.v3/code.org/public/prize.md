@@ -15,7 +15,7 @@ social:
 <header>
   <div>
     <h2>Expand computer science at your school, win $10,000</h2>
-    <p>To help more students access computer science, especially students from underserved communities, we're giving away $1 million in prizes — that's right, a MILLION dollars. In partnership with DonorsChoose, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
+    <p>To help more students access computer science, especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
     <a href="#form"><button>Enter to win</button></a>
   </div>
   <div>
@@ -28,12 +28,13 @@ social:
 
 <ul>
   <li>Establishing a <strong><em>new</em></strong> <a href="/educate/csp">Computer Science Principles</a>, <a href="/educate/csa">Computer Science A</a>, or <a href="/educate/csd">Computer Science Discoveries</a> course using Code.org.</li>
+  <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
   <li>Provide a short statement of support from district leadership for expanding of CS opportunities as a district priority.</li>
   <li>Organize a school-wide <a href="https://hourofcode.com/">Hour of Code</a> or other event/assembly for <a href="https://www.csedweek.org/">CSEdWeek</a> to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
 </ul>
 
 
-In addition to the $10,000 awarded through DonorsChoose, the implementing teacher(s) in each winning school will receive a no-cost scholarship to attend Code.org's [Professional Learning Program](/educate/professional-learning/middle-high).
+In addition to the $10,000 awarded to the school through DonorsChoose, the implementing teacher(s) in each winning school will receive a no-cost scholarship to attend Code.org's [Professional Learning Program](/educate/professional-learning/middle-high).
 
 See <a href="/prize-terms">terms and conditions</a>.
 
@@ -47,7 +48,15 @@ See <a href="/prize-terms">terms and conditions</a>.
 ## FAQ
 <details>
   <summary>Who is eligible to win?</summary>
-  <p>Any public middle or high school in the U.S. is eligible to apply. We especially encourage schools in low-income underserved communities to participate, to help advance diversity and equity in computer science.</p>
+  <p>Any public middle or high school in the U.S. is eligible to apply if they make the commitments below. We especially encourage schools in low-income underserved communities to participate, to help advance diversity and equity in computer science.</p>
+  <p>To be eligible a school must commit to:</p>
+  <ul>
+    <li>Establish a new Computer Science Principles, Computer Science A, or Computer Science Discoveries course using Code.org.</li>
+    <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
+    <li>Provide a short statement of support from district leadership for expanding of CS opportunities as a district priority.</li>
+    <li>Organize a school-wide Hour of Code or other event/assembly for CSEdWeek to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
+  </ul>
+
 </details>
 
 <details>
@@ -66,8 +75,13 @@ See <a href="/prize-terms">terms and conditions</a>.
 </details>
 
 <details>
+  <summary>How will Code.org select who receives an award?</summary>
+  <p>Award recipients will be selected by Code.org, exercising its sole and final discretion, based on a number of factors: including whether they meet all of the conditions for entry, student demographics (we will prioritize schools with 40% or more of students who qualify for free or reduced meal and/or schools with 40% or more of students who identify as Black, Hispanic/Latino, Native American or Native Alaskan, Native Hawaiian or Pacific Islander, or multiracial), the school’s plan for the Hour of Code or other CSEdWeek event, and the school’s plan for expanding access to CS for students beyond the course addition.</p>
+</details>
+
+<details>
   <summary>When will I be notified if my school wins?</summary>
-  <p>We are aiming to notify winning schools by Tuesday, November 29th. At the latest, winning schools will be notified by Wednesday, November 30th.</p>
+  <p>We are aiming to notify selected schools by Tuesday, November 29th. At the latest, selected schools will be notified by Wednesday, November 30th.</p>
 </details>
 
 <details>
