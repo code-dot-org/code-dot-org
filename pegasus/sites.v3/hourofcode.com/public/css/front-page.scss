@@ -119,7 +119,8 @@ section.join-us {
 
 // Announcements box
 aside.cs-leaders-prize {
-  background: #E5EEEE;
+  background-color: #D2EFDC;
+  background-image: linear-gradient(62deg, #D2EFDC 0%, #EDD8FE 100%);
   margin: 0 2em;
   padding: 2.5em 2em 3em;
   border-radius: 5px;
@@ -135,7 +136,7 @@ aside.cs-leaders-prize {
   }
 
   h1 {
-    color: $darkest_gray;
+    color: $dark_purple;
     margin: 0 auto;
     font-size: 1.65em;
   }
@@ -147,8 +148,8 @@ aside.cs-leaders-prize {
   }
 
   button {
-    background-color: $darkest-gray;
-    border: 1px solid $darkest-gray;
+    background-color: $dark_purple;
+    border: 1px solid $dark_purple;
   }
 }
 
