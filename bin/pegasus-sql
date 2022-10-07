@@ -1,7 +1,15 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 require_relative '../lib/cdo/mysql_console_helper'
+require 'uri'
 
-raise 'please define CDO.pegasus_db_reader' unless CDO.pegasus_db_reader
+raise 'please define CDO.db_writer_endpoint' unless CDO.db_writer_endpoint
 
-MysqlConsoleHelper.run(CDO.pegasus_db_reader, ARGV.join(' ').strip)
+db_connection_settings = URI::Generic.build(
+  scheme: 'mysql',
+  userinfo: CDO.db_reader_user + ':' + CDO.db_reader_password,
+  host: CDO.db_writer_endpoint,
+  port: 3306,
+  path: '/' + CDO.pegasus_db_name
+)
+MysqlConsoleHelper.run(db_connection_settings, ARGV.join(' ').strip)
