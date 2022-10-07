@@ -2,7 +2,7 @@ import * as storyLabUtils from '@cdo/apps/p5lab/storyLabUtils';
 
 export const commands = {
   drawStoryLabText() {
-    if (this.storyLabText.heading || this.storyLabText.subHeading) {
+    if (this.storyLabText.heading || this.storyLabText.subheading) {
       storyLabUtils.drawHeadings(this.p5, this.storyLabText);
     }
   },
@@ -10,7 +10,7 @@ export const commands = {
   clearHeadings() {
     this.storyLabText = {
       heading: '',
-      subHeading: ''
+      subheading: ''
     };
   },
 
@@ -18,7 +18,7 @@ export const commands = {
     this.storyLabText.heading = heading;
   },
 
-  setSubheading(subHeading) {
-    this.storyLabText.subHeading = subHeading;
+  setSubheading(subheading) {
+    this.storyLabText.subheading = subheading;
   }
 };

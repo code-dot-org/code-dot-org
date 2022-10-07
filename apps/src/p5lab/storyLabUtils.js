@@ -9,7 +9,7 @@ const LINE_HEIGHT = 50;
  *
  * @param {P5} p5
  * @param {String} heading
- * @param {String} subHeading
+ * @param {String} subheading
  */
 
 export function drawHeadings(p5, text) {
@@ -21,11 +21,11 @@ export function drawHeadings(p5, text) {
     drawLine(p5, text.heading, size, x, y);
     yCursor += LINE_HEIGHT / 2;
   }
-  if (text.subHeading) {
+  if (text.subheading) {
     const x = APP_WIDTH / 2;
     const y = yCursor;
-    const size = getScaledFontSize(p5, text.subHeading, 16);
-    drawLine(p5, text.subHeading, size, x, y);
+    const size = getScaledFontSize(p5, text.subheading, 16);
+    drawLine(p5, text.subheading, size, x, y);
   }
 }
 
