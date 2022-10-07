@@ -13,16 +13,6 @@
           "visibility": "Teacher-only",
           "buttonText": "Learn More",
           "key": "cf2c84fe-cbbb-4e69-8650-5c0dbd937855"
-        },
-        {
-          "notice": "Nominate A Student for Student Insight Groups!",
-          "details": "Do you know of CS Principles students who identify as female or nonbinary, and/or as members of underrepresented racial and ethnic groups? Code.org is recruiting currently enrolled CSP students to participate in our CSP Student Insight Groups for the 22-23 school year. Students who join these groups will meet monthly during the school year to discuss their experiences with the CSP curriculum and provide feedback to our team. If you have students who meet the criteria and would be interested, please complete this nomination form by September 23rd. ",
-          "link": "https://docs.google.com/forms/d/e/1FAIpQLSfS1bvQ3rRx9F5UbdBkXOWSTdONhtReAvIcZUdJR873BVn0Tg/viewform",
-          "type": "bullhorn",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": "Learn More",
-          "key": "1538091b-a1c5-461a-936e-0a93f1508835"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -40,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-05 00:10:15 UTC",
+    "serialized_at": "2022-10-06 22:58:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
