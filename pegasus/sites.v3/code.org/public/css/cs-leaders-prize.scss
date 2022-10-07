@@ -7,7 +7,7 @@ html {
 // Homepage banner
 .homepage-cs-leaders-prize {
   background-color: #E5EEEE;
-  padding: 2em;
+  padding: 1.5em;
   margin-bottom: 2em;
 
   @media screen and (max-width: $width-md) {
@@ -15,7 +15,7 @@ html {
   }
 
   @media screen and (max-width: $width-sm) {
-    padding: 1.5em 1.5em 2em;
+    padding: 1.5em 2em 2em;
   }
 
   .wrapper {
@@ -31,21 +31,22 @@ html {
     }
 
     img {
-      width: 80px;
+      width: 70px;
+      margin: -2px 0 2px;
 
       @media screen and (max-width: $width-md) {
-        width: 58px;
+        width: 50px;
       }
     }
 
     h1 {
       color: $darkest-gray;
       margin: 0;
-      font-family: $gotham-regular;
-      font-size: 1.875em;
+      font-family: $gotham-bold;
+      font-size: 1.75em;
 
       @media screen and (max-width: $width-md) {
-        font-size: 1.5em;
+        font-size: 1.35em;
       }
 
       @media screen and (max-width: $width-sm) {
@@ -58,7 +59,7 @@ html {
       background-color: $darkest-gray;
       color: white;
       border-radius: 4px;
-      font-size: 18px;
+      font-size: 17px;
       font-family: $gotham-bold;
       padding: 0.45em 1em;
 
