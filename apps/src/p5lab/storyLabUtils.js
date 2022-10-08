@@ -4,8 +4,7 @@ const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
 
 /**
- * Draw a validation bar - a P5 shape comprised of a rectangle
- * at the bottom of the canvas.
+ * Draw heading and subheading to canvas, if they exist.
  *
  * @param {P5} p5
  * @param {String} heading
