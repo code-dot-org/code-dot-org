@@ -18,6 +18,7 @@ import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
 import { parseJSON } from "./jsonReaderWrapper";
 import { TestDataLocations } from "./constants";
+import I18n from './i18n';
 
 export const store = createStore(rootReducer);
 
@@ -25,6 +26,7 @@ let saveTrainedModel = null;
 let onContinue = null;
 
 export const initAll = function (options) {
+  I18n.initI18n(options.i18n);
   // Handle an optional mode.
   const mode = options && options.mode;
   onContinue = options && options.onContinue;

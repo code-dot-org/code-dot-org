@@ -1,3 +1,4 @@
+import I18n from '../i18n'
 /*
 Validation checks to determine if app set up is ready for machine learning
 training. Panels prompt users to incrementally complete actions in preparation
@@ -175,7 +176,7 @@ export function prevNextButtons(state) {
       ? { panel: "dataDisplayLabel", text: "Back" }
       : null;
     next = isPanelAvailable(state, "trainModel")
-      ? { panel: "trainModel", text: "Train" }
+      ? { panel: "trainModel", text: I18n.t('trainModelButtonText') }
       : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.trainedModel) {
