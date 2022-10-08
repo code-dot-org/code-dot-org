@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  getDefaultList,
-  updateDefaultList,
+  getDefaultListMetadata,
+  uploadDefaultListMetadata,
   regenerateDefaultJSON
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
@@ -19,7 +19,7 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   componentDidMount() {
-    getDefaultList()
+    getDefaultListMetadata()
       .then(spriteDefault => {
         let orderedList = Array.from(spriteDefault['default_sprites']);
         this.setState({defaultList: orderedList, isLoading: false});
@@ -97,7 +97,7 @@ export default class DefaultSpritesEditor extends React.Component {
     this.setState({isUpdating: true});
     let jsonList = {};
     jsonList['default_sprites'] = this.state.defaultList;
-    updateDefaultList(jsonList)
+    uploadDefaultListMetadata(jsonList, 'levelbuilder')
       .then(() => regenerateDefaultJSON(jsonList))
       .then(() => {
         this.setState({

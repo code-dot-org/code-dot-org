@@ -26,40 +26,10 @@ export function getAnimationLibraryFile(filename) {
   );
 }
 
-// Returns the list of default sprites in SpriteLab in English
-export function getDefaultList() {
-  return fetch('/api/v1/animation-library/default-spritelab').then(response =>
-    response.json()
-  );
-}
-
-/* Returns the list of default sprites in SpriteLab in English
+/* Uploads given list as default sprites in SpriteLab in English
  * @param listData {Object} JSON object to upload
  */
-export function updateDefaultList(listData) {
-  return fetch(`/api/v1/animation-library/default-spritelab`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(listData)
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(
-          `Default List Upload Error(${response.status}: ${
-            response.statusText
-          })`
-        );
-      }
-      return Promise.resolve();
-    })
-    .catch(err => {
-      return Promise.reject(err);
-    });
-}
-
-function uploadDefaultListMetadata(metadata, environment) {
+export function uploadDefaultListMetadata(metadata, environment) {
   return fetch(
     `/api/v1/animation-library/default-spritelab-metadata/${environment}`,
     {
