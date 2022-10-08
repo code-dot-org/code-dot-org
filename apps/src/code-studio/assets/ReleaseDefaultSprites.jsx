@@ -2,9 +2,10 @@ import React from 'react';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {
-  getDefaultList,
+  getDefaultListMetadata,
   moveDefaultSpriteMetadataToProduction
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 
 export default class ReleaseDefaultSprites extends React.Component {
   state = {
@@ -12,9 +13,10 @@ export default class ReleaseDefaultSprites extends React.Component {
   };
 
   componentDidMount() {
-    getDefaultList()
+    getDefaultListMetadata('levelbuilder')
       .then(spriteDefault => {
-        this.setState({defaultList: spriteDefault});
+        let orderedList = Array.from(spriteDefault['default_sprites']);
+        this.setState({defaultList: orderedList});
       })
       .catch(err => {
         console.log(err);
@@ -58,6 +60,22 @@ export default class ReleaseDefaultSprites extends React.Component {
             onClick={this.confirmReleaseChangesToLevelbuilder}
             style={styles.button}
           />
+        </div>
+
+        <div style={styles.pageBreak}>
+          <div>
+            {this.state.defaultList.map(spriteObject => {
+              return (
+                <DefaultSpriteRow
+                  name={spriteObject.name}
+                  keyValue={spriteObject.key}
+                  onDelete={this.deleteSpriteFromDefaults}
+                  onMove={this.reorderSpriteByOne}
+                  key={spriteObject.name}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     );

@@ -19,7 +19,7 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   componentDidMount() {
-    getDefaultListMetadata()
+    getDefaultListMetadata('levelbuilder')
       .then(spriteDefault => {
         let orderedList = Array.from(spriteDefault['default_sprites']);
         this.setState({defaultList: orderedList, isLoading: false});

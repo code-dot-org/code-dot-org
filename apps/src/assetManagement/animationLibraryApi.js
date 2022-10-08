@@ -56,8 +56,10 @@ export function uploadDefaultListMetadata(metadata, environment) {
 }
 
 // Returns the metadata of the list of default sprites in SpriteLab in English
-export function getDefaultListMetadata() {
-  return fetch('/api/v1/animation-library/default-spritelab-metadata')
+export function getDefaultListMetadata(environment = 'production') {
+  return fetch(
+    `/api/v1/animation-library/default-spritelab-metadata/${environment}`
+  )
     .then(response => response.json())
     .catch(err => {
       return Promise.reject(err);

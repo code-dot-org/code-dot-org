@@ -167,10 +167,18 @@ class AnimationLibraryApi < Sinatra::Base
   # GET /api/v1/animation-library/default-spritelab-metadata/
   #
   # Retrieve the metadata for the default sprite list from S3
-  get %r{/api/v1/animation-library/default-spritelab-metadata} do
+  get %r{/api/v1/animation-library/default-spritelab-metadata/(levelbuilder|production)} do |env|
+    if env == 'production'
+      env_path = ANIMATION_DEFAULT_MANIFEST_JSON
+    elsif evn == 'levelbuilder'
+      env_path = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
+    else
+      bad_request
+    end
+
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-      object(ANIMATION_DEFAULT_MANIFEST_JSON).
+      object(env_path).
       get
     content_type 'application/json'
     cache_for 3600
