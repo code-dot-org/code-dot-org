@@ -15,7 +15,7 @@ social:
 <header>
   <div>
     <h2>Expand computer science at your school, win $10,000</h2>
-    <p>To help more students access computer science, especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
+    <p>To help more students access computer science, especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose.org, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
     <a href="#form"><button>Enter to win</button></a>
   </div>
   <div>
@@ -29,16 +29,15 @@ social:
 <ul>
   <li>Establishing a <strong><em>new</em></strong> <a href="/educate/csp">Computer Science Principles</a>, <a href="/educate/csa">Computer Science A</a>, or <a href="/educate/csd">Computer Science Discoveries</a> course using Code.org.</li>
   <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
-  <li>Provide a short statement of support from district leadership for expanding of CS opportunities as a district priority.</li>
+  <li>Provide a short statement of support from district leadership for expanding CS opportunities as a district priority.</li>
   <li>Organize a school-wide <a href="https://hourofcode.com/">Hour of Code</a> or other event/assembly for <a href="https://www.csedweek.org/">CSEdWeek</a> to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
 </ul>
 
-
-In addition to the $10,000 awarded to the school through DonorsChoose, the implementing teacher(s) in each winning school will receive a no-cost scholarship to attend Code.org's [Professional Learning Program](/educate/professional-learning/middle-high).
+In addition to the $10,000 awarded to the school to fund a project(s) of the school's creation through DonorsChoose, the implementing teacher(s) in each winning school will receive a no-cost scholarship to attend Code.org's [Professional Learning Program](/educate/professional-learning/middle-high).
 
 See <a href="/prize-terms">terms and conditions</a>.
 
-<p>Enter to win before <strong>November 21, 2022</strong> by filling out the form below!</p>
+<p>Enter your submission before <strong>November 21, 2022</strong> by filling out this form!</p>
 
 
 <a id="form"></a>
@@ -76,7 +75,7 @@ See <a href="/prize-terms">terms and conditions</a>.
 
 <details>
   <summary>How will Code.org select who receives an award?</summary>
-  <p>Award recipients will be selected by Code.org, exercising its sole and final discretion, based on a number of factors: including whether they meet all of the conditions for entry, student demographics (we will prioritize schools with 40% or more of students who qualify for free or reduced meal and/or schools with 40% or more of students who identify as Black, Hispanic/Latino, Native American or Native Alaskan, Native Hawaiian or Pacific Islander, or multiracial), the school’s plan for the Hour of Code or other CSEdWeek event, and the school’s plan for expanding access to CS for students beyond the course addition.</p>
+  <p>Award recipients will be selected by Code.org, exercising its sole and final discretion, based on a number of factors: including whether they meet all of the conditions for entry, student demographics (we will prioritize schools with 40% or more of students who qualify for free or reduced meal and/or schools with 40% or more of students who identify as Black, Hispanic/Latino, Native American or Native Alaskan, Native Hawaiian or Pacific Islander, or multiracial), the school's plan for the Hour of Code or other CSEdWeek event, and the school's plan for expanding access to CS for students beyond the course addition.</p>
 </details>
 
 <details>
