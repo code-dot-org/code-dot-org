@@ -116,20 +116,10 @@ header {
   }
 }
 
-iframe {
-  border-bottom: 1px solid $light-gray;
-  background: $background_gray;
-  padding-top: 1em;
-  margin-top: 1em;
-}
+summary {
+  font-family: $gotham-bold;
 
-details {
-
-  summary {
-    font-family: $gotham-bold;
-
-    &:hover {
-      cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
   }
 }

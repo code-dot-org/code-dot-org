@@ -41,7 +41,7 @@ See <a href="/prize-terms">terms and conditions</a>.
 
 
 <a id="form"></a>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfx9NrM-J-Vahqtrrqy5bDylTKqMnLAxgcrh4iqjkFWAm_KPA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfx9NrM-J-Vahqtrrqy5bDylTKqMnLAxgcrh4iqjkFWAm_KPA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" style="border-bottom: 1px solid #949ca2; background: #f2f2f2; padding-top: 1em; margin-top: 1em;">Loading…</iframe>
 
 
 ## FAQ
