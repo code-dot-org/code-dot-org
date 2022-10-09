@@ -36,6 +36,7 @@ $(document).ready(function() {
   } catch (e) {}
 
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');
+  const showStudioCertificate = true;
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
@@ -48,6 +49,7 @@ $(document).ready(function() {
         randomDonorTwitter={randomDonorTwitter}
         randomDonorName={randomDonorName}
         hideDancePartyFollowUp={hideDancePartyFollowUp}
+        showStudioCertificate={showStudioCertificate}
         initialCertificateImageUrl={certificateImageUrl}
         isHocTutorial={isHocTutorial}
         nextCourseScriptName={nextCourseScriptName}
