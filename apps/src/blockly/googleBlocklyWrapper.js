@@ -477,7 +477,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: 'cdo_renderer'
+      renderer: 'cdo_renderer',
+      comments: false
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
@@ -513,6 +514,33 @@ function initializeBlocklyWrapper(blocklyInstance) {
       'PROCEDURE',
       procedureFlyoutCallback
     );
+
+    //TODO: Move to separate file.
+    Blockly.blockly_.Blocks['procedures_defnoreturn'].init = function() {
+      const initName = Blockly.Procedures.findLegalName('', this);
+      const nameField = new blocklyWrapper.FieldTextInput(
+        initName,
+        Blockly.Procedures.rename
+      );
+      nameField.setSpellcheck(false);
+      this.appendDummyInput()
+        .appendField(nameField, 'NAME')
+        .appendField('', 'PARAMS');
+      // this.setMutator(new Mutator(['procedures_mutatorarg']));
+      if (
+        (this.workspace.options.comments ||
+          (this.workspace.options.parentWorkspace &&
+            this.workspace.options.parentWorkspace.options.comments)) &&
+        Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']
+      ) {
+        this.setCommentText(Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']);
+      }
+      this.setStyle('procedure_blocks');
+      this.arguments_ = [];
+      this.argumentVarModels_ = [];
+      this.setStatements_(true);
+      this.statementConnection_ = null;
+    };
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
