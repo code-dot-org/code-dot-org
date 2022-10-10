@@ -3,7 +3,7 @@
   "name": "World.seconds",
   "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Counts how many seconds have passed since the program has started.\r\n\r\n`World.seconds` is a method that tracks how many seconds have passed since the program has started, or rather, how many seconds the program has been running for. This can method can be useful for changing elements of your game up until or after a certain amount of time, like a title screen that should play for three seconds before your game starts. ",
+  "content": "Counts how many seconds have passed since the program has started.\n\n[`World.seconds`(#fff176)](/docs/gamelab/World.seconds/) is a method that tracks how many seconds have passed since the program has started, or rather, how many seconds the program has been running for. This can method can be useful for changing elements of your game up until or after a certain amount of time, like a title screen that should play for three seconds before your game starts. ",
   "examples": [
     {
       "name": "Example: Time Tracker",

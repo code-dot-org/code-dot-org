@@ -11,7 +11,7 @@ cron-pii:
         - finished_ip
         - name
         - session
-- pegasus.storage_apps
+- pegasus.poste_deliveries
 - dashboard.regional_partners
 - dashboard.regional_partners_school_districts
 - dashboard.pd_%
@@ -22,6 +22,7 @@ cron-pii:
 - dashboard.peer_reviews
 - dashboard.circuit_playground_discount_applications
 - dashboard.circuit_playground_discount_codes
+- dashboard.projects
 - dashboard.foorm_%
 cron:
 - dashboard.experiments
@@ -41,7 +42,6 @@ cron:
 - dashboard.plc_learning_module_tasks
 - dashboard.plc_tasks
 - dashboard.plc_user_course_enrollments
-- pegasus.user_storage_ids
 - dashboard.channel_tokens
 - dashboard.schools
 - dashboard.school_infos
@@ -71,6 +71,11 @@ cron:
 - dashboard.ib_school_codes
 - dashboard.ap_school_codes
 - dashboard.census_submissions_school_infos
+- dashboard.standards
+- dashboard.stages_standards
+- dashboard.standard_categories
+- dashboard.frameworks
+- dashboard.user_project_storage_ids
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:

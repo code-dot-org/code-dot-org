@@ -10,17 +10,10 @@
 
 = render partial: 'workshop_logistics'
 
-- unless @workshop.virtual? || !@is_reminder
-  = render partial: 'supply_list'
-
 - if @workshop.virtual?
   = render partial: 'virtual_tips'
-
-= render partial: 'workshop_notes'
-
-= render partial: 'workshop_details'
-
-- unless @workshop.virtual? || !@is_reminder
+- elsif !@workshop.virtual? && @is_reminder
+  = render partial: 'supply_list'
   = render partial: 'covid_19'
 
 - if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
@@ -36,17 +29,7 @@
     so we encourage you to start this process soon.
 
 - if @workshop.local_summer? && @is_reminder
-  %h3
-    Final reminders
-  %p
-    Be sure to check out your
-    = link_to "online professional learning page", professional_learning_landing_url, target: "_blank", rel: "noopener noreferrer"
-    and complete the following pre-work, if you have not done so already:
-
-  - if @workshop.course == Pd::Workshop::COURSE_CSD
-    = render partial: 'csd_pre_course_reading'
-  - elsif @workshop.course == Pd::Workshop::COURSE_CSP
-    = render partial: 'csp_pre_course_reading'
+  = render partial: 'pre_course_material'
 
 = render partial: 'accessibility'
 

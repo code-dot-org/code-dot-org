@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -51,8 +52,8 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
-    belongs_to :user
-    belongs_to :regional_partner
+    belongs_to :user, optional: true
+    belongs_to :regional_partner, optional: true
 
     after_initialize :set_type_and_year
 
@@ -65,6 +66,9 @@ module Pd::Application
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
 
     # An application either has an "incomplete" or "unreviewed" state when created.
+    # The applied_at field gets set when the status becomes 'unreviewed' for the first time
+    before_save :set_applied_date, if: :status_changed?
+
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
     before_save :update_accepted_date, if: :status_changed?
 
@@ -97,6 +101,10 @@ module Pd::Application
       define_method(:"#{attribute}?") do
         status == attribute
       end
+    end
+
+    def set_applied_date
+      self.applied_at = Time.now if applied_at.nil? && unreviewed?
     end
 
     def update_accepted_date
@@ -234,7 +242,7 @@ module Pd::Application
       answer
     end
 
-    def self.filtered_labels(course)
+    def self.filtered_labels(course, status = 'unreviewed')
       raise 'Abstract method must be overridden in inheriting class'
     end
 
@@ -260,7 +268,7 @@ module Pd::Application
             hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
             hash.delete additional_text_field_name
           end
-        end.slice(*(self.class.filtered_labels(course).keys + self.class.additional_labels).uniq)
+        end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
       end
     end
 
@@ -318,7 +326,10 @@ module Pd::Application
       numeric_scores = response_scores_hash.values.select do |score|
         score.is_a?(Numeric) || score =~ /^\d+$/
       end
-      numeric_scores.map(&:to_i).reduce(:+)
+
+      return nil if numeric_scores.empty?
+
+      numeric_scores.sum(&:to_i)
     end
 
     def course_name
@@ -330,8 +341,10 @@ module Pd::Application
       accepted_at&.to_date&.iso8601
     end
 
+    # displays the iso8601 date (yyyy-mm-dd)
+    # The applied_at date is null if an application has been started, saved, and not submitted
     def date_applied
-      created_at.to_date.iso8601
+      applied_at&.to_date&.iso8601
     end
 
     # Convert responses cores to a hash of underscore_cased symbols
@@ -345,7 +358,7 @@ module Pd::Application
     end
 
     def formatted_partner_contact_email
-      return nil unless regional_partner&.contact_email_with_backup.present?
+      return nil if regional_partner&.contact_email_with_backup.blank?
 
       if regional_partner.contact_name.present? && regional_partner.contact_email.present?
         "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"

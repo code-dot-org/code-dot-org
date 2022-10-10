@@ -17,6 +17,9 @@ class ReferenceGuideTest < ActiveSupport::TestCase
     assert_raises ActiveRecord::RecordInvalid do
       create :reference_guide, key: '\\ $ % * & @'
     end
+    assert_raises ActiveRecord::RecordInvalid do
+      create :reference_guide, key: 'edit'
+    end
   end
 
   test "reference guides are unique by key in course version" do
@@ -47,5 +50,12 @@ class ReferenceGuideTest < ActiveSupport::TestCase
     guide = create :reference_guide, key: 'page', parent_reference_guide_key: 'category_page'
     category = create :reference_guide, key: 'category_page', course_version_id: guide.course_version_id
     assert_equal [guide], category.children
+  end
+
+  test "reference guides can be found by course_version_name and key" do
+    unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
+    CourseOffering.add_course_offering(unit_group)
+    guide = create :reference_guide, key: 'page', course_version: unit_group.course_version
+    assert_equal guide, ReferenceGuide.find_by_course_name_and_key(guide.course_offering_version, guide.key)
   end
 end

@@ -1,10 +1,15 @@
 class ProgrammingEnvironmentsController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
-  before_action :set_programming_environment, except: [:index, :new, :create]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index, :get_summary_by_name]
+  before_action :set_programming_environment, only: [:edit, :update, :destroy]
   authorize_resource
 
   def index
-    @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
+    @programming_environments = ProgrammingEnvironment.get_published_environments_from_cache
+  end
+
+  def docs_index
+    @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
+    render :index
   end
 
   def new
@@ -21,25 +26,18 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def edit
-    @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
-    return render :not_found unless @programming_environment
   end
 
   def update
-    programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
-    unless programming_environment
-      render :not_found
-      return
-    end
-    programming_environment.assign_attributes(programming_environment_params.except(:categories))
+    @programming_environment.assign_attributes(programming_environment_params.except(:categories))
     begin
       if programming_environment_params[:categories]
-        programming_environment.categories =
+        @programming_environment.categories =
           programming_environment_params[:categories].each_with_index.map do |category, i|
             if category['id'].blank?
-              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id, position: i))
+              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: @programming_environment.id, position: i))
             else
-              existing_category = programming_environment.categories.find(category['id'])
+              existing_category = @programming_environment.categories.find(category['id'])
               existing_category.assign_attributes(category.except('id'))
               existing_category.position = i
               existing_category.save! if existing_category.changed?
@@ -47,28 +45,40 @@ class ProgrammingEnvironmentsController < ApplicationController
             end
           end
       end
-      programming_environment.save! if programming_environment.changed?
-      programming_environment.write_serialization
-      render json: programming_environment.summarize_for_edit.to_json
+      @programming_environment.save! if @programming_environment.changed?
+      @programming_environment.write_serialization
+      render json: @programming_environment.summarize_for_edit.to_json
     rescue ActiveRecord::RecordInvalid => e
       render(status: :not_acceptable, plain: e.message)
     end
   end
 
+  # GET /docs/ide/<name>
   def show
+    @programming_environment = ProgrammingEnvironment.get_from_cache(params[:name])
     return render :not_found unless @programming_environment
     return head :forbidden unless can?(:read, @programming_environment)
-    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+    @programming_environment_categories = @programming_environment.categories_for_navigation
+  end
+
+  def docs_show
+    @programming_environment = ProgrammingEnvironment.get_from_cache(params[:programming_environment_name])
+    return render :not_found unless @programming_environment
+    redirect_to(programming_environment_path(@programming_environment.name))
   end
 
   def destroy
+    @programming_environment.destroy!
+    render(status: :ok, plain: "Destroyed #{@programming_environment.name}")
+  rescue => e
+    render(status: :not_acceptable, plain: e.message)
+  end
+
+  def get_summary_by_name
+    @programming_environment = ProgrammingEnvironment.get_from_cache(params[:name])
     return render :not_found unless @programming_environment
-    begin
-      @programming_environment.destroy!
-      render(status: 200, plain: "Destroyed #{@programming_environment.name}")
-    rescue => e
-      render(status: :not_acceptable, plain: e.message)
-    end
+    return head :forbidden unless can?(:get_summary_by_name, @programming_environment)
+    return render json: @programming_environment.categories_for_get
   end
 
   private
@@ -79,7 +89,8 @@ class ProgrammingEnvironmentsController < ApplicationController
       :title,
       :published,
       :description,
-      :editor_type,
+      :editor_language,
+      :block_pool_name,
       :image_url,
       :project_url,
       categories: [:id, :name, :color]
@@ -89,5 +100,6 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def set_programming_environment
     @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
+    raise ActiveRecord::RecordNotFound unless @programming_environment
   end
 end

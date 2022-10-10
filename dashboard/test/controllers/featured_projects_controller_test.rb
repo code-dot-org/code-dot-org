@@ -3,7 +3,7 @@ require 'test_helper'
 class FeaturedProjectsControllerTest < ActionController::TestCase
   setup do
     @project_validator = create :project_validator
-    # @featured_project has a storage_app_id of 456
+    # @featured_project has a project_id of 456
     @featured_project = create :featured_project
     @teacher = create :teacher
   end
@@ -42,7 +42,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     assert_creates(FeaturedProject) do
       put :feature, params: {project_id: "789"}
     end
-    assert FeaturedProject.last.storage_app_id == 654
+    assert FeaturedProject.last.project_id == 654
     assert FeaturedProject.last.unfeatured_at.nil?
     assert FeaturedProject.last.featured?
   end

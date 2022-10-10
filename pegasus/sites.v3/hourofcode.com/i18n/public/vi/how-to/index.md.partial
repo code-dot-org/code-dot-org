@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Hãy tham gia phong trào và giới thiệu học sinh của bạn về khoa học máy tính qua các bước sau.
 
-Tư duy điện toán giúp nuôi dưỡng kỹ năng giải quyết vấn đề, logic và sáng tạo. Và công nghệ thì đang biến đổi mọi ngành công nghiệp trên hành tinh. Học sinh ngày nay nên học cách tạo ra công nghệ chứ không chỉ đơn thuần sử dụng nó. Nếu bắt đầu sớm, các em sẽ có nền tảng để thành công trên bất kỳ con đường sự nghiệp nào của thế kỷ 21.
+Học sinh ngày nay nên học cách tạo ra công nghệ chứ không chỉ đơn thuần sử dụng nó.
 
-Thử Giờ lập trình là một cách đơn giản và thú vị để giới thiệu cho học sinh về khoa học máy tính, có thể là trong lần đầu tiên, và chương trình này hoàn toàn phù hợp cho cả môi trường trên lớp và sau giờ học. Hãy xem [hướng dẫn tham gia của chúng tôi nếu bạn vẫn còn thắc mắc]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Xem video hướng dẫn Giờ lập trình](#how-to-video)
 - [Khám phá các hoạt động và bài hướng dẫn](#explore-activities)
@@ -23,13 +23,11 @@ Thử Giờ lập trình là một cách đơn giản và thú vị để giới
 - [Ăn mừng thành tựu của học sinh](#celebrate)
 - [Các nguồn tài liệu Giờ lập trình khác dành cho giáo viên](#other-resources)
 
-### Giờ lập trình cũng có thể được tổ chức từ xa! Để bắt đầu, hãy xem [lời khuyên để tổ chức sự kiện Giờ lập trình trực tuyến](https://hourofcode.com/us/how-to/virtual) của chúng tôi.
-
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -41,7 +39,7 @@ Chúng tôi cung cấp nhiều bài hướng dẫn thú vị, [theo hình thức
 
 Hãy khám phá các hoạt động và quyết định trước xem bạn có muốn chọn một bài hướng dẫn duy nhất cho tất cả học sinh của mình không, hoặc để từng trẻ tự chọn.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -60,7 +58,7 @@ Hãy khám phá các hoạt động và quyết định trước xem bạn có m
 
 ### Chọn ngày và giờ
 
-Mọi người trên khắp thế giới tham gia Lễ kỷ niệm Giờ lập trình trong Tuần lễ Giáo dục KHMT (từ ngày 9 đến ngày 13 tháng 12) khi các bài hướng dẫn và hoạt động mới nhất được phát hành. Nhưng bạn có thể thực hiện Giờ lập trình bất kỳ ngày nào trong năm!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Nhưng bạn có thể thực hiện Giờ lập trình bất kỳ ngày nào trong năm!
 
 * * *
 
@@ -76,11 +74,11 @@ Hãy giới thiệu Giờ lập trình cho các giáo viên khác, những ngư�
 
 ### Hãy cho tình nguyện viên biết bằng cách đăng ký sự kiện của bạn
 
-Khi bạn [ đăng ký sự kiện Giờ lập trình](/), bạn sẽ nhận được thông báo hữu ích qua email về tin tức và lời khuyên để tổ chức Giờ lập trình thành công. Đó cũng là cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham gia. Tình nguyện viên là một nguồn lực tuyệt vời và có thể đến nói chuyện với lớp của bạn về khoa học máy tính hoặc chỉ đơn giản là giúp học sinh của bạn trong các hoạt động Giờ lập trình.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Đó cũng là cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham gia. Tình nguyện viên là một nguồn lực tuyệt vời và có thể đến nói chuyện với lớp của bạn về khoa học máy tính hoặc chỉ đơn giản là giúp học sinh của bạn trong các hoạt động Giờ lập trình.
 
 ### Tạo hứng thú cho học sinh
 
-Dẫn dắt sự kiện bằng cách chia sẻ [video truyền cảm hứng](/promote/resources) nhằm nêu bật những con người đa dạng và những cách sáng tạo khi vận dụng khoa học máy tính. Hoặc đặt hàng áp phích truyền cảm hứng cho lớp học của bạn! Học sinh sẽ hào hứng hơn khi tham gia môn học khi thấy những người giống mình khuyến khích môn học đó.
+Dẫn dắt sự kiện bằng cách chia sẻ [video truyền cảm hứng](/promote/resources) nhằm nêu bật những con người đa dạng và những cách sáng tạo khi vận dụng khoa học máy tính. Or print inspirational posters for your classroom! Học sinh sẽ hào hứng hơn khi tham gia môn học khi thấy những người giống mình khuyến khích môn học đó.
 
 {{ promote_new_posters }}
 

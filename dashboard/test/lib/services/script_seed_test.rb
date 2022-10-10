@@ -89,7 +89,8 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(87) do
+      # (Dani) This will go back up by one when we turn the validation of families sharing course type back on
+      assert_queries(86) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -243,8 +244,8 @@ module Services
         lesson.lesson_activities.first.update!(name: 'Updated Activity Name')
         lesson.lesson_activities.create(
           name: 'New Activity Name',
-          position: 2,
-          key: "#{lesson.name}-activity-2"
+          position: 3,
+          key: "#{lesson.name}-activity-3"
         )
       end
 
@@ -267,8 +268,8 @@ module Services
         activity.activity_sections.first.update!(name: 'Updated Section Name')
         activity.activity_sections.create(
           name: 'New Section Name',
-          position: 2,
-          key: "#{activity.key}-section-2"
+          position: 3,
+          key: "#{activity.key}-section-3"
         )
       end
 
@@ -1137,7 +1138,7 @@ module Services
     test 'published state set to pilot when pilot_experiment is present' do
       unit = create :script
       assert_nil unit.pilot_experiment
-      assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
+      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
 
       json = ScriptSeed.serialize_seeding_json(unit)
       unit_data = JSON.parse(json)

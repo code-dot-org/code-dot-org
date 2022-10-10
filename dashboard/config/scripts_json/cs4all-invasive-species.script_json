@@ -5,12 +5,14 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "invasive-species-cs4all"
+      "pilot_experiment": "invasive-species-cs4all",
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2022-02-04 18:28:24 UTC",
+    "family_name": "cs4all-invasive-species",
+    "serialized_at": "2022-04-08 15:41:13 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -186,7 +188,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1gtcoLIsc6es4-YR8ECJgqH6Xw6UPb9KR85JEaAk6UJM/edit?usp=sharing) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -774,8 +776,20 @@
       }
     },
     {
-      "key": "774735aa-3de1-41d0-9f5b-2f238fbccda3",
+      "key": "a7dce44d-d95a-4269-aa33-643c2d7afabc",
       "position": 1,
+      "properties": {
+        "name": "Liz's Fishpond",
+        "progression_name": "Example Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7dce44d-d95a-4269-aa33-643c2d7afabc",
+        "lesson_activity.key": "0430043b-d52c-4b0d-b8ae-1aaa1d1d20bc"
+      }
+    },
+    {
+      "key": "774735aa-3de1-41d0-9f5b-2f238fbccda3",
+      "position": 2,
       "properties": {
         "name": "Hello World: Animals",
         "progression_name": "Video: Hello World: Welcome to Sprite Lab"
@@ -787,7 +801,7 @@
     },
     {
       "key": "26a48a02-044a-426c-91cf-694e0f3c557b",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -798,7 +812,7 @@
     },
     {
       "key": "8f0c6205-55d1-46ea-99c2-7518e8728044",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Video: Hello World: Programming with Events"
       },
@@ -809,7 +823,7 @@
     },
     {
       "key": "d6956d94-966b-4eec-955d-e6cf051915bc",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -820,7 +834,7 @@
     },
     {
       "key": "7fe08764-7c96-4efb-a021-40e7b1d7e180",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Video: Hello World: Do What You Want"
       },
@@ -831,7 +845,7 @@
     },
     {
       "key": "11b4c0a2-d12b-4416-a9bc-833445dc9959",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Free Play"
       },
@@ -1341,6 +1355,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "liz_fishpond"
+        ],
+        "progression": "Example Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "liz_fishpond"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "a7dce44d-d95a-4269-aa33-643c2d7afabc"
+      },
+      "level_keys": [
+        "liz_fishpond"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "coursee_helloworld_introtosprites"
         ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
@@ -1360,8 +1399,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 2,
+      "chapter": 13,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1385,34 +1424,9 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "liz_fishpond"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "liz_fishpond"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "cs4all-invasive-species",
-        "activity_section.key": "26a48a02-044a-426c-91cf-694e0f3c557b"
-      },
-      "level_keys": [
-        "liz_fishpond"
-      ]
-    },
-    {
       "chapter": 14,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1437,7 +1451,7 @@
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1462,7 +1476,7 @@
     {
       "chapter": 16,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2458,6 +2472,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "liz_fishpond",
+        "script_level.level_keys": [
+          "liz_fishpond"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "a7dce44d-d95a-4269-aa33-643c2d7afabc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "coursee_helloworld_introtosprites",
         "script_level.level_keys": [
           "coursee_helloworld_introtosprites"
@@ -2473,18 +2499,6 @@
         "level.key": "helloworld_animals_say_cs4all",
         "script_level.level_keys": [
           "helloworld_animals_say_cs4all"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "cs4all-invasive-species",
-        "activity_section.key": "26a48a02-044a-426c-91cf-694e0f3c557b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "liz_fishpond",
-        "script_level.level_keys": [
-          "liz_fishpond"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",

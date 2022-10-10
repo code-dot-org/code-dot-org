@@ -1,5 +1,6 @@
 /* globals fetch */
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const LIBRARY_NAME = 'library.json';
 export default class LibraryClientApi {
@@ -56,7 +57,7 @@ export default class LibraryClientApi {
     );
   }
 
-  fetchLatestVersionId(onSuccess, onError) {
+  fetchLatestVersionId(onSuccess, onError, event = 'unknown') {
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME + '/versions',
       (error, data) => {
@@ -66,6 +67,21 @@ export default class LibraryClientApi {
           });
           onSuccess(mostRecent.versionId);
         } else {
+          // Log to Firehose on error using "event" as context.
+          // See https://codedotorg.atlassian.net/browse/STAR-2140 for details.
+          firehoseClient.putRecord(
+            {
+              study: 'applab_library_versions',
+              event: event,
+              data_json: JSON.stringify({
+                error: error.message,
+                channelId: this.channelId,
+                pathname: location.pathname
+              })
+            },
+            {includeUserId: true}
+          );
+
           onError(error);
         }
       }

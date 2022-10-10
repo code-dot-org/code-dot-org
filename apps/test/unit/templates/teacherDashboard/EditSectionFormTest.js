@@ -3,8 +3,7 @@ import {mount} from 'enzyme';
 import {assert} from '../../../util/reconfiguredChai';
 import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates/teacherDashboard/EditSectionForm';
 import {
-  assignmentFamilies,
-  validAssignments,
+  courseOfferings,
   testSection,
   noStudentsSection
 } from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
@@ -18,10 +17,12 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={testSection}
+        section={{
+          ...testSection,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -55,10 +56,12 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={noStudentsSection}
+        section={{
+          ...noStudentsSection,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -92,10 +95,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...testSection, loginType: SectionLoginType.picture}}
+        section={{
+          ...testSection,
+          loginType: SectionLoginType.picture,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -129,10 +135,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...noStudentsSection, loginType: SectionLoginType.picture}}
+        section={{
+          ...noStudentsSection,
+          loginType: SectionLoginType.picture,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -166,12 +175,12 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.email
+          loginType: SectionLoginType.email,
+          participantType: 'student'
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -191,12 +200,12 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.email
+          loginType: SectionLoginType.email,
+          participantType: 'student'
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -216,10 +225,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...testSection, loginType: SectionLoginType.google_classroom}}
+        section={{
+          ...testSection,
+          loginType: SectionLoginType.google_classroom,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -238,12 +250,12 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.google_classroom
+          loginType: SectionLoginType.google_classroom,
+          participantType: 'student'
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -263,10 +275,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...testSection, loginType: SectionLoginType.clever}}
+        section={{
+          ...testSection,
+          loginType: SectionLoginType.clever,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -285,10 +300,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        section={{
+          ...noStudentsSection,
+          loginType: SectionLoginType.clever,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -309,11 +327,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        section={{
+          ...noStudentsSection,
+          loginType: SectionLoginType.clever,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -334,11 +354,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        section={{
+          ...noStudentsSection,
+          loginType: SectionLoginType.clever,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -358,11 +380,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        section={{
+          ...noStudentsSection,
+          loginType: SectionLoginType.clever,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -382,11 +406,13 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
-        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        section={{
+          ...noStudentsSection,
+          loginType: SectionLoginType.clever,
+          participantType: 'student'
+        }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}

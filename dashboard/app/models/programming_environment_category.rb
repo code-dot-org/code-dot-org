@@ -17,7 +17,8 @@
 #  index_programming_environment_categories_on_key_and_env_id  (key,programming_environment_id) UNIQUE
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
-  belongs_to :programming_environment
+  belongs_to :programming_environment, optional: true
+  has_many :programming_classes
   has_many :programming_expressions
 
   KEY_CHAR_RE = /[a-z_]/
@@ -47,13 +48,41 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     }
   end
 
-  def summarize_for_environment_show
+  def summarize_for_navigation
+    {
+      key: key,
+      name: localized_name,
+      color: color,
+      docs: (programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)).sort_by {|doc| doc[:name]}
+    }
+  end
+
+  def localized_name
+    I18n.t(
+      'name',
+      scope: [
+        :data,
+        :programming_environments,
+        programming_environment.name,
+        :categories,
+        key
+      ],
+      default: name,
+      smart: true
+    )
+  end
+
+  def summarize_for_get
     {
       key: key,
       name: name,
       color: color,
-      programmingExpressions: programming_expressions.map(&:serialize_for_environment_show)
+      docs: programming_classes.map(&:summarize_for_show) + programming_expressions.map(&:summarize_for_show)
     }
+  end
+
+  def should_be_in_navigation?
+    !programming_classes.empty? || !programming_expressions.empty?
   end
 
   def generate_key
@@ -65,6 +94,10 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
   def self.sanitize_key(key)
     key.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.squeeze('_')
+  end
+
+  def name_with_environment
+    "#{programming_environment.title}:#{name}"
   end
 end

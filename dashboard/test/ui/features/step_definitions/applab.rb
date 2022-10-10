@@ -345,7 +345,7 @@ end
 Then(/^the share link includes "([^"]*)"$/) do |expected_text|
   share_link_input = nil
   wait_short_until do
-    share_link_input = @browser.find_element(:css, '#sharing-input')
+    share_link_input = @browser.find_element(:css, '#sharing-dialog-copy-button')
   end
   expect(share_link_input.attribute('value')).to include(expected_text)
 end

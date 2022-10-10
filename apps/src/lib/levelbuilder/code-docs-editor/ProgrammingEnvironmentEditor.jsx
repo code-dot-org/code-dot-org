@@ -4,14 +4,13 @@ import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 import OrderableList from './OrderableList';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import Button from '@cdo/apps/templates/Button';
-import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import ImageInput from './ImageInput';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const EDITOR_TYPES = ['blockly', 'droplet', 'text'];
+const EDITOR_LANGUAGES = ['blockly', 'droplet', 'html/css', 'java'];
 
 const useProgrammingEnvironment = initialProgrammingEnvironment => {
   const [programmingEnvironment, setProgrammingEnvironment] = useState(
@@ -65,7 +64,6 @@ export default function ProgrammingEnvironmentEditor({
     updateProgrammingEnvironment,
     setProgrammingEnvironment
   ] = useProgrammingEnvironment(remainingProgrammingEnvironment);
-  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -110,10 +108,6 @@ export default function ProgrammingEnvironmentEditor({
   return (
     <div>
       <h1>{`Editing ${name}`}</h1>
-      <h2>
-        This feature is in development. Please continue to use curriculum
-        builder to edit code documentation.
-      </h2>
       <label>
         Title
         <input
@@ -145,19 +139,34 @@ export default function ProgrammingEnvironmentEditor({
       <label>
         How should this document render?
         <select
-          value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
+          value={programmingEnvironment.editorLanguage || EDITOR_LANGUAGES[0]}
           onChange={e =>
-            updateProgrammingEnvironment('editorType', e.target.value)
+            updateProgrammingEnvironment('editorLanguage', e.target.value)
           }
           style={styles.selectInput}
         >
-          {EDITOR_TYPES.map(type => (
+          {EDITOR_LANGUAGES.map(type => (
             <option key={type} value={type}>
               {type}
             </option>
           ))}
         </select>
       </label>
+      {programmingEnvironment.editorLanguage === 'blockly' && (
+        <label>
+          Block Pool Name
+          <HelpTip>
+            The block pool that will be used to show embedded blocks.{' '}
+          </HelpTip>
+          <input
+            value={programmingEnvironment.blockPoolName || ''}
+            onChange={e =>
+              updateProgrammingEnvironment('blockPoolName', e.target.value)
+            }
+            style={styles.textInput}
+          />
+        </label>
+      )}
       <label>
         Project URL
         <input
@@ -168,19 +177,12 @@ export default function ProgrammingEnvironmentEditor({
           style={styles.textInput}
         />
       </label>
-      <label>
-        Image
-        <Button
-          onClick={() => setUploadImageDialogOpen(true)}
-          text="Choose Image"
-          color="gray"
-          icon="plus-circle"
-        />
-        {programmingEnvironment.imageUrl && (
-          <span>{programmingEnvironment.imageUrl}</span>
-        )}
-      </label>
-
+      <ImageInput
+        initialImageUrl={programmingEnvironment.imageUrl}
+        updateImageUrl={imgUrl =>
+          updateProgrammingEnvironment('imageUrl', imgUrl)
+        }
+      />
       <TextareaWithMarkdownPreview
         markdown={programmingEnvironment.description || ''}
         label={'Description'}
@@ -204,12 +206,6 @@ export default function ProgrammingEnvironmentEditor({
         lastSaved={lastUpdated}
         error={error}
         handleView={() => navigateToHref(showPath)}
-      />
-      <UploadImageDialog
-        isOpen={uploadImageDialogOpen}
-        handleClose={() => setUploadImageDialogOpen(false)}
-        uploadImage={imgUrl => updateProgrammingEnvironment('imageUrl', imgUrl)}
-        allowExpandable={false}
       />
     </div>
   );

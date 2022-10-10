@@ -2,5 +2,6 @@
   "key": "csp5-virtual",
   "display_name": "Event-Driven Programming in App Lab",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

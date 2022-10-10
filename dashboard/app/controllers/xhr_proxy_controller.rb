@@ -52,6 +52,7 @@ class XhrProxyController < ApplicationController
     api.randomuser.me
     api.rebrandly.com
     api.scryfall.com
+    api.spoonacular.com
     api.si.edu
     api.spacexdata.com
     api.spotify.com
@@ -60,11 +61,14 @@ class XhrProxyController < ApplicationController
     api.uclassify.com
     api.waqi.info
     api.weather.gov
+    api.wolframalpha.com
     api.zippopotam.us
     bible-api.com
+    ch.tetr.io
     code.org
     covidtracking.com
     cryptonator.com
+    currencyapi.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
@@ -74,7 +78,7 @@ class XhrProxyController < ApplicationController
     deckofcardsapi.com
     distanza.org
     dweet.io
-    freecurrencyapi.net
+    githubusercontent.com
     googleapis.com
     grobchess.com
     hubblesite.org
@@ -85,6 +89,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    native-land.ca
     newsapi.org
     noaa.gov
     numbersapi.com

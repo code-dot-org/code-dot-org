@@ -3,7 +3,7 @@
   "name": "setNumber",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Sets the number for the specified screen element.\n\nYour apps will sometimes need to change, or clear, the numbers displayed on screen elements*. `setNumber()` can be used to update the number on a textInput, textLabel, button or slider screen element.\n\n*The slider design element was contributed by Mike and Mitchell Schmidt.",
+  "content": "Sets the number for the specified screen element.\n\nYour apps will sometimes need to change, or clear, the numbers displayed on screen elements*. [`setNumber()`(#fff176)](/docs/applab/setNumber/) can be used to update the number on a textInput, textLabel, button or slider screen element.\n\n*The slider design element was contributed by Mike and Mitchell Schmidt.",
   "examples": [
     {
       "name": "Example: Click Counter",
@@ -50,5 +50,5 @@
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Sets the number for the specified screen element.",
   "syntax": "setNumber(id, number)",
-  "tips": "- You cannot use `setText()` with sliders which require a number to be set."
+  "tips": "- You cannot use [`setText()`(#fff176)](/docs/applab/setText/) with sliders which require a number to be set."
 }

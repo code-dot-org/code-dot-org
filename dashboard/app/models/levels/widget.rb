@@ -33,4 +33,27 @@ class Widget < Level
   before_validation do
     self.skip_dialog = true
   end
+
+  def widget_app_options
+    # Base options are just the level properties
+    app_options = properties.camelize_keys
+
+    # Some options should be localized
+    if should_localize?
+      [:long_instructions, :short_instructions].each do |key|
+        localized =
+          I18n.t(
+            name,
+            scope: [:data, key],
+            default: nil,
+            smart: true
+          )
+
+        # Will set longInstructions and shortInstructions, if localized
+        app_options[key.to_s.camelize(:lower)] = localized if localized
+      end
+    end
+
+    return app_options
+  end
 end

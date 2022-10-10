@@ -7,14 +7,15 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "project_template_level_name": "CSA U2L8 PBT_2022",
-    "encrypted_examples": "mZB7BNRoUfVP+xe/M7KOnuvdOgK/ZEEXUmzYMFb5QmYsMFo36jxA2RCtrX7n\nXFtFA377XjtmoqmgJM7RzxVQm27lKE2kbPVqAyw7O5hhW78=\n"
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-06T20:25:59.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-06T20:25:59.908+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L2_2022\\\"\"],\"cloned_from\":\"CSA U2L8-L2_2022\"},{\"changed_at\":\"2022-03-06 20:34:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 20:44:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:42:43 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-06T20:25:59.908+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L2_2022\\\"\"],\"cloned_from\":\"CSA U2L8-L2_2022\"},{\"changed_at\":\"2022-03-06 20:34:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 20:44:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:42:43 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-12 13:13:29 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-12 13:38:38 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

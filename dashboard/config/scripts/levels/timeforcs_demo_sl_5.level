@@ -48,7 +48,6 @@
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14893,
     "long_instructions": "Create a third sprite that looks like a yellow alien.\r\n\r\nCan you set all of your aliens to stand in a straight line? It's an alien dance crew!",
-    "project_template_level_name": "Dance Party 2_2019",
     "show_type_hints": "true",
     "short_instructions": "Create a third sprite that looks like a yellow alien, and get all of your aliens to stand in a line. ",
     "include_shared_functions": "false",

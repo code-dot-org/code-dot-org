@@ -33,7 +33,6 @@ import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import clientState from '@cdo/apps/code-studio/clientState';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 // Types of blocks that do not count toward displayed block count. Used
@@ -799,9 +798,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
         break;
       case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
-        var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
-          exceededBlockType
-        );
+        var limit = Blockly.cdoUtils.getBlockLimit(exceededBlockType);
         var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
@@ -983,19 +980,13 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       .click(window.dashboard.popupWindow);
   }
 
-  var sharingInput = sharingDiv.querySelector('#sharing-input');
-  if (sharingInput) {
-    dom.addClickTouchEvent(sharingInput, function() {
-      sharingInput.focus();
-      sharingInput.select();
-      sharingInput.setSelectionRange(0, 9999);
-    });
-    var sharingInputCopyButton = sharingDiv.querySelector(
-      '#sharing-input-copy-button'
-    );
-    dom.addClickTouchEvent(sharingInputCopyButton, function() {
+  var sharingCopyButton = sharingDiv.querySelector(
+    '#sharing-dialog-copy-button'
+  );
+  if (sharingCopyButton) {
+    dom.addClickTouchEvent(sharingCopyButton, function() {
       copyToClipboard(options.shareLink, () => {
-        sharingInputCopyButton.className = 'sharing-input-copy-button-shared';
+        sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
       });
     });
   }
@@ -1111,9 +1102,6 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   challenge = false
 ) {
   const numLinesWritten = this.getNumBlocksUsed();
-  // Use the response from the server if we have one. Otherwise use the client's data.
-  const totalLines =
-    (options.response && options.response.total_lines) || clientState.lines();
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
@@ -1123,7 +1111,6 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   return (
     <CodeWritten
       numLinesWritten={numLinesWritten}
-      totalNumLinesWritten={totalLines}
       useChallengeStyles={challenge}
     >
       <GeneratedCode
@@ -1432,7 +1419,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
     const emptyBlockInfo = emptyBlock.getProcedureInfo();
     const findUsages = block =>
       block.type === emptyBlockInfo.callType &&
-      block.getTitleValue('NAME') === emptyBlockInfo.name;
+      block.getFieldValue('NAME') === emptyBlockInfo.name;
 
     if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -1501,7 +1488,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function() {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.mainBlockSpace.isReadOnly()) {
+    if (!Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
@@ -1853,8 +1840,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
   return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(block) {
-    return block.getTitles().some(function(title) {
-      return title.value_ === '???' || title.text_ === '???';
+    return Blockly.cdoUtils.getBlockFields(block).some(function(field) {
+      return field.value_ === '???' || field.text_ === '???';
     });
   });
 };
@@ -1877,7 +1864,7 @@ FeedbackUtils.prototype.hasUnusedParam_ = function() {
             (block.type === 'parameters_get' ||
               block.type === 'functional_parameters_get' ||
               block.type === 'variables_get') &&
-            block.getTitleValue('VAR') === paramName
+            block.getFieldValue('VAR') === paramName
           );
         });
       })
@@ -1912,7 +1899,7 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function() {
   var userDefs = [];
   var callBlocks = {};
   Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function(block) {
-    var name = block.getTitleValue('NAME');
+    var name = block.getFieldValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
     } else if (/^procedures_call/.test(block.type)) {
@@ -1965,8 +1952,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function(node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
-  const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
-  return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
+  return Blockly.cdoUtils.blockLimitExceeded();
 };
 
 /**

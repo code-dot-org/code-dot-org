@@ -1,9 +1,9 @@
 {
   "key": "keyWentUp",
   "name": "keyWentUp()",
-  "category": "World",
+  "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Checks if the key specified was released.\r\n\r\nSome interactive games use the keyboard for the user input to control the game. keyWentup() generates a single true value when the key is released, no matter how long a key is pressed. Use `keyDown()` to continually check if the key is pressed.",
+  "content": "Checks if the key specified was released.\n\nSome interactive games use the keyboard for the user input to control the game. keyWentup() generates a single true value when the key is released, no matter how long a key is pressed. Use [`keyDown()`(#fff176)](/docs/gamelab/keyDown/) to continually check if the key is pressed.",
   "examples": [
     {
       "name": "",
@@ -31,6 +31,9 @@
       "required": true,
       "description": "The name of key you want to check. Keys without a letter or number have names like \"up\", \"left\", \"shift\", \"tab\", \"space\", etc."
     }
+  ],
+  "parameters": [
+    "code"
   ],
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the key specified was released.",

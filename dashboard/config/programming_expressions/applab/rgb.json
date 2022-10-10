@@ -1,7 +1,7 @@
 {
   "key": "rgb",
   "name": "rgb()",
-  "category": "Drawing",
+  "category": "UI controls",
   "category_key": "ui_controls",
   "content": "Using RGBA values, creates colors for using in the background, shapes, lines and points.\r\n\r\nExplore the 256^3 possible colors you can choose from using three numeric parameters.\r\n\r\nNote that if only one parameter is provided to rgb(), it will be interpreted as a grayscale value. Add a second parameter, and it will be used for alpha transparency for grayscale. When three parameters are specified, they are interpreted as RGB values. Adding a fourth parameter applies alpha transparency to the RGB color.",
   "examples": [
@@ -50,8 +50,14 @@
       "description": "The alpha transparency, a number between 0 (fully transparent) and 1(fully opaque), of the color. Default is 1."
     }
   ],
+  "parameters": [
+    "r",
+    "g",
+    "b",
+    "a"
+  ],
   "return_value": "Returns a color. Usually used as a parameter to background(), fill(), or stroke().",
   "short_description": "Using RGBA values, creates colors for using in the background, shapes, lines and points.",
-  "syntax": "rgb(r, g, b)",
+  "syntax": "rgb(r, g, b, a)",
   "tips": "- If any of the RGBA values is out of range (0-255), then the value is rounded into range. For example, 300 becomes 255 and -100 becomes 0."
 }

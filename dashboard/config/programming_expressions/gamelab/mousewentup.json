@@ -1,9 +1,9 @@
 {
   "key": "mouseWentUp",
   "name": "mouseWentUp()",
-  "category": "World",
+  "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Checks if the mouse button specified was released.\r\n\r\nSome interactive games use the mouse for the user to control the game. mouseWentUp() generates a single true value when the mouse button is released, no matter how long the button is pressed. Use `mouseDown()` to continually check if the button is pressed.",
+  "content": "Checks if the mouse button specified was released.\n\nSome interactive games use the mouse for the user to control the game. [`mouseWentUp()`(#fff176)](/docs/gamelab/mouseWentUp/) generates a single true value when the mouse button is released, no matter how long the button is pressed. Use [`mouseDown()`(#fff176)](/docs/gamelab/mouseDown/) to continually check if the button is pressed.",
   "examples": [
     {
       "name": "",
@@ -31,6 +31,9 @@
       "required": true,
       "description": "The mouse button you want to check, either \"leftButton\" or \"rightButton\"."
     }
+  ],
+  "parameters": [
+    "button"
   ],
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the mouse button specified was released.",

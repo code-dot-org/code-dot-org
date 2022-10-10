@@ -271,6 +271,8 @@ ur-PK:
   homepage_slot_text_link_buy: شامل ہو جایئے
   homepage_slot_text_link_donate: عطیہ کریں
   homepage_slot_text_link_shop: ٹی شرٹس، ٹوپیاں اور بہت کچھ
+  homepage_gallery_header: "%{project_count} ملین سے زیادہ Code.org پراجیکٹ بنائے
+    جا چکے ہیں"
   homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
   homepage_donors_seall: سبھی دیکھیں
   homepage_donors_donate: عطیہ کریں
@@ -448,6 +450,7 @@ ur-PK:
   coursee-2017_name: کورس E (2017)
   coursef-2017_name: کورس F (2017)
   coursed-2021_name: کورس D (2021)
+  coursed-2022_name: کورس D (2021)
   pre-express-2018_name: پری ریڈر ایکسپریس کورس (2018)
   pre-express-2019_name: پری ریڈر ایکسپریس کورس (2019)
   pre-express-2020_name: پری ریڈر ایکسپریس کورس (2020)
@@ -623,6 +626,20 @@ ur-PK:
 
 '
   coursef-2021_gradelevel: 'Ages 9-13
+
+'
+  coursea-2022_gradelevel: عمر 4-7
+  courseb-2022_gradelevel: 'Ages 5-8
+
+'
+  coursec-2022_gradelevel: 'Ages 6-10
+
+'
+  coursed-2022_gradelevel: عمر 7-11
+  coursee-2022_gradelevel: 'Ages 8-12
+
+'
+  coursef-2022_gradelevel: 'Ages 9-13
 
 '
   accelerated_gradelevel: 'Ages 10-18

@@ -4,6 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Bring AP® Computer Science A to your students next year!",
+          "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.",
+          "link": "https://code.org/educate/csa",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "key": "b5d20321-d435-4fcd-9a87-d4c74337d122"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -17,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:08:21 UTC",
+    "serialized_at": "2022-09-28 14:31:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -77,7 +87,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work with envelopes and paper to model functions with parameters and return values. Students create their own physical function envelope for drawing a house that takes in different parameters, and then build another function to calculate and return the cost of building that house.  ",
         "preparation": "* Collect various sizes of sticky notes. Small sticky notes are particularly useful for this activity. \r\n* Two envelopes per group\r\n* Pencils/pens\r\n* One baggy for a teacher demonstration (optional)\r\n* Print out copies of the Activity Guide for students\r\n* Review the Unit 7, Lesson 1 slides prior to the class",
-        "purpose": "In this Exlore lesson, students follow a presentation and use manipulatives to understand the basics of creating a function with parameters and return values. ",
+        "purpose": "In this Explore lesson, students follow a presentation and use manipulatives to understand the basics of creating a function with parameters and return values. ",
         "student_overview": "Develop a mental model for how functions can be generalized using parameters and return values.",
         "unplugged": true
       },

@@ -24,8 +24,8 @@ class ProgrammingExpression < ApplicationRecord
   include SerializedProperties
   include Rails.application.routes.url_helpers
 
-  belongs_to :programming_environment
-  belongs_to :programming_environment_category
+  belongs_to :programming_environment, optional: true
+  belongs_to :programming_environment_category, optional: true
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
   has_many :lessons_programming_expressions
 
@@ -76,7 +76,7 @@ class ProgrammingExpression < ApplicationRecord
     if config['syntax']
       syntax = config['syntax']
     elsif config['paletteParams']
-      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']} .join(', ') + ")"
+      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']}.join(', ') + ")"
     elsif config['block']
       syntax = config['block']
     end
@@ -143,12 +143,16 @@ class ProgrammingExpression < ApplicationRecord
     record.id
   end
 
-  def documentation_path
+  def cb_documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
   end
 
   def studio_documentation_path
     programming_environment_programming_expression_path(programming_environment.name, key)
+  end
+
+  def documentation_path
+    studio_documentation_path
   end
 
   def summarize_for_lesson_edit
@@ -173,7 +177,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
-      environmentEditorType: programming_environment.editor_type,
+      environmentEditorLanguage: programming_environment.editor_language,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -190,6 +194,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_show
     {
+      id: id,
       name: name,
       blockName: block_name,
       category: programming_environment_category&.name,
@@ -201,8 +206,7 @@ class ProgrammingExpression < ApplicationRecord
       tips: tips,
       parameters: palette_params,
       examples: examples,
-      programmingEnvironmentName: programming_environment.name,
-      video: Video.current_locale.find_by_key(video_key)&.summarize(false),
+      video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
       imageUrl: image_url
     }
   end
@@ -217,14 +221,27 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
-  def serialize_for_environment_show
+  def summarize_for_navigation
     {
+      id: id,
       key: key,
       name: name,
       blockName: block_name,
       color: get_color,
       syntax: syntax,
       link: studio_documentation_path
+    }
+  end
+
+  def summarize_for_all_code_docs
+    {
+      id: id,
+      key: key,
+      name: name,
+      environmentId: programming_environment.id,
+      environmentTitle: programming_environment.title,
+      categoryName: programming_environment_category&.name,
+      editPath: edit_programming_expression_path(self)
     }
   end
 
@@ -260,6 +277,8 @@ class ProgrammingExpression < ApplicationRecord
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     object_to_serialize = serialize
+    directory_name = File.dirname(file_path)
+    Dir.mkdir(directory_name) unless File.exist?(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
@@ -294,5 +313,12 @@ class ProgrammingExpression < ApplicationRecord
     new_exp.write_serialization
 
     new_exp
+  end
+
+  def self.get_from_cache(programming_environment_name, key)
+    Rails.cache.fetch("programming_expression/#{programming_environment_name}/#{key}", force: !Script.should_cache?) do
+      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
+      ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
+    end
   end
 end

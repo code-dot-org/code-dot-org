@@ -38,5 +38,5 @@
   ],
   "short_description": "Creates a new named sprite of the chosen costume at the given location.",
   "syntax": "createNewSprite",
-  "tips": "- Use a different name for each named sprite. If two or more sprites are created with the same name, only the most recently created one will be affected by code that uses that `sprite name`."
+  "tips": "- Use a different name for each named sprite. If two or more sprites are created with the same name, only the most recently created one will be affected by code that uses that [`sprite name`(#df9399)](/docs/spritelab/codestudio_spriteName/)."
 }

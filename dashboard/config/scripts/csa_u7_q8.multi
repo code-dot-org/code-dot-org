@@ -18,7 +18,7 @@ The following method is intended to return a `String` of the single character at
 
 ```
 public String singleChar(String s, int i) {
-   return s.substring(index, index + 1);
+   return s.substring(i, i + 1);
 }
 
 What is the precondition required so the method works as intended for all values of the parameters that satisfy the preconditions?

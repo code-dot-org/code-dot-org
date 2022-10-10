@@ -34,7 +34,7 @@ class VideosControllerTest < ActionController::TestCase
     assert_creates(Video) do
       post :create, params: {
         title: 'Test create title',
-        video: {key: 'test_key', youtube_code: '_fake_code_'}
+        video: {key: 'test_key', youtube_code: '_fake_code_', download: 'video.mp4'}
       }
     end
 
@@ -50,7 +50,7 @@ class VideosControllerTest < ActionController::TestCase
     patch :update, params: {
       id: @video,
       title: 'Test title',
-      video: {key: @video.key, youtube_code: @video.youtube_code}
+      video: {key: @video.key, youtube_code: @video.youtube_code, download: 'video.mp4'}
     }
     assert_redirected_to videos_path
   end
@@ -59,13 +59,13 @@ class VideosControllerTest < ActionController::TestCase
     assert_creates(Video) do
       post :create, params: {
         title: 'Test create title',
-        video: {key: 'test_key', youtube_code: '_fake_code_'}
+        video: {key: 'test_key', youtube_code: '_fake_code_', download: 'video.mp4'}
       }
     end
     assert_creates(Video) do
       post :create, params: {
         title: 'Test create title',
-        video: {key: 'test_key', youtube_code: '_fake_code_', locale: 'es-MX'}
+        video: {key: 'test_key', youtube_code: '_fake_code_', download: 'video.mp4', locale: 'ex-MX'}
       }
     end
     assert_equal 2, Video.where(key: 'test_key').count
@@ -76,7 +76,7 @@ class VideosControllerTest < ActionController::TestCase
       assert_raise do
         post :create, params: {
           title: 'Test create title',
-          video: {key: 'test_key', youtube_code: '_fake_code_', locale: 'es-MX'}
+          video: {key: 'test_key', youtube_code: '_fake_code_', download: 'video.mp4', locale: 'ex-MX'}
         }
       end
     end

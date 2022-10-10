@@ -2,5 +2,6 @@
   "key": "poem-art",
   "display_name": "Poem Art",
   "category": "hoc",
-  "is_featured": true
+  "is_featured": true,
+  "assignable": true
 }

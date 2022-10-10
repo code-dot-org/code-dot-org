@@ -8,10 +8,6 @@ require 'bcrypt'
 require 'chronic'
 require 'nokogiri'
 
-def slog(h)
-  CDO.slog ({application: :pegasus}).merge(h)
-end
-
 def cache_dir(*paths)
   pegasus_dir('cache', *paths)
 end

@@ -1,0 +1,5478 @@
+{
+  "script": {
+    "name": "csd-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csd-playground",
+    "serialized_at": "2022-10-06 19:56:07 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csd-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Level Updates",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Innovations in Computing",
+      "name": "Innovations in Computing",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "assessment_opportunities": "1. **Identify computing innovations within a given field**\n\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\n\n2. **Describe the inputs and outputs of a device**\n\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\n\n3. **Describe the impacts of the device on society**\n\n\tActivity Guide, page 2: The description of the impact should identify the people who are impacted and either positive or negative effects of that impact.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
+        "preparation": "* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student\n* Decide how you would like to distribute the Computing Innovations Research Areas, and if you would like to make any edits to the document to add or remove websites.",
+        "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
+        "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Crypto Playground",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "The Draw Loop",
+      "name": "The Draw Loop",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "assessment_opportunities": "1. **Explain how the draw loop allows for the creation of animations in Game Lab**\n\n\tIn the wrap up discussion, check that students mention that the code in the draw loop is run over and over, whereas code outside the draw loop is just run once, at the beginning of the program.\n\n2. **Use the draw loop in combination with the randomNumber() command, shapes, and sprites to make simple animations**\n\n\tSee level 8 in Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Question of the Day: How can we animate our images in Game Lab?**\r\n\r\nIn this lesson students are introduced to the draw loop, one of the core programming paradigms in Game Lab. To begin the lesson students look at some physical flipbooks to see that having many frames with different images creates the impression of motion. Students then watch a video explaining how the draw loop in Game Lab helps to create this same impression in their programs. Students combine the draw loop with random numbers to manipulate some simple animations with dots and then with sprites.",
+        "preparation": "* Print and assemble the manipulatives\n* Prepare the video\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "The draw loop is a core component of Game Lab. The fact that the Game Lab environment repeatedly calls this function many times a second (by default 30) is what allows the tool to create animations. This lesson has two goals. The first is for students to see how animation in general depends on showing many slightly different images in a sequence. The second goal is for students to understand how the draw loop allows them to create this behavior in Game Lab. Students should leave the lesson understanding that the commands in the draw loop are called after all other code but are then called repeatedly to create animation. Students will have a chance to continue to develop an understanding of this behavior in the next two lessons, but laying a strong conceptual foundation in this lesson will serve them well for the rest of the unit.",
+        "student_overview": "**Question of the Day: How can we animate our images in Game Lab?**\n\nIn this lesson, you will learn how to use the draw loop with random numbers to create your first simple animations. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Updating Screen Elements",
+      "name": "Updating Screen Elements",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Change text on the screen using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Respond to user input using event handlers**\n\n\tCode Studio: See the rubric on the assessment level",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen\n\n**Question of the Day:** How can you update design elements of an app?",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Collisions",
+      "name": "Collisions",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "assessment_opportunities": "1. **Model different types of interactions between sprites.**\n\n\tSee Level 7 in Code Studio.\n\n2. **Describe how abstractions can be built upon to develop even further abstractions**\n\n\tIn the wrap up, make sure students understand that blocks such as [`isTouching`(#f78183)](/docs/gamelab/isTouching/) hide the complexity or details of the code inside, allowing them to tackle more complex problems.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lessson, students program their sprites to interact in new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)).",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. While students could theoretically have written their own displace, collide, or bounce commands, the ability to ignore the details of this code allows them to focus their attention on the high level structure of the games they want to build.\r\n\r\nThis lesson is also intended to give students more practice using the new commands they have learned in the second chapter. This the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.",
+        "student_overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\n\nIn this lesson, you will learn how to use the new collision blocks (collide, displace, bounce, and bounceOff) to make your sprite interact in new ways. "
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Book Cover ",
+      "name": "Book Cover ",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "US Landmarks",
+      "name": "U.S. Landmarks",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Wonder Book Cover ",
+      "name": "Wonder Book Cover ",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3",
+      "position": 1,
+      "properties": {
+        "name": "CSD U3L27.1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "63954ee5-436b-4559-ae43-c21ae5cce179",
+      "position": 2,
+      "properties": {
+        "name": "CSD U3L17.2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63954ee5-436b-4559-ae43-c21ae5cce179",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e",
+      "position": 3,
+      "properties": {
+        "name": "CSD U2L9.6.A"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ee728cbd-581b-41d7-8f1b-34d308286f18",
+      "position": 4,
+      "properties": {
+        "name": "CSD U3L7.8"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee728cbd-581b-41d7-8f1b-34d308286f18",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd",
+      "position": 5,
+      "properties": {
+        "name": "CSD U4L14 and L16"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4",
+      "position": 6,
+      "properties": {
+        "name": "CSD U6L8.3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "d12637c4-eb13-421b-ba75-c3100d524738",
+      "position": 7,
+      "properties": {
+        "name": "CSD U6L13"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d12637c4-eb13-421b-ba75-c3100d524738",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "3d436273-7ad2-4c0a-b1c6-001c3b446090",
+      "position": 1,
+      "properties": {
+        "name": "Before The Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "fbc92e10-407e-4e93-a138-0990a9f54e8e",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "5259db4f-6402-4f4d-841c-9c3430ae9669",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5259db4f-6402-4f4d-841c-9c3430ae9669",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e",
+      "position": 5,
+      "properties": {
+        "name": "Extensions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "f2e844ff-6a5b-43eb-8a80-665f7e4fe94d",
+      "position": 6,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2e844ff-6a5b-43eb-8a80-665f7e4fe94d",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "3e4e3118-34b6-411f-8b53-50e74a4341fb",
+      "position": 1,
+      "properties": {
+        "name": "Bitcoin Widgets"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e4e3118-34b6-411f-8b53-50e74a4341fb",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "f47202e2-7231-444a-9cd6-a7b960ef4a63",
+      "position": 2,
+      "properties": {
+        "name": "Value on Blockchain Widgets"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f47202e2-7231-444a-9cd6-a7b960ef4a63",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "a9e82c8c-4e9e-4f9b-8e4d-b05d9599078d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9e82c8c-4e9e-4f9b-8e4d-b05d9599078d",
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "088b9c52-0924-4e61-ba74-2467af8284e3",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3",
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "6e4ffbd1-18de-4068-92ea-d0aa00e9e226",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e4ffbd1-18de-4068-92ea-d0aa00e9e226",
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "7b01a81b-77b9-42e0-ae62-9bc75ffa7c50",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b01a81b-77b9-42e0-ae62-9bc75ffa7c50",
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "503805a7-e877-4bb1-b9ec-bc24ce13b570",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "503805a7-e877-4bb1-b9ec-bc24ce13b570",
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "1265dc0c-7580-4e68-804f-1554f716dec9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1265dc0c-7580-4e68-804f-1554f716dec9",
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40",
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d",
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "8ca70278-ea6d-4115-afb6-541727ff6ff6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ca70278-ea6d-4115-afb6-541727ff6ff6",
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "a8a98b19-c6a3-47f1-9a43-edb2022275d7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8a98b19-c6a3-47f1-9a43-edb2022275d7",
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e",
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "5c165f8c-5ee0-45e4-9483-0f582fb6621d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c165f8c-5ee0-45e4-9483-0f582fb6621d",
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "89dbbd83-a049-4f6c-acbb-e465a27f754d",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d",
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "1be0df49-fc1d-4a30-bf61-9d8158e778d7",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1be0df49-fc1d-4a30-bf61-9d8158e778d7",
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L27.1 from 2021 curriculum ([Link here](https://levelbuilder-studio.code.org/s/csd3-2021/lessons/27/levels/1))",
+        "progression_name": "U3L27.1"
+      },
+      "seeding_key": {
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53",
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3"
+      }
+    },
+    {
+      "key": "61b713d2-7a27-4104-93ef-75b49ef93741",
+      "position": 2,
+      "properties": {
+        "description": "[`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)\n\n[`keyWentDown()`(#fff176)](/docs/ide/gamelab/expressions/keyWentDown)\n\n[`sprite.x`(#f78183)](/docs/ide/gamelab/expressions/x)\n\n[`sprite.velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)"
+      },
+      "seeding_key": {
+        "activity_section.key": "61b713d2-7a27-4104-93ef-75b49ef93741",
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3"
+      }
+    },
+    {
+      "key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L17.2 from 2021 curriculum ([Link here](https://levelbuilder-studio.code.org/s/csd3-2021/lessons/17/levels/2))",
+        "progression_name": "U3L17.2"
+      },
+      "seeding_key": {
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc",
+        "lesson_activity.key": "63954ee5-436b-4559-ae43-c21ae5cce179"
+      }
+    },
+    {
+      "key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U2L9.6.A from 2021 curriculum ([Link Here](https://levelbuilder-studio.code.org/s/csd2-2021/lessons/9/levels/6/sublevel/1))",
+        "progression_name": "CSD U2L9.6.A"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1",
+        "lesson_activity.key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e"
+      }
+    },
+    {
+      "key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L7.8 from 2021 curriculum ([Link Here](https://studio.code.org/s/csd3-2021/lessons/7/levels/8))",
+        "progression_name": "CSD U3L7.8"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799",
+        "lesson_activity.key": "ee728cbd-581b-41d7-8f1b-34d308286f18"
+      }
+    },
+    {
+      "key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace existing video at beginning of U4 Level 14, and instead they will appear at beginning of Level 14 and then Level 16",
+        "progression_name": "CSD U4L14 & U4L16"
+      },
+      "seeding_key": {
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3",
+        "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd"
+      }
+    },
+    {
+      "key": "cc2feacd-11e1-433e-911f-b5e058d118e8",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace CSD U6L8.3 ([Link Here](https://levelbuilder-studio.code.org/s/csd6-pilot-2022/lessons/8/levels/3) - but update when clone to `csd6-2022`). It splits this level into two levels connected as a project level. The first level is just editing the code for the dropdown, the second level is going to design mode to add new options",
+        "progression_name": "CSD U6L8.3"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8",
+        "lesson_activity.key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4"
+      }
+    },
+    {
+      "key": "9fcc00a0-ed1f-48b9-9409-28423318d70d",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace the sequence of levels 5 and 6.\n\nCurrently: 5 is video, 6 is predict.\n\nNew: 5 is predict, 6 is video, 7 is skill building (see below)",
+        "progression_name": "CSD U6L13"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d",
+        "lesson_activity.key": "d12637c4-eb13-421b-ba75-c3100d524738"
+      }
+    },
+    {
+      "key": "66e0738b-0af6-41eb-a8a8-9246c3b80bec",
+      "position": 1,
+      "properties": {
+        "description": "This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "66e0738b-0af6-41eb-a8a8-9246c3b80bec",
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090"
+      }
+    },
+    {
+      "key": "460ffc7e-eb3e-49f7-aba3-497c2865e711",
+      "position": 2,
+      "properties": {
+        "description": "Students will be researching computing innovations on the internet. You can provide students with copies of the [Computing Innovation Research Areas](https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit) guide to students in their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy innovation may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students.**",
+        "name": "Preparing for the Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "460ffc7e-eb3e-49f7-aba3-497c2865e711",
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090"
+      }
+    },
+    {
+      "key": "d799b632-f143-4f95-8e8b-3516b598f89c",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** _What is an example of a time you've used a computer that doesn't look or feel like a computer? Think about devices you may have at home or even in your pocket!_\n\n**Discussion Goal:** Encourage students to consider computing devices as part of their everyday experiences, such as embedded in a car or in a watch or even a touchscreen that lets them order food or drink at a restaurant. As students share answers, you might keep track of their responses at the front of the room and encourage them to keep coming up with ideas.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "d799b632-f143-4f95-8e8b-3516b598f89c",
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
+      }
+    },
+    {
+      "key": "2e714d62-5bfa-4dba-92ba-31b01993c397",
+      "position": 2,
+      "properties": {
+        "description": "Computing devices are all around us, embedded in vehicles or our pockets or sometimes even our clothes! In this unit, we'll learn how to create our own computing devices to solve problems in the world around us.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e714d62-5bfa-4dba-92ba-31b01993c397",
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
+      }
+    },
+    {
+      "key": "dc1a813c-efaa-418f-bd5e-3de077c18620",
+      "position": 3,
+      "properties": {
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
+        "name": "Get Inspired\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc1a813c-efaa-418f-bd5e-3de077c18620",
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
+      }
+    },
+    {
+      "key": "8f5ef1b5-7286-443c-8b7f-ebc618b67946",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** _What is an innovation? What does it mean for something to be innovative?_\n\n**Discussion Goal:** This should be a quick discussion. The primary goal is for the class to come to a common understanding of what it means for something to be innovative. That it's not enough for a product to look sleeker than the last version, but that innovation means to really do something better than it's been done before, or to do things that have _never_ been done before.\n",
+        "name": "Innovation Research"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f5ef1b5-7286-443c-8b7f-ebc618b67946",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of 3-4\n\n**Distribute:** Hand out copies of the activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Innovation Research:** Present the overview from the activity guide or the slides as a class. During this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depth and report back to the class about. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose a topic they would like to focus on and mark it on their activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Researching Your Topic:** Present the next section of the activity guide or slides as a class. Students will be using the internet to research computing innovations in their chosen area.\n\n**Distribute:** Digitally distribute copies of the Computing Innovations Research Areas handout.\n\n**Do This:** Find at least two computing innovations from your chosen topic. Students can use the provided websites, or search the internet for other reputable sources."
+      },
+      "seeding_key": {
+        "activity_section.key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "7990e95d-c410-4c48-8315-22eff3b35396",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Student Research**: The goal of this research is twofold:\n* First, develop a deeper understanding of a chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\n* Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that may not look like computers, but perform computing functions using input and output."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7990e95d-c410-4c48-8315-22eff3b35396",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
+      "position": 4,
+      "properties": {
+        "description": "Once groups have selected a specific innovative device, they can complete the second page of this activity guide, which asks them to do the following:\n\n* **What Problem Does It Solve?:** For some topics this may be more clear (for example healthcare devices typically have a very specific goal), but for others students may need to think more broadly about what they consider problems. More frivolous wearables or digital art installations may be more concerned with personal expression than solving a specific problem.\n* **What Is Innovative About It?:** Encourage students to refer back to the earlier discussion about innovation for this. It can also be useful to compare against other devices found during the research phase.\n* **How Do You Interact With It?:** Ask students to think back to the _Input, Output, Storage, Processing_ model that was introduced way back in Unit 1. The goal here is to identify specifically the Inputs and Outputs provided by a given device - the more specific these are, the more easily students will be able to connect elements of the Circuit Playground to these devices.\n* **What is the Impact?:** Encourage students to think of the people who are affected by this innovation. Most innovations were probably designed to improve someone's life, and students can write about the impact this could have on individuals. But some devices may have unexpected or unintended consequences, and students can reflect on how those consequences could affect individuals.",
+        "name": "An Innovative Solution"
+      },
+      "seeding_key": {
+        "activity_section.key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "5f93034b-5213-41fc-9440-1047992185c6",
+      "position": 5,
+      "properties": {
+        "description": "Give groups a minute each to share their findings. See the extension activities for alternate ways to share.",
+        "name": "Share Out"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f93034b-5213-41fc-9440-1047992185c6",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "c6ad130a-0a16-4da4-9e0b-9d8328cffde2",
+      "position": 1,
+      "properties": {
+        "description": "**Journal:** What was the most surprising, cool, or impressive thing that you found in your research? If you could develop an innovation of your own, what would it be?",
+        "name": "Journaling\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6ad130a-0a16-4da4-9e0b-9d8328cffde2",
+        "lesson_activity.key": "5259db4f-6402-4f4d-841c-9c3430ae9669"
+      }
+    },
+    {
+      "key": "4f0ab896-2c67-4201-bc5b-4df66a77985d",
+      "position": 1,
+      "properties": {
+        "description": "Ask groups to create a poster that shares the innovation device that they researched. Posters should include:\n\n* Who invented the device\n* What problem they were trying to solve\n* Why it is unique or innovative\n* How users interact with it (specifically, what Inputs does it take and how does it provide Output)\n\nKeep these posters up throughout the unit for students to refer back to as they start to develop physical computing devices of their own.",
+        "name": "Innovation Posters\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f0ab896-2c67-4201-bc5b-4df66a77985d",
+        "lesson_activity.key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e"
+      }
+    },
+    {
+      "key": "2ded03fc-6744-429e-8037-ffe968a19690",
+      "position": 2,
+      "properties": {
+        "description": "Instead of (or in addition to) your posters, have students develop websites in Web Lab that include the same required content. Make sure that students include links to their source websites.",
+        "name": "Innovation Websites\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ded03fc-6744-429e-8037-ffe968a19690",
+        "lesson_activity.key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e"
+      }
+    },
+    {
+      "key": "e95dcf05-6bad-4d38-a4e4-bd102c53991d",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e95dcf05-6bad-4d38-a4e4-bd102c53991d",
+        "lesson_activity.key": "f2e844ff-6a5b-43eb-8a80-665f7e4fe94d"
+      }
+    },
+    {
+      "key": "98a31d64-f89d-4653-86a7-b53b38551943",
+      "position": 1,
+      "properties": {
+        "progression_name": "Bitcoin Widgets"
+      },
+      "seeding_key": {
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943",
+        "lesson_activity.key": "3e4e3118-34b6-411f-8b53-50e74a4341fb"
+      }
+    },
+    {
+      "key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12",
+      "position": 2,
+      "properties": {
+        "progression_name": "Bitcoin Scenarios"
+      },
+      "seeding_key": {
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12",
+        "lesson_activity.key": "3e4e3118-34b6-411f-8b53-50e74a4341fb"
+      }
+    },
+    {
+      "key": "a120702d-bc9a-46fd-96ec-1277061ac29c",
+      "position": 1,
+      "properties": {
+        "name": "Blockchain Value Widgets",
+        "progression_name": "Blockchain Value - Teach Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "a120702d-bc9a-46fd-96ec-1277061ac29c",
+        "lesson_activity.key": "f47202e2-7231-444a-9cd6-a7b960ef4a63"
+      }
+    },
+    {
+      "key": "ea9a98e4-5ba1-4edf-a2a3-58cdbc2716fb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Blockchain Value - Student Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea9a98e4-5ba1-4edf-a2a3-58cdbc2716fb",
+        "lesson_activity.key": "f47202e2-7231-444a-9cd6-a7b960ef4a63"
+      }
+    },
+    {
+      "key": "8f27e83a-aafc-4890-a043-209985e7d7b4",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show [Flipbook Example - by Marnic Bos - Video.](https://www.youtube.com/watch?v=hol0p29cd8o&feature=youtu.be)\n\n\n\n**Prompt:** This video shows a flipbook to make animation. In your own words, how is it working? Why does it \"trick our eyes\" into thinking something is moving?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f27e83a-aafc-4890-a043-209985e7d7b4",
+        "lesson_activity.key": "a9e82c8c-4e9e-4f9b-8e4d-b05d9599078d"
+      }
+    },
+    {
+      "key": "0bb93962-82d1-45a2-b6ec-8d28984984ad",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Have students write their ideas independently, then share with partners, then share as a whole group.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This discussion should introduce some key understandings about animation. Students should understand that the key is seeing many pictures in a row that are slightly different. Introduce the vocabulary word \"frame\" as being one of those many pictures--a single image within an animation. Then transition to the fact that soon students will be creating animations of their own. \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0bb93962-82d1-45a2-b6ec-8d28984984ad",
+        "lesson_activity.key": "a9e82c8c-4e9e-4f9b-8e4d-b05d9599078d"
+      }
+    },
+    {
+      "key": "950a5c30-aaf4-424c-b040-b95ea8a942f7",
+      "position": 3,
+      "properties": {
+        "description": "We're going to start learning how to make animations, not just still images. In order to do this we need a way to make our programs draw many pictures a second. Our eyes will blur them together to make it look like smooth motion. To do this, though, we're going to need to learn an important new tool.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "950a5c30-aaf4-424c-b040-b95ea8a942f7",
+        "lesson_activity.key": "a9e82c8c-4e9e-4f9b-8e4d-b05d9599078d"
+      }
+    },
+    {
+      "key": "5ae7f8fe-212a-4113-b89a-b83e008728b9",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: How can we animate our images in Game Lab?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ae7f8fe-212a-4113-b89a-b83e008728b9",
+        "lesson_activity.key": "a9e82c8c-4e9e-4f9b-8e4d-b05d9599078d"
+      }
+    },
+    {
+      "key": "bd3ac00c-fa30-460b-a086-40626cdedc57",
+      "position": 1,
+      "properties": {
+        "description": "**Video:** Watch the video introducing the draw loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "bd3ac00c-fa30-460b-a086-40626cdedc57",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "269cba61-a824-4033-b27e-9ae5be50495c",
+      "position": 2,
+      "properties": {
+        "description": "**Question to Consider with Video:**\n- What does the draw function do?",
+        "progression_name": "Game Lab Validation Test",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:**\n\nThe draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\". This creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\n\n**Misconception Alert!**\n\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "269cba61-a824-4033-b27e-9ae5be50495c",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "013f8991-e32f-42c4-8810-63d88f9dc280",
+      "position": 3,
+      "properties": {
+        "description": "**Demo:** If you choose, use the provided manipulatives to provide a hands-on demo for exploring how the draw loop and animations are connected."
+      },
+      "seeding_key": {
+        "activity_section.key": "013f8991-e32f-42c4-8810-63d88f9dc280",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "40ed75b3-d6a9-4889-a89d-6565b44336c3",
+      "position": 4,
+      "properties": {
+        "progression_name": "Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "40ed75b3-d6a9-4889-a89d-6565b44336c3",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "d5339392-6b3f-455a-9af6-1bf83ce80cec",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5339392-6b3f-455a-9af6-1bf83ce80cec",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "cd80741a-0a00-4830-a025-0c5bc2e632c8",
+      "position": 6,
+      "properties": {
+        "progression_name": "Prediction",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Notice that the blue background is never visible because it is immediately drawn over by the red background. Also there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cd80741a-0a00-4830-a025-0c5bc2e632c8",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "5960bf6e-bcf2-4763-a53d-dfc1a8386f71",
+      "position": 7,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "5960bf6e-bcf2-4763-a53d-dfc1a8386f71",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "fb0693a2-1915-47dd-9f99-1d8ff6c4115c",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb0693a2-1915-47dd-9f99-1d8ff6c4115c",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "007c3063-1b46-45a6-b155-2b641f22a62a",
+      "position": 9,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "007c3063-1b46-45a6-b155-2b641f22a62a",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "de27a6a7-606f-420a-844a-2275e5048cd9",
+      "position": 10,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "de27a6a7-606f-420a-844a-2275e5048cd9",
+        "lesson_activity.key": "088b9c52-0924-4e61-ba74-2467af8284e3"
+      }
+    },
+    {
+      "key": "39a97fc3-d817-4e37-80aa-ca8cc3fab468",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we animate our images in Game Lab?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "39a97fc3-d817-4e37-80aa-ca8cc3fab468",
+        "lesson_activity.key": "6e4ffbd1-18de-4068-92ea-d0aa00e9e226"
+      }
+    },
+    {
+      "key": "5b7231cf-bf86-4149-84e1-24b63ea50f42",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** How does the draw loop help us make animations?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Key Understandings:** There are many common misconceptions with the draw loop. Make sure students understand the following:\r\n\r\n* The draw loop is run after all other code in your program. It does not actually matter where it is located in your program.\r\n* The draw loop is run by Game Lab at a constant frame rate of 30 frames per second. You do not actually need to call the function yourself.\r\n* The \"frames\" in Game Lab can be thought of as transparency sheets. Unless you draw a background, then all your new shapes or sprites will simply appear on top of your old ones.\r\n* You should only have one draw loop in your program.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5b7231cf-bf86-4149-84e1-24b63ea50f42",
+        "lesson_activity.key": "6e4ffbd1-18de-4068-92ea-d0aa00e9e226"
+      }
+    },
+    {
+      "key": "8c55f59b-6450-493f-8794-a7708ad119ff",
+      "position": 3,
+      "properties": {
+        "description": "**Review:** Return to the resources students saw at the beginning of the lesson (Video, physical flip books) or under Help and Tips during the lesson. Address misconceptions that have arisen in the lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c55f59b-6450-493f-8794-a7708ad119ff",
+        "lesson_activity.key": "6e4ffbd1-18de-4068-92ea-d0aa00e9e226"
+      }
+    },
+    {
+      "key": "0e1df72f-65f3-4bf6-be3a-c9997b1d0970",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students this example image\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">",
+        "name": "UI Element Properties Refresher"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e1df72f-65f3-4bf6-be3a-c9997b1d0970",
+        "lesson_activity.key": "7b01a81b-77b9-42e0-ae62-9bc75ffa7c50"
+      }
+    },
+    {
+      "key": "0ca4afb9-cd84-4753-9d37-6e46c114f8cd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How would you describe to somebody else how to recreate this screen? What specific details would they need to know about each design element?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ca4afb9-cd84-4753-9d37-6e46c114f8cd",
+        "lesson_activity.key": "7b01a81b-77b9-42e0-ae62-9bc75ffa7c50"
+      }
+    },
+    {
+      "key": "161d2ec2-61c9-4839-99f0-4cc8f1e2f256",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** The goal of this discussion is to prime students to think about the _properties_ of various design elements, which they will learn to change with code later in this lesson. Students should rely on their previous experiences with Design Mode, and you can use this as a brief refresher on App Lab if needed.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "161d2ec2-61c9-4839-99f0-4cc8f1e2f256",
+        "lesson_activity.key": "7b01a81b-77b9-42e0-ae62-9bc75ffa7c50"
+      }
+    },
+    {
+      "key": "a4ad5895-eae8-49dc-bfdf-c8762f2e3fd5",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a4ad5895-eae8-49dc-bfdf-c8762f2e3fd5",
+        "lesson_activity.key": "503805a7-e877-4bb1-b9ec-bc24ce13b570"
+      }
+    },
+    {
+      "key": "fdca8dc9-bdd6-428f-92da-8aedcf8ad8ca",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students are familiar with design mode to set up the user interface of their app, but this level introduces how to change design elements with code. Students can hover over elements to see their IDs and use that to inform their guesses. When they press Run, the code will run slowly and highlight each line as it runs so students can see step-by-step what each line does. This can be helpful when discussing their prediction and matching the result to specific lines of code."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Mode Review:** If students need a review on Design Mode and Events in App Lab, consider showing students the following videos:\n\n- [Intro to Design Mode](https://youtu.be/jiX1dST2PCw)\n- [Events in App Lab](https://youtu.be/npa2r4t6y2A)\n\nAs an ongoing resources for students, consider printing or displaying the following Help and Tip pages for students:\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fdca8dc9-bdd6-428f-92da-8aedcf8ad8ca",
+        "lesson_activity.key": "503805a7-e877-4bb1-b9ec-bc24ce13b570"
+      }
+    },
+    {
+      "key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e",
+        "lesson_activity.key": "503805a7-e877-4bb1-b9ec-bc24ce13b570"
+      }
+    },
+    {
+      "key": "f53a851f-7ec5-4ca4-ad5f-7d5bcc36b93e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "f53a851f-7ec5-4ca4-ad5f-7d5bcc36b93e",
+        "lesson_activity.key": "503805a7-e877-4bb1-b9ec-bc24ce13b570"
+      }
+    },
+    {
+      "key": "0813631b-fdd5-4a6f-b1b1-d5909a20ad29",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0813631b-fdd5-4a6f-b1b1-d5909a20ad29",
+        "lesson_activity.key": "503805a7-e877-4bb1-b9ec-bc24ce13b570"
+      }
+    },
+    {
+      "key": "dec38cb1-e001-4d25-83fe-baaa9380c979",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "dec38cb1-e001-4d25-83fe-baaa9380c979",
+        "lesson_activity.key": "503805a7-e877-4bb1-b9ec-bc24ce13b570"
+      }
+    },
+    {
+      "key": "18254190-b2fc-4b8c-bb67-393ca2f38665",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and circuit playground?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "18254190-b2fc-4b8c-bb67-393ca2f38665",
+        "lesson_activity.key": "1265dc0c-7580-4e68-804f-1554f716dec9"
+      }
+    },
+    {
+      "key": "75710f54-dd2d-4f37-8497-fac2ca889e01",
+      "position": 2,
+      "properties": {
+        "description": "**Share Out:** Have students share with a partner, then with the class"
+      },
+      "seeding_key": {
+        "activity_section.key": "75710f54-dd2d-4f37-8497-fac2ca889e01",
+        "lesson_activity.key": "1265dc0c-7580-4e68-804f-1554f716dec9"
+      }
+    },
+    {
+      "key": "65e33584-9db6-4d7d-8749-6765b52537ce",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students should brainstorm a variety of options they can use to represent an error to users. For example:\n- Changing the text or background color red\n- Having the circuit playground buzz\n- Having the red LED on the circuit playground light up\n- Changing the text on the screen to say “Error!”\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "65e33584-9db6-4d7d-8749-6765b52537ce",
+        "lesson_activity.key": "1265dc0c-7580-4e68-804f-1554f716dec9"
+      }
+    },
+    {
+      "key": "7f3df5bf-9d8d-4e64-8787-f0729dfc478f",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7f3df5bf-9d8d-4e64-8787-f0729dfc478f",
+        "lesson_activity.key": "1265dc0c-7580-4e68-804f-1554f716dec9"
+      }
+    },
+    {
+      "key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924",
+      "position": 1,
+      "properties": {
+        "description": "**Display**: Display the animated image. It is also available as a level in code studio.\n\n![A giraffe emoji moves across the screen towards a stationary monkey emoji. As it touches the monkey emoji, both the monkey and giraffe continue moving across the screen](https://curriculum.code.org/media/uploads/collision.gif)\n\n\n**Prompt:** Using the blocks we already know how to use, how could we create the sprite interaction we can see in this program?",
+        "progression_name": "Code Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "9a7837ba-d043-4d1a-852d-a9b19365aaf5",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Allow students to share out their ideas.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus, because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a7837ba-d043-4d1a-852d-a9b19365aaf5",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "9bfc2999-cb97-4a33-a12c-c48dcd4f8941",
+      "position": 3,
+      "properties": {
+        "description": "The first part of the problem is figuring out when the two sprites are touching, but we already figured out how to do that and can now use the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block. That means we don’t need to think about those details anymore.  Using abstraction to hide the complicated details in that part of the problem means we can focus on the new part.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9bfc2999-cb97-4a33-a12c-c48dcd4f8941",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "131a7983-017d-45dd-a6c6-eb9f230d482f",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students have seen this vocabulary before, but given its importance to the chapter, it is introduced again here.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "131a7983-017d-45dd-a6c6-eb9f230d482f",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "5fe35c10-ce26-4af0-9195-83eb9240d7da",
+      "position": 5,
+      "properties": {
+        "description": "**Vocabulary Review:**\r\n\r\n* **abstraction** - a simplified representation of something more complex\r\n    \r\n**Question of the Day: How can programmers build on abstractions to create further abstractions?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe35c10-ce26-4af0-9195-83eb9240d7da",
+        "lesson_activity.key": "ac0f3d64-23dd-414d-8b11-16d5057e6e40"
+      }
+    },
+    {
+      "key": "083b2605-192f-4d94-a40a-50e83f1af48f",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt**: This was a challenging problem, but we were able to solve it.  What helped us to solve this problem?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Make sure students talk about the importance of higher-level blocks, such as isTouching, and that while these blocks don't provide new functionality, hiding the complexity of the code inside of a single block allows them to tackle more complex problems.  \r\n\r\nThis is also a good time to call out how far the students have progressed in their skills since the beginning of the unit.  This problem would have seemed almost impossible at the beginning of the year. Some things that made the problem easier to solve were:\r\n\r\n* Preparation: The students brainstormed and thought about solutions before trying out their code.\r\n* Cooperation: Students worked as a group to come up with a solution\r\n* Abstraction: Students were able to use the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) and [`velocityY`(#f78183)](/docs/gamelab/velocityY/) blocks to hide part of the solution's complexity.\r\n\r\n  \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "083b2605-192f-4d94-a40a-50e83f1af48f",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "856a8344-342a-44fa-8d2f-3b6a4ff2fbe2",
+      "position": 2,
+      "properties": {
+        "description": "All of these things are very important, and they come up in Computer Science a lot. One thing that was particularly helpful was the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, which hid the complicated code that tells us whether the two sprites are touching. There's also a [`displace`(#f78183)](/docs/gamelab/displace/) block that hides the code we just wrote, and some other blocks that hide the code for some other types of sprite interactions.  You'll have a chance to try out these blocks in the next few levels.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "856a8344-342a-44fa-8d2f-3b6a4ff2fbe2",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "4b6ed677-14a2-4835-9900-a1ccf348cf00",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b6ed677-14a2-4835-9900-a1ccf348cf00",
+        "lesson_activity.key": "77d0bfd1-2fd5-47cf-baec-13b95d88075d"
+      }
+    },
+    {
+      "key": "802beb6e-3902-472a-b37b-87d97d6e8f73",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\n\r\n**Vocabulary Review:**\r\n\r\n* **abstraction** - a simplified representation of something more complex"
+      },
+      "seeding_key": {
+        "activity_section.key": "802beb6e-3902-472a-b37b-87d97d6e8f73",
+        "lesson_activity.key": "8ca70278-ea6d-4115-afb6-541727ff6ff6"
+      }
+    },
+    {
+      "key": "4d319a00-8d18-4e8f-a8e7-ee66e1283403",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** How did having the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block and the [`velocityX`(#f78183)](/docs/gamelab/velocityX/) block make it easier to solve the problem of one sprite pushing another?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students should understand that these two blocks represent partial solutions to the problem of one sprite pushing the other, and that by hiding the details of those partial solutions, they can more easily focus on how to fit those partial solutions together to solve larger and more complex problems. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d319a00-8d18-4e8f-a8e7-ee66e1283403",
+        "lesson_activity.key": "8ca70278-ea6d-4115-afb6-541727ff6ff6"
+      }
+    },
+    {
+      "key": "07afb91c-d108-4f16-b122-6b0e3ade117d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d",
+        "lesson_activity.key": "a8a98b19-c6a3-47f1-9a43-edb2022275d7"
+      }
+    },
+    {
+      "key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303",
+        "lesson_activity.key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e"
+      }
+    },
+    {
+      "key": "ec95fa0f-6078-4560-a2ff-3e2b4bd5d6d1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ec95fa0f-6078-4560-a2ff-3e2b4bd5d6d1",
+        "lesson_activity.key": "5c165f8c-5ee0-45e4-9483-0f582fb6621d"
+      }
+    },
+    {
+      "key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6",
+      "position": 1,
+      "properties": {
+        "name": "Wonder: Book Cover",
+        "progression_name": "Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "282cca02-5d47-4990-bdb1-64e172cdf161",
+      "position": 2,
+      "properties": {
+        "name": "Introduction to Sprite Lab",
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "282cca02-5d47-4990-bdb1-64e172cdf161",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "5136c071-5838-4fb7-9c72-0dd8791c4726",
+      "position": 3,
+      "properties": {
+        "name": "Bud Not Buddy",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "defaabb9-c123-4159-bd74-0576619191da",
+      "position": 4,
+      "properties": {
+        "name": "Blended",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "8284326b-722d-4b11-a841-4554b01b541a",
+      "position": 5,
+      "properties": {
+        "name": "New Kid/Class Act",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "305105a4-60d3-4076-ae42-af9b991a0cf7",
+      "position": 6,
+      "properties": {
+        "name": "Hello World: When Clicked",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "305105a4-60d3-4076-ae42-af9b991a0cf7",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "552b1b84-0b71-4209-82e1-1981fcdf8968",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "552b1b84-0b71-4209-82e1-1981fcdf8968",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31",
+      "position": 8,
+      "properties": {
+        "name": "Number The Stars",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "a51001ac-4b27-4476-a5de-d7e1794ed909",
+      "position": 9,
+      "properties": {
+        "name": "Front Desk",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "0267a64a-56c8-430f-b23b-450ab29e32c2",
+      "position": 10,
+      "properties": {
+        "name": "Free Play",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "0267a64a-56c8-430f-b23b-450ab29e32c2",
+        "lesson_activity.key": "89dbbd83-a049-4f6c-acbb-e465a27f754d"
+      }
+    },
+    {
+      "key": "d6023249-0369-4571-85a0-97c0c0c65f36",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d6023249-0369-4571-85a0-97c0c0c65f36",
+        "lesson_activity.key": "1be0df49-fc1d-4a30-bf61-9d8158e778d7"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "progression": "U3L27.1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53"
+      },
+      "level_keys": [
+        "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "progression": "U3L17.2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc"
+      },
+      "level_keys": [
+        "CSD U3 - Interactive Card - ExampleChoice_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "progression": "CSD U2L9.6.A"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1"
+      },
+      "level_keys": [
+        "CSD U2 image debug match_2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "progression": "CSD U3L7.8"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799"
+      },
+      "level_keys": [
+        "CSD U3 drawSprites placement match_2022"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "progression": "CSD U4L14 & U4L16"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Design Mode Video"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "progression": "CSD U4L14 & U4L16"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Events Video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "progression": "CSD U6L8.3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB2.1_2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "progression": "CSD U6L8.3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB2.2_2022"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2.1_2022"
+        ],
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - SB2.1_2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - ArrayVideo_2022"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2.2_2022"
+        ],
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - SB2.2_2022"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - key generation"
+        ],
+        "progression": "Bitcoin Widgets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - key generation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      },
+      "level_keys": [
+        "Crypto - key generation"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - generate message"
+        ],
+        "progression": "Bitcoin Widgets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - generate message"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      },
+      "level_keys": [
+        "Crypto - generate message"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - generate signature"
+        ],
+        "progression": "Bitcoin Widgets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - generate signature"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      },
+      "level_keys": [
+        "Crypto - generate signature"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - verify signature"
+        ],
+        "progression": "Bitcoin Widgets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - verify signature"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      },
+      "level_keys": [
+        "Crypto - verify signature"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - mine blocks"
+        ],
+        "progression": "Bitcoin Widgets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - mine blocks"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      },
+      "level_keys": [
+        "Crypto - mine blocks"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 1"
+        ],
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 2"
+        ],
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 3"
+        ],
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 3"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 4"
+        ],
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 4"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - Value - Teach Widget"
+        ],
+        "progression": "Blockchain Value - Teach Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Value - Teach Widget"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a120702d-bc9a-46fd-96ec-1277061ac29c"
+      },
+      "level_keys": [
+        "Crypto - Value - Teach Widget"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crypto - Value - Student Widget"
+        ],
+        "progression": "Blockchain Value - Student Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Value - Student Widget"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ea9a98e4-5ba1-4edf-a2a3-58cdbc2716fb"
+      },
+      "level_keys": [
+        "Crypto - Value - Student Widget"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab validation test"
+        ],
+        "progression": "Game Lab Validation Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab validation test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "269cba61-a824-4033-b27e-9ae5be50495c"
+      },
+      "level_keys": [
+        "gamelab validation test"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1_validation-test"
+        ],
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "40ed75b3-d6a9-4889-a89d-6565b44336c3"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged predict 1_validation-test"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_validation-test"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d5339392-6b3f-455a-9af6-1bf83ce80cec"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged orange and green_validation-test"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_validation-test"
+        ],
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cd80741a-0a00-4830-a025-0c5bc2e632c8"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged predict 2_validation-test"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien_validation-test"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 dancing alien_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5960bf6e-bcf2-4763-a53d-dfc1a8386f71"
+      },
+      "level_keys": [
+        "CSD U3 dancing alien_validation-test"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_validation-test"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5960bf6e-bcf2-4763-a53d-dfc1a8386f71"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged wiggle sprite x_validation-test"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web draw loop practice choice_validation-test"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web draw loop practice choice_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fb0693a2-1915-47dd-9f99-1d8ff6c4115c"
+      },
+      "level_keys": [
+        "CSD web draw loop practice choice_validation-test"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_validation-test"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "007c3063-1b46-45a6-b155-2b641f22a62a"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged wiggle sprite y_validation-test"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web draw loop challenge choice_validation-test"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web draw loop challenge choice_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "de27a6a7-606f-420a-844a-2275e5048cd9"
+      },
+      "level_keys": [
+        "CSD web draw loop challenge choice_validation-test"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - P_validation-testing"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - P_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fdca8dc9-bdd6-428f-92da-8aedcf8ad8ca"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - P_validation-testing"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1_validation-testing"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB1_validation-testing"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_validation-testing"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB1.1_validation-testing"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB2_validation-testing"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB2_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB2_validation-testing"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB3_validation-testing"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB3_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB3_validation-testing"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB4_validation-testing"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB4_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB4_validation-testing"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Prac_validation-testing"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Prac_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f53a851f-7ec5-4ca4-ad5f-7d5bcc36b93e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - Prac_validation-testing"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_validation-testing"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "0813631b-fdd5-4a6f-b1b1-d5909a20ad29"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - ChalB_validation-testing"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Chal_validation-testing"
+        ],
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Chal_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "dec38cb1-e001-4d25-83fe-baaa9380c979"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - Chal_validation-testing"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 collisions predict set velocity code_validation-test"
+        ],
+        "progression": "Code Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions predict set velocity code_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924"
+      },
+      "level_keys": [
+        "CSD U3 collisions predict set velocity code_validation-test"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace x_validation-test"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions displace x_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions displace x_validation-test"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace y_validation-test"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions displace y_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions displace y_validation-test"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro_validation-test"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions displace intro_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions displace intro_validation-test"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks_validation-test"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions try blocks_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      },
+      "level_keys": [
+        "CSD U3 collisions try blocks_validation-test"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD games collisions practice choice_validation-test"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games collisions practice choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888"
+      },
+      "level_keys": [
+        "CSD games collisions practice choice_validation-test"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD games collisions assessment_validation-test"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games collisions assessment_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b"
+      },
+      "level_keys": [
+        "CSD games collisions assessment_validation-test"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD games collisions challenge choice_validation-test"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games collisions challenge choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4b6ed677-14a2-4835-9900-a1ccf348cf00"
+      },
+      "level_keys": [
+        "CSD games collisions challenge choice_validation-test"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_2021"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_2021"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "CourseF_video_introSpriteLab_2021"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_title"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_title"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_title"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_background"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_background"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_background"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_say"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_say"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_location"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_location"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_location"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_say2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say2"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_say2"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_prop"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_prop"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_prop"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_print"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_print"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_print"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_click"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_click"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "helloworld_food_click"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "coursee_helloworld_eventsvideo_2022"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_clicksay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_clicksay"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_prompt"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_prompt"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_prompt"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_promptanswered"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_promptanswered"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_promptanswered"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_hello-world"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_introtosprites_hello-world"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "coursee_helloworld_introtosprites_hello-world"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_makesprite"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_location"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_location"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_location"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_size"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_size"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_size"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmark_explain"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmark_explain"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmark_explain"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_place1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_place1"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_place1"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_place2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_place2"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_place2"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_behavior"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_behavior"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_behavior"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "coursee_helloworld_eventsvideo_2022"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches1"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_touches1"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_touches2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches2"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_touches2"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_freeplay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_freeplay"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      },
+      "level_keys": [
+        "csc_landmarks_freeplay"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_widget_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6"
+      },
+      "level_keys": [
+        "csc_bookcover_widget_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "282cca02-5d47-4990-bdb1-64e172cdf161"
+      },
+      "level_keys": [
+        "CourseF_video_introSpriteLab_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_title_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      },
+      "level_keys": [
+        "csc_bookcover_title_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_background_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      },
+      "level_keys": [
+        "csc_bookcover_background_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      },
+      "level_keys": [
+        "csc_bookcover_say_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_location_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      },
+      "level_keys": [
+        "csc_bookcover_location_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say2_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      },
+      "level_keys": [
+        "csc_bookcover_say2_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_prop_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      },
+      "level_keys": [
+        "csc_bookcover_prop_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_print_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      },
+      "level_keys": [
+        "csc_bookcover_print_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_click_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "305105a4-60d3-4076-ae42-af9b991a0cf7"
+      },
+      "level_keys": [
+        "helloworld_food_click_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "552b1b84-0b71-4209-82e1-1981fcdf8968"
+      },
+      "level_keys": [
+        "coursee_helloworld_eventsvideo_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31"
+      },
+      "level_keys": [
+        "csc_bookcover_clicksay_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_prompt_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      },
+      "level_keys": [
+        "csc_bookcover_prompt_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_promptanswered_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      },
+      "level_keys": [
+        "csc_bookcover_promptanswered_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "0267a64a-56c8-430f-b23b-450ab29e32c2"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay_-book-recommendation"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Design a Game 1 - ExampleChoice_2022",
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Interactive Card - ExampleChoice_2022",
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 image debug match_2022",
+        "script_level.level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawSprites placement match_2022",
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Design Mode Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Events Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - SB2.1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - SB2.2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - SB2.1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - ArrayVideo_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - SB2.2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - key generation",
+        "script_level.level_keys": [
+          "Crypto - key generation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - generate message",
+        "script_level.level_keys": [
+          "Crypto - generate message"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - generate signature",
+        "script_level.level_keys": [
+          "Crypto - generate signature"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - verify signature",
+        "script_level.level_keys": [
+          "Crypto - verify signature"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - mine blocks",
+        "script_level.level_keys": [
+          "Crypto - mine blocks"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 1",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 2",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 3",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 4",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Value - Teach Widget",
+        "script_level.level_keys": [
+          "Crypto - Value - Teach Widget"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a120702d-bc9a-46fd-96ec-1277061ac29c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Value - Student Widget",
+        "script_level.level_keys": [
+          "Crypto - Value - Student Widget"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ea9a98e4-5ba1-4edf-a2a3-58cdbc2716fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab validation test",
+        "script_level.level_keys": [
+          "gamelab validation test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "269cba61-a824-4033-b27e-9ae5be50495c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged predict 1_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "40ed75b3-d6a9-4889-a89d-6565b44336c3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged orange and green_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d5339392-6b3f-455a-9af6-1bf83ce80cec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged predict 2_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cd80741a-0a00-4830-a025-0c5bc2e632c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 dancing alien_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 dancing alien_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5960bf6e-bcf2-4763-a53d-dfc1a8386f71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged wiggle sprite x_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5960bf6e-bcf2-4763-a53d-dfc1a8386f71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web draw loop practice choice_validation-test",
+        "script_level.level_keys": [
+          "CSD web draw loop practice choice_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fb0693a2-1915-47dd-9f99-1d8ff6c4115c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged wiggle sprite y_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "007c3063-1b46-45a6-b155-2b641f22a62a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web draw loop challenge choice_validation-test",
+        "script_level.level_keys": [
+          "CSD web draw loop challenge choice_validation-test"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "de27a6a7-606f-420a-844a-2275e5048cd9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - P_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - P_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fdca8dc9-bdd6-428f-92da-8aedcf8ad8ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB1_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB1.1_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB2_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB2_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB3_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB3_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB4_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB4_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "301e8be3-5d85-4ee1-a3f3-da4d44a83e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - Prac_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Prac_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f53a851f-7ec5-4ca4-ad5f-7d5bcc36b93e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - ChalB_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "0813631b-fdd5-4a6f-b1b1-d5909a20ad29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - Chal_validation-testing",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Chal_validation-testing"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "dec38cb1-e001-4d25-83fe-baaa9380c979"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions predict set velocity code_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions predict set velocity code_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f61e08b5-aae4-4caf-8b9a-6bae7fad2924"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions displace x_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions displace x_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions displace y_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions displace y_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions displace intro_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions displace intro_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions try blocks_validation-test",
+        "script_level.level_keys": [
+          "CSD U3 collisions try blocks_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9b0f2ca2-f3f5-4621-a9a2-9f20ac21d0f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games collisions practice choice_validation-test",
+        "script_level.level_keys": [
+          "CSD games collisions practice choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "dcc47b86-d0ed-4ea0-9ef2-2914fe2ce888"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games collisions assessment_validation-test",
+        "script_level.level_keys": [
+          "CSD games collisions assessment_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e862a33a-ded3-4d0f-be41-12e4730a2d6b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games collisions challenge choice_validation-test",
+        "script_level.level_keys": [
+          "CSD games collisions challenge choice_validation-test"
+        ],
+        "lesson.key": "Collisions",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4b6ed677-14a2-4835-9900-a1ccf348cf00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_video_introSpriteLab_2021",
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_2021"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_title",
+        "script_level.level_keys": [
+          "csc_bookcover_title"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_background",
+        "script_level.level_keys": [
+          "csc_bookcover_background"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say",
+        "script_level.level_keys": [
+          "csc_bookcover_say"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_location",
+        "script_level.level_keys": [
+          "csc_bookcover_location"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say2",
+        "script_level.level_keys": [
+          "csc_bookcover_say2"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_prop",
+        "script_level.level_keys": [
+          "csc_bookcover_prop"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_print",
+        "script_level.level_keys": [
+          "csc_bookcover_print"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_click",
+        "script_level.level_keys": [
+          "helloworld_food_click"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_eventsvideo_2022",
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_clicksay",
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_prompt",
+        "script_level.level_keys": [
+          "csc_bookcover_prompt"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_promptanswered",
+        "script_level.level_keys": [
+          "csc_bookcover_promptanswered"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_introtosprites_hello-world",
+        "script_level.level_keys": [
+          "coursee_helloworld_introtosprites_hello-world"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_makesprite",
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_location",
+        "script_level.level_keys": [
+          "csc_landmarks_location"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_size",
+        "script_level.level_keys": [
+          "csc_landmarks_size"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmark_explain",
+        "script_level.level_keys": [
+          "csc_landmark_explain"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_place1",
+        "script_level.level_keys": [
+          "csc_landmarks_place1"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_place2",
+        "script_level.level_keys": [
+          "csc_landmarks_place2"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_behavior",
+        "script_level.level_keys": [
+          "csc_landmarks_behavior"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_eventsvideo_2022",
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches1",
+        "script_level.level_keys": [
+          "csc_landmarks_touches1"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches2",
+        "script_level.level_keys": [
+          "csc_landmarks_touches2"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_freeplay",
+        "script_level.level_keys": [
+          "csc_landmarks_freeplay"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_widget_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_widget_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "492b231f-9fa1-424f-be2e-46dc7fe2bdb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_video_introSpriteLab_-book-recommendation",
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "282cca02-5d47-4990-bdb1-64e172cdf161"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_title_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_title_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_background_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_background_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5136c071-5838-4fb7-9c72-0dd8791c4726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_say_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_location_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_location_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say2_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_say2_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "defaabb9-c123-4159-bd74-0576619191da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_prop_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_prop_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_print_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_print_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8284326b-722d-4b11-a841-4554b01b541a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_click_-book-recommendation",
+        "script_level.level_keys": [
+          "helloworld_food_click_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "305105a4-60d3-4076-ae42-af9b991a0cf7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_eventsvideo_-book-recommendation",
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "552b1b84-0b71-4209-82e1-1981fcdf8968"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_clicksay_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fe7127c5-fd23-4f83-a3f3-37f0e3bf8a31"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_prompt_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_prompt_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_promptanswered_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_promptanswered_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a51001ac-4b27-4476-a5de-d7e1794ed909"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_-book-recommendation"
+        ],
+        "lesson.key": "Wonder Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "0267a64a-56c8-430f-b23b-450ab29e32c2"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Collisions",
+      "url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/template/preview",
+      "key": "collisions",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "collisions"
+      }
+    },
+    {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
+      "key": "computer_science_is_changing_everything",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "name": "Computing Innovations",
+      "url": "https://docs.google.com/document/d/1gGU_SDQ2ys9ZI2h3p0stCdNBGKx4BTGIrOtW30nNJJA/view",
+      "key": "computing_innovations",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1gGU_SDQ2ys9ZI2h3p0stCdNBGKx4BTGIrOtW30nNJJA/export?format=pdf",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovations"
+      }
+    },
+    {
+      "name": "Computing Innovations Research Areas",
+      "url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit",
+      "key": "computing_innovations_research_areas",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/export?format=pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovations_research_areas"
+      }
+    },
+    {
+      "name": "Designing Screens with Code",
+      "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
+      "key": "designing_screens_with_code",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "name": "Flipbook Example - by Marnic Bos",
+      "url": "https://youtu.be/hol0p29cd8o",
+      "key": "flipbook_example_-_by_marnic_bos",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "flipbook_example_-_by_marnic_bos"
+      }
+    },
+    {
+      "name": "Innovations in Computing",
+      "url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/template/preview",
+      "key": "innovations_in_computing",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_computing"
+      }
+    },
+    {
+      "name": "Introduction to the Draw Loop",
+      "url": "https://youtu.be/G6QJeuHhqCM",
+      "key": "introduction_to_the_draw_loop",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_the_draw_loop"
+      }
+    },
+    {
+      "name": "Random Dot Flipbook",
+      "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit",
+      "key": "random_dot_flipbook",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_dot_flipbook"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Random Sprite Flipbook",
+      "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit",
+      "key": "random_sprite_flipbook",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_sprite_flipbook"
+      }
+    },
+    {
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "name": "The Draw Loop",
+      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+      "key": "the_draw_loop",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "name": "The Draw Loop",
+      "url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/template/preview",
+      "key": "the_draw_loop_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_draw_loop_1"
+      }
+    },
+    {
+      "name": "The Internet of Things",
+      "url": "https://youtu.be/xQGsubJNbQw",
+      "key": "the_internet_of_things",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_of_things"
+      }
+    },
+    {
+      "name": "Updating Screen Elements",
+      "url": "https://docs.google.com/presentation/d/1Q1TDByGJq8wIrILuE0E0nWExpE4GAjYdALiA974moAQ/template/preview",
+      "key": "updating_screen_elements",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "updating_screen_elements"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "resource.key": "collisions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing_innovations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing_innovations_research_areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "innovations_in_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "the_internet_of_things"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "flipbook_example_-_by_marnic_bos"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "introduction_to_the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "random_dot_flipbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "random_sprite_flipbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "updating_screen_elements"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "abstraction",
+      "word": "Abstraction",
+      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "key": "innovation",
+      "word": "Innovation",
+      "definition": "A new or improved idea, device, product, etc. or the development thereof",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "innovation"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "vocabulary.key": "innovation"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounce"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounceOff"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounciness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "collide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "displace"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "setCollider"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "World.frameRate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "draw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setProperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setText"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "key": "03377d11-993f-4f1a-b5d7-1d0b724ad22f",
+      "properties": {
+        "description": "Use the draw loop in combination with the randomNumber() command, shapes, and sprites to make simple animations"
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "objective.key": "03377d11-993f-4f1a-b5d7-1d0b724ad22f"
+      }
+    },
+    {
+      "key": "43157d11-cd32-45a6-bf01-a58915905177",
+      "properties": {
+        "description": "Describe the impacts of the device on society"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "43157d11-cd32-45a6-bf01-a58915905177"
+      }
+    },
+    {
+      "key": "4562bc7f-8a6c-4568-af76-e5086f456f9e",
+      "properties": {
+        "description": "Explain how the draw loop allows for the creation of animations in Game Lab"
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "objective.key": "4562bc7f-8a6c-4568-af76-e5086f456f9e"
+      }
+    },
+    {
+      "key": "8b4363b0-8258-4242-a773-13eebaf76c93",
+      "properties": {
+        "description": "Change text on the screen using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "objective.key": "8b4363b0-8258-4242-a773-13eebaf76c93"
+      }
+    },
+    {
+      "key": "adacbb5c-dc7d-445f-9139-beba72ce596f",
+      "properties": {
+        "description": "Describe the inputs and outputs of a device"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "adacbb5c-dc7d-445f-9139-beba72ce596f"
+      }
+    },
+    {
+      "key": "bdf693dc-dea3-4499-b9cb-5bc336feb987",
+      "properties": {
+        "description": "Respond to user input using event handlers"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "objective.key": "bdf693dc-dea3-4499-b9cb-5bc336feb987"
+      }
+    },
+    {
+      "key": "d5dda030-df23-4276-812e-6ba4df91d9aa",
+      "properties": {
+        "description": "Identify computing innovations within a given field"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "d5dda030-df23-4276-812e-6ba4df91d9aa"
+      }
+    },
+    {
+      "key": "d753de45-8123-4388-984b-9bf644cfe9dd",
+      "properties": {
+        "description": "Describe how abstractions can be built upon to develop even further abstractions"
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "objective.key": "d753de45-8123-4388-984b-9bf644cfe9dd"
+      }
+    },
+    {
+      "key": "e48669bf-657e-41a0-bf3e-89636a430db6",
+      "properties": {
+        "description": "Model different types of interactions between sprites."
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "objective.key": "e48669bf-657e-41a0-bf3e-89636a430db6"
+      }
+    },
+    {
+      "key": "e8cd3eb9-d457-457b-94cf-91a5d4bdbdf4",
+      "properties": {
+        "description": "Set the properties of UI elements using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "objective.key": "e8cd3eb9-d457-457b-94cf-91a5d4bdbdf4"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

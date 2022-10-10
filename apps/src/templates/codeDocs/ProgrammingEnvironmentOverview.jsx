@@ -18,9 +18,9 @@ export function CategorySection({category}) {
         {category.name}
       </h3>
       <ul>
-        {category.programmingExpressions.map(expression => (
-          <li key={expression.key}>
-            <CodeDocLink programmingExpression={expression} showBlocks />
+        {category.docs.map(doc => (
+          <li key={doc.key}>
+            <CodeDocLink programmingExpression={doc} showBlocks />
           </li>
         ))}
       </ul>
@@ -56,7 +56,7 @@ const categoryShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  programmingExpressions: PropTypes.arrayOf(PropTypes.object)
+  docs: PropTypes.arrayOf(PropTypes.object)
 });
 
 CategorySection.propTypes = {

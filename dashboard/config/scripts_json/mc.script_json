@@ -7,13 +7,12 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "mc",
-    "serialized_at": "2022-03-11 12:07:16 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-18 18:41:15 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -37,7 +36,7 @@
   "lessons": [
     {
       "key": "Hour of Code 2015",
-      "name": "Minecraft: Adventurer",
+      "name": "Minecraft Hour of Code",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
-import StudentSections from './StudentSections';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
@@ -65,7 +65,9 @@ export default class StudentHomepage extends Component {
               dismissible={false}
             />
           )}
-          {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
+          {hasFeedback && (
+            <ParticipantFeedbackNotification studentId={studentId} />
+          )}
           <RecentCourses
             courses={courses}
             topCourse={topCourse}
@@ -76,7 +78,7 @@ export default class StudentHomepage extends Component {
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <StudentSections initialSections={sections} />
+          <JoinSectionArea initialJoinedStudentSections={sections} />
         </div>
       </div>
     );

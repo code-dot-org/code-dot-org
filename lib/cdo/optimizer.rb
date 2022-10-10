@@ -39,10 +39,10 @@ module Cdo
     def self.optimize(data, content_type)
       Timeout.timeout(timeout) do
         case content_type
-          when *MIME_TYPES
-            optimize_image(data)
-          else
-            raise 'Invalid content type'
+        when *MIME_TYPES
+          optimize_image(data)
+        else
+          raise 'Invalid content type'
         end
       end
     rescue Timeout::Error

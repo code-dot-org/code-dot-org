@@ -3,10 +3,12 @@
  * experience.
  */
 const path = require('path');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const envConstants = require('./envConstants');
 const mode = envConstants.DEV ? 'development' : 'production';
-
+const outputFilename = envConstants.DEV
+  ? '[name].js'
+  : '[name]wp[contenthash].min.js';
 const config = {
   target: 'webworker',
   mode: mode,
@@ -17,7 +19,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'build/package/js/'),
     publicPath: '/',
-    filename: '[name]wp[contenthash].min.js'
+    filename: outputFilename
   },
   module: {
     rules: [
@@ -40,7 +42,7 @@ const config = {
   plugins: [
     // Generates a key/value mapping of a source file's name to its final name.
     // e.g. 'js/offline-service-worker.js': 'offline-service-workerwpfb055f24d3026d753ccc.min.js'
-    new ManifestPlugin({
+    new WebpackManifestPlugin({
       basePath: 'js/',
       fileName: 'offline-manifest.json'
     })

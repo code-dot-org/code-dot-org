@@ -25,9 +25,11 @@ describe('Custom studio blocks', function() {
       assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
 
       var block = Blockly.mainBlockSpace.getAllBlocks()[0];
-      var lastTitle = block.getTitles()[block.getTitles().length - 1];
+      var lastTitle = Blockly.cdoUtils.getBlockFields(block)[
+        Blockly.cdoUtils.getBlockFields(block).length - 1
+      ];
 
-      assert(block.getTitleValue('SPRITENAME') === '"witch"');
+      assert(block.getFieldValue('SPRITENAME') === '"witch"');
       assert(lastTitle.getText().indexOf('witch') !== -1);
     });
 
@@ -42,9 +44,11 @@ describe('Custom studio blocks', function() {
       assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
 
       var block = Blockly.mainBlockSpace.getAllBlocks()[0];
-      var lastTitle = block.getTitles()[block.getTitles().length - 1];
+      var lastTitle = Blockly.cdoUtils.getBlockFields(block)[
+        Blockly.cdoUtils.getBlockFields(block).length - 1
+      ];
 
-      assert(block.getTitleValue('SPRITENAME') === '"dinosaur"');
+      assert(block.getFieldValue('SPRITENAME') === '"dinosaur"');
       assert(lastTitle.getText().indexOf('dinosaur') !== -1);
     });
   });

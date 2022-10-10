@@ -10,7 +10,8 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "633d1416-a7fb-44b6-a724-8479fd66f4fa"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -27,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:08:14 UTC",
+    "serialized_at": "2022-09-28 14:31:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6010,18 +6011,6 @@
       }
     },
     {
-      "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/edit",
-      "key": "keeping-data-secret-exemplar-2019",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "keeping-data-secret-exemplar-2019"
-      }
-    },
-    {
       "name": "Make a Recommendation",
       "url": "https://docs.google.com/document/d/1cx4byvEDUduu9iPdtpRLzrPAvMBwPVRdgKxVeptvJCs/edit",
       "key": "make-a-recommendation-1",
@@ -6626,12 +6615,6 @@
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
         "resource.key": "keeping-data-secret"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keeping Data Secret",
-        "resource.key": "keeping-data-secret-exemplar-2019"
       }
     },
     {

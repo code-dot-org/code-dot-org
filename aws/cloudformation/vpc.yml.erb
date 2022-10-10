@@ -125,13 +125,25 @@ Resources:
           ToPort: 443
           CidrIp: 0.0.0.0/0
       SecurityGroupEgress:
+        # Forward HTTP requests to nginx on Web Application Server ("Front End") EC2 Instances.
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
+        # Forward HTTP requests to nginx on Web Application Server ("Front End") EC2 Instances.
         - IpProtocol: tcp
           FromPort: 443
           ToPort: 443
+          CidrIp: 0.0.0.0/0
+        # Forward HTTP requests directly to Dashboard Puma on Web Application Server ("Front End") EC2 Instances.
+        - IpProtocol: tcp
+          FromPort: 9000
+          ToPort: 9000
+          CidrIp: 0.0.0.0/0
+        # Forward HTTP requests directly to Pegasus Puma on Web Application Server ("Front End") EC2 Instances.
+        - IpProtocol: tcp
+          FromPort: 9001
+          ToPort: 9001
           CidrIp: 0.0.0.0/0
   FrontendSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -139,13 +151,25 @@ Resources:
       GroupDescription: Inbound HTTP[S] from load balancer, SSH from Gateway.
       VpcId: {Ref: VPC}
       SecurityGroupIngress:
+        # nginx listens for incoming HTTP requests forwarded by Load Balancer
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
+        # nginx listens for incoming HTTPS requests forwarded by Load Balancer
         - IpProtocol: tcp
           FromPort: 443
           ToPort: 443
+          SourceSecurityGroupId: {Ref: ELBSecurityGroup}
+        # Enable Dashboard Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
+        - IpProtocol: tcp
+          FromPort: 9000
+          ToPort: 9000
+          SourceSecurityGroupId: {Ref: ELBSecurityGroup}
+        # Enable Pegasus Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
+        - IpProtocol: tcp
+          FromPort: 9001
+          ToPort: 9001
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
         - IpProtocol: tcp
           FromPort: 22
@@ -208,11 +232,6 @@ Resources:
           FromPort: 3306
           ToPort: 3306
           DestinationSecurityGroupId: {Ref: FrontendSecurityGroup}
-        - Description: S3 outbound access (us-east-1 Prefix List)
-          IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          DestinationPrefixListId: pl-63a5400a
   DBSecurityGroupEgress:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:

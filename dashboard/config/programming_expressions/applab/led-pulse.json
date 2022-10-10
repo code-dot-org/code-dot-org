@@ -3,7 +3,7 @@
   "name": "led.pulse()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Makes the red LED pulse at a specific interval.\r\n\r\nWhile similar to `led.blink()`, the `led.pulse()` method turns the LED on and then slowly dims the light until the LED turns off again. So when the light is pulsing, it's not just turning on and off, it's lowering its brightness. Like `led.blink()`, `led.pulse()` takes an interval parameter to determine how fast the led should be pulsing.",
+  "content": "Makes the red LED pulse at a specific interval.\r\n\r\nWhile similar to [`led.blink()`(#f78183)](/docs/applab/led.blink/), the [`led.pulse()`(#f78183)](/docs/applab/led.pulse/) method turns the LED on and then slowly dims the light until the LED turns off again. So when the light is pulsing, it's not just turning on and off, it's lowering its brightness. Like [`led.blink()`(#f78183)](/docs/applab/led.blink/), [`led.pulse()`(#f78183)](/docs/applab/led.pulse/) takes an interval parameter to determine how fast the led should be pulsing.",
   "examples": [
     {
       "name": "Pulse versus Blink",
@@ -41,7 +41,10 @@
       "description": "The length of time (in milliseconds) that the light should be dimming for. If left empty, the interval will default to 200."
     }
   ],
+  "parameters": [
+    "interval"
+  ],
   "short_description": "Makes the red LED pulse at a specific interval.",
-  "syntax": "led.pulse(interval)",
-  "tips": "* Use `led.on()` or `led.off()` to make the led stop pulsing."
+  "syntax": "led.pulse(interval);",
+  "tips": "* Use [`led.on()`(#f78183)](/docs/applab/led.on/) or [`led.off()`(#f78183)](/docs/applab/led.off/) to make the led stop pulsing."
 }

@@ -22,7 +22,7 @@ class Pd::FitWeekend1819Registration < ApplicationRecord
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
 
-  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
+  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase', optional: true
 
   after_create :update_application_status
   after_create :send_fit_weekend_confirmation_email

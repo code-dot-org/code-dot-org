@@ -219,6 +219,41 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.titleRow;
   };
 
+  // Code.org's old Blockly fork uses title in place of all field tags.
+  blocklyWrapper.Input.prototype.appendField =
+    blocklyWrapper.Input.prototype.appendTitle;
+  blocklyWrapper.Block.prototype.getFieldValue =
+    blocklyWrapper.Block.prototype.getTitleValue;
+
+  blocklyWrapper.cdoUtils = {
+    blockLimitExceeded: function(blockType) {
+      const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
+      return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
+    },
+    getBlockFields: function(block) {
+      return block.getTitles();
+    },
+    getToolboxWidth: function() {
+      return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    },
+    getBlockLimit: function(blockType) {
+      return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
+        blockType
+      );
+    },
+    isWorkspaceReadOnly: function(workspace) {
+      return workspace.isReadOnly();
+    },
+    setHSV: function(block, h, s, v) {
+      block.setHSV(h, s, v);
+    },
+    workspaceSvgResize: function(workspace) {
+      return workspace.blockSpaceEditor.svgResize();
+    },
+    bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
+      return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
+    }
+  };
   return blocklyWrapper;
 }
 

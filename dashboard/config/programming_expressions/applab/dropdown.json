@@ -3,7 +3,7 @@
   "name": "dropdown",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "\r\n\r\nCreates a dropdown selection box on the screen displaying the *options* provided and referenced by the given *id* at default location (0,0).\r\n\r\n\r\nYour apps will sometimes need to collect specific input from the user, instead of unrestricted input using `textInput()`. You can code an event handler that is triggered by various events in the dropdown box. Use `getText()` to get the option currently chosen in the dropdown.\r\n\r\n\r\n",
+  "content": "\r\n\r\nCreates a dropdown selection box on the screen displaying the *options* provided and referenced by the given *id* at default location (0,0).\r\n\r\n\r\nYour apps will sometimes need to collect specific input from the user, instead of unrestricted input using [`textInput()`(#fff176)](/docs/applab/textInput/). You can code an event handler that is triggered by various events in the dropdown box. Use [`getText()`(#fff176)](/docs/applab/getText/) to get the option currently chosen in the dropdown.\r\n\r\n\r\n",
   "examples": [
     {
       "name": "",
@@ -44,8 +44,13 @@
       "description": "The text displayed within the dropdown box. "
     }
   ],
+  "parameters": [
+    "id",
+    "option1",
+    "etc"
+  ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a dropdown selection box on the screen displaying the options provided and referenced by the given id at default location (0,0).",
-  "syntax": "dropdown(id, option1, etc)",
-  "tips": "- If there is another UI element at location (0,0) the dropdown box is placed at the next available position to the right or below.\r\n- There are various UI element modification functions available: `setText()`, `showElement()`, `hideElement()`, `deleteElement()`, `setPosition()`, `setSize()`. \r\n- There are various UI element query functions available: `getText()`, `getXPosition()`, `getYPosition()`.\r\n- You should always provide a label for your dropdown box.\r\n- Dropdown boxes can also be created and initialized in Design mode."
+  "syntax": "dropdown(id, option1, option2)",
+  "tips": "- If there is another UI element at location (0,0) the dropdown box is placed at the next available position to the right or below.\r\n- There are various UI element modification functions available: [`setText()`(#fff176)](/docs/applab/setText/), [`showElement()`(#fff176)](/docs/applab/showElement/), [`hideElement()`(#fff176)](/docs/applab/hideElement/), [`deleteElement()`(#fff176)](/docs/applab/deleteElement/), [`setPosition()`(#fff176)](/docs/applab/setPosition/), [`setSize()`(#fff176)](/docs/applab/setSize/). \r\n- There are various UI element query functions available: [`getText()`(#fff176)](/docs/applab/getText/), [`getXPosition()`(#fff176)](/docs/applab/getXPosition/), [`getYPosition()`(#fff176)](/docs/applab/getYPosition/).\r\n- You should always provide a label for your dropdown box.\r\n- Dropdown boxes can also be created and initialized in Design mode."
 }

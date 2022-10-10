@@ -38,7 +38,7 @@
     "callout_json": "[]",
     "mini_rubric": "false",
     "encrypted": "false",
-    "long_instructions": " _\"Tell the world more about yourself through your new sprites!\"_\r\n\r\nHave your sprite say something different when each of your sprites is clicked. Be sure whatever you share is SAFE!",
+    "long_instructions": " _\"Tell the world more about invasive species through your new sprites!\"_\r\n\r\nHave your sprite say something different when each of your sprites is clicked.",
     "project_template_level_name": "courseE_aboutme_template2022_cs4all",
     "auto_run_setup": "DRAW_LOOP",
     "encrypted_examples": "jvFgwx7aDYXt6Wj5TLMBcYVuLlZbCERRjQuIos1hoVrdr3mn11qwInWQLlYF\n8xsWD7PFC4mZmNol5lVhmo70fixs/7XOe1Z/U+HIdGJKTZdbbk8pTjOfJjd4\nWb2V3HimJlAXHryysS5rhT96+kuRxw==\n",
@@ -58,7 +58,7 @@
   "level_num": "custom",
   "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-31T23:43:25.715+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_52022\\\"\"],\"cloned_from\":\"courseE_aboutme_52022\"},{\"changed_at\":\"2022-01-31 23:48:59 +0000\",\"changed\":[\"solution_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-31T23:43:25.715+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_52022\\\"\"],\"cloned_from\":\"courseE_aboutme_52022\"},{\"changed_at\":\"2022-01-31 23:48:59 +0000\",\"changed\":[\"solution_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-30 23:33:07 +0000\",\"changed\":[\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

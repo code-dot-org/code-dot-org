@@ -16,7 +16,7 @@ class TranslationService
     if scope == ""
       I18n.exists?(key, locale: locale)
     else
-      !I18n.t(key, scope: JSON.parse(scope), smart: true).include?("translation missing:")
+      !I18n.t(key, scope: JSON.parse(scope), smart: true, tracking: false).include?("translation missing")
     end
   end
 
@@ -28,7 +28,7 @@ class TranslationService
       translations = {}
       Dir.glob(locales_dir.join("#{locale}/blockly-*/*.json")).each do |loc_file|
         name = File.basename(loc_file, ".*")
-        translations[name] = JSON.load(File.read(loc_file)).to_h
+        translations[name] = JSON.parse(File.read(loc_file)).to_h
       end
       I18n.backend.store_translations(locale, translations)
     end

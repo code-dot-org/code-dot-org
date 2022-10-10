@@ -15,7 +15,7 @@ Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on t
 
 Code.org là trang chủ nơi tập trung rất nhiều những hoạt động, bài học và video của Giờ Lập Trình trên (các) trang web Code.org, Hour of Code, và CSEdWeek. Bạn có thể vào xem tất cả hoạt động đang diễn ra ở [hourofcode.com/learn]({{ urls/learn }}).
 
-Bạn muốn gửi những trò chơi tự hướng dẫn của mình, bài học được giáo viên hướng dẫn, hay hoạt động giải thích nguyên tác cơ bản của khoa học máy tính? Hãy tham gia vào hoạt động toàn cầu này và giúp những người tham gia khắp thế giới bắt đầu với một giờ học mã hóa hay xa hơn nữa là những hoạt động với đa dạng bài học, kéo dài một ngày hay một tuần. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.</strong> If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+Bạn muốn gửi những trò chơi tự hướng dẫn của mình, bài học được giáo viên hướng dẫn, hay hoạt động giải thích nguyên tác cơ bản của khoa học máy tính? Hãy tham gia vào hoạt động toàn cầu này và giúp những người tham gia khắp thế giới bắt đầu với một giờ học mã hóa hay xa hơn nữa là những hoạt động với đa dạng bài học, kéo dài một ngày hay một tuần. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)</strong> If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
 A few tips:
 
@@ -33,11 +33,10 @@ A few tips:
 - [Hướng dẫn chung cho việc tạo một hoạt động Hour of Code](#guidelines)
 - [Gửi đi như thế nào](#submit)
 - [Các hoạt động sẽ được đánh giá như thế nào](#inclusion)
-- [Những đề xuất để thiết kế hoạt động của bạn](#earlyreview)
-- [Nguyên tắc nhãn hiệu](#design)
-- [Theo dõi Pixel](#tm)
-- [Thúc đẩy hoạt động của bạn, CSEdWeek, và Giờ học mật mã](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Những đề xuất để thiết kế hoạt động của bạn](#design)
+- [Nguyên tắc nhãn hiệu](#tm)
+- [Theo dõi Pixel](#pixel)
+- [Thúc đẩy hoạt động của bạn, CSEdWeek, và Giờ học mật mã](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -98,7 +97,7 @@ To get a sense of the wide variety of types of tutorials and lesson plans you ca
 
 ## How to submit
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/z8ARSLcJCFdNPVJS8) and complete the questions to submit your activity.
+Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
 
 What you’ll need:
 
@@ -130,8 +129,8 @@ What you’ll need:
 #### Additional things you’ll need when submitting Online Activities
 
 * Name and logo of your organization
-* whether it is COPPA compliant or not
-* a URL link to teacher notes (optional)
+* Whether it is COPPA compliant or not
+* A URL link to teacher notes (optional)
 * A list of tested/compatible platforms: 
     * Web based: Which platforms have you tested? 
         * OS - Mac, Win, and other versions
@@ -159,7 +158,7 @@ What you’ll need:
 
 #### Additional things you’ll need when submitting Robotics
 
-* If you submit a robotics activity, we need to know the cost per student for robotics
+* If you submit a robotics activity, we need to know the cost per student for robotics.
 * To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
 
 [**Back to the top**](#top)
@@ -184,7 +183,10 @@ In addition, in order to be listed, all activities must:
 
 - Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
 - Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase) For self-directed activities for new teachers and students the review committee will be looking for whether:
+- Require no payment (exception for robotics activities these can require robot/kit purchase)
+
+For self-directed activities for new teachers and students the review committee will be looking for whether:
+
 - Teachers can use the tutorial or activity with no background in computer science
 - Students can be successful with no background in computer science
 - Students can direct themselves through the tutorial without parental or teacher guidance
@@ -199,32 +201,9 @@ Teachers and students will be able to search through and filter our list of acti
 
 [**Back to the top**](#top)
 
-<a id="earlyreview"></a>
-
-## Những đề xuất để thiết kế hoạt động của bạn
-
-Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
-
-Reviewers will focus on providing the following:
-
-* Positive feedback - What's working well?
-* Critical feedback - What could be improved?
-* Bugs or errors - Are there any bugs, syntax errors, or grammatical errors? If so, where in the activity?
-* Does this activity encourage students to create something unique?
-
-Please note: These are the general guidelines for providing feedback. The early review of your activity may include feedback across all of these categories, or it may only include feedback in one or two. There is also **no guarantee that we will catch all bugs or issues in an activity**.
-
-**The early review is not an opportunity to collect feedback on an unfinished activity. Any activity a reviewer deems too incomplete to assess will not be reviewed.**
-
-All activities submitted for early review will receive feedback by September 1st. We will also provide a link to a form you can use to explain specific changes made to an activity in response to feedback.
-
-Every activity submitted before October 1st will receive a standard review, whether it receives an early review or not. During the standard review period (September-October), reviewers will focus on rating the activities according to the criteria described in the "How activities will be evaluated" section above. Unless you note specific changes to an activity, reviewers can and likely will rely on early review feedback to rate activities.
-
-[**Back to the top**](#top)
-
 <a id="design"></a>
 
-## Nguyên tắc nhãn hiệu
+## Những đề xuất để thiết kế hoạt động của bạn
 
 You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
@@ -251,20 +230,23 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 <a id="tm"></a>
 
-## Theo dõi Pixel
+## Nguyên tắc nhãn hiệu
 
-Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following: a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
-4. Không sử dụng "Hour of Code" trong tên ứng dụng.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**Back to the top**](#top)
 
 <a id="pixel"></a>
 
-## Thúc đẩy hoạt động của bạn, CSEdWeek, và Giờ học mật mã
+## Theo dõi Pixel
 
 In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
@@ -283,7 +265,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Thúc đẩy hoạt động của bạn, CSEdWeek, và Giờ học mật mã
 
 Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 

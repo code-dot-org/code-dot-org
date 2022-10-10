@@ -1,9 +1,9 @@
 require 'cdo/firehose'
 
-class Api::V1::UsersController < Api::V1::JsonApiController
+class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in]
 
   def load_user
     user_id = params[:user_id]
@@ -23,12 +23,30 @@ class Api::V1::UsersController < Api::V1::JsonApiController
         user_type: current_user.user_type,
         is_signed_in: true,
         short_name: current_user.short_name,
-        is_verified_instructor: current_user.verified_instructor?
+        is_verified_instructor: current_user.verified_instructor?,
+        mute_music: current_user.mute_music?,
+        under_13: current_user.under_13?
       }
     else
       render json: {
         is_signed_in: false
       }
+    end
+  end
+
+  # GET /api/v1/users/netsim_signed_in
+  def netsim_signed_in
+    prevent_caching
+    if current_user
+      render json: {
+        id: current_user.id,
+        name: current_user.short_name,
+        is_admin: current_user.admin,
+        is_signed_in: true,
+        owned_sections: current_user.owned_section_ids,
+      }
+    else
+      raise CanCan::AccessDenied
     end
   end
 
@@ -50,12 +68,17 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # GET /api/v1/users/<user_id>/using_text_mode
   def get_using_text_mode
-    render json: {using_text_mode: !!@user.using_text_mode}
+    render json: {using_text_mode: !!@user&.using_text_mode}
   end
 
   # GET /api/v1/users/<user_id>/display_theme
   def get_display_theme
     render json: {display_theme: @user&.display_theme}
+  end
+
+  # GET /api/v1/users/<user_id>/mute_music
+  def get_mute_music
+    render json: {mute_music: !!@user&.mute_music}
   end
 
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
@@ -98,7 +121,15 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.using_text_mode = !!params[:using_text_mode].try(:to_bool)
     @user.save
 
-    render json: {using_text_mode: !!@user.using_text_mode}
+    render json: {using_text_mode: !!@user&.using_text_mode}
+  end
+
+  # POST /api/v1/users/<user_id>/mute_music
+  def post_mute_music
+    @user.mute_music = !!params[:mute_music].try(:to_bool)
+    @user.save
+
+    render json: {mute_music: !!@user&.mute_music}
   end
 
   # POST /api/v1/users/<user_id>/display_theme
@@ -140,7 +171,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.next_census_display = next_date
     @user.save
 
-    render status: 200, json: {next_census_display: @user.next_census_display}
+    render status: :ok, json: {next_census_display: @user.next_census_display}
   end
 
   # POST /api/v1/users/<user_id>/dismiss_census_banner
@@ -154,7 +185,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.next_census_display = Date.new(year, 11, 15)
     @user.save
 
-    render status: 200, json: {next_census_display: @user.next_census_display}
+    render status: :ok, json: {next_census_display: @user.next_census_display}
   end
 
   # POST /api/v1/users/<user_id>/dismiss_donor_teacher_banner

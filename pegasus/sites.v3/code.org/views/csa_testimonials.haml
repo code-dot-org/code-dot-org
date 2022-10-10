@@ -1,0 +1,61 @@
+#csa-teacher-testimonials.carousel-wrapper
+  #csa-teacher-testimonials.carousel
+    .slides
+      .slide
+        %p
+          I have overall been having a great time and we have
+          %strong
+            really enjoyed the creativity
+          in this unit. Something lacking in other AP CSA curricula is that element of personal investment in the programs being created.
+      .slide
+        %p
+          I just did this lesson today and I honestly was almost in tears with the change of outlook from Lesson 1 to this lesson in regards to
+          %strong
+            what comes to their minds when they think of the term "software engineer".
+          They saw more positivity and excitement reflected now…they saw more joy and celebration! It was just so amazing!!
+      .slide
+        %p
+          My students are talking to each other more than any other years I have taught CSA.
+          %strong
+            One of my "quiet" classes talked and laughed in their small groups
+          as they made the neighborhoods, it helped to build class culture and get them talking to each other.
+      .slide
+        %p
+          %strong
+            My kids are having a blast with this, and so am I.
+          Thank you for what you are doing with this curriculum. I am so confident in its potential to be something truly ground-breaking.
+      .slide
+        %p
+          This is my first time teaching CSA. Objects were always confusing to me. But now having taught it, it's like
+          %strong
+            'Ahh! That makes sense. I get it now.'
+    %a.slide-prev{:href=>'#'}<
+      %span<
+        %span.label Previous
+    %a.slide-next{:href=>'#'}<
+      %span<
+        %span.label Next
+
+  .pagination
+    %div{:id => "csa-teacher-testimonials-pagination"}
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+
+    var id = '#csa-teacher-testimonials';
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items : 1,
+      auto  : false,
+      responsive : true,
+      prev  : id + ' .slide-prev',
+      next  : id + ' .slide-next',
+      pagination : '#csa-teacher-testimonials-pagination',
+      swipe	: {
+        onTouch : true,
+        onMouse : false
+      },
+    });
+  });

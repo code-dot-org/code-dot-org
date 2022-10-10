@@ -346,20 +346,20 @@ describe('block utils', () => {
 
   describe('interpolateInputs', () => {
     let fakeBlockly, fakeBlock, fakeInput;
-    let appendDummyInput, appendTitle, setCheck, appendValueInput, setAlign;
+    let appendDummyInput, appendField, setCheck, appendValueInput, setAlign;
     beforeEach(() => {
       appendDummyInput = sinon.stub();
       appendValueInput = sinon.stub();
       fakeBlock = {appendDummyInput, appendValueInput};
 
-      appendTitle = sinon.stub();
+      appendField = sinon.stub();
       setCheck = sinon.stub();
       setAlign = sinon.stub();
-      fakeInput = {setCheck, appendTitle, setAlign};
+      fakeInput = {setCheck, appendField, setAlign};
 
       appendDummyInput.returns(fakeInput);
       appendValueInput.returns(fakeInput);
-      appendTitle.returns(fakeInput);
+      appendField.returns(fakeInput);
       setCheck.returns(fakeInput);
       setAlign.returns(fakeInput);
 
@@ -386,7 +386,7 @@ describe('block utils', () => {
       const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
       expect(dropdownArg).to.deep.equal(TEST_SPRITES);
       expect(appendDummyInput).to.have.been.calledOnce;
-      expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
+      expect(appendField).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
     });
 
     it('adds a value input', () => {
@@ -398,14 +398,14 @@ describe('block utils', () => {
             mode: 'value',
             name: 'DISTANCE',
             type: Blockly.BlockValueType.NUMBER,
-            label: 'block title'
+            label: 'block field'
           }
         ])
       );
 
       expect(appendValueInput).to.have.been.calledWith('DISTANCE');
       expect(setCheck).to.have.been.calledWith(Blockly.BlockValueType.NUMBER);
-      expect(appendTitle).to.have.been.calledWith('block title');
+      expect(appendField).to.have.been.calledWith('block field');
     });
 
     it('adds a dummy input', () => {
@@ -415,13 +415,13 @@ describe('block utils', () => {
         groupInputsByRow([
           {
             mode: 'dummy',
-            label: 'block title'
+            label: 'block field'
           }
         ])
       );
 
       expect(appendDummyInput).to.have.been.calledOnce;
-      expect(appendTitle).to.have.been.calledWith('block title');
+      expect(appendField).to.have.been.calledWith('block field');
     });
 
     it('adds all three', () => {
@@ -448,9 +448,9 @@ describe('block utils', () => {
         ])
       );
 
-      expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
-      expect(appendTitle).to.have.been.calledWith('value label');
-      expect(appendTitle).to.have.been.calledWith('dummy label');
+      expect(appendField).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
+      expect(appendField).to.have.been.calledWith('value label');
+      expect(appendField).to.have.been.calledWith('dummy label');
     });
 
     it('adds labels before and after value input', () => {
@@ -471,9 +471,9 @@ describe('block utils', () => {
       );
 
       expect(appendValueInput).to.have.been.calledWith('VALUE');
-      expect(appendTitle).to.have.been.calledWith('prefix');
+      expect(appendField).to.have.been.calledWith('prefix');
       expect(appendDummyInput).to.have.been.calledOnce;
-      expect(appendTitle).to.have.been.calledWith('suffix');
+      expect(appendField).to.have.been.calledWith('suffix');
     });
 
     describe('groupInputsByRow', () => {
@@ -701,7 +701,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: sinon.stub().returns('someVar')
+          getFieldValue: sinon.stub().returns('someVar')
         };
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('someVar = foo(someVar);\n');
@@ -728,7 +728,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: title =>
+          getFieldValue: title =>
             ({
               NAME1: 'a',
               NAME2: 'b'
@@ -1073,7 +1073,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 7
+          getFieldValue: () => 7
         };
         const code = generator['test_selectOne'].bind(fakeBlock)();
 
@@ -1095,7 +1095,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 42
+          getFieldValue: () => 42
         };
         const code = generator['test_processValue'].bind(fakeBlock)();
 
@@ -1118,7 +1118,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 'some input'
+          getFieldValue: () => 'some input'
         };
         const code = generator['test_processStringValue'].bind(fakeBlock)();
 
@@ -1141,7 +1141,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 'some input with a "quote" in it'
+          getFieldValue: () => 'some input with a "quote" in it'
         };
         const code = generator['test_processAnotherStringValue'].bind(
           fakeBlock

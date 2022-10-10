@@ -48,7 +48,6 @@
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14892,
     "long_instructions": "Create a new sprite that looks like a pink alien.\r\n\r\nMake it do a different dance move when it's clicked.",
-    "project_template_level_name": "Dance Party 2_2019",
     "show_type_hints": "true",
     "short_instructions": "Create a new sprite that looks like a pink alien, then make it do a different dance move when it's clicked.  ",
     "include_shared_functions": "false",

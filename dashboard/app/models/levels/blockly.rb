@@ -89,13 +89,10 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def self.field_or_title(xml_doc, enforce = true)
+  def self.field_or_title(xml_doc)
     num_fields = xml_doc.xpath('//field').count
     num_titles = xml_doc.xpath('//title').count
-    # An optional parameter allows this error to be ignored.
-    if enforce
-      raise "unexpected error: XML contains both field and title elements" if num_fields > 0 && num_titles > 0
-    end
+    raise "unexpected error: XML contains both field and title elements" if num_fields > 0 && num_titles > 0
     return "field" unless num_fields == 0
     "title"
   end
@@ -165,7 +162,7 @@ class Blockly < Level
   end
 
   def self.count_xml_blocks(xml_string)
-    unless xml_string.blank?
+    if xml_string.present?
       xml = Nokogiri::XML(xml_string, &:noblanks)
       # The structure of the XML will be
       # <document>
@@ -322,6 +319,7 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_placeholder_text_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_loop_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -386,7 +384,7 @@ class Blockly < Level
 
       if is_a?(Maze) && step_mode
         step_mode_value = JSONValue.value(step_mode)
-        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['step'] = [1, 2].include?(step_mode_value)
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
@@ -688,6 +686,27 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
+  # Localizing variable names in "controls_for" block types
+  def localized_loop_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
+    block_xml.xpath("//block[@type=\"controls_for\"]").each do |controls_for_block|
+      controls_for_name = controls_for_block.at_xpath("./#{tag}[@name=\"VAR\"]")
+      next unless controls_for_name
+      localized_name = I18n.t(
+        controls_for_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      controls_for_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
   # Localizes all supported types of the given placeholder text blockly
   # blocks in the given XML document string.
   # @param blocks [String] an XML doc to be localized.
@@ -796,7 +815,7 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    tag = Blockly.field_or_title(block_xml, false)
+    tag = Blockly.field_or_title(block_xml)
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
       mutation.xpath('./arg').each do |arg|
@@ -804,14 +823,20 @@ class Blockly < Level
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
 
-      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name|
-        localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
-        name.content = localized_name if localized_name
+      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name_element|
+        localized_name = I18n.t(name_element.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        name_element.content = localized_name if localized_name
+
+        mutation.xpath('.//description').each do |description|
+          # Using name_element['id'] so we still access the correct translation key even if the
+          # content has been translated in a previous step
+          localized_description = I18n.t(name_element['id'], scope: [:data, :behavior_descriptions, name], default: nil, smart: true)
+          description.content = localized_description if localized_description
+        end
       end
     end
 
-    # Explicitly check for title tags even if they are not the desired type.
-    block_xml.xpath(".//#{tag}|//title[@name=\"VAR\"]").each do |parameter|
+    block_xml.xpath(".//#{tag}[@name=\"VAR\"]").each do |parameter|
       next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
       parameter.content = I18n.t('behaviors.this_sprite')
     end

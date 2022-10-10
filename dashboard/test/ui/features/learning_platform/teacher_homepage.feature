@@ -4,25 +4,15 @@ Feature: Using the teacher homepage sections feature
 
   Scenario: Loading the teacher homepage with new sections
     # Create my first section (via the SetUpSections component)
-    When I create a new section and go home
-    Then the section table should have 1 row
+    When I create a new student section and go home
+    Then the student section table should have 1 row
 
     And I wait until element "a:contains(Untitled Section)" is visible
     And the href of selector "a:contains(Untitled Section)" contains "/teacher_dashboard/sections/"
 
     # Create my second section (via the button in OwnedSections)
-    When I create a new section and go home
-    Then the section table should have 2 rows
-
-  Scenario: Loading teacher homepage with course experiment enabled
-    Given I am on "http://studio.code.org/home"
-    Given I enable the "subgoals-group-a" course experiment
-    And I reload the page
-    And I wait to see ".uitest-newsection"
-    And check that the URL contains "/home"
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 3 - Subgoals Group A *"
-    Then the section table should have 1 row
-    And the section table row at index 0 has secondary assignment path "/s/csp3-a"
+    When I create a new student section and go home
+    Then the student section table should have 2 rows
 
   @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
@@ -39,9 +29,9 @@ Feature: Using the teacher homepage sections feature
 
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
-    And I create a new section and go home
-    Then the section table should have 2 rows
+    And I create a new student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
+    And I create a new student section and go home
+    Then the student section table should have 2 rows
 
     # save the older section id, from the last row of the table
     And I save the section id from row 1 of the section table
@@ -78,7 +68,7 @@ Feature: Using the teacher homepage sections feature
 
     # Save the newer section id
     Given I am on "http://studio.code.org/home"
-    Then the section table should have 2 rows
+    Then the student section table should have 2 rows
     And I save the section id from row 0 of the section table
 
     # Test that the overview pages add the newer section id to the url
@@ -102,8 +92,8 @@ Feature: Using the teacher homepage sections feature
 
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
-    Then the section table should have 1 rows
+    And I create a new student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
+    Then the student section table should have 1 rows
     And I save the section id from row 0 of the section table
 
     When I am on "http://studio.code.org/courses/csp-2017"
@@ -141,33 +131,33 @@ Feature: Using the teacher homepage sections feature
   Scenario: Assign a Course assigns first Unit in Course by default
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'17-'18"
-    Then the section table should have 1 rows
+    And I create a new student section with course "Computer Science Principles", version "'17-'18"
+    Then the student section table should have 1 rows
     And the section table row at index 0 has secondary assignment path "/s/csp1-2017"
 
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Course A", version "2017"
-    Then the section table should have 1 rows
+    And I create a new student section with course "Course A", version "2017"
+    Then the student section table should have 1 rows
     And the section table row at index 0 has primary assignment path "/s/coursea-2017"
 
     When I click selector ".ui-test-section-dropdown"
     And I click selector ".edit-section-details-link"
     And I wait until element "#assignment-version-year" is visible
-    And element "#assignment-version-year" has value "2017"
+    And element "#assignment-version-year" contains text "2017"
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2019)" once I see it
     And I press the first ".uitest-saveButton" element
     And I wait for the dialog to close
-    Then I should see the section table
+    Then I should see the student section table
     And the section table row at index 0 has primary assignment path "/s/coursea-2019"
 
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'19-'20" and unit "CSP Unit 1 - The Internet ('19-'20)"
-    Then the section table should have 1 rows
+    And I create a new student section with course "Computer Science Principles", version "'19-'20" and unit "CSP Unit 1 - The Internet ('19-'20)"
+    Then the student section table should have 1 rows
 
     # save the older section id, from the last row of the table
     And I save the section id from row 0 of the section table

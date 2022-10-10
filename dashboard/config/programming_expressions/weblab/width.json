@@ -3,7 +3,7 @@
   "name": "Width",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Width\r\n\r\nThe `width` property specifies the width of the content area of an element. The width of an element does not include padding, borders, or margins. Width can be defined in percent of the containing block, pixels, cm, etc.\r\n",
+  "content": "# Width\r\n\r\nThe [`Width`(#d3e965)](/docs/weblab/width/) property specifies the width of the content area of an element. The width of an element does not include padding, borders, or margins. Width can be defined in percent of the containing block, pixels, cm, etc.\r\n",
   "examples": [
     {
       "name": "Width as a percentage",
@@ -27,5 +27,5 @@
   "external_documentation": "http://www.w3schools.com/cssref/pr_dim_width.asp",
   "short_description": "Width\nThe width property specifies the width of the content area of an element. The width of an element does not include padding, borders, or margins. Width can be defined in percent of the containing block, pixels, cm, etc.",
   "syntax": "width: value;",
-  "tips": "* The `width` property does not include padding, borders, or margins.\r\n* The default value of the width is auto: The element will automatically adjust its width to allow its content to be displayed correctly."
+  "tips": "* The [`Width`(#d3e965)](/docs/weblab/width/) property does not include padding, borders, or margins.\r\n* The default value of the width is auto: The element will automatically adjust its width to allow its content to be displayed correctly."
 }

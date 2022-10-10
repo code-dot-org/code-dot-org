@@ -25,13 +25,14 @@ class ProgrammingEnvironment < ApplicationRecord
 
   alias_attribute :categories, :programming_environment_categories
   has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
+  has_many :programming_classes, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
   after_destroy :remove_serialization
 
-  # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
+  # @attr [String] editor_language - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
-    editor_type
+    editor_language
     block_pool_name
     title
     description
@@ -85,6 +86,10 @@ class ProgrammingEnvironment < ApplicationRecord
     File.delete(file_path) if File.exist?(file_path)
   end
 
+  def studio_documentation_path
+    programming_environment_path(name)
+  end
+
   def summarize_for_lesson_edit
     {id: id, name: name}
   end
@@ -97,7 +102,8 @@ class ProgrammingEnvironment < ApplicationRecord
       imageUrl: image_url,
       projectUrl: project_url,
       description: description,
-      editorType: editor_type,
+      editorLanguage: editor_language,
+      blockPoolName: block_pool_name,
       categories: categories.map(&:serialize_for_edit),
       showPath: programming_environment_path(name)
     }
@@ -106,9 +112,9 @@ class ProgrammingEnvironment < ApplicationRecord
   def summarize_for_show
     {
       title: title,
-      description: description,
+      description: localize_description,
       projectUrl: project_url,
-      categories: categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      categories: categories_for_navigation
     }
   end
 
@@ -118,7 +124,44 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       imageUrl: image_url,
       description: description,
-      showPath: programming_environment_path(name)
+      showPath: studio_documentation_path
     }
+  end
+
+  def localize_description
+    I18n.t(
+      'description',
+      scope: [
+        :data,
+        :programming_environments,
+        name,
+      ],
+      default: description,
+      smart: true
+    )
+  end
+
+  def categories_for_navigation
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_navigation", force: !Script.should_cache?) do
+      categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
+    end
+  end
+
+  def categories_for_get
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_get", force: !Script.should_cache?) do
+      categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+    end
+  end
+
+  def self.get_published_environments_from_cache
+    Rails.cache.fetch("published_programming_environments", force: !Script.should_cache?) do
+      @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
+    end
+  end
+
+  def self.get_from_cache(name)
+    Rails.cache.fetch("programming_environment/#{name}", force: !Script.should_cache?) do
+      ProgrammingEnvironment.find_by_name(name)
+    end
   end
 end

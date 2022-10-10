@@ -333,39 +333,39 @@ function childrenEquivalent(expected, given, ignoreChildBlocks) {
 
 /**
  * Checks if two blocks are "equivalent"
- * Currently means their type and all of their titles match exactly
+ * Currently means their type and all of their fields match exactly
  * @param blockA
  * @param blockB
  */
 exports.blocksMatch = function(blockA, blockB) {
   var typesMatch = blockA.type === blockB.type;
-  var titlesMatch = exports.blockTitlesMatch(blockA, blockB);
-  return typesMatch && titlesMatch;
+  var fieldsMatch = exports.blockFieldsMatch(blockA, blockB);
+  return typesMatch && fieldsMatch;
 };
 
 /**
- * Compares two blocks' titles, returns true if they all match
+ * Compares two blocks' fields, returns true if they all match
  * @returns {boolean}
  * @param blockA
  * @param blockB
  */
-exports.blockTitlesMatch = function(blockA, blockB) {
-  var blockATitles = blockA.getTitles();
-  var blockBTitles = blockB.getTitles();
+exports.blockFieldsMatch = function(blockA, blockB) {
+  var blockAFields = Blockly.cdoUtils.getBlockFields(blockA);
+  var blockBFields = Blockly.cdoUtils.getBlockFields(blockB);
 
   var nameCompare = function(a, b) {
     return a.name < b.name;
   };
-  blockATitles.sort(nameCompare);
-  blockBTitles.sort(nameCompare);
+  blockAFields.sort(nameCompare);
+  blockBFields.sort(nameCompare);
 
-  for (var i = 0; i < blockATitles.length || i < blockBTitles.length; i++) {
-    var blockATitle = blockATitles[i];
-    var blockBTitle = blockBTitles[i];
+  for (var i = 0; i < blockAFields.length || i < blockBFields.length; i++) {
+    var blockAField = blockAFields[i];
+    var blockBField = blockBFields[i];
     if (
-      !blockATitle ||
-      !blockBTitle ||
-      !titlesMatch(blockATitle, blockBTitle)
+      !blockAField ||
+      !blockBField ||
+      !fieldsMatch(blockAField, blockBField)
     ) {
       return false;
     }
@@ -373,6 +373,6 @@ exports.blockTitlesMatch = function(blockA, blockB) {
   return true;
 };
 
-var titlesMatch = function(titleA, titleB) {
-  return titleB.name === titleA.name && titleB.getValue() === titleA.getValue();
+var fieldsMatch = function(fieldA, fieldB) {
+  return fieldB.name === fieldA.name && fieldB.getValue() === fieldA.getValue();
 };

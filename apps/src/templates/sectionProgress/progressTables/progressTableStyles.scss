@@ -1,13 +1,6 @@
-@import 'color';
-@import 'style-constants';
-
-$scrollbar-height: 15px;
-$row-height: 42px;
-$expanded-row-height: 30px;
-$max-rows: 14;
-$max-height: $max-rows * $row-height + $scrollbar-height;
-$student-list-width: 170px;
-$content-view-width: $content-width - $student-list-width;
+@use "./progress-table-constants.module.scss" as constants;
+@import "color.scss";
+@import "style-constants";
 
 .progress-table {
   table {
@@ -19,52 +12,52 @@ $content-view-width: $content-width - $student-list-width;
   th {
     background-color: $table-header;
     color: $charcoal;
-    border-width: 0px 1px 2px 0px;
+    border-width: 0 1px 2px 0;
     border-color: $border-gray;
-    height: $row-height;
+    height: constants.$row-height;
   }
   th,
   td {
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
     border-right: 1px solid;
     border-color: $border-gray;
     &:last-child {
-      border-right: 0px;
+      border-right: 0;
     }
   }
   .cell-content {
-    padding: 0px 4px;
+    padding: 0 4px;
   }
   .primary-row {
     td {
-      height: $row-height;
+      height: constants.$row-height;
     }
   }
   .expanded-row {
     td {
-      height: $expanded-row-height;
-      border-width: 0px 1px 1px 0px;
+      height: constants.$expanded-row-height;
+      border-width: 0 1px 1px 0;
       border-style: solid;
       border-color: $border-gray;
     }
     td:last-of-type {
-      border-width: 0px 0px 1px 0px;
+      border-width: 0 0 1px 0;
     }
   }
   .first-expanded-row {
     td {
-      border-width: 1px 1px 1px 0px;
+      border-width: 1px 1px 1px 0;
     }
     td:last-of-type {
-      border-width: 1px 0px;
+      border-width: 1px 0;
     }
   }
   .student-list {
     table,
     th,
     td {
-      width: $student-list-width;
+      width: constants.$student-list-width;
     }
     tbody {
       tr,
@@ -74,7 +67,7 @@ $content-view-width: $content-width - $student-list-width;
       }
     }
     .content {
-      height: $row-height;
+      height: constants.$row-height;
       box-sizing: border-box;
       padding: 10px;
       font-size: 14px;
@@ -82,19 +75,19 @@ $content-view-width: $content-width - $student-list-width;
       white-space: nowrap;
       overflow: hidden;
       .fa {
-        html[dir='RTL'] & {
+        html[dir="RTL"] & {
           transform: scaleX(-1);
         }
       }
     }
     .expanded-row {
       td {
-        border-width: 0px 0px 1px 0px;
+        border-width: 0 0 1px 0;
       }
     }
     .first-expanded-row {
       td {
-        border-width: 1px 0px;
+        border-width: 1px 0;
       }
     }
   }
@@ -104,7 +97,7 @@ $content-view-width: $content-width - $student-list-width;
   .content-view {
     thead,
     tbody {
-      max-width: $content-view-width;
+      max-width: constants.$content-view-width;
       td {
         text-align: center;
       }
@@ -116,7 +109,7 @@ $content-view-width: $content-width - $student-list-width;
       align-content: center;
       .line {
         width: 100%;
-        height: 0px;
+        height: 0;
         border: 1px solid;
         margin-inline-end: -7px;
         margin-inline-start: 4px;
@@ -124,24 +117,15 @@ $content-view-width: $content-width - $student-list-width;
       .arrow {
         display: inline-block;
         border-style: solid;
-        border-width: 0px 2px 2px 0px;
+        border-width: 0 2px 2px 0;
         width: 6px;
         height: 6px;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
-        html[dir='RTL'] & {
-          border-width: 2px 0px 0px 2px;
+        html[dir="RTL"] & {
+          border-width: 2px 0 0 2px;
         }
       }
     }
   }
-}
-
-:export {
-  MAX_BODY_HEIGHT: $max-height / 1px;
-  STUDENT_LIST_WIDTH: $student-list-width / 1px;
-  CONTENT_VIEW_WIDTH: $content-view-width / 1px;
-  ROW_HEIGHT: $row-height / 1px;
-  MAX_ROWS: $max-rows;
-  MIN_COLUMN_WIDTH: 40;
 }

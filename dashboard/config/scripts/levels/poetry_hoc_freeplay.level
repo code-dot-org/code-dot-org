@@ -109,9 +109,9 @@
         </block>
         <block type="Poetry_setFontColor" id="14">
           <value name="FILL">
-            <block type="colour_picker" id="15">
+            <shadow type="colour_picker" id="15">
               <field name="COLOUR">#ffcc00</field>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="Poetry_setTextEffect" id="16">
@@ -119,17 +119,17 @@
         </block>
         <block type="Poetry_addTextHighlight" id="17">
           <value name="COLOR">
-            <block type="colour_picker" id="18">
+            <shadow type="colour_picker" id="18">
               <field name="COLOUR">#ffff99</field>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="Poetry_setBackground" id="19">
           <value name="COLOR">
-            <block type="colour_picker" id="20">
+            <shadow type="colour_picker" id="20">
               <field name="COLOUR">#cc0000</field>
             </block>
-          </value>
+          </shadow>
         </block>
         <block type="Poetry_setBackgroundEffect" id="21">
           <field name="EFFECT">"blooming"</field>

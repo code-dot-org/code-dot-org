@@ -176,13 +176,13 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
     helpUrl: helpUrl,
     init: function() {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var input = this.appendDummyInput();
       if (title) {
-        input.appendTitle(title);
+        input.appendField(title);
       }
       if (titleImage) {
-        input.appendTitle(new blockly.FieldImage(titleImage));
+        input.appendField(new blockly.FieldImage(titleImage));
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -684,8 +684,8 @@ const STANDARD_INPUT_TYPES = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       if (inputConfig.customOptions && inputConfig.customOptions.assetUrl) {
         currentInputRow
-          .appendTitle(inputConfig.label)
-          .appendTitle(
+          .appendField(inputConfig.label)
+          .appendField(
             new Blockly.FieldImage(
               Blockly.assetUrl(inputConfig.customOptions.assetUrl),
               inputConfig.customOptions.width,
@@ -711,11 +711,11 @@ const STANDARD_INPUT_TYPES = {
       const options = sanitizeOptions(inputConfig.options);
       const dropdown = new blockly.FieldDropdown(options);
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(dropdown, inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(dropdown, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      let code = block.getTitleValue(inputConfig.name);
+      let code = block.getFieldValue(inputConfig.name);
       if (
         inputConfig.type === Blockly.BlockValueType.STRING &&
         !code.startsWith('"') &&
@@ -733,7 +733,7 @@ const STANDARD_INPUT_TYPES = {
       block.getVars = function() {
         return {
           [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getTitleValue(inputConfig.name)
+            block.getFieldValue(inputConfig.name)
           ]
         };
       };
@@ -741,14 +741,14 @@ const STANDARD_INPUT_TYPES = {
       // The following functions make sure that the variable naming/renaming options work for this block
       block.renameVar = function(oldName, newName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
       block.removeVar = function(oldName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.dispose(true, true);
         }
@@ -763,12 +763,12 @@ const STANDARD_INPUT_TYPES = {
 
       // Add the variable field to the block
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(new Blockly.FieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
-        block.getTitleValue(inputConfig.name)
+        block.getFieldValue(inputConfig.name)
       );
     }
   },
@@ -780,11 +780,11 @@ const STANDARD_INPUT_TYPES = {
         getFieldInputChangeHandler(blockly, inputConfig.type)
       );
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(field, inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      let code = block.getTitleValue(inputConfig.name);
+      let code = block.getFieldValue(inputConfig.name);
       if (inputConfig.type === Blockly.BlockValueType.STRING) {
         // Wraps the value in quotes, and escapes quotes/newlines
         code = JSON.stringify(code);
@@ -872,7 +872,7 @@ const interpolateInputs = function(
     });
 
     // Finally append the last input's label
-    lastInput.appendTitle(lastInputConfig.label);
+    lastInput.appendField(lastInputConfig.label);
   });
 };
 exports.interpolateInputs = interpolateInputs;
@@ -1051,9 +1051,9 @@ exports.createJsWrapperBlockCreator = function(
       helpUrl: '',
       init: function() {
         if (color) {
-          this.setHSV(...color);
+          Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          this.setHSV(...DEFAULT_COLOR);
+          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
         }
 
         if (returnType) {
@@ -1080,7 +1080,7 @@ exports.createJsWrapperBlockCreator = function(
           (!window.appOptions || window.appOptions.level.miniToolbox)
         ) {
           var toggle = new Blockly.FieldIcon('+');
-          if (this.blockSpace.isReadOnly()) {
+          if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
             toggle.setReadOnly();
           }
 
@@ -1092,40 +1092,45 @@ exports.createJsWrapperBlockCreator = function(
           // Block.isMiniFlyoutOpen is used in the blockly repo to track whether or not the horizontal flyout is open.
           this.isMiniFlyoutOpen = false;
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
-          Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
-            if (this.blockSpace.isReadOnly()) {
-              return;
-            }
+          Blockly.cdoUtils.bindBrowserEvent(
+            toggle.fieldGroup_,
+            'mousedown',
+            this,
+            () => {
+              if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
+                return;
+              }
 
-            if (this.isMiniFlyoutOpen) {
-              toggle.setValue('+');
-            } else {
-              toggle.setValue('-');
-            }
-            this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
-            this.render();
-            // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
-            // This has to happen after render() because some browsers don't render properly if the elements are not
-            // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
-            // the thumbnail image overlaps the label in Firefox, Edge, and IE.
-            if (this.isMiniFlyoutOpen) {
-              let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
-              let rootInputBlocks = this.getConnections_(true /* all */)
-                .filter(function(connection) {
-                  return connection.type === Blockly.INPUT_VALUE;
-                })
-                .map(function(connection) {
-                  return connection.targetBlock();
+              if (this.isMiniFlyoutOpen) {
+                toggle.setValue('+');
+              } else {
+                toggle.setValue('-');
+              }
+              this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
+              this.render();
+              // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
+              // This has to happen after render() because some browsers don't render properly if the elements are not
+              // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
+              // the thumbnail image overlaps the label in Firefox, Edge, and IE.
+              if (this.isMiniFlyoutOpen) {
+                let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
+                let rootInputBlocks = this.getConnections_(true /* all */)
+                  .filter(function(connection) {
+                    return connection.type === Blockly.INPUT_VALUE;
+                  })
+                  .map(function(connection) {
+                    return connection.targetBlock();
+                  });
+                miniToolboxBlocks.forEach(function(block, index) {
+                  block.shadowBlockValue_(rootInputBlocks[index]);
                 });
-              miniToolboxBlocks.forEach(function(block, index) {
-                block.shadowBlockValue_(rootInputBlocks[index]);
-              });
+              }
             }
-          });
+          );
 
           this.appendDummyInput()
-            .appendTitle(toggle, 'toggle')
-            .appendTitle(' ');
+            .appendField(toggle, 'toggle')
+            .appendField(' ');
 
           this.initMiniFlyout(miniToolboxXml);
         }

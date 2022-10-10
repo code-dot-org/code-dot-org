@@ -28,14 +28,14 @@ class AzureContentModeratorTest < Minitest::Test
   def test_checks_jpg_image
     expect_firehose_log_request
     expect_firehose_log_result
-    image_data = open('https://studio.code.org/notfound.jpg')
+    image_data = URI.open('https://studio.code.org/notfound.jpg')
     assert_equal :everyone, @acm.rate_image(image_data, 'image/jpeg')
   end
 
   def test_checks_png_image
     expect_firehose_log_request
     expect_firehose_log_result
-    image_data = open('https://code.org/images/infographics/fit-800/diversity-courses-updated-05-23.png')
+    image_data = URI.open('https://code.org/images/infographics/fit-800/diversity-courses-updated-05-23.png')
     assert_equal :everyone, @acm.rate_image(image_data, 'image/png')
   end
 
@@ -46,14 +46,14 @@ class AzureContentModeratorTest < Minitest::Test
       json['ImageUrl'] == test_image_url &&
         stream == :analysis
     end
-    image_data = open('https://code.org/images/infographics/fit-800/diversity-courses-updated-05-23.png')
+    image_data = URI.open('https://code.org/images/infographics/fit-800/diversity-courses-updated-05-23.png')
     assert_equal :everyone, @acm.rate_image(image_data, 'image/png', test_image_url)
   end
 
   def test_raise_on_image_too_small
     expect_firehose_log_request
     # This image is smaller than the Azure content moderator's minimum size.
-    image_data = open('https://code.org/images/icons/medium-monogram-white.png')
+    image_data = URI.open('https://code.org/images/icons/medium-monogram-white.png')
     assert_raises AzureContentModerator::RequestFailed do
       @acm.rate_image(image_data, 'image/png')
     end

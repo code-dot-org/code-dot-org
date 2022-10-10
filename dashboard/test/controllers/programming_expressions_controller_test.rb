@@ -1,3 +1,5 @@
+require 'webmock/minitest'
+WebMock.disable_net_connect!(allow_localhost: true)
 require 'test_helper'
 
 class ProgrammingExpressionsControllerTest < ActionController::TestCase
@@ -118,6 +120,17 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal 1, JSON.parse(nav_data).length
   end
 
+  test 'redirected to new docs url if using studio code docs' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    programming_environment = create :programming_environment, name: 'weblab'
+    category = create :programming_environment_category, programming_environment: programming_environment
+    programming_expression = create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+
+    get :docs_show, params: {programming_environment_name: programming_environment.name, programming_expression_key: programming_expression.key}
+    assert_response :redirect
+  end
+
   test 'can destroy programming expression' do
     sign_in @levelbuilder
     programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
@@ -185,6 +198,67 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal destination_category.id, new_exp.programming_environment_category_id
   end
 
+  class FilterTests < ActionController::TestCase
+    setup do
+      ProgrammingEnvironment.all.destroy_all
+      @programming_environment1 = create :programming_environment
+      @programming_environment2 = create :programming_environment
+      [@programming_environment1, @programming_environment2].each do |programming_environment|
+        3.times do
+          category = create :programming_environment_category, programming_environment: programming_environment
+          4.times do
+            create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+          end
+        end
+      end
+
+      @levelbuilder = create :levelbuilder
+    end
+
+    test 'get_filtered_results returns not_acceptable if no page providewd' do
+      sign_in @levelbuilder
+
+      get :get_filtered_results, params: {}
+      assert_response :not_acceptable
+    end
+
+    test 'get_filtered_results returns paged results' do
+      sign_in @levelbuilder
+
+      get :get_filtered_results, params: {page: 1}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 2, response['numPages']
+      assert_equal 20, response['results'].length
+
+      get :get_filtered_results, params: {page: 2}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 2, response['numPages']
+      assert_equal 4, response['results'].length
+    end
+
+    test 'get_filtered_results only returns expressions in environment if specified' do
+      sign_in @levelbuilder
+
+      get :get_filtered_results, params: {programmingEnvironmentId: @programming_environment1.id, page: 1}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 1, response['numPages']
+      assert_equal 12, response['results'].length
+    end
+
+    test 'get_filtered_results only returns expressions in category if specified' do
+      sign_in @levelbuilder
+
+      get :get_filtered_results, params: {programmingEnvironmentId: @programming_environment2.id, categoryId: @programming_environment2.categories.first.id, page: 1}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 1, response['numPages']
+      assert_equal 4, response['results'].length
+    end
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
@@ -195,6 +269,11 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       destination_programming_environment = create :programming_environment
       @clone_params = {id: @programming_expression.id, destinationProgrammingEnvironmentName: destination_programming_environment.name}
     end
+
+    test_user_gets_response_for :index, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :index, user: :student, response: :forbidden
+    test_user_gets_response_for :index, user: :teacher, response: :forbidden
+    test_user_gets_response_for :index, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :new, user: :student, response: :forbidden

@@ -1,7 +1,7 @@
 @import "codemirror/lib/codemirror";
 @import "codemirror/addon/lint/lint";
 @import "codemirror-spell-checker/src/css/spell-checker";
-@import 'json_editor';
+@import "json_editor";
 
 .CodeMirror {
   border: 1px solid #eee;
@@ -12,20 +12,33 @@
   overflow-x: auto;
 }
 .CodeMirror-matchingtag {
-  background: rgba(255, 150, 0, .3);
+  background: rgb(255 150 0 / 0.3);
 }
 
 .container {
   width: 95% !important;
 }
 
-div[role=dialog] {
+div[role="dialog"] {
   div.modal-content {
     margin: 0 !important;
-    @import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+    @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule */
 
     div {
       height: auto;
     }
   }
+}
+
+.load-buttons-top-row {
+  display: flex;
+}
+
+.load-buttons-new {
+  margin-top: 0;
+}
+
+.load-buttons-search {
+  width: 60%;
 }

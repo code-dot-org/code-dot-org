@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
@@ -12,7 +12,6 @@ import Button from '../Button';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import {
   setScriptId,
-  validScriptPropType,
   getSelectedScriptName
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
@@ -28,7 +27,7 @@ const PADDING = 8;
 
 function TextResponses({
   sectionId,
-  validScripts,
+  coursesWithProgress,
   scriptId,
   scriptName,
   setScriptId
@@ -45,34 +44,40 @@ function TextResponses({
       prevSectionId.current = sectionId;
     }
     asyncLoadTextResponses(sectionId, scriptId);
-  }, [scriptId, sectionId]);
+  }, [scriptId, sectionId, asyncLoadTextResponses]);
 
-  const asyncLoadTextResponses = (sectionId, scriptId) => {
-    // Don't load data if it's already stored in state.
-    if (textResponsesByScript[scriptId]) {
-      return;
-    }
+  const asyncLoadTextResponses = useCallback(
+    (sectionId, scriptId) => {
+      // Don't load data if it's already stored in state.
+      if (textResponsesByScript[scriptId]) {
+        return;
+      }
 
-    setIsLoadingResponses(true);
+      setIsLoadingResponses(true);
 
-    loadTextResponsesFromServer(sectionId, scriptId)
-      .then(textResponses => {
-        setTextResponses(scriptId, textResponses);
-        setIsLoadingResponses(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setIsLoadingResponses(false);
-      });
-  };
+      loadTextResponsesFromServer(sectionId, scriptId)
+        .then(textResponses => {
+          setTextResponses(scriptId, textResponses);
+          setIsLoadingResponses(false);
+        })
+        .catch(err => {
+          console.error(err);
+          setIsLoadingResponses(false);
+        });
+    },
+    [textResponsesByScript, setTextResponses]
+  );
 
-  const setTextResponses = (scriptId, textResponses) => {
-    const newTextResponsesByScript = {
-      ...textResponsesByScript,
-      [scriptId]: textResponses
-    };
-    setTextResponsesByScript(newTextResponsesByScript);
-  };
+  const setTextResponses = useCallback(
+    (scriptId, textResponses) => {
+      const newTextResponsesByScript = {
+        ...textResponsesByScript,
+        [scriptId]: textResponses
+      };
+      setTextResponsesByScript(newTextResponsesByScript);
+    },
+    [textResponsesByScript]
+  );
 
   const onChangeScript = scriptId => {
     setScriptId(scriptId);
@@ -96,7 +101,7 @@ function TextResponses({
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
         <UnitSelector
-          validScripts={validScripts}
+          coursesWithProgress={coursesWithProgress}
           scriptId={scriptId}
           onChange={onChangeScript}
         />
@@ -138,7 +143,7 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+  coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
   setScriptId: PropTypes.func.isRequired
@@ -174,7 +179,7 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    validScripts: state.unitSelection.validScripts,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)
   }),

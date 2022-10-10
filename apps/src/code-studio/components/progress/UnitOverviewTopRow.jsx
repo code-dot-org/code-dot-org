@@ -6,8 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -16,6 +15,7 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import FontAwesome from '../../../templates/FontAwesome';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -31,8 +31,7 @@ class UnitOverviewTopRow extends React.Component {
   static propTypes = {
     assignedSectionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -40,11 +39,14 @@ class UnitOverviewTopRow extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
+    isProfessionalLearningCourse: PropTypes.bool,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
-    professionalLearningCourse: PropTypes.bool,
+    deeperLearningCourse: PropTypes.bool,
     hasPerLevelResults: PropTypes.bool.isRequired,
     unitCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
@@ -102,14 +104,13 @@ class UnitOverviewTopRow extends React.Component {
       sectionsForDropdown,
       selectedSectionId,
       currentCourseId,
-      professionalLearningCourse,
+      deeperLearningCourse,
       scriptId,
       scriptName,
       unitTitle,
       viewAs,
       isRtl,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       showAssignButton,
       assignedSectionId,
@@ -118,10 +119,11 @@ class UnitOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       isMigrated,
       unitCompleted,
-      hasPerLevelResults
+      hasPerLevelResults,
+      courseOfferingId,
+      courseVersionId,
+      isProfessionalLearningCourse
     } = this.props;
-
-    const useMigratedTeacherResources = isMigrated && !teacherResources.length;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
@@ -138,22 +140,31 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress = IN_PROGRESS;
     }
 
+    /*
+     * We are turning off Printing Certificates for Professional Learning Courses
+     * until we can create a specialized certificate for PL courses.
+     * */
+    let completedProfessionalLearningCourse =
+      isProfessionalLearningCourse && unitProgress === COMPLETED;
+
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
-        {!professionalLearningCourse && viewAs === ViewType.Participant && (
+        {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            <Button
-              __useDeprecatedTag
-              href={`/s/${scriptName}/next`}
-              text={NEXT_BUTTON_TEXT[unitProgress]}
-              size={Button.ButtonSize.large}
-              style={{marginRight: 10}}
-            />
+            {!completedProfessionalLearningCourse && (
+              <Button
+                __useDeprecatedTag
+                href={`/s/${scriptName}/next`}
+                text={NEXT_BUTTON_TEXT[unitProgress]}
+                size={Button.ButtonSize.large}
+                style={{marginRight: 10}}
+              />
+            )}
+
             {studentResources.length > 0 && (
               <ResourcesDropdown
-                migratedResources={studentResources}
+                resources={studentResources}
                 unitId={scriptId}
-                useMigratedResources={true}
                 studentFacing
               />
             )}
@@ -170,22 +181,25 @@ class UnitOverviewTopRow extends React.Component {
         )}
 
         <div style={styles.resourcesRow}>
-          {!professionalLearningCourse &&
+          {!deeperLearningCourse &&
             viewAs === ViewType.Instructor &&
-            ((!useMigratedTeacherResources && teacherResources.length > 0) ||
-              (useMigratedTeacherResources &&
-                migratedTeacherResources.length > 0)) && (
+            (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
                 resources={teacherResources}
-                migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources={useMigratedTeacherResources}
               />
             )}
           {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
-                text={i18n.printingOptions()}
+                customText={
+                  <div>
+                    <FontAwesome icon="print" style={styles.icon} />
+                    <span style={styles.customText}>
+                      {i18n.printingOptions()}
+                    </span>
+                  </div>
+                }
                 color={Button.ButtonColor.blue}
               >
                 {pdfDropdownOptions.map(option => (
@@ -210,13 +224,15 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!professionalLearningCourse && viewAs === ViewType.Instructor && (
+        {!deeperLearningCourse && viewAs === ViewType.Instructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}
             assignmentName={unitTitle}
             showAssignButton={showAssignButton}
             courseId={currentCourseId}
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
             scriptId={scriptId}
             forceReload={true}
             buttonLocationAnalytics={'unit-overview-top'}
@@ -244,6 +260,17 @@ const styles = {
     display: 'flex',
     alignItems: 'center'
   },
+  customText: {
+    margin: '0px 2px'
+  },
+  icon: {
+    margin: '0px 2px',
+    fontSize: 16,
+    // we want our icon text to be a different size than our button text, which
+    // requires we manually offset to get it centered properly
+    position: 'relative',
+    top: 1
+  },
   right: {
     position: 'absolute',
     right: 0,
@@ -270,15 +297,15 @@ const styles = {
 
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   selectedSectionId: state.teacherSections.selectedSectionId,
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
-    state.progress.scriptId,
-    state.progress.courseId,
-    false
+    ownProps.courseOfferingId,
+    ownProps.courseVersionId,
+    state.progress.scriptId
   ),
-  professionalLearningCourse: state.progress.professionalLearningCourse,
+  deeperLearningCourse: state.progress.deeperLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
   unitCompleted: !!state.progress.unitCompleted,
   scriptId: state.progress.scriptId,

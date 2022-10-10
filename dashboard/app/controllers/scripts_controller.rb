@@ -1,8 +1,8 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update]
-  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
+  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
@@ -47,7 +47,7 @@ class ScriptsController < ApplicationController
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
       @section = current_user&.sections&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map {|s| s.slice(:id, :name, :script_id, :course_id)}}
+      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
       @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
     end
 
@@ -64,6 +64,7 @@ class ScriptsController < ApplicationController
       user_type: current_user&.user_type,
       user_id: current_user&.id,
       user_providers: current_user&.providers,
+      is_instructor: @script.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Script.locale_english_name_map[request.locale],
       locale_code: request.locale,
@@ -72,7 +73,7 @@ class ScriptsController < ApplicationController
       sections: @sections_with_assigned_info
     }
 
-    @script_data = @script.summarize(true, current_user).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -87,6 +88,23 @@ class ScriptsController < ApplicationController
   end
 
   def new
+    @versioned_unit_families = []
+    @unit_families_course_types = []
+    Script.family_names.map do |cf|
+      co = CourseOffering.find_by(key: cf)
+
+      # There are some old family names for connecting between units in a course which will not be a course offering
+      next unless co
+      first_cv = co.course_versions.first
+      next unless first_cv
+      @versioned_unit_families << cf unless first_cv.key == 'unversioned'
+
+      unit = first_cv.content_root
+      next unless unit
+      @unit_families_course_types << [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
+    end
+
+    @unit_families_course_types = @unit_families_course_types.compact.to_h
   end
 
   def create
@@ -100,19 +118,19 @@ class ScriptsController < ApplicationController
     # are not used when you call new() just when you call create
     updated_unit_params = unit_params.merge(
       {
-        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 
     updated_general_params = general_params.merge(
       {
-        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 
@@ -204,7 +222,7 @@ class ScriptsController < ApplicationController
   def get_rollup_resources
     unit = Script.get_from_cache(params[:id])
     course_version = unit.get_course_version
-    return render status: 400, json: {error: 'Script does not have course version'} unless course_version
+    return render status: :bad_request, json: {error: 'Script does not have course version'} unless course_version
     rollup_pages = []
     if unit.lessons.any? {|l| !l.programming_expressions.empty?}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(unit), course_version_id: course_version.id))
@@ -306,8 +324,6 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :lesson_groups,
-      resourceTypes: [],
-      resourceLinks: [],
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],
@@ -328,7 +344,6 @@ class ScriptsController < ApplicationController
       :description_short,
       :description,
       :student_description,
-      :stage_descriptions
     ).to_h
   end
 

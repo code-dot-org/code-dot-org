@@ -22,6 +22,8 @@ class FollowersControllerTest < ActionController::TestCase
     @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
     @admin = create(:admin)
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "student in picture section should be redirected to picture login when joining section" do
@@ -340,7 +342,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_register errors when joining a section where user does not meet participant type' do
     sign_in @student
-    section = create(:section, login_type: Section::LOGIN_TYPE_EMAIL, participant_type: 'facilitator')
+    section = create(:section, :facilitator_participants)
 
     assert_does_not_create(User, Follower) do
       get :student_register, params: {section_code: section.code}

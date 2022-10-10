@@ -1,5 +1,4 @@
 import React from 'react';
-import Radium from 'radium';
 import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
@@ -56,4 +55,4 @@ class DropdownField extends React.Component {
   }
 }
 
-export default Radium(DropdownField);
+export default DropdownField;

@@ -14,7 +14,8 @@ describe('CourseOfferingEditor', () => {
         key: 'test-course-offering',
         is_featured: false,
         category: 'Other',
-        display_name: 'Course Offering 1'
+        display_name: 'Course Offering 1',
+        assignable: true
       }
     };
   });

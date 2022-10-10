@@ -2,5 +2,6 @@
   "key": "hello-world-retro",
   "display_name": "Hello World: Retro",
   "category": "hoc",
-  "is_featured": true
+  "is_featured": true,
+  "assignable": true
 }

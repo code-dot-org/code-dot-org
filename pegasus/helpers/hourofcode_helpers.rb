@@ -3,7 +3,7 @@ def hoc_dir(*dirs)
 end
 
 def hoc_load_countries
-  JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
+  JSON.parse(File.read(hoc_dir('i18n/countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 
@@ -16,9 +16,9 @@ HOC_COUNTRIES = hoc_load_countries
 #
 # Can be called with markdown: true to render the string as (HTML-safe)
 # markdown, or with markdown: :inline to render as inline markdown.
-def hoc_s(id, markdown: false, locals: {})
+def hoc_s(id, markdown: false, locals: {}, language: nil)
   id = id.to_s
-  language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
+  language ||= @language || PegasusLanguages.get_hoc_unique_language_by_locale(request.locale)
   string = I18n.t(id, locals.merge({locale: language}))
 
   if markdown
@@ -106,16 +106,31 @@ end
 # Called by pages on hourofcode.com to convert the current two-letter language (stored
 # in @language) into an XX-XX locale code as used by code.org/csedweek.org/apps.
 def hoc_get_locale_code
-  Languages.get_hoc_locale_by_unique_language(@language)
+  PegasusLanguages.get_hoc_locale_by_unique_language(@language)
 end
 
 # code.org and hourofcode.com's /learn pages call this to translate tutorial's languages attribute
-def hoc_language(lang_codes_str)
+def hoc_language(lang_codes_str, language = nil)
   return '' unless lang_codes_str
 
   # Convert language codes to array and get the translated string
   language_codes = lang_codes_str.split(',')
-  language_codes.map {|code| hoc_s(code.downcase)}.select {|code| code}.join ", "
+
+  lang_names = language_codes.map do |code|
+    code = code.strip.downcase
+    next if code.empty?
+
+    # Find the code in language codes and locale codes
+    language_translation = hoc_s("language_code.#{code}", language: language)
+    if language_translation.start_with?('translation missing')
+      locale_translation = hoc_s("locale_code.#{code}", language: language)
+      locale_translation.start_with?('translation missing') ? code : locale_translation
+    else
+      language_translation
+    end
+  end
+
+  lang_names.compact.join(", ")
 end
 
 def hoc_uri(uri)
@@ -151,7 +166,6 @@ end
 
 def campaign_date(format)
   @country ||= hoc_detect_country
-  type = HOC_COUNTRIES[@country]['type'] || 'default'
   language = @language || HOC_COUNTRIES[@country]['default_language']
   id = 'campaign_date_full'
 
@@ -170,8 +184,10 @@ def campaign_date(format)
     id = 'campaign_date_full_year'
   end
 
-  if %w(latam europe africa).include? type
-    id = "#{type}_#{id}"
+  # For hoc2022, we just want campaign dates for the US
+  # and non-US.
+  if @country != "us"
+    id = "nonus_#{id}"
   end
 
   return I18n.t(id, locale: language)

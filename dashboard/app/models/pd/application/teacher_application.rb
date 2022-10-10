@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -56,12 +57,6 @@ module Pd::Application
       'Kindergarten'.freeze,
       *(1..12).map {|n| "Grade #{n}".freeze}
     ].freeze
-
-    PRINCIPAL_APPROVAL_STATE = [
-      NOT_REQUIRED = 'Not required',
-      IN_PROGRESS = 'Incomplete - Principal email sent on ',
-      COMPLETE = 'Complete - '
-    ]
 
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
@@ -126,12 +121,6 @@ module Pd::Application
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       application_year
-    end
-
-    # Since teacher applications may be created on save before they are submitted, we cannot rely
-    # on the created_at field. When applications are submitted, they have status 'unreviewed'
-    def date_applied
-      status_log.find {|status_entry| status_entry["status"] == "unreviewed"}&.[]("at")&.to_date&.iso8601
     end
 
     def self.next_year(year)
@@ -265,20 +254,6 @@ module Pd::Application
 
     def principal_approval_url
       pd_application_principal_approval_url(application_guid) if application_guid
-    end
-
-    def principal_approval_state
-      principal_approval = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-
-      if principal_approval
-        if principal_approval.placeholder?
-          'Sent'
-        else
-          sanitize_form_data_hash[:principal_approval]
-        end
-      else
-        'No approval sent'
-      end
     end
 
     # @override
@@ -427,15 +402,15 @@ module Pd::Application
     # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      return COMPLETE + response.full_answers[:do_you_approve] if response
+      return PRINCIPAL_APPROVAL_STATE[:complete] + response.full_answers[:do_you_approve] if response
 
       principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
-        return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
+        return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
       end
 
-      return NOT_REQUIRED if principal_approval_not_required
+      return PRINCIPAL_APPROVAL_STATE[:not_required] if principal_approval_not_required
 
       nil
     end
@@ -890,9 +865,9 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
-      FILTERED_LABELS[course]
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
+      status == 'incomplete' ? {} : FILTERED_LABELS[course]
     end
 
     # List of columns to be filtered out based on selected program (course)
@@ -1142,6 +1117,7 @@ module Pd::Application
     end
 
     def meets_criteria
+      return if incomplete?
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
@@ -1182,10 +1158,8 @@ module Pd::Application
     # Called after the application is created. Do any manipulation needed for the form data
     # hash here, as well as send emails
     def on_successful_create
-      on_completed_app unless status == 'incomplete'
-    end
+      return if status == 'incomplete'
 
-    def on_completed_app
       queue_email :confirmation, deliver_now: true
       auto_score!
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL

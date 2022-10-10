@@ -2,5 +2,6 @@
   "key": "poster",
   "display_name": "poster",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

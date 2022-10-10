@@ -573,7 +573,7 @@ const StartApplicationButton = ({
   } else {
     notificationHeading =
       'We still have spaces in the Professional Learning Program!';
-    notificationText = 'It’s not too late to sign up.';
+    notificationText = 'It takes just 10-15 minutes to apply.';
   }
 
   const button = (

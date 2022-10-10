@@ -3,7 +3,7 @@
   "name": "Height",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Height\n\nThe `height` property specifies the height of the content area of an element. The height of an element does not include padding, borders, or margins. Height can be defined in percentage (of the width of the containing block), pixels, cm, etc.",
+  "content": "# Height\n\nThe [`Height`(#d3e965)](/docs/weblab/height/) property specifies the height of the content area of an element. The height of an element does not include padding, borders, or margins. Height can be defined in percentage (of the width of the containing block), pixels, cm, etc.",
   "examples": [
     {
       "name": " Height in pixels",

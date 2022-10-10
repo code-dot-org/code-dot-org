@@ -819,7 +819,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user progress" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     create :user_level, user: user, best_result: 100, script: @script, level: @level
@@ -830,7 +830,6 @@ class ApiControllerTest < ActionController::TestCase
 
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
-    assert_equal 2, body['linesOfCode']
     level_progress = body['progress'][@level.id.to_s]
     refute_nil level_progress
     assert_equal 'perfect', level_progress['status']
@@ -875,7 +874,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user app_options" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     level_source = create :level_source, level: @level, data: 'level source'
@@ -893,6 +892,7 @@ class ApiControllerTest < ActionController::TestCase
 
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
+    assert_equal false, body['isInstructor']
     assert_equal false, body['disableSocialShare']
     assert_equal 'level source', body['lastAttempt']['source']
   end
@@ -914,6 +914,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
+    assert_equal true, body['isInstructor']
     assert_equal false, body['disableSocialShare']
     assert_equal 'level source', body['lastAttempt']['source']
     assert_equal true, body['isStarted']
@@ -1149,7 +1150,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1630,30 +1631,30 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/pairing"]', false
+    assert_select 'a[href="http://test-studio.code.org/pairing"]', false
   end
 
   test 'api routing' do
     # /dashboardapi urls
     assert_routing(
-      {method: "get", path: "/dashboardapi/user_menu"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/user_menu"},
       {controller: "api", action: "user_menu"}
     )
 
     assert_routing(
-      {method: "get", path: "/dashboardapi/section_progress/2"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/section_progress/2"},
       {controller: "api", action: "section_progress", section_id: '2'}
     )
 
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
-      {method: "get", path: "/api/user_menu"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/user_menu"}
     )
 
     assert_recognizes(
       {controller: "api", action: "section_progress", section_id: '2'},
-      {method: "get", path: "/api/section_progress/2"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/section_progress/2"}
     )
   end
 
@@ -1755,18 +1756,18 @@ class ApiControllerTest < ActionController::TestCase
         expected['answer_texts'] == actual['answer_texts'] &&
         equivalent_bags?(expected['results'], actual['results'])
     end
-    assert match, <<MESSAGE
-Mismatched results:
+    assert match, <<~MESSAGE
+      Mismatched results:
 
-Expected:
+      Expected:
 
-#{expected_results.join("\n")}
+      #{expected_results.join("\n")}
 
-Actual:
+      Actual:
 
-#{actual_results.join("\n")}
+      #{actual_results.join("\n")}
 
-MESSAGE
+    MESSAGE
   end
 
   test 'sign_cookies' do

@@ -4,17 +4,17 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @pl_coursez_2017 = create :script, name: 'pl-coursez-2017', family_name: 'pl-coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    @pl_coursez_2018 = create :script, name: 'pl-coursez-2018', family_name: 'pl-coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    @pl_coursez_2019 = create :script, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_coursez_2017 = create :script, name: 'pl-coursez-2017', family_name: 'pl-coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_coursez_2018 = create :script, name: 'pl-coursez-2018', family_name: 'pl-coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_coursez_2019 = create :script, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
     @migrated_unit = create :script
-    @migrated_pl_unit = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @migrated_pl_unit = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @unmigrated_unit = create :script, is_migrated: false
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -424,6 +424,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'create' do
     unit_name = 'test-unit-create'
+    @request.host = CDO.dashboard_hostname
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
@@ -441,10 +442,39 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = Script.find_by_name(unit_name)
     assert_equal unit_name, unit.name
     assert unit.is_migrated
-    assert_equal unit.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
-    assert_equal unit.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-    assert_equal unit.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-    assert_equal unit.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    assert_equal unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    assert_equal unit.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    assert_equal unit.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+  end
+
+  test 'create: sets course type if provided' do
+    unit_name = 'test-pl-unit-create'
+    @request.host = CDO.dashboard_hostname
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
+    end
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    post :create, params: {
+      script: {name: unit_name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      instruction_type: 'self_paced',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'teacher'
+    }
+    assert_redirected_to edit_script_path id: unit_name
+
+    unit = Script.find_by_name(unit_name)
+    assert_equal unit_name, unit.name
+    assert unit.is_migrated
+    assert_equal unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    assert_equal unit.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
+    assert_equal unit.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
   end
 
   test 'cannot create legacy unit' do
@@ -483,25 +513,25 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -511,18 +541,18 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "update instruction_type" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    unit = create :script, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -532,18 +562,18 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+      instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    assert_equal unit.get_instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
   end
 
   test "update published state to in_development" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -553,18 +583,18 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   test "update published state to pilot" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -574,19 +604,19 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.pilot
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
   end
 
   test "update published state to beta" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -596,18 +626,18 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test "update published state to preview" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -617,18 +647,18 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -638,11 +668,11 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.stable
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
@@ -650,18 +680,18 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
@@ -669,18 +699,18 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update unmigrated unit' do
@@ -811,7 +841,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
     stub_file_writes(unit.name)
 
     course_version = create :course_version, content_root: unit
@@ -837,7 +867,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
     stub_file_writes(unit.name)
 
     course_version = create :course_version, content_root: unit
@@ -871,14 +901,14 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       lesson_groups: '[]',
       pilot_experiment: 'pilot-experiment',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     }
 
     assert_response :success
 
     assert_equal 'pilot-experiment', Script.find_by_name(unit.name).pilot_experiment
     # pilot units are always marked with the pilot published state
-    assert_equal Script.find_by_name(unit.name).get_published_state, SharedCourseConstants::PUBLISHED_STATE.pilot
+    assert_equal Script.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
   end
 
   test 'does not hide unit with blank pilot_experiment' do
@@ -894,14 +924,14 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       lesson_groups: '[]',
       pilot_experiment: '',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
 
     assert_response :success
 
     assert_nil Script.find_by_name(unit.name).pilot_experiment
     # blank pilot_experiment does not cause unit to have published_state of pilot
-    assert_equal Script.find_by_name(unit.name).get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
+    assert_equal Script.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do
@@ -952,10 +982,10 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
+      instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+      participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       tts: 'on',
       project_sharing: 'on',
       is_course: 'on',
@@ -995,7 +1025,7 @@ class ScriptsControllerTest < ActionController::TestCase
       lesson_groups: '[]',
       curriculum_path: '',
       version_year: '',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta,
       pilot_experiment: '',
       editor_experiment: '',
       curriculum_umbrella: '',
@@ -1060,7 +1090,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     unit = create :script, published_state: nil
     create :unit_group_unit, unit_group: course, script: unit, position: 1
     stub_file_writes(unit.name)
@@ -1070,7 +1100,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       lesson_groups: '[]',
       is_migrated: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
     unit.reload
@@ -1082,7 +1112,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     unit = create :script, published_state: nil
     create :unit_group_unit, unit_group: course, script: unit, position: 1
     stub_file_writes(unit.name)
@@ -1092,13 +1122,13 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       lesson_groups: '[]',
       is_migrated: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
     unit.reload
 
     refute_nil unit.published_state
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit.published_state
+    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.published_state
   end
 
   test 'add lesson to migrated unit' do
@@ -1496,12 +1526,12 @@ class ScriptsControllerTest < ActionController::TestCase
   class CoursePilotTests < ActionController::TestCase
     setup do
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-      @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+      @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
       @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
       @pilot_student = create(:follower, section: @pilot_section).student_user
 
       @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
-      @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_unit
       @pilot_pl_participant = create :facilitator
       create(:follower, section: @pilot_pl_section, student_user: @pilot_pl_participant)
@@ -1578,7 +1608,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   class CourseInDevelopmentTests < ActionController::TestCase
     setup do
-      @in_development_unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
+      @in_development_unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     end
 
     no_access_msg = "You don&#39;t have access to this unit."
@@ -1617,15 +1647,15 @@ class ScriptsControllerTest < ActionController::TestCase
       get :show, params: {id: 'ui-test-versioned-script'}
     end
 
-    dogs1.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    dogs1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
   end
@@ -1633,22 +1663,22 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for participant without progress or assignment' do
     sign_in create(:teacher)
 
-    pl_dogs1 = create :script, name: 'pl-dogs1', family_name: 'ui-test-versioned-pl-script', version_year: '1901', is_course: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    pl_dogs1 = create :script, name: 'pl-dogs1', family_name: 'ui-test-versioned-pl-script', version_year: '1901', is_course: true, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     CourseOffering.add_course_offering(pl_dogs1)
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'ui-test-versioned-pl-script'}
     end
 
-    pl_dogs1.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    pl_dogs1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/s/pl-dogs1"
 
-    create :script, name: 'pl-dogs2', family_name: 'ui-test-versioned-pl-script', version_year: '1902', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :script, name: 'pl-dogs2', family_name: 'ui-test-versioned-pl-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/s/pl-dogs2"
 
-    create :script, name: 'pl-dogs3', family_name: 'ui-test-versioned-pl-script', version_year: '1899', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :script, name: 'pl-dogs3', family_name: 'ui-test-versioned-pl-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/s/pl-dogs2"
   end

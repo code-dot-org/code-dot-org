@@ -1,4 +1,4 @@
-class Api::V1::TextToSpeechController < Api::V1::JsonApiController
+class Api::V1::TextToSpeechController < Api::V1::JSONApiController
   include AzureTextToSpeech
 
   # Allowed number of unique requests per minute before that client is throttled.

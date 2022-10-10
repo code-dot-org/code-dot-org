@@ -2,5 +2,6 @@
   "key": "csd6-pilot",
   "display_name": "Physical Computing Pilot (2022)",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

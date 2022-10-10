@@ -1,6 +1,7 @@
 {
   "key": "fit2019-apprentice",
   "display_name": "Apprentice Reflections for Summer Workshop 2019",
-  "category": "other",
-  "is_featured": false
+  "category": "pl_other",
+  "is_featured": false,
+  "assignable": true
 }

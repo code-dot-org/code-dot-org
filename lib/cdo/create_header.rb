@@ -30,6 +30,9 @@ class CreateHeader
     },
     poetry_hoc: {
       image: "logo_poetry.png"
+    },
+    thebadguys: {
+      image: "logo_thebadguys.png"
     }
   }.freeze
 

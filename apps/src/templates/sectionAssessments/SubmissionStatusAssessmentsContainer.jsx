@@ -33,8 +33,9 @@ class SubmissionStatusAssessmentsContainer extends Component {
   static propTypes = {
     onClickDownload: PropTypes.func.isRequired,
     // from redux
-    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
-    studentExportableData: PropTypes.arrayOf(studentExportableDataPropType)
+    localeCode: PropTypes.string,
+    studentExportableData: PropTypes.arrayOf(studentExportableDataPropType),
+    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType)
   };
 
   render() {
@@ -57,6 +58,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
           </CSVLink>
         </div>
         <SubmissionStatusAssessmentsTable
+          localeCode={this.props.localeCode}
           studentOverviewData={this.props.studentOverviewData}
         />
       </div>
@@ -76,6 +78,7 @@ const styles = {
 export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
 
 export default connect(state => ({
-  studentOverviewData: getStudentsMCandMatchSummaryForCurrentAssessment(state),
-  studentExportableData: getExportableSubmissionStatusData(state)
+  localeCode: state.locales.localeCode,
+  studentExportableData: getExportableSubmissionStatusData(state),
+  studentOverviewData: getStudentsMCandMatchSummaryForCurrentAssessment(state)
 }))(SubmissionStatusAssessmentsContainer);

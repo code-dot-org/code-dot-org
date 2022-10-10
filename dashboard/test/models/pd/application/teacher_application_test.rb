@@ -109,24 +109,6 @@ module Pd::Application
       assert_equal Pd::Application::TeacherApplication::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
-    test 'date_applied finds date of first unreviewed status' do
-      tomorrow = Date.tomorrow.to_time
-      next_day = tomorrow + 1.day
-      application = create :pd_teacher_application, status: 'incomplete'
-      assert_nil application.date_applied
-
-      Timecop.freeze(tomorrow) do
-        application.update!(status: 'unreviewed')
-      end
-
-      Timecop.freeze(next_day) do
-        application.update!(status: 'reopened')
-        application.update!(status: 'unreviewed')
-      end
-
-      assert_equal tomorrow, application.date_applied.to_time
-    end
-
     test 'accepted_at updates times' do
       today = Date.today.to_time
       tomorrow = Date.tomorrow.to_time
@@ -446,7 +428,7 @@ module Pd::Application
       application.update!(status: 'pending')
       assert_status_log(
         [
-          {status: 'unreviewed', at: Time.zone.now - 2.seconds},
+          {status: 'unreviewed', at: 2.seconds.ago},
           {status: 'pending', at: Time.zone.now}
         ],
         application
@@ -815,9 +797,14 @@ module Pd::Application
         # Updates the application with principal's responses and run auto_score! again
         application.on_successful_principal_approval_create(principal_approval)
 
-        assert_equal test_case[:meet_requirement],
-          application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
-          "Test case index #{index} failed"
+        # Written as a conditional to address Minitest 6 deprecation: `DEPRECATED: Use assert_nil if expecting nil`
+        if test_case[:meet_requirement]
+          assert application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+                 "Test case index #{index} failed"
+        else
+          refute application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+                 "Test case index #{index} failed"
+        end
       end
     end
 
@@ -853,6 +840,8 @@ module Pd::Application
         application.queue_email :principal_approval, deliver_now: true
         assert_equal incomplete, application.reload.principal_approval_state
       end
+
+      refute application.reload.principal_approval_not_required
 
       # even if it's not required, when an email was sent display incomplete
       application.update!(principal_approval_not_required: true)

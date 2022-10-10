@@ -11,10 +11,10 @@ markdown <<MARKDOWN
 Which line of code should replace `/* missing code */` to produce the final state of the `Painter` object and The Neighborhood shown here?
 
 ##Start
-![](https://images.code.org/e5888be22f71ff874d4e7403aafa1660-image-1646835157145.png)
+![](https://images.code.org/49f05f0986f9df635a60cd87efee42cf-image-1647620043449.jpg)
 
 ##End
-![](https://images.code.org/b641346f0c4ea6c36699fb7d39de77b8-image-1646835174981.png)
+![](https://images.code.org/f85629cf3adb6c9e6e22cbc4609eb61f-image-1647620012510.jpg)
 
 ```
 public class MyNeighborhood {

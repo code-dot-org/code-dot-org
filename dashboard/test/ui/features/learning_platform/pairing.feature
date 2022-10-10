@@ -1,7 +1,7 @@
 Feature: Student pairing
   Scenario: Pair Programming submits levels for both students
     Given I create a teacher named "Dr_Seuss"
-    And I create a new section
+    And I create a new student section
     Given I create a student named "Thing_One"
     And I join the section
     Given I create a student named "Thing_Two"
@@ -33,7 +33,7 @@ Feature: Student pairing
 
   Scenario: Pair Programming attempts levels for both students
     Given I create a teacher named "Dr_Seuss"
-    And I create a new section
+    And I create a new student section
     Given I create a student named "Thing_One"
     And I join the section
     Given I create a student named "Thing_Two"
@@ -57,7 +57,7 @@ Feature: Student pairing
 
   Scenario: Pairing group is correctly displayed in user menu on cached levels
     Given I create a teacher named "Dr_Seuss"
-    And I create a new section
+    And I create a new student section
     Given I create a student named "Thing_One"
     And I join the section
     Given I create a student named "Thing_Two"

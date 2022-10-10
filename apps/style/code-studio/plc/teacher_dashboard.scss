@@ -1,15 +1,15 @@
-@import "color";
+@import "color.scss";
 
 .module_assignments {
   display: flex;
 
   .module_task_view {
     .not_started {
-      background-color: rgba(255, 128, 128, .25)
+      background-color: rgb(255 128 128 / 0.25);
     }
 
     .completed {
-      background-color: rgba(128, 255, 128, .25);
+      background-color: rgb(128 255 128 / 0.25);
     }
 
     width: 100%;
@@ -18,11 +18,11 @@
   }
 
   .module_task_view:first-child {
-    margin-left: 0em;
+    margin-left: 0;
   }
 
   .module_task_view:last-child {
-    margin-right: 0em;
+    margin-right: 0;
   }
 }
 
@@ -35,7 +35,7 @@
   color: $charcoal;
 
   .course_unit_section {
-    border: 1px solid #bbbbbb;
+    border: 1px solid #bbb;
     border-radius: 5px;
     margin: 1em 1em 1em 1em;
     padding: 1em;
@@ -44,7 +44,7 @@
     .course_unit_title {
       a {
         color: $dark_charcoal !important;
-        font-family: 'Gotham 4r'
+        font-family: "Gotham 4r", sans-serif;
       }
 
       font-size: 18px;
@@ -78,8 +78,8 @@
         height: 100%;
         overflow: hidden;
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: 0;
+        right: 0;
 
         .ribbon {
           transform: rotate(45deg);
@@ -101,7 +101,7 @@
     }
 
     .in_progress {
-      background-color: #EFCD1C !important;
+      background-color: #efcd1c !important;
     }
 
     .completed {

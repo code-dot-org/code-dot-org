@@ -28,8 +28,6 @@ class UserScript < ApplicationRecord
   belongs_to :user
   belongs_to :script
 
-  validates_presence_of :user, :script
-
   serialized_attrs %w(
     version_warning_dismissed
   )
@@ -42,7 +40,7 @@ class UserScript < ApplicationRecord
   #   levels to be completed (note unplugged levels are an example of non-progress levels). Also
   #   returns false if the associated user has been soft-deleted.
   def check_completed?
-    user && user.completed_progression_levels?(script)
+    user&.completed_progression_levels?(script)
   end
 
   def empty?

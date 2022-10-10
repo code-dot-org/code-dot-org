@@ -5,6 +5,7 @@ import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
@@ -58,7 +59,7 @@ export default function CourseOfferingEditor(props) {
         Display Name
         <input
           type="text"
-          defaultValue={courseOffering.display_name}
+          value={courseOffering.display_name}
           style={styles.input}
           onChange={e => updateCourseOffering('display_name', e.target.value)}
         />
@@ -70,9 +71,9 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => updateCourseOffering('category', e.target.value)}
         >
-          {Object.values(CourseOfferingCategories).map(category => (
+          {CourseOfferingCategories.map(category => (
             <option key={category} value={category}>
-              {category}
+              {translatedCourseOfferingCategories[category]}
             </option>
           ))}
         </select>
@@ -93,11 +94,28 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
         <input
           type="checkbox"
-          defaultChecked={courseOffering.is_featured}
+          checked={courseOffering.is_featured}
           style={styles.checkbox}
-          onChange={e => updateCourseOffering('is_featured', e.target.value)}
+          onChange={e => updateCourseOffering('is_featured', e.target.checked)}
         />
       </label>
+      <label>
+        Course Offering Assignable
+        <HelpTip>
+          <p>
+            Assignable course offerings will show up in the assignment dropdown
+            for instructors to assign to participants. Most courses will want
+            this turned on.
+          </p>
+        </HelpTip>
+        <input
+          type="checkbox"
+          checked={courseOffering.assignable}
+          style={styles.checkbox}
+          onChange={e => updateCourseOffering('assignable', e.target.checked)}
+        />
+      </label>
+
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -114,7 +132,8 @@ CourseOfferingEditor.propTypes = {
     key: PropTypes.string,
     is_featured: PropTypes.bool,
     category: PropTypes.string,
-    display_name: PropTypes.string
+    display_name: PropTypes.string,
+    assignable: PropTypes.bool
   })
 };
 

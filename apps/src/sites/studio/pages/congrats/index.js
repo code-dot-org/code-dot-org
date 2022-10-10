@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Congrats from '@cdo/apps/templates/Congrats';
+import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import queryString from 'query-string';
@@ -17,17 +17,22 @@ $(document).ready(function() {
     : 'signedOut';
   const language = congratsData.language;
   const under13 = congratsData.under_13;
+  const nextCourseScriptName = congratsData.next_course_script_name;
+  const nextCourseTitle = congratsData.next_course_title;
+  const nextCourseDesc = congratsData.next_course_description;
   const randomDonorTwitter = congratsData.random_donor_twitter;
   const randomDonorName = congratsData.random_donor_name;
   // Allows us to conditionally hide the promotional card for the Dance Party
   // Extras tutorial if we have problems during Hour of Code.
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
+  const certificateImageUrl = congratsData.certificate_image_url;
+  const isHocTutorial = congratsData.is_hoc_tutorial;
 
   let certificateId = '';
   let tutorial = '';
   try {
     const params = queryString.parse(window.location.search);
-    certificateId = params['i'].replace(/[^a-z0-9_]/g, '');
+    certificateId = params['i'] && params['i'].replace(/[^a-z0-9_]/g, '');
     tutorial = atob(params['s']).replace(/[^A-Za-z0-9_\- ]/g, '');
   } catch (e) {}
 
@@ -48,6 +53,11 @@ $(document).ready(function() {
         randomDonorName={randomDonorName}
         hideDancePartyFollowUp={hideDancePartyFollowUp}
         showStudioCertificate={showStudioCertificate}
+        initialCertificateImageUrl={certificateImageUrl}
+        isHocTutorial={isHocTutorial}
+        nextCourseScriptName={nextCourseScriptName}
+        nextCourseTitle={nextCourseTitle}
+        nextCourseDesc={nextCourseDesc}
       />
     </Provider>,
     document.getElementById('congrats-container')

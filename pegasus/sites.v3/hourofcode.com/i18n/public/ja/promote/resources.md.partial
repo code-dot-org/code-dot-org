@@ -10,7 +10,7 @@ nav: promote_nav
 
 # Hour of Codeを多くの人に知ってもらうには
 
-### Hour of Codeの活動に注目してもらうための必要なリソースとは？どこから始めたらよいのかわかりませんか？こちら[ Hour of Codeを主催するためのハウツーガイド]({{ how_to_url }})をご覧ください。
+### Hour of Codeの活動に注目してもらうために必要なリソースをご覧ください。どこから始めたらよいのかわかりませんか？[ Hour of Codeを主催するためのハウツーガイド]({{ how_to_url }})をご覧ください！
 
 * * *
 
@@ -18,9 +18,9 @@ nav: promote_nav
 
 <a id="posters"></a>
 
-## このポスターを学校に貼る
+## このポスターを学校に貼りましょう
 
-マララ、スティーブン・カリー、シャキラなどをフィーチャーした新しいポスターセットが完成しました。 今年は、どのポスターセットにも6つのポスターと「私はHour of Codeを完了しました」のステッカー126枚が含まれます。 数量に限りがありますので、 [ご注文はお早めに](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)お願いいたします。 ご自身でプリントアウトする場合は、下の画像をクリックして表示し、印刷可能な形式にして保存してください。
+マララ、スティーブン・カリー、シャキラなどを前面に出した新しいポスターセットができました！ 今年は、どのポスターセットにもポスター6枚と「私はHour of Codeを行いました」ステッカー126枚が入っています。 数量に限りがありますので、 [ポスターセットのご注文](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)はお早めにお願いします。 ご自身で印刷する場合は、下の画像をクリックして表示し、印刷可能な形式で保存してください。
 
 {{ promote_new_posters }}
 
@@ -38,63 +38,63 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Hour of Codeを広めるためロゴを使う
+## Hour of Codeを広めるためにロゴを使う
 
 [![画像]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![画像]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[高解像度バージョンをダウンロードする](https://images.code.org/share/hour-of-code-logo.zip)
+[高解像度バージョンをダウンロード](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" と "Hora del Código" は商標として登録されています。これらの使用はとくに禁止していませんが、以下の通り使用に際しては若干の制限を加えています。**
+**「Hour of Code」と「Hora del Código」は商標登録されています。これらの使用を妨げることは意図していませんが、以下の通り使用に際して若干の制限があります。**
 
-1. "Hour of Code" や "Hora del Código" を記載する場合、それらが記載者のブランド名を想起させるような使用は控えてください。これらの名称はできれば草の根運動として言及する際に使用してください。 
+1. 「Hour of Code」や「Hora del Código」に言及する場合にこれらの名称が記載者のブランド名を想起させるような使用はお控えください。これらの名称はできれば草の根運動として言及する際にお使いください。 
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>良い使用例</strong>: 「"会社名".com.のウェブサイトでHour of Codeに参加しましょう」
+    <strong>良い使用例</strong>: 「あなたの会社名.comのウェブサイトでHour of Code™に参加しましょう」
   </li>
   <li>
-    <strong>良くない使用例</strong>:「"会社名"のHour of Codeをぜひお試しください」
+    <strong>良くない使用例</strong>:「あなたの会社名のHour of Codeをお試しください」
   </li>
 </ul>
 
-1. "Hour of Code" を記載する場合、最も目立つ箇所に"TM"のマークを上付きで加え、また、"Hora del Código"の場合、自社ウェブサイトとアプリケーション内容記載に際して最も目立つ箇所に "Ⓡ" のマークを上付きで加えます。
-2. CSEdWeekと[Code.org]({{ codeorg_link }}) ウェブサイトへのリンクを自社ウェブサイトのページ（またはフッターとして）に張る場合、以下の文言を記載してください。
+1. 「Hour of Code」に言及する場合、最も目立つ箇所に"TM"のマークを上付きで追加し、また「Hora del Código」の場合、あなたのウェブサイトとアプリケーション内容記載に際して最も目立つ箇所に "Ⓡ" のマークを上付きで追加してください。
+2. CSEdWeekと[Code.org]({{ codeorg_link }}) ウェブサイトへのリンクを自社ウェブサイトのページ（またはフッターとして）に貼る場合、以下の文言を記載してください。
     
-    *「Hour of Code™/'Hora del Código®はコンピューター教育週間[csedweek.org]とCode.org[code.org]による、数百万人もの生徒にコンピューターサイエンスとコンピュータープログラミングを1時間経験してもらうためのグローバルな取り組みです。」*
+    *「『Hour of Code™』/『Hora del Código®』はコンピューター教育週間 [csedweek.org]とCode.org [code.org]による、数百万人もの生徒にコンピューターサイエンスとコンピュータープログラミングを1時間体験してもらうためのグローバルな取り組みです。」*
 
-3. アプリの名称では "Hour of Code" や "Hora del Código" は使用できません。
+3. 「Hour of Code」や「Hora del Código」はアプリ名には使えません。
 
 <a id="stickers"></a>
 
 ## ステッカーを印刷して生徒に配布する
 
-(ステッカーは直径 1 インチのサイズでシート1 枚 あたり63個あります）<br />
+(ステッカーは直径1インチサイズで63枚/シートです）<br />
 
 [![画像](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## 地元の人々をHour of Codeに参加するよう呼びかけ、メールでイベントを宣伝する
+## 地元の人にHour of Codeへの参加を呼びかけ、メールでイベントを宣伝
 
-### Hour of Codeを話題にする際に使える文言の詳細を ご参照ください。</h3> 
+### Hour of Codeを話題にする際の[情報や使える文言]({{ promote/stats_url }})をご覧ください。
 
 * * *
 
 <a id="email"></a>
 
-### 学校、社長、友達にイベントを開催するよう依頼する
+### 学校、雇用主、友達にイベントの開催を依頼する
 
-**件名:** 私と1億人以上の生徒たちと一緒にHour of Codeに参加しましょう <br />
+**件名:** 私と1億人以上の生徒たちと一緒にHour of Codeに参加しませんか <br />
 
-至る所で使われているコンピューター。世界中の会社や組織を変革しています。 But only 51% of all high schools offer computer science. こうした中、私たちはこうした現状を変えるべく努力しています。 すでにHour of Codeのことを知っている方であれば、私たちの記録的な成果についてもご存知でしょう。 実際、1億人以上の生徒がHour of Codeを体験しています。
+至る所で使われているコンピューターは世界中の会社や組織を変革しています。 しかし高校でコンピューターサイエンスの授業を行っているのは現状わずか51％です。 良いニュースは、私たちはこの現状を変えようとしているということです！ すでにHour of Codeのことを知っている方であれば、私たちが新たな歴史を刻んだこともご存知でしょう。 1億人以上の生徒がHour of Codeを体験しました。
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. 世界各地の Apple Store ではHour of Codeを主催しています。また過去、オバマ大統領やジャスティン・トルドーカナダ大統領は選挙キャンペーンの一環として最初のコード行を記述しています。
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. 世界各地の Apple StoreでHour of Codeが開催されています。またこれまでにオバマ米大統領やジャスティン・トルドーカナダ大統領がキャンペーンの一環として初めての1行のコードを書きました。
 
-今年、皆様と一緒にこの運動をさらに盛り上げていきたいと考えています。 皆様にはHour of Code {{ campaign_date/year }}へのご参加をお願いいたします。 加えて、コンピューターサイエンス教育週間{{ campaign_date/full }}に当たり、皆様のHour of Code へのご参加をよろしくお願いいたします。 
+今年、皆様と一緒にこの運動をさらに盛り上げていきたいと考えています。 Hour of Code {{ campaign_date/year }}へのご参加をお願いします。 加えて、コンピューターサイエンス教育週間{{ campaign_date/full }}に当たり、Hour of Codeへご参加ください。
 
-Hour of Codeのことを広く皆に知ってもらいましょう。また、イベントを主催してください。地元の学校に登録をお願いしてください。また、自分でも Hour of Code を試してみませんか。コンピューターサイエンスの 基礎を学ぶだけでも大変役に立ちます。
+みんなに知らせましょう。イベントを開催しましょう。地元の学校に開催をお願いしましょう。もしくは、自分で Hour of Code を試しましょう。基礎を学ぶことでだれもが恩恵を受けられます。
 
-http://hourofcode.com/{{ country_language }}にアクセスして始めましょう。<br />
+http://hourofcode.com/{{ country_language }}から始めましょう。<br />
 
 * * *
 
@@ -102,19 +102,19 @@ http://hourofcode.com/{{ country_language }}にアクセスして始めましょ
 
 ### 学校でのボランティア：
 
-#### [学校でのボランティア活動の情報とリソースについてはこちらをお読みください。]({{ how_to_volunteers_url }}).
+#### [学校でのボランティア活動の情報とリソースについてはこちらをお読みください]({{ how_to_volunteers_url }})。
 
-**件名:** Hour of Codeを主催する方への支援
+**件名:** Hour of Codeを主催するあなたへの支援
 
-{{ campaign_date/short }}の実施期間中、世界中で10％の生徒がそれぞれの学校でHour of Codeに参加してコンピューターサイエンス教育週間を祝います。 この記念週間は、どの生徒も生活を豊かにするテクノロジーの素晴らしさを知るよい機会となっています。 
+{{ campaign_date/short }}の実施期間中、世界中で10％の生徒がそれぞれの学校でHour of Codeに参加してコンピューターサイエンス教育週間を祝います。 この記念週間は、すべての子どもが身の回りのテクノロジーの仕組みを知るよい機会となっています。 
 
-[所属組織/自分の氏名] は[学校名] による Hour of Code イベント実施をサポートしたいと思います。 私たちは教師の皆様が授業でHour of Codeを実施するのをサポートいたします（コンピューターは不要です！）。また、学校にて集会を開催するときには、講演者の手配をさせていただきます。講演者の方にはテクノロジーの役割とソフトエンジニアになることの意義などについて講演をいたします。 
+[所属組織/自分の氏名]は[学校名]のHour of Codeイベント実施をサポートしたいと思っています。 私たちは教師の皆様が授業でHour of Codeを実施するのをサポートいたします（コンピューターは不要です！）。また、学校で集会を開催するときに、技術の仕組みやソフトウェアエンジニアは何をしているのかをお話できる後援者の手配も可能です。
 
-生徒たちはオリジナルのアプリやゲームを作って保護者に披露します。生徒には持ち帰ることのできるHour of Code認定書をプリントアウトします。 また、イベントはとても楽しいです。 インタラクティブ性があり、直に触れ合うことのできるアクティビティで、生徒は無理なくコンピューター的思考を養うことができます。
+生徒たちはオリジナルのアプリやゲームを作って保護者に披露します。生徒にはHour of Code認定書を印刷して渡します。 また、イベントはとても楽しいです！ 相互にやり取りして直に触れ合えるアクティビティで、生徒は無理なくコンピューター的思考スキルを養えます。
 
-至る所で使われているコンピューター。世界中の会社や組織を変革しています。 But only 51% of all high schools offer computer science. こうした中、私たちはこうした現状を変えるべく努力しています。 すでにHour of Codeのことを知っている方であれば、私たちの記録的な成果についてもご存知でしょう。実際、1億人以上の生徒がHour of Codeを体験しています。 世界各地の Apple Store ではHour of Codeを主催しています。また過去、オバマ大統領やジャスティン・トルドーカナダ大統領は選挙キャンペーンの一環として最初のコード行を記述しています。
+至る所で使われているコンピューターは世界中の会社や組織を変革しています。 しかし高校でコンピューターサイエンスの授業を行っているのは現状わずか51％です。 良いニュースは、私たちはこの現状を変えようとしているということです！ すでにHour of Codeのことを知っている方であれば、歴史を刻んだこともご存知でしょう。1億人以上の生徒が実際にHour of Codeを体験しています。 世界各地の Apple Store でHour of Codeを開催しています。またこれまでにオバマ大統領やジャスティン・トルドーカナダ大統領がキャンペーンの一環として初めての1行コードを書きました。
 
-イベントの詳細はhttp://hourofcode.comにありますのでご覧ください。また、[学校名] の参加方法について話し合うための日程を設定したいときは私たちにご連絡ください。<br />
+イベントの詳細はhttp://hourofcode.comでご覧ください。また、[学校名] の参加方法について話し合うための日程は私たちにご連絡ください。<br />
 
 * * *
 
@@ -122,35 +122,35 @@ http://hourofcode.com/{{ country_language }}にアクセスして始めましょ
 
 ### 保護者に学校でのイベントについて知らせる:
 
-**件名:** 生徒たちはHour of Codeで未来を変える
+**件名:** 生徒がHour of Codeで未来を変えています
 
 保護者各位
 
-私たちはさまざまな技術に囲まれた世界に住んでいます。 そして子供たちが将来、仕事として選ぶ分野にかかわらず、コンピューターやプログラムの働きを理解していると仕事でとても役に立ちます。
+私たちはさまざまな技術に囲まれた世界に住んでいます。 そして子供たちが将来の仕事分野にかかわらず、コンピューターやプログラムの働きについての理解があると仕事で大いに役立ちます。
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
+しかしテクノロジーの**仕組み** を知っているのはごくわずかな人たちです。コンピューターサイエンスの授業を行っている高校は現状わずか51％です。
 
-こうした中、私たちが関わった学校がすべてがコンピューターサイエンス教育週間 ({{ campaign_date/full }})で過去最大のイベント: Hour of Codeに参加する運びとなりました。 既に、全世界で一億人以上の生徒がHour of Codeのイベントに参加し、コンピュータサイエンスを学んでいます。 私たち、Hour of Code では、[学校名] がコンピューターサイエンスのような21世紀に必要な基礎能力を育成する準備ができている、と発表しています。 お子様のプログラミング学習の機会提供を今後とも続けていくために、私たちはHour of Code のイベントを拡大していきたいと考えています。 ぜひ、イベントにボランティアとなっていただき、地元のメディアに支援の手を差し伸べ、また、ソーシャルメディアでニュースを配信してください。地元でHour of Codeのイベントの開催をご検討いただければ幸いです。
+だからこそ学校全体が史上最大の学習イベントに参加しています。それがコンピューターサイエンス教育週間 ({{ campaign_date/full }})中のHour of Codeです。 既に、全世界で一億人以上の生徒がHour of Codeを試しました。 私たちHour of Codeは、[学校名]が21世紀の基本スキルを教える準備が整っていることを宣言しています。 生徒のプログラミング学習の機会提供を今後も続けていくため、私たちはHour of Codeイベントを拡大していきたいと考えています。 ボランティアや地元メディアに働きかけてソーシャルメディアチャンネルでニュースを共有したり、コミュニティでHour of Codeのイベント開催の検討をお勧めします。
 
-Hour of Codeのイベントは[市町村名]の教育の未来を変える良い機会となりますので皆様のご協力をお願いいたします。
+これは[市町村名]の教育の未来を変える良い機会です。
 
-詳細は、http://hourofcode.com/{{ country_language }}をご覧ください。Hour of Codeの普及にご協力をお願いいたします。<br />
+詳細はhttp://hourofcode.com/{{ country_language }}をご覧ください。Hour of Codeの普及にご協力をお願いします。<br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### メディアをイベントに招待する:
+### メディアをあなたのイベントに招待する:
 
-#### [メディアをイベントに招待するための詳細はプレスキットをご参照ください。]({{ promote/press_kit_url }})
+#### [メディアをイベントに招待するための詳細情報はプレスキットをご覧ください。]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 良いお知らせは、私たちはこれを変えようとしているということです。
+至る所でコンピューターが使われ、世界中の会社や組織を変革しています。しかしコンピューターサイエンスの授業を行っている高校は現状わずか51％です。 Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 良いお知らせは、私たちはこれを変えようとしているということです！
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-こうした中、[学校名] の[人数] の生徒全員が、コンピューターサイエンス教育ウィーク（12月6〜12日）で過去最大の学習イベントHour of Codeに参加しています。
+[学校名] の[X番号] の生徒全員が、コンピューターサイエンス教育周間（12月6〜12日）で史上最大の学習イベントHour of Codeに参加しているのはそのためです。
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
@@ -168,17 +168,17 @@ I look forward to being in touch. <br />
 
 #### [もっと情報が必要ですか？イベントに政治家を招待する方法をご覧ください。]({{ how_to_public_officials_url }})
 
-**件名:** Hour of Codeで未来を変える学校に参加する
+**件名:** Hour of Codeで未来を変える学校に参加しませんか
 
-[市長/知事/代表者/議員の名前]様
+[市長/知事/代表者/議員の名前]様:
 
-米国で給料が最も高い職業はコンピューター関連であることをご存知でしたか？ 昨年、国内では50万以上のコンピューター関連職があり、その内卒業後、実際に職に就いたコンピューターサイエンス専攻学生はほんの42,969人でした。
+米国で給料が最も高い職業はコンピューター関連であることをご存知でしたか？ 昨年米国内では50万以上のコンピューター関連求人がありましたが、その内卒業後、実際に職に就いたコンピューターサイエンス専攻学生はたったの42,969人でした。
 
-Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
+今日、コンピューターサイエンスはどの業界でもその根幹をなす重要な分野でありながら、大半の学校ではコンピューターサイエンスの授業がありません。私たちは、[学校名]でこの現状を変えていきたいのです。
 
-こうした中、私たちが関わった学校がすべてがコンピューターサイエンス教育週間 ({{ campaign_date/full }})で過去最大のイベント: Hour of Codeに参加する運びとなりました。 既に、全世界で一億人以上の生徒がHour of Codeのイベントに参加し、コンピュータサイエンスを学んでいます。
+だからこそ学校全体が史上最大の学習イベントに参加しています。それがコンピューターサイエンス教育週間 ({{ campaign_date/full }})中のHour of Codeです。 既に、全世界で一億人以上の生徒がHour of Codeを試しました。
 
-この度は、Hour of Code のイベントにご参加いただき、キックオフ集会で講演いただけないかとの思いで、ご連絡させていただいております。 イベントは、は[日時] に[場所] で開催いたします。これは、[県や市の名前] が進んで生徒たち21 世紀を生きる上で重要なテクノロジーを教えようとしている証です。 生徒たちが、未来のテクノロジーをただ使うだけでなくそれを生み出す最前線で活躍できることを期待しております。
+この度は、Hour of Code のイベントにご参加いただき、キックオフ集会で講演いただけないかとご連絡いたしました。 イベントの開催は[日時、場所]です。これは、[県や市名] が生徒たちに21 世紀を生きる上で重要なテクノロジーを教えようとしている証となります。 生徒たちが、未来のテクノロジーをただ使うだけでなくそれを生み出す最前線で活躍できることを期待しています。
 
 [電話番号またはメール アドレス] までご連絡ください。お返事をお待ちしております。
 

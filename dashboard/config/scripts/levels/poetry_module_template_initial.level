@@ -57,37 +57,37 @@
           <next>
             <block type="Poetry_setTitle">
               <value name="TITLE">
-                <block type="Poetry_stringValue">
+                <shadow type="Poetry_stringValue">
                   <title name="TEXT"/>
-                </block>
+                </shadow>
               </value>
               <next>
                 <block type="Poetry_setAuthor">
                   <value name="AUTHOR">
-                    <block type="Poetry_stringValue">
+                    <shadow type="Poetry_stringValue">
                       <title name="TEXT"/>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="Poetry_addLine">
                       <value name="LINE">
-                        <block type="Poetry_stringValue">
+                        <shadow type="Poetry_stringValue">
                           <title name="TEXT"/>
-                        </block>
+                        </shadow>
                       </value>
                       <next>
                         <block type="Poetry_addLine">
                           <value name="LINE">
-                            <block type="Poetry_stringValue">
+                            <shadow type="Poetry_stringValue">
                               <title name="TEXT"/>
-                            </block>
+                            </shadow>
                           </value>
                           <next>
                             <block type="Poetry_addLine">
                               <value name="LINE">
-                                <block type="Poetry_stringValue">
+                                <shadow type="Poetry_stringValue">
                                   <title name="TEXT"/>
-                                </block>
+                                </shadow>
                               </value>
                             </block>
                           </next>

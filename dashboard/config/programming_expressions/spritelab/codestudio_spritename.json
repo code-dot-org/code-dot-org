@@ -3,7 +3,7 @@
   "name": "sprite name",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Gets the sprite with the specified name.\r\n\r\nThis block does nothing on its own and is meant to be inserted into other blocks, such as actions or events like `set sprite property` or `sprite clicked`. The sprite name block is used to choose which sprite is affected.\r\n\r\nThe default name is “mySprite,” but there is an option to use a new name (“rename this sprite”) or to change the name of a sprite throughout your program (“rename all”).",
+  "content": "Gets the sprite with the specified name.\r\n\r\nThis block does nothing on its own and is meant to be inserted into other blocks, such as actions or events like [`set sprite property`(#5ef3ff)](/docs/spritelab/gamelab_setProp/) or [`sprite clicked`(#62fc94)](/docs/spritelab/gamelab_spriteClicked/). The sprite name block is used to choose which sprite is affected.\r\n\r\nThe default name is “mySprite,” but there is an option to use a new name (“rename this sprite”) or to change the name of a sprite throughout your program (“rename all”).",
   "examples": [
     {
       "name": "",

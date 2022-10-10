@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:04:32.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -24,7 +20,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "The counter pattern can be used with strings too.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it runs now. Note a new block: `getText()` on line 14. \r\n* Add code so that each reminder is added to a different line on the screen. Remember the new line character is `\\n`.\r\n* Add code so that the reminder input is cleared out when you click the Remind! button.\r\n* If you need a refresher on your patterns you can always check \"Help & Tips\".",
+    "long_instructions": "The counter pattern can be used with strings too.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it runs now. Note a new block: `getText()`(#e7e8ea) on line 14. \r\n* Add code so that each reminder is added to a different line on the screen. Remember the new line character is `\\n`(#e7e8ea).\r\n* Add code so that the reminder input is cleared out when you click the Remind! button.\r\n* If you need a refresher on your patterns you can always check \"Help & Tips\".\r\n\r\n\r\n\r\n::: details [**Show Me How**]\r\nThe counter pattern with strings with each new string appearing on a new line is shown below: \r\n\r\n![](https://images.code.org/c59f0f831e68274688e7281e51423541-image-1653019079613.png)\r\n\r\nWhen using the counter pattern with strings replace `allStrings`(#e7e8ea) and `newString`(#e7e8ea) with the names of the variables. \r\n\r\n:::\r\n",
     "submittable": "false",
     "start_blocks": "// Create and assign variables\r\n// Feel free to change the reminder\r\nvar allReminders = \"Feed the cats\";\r\nvar newReminder;\r\n\r\n// Put the first reminder on the screen\r\nsetProperty(\"reminderText\", \"text\", allReminders);\r\n\r\n// When the button is clicked, add the new reminder\r\n// to the screen on a new line. The reminder\r\n// input box should be cleared out for the next\r\n// reminder.\r\nonEvent(\"reminderButton\", \"click\", function() {\r\n  newReminder = getText(\"reminderInput\");\r\n  allReminders = allReminders + newReminder;\r\n  setProperty(\"reminderText\", \"text\", allReminders);\r\n  \r\n  \r\n  \r\n  \r\n  \r\n});\r\n",
     "never_autoplay_video": "false",
@@ -61,11 +57,16 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:04:32.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:04:32.097+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Variables operator practice 6_2021\\\"\"],\"cloned_from\":\"U4 L03 Variables operator practice 6_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:04:32.097+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Variables operator practice 6_2021\\\"\"],\"cloned_from\":\"U4 L03 Variables operator practice 6_2021\"},{\"changed_at\":\"2022-05-20 04:02:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

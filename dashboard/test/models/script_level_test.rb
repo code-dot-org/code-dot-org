@@ -58,7 +58,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @authorized_teacher = create :authorized_teacher
       @student = create :student
 
-      @pl_script = create(:script, name: 'test-script',  instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @pl_script = create(:script, name: 'test-script',  instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
       @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
       @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: true)
     end
@@ -105,7 +105,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
 
     test 'get_example_solutions returns empty array if not instructor of course' do
-      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: unit)
 
@@ -141,11 +141,38 @@ class ScriptLevelTest < ActiveSupport::TestCase
       assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"]
     end
 
-    test 'get_example_solutions for javalab level' do
-      level = create(:javalab, :with_example_solutions)
-      sl = create(:script_level, levels: [level])
+    test 'get_example_solutions for javalab level with exemplar' do
+      level = create(:javalab, exemplar_sources: 'some code')
+      script = create(:script)
+      sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/s/csa-examples/lessons/1/levels/1/"]
+      # Javalab levels should only have one example solution.
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
+      example_solutions = sl.get_example_solutions(level, @authorized_teacher)
+      parsed_url = URI(example_solutions.first)
+
+      assert_equal 1, example_solutions.length
+      assert_equal "test-studio.code.org/s/#{script.name}/lessons/1/levels/1?exemplar=true",
+        parsed_url.host + parsed_url.path + '?' + parsed_url.query
+    end
+
+    test 'get_example_solutions for javalab sublevel level with exemplar' do
+      sublevel = create :javalab, exemplar_sources: 'some code'
+      sublevels = [sublevel]
+      bubble_choice = create :bubble_choice_level, sublevels: sublevels
+      script = create(:script)
+      sl = create :script_level, levels: [bubble_choice], script: script
+
+      # Javalab levels should only have one example solution.
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
+      example_solutions = sl.get_example_solutions(sublevel, @authorized_teacher)
+      parsed_url = URI(example_solutions.first)
+
+      assert_equal 1, example_solutions.length
+      assert_equal "test-studio.code.org/s/#{script.name}/lessons/1/levels/1/sublevel/1?exemplar=true",
+        parsed_url.host + parsed_url.path + '?' + parsed_url.query
     end
 
     test 'get_example_solutions for level with ideal level source' do

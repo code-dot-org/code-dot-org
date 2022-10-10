@@ -18,6 +18,7 @@ import $ from 'jquery';
 class LessonProgress extends Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+    lessonName: PropTypes.string,
     lessonExtrasUrl: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
@@ -128,7 +129,7 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {currentPageNumber, lessonExtrasUrl} = this.props;
+    const {currentPageNumber, lessonExtrasUrl, lessonName} = this.props;
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -170,6 +171,7 @@ class LessonProgress extends Component {
                     level={level}
                     disabled={false}
                     smallBubble={!isCurrent}
+                    lessonName={lessonName}
                   />
                 </div>
               );

@@ -10,7 +10,8 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "5972aa0b-1730-4977-82db-23cee2bda683"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -36,7 +37,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2022-03-11 12:08:15 UTC",
+    "serialized_at": "2022-09-28 14:31:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11038,7 +11039,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "definition": "Additional information provided as input to a block to customize it's functionality",
       "properties": {
       },
       "seeding_key": {

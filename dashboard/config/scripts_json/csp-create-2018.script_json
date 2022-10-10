@@ -10,14 +10,16 @@
           "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
           "link": "https://studio.code.org/s/csp-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Student-only"
+          "visibility": "Student-only",
+          "key": "9824c262-4765-4df0-8e4c-58b0c3e0ff6e"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csp-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "dd8241a6-3b3c-40d5-8e74-63411d6f045d"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -26,26 +28,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-18/csp-create/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp/ap-prep"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-18/csp-create/standards/"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csp-create",
-    "serialized_at": "2022-03-11 12:07:37 UTC",
+    "serialized_at": "2022-09-28 14:31:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -495,13 +483,62 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp-18/csp-create/",
+      "key": "lesson_plans",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp-18/csp-create/standards/",
+      "key": "standard_mappings",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/ap-prep",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp-create-2018"
+      }
+    }
   ],
   "scripts_student_resources": [
 

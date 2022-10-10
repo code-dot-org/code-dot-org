@@ -18,7 +18,8 @@ describe('ProgrammingEnvironmentEditor', () => {
         imageUrl: 'images.code.org/spritelab',
         projectUrl: '/p/spritelab',
         description: 'A description of spritelab',
-        editorType: 'blockly',
+        editorLanguage: 'blockly',
+        blockPoolName: 'GamelabJr',
         categories: [{id: 1, key: 'sprites', name: 'Sprites', color: '#00FF00'}]
       }
     };
@@ -42,7 +43,14 @@ describe('ProgrammingEnvironmentEditor', () => {
     const publishedCheckbox = wrapper.find('input').at(2);
     expect(publishedCheckbox.props().checked).to.be.true;
 
-    const projectUrlInput = wrapper.find('input').at(3);
+    const editorLanguageSelect = wrapper.find('select').at(0);
+    expect(editorLanguageSelect.props().value).to.equal('blockly');
+    expect(editorLanguageSelect.find('option').length).to.equal(4);
+
+    const blockPoolInput = wrapper.find('input').at(3);
+    expect(blockPoolInput.props().value).to.equal('GamelabJr');
+
+    const projectUrlInput = wrapper.find('input').at(4);
     expect(projectUrlInput.props().value).to.equal('/p/spritelab');
 
     const descriptionMarkdownInput = wrapper
@@ -52,22 +60,15 @@ describe('ProgrammingEnvironmentEditor', () => {
       'A description of spritelab'
     );
 
-    const editorTypeSelect = wrapper.find('select').at(0);
-    expect(editorTypeSelect.props().value).to.equal('blockly');
-    expect(editorTypeSelect.find('option').length).to.equal(3);
-
     const categoriesSection = wrapper.find('CollapsibleEditorSection');
     expect(
       categoriesSection.find('OrderableList').props().list.length
     ).to.equal(1);
   });
 
-  it('shows upload image dialog when choose image button is pressed', () => {
+  it('shows ImageInput', () => {
     const wrapper = shallow(<ProgrammingEnvironmentEditor {...defaultProps} />);
-    const uploadButton = wrapper.find('Button').first();
-    expect(uploadButton).to.not.be.null;
-    uploadButton.simulate('click');
-    expect(wrapper.find('UploadImageDialog').length).to.equal(1);
+    expect(wrapper.find('ImageInput').length).to.equal(1);
   });
 
   it('attempts to save when save is pressed', () => {
@@ -101,7 +102,8 @@ describe('ProgrammingEnvironmentEditor', () => {
         'title',
         'published',
         'description',
-        'editorType',
+        'editorLanguage',
+        'blockPoolName',
         'projectUrl',
         'imageUrl',
         'categories'
@@ -110,7 +112,7 @@ describe('ProgrammingEnvironmentEditor', () => {
     expect(fetchCallBody.title).to.equal('Spritelab');
     expect(fetchCallBody.published).to.be.true;
     expect(fetchCallBody.description).to.equal('A description of spritelab');
-    expect(fetchCallBody.editorType).to.equal('blockly');
+    expect(fetchCallBody.editorLanguage).to.equal('blockly');
     expect(fetchCallBody.projectUrl).to.equal('/p/spritelab');
     expect(fetchCallBody.imageUrl).to.equal('images.code.org/spritelab');
   });

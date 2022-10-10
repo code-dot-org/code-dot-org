@@ -2,11 +2,6 @@ import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import * as utils from '@cdo/apps/p5lab/utils';
 
-// Big numbers in some blocks can cause performance issues. Combined with live-preview,
-// this results in hanging the tab and students unable to edit their blocks. We should
-// guard against this by silently capping numbers where needed.
-const BIG_NUMBER_GUARD = 500;
-
 export const commands = {
   countByAnimation(spriteArg) {
     let sprites = this.getSpriteArray(spriteArg);
@@ -69,9 +64,14 @@ export const commands = {
     return this.addSprite({animation, location});
   },
 
-  makeNumSprites(num, animation) {
-    num = Math.min(num, BIG_NUMBER_GUARD);
-    for (let i = 0; i < num; i++) {
+  makeNumSprites(numSprites, animation) {
+    if (this.reachedSpriteMax()) {
+      return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
+    }
+    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
+    for (let i = 0; i < maxAllowedNewSprites; i++) {
       this.addSprite({
         animation,
         location: locationCommands.randomLocation()
@@ -79,17 +79,22 @@ export const commands = {
     }
   },
 
-  makeBurst(num, animation, effectName) {
+  makeBurst(numSprites, animation, effectName) {
+    if (this.reachedSpriteMax()) {
+      return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
+    }
+    const maxAllowedNewSprites = this.getMaxAllowedNewSprites(numSprites);
     const behaviorFuncs = {
       burst: behaviorCommands.burstFunc,
       pop: behaviorCommands.popFunc,
       rain: behaviorCommands.rainFunc,
       spiral: behaviorCommands.spiralFunc
     };
-    num = Math.min(num, BIG_NUMBER_GUARD);
     //Makes sure that same-frame multiple spiral effects start at a different angles
     const spiralRandomizer = utils.randomInt(0, 359);
-    for (let i = 0; i < num; i++) {
+    for (let i = 0; i < maxAllowedNewSprites; i++) {
       let spriteOptions = {};
       switch (effectName) {
         case 'burst': {
@@ -137,8 +142,8 @@ export const commands = {
             animation,
             scale: 1,
             initialAngle:
-              (i * 360) / num - 180 * ((i + 1) % 2) + spiralRandomizer,
-            delay: (i * 30) / num,
+              (i * 360) / numSprites - 180 * ((i + 1) % 2) + spiralRandomizer,
+            delay: (i * 30) / numSprites,
             lifetime: 90
           };
           break;

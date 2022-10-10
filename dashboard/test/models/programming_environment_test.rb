@@ -22,7 +22,7 @@ class ProgrammingEnvironmentTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed programming environment" do
-    env = create :programming_environment, name: 'ide', editor_type: 'droplet', title: 'IDE', description: 'A description of the IDE.', image_url: 'images.code.org/ide'
+    env = create :programming_environment, name: 'ide', editor_language: 'droplet', title: 'IDE', description: 'A description of the IDE.', image_url: 'images.code.org/ide'
     serialization = env.serialize
     previous_env = env.freeze
     env.destroy!
@@ -35,7 +35,7 @@ class ProgrammingEnvironmentTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed programming environment with categories" do
-    env = create :programming_environment, name: 'ide', editor_type: 'droplet', title: 'IDE', description: 'A description of the IDE.', image_url: 'images.code.org/ide'
+    env = create :programming_environment, name: 'ide', editor_language: 'droplet', title: 'IDE', description: 'A description of the IDE.', image_url: 'images.code.org/ide'
     create :programming_environment_category, programming_environment: env
     create :programming_environment_category, programming_environment: env
     serialization = env.serialize
@@ -51,7 +51,7 @@ class ProgrammingEnvironmentTest < ActiveSupport::TestCase
   end
 
   test "can remove categories when serializings and seeding programming environment with categories" do
-    env = create :programming_environment, name: 'ide', editor_type: 'droplet', title: 'IDE', description: 'A description of the IDE.', image_url: 'images.code.org/ide'
+    env = create :programming_environment, name: 'ide', editor_language: 'droplet', title: 'IDE', description: 'A description of the IDE.', image_url: 'images.code.org/ide'
     create :programming_environment_category, programming_environment: env
     serialization = env.serialize
     # Category not included in the serialization should be deleted on seed

@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Junte-se ao movimento e apresente aos seus alunos a ciência da computação com estes passos.
 
-O pensamento computacional ajuda a desenvolver habilidades de solução de problemas, lógica e criatividade. Além disso, a tecnologia está transformando todas as profissões no mundo. Hoje em dia, os alunos devem aprender a criar tecnologia, não apenas usá-la. Ao começar cedo, eles terão elementos para alcançar o sucesso em qualquer profissão do século XXI.
+Hoje em dia, os alunos devem aprender a criar tecnologia, não apenas usá-la.
 
-Experimentar uma Hora do Código é um jeito simples e divertido de apresentar aos estudantes a ciência da computação, talvez pela primeira vez, além de ser perfeita para ambientes dentro e fora da escola. Confira o nosso [guia de participação se ainda tiver dúvidas]({{ localized_files/participation_guide }}).
+Experimentar o Hour of Code é uma maneira simples e divertida de apresentar aos alunos a ciência da computação, talvez pela primeira vez! Encontre uma atividade que se adapte à sua configuração, seja em classe ou depois da aula, presencial ou virtual. Veja o nosso [Gua de participação se você ainda tiver dúvidas]({{ localized_files/participation_guide }}) depois de conferir as etapas abaixo:
 
 - [Assista ao vídeo de instruções da Hora do Código](#how-to-video)
 - [Explore atividades e tutoriais](#explore-activities)
@@ -23,13 +23,11 @@ Experimentar uma Hora do Código é um jeito simples e divertido de apresentar a
 - [Comemore o sucesso dos alunos](#celebrate)
 - [Outros recursos da Hora do Código para educadores](#other-resources)
 
-### Uma Hora do Código também pode ser realizada remotamente! Para começar, confira as nossas [dicas para realizar um evento Hora do Código virtual](https://hourofcode.com/us/how-to/virtual).
-
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Assista ao vídeo de instruções da Hora do Código <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Assista ao vídeo de instruções da Hora do Código <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -41,7 +39,7 @@ Proporcionamos vários, [tutoriais divertidos e dirigidos pelo aluno]({{ urls/le
 
 Explore as atividades e decida com antecedência se quiser escolher apenas um tutorial para todos os seus alunos ou deixar cada criança escolher.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -60,7 +58,7 @@ Explore as atividades e decida com antecedência se quiser escolher apenas um tu
 
 ### Escolha a data e a hora 
 
-Pessoas do mundo todo querem participar da comemoração da Hora do Código durante a CS Education Week (9 a 13 de dezembro), quando as atividades e tutoriais mais recentes forem lançados. Mas você pode realizar a sua Hora do Código qualquer dia do ano! 
+Pessoas em todo o mundo participam da celebração do Hour of Code durante a Semana de Educação em CC (5 a 11 de dezembro), quando os tutoriais e atividades mais recentes são lançados. Mas você pode realizar a sua Hora do Código qualquer dia do ano! 
 
 * * *
 
@@ -76,11 +74,11 @@ Promova a sua Hora do Código para outros professores que também possam querer 
 
 ### Avise os voluntários ao registrar o seu evento
 
-Ao [inscrever o seu evento a Hora do Código](/), você receberá um e-mail com informações úteis incluindo novidades e dicas para receber uma Hora do Código bem-sucedida. Assim você também pode avisar aos voluntários da região que a sua escola está participando. Voluntários são um recurso excelente e podem falar com a turma sobre ciência da computação ou simplesmente ajudar seus alunos com as atividades da Hora do Código. 
+Quando você <a href="/#join">se increver no evento Hour of Code</a>, você vai receber um e-mail com informações úteis, notícias e dicas para promover sessões bem-sucedidas do Hour of Code. Assim você também pode avisar aos voluntários da região que a sua escola está participando. Voluntários são um recurso excelente e podem falar com a turma sobre ciência da computação ou simplesmente ajudar seus alunos com as atividades da Hora do Código. 
 
 ### Entusiasme seus alunos 
 
-Prepare-se para o evento compartilhando [vídeos motivacionais](/promote/resources) que destacam a diversidade e modos criativos de como ciência da computação pode ser usada de forma criativa. Ou encomendar cartazes motivacionais para a sua turma! Os alunos se sentem mais encorajados a participar de uma matéria ao verem pessoas parecidas com eles incentivando.
+Prepare-se para o evento compartilhando [vídeos motivacionais](/promote/resources) que destacam a diversidade e modos criativos de como ciência da computação pode ser usada de forma criativa. Ou imprimir pôsteres inspiradores para a sua turma! Os alunos se sentem mais encorajados a participar de uma matéria ao verem pessoas parecidas com eles incentivando.
 
 {{ promote_new_posters }}
 

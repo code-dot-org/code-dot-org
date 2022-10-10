@@ -2,5 +2,6 @@
   "key": "jigsaw",
   "display_name": "Jigsaw",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

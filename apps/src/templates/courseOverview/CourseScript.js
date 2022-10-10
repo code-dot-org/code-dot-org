@@ -24,6 +24,8 @@ class CourseScript extends Component {
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     courseId: PropTypes.number,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
@@ -66,6 +68,8 @@ class CourseScript extends Component {
       hasNoSections,
       assignedSectionId,
       courseId,
+      courseOfferingId,
+      courseVersionId,
       sectionsForDropdown,
       showAssignButton
     } = this.props;
@@ -88,7 +92,7 @@ class CourseScript extends Component {
     const assignedByTeacher =
       viewAs === ViewType.Instructor &&
       selectedSection &&
-      selectedSection.scriptId === id;
+      selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
     return (
@@ -131,6 +135,8 @@ class CourseScript extends Component {
                   sectionId={selectedSection.id}
                   scriptId={id}
                   courseId={courseId}
+                  courseOfferingId={courseOfferingId}
+                  courseVersionId={courseVersionId}
                   assignmentName={title}
                   sectionName={selectedSection.name}
                 />
@@ -194,9 +200,9 @@ export default connect(
     selectedSectionId: state.teacherSections.selectedSectionId,
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
-      ownProps.id,
-      ownProps.courseId,
-      true
+      ownProps.courseOfferingId,
+      ownProps.courseVersionId,
+      ownProps.id
     ),
     hiddenLessonState: state.hiddenLesson,
     hasNoSections:

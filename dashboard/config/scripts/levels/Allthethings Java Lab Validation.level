@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "This is a sample Java Lab level with validation tests. As of Feb 2022 you can only run these tests in start mode.",
+    "long_instructions": "This is a sample Java Lab level with validation tests.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -20,6 +20,6 @@
   "level_num": "custom",
   "user_id": 6959,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-11 14:26:26 -0800\",\"changed\":[\"published\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 14:29:43 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 17:01:39 -0800\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-14 14:23:12 -0800\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-11 14:26:26 -0800\",\"changed\":[\"published\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 14:29:43 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 17:01:39 -0800\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-14 14:23:12 -0800\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 15:17:59 -0700\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 15:18:26 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-25 09:48:45 -0700\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

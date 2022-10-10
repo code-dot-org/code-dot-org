@@ -553,7 +553,7 @@ Eval.checkExamples_ = function(resetPlayspace) {
     var name = unfilled
       .getRootBlock()
       .getInputTargetBlock('ACTUAL')
-      .getTitleValue('NAME');
+      .getFieldValue('NAME');
     Eval.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
     return;
   }

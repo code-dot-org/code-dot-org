@@ -438,6 +438,7 @@ sq-AL:
   homepage_slot_text_link_buy: Përfshihu
   homepage_slot_text_link_donate: Bëj një donacion
   homepage_slot_text_link_shop: Këmisha, kapele dhe më shumë
+  homepage_gallery_header: Utworzono ponad %{project_count} milionów projektów Code.org
   homepage_header_donors: Code.org falenderon të gjithë mbështetësit
   homepage_donors_seall: Shiko të gjitha
   homepage_donors_donate: Dhuro
@@ -1060,6 +1061,12 @@ sq-AL:
   coursed-2021_gradelevel: Klasat 8+
   coursee-2021_gradelevel: Moshat 8-12
   coursef-2021_gradelevel: Moshat 9-13
+  coursea-2022_gradelevel: Moshat 4-7
+  courseb-2022_gradelevel: Moshat 5-8
+  coursec-2022_gradelevel: Moshat 6-10
+  coursed-2022_gradelevel: Klasat 8+
+  coursee-2022_gradelevel: Moshat 8-12
+  coursef-2022_gradelevel: Moshat 9-13
   accelerated_gradelevel: Moshat 10-18
   codeorg_platformtext: Browserat e kohës, smartphones, tableta
   codeintl_platformtext: Browserat e kohës, smartphones, tableta

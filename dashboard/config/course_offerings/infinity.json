@@ -2,5 +2,6 @@
   "key": "infinity",
   "display_name": "Disney Infinity Play Lab",
   "category": "hoc",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

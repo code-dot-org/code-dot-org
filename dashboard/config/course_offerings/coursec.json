@@ -2,5 +2,6 @@
   "key": "coursec",
   "display_name": "Course C",
   "category": "csf",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

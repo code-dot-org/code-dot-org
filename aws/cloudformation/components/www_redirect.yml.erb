@@ -4,9 +4,7 @@
     # Since this line is restricted to only run in production, we are comfortable using it.
     redirected_domains << "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
     
-    www_redirect_hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
-    raise "Could not find #{domain} in hosted zones" unless www_redirect_hosted_zone.name.delete_suffix('.') == domain
-    www_redirect_hosted_zone_id = www_redirect_hosted_zone.id.delete_prefix("/hostedzone/")
+    www_redirect_hosted_zone_id = CDO.hostedzone_id(domain)
   -%>
 
   <%=app%>RedirectDNS:

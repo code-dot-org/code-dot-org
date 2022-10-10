@@ -105,7 +105,7 @@ module RakeUtils
   def self.system_stream_output(*args, &block)
     command = command_(*args)
     CDO.log.info command
-    if block_given?
+    if block
       IO.popen(command, &block)
     else
       Kernel.system(command)
@@ -298,7 +298,7 @@ module RakeUtils
   def self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params={})
     raise 'Need to specify bucket' unless params[:bucket]
 
-    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), open(local_file), acl: 'public-read')
+    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), File.open(local_file), acl: 'public-read')
     new_fetchable_url = AWS::S3.public_url(params[:bucket], s3_filename)
 
     destination_local_pathname = Pathname(destination_local_path)

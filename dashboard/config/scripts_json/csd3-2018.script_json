@@ -10,7 +10,8 @@
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csd-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "249e1d1d-7ed0-4042-8e57-17f5f2061a9f"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -25,35 +26,13 @@
       ],
       "project_widget_visible": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-18/unit3/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd3"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-18/unit3/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-18/unit3/standards/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csd-18/unit3/code/"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-03-11 12:07:29 UTC",
+    "serialized_at": "2022-09-28 14:31:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -12363,13 +12342,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Code Introduced",
+      "url": "https://curriculum.code.org/csd-18/unit3/code/",
+      "key": "code_introduced_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "code_introduced_1"
+      }
+    },
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csd-18/unit3/",
+      "key": "lesson_plans_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_2"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csd-18/unit3/standards/",
+      "key": "standard_mappings_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_2"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd3",
+      "key": "teacher_forum_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_2"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csd-18/unit3/vocab/",
+      "key": "vocabulary_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_2"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "code_introduced_1",
+        "script.name": "csd3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_2",
+        "script.name": "csd3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_2",
+        "script.name": "csd3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_2",
+        "script.name": "csd3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_2",
+        "script.name": "csd3-2018"
+      }
+    }
   ],
   "scripts_student_resources": [
 

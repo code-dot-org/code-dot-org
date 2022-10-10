@@ -334,7 +334,8 @@ ca-ES:
   homepage_slot_text_link_stats: Veure les estadístiques
   homepage_slot_text_link_buy: Involucra't
   homepage_slot_text_link_donate: Fes una donació
-  homepage_gallery_header: Més de %{project_count} milions de projectes creats a Code.org
+  homepage_gallery_header: Més de %{project_count} milions de projectes  Code.org
+    creats
   homepage_header_donors: Code.org dóna gràcies als seus patrocinadors
   homepage_donors_seall: Mostra'ls tots
   homepage_donors_donate: Feu una donació
@@ -885,6 +886,12 @@ ca-ES:
   coursed-2021_gradelevel: Qualificacions 8+
   coursee-2021_gradelevel: Edats 8-12
   coursef-2021_gradelevel: Edats 9-13
+  coursea-2022_gradelevel: Edat 4-7
+  courseb-2022_gradelevel: Edats 5-8
+  coursec-2022_gradelevel: Edats de 6-10
+  coursed-2022_gradelevel: Qualificacions 8+
+  coursee-2022_gradelevel: Edats 8-12
+  coursef-2022_gradelevel: Edats 9-13
   accelerated_gradelevel: Edat 10 + (després del curs 3)
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets

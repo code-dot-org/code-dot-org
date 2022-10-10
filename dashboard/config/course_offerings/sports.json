@@ -2,5 +2,6 @@
   "key": "sports",
   "display_name": "Code your own sports game",
   "category": "hoc",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

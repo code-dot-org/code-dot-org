@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:04:57.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -33,7 +29,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "You need to spell function names the same way when you **declare** them and **call** them. Function names follow the same rules as variables. They must begin with a letter and cannot contain spaces.\r\n\r\n# Do This\r\n\r\n* Run the program and read the error messages from misspelling the function name.\r\n* Debug the code to remove the errors.\r\n* Call `buyApple` enough times that you get a message in the console saying you have run out of money.\r\n* **Note:** You'll be stuck in text mode until you fix the errors in the code.",
+    "long_instructions": "You need to spell function names the same way when you **declare** them and **call** them. Function names follow the same rules as variables. They must begin with a letter and cannot contain spaces.\r\n\r\n# Do This\r\n\r\n* Run the program and read the error messages from misspelling the function name.\r\n* Debug the code to remove the errors.\r\n* Call `buyApple` enough times that you get a message in the console saying you have run out of money.\r\n* **Note:** You'll be stuck in text mode until you fix the errors in the code.\r\n<br>\r\n\r\n::: details [**Show Me How**]\r\nYou can call a function as shown below:\r\n\r\n![](https://images.code.org/bc0e62f52194df2dd83ca780f97bc34a-image-1653266617250.png)\r\n\r\nWhen calling a function, make sure to replace `myFunction`(#e7e8ea) with name of the function. \r\n:::\r\n",
     "submittable": "false",
     "start_blocks": "// Create and assign variables\r\nvar apples = 0;\r\nvar dollars = 5;\r\n\r\n// Function calls to buy apples\r\nbuyApple();\r\nbuyapple();\r\nbuy Apple();\r\n\r\n// This function spends one dollar to buy one apple\r\n// This if-statement checks that you have enough\r\n// money to buy the apple.\r\nfunction buyApple(){\r\n  if (dollars > 0){\r\n    console.log(\"I have \" + apples + \" apples and \" + dollars + \" dollars\");\r\n    console.log(\"Let's buy another apple.\");\r\n    apples = apples + 1;\r\n    dollars = dollars - 1;\r\n    console.log(\"Now I have \" + apples + \" apples.\\n\");\r\n  } else {\r\n    console.log(\"I don't have any money left\");\r\n  }\r\n}",
     "never_autoplay_video": "false",
@@ -74,11 +70,16 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:04:57.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:04:57.110+00:00\",\"changed\":[\"cloned from \\\"U4 L10 Functions Practice 2_2021\\\"\"],\"cloned_from\":\"U4 L10 Functions Practice 2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:04:57.110+00:00\",\"changed\":[\"cloned from \\\"U4 L10 Functions Practice 2_2021\\\"\"],\"cloned_from\":\"U4 L10 Functions Practice 2_2021\"},{\"changed_at\":\"2022-05-23 00:48:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"log_conditions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

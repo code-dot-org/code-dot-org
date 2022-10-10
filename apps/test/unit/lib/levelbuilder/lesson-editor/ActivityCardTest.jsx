@@ -61,6 +61,56 @@ describe('ActivityCard', () => {
     expect(wrapper.find('button').length).to.equal(1);
   });
 
+  it('show OrderControls when not allowed to make major curriculum changes but there are no levels in activity', () => {
+    const activityWithNoLevels = {
+      key: 'activity-1',
+      displayName: 'Main Activity',
+      position: 1,
+      duration: 20,
+      activitySections: [
+        {
+          key: 'section-3',
+          position: 1,
+          displayName: 'Making programs',
+          duration: 10,
+          remarks: true,
+          scriptLevels: [],
+          text: 'Simple text',
+          tips: []
+        },
+        {
+          key: 'section-1',
+          position: 2,
+          displayName: '',
+          duration: 0,
+          remarks: false,
+          scriptLevels: [],
+          text: 'Details about this section',
+          tips: [
+            {
+              key: 'tip-1',
+              type: 'teachingTip',
+              markdown: 'Teaching tip content'
+            },
+            {
+              key: 'tip-2',
+              type: 'discussionGoal',
+              markdown: 'Discussion Goal content'
+            }
+          ]
+        }
+      ]
+    };
+    const wrapper = shallow(
+      <ActivityCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+        activity={activityWithNoLevels}
+      />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+  });
+
   it('hides OrderControls when not allowed to make major curriculum changes', () => {
     const wrapper = shallow(
       <ActivityCard {...defaultProps} allowMajorCurriculumChanges={false} />

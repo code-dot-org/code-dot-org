@@ -53,8 +53,12 @@
       "description": "Whether the radio button is initially checked. "
     }
   ],
+  "parameters": [
+    "id",
+    "checked"
+  ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a radio button on the screen with the initial checked boolean value and referenced by the given id at default location (0,0). Only one radio button in a group can be selected at a time.",
-  "syntax": "radioButton(id, checked)",
-  "tips": "- If there is another UI element at location (0,0) the radio button is placed at the next available position to the right or below.\n- There are various UI element modification functions available: `setText()`, `showElement()`, `hideElement()`, `deleteElement()`, `setPosition()`, `setSize()`. \n- There are various UI element query functions available: `getText()`, `getXPosition()`, `getYPosition()`.\n- Buttons can also be created and initi\n- Radio buttons usually have an associated textLabel.\n- If you are asking the user something with a single response, consider using a single checkbox screen element instead.\n- The radio button can also be created in design mode."
+  "syntax": "radioButton(id, checked, group)",
+  "tips": "- If there is another UI element at location (0,0) the radio button is placed at the next available position to the right or below.\n- There are various UI element modification functions available: [`setText()`(#fff176)](/docs/applab/setText/), [`showElement()`(#fff176)](/docs/applab/showElement/), [`hideElement()`(#fff176)](/docs/applab/hideElement/), [`deleteElement()`(#fff176)](/docs/applab/deleteElement/), [`setPosition()`(#fff176)](/docs/applab/setPosition/), [`setSize()`(#fff176)](/docs/applab/setSize/). \n- There are various UI element query functions available: [`getText()`(#fff176)](/docs/applab/getText/), [`getXPosition()`(#fff176)](/docs/applab/getXPosition/), [`getYPosition()`(#fff176)](/docs/applab/getYPosition/).\n- Buttons can also be created and initi\n- Radio buttons usually have an associated textLabel.\n- If you are asking the user something with a single response, consider using a single checkbox screen element instead.\n- The radio button can also be created in design mode."
 }

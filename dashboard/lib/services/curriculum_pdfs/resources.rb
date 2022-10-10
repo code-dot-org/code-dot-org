@@ -17,9 +17,8 @@ module Services
         # version of the script in the environment.
         #
         # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+('21-'22)+-+Resources.pdf>
-        def get_script_resources_pathname(script, as_url = false)
-          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
-          filename = CGI.escape(filename) if as_url
+        def get_script_resources_pathname(script)
+          filename = ActiveStorage::Filename.new(script.localized_title.parameterize(preserve_case: true) + "-Resources.pdf").to_s
           script_overview_pathname = get_script_overview_pathname(script)
           return nil unless script_overview_pathname
           subdirectory = File.dirname(script_overview_pathname)
@@ -32,8 +31,8 @@ module Services
         # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29+-+Resources.pdf
         def get_unit_resources_url(script)
           return nil unless Services::CurriculumPdfs.should_generate_resource_pdf?(script)
-          pathname = get_script_resources_pathname(script, true)
-          return nil unless pathname.present?
+          pathname = get_script_resources_pathname(script)
+          return nil if pathname.blank?
           File.join(get_base_url, pathname)
         end
 
@@ -120,7 +119,7 @@ module Services
             type: :haml
           )
 
-          filename = ActiveStorage::Filename.new("lesson.#{lesson.key}.title.pdf").sanitized
+          filename = ActiveStorage::Filename.new("lesson.#{lesson.key.parameterize}.title.pdf").to_s
           path = File.join(directory, filename)
 
           PDF.generate_from_html(page_content, path)
@@ -152,7 +151,7 @@ module Services
         # Given a Resource object, persist a PDF of that Resource (with a name
         # based on the key of that Resource) to the given directory.
         def fetch_resource_pdf(resource, directory="/tmp/")
-          filename = ActiveStorage::Filename.new("resource.#{resource.key}.pdf").sanitized
+          filename = ActiveStorage::Filename.new("resource.#{resource.key.parameterize}.pdf").to_s
           path = File.join(directory, filename)
           return path if File.exist?(path)
           return fetch_url_to_path(resource.url, path)
@@ -172,7 +171,7 @@ module Services
             file.download_to_file(path)
             return path
           elsif url.end_with?(".pdf")
-            IO.copy_stream(URI.open(url), path)
+            IO.copy_stream(URI.parse(url)&.open, path)
             return path
           end
         rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e

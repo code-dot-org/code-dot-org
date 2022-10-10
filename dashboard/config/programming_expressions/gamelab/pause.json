@@ -3,7 +3,7 @@
   "name": "sprite.pause()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Pause the automatic frame advance for the animation for a sprite.\r\n\r\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use `play()` to restart the animation.",
+  "content": "Pause the automatic frame advance for the animation for a sprite.\n\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use [`play()`(#f78183)](/docs/gamelab/play/) to restart the animation.",
   "examples": [
     {
       "name": "Swat the Bee",
@@ -18,5 +18,5 @@
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Pause the automatic frame advance for the animation for a sprite.",
   "syntax": "sprite.pause()",
-  "tips": "- Sprites all have the same functions and you use the dot notation (combining the name of the sprite, followed by a dot, with the function name) to call the function for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- Sprites all have the same functions and you use the dot notation (combining the name of the sprite, followed by a dot, with the function name) to call the function for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

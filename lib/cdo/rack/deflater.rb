@@ -56,22 +56,22 @@ module Rack
       end
 
       case encoding
-        when "gzip"
-          headers['Content-Encoding'] = "gzip"
-          headers.delete('Content-Length')
-          mtime = headers.key?("Last-Modified") ?
-            Time.httpdate(headers["Last-Modified"]) : Time.now
-          [status, headers, GzipStream.new(body, mtime)]
-        when "deflate"
-          headers['Content-Encoding'] = "deflate"
-          headers.delete('Content-Length')
-          [status, headers, DeflateStream.new(body)]
-        when "identity"
-          [status, headers, body]
-        when nil
-          message = "An acceptable encoding for the requested resource #{request.fullpath} could not be found."
-          bp = Rack::BodyProxy.new([message]) {body.close if body.respond_to?(:close)}
-          [406, {'Content-Type' => "text/plain", 'Content-Length' => message.length.to_s}, bp]
+      when "gzip"
+        headers['Content-Encoding'] = "gzip"
+        headers.delete('Content-Length')
+        mtime = headers.key?("Last-Modified") ?
+          Time.httpdate(headers["Last-Modified"]) : Time.now
+        [status, headers, GzipStream.new(body, mtime)]
+      when "deflate"
+        headers['Content-Encoding'] = "deflate"
+        headers.delete('Content-Length')
+        [status, headers, DeflateStream.new(body)]
+      when "identity"
+        [status, headers, body]
+      when nil
+        message = "An acceptable encoding for the requested resource #{request.fullpath} could not be found."
+        bp = Rack::BodyProxy.new([message]) {body.close if body.respond_to?(:close)}
+        [406, {'Content-Type' => "text/plain", 'Content-Length' => message.length.to_s}, bp]
       end
     end
 

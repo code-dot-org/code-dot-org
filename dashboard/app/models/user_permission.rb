@@ -16,7 +16,7 @@
 require 'cdo/chat_client'
 
 class UserPermission < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   VALID_PERMISSIONS = [
     # Grants access to managing workshops and workshop attendance.

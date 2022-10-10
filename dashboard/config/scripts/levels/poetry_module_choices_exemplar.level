@@ -72,29 +72,29 @@
                   <next>
                     <block type="gamelab_setPromptWithChoices" id="22">
                       <value name="QUESTION">
-                        <block type="text" id="23">
+                        <shadow type="text" id="23">
                           <title name="TEXT">Enter a food: </title>
-                        </block>
+                        </shadow>
                       </value>
                       <value name="VAR">
-                        <block type="variables_get" id="24">
+                        <block type="variables_get" movable="false" id="24">
                           <title name="VAR" id="As2?u)cOLfOHY+k}T|U/">food</title>
                         </block>
                       </value>
                       <value name="A">
-                        <block type="Poetry_stringValue" id="25">
+                        <shadow type="Poetry_stringValue" id="25">
                           <title name="TEXT">sandwich</title>
-                        </block>
+                        </shadow>
                       </value>
                       <value name="B">
-                        <block type="Poetry_stringValue" id="26">
+                        <shadow type="Poetry_stringValue" id="26">
                           <title name="TEXT">salad</title>
-                        </block>
+                        </shadow>
                       </value>
                       <value name="C">
-                        <block type="Poetry_stringValue" id="27">
+                        <shadow type="Poetry_stringValue" id="27">
                           <title name="TEXT">cupcake</title>
-                        </block>
+                        </shadow>
                       </value>
                     </block>
                   </next>
@@ -107,6 +107,9 @@
           <next>
             <block type="Poetry_setTitle" id="65">
               <value name="TITLE">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                 <block type="gamelab_textJoin" id="66">
                   <title name="TEXT1">An Ode to Food</title>
                 </block>
@@ -114,6 +117,9 @@
               <next>
                 <block type="Poetry_addLine" id="78">
                   <value name="LINE">
+                    <shadow type="text">
+                      <title name="TEXT"/>
+                    </shadow>
                     <block type="gamelab_textJoin" id="79">
                       <title name="TEXT1">Life is too short</title>
                     </block>
@@ -121,6 +127,9 @@
                   <next>
                     <block type="Poetry_addLine" id="89">
                       <value name="LINE">
+                        <shadow type="text">
+                          <title name="TEXT"/>
+                        </shadow>
                         <block type="gamelab_textJoin" id="90">
                           <title name="TEXT1">To eat a bad </title>
                           <value name="TEXT2">

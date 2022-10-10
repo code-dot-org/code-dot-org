@@ -196,8 +196,8 @@ end
 
 last_shared_url = nil
 Then /^I save the share URL$/ do
-  wait_short_until {@button = @browser.find_element(id: 'sharing-input')}
-  last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
+  wait_short_until {@button = @browser.find_element(id: 'sharing-dialog-copy-button')}
+  last_shared_url = @browser.execute_script("return document.getElementById('sharing-dialog-copy-button').value")
 end
 
 When /^I open the share dialog$/ do

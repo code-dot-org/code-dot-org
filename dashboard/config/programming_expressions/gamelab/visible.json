@@ -36,5 +36,5 @@
   "return_value": "Boolean true or false.",
   "short_description": "The visibility of the sprite, true or false.",
   "syntax": "sprite.visible",
-  "tips": "- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called.\r\n- A sprite that is not visible can still collide with other sprites and user mouse interactions."
+  "tips": "- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is called.\n- A sprite that is not visible can still collide with other sprites and user mouse interactions."
 }

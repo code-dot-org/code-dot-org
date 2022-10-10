@@ -44,7 +44,7 @@
 class SchoolStatsByYear < ApplicationRecord
   self.primary_keys = :school_id, :school_year
 
-  belongs_to :school
+  belongs_to :school, optional: true
 
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.
@@ -105,7 +105,7 @@ class SchoolStatsByYear < ApplicationRecord
   # Percentage of underrepresented minorities students
   # Note these are values between 0-100, not 0-1!
   def urm_percent
-    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
+    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.sum)
   end
 
   # Percentage of free/reduced lunch eligible students

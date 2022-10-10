@@ -4,14 +4,6 @@
 = link_to level_completions_path do
   Level Completion
 %br
-= link_to pd_progress_path(:script_id => 33) do
-  PD Progress
-%br
-
-%h3 Hour of Code
-= link_to hoc_students_served_path do
-  Students Served
-
 %h3 Search
 = link_to find_students_path do
   For Users
@@ -31,3 +23,6 @@
 
 %h3 Pilot Experiments
 = link_to 'Manage Pilots', pilots_path
+
+%h3 NPS Surveys
+= link_to 'NPS Surveys', nps_form_path

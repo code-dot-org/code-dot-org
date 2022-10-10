@@ -18,10 +18,7 @@
           %li
             %a{href:resolve_url('/promote'), title:hoc_s(:header_menu_promote)}= hoc_s(:header_menu_promote)
           %li
-            - if request.path == "/"
-              %a{href:"#", onclick:"return adjustScroll('faqs')", title:hoc_s(:header_menu_faq)}= hoc_s(:header_menu_faq)
-            - else
-              %a{href:resolve_url('/#faq'), title:hoc_s(:header_menu_faq)}= hoc_s(:header_menu_faq)
+            %a{href:resolve_url('/faq'), title:hoc_s(:header_menu_faq)}= hoc_s(:header_menu_faq)
         %a#hoc-nav-hamburger{href: "#"}
           &#9776;
 %div{style: "clear: both;"}

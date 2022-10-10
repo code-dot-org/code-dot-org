@@ -2,5 +2,6 @@
   "key": "csf-2021-pilot",
   "display_name": "CS Fundamentals 2021 Pilot",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

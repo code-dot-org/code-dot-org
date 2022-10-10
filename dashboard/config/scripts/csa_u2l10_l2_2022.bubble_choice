@@ -1,6 +1,6 @@
 name 'CSA U2L10-L2_2022'
 display_name 'Using the this Keyword'
-description 'Use the this keyword as you complete the given classes.'
+description 'Use the `this` keyword as you complete the given classes.'
 
 sublevels
 level 'CSA U2L10-L2a_2022'

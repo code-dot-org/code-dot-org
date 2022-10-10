@@ -26,12 +26,12 @@
 
 class EvaluationMulti < Multi
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name 'Unique question name here'
       question 'Question'
       answer 'Answer1', weight: 1, lesson_name: 'lesson_name'
       answer 'Answer2', weight: 1, lesson_name: 'lesson_name'
-    ruby
+    RUBY
   end
 
   def answers

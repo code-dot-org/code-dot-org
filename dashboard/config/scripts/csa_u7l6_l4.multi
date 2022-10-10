@@ -17,16 +17,16 @@ Given the declaration `Evaluator eval = new Calculator();` and the class definit
 ```
 public class Evaluator extends Calculator {
 	...
-   public int compute(int value) {
-      return value * 2;
+   public int compute( int value) {
+	value = super.compute(value - 1);
+      return value ++;
    }
 }
 
 public class Calculator {
 	...
-   public int compute( int value) {
-	value = super.compute(value - 1);
-      return value ++;
+   public int compute(int value) {
+      return value * 2;
    }
 }
 ```

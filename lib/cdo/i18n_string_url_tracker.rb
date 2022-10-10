@@ -68,11 +68,8 @@ class I18nStringUrlTracker
   def log(url, source, string_key, scope = [], separator = I18n.default_separator)
     # Return if DCDO flag is unset, or we get incomplete info
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
-    return unless string_key && url && source
-
-    # We got a bad string_key if there is no English source string
-    source_string = I18n.t(string_key, locale: I18n.default_locale)
-    return if !source_string || source_string.start_with?("translation missing")
+    return unless url && source
+    return unless self.class.string_exists? string_key, scope, I18n.default_locale
 
     # Skip URLs we are not interested in.
     return unless allowed(url)
@@ -91,6 +88,34 @@ class I18nStringUrlTracker
     # Stringify all items in the scope array so we can JSON stringify and parse it.
     stringified_scope = scope&.map(&:to_s).to_s
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
+  end
+
+  # Checks if a source string or a translation exists.
+  # @param string_key [String]
+  # @param scope [Array, String]
+  # @param locale [Symbol, String]
+  # @return [Boolean]
+  def self.string_exists?(string_key, scope = nil, locale = I18n.default_locale)
+    # By default, I18n.exists? returns true if the input key is nil,
+    # but raises exception if the key is an empty string.
+    return false if string_key.nil? || string_key.empty?
+
+    if scope.nil? || scope.empty?
+      I18n.exists? string_key, locale: locale
+    else
+      options = {
+        locale: locale,
+        scope: scope,
+        # don't report error if there is unused interpolation pattern in the translation
+        safe_interpolation: false,
+        # don't track string translation request
+        tracking: false,
+        # raise error if translation is missing
+        raise: true
+      }
+      source_string = I18n.t(string_key, **options) rescue nil
+      !source_string.nil?
+    end
   end
 
   private

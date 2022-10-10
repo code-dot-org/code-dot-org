@@ -16,6 +16,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def plc_reviewer_access
+    return unless (user = current_user)
+    user.permission = UserPermission::PLC_REVIEWER
+    user.save!
+    head :ok
+  end
+
   def facilitator_access
     return unless (user = current_user)
     user.permission = UserPermission::FACILITATOR
@@ -42,11 +49,34 @@ class TestController < ApplicationController
     )
   end
 
-  def create_section_assigned_to_script
+  def create_student_section_assigned_to_script
     return unless (user = current_user)
     script = Script.find_by_name(params.require(:script_name))
 
-    Section.create!(name: "New Section", user: user, script: script)
+    Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    head :ok
+  end
+
+  def assign_course_and_unit_as_student
+    return unless (user = current_user)
+    script = Script.find_by_name(params.require(:script_name))
+    course = UnitGroup.find_by_name(params.require(:course_name))
+
+    name = "Fake User"
+    email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+    password = name + "password"
+    attributes = {
+      name: name,
+      email: email,
+      password: password,
+      user_type: "teacher",
+      age: "21+"
+    }
+    fake_user = User.create!(attributes)
+
+    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section.students << user
+    section.save!
     head :ok
   end
 
@@ -66,7 +96,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script: script)
+    section = Section.create(name: "New Section", user: fake_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -81,7 +111,7 @@ class TestController < ApplicationController
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Script.create!(name: script_name, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development)
+      Script.create!(name: script_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     script.is_migrated = true
     script.save!
@@ -143,6 +173,12 @@ class TestController < ApplicationController
   def destroy_level
     level = Level.find(params[:id])
     level.destroy
+    head :ok
+  end
+
+  def destroy_data_doc
+    data_doc = DataDoc.find_by(key: params[:key])
+    data_doc.destroy
     head :ok
   end
 end

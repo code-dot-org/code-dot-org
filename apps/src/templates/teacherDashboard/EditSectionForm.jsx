@@ -5,7 +5,7 @@ import {Heading1, h3Style} from '../../lib/ui/Headings';
 import * as styleConstants from '@cdo/apps/styleConstants';
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
+import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
@@ -15,7 +15,8 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  assignedUnitLessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable,
+  assignedUnitRequiresVerifiedInstructor
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -27,6 +28,8 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
+import GetVerifiedBanner from './GetVerifiedBanner';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -40,8 +43,8 @@ class EditSectionForm extends Component {
     //Comes from redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
-    validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-    assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
+    courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
+      .isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
@@ -53,6 +56,8 @@ class EditSectionForm extends Component {
     assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
+    assignedUnitRequiresVerifiedInstructor: PropTypes.bool,
+    isVerifiedInstructor: PropTypes.bool,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
 
@@ -63,7 +68,7 @@ class EditSectionForm extends Component {
   onSaveClick = () => {
     const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
-    const scriptId = section.scriptId;
+    const scriptId = section.unitId;
 
     const isScriptHidden =
       sectionId &&
@@ -81,7 +86,7 @@ class EditSectionForm extends Component {
     const {section, updateHiddenScript} = this.props;
 
     // Avoid incorrectly showing the hidden unit warning twice.
-    updateHiddenScript(section.id.toString(), section.scriptId, false);
+    updateHiddenScript(section.id.toString(), section.unitId, false);
 
     this.setState({showHiddenUnitWarning: false});
     this.handleSave();
@@ -107,7 +112,7 @@ class EditSectionForm extends Component {
         study: 'section_setting',
         study_group: 'tts_auto_play',
         event: ttsAutoplayEnabled ? 'turn_on' : 'turn_off',
-        script_id: this.props.section.scriptId,
+        script_id: this.props.section.unitId,
         data_json: JSON.stringify({
           section_id: this.props.section.id
         })
@@ -134,18 +139,23 @@ class EditSectionForm extends Component {
     const {
       section,
       title,
-      validAssignments,
-      assignmentFamilies,
+      courseOfferings,
       isSaveInProgress,
       editSectionProperties,
       handleClose,
       assignedUnitLessonExtrasAvailable,
       assignedUnitTextToSpeechEnabled,
+      assignedUnitRequiresVerifiedInstructor,
       assignedUnitName,
       localeCode,
       isNewSection,
-      showLockSectionField // DCDO Flag - show/hide Lock Section field
+      showLockSectionField,
+      isVerifiedInstructor // DCDO Flag - show/hide Lock Section field
     } = this.props;
+
+    const courseDisplayName = section.courseOfferingId
+      ? courseOfferings[section.courseOfferingId].display_name
+      : '';
 
     /**
     OAuth and personal email login types can not be changed.
@@ -193,11 +203,13 @@ class EditSectionForm extends Component {
             onChange={name => editSectionProperties({name})}
             disabled={isSaveInProgress}
           />
-          <GradeField
-            value={section.grade || ''}
-            onChange={grade => editSectionProperties({grade})}
-            disabled={isSaveInProgress}
-          />
+          {section.participantType === ParticipantAudience.student && (
+            <GradeField
+              value={section.grade || ''}
+              onChange={grade => editSectionProperties({grade})}
+              disabled={isSaveInProgress}
+            />
+          )}
           {showLoginTypeField && (
             <LoginTypeField
               value={section.loginType}
@@ -209,12 +221,15 @@ class EditSectionForm extends Component {
           <AssignmentField
             section={section}
             onChange={ids => editSectionProperties(ids)}
-            validAssignments={validAssignments}
-            assignmentFamilies={assignmentFamilies}
+            courseOfferings={courseOfferings}
             disabled={isSaveInProgress}
-            localeCode={localeCode}
             isNewSection={isNewSection}
           />
+          {!isVerifiedInstructor &&
+            assignedUnitRequiresVerifiedInstructor &&
+            courseDisplayName && (
+              <GetVerifiedBanner courseName={courseDisplayName} />
+            )}
           {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
               value={section.lessonExtras}
@@ -370,24 +385,28 @@ LoginTypeField.propTypes = {
 const AssignmentField = ({
   section,
   onChange,
-  validAssignments,
-  assignmentFamilies,
+  courseOfferings,
   disabled,
-  localeCode,
   isNewSection
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
-    <FieldDescription>{i18n.whichCourse()}</FieldDescription>
+    <FieldDescription>
+      {i18n.whichCourse()}
+      <a
+        href="https://support.code.org/hc/en-us/articles/204874337-What-happens-when-I-assign-a-course-to-a-section-Can-I-assign-2-at-once-"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {i18n.explainCourseAssignmentsLearnMore()}
+      </a>
+    </FieldDescription>
     <AssignmentSelector
       section={section}
       onChange={ids => onChange(ids)}
-      assignments={validAssignments}
-      assignmentFamilies={assignmentFamilies}
-      chooseLaterOption={true}
+      courseOfferings={courseOfferings}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      localeCode={localeCode}
       isNewSection={isNewSection}
     />
   </div>
@@ -395,10 +414,8 @@ const AssignmentField = ({
 AssignmentField.propTypes = {
   section: sectionShape,
   onChange: PropTypes.func.isRequired,
-  validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-  assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
+  courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
-  localeCode: PropTypes.string,
   isNewSection: PropTypes.bool
 };
 
@@ -541,8 +558,7 @@ YesNoDropdown.propTypes = FieldProps;
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialUnitId: state.teacherSections.initialUnitId,
-  validAssignments: state.teacherSections.validAssignments,
-  assignmentFamilies: state.teacherSections.assignmentFamilies,
+  courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   assignedUnitLessonExtrasAvailable: assignedUnitLessonExtrasAvailable(state),
@@ -550,6 +566,10 @@ let defaultPropsFromState = state => ({
   assignedUnitName: assignedUnitName(state),
   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
+  assignedUnitRequiresVerifiedInstructor: assignedUnitRequiresVerifiedInstructor(
+    state
+  ),
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
 
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: state.teacherSections.showLockSectionField

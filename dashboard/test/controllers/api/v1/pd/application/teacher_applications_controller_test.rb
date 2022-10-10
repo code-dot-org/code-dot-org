@@ -48,6 +48,18 @@ module Api::V1::Pd::Application
       params: -> {{id: @application.id}},
       response: :success
 
+    test_user_gets_response_for :change_principal_approval_requirement,
+                                name: 'program managers can set change_principal_approval_requirement for applications they own',
+                                user: -> {@program_manager},
+                                params: -> {{id: @application.id, principal_approval_not_required: true}},
+                                response: :success
+
+    test_user_gets_response_for :change_principal_approval_requirement,
+                                name: 'program managers cannot set change_principal_approval_requirement for applications they do not own',
+                                user: :program_manager,
+                                params: -> {{id: @application.id}},
+                                response: :forbidden
+
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
@@ -106,7 +118,23 @@ module Api::V1::Pd::Application
       assert_no_difference "#{TEACHER_APPLICATION_CLASS.name}.count" do
         put :create, params: {form_data: @test_params}
       end
-      assert_response :success
+    end
+
+    test 'creating an application on an existing form renders conflict' do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      post :create, params:  {
+        id: application.id
+      }
+      assert_response :conflict
+    end
+
+    test 'updating an application with an error renders bad_request' do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
+
+      assert_response :bad_request
     end
 
     test 'updates user school info on successful create' do
@@ -116,19 +144,35 @@ module Api::V1::Pd::Application
       put :create, params: @test_params
     end
 
-    test 'updates course hours computation and autoscores on successful create' do
-      application_hash = build(
-        TEACHER_APPLICATION_HASH_FACTORY,
-        cs_how_many_minutes: 45,
-        cs_how_many_days_per_week: 5,
-        cs_how_many_weeks_per_year: 30
-      )
+    test 'does not send emails or autoscore on successful create if application status is incomplete' do
+      Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
+      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
 
       sign_in @applicant
-      put :create, params: {form_data: application_hash}
+      put :create, params: {form_data_hash: @test_params, status: 'incomplete'}
+      refute TEACHER_APPLICATION_CLASS.last.response_scores
+      assert_response :created
+    end
 
+    test 'updates course hours, autoscores, and queues email once application is submitted' do
+      application_hash = build :pd_teacher_application_hash_common, :csp,
+                               cs_how_many_minutes: 45,
+                               cs_how_many_days_per_week: 5,
+                               cs_how_many_weeks_per_year: 30
+      application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
+
+      Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).once.
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+
+      sign_in @applicant
+      put :update, params: {id: application.id, form_data: application_hash, status: 'unreviewed'}
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+      assert_response :ok
     end
 
     test 'can submit an empty form if application is incomplete' do
@@ -136,15 +180,6 @@ module Api::V1::Pd::Application
       put :create, params: {status: 'incomplete'}
 
       assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
-      assert_response :created
-    end
-
-    test 'does not update course hours nor autoscore on successful create if application status is incomplete' do
-      Pd::Application::TeacherApplication.expects(:auto_score).never
-      Pd::Application::TeacherApplication.expects(:queue_email).never
-
-      sign_in @applicant
-      put :create, params: {status: 'incomplete'}
       assert_response :created
     end
 
@@ -164,12 +199,22 @@ module Api::V1::Pd::Application
       assert_response :ok
     end
 
-    test 'updating an application with an error renders bad_request' do
-      sign_in @applicant
-      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
-      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
+    test 'change_principal_approval_requirement can set principal_approval_not_required to true' do
+      sign_in @program_manager
+      refute @application.principal_approval_not_required
 
-      assert_response :bad_request
+      post :change_principal_approval_requirement, params: {id: @application.id, principal_approval_not_required: true}
+      assert @application.reload.principal_approval_not_required
+    end
+
+    test 'change_principal_approval_requirement can set principal_approval_not_required to false' do
+      application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
+      sign_in @program_manager
+      application.update!(principal_approval_not_required: true)
+
+      assert_equal true, application.principal_approval_not_required
+      post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: false}
+      refute application.reload.principal_approval_not_required
     end
 
     test 'send_principal_approval queues up an email if none exist' do

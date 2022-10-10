@@ -16,10 +16,7 @@ import {
 } from './sectionProgressRedux';
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {
-  setScriptId,
-  validScriptPropType
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
@@ -35,7 +32,7 @@ class SectionProgress extends Component {
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
@@ -116,7 +113,7 @@ class SectionProgress extends Component {
 
   render() {
     const {
-      validScripts,
+      coursesWithProgress,
       currentView,
       scriptId,
       scriptData,
@@ -136,7 +133,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              validScripts={validScripts}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
@@ -220,7 +217,7 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
-    validScripts: state.unitSelection.validScripts,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,

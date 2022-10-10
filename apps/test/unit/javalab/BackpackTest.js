@@ -18,9 +18,12 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub.hasBackpack.returns(true);
     defaultProps = {
       displayTheme: DisplayTheme.DARK,
-      isDisabled: false,
+      isButtonDisabled: false,
       onImport: () => {},
-      backpackApi: backpackApiStub
+      backpackApi: backpackApiStub,
+      backpackEnabled: true,
+      sources: {},
+      validation: {}
     };
   });
 
@@ -109,10 +112,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('no dialog shown if there are no duplicate file names', () => {
-    const otherProps = {
-      sources: {}
-    };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = shallow(<Backpack {...defaultProps} />);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
@@ -124,5 +124,100 @@ describe('Java Lab Backpack Test', () => {
 
     const state = wrapper.instance().state;
     expect(state.openDialog).to.equal(null);
+  });
+
+  it('renders nothing if backpack is disabled', () => {
+    const wrapper = shallow(
+      <Backpack {...defaultProps} backpackEnabled={false} />
+    );
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
+  it('delete shows warning before deleting files', () => {
+    const otherProps = {
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file1', 'file3']
+    });
+
+    wrapper.instance().confirmAndDeleteFiles();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal('DELETE_CONFIRM');
+  });
+
+  it('dropdown and modal are closed if delete succeeds', () => {
+    const otherProps = {
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file1', 'file3']
+    });
+    // set up delete files to call success callback
+    backpackApiStub.deleteFiles.callsArg(2);
+
+    // open modal
+    wrapper.instance().confirmAndDeleteFiles();
+    // click delete
+    wrapper.instance().handleDelete();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal(null);
+  });
+
+  it('Delete error modal is shown if delete fails', () => {
+    const otherProps = {
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file1', 'file3']
+    });
+    // set up delete files to call failure callback
+    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
+
+    // open modal
+    wrapper.instance().confirmAndDeleteFiles();
+    // click delete
+    wrapper.instance().handleDelete();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal('DELETE_ERROR');
+  });
+
+  it('Deleted files are removed from dropdown on partial delete success', () => {
+    const otherProps = {
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file1', 'file3']
+    });
+    // set up delete files to call failure callback where only file 1 failed to delete
+    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);
+
+    // open modal
+    wrapper.instance().confirmAndDeleteFiles();
+    // click delete
+    wrapper.instance().handleDelete();
+
+    const state = wrapper.instance().state;
+    const selectedFiles = state.selectedFiles;
+    // selected files should only contain the file that failed to delete (file1).
+    expect(selectedFiles.length).to.equal(1);
+    expect(selectedFiles[0]).to.equal('file1');
+    // backpackFilenames should have length 2 (file3 should be gone)
+    expect(state.backpackFilenames.length).to.equal(2);
   });
 });

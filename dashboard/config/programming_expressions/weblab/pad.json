@@ -3,7 +3,7 @@
   "name": "Padding",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Padding\r\n\r\nThe `padding` property specifies how much space should appear between the content of an element and its border. It is a shorthand for `padding-top`, `padding-right`, `padding-bottom`, and `padding-left`. ",
+  "content": "# Padding\r\n\r\nThe [`Padding`(#d3e965)](/docs/weblab/pad/) property specifies how much space should appear between the content of an element and its border. It is a shorthand for `padding-top`, `padding-right`, `padding-bottom`, and `padding-left`. ",
   "examples": [
     {
       "name": "Single Padding Value",

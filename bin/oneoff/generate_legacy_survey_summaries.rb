@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../../dashboard/config/environment'
-require 'pd/survey_pipeline/survey_pipeline_helper.rb'
+require 'pd/survey_pipeline/survey_pipeline_helper'
 
 # for pegasus survey summaries
 include Api::V1::Pd::WorkshopScoreSummarizer

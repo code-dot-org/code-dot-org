@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-14 23:50:15 UTC",
+    "serialized_at": "2022-03-16 23:15:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -23,7 +23,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "course"
+        "display_name": "Tess lesson"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -32,7 +32,36 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Tess lesson 2",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pltess"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "lesson 3",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pltess"
+      }
+    }
   ],
   "lesson_activities": [
 

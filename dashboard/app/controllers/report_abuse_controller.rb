@@ -64,7 +64,7 @@ class ReportAbuseController < ApplicationController
         raise ZendeskError.new(response.code, response.body) unless response.success?
       end
 
-      unless params[:channel_id].blank?
+      if params[:channel_id].present?
         channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
         assets_path = "/v3/assets/#{params[:channel_id]}/"
         files_path = "/v3/files/#{params[:channel_id]}/"
@@ -104,9 +104,9 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse_form
     @react_props = {
-      name: (current_user.name unless current_user.nil?),
-      email: (current_user.email unless current_user.nil?),
-      age: (current_user.age unless current_user.nil?),
+      name: current_user&.name,
+      email: current_user&.email,
+      age: current_user&.age,
     }
   end
 end

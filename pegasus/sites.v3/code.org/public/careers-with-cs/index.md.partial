@@ -43,9 +43,23 @@ social:
 <div style="clear: both; margin-bottom:35px"></div>
 
 <a id="videos"></a>
-<h2 style="margin-top:0; margin-bottom:10px">Careers in Tech videos</h2>
+<h2 style="margin-top:0; margin-bottom:10px">Careers in Computer Science and Tech videos</h2>
 
 <div class="col-66" style="border-right:20px solid white">
+  <div class="col-50" style="float: left; padding: 10px; padding-left: 0; margin-bottom: 20px">
+    {{ csjourneys_vid_6 }}
+  </div>
+  <div class="col-50" style="float: left; padding: 10px; padding-right: 0; margin-bottom: 20px">
+    {{ csjourneys_vid_7 }}
+  </div>
+  <div style="clear: both"></div>
+  <div class="col-50" style="float: left; padding: 10px; padding-left: 0; margin-bottom: 20px">
+    {{ csjourneys_vid_8 }}
+  </div>
+  <div class="col-50" style="float: left; padding: 10px; padding-right: 0; margin-bottom: 20px">
+    {{ csjourneys_vid_9 }}
+  </div>
+  <div style="clear: both"></div>
   <div class="col-50" style="float: left; padding: 10px; padding-left: 0; margin-bottom: 20px">
     {{ csjourneys_vid_1 }}
   </div>

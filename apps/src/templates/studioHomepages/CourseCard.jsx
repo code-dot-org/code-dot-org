@@ -5,7 +5,7 @@ import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
 import BlueHeader from '@cdo/static/small_blue_icons_fullwidth.png';
-import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
+import PurpleHeader from '@cdo/static/small_purple_icons.png';
 
 /**
  * A card used on the homepage to display information about a particular course

@@ -2,5 +2,6 @@
   "key": "20-hour",
   "display_name": "Accelerated Intro to CS Course",
   "category": "twenty_hour",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

@@ -1,9 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-02-26T00:32:03.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -12,20 +8,29 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyConsole.java": {
-        "text": "public class MyConsole {\n  public static void main(String[] args) {\n    \n    TicketManager myShow = new TicketManager(\"Theater Manager\");\n    \n    myShow.displayTickets(5, 7);\n    myShow.displayTax(5.00);\n    myShow.displayMessage();\n    \n  }\n}",
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    boolean isEnrolled = true;\n    \n    Course myCourse = new Course(\"Computer Science\", isEnrolled);\n    Student myStudent = new Student(\"Betsy\", myCourse);\n\n    System.out.println(myStudent);\n\n    \n    \n  }\n}",
         "isVisible": true
       },
-      "TicketManager.java": {
-        "text": "public class TicketManager {\n\n  private String theaterManager;\n\n  public TicketManager(String theaterManager) {\n    this.theaterManager = theaterManager;\n  }\n    \n  public void displayTickets(int numofPeople, int numofTickets){\n    System.out.println(numofPeople + \" people purchased \" + numofTickets + \" tickets for the show.\");\n  }\n  \n  public void displayTax(double price){\n    double tax = price * 0.07;\n    double total = price + tax;\n    \n    System.out.println(\"Your total price is \" + total);\n  }\n  \n  public void displayMessage(){\n    System.out.println(\"Goodbye \" + theaterManager + \"!\");\n  }\n  \n}",
+      "Student.java": {
+        "text": "public class Student {\n\n  private String name;\n  private Course newCourse;\n\n  public Student(String name, Course newCourse) {\n    this.name = name;\n    this.newCourse = newCourse;\n  }\n\n  public void dropCourse(Course theCourse) {\n    theCourse.setStatus(false);\n  }\n\n  public String toString() {\n    return name + \"\\n\" + newCourse;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "Course.java": {
+        "text": "public class Course {\n\n  private String name;\n  private boolean status;\n\n  public Course(String name, boolean status) {\n    this.name = name;\n    this.status = status;\n  }\n\n  public void setStatus(boolean newStatus) {\n    status = newStatus;\n  }\n\n  public String toString() {\n    String text = name + \": \";\n\n    if (status) {\n      text = text + \"Enrolled\";\n    }\n    else {\n      text = text + \"Dropped\";\n    }\n\n    return text;\n  }\n  \n}",
         "isVisible": true
       }
     },
-    "contained_level_names": [
-      "CSA U7L2-L1 Predict_2022"
-    ],
-    "name_suffix": "_2022"
+    "name_suffix": "_2022",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Look at the `dropCourse()`(#e7e8ea) method in `Student.java`(#e7e8ea). What do you notice about its parameter? Does the parameter get a copy of the `Course`(#e7e8ea) object when the method is called?\r\n\r\n2. In `MyConsole.java`(#e7e8ea), add the following code:\r\n\r\n```\r\nmyStudent.dropCourse(myCourse);\r\nSystem.out.println(\"\\n\" + myStudent);\r\nSystem.out.println(\"\\n\" + myCourse);\r\n```\r\n\r\nRun the program. What do you notice about the output? Why do you think this happened?\r\n\r\n3. Look at the `setStatus()`(#e7e8ea) method in `Course.java`(#e7e8ea). What do you notice about its parameter? Does the parameter get a copy of the `boolean`(#e7e8ea) value when the method is called?\r\n\r\n4. In `MyConsole.java`(#e7e8ea), add the following code:\r\n\r\n```\r\nSystem.out.println(\"isEnrolled = \" + isEnrolled);\r\n```\r\n\r\nRun the program. What do you notice about the output? Why do you think this happened?\r\n\r\n5. What do you think will happen if the `myStudent`(#e7e8ea) variable is set to point to a different `Student`(#e7e8ea) object? In `MyConsole.java`(#e7e8ea), add the following code:\r\n\r\n```\r\nmyStudent = new Student(\"Sara\", myCourse);\r\nSystem.out.println(\"\\n\" + myStudent);\r\n```\r\n\r\nRun the program. What do you notice about the output? Why do you think this happened?",
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 68,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:03.327+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L1\\\"\"],\"cloned_from\":\"CSA U7L2-L1\"}]"
+  "created_at": "2022-02-26T00:32:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:03.327+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L1\\\"\"],\"cloned_from\":\"CSA U7L2-L1\"},{\"changed_at\":\"2022-05-09 16:39:28 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-09 20:48:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-09 20:54:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-09 20:54:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

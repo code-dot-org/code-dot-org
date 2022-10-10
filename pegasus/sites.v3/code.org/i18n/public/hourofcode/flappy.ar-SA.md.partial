@@ -1,32 +1,32 @@
 ---
-title: موارد المعلم - اصنع لعبة Flappy
+title: موارد المعلم - اصنع لعبة فلابي
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# اصنع لعبة Flappy: دورة تعليمية لـAn Hour of Code
+# اصنع لعبة فلابي Flappy: دورة تعليمية لـساعة البرمجة
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## مصادر المعلم
 
-### Lesson Plans:
+### خطط الدرس
 
 - [اصنع لعبة Flappy]({{ hoc_flappy_cb_url }})
 
-### أنشطة الامتداد:
+### أنشطة إضافية
 
-- [ما وراء Hour of Code](http://code.org/learn/beyond)
-- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+- [ما بعد "ساعة من البرمجة"](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية ٢](https://studio.code.org/s/course2)
 
 ### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [دليل "ساعة من البرمجة" الإرشادي للمعلمين ](https://hourofcode.com/how-to)
 - [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- حدث يبث مباشرةً:[ دليل المعلم لـساعة البرمجة](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,7 +36,7 @@ video_player: true
 
 استخدم برمجة السحب والإسقاط لتصنع لعبة Flappy Bird الخاصة بك وتخصصها لتبدو مختلفة (Flappy Shark أو Flappy Santa أو أيًّا كان). أضف اللعبة إلى هاتفك بنقرة واحدة.
 
-**الفئة العمرية الموصى بها:** 4-104
+**الفئة العمرية الموصى بها:** ٤-١٠٤
 
 **متطلبات التكنولوجيا:** متصفحات حديثة، هواتف ذكية + هواتف لوحية
 

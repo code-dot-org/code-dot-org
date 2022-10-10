@@ -51,10 +51,6 @@ function wrapShareClick(handler, type) {
   };
 }
 
-function select(event) {
-  event.target.select();
-}
-
 function checkImageReachability(imageUrl, callback) {
   const img = new Image();
   img.onabort = () => callback(false);
@@ -72,7 +68,6 @@ function checkImageReachability(imageUrl, callback) {
  */
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
-    allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
@@ -297,27 +292,26 @@ class ShareAllowedDialog extends React.Component {
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <p style={{fontSize: 20}}>{i18n.shareCopyLink()}</p>
-                    <input
-                      type="text"
-                      id="sharing-input"
-                      onClick={select}
-                      readOnly
-                      value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 450}}
-                    />
                     <button
                       type="button"
-                      id="share-dialog-copy-button"
+                      id="sharing-dialog-copy-button"
                       style={{
                         ...styles.button,
                         ...styles.copyButton,
                         ...(this.state.hasBeenCopied && styles.copyButtonLight)
                       }}
                       onClick={wrapShareClick(this.copy, 'copy')}
+                      value={this.props.shareUrl}
                     >
-                      <FontAwesome icon="clipboard" style={{fontSize: 14}} />
+                      <FontAwesome icon="clipboard" style={{fontSize: 16}} />
+                      <span style={{paddingLeft: 10}}>
+                        {i18n.copyLinkToProject()}
+                      </span>
                     </button>
+                    <DownloadReplayVideoButton
+                      style={{...styles.button, marginBottom: 8}}
+                      onError={this.replayVideoNotFound}
+                    />
                   </div>
                 </div>
                 <div className="social-buttons">
@@ -357,10 +351,7 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  <DownloadReplayVideoButton
-                    style={styles.button}
-                    onError={this.replayVideoNotFound}
-                  />
+
                   {canPrint && hasThumbnail && (
                     <a href="#" onClick={wrapShareClick(this.print, 'print')}>
                       <FontAwesome icon="print" style={{fontSize: 26}} />
@@ -437,7 +428,6 @@ class ShareAllowedDialog extends React.Component {
                 <div style={{clear: 'both', marginTop: 40}}>
                   {isDroplet && (
                     <AdvancedShareOptions
-                      allowExportExpo={this.props.allowExportExpo}
                       shareUrl={this.props.shareUrl}
                       exportApp={this.props.exportApp}
                       expanded={this.state.showAdvancedOptions}
@@ -509,10 +499,9 @@ const styles = {
     verticalAlign: 'top'
   },
   copyButton: {
-    paddingTop: 5,
-    marginLeft: 8,
-    width: 30,
-    height: 30
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
+    marginBottom: 5
   },
   copyButtonLight: {
     backgroundColor: color.light_purple
@@ -558,7 +547,6 @@ export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(
   state => ({
-    allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending

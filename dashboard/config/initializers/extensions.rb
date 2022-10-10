@@ -1,1 +1,1 @@
-require Rails.root.join 'lib/extensions'
+require Rails.root.join 'lib/core_extensions'

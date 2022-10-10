@@ -75,6 +75,10 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
@@ -82,6 +86,7 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {closeWorkspaceAlert} from './code-studio/projectRedux';
 
 var copyrightStrings;
 
@@ -433,6 +438,14 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
+  if (config.muteBackgroundMusic) {
+    this.muteBackgroundMusic = config.muteBackgroundMusic;
+  }
+
+  if (config.unmuteBackgroundMusic) {
+    this.unmuteBackgroundMusic = config.unmuteBackgroundMusic;
+  }
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -556,7 +569,7 @@ StudioApp.prototype.init = function(config) {
     ReactDOM.render(
       <ChallengeDialog
         isOpen={true}
-        avatar={this.icon}
+        avatar={this.icon || this.skin.staticAvatar}
         handleCancel={() => {
           this.skipLevel();
         }}
@@ -929,6 +942,11 @@ export function makeFooterMenuItems() {
       text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
+    },
+    {
+      text: msg.cookieNotice(),
+      link: 'https://code.org/cookies',
+      newWindow: true
     }
   ];
 
@@ -1038,7 +1056,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   if (showRun) {
     if (this.editDuringRunAlert !== undefined) {
-      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.closeAlert(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
     }
     getStore().dispatch(setIsEditWhileRun(false));
@@ -1387,17 +1405,17 @@ function resizePinnedBelowVisualizationArea() {
 }
 
 /**
- * Debounced onResize operations that update the layout to support sizing
+ * Throttled onResize operations that update the layout to support sizing
  * to viewport height and using the small footer.
  * @type {Function}
  */
-var onResizeSmallFooter = _.debounce(function() {
+var onResizeSmallFooter = _.throttle(function() {
   resizePinnedBelowVisualizationArea();
-}, 10);
+}, 1000 / 60);
 
 /**
  * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
- * to be static so it can be statically debounced as onResizeSmallFooter
+ * to be static so it can be statically throttled as onResizeSmallFooter.
  */
 StudioApp.prototype.resizePinnedBelowVisualizationArea = function() {
   resizePinnedBelowVisualizationArea();
@@ -1511,7 +1529,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -2897,7 +2915,7 @@ StudioApp.prototype.getUnfilledFunctionalExample = function() {
       return false;
     }
     var actual = rootBlock.getInputTargetBlock('ACTUAL');
-    return actual && actual.getTitleValue('NAME');
+    return actual && actual.getFieldValue('NAME');
   });
 };
 
@@ -2947,10 +2965,10 @@ StudioApp.prototype.getFunctionWithoutTwoExamples = function() {
       // Only care about functional_examples that have an ACTUAL input (i.e. it's
       // clear which function they're for
       var actual = block.getInputTargetBlock('ACTUAL');
-      return actual && actual.getTitleValue('NAME');
+      return actual && actual.getFieldValue('NAME');
     })
     .map(function(exampleBlock) {
-      return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
+      return exampleBlock.getInputTargetBlock('ACTUAL').getFieldValue('NAME');
     });
 
   var definitionWithLessThanTwoExamples;
@@ -2984,7 +3002,7 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function(topLevelType) {
 
   if (unfilled.type === topLevelType) {
     return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getTitleValue()
+      topLevelBlockName: unfilled.getFieldValue()
     });
   }
 
@@ -3020,7 +3038,7 @@ StudioApp.prototype.checkForFailingExamples = function(failureChecker) {
     if (failure) {
       failingBlockName = exampleBlock
         .getInputTargetBlock('ACTUAL')
-        .getTitleValue('NAME');
+        .getFieldValue('NAME');
     }
   });
   return failingBlockName;
@@ -3100,6 +3118,8 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   bottom = false,
   onClose = () => {}
 ) {
+  // close currently any open workspace alert from CodeWorkspace.jsx
+  getStore().dispatch(closeWorkspaceAlert());
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
@@ -3109,7 +3129,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
       type: type,
       onClose: () => {
         onClose();
-        ReactDOM.unmountComponentAtNode(container[0]);
+        this.closeAlert(container[0]);
       },
       isBlockly: this.usingBlockly_,
       displayBottom: bottom
@@ -3143,9 +3163,7 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
   var renderElement = container[0];
 
   let alertProps = {
-    onClose: () => {
-      ReactDOM.unmountComponentAtNode(renderElement);
-    },
+    onClose: () => this.closeAlert(renderElement),
     type: type
   };
 
@@ -3158,6 +3176,14 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+};
+
+/**
+ * Remove an alert from the DOM. This is just an alias for ReactDOM.unmountComponentAtNode.
+ * @param {Node} alert
+ */
+StudioApp.prototype.closeAlert = function(alert) {
+  ReactDOM.unmountComponentAtNode(alert);
 };
 
 /**
@@ -3298,6 +3324,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
     {
       exampleSolutions: config.exampleSolutions,
       isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
+      hasBackgroundMusic: level.levelTracks && level.levelTracks.length !== 0,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
@@ -3334,17 +3361,25 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      isProjectTemplateLevel:
+        !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:
         !!config.level.projectTemplateLevelName &&
         !config.level.isK1 &&
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
-      serverLevelId: config.serverLevelId
+      serverLevelId: config.serverLevelId,
+      serverProjectLevelId: config.serverProjectLevelId,
+      codeOwnersName: config.codeOwnersName
     },
     appSpecificConstants
   );
 
   getStore().dispatch(setPageConstants(combined));
+
+  if (config.isInstructor) {
+    getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));

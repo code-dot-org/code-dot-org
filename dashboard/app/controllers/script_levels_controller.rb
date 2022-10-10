@@ -120,7 +120,7 @@ class ScriptLevelsController < ApplicationController
     authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
     return render 'levels/no_access' unless can?(:read, @script_level)
 
-    if current_user && current_user.script_level_hidden?(@script_level)
+    if current_user&.script_level_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_lesson'
       return
@@ -128,11 +128,11 @@ class ScriptLevelsController < ApplicationController
 
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
-    extra_params = {}
+    @extra_params = {}
     if @script_level.long_assessment?
-      extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
+      @extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
-    extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
+    @extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script_level&.script)
@@ -146,7 +146,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
+    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -215,7 +215,10 @@ class ScriptLevelsController < ApplicationController
   def lesson_extras
     authorize! :read, ScriptLevel
 
-    if current_user&.teacher?
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
+
+    if @script.can_be_instructor?(current_user)
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
         @user = @section&.students&.find_by(id: params[:user_id])
@@ -229,8 +232,6 @@ class ScriptLevelsController < ApplicationController
       @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
-    raise ActiveRecord::RecordNotFound unless @script
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
@@ -382,7 +383,7 @@ class ScriptLevelsController < ApplicationController
         script: @script_level.script,
         level: @level
       )
-      if user_level && user_level.submitted?
+      if user_level&.submitted?
         level_view_options(
           @level.id,
           submitted: true,
@@ -390,7 +391,7 @@ class ScriptLevelsController < ApplicationController
         )
         readonly_view_options
       end
-      readonly_view_options if user_level && user_level.readonly_answers?
+      readonly_view_options if user_level&.readonly_answers?
     end
 
     @last_attempt = level_source.try(:data)
@@ -412,6 +413,7 @@ class ScriptLevelsController < ApplicationController
       @user = user_to_view
 
       if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
+        @is_code_reviewing = true
         view_options(is_code_reviewing: true)
       end
     end
@@ -516,9 +518,21 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
+    # Javalab exemplar URLs include ?exemplar=true as a URL param
+    if params[:exemplar]
+      return render 'levels/no_access_exemplar' unless current_user&.verified_instructor?
+
+      @is_viewing_exemplar = true
+      exemplar_sources = @level.try(:exemplar_sources)
+      return render 'levels/no_exemplar' unless exemplar_sources
+
+      level_view_options(@level.id, {is_viewing_exemplar: true, exemplar_sources: exemplar_sources})
+      readonly_view_options
+    end
+
     view_options(
       full_width: true,
-      small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
+      small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,

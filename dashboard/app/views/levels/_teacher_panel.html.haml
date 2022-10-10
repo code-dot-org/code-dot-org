@@ -2,6 +2,7 @@
 - data[:script_name] = @script.name
 - data[:script_id] = @script.id
 - data[:lesson_extra] = @lesson_extras
+- data[:is_instructor] = @script.can_be_instructor?(@current_user)
 
 - if @lesson_extras
   - data[:page_type] = 'lesson_extras'
