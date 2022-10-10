@@ -103,6 +103,7 @@ class ReportAbuseController < ApplicationController
   end
 
   def report_abuse_form
+    puts params[:weblabUrl]
     @react_props = {
       name: current_user&.name,
       email: current_user&.email,

@@ -6,7 +6,7 @@ import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
 
 $(document).ready(function() {
   const props = getScriptData('abuse');
-  props.abuseUrl = document.referrer;
+  props.abuseUrl = props.weblabUrl || document.referrer;
   ReactDOM.render(
     <ReportAbuseForm {...props} />,
     document.getElementById('report-abuse-form')
