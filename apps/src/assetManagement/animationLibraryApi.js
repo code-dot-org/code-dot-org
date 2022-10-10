@@ -78,43 +78,6 @@ export function moveDefaultSpriteMetadataToProduction() {
     });
 }
 
-export function createDefaultSpriteMetadata(listData) {
-  let orderedKeys = [];
-  let propsByKey = {};
-  return getManifest('spritelab')
-    .then(manifest => {
-      const animations = JSON.parse(manifest)['metadata'];
-      for (let sprite of listData.default_sprites) {
-        const {
-          sourceUrl,
-          frameSize,
-          frameCount,
-          looping,
-          frameDelay,
-          version,
-          categories
-        } = animations[sprite.key];
-        const props = {
-          name: sprite.name,
-          sourceUrl: `https://studio.code.org${sourceUrl}`,
-          frameSize,
-          frameCount,
-          looping,
-          frameDelay,
-          version,
-          categories
-        };
-        const key = createUuid();
-        orderedKeys.push(key);
-        propsByKey[key] = props;
-      }
-      return {orderedKeys, propsByKey};
-    })
-    .catch(err => {
-      return Promise.reject(err);
-    });
-}
-
 // Regenerates the metadata for the default list of sprites in SpriteLab and uploads it to S3
 export function generateAnimationMetadataForFile(fileObject) {
   const json = fileObject.json;
@@ -224,12 +187,15 @@ export function generateLevelAnimationsManifest() {
 }
 
 // Regenerates the metadata for the default list of sprites in SpriteLab
-export function regenerateDefaultSpriteMetadata(listData) {
-  return createDefaultSpriteMetadata(listData)
-    .then(defaultMetadata => {
-      return uploadDefaultListMetadata(defaultMetadata, 'levelbuilder');
-    })
-    .catch(err => Promise.reject(err));
+export function regenerateDefaultSpriteMetadata(spritesProps) {
+  let orderedKeys = [];
+  let propsByKey = {};
+  for (let sprite of spritesProps) {
+    const key = createUuid();
+    orderedKeys.push(key);
+    propsByKey[key] = sprite;
+  }
+  return uploadDefaultListMetadata({orderedKeys, propsByKey}, 'levelbuilder');
 }
 
 /* Uploads the given sprite to the animation library at the specified path. On success

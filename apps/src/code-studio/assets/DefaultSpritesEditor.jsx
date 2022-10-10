@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   getDefaultListMetadata,
-  uploadDefaultListMetadata,
-  regenerateDefaultJSON
+  regenerateDefaultSpriteMetadata
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -95,10 +94,7 @@ export default class DefaultSpritesEditor extends React.Component {
 
   updateDefaultSprites = () => {
     this.setState({isUpdating: true});
-    let jsonList = {};
-    jsonList['default_sprites'] = this.state.defaultList;
-    uploadDefaultListMetadata(jsonList, 'levelbuilder')
-      .then(() => regenerateDefaultJSON(jsonList))
+    regenerateDefaultSpriteMetadata(this.state.defaultList)
       .then(() => {
         this.setState({
           pendingChangesCount: 0,
@@ -158,9 +154,8 @@ export default class DefaultSpritesEditor extends React.Component {
         </p>
         <h2>Add or remove default sprite costumes and backgrounds.</h2>
         <p>
-          Animations are shown in the format: "name: category/path". The order
-          of this list is the order that the costumes and backgrounds appear in
-          a new project.{' '}
+          The order of this list is the order that the costumes and backgrounds
+          appear in a new project.{' '}
           <i>
             Note: In Sprite Lab, Sprite costumes and backgrounds are always
             listed separately.
