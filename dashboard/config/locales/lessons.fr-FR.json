@@ -389,7 +389,7 @@
         },
         "coursed-2022/Nested Loops in Maze": {
           "name": "Les Boucles Imbriquées dans le Labyrinthe",
-          "overview": "Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur \"Exécuter\".",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à programmer une boucle à l'intérieur d'une autre boucle.",
           "purpose": "Dans cette introduction aux boucles imbriquées, les élèves sortiront de leur zone de confort pour créer des solutions plus efficaces aux énigmes.\n\nDans les énigmes précédentes, les boucles poussaient les élèves à reconnaître la répétition. Ici, ils apprendront à reconnaître des modèles _dans_ des modèles qui se répètent pour développer ces boucles imbriquées. Cette étape commence par encourager les élèves à essayer de résoudre un puzzle où le code est énervant et trop complexe pour être écrit sur le long terme. Après qu'une vidéo présente les boucles imbriquées, on montre aux élèves un exemple et on leur demande de prédire ce qu'il se passera lorsqu'une boucle sera mise à l'intérieur d'une autre. Cette progression conduit à beaucoup de pratique pour que les étudiants se solidifient et développent leur compréhension du bouclage en programmation. ",
           "student_overview": "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu crées une boucle imbriquée."
         },
@@ -400,22 +400,22 @@
           "student_overview": "Il est temps de jouer à un jeu où tu ne gagnes des points que sous certaines conditions !"
         },
         "coursed-2022/Looking Ahead with Minecraft": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
-          "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "name": "Anticiper l'avenir avec Minecraft",
+          "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
-          "student_overview": "Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft."
+          "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "coursed-2022/If/Else with Bee": {
           "name": "« Si/Sinon » avec l'Abeille",
-          "overview": "Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.",
+          "overview": "Dans cette leçon de **développement des compétences**, ta classe commencera à coder avec des formules conditionnelles, leur permettant d'écrire du code qui fonctionne différemment en selon les conditions spécifiques rencontrées par le programme.",
           "purpose": "Après avoir été initiés aux conditions dans « Conditions avec cartes », les élèves vont maintenant s'entraîner à les utiliser dans leurs programmes. Les blocs \"if / else\" permettront un programme plus flexible. L'abeille ne récoltera le nectar _si_ il y a une fleur ou fera du miel _si_ il y a une ruche.",
-          "student_overview": "Maintenant que tu comprends les conditions, il est temps de programmer l'Abeille pour les utiliser lors de la collecte de miel et de nectar. "
+          "student_overview": "Maintenant qu'on a compris les formules conditionnelles, il est temps de programmer l'Abeille pour qu'elle les utilise quand elle récolte du miel et de nectar. "
         },
         "coursed-2022/While Loops in Farmer": {
           "name": "Les Boucles Tant Que dans la Fermière",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.",
+          "overview": "Dans cette leçon de **développement des compétences**, la tâche des élèves sera de remplir des trous et de creuser la terre dans La Fermière, mais ils ne sauront pas quelle est la taille des trous ni la hauteur des tas de terre. Pour résoudre ces casse-têtes, les élèves utiliseront un nouveau type de boucle.",
           "purpose": "Au fur et à mesure que vos élèves approfondissent leurs connaissances des boucles, ils rencontreront des problèmes où une commande doit être répétée, mais on ne sait pas combien de fois elle doit être répétée. C'est là les boucles `tant que` entrent en jeu. Dans la leçon d'aujourd'hui, les élèves développeront la compréhension d'un débutant des boucles basées sur les conditions, et élargiront également leurs connaissances des boucles, en général.",
-          "student_overview": "Les boucles sont si utiles dans le codage. Cette leçon t'apprendra un nouveau type de boucle : les boucles tant que !"
+          "student_overview": "Les boucles sont tellement utiles dans le codage. Dans cette leçon, tu vas te familiariser avec un nouveau type de boucle : les boucles « tant que » !"
         },
         "coursed-2022/Until Loops in Maze": {
           "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
@@ -554,8 +554,8 @@
           "student_overview": "Plus de boucles imbriquées ! Cette fois, tu dois faire un dessin ÉTONNANT avec des boucles imbriquées."
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
-          "overview": "Maintenant que les élèves savent comment superposer leurs boucles, ils peuvent créer tant de belles choses.  Cette leçon guidera les élèves à travers une série d'exercices pour les aider à créer leurs propres images, prêtes pour le portfolio, en utilisant les excellentes compétences d'Anna et Elsa en patinage sur glace !",
-          "student_overview": "Anna et Elsa ont d'excellentes compétences en patinage sur glace, mais ont besoin de ton aide pour créer des motifs dans la glace. Utilise des boucles imbriquées pour créer quelque chose de super COOL. "
+          "overview": "Cette leçon **mini-projet** guidera les élèves à travers une série d'exercices leur permettant de créer des images de flocons de neige avec les personnages des films _La Reine des neiges_. ",
+          "student_overview": "Anna et Elsa sont très fortes en patin à glace, mais ont besoin de ton aide pour créer des motifs sur la glace. Utilise des boucles imbriquées pour créer quelque chose de trop FRAIS."
         },
         "coursee-2022/Songwriting": {
           "name": "Écriture de chansons",
@@ -762,57 +762,58 @@
         },
         "express-2022/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8",
-          "overview": "Cette leçon de **renforcement des compétences** propose aux élèves d'utiliser des boucles pour aider le personnage de _Star Wars_ _BB-8_ à traverser efficacement un labyrinthe.",
+          "overview": "Cette leçon de **développement des compétences** propose aux élèves d'utiliser des boucles pour aider _BB-8,_ le personnage de _Star Wars,_ à traverser un labyrinthe de manière efficace.",
           "preparation": "-   Résolvez les énigmes pour voir si cela pose problème à votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves apprendront les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. Il convient de noter que les élèves seront confrontés à des énigmes avec de nombreuses solutions différentes. Cela ouvrira des discussions sur les différentes façons de résoudre des énigmes avec des avantages et des inconvénients à chaque approche.",
-          "student_overview": "Aide BB-8 à travers des labyrinthes en utilisant des boucles ! "
+          "student_overview": "Aide BB-8 à traverser des labyrinthes en utilisant des boucles ! "
         },
         "express-2022/Mini-Project: Sticker Art": {
-          "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
+          "name": "Mini-projet : Design à base d'autocollants ",
+          "overview": "Cette leçon sous forme de **mini-projet** continue à développer les connaissances en matière de boucles. Les élèves créeront des œuvres d'art uniques avec l'Artiste. ",
           "preparation": "-   Entraînez-vous à créer votre propre design. Notez à quel point ces niveaux sont différents de tout ce qui a précédé.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série met en valeur la puissance des boucles avec des motifs créatifs et personnels.  Présentée comme une séquence soutenue par un projet, cette progression permettra aux étudiants de construire sur leur propre travail et de créer des artefacts étonnants.",
-          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
+          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images encore plus stylées avec l'Artiste !"
         },
         "express-2022/Nested Loops in Maze": {
           "name": "Les Boucles Imbriquées dans le Labyrinthe",
-          "overview": "Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur \"Exécuter\".",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à programmer une boucle à l'intérieur d'une autre boucle.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette introduction aux boucles imbriquées, les élèves sortiront de leur zone de confort pour créer des solutions plus efficaces aux énigmes.\n\nDans les énigmes précédentes, les boucles poussaient les élèves à reconnaître la répétition. Ici, ils apprendront à reconnaître des modèles _dans_ des modèles qui se répètent pour développer ces boucles imbriquées. Cette étape commence par encourager les élèves à essayer de résoudre un puzzle où le code est énervant et trop complexe pour être écrit sur le long terme. Après qu'une vidéo présente les boucles imbriquées, on montre aux élèves un exemple et on leur demande de prédire ce qu'il se passera lorsqu'une boucle sera mise à l'intérieur d'une autre. Cette progression conduit à beaucoup de pratique pour que les étudiants se solidifient et développent leur compréhension du bouclage en programmation. ",
-          "student_overview": "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu crées une boucle imbriquée."
+          "student_overview": "Des boucles dans des boucles dans des boucles. Qu'est-ce ça veut dire ? Cette leçon va t'apprendre ce qui se passe lorsque tu crées une boucle imbriquée."
         },
         "express-2022/Snowflakes with Anna and Elsa": {
           "name": "Les Flocons de Neige avec Anna et Elsa",
-          "overview": "Maintenant que les élèves savent comment superposer leurs boucles, ils peuvent créer tant de belles choses.  Cette leçon guidera les élèves à travers une série d'exercices pour les aider à créer leurs propres images, prêtes pour le portfolio, en utilisant les excellentes compétences d'Anna et Elsa en patinage sur glace !",
+          "overview": "Cette leçon **mini-projet** guidera les élèves à travers une série d'exercices leur permettant de créer des images de flocons de neige avec les personnages des films _La Reine des neiges_. ",
           "preparation": "-   Parcourez le cours pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Anna et Elsa ont d'excellentes compétences en patinage sur glace, mais ont besoin de ton aide pour créer des motifs dans la glace. Utilise des boucles imbriquées pour créer quelque chose de super COOL. "
+          "student_overview": "Anna et Elsa sont très fortes en patin à glace, mais ont besoin de ton aide pour créer des motifs sur la glace. Utilise des boucles imbriquées pour créer quelque chose de trop FRAIS."
         },
         "express-2022/Looking Ahead with Minecraft": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
-          "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "name": "Anticiper l'avenir avec Minecraft",
+          "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
           "preparation": "-   Parcourez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
-          "student_overview": "Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft."
+          "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "express-2022/If/Else with Bee": {
           "name": "« Si/Sinon » avec l'Abeille",
-          "overview": "Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.",
+          "overview": "Dans cette leçon de **développement des compétences**, ta classe commencera à coder avec des formules conditionnelles, leur permettant d'écrire du code qui fonctionne différemment en selon les conditions spécifiques rencontrées par le programme.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les élèves s'exerceront à utiliser des conditions dans leurs programmes. Les blocs if / else permettront un programme plus flexible. L'abeille ne récoltera le nectar _si_ il y a une fleur ou fera du miel _si_ il y a une ruche.",
-          "student_overview": "Maintenant que tu comprends les conditions, il est temps de programmer l'Abeille pour les utiliser lors de la collecte de miel et de nectar. "
+          "student_overview": "Maintenant qu'on a compris les formules conditionnelles, il est temps de programmer l'Abeille pour qu'elle les utilise quand elle récolte du miel et de nectar. "
         },
         "express-2022/While Loops in Farmer": {
           "name": "Les Boucles Tant Que dans la Fermière",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.",
+          "overview": "Dans cette leçon de **développement des compétences**, la tâche des élèves sera de remplir des trous et de creuser la terre dans La Fermière, mais ils ne sauront pas quelle est la taille des trous ni la hauteur des tas de terre. Pour résoudre ces casse-têtes, les élèves utiliseront un nouveau type de boucle.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Au fur et à mesure que vos élèves approfondissent leurs connaissances des boucles, ils rencontreront des problèmes où une commande doit être répétée, mais on ne sait pas combien de fois elle doit être répétée. C'est là les boucles `tant que` entrent en jeu. Dans la leçon d'aujourd'hui, les élèves développeront la compréhension d'un débutant des boucles basées sur les conditions, et élargiront également leurs connaissances des boucles, en général.",
-          "student_overview": "Les boucles sont si utiles dans le codage. Cette leçon t'apprendra un nouveau type de boucle : les boucles tant que !"
+          "student_overview": "Les boucles sont tellement utiles dans le codage. Dans cette leçon, tu vas te familiariser avec un nouveau type de boucle : les boucles « tant que » !"
         },
         "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Les Conditions dans Minecraft : Voyage Aquatique",
-          "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "overview": "Dans cette leçon de **définition de contexte**, les élèves auront l'occasion de mettre en pratique les connaissances qu'ils ont acquises jusqu'à présent, ainsi que d'avoir un aperçu des formules conditionnelles !",
           "preparation": "-   Parcourez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles et des conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
-          "student_overview": "Ici, tu découvriras les conditions dans le monde de Minecraft."
+          "student_overview": "Ici, tu vas utiliser des conditions dans le monde de Minecraft."
         },
         "express-2022/Until Loops in Maze": {
           "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
@@ -1079,7 +1080,7 @@
           "name": "Les Boucles avec Rey et BB-8",
           "overview": "En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour aider BB-8 à traverser un labyrinthe plus efficacement qu'auparavant.",
           "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. Il convient de noter que les élèves seront confrontés à des énigmes avec de nombreuses solutions différentes. Cela ouvrira des discussions sur les différentes façons de résoudre des énigmes avec des avantages et des inconvénients à chaque approche. ",
-          "student_overview": "Aide BB-8 à travers des labyrinthes en utilisant des boucles ! "
+          "student_overview": "Aide BB-8 à traverser des labyrinthes en utilisant des boucles ! "
         },
         "coursec-2022/Harvesting Crops with Loops": {
           "name": "Récolter des Cultures avec des Boucles",
@@ -1088,9 +1089,10 @@
           "student_overview": "Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !"
         },
         "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "Mini-projet : Design à base d'autocollants ",
           "overview": "Cette leçon **mini-projet** s'appuie sur la compréhension des boucles des leçons précédentes. Les élèves créeront des œuvres d'art uniques avec l'Artiste.",
           "purpose": "Cette série met en valeur la puissance des boucles avec des motifs créatifs et personnels.  Présentée comme une séquence soutenue par un projet, cette progression permettra aux étudiants de construire sur leur propre travail et de créer des artefacts étonnants.",
-          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
+          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images encore plus stylées avec l'Artiste !"
         },
         "coursec-2022/The Big Event": {
           "name": "Le Grand Événement",
@@ -1171,49 +1173,77 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd1-2022/Intro to Problem Solving": {
-          "name": "Introduction à la Résolution de Problèmes"
+          "name": "Introduction à la Résolution de Problèmes",
+          "preparation": "**Pour chaque groupe**\n\n-   2 feuilles de papier d'aluminium de 5 à 5 pouces de longueur chacune\n-   1 récipient pouvant contenir 3 à 5 pouces d'eau \n-   Plusieurs serviettes en papier ou chiffons qui peuvent être placés sous le récipient \n-   15 pièces de monnaie\n-   Un exemplaire du guide d'activité\n\n\\*\\*Pour l'enseignant\n\n-   1 récipient pouvant contenir de 5 à 10 cm d'eau \n-   50 pièces de monnaie \n-   Des serviettes en papier ou des chiffons supplémentaires \n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez à distance, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/The Problem Solving Process": {
-          "name": "Le Processus de Résolution de Problèmes"
+          "name": "Le Processus de Résolution de Problèmes",
+          "preparation": "Pour chaque élève \n\n-   Imprimez une copie du Guide d'activité\n\nPour la classe\n\n-   Papier pour affiches\n-   Marqueurs/crayons de couleur\n\nPour l'enseignant\n\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/Exploring Problem Solving": {
-          "name": "Explorer la Résolution de Problèmes"
+          "name": "Explorer la Résolution de Problèmes",
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la fête d'anniversaire.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/What is a Computer?": {
-          "name": "Qu'est ce qu'un Ordinateur ?"
+          "name": "Qu'est ce qu'un Ordinateur ?",
+          "preparation": "**Pour chaque groupe** \n\n-   Imprimez des copies du guide d'activité. Notez qu'il y a deux séries d'images, mais que chaque groupe n'a besoin que d'une seule série.\n-   Ciseaux (si vous n'avez pas le temps de découper les images avant le cours) \n-   Papier pour affiches\n-   Marqueurs ou crayons de couleur \n-   Colle ou ruban adhésif pour fixer les images \n\n\\*\\*Pour l'enseignant\n\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/Input and Output": {
-          "name": "Entrée et Sortie"
+          "name": "Entrée et Sortie",
+          "preparation": "-   Préparez des copies du guide d'activité\n-   Consultez le forum [\"Salle de profs\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/Processing": {
           "name": "Le Traitement"
         },
         "csd1-2022/Storage": {
-          "name": "Le Stockage"
+          "name": "Le Stockage",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/Project - Propose an App": {
-          "name": "Projet - Propose une Application"
+          "name": "Projet - Propose une Application",
+          "preparation": "-   Imprimez une copie de [r apps_and_problem_solving/csd/2022] pour chaque paire d'élèves.\n-   Papier pour affiches, stylos, marqueurs et autres matériels pour la réalisation des affiches.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "preparation": "**Pour chaque groupe**\n\n-   2 journaux complets pour chaque groupe d'élèves\n-   1 rouleau de ruban adhésif pour chaque groupe d'élèves\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de poids similaire.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "preparation": "**Pour chaque groupe**\n\n-   1 lb de nouilles spaghetti sèches (environ 1 boîte)\n-   1 pistolet à colle\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de taille et de poids similaires\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "preparation": "**Pour chaque groupe**\n\n-   20 feuilles de papier, 8,5 x 11 pouces\n-   Espace pour construire leur tour\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   Papier supplémentaire \n-   Chronomètre\n-   Règle\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Préparez des tangrams pour les élèves, ou imprimez une feuille de tangram et prenez des ciseaux pour chaque groupe.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la course à relais entre partenaires.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd3-2022/Programming for Entertainment": {
-          "name": "Programmer pour le Divertissement"
+          "name": "Programmer pour le Divertissement",
+          "preparation": "-   Regardez les ressources de recherche liées à Code Studio\n-   Imprimez une copie du guide d'activité pour chaque groupe de trois élèves.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Plotting Shapes": {
           "name": "Tracer Des Formes"
         },
         "csd3-2022/Drawing in Game Lab": {
-          "name": "Dessiner dans le Labo des Jeux"
+          "name": "Dessiner dans le Labo des Jeux",
+          "preparation": "-   Préparez un projecteur ou un autre moyen de montrer les vidéos si vous souhaitez les regarder en classe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Shapes and Parameters": {
-          "name": "Formes et paramètres"
+          "name": "Formes et paramètres",
+          "preparation": "-   Révisez la séquence de niveaux dans Code Studio\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Variables": {
-          "name": "Variables"
+          "name": "Variables",
+          "preparation": "-   Examiner la progression des niveaux dans Code Studio\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Random Numbers": {
-          "name": "Nombres aléatoires"
+          "name": "Nombres aléatoires",
+          "preparation": "-   Examiner la progression des niveaux dans Code Studio\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Sprites": {
-          "name": "Sprites"
+          "name": "Sprites",
+          "preparation": "-   (Facultatif) Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Sprite Properties": {
           "name": "Propriétés du sprite"
@@ -1222,7 +1252,8 @@
           "name": "Texte"
         },
         "csd3-2022/The Draw Loop": {
-          "name": "La Boucle Dessiner"
+          "name": "La Boucle Dessiner",
+          "preparation": "-   Imprimer et assembler le matériel de manipulation\n-   Préparez la vidéo\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Sprite Movement": {
           "name": "Le Déplacement du Lutin"
@@ -1234,13 +1265,15 @@
           "name": "Entrée Au Clavier"
         },
         "csd3-2022/Project - Interactive Card": {
-          "name": "Projet - Carte Interactive"
+          "name": "Projet - Carte Interactive",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-interactive-card-interactive-animations-and-games-lesson-17/36208) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Velocity": {
           "name": "Vitesse"
         },
         "csd3-2022/Collision Detection": {
-          "name": "Détection de collision"
+          "name": "Détection de collision",
+          "preparation": "-   Imprimez des copies du guide d'activité de façon à ce que chaque paire d'élèves ait une partie A et une partie B.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Complex Sprite Movement": {
           "name": "Déplacement Complexe du Lutin"
@@ -1252,88 +1285,155 @@
           "name": "Fonctions"
         },
         "csd3-2022/The Game Design Process": {
-          "name": "Le Processus de Conception d'un Jeu"
+          "name": "Le Processus de Conception d'un Jeu",
+          "preparation": "-   Imprimez des copies du guide du projet si vous comptez remettre des copies physiques aux élèves.  Veuillez noter que ce guide de projet est intentionnellement rempli. (Voir les notes dans le plan de leçon).\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Using the Game Design Process": {
-          "name": "Utiliser le Processus de Conception d'un Jeu"
+          "name": "Utiliser le Processus de Conception d'un Jeu",
+          "preparation": "-   Imprimez une copie du guide de projet pour chaque élève ou paire d'élèves.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/Project - Design a Game": {
-          "name": "Projet - Concevoir un Jeu"
+          "name": "Projet - Concevoir un Jeu",
+          "preparation": "-   Imprimez des copies du guide du projet, une pour chaque élève ou paire d'élèves.\n-   Imprimez des copies de la grille d'évaluation, une pour chaque élève ou paire d'élèves.\n-   Imprimez des copies du guide d'évaluation par les pairs, une pour chaque élève ou paire d'élèves.\n-   Examinez les exemples de jeux dans Code Studio\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-design-a-game-interactive-animations-and-games-lesson-27/36211) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
         },
         "csd3-2022/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd2-2022/Exploring Web Pages": {
-          "name": "Explorer des Pages Web"
+          "name": "Explorer des Pages Web",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Intro to HTML": {
-          "name": "Initiation au HTML"
+          "name": "Initiation au HTML",
+          "preparation": "-   Regardez les niveaux de Code Studio\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Headings": {
-          "name": "Rubriques"
+          "name": "Rubriques",
+          "preparation": "-   Préparez les journaux des élèves pour les rendre.\n-   Si vous souhaitez utiliser un tableau d'ancrage, préparez du papier d'affiche pour le faire avec toute la classe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2022/Mini-Project: HTML Web Page": {
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Digital Footprint": {
-          "name": "L'Empreinte Numérique"
+          "name": "L'Empreinte Numérique",
+          "preparation": "-   Imprimez des copies de \"Social Sleuth\" pour chaque élève (ou une pour chaque groupe si vous regroupez les élèves).\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Styling Text with CSS": {
-          "name": "Styliser le texte avec CSS"
+          "name": "Styliser le texte avec CSS",
+          "preparation": "-   Créez une nouvelle affiche intitulée **Propriétés CSS** si vos élèves n'ont pas l'intention de suivre les nouvelles propriétés CSS dans leurs journaux.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2022/Mini-Project: Your Personal Style": {
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Intellectual Property": {
-          "name": "Propriété intellectuelle"
+          "name": "Propriété intellectuelle",
+          "preparation": "-   Aperçu de Creative Commons - Vidéo. Vous devrez peut-être la télécharger avant le cours si YouTube est bloqué.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2022/Websites for Expression": {
+          "preparation": "-   Préparez des journaux ou, éventuellement, imprimez des copies du guide d'activités.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Styling Elements with CSS": {
           "name": "Styliser des Éléments avec CSS"
+        },
+        "csd2-2022/Your Web Page - Prepare": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2022/Project - Personal Web Page": {
+          "preparation": "-   Assurez-vous que les élèves ont accès au guide de projet de la dernière leçon.\n-   Imprimez des copies des documents de réflexion et de rétroaction par les pairs.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Team Problem Solving": {
           "name": "La Résolution De Problèmes en Équipe"
         },
         "csd2-2022/Sources and Research": {
-          "name": "Les Sources et la Recherche"
+          "name": "Les Sources et la Recherche",
+          "preparation": "-   Imprimez une copie du guide d'activité de la chasse au trésor sur Internet pour chaque paire d'élèves, ou préparez-vous à projeter les questions à la classe.\n-   Créez une affiche vierge intitulée **Check-list de fiabilité** et placez-la au mur.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/CSS Classes": {
           "name": "Les classes CSS"
         },
         "csd2-2022/Linking Pages": {
-          "name": "Relier des Pages"
+          "name": "Relier des Pages",
+          "preparation": "-   Assurez-vous que les élèves ont accès à leurs plans de site web de la leçon précédente.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/Project - Website for a Purpose": {
           "name": "Projet - Site Web avec un But"
         },
         "csd2-2022/Peer Review and Final Touches": {
-          "name": "L'Examen par les Pairs et la Touche Finale"
+          "name": "L'Examen par les Pairs et la Touche Finale",
+          "preparation": "-   Imprimez une copie du guide d'évaluation par les pairs pour chaque élève.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
         },
         "csd2-2022/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Enquête Post-Cours"
         },
+        "csd4-2022/Designing With Empathy": {
+          "overview": "**Question du jour : Comment pouvons-nous choisir des produits en fonction des besoins d'un utilisateur ?**\n\nPour lancer une unité consacrée à la résolution de problèmes en groupe et au développement de produits pour d'autres utilisateurs, les élèves commencent par étudier le design de diverses chaussures. Ils observent une variété de chaussures et tentent d'associer chaque chaussure à un utilisateur potentiel. Les élèves donnent également leur avis sur ces modèles, à l'aide d'un formulaire \"J'aime...\" ou \"J'aimerais...\". / \"J'aimerais...\" / qui sera répétée tout au long de l'unité. Pour conclure l'activité, les élèves sont invités à proposer des modifications à une paire de chaussures afin de la rendre plus utile ou utilisable.",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève (ou préparez-vous à distribuer le document sous forme numérique).\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
         "csd4-2022/Understanding Your User": {
-          "name": "Comprendre Votre Utilisateur"
+          "name": "Comprendre Votre Utilisateur",
+          "preparation": "-   Imprimez suffisamment de profils d'utilisateurs pour tous les élèves, en veillant à ce qu'ils soient aussi variés que possible.\n-   Imprimez un guide d'activité pour chaque utilisateur\n-   Préparer des questions pour l'exercice d'échauffement\n-   Identifiez les quatre coins de la salle : A, B, C et D.\n-   Disposez la salle en groupes de 4 tables, et placez un numéro sur chaque groupe de tables (1, 2, 3,...)\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/User Centered Design   Define and Prepare": {
+          "name": "Conception centrée sur l'utilisateur - Définir et Préparer",
+          "preparation": "-   Assurez-vous de disposer de suffisamment de notes autocollantes, de stylos et de grandes feuilles de papier pour que les élèves puissent travailler.\n-   Constituez des groupes de 3 élèves chacun, de préférence.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/User Centered Design   Try and Reflect": {
+          "name": "Conception centrée sur l'utilisateur - Essayez et réfléchissez",
+          "preparation": "-   Remettez aux élèves le guide d'activité de la veille.\n-   Faites des copies du guide d'activité \" Essayer et Réfléchir \" - une pour chaque groupe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/User Interfaces": {
-          "name": "Les Interfaces Utilisateurs"
+          "name": "Les Interfaces Utilisateurs",
+          "preparation": "-   Imprimez une copie du guide d'activité sur les écrans de l'interface utilisateur pour chaque paire d'élèves.\n-   Imprimez un exemplaire du guide d'activité Expérience utilisateur (ordinateur) pour chaque paire d'élèves.\n-   Imprimez une copie du guide d'activité sur l'expérience utilisateur (utilisateur) pour chaque paire d'élèves.\n-   Découpez les écrans d'interface utilisateur ou fournissez des ciseaux aux élèves pour qu'ils le fassent eux-mêmes.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Feedback and Testing": {
-          "name": "Commentaires et Tests"
+          "name": "Commentaires et Tests",
+          "preparation": "-   Imprimez une copie de la ressource Écrans d'interface utilisateur pour chaque groupe ou préparez-vous à afficher les écrans devant la classe.\n-   Imprimez une copie de la ressource Rétroaction du prototype pour chaque groupe. Si possible, découpez-la en bandes à l'avance.\n-   Imprimez une copie de la ressource Améliorer un écran pour chaque groupe. Si possible, imprimez sur une seule face pour que les élèves puissent se partager le guide d'activité.\n-   Crayons de couleur ou marqueurs pour les prototypes en papier.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Identifying User Needs": {
-          "name": "Identifier les Besoins des Utilisateurs"
+          "name": "Identifier les Besoins des Utilisateurs",
+          "preparation": "-   Imprimez une copie du guide d'activité de l'entretien avec l'utilisateur pour chaque élève.\n-   Imprimez une copie des exemples d'entretiens avec les utilisateurs pour chaque groupe.\n-   Rassemblez du papier pour affiche et du matériel de remue-méninges (stylos, notes autocollantes, etc.).\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Project - Paper Prototype": {
-          "name": "Projet - Prototype Papier"
+          "name": "Projet - Prototype Papier",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Imprimez une copie de la grille d'évaluation pour chaque élève.\n-   6 cartes de notes pour chaque élève\n-   Matériel de dessin (crayons de couleur, marqueurs, règles, etc.)\n-   Du papier pour poster pour chaque élève\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-paper-prototype-the-design-process-lesson-8/36212) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Designing Apps for Good": {
-          "name": "Concevoir des Applications pour de Bon"
+          "name": "Concevoir des Applications pour de Bon",
+          "preparation": "-   Formez des équipes de 3-4 personnes, idéalement en fonction d'un intérêt similaire pour un sujet d'application.\n-   Imprimez un exemplaire du guide d'activité par équipe\n-   Choisissez 1 à 3 applications parmi les exemples d'applications à partager avec la classe.\n-   Disposez les sièges de la classe pour les équipes présélectionnées de 3-4 élèves.\n-   Distribuez des notes autocollantes pour chaque équipe\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Market Research": {
-          "name": "Étude de Marché"
+          "name": "Étude de Marché",
+          "preparation": "-   Disposez les sièges de la classe pour des équipes de 4-5 élèves.\n-   Imprimez un exemplaire du guide d'activité par équipe\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/Exploring UI Elements": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   (Facultatif) Prévisualisez la Leçon 14 - Mode Design dans AppLab pour aider à répondre aux questions des élèves sur les éléments de l'interface utilisateur dans AppLab.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/Build a Paper Prototype": {
+          "preparation": "-   Préparez des fiches 3x5 (ou des copies du modèle de prototype), des notes autocollantes, des stylos et crayons de couleur, des ciseaux pour chaque équipe.\n-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Prototype Testing": {
-          "name": "Les Essais de Prototype"
+          "name": "Les Essais de Prototype",
+          "preparation": "-   Préparez d'autres personnes pour tester les prototypes papier de chaque équipe, ou prévoyez suffisamment de temps pour que les équipes puissent tester leurs prototypes respectifs.\n-   Imprimez une copie du guide d'activité Test du prototype papier pour chaque équipe.\n-   Imprimez une copie du guide d'activité Cas de test utilisateur pour chaque équipe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/Design Mode in App Lab": {
+          "preparation": "-   Imprimez une copie du guide d'activité sur la propriété de l'écran pour chaque groupe.\n-   Imprimez un exemplaire du guide d'activité sur la conception d'écran pour chaque élève.\n-   (Facultatif) Imprimez un exemplaire du guide d'activité Conception d'écran modèle pour chaque groupe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/Build a Digital Prototype": {
+          "preparation": "-   Disposez d'exemplaires supplémentaires du Guide d'activité de conception d'écran pour les élèves.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Testing the App": {
-          "name": "Tester l'Application"
+          "name": "Tester l'Application",
+          "preparation": "-   Imprimez un exemplaire du guide d'activité pour chaque élève.\n-   Si possible, demandez à des utilisateurs externes de tester les applications des équipes avant le jour du test.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/Bugs and Features": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   Préparez des notes autocollantes pour chaque équipe\n-   (Facultatif) Préparez du papier pour affiche ou un grand tableau blanc pour chaque équipe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2022/Updating Your Prototype": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   (Facultatif) Préparez du papier pour affiche ou un grand tableau blanc pour chaque équipe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/Project - App Presentation": {
-          "name": "Projet - Présentation de l'Application"
+          "name": "Projet - Présentation de l'Application",
+          "preparation": "-   Déterminez le temps dont dispose chaque groupe pour faire sa présentation. En général, cela représente 8 à 10 minutes par équipe, mais n'oubliez pas de laisser du temps pour la transition entre les équipes.\n-   Créez une copie des diapositives du modèle de présentation pour chaque équipe.\n-   Imprimez une copie de la grille d'évaluation pour chaque équipe. \n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
         },
         "csd4-2022/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Enquête Post-Cours"
@@ -1627,7 +1727,7 @@
           "name": "Les Droits d'Auteur et la Créativité"
         },
         "express-2018/Concept Practice with Minecraft ": {
-          "name": "Regarder vers l'Avenir avec Minecraft"
+          "name": "Anticiper l'avenir avec Minecraft"
         },
         "express-2018/Nested Loops in Bee": {
           "name": "Les Boucles Imbriquées dans l'Abeille"
@@ -1864,7 +1964,7 @@
           "name": "Jeu de Poursuite avec des Événements"
         },
         "coursec-2018/Looking Ahead": {
-          "name": "Regarder vers l'Avenir avec Minecraft"
+          "name": "Anticiper l'avenir avec Minecraft"
         },
         "coursec-2018/Binary Bracelets": {
           "name": "Les bracelets binaires"
@@ -2476,7 +2576,7 @@
           "name": "Les Flocons de Neige avec Anna et Elsa"
         },
         "express-2019/Concept Practice with Minecraft ": {
-          "name": "Regarder vers l'Avenir avec Minecraft"
+          "name": "Anticiper l'avenir avec Minecraft"
         },
         "express-2019/Conditionals in Bee": {
           "name": "« Si/Sinon » avec l'Abeille"
@@ -2566,7 +2666,7 @@
           "name": "Récolter des Cultures avec des Boucles"
         },
         "coursec-2019/Looking Ahead": {
-          "name": "Regarder vers l'Avenir avec Minecraft"
+          "name": "Anticiper l'avenir avec Minecraft"
         },
         "coursec-2019/Sticker Art with Loops": {
           "name": "L'Art de l'Autocollant avec les Boucles"
@@ -4480,7 +4580,7 @@
           "overview": "En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour aider BB-8 à traverser un labyrinthe plus efficacement qu'auparavant.",
           "preparation": "-   Résolvez les énigmes pour voir s'il y aura des problèmes avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. Il convient de noter que les élèves seront confrontés à des énigmes avec de nombreuses solutions différentes. Cela ouvrira des discussions sur les différentes façons de résoudre des énigmes avec des avantages et des inconvénients à chaque approche. ",
-          "student_overview": "Aide BB-8 à travers des labyrinthes en utilisant des boucles ! "
+          "student_overview": "Aide BB-8 à traverser des labyrinthes en utilisant des boucles ! "
         },
         "coursec-2021/Loops in Harvester": {
           "name": "Récolter des Cultures avec des Boucles",
@@ -4490,10 +4590,11 @@
           "student_overview": "Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "name": "Mini-projet : Design à base d'autocollants ",
           "overview": "Cette leçon **mini-projet** s'appuie sur la compréhension des boucles des leçons précédentes. Les élèves créeront des œuvres d'art uniques avec l'Artiste.",
           "preparation": "-   Entraînez-vous à créer votre propre design. Notez à quel point ces niveaux sont différents de tout ce qui a précédé.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série met en valeur la puissance des boucles avec des motifs créatifs et personnels.  Présentée comme une séquence soutenue par un projet, cette progression permettra aux étudiants de construire sur leur propre travail et de créer des artefacts étonnants.",
-          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
+          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images encore plus stylées avec l'Artiste !"
         },
         "coursec-2021/Events: The Big Event": {
           "name": "Le Grand Événement",
@@ -4607,7 +4708,7 @@
         },
         "coursed-2021/Nested Loops in Bee": {
           "name": "Les Boucles Imbriquées dans le Labyrinthe",
-          "overview": "Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur \"Exécuter\".",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à programmer une boucle à l'intérieur d'une autre boucle.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette introduction aux boucles imbriquées, les élèves sortiront de leur zone de confort pour créer des solutions plus efficaces aux énigmes.\n\nDans les énigmes précédentes, les boucles poussaient les élèves à reconnaître la répétition. Ici, ils apprendront à reconnaître des modèles _dans_ des modèles qui se répètent pour développer ces boucles imbriquées. Cette étape commence par encourager les élèves à essayer de résoudre un puzzle où le code est énervant et trop complexe pour être écrit sur le long terme. Après qu'une vidéo présente les boucles imbriquées, on montre aux élèves un exemple et on leur demande de prédire ce qu'il se passera lorsqu'une boucle sera mise à l'intérieur d'une autre. Cette progression conduit à beaucoup de pratique pour que les étudiants se solidifient et développent leur compréhension du bouclage en programmation. ",
           "student_overview": "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu crées une boucle imbriquée."
@@ -4620,25 +4721,25 @@
           "student_overview": "Il est temps de jouer à un jeu où tu ne gagnes des points que sous certaines conditions !"
         },
         "coursed-2021/lesson-6": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
-          "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "name": "Anticiper l'avenir avec Minecraft",
+          "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
           "preparation": "-   Résolvez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
-          "student_overview": "Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft."
+          "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "coursed-2021/Conditionals in Bee": {
           "name": "« Si/Sinon » avec l'Abeille",
-          "overview": "Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.",
+          "overview": "Dans cette leçon de **développement des compétences**, ta classe commencera à coder avec des formules conditionnelles, leur permettant d'écrire du code qui fonctionne différemment en selon les conditions spécifiques rencontrées par le programme.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Après avoir été initiés aux conditions dans « Conditions avec cartes », les élèves vont maintenant s'entraîner à les utiliser dans leurs programmes. Les blocs \"if / else\" permettront un programme plus flexible. L'abeille ne récoltera le nectar _si_ il y a une fleur ou fera du miel _si_ il y a une ruche.",
-          "student_overview": "Maintenant que tu comprends les conditions, il est temps de programmer l'Abeille pour les utiliser lors de la collecte de miel et de nectar. "
+          "student_overview": "Maintenant qu'on a compris les formules conditionnelles, il est temps de programmer l'Abeille pour qu'elle les utilise quand elle récolte du miel et de nectar. "
         },
         "coursed-2021/While Loops in Farmer": {
           "name": "Les Boucles Tant Que dans la Fermière",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.",
+          "overview": "Dans cette leçon de **développement des compétences**, la tâche des élèves sera de remplir des trous et de creuser la terre dans La Fermière, mais ils ne sauront pas quelle est la taille des trous ni la hauteur des tas de terre. Pour résoudre ces casse-têtes, les élèves utiliseront un nouveau type de boucle.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Au fur et à mesure que vos élèves approfondissent leurs connaissances des boucles, ils rencontreront des problèmes où une commande doit être répétée, mais on ne sait pas combien de fois elle doit être répétée. C'est là les boucles `tant que` entrent en jeu. Dans la leçon d'aujourd'hui, les élèves développeront la compréhension d'un débutant des boucles basées sur les conditions, et élargiront également leurs connaissances des boucles, en général.",
-          "student_overview": "Les boucles sont si utiles dans le codage. Cette leçon t'apprendra un nouveau type de boucle : les boucles tant que !"
+          "student_overview": "Les boucles sont tellement utiles dans le codage. Dans cette leçon, tu vas te familiariser avec un nouveau type de boucle : les boucles « tant que » !"
         },
         "coursed-2021/Until Loops in Maze": {
           "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
@@ -4718,58 +4819,59 @@
         },
         "express-2021/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8",
-          "overview": "Cette leçon de **renforcement des compétences** propose aux élèves d'utiliser des boucles pour aider le personnage de _Star Wars_ _BB-8_ à traverser efficacement un labyrinthe.",
+          "overview": "Cette leçon de **développement des compétences** propose aux élèves d'utiliser des boucles pour aider _BB-8,_ le personnage de _Star Wars,_ à traverser un labyrinthe de manière efficace.",
           "preparation": "-   Résolvez les énigmes pour voir si cela pose problème à votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves apprendront les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. Il convient de noter que les élèves seront confrontés à des énigmes avec de nombreuses solutions différentes. Cela ouvrira des discussions sur les différentes façons de résoudre des énigmes avec des avantages et des inconvénients à chaque approche.",
-          "student_overview": "Aide BB-8 à travers des labyrinthes en utilisant des boucles ! "
+          "student_overview": "Aide BB-8 à traverser des labyrinthes en utilisant des boucles ! "
         },
         "express-2021/Sticker Art with Loops": {
-          "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
+          "name": "Mini-projet : Design à base d'autocollants ",
+          "overview": "Cette leçon sous forme de **mini-projet** continue à développer les connaissances en matière de boucles. Les élèves créeront des œuvres d'art uniques avec l'Artiste. ",
           "preparation": "-   Entraînez-vous à créer votre propre design. Notez à quel point ces niveaux sont différents de tout ce qui a précédé.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série met en valeur la puissance des boucles avec des motifs créatifs et personnels.  Présentée comme une séquence soutenue par un projet, cette progression permettra aux étudiants de construire sur leur propre travail et de créer des artefacts étonnants.",
-          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
+          "student_overview": "Dans cette leçon, les boucles facilitent la création d'images encore plus stylées avec l'Artiste !"
         },
         "express-2021/Nested Loops in Maze": {
-          "name": "Les Boucles Imbriquées dans le Labyrinthe",
-          "overview": "Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur \"Exécuter\".",
+          "name": "Les Boucles Imbriquées dans Labyrinthe",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à programmer une boucle à l'intérieur d'une autre boucle.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette introduction aux boucles imbriquées, les élèves sortiront de leur zone de confort pour créer des solutions plus efficaces aux énigmes.\n\nDans les énigmes précédentes, les boucles poussaient les élèves à reconnaître la répétition. Ici, ils apprendront à reconnaître des modèles _dans_ des modèles qui se répètent pour développer ces boucles imbriquées. Cette étape commence par encourager les élèves à essayer de résoudre un puzzle où le code est énervant et trop complexe pour être écrit sur le long terme. Après qu'une vidéo présente les boucles imbriquées, on montre aux élèves un exemple et on leur demande de prédire ce qu'il se passera lorsqu'une boucle sera mise à l'intérieur d'une autre. Cette progression conduit à beaucoup de pratique pour que les étudiants se solidifient et développent leur compréhension du bouclage en programmation. ",
-          "student_overview": "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu crées une boucle imbriquée."
+          "student_overview": "Des boucles dans des boucles dans des boucles. Qu'est-ce ça veut dire ? Cette leçon va t'apprendre ce qui se passe lorsque tu crées une boucle imbriquée."
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "name": "Les Flocons de Neige avec Anna et Elsa",
-          "overview": "Maintenant que les élèves savent comment superposer leurs boucles, ils peuvent créer tant de belles choses.  Cette leçon guidera les élèves à travers une série d'exercices pour les aider à créer leurs propres images, prêtes pour le portfolio, en utilisant les excellentes compétences d'Anna et Elsa en patinage sur glace !",
+          "overview": "Cette leçon **mini-projet** guidera les élèves à travers une série d'exercices leur permettant de créer des images de flocons de neige avec les personnages des films _La Reine des neiges_. ",
           "preparation": "-   Parcourez le cours pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette série, les élèves mettrons en pratique les boucles d'imbrication, tout en créant des images qu'ils seront ravis de partager. En commençant par une poignée d'instructions, les élèves prendront leurs propres décisions lorsqu'il s'agira de créer des dessins pour la répétition. Ils les feront alors tourner d'une variété de façons, et finiront avec une œuvre d'art vraiment unique.",
-          "student_overview": "Anna et Elsa ont d'excellentes compétences en patinage sur glace, mais ont besoin de ton aide pour créer des motifs dans la glace. Utilise des boucles imbriquées pour créer quelque chose de super COOL. "
+          "student_overview": "Anna et Elsa sont très fortes en patin à glace, mais ont besoin de ton aide pour créer des motifs sur la glace. Utilise des boucles imbriquées pour créer quelque chose de trop FRAIS."
         },
         "express-2021/Looking Ahead with Minecraft ": {
-          "name": "Regarder vers l'Avenir avec Minecraft",
-          "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "name": "Anticiper l'avenir avec Minecraft",
+          "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
           "preparation": "-   Parcourez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
-          "student_overview": "Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft."
+          "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "express-2021/If/Else with Bee": {
           "name": "« Si/Sinon » avec l'Abeille",
-          "overview": "Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.",
+          "overview": "Dans cette leçon de **développement des compétences**, ta classe commencera à coder avec des formules conditionnelles, leur permettant d'écrire du code qui fonctionne différemment en selon les conditions spécifiques rencontrées par le programme.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les élèves s'exerceront à utiliser des conditions dans leurs programmes. Les blocs if / else permettront un programme plus flexible. L'abeille ne récoltera le nectar _si_ il y a une fleur ou fera du miel _si_ il y a une ruche.",
-          "student_overview": "Maintenant que tu comprends les conditions, il est temps de programmer l'Abeille pour les utiliser lors de la collecte de miel et de nectar. "
+          "student_overview": "Maintenant qu'on a compris les formules conditionnelles, il est temps de programmer l'Abeille pour qu'elle les utilise quand elle récolte du miel et de nectar. "
         },
         "express-2021/While Loops with the Farmer": {
           "name": "Les Boucles Tant Que dans la Fermière",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.",
+          "overview": "Dans cette leçon de **développement des compétences**, la tâche des élèves sera de remplir des trous et de creuser la terre dans La Fermière, mais ils ne sauront pas quelle est la taille des trous ni la hauteur des tas de terre. Pour résoudre ces casse-têtes, les élèves utiliseront un nouveau type de boucle.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Au fur et à mesure que vos élèves approfondissent leurs connaissances des boucles, ils rencontreront des problèmes où une commande doit être répétée, mais on ne sait pas combien de fois elle doit être répétée. C'est là les boucles `tant que` entrent en jeu. Dans la leçon d'aujourd'hui, les élèves développeront la compréhension d'un débutant des boucles basées sur les conditions, et élargiront également leurs connaissances des boucles, en général.",
-          "student_overview": "Les boucles sont si utiles dans le codage. Cette leçon t'apprendra un nouveau type de boucle : les boucles tant que !"
+          "student_overview": "Les boucles sont tellement utiles dans le codage. Dans cette leçon, tu vas te familiariser avec un nouveau type de boucle : les boucles « tant que » !"
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Les Conditions dans Minecraft : Voyage Aquatique",
-          "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "overview": "Dans cette leçon de **définition de contexte**, les élèves auront l'occasion de mettre en pratique les connaissances qu'ils ont acquises jusqu'à présent, ainsi que d'avoir un aperçu des formules conditionnelles !",
           "preparation": "-   Parcourez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles et des conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
-          "student_overview": "Ici, tu découvriras les conditions dans le monde de Minecraft."
+          "student_overview": "Ici, tu vas utiliser des conditions dans le monde de Minecraft."
         },
         "express-2021/Until Loops in Maze": {
           "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
@@ -4950,8 +5052,8 @@
           "student_overview": "Plus de boucles imbriquées ! Cette fois, tu dois faire un dessin ÉTONNANT avec des boucles imbriquées."
         },
         "coursee-2021/Nested Loops in Frozen": {
-          "overview": "Maintenant que les élèves savent comment superposer leurs boucles, ils peuvent créer tant de belles choses.  Cette leçon guidera les élèves à travers une série d'exercices pour les aider à créer leurs propres images, prêtes pour le portfolio, en utilisant les excellentes compétences d'Anna et Elsa en patinage sur glace !",
-          "student_overview": "Anna et Elsa ont d'excellentes compétences en patinage sur glace, mais ont besoin de ton aide pour créer des motifs dans la glace. Utilise des boucles imbriquées pour créer quelque chose de super COOL. "
+          "overview": "Cette leçon **mini-projet** guidera les élèves à travers une série d'exercices leur permettant de créer des images de flocons de neige avec les personnages des films _La Reine des neiges_. ",
+          "student_overview": "Anna et Elsa sont très fortes en patin à glace, mais ont besoin de ton aide pour créer des motifs sur la glace. Utilise des boucles imbriquées pour créer quelque chose de trop FRAIS."
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Écriture de chansons",
@@ -4973,7 +5075,7 @@
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Les Conditions dans Minecraft : Voyage Aquatique",
-          "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "overview": "Dans cette leçon de **définition de contexte**, les élèves auront l'occasion de mettre en pratique les connaissances qu'ils ont acquises jusqu'à présent, ainsi que d'avoir un aperçu des formules conditionnelles !",
           "preparation": "-   Résolvez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Ici, tu découvriras les conditions dans le monde de Minecraft."
@@ -5504,7 +5606,7 @@
           "name": "Récolter des Cultures avec des Boucles"
         },
         "coursec-2020/Looking Ahead": {
-          "name": "Regarder vers l'Avenir avec Minecraft"
+          "name": "Anticiper l'avenir avec Minecraft"
         },
         "coursec-2020/Sticker Art with Loops": {
           "name": "L'Art de l'Autocollant avec les Boucles"

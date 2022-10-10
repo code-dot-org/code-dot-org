@@ -9,7 +9,7 @@ data = sf_teachers.collect do |u|
   average_completed_levels = 0
   unless u.followers.empty?
     completed_levels = u.followers.collect(&:student_user).collect {|student| student.user_levels.where('best_result > 20').count}
-    average_completed_levels = completed_levels.inject(&:+).to_f / completed_levels.size
+    average_completed_levels = completed_levels.sum.to_f / completed_levels.size
     average_completed_levels = average_completed_levels.round(2)
   end
 

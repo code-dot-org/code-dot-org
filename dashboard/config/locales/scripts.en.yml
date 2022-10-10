@@ -6548,13 +6548,18 @@ en:
           description: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           student_description: Learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.
         csc-things:
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Scratch Paper
           name: csc-things
           title: 'CSC Brain Dump '
           description_audience: ''
           description_short: ''
           description: 'These are just a work in progress :) '
           student_description: ''
+          lessons:
+            lesson-2:
+              name: book cover
         poetry-hoc2:
           lesson_groups: {}
           name: poetry-hoc2
@@ -8796,7 +8801,9 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description_audience: ''
         csa1-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
           lesson_groups: {}
           name: csa1-2023
           title: Object-Oriented Programming
@@ -8988,7 +8995,7 @@ en:
           name: csa-magpie-lab
           title: AP CSA Magpie Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Magpie Lab explores the basics of natural language processing as students create a chatbot program. Students work with a variety of methods of the String class and practice using if statements to evaluate user input to determine an appropriate response.
           description: |-
             From Eliza in the 1960s to Siri and Watson today, the idea of talking to computers in natural language has fascinated people. (And yes, there have been more than one conversation between Eliza and Siri – search for "chatbot Eliza Siri.") While natural language processing (NLP) is a complicated field, it is fairly easy to create a simple program to respond to English sentences.
 
@@ -9033,7 +9040,7 @@ en:
           name: csa-consumer-review-lab
           title: AP CSA Consumer Review Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Consumer Review lab explores how reviews for products and services are evaluated and sometimes manipulated. Students work with methods in the String class and practice using conditionals and iteration to design and implement algorithms to process text files containing reviews.
           description: |-
             The Consumer Review Lab provides students with the opportunity to work on a larger assignment involving multiple classes early in the course, before they necessarily know how to write their own classes. By focusing on calling methods and using the control structures of selection and iteration, students will have practice that directly relates to the **Methods and Control Structures** free-response question type that they will see on the end-of-year exam. Because students often struggle with methods in the `String` class, this lab specifically focuses on calling these methods and building strings in an interesting and engaging way.
 
@@ -9059,7 +9066,7 @@ en:
           name: csa-data-lab
           title: AP CSA Data Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Data Lab explores data retrieval and analysis techniques. Students practice developing questions, identifying appropriate data sources, and then writing code to read and process data to answer their questions.
           description: |-
             Students are motivated if they feel connected to the material they are studying. One way to make computer science content relevant, meaningful, relatable, and exciting is to incorporate real-world data sets into hands-on programming assignments.
 
@@ -9073,7 +9080,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: hello-world-space-2022
-          title: Hello World Space
+          title: 'Hello World: Space'
           description_audience: ''
           description_short: ''
           description: ''
@@ -9082,7 +9089,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: hello-world-soccer-2022
-          title: Hello World Soccer
+          title: 'Hello World: Soccer'
           description_audience: ''
           description_short: ''
           description: ''
@@ -9201,3 +9208,36 @@ en:
 
             **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: 'Book Cover '
+          lesson_groups: {}
+          name: csc-bookcover
+          title: CSC Bookcover
+          description_audience: ''
+          description_short: ''
+          description: 'this is an internal script as the source of truth for this lesson that will be reused in other CSC modules. '
+          student_description: ''
+        csc-landmarks-pilot:
+          lessons:
+            lesson-1:
+              name: U.S. Landmarks
+          lesson_groups: {}
+          name: csc-landmarks-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: 'Winter 2022 Pilot module - Historical Landmark and Mapping Module '
+          student_description: ''
+        csc-playground:
+          lessons:
+            lesson-1:
+              name: function machines playground
+          lesson_groups: {}
+          name: csc-playground
+          title: CSC Playground
+          description_audience: ''
+          description_short: ''
+          description: 'A place to park CSC stuff '
+          student_description: ''

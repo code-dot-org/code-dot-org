@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '>= 2.5', '< 2.7'
+ruby '2.6.6'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -141,7 +141,7 @@ gem 'gemoji'
 # Authentication and permissions.
 gem 'cancancan', '~> 3.0.0'
 gem 'devise', '~> 4.7.0'
-gem 'devise_invitable', '~> 1.6.0'
+gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
@@ -325,7 +325,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'activerecord-import'
+gem 'activerecord-import', '~> 1.0.3'
 gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'

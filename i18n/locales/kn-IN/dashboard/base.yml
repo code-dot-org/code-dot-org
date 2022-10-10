@@ -532,6 +532,7 @@ kn:
     no_primary_course: "ಕೋಡ್ ಸ್ಟುಡಿಯೋ ಕೋರ್ಸ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ\n"
     choose_next_course: "ಕೆಳಗಿನ ಒಂದನ್ನು ಆಯ್ಕೆ ಮಾಡುವ ಮೂಲಕ ಕೋಡ್ ಸ್ಟುಡಿಯೋ ಕೋರ್ಸ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ"
     print_certificate: "ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಮುದ್ರಿಸಿ"
+  certificate_hour_of_code: "ಅವರ್ ಆಫ್‌ ಕೋಡ್"
   move_students:
     new_section_dne: "ಕ್ಷಮಿಸಿ, ಆದರೆ ವಿಭಾಗ %{new_section_code} ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಬೇರೆ ವಿಭಾಗದ ಕೋಡ್ ನಮೂದಿಸಿ."
     section_code_cant_be_current_section: "ಪ್ರಸ್ತುತ ವಿಭಾಗವು ಹೊಸ ವಿಭಾಗದಂತೆಯೇ ಇರುವಂತಿಲ್ಲ."
@@ -987,3 +988,10 @@ kn:
       login_with_google: 'Google ನೊಂದಿಗೆ Maker ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಲಾಗಿನ್ ಮಾಡಿ'
       enter_code: 'ನಿಮ್ಮ ಡೀಫಾಲ್ಟ್ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ನೀವು Google ಮೂಲಕ ಲಾಗ್ ಇನ್ ಮಾಡಿದಾಗ ಒದಗಿಸಿದ ಕೋಡ್ ಅನ್ನು ನಮೂದಿಸಿ.'
   teacher_feedback: "ಶಿಕ್ಷಕರ ಪ್ರತಿಕ್ರಿಯೆ"
+  lesson_lock:
+    error:
+      no_updates: "ಯಾವುದೇ ಅಪ್‌ಡೇಟ್‌ಗಳಿಲ್ಲ"
+      missing_params: "ಬಳಕೆದಾರರು, ಲೆವೆಲ್ ಮತ್ತು ಯುನಿಟ್‌ ಐಡಿಗಳನ್ನು ಒದಗಿಸಬೇಕು"
+      cannot_view_locked_answers: "ಲಾಕ್ ಮಾಡಿರುವಾಗ ಉತ್ತರಗಳನ್ನು ನೋಡಲಾಗದು"
+      forbidden: "ವಿದ್ಯಾರ್ಥಿಯ ಲಾಕ್ ಮಾಡಬಹುದಾದ ಸ್ಥಿತಿಯನ್ನು ಬಳಕೆದಾರರು ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗದು"
+  reset_predict_progress_button: "ಉತ್ತರ ಅಳಿಸಿ"
