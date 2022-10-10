@@ -9,45 +9,49 @@ const sections = [
   {
     id: 1,
     name: 'NoStudents',
-    courseVersionName: 'cv',
     loginType: 'word',
     studentCount: 0,
     code: 'ABCD',
     grade: '10',
     providerManaged: false,
+    assignmentNames: ['a'],
+    assignmentPaths: ['b'],
     hidden: false
   },
   {
     id: 2,
     name: 'ThirdParty',
-    courseVersionName: 'cv',
     loginType: 'google_classroom',
     studentCount: 0,
     code: 'EFGH',
     grade: '11',
     providerManaged: true,
+    assignmentNames: ['a'],
+    assignmentPaths: ['b'],
     hidden: false
   },
   {
     id: 3,
     name: 'HasStudents',
-    courseVersionName: 'cv',
     loginType: 'picture',
     studentCount: 4,
     code: 'IJKL',
     grade: '9',
     providerManaged: false,
+    assignmentNames: ['a'],
+    assignmentPaths: ['b'],
     hidden: false
   },
   {
     id: 4,
     name: 'Hidden',
-    courseVersionName: 'cv',
     loginType: 'email',
     studentCount: 2,
     code: 'MNOP',
     grade: '6',
     providerManaged: false,
+    assignmentNames: ['a'],
+    assignmentPaths: ['b'],
     hidden: true
   }
 ];
@@ -99,7 +103,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.not.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(
-      wrapper.find(<PrintCertificates sectionId={2} courseVersionName="cv" />)
+      wrapper.find(<PrintCertificates sectionId={2} assignmentName="a" />)
         .length,
       1
     );
@@ -114,7 +118,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(
-      wrapper.find(<PrintCertificates sectionId={1} courseVersionName="cv" />)
+      wrapper.find(<PrintCertificates sectionId={1} assignmentName="a" />)
         .length,
       1
     );
