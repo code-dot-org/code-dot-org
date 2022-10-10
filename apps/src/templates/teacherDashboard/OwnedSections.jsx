@@ -115,10 +115,12 @@ class OwnedSections extends React.Component {
                 />
               </div>
             )}
-            <Button
-              onClick={() => this.setState({multiAssignmentDialogOpen: true})}
-              text="Change assignment of multiple sections"
-            />
+            {!isPlSections && (
+              <Button
+                onClick={() => this.setState({multiAssignmentDialogOpen: true})}
+                text="Change assignment of multiple sections"
+              />
+            )}
             {this.state.multiAssignmentDialogOpen && (
               <MultiChangeAssignmentDialog
                 handleClose={() =>

@@ -25,6 +25,9 @@ function useSelectedSectionIds() {
   return [selectedSectionIds, addSelectedSectionId, removeSelectedSectionId];
 }
 
+// Dialog to change the assignment of multiple sections at once
+// Note that this does not work for PL sections as the assignment
+// list would be trickier to determine
 function MultiChangeAssignmentDialog({
   courseOfferings,
   sections,
@@ -52,8 +55,8 @@ function MultiChangeAssignmentDialog({
         script_id: selectedAssignment.unitId
       })
     }).then(() => {
-            reloadSectionData();
-            handleClose();
+      reloadSectionData();
+      handleClose();
     });
   };
 
@@ -65,6 +68,7 @@ function MultiChangeAssignmentDialog({
       <AssignmentSelector
         courseOfferings={courseOfferings}
         onChange={selected => setSelectedAssignment(selected)}
+        participantTypeDefault="student"
       />
       to
       <div>
