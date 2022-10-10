@@ -5,6 +5,9 @@ export default GoogleBlockly.Theme.defineTheme('modern', {
   blockStyles: {
     colour_blocks: {
       colourPrimary: '#0093c9'
+    },
+    procedure_blocks: {
+      colourPrimary: '#509918'
     }
   },
   categoryStyles: {},
