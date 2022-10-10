@@ -53,7 +53,8 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    isNewSection: PropTypes.bool
+    isNewSection: PropTypes.bool,
+    participantTypeDefault: PropTypes.string
   };
 
   constructor(props) {
@@ -220,7 +221,7 @@ export default class AssignmentSelector extends Component {
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
       courseOfferings,
-      'student'
+      section?.participantType || this.props.participantTypeDefault
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];
