@@ -2,11 +2,10 @@
 #
 # Helper methods for the analyze_hoc_activity cron job.
 #
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require_relative '../src/env'
 require src_dir 'database'
-require 'cdo/properties'
+require_relative 'properties'
 
-DASHBOARD_DB_READER = sequel_connect(CDO.dashboard_db_reader, CDO.dashboard_db_reader, query_timeout: 1200)
 PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader, query_timeout: 1200)
 
 WEIGHTED_COUNT = "SUM(" \

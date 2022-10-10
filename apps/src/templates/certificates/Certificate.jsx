@@ -1,3 +1,4 @@
+/* global dashboard */
 import React, {useRef, useState} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
@@ -14,6 +15,12 @@ function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
   const [studentName, setStudentName] = useState();
   const nameInputRef = useRef(null);
+
+  const isMinecraft = () =>
+    /mc|minecraft|hero|aquatic|mee|mee_empathy|mee_timecraft/.test(
+      props.tutorial
+    );
+  const isAIOceans = () => /oceans/.test(props.tutorial);
 
   const personalizeCertificate = session => {
     if (isHocTutorial) {
@@ -51,17 +58,44 @@ function Certificate(props) {
     return btoa(JSON.stringify(data));
   };
 
-  const getCertificateImagePath = () => {
+  const getCertificateImagePath = certificate => {
+    if (!props.showStudioCertificate) {
+      return `${
+        dashboard.CODE_ORG_URL
+      }/api/hour/certificate/${certificate}.jpg`;
+    }
+
     const filename = getEncodedParams();
     return `/certificate_images/${filename}.jpg`;
   };
 
-  const getPrintPath = () => {
+  const getPrintPath = certificate => {
+    if (!props.showStudioCertificate) {
+      let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+      if (isMinecraft() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      if (isAIOceans() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      return print;
+    }
+
     const encoded = getEncodedParams();
     return `/print_certificates/${encoded}`;
   };
 
-  const getCertificateSharePath = () => {
+  const getCertificateSharePath = certificate => {
+    if (!props.showStudioCertificate) {
+      return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+    }
+
     const encoded = getEncodedParams();
     return `/certificates/${encoded}`;
   };
@@ -78,11 +112,11 @@ function Certificate(props) {
   } = props;
 
   const certificate = certificateId || 'blank';
-  const personalizedCertificate = getCertificateImagePath();
+  const personalizedCertificate = getCertificateImagePath(certificate);
   const imgSrc = personalized
     ? personalizedCertificate
     : initialCertificateImageUrl;
-  const certificateShareLink = getCertificateSharePath();
+  const certificateShareLink = getCertificateSharePath(certificate);
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -101,7 +135,11 @@ function Certificate(props) {
       : i18n.justDidHourOfCode()
   });
 
-  const print = getPrintPath();
+  const print = getPrintPath(certificate);
+
+  const wrapperClassName = props.showStudioCertificate
+    ? 'show-studio-certificate'
+    : undefined;
 
   return (
     <div style={styles.container}>
@@ -112,7 +150,11 @@ function Certificate(props) {
           linkText={i18n.backToActivity()}
         />
       )}
-      <div id="uitest-certificate" style={certificateStyle}>
+      <div
+        id="uitest-certificate"
+        className={wrapperClassName}
+        style={certificateStyle}
+      >
         <BackToFrontConfetti active={personalized} style={styles.confetti} />
         <a href={certificateShareLink}>
           <img src={imgSrc} />
@@ -165,6 +207,7 @@ Certificate.propTypes = {
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
+  showStudioCertificate: PropTypes.bool,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool
 };
