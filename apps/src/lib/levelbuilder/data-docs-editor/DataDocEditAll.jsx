@@ -20,27 +20,21 @@ const DataDocEditAll = props => {
     $.ajax({
       url: `/data_docs/${pendingDeleteDocKey}`,
       method: 'DELETE',
-      success: () => {
-        setDataDocs([
-          ...dataDocs.filter(
-            dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
-          )
-        ]);
-        setShowDeleteWarningDialog(false);
-        setPendingDeleteDocKey(null);
-      },
-      error: function(xhr, ajaxOptions, thrownError) {
+      success: () => deleteRequestCleanup(),
+      error: (xhr, ajaxOptions, thrownError) => {
         if (xhr.status === 404) {
-          setDataDocs([
-            ...dataDocs.filter(
-              dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
-            )
-          ]);
-          setShowDeleteWarningDialog(false);
-          setPendingDeleteDocKey(null);
+          deleteRequestCleanup();
         }
       }
     });
+  };
+
+  const deleteRequestCleanup = () => {
+    setDataDocs([
+      ...dataDocs.filter(dataDoc => !pendingDeleteDocKey.includes(dataDoc.key))
+    ]);
+    setShowDeleteWarningDialog(false);
+    setPendingDeleteDocKey(null);
   };
 
   return (
