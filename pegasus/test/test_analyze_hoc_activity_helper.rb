@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
 
-require_relative '../../lib/analyze_hoc_activity_helper'
+require_relative '../helpers/analyze_hoc_activity_helper'
 
 class AnalyzeHocActivityHelperTest < Minitest::Test
   def test_add_hashes_disjoint_keys
