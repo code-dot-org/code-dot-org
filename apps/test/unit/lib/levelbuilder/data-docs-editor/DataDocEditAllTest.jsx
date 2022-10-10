@@ -93,10 +93,10 @@ describe('DataDocEditAll', () => {
     );
 
     // click delete for data doc with key 'docToDelete' and confirm in dialog
-    testDeleteWrapper
-      .findAll('.actions-box')[2]
-      .findAll('TextLink')[1]
-      .props.onClick();
+    const docToDeleteActions = testDeleteWrapper
+      .findAll('.actions-box')
+      .filter(dataDoc => dataDoc.toString().includes(docToDelete.key))[0];
+    docToDeleteActions.findAll('TextLink')[1].props.onClick();
     expect(testDeleteWrapper.exists('Dialog')).to.be.true;
     testDeleteWrapper.findOne('Dialog').props.onConfirm();
     server.respond();
