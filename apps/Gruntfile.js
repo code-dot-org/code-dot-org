@@ -673,6 +673,7 @@ describe('entry tests', () => {
     'courses/new': './src/sites/studio/pages/courses/new.js',
     'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
     'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
+    'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -749,7 +750,6 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
-    'code.org/public/congrats': './src/sites/code.org/pages/public/congrats.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
@@ -759,8 +759,6 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/certificates.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
-    'code.org/public/sharecertificate':
-      './src/sites/code.org/pages/public/sharecertificate.js',
     'code.org/public/teacher-dashboard/index':
       './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/yourschool':

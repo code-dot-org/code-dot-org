@@ -568,3 +568,8 @@ a.category-link {
 .required-asterisk {
   color: #008b9a;
 }
+
+/* Hiding this text snippet visually so the JS on the school census form will work */
+#join-us-header {
+  display: none;
+}
