@@ -111,9 +111,8 @@ function removeCommentNodes(root) {
  * Converts any inline XML in the container element into embedded
  * readonly BlockSpaces
  * @param {Element} xmlContainer The element in which to search for XML
- * @param {Boolean} isRtl True if we are displaying in RTL
  */
-export function convertXmlToBlockly(xmlContainer, isRtl) {
+export function convertXmlToBlockly(xmlContainer) {
   const xmls = xmlContainer.getElementsByTagName('xml');
 
   Array.prototype.forEach.call(xmls, function(xml) {
@@ -145,13 +144,13 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
 
     // Don't render the raw XML
     xml.style.display = 'none';
+
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockSpaceContainer,
       xml,
       {
         noScrolling: true,
-        inline: inline,
-        rtl: isRtl
+        inline: inline
       }
     );
 
