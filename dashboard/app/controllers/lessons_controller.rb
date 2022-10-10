@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
-  before_action :disable_session_for_cached_pages
+  before_action :disable_session_for_cached_pages, only: [:show]
 
   include LevelsHelper
   include CachedScriptHelper
