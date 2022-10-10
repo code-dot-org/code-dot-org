@@ -33,7 +33,7 @@ export default function StatusIcon(props) {
 }
 
 StatusIcon.propTypes = {
-  status: PropTypes.oneOf(iconStatus)
+  status: PropTypes.oneOf(Object.keys(iconStatus))
 };
 
 const styles = {

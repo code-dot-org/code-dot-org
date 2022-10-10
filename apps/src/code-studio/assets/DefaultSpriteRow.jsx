@@ -4,48 +4,41 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default function DefaultSpriteRow(props) {
-  let {name, keyValue, onDelete, onMove} = props;
+  let {name, onDelete, onMove} = props;
   return (
     <div style={styles.assetRow}>
-      {!!onDelete && (
+      <Button
+        text="Delete"
+        color={Button.ButtonColor.red}
+        onClick={() => onDelete(name)}
+        icon="trash"
+        iconClassName="fa-trash"
+      />
+      <div>
         <Button
-          text="Delete"
-          color={Button.ButtonColor.red}
-          onClick={() => onDelete(name)}
-          icon="trash"
-          iconClassName="fa-trash"
+          color={Button.ButtonColor.gray}
+          onClick={() => onMove(true /*moveForward*/, name)}
+          size={Button.ButtonSize.narrow}
+          icon="arrow-up"
+          iconClassName="fa-arrow-up"
         />
-      )}
-      {!!onMove && (
-        <div>
-          <Button
-            color={Button.ButtonColor.gray}
-            onClick={() => onMove(true /*moveForward*/, name)}
-            size={Button.ButtonSize.narrow}
-            icon="arrow-up"
-            iconClassName="fa-arrow-up"
-          />
-          <Button
-            color={Button.ButtonColor.gray}
-            onClick={() => onMove(false /*moveForward*/, name)}
-            size={Button.ButtonSize.narrow}
-            icon="arrow-down"
-            iconClassName="fa-arrow-down"
-          />
-        </div>
-      )}
-      <h3>
-        {name}: {keyValue}
-      </h3>
+        <Button
+          color={Button.ButtonColor.gray}
+          onClick={() => onMove(false /*moveForward*/, name)}
+          size={Button.ButtonSize.narrow}
+          icon="arrow-down"
+          iconClassName="fa-arrow-down"
+        />
+      </div>
+      <h3>{name}</h3>
     </div>
   );
 }
 
 DefaultSpriteRow.propTypes = {
   name: PropTypes.string.isRequired,
-  keyValue: PropTypes.string.isRequired,
-  onDelete: PropTypes.func,
-  onMove: PropTypes.func
+  onDelete: PropTypes.func.isRequired,
+  onMove: PropTypes.func.isRequired
 };
 
 const styles = {

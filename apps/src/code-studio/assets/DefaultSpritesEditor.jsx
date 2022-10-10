@@ -21,7 +21,7 @@ export default class DefaultSpritesEditor extends React.Component {
   componentDidMount() {
     getDefaultListMetadata('levelbuilder')
       .then(spriteDefault => {
-        let orderedList = Array.from(spriteDefault['default_sprites']);
+        let orderedList = Object.values(spriteDefault.propsByKey);
         this.setState({defaultList: orderedList, isLoading: false});
       })
       .catch(err => {
@@ -117,7 +117,6 @@ export default class DefaultSpritesEditor extends React.Component {
       return (
         <DefaultSpriteRow
           name={spriteObject.name}
-          keyValue={spriteObject.key}
           onDelete={this.deleteSpriteFromDefaults}
           onMove={this.reorderSpriteByOne}
           key={spriteObject.name}
