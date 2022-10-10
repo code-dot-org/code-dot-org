@@ -15,7 +15,7 @@ social:
 <header>
   <div>
     <h2>Expand computer science at your school, win $10,000</h2>
-    <p>To help more students access computer science (CS), especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose.org, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
+    <p>To help more students access computer science (CS), especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
     <a href="#form"><button>Enter to win</button></a>
   </div>
   <div>
@@ -60,7 +60,7 @@ See <a href="/prize-terms">terms and conditions</a>.
 
 <details>
   <summary>Why is this only available to public schools?</summary>
-  <p>We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with DonorsChoose.org to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.</p>
+  <p>We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with DonorsChoose to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose, the organization is better able to access consistent and accurate data that's available for public schools.</p>
 </details>
 
 <details>
@@ -89,6 +89,6 @@ See <a href="/prize-terms">terms and conditions</a>.
 </details>
 
 <details>
-  <summary>Are there any restrictions to how my school uses the Donors Choose gift code?</summary>
-  <p>View <a href="https://help.donorschoose.org/hc/en-us/articles/203895786-Project-eligibility-requirements">project eligibility requirements</a> on <a href="https://donorschoose.org">donorschoose.org</a>.</p>
+  <summary>Are there any restrictions to how my school uses the DonorsChoose gift code?</summary>
+  <p>View <a href="https://help.donorschoose.org/hc/en-us/articles/203895786-Project-eligibility-requirements">project eligibility requirements</a> on <a href="https://donorschoose.org">DonorsChoose</a>.</p>
 </details>
