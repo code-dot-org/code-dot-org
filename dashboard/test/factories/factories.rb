@@ -642,6 +642,11 @@ FactoryGirl.define do
     end
   end
 
+  factory :ailab, parent: :level, class: Ailab do
+    game {Game.ailab}
+    level_num 'custom'
+  end
+
   factory :free_response, parent: :level, class: FreeResponse do
     game {Game.free_response}
     level_num 'custom'

@@ -1,29 +1,32 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-08-23T20:56:56.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
+    "name_suffix": "_pilot-2022",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Look at the `binarySearch()`(#e7e8ea) method in `Searcher.java`(#e7e8ea). What do you notice about the code?\r\n\r\n2. In `MyConsole.java`(#e7e8ea), create a new 1D array containing several values and call the `binarySearch()`(#e7e8ea) method to find a value in the list.",
+    "encrypted_validation": "K4U34HWwSTXSa5gCbi3RkY30MqmKEUguYRhIxkkiJgT8MVlTGE37BmGcsN0i\nl/kXOExrFT0ZxSB0TRbiCmmfqkDQXSc0LKgk5Xp0wmWCSavJIpdQUKplHZlk\n/pgwfIYIxne4UdeOUuQf/jXANE8BC6szTh+tGaLrEjFhCR6bWXIONk+xT9wJ\nNgDrPvUTXazYMJGIDbbPp48APywxwLg4v6z7EfBujfqqC6RpOftXsdD3eocp\nDCPMyQxWyWiEjgWQCQTWohfspgbUngNMExdxVJ+vVPHwWzub7ytHL8CqCsoq\nymkCKcnoZkLYe4EWMGaWdEfu9irsi84z5UhBLK588gKNgM3EqXy0DbKfadCh\nqQJpNNx4aKhbG0LICdvAFrc3PwOHuH0cvmiUGJ7tku2oDtiKcjFVvvbpQDjv\nLC9cQpS3223yG51Tka65Q+AAh+Ez1kwXfH2i+XJSUZjl6VZKxrOg10VjHhM0\nmhjLZYf7opp+mIf/fUPemVGA96lw3rxlRPBmdgCBCh1pHmSzKvU9Oxc4Xl/d\nMw9MuJNM0lR87dt26Z3kCSgnKmuOvgPKz+4midXpadY4N+Nb2oYXIn/4iUYo\naPczOlaZIDpkV+wJBvJ0s1YytuQsBXfAhHkozGWnZaqmOREcuPRj0oF2FP2R\nQE4uYxGn5Bja/w/IURRP6t70QJeo5AGSQGoHtScoYGVh6zlMe6hkap6BC0Ei\nhbSwzP+vXHHWK77WZwvRvWG6izQh+za+6eKpnlnY0uZN1nE2gECUD36BvV8L\nZh3FJNxSPSjyeOO+bW15drklnupmULoHAUXumkOgIAtAoPDZkbnxHyiAE3O7\nCdnpusHEexOG3rCeFh5Elh+KikjpIO2q3p6B37Nxm1gm+EirwGEMbIgWyvc+\njrpXsWO29NyCS+Q3ZIzyBQnWelpwPtM7aSJvGgCqUrhszaokj5m0K8hnHYv6\nTmKFL0J0QPMwv9QaYRuIAmvDLILlKVZMK8VKgZjjj4TWWY6oHw2bugS1JRkX\nI/OAPkiIop00aQidpMdA061xELbdTMGFzrcZ1aLuC4pSgO3inHsGycqSGxB0\n+Tokjzc0Boia3lpaFfVwzGksj0RK38V3rzS14WUbi5OEa1kJQ18ynd40KT31\nqC8MWvxmJXK1apMt9pVqxAaMkOmSZeH1bf7cGYMadyGFQBtSfXpBuP8=\n",
     "start_sources": {
       "MyConsole.java": {
         "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    int[] nums = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};\n    int target = 6;\n    int index = Searcher.binarySearch(nums, 0, nums.length - 1, target);\n    System.out.println(target + \" found at index \" + index);\n    \n  }\n}",
-        "isVisible": true
+        "isVisible": true,
+        "tabOrder": 0
       },
       "Searcher.java": {
         "text": "public final class Searcher {\n\n  public static int binarySearch(int[] nums, int left, int right, int target) {\n    if (left > right) {\n      return -1;\n    }\n\n    int middle = (left + right) / 2;\n\n    if (target < nums[middle]) {\n      return binarySearch(nums, left, middle - 1, target);\n    }\n    else if (target > nums[middle]) {\n      return binarySearch(nums, middle + 1, right, target);\n    }\n    else {\n      return middle;\n    }\n  }\n  \n}",
-        "isVisible": true
+        "isVisible": true,
+        "tabOrder": 1
       }
-    },
-    "name_suffix": "_pilot-2022",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Look at the `binarySearch()`(#e7e8ea) method in `Searcher.java`(#e7e8ea). What do you notice about the code?\r\n\r\n2. In `MyConsole.java`(#e7e8ea), create a new 1D array containing several values and call the `binarySearch()`(#e7e8ea) method to find a value in the list."
+    }
   },
+  "game_id": 68,
+  "created_at": "2022-08-23T20:56:56.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-08-23T20:56:56.505+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L1_2022\\\"\"],\"cloned_from\":\"CSA U8L4-L1_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:56:56.505+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L1_2022\\\"\"],\"cloned_from\":\"CSA U8L4-L1_2022\"},{\"changed_at\":\"2022-10-07 13:25:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:25:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:25:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:26:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:26:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:26:58 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:28:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:28:38 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

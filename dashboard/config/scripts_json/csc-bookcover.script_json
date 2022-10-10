@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcover",
-    "serialized_at": "2022-10-04 20:37:29 UTC",
+    "serialized_at": "2022-10-07 21:09:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,12 +35,15 @@
   "lessons": [
     {
       "key": "Book Cover ",
-      "name": "Wonder Book Cover ",
+      "name": "Learn to Code a Book Cover ",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "In this CS and ELA integrated lesson for new coders, students will learn to code a digital book cover. First, they will look at existing book covers and discuss what graphic design choices were made. Next, students will look at an digital book cover example before creating several of their own. Students will learn to select sprites to represent the characters in a book and to use events to make the characters speak. Finally, they will use prompts and variables to make the book cover interactive. \n",
+        "preparation": "- Play through the levels and review the lesson slides.",
+        "student_overview": "In this lesson, you will learn how to code a digital book cover. First, you will select the background and characters.Then, you will learn how to program the characters to have a short conversation. By the end of the lesson, you will have coded several examples of interactive book covers."
       },
       "seeding_key": {
         "lesson.key": "Book Cover ",
@@ -214,6 +217,9 @@
       "key": "6f342755-a2c2-4e4b-9400-6fb39e6762f8",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show Judge A Book By Its Cover slide\n\n**Do This**: As a class, look at the book covers shown on the slide. The books featured are Wonder, Holes, and Esperanza Rising. Have students answer the following questions.\n\n**Discuss**: What do you see featured on these book covers? Which of these books would you want to read based on its cover?\n\n**Discussion Goal**: Students should mention what they see on the cover, including the title, the author, the scenery, the characters, and other information, such as awards the book has won or highlighted author quotes. Have students discuss which features of the cover capture their attention and make them want to pick up the book. Students might also discuss if they can determine the genre of the book (e.g. fantasy, mystery, non-fiction) based on context clues. \n\nStudents should recognize that a good book cover design will reflect the book’s themes without giving away the ending. Perhaps, the book covers depict some of the main characters or settings in the book. For students who have read the books featured, ask “Does the cover art accurately reflect the content and mood of the book?” For students who have not read the books, ask “If you had to guess, what do you think this story is about?”\n",
+        "duration": "5",
+        "name": "Book Covers"
       },
       "seeding_key": {
         "activity_section.key": "6f342755-a2c2-4e4b-9400-6fb39e6762f8",
@@ -221,10 +227,49 @@
       }
     },
     {
-      "key": "66dea86b-fa9d-43cb-ae7d-7d25033a0a1e",
+      "key": "c39f8d2b-0415-45e2-93a7-6306d513b1e4",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you would like, you are able to choose your own books instead of the ones provided on the slides. Before the lesson begins, gather a few books that your students are familiar with and some that they are unlikely to have read. Try to choose a diverse set of book covers for students to look at during the discussion. \n\nIf you are looking for ideas, refer to the [Book Guide](https://docs.google.com/document/d/1WINH28YY27b0u7JR5pDOosOsJAafzfIj9hnSvcYPHU8/template/preview) in the lesson resources. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c39f8d2b-0415-45e2-93a7-6306d513b1e4",
+        "lesson_activity.key": "8b74278d-6c18-4200-94d2-e4b68132464e"
+      }
+    },
+    {
+      "key": "713cd71e-efa7-4e25-8ff4-cde06fb8600d",
       "position": 1,
       "properties": {
-        "name": "Wonder: Book Cover",
+        "description": "Today, we are going to be creating digital book covers using Sprite Lab. You will program interactive covers that feature sprites, dialogue, and a background. You might recognize some of the books that you will be coding today. \n\nIn the next lesson, you will create your own custom digital book cover. As you go through the levels today, think about how you would want to code your own book cover.\n",
+        "name": "Digital Book Cover",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "713cd71e-efa7-4e25-8ff4-cde06fb8600d",
+        "lesson_activity.key": "c209c7c2-d241-4402-b9e8-9817f27c32d9"
+      }
+    },
+    {
+      "key": "e7b4f8ba-3357-4d03-8359-38a5b2b8d47b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Do This**: Play through the provided Book Cover example level as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7b4f8ba-3357-4d03-8359-38a5b2b8d47b",
+        "lesson_activity.key": "c209c7c2-d241-4402-b9e8-9817f27c32d9"
+      }
+    },
+    {
+      "key": "66dea86b-fa9d-43cb-ae7d-7d25033a0a1e",
+      "position": 3,
+      "properties": {
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -234,8 +279,9 @@
     },
     {
       "key": "bee79760-f43d-4b4f-b70d-304ab8b268ed",
-      "position": 2,
+      "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Introducing Sprite Lab” video\n\n**Do This**: Decide beforehand whether you plan to show the videos to the whole class or have students watch them independently as they progress through the levels.\n",
         "name": "Introduction to Sprite Lab",
         "progression_name": "Video"
       },
@@ -245,9 +291,26 @@
       }
     },
     {
-      "key": "76772f68-9581-462a-8965-3c4921adf3d6",
-      "position": 3,
+      "key": "086226d5-a173-4065-95f1-f6729dd488f3",
+      "position": 5,
       "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "086226d5-a173-4065-95f1-f6729dd488f3",
+        "lesson_activity.key": "c209c7c2-d241-4402-b9e8-9817f27c32d9"
+      }
+    },
+    {
+      "key": "76772f68-9581-462a-8965-3c4921adf3d6",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-10 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level.\n",
         "name": "Bud Not Buddy",
         "progression_name": "Skill Building"
       },
@@ -258,7 +321,7 @@
     },
     {
       "key": "a33bb8cb-8f4e-4adf-9212-1fe814e46b8b",
-      "position": 4,
+      "position": 7,
       "properties": {
         "name": "Blended",
         "progression_name": "Skill Building"
@@ -270,7 +333,7 @@
     },
     {
       "key": "6fdcb695-a19e-4ff6-9c04-a0b736ccd611",
-      "position": 5,
+      "position": 8,
       "properties": {
         "name": "New Kid/Class Act",
         "progression_name": "Skill Building"
@@ -282,7 +345,7 @@
     },
     {
       "key": "8ab53d4a-e63a-43a1-803b-1bc1668b9bd3",
-      "position": 6,
+      "position": 9,
       "properties": {
         "name": "Hello World: When Clicked",
         "progression_name": "Skill Building"
@@ -294,8 +357,9 @@
     },
     {
       "key": "d094d6c6-d018-44a7-8491-7c242a9ee7e5",
-      "position": 7,
+      "position": 10,
       "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Programming with Events” video\n",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -305,8 +369,9 @@
     },
     {
       "key": "8eb09aa7-4007-4876-a268-07c2b3be8ffa",
-      "position": 8,
+      "position": 11,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-14 - Skill Building” slide\n",
         "name": "Number The Stars",
         "progression_name": "Skill Building"
       },
@@ -317,7 +382,7 @@
     },
     {
       "key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b",
-      "position": 9,
+      "position": 12,
       "properties": {
         "name": "Front Desk",
         "progression_name": "Skill Building"
@@ -329,8 +394,9 @@
     },
     {
       "key": "b15b4141-45c5-45dc-b9a7-d449622765ba",
-      "position": 10,
+      "position": 13,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 15 - Free Play” slide\n\nIf a group or individual finishes early, encourage them to continue building a book cover project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your book cover?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- Invite students to share ideas and to learn from each other. \n",
         "name": "Free Play",
         "progression_name": "Free Play"
       },
@@ -340,9 +406,28 @@
       }
     },
     {
+      "key": "b3f859ac-76ed-4d8a-a8fe-bb2ede1df723",
+      "position": 14,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Free Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be used as assessments if there is a rubric attached to the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b3f859ac-76ed-4d8a-a8fe-bb2ede1df723",
+        "lesson_activity.key": "c209c7c2-d241-4402-b9e8-9817f27c32d9"
+      }
+    },
+    {
       "key": "b95e84f4-2430-4fe4-a2cd-bf46c4f6ee25",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _How do event blocks make your book cover interactive?_\n- _What sprites would you use to animate your favorite book?_\n",
+        "duration": "10",
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "b95e84f4-2430-4fe4-a2cd-bf46c4f6ee25",
@@ -1493,10 +1578,45 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Book Cover",
+      "url": "https://docs.google.com/presentation/d/1otbPjtIoZag8Qlp8ogc8tYwbW1j2UgLkU00pSiUD0Ag/template/preview",
+      "key": "book_cover",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1otbPjtIoZag8Qlp8ogc8tYwbW1j2UgLkU00pSiUD0Ag/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "book_cover"
+      }
+    },
+    {
+      "name": "Book Guide",
+      "url": "https://docs.google.com/document/d/1WINH28YY27b0u7JR5pDOosOsJAafzfIj9hnSvcYPHU8/template/preview",
+      "key": "book_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "book_guide"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "resource.key": "book_cover"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "resource.key": "book_guide"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -1505,18 +1625,157 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "code_v_",
+      "word": "Code (v)",
+      "definition": "to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code_v_"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "A message on the computer screen that waits for input from the user.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "vocabulary.key": "code_v_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "16098c4d-bc27-4668-9a9f-0c598a7d8cb2",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and locations. "
+      },
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "objective.key": "16098c4d-bc27-4668-9a9f-0c598a7d8cb2"
+      }
+    },
+    {
+      "key": "5f6ffcad-d96c-484a-a865-5f9aeb53f57f",
+      "properties": {
+        "description": "Identify the elements of a book cover."
+      },
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "objective.key": "5f6ffcad-d96c-484a-a865-5f9aeb53f57f"
+      }
+    }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Book Cover ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (beta)",
