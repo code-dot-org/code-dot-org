@@ -18,7 +18,7 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And I wait to see element with ID "uitest-thanks"
 
 Scenario: Flappy customized dashboard certificate pages
-  Given I am on "http://studio.code.org/congrats"
+  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
   And I wait until element "#uitest-certificate" is visible
 
   When I am on "http://code.org/api/hour/finish/flappy"
@@ -41,7 +41,7 @@ Scenario: Flappy customized dashboard certificate pages
   Then I wait to see an image "/certificate_images/"
 
 Scenario: Oceans uncustomized dashboard certificate pages
-  Given I am on "http://studio.code.org/congrats"
+  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
   And I wait until element "#uitest-certificate" is visible
 
   When I am on "http://code.org/api/hour/finish/oceans"
@@ -59,10 +59,10 @@ Scenario: Oceans uncustomized dashboard certificate pages
   Then I wait to see an image "/images/oceans_hoc_certificate.png"
 
 Scenario: Course A 2017 uncustomized dashboard certificate pages
-  Given I am on "http://studio.code.org/congrats"
+  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
   And I wait until element "#uitest-certificate" is visible
 
-  When I am on "http://code.org/congrats/coursea-2017"
+  When I am on "http://code.org/congrats/coursea-2017?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
@@ -77,30 +77,14 @@ Scenario: Course A 2017 uncustomized dashboard certificate pages
   Then I wait to see an image "/certificate_images/"
 
 Scenario: blank certificate
-  When I am on "http://code.org/certificates/blank"
+  When I am on "http://code.org/certificates/blank?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/certificates/blank"
 
   Then I wait to see an image "/images/hour_of_code_certificate.jpg"
 
-Scenario: pegasus congrats page redirects to dashboard congrats page
-  When I am on "http://code.org/congrats"
-  And I wait until current URL contains "http://studio.code.org/congrats"
-  And I wait to see element with ID "uitest-certificate"
-
-@as_teacher
-Scenario: pegasus batch page redirects to dashboard batch page
-  When I am on "http://code.org/certificates"
-  And I wait until current URL contains "http://studio.code.org/certificates/batch"
-  And I wait to see element with ID "certificate-batch"
-
-Scenario: sharecertificate page redirects to blank certificate page
-  When I am on "http://code.org/sharecertificate"
-  And I wait until current URL contains "http://studio.code.org/certificates/blank"
-  And I wait to see element with ID "certificate-share"
-
 @eyes
 Scenario: congrats certificate pages
-  Given I am on "http://studio.code.org/congrats"
+  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
   And I wait until element "#uitest-certificate" is visible
   And element "#uitest-certificate.show-studio-certificate" is visible
   And I open my eyes to test "congrats certificate pages"
@@ -129,7 +113,7 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized oceans certificate"
 
-  When I am on "http://code.org/congrats/coursea-2017"
+  When I am on "http://code.org/congrats/coursea-2017?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate.show-studio-certificate" is visible
@@ -141,7 +125,7 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized Course A 2017 certificate"
 
-  When I am on "http://code.org/congrats/accelerated"
+  When I am on "http://code.org/congrats/accelerated?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate.show-studio-certificate" is visible

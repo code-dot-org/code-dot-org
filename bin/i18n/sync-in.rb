@@ -133,6 +133,12 @@ def get_i18n_strings(level)
       i18n_strings['mini_rubric'].merge! rubric_properties
     end
 
+    # dynamic_instructions
+    if level.dynamic_instructions
+      dynamic_instructions = JSON.parse(level.dynamic_instructions)
+      i18n_strings['dynamic_instructions'] = dynamic_instructions unless dynamic_instructions.empty?
+    end
+
     # parse markdown properties for potential placeholder texts
     documents = []
     %w(

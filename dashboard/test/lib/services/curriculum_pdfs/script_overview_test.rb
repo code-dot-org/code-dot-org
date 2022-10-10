@@ -50,6 +50,8 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
     lesson_group = create(:lesson_group, script: script)
 
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
+      FileUtils.stubs(:cp)
+
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 1}
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)
 

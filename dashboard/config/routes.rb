@@ -9,7 +9,7 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /.*code.org.*/ do
+  constraints host: /.*code.org.*|.*hourofcode.com.*/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
@@ -347,7 +347,11 @@ Dashboard::Application.routes.draw do
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-    resources :data_docs, only: [:new, :create, :edit, :update, :show, :index], param: :key
+    resources :data_docs, param: :key do
+      collection do
+        get '/edit', to: 'data_docs#edit_all'
+      end
+    end
 
     resources :lessons, only: [:edit, :update] do
       member do
