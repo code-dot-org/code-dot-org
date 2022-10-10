@@ -231,7 +231,7 @@ const AboutYou = props => {
             textFieldMap={{[TextFields.otherPleaseList]: 'other'}}
           />
 
-          <p>Please provide your school and principal information below:</p>
+          <p>Please provide your school’s information below:</p>
 
           <FormGroup
             id="school"
@@ -268,6 +268,19 @@ const AboutYou = props => {
               <LabeledRadioButtons name="schoolType" />
             </div>
           )}
+
+          <p>
+            Please provide information for an Administrator/School Leader (i.e.
+            Principal, Vice Principal, STEM Program Director, etc) who can
+            certify that the course will be offered at your school. Upon your
+            submission of this application, we will contact the
+            Administrator/School Leader that you listed via email in order to
+            obtain their approval. Note that your application cannot be fully
+            reviewed until there is approval from your administrator/school
+            leader. Therefore, we encourage you to follow up with them directly
+            to let them know about your application and to expect an email
+            seeking their approval.
+          </p>
 
           {
             // Disable auto complete for principal fields, so they are not filled with the teacher's details.
