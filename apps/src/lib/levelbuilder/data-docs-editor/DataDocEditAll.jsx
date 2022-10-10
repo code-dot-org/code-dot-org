@@ -19,9 +19,8 @@ const DataDocEditAll = props => {
   const deleteDataDoc = () => {
     $.ajax({
       url: `/data_docs/${pendingDeleteDocKey}`,
-      method: 'DELETE'
-    })
-      .done(() => {
+      method: 'DELETE',
+      success: () => {
         setDataDocs([
           ...dataDocs.filter(
             dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
@@ -29,16 +28,19 @@ const DataDocEditAll = props => {
         ]);
         setShowDeleteWarningDialog(false);
         setPendingDeleteDocKey(null);
-      })
-      .fail(() => {
-        setDataDocs([
-          ...dataDocs.filter(
-            dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
-          )
-        ]);
-        setShowDeleteWarningDialog(false);
-        setPendingDeleteDocKey(null);
-      });
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+        if (xhr.status === 404) {
+          setDataDocs([
+            ...dataDocs.filter(
+              dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
+            )
+          ]);
+          setShowDeleteWarningDialog(false);
+          setPendingDeleteDocKey(null);
+        }
+      }
+    });
   };
 
   return (
