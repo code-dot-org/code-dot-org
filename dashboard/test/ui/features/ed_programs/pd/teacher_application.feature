@@ -20,7 +20,6 @@ Scenario: Teacher starts a new application and submits it
     And I press keys "Seattle" for element "input#city"
     And I select the "Washington" option in dropdown "state"
     And I press keys "98101" for element "input#zipCode"
-    And I press the first "input[name='previousUsedCurriculum']" element
     And I press the first "input[name='previousYearlongCdoPd']" element
     And I press the first "input[name='currentRole']" element
     And I press keys "nonexistent" for element "#school input"
@@ -157,7 +156,6 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I press keys "Seattle" for element "input#city"
   And I select the "Washington" option in dropdown "state"
   And I press keys "98101" for element "input#zipCode"
-  And I press the first "input[name='previousUsedCurriculum']" element
   And I press the first "input[name='previousYearlongCdoPd']" element
   And I press the first "input[name='currentRole']" element
   And I press keys "nonexistent" for element "#school input"
