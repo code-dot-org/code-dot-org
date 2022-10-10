@@ -29,6 +29,27 @@ $(document).ready(function() {
     return normalizedCoordinates;
   }
 
+  function setPopup(e, isSpecialEvent) {
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const organizationName = e.features[0].properties.organization_name;
+    const city = e.features[0].properties.city;
+
+    if (popup) {
+      popup.remove();
+    }
+    const citySuffix = city && city.length > 0 ? ' (' + city + ')' : '';
+    let popupText = organizationName + citySuffix;
+    if (isSpecialEvent) {
+      const eventDescription = e.features[0].properties.description;
+      popupText += '<br>' + eventDescription;
+    }
+
+    popup = new mapboxgl.Popup({closeButton: false})
+      .setLngLat(getPopupCoordinates(e.lngLat, coordinates))
+      .setHTML(popupText)
+      .addTo(map);
+  }
+
   map.on('load', function() {
     map.addSource('hoctiles', {
       type: 'vector',
@@ -99,39 +120,8 @@ $(document).ready(function() {
       enableMouseControls();
     });
 
-    map.on('click', 'hoc-events', function(e) {
-      const coordinates = e.features[0].geometry.coordinates.slice();
-      const organizationName = e.features[0].properties.organization_name;
-      const city = e.features[0].properties.city;
-
-      if (popup) {
-        popup.remove();
-      }
-      const citySuffix = city && city.length > 0 ? ' (' + city + ')' : '';
-      const popupText = organizationName + citySuffix;
-      popup = new mapboxgl.Popup({closeButton: false})
-        .setLngLat(getPopupCoordinates(e.lngLat, coordinates))
-        .setText(popupText)
-        .addTo(map);
-    });
-
-    map.on('click', 'hoc-special-events', function(e) {
-      const coordinates = e.features[0].geometry.coordinates.slice();
-      const organizationName = e.features[0].properties.organization_name;
-      const city = e.features[0].properties.city;
-      const event_description = e.features[0].properties.description;
-
-      if (popup) {
-        popup.remove();
-      }
-      const citySuffix = city && city.length > 0 ? ' (' + city + ')' : '';
-      const popupText =
-        organizationName + citySuffix + '<br>' + event_description;
-      popup = new mapboxgl.Popup({closeButton: false})
-        .setLngLat(getPopupCoordinates(e.lngLat, coordinates))
-        .setHTML(popupText)
-        .addTo(map);
-    });
+    map.on('click', 'hoc-events', e => setPopup(e, false));
+    map.on('click', 'hoc-special-events', e => setPopup(e, true));
 
     map.on('mouseenter', 'hoc-events', function() {
       map.getCanvas().style.cursor = 'pointer';
