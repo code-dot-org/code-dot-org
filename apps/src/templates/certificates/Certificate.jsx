@@ -68,11 +68,11 @@ function Certificate(props) {
   const getEncodedParams = () => {
     const donor = studentName ? props.randomDonorName : null;
     const data = {
-      name: reEncodeNonLatin1(studentName),
+      name: studentName,
       course: props.tutorial,
       donor
     };
-    return btoa(JSON.stringify(data));
+    return btoa(reEncodeNonLatin1(JSON.stringify(data)));
   };
 
   const getCertificateImagePath = certificate => {
