@@ -785,7 +785,6 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
-    previous_used_curriculum ['Neither']
     previous_yearlong_cdo_pd ['CS in Science']
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'

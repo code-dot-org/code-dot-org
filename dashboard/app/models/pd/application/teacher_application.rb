@@ -501,13 +501,6 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        previous_used_curriculum: [
-          'CS Discoveries',
-          'CS Principles',
-          'Both',
-          'Neither'
-        ],
-
         previous_yearlong_cdo_pd: [
           'CS Discoveries',
           'CS Principles',
@@ -691,7 +684,6 @@ module Pd::Application
         principal_phone_number
         completing_on_behalf_of_someone_else
         current_role
-        previous_used_curriculum
         previous_yearlong_cdo_pd
 
         program

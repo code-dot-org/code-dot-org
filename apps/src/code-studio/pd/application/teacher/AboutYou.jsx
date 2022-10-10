@@ -225,7 +225,6 @@ const AboutYou = props => {
           <LabeledSelect name="state" placeholder="Select a state" />
           <LabeledInput name="zipCode" />
 
-          <LabeledCheckBoxes name="previousUsedCurriculum" />
           <LabeledCheckBoxes name="previousYearlongCdoPd" />
           <LabeledRadioButtonsWithAdditionalTextFields
             name="currentRole"

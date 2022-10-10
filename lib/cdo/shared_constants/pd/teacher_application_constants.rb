@@ -54,7 +54,6 @@ module Pd
         completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
         completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
         how_heard: 'How did you hear about this program?',
-        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
@@ -180,7 +179,6 @@ module Pd
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
-        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
@@ -380,7 +378,6 @@ module Pd
         :race,
         :how_heard,
         :principal_approval_url,
-        :previous_used_curriculum,
         :street_address,
         :city,
         :state,
