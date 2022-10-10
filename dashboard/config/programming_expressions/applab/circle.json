@@ -6,6 +6,7 @@
   "content": "You can draw many things with the basic canvas drawing functions of circle, line and rect. For circle(), the x and y coordinates specify the center of the circle, relative to the top-left corner of the canvas (x:0 y:0). The radius is measured in pixels. Circles are drawn using the current stroke width and current stroke color, and then filled with the current fill color (if the fill color is anything other than the default \"transparent\").\n\n\n",
   "examples": [
     {
+      "name": "Example: One Circle",
       "code": "```\n// Draw a circle centered on the screen with the default stroke color, width, fill color.\ncreateCanvas(\"canvas1\");\ncircle(160, 240, 100);\n```"
     },
     {
