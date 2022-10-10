@@ -10,8 +10,7 @@ import React from 'react';
  */
 export default class ReadOnlyBlockSpace extends React.Component {
   static propTypes = {
-    block: PropTypes.object.isRequired,
-    isRtl: PropTypes.bool
+    block: PropTypes.object.isRequired
   };
 
   state = {
@@ -30,8 +29,7 @@ export default class ReadOnlyBlockSpace extends React.Component {
       this.container,
       this.props.block,
       {
-        noScrolling: true,
-        rtl: this.props.isRtl
+        noScrolling: true
       }
     );
 
