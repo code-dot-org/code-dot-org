@@ -20,15 +20,25 @@ const DataDocEditAll = props => {
     $.ajax({
       url: `/data_docs/${pendingDeleteDocKey}`,
       method: 'DELETE'
-    }).done(() => {
-      setDataDocs([
-        ...dataDocs.filter(
-          dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
-        )
-      ]);
-      setShowDeleteWarningDialog(false);
-      setPendingDeleteDocKey(null);
-    });
+    })
+      .done(() => {
+        setDataDocs([
+          ...dataDocs.filter(
+            dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
+          )
+        ]);
+        setShowDeleteWarningDialog(false);
+        setPendingDeleteDocKey(null);
+      })
+      .fail(() => {
+        setDataDocs([
+          ...dataDocs.filter(
+            dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)
+          )
+        ]);
+        setShowDeleteWarningDialog(false);
+        setPendingDeleteDocKey(null);
+      });
   };
 
   return (
