@@ -1,6 +1,6 @@
 require_relative '../../test_helper'
 require 'cdo/contact_rollups/v2/pardot'
-require 'cdo/shared_constants/pd/shared_workshop_constants.rb'
+require 'cdo/shared_constants/pd/shared_workshop_constants'
 
 class PardotV2Test < Minitest::Test
   include Pd::SharedWorkshopConstants

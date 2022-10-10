@@ -428,7 +428,7 @@ module Pd::Application
       application.update!(status: 'pending')
       assert_status_log(
         [
-          {status: 'unreviewed', at: Time.zone.now - 2.seconds},
+          {status: 'unreviewed', at: 2.seconds.ago},
           {status: 'pending', at: Time.zone.now}
         ],
         application

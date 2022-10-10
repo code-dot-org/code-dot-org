@@ -1,6 +1,6 @@
 require 'test_helper'
-require 'pd/survey_pipeline/generic_mapper.rb'
-require 'pd/survey_pipeline/reducer.rb'
+require 'pd/survey_pipeline/generic_mapper'
+require 'pd/survey_pipeline/reducer'
 
 module Pd::SurveyPipeline
   class GenericMapperTest < ActiveSupport::TestCase
