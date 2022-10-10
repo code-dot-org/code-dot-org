@@ -86,6 +86,8 @@ class ActiveSupport::TestCase
     # when called from unit tests. See comments on that method for details.
     CDO.stubs(:optimize_webpack_assets).returns(false)
     CDO.stubs(:use_my_apps).returns(true)
+
+    AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
   end
 
   teardown do
