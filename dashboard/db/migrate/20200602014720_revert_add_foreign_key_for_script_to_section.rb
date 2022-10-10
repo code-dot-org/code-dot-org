@@ -1,4 +1,4 @@
-require_relative '20200529004150_add_foreign_key_for_script_to_section.rb'
+require_relative '20200529004150_add_foreign_key_for_script_to_section'
 
 class RevertAddForeignKeyForScriptToSection < ActiveRecord::Migration[5.0]
   def change
