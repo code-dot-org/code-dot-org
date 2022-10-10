@@ -15,7 +15,7 @@ social:
 <header>
   <div>
     <h2>Expand computer science at your school, win $10,000</h2>
-    <p>To help more students access computer science, especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose.org, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
+    <p>To help more students access computer science (CS), especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose.org, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
     <a href="#form"><button>Enter to win</button></a>
   </div>
   <div>
@@ -27,7 +27,7 @@ social:
 ## To be eligible a school must commit to:
 
 <ul>
-  <li>Establishing a <strong><em>new</em></strong> <a href="/educate/csp">Computer Science Principles</a>, <a href="/educate/csa">Computer Science A</a>, or <a href="/educate/csd">Computer Science Discoveries</a> course using Code.org.</li>
+  <li>Establish a <strong><em>new</em></strong> <a href="/educate/csp">Computer Science Principles</a>, <a href="/educate/csa">Computer Science A</a>, or <a href="/educate/csd">Computer Science Discoveries</a> course using Code.org.</li>
   <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
   <li>Provide a short statement of support from district leadership for expanding CS opportunities as a district priority.</li>
   <li>Organize a school-wide <a href="https://hourofcode.com/">Hour of Code</a> or other event/assembly for <a href="https://www.csedweek.org/">CSEdWeek</a> to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
