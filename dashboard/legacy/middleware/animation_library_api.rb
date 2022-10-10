@@ -6,7 +6,6 @@ require 'cdo/aws/s3'
 require 'cdo/png_utils'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
-# ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
 ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaultSprites.json'.freeze
 ANIMATION_DEFAULT_MANIFEST_JSON = 'animation-manifests/manifests/defaultSprites.json'.freeze
 
@@ -170,7 +169,7 @@ class AnimationLibraryApi < Sinatra::Base
   get %r{/api/v1/animation-library/default-spritelab-metadata/(levelbuilder|production)} do |env|
     if env == 'production'
       env_path = ANIMATION_DEFAULT_MANIFEST_JSON
-    elsif evn == 'levelbuilder'
+    elsif env == 'levelbuilder'
       env_path = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
     else
       bad_request

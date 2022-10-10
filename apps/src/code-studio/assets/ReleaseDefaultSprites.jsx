@@ -5,18 +5,36 @@ import {
   getDefaultListMetadata,
   moveDefaultSpriteMetadataToProduction
 } from '@cdo/apps/assetManagement/animationLibraryApi';
-import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 
 export default class ReleaseDefaultSprites extends React.Component {
   state = {
-    defaultList: [] // Array of name/category sprite objects
+    levelbuilderDefaultList: [], // Array of name/category sprite objects
+    productionDefaultList: []
   };
 
   componentDidMount() {
     getDefaultListMetadata('levelbuilder')
       .then(spriteDefault => {
-        let orderedList = Array.from(spriteDefault['default_sprites']);
-        this.setState({defaultList: orderedList});
+        let orderedKeys = spriteDefault['orderedKeys'];
+        let propsByKey = spriteDefault['propsByKey'];
+        let orderedList = [];
+        orderedKeys.map(key => {
+          orderedList.push(propsByKey[key]);
+        });
+        this.setState({levelbuilderDefaultList: orderedList});
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    getDefaultListMetadata('production')
+      .then(spriteDefault => {
+        let orderedKeys = spriteDefault['orderedKeys'];
+        let propsByKey = spriteDefault['propsByKey'];
+        let orderedList = [];
+        orderedKeys.map(key => {
+          orderedList.push(propsByKey[key]);
+        });
+        this.setState({productionDefaultList: orderedList});
       })
       .catch(err => {
         console.log(err);
@@ -47,33 +65,36 @@ export default class ReleaseDefaultSprites extends React.Component {
         <h1>Release Default Sprites from Levelbuilder to Production</h1>
         <p>
           If you made changes to the list of default sprites on this
-          <a href="/sprites/default_sprites_editor">tool</a>, those changes are
+          <a href="/sprites/default_sprites_editor"> tool</a>, those changes are
           saved only to the levelbuilder environment. By pressing this button,
           those changes will be sent to production and become available to
           students immediately.
         </p>
-
+        <Button
+          text="Release Changes to Production"
+          color={Button.ButtonColor.red}
+          onClick={this.confirmReleaseChangesToLevelbuilder}
+          style={styles.button}
+        />
+        <h3>Review The Changes</h3>
+        <p>
+          You can test these changes in a Sprite Lab project on Levelbuilder
+        </p>
+        <p>
+          Below is the current levelbuilder default sprite list and the current
+          default sprite list on production.
+        </p>
         <div style={styles.pageBreak}>
-          <Button
-            text="Release Changes to Production"
-            color={Button.ButtonColor.red}
-            onClick={this.confirmReleaseChangesToLevelbuilder}
-            style={styles.button}
-          />
-        </div>
-
-        <div style={styles.pageBreak}>
-          <div>
-            {this.state.defaultList.map(spriteObject => {
-              return (
-                <DefaultSpriteRow
-                  name={spriteObject.name}
-                  keyValue={spriteObject.key}
-                  onDelete={this.deleteSpriteFromDefaults}
-                  onMove={this.reorderSpriteByOne}
-                  key={spriteObject.name}
-                />
-              );
+          <div style={styles.column}>
+            <h3>List To Deploy</h3>
+            {this.state.levelbuilderDefaultList.map(spriteObject => {
+              return <p style={styles.listItem}>{spriteObject.name}</p>;
+            })}
+          </div>
+          <div style={styles.column}>
+            <h3>List Already on Production</h3>
+            {this.state.productionDefaultList.map(spriteObject => {
+              return <p style={styles.listItem}>{spriteObject.name}</p>;
             })}
           </div>
         </div>
@@ -90,6 +111,17 @@ const styles = {
   },
   button: {
     margin: 20,
+    fontSize: 20
+  },
+  column: {
+    float: 'left',
+    width: '50%',
+    border: `1px solid ${color.dark_slate_gray}`
+  },
+  listItem: {
+    borderTop: `1px solid ${color.dark_slate_gray}`,
+    marginTop: '5px',
+    marginBottom: '5px',
     fontSize: 20
   }
 };
