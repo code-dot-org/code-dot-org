@@ -191,8 +191,9 @@ aside.announcement {
       }
 
       button {
-        background-color: #5b98f3;
-        border: 1px solid #5b98f3;
+        background: none;
+        border: 2px solid rgba($darkest_gray,.8);
+        color: rgba($darkest_gray,.85);
       }
     }
 
