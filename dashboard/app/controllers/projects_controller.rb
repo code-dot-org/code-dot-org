@@ -268,7 +268,7 @@ class ProjectsController < ApplicationController
   end
 
   def weblab_footer
-    render partial: 'projects/weblab_footer'
+    render partial: 'projects/weblab_footer', locals: {channel_id: channel_id}
   end
 
   private def initial_data
