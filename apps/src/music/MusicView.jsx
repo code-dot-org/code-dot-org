@@ -166,7 +166,7 @@ class MusicView extends React.Component {
     var theme = GoogleBlockly.Theme.defineTheme('dark', {
       base: CdoTheme,
       componentStyles: {
-        toolboxBackgroundColour: '#222'
+        toolboxBackgroundColour: '#5b6770'
       }
     });
 
@@ -503,7 +503,9 @@ class MusicView extends React.Component {
             width: '100%',
             height: blocklyAreaHeight,
             position: 'absolute',
-            top: blocklyAreaTop
+            top: blocklyAreaTop,
+            borderRadius: 4,
+            overflow: 'hidden'
           }}
         >
           <div id="blockly-div" />
