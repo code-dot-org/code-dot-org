@@ -525,6 +525,7 @@
   "englishOnlyWarning": "Því miður! Þetta stig er ekki til á þínu tungumáli. Þrautirnar á þessu stigi nota blöndu af enskum orðum og táknum sem ekki er hægt að þýða eins og er. Þú getur haldið áfram með stigið {nextStage}.",
   "enterCountry": "Skrifaðu land ef það er utan Bandaríkjanna",
   "enterSectionCode": "Færa inn kóða hóps",
+  "enterCertificateNames": "Færðu inn allt að 30 nöfn, **eitt á hverja línu**. Prentanleg síða með sérsniðnum skírteinum fyrir {courseTitle} verður útbúin.",
   "enrollmentDescription": "Skráðu þig í hóp kennarans með því að slá inn kóða hópsins hér fyrir neðan. Kennarar geta fylgst með námsframvindu þinni og verkefnum og geta endurstillt aðgangsorðið þitt ef þú gleymir því.",
   "errorEmptyFunctionBlockModal": "Það þurfa að vera kubbar innan í skilgreiningunni á fallinu. Smelltu á \"breyta\" og dragðu kubba inn í græna kubbinn.",
   "errorIncompleteBlockInFunction": "Smelltu á \"breyta\" til að ganga úr skugga um að það vanti ekki neina kubba í skilgreininguna á fallinu.",
