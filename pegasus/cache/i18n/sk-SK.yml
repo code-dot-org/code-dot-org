@@ -451,6 +451,8 @@ sk-SK:
   homepage_slot_text_link_donate: Venuj dar
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
   homepage_slot_text_link_administrators: Prines Informatiku na tvoju školu
+  homepage_gallery_header: Viac ako %{project_count} miliónov vytvorených projektov
+    Code.org
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
   homepage_donors_donate: Prispejte
@@ -1037,7 +1039,7 @@ sk-SK:
   dashboard_grade_other: Ostatné
   dashboard_login_word: Slovo
   dashboard_login_picture: Obrázok
-  dashboard_login_none: Email
+  dashboard_login_none: E-mailová adresa
   dashboard_stage: Úroveň
   dashboard_puzzle: Úloha
   dashboard_question: Otázka

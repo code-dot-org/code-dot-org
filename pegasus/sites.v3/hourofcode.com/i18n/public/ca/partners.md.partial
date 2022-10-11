@@ -2,37 +2,37 @@
 title: Col·laboradors
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+L'Hora del Codi està per al Comitè de Revisió de l'Hora del Codi.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+El [Comitè de Revisió]({{ urls/review_committee }}) està compost per 2 educadors actuals i antics dins de la franja de graus K-12 que assessoren i recomanen activitats utilitzant una rúbrica establerta per al comitè assessor. Aquestes activitats de revisió d'educadors dirigides per plans d'alumnes i de professors enviades per centenars de col·laboradors d'activitats, que avaluen el valor educacional de les activitats, la capacitat d'atreure els aprenents i potencial atractiu a grups d'alumnes diversos.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+La feina i la dedicació del comitè han contribuït a l'èxit de l'Hora de Codi i la seva visió d'oferir una introducció a les ciències informàtiques per a cada alumne.
 
-# Major Partners and Corporate Supporters
+# Socis Principals i Col·laboradors Empresarials
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Socis internacionals
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Currículum i Col·laboradors de tutories
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Socis d'infraestructura i eines
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Col·laboradors addicionals
 
 {{ partners/additional_partners }}
 

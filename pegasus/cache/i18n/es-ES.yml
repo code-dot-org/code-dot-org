@@ -498,6 +498,10 @@ es-ES:
     de ganar entradas para ver a la banda en vivo.
   homepage_thebadguys_body: "¡Codifica una aventura con la Sra. Tarántula, el Sr.
     Lobo y el resto de los personajes de la película, **Los Tipos Malos**!"
+  homepage_csa_subhead: Un nuevo enfoque para
+  homepage_csa_title: AP® Informática A
+  homepage_csa_body: Capacitar a los estudiantes con proyectos creativos conectados
+    con el mundo real en nuestro plan de estudios basado en la equidad.
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -1385,6 +1389,7 @@ es-ES:
   express-2021_name: Curso Exprés (2021)
   pre-express-2021_name: Curso Exprés para pre-lectores (2021)
   express-2022_name: Curso Exprés (2021)
+  pre-express-2022_name: Curso Exprés para Pre-lectores (2022)
   csd2_name: 'Unidad 2: Desarrollo Web'
   csd3_name: 'Unidad 3: Animación y Juegos'
   accelerated_name: Curso acelerado
@@ -2792,6 +2797,11 @@ es-ES:
   ai_ecs: 'ECS: Inteligencia Artificial (IA)'
   ai_ecs_description: Una nueva unidad de plan de estudios alternativo para el plan
     de estudios de Exploración de Ciencias de la Computación (ECS).
+  ai_aiedu_intro: 'aiEDU: Introducción a la Inteligencia Artificial'
+  ai_aiedu_intro_description: Introducción a la Inteligencia Artificial es un plan
+    de estudios gratuito, innovador y culturalmente relevante en el que los alumnos
+    desarrollan conocimientos conceptuales sobre qué es la Inteligencia Artificial
+    y cómo se utiliza en el mundo real.
   ai_elements: Elementos de Inteligencia Artificial
   ai_elements_description: Una serie de cursos gratuitos en línea creados por Reaktor
     y la Universidad de Helsinki.

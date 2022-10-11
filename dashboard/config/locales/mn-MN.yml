@@ -599,6 +599,7 @@ mn:
     no_primary_course: Кодын студийн хичээлийг оролдоорой
     choose_next_course: Доорхын нэгийг сонгож Кодын студийн хичээлийг оролдоорой
     print_certificate: Гэрчилгээг хэвлэх
+  certificate_hour_of_code: Кодын цаг
   move_students:
     new_section_dne: Уучлаарай, гэхдээ хэсэг %{new_section_code} оршихгүй байна. Өөр
       хэсгийн кодыг оруулаарай.

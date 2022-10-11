@@ -5601,8 +5601,19 @@ fr:
               display_name: Bienvenue
         dlp-csp-mod1-2022:
           title: CS Principles Apprentissage Approfondi Module 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Extension de débogage asynchrone
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 'Module 2 : Travail asynchrone'
         soccer:
           name: foot
+          title: Codez votre jeu de football
+          description_short: Créez une partie de football
+          description: Créez une partie de football
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -5639,3 +5650,46 @@ fr:
               display_name: Contenu
             lessonGroup-5:
               display_name: Enquête
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
+          title: Résolution de problèmes
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
+            lessonGroup-3:
+              display_name: 'Chapitre 23 : Prototypage d''Applications'
+          title: Le Processus Du Concept
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Images et Animations'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Jeux'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
+          title: L'Informatique Physique
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
