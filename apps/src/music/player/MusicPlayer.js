@@ -1,4 +1,10 @@
-import {GetCurrentAudioTime, InitSound, PlaySound, StopSound} from './sound';
+import {
+  GetCurrentAudioTime,
+  InitSound,
+  PlaySound,
+  StopSound,
+  StopSoundByUniqueId
+} from './sound';
 
 // Default to 4/4 time
 const BEATS_PER_MEASURE = 4;
@@ -32,7 +38,7 @@ export default class MusicPlayer {
     this.isInitialized = true;
   }
 
-  playSoundAtMeasureById(id, measure) {
+  playSoundAtMeasureById(id, measure, insideWhenRun) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
       return;
@@ -49,18 +55,30 @@ export default class MusicPlayer {
     const soundEvent = {
       type: 'play',
       id,
+      insideWhenRun,
       when: measure - 1
     };
 
     this.soundEvents.push(soundEvent);
+
+    // Sort the sounds by play time, earliest first, so that when we
+    // render the timeline, we can prioritize by play time when
+    // allocating rows to sounds.
+    this.soundEvents.sort(
+      (soundEventA, soundEventB) => soundEventA.when - soundEventB.when
+    );
 
     if (this.isPlaying) {
       this.playSoundEvent(soundEvent);
     }
   }
 
-  playSoundAtMeasureByName(name, measure) {
-    this.playSoundAtMeasureById(this.getIdForSoundName(name), measure);
+  playSoundAtMeasureByName(name, measure, insideWhenRun) {
+    this.playSoundAtMeasureById(
+      this.getIdForSoundName(name),
+      measure,
+      insideWhenRun
+    );
   }
 
   getIdForSoundName(name) {
@@ -74,16 +92,6 @@ export default class MusicPlayer {
     }
 
     return null;
-  }
-
-  playSoundImmediately(id) {
-    if (!this.isInitialized) {
-      console.log('MusicPlayer not initialized');
-      return;
-    }
-    this.stopSong();
-
-    this.playSoundEvent({type: 'play', id, when: 0}, true);
   }
 
   playSong() {
@@ -103,8 +111,36 @@ export default class MusicPlayer {
     this.isPlaying = false;
   }
 
-  clearQueue() {
-    this.soundEvents = [];
+  stopAllSoundsStillToPlay() {
+    // If we are actively playing, then go through all events that were
+    // triggered under when_run and that have a timestamp in the future,
+    // and stop them preemptively.  This is usually because the code
+    // changed and these future sound events might no longer be valid,
+    // or if they are valid, they will be scheduled again.
+    if (this.isPlaying) {
+      for (let soundEvent of this.soundEvents) {
+        if (soundEvent.insideWhenRun) {
+          const eventStart =
+            this.startPlayingAudioTime +
+            this.convertMeasureToSeconds(soundEvent.when);
+          if (eventStart > GetCurrentAudioTime()) {
+            StopSoundByUniqueId(GROUP_TAG, soundEvent.uniqueId);
+          }
+        }
+      }
+    }
+  }
+
+  clearWhenRunEvents() {
+    this.soundEvents = this.soundEvents.filter(
+      soundEvent => !soundEvent.insideWhenRun
+    );
+  }
+
+  clearTriggeredEvents() {
+    this.soundEvents = this.soundEvents.filter(
+      soundEvent => soundEvent.insideWhenRun
+    );
   }
 
   getSoundEvents() {
@@ -139,15 +175,19 @@ export default class MusicPlayer {
     );
   }
 
-  playSoundEvent(sound, isImmediate) {
-    const eventStart =
-      this.startPlayingAudioTime + this.convertMeasureToSeconds(sound.when);
-    if (!isImmediate && eventStart < GetCurrentAudioTime()) {
-      // Don't play if we've already passed this measure unless we're playing immediately (e.g. preview)
-      return;
-    }
-    if (sound.type === 'play') {
-      PlaySound(this.groupPrefix + '/' + sound.id, GROUP_TAG, eventStart);
+  playSoundEvent(soundEvent) {
+    if (soundEvent.type === 'play') {
+      const eventStart =
+        this.startPlayingAudioTime +
+        this.convertMeasureToSeconds(soundEvent.when);
+
+      if (eventStart >= GetCurrentAudioTime()) {
+        soundEvent.uniqueId = PlaySound(
+          this.groupPrefix + '/' + soundEvent.id,
+          GROUP_TAG,
+          eventStart
+        );
+      }
     }
   }
 

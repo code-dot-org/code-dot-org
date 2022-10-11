@@ -1,5 +1,17 @@
 import {BlockTypes} from '../blockTypes';
 
+// Examine chain of parents to see if one is 'when_run'.
+const isBlockInsideWhenRun = ctx => {
+  let block = ctx;
+  while ((block = block.getParent())) {
+    if (block.type === 'when_run') {
+      return true;
+    }
+  }
+
+  return false;
+};
+
 export const playSound = {
   definition: {
     type: BlockTypes.PLAY_SOUND,
@@ -39,6 +51,8 @@ export const playSound = {
       'measure',
       Blockly.JavaScript.ORDER_ASSIGNMENT
     ) +
+    ', ' +
+    (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
     ');\n'
 };
 
@@ -85,6 +99,8 @@ export const playSample = {
       'measure',
       Blockly.JavaScript.ORDER_ASSIGNMENT
     ) +
+    ', ' +
+    (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
     ');\n'
 };
 

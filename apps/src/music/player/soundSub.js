@@ -101,9 +101,12 @@ WebAudio.prototype.PlaySoundByBuffer = function(
 };
 
 WebAudio.prototype.StopSoundBySource = function(source) {
-  if (source.context.state === 'running') {
-    source.stop();
-  }
+  // todo: investigate whether this condition is needed/useful
+  // across browsers.
+
+  //if (source.context.state === 'running') {
+  source.stop();
+  //}
 };
 
 export default WebAudio;
