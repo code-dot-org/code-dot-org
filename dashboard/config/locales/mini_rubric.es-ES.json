@@ -902,6 +902,45 @@
           "rubric_performance_level_2": "Cada botón utiliza tanto los bloques de leds como los de zumbidos, pero los parámetros pueden no coincidir con la descripción correcta (por ejemplo: que todos tengan la misma duración)",
           "rubric_performance_level_3": "En algunos botones faltan bloques enteros de leds o zumbadores",
           "rubric_performance_level_4": "No se han añadido bloques adicionales de leds o zumbadores al programa "
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "rubric_key_concept": "Utiliza los botones y el conmutador en el Circuit Playground para crear una aplicación",
+          "rubric_performance_level_1": "La aplicación funciona tal y como se describe, y los emojis cambian en función de las entradas del usuario\n",
+          "rubric_performance_level_2": "La mayor parte de la aplicación funciona como se describe, pero algunas de las acciones no coinciden con la descripción, como el cambio de tamaño o el cambio de los emojis",
+          "rubric_performance_level_3": "La aplicación cambia los elementos en la pantalla, pero no coincide con la descripción del programa",
+          "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
+        },
+        "CSD U6 - Color LEDs - A_2222": {
+          "rubric_key_concept": "Utiliza los LEDs de colores para crear un patrón en el Circuit Playground",
+          "rubric_performance_level_1": "El patrón de luz utiliza al menos 3 colores diferentes y cambia la intensidad de algunos de los LEDs",
+          "rubric_performance_level_2": "El patrón de luz sólo utiliza 2 colores, o utiliza 3 colores pero no cambia la intensidad de los LEDs",
+          "rubric_performance_level_3": "El patrón de luz utiliza 1 color, o utiliza 2 colores pero no cambia la intensidad de los LEDs",
+          "rubric_performance_level_4": "No se ha utilizado ningún patrón"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "rubric_key_concept": "Combinando los elementos de entrada y salida del Circuit Playground y de la pantalla para crear una aplicación",
+          "rubric_performance_level_1": "La aplicación funciona como se describe, con variables que se utilizan para obtener los valores de la pantalla y para encender los LEDs del Circuit Playground en la dirección correcta."
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "rubric_key_concept": "Utiliza variables y sentencias `if` para crear una aplicación que utilice el Circuit Playground",
+          "rubric_performance_level_1": "El programa funciona como se ha descrito, utilizando variables para llevar la cuenta del tamaño y una sentencia `if` para hacer sonar el zumbador en el momento correcto",
+          "rubric_performance_level_2": "Las variables se utilizan para controlar el tamaño del elemento, pero el zumbador no suena una vez que alcanza el tamaño correcto",
+          "rubric_performance_level_3": "Las variables se utilizan para el tamaño, pero no aumentan cuando se pulsa el botón",
+          "rubric_performance_level_4": "El código no ha cambiado"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "rubric_key_concept": "Obtención de la información del usuario en la pantalla y su utilización para actualizar una aplicación",
+          "rubric_performance_level_1": "Cada elemento de diseño se ha personalizado correctamente de acuerdo con la descripción de la aplicación, y el código obtiene la entrada del usuario y la utiliza para actualizar la aplicación",
+          "rubric_performance_level_2": "El código obtiene la entrada del usuario y la utiliza para actualizar la aplicación, pero los elementos de diseño pueden no estar correctamente personalizados de acuerdo con la descripción de la aplicación",
+          "rubric_performance_level_3": "Hay errores al intentar obtener valores de la entrada de texto, del desplegable o del deslizador; o la aplicación está incompleta y no obtiene todos los elementos de entrada.",
+          "rubric_performance_level_4": "La aplicación no recibe información de ninguno de los elementos de la pantalla."
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "rubric_key_concept": "Actualizar las propiedades y el texto de los elementos de diseño mediante código",
+          "rubric_performance_level_1": "La aplicación terminada coincide con la descripción, y cada botón actualiza correctamente el icono y el texto",
+          "rubric_performance_level_2": "La aplicación terminada es similar a la descripción, pero tiene al menos un elemento incompleto (por ejemplo, no actualizar el texto o no actualizar el color del icono)",
+          "rubric_performance_level_3": "La aplicación terminada puede tener algunos elementos que parecen correctos, pero la mayoría de los elementos no se actualizan correctamente o la aplicación está sólo parcialmente terminada.\n",
+          "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
         }
       }
     }
