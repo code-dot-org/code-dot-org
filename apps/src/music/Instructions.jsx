@@ -11,20 +11,32 @@ export default class Instructions extends React.Component {
     currentPanel: 0
   };
 
+  getPreviousPanel = () => {
+    return this.state.currentPanel > 0 ? this.state.currentPanel - 1 : null;
+  };
+
+  getNextPanel = () => {
+    return this.state.currentPanel + 1 <
+      this.props.instructions?.groups[0].panels.length
+      ? this.state.currentPanel + 1
+      : null;
+  };
+
   changePanel = nextPanel => {
-    if (
-      nextPanel &&
-      this.state.currentPanel + 1 <
-        this.props.instructions?.groups[0].panels.length
-    ) {
-      this.setState({currentPanel: this.state.currentPanel + 1});
-    } else if (!nextPanel && this.state.currentPanel > 0) {
-      this.setState({currentPanel: this.state.currentPanel - 1});
+    const nextPanelIndex = nextPanel
+      ? this.getNextPanel()
+      : this.getPreviousPanel();
+
+    if (nextPanelIndex !== null) {
+      this.setState({currentPanel: nextPanelIndex});
     }
   };
 
   render() {
     const {instructions, baseUrl} = this.props;
+
+    const previousPanel = this.getPreviousPanel();
+    const nextPanel = this.getNextPanel();
 
     return (
       <div
@@ -88,14 +100,24 @@ export default class Instructions extends React.Component {
           <button
             type="button"
             onClick={() => this.changePanel(false)}
-            style={{fontSize: 13, padding: '4px 8px'}}
+            style={{
+              fontSize: 13,
+              padding: '4px 8px',
+              opacity: previousPanel !== null ? 1 : 0,
+              pointerEvents: previousPanel !== null ? 'auto' : 'none'
+            }}
           >
             Previous
           </button>
           <button
             type="button"
             onClick={() => this.changePanel(true)}
-            style={{fontSize: 13, padding: '4px 8px'}}
+            style={{
+              fontSize: 13,
+              padding: '4px 8px',
+              opacity: nextPanel !== null ? 1 : 0,
+              pointerEvents: nextPanel !== null ? 'auto' : 'none'
+            }}
           >
             Next
           </button>
