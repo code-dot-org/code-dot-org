@@ -170,7 +170,7 @@ function getBoard() {
     if (project.getMakerAPIs() === MB_API) {
       return findPortWithViableDevice().then(port => new MicroBitBoard(port));
     } else {
-      if (shouldUseWebSerial) {
+      if (shouldUseWebSerial()) {
         return navigator.serial.getPorts().then(ports => {
           // No previously connected port. Query user to select port.
           if (!ports.length) {
