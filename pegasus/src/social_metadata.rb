@@ -45,7 +45,7 @@ def get_social_metadata_for_page(request)
     hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
     coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
     hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
-    cs_leaders_prize: {path: "/images/marketing/hoc2022-cs-leaders-prize-opengraph.png", width: 1200, height: 630},
+    cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
   }
 
   # Important:
