@@ -44,19 +44,3 @@
 <!-- Link to Jira task(s) where sensitive security issues are discussed privately. -->
 
 ## Caching
-
-## PR Checklist:
-
-<!--
-  The final step! Before you create your PR, double-check that everything is in order.
-  Change [ ] to [X] during creation to check boxes.
--->
-
-- [ ] Tests provide adequate coverage
-- [ ] Privacy and Security impacts have been assessed
-- [ ] Code is well-commented
-- [ ] New features are translatable or updates will not break translations
-- [ ] Relevant documentation has been added or updated
-- [ ] User impact is well-understood and desirable
-- [ ] Pull Request is labeled appropriately
-- [ ] Follow-up work items (including potential tech debt) are tracked and linked
