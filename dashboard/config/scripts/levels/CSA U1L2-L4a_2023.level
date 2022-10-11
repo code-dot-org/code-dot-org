@@ -1,0 +1,369 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "display_name": "One Syntax Error",
+    "bubble_choice_description": "This program has one syntax error that is preventing it from running. Can you find and fix the error?",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 52
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 26
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 24
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 22
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 20
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 27
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 25
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 23
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 21
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 49
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "long_instructions": "##Fix the Error\r\n\r\nRun the program to see the error displayed in the console.\r\n\r\nThis program has **one** syntax error to fix! Find and fix the syntax error in the program.\r\n\r\n**Hint:** The error messages that are displayed in the console can be helpful in identifying which line is causing the error and provide a clue about the problem.\r\n\r\nFor example, in the error message shown below, `NeighborhoodRunner.java:6`(#e7e8ea) indicates the file and line number causing the error.\r\n\r\nWe then see a `cannot find symbol`(#e7e8ea) message followed by the line from the program ( `jason.turnleft()`(#e7e8ea) ). The `symbol: method turnleft()`(#e7e8ea) line tells us that Java does not know what `turnleft()`(#e7e8ea) means in this line of code. That's because it should be `turnLeft()`(#e7e8ea) (with a capital `L`(#e7e8ea))!\r\n\r\n```\r\n/NeighborhoodRunner.java:6: error: cannot find symbol\r\n    jason.turnleft();\r\n          ^\r\n  symbol:   method turnleft()\r\n  location: variable jason of type org.code.neighborhood.Painter\r\n```",
+    "encrypted_exemplar_sources": "kq0Pf5c4aweori7RVLPa2YdCHg6i+267r90rZwE5q3QjjBR/PpJw16UPErsZ\nOeh4HkoGe0sIy4rmswwWqhzFbcFdbFVrR0Z9OcEvJ+vg5mvdX5HJUsmmpmcW\nY4abvtGgvTEQflirPWy6TVn0XL94SHijNz2EJ2b1dBsPvo1Ca87yOSd8VBrG\n4FOFvcdOUY0K1z4pIMjprM7tzNVC+7AWPU0fJw7wiCkMBfdgwYWDlWpkwidH\n2UU8LqtSva9JYq2+FlF1g9npbj5LrK0oz+cD2dwwCTHd2IHokxJldfceou4N\nTdIH96Yq7+4dnFYOFKVRlIGFXKENueZ4UHtViN/6cnpFSmxgUon0WnaxwX97\nyQbXUbS1aZLk8T+mVPqXba4UqV/cIYsBWmFZuKap1Bgb305cjFi2d2Ml01im\nvue1wGpxS7OOumxZrxckpwiJ4ZF+tdk24XaQHD8C9hZwF3ElUN/U0G4JqoLE\n7sh+7xe85vIzMytxJLAI3/Yv1JrKqSqa2dGoDnrdqiyOVBzpVfaTNIi2/4F0\nrt9i/SqUv4XlCNgyLHS+B33d1G/w0DFLEF+cUR48AdcVysAeg0It/YmRURn/\nNSE4ejnyWb/pMW7gv379/imMfDRwK4nfcFvS0gaDCGj+DOCda7JQRbV3ReNV\nMQcUEHd3g+TZ8Q+Kr2BKKuEkxnGav1yw1p2giOigExjNZ8oZL20wrDqLqHLr\nbI+PqlswSL2bR2gtLGfrXqky52Ll2u35l0oPEiKOqA157l57gftflJGwHOAl\nwgIsoSCbqlq4b9jZ7beIDoVXkzMTxzEY95mLOaOVVv+I8WSgwEkJToway3PM\nUTzcnM7LjvbmzdiHYjkTzO8rVvvjq5ZnNl5tu5LKu3aPF1WNBjloj1GG+31I\nGk9IogsF2ExpO+abnffKvz/wvLHcYc+KthUSMzbnfsOXf2XJBSyqvTxCU7cA\n9PAPyxFv7Ppg/M5B3kCqa0rmyo3xHS3s+24/XEtxxf53uym/X8J324BXTGV2\n33TdIvavdvER4ORZtIXEMfB/pPOx2YZZRu7bxTe++L0NFvbiqTUSstjTU/IV\nYU3JDOce9GvJUeRBulOjBUc/j6bRZGxyvPxOLyRZ73DZvua48rH6Yk8WgyAI\nbxSC2uNura1a\n",
+    "teacher_markdown": "The error is on **Line 14**. In the line\r\n\r\n```\r\namelia.takepaint();\r\n```\r\n\r\nThe `takePaint()` method should have a capital `P`.",
+    "thumbnail_url": "https://images.code.org/fc840d17b0b33da8f0c93dd8d3994448-U1L2-L4a.png",
+    "encrypted_validation": "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\nL9AUWQkU1ILHC/L1zGP2JrWjw3I=\n",
+    "start_sources": {
+      "NeighborhoodRunner.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    // Creates a Painter called amelia\n    Painter amelia = new Painter();\n\n    // Moves forward one space\n    amelia.move();\n\n    // Takes paint three times to get all the paint from the bucket\n    amelia.takePaint();\n    amelia.takepaint();\n    amelia.takePaint();\n\n    // Turns right by turning left three times\n    amelia.turnLeft();\n    amelia.turnLeft();\n    amelia.turnLeft();\n\n    // Moves and paints three times\n    amelia.move();\n    amelia.paint(\"LawnGreen\");\n    amelia.move();\n    amelia.paint(\"LawnGreen\");\n    amelia.move();\n    amelia.paint(\"LawnGreen\");\n\n    // Moves forward one space to get off the paint\n    amelia.move();\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-10-10T15:24:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-10-10 15:24:05 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 21:30:09 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 21:30:25 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 21:56:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 21:57:35 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 22:05:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 22:06:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 22:07:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 22:54:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 22:55:28 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 23:17:08 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 23:40:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 23:41:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
