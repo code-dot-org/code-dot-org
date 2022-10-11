@@ -45,8 +45,7 @@ export function PlaySound(name, groupTag, when = 0, loop = false) {
   for (var i = 0; i < soundList.length; i++) {
     if (soundList[i] === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
-      PlaySoundByIndex(i, groupTag || name, when, loop);
-      break;
+      return PlaySoundByIndex(i, groupTag || name, when, loop);
     }
   }
 }
@@ -81,7 +80,7 @@ function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop) {
   );
 
   tagGroup.sources.push({source: source, id: audioIdUpto});
-  audioIdUpto++;
+  return audioIdUpto++;
 }
 
 function RemoveStoppedBuffer(groupTag, soundSourceId) {
@@ -106,6 +105,14 @@ export function StopSound(groupTag) {
 
   for (var b = 0; b < sources.length; b++) {
     var source = sources[b].source;
+    audioSystem.StopSoundBySource(source);
+  }
+}
+
+export function StopSoundByUniqueId(groupTag, uniqueId) {
+  var sources = tagGroups[groupTag].sources;
+  const source = sources.find(source => source.id === uniqueId)?.source;
+  if (source) {
     audioSystem.StopSoundBySource(source);
   }
 }

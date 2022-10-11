@@ -234,8 +234,22 @@ class MusicView extends React.Component {
       return;
     }
 
+    // Stop all when_run sounds that are still to play, because if they
+    // are still valid after the when_run code is re-executed, they
+    // will be scheduled again.
+    this.stopAllSoundsStillToPlay();
+
+    // Also clear all when_run sounds from the events list, because it
+    // will be recreated in its entirely when the when_run code is
+    // re-executed.
+    this.player.clearWhenRunEvents();
+
     this.executeSong();
 
+    console.log('onBlockSpaceChange', Blockly.getWorkspaceCode());
+
+    // This is a way to tell React to re-render the scene, notably
+    // the timeline.
     this.setState({updateNumber: this.state.updateNumber + 1});
   };
 
@@ -301,7 +315,7 @@ class MusicView extends React.Component {
   };
 
   playTrigger = id => {
-    console.log('Playhead position: ' + this.player.getPlayheadPosition());
+    //console.log('Playhead position: ' + this.player.getPlayheadPosition());
     this.inputContext.onTrigger(id);
     this.callUserGeneratedCode(hooks.triggeredAtButton);
   };
@@ -325,30 +339,38 @@ class MusicView extends React.Component {
       hooks[hook.name] = hook.func;
     });
 
-    this.player.clearQueue();
-
     this.callUserGeneratedCode(hooks.whenRunButton);
   };
 
   playSong = () => {
     this.player.stopSong();
+
+    // Clear the events list of when_run sounds, because it will be
+    // populated next.
+    this.player.clearWhenRunEvents();
+
     this.executeSong();
+
     this.player.playSong();
 
     this.setState({isPlaying: true});
 
-    console.log(Blockly.getWorkspaceCode());
+    console.log('playSong', Blockly.getWorkspaceCode());
   };
 
   stopSong = () => {
     this.player.stopSong();
     this.inputContext.clearTriggers();
 
+    // Clear the events list, and hence the visual timeline, of any
+    // user-triggered sounds.
+    this.player.clearTriggeredEvents();
+
     this.setState({isPlaying: false});
   };
 
-  previewSound = id => {
-    this.player.playSoundImmediately(id);
+  stopAllSoundsStillToPlay = () => {
+    this.player.stopAllSoundsStillToPlay();
   };
 
   getCurrentGroup = () => {
