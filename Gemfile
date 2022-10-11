@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
-ruby '2.6.6'
+
+# Temporarily support both Ruby 2.6 and 2.7 until we are fully transitioned
+ruby '>= 2.6', '< 2.8'
+
+# Ruby 2.7 no longer includes some libraries by default; install
+# the ones we need here
+# see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
+gem 'thwait'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
