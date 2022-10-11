@@ -7,6 +7,7 @@ import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarsha
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
 import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
+import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
@@ -69,6 +70,7 @@ class MusicView extends React.Component {
       appWidth: this.codeAppRef.offsetWidth,
       appHeight: this.codeAppRef.offsetHeight,
       library: null,
+      instructions: null,
       currentPanel: 'groups',
       groupPanel: 'all',
       isPlaying: false,
@@ -76,7 +78,7 @@ class MusicView extends React.Component {
       currentAudioElapsedTime: 0,
       updateNumber: 0,
       timelineAtTop: !!getRandomIntInclusive(0, 1),
-      showInstructions: false
+      showInstructions: true
     };
   }
 
@@ -112,6 +114,10 @@ class MusicView extends React.Component {
       this.workspace.updateToolbox(createMusicToolbox(library, 'dropdown'));
       this.player.initialize(library);
     });
+
+    this.loadInstructions().then(instructions => {
+      this.setState({instructions});
+    });
   }
 
   componentDidUpdate() {
@@ -131,6 +137,13 @@ class MusicView extends React.Component {
     const libraryFilename = parameters['library']
       ? `music-library-${parameters['library']}.json`
       : 'music-library.json';
+    const response = await fetch(baseUrl + libraryFilename);
+    const library = await response.json();
+    return library;
+  };
+
+  loadInstructions = async () => {
+    const libraryFilename = 'music-instructions.json';
     const response = await fetch(baseUrl + libraryFilename);
     const library = await response.json();
     return library;
@@ -492,14 +505,10 @@ class MusicView extends React.Component {
               overflow: 'scroll'
             }}
           >
-            <p>Music Lab Prototype Keyboard Shortcuts:</p>
-            <p>i: show/hide instructions</p>
-            <p>t: move timeline to bottom/top</p>
-            <p>d: sample block mode = play block + dropdown </p>
-            <p>v: sample block mode = values </p>
-            <p>p: sample block mode = play block + values</p>
-            <p>space: play/stop song</p>
-            <p>[1, 2, 3]: trigger buttons</p>
+            <Instructions
+              instructions={this.state.instructions}
+              baseUrl={baseUrl}
+            />
           </div>
         )}
         <div
