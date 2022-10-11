@@ -472,6 +472,7 @@ class Ability
         ScriptLevel,
         UserLevel,
         UserScript,
+        DataDoc,
         :pd_foorm,
         Foorm::Form,
         Foorm::Library,
