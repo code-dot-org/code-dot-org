@@ -8,6 +8,7 @@
 #   code.org/oceans
 #   code.org/hourofcode/overview
 #   code.org/learn
+#   code.org/prize
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
