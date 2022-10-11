@@ -31,16 +31,3 @@
 <!--
   List (ideally with Jira links) any clean-up or technical debt that will be addressed in future work.
 -->
-
-## Privacy
-
-<!--
-  1.	Does this change involve the collection, use, or sharing of new Personal Data?
-  2.	Does this change involve a new or changed use or sharing of existing Personal Data?
--->
-
-## Security
-
-<!-- Link to Jira task(s) where sensitive security issues are discussed privately. -->
-
-## Caching
