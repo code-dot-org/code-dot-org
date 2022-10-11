@@ -8796,7 +8796,9 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description_audience: ''
         csa1-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
           lesson_groups: {}
           name: csa1-2023
           title: Object-Oriented Programming
@@ -9073,7 +9075,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: hello-world-space-2022
-          title: Hello World Space
+          title: 'Hello World: Space'
           description_audience: ''
           description_short: ''
           description: ''
@@ -9082,7 +9084,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: hello-world-soccer-2022
-          title: Hello World Soccer
+          title: 'Hello World: Soccer'
           description_audience: ''
           description_short: ''
           description: ''
