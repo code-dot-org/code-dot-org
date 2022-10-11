@@ -1,11 +1,6 @@
 ---
 title: 'CS Leaders Prize - $1 Million for U.S. Schools'
 theme: responsive
-social:
-  "og:description": "Tell us how your school will expand computer science, and you could win $10,000 to make it happen!"
-  "og:image": "/images/marketing/hoc2022-cs-leaders-prize-opengraph.png"
-  "og:image:width": 1200
-  "og:image:height": 630
 ---
 
 <link href="/css/generated/cs-leaders-prize.css" rel="stylesheet">
