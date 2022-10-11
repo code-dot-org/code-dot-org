@@ -88,13 +88,21 @@ export default class ReleaseDefaultSprites extends React.Component {
           <div style={styles.column}>
             <h3>List To Deploy</h3>
             {this.state.levelbuilderDefaultList.map(spriteObject => {
-              return <p style={styles.listItem}>{spriteObject.name}</p>;
+              return (
+                <p key={spriteObject.name} style={styles.listItem}>
+                  {spriteObject.name}
+                </p>
+              );
             })}
           </div>
           <div style={styles.column}>
             <h3>List Already on Production</h3>
             {this.state.productionDefaultList.map(spriteObject => {
-              return <p style={styles.listItem}>{spriteObject.name}</p>;
+              return (
+                <p key={spriteObject.name} style={styles.listItem}>
+                  {spriteObject.name}
+                </p>
+              );
             })}
           </div>
         </div>
