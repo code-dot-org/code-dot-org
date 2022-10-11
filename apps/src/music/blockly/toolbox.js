@@ -1,5 +1,11 @@
-import moduleStyles from '@cdo/apps/music/music.module.scss';
+import moduleStyles from './toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
+
+const baseCategoryCssConfig = {
+  container: moduleStyles.toolboxCategoryContainer,
+  row: moduleStyles.toolboxRow,
+  label: moduleStyles.toolboxLabel
+};
 
 export const baseToolbox = {
   kind: 'categoryToolbox',
@@ -7,10 +13,7 @@ export const baseToolbox = {
     {
       kind: 'category',
       name: 'Play',
-      cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
-      },
+      cssConfig: baseCategoryCssConfig,
       contents: [
         {
           kind: 'block',
@@ -45,19 +48,13 @@ export const baseToolbox = {
     {
       kind: 'category',
       name: 'Samples',
-      cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
-      },
+      cssConfig: baseCategoryCssConfig,
       contents: []
     },
     {
       kind: 'category',
       name: 'Events',
-      cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
-      },
+      cssConfig: baseCategoryCssConfig,
       contents: [
         {
           kind: 'block',
@@ -68,10 +65,7 @@ export const baseToolbox = {
     {
       kind: 'category',
       name: 'Control',
-      cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
-      },
+      cssConfig: baseCategoryCssConfig,
       contents: [
         {
           kind: 'block',
@@ -112,10 +106,7 @@ export const baseToolbox = {
     {
       kind: 'category',
       name: 'Math',
-      cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
-      },
+      cssConfig: baseCategoryCssConfig,
       contents: [
         {
           kind: 'block',
@@ -184,10 +175,7 @@ export const baseToolbox = {
     {
       kind: 'category',
       name: 'Variables',
-      cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
-      },
+      cssConfig: baseCategoryCssConfig,
       contents: [
         {
           kind: 'button',
@@ -232,10 +220,7 @@ export const createMusicToolbox = (library, mode) => {
     let category = {
       kind: 'category',
       name: folder.name,
-      cssConfig: {
-        container: moduleStyles.toolboxCategoryContainer,
-        row: moduleStyles.blocklyTreeRow
-      },
+      cssConfig: baseCategoryCssConfig,
       contents: []
     };
 
