@@ -25,9 +25,15 @@ namespace :curriculum_pdfs do
   #   cd bin/generate-pdf
   #   yarn install
   # on the staging machine, this is taken care of in cookbooks/cdo-apps/recipes/generate_pdf.rb
-  desc 'Generate any PDFs that we would expect to have been generated automatically but for whatever reason haven\'t been.'
+  desc 'Generate any curriculum PDFs that have not yet been generated.'
   task generate_missing_pdfs: :environment do
-    Services::CurriculumPdfs.generate_missing_pdfs
+    exception_cb = proc do
+      ChatClient.log "PDF generation failed. retrying..."
+    end
+
+    Retryable.retryable(on: StandardError, tries: 2, exception_cb: exception_cb) do
+      Services::CurriculumPdfs.generate_missing_pdfs
+    end
 
     puts "Finished generating missing PDFs"
   end

@@ -11,6 +11,23 @@ import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
+/**
+ * Without this, we get an error on the server "invalid byte sequence in UTF-8".
+ *
+ * Workaround via
+ * https://github.com/exupero/saveSvgAsPng/commit/fd9453f576d202dd36e08105cd18d5aed9174d22
+ *
+ * @param {string} data
+ * @returns {string}
+ */
+function reEncodeNonLatin1(data) {
+  var encodedData = encodeURIComponent(data);
+  encodedData = encodedData.replace(/%([0-9A-F]{2})/g, function(match, p1) {
+    return String.fromCharCode('0x' + p1);
+  });
+  return decodeURIComponent(encodedData);
+}
+
 function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
   const [studentName, setStudentName] = useState();
@@ -55,7 +72,7 @@ function Certificate(props) {
       course: props.tutorial,
       donor
     };
-    return btoa(JSON.stringify(data));
+    return btoa(reEncodeNonLatin1(JSON.stringify(data)));
   };
 
   const getCertificateImagePath = certificate => {
