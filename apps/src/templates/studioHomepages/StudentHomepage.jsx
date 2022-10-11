@@ -20,7 +20,6 @@ export default class StudentHomepage extends Component {
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
-    isEnglish: PropTypes.bool.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool
   };
 
