@@ -367,6 +367,12 @@ class MusicView extends React.Component {
   };
 
   handleKeyUp = event => {
+    // Don't handle a keyboard shortcut if the active element is an
+    // input field, since the user is probably trying to type something.
+    if (document.activeElement.tagName.toLowerCase() === 'input') {
+      return;
+    }
+
     if (event.key === 't') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
