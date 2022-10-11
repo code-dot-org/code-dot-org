@@ -35,23 +35,17 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 * * *
 
-## კოდის ერთ საათთან ერთად მოაწყვეთ ოჯახური კოდის წერის საღამო და მონაწილეობის მისაღებად მოიწვიეთ მშობლები
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. ეს არის ერთ-ერთი დიდებული გზა იმისათვის, რომ მოვიზიდოთ უფრო ფართო აუდიტორია და წავახალისოთ მშობლები სკოლაში კომპიუტერული მეცნიერების მხარდაჭერისთვის. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [ღონისძიების კომპლექტის ჩამოსატვირთათ დააწექით აქ](http://www.familycodenight.org/DownloadCodeDotOrg.html).
-
-* * *
-
 ## Example plan for a school assembly or event
 
-**ღონისძიება:** სკოლაში კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის გახსნა
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**დრო:** სასკოლო დროს. სასურველია თორმეტი საათისკენ. ხანგრძლივობა დაახლოებით 1 საათი.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**ადგილმდებარეობა:** ნებისმიერი დიდი ფართი სკოლაში (მაგალითად, თეატრი, სავარჯიშო დარბაზი, კაფეტერია)
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-## ღონისძიების დღის წესრიგი
+## Run of Show
 
 | დრო           | მოქმედება                                                                                                                                      |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
