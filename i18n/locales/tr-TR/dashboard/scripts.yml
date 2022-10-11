@@ -4101,6 +4101,17 @@ tr:
               display_name: İçerik
             lessonGroup-5:
               display_name: Anket
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Laboratuvarı
+            lesson-6:
+              name: Döngüler
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Anket
+            lessonGroup-3:
+              display_name: İçerik
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
