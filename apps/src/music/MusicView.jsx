@@ -505,8 +505,7 @@ export default class MusicView extends React.Component {
               backgroundColor: 'black',
               borderRadius: 4,
               padding: 0,
-              boxSizing: 'border-box',
-              overflow: 'scroll'
+              boxSizing: 'border-box'
             }}
           >
             <Instructions
