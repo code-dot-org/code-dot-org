@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcover",
-    "serialized_at": "2022-10-07 21:09:15 UTC",
+    "serialized_at": "2022-10-10 21:02:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -74,8 +74,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this final lesson, students will share their book covers with one another.  First they will copy and paste their app links into a new tab. Then students will walk around and run each other’s book cover apps. Finally, the whole class will have a discussion on the importance of design and how to decide what elements to keep in creating a digital book cover.",
-        "preparation": "- Have student handouts and projects pulled up from the previous class\n- Hand out a stack of Post It notes to each student \n"
+        "overview": "In this final lesson, students will share their book covers with one another. First, they will copy and paste their app links into a new tab. Then students will walk around and run each other’s book cover apps. Finally, the whole class will have a discussion on the importance of design and how to decide what elements to keep in creating a digital book cover.\n",
+        "preparation": "- Have student handouts and projects pulled up from the previous class\n- Hand out a stack of Post It notes to each student \n",
+        "student_overview": "In this final lesson, you are going to share out your Book Cover with your classmates. You will have the chance to show off your work and test your classmates’ projects. At the end of class, you will have a discussion on what choices your classmates made in their Book Covers.\n"
       },
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (beta)",
@@ -482,7 +483,7 @@
       "key": "0e5d7bf3-ad27-4c16-8731-28c693a28298",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: *Reread your time capsule story from last class. Imagine if someone else told the story of your life without your input:*\n\n- _How would that make you feel?_ \n- _How might they tell it differently?_\n- _Do you think it is important for everyone to have a voice in telling their side of history?_\n\n**Do This**: Have students pair up and answer the Discussion questions.\n\n**Discussion Goal**: The purpose of this discussion is for students to understand how history is written. Stories can be told from multiple perspectives, but they are not always told from the perspective of the group of people experiencing the event. The goal is for students to understand the power of being able to tell their own stories from their own perspective.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What choices did you make in designing your book cover?_\n- _How is your digital book cover similar to or different from the book’s original cover?_\n\n**Do This:** Have students pair up and answer the Discussion questions.\n\n**Discussion Goal:** The purpose of this discussion is for students to understand how the choices they make in designing a book cover can influence whether someone will choose to pick up a book. They should also understand that they should give the future reader enough information to make an informed decision about whether or not to read the book without giving away too much of the plot.\n",
         "duration": "5",
         "name": "Discussion"
       },
@@ -495,9 +496,9 @@
       "key": "ef8754d9-054d-4764-a81e-ca283115edf1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Your App” slide\n\n**Display**: *Follow the directions on the slide:*\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Your Book Cover” slide\n\n**Display**: Follow the directions on the slide:\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
         "duration": "20",
-        "name": "Share Your Time Capsule"
+        "name": "Share Your Book Cover"
       },
       "seeding_key": {
         "activity_section.key": "ef8754d9-054d-4764-a81e-ca283115edf1",
@@ -524,7 +525,7 @@
       "key": "695828e4-e1e0-4445-b98c-486caefcb0af",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ apps, think about the images and sounds they used. Did they discuss the same stories that you did or did they choose different ones? How did their images and sounds make you feel?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *We both wrote about ___________!*\n- *Your images made me feel ________.*\n- *Your sounds made me feel ________.*\n- *I liked your decision to ________.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _ Now it is time to show off our hard work! As you look at your classmates’ book covers, think about the sprites and dialogue they used. Did any of your classmates choose the same book that you did? How did their choices compare to yours?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *I liked your decision to ____!*\n- *I liked that your code included ____.*\n- *I want to read the book you chose because ____.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
       },
       "seeding_key": {
         "activity_section.key": "695828e4-e1e0-4445-b98c-486caefcb0af",
@@ -551,9 +552,9 @@
       "key": "09abfc52-8d7f-4146-8016-c58970403224",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What images and sounds did you see in your classmates’ time capsules?* \\\n*2. How were their stories different from yours?* \\\n*3. How were their stories similar to yours?* \\\n*4. How did their images make you feel?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**:  The goal is for students to understand how their stories and visual effects are similar to or different from their classmates stories. They should also note how different images and sounds made them feel.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What sprites and dialogue did you see in your classmates’ book covers?*\\\n*2. What is being portrayed in this scene?*\\\n*3. How were their choices similar to yours? How were they different?*\\\n*4. Would you want to read the book based on its cover?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**: The goal is for students to understand how their book covers are similar to or different from their classmates’ book covers. They should also notice how different choices of sprites and dialogue made them feel about wanting to read the book.",
         "duration": "10",
-        "name": "Discuss Your Time Capsule"
+        "name": "Discuss Your Book Cover"
       },
       "seeding_key": {
         "activity_section.key": "09abfc52-8d7f-4146-8016-c58970403224",
@@ -564,7 +565,7 @@
       "key": "a323c20b-54b5-4097-80d9-fa8f0c68d360",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Reflect**: \n- _Which of your classmates’ book cover captured your attention?_ \n- _What choices did they make in designing their cover?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: They should also recognize that the same book cover can be designed differently by different people. For example, they may have designed a cover for the same book as a classmate but chosen a different background or sprites.\n",
         "duration": "10",
         "name": "Reflection"
       },
@@ -1579,6 +1580,18 @@
   ],
   "resources": [
     {
+      "name": "[Optional] Gallery Walk Sticky Notes",
+      "url": "https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview",
+      "key": "_optional_gallery_walk_sticky_notes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_gallery_walk_sticky_notes"
+      }
+    },
+    {
       "name": "Book Cover",
       "url": "https://docs.google.com/presentation/d/1otbPjtIoZag8Qlp8ogc8tYwbW1j2UgLkU00pSiUD0Ag/template/preview",
       "key": "book_cover",
@@ -1589,6 +1602,18 @@
       },
       "seeding_key": {
         "resource.key": "book_cover"
+      }
+    },
+    {
+      "name": "Book Cover",
+      "url": "https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview",
+      "key": "book_cover_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "book_cover_1"
       }
     },
     {
@@ -1615,6 +1640,24 @@
       "seeding_key": {
         "lesson.key": "Book Cover ",
         "resource.key": "book_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "resource.key": "_optional_gallery_walk_sticky_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "resource.key": "book_cover"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "resource.key": "book_cover_1"
       }
     }
   ],
@@ -1731,6 +1774,16 @@
         "lesson.key": "Book Cover ",
         "objective.key": "5f6ffcad-d96c-484a-a865-5f9aeb53f57f"
       }
+    },
+    {
+      "key": "f5dff979-23d7-47b6-ab99-126ae45426f7",
+      "properties": {
+        "description": "Reflect on the design process"
+      },
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "objective.key": "f5dff979-23d7-47b6-ab99-126ae45426f7"
+      }
     }
   ],
   "lessons_standards": [
@@ -1780,21 +1833,49 @@
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (beta)",
         "framework.shortcode": "ccela",
-        "standard.shortcode": "5.RL.7"
+        "standard.shortcode": "4.RL.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (beta)",
         "framework.shortcode": "ccela",
-        "standard.shortcode": "7.RI.4"
+        "standard.shortcode": "4.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (beta)",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     }
   ],
