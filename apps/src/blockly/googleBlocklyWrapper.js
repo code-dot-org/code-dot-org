@@ -516,7 +516,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       procedureFlyoutCallback
     );
 
-    //TODO: Move to separate file.
+    // Customize function defintion blocks
     Blockly.blockly_.Blocks[
       'procedures_defnoreturn'
     ].init = procedures_defnoreturn;
