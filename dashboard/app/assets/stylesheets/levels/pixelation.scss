@@ -1,3 +1,5 @@
+@import 'color';
+
 #external {
   clear: both;
 }
@@ -21,7 +23,7 @@
 }
 
 #save_image {
-  margin: 3px 0 5px 0;
+  margin: 3px 10px 5px 0;
 }
 
 #actual_size_label {
@@ -33,8 +35,8 @@
 }
 
 #pixel_format {
-  color: #fff;
-  background: #000;
+  color: $white;
+  background: $black;
   font: bold 14pt monospace;
   padding: 1px 7px;
   max-width: 300px;
@@ -45,19 +47,19 @@
 }
 
 #pixel_format .r {
-  color: #f00;
+  color: $red;
 }
 
 #pixel_format .g {
-  color: #0f0;
+  color: $highlight_green;
 }
 
 #pixel_format .b {
-  color: #00f;
+  color: $default_blue;
 }
 
 #pixel_format .unknown {
-  color: #999;
+  color: $light_gray;
 }
 
 #pixel_data {
@@ -70,14 +72,18 @@
 
 #file_format div {
   padding: 3px 5px;
-  border: 1px solid #000;
+  border: 1px solid $black;
   max-width: 230px;
-  background: #fff;
+  background: $white;
 }
 
 #file_format .byte {
   border-bottom: 0;
   width: 140px;
+}
+
+#image_controls {
+  margin-top: 10px;
 }
 
 #image_controls td {
@@ -94,6 +100,7 @@
 
 input[type=radio] {
   margin: 0 3px;
+  vertical-align: baseline;
 }
 
 input[type=number] {
@@ -104,8 +111,14 @@ input[type=range] {
   width: 100%;
 }
 
+.label_group {
+  text-align: left;
+}
+
 .label_group label {
+  border: 1px solid $bootstrap_border_color;
   display: inline-block;
+  padding: 5px 10px;
 }
 
 #file_format {
