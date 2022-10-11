@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-10-04 20:34:50 UTC",
+    "serialized_at": "2022-10-10 20:18:47 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1651,6 +1651,18 @@
       "seeding_key": {
         "resource.key": "time_capsule"
       }
+    },
+    {
+      "name": "Time Capsule Rubric",
+      "url": "https://docs.google.com/document/d/1cD9ih5xOlW2YMNgpK07K0-zjaxuzYixY5H_WKfEhrhk/template/preview",
+      "key": "time_capsule_rubric",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "time_capsule_rubric"
+      }
     }
   ],
   "lessons_resources": [
@@ -1736,6 +1748,12 @@
       "seeding_key": {
         "lesson.key": "The Time We Live In",
         "resource.key": "time_capsule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Time We Live In",
+        "resource.key": "time_capsule_rubric"
       }
     }
   ],
