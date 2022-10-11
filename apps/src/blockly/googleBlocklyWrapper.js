@@ -27,6 +27,7 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
+import procedures_defnoreturn from './blocks/procedures_defnoreturn';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -516,31 +517,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     );
 
     //TODO: Move to separate file.
-    Blockly.blockly_.Blocks['procedures_defnoreturn'].init = function() {
-      const initName = Blockly.Procedures.findLegalName('', this);
-      const nameField = new blocklyWrapper.FieldTextInput(
-        initName,
-        Blockly.Procedures.rename
-      );
-      nameField.setSpellcheck(false);
-      this.appendDummyInput()
-        .appendField(nameField, 'NAME')
-        .appendField('', 'PARAMS');
-      // this.setMutator(new Mutator(['procedures_mutatorarg']));
-      if (
-        (this.workspace.options.comments ||
-          (this.workspace.options.parentWorkspace &&
-            this.workspace.options.parentWorkspace.options.comments)) &&
-        Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']
-      ) {
-        this.setCommentText(Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']);
-      }
-      this.setStyle('procedure_blocks');
-      this.arguments_ = [];
-      this.argumentVarModels_ = [];
-      this.setStatements_(true);
-      this.statementConnection_ = null;
-    };
+    Blockly.blockly_.Blocks[
+      'procedures_defnoreturn'
+    ].init = procedures_defnoreturn;
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
