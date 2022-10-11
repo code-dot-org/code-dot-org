@@ -36,7 +36,6 @@ export default class Controls extends React.Component {
         id="controls"
         style={{
           width: 100,
-          backgroundColor: '#222',
           bottom: 10,
           left: 10,
           borderRadius: 4,
