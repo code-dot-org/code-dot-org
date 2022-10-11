@@ -263,6 +263,11 @@ section.host-an-hour {
     float: none !important; // removes inline styles on views/signup_button.haml
     margin: 0 !important; // removes inline styles on views/signup_button.haml
   }
+
+  p {
+    margin: 5em auto 1em;
+    font-size: 1.15em;
+  }
 }
 
 .ctabuttongroup {
