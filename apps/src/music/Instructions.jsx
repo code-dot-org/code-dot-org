@@ -47,11 +47,13 @@ export default class Instructions extends React.Component {
               style={{
                 position: 'absolute',
                 top: 10,
-                opacity: index === this.state.currentPanel ? 1 : 0
+                opacity: index === this.state.currentPanel ? 1 : 0,
+                pointerEvents:
+                  index === this.state.currentPanel ? 'auto' : 'none'
               }}
             >
               {panel.imageSrc && (
-                <div style={{float: 'left'}}>
+                <div style={{float: 'left', width: 140}}>
                   <img
                     src={
                       baseUrl +
@@ -59,11 +61,20 @@ export default class Instructions extends React.Component {
                       '/' +
                       panel.imageSrc
                     }
-                    style={{height: 70, marginRight: 10}}
+                    style={{height: 70}}
                   />
                 </div>
               )}
-              <div style={{float: 'left'}}>{panel.text}</div>
+              <div
+                style={{
+                  float: 'left',
+                  width: 'calc(100% - 290px)',
+                  height: 70,
+                  overflow: 'scroll'
+                }}
+              >
+                {panel.text}
+              </div>
             </div>
           );
         })}
