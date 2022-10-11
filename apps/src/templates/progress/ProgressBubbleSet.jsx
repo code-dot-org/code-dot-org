@@ -35,11 +35,7 @@ class ProgressBubbleSet extends React.Component {
     const {disabled} = this.props;
     // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
     // for the current section.
-    const disableBubble = disabled;
-    if (disableBubble) {
-      return true;
-    }
-    return false;
+    return disabled;
   };
 
   renderBubble = (level, index, isSublevel) => {
