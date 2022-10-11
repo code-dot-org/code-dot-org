@@ -166,7 +166,7 @@ class MusicView extends React.Component {
     var theme = GoogleBlockly.Theme.defineTheme('dark', {
       base: CdoTheme,
       componentStyles: {
-        toolboxBackgroundColour: '#222'
+        toolboxBackgroundColour: '#5b6770'
       }
     });
 
@@ -367,6 +367,12 @@ class MusicView extends React.Component {
   };
 
   handleKeyUp = event => {
+    // Don't handle a keyboard shortcut if the active element is an
+    // input field, since the user is probably trying to type something.
+    if (document.activeElement.tagName.toLowerCase() === 'input') {
+      return;
+    }
+
     if (event.key === 't') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
@@ -503,7 +509,9 @@ class MusicView extends React.Component {
             width: '100%',
             height: blocklyAreaHeight,
             position: 'absolute',
-            top: blocklyAreaTop
+            top: blocklyAreaTop,
+            borderRadius: 4,
+            overflow: 'hidden'
           }}
         >
           <div id="blockly-div" />
