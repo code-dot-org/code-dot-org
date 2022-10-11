@@ -1617,7 +1617,7 @@ class Script < ApplicationRecord
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
-    hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
+    hidden_section_ids.index_with {|section_id| [id]}
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
@@ -1647,9 +1647,9 @@ class Script < ApplicationRecord
   def summarize_i18n_for_copy(new_name, new_course_version)
     resource_markdown_replacement_proc = proc {|r| "[r #{Services::GloballyUniqueIdentifiers.build_resource_key(r.copy_to_course_version(new_course_version))}]"}
     vocab_markdown_replacement_proc = proc {|v| "[v #{Services::GloballyUniqueIdentifiers.build_vocab_key(v.copy_to_course_version(new_course_version))}]"}
-    data = %w(title description student_description description_short description_audience).map do |key|
-      [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
-    end.to_h
+    data = %w(title description student_description description_short description_audience).index_with do |key|
+      I18n.t("data.script.name.#{name}.#{key}", default: '')
+    end
     Services::MarkdownPreprocessor.sub_resource_links!(data['description'], resource_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description'], vocab_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_resource_links!(data['student_description'], resource_markdown_replacement_proc) if data['student_description']

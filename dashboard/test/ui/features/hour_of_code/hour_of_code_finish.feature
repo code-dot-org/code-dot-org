@@ -13,7 +13,7 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And my query params match "\?i\=.*\&s\=bWM\="
   And I wait to see element with ID "congrats-container"
   And I wait to see element with ID "uitest-certificate"
-  And I type "Robo Coder" into "#name"
+  And I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
 
@@ -27,7 +27,7 @@ Scenario: Flappy customized dashboard certificate pages
   Then the href of selector ".social-print-link" contains "/print_certificates/"
   Then I wait to see an image "/images/hour_of_code_certificate.jpg"
 
-  When I type "Robo Coder" into "#name"
+  When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   Then I wait to see an image "/certificate_images/"
@@ -112,7 +112,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized flappy certificate"
 
-  When I type "Robo Coder" into "#name"
+  When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized flappy certificate"
@@ -124,7 +124,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized oceans certificate"
 
-  When I type "Robo Coder" into "#name"
+  When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized oceans certificate"
@@ -136,7 +136,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized Course A 2017 certificate"
 
-  When I type "Robo Coder" into "#name"
+  When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized Course A 2017 certificate"
@@ -148,7 +148,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized 20-hour certificate"
 
-  When I type "Robo Coder" into "#name"
+  When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized 20-hour certificate"
