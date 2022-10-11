@@ -1,8 +1,10 @@
+- channel_id ||= ""
+
 %footer#codeprojects_pagefooter
   .codeprojects_pagefooter_content
     %a.codeprojects_pagefooter_link{:href=>CDO.studio_url()}= I18n.t('footer.built_on_code_studio')
     .codeprojects_pagefooter_dim &nbsp; | &nbsp;
-    %a.codeprojects_pagefooter_link{:href=>CDO.studio_url("report_abuse?weblabUrl=#{request.url}"), :target=>"blank"}= I18n.t('footer.report_abuse')
+    %a.codeprojects_pagefooter_link{:href=>CDO.studio_url("report_abuse?channelId=#{channel_id}"), :target=>"blank"}= I18n.t('footer.report_abuse')
     .codeprojects_pagefooter_dim &nbsp; | &nbsp;
     %a.codeprojects_pagefooter_link{:href=>CDO.studio_url("projects/weblab"), :id=>"pagefooter_view_code"}= I18n.t('footer.view_code')
     .codeprojects_pagefooter_dim &nbsp; | &nbsp;
