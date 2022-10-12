@@ -3446,7 +3446,7 @@ fr-FR:
             options avant de répondre!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - text: L'Agricultrice ramassera toutes les plantes.
+        - text: L'agricultrice ramassera toutes les cultures.
           feedback: Incorrect. Il n'y a pas de code pour ramasser la citrouille.
         - text: Le cueilleur ne ramassera aucune des plantes avec le chemin qu'il
             prend.
@@ -3460,74 +3460,77 @@ fr-FR:
           feedback: Le code verra l'agricultrice répéter le motif des marches d'escalier
             et ramasser autant de salades et plantes qu'il croise. Elle ne ramassera
             pas la citrouille.
-        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
-          br / >
+        markdown: "Dans ce casse-tête, les pousses seront soit du maïs, soit de la
+          laitue. \n<br/>"
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que se passera-t-il quand
+            on appuie sur « Démarrer » ?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - text: L'Agricultrice ramassera toutes les plantes.
-          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
-            prend.
-          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
-            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
-            ramassera pas la citrouille.
-        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
+        - text: L'agricultrice ramassera toutes les cultures.
+          feedback: Incorrect. Il n'y a pas de code ici pour lui faire ramasser la
+            citrouille.
+        - text: L'agricultrice ne ramassera aucune des cultures avec le chemin qu'elle
+            va emprunter.
+          feedback: Incorrect. Le code fera suivre à l'agricultrice un parcours en
+            escalier qui se répète et ramasser tout le maïs et les laitues qu'elle
+            croise. Mais elle ne ramassera pas la citrouille.
+        - text: L'agricultrice récoltera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct !
         - text: Je ne sais pas.
           feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
             et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
-        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
-          br / >
+        markdown: "Dans ce casse-tête, les pousses seront soit du maïs, soit de la
+          laitue. \n<br/>"
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que se passera-t-il quand
+            on appuie sur « Démarrer » ?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - text: L'Agricultrice ramassera toutes les plantes.
-          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
-            prend.
-          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
-            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
-            ramassera pas la citrouille.
-        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
+        - text: L'agricultrice ramassera toutes les cultures.
+          feedback: Incorrect. Il n'y a pas de code ici pour lui faire ramasser la
+            citrouille.
+        - text: L'agricultrice ne ramassera aucune des cultures avec le chemin qu'elle
+            va emprunter.
+          feedback: Incorrect. Le code fera suivre à l'agricultrice un parcours en
+            escalier qui se répète et ramasser tout le maïs et les laitues qu'elle
+            croise. Mais elle ne ramassera pas la citrouille.
+        - text: L'agricultrice récoltera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct !
         - text: Je ne sais pas.
           feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
             et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
-        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
-          br / >
+        markdown: "Dans ce casse-tête, les pousses seront soit du maïs, soit de la
+          laitue. \n<br/>"
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que se passera-t-il quand
+            on appuie sur « Démarrer » ?
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
-        - text: L'Agricultrice ramassera toutes les plantes.
-          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
-            prend.
-          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
-            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
-            ramassera pas la citrouille.
-        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
+        - text: L'agricultrice ramassera toutes les cultures.
+          feedback: Incorrect. Il n'y a pas de code ici pour lui faire ramasser la
+            citrouille.
+        - text: L'agricultrice ne ramassera aucune des cultures avec le chemin qu'elle
+            va emprunter.
+          feedback: Incorrect. Le code fera suivre à l'agricultrice un parcours en
+            escalier qui se répète et ramasser tout le maïs et les laitues qu'elle
+            croise. Mais elle ne ramassera pas la citrouille.
+        - text: L'agricultrice récoltera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct !
         - text: Je ne sais pas.
           feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
             et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
-        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
-          br / >
+        markdown: "Dans ce casse-tête, les pousses seront soit du maïs, soit de la
+          laitue. \n<br/>"
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que se passera-t-il quand
+            on appuie sur « Démarrer » ?
       courseD_multi_farmer_ramp13:
         answers:
         - text: Le fermier marchera jusqu'au bout du chemin et récoltera la citrouille.
@@ -3689,12 +3692,12 @@ fr-FR:
         - text: Le zombie va tourner à droite et se retrouver coincé.
           correct: true
           feedback: Correct !
-        - text: Le zombie va arriver jusqu'au tournesol.
+        - text: Le zombie arrivera jusqu'au tournesol.
           feedback: Incorrect. Dans ce code, il cherche à tourner à droite *avant*
             de regarder s'il peut passer tout droit. C'est à cause de ça que le puzzle
             échoue.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
-            rond à l'infini.
+            rond pour toujours.
           feedback: Incorrect. Le zombie cherche seulement à tourner à droite ou un
             chemin droit. Il ne cherche jamais à tourner à gauche, donc il se fait
             bloquer immédiatement.
@@ -3702,141 +3705,141 @@ fr-FR:
           feedback: Dans ce code, il cherche à tourner à droite *avant* de regarder
             s'il peut passer tout droit. C'est à cause de ça que le puzzle échoue.
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer »?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
-            toujours.
+        - text: Le zombie passera outre le bon chemin et finira par faire des allers-retours
+            sans fin.
           correct: true
           feedback: Correct !
-        - text: Le zombie va arriver jusqu'au tournesol.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+        - text: Le zombie arrivera jusqu'au tournesol.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
-            rond à l'infini.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+            rond pour toujours.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Je ne sais pas.
-          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
-            aller et venir, pour toujours.
+          feedback: Dans ce code, le zombie passera outre le bon chemin et finira
+            par faire des allers-retours sans fin.
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer »?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
-            toujours.
+        - text: Le zombie passera outre le bon chemin et finira par faire des allers-retours
+            sans fin.
           correct: true
           feedback: Correct !
-        - text: Le zombie va arriver jusqu'au tournesol.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+        - text: Le zombie arrivera jusqu'au tournesol.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
-            rond à l'infini.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+            rond pour toujours.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Je ne sais pas.
-          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
-            aller et venir, pour toujours.
+          feedback: Dans ce code, le zombie passera outre le bon chemin et finira
+            par faire des allers-retours sans fin.
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer »?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
-            toujours.
+        - text: Le zombie passera outre le bon chemin et finira par faire des allers-retours
+            sans fin.
           correct: true
           feedback: Correct !
-        - text: Le zombie va arriver jusqu'au tournesol.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+        - text: Le zombie arrivera jusqu'au tournesol.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
-            rond à l'infini.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+            rond pour toujours.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Je ne sais pas.
-          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
-            aller et venir, pour toujours.
+          feedback: Dans ce code, le zombie passera outre le bon chemin et finira
+            par faire des allers-retours sans fin.
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer »?
       courseD_multi_maze_until2_predict1:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive
+            au cochon !
         - text: L'oiseau arrivera jusqu'au cochon.
           correct: true
           feedback: Correct !
-        - text: L'oiseau avance et rentre dans le TNT.
+        - text: L'oiseau va avancer et rentrer dans les explosifs.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            sûr, puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il
+            arrive au cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
+            à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive au cochon !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer » ?
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive
+            au cochon !
         - text: L'oiseau arrivera jusqu'au cochon.
           correct: true
           feedback: Correct !
-        - text: L'oiseau avance et rentre dans le TNT.
+        - text: L'oiseau va avancer et rentrer dans les explosifs.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            sûr, puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il
+            arrive au cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
+            à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive au cochon !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer » ?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive
+            au cochon !
         - text: L'oiseau arrivera jusqu'au cochon.
           correct: true
           feedback: Correct !
-        - text: L'oiseau avance et rentre dans le TNT.
+        - text: L'oiseau va avancer et rentrer dans les explosifs.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            sûr, puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il
+            arrive au cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
+            à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive au cochon !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer » ?
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive
+            au cochon !
         - text: L'oiseau arrivera jusqu'au cochon.
           correct: true
           feedback: Correct !
-        - text: L'oiseau avance et rentre dans le TNT.
+        - text: L'oiseau va avancer et rentrer dans les explosifs.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            sûr, puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il
+            arrive au cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
+            à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive au cochon !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer » ?
       courseD_multi_scrat_predict1:
         answers:
         - text: Rien. Scrat ne bougera pas du tout.
@@ -5619,26 +5622,26 @@ fr-FR:
             produira-t-elle lorsque tu cliques sur « Démarrer » ?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - text: L'Agricultrice ramassera toutes les plantes.
-          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
-            prend.
-          feedback: Incorrect. Le code verra la moissoneuse répéter le modèle des
-            marches d'escalier et ramasser autant de laitues et plantes qu'elle en
-            voit. Elle ne ramassera pas la citrouille.
-        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
+        - text: L'agricultrice ramassera toutes les cultures.
+          feedback: Incorrect. Il n'y a pas de code ici pour lui faire ramasser la
+            citrouille.
+        - text: L'agricultrice ne ramassera aucune des cultures avec le chemin qu'elle
+            va emprunter.
+          feedback: Incorrect. Le code fera suivre à l'agricultrice un parcours en
+            escalier qui se répète et ramasser tout le maïs et les laitues qu'elle
+            croise. Mais elle ne ramassera pas la citrouille.
+        - text: L'agricultrice récoltera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct !
-        - text: La moissoneuse ne ramassera que la citrouille.
-          feedback: Incorrect. Le code fera répéter le modèle des marches d'escalier
-            et ramasser autant de laitues et plantes à la moissoneuse qu'elle en croise.
-            Elle ne ramassera pas la citrouille.
-        markdown: |-
-          Les germes, dans cette énigme, seront soit du maïs, soit de la laitue.
-          <br/>
+        - text: L'agricultrice ne ramassera que la citrouille.
+          feedback: Incorrect. Le code fera suivre à l'agricultrice un parcours en
+            escalier qui se répète et ramasser tout le maïs et les laitues qu'elle
+            croise. Mais elle ne ramassera pas la citrouille.
+        markdown: "Dans ce casse-tête, les pousses seront soit du maïs, soit de la
+          laitue. \n<br/>"
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
-            sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que se passera-t-il quand
+            on appuie sur « Démarrer » ?
       courseD_multi_farmer_while10_predict2_2021:
         answers:
         - text: Rien. Ce code ne laissera qu’un terrain plat.
@@ -5673,42 +5676,42 @@ fr-FR:
             clique sur « Démarrer » ?
       courseD_multi_maze_until10_predict2_2021:
         answers:
-        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
-            toujours.
+        - text: Le zombie passera outre le bon chemin et finira par faire des allers-retours
+            sans fin.
           correct: true
           feedback: Correct !
-        - text: Le zombie va arriver jusqu'au tournesol.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+        - text: Le zombie arrivera jusqu'au tournesol.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
-            rond à l'infini.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
-        - text: 'Le zombie sera coincé au bout du chemin. '
-          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
-            aller et venir, pour toujours.
+            rond pour toujours.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
+        - text: Le zombie sera coincé au bout du chemin vers l'avant.
+          feedback: Dans ce code, le zombie passera outre le bon chemin et finira
+            par faire des allers-retours sans fin.
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer »?
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive
+            au cochon !
         - text: L'oiseau arrivera jusqu'au cochon.
           correct: true
           feedback: Correct !
-        - text: L'oiseau avance et rentre dans le TNT.
+        - text: L'oiseau va avancer et rentrer dans les explosifs.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
-        - text: 'L''oiseau tourne dans le mauvais sens. '
+            sûr, puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il
+            arrive au cochon !
+        - text: 'L''oiseau va tourner dans le mauvais sens. '
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
+            à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive au cochon !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer » ?
       courseE_EOC_2021:
         description: Tu as finis le Cours E! Choisis un projet à créer.
         display_name: Projet de Fin de Cours
@@ -16490,25 +16493,26 @@ fr-FR:
             produira-t-elle lorsque tu cliques sur « Démarrer » ?
       courseD_multi_farmer_condLoops9_predict12022:
         answers:
-        - text: L'Agricultrice ramassera toutes les plantes.
-          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
-            prend.
-          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
-            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
-            ramassera pas la citrouille.
-        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
+        - text: L'agricultrice ramassera toutes les cultures.
+          feedback: Incorrect. Il n'y a pas de code ici pour lui faire ramasser la
+            citrouille.
+        - text: L'agricultrice ne ramassera aucune des cultures avec le chemin qu'elle
+            va emprunter.
+          feedback: Incorrect. Le code fera suivre à l'agricultrice un parcours en
+            escalier qui se répète et ramasser tout le maïs et les laitues qu'elle
+            croise. Mais elle ne ramassera pas la citrouille.
+        - text: L'agricultrice récoltera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct !
-        - text: La moissoneuse ne ramassera que la citrouille.
-          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
-            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
-            ramassera pas la citrouille.
-        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
-          br / >
+        - text: L'agricultrice ne ramassera que la citrouille.
+          feedback: Incorrect. Le code fera suivre à l'agricultrice un parcours en
+            escalier qui se répète et ramasser tout le maïs et les laitues qu'elle
+            croise. Mais elle ne ramassera pas la citrouille.
+        markdown: "Dans ce casse-tête, les pousses seront soit du maïs, soit de la
+          laitue. \n<br/>"
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que se passera-t-il quand
+            on appuie sur « Démarrer » ?
       courseD_multi_farmer_while10_predict22022:
         answers:
         - text: Rien. Ce code ne laissera qu’un terrain plat.
@@ -16543,42 +16547,42 @@ fr-FR:
             clique sur « Démarrer » ?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
-            toujours.
+        - text: Le zombie passera outre le bon chemin et finira par faire des allers-retours
+            sans fin.
           correct: true
           feedback: Correct !
-        - text: Le zombie va arriver jusqu'au tournesol.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
+        - text: Le zombie arrivera jusqu'au tournesol.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
-            rond à l'infini.
-          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
-            et venir, pour toujours.
-        - text: 'Le zombie sera coincé au bout du chemin. '
-          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
-            aller et venir, pour toujours.
+            rond pour toujours.
+          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
+            faire des allers-retours sans fin.
+        - text: Le zombie sera coincé au bout du chemin vers l'avant.
+          feedback: Dans ce code, le zombie passera outre le bon chemin et finira
+            par faire des allers-retours sans fin.
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer »?
       courseD_multi_maze_until2_predict12022:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
+            puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive
+            au cochon !
         - text: L'oiseau arrivera jusqu'au cochon.
           correct: true
           feedback: Correct !
-        - text: L'oiseau avance et rentre dans le TNT.
+        - text: L'oiseau va avancer et rentrer dans les explosifs.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
-            le cochon !
-        - text: 'L''oiseau tourne dans le mauvais sens. '
+            sûr, puis tourner à gauche. Il va continuer à faire ça jusqu'à ce qu'il
+            arrive au cochon !
+        - text: 'L''oiseau va tourner dans le mauvais sens. '
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
+            à gauche. Il va continuer à faire ça jusqu'à ce qu'il arrive au cochon !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
-            tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
+            on clique sur « Démarrer » ?
       courseE_EOC2022:
         description: Tu as finis le Cours E! Choisis un projet à créer.
         display_name: Projet de fin de cours
@@ -16919,3 +16923,59 @@ fr-FR:
           **Sondages de fin d'unité pour les enseignants : ** Pendant que vos élèves remplissent le questionnaire, nous vous serions reconnaissants de remplir un bref sondage pour les enseignants.
 
           ## [Cliquez ici pour le sondage des enseignants] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
+      CSD CSS project Review_2021:
+        description: Voici quelques propriétés CSS que vous avez peut-être vues au
+          cours des deux dernières leçons.  Vous pouvez les utiliser pour revoir les
+          styles que vous pourriez vouloir pour votre page web.
+        display_name: Révision CSS
+      CSD CSS project Review_2022:
+        description: Voici quelques propriétés CSS que vous avez peut-être vues au
+          cours des deux dernières leçons.  Vous pouvez les utiliser pour revoir les
+          styles que vous pourriez vouloir pour votre page web.
+        display_name: Révision CSS
+      CSD Web Headings challenge_2021:
+        description: Voici quelques exemples de code HTML supplémentaires à tester,
+          ainsi qu'une zone de jeu libre pour les utiliser.
+        display_name: Titres HTML
+      CSD Web Headings challenge_2022:
+        description: Voici quelques exemples de code HTML supplémentaires à tester,
+          ainsi qu'une zone de jeu libre pour les utiliser.
+        display_name: Titres HTML
+      CSD Web Headings practice_2021:
+        description: Mettez en pratique ce que vous avez appris dans une ou plusieurs
+          des activités suivantes.
+        display_name: Titres HTML
+      CSD Web Headings practice_2022:
+        description: Mettez en pratique ce que vous avez appris dans une ou plusieurs
+          des activités suivantes.
+        display_name: Titres HTML
+      CSD Web Sample Pages_2021:
+        markdown: |+
+          # Exemples de pages web personnelles
+
+          <div style="float: left; text-align:center;"><strong>Le chien le plus mignon</strong><br /><a href="https://codeprojects.org/uqvtQ_zKapQ2XocJkdGZypbJWM1nDMCpts1dN7NZ9wQ" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mon voyage</strong><br /><a href="https://codeprojects.org/qNceXIsgEYKraWZxd0Lq9uOO7Jj3yBfcp8pHR4uXq8c" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instruments de musique</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de recyclage</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haïkus</strong><br /><a href="https://codeprojects.org/PPGOslHhH0Od4yEOHHdnjLT4-x4yfDMStUTlMUZy6Cc" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+
+
+
+      CSD Web Sample Pages_2022:
+        markdown: |+
+          # Exemples de pages web personnelles
+
+          <div style="float: left; text-align:center;"><strong>Le chien le plus mignon</strong><br /><a href="https://codeprojects.org/uqvtQ_zKapQ2XocJkdGZypbJWM1nDMCpts1dN7NZ9wQ" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mon voyage</strong><br /><a href="https://codeprojects.org/qNceXIsgEYKraWZxd0Lq9uOO7Jj3yBfcp8pHR4uXq8c" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instruments de musique</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de recyclage</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haïkus</strong><br /><a href="https://codeprojects.org/PPGOslHhH0Od4yEOHHdnjLT4-x4yfDMStUTlMUZy6Cc" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+
+
+
+      ml-models in applab-choice parent:
+        description: Mettez en pratique ce que vous avez appris dans une ou plusieurs
+          des activités suivantes.
+      ml-models in applab-choice parent_2022:
+        description: Mettez en pratique ce que vous avez appris dans une ou plusieurs
+          des activités suivantes.

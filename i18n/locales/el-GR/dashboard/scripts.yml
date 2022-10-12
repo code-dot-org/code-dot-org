@@ -1687,5 +1687,14 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Εργαστήριο Java
+            lesson-6:
+              name: Βρόχοι
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Έρευνα
         csd1-2023:
           title: Επίλυση Προβλημάτων

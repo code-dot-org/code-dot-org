@@ -1737,6 +1737,12 @@ ta:
           title: உங்கள் சொந்த கால்பந்து விளையாட்டை குறியிடவும்
           description_short: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
           description: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ஜாவா லேப்
+            lesson-6:
+              name: சுழற்சிகள்
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

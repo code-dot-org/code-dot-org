@@ -111,7 +111,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 Talabalarni faoliyatga yo‘naltiring
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 O‘quvchilaringiz qiyinchiliklarga duch kelganda, javob berish yaxshidir:
 
@@ -138,7 +138,6 @@ Agar talaba erta tugatsa nima bo‘ladi?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [O‘quvchilaringiz uchun "Men bir soatlik kodni qildim!"]({{ urls/promote_stickers }}) stikerlarini chop eting.
-- \[Maktabingiz uchun maxsus futbolkalarga buyurtma bering\]((http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 * * *
@@ -152,6 +151,6 @@ Agar talaba erta tugatsa nima bo‘ladi?
 
 ### What comes after the Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

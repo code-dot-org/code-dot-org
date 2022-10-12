@@ -10,7 +10,7 @@ title: Guide pratique de l'Heure de Code pour les volontaires
 
 * * *
 
-La pensée computationnelle contribue à développer les compétences de résolution de problèmes, la logique et la créativité. Et la technologie est en train de transformer toutes les industries au monde. Les élèves d'aujourd'hui doivent apprendre à fabriquer la technologie, et non seulement à l'utiliser.
+La pensée informatique permet de développer les aptitudes à la résolution des problèmes, la logique et la créativité. Et la technologie est en train de créer de grands changements dans tous les secteurs du monde. Les apprenants d'aujourd'hui doivent savoir comment créer de la technologie, et pas seulement l'utiliser.
 
 L'Heure de Code est une initiation d'une heure à l'informatique, conçue pour démystifier le « code », montrer que tout le monde peut en apprendre les bases, et élargir la participation dans le domaine de l'informatique. Vous pouvez aider à sensibiliser le public à l'informatique et vous porter volontaire afin d'encourager plus d'étudiants à essayer l'informatique, notamment les jeunes femmes et les élèves issus d'origines défavorisées. 
 
@@ -76,7 +76,7 @@ Si vous recevez trop de demandes d'enseignants, vous pouvez toujours mettre à j
 
 Vous n'avez pas besoin d'utiliser notre carte des volontaire pour vous porter volontaires ! D'ailleurs, nous vous recommandons de contacter directement les enseignants ou l'administration s'il y a une classe au sein de laquelle vous souhaitez vous porter volontaire. 
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - Si vous avez une autre école à l'esprit, visitez son site web pour trouver les coordonnées des personnes à contacter, comme un directeur ou sous-directeur, les professeurs de technologie ou d'informatique, voir même l'association des parents d'élèves de l'école. Vous pouvez également vous associer à des organisations tels que les Boys & Girls Clubs of America, une branche de la YMCA, ou d'autres encore, pour co-organiser un événement. - Si vous ne parvenez pas à trouver une école qui organise une Heure de Code, vous pouvez vous porter volontaire pour aider à organiser votre propre événement avec votre entreprise. Consultez notre [Guide Pratique pour les entreprises](https://hourofcode.com/us/how-to/companies) pour en savoir plus et vous inspirez. 
+Pour commencer : - Si vous êtes un parent ou un tuteur, envoyez [ce courriel](https://hourofcode.com/us/promote/resources#help-schools) à l'enseignant de votre enfant en lui proposant de l'aider à organiser un programme de l'Heure du code. - Si vous avez une autre école à l'esprit, visitez son site web pour trouver les coordonnées des personnes à contacter, comme un directeur ou sous-directeur, les professeurs de technologie ou d'informatique, voir même l'association des parents d'élèves de l'école. Vous pouvez également vous associer à des organisations tels que les Boys & Girls Clubs of America, une branche de la YMCA, ou d'autres encore, pour co-organiser un événement. - Si vous ne parvenez pas à trouver une école qui organise une Heure de Code, vous pouvez vous porter volontaire pour aider à organiser votre propre événement avec votre entreprise. Consultez notre [Guide Pratique pour les entreprises](https://hourofcode.com/us/how-to/companies) pour en savoir plus et vous inspirez. 
 
 * * *
 
@@ -126,7 +126,8 @@ Parlez-en avec l'école ou l'enseignant pour voir ce qui est le plus logique. No
 
 #### Exemple d'ordre du jour :
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Qu'est-ce qui vous inspire (une personne, un phénomène, ou autre) ? D'où vient votre intérêt pour l'informatique ? Avez-vous eu un mentor ? Posez des questions aux élèves et laissez assez de temps pour une séance de questions-réponses. | |30-60 minutes | Code! Si vous animez votre événement en personne, c'est le moment de répondre aux questions et de guider les élèves à travers des énigmes complexes. Essayez de ne pas leur donner la solution directement. Tentez plutôt de leur poser des questions afin qu'ils puissent trouver, eux-mêmes, l'origine du problème, et poussez vos élèves à se les poser les uns aux autres s'ils ont des questions. Si vous vous portez volontaire virtuellement, parlez de ce que vous pensez être la meilleure approche avec l'enseignant. Il peut être plus logique de revenir à la fin de la session pour voir les progrès réalisés par les élèves. | ||1 à 3 minutes | Remerciez tout le monde, et dites quelques mots qui les inspireront avant de les quitter. Distribuez des goodies liés à votre entreprise ([des autocollants](#celebrate), c'est génial) ! | | <br />
+|Durée | Créneau | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- ||1 à 5 minutes | Projetez une [vidéo qui inspire](https://hourofcode.com/us/promote/resources#videos)|  
+|5 à 10 minutes | Présentez-vous et apprenez-en plus sur les participants : où travaillez-vous, que faites-vous, et qu'est-ce que vous aimez le plus dans votre travail ? Qu'est-ce qui vous inspire (une personne, un phénomène, ou autre) ? D'où vient votre intérêt pour l'informatique ? Avez-vous eu un mentor ? Posez des questions aux élèves et laissez assez de temps pour une séance de questions-réponses. | |30 à 60 minutes | Codez ! Si vous animez votre événement en personne, c'est le moment de répondre aux questions et de guider les élèves à travers des énigmes complexes. Essayez de ne pas leur donner la solution directement. Tentez plutôt de leur poser des questions afin qu'ils puissent trouver, eux-mêmes, l'origine du problème, et poussez vos élèves à se les poser les uns aux autres s'ils ont des questions. Si vous vous portez volontaire virtuellement, parlez de ce que vous pensez être la meilleure approche avec l'enseignant. Il peut être plus logique de revenir à la fin de la session pour voir les progrès réalisés par les élèves. | ||1 à 3 minutes | Remerciez tout le monde, et dites quelques mots qui les inspireront avant de les quitter. Distribuez des goodies liés à votre entreprise ([des autocollants](#celebrate), c'est génial) ! | | <br />
 
 #### Autres idées à ajouter à votre événement
 
@@ -186,7 +187,7 @@ L'une des meilleures façons de nous aider est de faire passer le mot et de prom
 
 ### 1. Enregistrez votre événement
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. C'est aussi de cette manière que vous pourrez faire savoir aux écoles des environs ou aux parents que vous organisez un événement près de chez eux.
+Après avoir finalisé [votre inscription à l'événement Heure du code](/#join), vous recevrez des messages électroniques utiles contenant des nouvelles et des conseils pour organiser l'Heure du code avec succès. C'est aussi de cette manière que vous pourrez faire savoir aux écoles des environs ou aux parents que vous organisez un événement près de chez eux.
 
 ### 2. Publiez sur les réseaux sociaux
 
@@ -199,7 +200,7 @@ Aidez à sensibiliser le public au mouvement de l'informatique en vous servant s
 
 #### Statistiques
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- Saviez-vous que seulement 53 % des écoles américaines enseignent l'informatique ? Donnez à tous les élèves la chance de participer au programme #HourOfCode https://hourofcode.com/
 - Aux États-Unis, seul 26% des professionnels en informatique sont des femmes. Initiez plus de jeunes femmes à l'informatique avec une #HeureDeCode https://hourofcode.com/
 - 67% des emplois informatiques aux États-Unis ne sont pas dans le secteur technologique. Aidez-nous à insérer l'informatique dans le socle commun de connaissances avec une #HeureDeCode https://hourofcode.com/
 
