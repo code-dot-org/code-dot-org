@@ -1,12 +1,12 @@
 import CdoTheme from '@cdo/apps/blockly/addons/cdoTheme';
 import GoogleBlockly from 'blockly/core';
-import color from '../../util/color';
 
 const blockStyles = {};
 const categoryStyles = {};
 const componentStyles = {
-  toolboxBackgroundColour: color.charcoal,
-  flyoutBackgroundColour: color.light_gray
+  toolboxBackgroundColour: '#424242', // gray-800
+  flyoutBackgroundColour: '#9e9e9e', // gray-500
+  workspaceBackgroundColour: '#212121' // gray-900
 };
 
 export const musicLabDarkTheme = GoogleBlockly.Theme.defineTheme(
