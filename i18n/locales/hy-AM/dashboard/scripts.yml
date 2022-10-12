@@ -1414,3 +1414,10 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: loops
+          lesson_groups:
+            lessonGroup-3:
+              display_name: պարունակություն

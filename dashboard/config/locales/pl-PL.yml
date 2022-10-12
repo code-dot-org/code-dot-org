@@ -451,6 +451,7 @@ pl:
       about: O programie
       legal: Prywatność i legalność
       legal_privacy: Polityka prywatności
+      legal_cookie_notice: Informacja o plikach cookie
       legal_tos: Regulamin
     user:
       classroom: Domowa strona nauczyciela

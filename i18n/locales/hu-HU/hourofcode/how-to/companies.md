@@ -16,41 +16,41 @@ A Kódolás órája kampány során cége segíthet felhívni a figyelmet a szá
 
 Ellenőrizd a kezdéshez szükséges alábbi lépéseket, nézd át a(z) [Útmutató vállalati partnereknek](/files/hoc-corporate-toolkit.pdf) című kiadványunkat, amelyben további információk találhatók arról, hogy hogyan lehet a vállalatok lelkesedését a Kódolás órája iránt felkelteni.
 
-- [Ösztönözze az alkalmazottakat, hogy vállaljanak önkéntes munkát az egyik osztályteremben](#encourage-employees)
-- [Építsen ki kapcsolatot egy iskolával](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [Szervezzen egy saját Kódolás órája eseményt](#host-hour-of-code)
 - [Népszerűsítsd a Kódolás óráját](#promote-hour-of-code)
 - [Még több lehetőség a Kódolás órája támogatására](#support-hour-of-code)
 
 * * *
 
-<a id="encourage-employees"></a>
-
-## Ösztönözze az alkalmazottakat, hogy vállaljanak önkéntes munkát az egyik osztályteremben
-
-[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
-
-A legnagyobb elégedettséget úgy lehet elérni, ha önkéntesként veszel részt egy helyi tanterembern tartott Kódolás óráján - akár személyesen, akár virtuálisan. Az egészben az a legjobb, hogy még mérnöknek sem kell lenned ahhoz, hogy önkéntesnek jelentkezz. Azzal is maradandó élményt nyújthatsz a diákoknak, ha megosztod velük saját tapasztalataidat, és azt, hogy az IT és a technológia milyen hatással van a munkádra.
-
-[<button>Jelentkezzen önkéntesnek</button>]({{ urls/volunteer }})
-
-Az önkéntesként való regisztrálás után a tanár megnézi az adatlapod az [önkéntesek térképén](https://code.org/volunteer/local) - ezért a adatlapon lehetőleg minden információt meg kell adni. Ha beilleszthető vagy az osztály munkájába, a tanár a platformon keresztül felveszi veled a kapcsolatot (az e-mail-címedet soha nem osztjuk meg a tanárral). Ezután közvetlenül a tanárral egyeztetheted a részleteket [önkéntesként hogyan tudsz legjobban részt venni az osztály munkájában](https://hourofcode.com/us/how-to/volunteers).
-
-Ha az önkéntes munkával kapcsolatban további iránymutatásra van szükséged, és üzenetmintákat szeretnél megnézni, hogy hogyan lehet a vállalat érdeklődését a Kódolás órája iránt felkelteni, nézd meg az[Útmutató vállalati partnereknek]({{ localized_files/hoc_corporate_toolkit }}}) című kiadványunkat.
-
-* * *
-
 <a id="connect-with-a-school"></a>
 
-## Építsen ki kapcsolatot egy iskolával
+## Connect with a local school
 
-Ha kapcsolatba akarsz lépni egy osztállyal vagy egy iskolával, nem kell feltétlenül az önkéntesek térképét használni. Gyakran javasoljuk azt, hogy az önkéntes kezdje helyben. Végig kell gondolni, hogy vannak-e olyan iskolák, amelyekhez személy szerint te vagy a munkatársaid erősen kötődnek, például a volt iskolád, a gyermeked iskolája, vagy van-e olyan szervezet vagy iskola, amelyik kiemelten olyan csoportokkal foglalkozik, akik a számítástechnikát tekintve hagyományosan alulreprezentáltak.
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-Ezután ellátogathatsz az iskola weboldalára, megkeresheted a megfelelő kapcsolattartókat, felkeresheted például az igazgatót vagy az igazgatóhelyettest, a műszaki tárgyakat vagy számítástechnikát oktató tanárokat, vagy akár az iskolai SZMK-t. Lehet együttműködni különböző szervezetekkel, ilyen lehet például a Boys & Girls Clubs of America, az YMCA helyi szervezete stb., akikkel lehet közösen szervezni programot.
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
 
-Ha nem tud kapcsolatot teremteni egy iskolával sem, kérjük, [Lépjen kapcsolatba velünk](https://support.code.org/hc/en-us/requests/new), és ha tudjuk, összekötjük Önt valamelyik helyi partnerünkkel.
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
+<a id="encourage-employees"></a>
+
+## Encourage employees to volunteer with a classroom
+
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
+
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+
+[<button>Jelentkezzen önkéntesnek</button>]({{ urls/volunteer }})
+
+Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -83,7 +83,6 @@ Láttunk már [virtuális](https://hourofcode.com/us/how-to/virtual) eseményeke
 - Magyarázza el, hogy a technológia hogyan befolyásolja az életünket, olyan példákat mondjon, amelyek minden diákot érdekelhetnek, a hátterüktől függetlenül - technológiák, amely életeket mentenek, segítenek az embereknek, összekötik az embereket.
 - Ha technológiai vállalatnál dolgozik, mutassa be a cég szórakoztató és innovatív termékeit. Ha nem, beszéljen aról, hogy a cég hogyan használja a technológiát problémamegoldásra és céljai elérésére.
 - Győzz meg programozókat a vállalatodtól, hogy mondják el miért lettek programozók és jelenleg milyen projekteken dolgoznak épp.
-- Ha több munkatársa segít az esemény megrendezésében, vagy önkéntesként dolgozik egy helyi iskolában, érdemes megfontolni[egyedi pólók](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)készíttetését a munkatársai számára.
 
 ### 3. Tervezze meg, hogy milyen technológiára lesz szükség
 
@@ -163,7 +162,7 @@ Segítse felhívni a figyelmet az informatikai mozgalomra a következő tartalom
 - Ha a legelső saját kódsor megváltoztatta az életét, segítsen a közelben lévő diákoknak megírni az első #Kódolás órájukat. https://code.org/volunteer
 - Ha megtanult kódolni - mi a saját története? Inspiráljon egy közeli diákot az első #Kódolás órájával https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Tudjon meg többet</a> a plakátokról, videókról, matricákról és más eszközökről, amelyekkel az eseményt a saját közösségében népszerűsítheti.
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

@@ -377,6 +377,7 @@ id:
       about: "Tentang"
       legal: "Privasi & Hukum"
       legal_privacy: "Kebijakan privasi"
+      legal_cookie_notice: "Informasi Cookie"
       legal_tos: "Ketentuan Layanan"
     user:
       classroom: 'Beranda guru'

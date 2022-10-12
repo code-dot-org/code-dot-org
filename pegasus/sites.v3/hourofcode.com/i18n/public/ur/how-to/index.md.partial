@@ -12,7 +12,7 @@ nav: how_to_nav
 
 آج کے طالب علموں کو نہ صرف ٹیکنالوجی استمعال کرنا بلکہ بنانا بھی سیکھنا چاہیئے۔
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+اپنے طلباء کو شاید پہلی بار کمپیوٹر سائنس سے متعارف کرانے کے لئے، آور آف کوڈ ایک آسان اور تفریحی طریقہ ہے. ایک سرگرمی تلاش کریں جو آپ کے سیٹنگز سے مطابقت رکھتی ہو، چاہے وہ سکول کے اندر ہو یا سکول کی چھٹی کے بعد ہو، ذاتی موجودگی میں ہو یا انٹرنٹ پر ہو۔ نیچے کے اقدامات دیکھنے کے بعد بھی اگر آپ کے ذہن میں سوالات ہیں تو [حصہ لینے کے لیے ہمارا راہنما]({{ localized_files/participation_guide }}) دیکھ لیں۔
 
 - [آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں](#how-to-video)
 - [سرگرمیاں اور ٹیوٹوریل تلاش کریں](#explore-activities)
@@ -58,7 +58,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ### دن اور وقت کا تعین کریں
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. لیکن اس کے باوجود آپ سال کے کسی بھی دن اس Hour of Code سے فائدہ اٹھا سکتے ہیں!
+زیادہ تر لوگ hour of code سے ہمارے CS Education Week کے دوران استفادہ حاصل کرتے ہیں کیونکہ عموماً ہر سال دسمبر 5 سے دسمبر 11 کے درمیان ہم نئے اسباق اور سرگرمیاں متعارف کرواتے ہیں۔ لیکن اس کے باوجود آپ سال کے کسی بھی دن اس Hour of Code سے فائدہ اٹھا سکتے ہیں!
 
 * * *
 
@@ -74,11 +74,11 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ### اپنی تقریب کی آواز رضاکارانہ کام کرنے والوں کے کانوں تک پہنچائیں
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. اس سے آپ کو یہ فائدہ ہو گا کہ جو لوگ Hour of Code پر رضاکارانہ طور پر کام کرنا چاہتے ہیں ان تک آپکی تقریب کی خبر پہنچ جائے گی. رضاکار ایسے حالات میں بہت مفید ثابت ہوتے ہیں وہ آپکی کلاس کو کمپیوٹر سائنس کی مختلف سرگرمیاں کروا سکتے ہیں اور طلباء کی مدد کر سکتے ہیں.
+جیسے ہی آپ اپنے Hour of Code کی تقریب کو [رجسٹر کروائیں ](/#join) گے، آپکو کامیاب کوڈ نگ تقریب منعقد کرنے سے متعلق مفید معلومات ای میل کے ذریعے ملنا شروع ہو جائیں گی. اس سے آپ کو یہ فائدہ ہو گا کہ جو لوگ Hour of Code پر رضاکارانہ طور پر کام کرنا چاہتے ہیں ان تک آپکی تقریب کی خبر پہنچ جائے گی. رضاکار ایسے حالات میں بہت مفید ثابت ہوتے ہیں وہ آپکی کلاس کو کمپیوٹر سائنس کی مختلف سرگرمیاں کروا سکتے ہیں اور طلباء کی مدد کر سکتے ہیں.
 
 ### طلباء میں جوش و خروش پیدا کریں
 
-ایسی [ کارآمد ویڈیوز](/promote/resources) اور دیگر مطالعاتی ریسورسز طلباء تک پہنچائیں جن کی بدولت وہ کوڈ اور کمپیوٹر سائنس کی اہمیت جان سکیں۔. Or print inspirational posters for your classroom! طلباء اپنے جیسے دوسروں لوگوں کو جب یہ چیز سیکھتا ہوا پائیں گے تو ان میں سیکھنے کا جذبہ مزید پروان چڑھے گا.
+ایسی [ کارآمد ویڈیوز](/promote/resources) اور دیگر مطالعاتی ریسورسز طلباء تک پہنچائیں جن کی بدولت وہ کوڈ اور کمپیوٹر سائنس کی اہمیت جان سکیں۔. یا اپنی کلاسروم کے لیے حوصلہ بڑھانے والے پوسٹر پرنٹ کریں! طلباء اپنے جیسے دوسروں لوگوں کو جب یہ چیز سیکھتا ہوا پائیں گے تو ان میں سیکھنے کا جذبہ مزید پروان چڑھے گا.
 
 {{ promote_new_posters }}
 
@@ -113,7 +113,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 ایکٹیویٹی کے لیے اسٹوڈینٹس کو ہدایات دیں
 
-- ٹیوٹوریل کا لنک وائٹ بورڈ پر لکھیں۔ لنک​[​آپ کے منتخب کردہ ٹیوٹوریل کے لیے معلومات کی فہرست میں]({{ urls/learn }}) شرکاء کی تعداد کے تحت ملے گی.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 :اگر آپ کے اسٹوڈینٹس مشکلات پیش آئیں تو کہیں
 
@@ -140,7 +140,6 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- آپ کے اسکول کے لئے [ آرڈر اپنی مرضی کے مطابق ٹی شرٹس ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 
 * * *
@@ -154,6 +153,6 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 ### آور-آف-کوڈ کے بعد کیا ہو گا?
 
-کمپیوٹر سائنس کا آور آف کوڈ کے ساتھ ختم ہونا ضروری نہیں ہے! ہمارا نصاب ویب پر ہے اور استعمال کے لیے ہمیشہ کے لیے مفت ہے۔ [​جانیں کہ کس طرح​](/beyond) اپنے اسکول اور طلباء تک CS پہنچا سکتے ہیں۔
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}
