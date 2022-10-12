@@ -167,16 +167,20 @@ Given(/^the element contains the path to the temp data doc$/) do
   }
 end
 
-Given(/^I click the icon to edit the data doc$/) do
+Given(/^I click the icon to edit the temp data doc$/) do
   steps %{
     And I click selector "#edit_#{@temp_data_doc_key}"
   }
 end
 
-Given(/^I delete the temp data doc$/) do
-  browser_request(
-    url: '/api/test/destroy_data_doc',
-    method: 'POST',
-    body: {key: @temp_data_doc_key}
-  )
+Given(/^I click the icon to delete the temp data doc$/) do
+  steps %{
+    And I click selector "#delete_#{@temp_data_doc_key}"
+  }
+end
+
+Given(/^the temp data doc is not visible$/) do
+  steps %{
+    And element "a" does not contain text "#{@temp_data_doc_name}"
+  }
 end
