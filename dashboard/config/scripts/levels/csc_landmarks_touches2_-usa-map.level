@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-09-30T21:20:16.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -15,7 +11,7 @@
     "helper_libraries": [
       "NativeSpriteLab"
     ],
-    "use_default_sprites": "true",
+    "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "show_type_hints": true,
     "hide_custom_blocks": true,
@@ -23,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Program the guide to explain the second landmark**\r\n- Add a second `when touches` event block\r\n- Drag a sprite say block under this new event.\r\n- Click run to test your new code.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "**Program the guide to explain the second landmark**\r\n- Add a second `when touches` event block\r\n- Drag a `sprite say` block under this new event and add text to explain the landmark.\r\n- Click run to test your new code.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -41,10 +37,17 @@
     "authored_hints": "[]",
     "project_template_level_name": "csc_landmarks_template_-usa-map",
     "name_suffix": "_-usa-map",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:16.788+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches2\\\"\"],\"cloned_from\":\"csc_landmarks_touches2\"}]",
+  "created_at": "2022-09-30T21:20:16.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:16.788+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches2\\\"\"],\"cloned_from\":\"csc_landmarks_touches2\"},{\"changed_at\":\"2022-10-11 17:47:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 22:37:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
