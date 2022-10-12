@@ -60,6 +60,27 @@ class HocRoutesTest < Minitest::Test
       assert_equal expected_url, @pegasus.last_response['Location'].strip
     end
 
+    it 'redirects blank certificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/certificates/blank')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/blank'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
+    end
+
+    it 'redirects sharecertificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/sharecertificate')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/blank'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
+    end
+
+    it 'redirects vanilla congrats page to code studio' do
+      @pegasus.get CDO.code_org_url('/congrats')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/congrats'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
+    end
+
     it 'serves png, jpg, jpeg certificate images, not others' do
       cert_id = make_certificate
       assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpg")

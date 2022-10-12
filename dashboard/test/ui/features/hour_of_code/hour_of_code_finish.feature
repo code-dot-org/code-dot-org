@@ -76,31 +76,6 @@ Scenario: Course A 2017 uncustomized dashboard certificate pages
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
 
-Scenario: blank certificate
-  When I am on "http://code.org/certificates/blank"
-  # bypass replace_hostname logic, and match against a production url
-  And I wait until current URL contains "studio.code.org/certificates/blank"
-  Then I wait to see an image "/images/hour_of_code_certificate.jpg"
-
-Scenario: pegasus congrats page redirects to dashboard congrats page
-  When I am on "http://code.org/congrats"
-  # bypass replace_hostname logic, and match against a production url
-  And I wait until current URL contains "studio.code.org/congrats"
-  And I wait to see element with ID "uitest-certificate"
-
-@as_teacher
-Scenario: pegasus batch page redirects to dashboard batch page
-  When I am on "http://code.org/certificates"
-  # bypass replace_hostname logic, and match against a production url
-  And I wait until current URL contains "studio.code.org/certificates/batch"
-  And I wait to see element with ID "certificate-batch"
-
-Scenario: sharecertificate page redirects to blank certificate page
-  When I am on "http://code.org/sharecertificate"
-  # bypass replace_hostname logic, and match against a production url
-  And I wait until current URL contains "studio.code.org/certificates/blank"
-  And I wait to see element with ID "certificate-share"
-
 @eyes
 Scenario: congrats certificate pages
   Given I am on "http://studio.code.org/congrats"
