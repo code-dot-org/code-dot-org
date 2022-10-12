@@ -107,6 +107,8 @@
   "markComplete": "Marca Completa",
   "markIncomplete": "Marca Incompleta",
   "missingFilenameError": "El nombre del archivo no puede estar en blanco.",
+  "moveLeft": "Mover a la izquierda",
+  "moveRight": "Mover a la derecha",
   "newFile": "Archivo Nuevo",
   "noCodeReviewComments": "Los comentarios de tu docente aparecen aquí.",
   "noCodeReviewUntilStudentEditsCode": "No puedes dejar comentarios hasta que el propietario del proyecto haya modificado el código por defecto y haya pulsado el botón \"Ejecutar\"",

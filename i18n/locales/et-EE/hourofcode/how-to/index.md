@@ -111,7 +111,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 Juhata osalised tegevuse juurde
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Kui osalejad satuvad raskustesse, siis võid vastata:
 
@@ -138,7 +138,6 @@ Mida teha, kui õpilane saab varem valmis?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Telli spetsiaalsed t-särgid](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) osalejatele.
 - Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 
 * * *
@@ -152,6 +151,6 @@ Mida teha, kui õpilane saab varem valmis?
 
 ### Mis saab pärast KoodiTund ürituse läbiviimist?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

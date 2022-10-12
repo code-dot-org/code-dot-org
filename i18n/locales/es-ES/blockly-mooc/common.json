@@ -377,6 +377,7 @@
   "contractMatchBadNameCase": "Los nombres de funciones distinguen mayúsculas de minúsculas. Intenta cambiar las mayúsculas o minúsculas del nombre de su contrato.",
   "contractMatchBadRange": "El contrato tiene el nombre equivocado.",
   "controlProjectSharing": "Controlar la colaboración de proyecto",
+  "cookieNotice": "Aviso de Cookies",
   "copied": "Copiado",
   "copy": "Copiar",
   "copyId": "Copiar ID",

@@ -8804,7 +8804,53 @@ en:
           lessons:
             lesson-1:
               name: Welcome to CSA
-          lesson_groups: {}
+            lesson-3:
+              name: CSA Pre-Survey
+            lesson-2:
+              name: Java Lab
+            lesson-4:
+              name: The Neighborhood
+            lesson-5:
+              name: Navigating and Painting
+            lesson-6:
+              name: Loops
+            lesson-7:
+              name: Inheritance
+            lesson-8:
+              name: Writing Methods
+            lesson-9:
+              name: Programming Style and Feedback
+            lesson-10:
+              name: Selection Statements
+            lesson-11:
+              name: Debugging Strategies
+            lesson-12:
+              name: Decomposition and Design
+            lesson-13:
+              name: Two-Way Selection Statements
+            lesson-14:
+              name: Expanding Conditions
+            lesson-15:
+              name: Edge Cases
+            lesson-16:
+              name: Open Source Code
+            lesson-17:
+              name: Asphalt Art Project – Day 1
+            lesson-18:
+              name: Asphalt Art Project – Day 2
+            lesson-19:
+              name: Asphalt Art Project – Day 3
+            lesson-20:
+              name: FRQ Practice
+            lesson-21:
+              name: Unit 1 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Show What You Know
           name: csa1-2023
           title: Object-Oriented Programming
           description_audience: ''
@@ -9241,3 +9287,35 @@ en:
           description_short: ''
           description: 'A place to park CSC stuff '
           student_description: ''
+        self-paced-pl-physical-computing1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-physical-computing1
+          title: 'Module 1: Getting Started with Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-physical-computing2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-physical-computing2
+          title: 'Module 2: Preparing to Teach Physical Computing'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **You will:**
+            * Get an introduction to Physical Computing.
+            * Practice key concepts included in the unit.
+            * Engage with the maker app.
+            * Explore end of chapter projects.
+
+            **Suggested time:** 90 minutes
+          student_description: |-
+            **You will:**
+            * Get an introduction to Physical Computing.
+            * Practice key concepts included in the unit.
+            * Engage with the maker app.
+            * Explore end of chapter projects.
+
+            **Suggested time:** 90 minutes
