@@ -167,6 +167,12 @@ Given(/^the element contains the path to the temp data doc$/) do
   }
 end
 
+Given(/^I click the icon to edit the data doc$/) do
+  steps %{
+    And I click selector "#edit_#{@temp_data_doc_key}"
+  }
+end
+
 Given(/^I delete the temp data doc$/) do
   browser_request(
     url: '/api/test/destroy_data_doc',
