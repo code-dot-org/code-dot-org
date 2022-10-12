@@ -78,7 +78,6 @@ export function moveDefaultSpriteMetadataToProduction() {
     });
 }
 
-// Regenerates the metadata for the default list of sprites in SpriteLab and uploads it to S3
 export function generateAnimationMetadataForFile(fileObject) {
   const json = fileObject.json;
   const png = fileObject.png;
@@ -186,7 +185,7 @@ export function generateLevelAnimationsManifest() {
   });
 }
 
-// Regenerates the metadata for the default list of sprites in SpriteLab
+// Regenerates the metadata for the default list of sprites in SpriteLab and uploads it to S3
 export function regenerateDefaultSpriteMetadata(spritesProps) {
   let orderedKeys = [];
   let propsByKey = {};

@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
-import StatusIcon, {
-  iconStatus
-} from '@cdo/apps/code-studio/components/StatusIcon';
 
 export default class AddDefaultSprite extends React.Component {
   static propTypes = {
@@ -14,21 +11,15 @@ export default class AddDefaultSprite extends React.Component {
   state = {
     spriteName: '',
     spriteCategory: '',
-    displaySuccess: iconStatus.none
+    displaySuccess: false
   };
 
   handleNameChange = event => {
-    this.setState({
-      spriteName: event.target.value,
-      displaySuccess: iconStatus.none
-    });
+    this.setState({spriteName: event.target.value, displaySuccess: false});
   };
 
   handleCategoryChange = event => {
-    this.setState({
-      spriteCategory: event.target.value,
-      displaySuccess: iconStatus.none
-    });
+    this.setState({spriteCategory: event.target.value, displaySuccess: false});
   };
 
   handleSpriteAdd = addToBeginning => {
@@ -37,11 +28,7 @@ export default class AddDefaultSprite extends React.Component {
       this.state.spriteName,
       this.state.spriteCategory
     );
-    this.setState({
-      spriteName: '',
-      spriteCategory: '',
-      displaySuccess: iconStatus.success
-    });
+    this.setState({spriteName: '', spriteCategory: '', displaySuccess: true});
   };
 
   render() {
@@ -81,7 +68,14 @@ export default class AddDefaultSprite extends React.Component {
           onClick={() => this.handleSpriteAdd(false)}
           size={Button.ButtonSize.narrow}
         />
-        <StatusIcon status={displaySuccess} />
+        <i
+          style={{
+            ...styles.checkmark,
+            visibility: displaySuccess ? 'visible' : 'hidden'
+          }}
+          className="fa fa-check"
+          aria-hidden="true"
+        />
       </div>
     );
   }
@@ -97,5 +91,13 @@ const styles = {
   },
   addSpriteLabel: {
     padding: 10
+  },
+  checkmark: {
+    color: color.light_green,
+    fontSize: 18,
+    left: 5,
+    lineHeight: '25px',
+    position: 'relative',
+    top: 7
   }
 };

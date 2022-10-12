@@ -15,31 +15,31 @@ export default class ReleaseDefaultSprites extends React.Component {
   componentDidMount() {
     getDefaultListMetadata('levelbuilder')
       .then(spriteDefault => {
-        let orderedKeys = spriteDefault['orderedKeys'];
-        let propsByKey = spriteDefault['propsByKey'];
-        let orderedList = [];
-        orderedKeys.map(key => {
-          orderedList.push(propsByKey[key]);
-        });
-        this.setState({levelbuilderDefaultList: orderedList});
+        const parsedList = this.parseDefaultListMetadata(spriteDefault);
+        this.setState({levelbuilderDefaultList: parsedList});
       })
       .catch(err => {
         console.log(err);
       });
     getDefaultListMetadata('production')
       .then(spriteDefault => {
-        let orderedKeys = spriteDefault['orderedKeys'];
-        let propsByKey = spriteDefault['propsByKey'];
-        let orderedList = [];
-        orderedKeys.map(key => {
-          orderedList.push(propsByKey[key]);
-        });
-        this.setState({productionDefaultList: orderedList});
+        const parsedList = this.parseDefaultListMetadata(spriteDefault);
+        this.setState({productionDefaultList: parsedList});
       })
       .catch(err => {
         console.log(err);
       });
   }
+
+  parseDefaultListMetadata = listData => {
+    let orderedKeys = listData['orderedKeys'];
+    let propsByKey = listData['propsByKey'];
+    let orderedList = [];
+    orderedKeys.map(key => {
+      orderedList.push(propsByKey[key]);
+    });
+    return orderedList;
+  };
 
   confirmReleaseChangesToLevelbuilder = () => {
     let shouldRelease = confirm(
@@ -52,7 +52,6 @@ export default class ReleaseDefaultSprites extends React.Component {
   };
 
   moveChangesToProduction = () => {
-    //Files to move to production folder: defaultSprites.json
     moveDefaultSpriteMetadataToProduction().catch(err => {
       console.log(err);
     });
