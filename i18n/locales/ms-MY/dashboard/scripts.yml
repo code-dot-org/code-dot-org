@@ -1879,6 +1879,12 @@ ms:
           title: Mengekod permainan bola sepak anda sendiri
           description_short: Buat permainan bola sepak
           description: Buat permainan bola sepak
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Gelung
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

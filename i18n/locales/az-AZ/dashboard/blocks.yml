@@ -2,22 +2,26 @@
 az:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: ox düymələri ilə hərəkət edən NESW
       BadGuys_setSizeAll_dropdown:
+        text: bütün spritlərin ölçüsünü {SIZE} olaraq təyin edin
         options:
           SIZE:
             '0.50': daha kiçik
             '0.75': kiçik
             '1.00': orta
             '2.00': böyük
-            '3.00': extra large
+            '3.00': əlavə böyük
       BadGuys_setSize_dropdown:
+        text: "{SPRITE} ölçüsünü {SIZE} olaraq təyin edin"
         options:
           SIZE:
             '0.50': daha kiçik
             '0.75': kiçik
             '1.00': orta
             '2.00': böyük
-            '3.00': extra large
+            '3.00': əlavə böyük
       Dancelab_alternateMoves:
         text: "{GROUP} dəyişdir hər bir {N} ölçüləri \narasında {MOVE1} and {MOVE2}"
         options:
@@ -66,12 +70,14 @@ az:
             '"measures"': Ölçülər
             '"seconds"': saniyələr
       Dancelab_changeColorBy:
+        text: "{COLOR} {METHOD} dəyərini {AMOUNT} qədər dəyişin"
         options:
           METHOD:
             '"hue"': Rəng
             '"saturation"': doyma
             '"brightness"': Parlaqlıq
       Dancelab_changeMoveEachLR:
+        text: "{GROUP} həmişəlik {MOVE} {DIR} edin"
         options:
           GROUP:
             sprites: bütün
@@ -103,6 +109,7 @@ az:
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_changeMoveLR:
+        text: "{SPRITE} əbədi olaraq {MOVE} {DIR} edin"
         options:
           MOVE:
             '"next"': "(Növbəti)"
@@ -120,6 +127,7 @@ az:
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_changePropBy:
+        text: "{SPRITE} {PROPERTY} ilə {VAL} dəyişin"
         options:
           PROPERTY:
             '"scale"': ölçü
@@ -153,6 +161,7 @@ az:
             '"x"': üfüqi vəziyyət
             '"y"': şaquli vəziyyət
       Dancelab_doMoveEachLR:
+        text: "{GROUP} bir dəfə {MOVE} {DIR} edin"
         options:
           GROUP:
             sprites: bütün
@@ -181,6 +190,7 @@ az:
             MOVES.Floss: ip
             MOVES.Fresh: təzə
             MOVES.Clown: Qənqnəm
+            MOVES.XHeadHips: Baş + Bud
             MOVES.XHop: Hoppanmaq
             MOVES.XHighKick: Təpik
             MOVES.XKnee: Diz
@@ -193,6 +203,7 @@ az:
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_doMoveLR:
+        text: "{SPRITE} bir dəfə {MOVE} {DIR} edin"
         options:
           MOVE:
             '"rand"': "(İxtiyari)"
@@ -207,6 +218,7 @@ az:
             MOVES.Floss: ip
             MOVES.Fresh: təzə
             MOVES.Clown: Qənqnəm
+            MOVES.XHeadHips: Baş + Bud
             MOVES.XHop: Hoppanmaq
             MOVES.XHighKick: Təpik
             MOVES.XKnee: Diz
@@ -218,6 +230,8 @@ az:
             MOVES.XArmsUp: Dartmaq
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
+      Dancelab_everyMeasuresRange:
+        text: "{START} sonra hər {N} ölçünü təkrarlayın"
       Dancelab_everySeconds:
         text: 'təkrarla hər '
         options:
@@ -225,6 +239,7 @@ az:
             '"measures"': Ölçülər
             '"seconds"': saniyələr
       Dancelab_everySecondsRange:
+        text: hər {N} {UNIT} {START} ilə {STOP} arasında
         options:
           UNIT:
             measures: Ölçülər
@@ -275,6 +290,9 @@ az:
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_ifTime:
+        text: |-
+          əgər {UNIT} {OP} {N} olarsa
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': Ölçülər
@@ -951,6 +969,7 @@ az:
       gamelab_avoidingTargets:
         text: hədəflərdən qaçınmaq
       gamelab_changePropBy:
+        text: "{SPRITE} {PROPERTY} ilə {VAL} dəyişin"
         options:
           PROPERTY:
             '"scale"': ölçü
@@ -1794,6 +1813,11 @@ az:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': on bir
+            '12': on iki
+            '13': on üç
+            '14': on dörd
+            '15': on beş
       Poetry_whenPromptAnswered:
         text: cavablananda
       RyanLab_moveForward:
