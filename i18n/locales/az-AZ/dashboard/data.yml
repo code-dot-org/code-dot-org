@@ -561,6 +561,7 @@ az:
         csd_ml_intro_ai_lab_july2021: Süni intellekt laboratoriyasına giriş
         csd_ml_training_testing_ai_lan: Süni intellekt laboratoriyasında təlim və sınaq
         csd_ml_model_cards_july2021: AI Laboratoriyasında Model Kartlar
+        csd_ml_numerical_ai_lab: AI laboratoriyasında rəqəmsal məlumatlar
         Gettting_Started_Progress: Tərəqqi, Əlaqə və Qiymətləndirmə
         Gettting_Started_ClassSection: Sinif bölməsinin yaradılması
         Gettting_Started_StudentExperience: Şagird təcrübəsi
@@ -600,8 +601,37 @@ az:
         outbreak_outro: 'Epidemiya Simulyatoru: Pulsuz Oyna'
         PL_overview_CSP: Kompüter Elmləri Prinsipləri nədir?
         PL_CSP_EIPMOverview: EIPM Dərsləri üçün bələdçi
+        CSA-PL-debugging-temp: Java Laboratoriyasında Sazlamaya Giriş - temp
+        csd_app_lab_design_mode: CSD Tətbiq Laboratoriyası Dizayn Rejimi
+        csd_app_lab_events: CSD Tətbiq Laboratoriyası Hadisələri
+        PL_CSD_Unit4_AppTesting: Kağız Prototip Testi
+        csd_u6_circuit_playground: Fiziki Hesablama
+        CSA-PL-for-loops: Java-da döngələr üçün
+        CSA-PL-variables: Java-da dəyişənlərin yaradılması
         PL_CS_Journeys_Overview: "CS Səyahətlər\n"
+        CSA-PL-intro-to-java-lab: Java Laboratoriyasının Əsasları
+        CSA-PL-first-program: Java-da proqram yazmaq
+        CSD_u6_variables_part1: 'CSD: Dəyişənlər'
+        csd_u6_if_statements: 'CSD: Əgər bəyanatlar'
+        csc-poem-art-intro: Giriş Videosu
+        csc-poem-art-outro: Xarici Video
+        csd_u6_call_define_functions: 'CSD: Funksiyaların Çağırılması və Müəyyənləşdirilməsi'
         csp_applab_parameters: Parametrli funksiyalar
+        starquilts_intro_artist: Ulduz yorğanlarına giriş
+        CSA-PL-intro-to-arrays: Birölçülü (1D) massivlər
+        CSA-PL-1d-arrays-new-values: 1D massivlərində dəyərlərin daxil edilməsi
+        CSA-PL-conditionals: Java-da şərti ifadələr
+        CSA-PL-two-way-selection: İki tərəfli seçim
+        CSA-PL-Printing-in-Java: Java-da çap
+        CSA-PL-multi-selection-statements: "Multi-selection Statements\n"
+        PL_CSP_TeacherTips_Advice: 'Müəllim Məsləhətləri: Yeni CS Müəllimlərinə Məsləhət'
+        PL_CSP_TeacherTips_IntroToCSP: 'Müəllim məsləhətləri: CS Prinsiplərinə giriş '
+        PL_CSP_TeacherTips_Debugging: 'Müəllim məsləhətləri: Sazlama ilə bağlı yardım '
+        PL_CSP_TeacherTips_LeadLearner: 'Müəllim məsləhəti: Necə Lider Şagird ola bilərəm'
+        PL_CSP_TeacherTips_APExam: 'Müəllim məsləhəti: AP Sınağına hazırlıq'
+        PL_CSP_TeacherTips_EIPM: 'Müəllim məsləhəti: EIPM Prosesi'
+        PL_CSD_CircuitPlayground_Overview: Oyun ərazisinə ümumi baxış
+        CSA-PL-debugging-22: Java Labaratoriyasında Debugging
         CS_Changing_Everything: Kompüterlər hər şeyi dəyişir
     callout:
       text:

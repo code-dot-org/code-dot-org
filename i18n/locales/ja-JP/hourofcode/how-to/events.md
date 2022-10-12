@@ -35,23 +35,17 @@ Facebook やTwitter でイベントの写真をシェアしましょう。ハッ
 
 * * *
 
-## Hour of Code のFamily Code Night を主催して保護者の参加を促す
+## Example plan for a school assembly or event
 
-K-5（幼稚園から小学校5年生まで）向けの夕方イベントを主催して、 コンピュータサイエンスの時間を1時間、生徒と一緒に過ごすよう保護者を招きます。 これは、より大きなコミュニティを巻き込んで、学校でコンピュータサイエンスを学ぶためのサポートについて、保護者に呼びかける最適な方法です。 Family Code Nightのパートナーは、計画時チェックリスト、講演者の台本、招待メール、ポスター、PowerPoint資料 、イベントを実施する上で必要なものが全て入ったイベントキットを作成しています。 [イベントキットをダウンロードするにはこちらをクリックします。](http://www.familycodenight.org/DownloadCodeDotOrg.html)
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## 学校での集会、イベント計画の参考例
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**イベント:** コンピュータサイエンス教育週間の全校キックオフ集会
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**日付:** {{ campaign_date/start_short }}（コンピュータサイエンス教育週間の開始日）
-
-**時間:** 授業中または午前中に1時間程度のイベントを開催できることが望ましい。
-
-**場所:** 学校の集会場（例: 講義室、体育館、カフェテリア）
-
-## 当日の流れ
+## Run of Show
 
 | 時刻          | 内容                                                                         |
 | ----------- | -------------------------------------------------------------------------- |

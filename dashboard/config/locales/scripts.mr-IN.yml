@@ -1862,5 +1862,43 @@ mr:
         aiml-2022:
           name: aiml-2022
           description_short: आर्टिफिशियल इंटेलिजन्स आणि मशीन लर्निंगबद्दल जाणून घ्या
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: एसिंक्रोनस डीबगिंग एक्स्टेंशन
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: मॉड्यूल 2 एसिंक्रोनस कार्य
         soccer:
           name: फुटबॉल
+          title: आपला स्वतःचा सॉकर गेम कोड करा
+          description_short: सॉकर गेम बनवा
+          description: सॉकर गेम बनवा
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: जावा लॅब
+            lesson-6:
+              name: लूप्स
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: प्रकरण 1
+            lessonGroup-3:
+              display_name: प्रकरण 2
+          title: समस्या सोडवणे
+        csd4-2023:
+          title: डिझाईन प्रक्रिया
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: प्रकरण 1
+            lessonGroup-3:
+              display_name: प्रकरण 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: प्रकरण 1
+            lessonGroup-3:
+              display_name: प्रकरण 2

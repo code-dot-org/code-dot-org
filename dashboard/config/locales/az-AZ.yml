@@ -41,6 +41,7 @@ az:
 '
         username: istifadəçi adı
         password: Parol
+        verified_teacher: Doğrulanmış Müəllim
         password_confirmation: Parolun təsdiqi
         current_password: Cari parol
         locale: Dil
@@ -495,6 +496,7 @@ az:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blokları)
       starwarsblocks_hour: Star Wars (Blokları)
+      thebadguys: Pis Uşaqlar
       loading: Yüklənir...
       weblab: Veb Laboratoriyası
       view_all: Bütün layihələrə baxın...
@@ -663,6 +665,7 @@ az:
     print_certificate: Sertifikatı çap edin
   certificate_sponsor_message: "%{sponsor_name} sizin təlim sponsor üçün səxavətli
     hədiyyə etdi."
+  certificate_hour_of_code: Kod Saatı
   move_students:
     new_section_dne: Üzr istəyirik, lakin %{new_section_code} bölməsi mövcud deyil.
       Xahiş edirəm başqa bir bölmə kodu daxil edin.
@@ -741,6 +744,7 @@ az:
     how_it_works: Necə işləyir (Kodu göstər)
     try_hour_of_code: Kodun bir saatını yoxlayın !
     store: Mağaza
+    view_code: Koda Baxın
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
@@ -821,6 +825,10 @@ az:
       title: Rəqs şənliyi
     hello-world:
       title: Salam Dünya
+      body: Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli
+        mövzudan birini seçin.
+    poem-art:
+      body: Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.
     hoc:
       title: Ənənəvi labirint
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
@@ -1254,6 +1262,14 @@ az:
     yazın ki bu problemi həll edək.
   no_level_access_student: Sizin bu bölməyə girişinizə icazə yoxdur. Xahiş edirik
     müəlliminizdən hansı bölmədə olmalı olduğunuzu soruşun.
+  no_level_access_teacher: Bu səviyyəyə girişiniz yoxdur. Bu səviyyəyə çıxışınız olduğunu
+    düşünürsünüzsə, vəziyyəti düzəldə bilməmiz üçün support@code.org ünvanına yazın.
+  no_exemplar: Bu səviyyə üçün heç bir nümunə yoxdur.
+  no_exemplar_access_student: Tələbələr nümunə koduna daxil ola bilməzlər. Zəhmət
+    olmasa müəlliminizdən hansı səviyyədə olmalı olduğunuzu soruşun.
+  no_exemplar_access_teacher: Yalnız təsdiqlənmiş müəllimlər nümunə koduna daxil ola
+    bilər. Əgər təsdiqlənmiş müəllim olmaq istəyirsinizsə, support@code.org ünvanına
+    yazın.
   return_unit_overview: Mündərəcat bölməsinə keçin
   return_course_overview: Kurs icmalına gedin
   view_all_units: Bütün bölmələri görmək
@@ -1308,12 +1324,15 @@ az:
         not_listed: Üstünlük verilən müddət siyahıda deyil
         none: Cavab verməməyə üstünlük verirəm
       school_country:
+        barbados: Barbados
+        belize: beliz
         canada: Kanada
         chile: Çili
         colombia: Kolumbiya
         israel: İtrail
         malaysia: Malayziya
         mexico: Meksika
+        paraguay: Paraqvay
         thailand: Tayland
         uzbekistan: Özbəkistan
       ages:
@@ -1437,3 +1456,10 @@ az:
   unit_prefix: Vahid %{n}
   code_org_logo_alt: Code.org Evi
   teacher_feedback: Müəllim rəyi
+  lesson_lock:
+    error:
+      no_updates: İcra etmək üçün yeniləmə yoxdur
+      missing_params: İstifadəçi, səviyyə və vahid identifikatorlarını təqdim etməlidir
+      cannot_view_locked_answers: Kilidli olarkən cavablara baxmaq mümkün deyil
+      forbidden: İstifadəçi tələbənin kilidlənən vəziyyətini yeniləyə bilməz
+  reset_predict_progress_button: Cavabı Sil

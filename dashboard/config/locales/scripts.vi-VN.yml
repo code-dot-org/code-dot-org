@@ -3353,3 +3353,35 @@ vi:
               display_name: Nội dung
             lessonGroup-5:
               display_name: Khảo sát
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Vòng lặp
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát
+            lessonGroup-3:
+              display_name: Nội dung
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2
+          title: Giải quyết vấn đề
+        csd4-2023:
+          title: Quy trình thiết kế
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2

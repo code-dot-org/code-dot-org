@@ -3928,8 +3928,19 @@ zh-CN:
               display_name: 欢迎
         dlp-csp-mod1-2022:
           title: 计算机科学原理进一步学习模块 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 异步调试扩展
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 模块2异步工作
         soccer:
           name: 足球
+          title: 编写你自己的足球游戏
+          description_short: 制作足球游戏
+          description: 制作足球游戏
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -3966,3 +3977,63 @@ zh-CN:
               display_name: 内容
             lessonGroup-5:
               display_name: 调查
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java实验室
+            lesson-6:
+              name: 循环
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 调查
+            lessonGroup-3:
+              display_name: 内容
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 解决问题
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一单元：创造网页
+            lessonGroup-3:
+              display_name: 第二章：多界面网站
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 用户为中心的设计
+            lessonGroup-3:
+              display_name: 第 2 章︰ 应用程序原型
+          title: 设计过程
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 表达信息
+            lessonGroup-3:
+              display_name: 第 2 章︰ 解决数据问题
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰图像和动画
+            lessonGroup-3:
+              display_name: 第 2 章︰ 创建游戏
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 物理计算
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 第 2 章︰ 创建物理原型

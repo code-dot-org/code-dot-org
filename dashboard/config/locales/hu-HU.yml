@@ -441,6 +441,7 @@ hu:
       about: Rólunk
       legal: Adatvédelem és jogi
       legal_privacy: Adatvédelmi Elvek
+      legal_cookie_notice: Sütikre vonatkozó figyelmeztetés
       legal_tos: Feltételek
     user:
       classroom: Tanári kezdőlap
@@ -664,6 +665,7 @@ hu:
     print_certificate: Oklevél nyomtatása
   certificate_sponsor_message: "%{sponsor_name} tette a nagylelkű ajándékot, hogy
     szponzorálja a tanulást."
+  certificate_hour_of_code: A kódolás órája
   move_students:
     new_section_dne: Sajnáljuk, de a %{new_section_code} kurzus nem létezik. Próbálkozz
       egy másik kódot beírni!

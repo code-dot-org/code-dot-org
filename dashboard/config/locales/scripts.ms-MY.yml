@@ -2247,5 +2247,43 @@ ms:
         aiml-2022:
           name: aiml-2022
           description_short: Ketahui tentang Kepintaran Buatan dan Pembelajaran Mesin
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Sambungan Nyahpepijat Asynchronous
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Kerja Tak Segerak
         soccer:
           name: bola sepak
+          title: Mengekod permainan bola sepak anda sendiri
+          description_short: Buat permainan bola sepak
+          description: Buat permainan bola sepak
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Gelung
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-3:
+              display_name: Bab 2
+          title: Penyelesaian Masalah
+        csd4-2023:
+          title: Proses Reka Bentuk
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-3:
+              display_name: Bab 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-3:
+              display_name: Bab 2

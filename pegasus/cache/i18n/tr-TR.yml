@@ -461,6 +461,7 @@ tr-TR:
   homepage_banner_40k_teachers_link: Daha fazlasını öğren
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
+  homepage_slot_text_blurb_hoc_2022: Keşfet, Oyna, Yarat!
   homepage_slot_text_link_hoc: Kodlama Saati'ni Deneyin
   homepage_slot_text_link_about_hoc: Kad Saati Hakkında
   homepage_slot_text_link_host: Hour of Code organize edin
@@ -488,8 +489,7 @@ tr-TR:
   homepage_slot_text_link_shop: Tişörtler, şapkalar ve daha fazlası
   homepage_slot_text_link_thebadguys: Kim Demiş Kötüyüz Diye? ile Kodlama
   homepage_slot_text_link_administrators: Okul veya bölgenizde düzenleyin
-  homepage_gallery_header: "%{project_count} milyonun üzerinde Code.org projeleri
-    oluşturuldu"
+  homepage_gallery_header: "%{project_count} milyonun üzerinde Code.org projesi oluşturuldu"
   homepage_header_donors: Code.org destekleyenlere teşekkürler
   homepage_donors_seall: Tümünü göster
   homepage_donors_donate: Bağış Yap
@@ -2167,7 +2167,7 @@ tr-TR:
   header_report_abuse: Hata Rapor Et
   header_legal: Gizlilik & Hukuk
   header_legal_privacy: Gizlilik Politikası
-  header_legal_tos: Şartlar
+  header_legal_tos: Hizmet Şartları
   header_tutorials: Eğitmler
   header_screen_reader_hamburger: 'Menü
 

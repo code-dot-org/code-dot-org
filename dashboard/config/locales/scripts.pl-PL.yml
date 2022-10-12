@@ -6891,6 +6891,10 @@ pl:
               name: Aktywność otwarta
             lesson-16:
               name: Aktywność otwarta
+            lesson-19:
+              name: Zbierając to wszystko razem...
+            lesson-20:
+              name: Aktywność otwarta
         csa-draft-pl:
           name: csa-draft-pl
         vpl-csd2-ayw-pilot-2022:
@@ -6981,6 +6985,18 @@ pl:
           description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc
             odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
         csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Pętle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ankieta
+            lessonGroup-3:
+              display_name: Treści
+            lessonGroup-4:
+              display_name: Pokaż, co wiesz
           name: csa1-2023
           title: Programowanie obiektowe
         csa2-2023:
@@ -7010,3 +7026,85 @@ pl:
         vpl-csd4-ayw-pilot-2022:
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 4
+        csa-consumer-review-lab:
+          lessons:
+            lesson-5:
+              name: Aktywność otwarta
+        csa-data-lab:
+          lessons:
+            lesson-3:
+              name: Zbierając to wszystko razem...
+            lesson-4:
+              name: Aktywność otwarta
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          title: Rozwiązywanie problemów
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          title: Opracowywaniem stron internetowych
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+          title: Proces projektowania
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          title: Dane i społeczeństwo
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Obrazy i animacje'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie gier'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
+          title: Oiczenia fizyczne
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
+          title: AI i uczenie maszynowe
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: physcomp-temp
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: Okładka
+          name: csc-bookcover
+          title: Okładka CSC
+          description: jest to wewnętrzny skrypt jako źródło prawdy dla tej lekcji,
+            który zostanie ponownie wykorzystany w innych modułach CSC.
+        csc-landmarks-pilot:
+          lessons:
+            lesson-1:
+              name: Zabytki USA
+          name: csc-landmarks-pilot
+          description: Moduł pilotażowy zima 2022 r. – Moduł historycznych zabytków
+            i punktów orientacyjnych na mapie

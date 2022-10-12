@@ -22,21 +22,21 @@ La Hora del Código es fácil de ejecutar, incluso para principiantes. No necesi
 
 ## 1) Explora actividades y tutoriales.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 Hay innumerables [actividades de la Hora del Código](https://hourofcode.com/us/learn) disponibles si estás trabajando en una computadora con acceso a Internet. Te recomendamos que eches un vistazo a algunas de tus opciones con anticipación para que puedas ayudar a guiar a tu hijo hacia los ejercicios que disfrutará.
 
 Todas nuestras actividades integran la resolución de problemas y el pensamiento crítico con diversión y creatividad, pero estas son algunas de las favoritas de los estudiantes:
 
 - Para el niño al que le encanta jugar: [Minecraft](https://code.org/minecraft) o [Fiesta de baile](https://code.org/dance)
-- Para los niños que les encanta Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Para los niños y niñas a los que les encanta Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1) o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Para el niño al que le encanta aprender: [IA para océanos](https://code.org/oceans) o [Hacer música con Scratch ](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>¿Poca tecnología o sin tecnología?</h3>
 
 Si vas a usar tecnología limitada o ninguna, puedes filtrar [actividades de la Hora del Código](https://hourofcode.com/us/learn) seleccionando "Sin computadoras ni dispositivos" en la sección *Tecnología para el aula*.
 
-[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
+[![](/images/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
 ¡También puede ver estos [videos cortos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) para obtener más ideas sobre cómo facilitar una actividad desconectada en casa!
 
@@ -58,7 +58,7 @@ Esta es una gran oportunidad para agregar un nuevo tipo de actividad al día de 
 
 - Muéstrales un [video inspirador](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) que presenta a uno de sus modelos favoritos.
 - Inspíralos con un video sobre una de las [muchas carreras](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) a las que pueden conducir las habilidades en las ciencias de la computación.
-- [Solicita material promocional](https://store.code.org/)! Puedes elegir entre camisetas, stickers o incluso tatuajes temporales. Compártelo con ellos de inmediato para emocionarlos, o guárdalo para el final de tu Hora del Código como premio especial. 
+- [Solicita material promocional](https://store.code.org/)! Puedes elegir entre camisetas, stickers o incluso tatuajes temporales. Compártelo con ellos de inmediato para emocionarlos, o guárdalo para el final de tu Hora del Código como premio especial.
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
@@ -85,9 +85,9 @@ La ciencia de la computación tiene que ver con aprender a "depurar" situaciones
 
 La Hora del Código es un evento mundial y tu familia merece celebrarlo. Estas son algunas formas de hacer que tu Hora del Código sea muy especial:
 
-- Imprime [Certificados de la Hora del Código](https://staging.code.org/certificates) que otorgues cuando tu hijo complete su actividad 
-- [Imprime stickers](https://staging.hourofcode.com/us/promote/resources#stickers) en casa o [cómpralas en línea](https://store.code.org/), a modo de sorpresa adicional. 
-- Comparte fotos y videos de tu Hora del Código en casa en las redes sociales. ¡Utiliza #HoraDelCódigo y @codeorg para que también podamos destacar tu éxito!
+- Imprime [Certificados de la Hora del Código](https://staging.code.org/certificates) que otorgues cuando tu hijo complete su actividad
+- [Imprime stickers](https://staging.hourofcode.com/us/promote/resources#stickers) en casa o [cómpralas en línea](https://store.code.org/), a modo de sorpresa adicional.
+- Comparte fotos y videos de tu Hora del Código en casa en las redes sociales. Utiliza el hashtag [#HoraDelCódigo](https://twitter.com/hashtag/hourofcode) y etiqueta a [@codeorg](https://twitter.com/codeorg) para que también podamos destacar tu éxito.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

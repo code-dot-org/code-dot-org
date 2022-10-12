@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'pd/survey_pipeline/daily_survey_parser.rb'
+require 'pd/survey_pipeline/daily_survey_parser'
 
 module Pd::SurveyPipeline
   class DailySurveyParserTest < ActiveSupport::TestCase

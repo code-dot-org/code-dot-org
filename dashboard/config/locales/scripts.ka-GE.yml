@@ -2882,3 +2882,35 @@ ka:
               display_name: შიგთავსი
             lessonGroup-5:
               display_name: გამოკითხვა
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: ციკლები
+          lesson_groups:
+            lessonGroup-2:
+              display_name: გამოკითხვა
+            lessonGroup-3:
+              display_name: შიგთავსი
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            lessonGroup-3:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+          title: დიზაინის პროცესი
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            lessonGroup-3:
+              display_name: 'თავი 2: თამაშების შექმნა'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'თავი 2: აპარატული შეყვანა'

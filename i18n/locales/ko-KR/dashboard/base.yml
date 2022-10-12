@@ -380,6 +380,7 @@ ko:
       about: "소개"
       legal: "개인정보 보호 및 법률"
       legal_privacy: "개인정보보호 정책"
+      legal_cookie_notice: "쿠키 방침"
       legal_tos: "이용 약관"
     user:
       classroom: '선생님 홈페이지'
@@ -555,6 +556,7 @@ ko:
     choose_next_course: "아래의 Code Studio 과정을 해보세요."
     print_certificate: "인증서 인쇄"
   certificate_sponsor_message: "%{sponsor_name}가 학습을 후원하기 위해 선물을 했습니다."
+  certificate_hour_of_code: "Hour of Code"
   move_students:
     new_section_dne: "죄송합니다. 섹션 %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     section_code_cant_be_current_section: "현재 섹션과 새로운 섹션은 동일할 수 없습니다."

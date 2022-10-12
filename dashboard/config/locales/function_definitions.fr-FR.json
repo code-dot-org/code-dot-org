@@ -594,7 +594,7 @@
         },
         "Course 4 SCF 1a": {
           "get nectar": {
-            "name": "obtenir du nectar",
+            "name": "récolter le nectar",
             "parameters": {
               "counter": "compteur"
             }
