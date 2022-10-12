@@ -161,7 +161,7 @@ Given(/^element "([^"]*)" contains the name of the temp data doc$/) do |selector
   }
 end
 
-Given(/^the element contains path to temp data doc$/) do
+Given(/^the element contains the path to the temp data doc$/) do
   steps %{
     And the href of selector "a:contains(#{@temp_data_doc_name})" contains "/data_docs/#{@temp_data_doc_key}"
   }

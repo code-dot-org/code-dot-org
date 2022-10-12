@@ -1,7 +1,7 @@
 @no_mobile
-Feature: Creating and seeing data docs
+Feature: Creating and deleting data docs
 
-  Scenario: Create new data doc, and see it on index page
+  Scenario: Create new data doc, see it on index page, and delete it
     Given I create a levelbuilder named "Angela"
     And I am on "http://studio.code.org/data_docs/new"
     And I wait until element "#form" is visible
@@ -17,6 +17,10 @@ Feature: Creating and seeing data docs
     Then I am on "http://studio.code.org/data_docs"
     And I wait until element "#see-data-docs" is visible
     And element "a" contains the name of the temp data doc
-    And the element contains path to temp data doc
+    And the element contains the path to the temp data doc
+
+    And I click selector "a:contains('Edit All')"
+    And element "a" contains the name of the temp data doc
+    And the element contains the path to the temp data doc
 
     And I delete the temp data doc
