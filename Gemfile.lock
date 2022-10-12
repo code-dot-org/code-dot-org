@@ -434,7 +434,7 @@ GEM
       http-cookie (~> 1.0.0)
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.10.0)
+    ffi (1.15.5)
     firebase (0.2.6)
       httpclient
       json
