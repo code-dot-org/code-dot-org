@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'cdo/shared_constants'
 
-class ScriptTest < ActiveSupport::TestCase
+class UnitTest < ActiveSupport::TestCase
   include SharedConstants
 
   self.use_transactional_test_case = true
