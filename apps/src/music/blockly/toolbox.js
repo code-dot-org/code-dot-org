@@ -69,10 +69,6 @@ export const baseToolbox = {
       contents: [
         {
           kind: 'block',
-          type: BlockTypes.LOOP_FROM_TO
-        },
-        {
-          kind: 'block',
           type: BlockTypes.FOR_LOOP,
           inputs: {
             FROM: {
@@ -87,7 +83,7 @@ export const baseToolbox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1
+                  NUM: 8
                 }
               }
             },
@@ -95,7 +91,7 @@ export const baseToolbox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1
+                  NUM: 2
                 }
               }
             }
@@ -184,11 +180,33 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: BlockTypes.VARIABLES_GET
+          type: BlockTypes.VARIABLES_GET,
+          fields: {
+            var: {
+              name: 'i',
+              type: 'number'
+            }
+          }
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.VARIABLES_GET,
+          fields: {
+            var: {
+              name: 'currentTime',
+              type: 'number'
+            }
+          }
         },
         {
           kind: 'block',
           type: BlockTypes.VARIABLES_SET,
+          fields: {
+            var: {
+              name: 'i',
+              type: 'number'
+            }
+          },
           inputs: {
             value: {
               shadow: {

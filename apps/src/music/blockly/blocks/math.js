@@ -34,8 +34,8 @@ export const round = {
         type: 'field_dropdown',
         name: 'OP',
         options: [
-          ['%{BKY_MATH_ROUND_OPERATOR_ROUND}', 'ROUND'],
           ['%{BKY_MATH_ROUND_OPERATOR_ROUNDUP}', 'ROUNDUP'],
+          ['%{BKY_MATH_ROUND_OPERATOR_ROUND}', 'ROUND'],
           ['%{BKY_MATH_ROUND_OPERATOR_ROUNDDOWN}', 'ROUNDDOWN']
         ]
       },
