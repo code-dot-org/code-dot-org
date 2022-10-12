@@ -8,7 +8,7 @@ export const variablesGet = {
       {
         type: 'field_variable',
         name: 'var',
-        variable: 'measure'
+        variable: '%{BKY_VARIABLES_DEFAULT_NAME}'
       }
     ],
     output: 'Number',
@@ -31,7 +31,7 @@ export const variablesSet = {
       {
         type: 'field_variable',
         name: 'var',
-        variable: 'measure'
+        variable: '%{BKY_VARIABLES_DEFAULT_NAME}'
       },
       {
         type: 'input_value',

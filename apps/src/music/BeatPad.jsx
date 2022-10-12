@@ -30,7 +30,14 @@ const BeatPad = ({triggers, playTrigger, onClose}) => {
           />
         );
       }
-      rows.push(<div className={styles.triggerButtonRow}>{buttons}</div>);
+      rows.push(
+        <div
+          key={`row-${i / BUTTONS_PER_ROW}`}
+          className={styles.triggerButtonRow}
+        >
+          {buttons}
+        </div>
+      );
     }
 
     return rows;
