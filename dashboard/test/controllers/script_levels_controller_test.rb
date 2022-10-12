@@ -2120,7 +2120,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     extras_data = JSON.parse(
       css_select('script[data-extras]').first.attribute('data-extras').to_s
     )
-    puts extras_data
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 

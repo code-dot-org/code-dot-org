@@ -14,13 +14,6 @@ module CachedScriptHelper
     end
   end
 
-  # Return true if request is one that can be publicly cached.
-  def cachable_request?(request)
-    script = Script.get_from_cache(request.params[:script_id])
-    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
-      !ScriptConfig.uncached_script_level_path?(request.path)
-  end
-
   private
 
   # Configure http caching for the given script. Caching is disabled unless the

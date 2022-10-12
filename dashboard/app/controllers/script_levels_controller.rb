@@ -13,6 +13,13 @@ class ScriptLevelsController < ApplicationController
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
 
+  # Return true if request is one that can be publicly cached.
+  def cachable_request?(request)
+    script = ScriptLevelsController.get_script(request)
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
+  end
+
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
