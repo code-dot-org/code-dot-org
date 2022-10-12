@@ -29,11 +29,11 @@ var applyFooter = function() {
     document.body.appendChild(footerContents.childNodes[0]);
   }
   if (window.encrypted_channel_id) {
-    var link = document.getElementById("pagefooter_view_code");
-    link.onclick = function() {
-      window.location.href =
-        link.href + "/" + window.encrypted_channel_id + "/view";
-      return false;
-    };
+    var viewCodeLink = document.getElementById("pagefooter_view_code");
+    viewCodeLink.href =
+      viewCodeLink.href + "/" + window.encrypted_channel_id + "/view";
+    var abuseLink = document.getElementById("pagefooter_report_abuse");
+    abuseLink.href =
+      abuseLink.href + "?channelId=" + window.encrypted_channel_id;
   }
 };
