@@ -778,6 +778,7 @@ FactoryGirl.define do
     state 'Washington'
     add_attribute :zip_code, '98101'
     association :school
+    principal_role 'Headmaster'
     principal_first_name 'Albus'
     principal_last_name 'Dumbledore'
     principal_title 'Dr.'

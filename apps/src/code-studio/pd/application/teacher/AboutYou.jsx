@@ -269,7 +269,7 @@ const AboutYou = props => {
             </div>
           )}
 
-          <p>
+          <p style={{margin: '10px 0'}}>
             Please provide information for an Administrator/School Leader (i.e.
             Principal, Vice Principal, STEM Program Director, etc) who can
             certify that the course will be offered at your school. Upon your
@@ -287,6 +287,7 @@ const AboutYou = props => {
             // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
             // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
           }
+          <LabeledInput name="principalRole" autoComplete="never" />
           <LabeledInput name="principalFirstName" autoComplete="never" />
           <LabeledInput name="principalLastName" autoComplete="never" />
           <LabeledInput name="principalEmail" autoComplete="never" />

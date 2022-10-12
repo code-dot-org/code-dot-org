@@ -35,7 +35,8 @@ Scenario: Teacher starts a new application and submits it
     And I select the "Washington" option in dropdown "schoolState"
     And I press keys "98101" for element "input#schoolZipCode"
     And I press the first "input[name='schoolType'][value='Other']" element
-  Then I press keys "Albus" for element "input#principalFirstName"
+  Then I press keys "Headmaster" for element "input#principalRole"
+  And I press keys "Albus" for element "input#principalFirstName"
   And I press keys "Dumbledore" for element "input#principalLastName"
   And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
   And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
@@ -171,7 +172,8 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I select the "Washington" option in dropdown "schoolState"
   And I press keys "98101" for element "input#schoolZipCode"
   And I press the first "input[name='schoolType'][value='Other']" element
-  Then I press keys "Albus" for element "input#principalFirstName"
+  Then I press keys "Headmaster" for element "input#principalRole"
+  And I press keys "Albus" for element "input#principalFirstName"
   And I press keys "Dumbledore" for element "input#principalLastName"
   And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
   And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
