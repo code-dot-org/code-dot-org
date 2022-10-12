@@ -231,7 +231,11 @@ const AboutYou = props => {
             textFieldMap={{[TextFields.otherPleaseList]: 'other'}}
           />
 
-          <p>Please provide your school’s information below:</p>
+          <p>
+            Please provide your school’s information below. If your school is
+            not listed please select from the drop-down “Other school not listed
+            below” and provide the school details below.
+          </p>
 
           <FormGroup
             id="school"
