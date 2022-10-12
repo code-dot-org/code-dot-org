@@ -40,12 +40,30 @@
   flex-direction: row;
   justify-content: space-around;
   margin: 5px 0;
+  align-items: flex-end;
+}
+
+$hover-opacity: 0.5;
+
+@mixin trigger-button-settings($color) {
+  border-color: $color;
+  &:hover {
+    background-color: rgba($color, $hover-opacity);
+  }
+
+  &:active {
+    background-color: $color;
+    border-width: 2px;
+    color: $gray-900;
+    border-color: $gray;
+    box-shadow: 0 0 5px $gray;
+  }
 }
 
 .triggerButton {
   font-size: 20px;
-  border-radius: 4px;
-  border-width: 2px;
+  border-radius: 8px;
+  border-width: 2px 2px 4px 2px;
   border-style: solid;
   color: $gray;
   background-color: $gray-900;
@@ -57,44 +75,26 @@
   cursor: pointer;
 
   &.purple {
-    border-color: $purple;
-    &:hover {
-      background-color: $purple;
-    }
+    @include trigger-button-settings($purple);
   }
 
   &.strawberry {
-    border-color: $strawberry;
-    &:hover {
-      background-color: $strawberry;
-    }
+    @include trigger-button-settings($strawberry);
   }
 
   &.orange {
-    border-color: $light-orange;
-    &:hover {
-      background-color: $light_orange;
-    }
+    @include trigger-button-settings($light-orange);
   }
 
   &.yellow {
-    border-color: $yellow;
-    &:hover {
-      background-color: $yellow;
-    }
+    @include trigger-button-settings($yellow);
   }
 
   &.green {
-    border-color: $green;
-    &:hover {
-      background-color: $green;
-    }
+    @include trigger-button-settings($green);
   }
 
   &.teal {
-    border-color: $teal;
-    &:hover {
-      background-color: $teal;
-    }
+    @include trigger-button-settings($teal);
   }
 }
