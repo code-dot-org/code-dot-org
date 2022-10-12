@@ -8,6 +8,17 @@
   .field
     = f.label :name
     = f.text_field :name
+  %h2 Regional Manager Information
+  .field
+    = f.label :contact_name
+    = f.text_field :contact_name
+  .field
+    = f.label :contact_email
+    = f.text_field :contact_email
+  .field
+    = f.label :phone_number
+    = f.text_field :phone_number
+  %h2 Teacher Application Settings
   .field
     = f.label nil, "Apps Open Date for Teachers (YYYY-MM-DD)"
     = f.text_field :apps_open_date_teacher
@@ -15,14 +26,14 @@
     = f.label nil, "Apps Close Date for Teachers (YYYY-MM-DD)"
     = f.text_field :apps_close_date_teacher
   .field
-    = f.label nil, "Applications Principal Approval"
+    = f.label nil, "Applications Administrator/School Leader Approval"
     .applications_principal_approval
       %label
         = f.radio_button :applications_principal_approval, RegionalPartner::ALL_REQUIRE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::ALL_REQUIRE_APPROVAL
-        = 'All apps require principal approval'
+        = 'All apps require administrator/school leader approval'
       %label
         = f.radio_button :applications_principal_approval, RegionalPartner::SELECTIVE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        = 'Selectively require some apps to have principal approval'
+        = 'Selectively require some apps to have administrator/school leader approval'
   .field
     = f.label nil, "Applications Decision Emails"
     .applications_decision_emails
@@ -44,13 +55,4 @@
   .field
     = f.label :additional_program_information
     = f.text_area :additional_program_information, {style: 'width: 1000px; height: 200px'}
-  .field
-    = f.label :contact_name
-    = f.text_field :contact_name
-  .field
-    = f.label :contact_email
-    = f.text_field :contact_email
-  .field
-    = f.label :phone_number
-    = f.text_field :phone_number
   %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save
