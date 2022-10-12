@@ -268,8 +268,7 @@ class ProjectsController < ApplicationController
   end
 
   def weblab_footer
-    channel_id = params[:channel_id]
-    render partial: 'projects/weblab_footer', locals: {channel_id: channel_id}
+    render partial: 'projects/weblab_footer'
   end
 
   private def initial_data
