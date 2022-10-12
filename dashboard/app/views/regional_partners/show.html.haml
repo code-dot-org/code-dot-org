@@ -51,10 +51,15 @@
   = @regional_partner.pl_programs_offered
 %p
   %strong Program information:
-  = @regional_partner.cost_scholarship_information
+.field{style: 'border: 1px solid black; padding: 5px' }
+  :markdown
+    #{@regional_partner.cost_scholarship_information}
+
 %p
   %strong Additional Partner information:
-  = @regional_partner.additional_program_information
+.field{style: 'border: 1px solid black; padding: 5px' }
+  :markdown
+    #{@regional_partner.additional_program_information}
 
 %br
 %h2 Regions
