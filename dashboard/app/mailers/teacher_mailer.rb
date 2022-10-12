@@ -21,4 +21,8 @@ class TeacherMailer < ActionMailer::Base
     @removed_students = removed_students
     mail to: teacher.email, from: 'noreply@code.org', subject: I18n.t('teacher_mailer.delete_teacher_subject')
   end
+
+  def verified_teacher_email(teacher)
+    mail to: teacher.email, from: 'teacher@code.org', subject: I18n.t('teacher_mailer.verified_teacher_subject')
+  end
 end
