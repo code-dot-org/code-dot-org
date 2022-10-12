@@ -40,10 +40,10 @@
     = f.select :pl_programs_offered, Pd::SharedWorkshopConstants::OFFERED_PROGRAMS, {}, {multiple: true}
   .field
     = f.label nil, "Program information"
-    = f.text_area :cost_scholarship_information, {style: 'width: 500px'}
+    = f.text_area :cost_scholarship_information, {style: 'width: 1000px; height: 200px'}
   .field
     = f.label :additional_program_information
-    = f.text_area :additional_program_information, {style: 'width: 500px'}
+    = f.text_area :additional_program_information, {style: 'width: 1000px; height: 200px'}
   .field
     = f.label :contact_name
     = f.text_field :contact_name
