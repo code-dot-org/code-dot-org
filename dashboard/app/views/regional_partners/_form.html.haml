@@ -20,13 +20,13 @@
     = f.text_field :phone_number
   %h2 Teacher Application Settings
   .field
-    = f.label nil, "Apps Open Date for Teachers (YYYY-MM-DD)"
+    = f.label nil, "Apps Open Date (YYYY-MM-DD)"
     = f.text_field :apps_open_date_teacher
   .field
-    = f.label nil, "Apps Close Date for Teachers (YYYY-MM-DD)"
+    = f.label nil, "Apps Close Date (YYYY-MM-DD)"
     = f.text_field :apps_close_date_teacher
   .field
-    = f.label nil, "Applications Administrator/School Leader Approval"
+    = f.label nil, "Applications Administrator/School Leader Approval", {style: 'margin-top: 20px'}
     .applications_principal_approval
       %label
         = f.radio_button :applications_principal_approval, RegionalPartner::ALL_REQUIRE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::ALL_REQUIRE_APPROVAL
@@ -35,7 +35,7 @@
         = f.radio_button :applications_principal_approval, RegionalPartner::SELECTIVE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         = 'Selectively require some apps to have administrator/school leader approval'
   .field
-    = f.label nil, "Applications Decision Emails"
+    = f.label nil, "Applications Decision Emails", {style: 'margin-top: 20px'}
     .applications_decision_emails
       %label
         = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_PARTNER, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
@@ -44,7 +44,7 @@
         = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_SYSTEM, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM
         = 'System sends decision emails'
   .field
-    = f.label :link_to_partner_application
+    = f.label :link_to_partner_application, {style: 'margin-top: 20px'}
     = f.text_field :link_to_partner_application, {style: 'width: 500px'}
   .field
     = f.label nil, "PL Programs Offered"
