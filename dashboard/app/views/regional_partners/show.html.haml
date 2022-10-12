@@ -15,24 +15,6 @@
   %strong Name:
   = @regional_partner.name
 %p
-  %strong Apps open date for teachers:
-  = @regional_partner.apps_open_date_teacher
-%p
-  %strong Apps close date for teachers:
-  = @regional_partner.apps_close_date_teacher
-%p
-  %strong Program information:
-  = @regional_partner.cost_scholarship_information
-%p
-  %strong Additional Partner information:
-  = @regional_partner.additional_program_information
-%p
-  %strong Link to Partner's Application:
-  = @regional_partner.link_to_partner_application
-%p
-  %strong PL Programs Offered:
-  = @regional_partner.pl_programs_offered
-%p
   %strong Contact Email:
   = @regional_partner.contact_email
 %p
@@ -51,6 +33,27 @@
   = link_to 'Edit', edit_regional_partner_path(@regional_partner)
 \|
 = link_to 'Back', regional_partners_path
+
+%h2 Teacher Application Settings
+%p
+  %strong Apps open date for teachers:
+  = @regional_partner.apps_open_date_teacher
+%p
+  %strong Apps close date for teachers:
+  = @regional_partner.apps_close_date_teacher
+%p
+  %strong Link to Partner's Application:
+  = @regional_partner.link_to_partner_application
+%p
+  %strong PL Programs Offered:
+  = @regional_partner.pl_programs_offered
+%p
+  %strong Program information:
+  = @regional_partner.cost_scholarship_information
+%p
+  %strong Additional Partner information:
+  = @regional_partner.additional_program_information
+
 %br
 %h2 Regions
 %p
