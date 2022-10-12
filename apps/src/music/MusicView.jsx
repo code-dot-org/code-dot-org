@@ -462,15 +462,15 @@ export default class MusicView extends React.Component {
     };
 
     const blocklyAreaHeight = this.state.showInstructions
-      ? 'calc(100% - 250px)'
-      : 'calc(100% - 150px)';
+      ? 'calc(100% - 300px)'
+      : 'calc(100% - 200px)';
 
     const blocklyAreaTop = this.state.showInstructions
       ? this.state.timelineAtTop
-        ? 250
+        ? 300
         : 100
       : this.state.timelineAtTop
-      ? 150
+      ? 200
       : 0;
 
     const timelinePosition = this.state.showInstructions
@@ -527,24 +527,28 @@ export default class MusicView extends React.Component {
           }}
         >
           <div id="blockly-div" />
-
-          <Controls
-            isPlaying={this.state.isPlaying}
-            setPlaying={this.setPlaying}
-            playTrigger={this.playTrigger}
-          />
         </div>
 
         <div
           id="timeline-area"
           style={{
-            height: 140,
+            height: 200,
             width: '100%',
             boxSizing: 'border-box',
             position: 'absolute',
+            display: 'flex',
+            flexDirection: this.state.timelineAtTop
+              ? 'column-reverse'
+              : 'column',
             ...timelinePosition
           }}
         >
+          <Controls
+            isPlaying={this.state.isPlaying}
+            setPlaying={this.setPlaying}
+            playTrigger={this.playTrigger}
+            top={this.state.timelineAtTop}
+          />
           <Timeline
             isPlaying={this.state.isPlaying}
             songData={songData}

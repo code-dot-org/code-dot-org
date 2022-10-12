@@ -3,28 +3,33 @@ import React from 'react';
 import FontAwesome from '../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
+import BeatPad from './BeatPad';
 
 export default class Controls extends React.Component {
   static propTypes = {
     isPlaying: PropTypes.bool.isRequired,
     setPlaying: PropTypes.func.isRequired,
-    playTrigger: PropTypes.func.isRequired
+    playTrigger: PropTypes.func.isRequired,
+    top: PropTypes.bool.isRequired
   };
 
-  renderTriggers = () => {
-    const triggerButtons = Triggers.map(trigger => (
-      <button
-        key={trigger.id}
-        type="button"
-        onClick={() => this.props.playTrigger(trigger.id)}
-        className={moduleStyles.triggerButton}
-      >
-        {trigger.buttonLabel}
-      </button>
-    ));
-
+  renderBeatPad = () => {
     return (
-      <div className={moduleStyles.triggersContainer}>{triggerButtons}</div>
+      <div
+        style={{
+          position: 'absolute',
+          [this.props.top ? 'bottom' : 'top']: -175,
+          right: 10
+        }}
+      >
+        <BeatPad
+          triggers={Triggers}
+          playTrigger={this.props.playTrigger}
+          onClose={() => {
+            console.log('TODO close Beat Pad');
+          }}
+        />
+      </div>
     );
   };
 
@@ -32,30 +37,16 @@ export default class Controls extends React.Component {
     const {isPlaying, setPlaying} = this.props;
 
     return (
-      <div
-        id="controls"
-        style={{
-          width: 100,
-          bottom: 10,
-          left: 10,
-          borderRadius: 4,
-          position: 'absolute',
-          zIndex: 70
-        }}
-      >
-        {isPlaying && this.renderTriggers()}
+      <div id="controls" className={moduleStyles.controlsContainer}>
+        {isPlaying && this.renderBeatPad()}
         <br />
         <div
-          style={{
-            textAlign: 'left',
-            cursor: 'pointer',
-            color: 'white'
-          }}
+          className={moduleStyles.playPauseButton}
           onClick={() => setPlaying(!isPlaying)}
         >
           <FontAwesome
-            icon={isPlaying ? 'stop' : 'play'}
-            style={{fontSize: 25}}
+            icon={isPlaying ? 'stop-circle' : 'play-circle'}
+            style={{fontSize: 30}}
           />
         </div>
       </div>
