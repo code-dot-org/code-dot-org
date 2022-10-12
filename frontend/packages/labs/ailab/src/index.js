@@ -25,6 +25,10 @@ export const store = createStore(rootReducer);
 let saveTrainedModel = null;
 let onContinue = null;
 
+/**
+ * @param {Object} options.i18n Optional. Object where each method returns the locale relevant
+ * string to display. If this is not defined, an English string will be provided.
+ */
 export const initAll = function (options) {
   I18n.initI18n(options.i18n);
   // Handle an optional mode.
