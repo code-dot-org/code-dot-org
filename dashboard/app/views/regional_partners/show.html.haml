@@ -8,7 +8,13 @@
   - if flash[:upload_error]
     = content_tag(:div, flash[:upload_error], {class: 'alert alert-danger'}, false)
     - flash[:upload_error] = nil
-%p
+
+- if can? :update, @regional_partner
+  = link_to 'Edit', edit_regional_partner_path(@regional_partner)
+\|
+= link_to 'Back', regional_partners_path
+
+%p{style: 'margin-top: 20px' }
   %strong ID:
   = @regional_partner.id
 %p
@@ -29,10 +35,6 @@
 %p
   %strong Updated At:
   = @regional_partner.updated_at.strftime('%F')
-- if can? :update, @regional_partner
-  = link_to 'Edit', edit_regional_partner_path(@regional_partner)
-\|
-= link_to 'Back', regional_partners_path
 
 %h2 Teacher Application Settings
 %p
