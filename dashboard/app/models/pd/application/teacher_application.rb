@@ -677,6 +677,7 @@ module Pd::Application
         city
         state
         zip_code
+        principal_role
         principal_first_name
         principal_last_name
         principal_email
