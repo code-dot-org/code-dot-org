@@ -378,6 +378,7 @@
   "contractMatchBadNameCase": "Function names are case-sensitive. Try changing the case of your contract's name.",
   "contractMatchBadRange": "Your contract has the wrong range.",
   "controlProjectSharing": "Control project sharing",
+  "cookieNotice": "Cookie Notice",
   "copied": "Copied!",
   "copy": "Copy",
   "copyId": "Copy ID",

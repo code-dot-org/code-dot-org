@@ -8,6 +8,7 @@
 #   code.org/oceans
 #   code.org/hourofcode/overview
 #   code.org/learn
+#   code.org/prize
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -45,6 +46,7 @@ def get_social_metadata_for_page(request)
     hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
     coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
     hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
+    cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -153,6 +155,13 @@ def get_social_metadata_for_page(request)
         image: images[:hoc_2022_social]
       }
     },
+    "cs-leaders-prize" => {
+      "default" => {
+        title: "CS Leaders Prize - $1 Million for U.S. Schools",
+        description: "Tell us how your school will expand computer science, and you could win $10,000 to make it happen!",
+        image: images[:cs_leaders_prize]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -175,6 +184,8 @@ def get_social_metadata_for_page(request)
     page = "hoc-overview"
   elsif request.path == "/learn" && request.site == "code.org"
     page = "learn-cdo"
+  elsif request.path == "/prize" && request.site == "code.org"
+    page = "cs-leaders-prize"
   else
     return {}
   end
