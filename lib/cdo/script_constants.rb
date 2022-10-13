@@ -101,6 +101,8 @@ module ScriptConstants
       HELLO_WORLD_ANIMALS_2021_NAME = 'hello-world-animals-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_EMOJI_2021_NAME = 'hello-world-emoji-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_RETRO_2021_NAME = 'hello-world-retro-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_SPACE_2022_NAME = 'hello-world-space-2022'.freeze, # 2022 hour of code
+      HELLO_WORLD_SOCCER_2022_NAME = 'hello-world-soccer-2022'.freeze, # 2022 hour of code
       DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
       DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
       OCEANS_NAME = 'oceans'.freeze,
@@ -297,8 +299,6 @@ module ScriptConstants
     HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze,
     HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze,
     HELLO_WORLD_RETRO = 'hello-world-retro'.freeze,
-    HELLO_WORLD_SPACE = 'hello-world-space'.freeze,
-    HELLO_WORLD_SOCCER = 'hello-world-soccer'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
