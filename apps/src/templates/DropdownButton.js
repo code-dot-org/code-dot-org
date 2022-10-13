@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import onClickOutside from 'react-onclickoutside';
+import moduleStyles from './dropdown-button.module.scss';
 
 const styles = {
   main: {
@@ -115,7 +115,7 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
     const {dropdownOpen} = this.state;
 
     return (
-      <div style={styles.main}>
+      <div className={moduleStyles.main}>
         <Button
           __useDeprecatedTag
           text={text}
@@ -127,19 +127,22 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
           className={this.props.className}
         >
           {this.props.customText && (
-            <div style={styles.main}>{this.props.customText}</div>
+            <div className={moduleStyles.main}>{this.props.customText}</div>
           )}
         </Button>
 
         {dropdownOpen && (
-          <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
+          <div
+            className={moduleStyles.dropdown}
+            ref={ref => (this.dropdownList = ref)}
+          >
             {this.props.children.map((child, index) => (
               <a
                 {...child.props}
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
+                className={moduleStyles.anchor}
                 style={{
-                  ...styles.anchor,
                   ...(index > 0 && styles.nonFirstAnchor),
                   ...child.props.style
                 }}
@@ -152,4 +155,4 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
   }
 };
 
-export default onClickOutside(Radium(DropdownButton));
+export default onClickOutside(DropdownButton);
