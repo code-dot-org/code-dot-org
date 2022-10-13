@@ -203,7 +203,8 @@ class MegaSection
     " non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
       split(/[.,]/).
       sample(rng.rand(3..6)).
-      filter_map(&:strip).
+      map(&:strip).
+      compact.
       map(&:capitalize).
       join('. ') + '.'
   end

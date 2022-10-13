@@ -293,7 +293,7 @@ class Projects
   end
 
   def to_a
-    @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
+    @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
       channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
       begin
         Projects.merged_row_value(
@@ -304,7 +304,7 @@ class Projects
       rescue JSON::ParserError
         nil
       end
-    end
+    end.compact
   end
 
   # Find the encrypted channel token for most recent project of the given type.
