@@ -9,7 +9,7 @@ require_relative '../../dashboard/config/environment'
 def set_course_audiences
   raise unless Rails.application.config.levelbuilder_mode
 
-  Unit.all.each do |script|
+  Script.all.each do |script|
     # scripts in unit_groups get their audiences from their unit group
     next if script.unit_group
 
