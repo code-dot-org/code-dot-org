@@ -8,12 +8,6 @@ module ScriptConstants
   JIGSAW_NAME = 'jigsaw'.freeze
   ACCELERATED_NAME = 'accelerated'.freeze
 
-  OTHER_CATEGORY_NAME = 'other'.freeze
-
-  MINECRAFT_TEACHER_DASHBOARD_NAME = 'Minecraft Adventurer'.freeze
-  MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'Minecraft Designer'.freeze
-  HOC_TEACHER_DASHBOARD_NAME = 'Classic Maze'.freeze
-
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
   # a category will be the order in which they appear in the dropdown, and the
@@ -86,9 +80,6 @@ module ScriptConstants
       EXPLORE_DATA_1_2021_NAME = 'explore-data-1-2021'.freeze,
       SPELLING_BEE_2021_NAME = 'spelling-bee-2021'.freeze
     ],
-    aiml_2021: [
-      AIML_2021_NAME = 'aiml-2021'.freeze,
-    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here, you must also update the cdo-tutorials gsheet
@@ -141,15 +132,6 @@ module ScriptConstants
       ALGEBRA_A_NAME = 'AlgebraA'.freeze,
       ALGEBRA_B_NAME = 'AlgebraB'.freeze,
     ],
-    research_studies: [
-      HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
-      FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
-    ],
-    csd_pilot: [
-      CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
-      CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
-      CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
-    ],
     csd_2022: [
       CSD1_2022_NAME = 'csd1-2022'.freeze,
       CSD2_2022_NAME = 'csd2-2022'.freeze,
@@ -201,78 +183,6 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
-    csp_2021: [
-      CSP1_2021_NAME = 'csp1-2021'.freeze,
-      CSP2_2021_NAME = 'csp2-2021'.freeze,
-      CSP3_2021_NAME = 'csp3-2021'.freeze,
-      CSP4_2021_NAME = 'csp4-2021'.freeze,
-      CSP5_2021_NAME = 'csp5-2021'.freeze,
-      CSP6_2021_NAME = 'csp6-2021'.freeze,
-      CSP7_2021_NAME = 'csp7-2021'.freeze,
-      CSP8_2021_NAME = 'csp8-2021'.freeze,
-      CSP9_2021_NAME = 'csp9-2021'.freeze,
-      CSP10_2021_NAME = 'csp10-2021'.freeze,
-    ].freeze,
-    csp_2020: [
-      CSP1_2020_NAME = 'csp1-2020'.freeze,
-      CSP2_2020_NAME = 'csp2-2020'.freeze,
-      CSP3_2020_NAME = 'csp3-2020'.freeze,
-      CSP4_2020_NAME = 'csp4-2020'.freeze,
-      CSP5_2020_NAME = 'csp5-2020'.freeze,
-      CSP6_2020_NAME = 'csp6-2020'.freeze,
-      CSP7_2020_NAME = 'csp7-2020'.freeze,
-      CSP8_2020_NAME = 'csp8-2020'.freeze,
-      CSP9_2020_NAME = 'csp9-2020'.freeze,
-      CSP10_2020_NAME = 'csp10-2020'.freeze,
-      CSP_POST_SURVEY_2020_NAME = 'csp-post-survey-2020'.freeze
-    ].freeze,
-    csp_2019: [
-      CSP1_2019_NAME = 'csp1-2019'.freeze,
-      CSP2_2019_NAME = 'csp2-2019'.freeze,
-      CSP3_2019_NAME = 'csp3-2019'.freeze,
-      CSP4_2019_NAME = 'csp4-2019'.freeze,
-      CSP5_2019_NAME = 'csp5-2019'.freeze,
-      CSP_CREATE_2019_NAME = 'csp-create-2019'.freeze,
-      CSP_POSTAP_2019_NAME = 'csppostap-2019'.freeze,
-      CSP_POST_SURVEY_2019_NAME = 'csp-post-survey-2019'.freeze,
-      CSP_EXPLORE_2019_NAME = 'csp-explore-2019'.freeze,
-    ],
-    csp_2018: [
-      CSP1_2018_NAME = 'csp1-2018'.freeze,
-      CSP2_2018_NAME = 'csp2-2018'.freeze,
-      CSP3_2018_NAME = 'csp3-2018'.freeze,
-      CSP4_2018_NAME = 'csp4-2018'.freeze,
-      CSP_EXPLORE_2018_NAME = 'csp-explore-2018'.freeze,
-      CSP5_2018_NAME = 'csp5-2018'.freeze,
-      CSP_CREATE_2018_NAME = 'csp-create-2018'.freeze,
-      CSP_POSTAP_2018_NAME = 'csppostap-2018'.freeze,
-      CSP_POST_SURVEY_2018_NAME = 'csp-post-survey-2018'.freeze,
-    ],
-    csp: [
-      CSP_UNIT1_NAME = 'cspunit1'.freeze,
-      CSP_UNIT2_NAME = 'cspunit2'.freeze,
-      CSP_UNIT3_NAME = 'cspunit3'.freeze,
-      CSP_UNIT4_NAME = 'cspunit4'.freeze,
-      CSP_UNIT5_NAME = 'cspunit5'.freeze,
-      CSP_UNIT6_NAME = 'cspunit6'.freeze,
-    ],
-    csp17: [
-      CSP17_UNIT1_NAME = 'csp1-2017'.freeze,
-      CSP17_UNIT2_NAME = 'csp2-2017'.freeze,
-      CSP17_UNIT3_NAME = 'csp3-2017'.freeze,
-      CSP17_UNIT4_NAME = 'csp4-2017'.freeze,
-      CSP17_UNIT5_NAME = 'csp5-2017'.freeze,
-      # CSP17_UNIT6_NAME = 'csp6'.freeze,
-      CSP17_EXPLORE_NAME = 'csp-explore-2017'.freeze,
-      CSP17_CREATE_NAME = 'csp-create-2017'.freeze,
-      CSP17_POSTAP_NAME = 'csppostap-2017'.freeze,
-      CSP17_SURVEY_NAME = 'csp-post-survey'.freeze,
-    ],
-    cspexams: [
-      CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,
-      CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze,
-      CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze,
-    ],
     twenty_hour: [
       TWENTY_HOUR_NAME = '20-hour'.freeze,
     ],
@@ -282,9 +192,6 @@ module ScriptConstants
       MINECRAFT_DESIGNER_NAME,
       MINECRAFT_HERO_NAME,
       MINECRAFT_AQUATIC_NAME
-    ],
-    tts: [
-      TTS_NAME = 'allthettsthings'.freeze
     ],
   }.freeze
 
