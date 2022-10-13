@@ -91,5 +91,11 @@ module Services
       return if lesson&.script.blank?
       [lesson.script.name, lesson.key].join('/')
     end
+
+    # Returns a key which can be used by to globally and uniquely identify the
+    # given Reference Guide object
+    def self.build_reference_guide_key(reference_guide)
+      [reference_guide.course_offering_version, reference_guide.key].join('/')
+    end
   end
 end
