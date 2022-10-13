@@ -56,7 +56,7 @@ def update_level_tts_i18n(level, script=nil)
 end
 
 def main
-  k1_scripts = Script.all.select(&:text_to_speech_enabled?)
+  k1_scripts = Unit.all.select(&:text_to_speech_enabled?)
   TextToSpeech::VOICES.keys.each do |lang|
     next if lang == :'en-US'
 

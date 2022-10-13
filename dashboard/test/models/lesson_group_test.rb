@@ -53,8 +53,8 @@ class LessonGroupTest < ActiveSupport::TestCase
   end
 
   test 'can copy to script' do
-    Script.any_instance.stubs(:write_script_json)
-    Script.stubs(:merge_and_write_i18n)
+    Unit.any_instance.stubs(:write_script_json)
+    Unit.stubs(:merge_and_write_i18n)
     destination_script = create :script, is_migrated: true
     create :course_version, content_root: destination_script
     original_script = create :script, is_migrated: true
@@ -73,8 +73,8 @@ class LessonGroupTest < ActiveSupport::TestCase
   end
 
   test 'can copy to deeper learning script' do
-    Script.any_instance.stubs(:write_script_json)
-    Script.stubs(:merge_and_write_i18n)
+    Unit.any_instance.stubs(:write_script_json)
+    Unit.stubs(:merge_and_write_i18n)
     destination_script = create :script, is_migrated: true, professional_learning_course: 'MY-PLC-COURSE', participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
     original_script = create :script, is_migrated: true, professional_learning_course: 'MY-NEW-PLC-COURSE', participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
     lesson_group = create :lesson_group, script: original_script

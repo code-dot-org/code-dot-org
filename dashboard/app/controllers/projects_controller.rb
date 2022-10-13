@@ -481,7 +481,7 @@ class ProjectsController < ApplicationController
   end
 
   def get_from_cache(key)
-    if Script.should_cache?
+    if Unit.should_cache?
       @@project_level_cache[key] ||= Level.find_by_key(key)
     else
       Level.find_by_key(key)
