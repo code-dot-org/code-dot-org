@@ -96,7 +96,8 @@ class CodeReviewsController < ApplicationController
     # For each Follower object, get the user_ids of the other members in the
     # code review group; combine the results and return as a single array.
     followeds.
-      filter_map {|followed| followed.code_review_group&.followers&.pluck(:student_user_id)}.
+      map {|followed| followed.code_review_group&.followers&.pluck(:student_user_id)}.
+      compact.
       flatten.
       select {|user_id| user_id != student.id}
   end

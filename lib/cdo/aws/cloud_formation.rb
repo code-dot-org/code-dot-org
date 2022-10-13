@@ -181,7 +181,7 @@ module AWS
       params = YAML.load(template)['Parameters']
       # rubocop:enable Security/YAMLLoad
       return [] unless params
-      params.filter_map do |key, properties|
+      params.map do |key, properties|
         value = CDO[key.underscore] || ENV[key.underscore.upcase]
         param = {parameter_key: key}
         if value
@@ -198,7 +198,7 @@ module AWS
             HighLine.new.ask("Enter value for Parameter #{key}:", String)
         end
         param
-      end
+      end.compact
     end
 
     def base_options
