@@ -29,9 +29,9 @@ CSV.open('ap-school-code-map.csv', 'w') do |csv|
   csv << %w(ap_school_code ap_school_name nces_school_id nces_school_name)
 
   School.find_each do |school|
-    address = %w(address_line1 address_line2 address_line3 city state zip).map do |col|
+    address = %w(address_line1 address_line2 address_line3 city state zip).filter_map do |col|
       school.attributes[col].presence
-    end.compact.join(', ').upcase
+    end.join(', ').upcase
 
     if address
       CDO.log.info "Processing school id: #{school.id} with address: \"#{address}\""

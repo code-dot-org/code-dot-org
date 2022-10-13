@@ -631,13 +631,13 @@ class Lesson < ApplicationRecord
   def update_objectives(objectives)
     return unless objectives
 
-    self.objectives = objectives.map do |objective|
+    self.objectives = objectives.filter_map do |objective|
       next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end.compact
+    end
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
