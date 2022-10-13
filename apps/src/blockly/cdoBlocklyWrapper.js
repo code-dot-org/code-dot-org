@@ -157,10 +157,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.blockSpaceEditor.getSVGElement().parentNode;
   };
 
-  blocklyWrapper.getFieldForInputType = function(type) {
-    return blocklyWrapper.FieldTextInput;
-  };
-
   blocklyWrapper.getGenerator = function() {
     return blocklyWrapper.Generator.get('JavaScript');
   };
