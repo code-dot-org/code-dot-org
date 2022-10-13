@@ -7,6 +7,7 @@ module ScriptConstants
   TWENTY_FOURTEEN_NAME = 'events'.freeze
   JIGSAW_NAME = 'jigsaw'.freeze
   ACCELERATED_NAME = 'accelerated'.freeze
+  ALGEBRA_NAME = 'algebra'.freeze
 
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
@@ -126,11 +127,6 @@ module ScriptConstants
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
-    ],
-    math: [
-      ALGEBRA_NAME = 'algebra'.freeze,
-      ALGEBRA_A_NAME = 'AlgebraA'.freeze,
-      ALGEBRA_B_NAME = 'AlgebraB'.freeze,
     ],
     csd_2022: [
       CSD1_2022_NAME = 'csd1-2022'.freeze,
