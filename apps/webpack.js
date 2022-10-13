@@ -18,6 +18,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'johnny-five'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
