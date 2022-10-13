@@ -50,9 +50,6 @@ Scenario: Teacher starts a new application and submits it
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
-  And I press keys "50" for element "input#csHowManyMinutes"
-  And I press keys "5" for element "input#csHowManyDaysPerWeek"
-  And I press keys "40" for element "input#csHowManyWeeksPerYear"
   And I press the first "input[name='planToTeach']" element
   And I press the first "input[name='replaceExisting']" element
   Then I wait until element "input[name='replaceWhichCourse']" is visible
@@ -184,9 +181,6 @@ Scenario: Teacher saves, re-opens, and submits an application
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
-  And I press keys "50" for element "input#csHowManyMinutes"
-  And I press keys "5" for element "input#csHowManyDaysPerWeek"
-  And I press keys "40" for element "input#csHowManyWeeksPerYear"
   And I press the first "input[name='planToTeach']" element
   And I press the first "input[name='replaceExisting']" element
   Then I wait until element "input[name='replaceWhichCourse']" is visible
