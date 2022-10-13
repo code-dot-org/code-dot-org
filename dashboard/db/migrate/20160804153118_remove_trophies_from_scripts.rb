@@ -2,7 +2,7 @@ class RemoveTrophiesFromScripts < ActiveRecord::Migration[4.2]
   def change
     reversible do |dir|
       dir.down do
-        Unit.find_by_name('20-hour').update(trophies: true)
+        Script.find_by_name('20-hour').update(trophies: true)
       end
     end
 
