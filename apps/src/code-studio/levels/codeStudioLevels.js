@@ -167,8 +167,8 @@ export function resetContainedLevel() {
       `Expected exactly one contained level. Got ${levelIds.length}`
     );
   }
-  getAuthenticityToken().then(() => {
-    fetch('/delete_predict_level_progress', {
+  return getAuthenticityToken().then(() => {
+    return fetch('/delete_predict_level_progress', {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
@@ -176,14 +176,16 @@ export function resetContainedLevel() {
         'X-CSRF-Token': authenticityToken
       },
       body: JSON.stringify({
-        script_id: appOptions.scriptId,
+        script_id: appOptions.serverScriptId,
         level_id: levelIds[0]
       })
     }).then(response => {
       if (response.ok) {
         getLevel(levelIds[0]).resetAnswers();
+        const runButton = $('#runButton');
+        runButton.prop('disabled', true);
       } else {
-        console.log(response);
+        throw `Error resetting answer with status code ${response.status}`;
       }
     });
   });

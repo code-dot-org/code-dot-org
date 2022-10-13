@@ -220,7 +220,7 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.blank?
+    professional_learning_course.present?
   end
 
   def generate_plc_objects
@@ -1355,6 +1355,9 @@ class Script < ApplicationRecord
   end
 
   def write_script_json
+    # make sure we only write script json in the levelbuilder environment.
+    return unless Rails.application.config.levelbuilder_mode
+
     filepath = Script.script_json_filepath(name)
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
@@ -1523,7 +1526,7 @@ class Script < ApplicationRecord
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
-      announcements: announcements,
+      announcements: localized_announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
@@ -1614,7 +1617,7 @@ class Script < ApplicationRecord
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
-    hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
+    hidden_section_ids.index_with([id])
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
@@ -1644,9 +1647,9 @@ class Script < ApplicationRecord
   def summarize_i18n_for_copy(new_name, new_course_version)
     resource_markdown_replacement_proc = proc {|r| "[r #{Services::GloballyUniqueIdentifiers.build_resource_key(r.copy_to_course_version(new_course_version))}]"}
     vocab_markdown_replacement_proc = proc {|v| "[v #{Services::GloballyUniqueIdentifiers.build_vocab_key(v.copy_to_course_version(new_course_version))}]"}
-    data = %w(title description student_description description_short description_audience).map do |key|
-      [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
-    end.to_h
+    data = %w(title description student_description description_short description_audience).index_with do |key|
+      I18n.t("data.script.name.#{name}.#{key}", default: '')
+    end
     Services::MarkdownPreprocessor.sub_resource_links!(data['description'], resource_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description'], vocab_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_resource_links!(data['student_description'], resource_markdown_replacement_proc) if data['student_description']
@@ -1729,6 +1732,30 @@ class Script < ApplicationRecord
 
   def localized_student_description
     I18n.t "data.script.name.#{name}.student_description"
+  end
+
+  def localized_announcements
+    return announcements if announcements.nil?
+    announcements.deep_dup.each do |announcement|
+      announcement['notice'] = I18n.t(
+        "notice",
+        default: announcement['notice'],
+        scope: [:data, :script_announcements, announcement['key']],
+        smart: true
+      )
+      announcement['details'] = I18n.t(
+        "details",
+        default: announcement['details'],
+        scope: [:data, :script_announcements, announcement['key']],
+        smart: true
+      )
+      announcement['buttonText'] = I18n.t(
+        "buttonText",
+        default: announcement['buttonText'],
+        scope: [:data, :script_announcements, announcement['key']],
+        smart: true
+      )
+    end
   end
 
   def disable_post_milestone?
@@ -1946,7 +1973,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !get_pilot_experiment.blank?
+    get_pilot_experiment.present?
   end
 
   def has_pilot_access?(user = nil)

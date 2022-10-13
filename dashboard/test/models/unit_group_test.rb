@@ -315,8 +315,6 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "set pilot experiment to nil for new UnitGroupUnits" do
-      File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/scripts_json/unit1.script_json"}.once
-
       unit_group = create :unit_group
 
       unit1 = create(:script, name: 'unit1', published_state: 'pilot', pilot_experiment: 'unit-going-to-unit-group-pilot')

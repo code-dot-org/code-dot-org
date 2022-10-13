@@ -380,6 +380,7 @@ ta:
       about: "பற்றி"
       legal: "தனியுரிமை & சட்டம்"
       legal_privacy: "தனியுரிமை கொள்கை"
+      legal_cookie_notice: "குக்கீ அறிவிப்பு"
       legal_tos: "சேவையின் விதிமுறைகள்"
     user:
       classroom: 'ஆசிரியர் முகப்பு பக்கம்'
@@ -551,6 +552,7 @@ ta:
     choose_next_course: "கீழே உள்ள ஒன்றைத் தேர்ந்தெடுத்து கோட் ஸ்டுடியோ பாடத்திட்டத்தை முயற்சிக்கவும்"
     print_certificate: "சான்றிதழை பிரிண்ட் செய்யவும்"
   certificate_sponsor_message: "%{sponsor_name}உங்கள் கற்றலுக்கு நிதியுதவி செய்ய தாராளமான பரிசை வழங்கியது."
+  certificate_hour_of_code: "நிரல்வரி நேரம்"
   move_students:
     new_section_dne: "மன்னிக்கவும், பிரிவு %{new_section_code} இல்லை. வேறு பிரிவுக் குறியீட்டை உள்ளிடவும்."
     section_code_cant_be_current_section: "தற்போதைய பிரிவு புதிய பிரிவாக இருக்க முடியாது."
@@ -1143,3 +1145,10 @@ ta:
   unit_prefix: "அலகு %{n}"
   code_org_logo_alt: "Code.org முகப்பு"
   teacher_feedback: "ஆசிரியர் கருத்து"
+  lesson_lock:
+    error:
+      no_updates: "செயல்படுத்த புதுப்பிப்புகள் இல்லை"
+      missing_params: "பயனர், நிலை மற்றும் யூனிட் ஐடிகளை வழங்க வேண்டும்"
+      cannot_view_locked_answers: "பூட்டப்பட்டிருக்கும் போது பதில்களைப் பார்க்க முடியாது"
+      forbidden: "மாணவர் பூட்டக்கூடிய நிலையைப் பயனர் புதுப்பிக்க முடியாது"
+  reset_predict_progress_button: "பதிலை நீக்கு"

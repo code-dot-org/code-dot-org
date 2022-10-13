@@ -2,11 +2,11 @@
 title: Partner
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Hour of Code e gestito dal Comitato di Revisione Hour of Code.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Il [Comitato di revisione]({{ urls/review_committee }}) e composto da 12 educatori presenti e passati tra i bandi di grado K-12 che svolgono e consigliano attività utilizzando una rubrica stabilità da un comitato consultivo. Questi educatori valutano le attività autogestite dagli studenti e i programmi delle lezioni condotte dagli insegnanti inseriti da centinaia di partner, valutandone il valore educativo, la capacità di coinvolgere gli studenti e l'attrattiva per differenti fasce di età.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Il lavoro e la dedizione del Comitato hanno contribuito al successo di Hour of Code, offrendo un'introduzione d'informatica per ogni studente.
 
 # Principali Partner e Aziende Sostenitrici
 

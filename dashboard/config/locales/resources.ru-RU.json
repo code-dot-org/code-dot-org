@@ -728,7 +728,17 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "Изменения виртуального урока"
+          "name": "Изменения виртуального урока",
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
+        },
+        "all_resources/courseb/2022": {
+          "url": "/s/courseb-2022/resources"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/s/courseb-2022/standards"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/courseb-2022/vocab"
         },
         "unplugged_maze_blocks/express/2022": {
           "name": "Офлайн-занятие: блоки в игре \"Лабиринт\"",
@@ -764,10 +774,6 @@
         "swimming_fish_teacher_sandbox/express/2022": {
           "name": "«Песочница для учителя» — Плавающая рыбка",
           "url": "https://studio.code.org/levels/18623"
-        },
-        "making_sprites/express/2022": {
-          "name": "Создание спрайтов",
-          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprites_in_action/express/2022": {
           "name": "Спрайты в действии",
@@ -858,6 +864,15 @@
         "teacher_forum/pre-express/2022": {
           "name": "Форум учителей",
           "url": "https://forum.code.org/c/csf/"
+        },
+        "all_resources/pre-express/2022": {
+          "url": "/s/pre-express-2022/resources"
+        },
+        "all_standards/pre-express/2022": {
+          "url": "/s/pre-express-2022/standards"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "url": "/s/pre-express-2022/vocab"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Безопасность в моем интернет-окружении: Слайды урока",
@@ -1019,7 +1034,17 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "Изменения виртуального урока"
+          "name": "Изменения виртуального урока",
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
+        },
+        "all_resources/coursea/2022": {
+          "url": "/s/coursea-2022/resources"
+        },
+        "all_standards/coursea/2022": {
+          "url": "/s/coursea-2022/standards"
+        },
+        "all_vocabulary/coursea/2022": {
+          "url": "/s/coursea-2022/vocab"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Стоп грубости в Интернете: Слайды урока",
@@ -1231,6 +1256,7 @@
           "type": "Видео"
         },
         "video_impact_on_society/csd/2022": {
+          "name": "Видео: Влияние на Общество",
           "type": "Видео"
         },
         "video_machine_learning/csd/2022": {
@@ -1239,6 +1265,7 @@
           "type": "Видео"
         },
         "video_training_data_and_bias/csd/2022": {
+          "name": "Видео: Обучающие Данные и Предвзятость",
           "type": "Видео"
         },
         "make_a_recommendation/csd/2022": {
@@ -1336,7 +1363,11 @@
           "type": "Видео"
         },
         "sprite_movement/csd/2022": {
+          "name": "Движение Спрайтов",
           "type": "Видео"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "Движение Спрайтов"
         },
         "animated_scene/csd/2022": {
           "type": "Рубрика"
@@ -1447,6 +1478,7 @@
           "name": "Заголовки и параграфы"
         },
         "video_debugging/csd/2022": {
+          "name": "Видео: Отладка",
           "type": "Видео"
         },
         "video_pair_programming/csd/2022": {
@@ -1473,6 +1505,12 @@
         },
         "digital_footprint/csd/2022": {
           "name": "Цифровое присутствие"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Социальный Сыщик"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Социальный Сыщик"
         },
         "intro_to_css_-_part_1/csd/2022": {
           "name": "Введение в CSS - Часть 1",
@@ -1517,12 +1555,15 @@
           "type": "Видео"
         },
         "video_managing_disagreement/csd/2022": {
+          "name": "Видео: Управление Противоречиями",
           "type": "Видео"
         },
         "video_teamwork/csd/2022": {
+          "name": "Видео: Коллективная работа",
           "type": "Видео"
         },
         "video_how_search_works/csd/2022": {
+          "name": "Видео: Как Работает Поиск",
           "type": "Видео"
         },
         "css_classes/csd/2022": {
@@ -1569,6 +1610,12 @@
         },
         "importing_screens/csd/2022": {
           "name": "Импорт экранов"
+        },
+        "updating_your_prototype/csd/2022": {
+          "name": "Обновление Вашего Прототипа"
+        },
+        "updating_your_prototype_1/csd/2022": {
+          "name": "Обновление Вашего Прототипа"
         },
         "app_presentation/csd/2022": {
           "type": "Рубрика"
@@ -1662,6 +1709,7 @@
           "type": "Видео"
         },
         "seeing_ai/csd/2022": {
+          "name": "Зрячий ИИ",
           "type": "Видео"
         },
         "finding_patterns_in_data/csd/2022": {
@@ -1690,7 +1738,14 @@
         "if-statements_in_app_lab/csd/2022": {
           "type": "Видео"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Числовые данные в ИИ лаборатории"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Числовые данные в ИИ лаборатории"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Числовые данные в ИИ лаборатории",
           "type": "Видео"
         },
         "ai_ethics_research_reflection/csd/2022": {
@@ -3466,6 +3521,7 @@
           "type": "Видео"
         },
         "seeing_ai/csd/2021": {
+          "name": "Зрячий ИИ",
           "type": "Видео"
         },
         "finding_patterns_in_data/csd/2021": {
@@ -3494,7 +3550,14 @@
         "if-statements_in_app_lab/csd/2021": {
           "type": "Видео"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Числовые данные в ИИ лаборатории"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Числовые данные в ИИ лаборатории"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Числовые данные в ИИ лаборатории",
           "type": "Видео"
         },
         "ai_ethics_research_reflection/csd/2021": {
@@ -3541,6 +3604,9 @@
         },
         "importing_screens/csd/2021": {
           "name": "Импорт экранов"
+        },
+        "updating-your-prototype/csd/2021": {
+          "name": "Обновление Вашего Прототипа"
         },
         "app-presentation/csd/2021": {
           "type": "Рубрика"
@@ -3635,6 +3701,7 @@
           "type": "Видео"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Видео: Влияние на Общество",
           "type": "Видео"
         },
         "video_machine_learning/csd/2021": {
@@ -3643,6 +3710,7 @@
           "type": "Видео"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Видео: Обучающие Данные и Предвзятость",
           "type": "Видео"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
@@ -3695,6 +3763,7 @@
           "type": "Видео"
         },
         "animating-sprites/csd/2021": {
+          "name": "Движение Спрайтов",
           "type": "Видео"
         },
         "animated-scene-1/csd/2021": {
@@ -3816,6 +3885,7 @@
           "name": "Заголовки и параграфы"
         },
         "video_debugging/csd/2021": {
+          "name": "Видео: Отладка",
           "type": "Видео"
         },
         "html-web-page-1/csd/2021": {
@@ -3835,6 +3905,12 @@
         },
         "digital-footprint/csd/2021": {
           "name": "Цифровое присутствие"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Социальный Сыщик"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Социальный Сыщик"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Введение в CSS - Часть 1",
@@ -3879,12 +3955,15 @@
           "type": "Видео"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Видео: Управление Противоречиями",
           "type": "Видео"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Видео: Коллективная работа",
           "type": "Видео"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Видео: Как Работает Поиск",
           "type": "Видео"
         },
         "website-for-a-purpose-1/csd/2021": {

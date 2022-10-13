@@ -883,6 +883,8 @@ fa:
               description: آزمایش
         spelling-bee:
           title: زنبور عسل هجی کن
+        ai-ethics-2021:
+          description_audience: رده سنی ۶-۱۲
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -983,3 +985,7 @@ fa:
               display_name: متغیرها
         soccer:
           name: فوتبال
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: حلقه‌ها

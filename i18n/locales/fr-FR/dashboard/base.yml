@@ -378,6 +378,7 @@ fr:
       about: "À propos"
       legal: "Confidentialité et mentions légales"
       legal_privacy: "Politique de confidentialité"
+      legal_cookie_notice: " Utilisation de cookies"
       legal_tos: "Conditions Générales d'Utilisation"
     user:
       classroom: 'Page d''accueil de l''enseignant'
@@ -553,6 +554,7 @@ fr:
     choose_next_course: "Essaye un cours Code Studio en le choisissant ci-dessous"
     print_certificate: "Imprimer le certificat"
   certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer ton apprentissage."
+  certificate_hour_of_code: "Heure de Code"
   move_students:
     new_section_dne: "Désolé, la section %{new_section_code} n’existe pas. Veuillez saisir un code de section différent."
     section_code_cant_be_current_section: "La section courante ne peut pas être identique à la nouvelle section."
@@ -1151,3 +1153,10 @@ fr:
   unit_prefix: "Unité %{n}"
   code_org_logo_alt: "Accueil Code.org"
   teacher_feedback: "FeedBack enseignants"
+  lesson_lock:
+    error:
+      no_updates: "Aucune mise à jour à effectuer"
+      missing_params: "Fournir les identifiants de l'utilisateur, le niveau et les codes d'identification d'unité."
+      cannot_view_locked_answers: "Impossible d'afficher les réponses lorsque le système est verrouillé"
+      forbidden: "L'utilisateur ne peut pas modifier les paramètres de verrouillage de l'apprenant"
+  reset_predict_progress_button: "Supprimer la réponse"

@@ -469,7 +469,7 @@ ru-RU:
         - text: Какие блоки решают головоломку?
         title: Лабиринт. Вопрос с несколькими вариантами ответа
       Begin planning your project:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Процесс разработки\nРазработка программного обеспечения означает
           постоянное решение множества мелких проблем. Главная проблема разработки
           программ – сначала решить, что создавать.\n\nЭтот процесс полезен при работе
@@ -508,7 +508,7 @@ ru-RU:
           поможет улучшить твои проекты\n1. **Презентация**\n * Демонстрация твоего
           конечного продукта!\n"
       Begin planning your project_2018:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Процесс разработки\nРазработка программного обеспечения означает
           постоянное решение множества мелких проблем. Главная проблема разработки
           программ – сначала решить, что создавать.\n\nЭтот процесс полезен при работе
@@ -547,7 +547,7 @@ ru-RU:
           поможет улучшить твои проекты\n1. **Презентация**\n * Демонстрация твоего
           конечного продукта!\n"
       Begin planning your project_2018_2019:
-        content1: описание здесь
+        content1: пояснение
         markdown: |+
           # Примеры проектов
 
@@ -559,7 +559,7 @@ ru-RU:
           | Попробуй добавить к этой игре звуки! | Попробуй добавить к этой истории еще одну сцену! |
 
       Begin planning your project_2018_2019_2020:
-        content1: описание здесь
+        content1: пояснение
         markdown: |+
           # Примеры проектов
 
@@ -668,6 +668,9 @@ ru-RU:
           ## Ресурсы
 
           * [Ввод и Вывод - Руководство](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: "[Ввод и вывод - Образец](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - Рабочее Руководство ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))\n\n"
       CSD U1 Lesson 6 Overview:
         markdown: |
           # Обзор
@@ -681,6 +684,9 @@ ru-RU:
           ## Ресурсы
 
           * [Алгоритм Сортировки Карт - Руководство](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+        teacher_markdown: "* [Алгоритм Сортировки Карточек](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Образец ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))\n"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Обзор
@@ -690,6 +696,9 @@ ru-RU:
           ## Ресурсы
 
           * [Хранение и Обработка - Руководство](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Хранение и Обработка - Образец](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Рабочее Руководство ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))\n"
       CSD U1 Lesson 8 Overview:
         markdown: |
           # Обзор
@@ -699,6 +708,9 @@ ru-RU:
           ## Ресурсы
 
           * [Исследование Приложений - Руководство](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+        teacher_markdown: "* [КЛЮЧ к Исследованию Приложения](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Рабочее Руководство ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)\n"
       CSD U1 Lesson 9 Overview:
         markdown: |
           # Обзор
@@ -710,16 +722,35 @@ ru-RU:
           * [Приложения и Решение Проблем - Руководство](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Приложения и Решение Проблем - Экспертная Оценка](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Приложения и Решение Проблем - Рубрика](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+        teacher_markdown: |+
+          * [Приложения и Решение Проблемы](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Образец Руководства по Проекту ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Приложения и Решение Проблемы](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Образец Экспертной Оценки ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+
+
       CSD U2 Design Project:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 Design Project_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 Design Project_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 L1 Overview:
-        content1: описание здесь
+        content1: пояснение
+        markdown: |
+          # Обзор
+
+          В этом уроке рассматриваются задачи, которые могут решать веб-сайты, как для пользователей, так и для создателей. На занятии рассматриваются несколько наиболее часто используемых веб-сайтов в Соединенных Штатах и обсуждается, насколько каждый из этих сайтов полезен для посетителей и как он работает на своих создателей.
+          ## Словарь
+
+          * **Веб-сайт** - Место расположения содержимого сервера, подключенного к Интернету, который поддерживает одну или несколько логически связанных между собой веб-страниц во Всемирной паутине.
+
+
+          ## Ресурсы
+
+          * [Назначение Веб-сайтов - Рабочее Руководство](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Назначение Веб-сайтов - Образец](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Обзор
 
@@ -732,8 +763,11 @@ ru-RU:
           ## Ресурсы
 
           * [Личный Набросок Сайта - Руководство](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+        teacher_markdown: "* [Эскиз Персонального Веб-Сайта](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Образец ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Обзор
 
@@ -754,7 +788,7 @@ ru-RU:
           * **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
           * **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
-        content1: описание здесь
+        content1: пояснение
         markdown: |+
           # Обзор
 
@@ -768,11 +802,55 @@ ru-RU:
           *  **[Heading](//docs.code.org/weblab/h/)** - `<h1></h1>`
 
       CSD U2 L5 Overview:
-        content1: описание здесь
+        content1: пояснение
+        markdown: |
+          # Обзор
+
+          Этот урок на шаг отходит от создания персонального веб-сайта, чтобы рассказать о личной информации, которой люди предпочитают делиться в цифровом виде. Урок начинается с обсуждения того, какими типами информации полезно делиться с другими людьми, затем рассматриваются несколько примеров страниц в социальных сетях, чтобы увидеть, какими типами личной информации можно делиться намеренно или непреднамеренно. Наконец, класс вырабатывает набор рекомендаций, которым следует следовать при размещении информации в Интернете.
+          ## Словарь
+
+          * **Цифровой След** - Собранная информация о физическом лице на нескольких веб-сайтах в Интернете.
+
+
+          ## Ресурсы
+
+          * [Когда Ваша Конфиденциальность Имеет Значение? - Рабочее Руководство](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Социальный Детектив - Рабочее Руководство](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |+
+          * [Когда Ваша Конфиденциальность Имеет Значение?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Образец Рабочего Руководства ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Социальный Детектив](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Рабочее Руководство ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
       CSD U2 L6 Overview:
-        content1: описание здесь
+        content1: пояснение
+        markdown: |+
+          # Обзор
+
+          В этом уроке представлены упорядоченные и неупорядоченные списки и связанные с ними HTML-теги:  &lt;ul&gt;, &lt;ol&gt;, и &lt;li&gt; .  Класс попрактикуется в использовании тегов, затем вернется к проекту персональной веб-страницы, чтобы добавить новую HTML-страницу, включающую новые теги.
+
+          ## Введенный Код
+
+
+          *  **[Неупорядоченный Список](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          *  **[Элемент Списка](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          *  **[Упорядоченный Список](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+
       CSD U2 Lesson 6 Overview:
-        content1: описание здесь
+        content1: пояснение
+        markdown: |
+          # Обзор
+
+          В этом уроке будут рассмотрены общие проблемы, возникающие при проектировании веб-страниц в HTML. На занятии нужно будет исправить ошибки в коде более сложных веб-страниц, найденных в Code Studio, и изучить важность комментариев, пробелов и отступов как инструментов, облегчающих чтение веб-страниц.
+          ## Словарь
+
+          * **Баг** - Часть программы, которая работает неправильно.
+          * **Комментарий** - Комментарий - это читаемая программистом заметка в исходном коде компьютерной программы.
+          * **Отладка** - Поиск и устранение проблем в алгоритме или программе.
+          * **Отступ** - Размещение текста дальше вправо или влево, чтобы отделить его от окружающего текста, который помогает передать структуру программы.
+          * **Пробел** - Пробел относится к любому символу, который отображается на экране в виде пустого места, например, пробельного символа, табуляции или новой строки. Пробелы помогают разделить различные части документа, чтобы облегчить его чтение.
+
+          ## Введенный Код
+
+          *  **[Comment](//studio.code.org/docs/weblab/comment/)** - `<!-- -->`
       CSD U2 Top Websites:
         markdown: |
           # Топ сайтов в США
@@ -787,11 +865,11 @@ ru-RU:
           5. Yahoo.com - Поисковая система, провайдер электронной почты и новостная страница
           6. Wikipedia.org - Бесплатная энциклопедия с контентом, созданным пользователями
       CSD U2 expand project:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 expand project_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 expand project_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 image debug match:
         answers:
         - {}
@@ -845,11 +923,11 @@ ru-RU:
         - {}
         - {}
       CSD U2 project guide:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 project guide_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U2 project guide_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -917,9 +995,9 @@ ru-RU:
         - {}
         title: название
       CSD U3 Card Examples_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 Card Examples_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1014,11 +1092,11 @@ ru-RU:
         questions:
         - {}
       CSD U3 combining rep:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 combining rep_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 combining rep_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 drawSprites placement match:
         answers:
         - {}
@@ -1042,55 +1120,55 @@ ru-RU:
         - {}
         - {}
       CSD U3 game intro:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 game intro_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 game intro_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 platform intro:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 platform intro_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 platform intro_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 Encryption 1:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 Encryption 1_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 Encryption 1_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 Encryption 2:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 Encryption 2_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 Encryption 2_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 L13 SFLP Interpreting Data:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 crosstab warmup:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 crosstab warmup_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 crosstab warmup_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 data visualization:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 data visualization_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 data visualization_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 student record:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 student record_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U5 student record_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 LED create intro:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 LED create intro_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 LED create intro_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 array multi:
         answers:
         - {}
@@ -1116,11 +1194,11 @@ ru-RU:
         questions:
         - {}
       CSD U6 final intro:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 final intro_2018:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 final intro_2018_2019:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -1354,7 +1432,7 @@ ru-RU:
 
            Создай алгоритм, чтобы провести персонажа через лабиринт.
       Internet Simulator Setup:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Интернет-симулятор Code.org\n\nПримечание: инструкции, приведенные
           в настоящем руководстве, предназначены для учителей, желающих использовать
           Интернет-симулятор в качестве самостоятельного инструмента отдельно от учебной
@@ -1420,7 +1498,7 @@ ru-RU:
           width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\nДалее:
           Инструкции по настройке_\n\n\n"
       Internet Simulator Setup 2:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Интернет-симулятор: инструкции по настройке\n\n1. **Создайте
           раздел в Code Studio.** Чтобы ученики вашего класса могли общаться друг
           с другом, все они должны быть связаны с одним и тем же разделом в Code Studio.
@@ -1440,7 +1518,7 @@ ru-RU:
           смогут установить связь друг с другом, когда зайдут по одному и тому же
           URL-адресу.  \n\nДалее: Часто задаваемые вопросы_\n\n\n\n"
       Internet Simulator Setup 3:
-        content1: описание здесь
+        content1: пояснение
         markdown: |+
           # Интернет-симулятор: Часто задаваемые вопросы
 
@@ -1683,30 +1761,33 @@ ru-RU:
         - text: Какое слово записано?
         title: Вопрос с несколькими вариантами ответа
       Multi-Screen Apps:
-        content1: описание здесь
+        content1: пояснение
       New Challenge Introduction:
-        content1: описание здесь
-        markdown: "### Новая задача: взломать случайный шифр подстановки...с новым
-          виджетом\n\nЧто, если вместо того, чтобы переместить весь алфавит, мы сопоставили
-          каждую букву алфавита случайной другой букве алфавита? Это называется **шифром
-          случайной подстановки**.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nТеперь
-          вместо того, чтобы секретное сообщение было закодировано простым алфавитным
-          сдвигом, вы столкнетесь с сообщениями, закодированными **случайной подстановкой**.\n\nЭто
-          гораздо труднее взломать и требует более сложного инструмента, так что...\n\nКогда
-          вы нажмете кнопку Продолжить, вы увидите **новую, более сложную версию инструмента
-          шифрования**, которая показывает вам много разных вещей.\n\nНо что он делает-это
-          немного загадка!\n### Ваша задача:\n \n* Выясните, что происходит в этой
-          новой версии инструмента\n* Какая информация представляется вам?\n* Выясните,
-          что инструмент позволяет вам делать\n* Как обычно: вы не можете сломать
-          его.  Так что нажимайте на вещи, копайтесь.\n* Если вы поймете это, вы можете
-          взломать сообщение, закодированное со случайной подстановкой.\n\n### Интересный
-          факт\n\nЗнаете ли вы, что **E** является наиболее распространенной буквой,
-          используемой в английском языке?\n\n### Собраться и обсудить\nЧерез некоторое
-          время, играя с ним, вы должны собраться вместе с кем-то :партнером, небольшой
-          группой, целым классом, чтобы обсудить то, что вы нашли, и проверить, что
-          вы знаете, что происходит, и различные способы использования инструмента.\n\n\n"
+        content1: пояснение
+        markdown: "### Новая задача: взломать шифр случайной подстановки...с новым
+          виджетом\n\nЕсли, вместо того, чтобы перемещать весь алфавит, сопоставить
+          каждой букве алфавита другую случайную букву алфавита, получится **шифр
+          случайной подстановки**.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440_Rus.gif
+          ->\nА Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я\nК
+          У Ц Й А В Ы Ф М С Ч Я Ё Ш Г Н Е Л О Р П Б Ь Т И Ъ Ж Ю Х Д З Щ Э)\n\nТеперь
+          секретная информация будет закодирована не простым алфавитным сдвигом, а
+          методом **случайной подстановкой**.\n\n\nТакой шифр гораздо труднее взломать.
+          Для взлома потребуется более сложный инструмент, и так...\n\nКогда вы нажмете
+          кнопку Продолжить, вы увидите **новую, более сложную версию инструмента
+          шифрования**, которая даст вам больше возможностей.\n\nКакие возможности
+          дает инструмент - это пока что секрет!\n\n### Ваша задача:\n \n* Выясните,
+          как работает эта новая версия инструмента\n* Какая информация вам предоставлена?\n*
+          Выясните, что можно делать с помощью инструмента\n* Как обычно: вы не сможете
+          ничего испортить, так что нажимайте на что хотите, копайтесь.\n* Если вы
+          разберетесь, то сможете взломать сообщение, зашированное случайной подстановкой.\n\n###
+          Интересные факты\n\nНаиболее распространенной буквой в английском языке
+          является **E**. В русском языке чаще всего встречается буква **О**.\n\n###
+          Соберитесь и обсудите\nЧерез некоторое время игры с этим инструментом, соберитесь
+          вместе с кем-нибудь: партнером, небольшой группой, всем классом, чтобы обсудить
+          то, что вы нашли, и проверить, что вы знаете, что можно делать, и какие
+          имеются способы использования инструмента.\n\n\n"
       OPD-K5 Reviewing Reflections:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Обзор: Анализ размышлений\n\nПоздравляем! Вы познакомились с
           основными концепциями программирования и получили возможность попрактиковаться
           в них. \n\nВ рамках этого урока, прежде чем перейти к следующим шагам, у
@@ -1715,7 +1796,7 @@ ru-RU:
           если захотите! \n\nЕсли вы не выполнили факультативный раздел по курсам
           E и F, вы можете пропустить эти уровни.\n"
       OPD-K5 Stage3aGo:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Выстраивание последовательности > Уроки без компьютера\n\nКак
           мы уже говорили ранее, нам нравится вводить темы по информатике с помощью
           уроков без компьютера. Затем мы используем промежуточные занятия, чтобы
@@ -1760,7 +1841,7 @@ ru-RU:
           перейти к следующему этапу.\n\nНа следующем этапе мы усложним наши программы
           за счет добавления циклов.\n"
       OPD-K5 Stage3aGo_copy:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Урок без компьютера: «Весёлые карты»\n\nНам нравится вводить
           темы по информатике на уроках без компьютера. Затем мы используем промежуточные
           занятия, чтобы позже перейти к онлайн-урокам. Начиная с таких уроков без
@@ -1788,7 +1869,7 @@ ru-RU:
           target=\"blank\" rel=\"noopener noreferrer\">![](https://images.code.org/8871ce7afb8fa81eb805d4640e1b9a95-image-1573079151706.25.15
           PM.png)</a>\n"
       OPD-K5 conditionals introduced:
-        content1: описание здесь
+        content1: пояснение
         markdown: |-
           # Условные операторы: Где они вводятся?
 
@@ -1808,7 +1889,7 @@ ru-RU:
           - Урок 3: Условные операторы в игре Minecraft: Водное путешествие
           - Урок 4: Условные операторы со Сборщицей урожая
       OPD-K5 debugging:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Практика преподавания: отладка\n\nУ всех бывают ошибки! Поэтому
           отладка — это важный навык, который должны развивать все учащиеся, опираясь
           на практику, рассмотренную выше. Не обладая сильными навыками отладки, учащиеся
@@ -1835,7 +1916,7 @@ ru-RU:
           noreferrer\">![](https://images.code.org/281fbcbd84d0df2491e0c4050e612b97-image-1571696135948.13.58
           PM.png)</a>\n"
       OPD-K5 diving deeper intro:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Погружаемся глубже: Курсы E и F\n\n## Вы преподаете курсы E и
           F? \n\nКурсы E и F предназначены для 4 и 5 классов. В рамках этих курсов
           мы углубляемся в некоторые понятия и вводим новые среды программирования.
@@ -1848,7 +1929,7 @@ ru-RU:
           новая среда программирования под названием «Лаборатория спрайтов»\n- Проекты
           по окончании курса\n\n\n"
       OPD-K5 events introduced:
-        content1: описание здесь
+        content1: пояснение
         markdown: |-
           # События: Где они вводятся?
 
@@ -1871,7 +1952,7 @@ ru-RU:
           - Урок 5: События отскока
           - Урок 6: Создайте игру на тему «Звездных войн»
       OPD-K5 for loops:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Урок без компьютера: Игры с циклами «for»\n\n> **Цикл «for»**
           — это цикл с заранее определенным началом, концом и прибавляемой величиной
           (интервалом между шагами).\n*** \n## **1. Просмотрите \"<a href=\"https://curriculum.code.org/csf-19/coursef/11/\"
@@ -1885,7 +1966,7 @@ ru-RU:
           rel=\"noopener noreferrer\">![](https://images.code.org/73c0b6e95f2136d6ebcc03cbddee1be7-image-1573148733514.45.16
           AM.png)</a>\n"
       OPD-K5 for loops intro:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Обзор: Циклы «for»
 
@@ -1895,7 +1976,7 @@ ru-RU:
           - Усвойте, что цикл «for» — это цикл с заранее определенным началом, концом и прибавляемой величиной (интервалом между шагами)
           - Попрактикуйтесь в использовании циклов «for»
       OPD-K5 for loops introduction:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Циклы «for»: Где они вводятся?
 
@@ -1904,7 +1985,7 @@ ru-RU:
           - Урок 12: Циклы «for» с Пчелой
           - Урок 13: Циклы «for» с Художником
       OPD-K5 functions introduced:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Функции: Где они вводятся?
 
@@ -1919,7 +2000,7 @@ ru-RU:
           ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" rel="noopener noreferrer">Курс F</a>
           - Урок 1: Функции в Minecraft
       OPD-K5 journaling:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Практика преподавания: ведение журнала\n\n<img src=\"https://images.code.org/49264bf902a5804672133e723bee6e8b-image-1573170371197.42.28
           PM.png\" class=\"level-image\">\n\n## Для чего это нужно? \nКак химик ведет
           каталог методов и растворов, так и мы просим наших начинающих компьютерщиков
@@ -1937,7 +2018,7 @@ ru-RU:
           ответить письменно, чтобы проанализировать свои достижения за день\n\nВ
           планах уроков также есть наводящие вопросы для ведения журнала!\n\n"
       OPD-K5 lesson implementation planning:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Руководство по планированию проведения уроков\n\nЦель этих вопросов
           — помочь вам обдумать и составить подробный план того, как вы можете проводить
           уроки, используя передовые методы преподавания и помогая ученикам. Подумайте
@@ -1981,7 +2062,7 @@ ru-RU:
           с реальным миром/другими предметами, которые учащиеся изучают в школе? |
           |"
       OPD-K5 lesson plans:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Планы уроков\n\n## Где найти планы уроков?\nМожно посмотреть
           все планы уроков для всех курсов по основам информатики <a href=\"https://curriculum.code.org/csf-19/\"
           target=\"blank\" rel=\"noopener noreferrer\">здесь</a>.\n\n## Есть ли планы
@@ -1995,7 +2076,7 @@ ru-RU:
           target=\"blank\" rel=\"noopener noreferrer\">учебной программе</a> вы найдете
           массу дополнительной информации о планах уроков!"
       OPD-K5 loops introduced:
-        content1: описание здесь
+        content1: пояснение
         markdown: |-
           # Циклы: Где они вводятся?
 
@@ -2025,7 +2106,7 @@ ru-RU:
           - Урок 8: Рисование фигур с использованием циклов
           - Урок 9: Вложенные циклы в Лабиринте
       OPD-K5 project:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Обзор: Проекты по окончании курса\n\n<img src=\"https://images.code.org/0a5fca1b8c79ab8463d53ef7bde1a7a1-image-1573236230401.jpg\"
           class=\"level-image\">\n\n## Новая практика преподавания: проекты по окончании
           курса\n\n- Каждый курс предлагает учащимся возможность взять то, что они
@@ -2036,7 +2117,7 @@ ru-RU:
           изнутри. Эти пошаговые проекты обеспечивают структурированные рубрики, полезные
           для учащихся и учителя.\n\n"
       OPD-K5 projects introduction:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Проекты по окончании курса: Где они вводятся?
 
@@ -2058,7 +2139,7 @@ ru-RU:
           ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" rel="noopener noreferrer">Курс F</a>
           - Урок 20: Проект по окончании курса
       OPD-K5 role_of_teacher:
-        content1: описание здесь
+        content1: пояснение
         markdown: |-
           # Роль учителя
 
@@ -2072,7 +2153,7 @@ ru-RU:
 
           Подробнее о том, как стать «ведущим учеником», а также о других педагогических подходах к нашим ценностям вы можете прочитать в <a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#" target="blank" rel="noopener noreferrer">учебной программе</a>.
       OPD-K5 sequencing introduced:
-        content1: описание здесь
+        content1: пояснение
         markdown: |+
           # Выстраивание последовательности: Где оно вводится?
 
@@ -2108,7 +2189,7 @@ ru-RU:
           - Урок 1: Выстраивание последовательности в лабиринте
 
       OPD-K5 sprite lab:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Обзор: Лаборатория спрайтов
 
@@ -2121,7 +2202,7 @@ ru-RU:
 
           ![]()
       OPD-K5 sprite lab introduction:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Лаборатория спрайтов: Где она вводится?
 
@@ -2136,7 +2217,7 @@ ru-RU:
           - Урок 15: Модели поведения в Лаборатории спрайтов
           - Урок 16: Виртуальный питомец с Лабораторией спрайтов
       OPD-K5 sprite lab unplugged:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Урок без компьютера: Саймон говорит
 
@@ -2151,13 +2232,13 @@ ru-RU:
           ***
           <a href="https://curriculum.code.org/csf-19/coursee/5/" target="blank" rel="noopener noreferrer">![](https://images.code.org/991a82dba5edbd6c4909c540a1777041-image-1573149641437.00.20 Am.png)</a>
       OPD-K5 sprite lab video:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Представляем Лабораторию спрайтов\n\nПосмотрите это видео для
           ознакомления с Лабораторией спрайтов!  \n\n<a href=\"https://www.youtube.com/watch?v=l0B0gDuHHC8\"
           target=\"blank\" rel=\"noopener noreferrer\">![](https://images.code.org/929bd692b7029063aa9bf5835f6e6397-image-1571775211459.12.36
           PM.png)</a>\n"
       OPD-K5 types of lessons:
-        content1: описание здесь
+        content1: пояснение
         markdown: |-
           # Организация курсов по основам информатики
 
@@ -2183,7 +2264,7 @@ ru-RU:
           ## Проекты по окончании курса
           Каждый курс предлагает учащимся возможность взять то, что они изучили в конце урока, и объединить это в уникальный проект, представляющий их собственное творчество. Подробнее о них мы узнаем позже в рамках этого курса.
       OPD-K5 using lesson plans:
-        content1: описание здесь
+        content1: пояснение
         markdown: |-
           # Практика преподавания: Использование планов уроков
 
@@ -2195,7 +2276,7 @@ ru-RU:
 
           Планы уроков предоставляют возможность ввести понятия, предложить учащимся подумать о том, что они узнали, и поработать в сотрудничестве.
       OPD-K5 variables:
-        content1: описание здесь
+        content1: пояснение
         markdown: |+
           # Обзор: переменные
 
@@ -2207,7 +2288,7 @@ ru-RU:
           - Попрактикуйтесь в использовании переменных
 
       OPD-K5 variables introduction:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Переменные: Где они вводятся?
 
@@ -2217,7 +2298,7 @@ ru-RU:
           - Урок 8: Изменение переменных с «Пчёлкой»
           - Урок 9: Изменение переменных с «Художником»
       OPD-K5 variables unplugged:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Урок без компьютера: Конвертные переменные
 
@@ -2237,7 +2318,7 @@ ru-RU:
           ***
           <a href="https://curriculum.code.org/csf-20/coursef/7/" target="blank" rel="noopener noreferrer">![](https://images.code.org/ff686377c1ba9bcd153a01cbfb24af35-image-1573086630947.29.50 Pm.png)</a>
       OPD-K5 where to next:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Что дальше?
 
@@ -2249,7 +2330,7 @@ ru-RU:
           ## Если вы не планируете преподавать курсы E и F
           Если вы не планируете преподавать курсы E и F, вы можете перейти к <a href="https://studio.code.org/s/k5-onlinepd-2019/lessons/12/levels/1" target="blank" rel="noopener noreferrer">концептуальному блоку «Следующие шаги»</a>.
       OPD-K5-projects-1:
-        content1: описание здесь
+        content1: пояснение
         markdown: |-
           # Примеры проектов
 
@@ -2329,57 +2410,55 @@ ru-RU:
 
 
       Prepare for your presentation:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Презентации проектов
 
            Пришло время представить твои проекты! Твой учитель более подробно расскажет тебе, как ты будешь представлять свой проект одноклассникам.
       'Technique: Frequency Analysis':
-        content1: описание здесь
-        markdown: "# Взломать шифр случайной подстановки\n\nЛучший метод для взлома
-          случайного шифра подстановки известен как **частотный анализ**\n\nВзято
-          из: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n* Частотный
-          анализ-это метод, основанный на том, как часто некоторые буквы появляются
-          на английском языке по сравнению с другими.\n* Например, данный раздел английского
-          текста, *Е*, *Т*, *А* и *O* являются наиболее распространенными,  *Z*, *Q*
-          и *X* являются редкими. Аналогично, *TH*, * ER*, * ON* и *AN* являются наиболее
-          распространенными парами букв, которые встречаются рядом друг с другом.\n*На
-          самом деле, распределение букв примерно одинаково почти для всех образцов
-          английского текста.\n\n\nВерсия виджета на предыдущей странице предназначена
+        content1: пояснение
+        markdown: "# Взлом шифра случайной подстановки\n\nЛучший метод взлома шифра
+          случайной подстановки - **частотный анализ**\n\nВзято из: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Частотный анализ** - это метод, основанный на том, насколько *часто* одни
+          буквы по сравнению с другими встречаются в данном языке.\n* Например, буквы
+          английского текста, *E*, *T*, *A* и *O* являются наиболее распространенными,
+          \ *Z*, *Q* и *X* являются редкими. Пары букв, *TH*, *ER*, *ON* и *AN* являются
+          наиболее распространенными, которые встречаются рядом друг с другом.\n*
+          Фактически, распределение букв в данном языке примерно одинаково почти для
+          *всех* образцов текста.\n\n\nВерсия виджета на предыдущей странице предназначена
           для того, чтобы помочь вам **взломать шифр подстановки с помощью частотного
           анализа**.\n\nАнализируя частоту букв в зашифрованном сообщении по сравнению
-          с частотой букв в типичном произведении английской прозы,вы можете сузить
-          круг возможных соответствий букв.\n\nИнструмент показывает, как частота
-          букв в зашифрованном тексте (оранжевый) сравнивается с частотами из типичного
-          английского языка (синий).\n\n### Совет: как начать?\n\n1. Найдите короткие
-          слова и \"взломайте\" их в первую очередь.  Сколько однобуквенных слов вы
-          знаете? (\"a)\"  Очень распространенное слово из 3 букв- \"the\".\n2. После
-          того, как вы сделали это, у вас есть замены для некоторых из наиболее распространенных
-          букв.  Вы должны быть в состоянии использовать интуицию, чтобы посмотреть
-          на другие слова с этими частичными заменами и сделать догадки.\n3. После
-          того, как вы найдете только несколько трудных букв, остальные быстро станут
-          понятны.\n4. Сравнение частот букв дает хорошее понимание для создания разумных
-          догадок.\n\n### Попробуй это:\nАнимация ниже показывает, что кто-то начинает
-          работу.  Вот что они пытались сделать\n\n* Сначала отсортируйте символы
-          по частоте. \n* Определите группу символов, которые могут соответствовать
-          слову \"the\".  \nЭто хорошее начало!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
-          Хороша ли случайная подстановка?\n* После небольшой практики, сколько времени
-          вам потребуется, чтобы взломать случайный шифр подстановки?\n* Это хорошо
-          или нет?\n\n\n"
+          с частотой букв в обычном тексте английской прозы, можно сузить круг возможных
+          соответствий букв.\n\nС помощью инструмента можно сравнить частоту букв
+          в зашифрованном тексте (оранжевый) и частоту букв в обычном тексте английского
+          языка (синий).\n\n### Совет: Как начать?\n\n1. Сначала найдите и \"взломайте\"
+          короткие слова.  Сколько однобуквенных слов вы знаете? (\"a\"). Очень распространенное
+          слово из 3 букв - \"the\".\n2. После этого, замените некоторые из наиболее
+          распространенных букв. Используйте интуицию, чтобы посмотреть на другие
+          слова после этих частичных замен и догадывайтесь.\n3. После того, как вы
+          расшифруете несколько наиболее трудных букв, остальные буквы быстро станут
+          понятны.\n4. Сравнение частоты использования букв дает хорошее понимание
+          для создания разумных догадок.\n\n### Попробуйте это:\nАнимация ниже показывает,
+          как можно начать.  Вот что можно попытаться сделать\n\n* Сначала отсортируйте
+          символы по частоте использования в тексте. \n* Определите группу символов,
+          которые могут соответствовать слову \"the\".  \nЭто уже хорошее начало!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Хорошо ли шифрование методом случайной подстановки?\n* После небольшой практики,
+          сколько времени вам потребуется, чтобы взломать шифр случайной подстановки?\n*
+          Это хорошо или нет?\n\n\n"
       Terminology Recap:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
-          # Пауза и возврат
+          # Давайте сделаем паузу для небольшого ознакомления а затем продолжим
 
-          Сообщения, зашифрованные с помощью шифра Цезаря, очень легко взломать, особенно с помощью вычислительного инструмента. Теперь, когда у вас была небольшая практика взлома алфавитного шифра сдвига (довольно легко, да?) давайте попробуем что-нибудь более сложное.
+          Сообщения, зашифрованные с помощью **шифра Цезаря**, очень легко взломать, особенно с помощью вычислительного инструмента. Теперь, когда у вас была небольшая практика взлома алфавитного шифра сдвига (довольно легко, да?) давайте попробуем что-нибудь более сложное.
 
-          **Повторение терминологии:**
+          **Терминология:**
 
-          * ** Шифрование ** - процесс кодирования сообщений, чтобы держать их в секрете, так что только" уполномоченные " стороны могут прочитать его.
-          * ** Расшифровка** - процесс, который отменяет шифрование, принимая секретное сообщение и воспроизводя начальный простой текст.
-          * ** Шифр ** - общий термин для метода (или алгоритма), который выполняет шифрование.
-          * ** Шифр Цезаря ** - техника шифрования, которая сдвигает алфавит на некоторое количество символов.
-          * ** Взлом шифрования ** - когда вы пытаетесь расшифровать секретное сообщение *без* зная все особенности шифра, вы пытаетесь **взломать** шифрование.
+          * **Шифрование** - преобразование информации, делающее ее нечитаемой для посторонних, при этом доверенные лица могут провести расшифровку и прочитать исходную информацию.
+          * **Расшифровка** - процесс преобразования зашифрованной информации в первоначальную понятную форму.
+          * **Шифр** - общий термин для метода (или алгоритма), который выполняет шифрование.
+          * **Шифр Цезаря** - техника шифрования, которая сдвигает символы на некоторое количество.
+          * **Взлом шифрования** - процесс расшифровки зашифрованной информации *незная* всех особенностей шифра.
 
           Нажмите кнопку Продолжить, чтобы увидеть **следующее задание**...
       Unit 1 Lesson 2 Overview:
@@ -2392,6 +2471,10 @@ ru-RU:
           ## Ресурсы
 
           * [Процесс Решения Проблем - Руководство](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: |+
+          * [Процесс Решения Проблемы](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Activity Guide ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
+
+
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Обзор
@@ -2400,6 +2483,9 @@ ru-RU:
           ## Ресурсы
 
           * [Решение Проблем - Руководство](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[КЛЮЧ к Решению Проблем](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
       Unit 1 Lesson 4 Overview:
         markdown: |
           # Обзор
@@ -2409,6 +2495,10 @@ ru-RU:
           ## Ресурсы
 
           * [Что Такое Компьютер - Руководство](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: |+
+          [Что такое компьютер - Образец](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Рабочее Руководство ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
+
+
       behaviors 1 predict:
         answers:
         - text: Спрайт начнет кружиться
@@ -5869,13 +5959,13 @@ ru-RU:
 
           * [Алюминиевые лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       csf_be_a_super_digital_citizen:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Очень Цифровой Гражданин
 
           ## Как можно проявить свою добропорядочность, когда сталкиваешься с кибербуллингом?
       csf_password_power-up:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           #  Активируй свой пароль
 
@@ -5889,7 +5979,7 @@ ru-RU:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # СТОП грубости
 
@@ -6453,6 +6543,12 @@ ru-RU:
           ## Ресурсы
 
           * [Алюминиевые лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        teacher_markdown: |
+          [key]
+
+          * [Алюминиевые Лодки - Образец](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Рабочее Руководство ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
       outbreak_story:
         content1: описание здесь
         markdown: "# Эпидемия: Создай свой собственный симулятор\n\n## Добро пожаловать
@@ -6752,7 +6848,7 @@ ru-RU:
 
            Учитесь программировать, создавая код для своих друзей!
       OPD-K5 Stage3aGo_dani:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Выстраивание последовательности > Уроки без компьютера\n\nКак
           мы уже говорили ранее, нам нравится вводить темы по информатике с помощью
           уроков без компьютера. Затем мы используем промежуточные занятия, чтобы
@@ -10394,7 +10490,7 @@ ru-RU:
         - {}
         - {}
       CSD U2 project guide_2018_2019_pilot_2021:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
         answers:
         - {}
@@ -10418,7 +10514,7 @@ ru-RU:
         - {}
         title: название
       CSD U3 Card Examples_2018_2019_pilot_2021:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
         answers:
         - {}
@@ -10447,11 +10543,11 @@ ru-RU:
       CSD U3 drawing practice choice_2021:
         display_name: Практика
       CSD U3 game intro_2018_2019_pilot_2021:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 platform intro_2018_2019_pilot_2021:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 LED create intro_2021:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 array multi_2021:
         answers:
         - {}
@@ -10461,7 +10557,7 @@ ru-RU:
         questions:
         - {}
       CSD U6 final intro_2021:
-        content1: описание здесь
+        content1: пояснение
       CSD U6 setProperty predict multi_2021:
         answers:
         - {}
@@ -10542,7 +10638,7 @@ ru-RU:
         - {}
       Test Contained Multi:
         answers:
-        - {}
+        - text: '0'
         - text: '1'
         - text: '2'
           correct: true
@@ -10550,9 +10646,9 @@ ru-RU:
         questions:
         - {}
       allthethings_external_displayed_as_unplugged:
-        content1: описание здесь
+        content1: пояснение
       allthethings_external_not_displayed_as_unplugged:
-        content1: описание здесь
+        content1: пояснение
       contained_Choose_2_Test:
         answers:
         - correct: true
@@ -10925,7 +11021,7 @@ ru-RU:
         - {}
         - {}
       CSD U2 project guide_2018_2019_pilot_2022:
-        content1: описание здесь
+        content1: пояснение
       CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
         answers:
         - {}
@@ -11144,7 +11240,7 @@ ru-RU:
       CSD U3 drawing practice choice_2022:
         display_name: Практика
       CSD U3 platform intro_2018_2019_pilot_2022:
-        content1: описание здесь
+        content1: пояснение
       CSD U4 test feature match:
         answers:
         - {}
@@ -12672,17 +12768,17 @@ ru-RU:
         questions:
         - {}
       csd-post-survey-unit1-preamble:
-        content1: описание здесь
+        content1: пояснение
       csd-post-survey-unit2-preamble:
-        content1: описание здесь
+        content1: пояснение
       csd-post-survey-unit3-preamble:
-        content1: описание здесь
+        content1: пояснение
       csd-post-survey-unit4-preamble:
-        content1: описание здесь
+        content1: пояснение
       csd-post-survey-unit5-preamble:
-        content1: описание здесь
+        content1: пояснение
       csd-post-survey-unit6-preamble:
-        content1: описание здесь
+        content1: пояснение
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -15573,9 +15669,9 @@ ru-RU:
         questions:
         - {}
       csp-post-survey-2018-topics-preamble:
-        content1: описание здесь
+        content1: пояснение
       csp-post-survey-2018-unit-feedback-preamble:
-        content1: описание здесь
+        content1: пояснение
       csp-post-survey-who-encouraged-csp:
         answers:
         - correct: true
@@ -16615,7 +16711,7 @@ ru-RU:
         questions:
         - {}
       csp_unit_assessment_overview:
-        content1: описание здесь
+        content1: пояснение
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -17381,7 +17477,7 @@ ru-RU:
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: Практика с художником
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Эпидемия: cоздайте свой собственный симулятор\n\n## Добро пожаловать
           в Город Монстров!\nГород Монстров всегда был благополучным и здоровым местом.
           Монстры из Города Монстров любили гулять и заходить в гости к друзьям. \n\n<img
@@ -17457,7 +17553,7 @@ ru-RU:
           в город придет вирус. \n\n<img src=\"https://images.code.org/5e41169fcaf0e949b09ab225d183c165-image-1617128998517.png\"
           style=\"float:left;width:30%\">\n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Эпидемия: думать как ученый
 
@@ -18320,7 +18416,7 @@ ru-RU:
           программы.
         display_name: Исследование - Программы-примеры
       courseF_variables_stop2022_2022_pilot_-2022-2:
-        content1: описание здесь
+        content1: пояснение
         markdown: "# Стоп! \n\n## Ты уверен(-а), что готов(-а) продолжить? \n\n\nНа
           следующем уровне ты начнешь писать код для своего проекта. Это лучше всего
           делать, если у тебя уже есть план. \n\nТвой план должен включать:\n\n <img
@@ -18364,7 +18460,7 @@ ru-RU:
 
 '
       csf_be_a_super_digital_citizen2022:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # Очень Цифровой Гражданин
 
@@ -18375,7 +18471,7 @@ ru-RU:
 
           ## Какую информацию следует иметь в своем цифровом следе?
       csf_password_power-up2022:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           #  Активируй свой пароль
 
@@ -18389,7 +18485,7 @@ ru-RU:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness2022:
-        content1: описание здесь
+        content1: пояснение
         markdown: |
           # СТОП грубости
 
@@ -18433,3 +18529,143 @@ ru-RU:
         questions:
         - text: Внимательно посмотри на этот код. Что, по-твоему, произойдет при запуске
             программы?
+      ml-club app-choice parent:
+        display_name: Настроить Свое Приложение
+      ml-club app-choice parent_2022:
+        display_name: Настроить Свое Приложение
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Настроить Свое Приложение
+      ml-intro app lab-book recommender 5_2022:
+        display_name: Настроить Свое Приложение
+      CSD U2 L12 Overview:
+        markdown: |
+          # Обзор
+
+          После первого завершения сетевого охотника за мусором (web search scavenger hunt) класс узнает о внутренней работе поисковых систем и получит возможность проявить свои аналитические навыки в поиске странных и маловероятных животных.
+          ## Словарь
+
+          * **Алгоритм (Algorithm) ** - Точная последовательность инструкций для процессов, которые могут быть выполнены компьютером.
+          * **Релевантность (Relevant) ** - тесная связь или соответствие рассматриваемому вопросу.
+          * **Поисковая Система (Search Engine) ** - Программа, которая ищет и идентифицирует элементы в базе данных, соответствующие ключевым словам или символам, указанным пользователем, используется специально для поиска определенных сайтов во Всемирной Паутине.
+          * **Заслуживающий доверия (Trustworthy) ** - то, на что можно положиться как на честное или правдивое.
+
+
+          ## Ресурсы
+
+          * [Охотник за Мусором в Интернете - Рабочее Руководство](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
+          * [Странные, Но Настоящие Животные - Рабочее Руководство](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
+        teacher_markdown: "[Странные, Но Настоящие Животные - Ключ](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/edit)
+          ([PDF](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=doc))\n"
+      CSD U2 L7 Overview:
+        markdown: |
+          # Обзор
+
+          В этом уроке рассказывается о том, как использовать контент, созданный другими пользователями на веб-сайте, соблюдая при этом права первоначального создателя этого контента. После первого изучения лицензирования Creative Commons (Творческое Достояние) класс узнает, как добавлять изображения на веб-страницы и указывать при этом правильные атрибуты.
+
+          ## Словарь
+
+          * **Цитирование** - Цитата или ссылка на книгу, статью или автора, особенно в научной работе.
+          * **Авторское право** - исключительное законное право, предоставляемое составителю или правопреемнику печатать, публиковать, исполнять, экранизировать или записывать литературные, художественные или музыкальные материалы и разрешать другим делать то же самое.
+          * **Creative Commons (Творческое Достояние)** - Публичные лицензии на авторское право, которые позволяют бесплатно распространять произведение, защищенное иным авторским правом. Лицензия CC (Creative Commons) используется, когда автор хочет предоставить людям право делиться, использовать и развивать созданное им произведение.
+          * **Интеллектуальная Собственность** - Произведение или изобретение, являющееся результатом творчества, например рукопись или дизайн, на которые у человека есть права и на которые он может подать заявку на патент, авторское право, товарный знак и т.д.
+
+          ## Введенный Код
+
+          *  **[Image](//studio.code.org/docs/weblab/img/)** - `<img />`
+
+          ## Ресурсы
+
+          * [Обзор Creative Commons](https://www.youtube.com/watch?v=HKfqoPYJdVc) - Видео
+          * [Лицензирование Своей Работы - Рабочее Руководство](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Лицензирование Своей Работы - Образец Рабочего Руководства](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)\n"
+      CSD U2 Lesson 9 Overview:
+        markdown: "# Обзор\n\nВ этом уроке рассматриваются гиперссылки, которые позволяют
+          веб-разработчикам соединять страницы вместе в один веб-сайт. Классу предстоит
+          связать все предыдущие страницы в один проект и создать панели навигации
+          для каждой страницы перед публикацией всего сайта в Интернете.  \n## Словарь\n\n*
+          **Гиперссылка** - Ссылка из HTML-файла на другое местоположение или файл,
+          обычно активируемая нажатием на выделенное слово или изображение на экране.\n\n##
+          Введенный код\n\n*  **[Гиперссылка](//studio.code.org/docs/weblab/A/)**
+          - `<a></a>`\n\n## Ресурсы\n\n* [Персональный Веб-Сайт - Рабочее Руководство](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)\n*
+          [Персональный Веб-Сайт - Экспертная Оценка](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)\n*
+          [Персональный Веб-Сайт - Рубрика](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n"
+        teacher_markdown: |+
+          * [Персональный Веб-Сайт](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Образец Рабочего Руководства ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+          * [Персональный Веб-Сайт](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Образец Экспертной Оценки ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
+
+
+
+      Unit 2 Lesson 10 Overview:
+        markdown: |
+          # Обзор
+
+          В этом уроке рассматриваются классы CSS и пользовательские цвета. Сначала студенты узнают, как задать пользовательские цвета, используя значения RGB (red, green, blue), затем применят эти цвета на новой веб-странице Four Seasons (Четыре Сезона), которая использует классы CSS. Используя классы, студенты добавят дополнительные стили на веб-страницу Four Seasons, а затем применят эти стили для оформления своих личных веб-сайтов.
+          ## Словарь
+
+          * **HTML Класс** - Позволяет определять одинаковые стили для элементов, присваивая им всем одинаковое имя класса.
+
+          ## Вводимый код
+
+          * [RGB Цвет](//studio.code.org/docs/weblab/rgb-color/)
+
+          ## Ресурсы
+
+          * [RGB Цвета - Рабочее Руководство](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+        teacher_markdown: "* [RGB Цвета](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/edit?copiedFromTrash)
+          - Рабочее Руководство ([PDF](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=doc))\n"
+      Unit 2 Lesson 16 Overview:
+        markdown: |
+          # Обзор
+
+          В последние несколько дней занятия студенты завершат работу над своими личными веб-сайтами, работая со сверстниками, чтобы получить отзывы, просмотреть замечания и внести последние штрихи в сайт. В довершение всего каждый делится своими проектами и тем, как они были разработаны.
+
+
+          ## Ресурсы
+
+          * [Окончательный Персональный Веб-Сайт - Взаимная Оценка](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
+          * [Окончательный Персональный Веб-Сайт - Руководство по Проекту](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
+          * [Окончательный Персональный Веб-Сайт - Рубрика](https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+        teacher_markdown: |
+          [key]
+
+          * [Окончательный Персональный Веб-Сайт](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/edit?usp=sharing) - Образец Руководства по Проекту ([PDF](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=doc))
+          * [Окончательный Персональный Веб-Сайт](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - Образец Взаимной Оценки ([PDF](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=doc))
+
+          [/key]
+      Unit 2 Lesson 7 Overview:
+        markdown: |+
+          # Обзор
+
+          Этот урок знакомит с CSS как со способом оформления элементов на странице. Класс изучит базовый синтаксис для наборов правил CSS, а затем исследует свойства, которые влияют на текстовые элементы HTML. Наконец, каждый применит текстовые стили к своим личным веб-сайтам.
+          ## Словарь
+
+          * **CSS** - CSS расшифровывается как Cascading Style Sheets (Каскадные Таблицы Стилей). CSS позволяет стилизовать каждый HTML-элемент в соответствии с определенным набором правил.
+          * **CSS Селектор** - Указывает на часть кода, к которой должен быть применен стиль.
+
+          ## Вводимый Код
+
+          *  **[Цвет](//studio.code.org/docs/weblab/color/)** - `color: value;`
+          *  **[Выравнивание текста](//studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          *  **[Оформление текста](//studio.code.org/docs/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[Семейство Шрифтов](//studio.code.org/docs/weblab/font-family/)** - `font-family:value;`
+          *  **[Размер Шрифта](//studio.code.org/docs/weblab/font-size/)** - `font-size:value;`
+
+      Unit 2 Lesson 8 Overview:
+        markdown: |+
+          # Обзор
+
+          Этот урок продолжит знакомство со свойствами стиля CSS, на этот раз уделяя больше внимания нетекстовым элементам. Урок начнется с изучения и изменения новых стилей CSS на странице "Десерты Мира". Впоследствии каждый студент применит эти новые знания на своих личных веб-сайтах.
+
+          ## Вводимый Код
+
+          *  **[Цвет Фона (background color) ](//studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+          *  **[Обтекание (float) ](//studio.code.org/docs/weblab/float/)** - `float: value;`
+          *  **[Внешний отступ (margin) ](//studio.code.org/docs/weblab/margin/)** - `margin: value;`
+          *  **[Ширина (width) ](//studio.code.org/docs/weblab/width/)** - `width: value;`
+          *  **[Высота (height) ](//studio.code.org/docs/weblab/height/)** - `height: value;`
+          *  **[Стиль Границы (border style) ](//studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+          *  **[Ширина Границы (border width) ](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+          *  **[Цвет Границы (border color) ](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
+

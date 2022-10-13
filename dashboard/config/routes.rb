@@ -9,7 +9,7 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /.*code.org.*/ do
+  constraints host: /.*code.org.*|.*hourofcode.com.*/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
@@ -347,7 +347,11 @@ Dashboard::Application.routes.draw do
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-    resources :data_docs, only: [:new, :create, :show], param: :key
+    resources :data_docs, param: :key do
+      collection do
+        get '/edit', to: 'data_docs#edit_all'
+      end
+    end
 
     resources :lessons, only: [:edit, :update] do
       member do
@@ -568,7 +572,6 @@ Dashboard::Application.routes.draw do
     get '/too_young', to: 'too_young#index'
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
-    post '/sms/send_download', to: 'sms#send_download_url_to_phone', as: 'send_download_url_to_phone'
 
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
     get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
@@ -995,7 +998,7 @@ Dashboard::Application.routes.draw do
       get :peers_with_open_reviews, on: :collection
     end
 
-    resources :code_review_notes, only: [:create, :update, :destroy]
+    resources :code_review_comments, only: [:create, :update, :destroy]
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 

@@ -8,7 +8,7 @@ require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
-require 'cdo/properties'
+require_relative 'helpers/properties'
 require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
@@ -562,7 +562,7 @@ class Documents < Sinatra::Base
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
             FileUtils.mkdir_p File.dirname(cache_file)
-            File.binwrite(cache_file, Net::HTTP.get(URI(result)))
+            File.binwrite(cache_file, Net::HTTP.get(URI(result.chomp)))
           end
           pass unless File.file?(cache_file)
 

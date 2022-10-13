@@ -38,6 +38,8 @@
   "drawATriangle": "нарисовать треугольник",
   "drawUpperWave": "нарисовать верхнюю волну",
   "drawLowerWave": "нарисовать нижнюю волну",
+  "drawShape": "нарисовать фигуру",
+  "drawShapeWithSideLength": "нарисовать фигуру с длиной стороны",
   "drawSticker": "нарисовать стикер",
   "drawStickerWithSize": "нарисовать стикер с размером",
   "forward": "вперед",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Делает художника видимым или невидимым.",
   "widthTooltip": "Изменяет ширину карандаша.",
   "withSize": "с размером",
+  "withSideLength": "с длиной стороны",
   "wrongColour": "Неправильный цвет картинки. Для этой головоломки он должен быть %1."
 }

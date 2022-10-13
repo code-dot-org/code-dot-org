@@ -503,6 +503,7 @@ fi:
     no_primary_course: "Kokeile kurssia Koodistudiossa"
     choose_next_course: "Kokeile jotakin allaolevista Koodistudion kursseista"
     print_certificate: "Tulosta todistus"
+  certificate_hour_of_code: "Koodaustunti"
   move_students:
     new_section_dne: "Anteeksi, mutta ryhmää %{new_section_code} ei ole olemassa. Anna eri ryhmäkoodi."
     section_code_cant_be_current_section: "Ryhmä ei voi olla sama kuin nykyinen ryhmä."

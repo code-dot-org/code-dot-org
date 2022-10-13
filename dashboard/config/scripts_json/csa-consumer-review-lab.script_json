@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": "csa-celebrity-lab",
-    "serialized_at": "2022-09-14 15:18:15 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-09-27 14:44:24 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -708,6 +708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L1-L1"
+        ],
         "progression": "The sentimentVal() Method"
       },
       "bonus": false,
@@ -730,6 +733,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L1-L2"
+        ],
         "progression": "The sentimentVal() Method"
       },
       "bonus": false,
@@ -752,6 +758,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L1-L3"
+        ],
         "progression": "The sentimentVal() Method"
       },
       "bonus": false,
@@ -774,6 +783,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L1-L4"
+        ],
         "progression": "Testing the sentimentVal() Method"
       },
       "bonus": false,
@@ -796,6 +808,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L1-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -818,6 +833,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L1-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -840,6 +858,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L1-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -862,6 +883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L2-L1"
+        ],
         "progression": "Analyzing Reviews"
       },
       "bonus": false,
@@ -884,6 +908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L2-L2"
+        ],
         "progression": "The totalSentiment() Method"
       },
       "bonus": false,
@@ -906,6 +933,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L2-L3"
+        ],
         "progression": "The totalSentiment() Method"
       },
       "bonus": false,
@@ -928,6 +958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L2-L4"
+        ],
         "progression": "The starRating() Method"
       },
       "bonus": false,
@@ -950,6 +983,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L2-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -972,6 +1008,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L2-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -994,6 +1033,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L2-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1016,6 +1058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L3-L1"
+        ],
         "progression": "Annotate Adjectives"
       },
       "bonus": false,
@@ -1038,6 +1083,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L3-L2"
+        ],
         "progression": "Annotate Adjectives"
       },
       "bonus": false,
@@ -1060,6 +1108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L3-L3"
+        ],
         "progression": "The fakeReview() Method"
       },
       "bonus": false,
@@ -1082,6 +1133,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L3-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1104,6 +1158,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L3-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1126,6 +1183,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L4-L1"
+        ],
         "progression": "Autogenerating Positive and Negative Reviews"
       },
       "bonus": false,
@@ -1148,6 +1208,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L4-L2"
+        ],
         "progression": "Autogenerating Positive and Negative Reviews"
       },
       "bonus": false,
@@ -1170,6 +1233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L4-L3"
+        ],
         "progression": "Modifying the fakeReview() Method"
       },
       "bonus": false,
@@ -1192,6 +1258,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L4-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1214,6 +1283,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L4-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1236,6 +1308,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L4-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1258,6 +1333,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L5-L1"
+        ],
         "progression": "Open-Ended Activity"
       },
       "bonus": false,
@@ -1280,6 +1358,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L5-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1302,6 +1383,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L5-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1324,6 +1408,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L5-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1346,6 +1433,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L5-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1368,6 +1458,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L5-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1390,6 +1483,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Consumer Review Lab L5-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1795,6 +1891,18 @@
   ],
   "resources": [
     {
+      "name": "Consumer Review Slides",
+      "url": "https://docs.google.com/presentation/d/1ygET_FTDgu8LDMtBlSB0uTO2poDbx-CNvgSDE6jCPYc/edit?usp=sharing",
+      "key": "consumer_review_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "consumer_review_slides"
+      }
+    },
+    {
       "name": "Open-Ended Activity Scoring Guidelines",
       "url": "https://docs.google.com/document/d/1OBS2bJVkEE9PU4eM2khY-srF-dmReVpS3q3bZlENbFM/edit?usp=sharing",
       "key": "open-ended_activity_scoring_guidelines",
@@ -1808,6 +1916,36 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "consumer_review_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "consumer_review_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "consumer_review_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "consumer_review_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "consumer_review_slides"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",

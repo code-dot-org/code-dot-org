@@ -339,6 +339,7 @@
   homepage_banner_40k_teachers_link: "En savoir plus"
   homepage_slot_text_title_hoc: "Heure de Code"
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
+  homepage_slot_text_blurb_hoc_2022: "Explores, joues, crées !"
   homepage_slot_text_link_hoc: "Essayer l'Heure de Code"
   homepage_slot_text_link_about_hoc: "À propos de l'Heure de Code"
   homepage_slot_text_link_host: "Héberger une Heure de Code"
@@ -962,6 +963,7 @@
   coursed-2020_name: Cours D (2020)
   coursee-2020_name: Cours E (2020)
   coursef-2020_name: Cours F (2020)
+  coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
   coursed-2022_name: Cours D (2021)
   express-2018_name: Cours Express (2018)
@@ -1685,8 +1687,8 @@
   hoc2018_aquatic_video3: "Minecraft : Voyage Aquatique - Les Conditions"
   hoc2018_aquatic_video4: "Minecraft : Voyage aquatique - Félicitations"
   hoc2018_dance_video1: "Soirée Dansante - Introduction"
-  hoc2018_dance_video2: "Soirée Dansante – Les Événements"
-  hoc2018_dance_video3: "Soirée Dansante – Les Propriétés"
+  hoc2018_dance_video2: "Soirée Dansante – Événements"
+  hoc2018_dance_video3: "Soirée Dansante – Propriétés"
   hoc2018_dance_video4: "Soirée Dansante - Félicitations"
   dance_box_higher_power_line_1: "Codez une danse au son de \"Higher Power\" de Coldplay et vous pourriez avoir l'occasion de voir le groupe en live!"
   dance_box_higher_power_line_2: "Visitez <a href=\"%{path}\">code.org/coldplay</a> pour plus d'infos"

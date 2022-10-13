@@ -1354,6 +1354,8 @@ ta:
           lesson_groups:
             lessonGroup-5:
               display_name: சாண்ட்பாக்ஸ்
+        ai-ethics-2021:
+          description_audience: தரம் 6-12
         poem-art-2021:
           title: கவிதை கலை
         explore-data-1-2021:
@@ -1722,5 +1724,43 @@ ta:
         aiml-2022:
           name: aiml-2022
           description_short: செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் பற்றி அறிக
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ஒத்திசைவற்ற பிழைத்திருத்த நீட்டிப்பு
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: தொகுதி 2 ஒத்திசைவற்ற வேலை
         soccer:
           name: காற்பந்து
+          title: உங்கள் சொந்த கால்பந்து விளையாட்டை குறியிடவும்
+          description_short: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
+          description: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ஜாவா லேப்
+            lesson-6:
+              name: சுழற்சிகள்
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+          title: பிரச்சனை தீர்வு
+        csd4-2023:
+          title: வடிவமைப்பு செயல்முறை
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2

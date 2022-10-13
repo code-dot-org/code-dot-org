@@ -12,7 +12,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey"
+          "buttonText": "End of Unit Survey",
+          "key": "defdc3f1-b1e5-46a0-a380-277cfa7f5d83"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-02 13:09:13 UTC",
+    "serialized_at": "2022-10-10 13:30:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6394,6 +6395,18 @@
       }
     },
     {
+      "name": "Unit 4 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1cOUPPIicbhfv6BBl17cfND_WiCWXcZlUxbzzCvcAFHA/edit?usp=sharing",
+      "key": "unit_4_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_guide_exemplar_"
+      }
+    },
+    {
       "name": "Unit 4 Overview",
       "url": "https://docs.google.com/document/d/1q5lcfSPiZvc7TI2rkdcF5mCK3arJk2yg119LRLsrzLg/edit?usp=sharing",
       "key": "unit_4_overview",
@@ -6881,6 +6894,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_4_guide",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_guide_exemplar_",
         "script.name": "csa4-2022"
       }
     },
