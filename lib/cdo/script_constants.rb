@@ -101,6 +101,8 @@ module ScriptConstants
       HELLO_WORLD_ANIMALS_2021_NAME = 'hello-world-animals-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_EMOJI_2021_NAME = 'hello-world-emoji-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_RETRO_2021_NAME = 'hello-world-retro-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_SPACE_2022_NAME = 'hello-world-space-2022'.freeze, # 2022 hour of code
+      HELLO_WORLD_SOCCER_2022_NAME = 'hello-world-soccer-2022'.freeze, # 2022 hour of code
       DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
       DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
       OCEANS_NAME = 'oceans'.freeze,
