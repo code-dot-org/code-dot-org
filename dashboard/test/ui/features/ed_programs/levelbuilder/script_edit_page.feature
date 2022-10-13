@@ -1,6 +1,6 @@
 @no_mobile
 @no_safari
-Feature: Using the Unit Edit Page
+Feature: Using the Script Edit Page
 
 Scenario: View the unit edit page
   Given I create a levelbuilder named "Levi"

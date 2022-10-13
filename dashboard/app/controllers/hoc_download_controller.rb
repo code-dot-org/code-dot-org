@@ -7,11 +7,11 @@ class HocDownloadController < ApplicationController
     languages = %w(Albanian Arabic Azerbaijani Basque Bosnian Bulgarian Catalan Chinese-Taiwan Chinese Croatian Czech Danish Dutch English Finnish French German Greek Hebrew Hungarian Icelandic Indonesian Italian Japanese Korean Latvian Lithuanian Norwegian Norwegian-Nynorsk Polish Portuguese-Brazil Portuguese Romanian Russian Serbian Slovenian Spanish Swedish Turkish Ukrainian Vietnamese)
 
     case @product_name
-    when Unit::MINECRAFT_NAME
+    when Script::MINECRAFT_NAME
       @app_name = t('hoc_download.minecraft_name')
       @file_prefix = 'MC'
       @og_image_url = CDO.code_org_url('/images/mc/mc_social.jpg')
-    when Unit::STARWARS_NAME
+    when Script::STARWARS_NAME
       @app_name = t('hoc_download.starwars_blocks_name')
       @file_prefix = 'StarWarsBlocks'
       @og_image_url = CDO.code_org_url('/images/star-wars-announcement.jpg')
