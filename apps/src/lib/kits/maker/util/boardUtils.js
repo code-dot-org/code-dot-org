@@ -7,7 +7,6 @@ import {
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import DCDO from '@cdo/apps/dcdo';
-
 import {isChromeOS} from '../util/browserChecks';
 import experiments from '@cdo/apps/util/experiments';
 

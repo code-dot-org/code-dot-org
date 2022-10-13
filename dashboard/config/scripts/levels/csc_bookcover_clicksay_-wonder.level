@@ -5,7 +5,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "storylab"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -35,17 +36,14 @@
     "long_instructions": "**Let’s make your sprites say something when you click on them!**\r\n- Connect a `say` block under a `when clicked` block.\r\n- Select the same costume in each block of code.\r\n- Press the \"Run\" button.\r\n- Click or tap the sprite to have it say something.\r\n\r\n*Extra Challenge: Make both sprites say something when they are clicked!*\r\n\r\n\r\n\r\n",
     "instructions_icon": "bear",
     "name_suffix": "_-wonder",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-09-30T16:38:11.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-30T16:38:11.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:11.007+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_clicksay\\\"\"],\"cloned_from\":\"csc_bookcover_clicksay\"},{\"changed_at\":\"2022-09-30 17:57:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:11.007+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_clicksay\\\"\"],\"cloned_from\":\"csc_bookcover_clicksay\"},{\"changed_at\":\"2022-09-30 17:57:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:07:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:21:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -65,23 +63,25 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_showTitleScreen">
-          <value name="TITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT"/>
             </block>
           </value>
-          <value name="SUBTITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT"/>
             </block>
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs">
-          <field name="IMG">"front_of_house"</field>
+          <field name="IMG">"cave"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"green_shirt_wave2"</field>
+          <field name="ANIMATION_NAME">"bear"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":200,"y":200}</field>
@@ -92,7 +92,7 @@
           <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"green_shirt_wave2"</field>
+              <field name="ANIMATION">"bear"</field>
             </block>
           </value>
         </block>
@@ -100,7 +100,7 @@
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"green_shirt_wave2"</field>
+              <field name="ANIMATION">"bear"</field>
             </block>
           </value>
           <value name="VAL">
@@ -120,7 +120,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"green_shirt_wave2"</field>
+              <field name="ANIMATION">"bear"</field>
             </block>
           </value>
         </block>

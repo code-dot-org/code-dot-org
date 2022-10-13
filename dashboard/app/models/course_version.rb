@@ -17,7 +17,7 @@
 #
 #  index_course_versions_on_content_root_type_and_content_root_id  (content_root_type,content_root_id)
 #  index_course_versions_on_course_offering_id                     (course_offering_id)
-#  index_course_versions_on_course_offering_id_and_key             (course_offering_id,key) UNIQUE
+#  index_course_versions_on_offering_id_and_key_and_type           (course_offering_id,key,content_root_type) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord
@@ -139,7 +139,7 @@ class CourseVersion < ApplicationRecord
 
   def self.course_offering_keys(content_root_type)
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
-      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
+      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).filter_map {|cv| cv.course_offering&.key}.uniq.sort
     end
   end
 

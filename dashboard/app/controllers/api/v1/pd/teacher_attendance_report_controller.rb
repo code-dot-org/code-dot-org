@@ -8,7 +8,7 @@ class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportContro
   def index
     @workshops = load_filtered_ended_workshops
 
-    report = @workshops.map do |workshop|
+    report = @workshops.filter_map do |workshop|
       ::Pd::Payment::PaymentFactory.get_payment(workshop).try do |workshop_summary|
         workshop_summary.teacher_summaries.map do |teacher_summary|
           teacher_summary.generate_teacher_progress_report_line_item(
@@ -16,7 +16,7 @@ class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportContro
           )
         end
       end
-    end.compact.flatten
+    end.flatten
 
     respond_to do |format|
       format.json do

@@ -285,6 +285,7 @@ en:
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
+    verified_teacher_subject: 'Code.org Teacher Verification - Success'
   section:
     your_section:
       one: 'Your section:'
@@ -1227,3 +1228,22 @@ en:
       cannot_view_locked_answers: "Cannot view answers while locked"
       forbidden: "User cannot update student's lockable state"
   reset_predict_progress_button: "Delete Answer"
+  pixelation:
+    raw_format: "Raw Format"
+    raw_format_alt: "View bits without any formatting"
+    readable_format: "Readable Format"
+    readable_format_alt: "View bits separated by pixel"
+    save_image: "Save Image"
+    actual_size: "Actual Size"
+    image_file_format_header: "Image File Format"
+    image_file_format_width: "Width: 1 byte"
+    image_file_format_height: "Height: 1 byte"
+    image_file_format_bits_per_pixel: "Bits per Pixel: 1 byte"
+    image_file_format_data_a: "n bits of pixel data"
+    image_file_format_data_b: "n = Width * Height * Bits per Pixel"
+    image_width: "Image Width"
+    image_height: "Image Height"
+    bits_per_pixel_header: "Bits Per Pixel"
+    binary: "Binary"
+    hexadecimal: "Hexadecimal"
+    pixel_format_header: "Pixel Format"

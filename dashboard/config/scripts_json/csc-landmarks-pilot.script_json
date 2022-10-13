@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-landmarks-pilot",
-    "serialized_at": "2022-09-30 22:11:57 UTC",
+    "serialized_at": "2022-10-13 04:48:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -62,6 +62,21 @@
         "lesson_group.key": "",
         "script.name": "csc-landmarks-pilot"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Local Storytellers",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot"
+      }
     }
   ],
   "lesson_activities": [
@@ -88,6 +103,18 @@
         "lesson_group.key": "",
         "script.name": "csc-landmarks-pilot"
       }
+    },
+    {
+      "key": "d9eeff8d-1468-4930-b254-11fac967cdbb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9eeff8d-1468-4930-b254-11fac967cdbb",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -110,6 +137,16 @@
         "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a",
         "lesson_activity.key": "90f0e272-1dd3-4c43-8231-1f94279ccd44"
       }
+    },
+    {
+      "key": "823fcd9d-b299-406e-ab14-75c5b2742c9d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "823fcd9d-b299-406e-ab14-75c5b2742c9d",
+        "lesson_activity.key": "d9eeff8d-1468-4930-b254-11fac967cdbb"
+      }
     }
   ],
   "script_levels": [
@@ -119,14 +156,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "coursee_helloworld_introtosprites_hello-world"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_hello-world"
+          "CourseF_video_introSpriteLab_-wonder"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -134,7 +168,7 @@
         "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
       },
       "level_keys": [
-        "coursee_helloworld_introtosprites_hello-world"
+        "CourseF_video_introSpriteLab_-wonder"
       ]
     },
     {
@@ -216,6 +250,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "csc_landmarks_behavior"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_behavior"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
+      },
+      "level_keys": [
+        "csc_landmarks_behavior"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "csc_landmark_explain"
         ]
       },
@@ -234,9 +292,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -258,57 +316,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_place2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_place2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
-      },
-      "level_keys": [
-        "csc_landmarks_place2"
-      ]
-    },
-    {
       "chapter": 8,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_behavior"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_behavior"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
-      },
-      "level_keys": [
-        "csc_landmarks_behavior"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -330,9 +340,9 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -351,6 +361,30 @@
       },
       "level_keys": [
         "csc_landmarks_touches1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_place2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_place2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
+      },
+      "level_keys": [
+        "csc_landmarks_place2"
       ]
     },
     {
@@ -407,11 +441,14 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_background"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_-usa-map"
+          "csc_landmarks_background"
         ],
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
@@ -419,7 +456,7 @@
         "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
       },
       "level_keys": [
-        "coursee_helloworld_introtosprites_-usa-map"
+        "csc_landmarks_background"
       ]
     },
     {
@@ -428,6 +465,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite_-usa-map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -449,6 +489,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_location_-usa-map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -470,48 +513,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_size_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      },
-      "level_keys": [
-        "csc_landmarks_size_-usa-map"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmark_explain_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      },
-      "level_keys": [
-        "csc_landmark_explain_-usa-map"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
+        "level_keys": [
+          "csc_landmarks_place1_-usa-map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -528,11 +532,14 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place2_-usa-map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -549,53 +556,14 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_behavior_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      },
-      "level_keys": [
-        "csc_landmarks_behavior_-usa-map"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursee_helloworld_eventsvideo_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      },
-      "level_keys": [
-        "coursee_helloworld_eventsvideo_-usa-map"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1_-usa-map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -612,11 +580,14 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches2_-usa-map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -633,11 +604,62 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 12,
-      "activity_section_position": 12,
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite3"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite3"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
+      },
+      "level_keys": [
+        "csc_landmarks_makesprite3"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_touches3"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches3"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
+      },
+      "level_keys": [
+        "csc_landmarks_touches3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_landmarks_freeplay_-usa-map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -657,9 +679,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_hello-world",
+        "level.key": "CourseF_video_introSpriteLab_-wonder",
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_hello-world"
+          "CourseF_video_introSpriteLab_-wonder"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -705,6 +727,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_landmarks_behavior",
+        "script_level.level_keys": [
+          "csc_landmarks_behavior"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_landmark_explain",
         "script_level.level_keys": [
           "csc_landmark_explain"
@@ -720,30 +754,6 @@
         "level.key": "csc_landmarks_place1",
         "script_level.level_keys": [
           "csc_landmarks_place1"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_place2",
-        "script_level.level_keys": [
-          "csc_landmarks_place2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_behavior",
-        "script_level.level_keys": [
-          "csc_landmarks_behavior"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -777,6 +787,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_landmarks_place2",
+        "script_level.level_keys": [
+          "csc_landmarks_place2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "5459c357-a1b2-4d8c-b9d0-9bce758d2c7b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_landmarks_touches2",
         "script_level.level_keys": [
           "csc_landmarks_touches2"
@@ -801,9 +823,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_-usa-map",
+        "level.key": "csc_landmarks_background",
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_-usa-map"
+          "csc_landmarks_background"
         ],
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
@@ -837,30 +859,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_size_-usa-map",
-        "script_level.level_keys": [
-          "csc_landmarks_size_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmark_explain_-usa-map",
-        "script_level.level_keys": [
-          "csc_landmark_explain_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc_landmarks_place1_-usa-map",
         "script_level.level_keys": [
           "csc_landmarks_place1_-usa-map"
@@ -885,30 +883,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_behavior_-usa-map",
-        "script_level.level_keys": [
-          "csc_landmarks_behavior_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "coursee_helloworld_eventsvideo_-usa-map",
-        "script_level.level_keys": [
-          "coursee_helloworld_eventsvideo_-usa-map"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csc-landmarks-pilot",
-        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc_landmarks_touches1_-usa-map",
         "script_level.level_keys": [
           "csc_landmarks_touches1_-usa-map"
@@ -924,6 +898,30 @@
         "level.key": "csc_landmarks_touches2_-usa-map",
         "script_level.level_keys": [
           "csc_landmarks_touches2_-usa-map"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_makesprite3",
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite3"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot",
+        "activity_section.key": "4df601ce-5ccb-4500-a44d-f4ff69e00e8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches3",
+        "script_level.level_keys": [
+          "csc_landmarks_touches3"
         ],
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",

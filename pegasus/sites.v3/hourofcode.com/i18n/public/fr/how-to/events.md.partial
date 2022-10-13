@@ -38,23 +38,17 @@ nav: how_to_nav
     
     * * *
     
-    ## Organisez une Nuit de Code en Famille avec l'Heure de Code et invitez les parents à participer. 
+    ## Example plan for a school assembly or event
     
-    Pensez à animer un événement pour les élèves de primaire en début de soirée et invitez les parents à rejoindre leurs enfants pour une heure d'informatique. Il s’agit d’une excellente façon de faire participer l’ensemble de votre communauté et de favoriser le soutien des parents pour l’informatique dans votre école. Nos partenaires chez la Nuit de Code en Famille ont créé une kit événementiel tout-en-un avec une checklist pour la préparation, un script pour l'animateur, des e-mails d'invitation, des posters, des présentations Powerpoint et bien plus encore pour que vous puissiez animer votre propre événement. [Cliquez ici pour télécharger le Kit Évènement](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+    **Event:** School-wide Computer Science Education Week kick-off assembly
     
-    * * *
+    **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
     
-    ## Exemple de programme pour un événement ou une réunion générale
+    **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
     
-    **Événement :** Rassemblement pour le lancement de la Semaine de l'enseignement de l'informatique.
+    **Location:** School assembly hall (e.g. theater, gym, cafeteria)
     
-    **Date :** {{ campaign_date/start_short }} (début de la Semaine de l'Enseignement de l'Informatique)
-    
-    **Temps :** Au cours de la journée scolaire. Idéalement, en milieu de matinée. Pendant environ 1 heure.
-    
-    **Lieu :** Une salle de réunion de l'école (par exemple, la cantine, la salle de projection, la salle de sport).
-    
-    ## Déroulement de l'événement
+    ## Run of Show
     
     | Temps          | Action                                                                                                                                                                                                 |
     | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
