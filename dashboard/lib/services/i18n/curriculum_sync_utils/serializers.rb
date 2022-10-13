@@ -146,6 +146,16 @@ module Services::I18n::CurriculumSyncUtils
       delegate :crowdin_key, to: :object
     end
 
+    class ReferenceGuideCrowdinSerializer < CrowdinSerializer
+      attributes :display_name, :content
+
+      # override
+      def crowdin_key
+        path = Rails.application.routes.url_helpers.course_reference_guide_path(object.course_offering_version, object.key)
+        URI.join("https://studio.code.org", path)
+      end
+    end
+
     class LessonCrowdinSerializer < CrowdinSerializer
       attributes(
         :name,
@@ -170,12 +180,17 @@ module Services::I18n::CurriculumSyncUtils
     end
 
     class ScriptCrowdinSerializer < CrowdinSerializer
+      has_many :resources, serializer: ResourceCrowdinSerializer
+      has_many :student_resources, serializer: ResourceCrowdinSerializer
+      has_many :reference_guides, serializer: ReferenceGuideCrowdinSerializer do
+        object.get_course_version&.reference_guides
+      end
+
       # Optional `only_numbered_lessons` scope to avoid `relative_position` conflicts between Lessons
       has_many :lessons, serializer: LessonCrowdinSerializer do
         scope[:only_numbered_lessons] ? object.lessons.select(&:numbered_lesson?) : object.lessons
       end
-      has_many :resources, serializer: ResourceCrowdinSerializer
-      has_many :student_resources, serializer: ResourceCrowdinSerializer
+
       has_many :announcements, serializer: AnnouncementCrowdinSerializer do
         next if object.announcements.nil?
 
