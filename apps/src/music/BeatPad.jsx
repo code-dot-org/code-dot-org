@@ -5,7 +5,7 @@ import styles from './beatpad.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const BUTTONS_PER_ROW = 3;
-const colorClasses = [
+const enabledClasses = [
   styles.purple,
   styles.strawberry,
   styles.orange,
@@ -14,7 +14,7 @@ const colorClasses = [
   styles.teal
 ];
 
-const BeatPad = ({triggers, playTrigger, onClose}) => {
+const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
   const renderTriggers = () => {
     const rows = [];
 
@@ -26,7 +26,7 @@ const BeatPad = ({triggers, playTrigger, onClose}) => {
             label={triggers[j].buttonLabel}
             onClick={() => playTrigger(triggers[j].id)}
             key={triggers[j].id}
-            colorClassName={colorClasses[j]}
+            colorClassName={classNames(isPlaying && enabledClasses[j])}
           />
         );
       }
@@ -78,7 +78,8 @@ TriggerButton.propTypes = {
 BeatPad.propTypes = {
   triggers: PropTypes.array.isRequired,
   playTrigger: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func.isRequired,
+  isPlaying: PropTypes.func.bool
 };
 
 export default BeatPad;

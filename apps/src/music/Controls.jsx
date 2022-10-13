@@ -29,6 +29,7 @@ const Controls = ({isPlaying, setPlaying, playTrigger, top}) => {
           onClose={() => {
             setBeatPadShowing(false);
           }}
+          isPlaying={isPlaying}
         />
       </div>
     );
@@ -36,23 +37,22 @@ const Controls = ({isPlaying, setPlaying, playTrigger, top}) => {
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      {isPlaying && isShowingBeatBad && renderBeatPad()}
-      {isPlaying && (
-        // Placeholder button area, currently hidden
-        <div
-          className={classNames(
-            moduleStyles.controlButtons,
-            moduleStyles.side,
-            moduleStyles.hide
-          )}
-        >
-          <FontAwesome
-            icon={'th'}
-            style={{fontSize: 30}}
-            className={moduleStyles.iconButton}
-          />
-        </div>
-      )}
+      {isShowingBeatBad && renderBeatPad()}
+      {/*Placeholder button area, currently hidden*/}
+      <div
+        className={classNames(
+          moduleStyles.controlButtons,
+          moduleStyles.side,
+          moduleStyles.hide
+        )}
+      >
+        <FontAwesome
+          icon={'th'}
+          style={{fontSize: 30}}
+          className={moduleStyles.iconButton}
+        />
+      </div>
+
       <div
         className={classNames(moduleStyles.controlButtons, moduleStyles.center)}
       >
@@ -63,18 +63,16 @@ const Controls = ({isPlaying, setPlaying, playTrigger, top}) => {
           className={moduleStyles.iconButton}
         />
       </div>
-      {isPlaying && (
-        <div
-          className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
-        >
-          <FontAwesome
-            icon={'th'}
-            style={{fontSize: 30}}
-            onClick={() => setBeatPadShowing(!isShowingBeatBad)}
-            className={moduleStyles.iconButton}
-          />
-        </div>
-      )}
+      <div
+        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
+      >
+        <FontAwesome
+          icon={'th'}
+          style={{fontSize: 30}}
+          onClick={() => setBeatPadShowing(!isShowingBeatBad)}
+          className={moduleStyles.iconButton}
+        />
+      </div>
     </div>
   );
 };
