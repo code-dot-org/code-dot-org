@@ -16,41 +16,41 @@ Gjatë fushatës Hour of Code, kompania juaj mund të ndihmojë në rritjen e nd
 
 Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
 
-- [Inkurajoni punonjësit që të paraqiten vullnetarë në një klasë](#encourage-employees)
-- [Lidhni kompaninë tuaj me një shkollë](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [Organizoni ngjarjen tuaj Hour of Code](#host-hour-of-code)
 - [Promovo Orën e Kodimit](#promote-hour-of-code)
 - [Më shumë mënyra për të mbështetur Orën e Kodit](#support-hour-of-code)
 
 * * *
 
+<a id="connect-with-a-school"></a>
+
+## Connect with a local school
+
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
+
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
 <a id="encourage-employees"></a>
 
-## Inkurajoni punonjësit që të paraqiten vullnetarë në një klasë
+## Encourage employees to volunteer with a classroom
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
 [<button>Regjistrohuni për të dalë vullnetar</button>]({{ urls/volunteer }})
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
 For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
-
-* * *
-
-<a id="connect-with-a-school"></a>
-
-## Lidhni kompaninë tuaj me një shkollë
-
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
-
-[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
-
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
-
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
 
 * * *
 
@@ -83,7 +83,6 @@ Ne kemi parë ngjarje që janë [ virtuale ](https://hourofcode.com/us/how-to/vi
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 
 ### 3. Plan your technology needs
 
@@ -163,7 +162,7 @@ Help raise awareness of the computer science movement with this sample content t
 - If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
 - If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

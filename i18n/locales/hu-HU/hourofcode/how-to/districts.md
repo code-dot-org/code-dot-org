@@ -37,6 +37,6 @@ Nézd meg a [rendezvény szervezési útmutatónkat]({{ urls/how_to_events }}) e
 A Kódolás Órája esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Itt tudod folytatni ezt az utat:
 
 - Bátorítsd a diákokat, hogy [tanuljanak online]({{ urls/learn_beyond }}).
-- [Vegyél részt]({{ urls/professional_development_workshops }}) egy egy-napos személyes workshopon, ahol tapasztalt számítástechnikai okktatóktól kaphatsz útmutatást. (csak Egyesült Államokban tartózkodó oktatóknak)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

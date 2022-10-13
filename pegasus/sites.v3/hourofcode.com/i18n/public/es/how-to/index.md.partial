@@ -113,7 +113,7 @@ No hay ningún problema si tanto tú como tus estudiantes sois nuevos en la Cien
 
 Involucra a los estudiantes en la actividad
 
-- Escribe el enlace al tutorial en una pizarra. Encuentra el enlace en [ con información ]({{ urls/learn }}) y ten en cuenta el número de participantes.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Si los estudiantes encuentran dificultades, está bien responder:
 
@@ -140,8 +140,7 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 - [Imprime certificados]({{ urls/certificates }}) para tus estudiantes.
 - [Imprime etiquetas adhesivas de "¡Yo participé en la Hora del Código!"]({{ urls/promote_stickers }}) para tus estudiantes.
-- [Pide camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para tu escuela.
-- Comparte fotos y vídeos de la Hora del Código en las redes sociales. ¡Usa #HoraDelCódigo y @codeorg para que podamos destacar tu éxito!
+- Comparte fotos y videos de la Hora del Código en las redes sociales. ¡Usa #HoraDelCódigo y @codeorg para que podamos destacar tu éxito!
 
 * * *
 
@@ -154,6 +153,6 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 ### ¿Qué viene después de la Hora de Código?
 
-La Ciencia Computacional no acaba con el fin de la Hora del Código. Nuestro plan de acción está colgado en la Web y puedes usarlo libremente siempre que quieras. [ Aprende cómo ](/beyond) para traer el Pensamiento Computacional a tu centro y a sus estudiantes.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

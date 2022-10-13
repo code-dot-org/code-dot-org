@@ -1919,7 +1919,15 @@
         "ramp_artist_loops12022": "Bu tapmacanı tamamlamaq üçün 60 piksel irəli gedin.",
         "ramp_artist_loops22022": "5 dəfə irəli gedin və bu boyalı xətti düzəldin.",
         "ramp_artist_loops42022": "\"İrəli get\" və \"144 dərəcə sağa dön\" bloklarının ardıcıllığını döngə edərək bu ulduz nümunəsini yaradın.",
-        "ramp_artist_loops92022": "Bu tapmacanı kvadrat çəkərək həll edin."
+        "ramp_artist_loops92022": "Bu tapmacanı kvadrat çəkərək həll edin.",
+        "courseD_artist_nestedLoops32022": "Bu bina üçün pəncərələrin son cərgəsini tez çəkmək üçün yeni bacarıqlarınızdan istifadə edin.\n\nPəncərələr 20 piksel kvadratdır, hər biri 20 pikseldir.",
+        "courseF_groups_behaviors_-2022-2": "Hər spritə tıkladığınız zaman müəyyən bir davranış verin.",
+        "courseF_groups_costume_-2022-2": "Onu tıkladığınız zaman hər sprite kostyumunu dəyişdirin.",
+        "courseF_groups_make_-2022-2": "Qısa Təlimat",
+        "courseF_groups_practice_behavior_-2022-2": "Onlara basın zaman sprites hərəkət etmək.",
+        "courseF_groups_say_-2022-2": "Müxtəlif sprites onlara tıklayarak müxtəlif vaxtlarda danışmaq məcbur edə bilər?",
+        "courseF_groups_size_-2022-2": "Üzərinə tıkladığınız zaman hər sprite ölçüsünü dəyişdirmək üçün bir proqram yazın.",
+        "courseF_groups_touch_-2022-2": "Hər spritə tıkladığınız zaman müəyyən bir davranış verin."
       }
     }
   }

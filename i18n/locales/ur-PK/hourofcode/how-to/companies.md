@@ -16,41 +16,41 @@ Hour of Code مہم کے دوران، آپ کی کمپنی کمپیوٹر سائ
 
 شروع کرنے کے لیے نیچے دیئے گئے اقدامات دیکھ لیں، [کارپوریٹ شراکت داروں کے ہمارا راہنما دیکھ لیں](/files/hoc-corporate-toolkit.pdf) تاکہ دیکھ لیں کہ آپ اپنی کمپنی کو آور آف کوڈ کے لیے پرجوش کر سکتے ہیں۔
 
-- [ملازمین کو کلاس روم کے ساتھ رضاکارانہ طور پر کام کرنے کی ترغیب دیں](#encourage-employees)
-- [اپنی کمپنی کو ایک اسکول سے جوڑیں](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [اپنے Hour of Code ایونٹ کی میزبانی کریں](#host-hour-of-code)
 - [آور-آف-کوڈ کو پروموٹ کریں](#promote-hour-of-code)
 - [Hour of Code کو سپورٹ کرنے کے مزید طریقے](#support-hour-of-code)
 
 * * *
 
-<a id="encourage-employees"></a>
-
-## ملازمین کو کلاس روم کے ساتھ رضاکارانہ طور پر کام کرنے کی ترغیب دیں
-
-[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
-
-Hour of Code میں حصہ لینے کے سب سے تسلی بخش طریقوں میں سے ایک مقامی کلاس روم کے ساتھ رضاکارانہ طور پر، یا تو ذاتی یا آنلائن طور پر، حصہ لینا ہے۔ سب سے بہترین بات یہ ہے کہ آپ کو رضاکارانہ طور پر کام کرنے کے لیے انجینئر ہونے کی ضرورت نہیں ہے۔ آپ انجیئر نہ بھی ہوں تو آپ پھر بھی اپنے کیریئر کے تجربے اور CS ٹیکنالوجی کا آپ پر اثر کے حوالے سے باتیں شریک کر سکتے ہیں تاکہ طلباء کو ایک بامعنی تجربہ فراہم کر سکیں۔
-
-[<button>رضاکار بننے کے لیے سائن اپ کریں</button>]({{ urls/volunteer }})
-
-جب ایک رضاکار رجسٹر کر لیتا ہے، ہمارے ایک استاد ہمارے [رضاکاروں کا نقشہ](https://code.org/volunteer/local) پر ان کے پروفائل کا جائزہ لیتا ہے، لہذا پروفائلز کو ہر ممکن حد تک مکمل ہونا چاہئے۔ اگر آپ ان کے کلاس روم کے لیے موزوں ہیں، تو ایک استاد آپ سے پلیٹ فارم کے ذریعے رابطہ کرے گا (ہم کبھی بھی استاد کے ساتھ آپ کا ای میل ایڈریس شریک نہیں کریں گے)۔ اس کے بعد آپ استاد کے ساتھ براہ راست تفصیلات کو مربوط کر سکتے ہیں کہ [آپ رضاکار کے طور اپنے کلاس روم کی بہترین خدمت کیسے کر سکتے ہیں](https://hourofcode.com/us/how-to/volunteers).
-
-اپنی کمپنی کو Hour of Code کے بارے میں پرجوش کرنے کے لیے رضاکارانہ کام کے بارے میں رہنمائی اور نمونے کے پیغامات کے لیے، چیک کریں [کارپوریٹ شراکت داروں کے لیے رہنما]({{ localized_files/hoc_corporate_toolkit }}).
-
-* * *
-
 <a id="connect-with-a-school"></a>
 
-## اپنی کمپنی کو ایک اسکول سے جوڑیں
+## Connect with a local school
 
-کلاس روم یا اسکول سے جڑنے کے لیے لازم نہیں کہ آپ ہمارا رضاکارانہ نقشہ استعمال کریں۔ اکثر اوقات، ہم مقامی طور پر شروع کرنے کی تجویز کرتے ہیں۔ غور کریں کہ کیا ایسے اسکول ہیں جن سے آپ یا آپ کے ملازمین کا مضبوط تعلق ہے جیسے کہ سکول جہاں آپ نے پڑھا، آپ کے بچوں کا اسکول، یا ایسی تنظیم یا اسکول جو کسی ایسی آبادی کی خدمت پر مرکوز ہے جو کمپیوٹر سائنس میں تاریخی طور پر کم نمائندگی رکھتی ہے۔
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-وہاں سے، آپ پرنسپل یا وائس پرنسپل جیسے منتظمین، ٹیکنالوجی یا کمپیوٹر سائنس کے اساتذہ، یا یہاں تک کہ اسکول کے PTSA تک پہنچنے کے لیے مناسب رابطے تلاش کرنے کے لیے اسکول کی ویب سائٹ ملاحظہ کر سکتے ہیں۔ آپ تنظیموں کے ساتھ بھی شراکت کر سکتے ہیں، جیسے Boys &amp؛ گرلز کلب آف امریکہ، کوئی YMCA برانچ، اور دیگر تاکہ آپ ایک ایونٹ کی میزبانی کر سکیں۔
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
 
-اگر آپ کسی اسکول سے رابطہ قائم کرنے سے قاصر ہیں تو براہ کرم [ہم سے رابطہ کریں۔](https://support.code.org/hc/en-us/requests/new) اور اگر ممکن ہو تو ہم آپ کو اپنے مقامی شراکت داروں میں سے ایک سے جوڑ لیں گے۔
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
+<a id="encourage-employees"></a>
+
+## Encourage employees to volunteer with a classroom
+
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
+
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+
+[<button>رضاکار بننے کے لیے سائن اپ کریں</button>]({{ urls/volunteer }})
+
+Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -83,7 +83,6 @@ Hour of Code میں حصہ لینے کے سب سے تسلی بخش طریقوں 
 - ان طریقوں کی وضاحت کریں جن سے ٹیکنالوجی ہماری زندگیوں پر اثر انداز ہوتی ہے، ایسے مثالوں کے ساتھ جن کے بارے میں تمام پس منظر کے طالب علموں کو معلومات ہوں - ایسی ٹیکنالوجی کے بارے میں بات کریں جو زندگیاں بچا رہی ہے، لوگوں کی مدد کر رہی ہے، لوگوں کو جوڑ رہی ہے۔
 - اگر آپ ایک ٹیک کمپنی ہیں، تفریحی، اختراعی مصنوعات جن پر آپ کی کمپنی کام کر رہی ہے کا ڈیمو دیں۔ اگر آپ ٹیک کمپنی نہیں ہیں تو ان طریقوں پر تبادلہ خیال کریں جن سے آپ کی کمپنی مسائل کو حل کرنے اور اہداف کی تکمیل کے لیے ٹیکنالوجی کا استعمال کرتی ہے۔
 - سوفٹ ویئر انجینئرز کو آپ کی کمپنی سے مدعو کرنے کے بارے میں بات کرنے کے لئے مدعو کریں کیوں کہ انہوں نے کمپیوٹر سائنس اور ان منصوبوں پر کام کرنے کا مطالعہ کرنے کا فیصلہ کیا.
-- اگر آپ کے پاس عملے کا ایک گروپ ہے جو آپ کے پروگرام میں سہولت فراہم کرے گا یا کسی مقامی اسکول کے ساتھ رضاکارانہ خدمات انجام دے گا، تو اپنے ملازمین کے لیے [کسٹم ٹی شرٹس](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) آرڈر کرنے پر غور کریں۔
 
 ### 3. اپنی ٹیکنالوجی کی ضروریات کی منصوبہ بندی کریں
 
@@ -136,7 +135,7 @@ Hour of Code میں حصہ لینے کے سب سے تسلی بخش طریقوں 
 
 ### 1. اپنا ایونٹ رجسٹر کریں
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. اسی طریقے سے آپ مقامی اسکولوں یا والدین کو یہ بتا سکتے ہیں کہ آپ ان کے قریب ایک ایونٹ کی میزبانی کر رہے ہیں۔
+جیسے ہی آپ اپنے Hour of Code کی تقریب کو [رجسٹر کروائیں ](/#join) گے، آپکو کامیاب کوڈ نگ تقریب منعقد کرنے سے متعلق مفید معلومات ای میل کے ذریعے ملنا شروع ہو جائیں گی. اسی طریقے سے آپ مقامی اسکولوں یا والدین کو یہ بتا سکتے ہیں کہ آپ ان کے قریب ایک ایونٹ کی میزبانی کر رہے ہیں۔
 
 ### 2. سوشل میڈیا پر پوسٹ کریں
 
@@ -163,7 +162,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 - اگر آپ کے کوڈ کی پہلی لائن نے آپ کی زندگی بدل دی ہے، تو اپنے قریبی طلباء کو ان کا پہلا #HourOfCode لکھنے میں مدد کریں https://code.org/volunteer
 - اگر آپ نے کوڈ کرنا سیکھ لیا — آپ کی کہانی کیا ہے؟ اپنے قریبی طالب علم کو ان کے پہلے #HourOfCode https://code.org/volunteer کے ذریعے متاثر کریں۔
 
-<a href="https://hourofcode.com/promote/resources#posters">مزید جانیئے</a> پوسٹرز، ویڈیوز، اسٹیکرز اور اپنی کمیونٹی میں اپنے ایونٹ کو فروغ دینے کے دیگر طریقوں کے بارے میں۔
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 
