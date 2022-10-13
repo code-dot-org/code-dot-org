@@ -13,10 +13,17 @@
 #
 require 'optparse'
 require 'parallel'
-require 'taglib'
 require_relative '../../deployment'
 require_relative '../../lib/cdo/cdo_cli'
 include CdoCli
+
+begin
+  require 'taglib'
+rescue LoadError
+  puts "You need taglib installed locally to run this script. Run 'brew install taglib' then 'gem install taglib-ruby'.\n"\
+"If that doesn't work, add \"gem 'taglib-ruby'\" to your Gemfile and run 'bundle install' "\
+"(do not commit changes to Gemfile or Gemfile.lock)"
+end
 
 DEFAULT_S3_BUCKET = 'cdo-sound-library'.freeze
 DEFAULT_OUTPUT_FILE = 'apps/src/code-studio/soundLibrary.json'.freeze

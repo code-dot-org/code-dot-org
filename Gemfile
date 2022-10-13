@@ -349,5 +349,3 @@ gem 'pry'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.2.1'
-
-gem 'taglib-ruby'
