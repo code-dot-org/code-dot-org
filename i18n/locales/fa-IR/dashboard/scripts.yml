@@ -985,3 +985,7 @@ fa:
               display_name: متغیرها
         soccer:
           name: فوتبال
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: حلقه‌ها

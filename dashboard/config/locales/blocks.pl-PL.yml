@@ -2,6 +2,8 @@
 pl:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: przesuwanie NESW za pomocą klawiszy strzałek
       AmysBlocks_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
@@ -1461,6 +1463,8 @@ pl:
             '100': duży
       gamelab_setPrompt:
         text: poproś użytkownika {QUESTION} o zmienne {VAR}
+      gamelab_setPromptWith2Choices:
+        text: poproś użytkownika {QUESTION} o zmienną {VAR} z wyborami {A}{B}
       gamelab_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       gamelab_setProp:
@@ -2251,6 +2255,11 @@ pl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: gdy {VAR} uzyskała odpowiedź
       RyanLab_moveForward:

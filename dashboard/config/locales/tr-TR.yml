@@ -434,7 +434,8 @@ tr:
       about: Hakkında
       legal: Gizlilik & Hukuk
       legal_privacy: Gizlilik Politikası
-      legal_tos: Şartlar
+      legal_cookie_notice: Çerez Bildirimi
+      legal_tos: Hizmet Şartları
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi
@@ -721,7 +722,7 @@ tr:
     support: Yardım ve Topluluk
     support_url: http://support.code.org
     tos_short: Koşullar
-    tos: Şartlar
+    tos: Hizmet Şartları
     privacy: Gizlilik Politikası
     privacy_updated: Gizlilik Politikası (güncellendi)
     secure: Güvenli sürüm
@@ -1013,7 +1014,7 @@ tr:
       bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel
       bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere
       okul parası için ebeveyn izni olduğundan emin olun istenecektir.
-    tos: Şartlar
+    tos: Hizmet Şartları
     privacy: Gizlilik Politikası
     privacy_notice: Gizlilik Politikası
     accept_label: Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet

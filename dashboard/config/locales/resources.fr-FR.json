@@ -1597,6 +1597,7 @@
           "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view"
         },
         "video_debugging/csd/2022": {
+          "name": "Vidéo : Déboguage",
           "type": "Vidéo"
         },
         "video_pair_programming/csd/2022": {
@@ -1605,7 +1606,7 @@
           "type": "Vidéo"
         },
         "headings/csd/2022": {
-          "name": "Rubriques",
+          "name": "Titres",
           "url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/template/preview"
         },
         "formatting_html/csd/2022": {
@@ -1635,6 +1636,7 @@
           "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view"
         },
         "mini-project_html_web_page/csd/2022": {
+          "name": "Mini-projet : Page web HTML",
           "url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/template/preview"
         },
         "digital_footprint/csd/2022": {
@@ -1642,9 +1644,11 @@
           "url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/template/preview"
         },
         "social_sleuth/csd/2022": {
+          "name": "Limier social",
           "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit"
         },
         "social_sleuth_1/csd/2022": {
+          "name": "Limier social",
           "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
         },
         "intro_to_css_-_part_1/csd/2022": {
@@ -1685,6 +1689,7 @@
           "type": "Guide projet"
         },
         "mini-project_your_personal_style/csd/2022": {
+          "name": "Mini-projet : Votre style personnel",
           "url": "https://docs.google.com/presentation/d/1LX6NzOZWylOLKPKoPm-SFKdKj6_raNSvQv6MugarH9k/template/preview"
         },
         "creative_commons_overview/csd/2022": {
@@ -1712,6 +1717,7 @@
           "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/"
         },
         "websites_for_expression/csd/2022": {
+          "name": "Sites web pour s'exprimer",
           "url": "https://docs.google.com/presentation/d/1xULQRcqeI288kAZoPX0_oeemk5u5VKHc1G0yAGxo9Ao/template/preview"
         },
         "body_styling/csd/2022": {
@@ -1769,6 +1775,7 @@
           "type": "Vidéo"
         },
         "project_-_personal_web_page/csd/2022": {
+          "name": "Projet - Page web personnelle",
           "url": "https://docs.google.com/presentation/d/1RaUMZ1CxWmklck8g70oNcZmzUbqOaYFAkRFGR9JdUF8/template/preview"
         },
         "websites_for_a_purpose_1/csd/2022": {
@@ -4402,6 +4409,7 @@
           "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view"
         },
         "video_debugging/csd/2021": {
+          "name": "Vidéo : Déboguage",
           "type": "Vidéo"
         },
         "project-guide-html-project-2020/csd/2021": {
@@ -4434,9 +4442,11 @@
           "name": "L'Empreinte Numérique"
         },
         "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Limier social",
           "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit"
         },
         "social-sleuth/csd/2021": {
+          "name": "Limier social",
           "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
         },
         "intro_to_css_-_part_1/csd/2021": {

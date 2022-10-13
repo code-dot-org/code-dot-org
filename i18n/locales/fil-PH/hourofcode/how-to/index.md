@@ -10,7 +10,7 @@ title: Gabay sa Paggamit ng Hour of Code
 
 Dapat matuto ang mga mag-aaral ngayon kung paano lumikha ng teknolohiya, hindi lang ang paggamit nito.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Ang pagsubok ng Hour of Code ay isang madali at nakakatuwang paraan upang ipakilala sa mga mag-aaral ang computer science, marahil sa unang pagkakataon! Maghanap ng aktibidad na naaangkop sa iyong tagpo, maaaring habang nasa klase or pagkatapos ng eskwela, sa personal o birtuwal. Tignan ang[ aming gabay sa pakikilahok kung sakaling mayroon kayong tanong]({{ localized_files/participation_guide }}) pagkatapos tignan ang mga hakbang sa ibaba:
 
 - [Panoorin ang video na kung-paano ng Hour of Code](#how-to-video)
 - [Tuklasin ang mga aktibidad at tutorial.](#explore-activities)
@@ -56,7 +56,7 @@ Tuklasin ang mga aktibidad at magpasya nang maaga kung gusto mong pumili ng isan
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Ngunit pwede mong gawin ang Hour of Code anumang araw ng taon!
+Ang mga tao sa buong mundo ay nakikilahok sa Hour of Code na ipinagdiriwang tuwing CS Education Week (Disyembre 5-11) kung kailan ang pinakabagong mga tutorial at aktibidad ay inilalabas. Ngunit pwede mong gawin ang Hour of Code anumang araw ng taon!
 
 * * *
 
@@ -72,11 +72,11 @@ I-promote ang Hour of Code sa ibang mga guro na maaaring gustong sumali sa saya!
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kapag [ iyong na sign-up ang iyong Hour of Code event](/#join) ikaw ay makakatanggap ng mga sulatronikong komunikasyon kasama ng mga balita at mungkahi para sa pag-host ng matagumpay na Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. o magprint ng nakakapagbigay inspirasyon na mga poster para sa iyong silid-aralan. Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -111,7 +111,7 @@ Ayos lang kahit baguhan ka at ang mga estudyante mo sa computer science. Narito 
 
 Patnubayan ang mga estudyante sa aktibidad
 
-- Isulat ang link ng tutorial sa isang whiteboard. Hanapin ang link na nakalista sa [impormasyon sa iyong napiling tutorial]({{ urls/learn }}) sa ilalim ng bilang ng mga kalahok.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Kung ang iyong mga estudyante ay nahihirapan ay ayos lang na tumugon:
 
@@ -138,7 +138,6 @@ Paano kung ang estudyante ay natapos ng maaga?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Umorder ng pasadyang mga t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sa iyong paaralan.
 - Ibahagi ang mga larawan at video sa mga nangyayari sa iyong Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin naming i-highlight ang iyong pinagtatagumpayan!
 
 * * *
@@ -152,6 +151,6 @@ Paano kung ang estudyante ay natapos ng maaga?
 
 ### Ano ang susunod pagkatapos ng Hour of Code?
 
-Hindi kailangang magtapos ang computer science sa Hour of Code! Web-based ang aming kurikulum at malayang gamitin, magpakailanman. [Matuto kung paano](/beyond) maihatid ang CS sa paaralan at mga mag-aaral mo.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

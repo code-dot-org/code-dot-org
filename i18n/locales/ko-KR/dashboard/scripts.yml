@@ -4118,6 +4118,17 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 설문조사
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java 연구소
+            lesson-6:
+              name: 반복
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 설문조사
+            lessonGroup-3:
+              display_name: 컨텐츠
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

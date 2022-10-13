@@ -12,7 +12,7 @@ nav: how_to_nav
 
 Сегодня школьники должны учиться не только использовать технологии, но и создавать их.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Участие в Часе кода – простой и занимательный способ познакомить вашего ребенка с информатикой, возможно впервые! Выберите занятия, которые подойдут для вашей ситуации: это могут занятия во время или после уроков, очные или онлайн. Есл после выполнения указанных ниже шагов у вас остались вопросы, ознакомьтесь с нашим [руководством по участию]({{ localized_files/participation_guide }}).
 
 - [Просмотрите видеоруководство по проведению Часа кода](#how-to-video)
 - [Ознакомьтесь с занятиями и учебными пособиями](#explore-activities)
@@ -58,7 +58,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ### Выберите дату и время 
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Но вы можете провести Час кода в любой день года! 
+Люди во всем мире присоединятся к событиям Часа кода во время Недели изучения информатики (5–11 декабря), когда публикуются новейшие пособия и задания. Но вы можете провести Час кода в любой день года! 
 
 * * *
 
@@ -74,11 +74,11 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ### Оповестите волонтеров, зарегистрировав ваше событие 
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Таким образом вы также сможете оповестить местных волонтерах об участии вашей школы в кампании. Волонтеры – это великолепный ресурс; они могут прийти в ваш класс и рассказать об информатике или просто помочь вашим ученикам в прохождении занятий Часа кода. 
+После регистрации [вашего мероприятия Часа кода](/), вы получите электронные сообщения с новостями и полезными советами по успешному проведению Часа кода. Таким образом вы также сможете оповестить местных волонтерах об участии вашей школы в кампании. Волонтеры – это великолепный ресурс; они могут прийти в ваш класс и рассказать об информатике или просто помочь вашим ученикам в прохождении занятий Часа кода. 
 
 ### Воодушевите ваших учеников 
 
-Перед мероприятием разошлите ссылку на [мотивационное видео](/promote/resources) с участием разнообразных людей и информацией о том, как можно творчески использовать информатику. Or print inspirational posters for your classroom! Ученики с большим энтузиазмом занимаются предметом, когда они видят подобных себе людей из соответствующей сферы деятельности. 
+Перед мероприятием разошлите ссылку на [мотивационное видео](/promote/resources) с участием разнообразных людей и информацией о том, как можно творчески использовать информатику. Или закажите для вашего класса вдохновляющие плакаты! Ученики с большим энтузиазмом занимаются предметом, когда они видят подобных себе людей из соответствующей сферы деятельности. 
 
 {{ promote_new_posters }}
 
@@ -113,7 +113,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 Объясните ученикам, как начать
 
-- Напишите на доске ссылку на учебное пособите. Найдите ссылку в списке [информации о выбранном вами пособии]({{ urls/learn }}) под количеством участников.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Если ваши ученики сталкиваются с трудностями, будет правильно ответить:
 
@@ -138,9 +138,8 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Напечатайте сертификаты]({{ urls/certificates }}) для ваших учеников.
 - [Распечатайте стикеры "Я прошел Час кода!"]({{ urls/promote_stickers }}) для ваших учеников. 
-- [Закажите специальные футболки](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для вашей школы.
 - Поделитесь фотографиями и видео о вашем Часе Кода в социальных медиа. Используйте хештеги #HourOfCode и @codeorg, чтобы мы тоже смогли отметить ваш успех!
 
 * * *
@@ -154,6 +153,6 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 ### Час Кода: а что дальше?
 
-Информатика не ограничивается Часом кода! Наша программа размещена в Интернете и всегда будет бесплатной. [Узнайте как](/beyond) принести информатику в вашу школу и познакомить с ней учеников.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

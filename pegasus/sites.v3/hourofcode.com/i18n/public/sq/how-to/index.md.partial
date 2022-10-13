@@ -113,7 +113,7 @@ Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike.
 
 Direct students to the activity
 
-- Shkruaje në tabelë (dërrasë të zezë) linkun e tutorialit. Poshtë numrit të pjesëmarrësve gjeni të listuar linkun e [të dhëna rreth tutorialit të zgjedhur](http://<%= codeorg_url() %>/learn) nga ju.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
@@ -140,7 +140,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Porosit bluza ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)për shkollën tënde.
 - Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 * * *
@@ -154,6 +153,6 @@ What if a student finishes early?
 
 ### Çfarë vjen pas Orës së Kodimit?
 
-Shkenca kompjuterike nuk ka pse të përfundojë me Orën e Kodit! Kurrikula jonë është e bazuar në internet dhe falas për t'u përdorur, përgjithmonë. [ Mësoni si ](/beyond) të sillni CS në shkollën tuaj dhe studentët.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}
