@@ -30,7 +30,7 @@ module Cdo::CloudFormation
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
     INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
-    CHEF_VERSION = '15.2.20'
+    CHEF_VERSION = '17.6.18'
     DOMAIN = 'cdn-code.org'
     SSH_KEY_NAME = 'server_access_key'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
